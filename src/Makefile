@@ -125,13 +125,12 @@ twol-sma.bin: twol-sma.txt
 # I leave twol-sma.bin because I need it for twolc, and tok.fst
 # because that is used seperately on the command line.
 
-
-#clean:
-#	@rm -f caseconv.fst sma.save
-
-
-
-
-
-
-
+.PHONY: clean
+clean:
+	@echo
+	@echo "*** Now deleting all *.fst, *.save and *.bin files ***"
+	@echo
+	@rm -f \
+	*.fst
+	*.save
+	*.bin
