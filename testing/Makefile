@@ -12,7 +12,8 @@ UMASK=@umask 007
 
 # Default target:
 .PHONY: all
-all: n.gsummary n.asummary
+all: n.gsummary
+# n.asummary
 
 # Clean up all the mess created during a test pass, to prepare for new tests:
 #		  *.tgz	\	# just to remove archive files used for file transfering
@@ -25,9 +26,12 @@ clean:
 	@rm -f *.testbase \
 		  *.gtest \
 		  *.atest \
-		  *.facit \
-		  *.report \
-		  *.result \
+		  *.gfacit \
+		  *.afacit \
+		  *.greport \
+		  *.areport \
+		  *.gresult \
+		  *.aresult \
 		  *summary \
 		  *.tgz	\
 		  *~ \
@@ -41,11 +45,11 @@ NAnaFiles := $(patsubst %.txt,%.areport,$(wildcard n-*.txt))
 VGenFiles := $(patsubst %.txt,%.greport,$(wildcard v-*.txt))
 VAnaFiles := $(patsubst %.txt,%.areport,$(wildcard v-*.txt))
 
-# Debugging of the variable $(GNounFiles)
-#test: $(NGenFiles)
-#	@echo "*** NGenFiles: ***"
-#	@printf $^
-#	@printf "\n"
+# Debugging of the variable $(NGenFiles)
+test: $(NGenFiles)
+	@echo "*** NGenFiles: ***"
+	@printf $^
+	@printf "\n"
 
 # Create all the noun test file bases:
 n-%.testbase: n-%.txt noun-codes.txt
@@ -93,22 +97,27 @@ n-%.gresult: n-%.gtest
 # Then we compare with the facit, and report any differences:
 n-%.greport: n-%.gresult n-%.gfacit
 	@echo
-	@echo "*** Diffing the test result and the facit file for ***"
-	@echo "*** word form generation for n-$*.txt              ***"
+	@echo "*** Diffing the test result and the facit file for   ***"
+	@echo "*** word form generation for n-$*.txt ***"
 	@echo
-	@diff $< n-$*.gfacit > $@
+	@echo "*** Now diffing: ***"
+	rm -f $@
+	$(UMASK) && \
+	diff $< n-$*.gfacit > $@
+	chmod 660 $@
+	@echo "*** Test: finished greport ***"
 
 # Finally, we concatenate all greports, and display them:
 n.gsummary: $(NGenFiles)
-	cat $^ > $@
-#	or: cat n-*.greport > $@
+#	cat $^ > $@
+#	cat n-*.greport > $@
 	@echo
 	@echo "*** All noun word form generation testing is done.     ***"
 	@echo "*** The concatenated reports are stored in n.gsummary, ***"
 	@echo "*** and is also less-ed now. Type C-z to continue.     ***"
 	@echo
-	@cat
-	@less $@
+#	@cat
+#	@less $@
 
 # Now we turn to analysis testing:
 # First, create the needed test file
