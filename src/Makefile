@@ -69,7 +69,7 @@ tok.fst: ../bin/tok.fst
 	@echo "*** Building the tokenizer tok.fst ***" ;
 	@echo
 	@printf "source tok.txt \n\
-	save stack tok.fst \n\
+	save stack ../bin/tok.fst \n\
 	quit \n" > /tmp/tok-script
 	@xfst < /tmp/tok-script
 	@rm -f /tmp/tok-script
