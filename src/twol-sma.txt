@@ -302,3 +302,39 @@ D1:X <=> A1:a X: _ ;
   "Inserted å"
   0:å <=> Syllable1 [Å2:| Å3:| U1:] _
           Cons [I2:0 | O2:0] %>: A1:e OpenOrClosedFinal ;
+
+
+
+! Blocking rules to prevent overgeneration
+! ========================================
+
+
+"Berre 0:e etter leksikalsk vokal"
+  0:e => E1:i _ ;
+         E1:e _ ;
+         I1:i _ ;
+         I2:i _ ;
+         O1:o _ ;
+         O2:o _ ;
+         U1:u _ ;
+         Å2:a _ ;
+         Å2:e _ ;
+         Å3:å _ ;
+         Å4:å _ ;
+
+"Berre 0:a etter leksikalsk vokal"
+  0:a => E1:e _ ;
+         U1:u _ ;
+         Å2:a _ ;
+         Å3:å _ ;
+         Å4:å _ ;
+
+"Berre 0:ö etter leksikalsk vokal"
+  0:ö => E1:y _ ;
+         U1:ö _ ;
+         Å3:ö _ ;
+
+"Berre 0:å etter leksikalsk vokal"
+  0:å => U1:å _ ;
+         Å2:å _ ;
+         Å3:å _ ;
