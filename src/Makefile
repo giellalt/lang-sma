@@ -12,9 +12,9 @@ isma.fst: ../bin/isma.fst
 	@printf "load ../bin/sma.save \n\
 	invert net \n\
 	save stack ../bin/isma.fst \n\
-	quit \n" > /tmp/isma-fst-script
-	@xfst < /tmp/isma-fst-script
-	@rm -f /tmp/isma-fst-script
+	quit \n" > ../../tmp/isma-fst-script
+	@xfst < ../../tmp/isma-fst-script
+	@rm -f ../../tmp/isma-fst-script
 
 # Here we build the final transducer. The goal depends upon the tokenizer,
 # the spellrelaxer, the caseconverter and the bare transducer
@@ -28,9 +28,9 @@ sma.fst: ../bin/sma.fst
 	@printf "read regex @\"../bin/sma.save\" .o. \
 	@\"../bin/caseconv.fst\" .o. @\"../bin/spellrelax.fst\" ; \n\
 	save stack ../bin/sma.fst \n\
-	quit \n" > /tmp/sma-fst-script
-	@xfst < /tmp/sma-fst-script
-	@rm -f /tmp/sma-fst-script
+	quit \n" > ../../tmp/sma-fst-script
+	@xfst < ../../tmp/sma-fst-script
+	@rm -f ../../tmp/sma-fst-script
 
 # This goal is to allow for i instead of ï, and for ä/æ and ö/ø mix
 
@@ -41,12 +41,12 @@ spellrelax.fst: ../bin/spellrelax.fst
 	@echo
 	@printf "read regex < spellrelax.regex \n\
 	save stack ../bin/spellrelax.fst \n\
-	quit \n" > /tmp/spellrelax-script
-	@xfst < /tmp/spellrelax-script
-	@rm -f /tmp/spellrelax-script
+	quit \n" > ../../tmp/spellrelax-sma-script
+	@xfst < ../../tmp/spellrelax-sma-script
+	@rm -f ../../tmp/spellrelax-sma-script
 
 
-# The second goal il to build the caseconv.fst file
+# The second goal is to build the caseconv.fst file
 # This goal depends on case.regex
 
 caseconv.fst: ../bin/caseconv.fst
@@ -56,9 +56,9 @@ caseconv.fst: ../bin/caseconv.fst
 	@echo
 	@printf "read regex < case.regex \n\
 	save stack ../bin/caseconv.fst \n\
-	quit \n" > /tmp/caseconv-script
-	@xfst < /tmp/caseconv-script
-	@rm -f /tmp/caseconv-script
+	quit \n" > ../../tmp/caseconv-sma-script
+	@xfst < ../../tmp/caseconv-sma-script
+	@rm -f ../../tmp/caseconv-sma-script
 
 
 # Another goal is to build a preprocessor.This goal depends on tok.txt
@@ -70,9 +70,9 @@ tok.fst: ../bin/tok.fst
 	@echo
 	@printf "source tok.txt \n\
 	save stack ../bin/tok.fst \n\
-	quit \n" > /tmp/tok-script
-	@xfst < /tmp/tok-script
-	@rm -f /tmp/tok-script
+	quit \n" > ../../tmp/tok-sma-script
+	@xfst < ../../tmp/tok-sma-script
+	@rm -f ../../tmp/tok-sma-script
 
 
 
@@ -92,9 +92,9 @@ sma.save: ../bin/sma.save
 	read-rules ../bin/twol-sma.bin \n\
 	compose-result \n\
 	save-result ../bin/sma.save \n\
-	quit \n" > /tmp/sma-save-script
-	@lexc < /tmp/sma-save-script
-	rm -f /tmp/sma-save-script
+	quit \n" > ../../tmp/sma-save-script
+	@lexc < ../../tmp/sma-save-script
+	@rm -f ../../tmp/sma-save-script
 
 # The second goal is to build twol-sma.bin
 # This goal depends on twol-sma.txt
@@ -107,9 +107,9 @@ twol-sma.bin: ../bin/twol-sma.bin
 	@printf "read-grammar twol-sma.txt \n\
 	compile \n\
 	save-binary ../bin/twol-sma.bin \n\
-	quit \n" > /tmp/twol-sma-script
-	@twolc < /tmp/twol-sma-script
-	@rm -f /tmp/twol-sma-script
+	quit \n" > ../../tmp/twol-sma-script
+	@twolc < ../../tmp/twol-sma-script
+	@rm -f ../../tmp/twol-sma-script
 
 
 # Manual clean command, removing the binary files
