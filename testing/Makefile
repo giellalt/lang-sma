@@ -150,7 +150,7 @@ n-para.ptest: noun-codes.txt
 
 # Paradigm generation:
 .PHONY: n-paradigm
-n-paradigm: n-para.ptest
+n-paradigm: n-para.ptest savefile
 	@echo
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
@@ -204,7 +204,7 @@ v-para.ptest: verb-codes.txt
 	@chmod 660 $@
 
 # Paradigm generation:
-v-paradigm: v-para.ptest
+v-paradigm: v-para.ptest savefile
 	@echo
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
@@ -258,7 +258,7 @@ a-para.ptest: adj-codes.txt
 	@chmod 660 $@
 
 # Paradigm generation:
-a-paradigm: a-para.ptest
+a-paradigm: a-para.ptest savefile
 	@echo
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
@@ -272,6 +272,10 @@ a-paradigm: a-para.ptest
 
 # POS-independent parts:
 # ======================
+
+# Make sure there is an available smX.save in the parent directory:
+savefile:
+	cd ../ && $(MAKE)
 
 # Word form generation:
 # ---------------------
@@ -299,7 +303,7 @@ a-paradigm: a-para.ptest
 	@chmod 660 $@
 
 # Here we run the actual generation test:
-%.gresult: %.gtest
+%.gresult: %.gtest savefile
 	@echo
 	@echo "*** Running the word form generator test for $*.txt ***"
 	@echo
@@ -358,7 +362,7 @@ a-paradigm: a-para.ptest
 	@chmod 660 $@
 
 # Here we run the actual analysis test:
-%.aresult: %.atest
+%.aresult: %.atest savefile
 	@echo
 	@echo "*** Running the word form analysis test for verbs ***"
 	@echo
