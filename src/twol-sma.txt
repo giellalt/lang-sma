@@ -13,7 +13,7 @@ Alphabet
   E1:i E1:e E1:y
 !  E2:0
   E2:0 E2:e
-  I1:i I1:e I1:0
+  I1:i I1:e
   I2:i I2:e I2:0
   I3:i I3:j
   I4:e I4:i I4:0
@@ -139,10 +139,13 @@ Rules
 
 ! The B-x and C-x cases are covered by the following rules
 
+! The second context specifies two-syllabic stems, where the stem vowel is reduced
+! to 'e' when inflected. 'maana' words were missing, added A2:e to cover Ine and
+! Ela Sg of this noun class as well. SNM 13.5.2002
   "I1 as e"
    I1:e <=> Syllable2 _ 
                   ConsJV [ Nucleus (AccGenSg) | V:0 %>:  [h | :i ]] DomainBound: ;
-            Syllable2 [ [I2:e | O2:o ] %>: | 
+            Syllable2 [ [I2:e | O2:o | A2:e ] %>: | 
                                            V:0 %>: [:e | :i]] Cons _ DomainBound: ;
 
   "O1 as o, A3 as e"
