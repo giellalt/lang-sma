@@ -59,7 +59,7 @@ tok.fst: tok.txt
 
 sma.save: twol-sma.bin sma-lex.txt noun-sma-lex.txt \
 	closed-sma-lex.txt pp-sma-lex.txt adv-sma-lex.txt \
-	verb-sma-lex.txt punct-sma-lex.txt
+	verb-sma-lex.txt propernoun-sma-lex.txt punct-sma-lex.txt
 	@echo
 	@echo
 	@echo
@@ -69,7 +69,7 @@ sma.save: twol-sma.bin sma-lex.txt noun-sma-lex.txt \
 	@echo
 	printf "compile-source sma-lex.txt noun-sma-lex.txt \
 	closed-sma-lex.txt pp-sma-lex.txt adv-sma-lex.txt \
-	verb-sma-lex.txt punct-sma-lex.txt \n\
+	verb-sma-lex.txt propernoun-sma-lex.txt punct-sma-lex.txt \n\
 	read-rules twol-sma.bin \n\
 	compose-result \n\
 	save-result sma.save \n\
