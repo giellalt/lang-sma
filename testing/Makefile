@@ -48,8 +48,8 @@ AAnaFiles := $(patsubst %.txt,%.areport,$(wildcard a-*.txt))
 .PHONY: all
 all: n-g.summary \
 	 n-a.summary \
-#	 v-g.summary \
-#	 v-a.summary \
+	 v-g.summary \
+	 v-a.summary \
 #	 a-g.summary \
 #	 a-a.summary
 
