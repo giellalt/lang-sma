@@ -4,11 +4,11 @@
 
 # Here we build the inverted transducer, to allow for generation
 
-isma.fst: sma.fst
+isma.fst: sma.fst sma.save
 	@echo
 	@echo "*** Building the inverse isma.fst ***"
 	@echo
-	@printf "load sma.fst \n\
+	@printf "load sma.save \n\
 	invert net \n\
 	save stack isma.fst \n\
 	quit \n" > /tmp/isma-fst-script
