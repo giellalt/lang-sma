@@ -25,7 +25,7 @@ clean:
 n-eq-row1ie-full.test: n-codes.txt n-eq-row1ie-full.txt
 	rm -f $@
 	$(UMASK) && \
-	$(BINDIR)/merge-codes\&forms.pl n-codes.txt n-eq-row1ie-full.txt \
+	$(BINDIR)/merge-codesNforms.pl n-codes.txt n-eq-row1ie-full.txt \
 	> $@
 	chmod 660 $@
 
