@@ -3,14 +3,22 @@ Multichar_Symbols
   A1 A2 A3 A4 E1 E2 I1 I2 I3 I4 O1 O2 U1 U2 Æ Å1 Å2 Å3 Å4 D1
   +N +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Ess +Kom
 
+
+! The root lexicon
+! ================
+
 LEXICON Root
   0:#			Noun	;
 
+
+
 ! Nominal inflection sublexica
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! ============================
 
 
-!Inflection for nouns ending in '-ie'
+! Inflection for nouns ending in '-ie'
+! ------------------------------------
+
 ! Only the cases that require special treatment.
 ! The regular cases are treated by continuing to N_SG and N_PL.
 
@@ -20,7 +28,10 @@ LEXICON N_IE
   +N+Pl:0		N_PL	;
   +N+Sg+Ess:%>inI1	FINAL1	;
 
+
 ! Inflection for nouns ending in oe
+! ---------------------------------
+
 ! Only the cases that require special treatment.
 ! The regular cases are treated by continuing to N_SG and N_PL.
 
@@ -31,7 +42,10 @@ LEXICON N_OE
   +N+Pl:0		N_PL_OE	;
   +N+Sg+Ess:%>jnI1	FINAL1	;
 
+
 ! Inflection for all other nouns
+! ------------------------------
+
 ! The same cases as covered by the two other nounclass lexicons above
 ! The rest of the cases are treated by continuing to N_SG and N_PL.
 
@@ -40,6 +54,12 @@ LEXICON N_OTHERS
   +N+Sg+Ill:%>A1sD1e	FINAL1	;
   +N+Pl:0		N_PL	;
   +N+Sg+Ess:%>inI1	FINAL1	;
+
+
+
+! Grammatical lexica for the nouns
+! ================================
+
 
 LEXICON N_SG
   +Nom:0		FINAL1	;
@@ -77,6 +97,12 @@ LEXICON N_PL_OE
   +Ela:%>jstI1		FINAL1	;
   +Kom:%>I3+gujmie	FINAL1	;
   +Kom:%>I3+guejmie	FINAL1	;
+
+
+
+! Final lexicon
+! =============
+
 
 LEXICON FINAL1
   0:#			#	;
