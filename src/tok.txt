@@ -20,7 +20,7 @@ define WS [SP|NL|TAB];
 # =============================================================
 echo >>> define single character symbols
 define SINGLE [ %" | %. | %, | %; | %: | %! | %?
-| %( | %) | %[ | %] | %{ | %}
+| %( | %) | %[ | %] | %{ | %} | %« | %» 
 ];
 define PUNCT [ %. %. (%.) | %' %' | %' %' | %, %, ] ;
 define Char \[ WS | SINGLE ] ;
@@ -49,17 +49,18 @@ a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z
 define INIT [ Letter %. ]+ ;
 
 # =============================================================
-#echo >>> numeric expressions
-#define Digit [ %0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9];
-#define NumOp [ %- | %+ | %* | %/ | %= | %: ];
-#define NumSep [ %. | %, ];
-#define NUM [ Digit | NumOp | NumSep]+ & $[Digit] ;
+echo >>> numeric expressions
+define Digit [ %0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9];
+define NumOp [ %- | %+ | %* | %/ | %= | %: ];
+define NumSep [ %. | %, ];
+define NUM [ Digit | NumOp | NumSep]+ & $[Digit] ;
 
 # =============================================================
 echo >>> define tokens
 define Token [ WORD | SYMBOL | INIT ];
 # commenting out NUM in order to allow 7-bit encoding
-#define Token [ WORD | SYMBOL | ABBR | INIT | NUM ];
+# commenting them in again since this is Southern Sámi
+define Token [ WORD | SYMBOL | ABBR | INIT | NUM ];
 # =============================================================
 echo >>> longest match--insert a newline after each token
 define TOK1 [ Token @-> ... NL ] ;
