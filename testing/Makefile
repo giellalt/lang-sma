@@ -10,7 +10,7 @@ BINDIR = ../../script/testing
 UMASK=umask 007
 
 # Default target:
-all: n-gen-report
+all: n-gen-report n-ana-report
 
 # Clean up all the mess created during a test pass, to prepare for new tests:
 clean:
