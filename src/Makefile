@@ -2,6 +2,45 @@
 # *****************************************************************
 
 
+sma.fst: sma.save caseconv.fst spellrelax.fst
+	@echo
+	@echo "*** Building sma.fst ***" ;
+	@echo
+	@printf "read regex @\"sma.save\" .o. @\"caseconv.fst\" \
+	.o. @\"spellrelax.fst\" ; \n\
+	save stack sma.fst \n\
+	quit \n" > /tmp/sma-fst-script
+	@xfst < /tmp/sma-fst-script
+	@rm -f /tmp/sma-fst-script
+
+# This goal is to allow for i instead of ï, and for ä/æ and ö/ø mix
+
+spellrelax.fst: spellrelax.regex
+	@echo
+	@echo "*** Building spellrelax.fst ***" ;
+	@echo
+	@printf "read regex < spellrelax.regex \n\
+	save stack spellrelax.fst \n\
+	quit \n" > /tmp/spellrelax-script
+	@xfst < /tmp/spellrelax-script
+	@rm -f /tmp/spellrelax-script
+
+
+# The second goal il to build the caseconv.fst file
+# This goal depends on case.regex
+
+caseconv.fst: case.regex
+	@echo
+	@echo "*** Building caseconv.fst ***" ;
+	@echo
+	@printf "read regex < case.regex \n\
+	save stack caseconv.fst \n\
+	quit \n" > /tmp/caseconv-script
+	@xfst < /tmp/caseconv-script
+	@rm -f /tmp/caseconv-script
+
+
+
 # The first goal is to build sma.save
 # This goal depends on twol-sma.bin and a bunch of lexicon files
 
