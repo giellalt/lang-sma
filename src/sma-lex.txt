@@ -1,10 +1,31 @@
 Multichar_Symbols
 
-  A1 A2 A3 A4 E1 I1 I2 I3 I4 O1 O2 U1 U2 Æ Å1 Å2 Å3 Å4 D1
-  +N +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Ess +Com 
+  +N +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Com +Ess
+  +PxSg1 +PxSg2 +PxSg3
+  +PxDu1 +PxDu2 +PxDu3
+  +PxPl1 +PxPl2 +PxPl3
+
+  +V +Prs +Prt
+  +Sg1 +Sg2 +Sg3
+  +Du1 +Du2 +Du3
+  +Pl1 +Pl2 +Pl3
+
+  +Inf +Neg +VGen +Ger +Ptc
+  +Ind
+  +Imp +ImpII !Den siste berre nektingsverbet
+
+! Berre hjelpeverbet/nektingsverbet (Pot. for andre V?):
+  +Pot +Cond  ! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21)
+
+! Frå nordsamisk:
+! +Actor +Clt
+  +A +Comp +Superl
+  +Attr
+
+  +Pron +Pers +Dem +Adp +Po +Adv +Interj
   +CS +CC +Pcle +CLB
-  +V +Neg +Ind +Prs +Prt +Pron +Pers +Dem +Adp +Po +Adv +Interj
-  +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
+
+  A1 A2 A3 A4 E1 I1 I2 I3 I4 O1 O2 U1 U2 Æ Å1 Å2 Å3 Å4 D1
   X2
 
 
@@ -89,10 +110,10 @@ LEXICON J-LESS-CASE
   +Sg+Ela:%>stI1	FINAL1	;
   +Pl+Nom:%>h		FINAL1	;
   +Pl+Gen:%>I3		FINAL1	;
-  +Kom:%>I3+gujmie	FINAL1	;
+  +Pl+Com:%>I3+gujmie	FINAL1	;
 
 LEXICON IJ-CASE
-  +Sg+Kom:nI1		FINAL1	;
+  +Sg+Com:nI1		FINAL1	;
   +Pl+Acc:dI1		FINAL1	;
   +Pl+Ill:dI1		FINAL1	;
   +Pl+Ine:nI1		FINAL1	;
