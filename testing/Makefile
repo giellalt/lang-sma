@@ -6,7 +6,10 @@ SHELL = /bin/sh
 # Where all the perl scripts are:
 BINDIR = ../../script/testing
 
-# The variable holding the filename of the save file:
+# The temp directory:
+TEMP = /tmp
+
+# This variable is holding the filename of the save file:
 # (makes the Makefile truly language independent for
 # the Sami languages)
 SAVEFILE = $(wildcard ../sm?.save)
@@ -70,7 +73,7 @@ clean:
 		  *paradigm \
 		  *.tgz	\
 		  *~ \
-		  /tmp/*test-script
+		  $(TEMP)/*test-script
 
 # These variables define  the relationship between the source files
 # and the final output files (the reports), such that one can con-
@@ -131,9 +134,9 @@ n-paradigm: n-para.ptest
 	@echo
 	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
-	quit \n" > /tmp/$@-gtest-script
-	@xfst < /tmp/$@-gtest-script > $@
-	@rm -f /tmp/$@-gtest-script
+	quit \n" > $(TEMP)/$@-gtest-script
+	@xfst < $(TEMP)/$@-gtest-script > $@
+	@rm -f $(TEMP)/$@-gtest-script
 	@less $@
 
 
@@ -185,9 +188,9 @@ v-paradigm: v-para.ptest
 	@echo
 	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
-	quit \n" > /tmp/$@-gtest-script
-	@xfst < /tmp/$@-gtest-script > $@
-	@rm -f /tmp/$@-gtest-script
+	quit \n" > $(TEMP)/$@-gtest-script
+	@xfst < $(TEMP)/$@-gtest-script > $@
+	@rm -f $(TEMP)/$@-gtest-script
 	@less $@
 
 
@@ -239,9 +242,9 @@ a-paradigm: a-para.ptest
 	@echo
 	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
-	quit \n" > /tmp/$@-gtest-script
-	@xfst < /tmp/$@-gtest-script > $@
-	@rm -f /tmp/$@-gtest-script
+	quit \n" > $(TEMP)/$@-gtest-script
+	@xfst < $(TEMP)/$@-gtest-script > $@
+	@rm -f $(TEMP)/$@-gtest-script
 	@less $@
 
 
@@ -280,9 +283,9 @@ a-paradigm: a-para.ptest
 	@echo
 	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
-	quit \n" > /tmp/$*-gtest-script
-	@xfst < /tmp/$*-gtest-script > $@
-	@rm -f /tmp/$*-gtest-script
+	quit \n" > $(TEMP)/$*-gtest-script
+	@xfst < $(TEMP)/$*-gtest-script > $@
+	@rm -f $(TEMP)/$*-gtest-script
 
 # Then we compare with the facit, and report any differences:
 %.greport: %.gresult %.gfacit
@@ -339,9 +342,9 @@ a-paradigm: a-para.ptest
 	@echo
 	@printf "load $(SAVEFILE) \n\
 	apply up <$< \n\
-	quit \n" > /tmp/$*-atest-script
-	@xfst < /tmp/$*-atest-script > $@
-	@rm -f /tmp/$*-atest-script
+	quit \n" > $(TEMP)/$*-atest-script
+	@xfst < $(TEMP)/$*-atest-script > $@
+	@rm -f $(TEMP)/$*-atest-script
 
 # Finally, we compare with the facit, and report any differences:
 # Due to the sorting problems mentioned above, there will always (?)
