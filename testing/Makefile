@@ -2,6 +2,12 @@ SHELL = /bin/sh
 #!/usr/bin/make
 #
 # This is a makefile to automatise most of the testing.
+# It is language independent within the framework of the Sámi language
+# technology project. See further user documentation (and technical as well)
+# in $CVSROOT/gt/doc/docu-testing.html
+
+# VARIABLE DEFINITIONS
+# ====================
 
 # Where all the perl scripts are:
 BINDIR = ../../script/testing
@@ -21,6 +27,20 @@ UMASK=@umask 007
 # Empty variable to be overridden by the user when
 # generating paradigms:
 WORD =
+
+# These variables define  the relationship between the source files
+# and the final output files (the reports), such that one can con-
+# struct a list of targets for the main target
+NGenFiles := $(patsubst %.txt,%.greport,$(wildcard n-*.txt))
+NAnaFiles := $(patsubst %.txt,%.areport,$(wildcard n-*.txt))
+VGenFiles := $(patsubst %.txt,%.greport,$(wildcard v-*.txt))
+VAnaFiles := $(patsubst %.txt,%.areport,$(wildcard v-*.txt))
+AGenFiles := $(patsubst %.txt,%.greport,$(wildcard a-*.txt))
+AAnaFiles := $(patsubst %.txt,%.areport,$(wildcard a-*.txt))
+
+
+# MAJOR TARGETS, HOUSEKEEPING TARGETS
+# ===================================
 
 # Default target:
 # Remove the comments in front of the verb and adjective
@@ -96,16 +116,8 @@ almost-clean:
 		  $(TEMP)/*test-script
 
 
-# These variables define  the relationship between the source files
-# and the final output files (the reports), such that one can con-
-# struct a list of targets for the main target
-NGenFiles := $(patsubst %.txt,%.greport,$(wildcard n-*.txt))
-NAnaFiles := $(patsubst %.txt,%.areport,$(wildcard n-*.txt))
-VGenFiles := $(patsubst %.txt,%.greport,$(wildcard v-*.txt))
-VAnaFiles := $(patsubst %.txt,%.areport,$(wildcard v-*.txt))
-AGenFiles := $(patsubst %.txt,%.greport,$(wildcard a-*.txt))
-AAnaFiles := $(patsubst %.txt,%.areport,$(wildcard a-*.txt))
-
+# POS SPECIFIC SECTIONS
+# =====================
 
 # NOUNS
 # =====
