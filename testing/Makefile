@@ -11,8 +11,23 @@ BINDIR = ../../script/testing
 UMASK=@umask 007
 
 # Default target:
+# Add v.gsummary v.asummary when you have verbs to analyse
 .PHONY: all
 all: n.gsummary n.asummary
+
+# If you only want to test nouns:
+.PHONY: all-n
+all-n: n.gsummary n.asummary
+
+# If you only want to test verbs:
+.PHONY: all-v
+all-v: v.gsummary v.asummary
+
+# If you only want to test verbal generation, use v.gsummary
+# as target. Etc. for the other cases. And do you only want to
+# test a specific word or inflection class, type the name of
+# the file containing the infl. word, but replace the suffix
+# .txt with .greport for generation, and .areport for analysis.
 
 # Clean up all the mess created during a test pass, to prepare for new tests:
 #		  *.tgz	\	# just to remove archive files used for file transfering
