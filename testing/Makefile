@@ -12,8 +12,7 @@ UMASK=@umask 007
 
 # Default target:
 .PHONY: all
-all: n.gsummary
-# n.asummary
+all: n.gsummary n.asummary
 
 # Clean up all the mess created during a test pass, to prepare for new tests:
 #		  *.tgz	\	# just to remove archive files used for file transfering
@@ -99,24 +98,20 @@ n-%.greport: n-%.gresult n-%.gfacit
 	@echo
 	@echo "*** Diffing the test result and the facit file for   ***"
 	@echo "*** word form generation for n-$*.txt ***"
+	@echo "*** Error 1 (ignored) means that there were diffs.   ***"
 	@echo
-	@echo "*** Now diffing: ***"
-	rm -f $@
-	$(UMASK) && \
+	@rm -f $@
+	-$(UMASK) && \
 	diff $< n-$*.gfacit > $@
-	chmod 660 $@
-	@echo "*** Test: finished greport ***"
+	@chmod 660 $@
 
 # Finally, we concatenate all greports, and display them:
 n.gsummary: $(NGenFiles)
-#	cat $^ > $@
-#	cat n-*.greport > $@
+	@cat $^ > $@
 	@echo
 	@echo "*** All noun word form generation testing is done.     ***"
-	@echo "*** The concatenated reports are stored in n.gsummary, ***"
-	@echo "*** and is also less-ed now. Type C-z to continue.     ***"
+	@echo "*** The concatenated reports are stored in n.gsummary. ***"
 	@echo
-#	@cat
 #	@less $@
 
 # Now we turn to analysis testing:
@@ -171,17 +166,14 @@ n-%.areport: n-%.aresult n-%.afacit
 	@echo "*** Diffing the test result and the facit file for ***"
 	@echo "*** word form analysis for n-$*.txt       ***"
 	@echo
-	@diff $< n-$*.afacit > $@
+	-@diff $< n-$*.afacit > $@
 
 # Finally, we concatenate all n-areports, and display them:
 n.asummary: $(NAnaFiles)
-	cat $^ > $@
-#	or: cat n-*.areport > $@
+	@cat $^ > $@
 	@echo
 	@echo "*** All noun word form analysis testing is done.       ***"
-	@echo "*** The concatenated reports are stored in n.asummary, ***"
-	@echo "*** and is also less-ed now. Type C-z to continue.     ***"
+	@echo "*** The concatenated reports are stored in n.asummary. ***"
 	@echo
-	@cat
-	@less $@
+#	@less $@
 
