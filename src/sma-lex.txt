@@ -1,19 +1,32 @@
 Multichar_Symbols
 
   A1 A2 A3 A4 E1 E2 I1 I2 I3 I4 O1 O2 U1 U2 Æ Å1 Å2 Å3 Å4 D1
-  +N +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Ess +Kom
+  +N +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Ess +Com 
+  +CS +CC +Pcle +CLB
+  +V +Neg +Ind +Prs +Prt +Pron +Pers +Dem +Adp +Po +Adv
+  +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
+  X2
 
 
+! ================
 ! The root lexicon
 ! ================
 
 LEXICON Root
   0:#			Noun	;
+  0:#			Verb	;
+  0:#			Pronoun	;
+  0:#			Adverb	;
+  0:#			Subjunction	;
+  0:#			Conjunction	;
+  0:#			Particle	;
+  0:#			Adposition	;
+  0:#			Punctuation	;  
 
-
-
+! ============================
 ! Nominal inflection sublexica
 ! ============================
+
 
 
 ! Inflection for nouns ending in '-ie'
@@ -41,6 +54,147 @@ LEXICON N_OE
 ! ------------------------------
 
 LEXICON N_OTHERS
+  +N+Sg:0		N_SG	;
+  +N+Sg+Ill:%>A1sD1e	FINAL1	;
+  +N+Pl:0		N_PL	;
+  +N+Sg+Ess:%>inI1	FINAL1	;
+
+
+
+! Grammatical lexica for the nouns
+! ================================
+
+! N_SG and N_SG_OE are identical, except for +Com.
+! They should be merged, with separate Kom entries.
+
+LEXICON N_SG
+  +Nom:0		FINAL1	;
+  +Acc:%>m		FINAL1	;
+  +Gen:%>n		FINAL1	;
+  +Ine:%>snI1		FINAL1	;
+  +Ela:%>stI1		FINAL1	;
+  +Com:%>inI1		FINAL1	;
+
+LEXICON N_PL
+  +Nom:%>h		FINAL1	;
+  +Acc:%>idI1		FINAL1	;
+  +Gen:%>I3		FINAL1	;
+  +Ill:%>idI1		FINAL1	;
+  +Ine:%>inI1		FINAL1	;
+  +Ela:%>ijstI1		FINAL1	;
+  +Com:%>I3+gujmie	FINAL1	;
+! +Com:%>I3+guejmie	FINAL1	;
+! I do not understand how the "guejmie" form has crept in. TT-011105.
+
+LEXICON N_SG_OE
+  +Nom:0		FINAL1	;
+  +Acc:%>m		FINAL1	;
+  +Gen:%>n		FINAL1	;
+  +Ine:%>snI1		FINAL1	;
+  +Ela:%>stI1		FINAL1	;
+  +Com:%>jnI1		FINAL1	;
+
+LEXICON N_PL_OE
+  +Nom:%>h		FINAL1	;
+  +Acc:%>jdI1		FINAL1	;
+  +Gen:%>I3		FINAL1	;
+  +Ill:%>jdI1		FINAL1	;
+  +Ine:%>jnI1		FINAL1	;
+  +Ela:%>jstI1		FINAL1	;
+  +Com:%>I3+gujmie	FINAL1	;
+  +Com:%>I3+guejmie	FINAL1	;
+
+
+
+
+! ===========================
+! Verbal inflection sublexica
+! ===========================
+
+
+! The auxiliaries
+! ===============
+
+LEXICON LEA
+
++Ind+Prs:l LEA-PRES	;
++Ind+Prt:l LEA-PRET	;
+
+LEXICON LEA-PRES
++Sg1:eam		FINAL1	;
++Sg2:eah		FINAL1	;
++Sg3:ea			FINAL1	;
++Du1:ean		FINAL1	;
++Du2:idien		FINAL1	;
++Du3:ægan		FINAL1	;
++Pl1:ibie		FINAL1	;
++Pl2:idie		FINAL1	;
++Pl3:eah		FINAL1	;
+
+LEXICON LEA-PRET
++Sg1:im		FINAL1	;
++Sg2:ih		FINAL1	;
++Sg3:ij		FINAL1	;
++Du1:imen	FINAL1	;
++Du2:iden	FINAL1	;
++Du3:igan	FINAL1	;
++Pl1:imh	FINAL1	;
++Pl2:idh	FINAL1	;
++Pl3:in		FINAL1	;
+
+
+! The negative verb
+! =================
+
+LEXICON NEG
++Ind+Prs:	IJ-PRES ;
++Ind+Prt:idtj	VSUF-II ;
+
+LEXICON IJ-PRES
++Sg1:im		FINAL1	;
++Sg2:ih		FINAL1	;
++Sg3:ij		FINAL1	;
++Du1:ean	FINAL1	;
++Du2:idien	FINAL1	;
++Du3:eakan	FINAL1	;
++Pl1:ibie	FINAL1	;
++Pl2:idie	FINAL1	;
++Pl3:eah	FINAL1	;
+
+
+
+! Even-syllable verbs
+
+LEXICON V_EVEN
++V+Ind+Prs: VSUF-I ; 
++V+Ind+Prt: VSUF-II ;
+
+
+! Verbal affixes
+! ==============
+
+LEXICON VSUF-I
++Sg1:%>m		FINAL1	;
++Sg2:%>h		FINAL1	;
++Sg3:%>		FINAL1	;
++Du1:%>n		FINAL1	;
++Du2:%>dI1n	FINAL1	;
++Du3:%>gan	FINAL1	;
++Pl1:%>bI1	FINAL1	;
++Pl2:%>dI1	FINAL1	;
++Pl3:%>h		FINAL1	;
+
+LEXICON VSUF-II
++Sg1:%>im		FINAL1	;
++Sg2:%>ih		FINAL1	;
++Sg3:%>i		FINAL1	;
++Du1:%>imen	FINAL1	;
++Du2:%>iden	FINAL1	;
++Du3:%>igan	FINAL1	;
++Pl1:%>imh	FINAL1	;
++Pl2:%>idh	FINAL1	;
++Pl3:%>in		FINAL1	;
+=======
   +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Special Ill
   +N+Sg+Ess:%>inI1	FINAL1	;	! Special Ess
   +N: J-LESS-CASE		;	! cases without -i/j-
@@ -80,6 +234,7 @@ LEXICON IJ-CASE
   +Pl+Acc:dI1		FINAL1	;
   +Pl+Ill:dI1		FINAL1	;
   +Pl+Ine:nI1		FINAL1	;
+
 
 
 
