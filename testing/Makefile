@@ -149,6 +149,7 @@ n-para.ptest: noun-codes.txt
 	@chmod 660 $@
 
 # Paradigm generation:
+.PHONY: n-paradigm
 n-paradigm: n-para.ptest
 	@echo
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
@@ -156,9 +157,9 @@ n-paradigm: n-para.ptest
 	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	@xfst < $(TEMP)/$@-gtest-script > $@
+	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
-	@less $@
+	@less $(WORD).paradigm
 
 
 # VERBS
@@ -210,9 +211,9 @@ v-paradigm: v-para.ptest
 	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	@xfst < $(TEMP)/$@-gtest-script > $@
+	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
-	@less $@
+	@less $(WORD).paradigm
 
 
 # ADJECTIVES
@@ -264,9 +265,9 @@ a-paradigm: a-para.ptest
 	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	@xfst < $(TEMP)/$@-gtest-script > $@
+	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
-	@less $@
+	@less $(WORD).paradigm
 
 
 # POS-independent parts:
