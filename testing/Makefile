@@ -98,7 +98,7 @@ clean:
 .PHONY: almost-clean
 almost-clean:
 	@echo
-	@echo "*** Now deleting all generated files but the summary files ***"
+	@echo "*** Now deleting all generated files but the summary & parad. files ***"
 	@echo
 	@rm -f *.testbase \
 		  *.gtest \
@@ -110,7 +110,6 @@ almost-clean:
 		  *.gresult \
 		  *.aresult \
 		  *.ptest \
-		  *paradigm \
 		  *.tgz	\
 		  *~ \
 		  $(TEMP)/*test-script
