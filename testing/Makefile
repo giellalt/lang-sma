@@ -11,9 +11,13 @@ BINDIR = ../../script/testing
 UMASK=@umask 007
 
 # Default target:
-# Add v-g.summary v-a.summary when you have verbs to analyse
 .PHONY: all
-all: n-g.summary n-a.summary
+all: n-g.summary \
+	 n-a.summary \
+#	 v-g.summary \
+#	 v-a.summary \
+#	 a-g.summary \
+#	 a-a.summary
 
 # If you only want to test nouns:
 .PHONY: all-n
@@ -22,6 +26,10 @@ all-n: n-g.summary n-a.summary
 # If you only want to test verbs:
 .PHONY: all-v
 all-v: v-g.summary v-a.summary
+
+# If you only want to test adjectives:
+.PHONY: all-a
+all-a: a-g.summary a-a.summary
 
 # If you only want to test verbal generation, use v-g.summary
 # as target. Etc. for the other cases. And do you only want to
@@ -75,21 +83,21 @@ n-%.testbase: n-%.txt noun-codes.txt
 	$(BINDIR)/merge-codesNforms.pl noun-codes.txt $< > $@
 	@chmod 660 $@
 
-# Finally, we concatenate all greports, and display them:
+# Finally, we concatenate all *.greports
 n-g.summary: $(NGenFiles)
 	@cat $^ > $@
 	@echo
-	@echo "*** All noun word form generation testing is done.     ***"
-	@echo "*** The concatenated reports are stored in n-g.summary. ***"
+	@echo "*** All noun word form generation testing is done.      ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
 	@echo
 #	@less $@
 
-# Finally, we concatenate all n-areports, and display them:
+# Finally, we concatenate all *.areports:
 n-a.summary: $(NAnaFiles)
 	@cat $^ > $@
 	@echo
-	@echo "*** All noun word form analysis testing is done.       ***"
-	@echo "*** The concatenated reports are stored in n-a.summary. ***"
+	@echo "*** All noun word form analysis testing is done.        ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
 	@echo
 #	@less $@
 
@@ -120,6 +128,37 @@ v-a.summary: $(VAnaFiles)
 	@cat $^ > $@
 	@echo
 	@echo "*** All verb word form analysis testing is done.        ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# ADJECTIVES
+# ==========
+
+# Create all the adjective test file bases:
+a-%.testbase: a-%.txt adj-codes.txt
+	@echo
+	@echo "*** Creating the test base for a-$*.txt ***"
+	@echo
+	@rm -f $@
+	$(UMASK) && \
+	$(BINDIR)/merge-codesNforms.pl adj-codes.txt $< > $@
+	@chmod 660 $@
+
+# Finally, we concatenate all *.greports:
+a-g.summary: $(AGenFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All noun word form generation testing is done.      ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# Finally, we concatenate all *.areports:
+a-a.summary: $(AAnaFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All noun word form analysis testing is done.        ***"
 	@echo "*** The concatenated reports are stored in $@. ***"
 	@echo
 #	@less $@
