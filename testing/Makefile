@@ -172,7 +172,7 @@ v-a.summary: $(VAnaFiles)
 	@echo
 	@rm -f $@
 	-$(UMASK) && \
-	diff $< $*.gfacit > $@
+	diff --side-by-side --width=70 $< $*.gfacit > $@
 	@chmod 660 $@
 
 # Word form analysis:
@@ -230,5 +230,5 @@ v-a.summary: $(VAnaFiles)
 	@echo "*** word form analysis for $*.txt       ***"
 	@echo "*** \"Error 1 (ignored)\" means that there were diffs.   ***"
 	@echo
-	-@diff $< $*.afacit > $@
+	-@diff --side-by-side --width=70 $< $*.afacit > $@
 
