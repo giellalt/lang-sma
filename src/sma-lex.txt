@@ -36,7 +36,7 @@ LEXICON Root
 
 LEXICON N_IE
   +N+Sg+Ill:%>A1n	FINAL1	;	! Special Ill
-  +N+Sg+Ess:%>inI1	FINAL1	;	! Special Ess
+  +N+Ess:%>inI1	FINAL1	;	! Special Ess
   +N: J-LESS-CASE		;	! cases without -i/j-
   +N: I-CLASS			;	! cases with -i-
 
@@ -47,7 +47,7 @@ LEXICON N_IE
 LEXICON N_OE
   +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Causes Umlaut
   +N+Sg+Ill:%>se	FINAL1	;	! does NOT cause Umlaut
-  +N+Sg+Ess:%>jnI1	FINAL1	;	! cases without -i/j-
+  +N+Ess:%>jnI1	FINAL1	;	! cases without -i/j-
   +N: J-LESS-CASE		;	! cases with -j-
   +N: J-CLASS			;
 
@@ -68,11 +68,11 @@ LEXICON N_OTHERS
 ! -----------------------------------------------------------------
 
 LEXICON I-CLASS
-  +N+Pl+Ela:%>ijstI1	FINAL1	;	! Ela has -iste
+  +Pl+Ela:%>ijstI1	FINAL1	;	! Ela has -iste
   :%>i			IJ-CASE ;	! others have -ine etc.
 
 LEXICON J-CLASS
-  +N+Pl+Ela:%>jstI1	FINAL1	;	! Ela has -ijste
+  +Pl+Ela:%>jstI1	FINAL1	;	! Ela has -ijste
   :%>j			IJ-CASE ;	! others have -jne etc.
 
 
