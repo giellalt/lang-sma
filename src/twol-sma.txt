@@ -158,6 +158,17 @@ Rules
    I4:0 <=> Syllable2 Nucleus Cons _ %>: [Nucleus (Cons Nucleus) | h]
                                                          DomainBound: ;
 
+! Reglar for U2 (tidlegare 'E2')
+"U2 som 0"
+U2:0 <=> DomainBound: C* Nucleus Cons  _  %>: [ h | Nucleus ( Cons ) ( Nucleus ) ]\
+ DomainBound: ;
+
+
+"Consonant doubling"
+D1:X <=> A1:a X: _ ;
+              X: _ I1:i 0:e ;
+         where X in DobCons;
+
 
 
 ! Umlaut rules
