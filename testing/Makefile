@@ -11,19 +11,19 @@ BINDIR = ../../script/testing
 UMASK=@umask 007
 
 # Default target:
-# Add v.gsummary v.asummary when you have verbs to analyse
+# Add v-g.summary v-a.summary when you have verbs to analyse
 .PHONY: all
-all: n.gsummary n.asummary
+all: n-g.summary n-a.summary
 
 # If you only want to test nouns:
 .PHONY: all-n
-all-n: n.gsummary n.asummary
+all-n: n-g.summary n-a.summary
 
 # If you only want to test verbs:
 .PHONY: all-v
-all-v: v.gsummary v.asummary
+all-v: v-g.summary v-a.summary
 
-# If you only want to test verbal generation, use v.gsummary
+# If you only want to test verbal generation, use v-g.summary
 # as target. Etc. for the other cases. And do you only want to
 # test a specific word or inflection class, type the name of
 # the file containing the infl. word, but replace the suffix
@@ -46,7 +46,7 @@ clean:
 		  *.areport \
 		  *.gresult \
 		  *.aresult \
-		  *summary \
+		  *.summary \
 		  *.tgz	\
 		  *~ \
 		  /tmp/*test-script
@@ -59,11 +59,6 @@ NAnaFiles := $(patsubst %.txt,%.areport,$(wildcard n-*.txt))
 VGenFiles := $(patsubst %.txt,%.greport,$(wildcard v-*.txt))
 VAnaFiles := $(patsubst %.txt,%.areport,$(wildcard v-*.txt))
 
-# Debugging of the variable $(NGenFiles)
-test: $(NGenFiles)
-	@echo "*** NGenFiles: ***"
-	@printf $^
-	@printf "\n"
 
 # NOUNS
 # =====
@@ -127,11 +122,11 @@ n-%.greport: n-%.gresult n-%.gfacit
 	@chmod 660 $@
 
 # Finally, we concatenate all greports, and display them:
-n.gsummary: $(NGenFiles)
+n-g.summary: $(NGenFiles)
 	@cat $^ > $@
 	@echo
 	@echo "*** All noun word form generation testing is done.     ***"
-	@echo "*** The concatenated reports are stored in n.gsummary. ***"
+	@echo "*** The concatenated reports are stored in n-g.summary. ***"
 	@echo
 #	@less $@
 
@@ -193,11 +188,11 @@ n-%.areport: n-%.aresult n-%.afacit
 	-@diff $< n-$*.afacit > $@
 
 # Finally, we concatenate all n-areports, and display them:
-n.asummary: $(NAnaFiles)
+n-a.summary: $(NAnaFiles)
 	@cat $^ > $@
 	@echo
 	@echo "*** All noun word form analysis testing is done.       ***"
-	@echo "*** The concatenated reports are stored in n.asummary. ***"
+	@echo "*** The concatenated reports are stored in n-a.summary. ***"
 	@echo
 #	@less $@
 
@@ -264,11 +259,11 @@ v-%.greport: v-%.gresult v-%.gfacit
 	@chmod 660 $@
 
 # Finally, we concatenate all greports, and display them:
-v.gsummary: $(VGenFiles)
+v-g.summary: $(VGenFiles)
 	@cat $^ > $@
 	@echo
 	@echo "*** All verb word form generation testing is done.     ***"
-	@echo "*** The concatenated reports are stored in v.gsummary. ***"
+	@echo "*** The concatenated reports are stored in v-g.summary. ***"
 	@echo
 #	@less $@
 
@@ -330,11 +325,11 @@ v-%.areport: v-%.aresult v-%.afacit
 	-@diff $< v-$*.afacit > $@
 
 # Finally, we concatenate all n-areports, and display them:
-v.asummary: $(VAnaFiles)
+v-a.summary: $(VAnaFiles)
 	@cat $^ > $@
 	@echo
 	@echo "*** All verb word form analysis testing is done.       ***"
-	@echo "*** The concatenated reports are stored in v.asummary. ***"
+	@echo "*** The concatenated reports are stored in v-a.summary. ***"
 	@echo
 #	@less $@
 
