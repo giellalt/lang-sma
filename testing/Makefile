@@ -58,6 +58,8 @@ NGenFiles := $(patsubst %.txt,%.greport,$(wildcard n-*.txt))
 NAnaFiles := $(patsubst %.txt,%.areport,$(wildcard n-*.txt))
 VGenFiles := $(patsubst %.txt,%.greport,$(wildcard v-*.txt))
 VAnaFiles := $(patsubst %.txt,%.areport,$(wildcard v-*.txt))
+AGenFiles := $(patsubst %.txt,%.greport,$(wildcard a-*.txt))
+AAnaFiles := $(patsubst %.txt,%.areport,$(wildcard a-*.txt))
 
 
 # NOUNS
@@ -73,54 +75,6 @@ n-%.testbase: n-%.txt noun-codes.txt
 	$(BINDIR)/merge-codesNforms.pl noun-codes.txt $< > $@
 	@chmod 660 $@
 
-# Word form generation for nouns:
-# -------------------------------
-
-# Make test cases for noun word form generation tests,
-# based on the noun test file bases:
-n-%.gtest: n-%.testbase
-	@echo
-	@echo "*** Creating test cases for word form generation for n-$*.txt ***"
-	@echo
-	@rm -f $@
-	$(UMASK) && \
-	$(BINDIR)/make-gen-test.pl $< > $@
-	@chmod 660 $@
-
-# Make facit files containing the expected output from the
-# noun, word form generation test run:
-n-%.gfacit: n-%.testbase
-	@echo
-	@echo "*** Creating facit file for word form generation for n-$*.txt ***"
-	@echo
-	@rm -f $@
-	$(UMASK) && \
-	$(BINDIR)/make-gen-test-facit.pl $< > $@
-	@chmod 660 $@
-
-# Here we run the actual generation test:
-n-%.gresult: n-%.gtest
-	@echo
-	@echo "*** Running the word form generator test for n-$*.txt ***"
-	@echo
-	@printf "load ../sma.save \n\
-	apply down <$< \n\
-	quit \n" > /tmp/n-$*-gtest-script
-	@xfst < /tmp/n-$*-gtest-script > $@
-	@rm -f /tmp/n-$*-gtest-script
-
-# Then we compare with the facit, and report any differences:
-n-%.greport: n-%.gresult n-%.gfacit
-	@echo
-	@echo "*** Diffing the test result and the facit file for   ***"
-	@echo "*** word form generation for n-$*.txt ***"
-	@echo "*** \"Error 1 (ignored)\" means that there were diffs. ***"
-	@echo
-	@rm -f $@
-	-$(UMASK) && \
-	diff $< n-$*.gfacit > $@
-	@chmod 660 $@
-
 # Finally, we concatenate all greports, and display them:
 n-g.summary: $(NGenFiles)
 	@cat $^ > $@
@@ -130,63 +84,6 @@ n-g.summary: $(NGenFiles)
 	@echo
 #	@less $@
 
-# Word form analysis for nouns:
-# -----------------------------
-
-# First, create the needed test file
-# NB! The sorting specified does not work completely as intended!
-# This will lead to small differences between the facit file and
-# the analysis output. This happens when one input string gives
-# more than one analysis. The expected output is according to the
-# order in the inflection lexicon, but the tags in the facit file
-# are sorted alphabetically (due to the way sorting is performed -
-# there is no way to tell GNU sort to ONLY sort on a specified key).
-# For a completely satisfactory result we need a different solution.
-# The present solution will have to be good enough for now.
-n-%.atest: n-%.testbase
-	@echo
-	@echo "*** Creating test cases for word form analysis for n-$*.txt ***"
-	@echo
-	@rm -f $@
-	$(UMASK) && \
-	$(BINDIR)/make-ana-test.pl $< \
-	| sort -t '\t' -k 1 | cut -f 1 | uniq > $@
-	@chmod 660 $@
-
-# Make facit files containing the expected output from the
-# noun word form analysis test run:
-n-%.afacit: n-%.testbase
-	@echo
-	@echo "*** Creating facit file for word form analysis for n-$*.txt ***"
-	@echo
-	@rm -f $@
-	$(UMASK) && \
-	$(BINDIR)/make-ana-test.pl $< \
-	| sort -t '\t' -k 1 | cut -f 2 > $@
-	@chmod 660 $@
-
-# Here we run the actual analysis test:
-n-%.aresult: n-%.atest
-	@echo
-	@echo "*** Running the word form analysis test for nouns ***"
-	@echo
-	@printf "load ../sma.save \n\
-	apply up <$< \n\
-	quit \n" > /tmp/n-$*-atest-script
-	@xfst < /tmp/n-$*-atest-script > $@
-	@rm -f /tmp/n-$*-atest-script
-
-# Finally, we compare with the facit, and report any differences:
-# Due to the sorting problems mentioned above, there will always (?)
-# be (small) differences.
-n-%.areport: n-%.aresult n-%.afacit
-	@echo
-	@echo "*** Diffing the test result and the facit file for ***"
-	@echo "*** word form analysis for n-$*.txt       ***"
-	@echo "*** \"Error 1 (ignored)\" means that there were diffs. ***"
-	@echo
-	-@diff $< n-$*.afacit > $@
-
 # Finally, we concatenate all n-areports, and display them:
 n-a.summary: $(NAnaFiles)
 	@cat $^ > $@
@@ -195,7 +92,6 @@ n-a.summary: $(NAnaFiles)
 	@echo "*** The concatenated reports are stored in n-a.summary. ***"
 	@echo
 #	@less $@
-
 
 # VERBS
 # =====
@@ -210,14 +106,35 @@ v-%.testbase: v-%.txt verb-codes.txt
 	$(BINDIR)/merge-codesNforms.pl verb-codes.txt $< > $@
 	@chmod 660 $@
 
-# Word form generation for verbs:
-# -------------------------------
-
-# Make test cases for verb word form generation tests,
-# based on the verb test file bases:
-v-%.gtest: v-%.testbase
+# Finally, we concatenate all *.greports:
+v-g.summary: $(VGenFiles)
+	@cat $^ > $@
 	@echo
-	@echo "*** Creating test cases for word form generation for v-$*.txt ***"
+	@echo "*** All verb word form generation testing is done.      ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# Finally, we concatenate all *.areports:
+v-a.summary: $(VAnaFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All verb word form analysis testing is done.        ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# POS-independent parts:
+# ======================
+
+# Word form generation:
+# ---------------------
+
+# Make test cases for word form generation tests,
+# based on the test file bases:
+%.gtest: %.testbase
+	@echo
+	@echo "*** Creating test cases for word form generation for $*.txt ***"
 	@echo
 	@rm -f $@
 	$(UMASK) && \
@@ -225,10 +142,10 @@ v-%.gtest: v-%.testbase
 	@chmod 660 $@
 
 # Make facit files containing the expected output from the
-# verb word form generation test run:
-v-%.gfacit: v-%.testbase
+# word form generation test run:
+%.gfacit: %.testbase
 	@echo
-	@echo "*** Creating facit file for word form generation for v-$*.txt ***"
+	@echo "*** Creating facit file for word form generation for $*.txt ***"
 	@echo
 	@rm -f $@
 	$(UMASK) && \
@@ -236,39 +153,30 @@ v-%.gfacit: v-%.testbase
 	@chmod 660 $@
 
 # Here we run the actual generation test:
-v-%.gresult: v-%.gtest
+%.gresult: %.gtest
 	@echo
-	@echo "*** Running the word form generator test for v-$*.txt ***"
+	@echo "*** Running the word form generator test for $*.txt ***"
 	@echo
 	@printf "load ../sma.save \n\
 	apply down <$< \n\
-	quit \n" > /tmp/v-$*-gtest-script
-	@xfst < /tmp/v-$*-gtest-script > $@
-	@rm -f /tmp/v-$*-gtest-script
+	quit \n" > /tmp/$*-gtest-script
+	@xfst < /tmp/$*-gtest-script > $@
+	@rm -f /tmp/$*-gtest-script
 
 # Then we compare with the facit, and report any differences:
-v-%.greport: v-%.gresult v-%.gfacit
+%.greport: %.gresult %.gfacit
 	@echo
 	@echo "*** Diffing the test result and the facit file for   ***"
-	@echo "*** word form generation for v-$*.txt ***"
+	@echo "*** word form generation for $*.txt ***"
 	@echo "*** \"Error 1 (ignored)\" means that there were diffs. ***"
 	@echo
 	@rm -f $@
 	-$(UMASK) && \
-	diff $< v-$*.gfacit > $@
+	diff $< $*.gfacit > $@
 	@chmod 660 $@
 
-# Finally, we concatenate all greports, and display them:
-v-g.summary: $(VGenFiles)
-	@cat $^ > $@
-	@echo
-	@echo "*** All verb word form generation testing is done.     ***"
-	@echo "*** The concatenated reports are stored in v-g.summary. ***"
-	@echo
-#	@less $@
-
-# Word form analysis for verbs:
-# -----------------------------
+# Word form analysis:
+# -------------------
 
 # First, create the needed test file
 # NB! The sorting specified does not work completely as intended!
@@ -280,9 +188,9 @@ v-g.summary: $(VGenFiles)
 # there is no way to tell GNU sort to ONLY sort on a specified key).
 # For a completely satisfactory result we need a different solution.
 # The present solution will have to be good enough for now.
-v-%.atest: v-%.testbase
+%.atest: %.testbase
 	@echo
-	@echo "*** Creating test cases for word form analysis for v-$*.txt ***"
+	@echo "*** Creating test cases for word form analysis for $*.txt ***"
 	@echo
 	@rm -f $@
 	$(UMASK) && \
@@ -291,10 +199,10 @@ v-%.atest: v-%.testbase
 	@chmod 660 $@
 
 # Make facit files containing the expected output from the
-# verb word form analysis test run:
-v-%.afacit: v-%.testbase
+# word form analysis test run:
+%.afacit: %.testbase
 	@echo
-	@echo "*** Creating facit file for word form analysis for v-$*.txt ***"
+	@echo "*** Creating facit file for word form analysis for $*.txt ***"
 	@echo
 	@rm -f $@
 	$(UMASK) && \
@@ -303,33 +211,24 @@ v-%.afacit: v-%.testbase
 	@chmod 660 $@
 
 # Here we run the actual analysis test:
-v-%.aresult: v-%.atest
+%.aresult: %.atest
 	@echo
 	@echo "*** Running the word form analysis test for verbs ***"
 	@echo
 	@printf "load ../sma.save \n\
 	apply up <$< \n\
-	quit \n" > /tmp/v-$*-atest-script
-	@xfst < /tmp/v-$*-atest-script > $@
-	@rm -f /tmp/v-$*-atest-script
+	quit \n" > /tmp/$*-atest-script
+	@xfst < /tmp/$*-atest-script > $@
+	@rm -f /tmp/$*-atest-script
 
 # Finally, we compare with the facit, and report any differences:
 # Due to the sorting problems mentioned above, there will always (?)
 # be (small) differences.
-v-%.areport: v-%.aresult v-%.afacit
+%.areport: %.aresult %.afacit
 	@echo
 	@echo "*** Diffing the test result and the facit file for ***"
-	@echo "*** word form analysis for v-$*.txt       ***"
+	@echo "*** word form analysis for $*.txt       ***"
 	@echo "*** \"Error 1 (ignored)\" means that there were diffs.   ***"
 	@echo
-	-@diff $< v-$*.afacit > $@
-
-# Finally, we concatenate all n-areports, and display them:
-v-a.summary: $(VAnaFiles)
-	@cat $^ > $@
-	@echo
-	@echo "*** All verb word form analysis testing is done.       ***"
-	@echo "*** The concatenated reports are stored in v-a.summary. ***"
-	@echo
-#	@less $@
+	-@diff $< $*.afacit > $@
 
