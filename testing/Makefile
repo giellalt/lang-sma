@@ -6,6 +6,11 @@ SHELL = /bin/sh
 # Where all the perl scripts are:
 BINDIR = ../../script/testing
 
+# The variable holding the filename of the save file:
+# (makes the Makefile truly language independent for
+# the Sami languages)
+SAVEFILE = $(wildcard ../sm?.save)
+
 # Copied from old LS makefile:
 # Bond, James Bond
 UMASK=@umask 007
@@ -124,7 +129,7 @@ n-paradigm: n-para.ptest
 	@echo
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
-	@printf "load ../sma.save \n\
+	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
 	quit \n" > /tmp/$@-gtest-script
 	@xfst < /tmp/$@-gtest-script > $@
@@ -178,7 +183,7 @@ v-paradigm: v-para.ptest
 	@echo
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
-	@printf "load ../sma.save \n\
+	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
 	quit \n" > /tmp/$@-gtest-script
 	@xfst < /tmp/$@-gtest-script > $@
@@ -232,7 +237,7 @@ a-paradigm: a-para.ptest
 	@echo
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
-	@printf "load ../sma.save \n\
+	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
 	quit \n" > /tmp/$@-gtest-script
 	@xfst < /tmp/$@-gtest-script > $@
@@ -273,7 +278,7 @@ a-paradigm: a-para.ptest
 	@echo
 	@echo "*** Running the word form generator test for $*.txt ***"
 	@echo
-	@printf "load ../sma.save \n\
+	@printf "load $(SAVEFILE) \n\
 	apply down <$< \n\
 	quit \n" > /tmp/$*-gtest-script
 	@xfst < /tmp/$*-gtest-script > $@
@@ -332,7 +337,7 @@ a-paradigm: a-para.ptest
 	@echo
 	@echo "*** Running the word form analysis test for verbs ***"
 	@echo
-	@printf "load ../sma.save \n\
+	@printf "load $(SAVEFILE) \n\
 	apply up <$< \n\
 	quit \n" > /tmp/$*-atest-script
 	@xfst < /tmp/$*-atest-script > $@
