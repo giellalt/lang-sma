@@ -1,6 +1,22 @@
+
 # This is a makefile that builds the Southern Sami morphological parser
 # *****************************************************************
 
+# Here we build the inverted transducer, to allow for generation
+
+isma.fst: sma.fst
+	@echo
+	@echo "*** Building the inverse isma.fst ***"
+	@echo
+	@printf "load sma.fst \n\
+	invert net \n\
+	save stack isma.fst \n\
+	quit \n" > /tmp/isma-fst-script
+	@xfst < /tmp/isma-fst-script
+	@rm -f /tmp/isma-fst-script
+
+# Here we build the final transducer. The goal depends upon the tokenizer,
+# the spellrelaxer, the caseconverter and the bare transducer
 
 sma.fst: sma.save caseconv.fst spellrelax.fst tok.fst
 	@echo
