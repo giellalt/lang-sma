@@ -19,86 +19,68 @@ LEXICON Root
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
 
-! Only the cases that require special treatment.
-! The regular cases are treated by continuing to N_SG and N_PL.
-
 LEXICON N_IE
-  +N+Sg:0		N_SG	;
-  +N+Sg+Ill:%>A1n	FINAL1	;
-  +N+Pl:0		N_PL	;
-  +N+Sg+Ess:%>inI1	FINAL1	;
+  +N+Sg+Ill:%>A1n	FINAL1	;	! Special Ill
+  +N+Sg+Ess:%>inI1	FINAL1	;	! Special Ess
+  +N: J-LESS-CASE		;	! cases without -i/j-
+  +N: I-CLASS			;	! cases with -i-
 
 
 ! Inflection for nouns ending in oe
 ! ---------------------------------
 
-! Only the cases that require special treatment.
-! The regular cases are treated by continuing to N_SG and N_PL.
-
 LEXICON N_OE
-  +N+Sg:0		N_SG_OE	;
   +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Causes Umlaut
   +N+Sg+Ill:%>se	FINAL1	;	! does NOT cause Umlaut
-  +N+Pl:0		N_PL_OE	;
-  +N+Sg+Ess:%>jnI1	FINAL1	;
+  +N+Sg+Ess:%>jnI1	FINAL1	;	! cases without -i/j-
+  +N: J-LESS-CASE		;	! cases with -j-
+  +N: I-CLASS			;
 
 
 ! Inflection for all other nouns
 ! ------------------------------
 
-! The same cases as covered by the two other nounclass lexicons above
-! The rest of the cases are treated by continuing to N_SG and N_PL.
-
 LEXICON N_OTHERS
-  +N+Sg:0		N_SG	;
-  +N+Sg+Ill:%>A1sD1e	FINAL1	;
-  +N+Pl:0		N_PL	;
-  +N+Sg+Ess:%>inI1	FINAL1	;
+  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Special Ill
+  +N+Sg+Ess:%>inI1	FINAL1	;	! Special Ess
+  +N: J-LESS-CASE		;	! cases without -i/j-
+  +N: I-CLASS			;	! cases with -i-
 
 
 
-! Grammatical lexica for the nouns
-! ================================
+! Sublexica to handle the i/j difference between oe nouns and other
+! -----------------------------------------------------------------
 
-! N_SG and N_SG_OE are identical, except for +Kom.
-! They should be merged, with separate Kom entries.
+LEXICON I-CLASS
+  +N+Pl+Ela:%>ijstI1	FINAL1	;	! Ela has -iste
+  :%>i			IJ-CASE ;	! others have -ine etc.
 
-LEXICON N_SG
-  +Nom:0		FINAL1	;
-  +Acc:%>m		FINAL1	;
-  +Gen:%>n		FINAL1	;
-  +Ine:%>snI1		FINAL1	;
-  +Ela:%>stI1		FINAL1	;
-  +Kom:%>inI1		FINAL1	;
+LEXICON J-CLASS
+  +N+Pl+Ela:%>jstI1	FINAL1	;	! Ela has -ijste
+  :%>j			IJ-CASE ;	! others have -jne etc.
 
-LEXICON N_PL
-  +Nom:%>h		FINAL1	;
-  +Acc:%>idI1		FINAL1	;
-  +Gen:%>I3		FINAL1	;
-  +Ill:%>idI1		FINAL1	;
-  +Ine:%>inI1		FINAL1	;
-  +Ela:%>ijstI1		FINAL1	;
+
+
+! Remaining grammatical case lexica for the nouns
+! ===============================================
+
+
+LEXICON J-LESS-CASE
+  +Sg+Nom:0		FINAL1	;
+  +Sg+Acc:%>m		FINAL1	;
+  +Sg+Gen:%>n		FINAL1	;
+  +Sg+Ine:%>snI1	FINAL1	;
+  +Sg+Ela:%>stI1	FINAL1	;
+  +Pl+Nom:%>h		FINAL1	;
+  +Pl+Gen:%>I3		FINAL1	;
   +Kom:%>I3+gujmie	FINAL1	;
-! +Kom:%>I3+guejmie	FINAL1	;
-! I do not understand how the "guejmie" form has crept in. TT-011105.
 
-LEXICON N_SG_OE
-  +Nom:0		FINAL1	;
-  +Acc:%>m		FINAL1	;
-  +Gen:%>n		FINAL1	;
-  +Ine:%>snI1		FINAL1	;
-  +Ela:%>stI1		FINAL1	;
-  +Kom:%>jnI1		FINAL1	;
+LEXICON IJ-CASE
+  +Sg+Kom:nI1		FINAL1	;
+  +Pl+Acc:dI1		FINAL1	;
+  +Pl+Ill:dI1		FINAL1	;
+  +Pl+Ine:nI1		FINAL1	;
 
-LEXICON N_PL_OE
-  +Nom:%>h		FINAL1	;
-  +Acc:%>jdI1		FINAL1	;
-  +Gen:%>I3		FINAL1	;
-  +Ill:%>jdI1		FINAL1	;
-  +Ine:%>jnI1		FINAL1	;
-  +Ela:%>jstI1		FINAL1	;
-  +Kom:%>I3+gujmie	FINAL1	;
-  +Kom:%>I3+guejmie	FINAL1	;
 
 
 
