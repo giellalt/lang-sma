@@ -144,7 +144,7 @@ LEXICON LEA-PRET
 
 LEXICON NEG
 +Ind+Prs:	IJ-PRES ;
-+Ind+Prt:idtj	VSUF-II ;
++Ind+Prt:idtj	VSUF-PRT ;
 
 LEXICON IJ-PRES
 +Sg1:im		FINAL1	;
@@ -159,28 +159,89 @@ LEXICON IJ-PRES
 
 
 
-! Even-syllable verbs
+! Odd-syllable verbs
+! ==================
 
-LEXICON V_EVEN
-+V+Ind+Prs: VSUF-I ; 
-+V+Ind+Prt: VSUF-II ;
+LEXICON DÅERIEDIDH
+ +V+Ind+Prs: VSUF-PRS ;
+ +V+Ind+Prt: VSUF-PRT ;
+
+! Even-syllable verbs
+! ===================
+
+LEXICON BÅETEDH ! row A
+ +V+Prs: V-I-PRS-SG ; ! class I special
+ +V+Prs:  V-PRS-DUPL ;
+ +V+Prt:j  VSUF-PRT ;
+ ! row F trigger for Umlaut Prt
+
+LEXICON TJEARODH ! row C
+ +V+Prs:  V-II-PRS-SG ; ! class II special
+ +V+Prs:  V-PRS-DUPL ;
+ +V+Prt:j  VSUF-PRT ;
+
+LEXICON GUARKEDH ! row B
+ +V+Prs: V-III-PRS-SG ; ! class III special
+ +V+Prt:j  VSUF-PRT ;
+
+LEXICON TJOEHPEDH ! row D
+ +V+Prs:  VSUF-PRS ; 
+ +V+Prt:  VSUF-PRT ;
+
+LEXICON VÅÅJNEDH ! row E
+ +V+Prs:  VSUF-PRS ; 
+ +V+Prt:  VSUF-PRT ;
+
+LEXICON GÖÖLEDH ! row F
+ +V+Prs:  VSUF-PRS ; 
+ +V+Prt:  VSUF-PRT ;
+
+
+! Verbal sublexica
+! ================
+
+
+LEXICON V-I-PRS-SG
+ :A1 V-PRS-SG-12 ;
+ :A1 V-PRS-SG-3 ;
+
+LEXICON V-II-PRS-SG
+ V-PRS-SG-12 ;
+ :A1 V-PRS-SG-3 ; ! ?? parallels the byörkesne case
+
+LEXICON V-III-PRS-SG
+ V-PRS-SG-12 ; ! This should give guarka
+! V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
+! perhaps use A2 as 0 rule, triggers deletion in front of aff border
+! but then oe aff must come afterwards
+ :%>oe FINAL1 ; ! well, perhaps a more archi-looking affix ?
+
 
 
 ! Verbal affixes
 ! ==============
 
-LEXICON VSUF-I
-+Sg1:%>m		FINAL1	;
-+Sg2:%>h		FINAL1	;
-+Sg3:%>		FINAL1	;
-+Du1:%>n		FINAL1	;
-+Du2:%>dI1n	FINAL1	;
-+Du3:%>gan	FINAL1	;
-+Pl1:%>bI1	FINAL1	;
-+Pl2:%>dI1	FINAL1	;
-+Pl3:%>h		FINAL1	;
+LEXICON VSUF-PRS
+ V-PRS-SG-12 ;
+ V-PRS-SG-3 ;
+ V-PRS-DUPL ;
 
-LEXICON VSUF-II
+LEXICON V-PRS-SG-12
+ +Sg1:%>m		FINAL1	;
+ +Sg2:%>h		FINAL1	;
+
+LEXICON V-PRS-SG-3
+ +Sg3:%>		FINAL1	;
+
+LEXICON V-PRS-DUPL
+ +Du1:%>n		FINAL1	;
+ +Du2:%>dI1n	FINAL1	;
+ +Du3:%>gan	FINAL1	;
+ +Pl1:%>bI1	FINAL1	;
+ +Pl2:%>dI1	FINAL1	;
+ +Pl3:%>h		FINAL1	;
+
+LEXICON VSUF-PRT
 +Sg1:%>im		FINAL1	;
 +Sg2:%>ih		FINAL1	;
 +Sg3:%>i		FINAL1	;
