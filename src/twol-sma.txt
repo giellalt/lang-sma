@@ -26,7 +26,8 @@ Alphabet
   Å3:å Å3:ö
   Å4:å
   D1:0
-  %#:0 %>:0 %+:0 ;
+  %#:0 %>:0 %+:0 
+  X2:0 ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -305,6 +306,15 @@ D1:X <=> A1:a X: _ ;
 
 
 
+! New-style stem vowel alternations
+! =================================
+
+  "e deletion before i-initial suffix"
+  e:0 <=> _ X2:0 i: ;
+=======
+
+
+
 ! Blocking rules to prevent overgeneration
 ! ========================================
 
@@ -338,3 +348,4 @@ D1:X <=> A1:a X: _ ;
   0:å => U1:å _ ;
          Å2:å _ ;
          Å3:å _ ;
+
