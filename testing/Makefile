@@ -57,7 +57,7 @@ all-a: a-g.summary a-a.summary
 .PHONY: clean
 clean:
 	@echo
-	@echo "*** Now deleting all generated files ***"
+	@echo "*** Now deleting ALL the generated files ***"
 	@echo
 	@rm -f *.testbase \
 		  *.gtest \
@@ -74,6 +74,27 @@ clean:
 		  *.tgz	\
 		  *~ \
 		  $(TEMP)/*test-script
+
+.PHONY: almost-clean
+almost-clean:
+	@echo
+	@echo "*** Now deleting all generated files but the summary files ***"
+	@echo
+	@rm -f *.testbase \
+		  *.gtest \
+		  *.atest \
+		  *.gfacit \
+		  *.afacit \
+		  *.greport \
+		  *.areport \
+		  *.gresult \
+		  *.aresult \
+		  *.ptest \
+		  *paradigm \
+		  *.tgz	\
+		  *~ \
+		  $(TEMP)/*test-script
+
 
 # These variables define  the relationship between the source files
 # and the final output files (the reports), such that one can con-
