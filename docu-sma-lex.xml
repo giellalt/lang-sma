@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.3//EN" "document-v13.dtd">
+<document>
+  <header>
+    <title>Documenting the Southern Sámi lexicon file</title>
+  </header>
+  <body>
+    <section id="Documenting_the_Southern_Sámi_lexicon_file" >
+      <title>Documenting the Southern Sámi lexicon file</title>
+      <section id="Introduction" >
+        <title>Introduction</title>
+        <p>The sma lexicon is organised the same way as the Northern Sámi lexicon, cf. <link href="docu-sme-flowchart.html" >the flowchart of Northern Sámi</link>.</p>
+        <p>So far (May 2002) the sma lexicon contains nouns and some closed classes (auxiliary verbs, adverbs, adpositions and personal and demonstrative pronouns.</p>
+      </section>
+      <section id="Morphophonology_in_the_lexical_representations" >
+        <title>Morphophonology in the lexical representations</title>
+        <p>The nouns are entered with a morphophonolgical underlying form, and a corresponding simple morphological structure, with few morpholocial sublexica. Before the system is enlarged, we should evaluate it, and compare it to the other languages, and to Xerox practice.</p>
+      </section>
+      <section id="The_nouns" >
+        <title>The nouns</title>
+        <p>The noun stems are stored in <link href="../sma/noun-sma-lex.txt" >noun-sma-lex,txt</link>, whereas the morphology is found in <link href="../sma/sma-lex.txt" >sma-lex.txt</link>. It is made by converting the original Moshagen / Trosterud sma lexicon to the Xerox format. The lexical rules are taken from Karttunen's alternative formualtion of our file. His original is found in the archive of original files (Contact Trond for reference, if needed).</p>
+        <p>The nouns are divided into three stem classes, the N_IE nouns (gï¿½tie, etc.), the N_OE nouns (bearkoe, etc) and the N_OTHER nouns (all other ones, bi- and trisyllabic alike).</p>
+        <p>The case forms fall in three different groups: Forms unique to each of the three stem classes (listed under each sublexicon), forms with -j- in the N_OE class and -i- in the other ones (with separate i- and j- sublexica and a common suffix lexicon), and forms common to all stem classes (covered in a common continuation lexicon).</p>
+      </section>
+      <section id="The_proper_nouns" >
+        <title>The proper nouns</title>
+        <p>The proper nouns file contains appr. 1000 Southern Sami place names (achieved from Statens Kartverk), and appr. 23000 general names. Both the general names and the Sami names are divided in two groups, VNAME and CNAME. This is most certainly not correct for the latter group, probably also not for the former (the syllable structure will be relevant). Work is needed.</p>
+      </section>
+      <section id="The_adjectives" >
+        <title>The adjectives</title>
+        <p>Nothing has been done on the adjectives.</p>
+      </section>
+      <section id="The_verbs" >
+        <title>The verbs</title>
+        <p>The auxiliary <em>lea</em> and the negative verbs have been added. These verbs are irregular, and have thus been added without the use of any morphophonological processes.</p>
+        <p>Verb entries have been added for all stem classes and all Umlaut types in Bergsland's grammar.</p>
+        <source>stemcl. lexicon  umlaut row
+---------------------------
+odd    Dï¿½RIEDIDH -
+ I     Bï¿½TEDH    row A
+ II    TJEARODH   row C
+ III   GUARKEDH   row B
+ IV    TJOEHPEDH  row D
+ V     Vï¿½JNEDH   row E
+ VI    Gï¿½LEDH    row F
+---------------------------
+</source>
+        <p>Thus, the framework is now ready to add all the verbs. In addition, most inflection has been added (present and past tense, infinitive, verb genitive, actio, gerund, the participles, conneg form and verbabbessive).</p>
+        <p>No derivation is included.</p>
+      </section>
+      <section id="The_adpositions_and_prepositions" >
+        <title>The adpositions and prepositions</title>
+        <p>The adpositions in Bergsland's grammar have been listed, in two groups, pure postpositions and combined pre/postpositions (named &quot;adpositions&quot;).</p>
+      </section>
+      <section id="The_adverbs" >
+        <title>The adverbs</title>
+        <p>The adv-sma-lex.txt file lists all the adverbs mentioned in Bergsland's grammar. In some cases, it is unclear whether it is an adverb or just a noun prototypically used as an adverb.</p>
+        <p>Trond Trosterud</p>
+        <p>
+<!-- hhmts start -->Last modified: Mon May 6 00:44:21 CEST 2002 <!-- hhmts end -->        </p>
+      </section>
+    </section>
+  </body>
+</document>
