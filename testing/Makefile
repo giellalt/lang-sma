@@ -11,6 +11,8 @@ BINDIR = ../../script/testing
 UMASK=@umask 007
 
 # Default target:
+# Remove the comments in front of the verb and adjective
+# targets when you have codes and test cases for them
 .PHONY: all
 all: n-g.summary \
 	 n-a.summary \
