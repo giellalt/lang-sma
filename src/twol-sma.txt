@@ -52,12 +52,13 @@ Definitions
 
 Rules
  
- ! Bisyllabic stems
+! Bisyllabic stems
+! ================
 
 ! Rules for ie nouns
+! ------------------
  
 ! Final vowel is ie
-
   "I2 as ie"
   I2:i <=> Syllable2 _ 0:e (%>: [ I3:j | Cons ]) DomainBound:;
 
@@ -68,8 +69,11 @@ Rules
 ! Final vowels is 0, suffix is vowel-initial
   "I2 as 0"
   I2:0 <=> Syllable2 _ %>: Nucleus (Cons) (Nucleus)  DomainBound: ;
+
   
 ! Rules for oe nouns
+! ------------------
+
   "O2 as oe and o"
   O2:o <=> Syllable2 _ 0:e (%>: [ I3:j | Cons ]) DomainBound: ;
            Syllable2 _ %>: OpenFinal ;
@@ -77,7 +81,9 @@ Rules
   "O2 as 0"
   O2:0 <=>  Syllable2 _ %>: A1: OpenFinal ;
 
+
 ! Rules for a-nouns
+! -----------------
 ! A2 as e, as in three-syllabic forms
   "A2 as e"
   A2:e <=> Syllable2 _ %>: OpenFinal ;
@@ -86,7 +92,9 @@ Rules
   "A2 as 0"
   A2:0 <=> Syllable2 _ %>: Nucleus (Cons) (Nucleus) (:0) DomainBound: ;
 
+
 ! Rules for e-nouns
+! -----------------
 
 ! Rules for E2
   "E2 as 0"
@@ -94,6 +102,8 @@ Rules
 
 
 ! Rules for two-syllable contexts
+! ===============================
+
   "I1 as ie"
   I1:i <=> Syllable2 _ 0:e Cons [Nucleus %>: | V:0 %>: Nucleus] 
                                          OpenFinal ;
@@ -110,6 +120,7 @@ Rules
            where Cx in (A3 I1 O1)
                  Cy in (o  u  o)
            matched;
+
 
 ! The rules for a preceding j (A-j, C-j) are strictly parallel.
 
@@ -147,6 +158,14 @@ Rules
    I4:0 <=> Syllable2 Nucleus Cons _ %>: [Nucleus (Cons Nucleus) | h]
                                                          DomainBound: ;
 
+
+
+! Umlaut rules
+! ============
+
+! Monophtongs
+! -----------
+
 ! Umlaut in row A in the umlaut table
   "Umlaut in ie-context, monopthongs"
   Cx:Cy <=> Syllable1 _ Cons [I2:i | I2:e] ;
@@ -182,7 +201,9 @@ Rules
 	      Cy in (i  i u )
 	matched ;
 
+
 ! Dipthongs
+! ---------
 
 ! Umlaut in row A in the umlaut table
   "Umlaut in ie-context, diphthongs"
@@ -230,6 +251,10 @@ Rules
                   Cy in (e  e  ö  ö )
             matched;
 
+
+! Other rules
+! ===========
+
 ! Rules for I3 (genitive plural):
   "I3 as j"
    I3:j <=> [I2:i 0:e | A2: | O2:o 0:e] %>: _ DomainBound: ;
@@ -239,6 +264,7 @@ Rules
 
 
 ! Rules for surface dipthtongs
+! ============================
 
   "Inserted a"
   0:a <=>  Syllable1 [E1:| Å2: | Å3: | U1:] _ Cons I2: %>: A1:a ;
