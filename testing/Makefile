@@ -171,6 +171,7 @@ n-paradigm: n-para.ptest savefile
 	quit \n" > $(TEMP)/$@-gtest-script
 	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
+	@rm -f $<
 	@less $(WORD).paradigm
 
 
@@ -225,6 +226,7 @@ v-paradigm: v-para.ptest savefile
 	quit \n" > $(TEMP)/$@-gtest-script
 	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
+	@rm -f $<
 	@less $(WORD).paradigm
 
 
@@ -279,6 +281,7 @@ a-paradigm: a-para.ptest savefile
 	quit \n" > $(TEMP)/$@-gtest-script
 	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
+	@rm -f $<
 	@less $(WORD).paradigm
 
 
@@ -287,7 +290,7 @@ a-paradigm: a-para.ptest savefile
 
 # Make sure there is an available smX.save in the parent directory:
 savefile:
-	cd ../ && $(MAKE)
+	@cd ../ && $(MAKE)
 
 # Word form generation:
 # ---------------------
