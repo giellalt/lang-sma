@@ -131,6 +131,6 @@ clean:
 	@echo "*** Now deleting all *.fst, *.save and *.bin files ***"
 	@echo
 	@rm -f \
-	*.fst
-	*.save
+	*.fst \
+	*.save \
 	*.bin
