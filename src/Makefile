@@ -13,7 +13,7 @@ isma.fst: ../bin/isma.fst
 	invert net \n\
 	save stack ../bin/isma.fst \n\
 	quit \n" > ../../tmp/isma-fst-script
-	@xfst < ../../tmp/isma-fst-script
+	@xfst -utf8 < ../../tmp/isma-fst-script
 	@rm -f ../../tmp/isma-fst-script
 
 # Here we build the final transducer. The goal depends upon the tokenizer,
@@ -29,7 +29,7 @@ sma.fst: ../bin/sma.fst
 	@\"../bin/caseconv.fst\" .o. @\"../bin/spellrelax.fst\" ; \n\
 	save stack ../bin/sma.fst \n\
 	quit \n" > ../../tmp/sma-fst-script
-	@xfst < ../../tmp/sma-fst-script
+	@xfst -utf8 < ../../tmp/sma-fst-script
 	@rm -f ../../tmp/sma-fst-script
 
 # This goal is to allow for i instead of ï, and for ä/æ and ö/ø mix
@@ -42,7 +42,7 @@ spellrelax.fst: ../bin/spellrelax.fst
 	@printf "read regex < spellrelax.regex \n\
 	save stack ../bin/spellrelax.fst \n\
 	quit \n" > ../../tmp/spellrelax-sma-script
-	@xfst < ../../tmp/spellrelax-sma-script
+	@xfst -utf8 < ../../tmp/spellrelax-sma-script
 	@rm -f ../../tmp/spellrelax-sma-script
 
 
@@ -57,7 +57,7 @@ caseconv.fst: ../bin/caseconv.fst
 	@printf "read regex < case.regex \n\
 	save stack ../bin/caseconv.fst \n\
 	quit \n" > ../../tmp/caseconv-sma-script
-	@xfst < ../../tmp/caseconv-sma-script
+	@xfst -utf8 < ../../tmp/caseconv-sma-script
 	@rm -f ../../tmp/caseconv-sma-script
 
 
@@ -71,7 +71,7 @@ tok.fst: ../bin/tok.fst
 	@printf "source tok.txt \n\
 	save stack ../bin/tok.fst \n\
 	quit \n" > ../../tmp/tok-sma-script
-	@xfst < ../../tmp/tok-sma-script
+	@xfst -utf8 < ../../tmp/tok-sma-script
 	@rm -f ../../tmp/tok-sma-script
 
 
@@ -93,7 +93,7 @@ sma.save: ../bin/sma.save
 	compose-result \n\
 	save-result ../bin/sma.save \n\
 	quit \n" > ../../tmp/sma-save-script
-	@lexc < ../../tmp/sma-save-script
+	@lexc -utf8 < ../../tmp/sma-save-script
 	@rm -f ../../tmp/sma-save-script
 
 # The second goal is to build twol-sma.bin
@@ -108,7 +108,7 @@ twol-sma.bin: ../bin/twol-sma.bin
 	compile \n\
 	save-binary ../bin/twol-sma.bin \n\
 	quit \n" > ../../tmp/twol-sma-script
-	@twolc < ../../tmp/twol-sma-script
+	@twolc -utf8 < ../../tmp/twol-sma-script
 	@rm -f ../../tmp/twol-sma-script
 
 
