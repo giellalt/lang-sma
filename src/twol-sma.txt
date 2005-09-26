@@ -1,10 +1,10 @@
 Alphabet
-  a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å
-  á é í 
-  Å Ä Ö Ø Æ Á
-  Á É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Â Ê Ô Û Î Ã Ý þ Ñ Ð
-  á é ó ú í à è ò ù ì ë ü ï â ê ô û î ã ý þ ñ ð ß ª ß ç
-  0:a 0:e 0:ö 0:å
+  a b c d e f g h i Ã¯ j k l m n o p q r s t u v w x y z Ã¦ Ã¤ Ã¸ Ã¶ Ã¥
+  Ã¡ Ã© Ã­ 
+  Ã… Ã„ Ã– Ã˜ Ã† Ã
+  Ã Ã‰ Ã“ Ãš Ã Ã€ Ãˆ Ã’ Ã™ ÃŒ Ã‹ Ãœ Ã Ã‚ ÃŠ Ã” Ã› ÃŽ Ãƒ Ã Ã¾ Ã‘ Ã
+  Ã¡ Ã© Ã³ Ãº Ã­ Ã  Ã¨ Ã² Ã¹ Ã¬ Ã« Ã¼ Ã¯ Ã¢ Ãª Ã´ Ã» Ã® Ã£ Ã½ Ã¾ Ã± Ã° ÃŸ Âª ÃŸ Ã§
+  0:a 0:e 0:Ã¶ 0:Ã¥
   A1:a A1:e
 !  A2:a
   A2:a A2:e A2:0
@@ -18,25 +18,25 @@ Alphabet
   O1:o
 !  O2:o
   O2:o O2:0
-!  U1:u U1:ö
-  U1:u U1:ö U1:å
+!  U1:u U1:Ã¶
+  U1:u U1:Ã¶ U1:Ã¥
   U2:e
-  Æ:æ Æ:i Æ:y
-  Å1:å Å1:u Å1:o
-!  Å2:a Å2:e
-  Å2:a Å2:e Å2:å
-  Å3:å Å3:ö
-  Å4:å
+  Ã†:Ã¦ Ã†:i Ã†:y
+  Ã…1:Ã¥ Ã…1:u Ã…1:o
+!  Ã…2:a Ã…2:e
+  Ã…2:a Ã…2:e Ã…2:Ã¥
+  Ã…3:Ã¥ Ã…3:Ã¶
+  Ã…4:Ã¥
   D1:0
   %#:0 %>:0 %+:0 
   X2:0 ;
 
 Sets
-  Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
+  Letter = a b c d e f g h i Ã¯ j k l m n o p q r s t u v w x y z Ã¦ Ã¤ Ã¸ Ã¶ Ã¥ ;
   C      =   b c d   f g h     j k l m n   p q r s t   v w x   z           ;
   CJV    =   b c d   f g h       k l m n   p q r s t     w x   z           ;
-  V      = a       e       i ï           o           u       y   æ ä ø ö å
-           A1 A2 A3 A4 E1 I1 I2 I3 I4 O1 O2 U1 U2 Æ Å1 Å2 Å3 Å4 ;
+  V      = a       e       i Ã¯           o           u       y   Ã¦ Ã¤ Ã¸ Ã¶ Ã¥
+           A1 A2 A3 A4 E1 I1 I2 I3 I4 O1 O2 U1 U2 Ã† Ã…1 Ã…2 Ã…3 Ã…4 ;
   DobCons = s m ;
   Bound   = # %> ;
   WordBound = # ;
@@ -184,35 +184,35 @@ D1:X <=> A1:a X: _ ;
 ! Umlaut in row A in the umlaut table
   "Umlaut in ie-context, monopthongs"
   Cx:Cy <=> Onset _ Cons [I2:i | I2:e] ;
-        where Cx in (Æ A4 Å1)
+        where Cx in (Ã† A4 Ã…1)
 	      Cy in (i e  u )
 	matched ;
 
 ! Umlaut in row B in the umlaut table
   "Umlaut in a-context, monopthongs"
   Cx:Cy <=> Onset _ Cons I2:0 %>: A1:a ;
-        where Cx in (Æ A4 Å1)
-	      Cy in (æ a  å )
+        where Cx in (Ã† A4 Ã…1)
+	      Cy in (Ã¦ a  Ã¥ )
 	matched ;
 
 ! Umlaut in row C in the umlaut table
   "Umlaut in oe-context, monopthongs"
   Cx:Cy <=> Onset _ Cons O2:o ;
-        where Cx in (Æ A4 Å1)
-	      Cy in (æ a  å )
+        where Cx in (Ã† A4 Ã…1)
+	      Cy in (Ã¦ a  Ã¥ )
 	matched ;
 
 ! Umlaut in row E in the umlaut table
   "Umlaut before affixes on A1:e, row E, monophtongs"
   Cx:Cy <=> Onset _ Cons [I2:0|O2:0] %>: A1:e OpenOrClosedFinal ;
-        where Cx in (Æ A4 Å1)
+        where Cx in (Ã† A4 Ã…1)
 	      Cy in (y o  o )
 	matched ;
 
 ! Umlaut in row F in the umlaut table
   "Umlaut before affixes on -i, row F, monopthongs"
   Cx:Cy <=> Onset _ Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
-        where Cx in (Æ A4 Å1)
+        where Cx in (Ã† A4 Ã…1)
 	      Cy in (i  i u )
 	matched ;
 
@@ -223,47 +223,47 @@ D1:X <=> A1:a X: _ ;
 ! Umlaut in row A in the umlaut table
   "Umlaut in ie-context, diphthongs"
   Cx:Cy <=> Onset _ 0:e Cons [ I2:i | I2:e ] ;
-	    where Cx in (E1 Å2 Å3 U1)
-                  Cy in (i  a  å  u )
+	    where Cx in (E1 Ã…2 Ã…3 U1)
+                  Cy in (i  a  Ã¥  u )
             matched;
 
 ! Umlaut in row B in the umlaut table
   "Umlaut in a-context, diphthongs"
   Cx:Cy <=> Onset _ 0:a Cons I2: %>: A1:a ;
-	    where Cx in (E1 Å2 Å3 U1)
-                  Cy in (e  a  å  u )
+	    where Cx in (E1 Ã…2 Ã…3 U1)
+                  Cy in (e  a  Ã¥  u )
             matched;
 
 ! Umlaut in row C in the umlaut table
   "Umlaut in oe-context, diphthongs"
   Cx:Cy <=> Onset _ 0:a Cons O2:o ;
-	    where Cx in (E1 Å2 Å3 U1)
-                  Cy in (e  a  å  å )
+	    where Cx in (E1 Ã…2 Ã…3 U1)
+                  Cy in (e  a  Ã¥  Ã¥ )
             matched;
 
-  "Å4 to åe and åa"
-  Å4:å <=> Onset _ 0:a C+ I2: %>: A1: ;
+  "Ã…4 to Ã¥e and Ã¥a"
+  Ã…4:Ã¥ <=> Onset _ 0:a C+ I2: %>: A1: ;
            Onset _ 0:e C+ [I2:i |I2:e | I2:0 %>: Nucleus] ;
 
 ! Umlaut in row E in the umlaut table
   "Umlaut before affixes with A1:e, row E, diphthongs"
   Cx:Cy <=> Onset _ 0:Cy Cons [I2:0 | O2:0] %>: A1:e
                               OpenOrClosedFinal ;
-            where Cx in (Å2 Å3 U1)
-                  Cy in (å  å  å )
+            where Cx in (Ã…2 Ã…3 U1)
+                  Cy in (Ã¥  Ã¥  Ã¥ )
             matched;
 
-! Umlaut in row E in the umlaut table ie->yö
-  "Umlaut before affixes with A1, row E, ie->yö"
-  E1:y <=> Onset _ 0:ö Cons [I2:0 | O2:0] %>: [A1:a | A1:e]
+! Umlaut in row E in the umlaut table ie->yÃ¶
+  "Umlaut before affixes with A1, row E, ie->yÃ¶"
+  E1:y <=> Onset _ 0:Ã¶ Cons [I2:0 | O2:0] %>: [A1:a | A1:e]
                               OpenOrClosedFinal ;
 
 ! Umlaut in row F in the umlaut table
   "Umlaut before affixes on -i, row F, diphthongs"
   Cx:Cy <=> Onset _ 0:Cy Cons I2:0 %>: :i
                               (Cons Nucleus) DomainBound: ;
-            where Cx in (E1 Å2 Å3 U1)
-                  Cy in (e  e  ö  ö )
+            where Cx in (E1 Ã…2 Ã…3 U1)
+                  Cy in (e  e  Ã¶  Ã¶ )
             matched;
 
 
@@ -275,16 +275,16 @@ D1:X <=> A1:a X: _ ;
    I3:j <=> [I2:i 0:e | A2: | O2:o 0:e] %>: _ DomainBound: ;
 
   "I2 not as 0"
-   I2:0 /<= Onset Å4:å 0:e Cons _ %>: I3: DomainBound: ;
+   I2:0 /<= Onset Ã…4:Ã¥ 0:e Cons _ %>: I3: DomainBound: ;
 
 
 ! Rules for surface dipthtongs
 ! ============================
 
-  "Inserted a"
-  0:a <=>  Onset [E1:| Å2: | Å3: | U1:] _ Cons I2: %>: A1:a ;
-           Onset [E1:| Å2: | Å3:| U1:]  _ Cons O2:o ;
-           Onset Å4: _ C+ I2: %>: A1: ;
+!  "Inserted a"
+!  0:a <=>  Onset [E1:| Ã…2: | Ã…3: | U1:] _ Cons I2: %>: A1:a ;
+           Onset [E1:| Ã…2: | Ã…3:| U1:]  _ Cons O2:o ;
+           Onset Ã…4: _ C+ I2: %>: A1: ;
 
   "Inserted e"
   0:e <=> Syllable [I2:|O2:] _ (%>: [ I3:j | Cons ]) DomainBound:;
@@ -292,19 +292,19 @@ D1:X <=> A1:a X: _ ;
           Syllable Nucleus Cons [Nucleus %>: | (V:0) %>: Nucleus] Cons I1: _ 
           DomainBound:;
           Syllable O1: _ Cons [Nucleus %>: | (V:0) %>: Nucleus] OpenFinal ;
-	  Onset [E1:| Å2:| Å3:| U1:] _ Cons [ I2:i | I2:e ] ;
-          Onset Å4: _ C+ [I2:i |I2:e | I2:0 %>: Nucleus] ;
+	  Onset [E1:| Ã…2:| Ã…3:| U1:] _ Cons [ I2:i | I2:e ] ;
+          Onset Ã…4: _ C+ [I2:i |I2:e | I2:0 %>: Nucleus] ;
           [I2: | O2:] _ %>: I3: DomainBound: ;
-	  Onset [E1:|Å2:] _ Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
+	  Onset [E1:|Ã…2:] _ Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
 
-  "Inserted ö"
-  0:ö <=> Onset E1: _ 
+  "Inserted Ã¶"
+  0:Ã¶ <=> Onset E1: _ 
           Cons [I2:0 | O2:0] %>: [A1:a | A1:e] OpenOrClosedFinal ;
-	  Onset [Å3:|U1:] _
+	  Onset [Ã…3:|U1:] _
           Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
 
-  "Inserted å"
-  0:å <=> Onset [Å2:| Å3:| U1:] _
+  "Inserted Ã¥"
+  0:Ã¥ <=> Onset [Ã…2:| Ã…3:| U1:] _
           Cons [I2:0 | O2:0] %>: A1:e OpenOrClosedFinal ;
 
 
@@ -330,25 +330,25 @@ D1:X <=> A1:a X: _ ;
          O1:o _ ;
          O2:o _ ;
          U1:u _ ;
-         Å2:a _ ;
-         Å2:e _ ;
-         Å3:å _ ;
-         Å4:å _ ;
+         Ã…2:a _ ;
+         Ã…2:e _ ;
+         Ã…3:Ã¥ _ ;
+         Ã…4:Ã¥ _ ;
 
 "Berre 0:a etter leksikalsk vokal"
   0:a => E1:e _ ;
          U1:u _ ;
-         Å2:a _ ;
-         Å3:å _ ;
-         Å4:å _ ;
+         Ã…2:a _ ;
+         Ã…3:Ã¥ _ ;
+         Ã…4:Ã¥ _ ;
 
-"Berre 0:ö etter leksikalsk vokal"
-  0:ö => E1:y _ ;
-         U1:ö _ ;
-         Å3:ö _ ;
+"Berre 0:Ã¶ etter leksikalsk vokal"
+  0:Ã¶ => E1:y _ ;
+         U1:Ã¶ _ ;
+         Ã…3:Ã¶ _ ;
 
-"Berre 0:å etter leksikalsk vokal"
-  0:å => U1:å _ ;
-         Å2:å _ ;
-         Å3:å _ ;
+"Berre 0:Ã¥ etter leksikalsk vokal"
+  0:Ã¥ => U1:Ã¥ _ ;
+         Ã…2:Ã¥ _ ;
+         Ã…3:Ã¥ _ ;
 
