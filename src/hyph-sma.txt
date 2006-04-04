@@ -1,0 +1,109 @@
+! ========================= !
+! Hyphenator for South Sámi !
+! ========================= !
+
+echo <<defining Cns and Vow...>>
+
+define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö | 
+                   A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö | 
+é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý 
+É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
+
+define 2ndVow [ e | a | å | ö | ø | E | A | Å | Ö | Ø ] ;
+
+define VowNot2ndVow [ Vow - 2ndVow ] ;
+
+define vÅ [ å | Å ] ; define vO [ o | O ] ; define vA [ a | A ] ;
+define vE [ e | E ] ; define vI [ i | I ] ; define vU [ u | U ] ;
+define vØ [ ö | Ö ] ; define vØ [ ø | Ø ] ; define vY [ y | Y ] ;
+
+define vAEUÅ [ vA | vE | vU | vÅ ] ;
+define vAEIOUÅ [ vA | vE | vI | vO | vU | vÅ ] ;
+define vYØ [ vY | vØ ] ;
+define vYÖ [ vY | vÖ ] ;
+
+define VowNotAEUÅ   [ Vow - vAEUÅ ] ;   ! xa
+define VowNotAEIOUÅ [ Vow - vAEIOUÅ ] ; ! xe
+define VowNotYØ     [ Vow - vYØ ] ;     ! xø
+define VowNotYÖ     [ Vow - vYÖ ] ;     ! xö
+
+define AAdipht [ a a | A a | A A ] ; 
+define AEdipht [ a e | A e | A E ] ;
+define EAdipht [ e a | E a | E A ] ; 
+define EEdipht [ e e | E e | E E ] ;
+define IEdipht [ i e | I e | I E ] ; 
+define OEdipht [ o e | O e | O E ] ; 
+define UAdipht [ u a | U a | U A ] ; 
+define UEdipht [ u e | U e | U E ] ;
+define YÖdipht [ y ö | Y ö | Y Ö ] ;
+define YØdipht [ y ø | Y ø | Y Ø ] ;
+define ÅAdipht [ å a | Å a | Å A ] ; 
+define ÅEdipht [ å e | Å e | Å E ] ;
+define ÅÅdipht [ å å | Å å | Å Å ] ; 
+define ÖÖdipht [ ö ö | Ö ö | Ö Ö ] ; 
+define ØØdipht [ ø ø | Ø ø | Ø Ø ] ; 
+
+define dipht [ AAdipht | AEdipht | EAdipht | EEdipht | IEdipht | OEdipht |
+               UAdipht | UEdipht | YÖdipht | YØdipht | ÅAdipht | ÅEdipht | 
+               ÅÅdipht | ÖÖdipht | ØØdipht ] ;
+
+define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | 
+             B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ | 
+             p | r | s | š | t | ŧ | v | x | z | ž |   
+             P | R | S | Š | T | Ŧ | V | X | Z | Ž ] ; 
+
+define S [ S | s ] ; define Cnss [ Cns - S ] ;
+
+!define Sgm [ Cns | Vow ] ;
+
+!define Cns [ Cnssymb | Vow i ] ;
+
+echo << Rules>>
+
+define beforedipht [..] -> %- || Vow _ dipht ;
+define nodipht  [..] -> %- || Cns Vow _ VowNot2ndVow , Cns VowNotAEUÅ _ vA , 
+                              Cns VowNotAEIOUÅ _ vE , Cns VowNotYØ _ vØ , 
+                              Cns VowNotÅ _ vÅ , Cns VowNotYÖ _ vÖ ;
+define unvoiced [..] -> %- || Vow (Cns) _ h [ n | m | l | j | r ] Vow ;
+define palatal  [..] -> %- || Vow (Cns) n _ n j ; 
+define s2cns    [..] -> %- || Vow Cns _ s Cnss Vow ; ! máj-stet,
+define j4cns    [..] -> %- || Vow  Cns Cns Cns  _ [ [s|t] j | [t|d] s ] Vow ;
+define j3cns    [..] -> %- || Vow  Cns Cns      _ [ [s|t] j | [t|d] s ] Vow ;
+define j2cns    [..] -> %- || Vow  Cns          _ [ [s|t] j | [t|d] s ] Vow ;
+define j1cns    [..] -> %- || Vow               _ [ [s|t] j | [t|d] s ] Vow ;
+define 4cns     [..] -> %- || Vow  Cns Cns  Cns _  Cns Vow ;
+define 3cns     [..] -> %- || Vow  Cns Cns      _  Cns Vow ;
+define 2cns     [..] -> %- || Vow  Cns          _  Cns Vow ;
+define 1cns     [..] -> %- || Vow               _  Cns Vow ;
+
+                     
+echo <<Combining...>>
+
+read regex [
+beforedipht
+.o.
+nodipht
+.o.
+unvoiced
+.o.
+palatal 
+.o.
+s2cns
+.o.
+j4cns
+.o.
+j3cns
+.o.
+j2cns
+.o.
+j1cns
+.o.
+4cns
+.o.
+3cns
+.o.
+2cns
+.o.
+1cns ] ;
+
+invert net ;
