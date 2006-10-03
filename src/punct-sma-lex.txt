@@ -1,15 +1,53 @@
 LEXICON Punctuation
-+CLB:%,   # ;
-+CLB:%.   # ;
-+CLB:%:   # ;
-+CLB:%;	  # ;
-+CLB:%!	  # ;
-+CLB:%?	  # ;
-+PUNCT:%-  # ;
-+HYPH:%" # ;
-+HYPH:%« # ;
-+HYPH:%» # ;
-+PAR:%[ # ;
-+PAR:%] # ;
-+PAR:%( # ;
-+PAR:%) # ;
+! Clause boundary symbols
+
+%,+CLB:%,   # ;
+%.+CLB:%.   # ;
+%.%.+CLB:%.%.   # ;
+%.%.%.+CLB:%.%.%.   # ;
+%:+CLB:%:   # ;
+%;+CLB:%;	  # ;
+^excl+CLB:%!	  # ;	!^C^
+%?+CLB:%?	  # ;
+…+CLB:…		  # ;
+¿+CLB:¿		  # ;	! Only seen as noise.
+¶+CLB:¶		  # ;	
+
+•+PUNCT:•	  # ;
+-+PUNCT:-  # ; !hyphen
+--+PUNCT:--  # ; !double hyphen
+–+PUNCT:– # ; !endash
+—+PUNCT:— # ; !emdash
+=+PUNCT:=  # ;
+%%+PUNCT:%%  # ;
+&+PUNCT:& # ;
+%"+PUNCT:%"  # ;
+'+PUNCT:'  # ;   ! We use "'1" to avoid the CG symbol of ái'gi etc.
+%*+PUNCT:%*  # ;
+++PUNCT:+  # ;
+`+PUNCT:`  # ;
+´+PUNCT:´  # ;
+/+PUNCT:/  # ; 
++/-+PUNCT:+/- # ;
+%~+PUNCT:%~	  # ;
+
+
+! Paired punctuation marks
+
+%«+PUNCT+LEFT:%«  # ;
+%»+PUNCT+RIGHT:%»  # ;
+%“+PUNCT+LEFT:%“  # ;
+%”+PUNCT+RIGHT:%”  # ;
+%‘+PUNCT+LEFT:%‘  # ;
+%’+PUNCT+RIGHT:%’  # ;
+%‹+PUNCT+LEFT:%‹ # ;
+%›+PUNCT+RIGHT:%›  # ;
+%(+PUNCT+LEFT:%(  # ;
+%)+PUNCT+RIGHT:%)  # ;
+%[+PUNCT+LEFT:%[  # ;
+%]+PUNCT+RIGHT:%]  # ;
+%{+PUNCT+LEFT:%{  # ;
+%}+PUNCT+RIGHT:%}  # ;
+%<+PUNCT+LEFT:%<   # ;
+%>+PUNCT+LEFT:%>   # ;
+
