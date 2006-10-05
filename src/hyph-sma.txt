@@ -60,23 +60,28 @@ define S [ S | s ] ; define Cnss [ Cns - S ] ;
 
 echo << Rules>>
 
-define beforedipht [..] -> %- || Vow _ dipht ;
-define nodipht  [..] -> %- || Cns Vow _ VowNot2ndVow , Cns VowNotAEUÅ _ vA , 
-                              Cns VowNotAEIOUÅ _ vE , Cns VowNotYØ _ vØ , 
-                              Cns VowNotÅ _ vÅ , Cns VowNotYÖ _ vÖ ;
-define unvoiced [..] -> %- || Vow (Cns) _ h [ n | m | l | j | r ] Vow ;
-define palatal  [..] -> %- || Vow (Cns) n _ n j ; 
-define s2cns    [..] -> %- || Vow Cns _ s Cnss Vow ; ! máj-stet,
-define j4cns    [..] -> %- || Vow  Cns Cns Cns  _ [ [s|t] j | [t|d] s ] Vow ;
-define j3cns    [..] -> %- || Vow  Cns Cns      _ [ [s|t] j | [t|d] s ] Vow ;
-define j2cns    [..] -> %- || Vow  Cns          _ [ [s|t] j | [t|d] s ] Vow ;
-define j1cns    [..] -> %- || Vow               _ [ [s|t] j | [t|d] s ] Vow ;
-define 4cns     [..] -> %- || Vow  Cns Cns  Cns _  Cns Vow ;
-define 3cns     [..] -> %- || Vow  Cns Cns      _  Cns Vow ;
-define 2cns     [..] -> %- || Vow  Cns          _  Cns Vow ;
-define 1cns     [..] -> %- || Vow               _  Cns Vow ;
+define beforedipht [..] -> %- ||     Vow           _ dipht ;
+define nodipht     [..] -> %- || Cns Vow           _ VowNot2ndVow , 
+                                 Cns VowNotAEUÅ    _ vA , 
+                                 Cns VowNotAEIOUÅ  _ vE , 
+                                 Cns VowNotYØ      _ vØ , 
+                                 Cns VowNotÅ       _ vÅ , 
+                                 Cns VowNotYÖ      _ vÖ ;
+define unvoiced    [..] -> %- || Vow (Cns)         _ h [ n | m | l | j | r ] Vow ;
+define palatal     [..] -> %- || Vow (Cns) n       _ n j ; 
+define s2cns       [..] -> %- || Vow  Cns          _ s Cnss Vow ; ! máj-stet,
+define j4cns       [..] -> %- || Vow  Cns Cns Cns  _ [ [n|s|t] j | [t|d] s ] Vow ;
+define j3cns       [..] -> %- || Vow  Cns Cns      _ [ [n|s|t] j | [t|d] s ] Vow ;
+define j2cns       [..] -> %- || Vow  Cns          _ [ [n|s|t] j | [t|d] s ] Vow ;
+define j1cns       [..] -> %- || Vow               _ [ [n|s|t] j | [t|d] s ] Vow ;
+define 4cns        [..] -> %- || Vow  Cns Cns  Cns _  Cns Vow ;
+define 3cns        [..] -> %- || Vow  Cns Cns      _  Cns Vow ;
+define 2cns        [..] -> %- || Vow  Cns          _  Cns Vow ;
+define 1cns        [..] -> %- || Vow               _  Cns Vow ;
 
-                     
+!Error: We fail with: jijnjebh        jijn-jebh Vow Cns _ n j Vow = 72 should be jij-nj     
+
+               
 echo <<Combining...>>
 
 read regex [
