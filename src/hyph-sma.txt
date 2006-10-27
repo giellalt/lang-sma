@@ -60,28 +60,52 @@ define S [ S | s ] ; define Cnss [ Cns - S ] ;
 
 echo << Rules>>
 
-define beforedipht [..] -> %- ||     Vow           _ dipht ;
-define nodipht     [..] -> %- || Cns Vow           _ VowNot2ndVow , 
-                                 Cns VowNotAEUÅ    _ vA , 
-                                 Cns VowNotAEIOUÅ  _ vE , 
-                                 Cns VowNotYØ      _ vØ , 
-                                 Cns VowNotÅ       _ vÅ , 
-                                 Cns VowNotYÖ      _ vÖ ;
-define unvoiced    [..] -> %- || Vow (Cns)         _ h [ n | k | m | l | j | r ] Vow ;
-define palatal     [..] -> %- || Vow (Cns) n       _ n j ; 
-define s2cns       [..] -> %- || Vow  Cns          _ s Cnss Vow ; ! máj-stet,
-define j4cns       [..] -> %- || Vow  Cns Cns Cns  _ [ [n|s|t] j | [t|d] s ] Vow ;
-define j3cns       [..] -> %- || Vow  Cns Cns      _ [ [n|s|t] j | [t|d] s ] Vow ;
-define j2cns       [..] -> %- || Vow  Cns          _ [ [n|s|t] j | [t|d] s ] Vow ;
-define j1cns       [..] -> %- || Vow               _ [ [n|s|t] j | [t|d] s ] Vow ;
-define 4cns        [..] -> %- || Vow  Cns Cns  Cns _  Cns Vow ;
-define 3cns        [..] -> %- || Vow  Cns Cns      _  Cns Vow ;
-define 2cns        [..] -> %- || Vow  Cns          _  Cns Vow ;
-define 1cns        [..] -> %- || Vow               _  Cns Vow ;
+define beforedipht [..] -> %- ||     Vow            _ dipht ;
+define nodipht     [..] -> %- || Cns Vow            _ VowNot2ndVow , 
+                                 Cns VowNotAEUÅ     _ vA , 
+                                 Cns VowNotAEIOUÅ   _ vE , 
+                                 Cns VowNotYØ       _ vØ , 
+                                 Cns VowNotÅ        _ vÅ , 
+                                 Cns VowNotYÖ       _ vÖ ;
+define divdigraph   [..] -> %- || Vow  Cns*         _ n g Vow ; ! !jarngas
+define unvoiced     [..] -> %- || Vow (Cns)         _ h [ n | m | l | j | r ] Vow ;
+define preaspirated [..] -> %- || Vow  Cns          _ h [ p | t | k ] ( [ s | j ] ) Vow ;
+define palatal      [..] -> %- || Vow (Cns) n       _ n j ; 
+define s2cns        [..] -> %- || Vow  Cns          _ s Cnss Vow ; ! máj-stet,
+define j4cns        [..] -> %- || Vow  Cns Cns Cns  _ [ [n|s|t] j | [t|d] s ] Vow ;
+define j3cns        [..] -> %- || Vow  Cns Cns      _ [ [n|s|t] j | [t|d] s ] Vow ;
+define j2cns        [..] -> %- || Vow  Cns          _ [ [n|s|t] j | [t|d] s ] Vow ;
+define j1cns        [..] -> %- || Vow               _ [ [n|s|t] j | [t|d] s ] Vow ;
+define 4cns         [..] -> %- || Vow  Cns Cns  Cns _  Cns Vow ;
+define 3cns         [..] -> %- || Vow  Cns Cns      _  Cns Vow ;
+define 2cns         [..] -> %- || Vow  Cns          _  Cns Vow ;
+define 1cns         [..] -> %- || Vow               _  Cns Vow ;
 
 !Error: We fail with: jijnjebh        jijn-jebh Vow Cns _ n j Vow = 72 should be jij-nj     
+! Wrong: lokn-ge-sieh
+! Corr:  lok-nge-sieh
+! minn-ge-mes
+! min-nge-mes
+!Lutnjiest<BE>jja
+!Lut-njes-taj-ja
+!Lut-nje-staj-ja ???
+!lutnje^stajja
+!lut-nje^staj-ja
+!tjåanghkanidh
 
-               
+! Lagre denne fila. 
+! i xfst: source < dennefila.txt
+! i xfst: save hy.fst
+!cat ~/Desktop/lpstekst/*txt | tr ' ' '\n' | tr -d ',.;\!\?' | ./lookup -utf8 hy.fst | cut -f2 | tr '\n' ' ' | less
+! VCCCV
+! Maksimere coda
+
+! Bruk
+! cat korpusfiler/*txt | tr ' ' '\n' | tr -d ',.;\!\?' | lookup hy.fst | cut -f2 | tr '\n' ' ' | less
+!chmod a+x lookup
+!cat ~/Desktop/lpstekst/*txt | less
+!./lookup -utf8 hy.fst
+
 echo <<Combining...>>
 
 read regex [
@@ -90,6 +114,10 @@ beforedipht
 nodipht
 .o.
 unvoiced
+.o.
+divdigraph
+.o.
+preaspirated
 .o.
 palatal 
 .o.
