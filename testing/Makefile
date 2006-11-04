@@ -2,7 +2,7 @@ SHELL = /bin/sh
 #!/usr/bin/make
 #
 # This is a makefile to automatise most of the testing.
-# It is language independent within the framework of the S�mi language
+# It is language independent within the framework of the Sámi language
 # technology project. See further user documentation (and technical as well)
 # in $CVSROOT/gt/doc/docu-testing.html
 
@@ -404,3 +404,49 @@ savefile:
 	@echo
 	-@diff --side-by-side --width=70 $< $*.afacit > $@
 
+
+
+
+# TWOL-testing :
+#===============
+
+# Usage:
+# make twol-test (extracts the test words from src/twol-sme.txt)
+# make twol-pos  (tests for the positive test pairs, prints output to twol-pos.out)
+# make twol-neg  (tests for the positive test pairs, prints output to twol-neg.out)
+# make twol-test FILE=filename.txt (test for pairs in filename.txt)
+
+TWOLC = twolc -utf8
+TYPE = pos
+FILEPOS = twol-pos.in
+FILENEG = twol-neg.in
+FILE = $(FILEPOS)
+
+twol-extract: ../src/twol-sma.txt
+	@echo
+	@echo "*** Extracting twol tests ***"
+	@echo
+	@grep '^!€' $< > $(FILEPOS)
+	@grep '^!\$$' $< > $(FILENEG)
+	@touch twol-pos.out
+	@touch twol-neg.out
+
+twol-test: ../bin/twol-sma.bin twol-extract
+	@echo
+	@echo "*** Testing twolc rules ***"
+	@echo
+	@printf "install-binary $< \n\
+	pair-test-file $(FILE) twol-$(TYPE).out \n\
+	quit \n" > $(TEMP)/twol-test-script
+	$(TWOLC) < $(TEMP)/twol-test-script
+	@rm -f $(TEMP)/twol-test-script
+
+twol-pos: TYPE=pos
+twol-pos: FILE=$(FILEPOS)
+twol-pos: twol-test
+
+twol-neg: TYPE=neg
+twol-neg: FILE=$(FILENEG)
+twol-neg: twol-test
+
+twol-both: twol-pos twol-neg
