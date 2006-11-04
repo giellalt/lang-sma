@@ -10,7 +10,8 @@ Multichar_Symbols
   +Du1 +Du2 +Du3
   +Pl1 +Pl2 +Pl3
 
-  +Inf +Neg +VGen +Ger +Ptc
+  +Inf +Neg  +Ptc
+! +VGen +Ger
   +Ind
   +Imp +ImpII !Den siste berre nektingsverbet
 
@@ -19,7 +20,8 @@ Multichar_Symbols
 
 ! Frå nordsamisk:
 ! +Actor +Clt
-  +A +Comp +Superl
+! +A
+  +Comp +Superl
   +Attr
 
   +Pron +Pers +Dem +Adp +Po +Adv +Interj
@@ -208,9 +210,9 @@ LEXICON DÅERIEDIDH
 ! ===================
 
 LEXICON BÅETEDH ! row A
- +V+Prs: V-I-PRS-SG ; ! class I special
- +V+Prs:  V-PRS-DUPL ;
- +V+Prt:j  VSUF-PRT ;
+ +V+Ind+Prs: V-I-PRS-SG ; ! class I special
+ +V+Ind+Prs:  V-PRS-DUPL ;
+ +V+Ind+Prt:j  VSUF-PRT ;
  +V+Inf:%>dh FINAL1 ;
  +V+Ger:%>minI1 FINAL1 ;
  +V+PrtPrc:%>me FINAL1 ;
@@ -218,25 +220,45 @@ LEXICON BÅETEDH ! row A
  ! row F trigger for Umlaut Prt
 
 LEXICON TJEARODH ! row C
- +V+Prs:  V-II-PRS-SG ; ! class II special
- +V+Prs:  V-PRS-DUPL ;
- +V+Prt:j  VSUF-PRT ;
+ +V+Ind+Prs:  V-II-PRS-SG ; ! class II special
+ +V+Ind+Prs:  V-PRS-DUPL ;
+ +V+Ind+Prt:j  VSUF-PRT ;
+ +V+Inf:%>dh FINAL1 ;
+ +V+Ger:%>minI1 FINAL1 ;
+ +V+PrtPrc:%>me FINAL1 ;
+ +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON GUARKEDH ! row B
- +V+Prs: V-III-PRS-SG ; ! class III special
- +V+Prt:j  VSUF-PRT ;
+ +V+Ind+Prs: V-III-PRS-SG ; ! class III special
+ +V+Ind+Prt:j  VSUF-PRT ;
+ +V+Inf:%>dh FINAL1 ;
+ +V+Ger:%>minI1 FINAL1 ;
+ +V+PrtPrc:%>me FINAL1 ;
+ +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON TJOEHPEDH ! row D
- +V+Prs:  VSUF-PRS ; 
- +V+Prt:  VSUF-PRT ;
+ +V+Ind+Prs:  VSUF-PRS ; 
+ +V+Ind+Prt:  VSUF-PRT ;
+ +V+Inf:%>dh FINAL1 ;
+ +V+Ger:%>minI1 FINAL1 ;
+ +V+PrtPrc:%>me FINAL1 ;
+ +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON VÅÅJNEDH ! row E
- +V+Prs:  VSUF-PRS ; 
- +V+Prt:  VSUF-PRT ;
+ +V+Ind+Prs:  VSUF-PRS ; 
+ +V+Ind+Prt:  VSUF-PRT ;
+ +V+Inf:%>dh FINAL1 ;
+ +V+Ger:%>minI1 FINAL1 ;
+ +V+PrtPrc:%>me FINAL1 ;
+ +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON GÖÖLEDH ! row F
- +V+Prs:  VSUF-PRS ; 
- +V+Prt:  VSUF-PRT ;
+ +V+Ind+Prs:  VSUF-PRS ; 
+ +V+Ind+Prt:  VSUF-PRT ;
+ +V+Inf:%>dh FINAL1 ;
+ +V+Ger:%>minI1 FINAL1 ;
+ +V+PrtPrc:%>me FINAL1 ;
+ +V+ConNeg:%>0h  FINAL1 ;
 
 
 ! Verbal sublexica
@@ -280,21 +302,21 @@ LEXICON V-PRS-SG-3
 
 LEXICON V-PRS-DUPL
  +Du1:%>n		FINAL1	;
- +Du2:%>dI1n	FINAL1	;
- +Du3:%>gan	FINAL1	;
- +Pl1:%>bI1	FINAL1	;
- +Pl2:%>dI1	FINAL1	;
+ +Du2:%>dI1n		FINAL1	;
+ +Du3:%>gan		FINAL1	;
+ +Pl1:%>bI1		FINAL1	;
+ +Pl2:%>dI1		FINAL1	;
  +Pl3:%>h		FINAL1	;
 
 LEXICON VSUF-PRT
 +Sg1:%>im		FINAL1	;
 +Sg2:%>ih		FINAL1	;
 +Sg3:%>i		FINAL1	;
-+Du1:%>imen	FINAL1	;
-+Du2:%>iden	FINAL1	;
-+Du3:%>igan	FINAL1	;
-+Pl1:%>imh	FINAL1	;
-+Pl2:%>idh	FINAL1	;
++Du1:%>imen		FINAL1	;
++Du2:%>iden		FINAL1	;
++Du3:%>igan		FINAL1	;
++Pl1:%>imh		FINAL1	;
++Pl2:%>idh		FINAL1	;
 +Pl3:%>in		FINAL1	;
 
 
