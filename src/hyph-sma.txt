@@ -6,7 +6,7 @@ echo <<defining Cns and Vow...>>
 
 define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö | 
                    A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö | 
-é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý 
+é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý |
 É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
 
 define 2ndVow [ e | a | å | ö | ø | E | A | Å | Ö | Ø ] ;
@@ -15,37 +15,48 @@ define VowNot2ndVow [ Vow - 2ndVow ] ;
 
 define vÅ [ å | Å ] ; define vO [ o | O ] ; define vA [ a | A ] ;
 define vE [ e | E ] ; define vI [ i | I ] ; define vU [ u | U ] ;
-define vØ [ ö | Ö ] ; define vØ [ ø | Ø ] ; define vY [ y | Y ] ;
+define vY [ y | Y ] ;
+define vÆ [ æ | Æ | ä | Ä ] ;  define vØ [ ö | Ö | ø | Ø ] ;        
 
 define vAEUÅ [ vA | vE | vU | vÅ ] ;
 define vAEIOUÅ [ vA | vE | vI | vO | vU | vÅ ] ;
-define vYØ [ vY | vØ ] ;
-define vYÖ [ vY | vÖ ] ;
+define vYØ [ vY | vØ | vÖ ] ;
+
 
 define VowNotAEUÅ   [ Vow - vAEUÅ ] ;   ! xa
 define VowNotAEIOUÅ [ Vow - vAEIOUÅ ] ; ! xe
-define VowNotYØ     [ Vow - vYØ ] ;     ! xø
-define VowNotYÖ     [ Vow - vYÖ ] ;     ! xö
+define VowNotYØ     [ Vow - vYØ ] ;     ! xø, xö
+
 
 define AAdipht [ a a | A a | A A ] ; 
 define AEdipht [ a e | A e | A E ] ;
 define EAdipht [ e a | E a | E A ] ; 
 define EEdipht [ e e | E e | E E ] ;
-define IEdipht [ i e | I e | I E ] ; 
+define IEdipht [ i e | I e | I E | ï e | Ï e | Ï E ] ; 
 define OEdipht [ o e | O e | O E ] ; 
 define UAdipht [ u a | U a | U A ] ; 
 define UEdipht [ u e | U e | U E ] ;
-define YÖdipht [ y ö | Y ö | Y Ö ] ;
-define YØdipht [ y ø | Y ø | Y Ø ] ;
+define YØdipht [ y ø | Y ø | Y Ø | y ö | Y ö | Y Ö ] ;
 define ÅAdipht [ å a | Å a | Å A ] ; 
 define ÅEdipht [ å e | Å e | Å E ] ;
 define ÅÅdipht [ å å | Å å | Å Å ] ; 
-define ÖÖdipht [ ö ö | Ö ö | Ö Ö ] ; 
-define ØØdipht [ ø ø | Ø ø | Ø Ø ] ; 
+define ØØdipht [ ø ø | Ø ø | Ø Ø | ö ö | Ö ö | Ö Ö ] ; 
+
+define d [ d | D ] ;
+define g [ g | G ] ;
+define h [ h | H ] ;
+define j [ j | J ] ;
+define k [ k | K ] ;
+define l [ l | L ] ;
+define n [ n | N ] ;
+define p [ p | P ] ;
+define r [ r | R ] ;
+define s [ s | S ] ;
+define t [ t | T ] ;
 
 define dipht [ AAdipht | AEdipht | EAdipht | EEdipht | IEdipht | OEdipht |
-               UAdipht | UEdipht | YÖdipht | YØdipht | ÅAdipht | ÅEdipht | 
-               ÅÅdipht | ÖÖdipht | ØØdipht ] ;
+               UAdipht | UEdipht | YØdipht | ÅAdipht | ÅEdipht | 
+               ÅÅdipht | ØØdipht ] ;
 
 define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | 
              B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ | 
@@ -65,17 +76,17 @@ define nodipht     [..] -> %- || Cns Vow            _ VowNot2ndVow ,
                                  Cns VowNotAEUÅ     _ vA , 
                                  Cns VowNotAEIOUÅ   _ vE , 
                                  Cns VowNotYØ       _ vØ , 
-                                 Cns VowNotÅ        _ vÅ , 
-                                 Cns VowNotYÖ       _ vÖ ;
-define divdigraph   [..] -> %- || Vow  Cns*         _ n g Vow ; ! !jarngas
+                                 Cns VowNotÅ        _ vÅ ;
+!define divdigraph  [..] -> %- || Vow  Cns*         _ n g  Vow ; ! !jar-ngas
+define divdigraph   [..] -> %- || Vow           n g _ Cns+ Vow ; ! !jarn-gas, a-nga
 define unvoiced     [..] -> %- || Vow (Cns)         _ h [ n | m | l | j | r ] Vow ;
 define preaspirated [..] -> %- || Vow  Cns          _ h [ p | t | k ] ( [ s | j ] ) Vow ;
 define palatal      [..] -> %- || Vow (Cns) n       _ n j ; 
 define s2cns        [..] -> %- || Vow  Cns          _ s Cnss Vow ; ! máj-stet,
-define j4cns        [..] -> %- || Vow  Cns Cns Cns  _ [ [n|s|t] j | [t|d] s ] Vow ;
-define j3cns        [..] -> %- || Vow  Cns Cns      _ [ [n|s|t] j | [t|d] s ] Vow ;
-define j2cns        [..] -> %- || Vow  Cns          _ [ [n|s|t] j | [t|d] s ] Vow ;
-define j1cns        [..] -> %- || Vow               _ [ [n|s|t] j | [t|d] s ] Vow ;
+define j4cns        [..] -> %- || Vow  Cns Cns Cns  _ [ [b|n|s|t] j | [t|d] s ] Vow ;
+define j3cns        [..] -> %- || Vow  Cns Cns      _ [ [b|n|s|t] j | [t|d] s ] Vow ;
+define j2cns        [..] -> %- || Vow  Cns          _ [ [b|n|s|t] j | [t|d] s ] Vow ;
+define j1cns        [..] -> %- || Vow               _ [ [b|n|s|t] j | [t|d] s ] Vow ;
 define 4cns         [..] -> %- || Vow  Cns Cns  Cns _  Cns Vow ;
 define 3cns         [..] -> %- || Vow  Cns Cns      _  Cns Vow ;
 define 2cns         [..] -> %- || Vow  Cns          _  Cns Vow ;
