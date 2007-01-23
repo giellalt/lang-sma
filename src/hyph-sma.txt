@@ -13,8 +13,8 @@ define 2ndVow [ e | a | å | ö | ø | E | A | Å | Ö | Ø ] ;
 
 define VowNot2ndVow [ Vow - 2ndVow ] ;
 
-define vÅ [ å | Å ] ; define vO [ o | O ] ; define vA [ a | A ] ;
-define vE [ e | E ] ; define vI [ i | I ] ; define vU [ u | U ] ;
+define vÅ [ å | Å ] ; define vO [ o | O ] ;         define vA [ a | A ] ;
+define vE [ e | E ] ; define vI [ i | I | ï | Ï ] ; define vU [ u | U ] ;
 define vY [ y | Y ] ;
 define vÆ [ æ | Æ | ä | Ä ] ;  define vØ [ ö | Ö | ø | Ø ] ;        
 
@@ -77,16 +77,16 @@ define nodipht     [..] -> %- || Cns Vow            _ VowNot2ndVow ,
                                  Cns VowNotAEIOUÅ   _ vE , 
                                  Cns VowNotYØ       _ vØ , 
                                  Cns VowNotÅ        _ vÅ ;
-!define divdigraph  [..] -> %- || Vow  Cns*         _ n g  Vow ; ! !jar-ngas
-define divdigraph   [..] -> %- || Vow           n g _ Cns+ Vow ; ! !jarn-gas, a-nga
-define unvoiced     [..] -> %- || Vow (Cns)         _ h [ n | m | l | j | r ] Vow ;
-define preaspirated [..] -> %- || Vow  Cns          _ h [ p | t | k ] ( [ s | j ] ) Vow ;
+define divdigraph   [..] -> %- || Vow  Cns*         _ n g  Vow ; ! !jar-ngas
+!define divdigraph  [..] -> %- || Vow           n g _ Cns+ Vow ; ! !jarn-gas, a-nga
+define unvoiced     [..] -> %- || Vow (Cns)         _ h [ n | m | l | j | r | v ] Vow ;
+define preaspirated [..] -> %- || Vow  Cns          _ h [ p | t | k ] ([ s | j ]) Vow ;
 define palatal      [..] -> %- || Vow (Cns) n       _ n j ; 
-define s2cns        [..] -> %- || Vow  Cns          _ s Cnss Vow ; ! máj-stet,
+define s2cns        [..] -> %- || Vow [Cns - t]     _ s Cnss Vow ; ! máj-stet,
 define j4cns        [..] -> %- || Vow  Cns Cns Cns  _ [ [b|n|s|t] j | [t|d] s ] Vow ;
 define j3cns        [..] -> %- || Vow  Cns Cns      _ [ [b|n|s|t] j | [t|d] s ] Vow ;
 define j2cns        [..] -> %- || Vow  Cns          _ [ [b|n|s|t] j | [t|d] s ] Vow ;
-define j1cns        [..] -> %- || Vow               _ [ [b|n|s|t] j | [t|d] s ] Vow ;
+define j1cns        [..] -> %- || Vow               _ [ [  n|s|t] j | [t|d] s ] Vow ;
 define 4cns         [..] -> %- || Vow  Cns Cns  Cns _  Cns Vow ;
 define 3cns         [..] -> %- || Vow  Cns Cns      _  Cns Vow ;
 define 2cns         [..] -> %- || Vow  Cns          _  Cns Vow ;
