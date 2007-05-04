@@ -422,7 +422,7 @@ FILEPOS = twol-pos.in
 FILENEG = twol-neg.in
 FILE = $(FILEPOS)
 
-twol-extract: ../src/twol-sma.txt
+twol-extract: ../src/twol-sma-descriptive.txt
 	@echo
 	@echo "*** Extracting twol tests ***"
 	@echo
