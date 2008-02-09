@@ -10,7 +10,7 @@ Multichar_Symbols
   +Du1 +Du2 +Du3
   +Pl1 +Pl2 +Pl3
 
-  +Inf +Neg  +Ptc
+  +Inf +Neg  +PrfPrc
 ! +VGen +Ger
   +Ind
   +Imp +ImpII !Den siste berre nektingsverbet
@@ -29,7 +29,8 @@ Multichar_Symbols
 
   A1 A2 A3 A4 E1 I1 I2 I3 I4 O1 O2 U1 U2 Æ Å1 Å2 Å3 Å4 D1
   X2
-
+  E2 ! insert e ! Fjern denne.
+  %^DISIMP
 
 ! ================
 ! The root lexicon
@@ -61,7 +62,7 @@ LEXICON Root
 
 LEXICON N_IE
   +N+Sg+Ill:%>A1n	FINAL1	;	! Special Ill
-  +N+Ess:%>inI1	FINAL1	;	! Special Ess
+  +N+Ess:%>inI1		FINAL1	;	! Special Ess
   +N: J-LESS-CASE		;	! cases without -i/j-
   +N: I-CLASS			;	! cases with -i-
 
@@ -72,7 +73,7 @@ LEXICON N_IE
 LEXICON N_OE
   +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Causes Umlaut
   +N+Sg+Ill:%>se	FINAL1	;	! does NOT cause Umlaut
-  +N+Ess:%>jnI1	FINAL1	;	! cases without -i/j-
+  +N+Ess:%>jnI1		FINAL1	;	! cases without -i/j-
   +N: J-LESS-CASE		;	! cases with -j-
   +N: J-CLASS			;
 
@@ -187,25 +188,42 @@ LEXICON IJ-PRES
 ! Odd-syllable verbs
 ! ==================
 
+! Odd syllable verbs differ in Prt Sg3.
+! This form is treated separately, and
+! the rest of the paradigm is conflated.
+
+LEXICON GOLTELIDH
++V+Ind+Prt+Sg3:%>e FINAL1 ;
+                   V-ODD ;
+
 LEXICON DÅERIEDIDH
++V+Ind+Prt+Sg3:%>i FINAL1 ;
+                   V-ODD ;
+
+LEXICON DÅERIEDIDH
++V+Ind+Prt+Sg3:%>i FINAL1 ;
+                   V-ODD ;
+
+LEXICON V-ODD
 
 ! Finite forms
 ! ------------
- +V+Ind+Prs: VSUF-PRS ;
- +V+Ind+Prt: VSUF-PRT ;
+ +V+Ind+Prs: VSUF-ODD-PRS ;
+ +V+Ind+Prt: VSUF-ODD-PRT ;
+ +V+Imp:     VSUF-ODD-IMP ;
 
 ! Infinite forms
 ! --------------
- +V+Inf:%>0dh		FINAL1 ;
- +V+VGen:%>minie	FINAL1 ; ! GH Modalis, KB måtesform
+ +V+Inf:%>idh		FINAL1 ;
+ +V+VGen:%>eminie	FINAL1 ; ! GH Modalis, KB måtesform
 				 ! GH Voluntativ
- +V+Act:%>me		FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+Ger:%>minie		FINAL1 ;
- +V+PrsPrc:%>ije	FINAL1 ; ! muzt go to nominal lexicon instead
+ +V+Act:%>amme		FINAL1 ; ! GH verbalsubst, KB nomen actionis
+ +V+Ger:%>eminie	FINAL1 ;
+ +V+PrsPrc:%>ije	FINAL1 ; ! must go to nominal lexicon instead
 				 ! Ptz.Fut b'ïssejässaa
- +V+PrtPrc:%>me		FINAL1 ;
- +V+ConNeg:%>		FINAL1 ;
- +V+VAbess:%>		FINAL1 ;
+ +V+PrfPrc:%>amme	FINAL1 ;
+ +V+ConNeg:%^DISIMP%>h	FINAL1 ;
+ +V+VAbess:%>h		FINAL1 ; ! Check
 
 
 ! Even-syllable verbs
@@ -263,6 +281,14 @@ LEXICON GÖÖLEDH ! row F
  +V+ConNeg:%>0h  FINAL1 ;
 
 
+! Contract verbs
+! ==============
+
+LEXICON BILLIJIDH
++V+Inf:ijidh # ; ! not done, of course.
+
+
+
 ! Verbal sublexica
 ! ================
 
@@ -291,12 +317,25 @@ LEXICON V-III-PRS-SG
 ! ------------
 
 LEXICON VSUF-PRS
- V-PRS-SG-12 ;
+ :%> V-PRS-SG-1 ;
+ V-PRS-SG-2 ;
  V-PRS-SG-3 ;
  V-PRS-DUPL ;
 
-LEXICON V-PRS-SG-12
- +Sg1:%>m		FINAL1	;
+LEXICON VSUF-ODD-PRS
+ :%^DISIMP%>e V-PRS-SG-1 ;
+ :%^DISIMP    V-PRS-SG-2 ;
+ :%^DISIMP%>e V-PRS-SG-3 ;
+              V-ODD-PRS-DUPL ;
+
+LEXICON V-PRS-SG-12 ! Kutt denne viss ikkje ref til
+ V-PRS-SG-1 ;
+ V-PRS-SG-2 ;
+
+LEXICON V-PRS-SG-1 
+ +Sg1:m			FINAL1	; ! Border in prev lex
+
+LEXICON V-PRS-SG-2 
  +Sg2:%>h		FINAL1	;
 
 LEXICON V-PRS-SG-3
@@ -310,10 +349,21 @@ LEXICON V-PRS-DUPL
  +Pl2:%>dI1		FINAL1	;
  +Pl3:%>h		FINAL1	;
 
+LEXICON V-ODD-PRS-DUPL
+ +Du1:%>ien		FINAL1	;
+ +Du2:%>idien		FINAL1	;
+ +Du3:%>ægan		FINAL1	;
+ +Pl1:%>ibie		FINAL1	;
+ +Pl2:%>idie		FINAL1	;
+ +Pl3:%>ieh		FINAL1	;
+
+LEXICON VSUF-ODD-PRT
+VSUF-PRT ;
+
 LEXICON VSUF-PRT
 +Sg1:%>im		FINAL1	;
 +Sg2:%>ih		FINAL1	;
-+Sg3:%>i		FINAL1	;
+!+Sg3 was treated separately acc to i/e variation
 +Du1:%>imen		FINAL1	;
 +Du2:%>iden		FINAL1	;
 +Du3:%>igan		FINAL1	;
@@ -321,6 +371,11 @@ LEXICON VSUF-PRT
 +Pl2:%>idh		FINAL1	;
 +Pl3:%>in		FINAL1	;
 
+
+LEXICON VSUF-ODD-IMP
+ +Sg2:%^DISIMP%>h	FINAL1  ;
+ +Du2:%>idien           FINAL1  ;
+ +Pl2:%>idie            FINAL1  ;
 
 
 
