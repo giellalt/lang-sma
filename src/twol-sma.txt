@@ -11,6 +11,7 @@ Alphabet
   A3:a A3:o A3:e
   A4:a A4:e A4:i A4:o
   E1:i E1:e E1:y
+  E2:e ! this must be inserted everywhere 800209
   I1:i I1:e
   I2:i I2:e I2:0
   I3:i I3:j
@@ -29,7 +30,7 @@ Alphabet
   Å4:å
   D1:0
   %#:0 %>:0 %+:0 
-  X2:0 ;
+  X2:0 %^DISIMP:0 ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -146,7 +147,7 @@ Rules
 ! Ela Sg of this noun class as well. SNM 13.5.2002
   "I1 as e"
    I1:e <=> Syllable _ 
-                  ConsJV [ Nucleus (AccGenSg) | V:0 %>:  [h | :i ]] DomainBound: ;
+            ConsJV [ Nucleus (AccGenSg) | V:0 %>:  [h | :i ]] DomainBound: ;
             Syllable [ [I2:e | O2:o | A2:e | U2:e ] %>: | 
                                            V:0 %>: [:e | :i]] Cons _ DomainBound: ;
 
@@ -333,17 +334,28 @@ D1:X <=> A1:a X: _ ;
 !           Onset [E1:| Å2: | Å3:| U1:]  _ Cons O2:o ;
 !           Onset Å4:                    _ C+ I2: %>: A1: ;
 
-  "Inserted e" !E2 must in again.
+!  "Inserted e" !E2 must in again.
+!  E2:e <=>
+!  Syllable [I2: | O2: ]                      _ (%>: [ I3:j | Cons ]) DomainBound:;
+!  Syllable I1:                               _ Cons [Nucleus %>: | V:0 %>: Nucleus] OpenFinal ;
+!  Syllable Nucleus Cons 
+!  [Nucleus %>: | (V:0) %>: Nucleus] Cons I1: _ DomainBound:;
+!          Syllable O1:                       _ Cons [Nucleus %>: | (V:0) %>: Nucleus] OpenFinal ;
+!          Onset [E1:| Å2:| Å3:| U1:]         _ Cons [ I2:i | I2:e ] ;
+!          Onset Å4:                          _ C+ [I2:i |I2:e | I2:0 %>: Nucleus] ;
+!!          [I2: | O2:]                       _ %>: I3: DomainBound: ;
+!          Onset [E1:|Å2:]                    _ Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
+
+  "Inserted e" !E2 must in again. (080209 this now happens)
   0:e <=>
-!          Syllable [I2: | O2: ]              _ (%>: [ I3:j | Cons ]) DomainBound:;
-          Syllable I1:                       _ Cons [Nucleus %>: | V:0 %>: Nucleus] OpenFinal ;
-          Syllable Nucleus Cons 
-           [Nucleus %>: | (V:0) %>: Nucleus] 
-           Cons I1:                          _ DomainBound:;
+  Syllable [I2: | O2: ]                      _ (%>: [ I3:j | Cons ]) DomainBound:;
+  Syllable I1:                               _ Cons [Nucleus %>: | V:0 %>: Nucleus] OpenFinal ;
+  Syllable Nucleus Cons 
+  [Nucleus %>: | (V:0) %>: Nucleus] Cons I1: _ DomainBound:;
           Syllable O1:                       _ Cons [Nucleus %>: | (V:0) %>: Nucleus] OpenFinal ;
           Onset [E1:| Å2:| Å3:| U1:]         _ Cons [ I2:i | I2:e ] ;
           Onset Å4:                          _ C+ [I2:i |I2:e | I2:0 %>: Nucleus] ;
-!          [I2: | O2:]                        _ %>: I3: DomainBound: ;
+!         [I2: | O2:]                       _ %>: I3: DomainBound: ;
           Onset [E1:|Å2:]                    _ Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
 
   "Inserted ö"
@@ -362,7 +374,32 @@ D1:X <=> A1:a X: _ ;
 ! =================================
 
   "e deletion before i-initial suffix"
-  e:0 <=> _ X2:0 i: ;
+   e:0 <=> _ X2:0 i: ;
+
+!€# manneX2ine
+!€0 mann0ine
+
+
+
+  "Diphthong simplification ie:e"
+   i:0 <=> _ e  C+ %^DISIMP: ;
+
+!€# dåeried%^DISIMP%>em
+!€0 dåer0ed00em
+
+  "Diphthong simplification oe:o"
+   e:0 <=> o _  C+ %^DISIMP: ;
+
+!€# daaroest%^DISIMP%>em
+!€0 daaro0st00em
+
+  "a/e alternation"
+   a:e <=> _ [ C - j ] (C) %^DISIMP: ;
+
+
+  "a/i alternation"
+   a:i <=> _ j %^DISIMP: ;
+
 
 
 
