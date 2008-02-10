@@ -108,7 +108,7 @@ LEXICON J-CLASS
 
 
 LEXICON J-LESS-CASE
-  +Sg+Nom:0		FINAL1	;
+  +Sg+Nom:  	    FINAL1  ; 
   +Sg+Acc:%>m		FINAL1	;
   +Sg+Gen:%>n		FINAL1	;
   +Sg+Ine:%>snI1	FINAL1	;
@@ -192,17 +192,14 @@ LEXICON IJ-PRES
 ! This form is treated separately, and
 ! the rest of the paradigm is conflated.
 
-LEXICON GOLTELIDH
+LEXICON GOLTELIDH ! one Verbh class
 +V+Ind+Prt+Sg3:%>e FINAL1 ;
                    V-ODD ;
 
-LEXICON DÅERIEDIDH
+LEXICON DÅERIEDIDH ! The other 4 Verbh classes
 +V+Ind+Prt+Sg3:%>i FINAL1 ;
                    V-ODD ;
 
-LEXICON DÅERIEDIDH
-+V+Ind+Prt+Sg3:%>i FINAL1 ;
-                   V-ODD ;
 
 LEXICON V-ODD
 
@@ -214,16 +211,40 @@ LEXICON V-ODD
 
 ! Infinite forms
 ! --------------
- +V+Inf:%>idh		FINAL1 ;
+ +V+Inf:%>idh		        FINAL1 ;
+ +V+VGen:^%DISIMP%>eminie	FINAL1 ; ! GH Modalis, KB måtesform
+				 ! GH Voluntativ
+ +V+Act:%>amme		        FINAL1 ; ! GH verbalsubst, KB nomen actionis
+ +V+Ger:^%DISIMP%>eminie	FINAL1 ;
+ +V+PrsPrc:%>ije	        FINAL1 ; ! must go to nominal lexicon instead
+				 ! Ptz.Fut b'ïssejässaa
+ +V+PrfPrc:%>amme	        FINAL1 ;
+ +V+ConNeg:%^DISIMP%>h	    FINAL1 ;
+ +V+VAbess:%>h		        FINAL1 ; ! Check
+
+
+! Contract verbs
+! ==============
+
+
+LEXICON BILLIJIDH
+ +V+Ind+Prs: VSUF-CONTR-PRS ;
+ +V+Ind+Prt: VSUF-CONTR-PRT ;
+ +V+Imp:     VSUF-CONTR-IMP ;
+
+! Infinite forms
+! --------------
+ +V+Inf:%>ijidh		FINAL1 ;
  +V+VGen:%>eminie	FINAL1 ; ! GH Modalis, KB måtesform
 				 ! GH Voluntativ
- +V+Act:%>amme		FINAL1 ; ! GH verbalsubst, KB nomen actionis
+ +V+Act:%>eme		FINAL1 ; ! GH verbalsubst, KB nomen actionis
  +V+Ger:%>eminie	FINAL1 ;
  +V+PrsPrc:%>ije	FINAL1 ; ! must go to nominal lexicon instead
 				 ! Ptz.Fut b'ïssejässaa
- +V+PrfPrc:%>amme	FINAL1 ;
+ +V+PrfPrc:%>eme	FINAL1 ;
  +V+ConNeg:%^DISIMP%>h	FINAL1 ;
  +V+VAbess:%>h		FINAL1 ; ! Check
+
 
 
 ! Even-syllable verbs
@@ -281,12 +302,6 @@ LEXICON GÖÖLEDH ! row F
  +V+ConNeg:%>0h  FINAL1 ;
 
 
-! Contract verbs
-! ==============
-
-LEXICON BILLIJIDH
-+V+Inf:ijidh # ; ! not done, of course.
-
 
 
 ! Verbal sublexica
@@ -298,11 +313,11 @@ LEXICON V-I-PRS-SG
  :A1 V-PRS-SG-3 ;
 
 LEXICON V-II-PRS-SG
- V-PRS-SG-12 ;
+     V-PRS-SG-12 ;
  :A1 V-PRS-SG-3 ; ! ?? parallels the byörkesne case
 
 LEXICON V-III-PRS-SG
- V-PRS-SG-12 ; ! This should give guarka
+  V-PRS-SG-12 ; ! This should give guarka
 ! V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
 ! perhaps use A2 as 0 rule, triggers deletion in front of aff border
 ! but then oe aff must come afterwards
@@ -316,38 +331,23 @@ LEXICON V-III-PRS-SG
 ! Finite forms
 ! ------------
 
+! Even
+
 LEXICON VSUF-PRS
  :%> V-PRS-SG-1 ;
- V-PRS-SG-2 ;
- V-PRS-SG-3 ;
- V-PRS-DUPL ;
+ :%>    V-PRS-SG-2 ;
+     V-PRS-SG-3 ;
+     V-PRS-DUPL ;
+
+
+! Odd
 
 LEXICON VSUF-ODD-PRS
  :%^DISIMP%>e V-PRS-SG-1 ;
- :%^DISIMP    V-PRS-SG-2 ;
+ :%^DISIMP%>  V-PRS-SG-2 ;
  :%^DISIMP%>e V-PRS-SG-3 ;
               V-ODD-PRS-DUPL ;
 
-LEXICON V-PRS-SG-12 ! Kutt denne viss ikkje ref til
- V-PRS-SG-1 ;
- V-PRS-SG-2 ;
-
-LEXICON V-PRS-SG-1 
- +Sg1:m			FINAL1	; ! Border in prev lex
-
-LEXICON V-PRS-SG-2 
- +Sg2:%>h		FINAL1	;
-
-LEXICON V-PRS-SG-3
- +Sg3:%>		FINAL1	;
-
-LEXICON V-PRS-DUPL
- +Du1:%>n		FINAL1	;
- +Du2:%>dI1n		FINAL1	;
- +Du3:%>gan		FINAL1	;
- +Pl1:%>bI1		FINAL1	;
- +Pl2:%>dI1		FINAL1	;
- +Pl3:%>h		FINAL1	;
 
 LEXICON V-ODD-PRS-DUPL
  +Du1:%>ien		FINAL1	;
@@ -357,13 +357,70 @@ LEXICON V-ODD-PRS-DUPL
  +Pl2:%>idie		FINAL1	;
  +Pl3:%>ieh		FINAL1	;
 
+
 LEXICON VSUF-ODD-PRT
 VSUF-PRT ;
+
+LEXICON VSUF-ODD-IMP
+ +Sg2:%^DISIMP%>h	FINAL1  ;
+ +Du2:%>idien           FINAL1  ;
+ +Pl2:%>idie            FINAL1  ;
+
+
+! Contract
+
+
+LEXICON VSUF-CONTR-PRS
+     :%>e  V-PRS-SG-1 ;
+     :%>   V-PRS-SG-2 ;
+     :%>ie V-PRS-SG-3 ;
+           VSUF-CONTR-DUPL ;
+
+LEXICON VSUF-CONTR-DUPL
+ +Du1:%>ien		FINAL1	;
+ +Du2:%>eden		FINAL1	;
+ +Du3:%>ijægan		FINAL1	;
+ +Pl1:%>ebe		FINAL1	;
+ +Pl2:%>ede		FINAL1	;
+ +Pl3:%>ieh		FINAL1	;
+
+LEXICON VSUF-CONTR-PRT
++Sg3:%>iji FINAL1 ;
+           VSUF-PRT ;
+
+LEXICON VSUF-CONTR-IMP
+ +Sg2:%>h	 FINAL1  ;
+ +Du2:%>eden FINAL1  ;
+ +Pl2:%>ede  FINAL1  ;
+
+
+! Common even-odd-contr
+
+LEXICON V-PRS-SG-12 ! Kutt denne viss ikkje ref til
+ :%> V-PRS-SG-1 ;
+ :%> V-PRS-SG-2 ;
+
+LEXICON V-PRS-SG-1 
+ +Sg1:m			FINAL1	; ! Border in prev lex
+
+LEXICON V-PRS-SG-2 
+ +Sg2:h		FINAL1	;
+
+LEXICON V-PRS-SG-3
+ +Sg3:  		FINAL1	;
+
+LEXICON V-PRS-DUPL
+ +Du1:n         FINAL1	;
+ +Du2:dI1n		FINAL1	;
+ +Du3:gan		FINAL1	;
+ +Pl1:bI1		FINAL1	;
+ +Pl2:dI1		FINAL1	;
+ +Pl3:h		FINAL1	;
 
 LEXICON VSUF-PRT
 +Sg1:%>im		FINAL1	;
 +Sg2:%>ih		FINAL1	;
-!+Sg3 was treated separately acc to i/e variation
+!+Sg3 was treated in GOLTELIDH / DÅERIEDIDH wrt. i/e
 +Du1:%>imen		FINAL1	;
 +Du2:%>iden		FINAL1	;
 +Du3:%>igan		FINAL1	;
@@ -372,10 +429,6 @@ LEXICON VSUF-PRT
 +Pl3:%>in		FINAL1	;
 
 
-LEXICON VSUF-ODD-IMP
- +Sg2:%^DISIMP%>h	FINAL1  ;
- +Du2:%>idien           FINAL1  ;
- +Pl2:%>idie            FINAL1  ;
 
 
 
