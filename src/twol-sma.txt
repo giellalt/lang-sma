@@ -123,10 +123,10 @@ Rules
                                          OpenFinal ;
 
  "A3, I1, O1 when preceding v"
-  Cx:Cy <=> Syllable _ v
+  Vx:Vy <=> Syllable _ v
                        (Cons) [ Nucleus (AccGenSg) | V:0 %>:  [h | :i ]] DomainBound: ;
-           where Cx in (A3 I1 O1)
-                 Cy in (o  u  o)
+           where Vx in (A3 I1 O1)
+                 Vy in (o  u  o)
            matched;
 
 
@@ -134,10 +134,10 @@ Rules
 
 
  "I1, O1 when preceding j"
-  Cx:Cy <=> Syllable _ j
+  Vx:Vy <=> Syllable _ j
                        (Cons) [ Nucleus (AccGenSg) | V:0 %>:  [h | :i ]] DomainBound: ;
-           where Cx in (I1 O1)
-                 Cy in (i o)
+           where Vx in (I1 O1)
+                 Vy in (i o)
            matched;
 
 ! The B-x and C-x cases are covered by the following rules
@@ -152,10 +152,10 @@ Rules
                                            V:0 %>: [:e | :i]] Cons _ DomainBound: ;
 
   "O1 as o, A3 as e"
-   Cx:Cy <=> Syllable _ ConsJV [Nucleus (AccGenSg) | V:0 %>:
+   Vx:Vy <=> Syllable _ ConsJV [Nucleus (AccGenSg) | V:0 %>:
                                            [h | :i]] DomainBound: ;
-             where Cx in (A3 O1)
-                   Cy in (e  o)
+             where Vx in (A3 O1)
+                   Vy in (e  o)
              matched;
 
 ! Rules for I4:
@@ -210,20 +210,20 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row B in the umlaut table
   "Umlaut in a-context, monopthongs"
-  Cx:Cy <=> Onset _ Cons+ I2:0 %>: A1:a ;
-        where Cx in (Æ A4 Å1)
-	      Cy in (æ a  å )
-	matched ;
+  Vx:Vy <=> Onset _ Cons+ I2:0 %>: A1:a ;
+        where Vx in (Æ A4 Å1)
+	          Vy in (æ a  å )
+    	matched ;
 
 
 
 
 ! Umlaut in row C in the umlaut table
   "Umlaut in oe-context, monopthongs"
-  Cx:Cy <=> Onset _ Cons+ O2:o ;
-        where Cx in (Æ A4 Å1)
-	      Cy in (æ a  å )
-	matched ;
+  Vx:Vy <=> Onset _ Cons+ O2:o ;
+        where Vx in (Æ A4 Å1)
+     	      Vy in (æ a  å )
+     	matched ;
 
 !€# ÆbjO2%>dh#
 !€0 æbjo0dh0
@@ -237,18 +237,18 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row E in the umlaut table
   "Umlaut before affixes on A1:e, row E, monophtongs"
-  Cx:Cy <=> Onset _ Cons+ [I2:0|O2:0] %>: A1:e OpenOrClosedFinal ;
-        where Cx in (Æ A4 Å1)
-	      Cy in (y o  o )
-	matched ;
+  Vx:Vy <=> Onset _ Cons+ [I2:0|O2:0] %>: A1:e OpenOrClosedFinal ;
+        where Vx in (Æ A4 Å1)
+              Vy in (y o  o )
+    	matched ;
 
 
 ! Umlaut in row F in the umlaut table
   "Umlaut before affixes on -i, row F, monopthongs"
-  Cx:Cy <=> Onset _ Cons+ I2:0 %>: :i (Cons Nucleus) DomainBound: ;
-        where Cx in (Æ A4 Å1)
-	      Cy in (i  i u )
-	matched ;
+  Vx:Vy <=> Onset _ Cons+ I2:0 %>: :i (Cons Nucleus) DomainBound: ;
+        where Vx in (Æ A4 Å1)
+	          Vy in (i  i u )
+	    matched ;
 
 
 ! Dipthongs
@@ -256,10 +256,10 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row A in the umlaut table
   "Umlaut in ie-context, diphthongs"
-  Cx:Cy <=> Onset _ 0:e Cons [ I2:i | I2:e ] ;
-	    where Cx in (E1 Å2 Å3 U1)
-                  Cy in (i  a  å  u )
-            matched;
+  Vx:Vy <=> Onset _ 0:e Cons [ I2:i | I2:e ] ;
+    where Vx in (E1 Å2 Å3 U1)
+          Vy in (i  a  å  u )
+    matched;
 
 !€# pE10kI2%>dh 
 !€0 paeke0dh
@@ -273,18 +273,18 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row B in the umlaut table
   "Umlaut in a-context, diphthongs"
-  Cx:Cy <=> Onset _ 0:a Cons I2: %>: A1:a ;
-	    where Cx in (E1 Å2 Å3 U1)
-                  Cy in (e  a  å  u )
-            matched;
+  Vx:Vy <=> Onset _ 0:a Cons I2: %>: A1:a ;
+	    where Vx in (E1 Å2 Å3 U1)
+              Vy in (e  a  å  u )
+        matched;
 
 
 ! Umlaut in row C in the umlaut table
   "Umlaut in oe-context, diphthongs"
-  Cx:Cy <=> Onset _ 0:a Cons O2:o ;
-	    where Cx in (E1 Å2 Å3 U1)
-                  Cy in (e  a  å  å )
-            matched;
+  Vx:Vy <=> Onset _ 0:a Cons O2:o ;
+	    where Vx in (E1 Å2 Å3 U1)
+              Vy in (e  a  å  å )
+        matched;
 
   "Å4 to åe and åa"
   Å4:å <=> Onset _ 0:a C+ I2: %>: A1: ;
@@ -292,10 +292,10 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row E in the umlaut table
   "Umlaut before affixes with A1:e, row E, diphthongs"
-  Cx:Cy <=> Onset _ 0:Cy Cons [I2:0 | O2:0] %>: A1:e
+  Vx:Vy <=> Onset _ 0:Vy Cons [I2:0 | O2:0] %>: A1:e
                               OpenOrClosedFinal ;
-            where Cx in (Å2 Å3 U1)
-                  Cy in (å  å  å )
+            where Vx in (Å2 Å3 U1)
+                  Vy in (å  å  å )
             matched;
 
 
@@ -307,10 +307,10 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row F in the umlaut table
   "Umlaut before affixes on -i, row F, diphthongs"
-  Cx:Cy <=> Onset _ 0:Cy Cons I2:0 %>: :i
+  Vx:Vy <=> Onset _ 0:Vy Cons I2:0 %>: :i
                               (Cons Nucleus) DomainBound: ;
-            where Cx in (E1 Å2 Å3 U1)
-                  Cy in (e  e  ö  ö )
+            where Vx in (E1 Å2 Å3 U1)
+                  Vy in (e  e  ö  ö )
             matched;
 
 
