@@ -212,12 +212,12 @@ LEXICON V-ODD
 ! Infinite forms
 ! --------------
  +V+Inf:idh		        FINAL1 ;
- +V+VGen:^%DISIMPeminie	FINAL1 ; ! GH Modalis, KB måtesform
-				 ! GH Voluntativ
+ +V+VGen:%^DISIMPeminie	FINAL1 ; ! GH Modalis, KB måtesform
+		                 		 ! GH Voluntativ
  +V+Act:amme		    FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+Ger:^%DISIMPeminie	FINAL1 ;
+ +V+Ger:%^DISIMPeminie	FINAL1 ;
  +V+PrsPrc:ije	        FINAL1 ; ! must go to nominal lexicon instead
-				 ! Ptz.Fut b'ïssejässaa
+				                 ! Ptz.Fut b'ïssejässaa
  +V+PrfPrc:amme	        FINAL1 ;
  +V+ConNeg:%^DISIMPh    FINAL1 ;
  +V+VAbess:h		    FINAL1 ; ! Check
@@ -234,16 +234,16 @@ LEXICON BILLIJIDH
 
 ! Infinite forms
 ! --------------
- +V+Inf:%>ijidh		FINAL1 ;
- +V+VGen:%>eminie	FINAL1 ; ! GH Modalis, KB måtesform
-				 ! GH Voluntativ
- +V+Act:%>eme		FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+Ger:%>eminie	FINAL1 ;
- +V+PrsPrc:%>ije	FINAL1 ; ! must go to nominal lexicon instead
-				 ! Ptz.Fut b'ïssejässaa
- +V+PrfPrc:%>eme	FINAL1 ;
+ +V+Inf:%>ijidh		    FINAL1 ;
+ +V+VGen:%>eminie	    FINAL1 ; ! GH Modalis, KB måtesform
+            		    		 ! GH Voluntativ
+ +V+Act:%>eme		    FINAL1 ; ! GH verbalsubst, KB nomen actionis
+ +V+Ger:%>eminie	    FINAL1 ;
+ +V+PrsPrc:%>ije	    FINAL1 ; ! must go to nominal lexicon instead
+				                 ! Ptz.Fut b'ïssejässaa
+ +V+PrfPrc:%>eme	    FINAL1 ;
  +V+ConNeg:%^DISIMP%>h	FINAL1 ;
- +V+VAbess:%>h		FINAL1 ; ! Check
+ +V+VAbess:%>h		    FINAL1 ; ! Check
 
 
 
@@ -251,13 +251,13 @@ LEXICON BILLIJIDH
 ! ===================
 
 LEXICON BÅETEDH ! row A
- +V+Ind+Prs:%>%^1UMLa  V-I-PRS-SG ; ! class I special
- +V+Ind+Prs:%>         V-PRS-DUPL ;
- +V+Ind+Prt:%>         VSUF-PRT ;
- +V+Inf:%>edh          FINAL1 ;
- +V+Ger:%>ieminie        FINAL1 ;
+ +V+Ind+Prs:%>%^1UMLa         V-I-PRS-SG ; ! class I special
+ +V+Ind+Prs:%>                V-EVEN-PRS-DUPL ;
+ +V+Ind+Prt:%>                VSUF-PRT ;
+ +V+Inf:%>edh                 FINAL1 ;
+ +V+Ger:%>ieminie             FINAL1 ;
  +V+PrtPrc:%>%^1UMLeme        FINAL1 ;
- +V+ConNeg:%>ieh        FINAL1 ;
+ +V+ConNeg:%>ieh              FINAL1 ;
  ! row F trigger for Umlaut Prt
 
 LEXICON TJEARODH ! row C
@@ -337,7 +337,6 @@ LEXICON VSUF-PRS
   V-PRS-SG-1 ;
   V-PRS-SG-2 ;
   V-PRS-SG-3 ;
-  V-PRS-DUPL ;
 
 
 ! Odd
@@ -379,7 +378,7 @@ LEXICON VSUF-CONTR-PRS
 LEXICON VSUF-CONTR-DUPL
  +Du1:ien		FINAL1	;
  +Du2:eden		FINAL1	;
- +Du3:ijægan		FINAL1	;
+ +Du3:ijægan	FINAL1	;
  +Pl1:ebe		FINAL1	;
  +Pl2:ede		FINAL1	;
  +Pl3:ieh		FINAL1	;
@@ -410,13 +409,21 @@ LEXICON V-PRS-SG-2
 LEXICON V-PRS-SG-3
  +Sg3:  		FINAL1	;
 
-LEXICON V-PRS-DUPL
- +Du1:n         FINAL1	;
- +Du2:dI1n		FINAL1	;
- +Du3:gan		FINAL1	;
- +Pl1:bI1		FINAL1	;
- +Pl2:dI1		FINAL1	;
- +Pl3:h		FINAL1	;
+LEXICON V-EVEN-PRS-DUPL
+ +Du1:ien       FINAL1	;
+ +Du2:eden		FINAL1	;
+ +Du3:iejægan	FINAL1	;
+ +Pl1:ebe		FINAL1	;
+ +Pl2:ede		FINAL1	;
+ +Pl3:ieh		FINAL1	;
+
+! LEXICON V-PRS-DUPL
+!  +Du1:n         FINAL1	;
+!  +Du2:dI1n		FINAL1	;
+!  +Du3:gan		FINAL1	;
+!  +Pl1:bI1		FINAL1	;
+!  +Pl2:dI1		FINAL1	;
+!  +Pl3:h		    FINAL1	;
 
 LEXICON VSUF-PRT
 +Sg1:im		FINAL1	;
