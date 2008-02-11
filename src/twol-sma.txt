@@ -577,3 +577,135 @@ D1:X <=> A1:a X: _ ;
 !! ziza CL ;
 !! in lexicon          
 
+
+!!!Class Even I
+
+! i:æ e:a ae:aa u:å 
+! Pres Sg123
+! V28, V30, V32, V36, V38, V40
+
+"Even syllabic verbs present sg, monophpt E I"
+ Vx:Vy <=>  _ C+ %^1UML ;
+ 	where Vx in (i e u)
+ 	      Vy in (æ a å)
+ 	matched ;
+
+!€# bissedh
+!€0 bæssa
+
+!€# beltedh
+!€0 balta
+
+!€# buhtjedh
+!€0 båhtja
+
+!€# paekedh
+!€0 paaka
+
+!€# båetedh
+!€0 båata
+
+!€# bueledh
+!€0 buala
+
+
+"Even syllabic verbs present sg, diphth ie-ea" 
+ i:e <=>  _ e: C+ %^1UML ;
+
+!€# jiehtedh
+!€0 jeahta
+
+
+"Even syllabic verbs Sg3 + PrfPtc E II"
+ Vx:Vy <=> _ C+ o:0 %>:  e: %^2UML ;
+ 	where Vx in (æ a å)
+ 	      Vy in (y o o)
+ 	matched ;
+
+!"o Deletion"
+!o:0 <=> _ e %^2UML ;
+!
+!"e Deletion" 	
+!e:0 <=> o _ (Dummy:) %>: [b|d]; ! Dummy being %^2UML
+
+
+"Even syllabic verbs Sg3 + PrfPtc ea-yø II a"
+ e:y <=>    _ a: C+ o:0 e: %>: %^2UML ;
+
+"Even syllabic verbs Sg3 + PrfPtc ea-yø II b"
+ a:ø <=> e: _    C+ o:0 e: %>: %^2UML ;
+
+!€# tjear
+!€0 tjyør
+
+
+"Even syllabic verbs Sg3 + PrfPtc aa-åå åa-åå II"
+ a:å <=> :å _     C+ o:0 e: %>: %^2UML ; 
+            _ a:å C+ o:0 e: %>: %^2UML ; 
+
+!aa åa
+!åå åå
+
+
+"Even syllabic verbs Sg3 + PrfPtc e-y II"
+ e:y <=> _ a:ø C+ o:0 e: %>: %^2UML ;
+
+"Even syllabic verbs Sg3 + PrfPtc a-ø II"
+ a:ø <=> e:y _ C+ o:0 e: %>: %^2UML ;
+
+
+
+"Even syllabic verbs Sg3 ï-æ IV"
+ Vx:Vy <=> _ C+ %> %^3sUML ; ! or %^iæUML
+ 	where Vx in (ï a)
+ 	      Vy in (æ å)
+ 	matched ;
+
+!€# mïnn%>%^3sUMLa
+!€0 mænn00a
+
+"Even syllabic verbs Sg3 ïe-ea IV a"
+ ï:e <=> _ e: C+ %> %^3sUML ; ! or %^iæUML
+
+"Even syllabic verbs Sg3 ïe-ea IV b"
+ e:a <=> ï: _ C+ %> %^3sUML ; ! or %^iæUML
+
+!€# tjïer%>%^3sUMLa
+!€0 tjea00a
+
+
+
+"Even syllabic verbs Du1Pl3 IV"
+ Vx:Vy <=> _ (e) C+ %> %^3dUML ; !(e) due to îe:ie
+	where Vx in (ï a o å)
+		  Vy in (i e u e)
+	matched :
+	
+!€# mïnn%>%^3dUMLien
+!€0 minn00ien
+
+!€# barke%>%^3dUMLien
+!€# berke00ien
+
+!€# jovke%>%^3dUMLien
+!€# juvke00ien
+
+!€# jårr%>%^3dUMLien
+!€0 jerr00ien
+
+!€# tjïek%>%^3dUMLien
+!€0 tjiek00ien
+
+
+""
+
+! prob delete this after testing
+! " verbs Sg3 + PrfPtc ÅÅ II"
+!  a:å <=> _ a:å C+ o:0 e: %^2UML ;
+
+
+
+
+
+
+
