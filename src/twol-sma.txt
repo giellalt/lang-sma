@@ -36,7 +36,8 @@ Alphabet
   Å4:å
   D1:0
   %#:0 %>:0 %+:0 
-  X2:0 %^DISIMP:0 ;
+  X2:0
+  %^DISIMP:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -50,16 +51,17 @@ Sets
   DomainBound = %# %+ ;
 
 Definitions
-  Vowel    = [ :V ] ;
-  Nucleus  = [ Vowel (Vowel)] ;
-  Cons     = [ C [ :C* | D1:*]] ;
-  ConsJV   = [CJV [ :C* | D1:*]];
-  AccGenSg = [ %>: [m | n ]] ;
-  Onset = C* ;
-!  Onset = DomainBound: C*;
-  Syllable = Onset Nucleus Cons;
+  Vowel     = [ :V ] ;
+  Nucleus   = [ Vowel (Vowel)] ;
+  Cons      = [ C [ :C* | D1:*]] ;
+  ConsJV    = [CJV [ :C* | D1:*]];
+  AccGenSg  = [ %>: [m | n ]] ;
+  Onset     = C* ;
+! Onset     = DomainBound: C*;
+  Syllable  = Onset Nucleus Cons;
   OpenFinal = Cons Nucleus DomainBound: ;
   OpenOrClosedFinal = [Cons (Nucleus) DomainBound:];
+  Dummy     =   %^DISIMP %^1UML %^2UML %^3UML %^3sUML %^3dUML %^iæUML ;
 
 Rules
  
@@ -585,7 +587,7 @@ D1:X <=> A1:a X: _ ;
 ! V28, V30, V32, V36, V38, V40
 
 "Even syllabic verbs present sg, monophpt E I"
- Vx:Vy <=>  _ C+ %^1UML ;
+ Vx:Vy <=>  _ C+ %>:0 %^1UML:0 ;
  	where Vx in (i e u)
  	      Vy in (æ a å)
  	matched ;
@@ -610,53 +612,54 @@ D1:X <=> A1:a X: _ ;
 
 
 "Even syllabic verbs present sg, diphth ie-ea" 
- i:e <=>  _ e: C+ %^1UML ;
+ i:e <=>  _ e:a C+ %>:0 %^1UML:0 ;
 
 !€# jiehtedh
 !€0 jeahta
 
 
 "Even syllabic verbs Sg3 + PrfPtc E II"
- Vx:Vy <=> _ C+ o:0 %>:  e: %^2UML ;
+ Vx:Vy <=> _ C+ o:0 %>:  e: %^2UML: ;
  	where Vx in (æ a å)
  	      Vy in (y o o)
  	matched ;
 
 !"o Deletion"
-!o:0 <=> _ e %^2UML ;
+!o:0 <=> _ e %^2UML: ;
 !
 !"e Deletion" 	
 !e:0 <=> o _ (Dummy:) %>: [b|d]; ! Dummy being %^2UML
 
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yø II a"
- e:y <=>    _ a: C+ o:0 e: %>: %^2UML ;
+ e:y <=>    _ a: C+ o:0 e: %>:0 %^2UML: ;
+ 
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yø II b"
- a:ø <=> e: _    C+ o:0 e: %>: %^2UML ;
-
+ a:ø <=> e: _    C+ o:0 e: %>:0 %^2UML: ;
+ 
 !€# tjear
 !€0 tjyør
 
 
 "Even syllabic verbs Sg3 + PrfPtc aa-åå åa-åå II"
- a:å <=> :å _     C+ o:0 e: %>: %^2UML ; 
-            _ a:å C+ o:0 e: %>: %^2UML ; 
+ a:å <=> :å _     C+ o:0 e: %>:0 %^2UML: ; 
+            _ a:å C+ o:0 e: %>:0 %^2UML: ; 
 
 !aa åa
 !åå åå
 
 
 "Even syllabic verbs Sg3 + PrfPtc e-y II"
- e:y <=> _ a:ø C+ o:0 e: %>: %^2UML ;
-
+ e:y <=> _ a: C+ o:0 e: %>:0 %^2UML: ;
+ 
 "Even syllabic verbs Sg3 + PrfPtc a-ø II"
- a:ø <=> e:y _ C+ o:0 e: %>: %^2UML ;
+ a:ø <=> e: _ C+ o:0 e: %>:0 %^2UML: ;
 
 
 
 "Even syllabic verbs Sg3 ï-æ IV"
- Vx:Vy <=> _ C+ %> %^3sUML ; ! or %^iæUML
+ Vx:Vy <=> _ C+ %>:0 %^3sUML: ; ! or %^iæUML
  	where Vx in (ï a)
  	      Vy in (æ å)
  	matched ;
@@ -664,11 +667,11 @@ D1:X <=> A1:a X: _ ;
 !€# mïnn%>%^3sUMLa
 !€0 mænn00a
 
-"Even syllabic verbs Sg3 ïe-ea IV a"
- ï:e <=> _ e: C+ %> %^3sUML ; ! or %^iæUML
+"1st rule for even syllabic verbs Sg3 ïe-ea IV a"
+ ï:e <=> _ e: C+ %>:0 %^3sUML: ; ! or %^iæUML
 
-"Even syllabic verbs Sg3 ïe-ea IV b"
- e:a <=> ï: _ C+ %> %^3sUML ; ! or %^iæUML
+"2nd rule for even syllabic verbs Sg3 ïe-ea IV"
+ e:a <=> ï: _ C+ %>:0 %^3sUML: ; ! or %^iæUML
 
 !€# tjïer%>%^3sUMLa
 !€0 tjea00a
@@ -676,10 +679,10 @@ D1:X <=> A1:a X: _ ;
 
 
 "Even syllabic verbs Du1Pl3 IV"
- Vx:Vy <=> _ (e) C+ %> %^3dUML ; !(e) due to îe:ie
+ Vx:Vy <=> _ (e) C+ %>:0 %^3dUML: ; !(e) due to îe:ie
 	where Vx in (ï a o å)
-		  Vy in (i e u e)
-	matched :
+	      Vy in (i e u e)
+	matched ;
 	
 !€# mïnn%>%^3dUMLien
 !€0 minn00ien
@@ -697,11 +700,11 @@ D1:X <=> A1:a X: _ ;
 !€0 tjiek00ien
 
 
-""
+
 
 ! prob delete this after testing
 ! " verbs Sg3 + PrfPtc ÅÅ II"
-!  a:å <=> _ a:å C+ o:0 e: %^2UML ;
+!  a:å <=> _ a:å C+ o:0 e: %^2UML: ;
 
 
 
