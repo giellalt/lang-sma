@@ -194,33 +194,33 @@ LEXICON IJ-PRES
 
 LEXICON GOLTELIDH ! one Verbh class
 +V+Ind+Prt+Sg3:%>e FINAL1 ;
-                   V-ODD ;
+              :%>  V-ODD ;
 
 LEXICON DÅERIEDIDH ! The other 4 Verbh classes
 +V+Ind+Prt+Sg3:%>i FINAL1 ;
-                   V-ODD ;
+              :%>  V-ODD ;
 
 
 LEXICON V-ODD
 
 ! Finite forms
 ! ------------
- +V+Ind+Prs: VSUF-ODD-PRS ;
- +V+Ind+Prt: VSUF-ODD-PRT ;
- +V+Imp:     VSUF-ODD-IMP ;
+ +V+Ind+Prs:%> VSUF-ODD-PRS ;
+ +V+Ind+Prt:%> VSUF-ODD-PRT ;
+ +V+Imp:%>     VSUF-ODD-IMP ;
 
 ! Infinite forms
 ! --------------
- +V+Inf:%>idh		        FINAL1 ;
- +V+VGen:^%DISIMP%>eminie	FINAL1 ; ! GH Modalis, KB måtesform
+ +V+Inf:idh		        FINAL1 ;
+ +V+VGen:^%DISIMPeminie	FINAL1 ; ! GH Modalis, KB måtesform
 				 ! GH Voluntativ
- +V+Act:%>amme		        FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+Ger:^%DISIMP%>eminie	FINAL1 ;
- +V+PrsPrc:%>ije	        FINAL1 ; ! must go to nominal lexicon instead
+ +V+Act:amme		    FINAL1 ; ! GH verbalsubst, KB nomen actionis
+ +V+Ger:^%DISIMPeminie	FINAL1 ;
+ +V+PrsPrc:ije	        FINAL1 ; ! must go to nominal lexicon instead
 				 ! Ptz.Fut b'ïssejässaa
- +V+PrfPrc:%>amme	        FINAL1 ;
- +V+ConNeg:%^DISIMP%>h	    FINAL1 ;
- +V+VAbess:%>h		        FINAL1 ; ! Check
+ +V+PrfPrc:amme	        FINAL1 ;
+ +V+ConNeg:%^DISIMPh    FINAL1 ;
+ +V+VAbess:h		    FINAL1 ; ! Check
 
 
 ! Contract verbs
@@ -228,9 +228,9 @@ LEXICON V-ODD
 
 
 LEXICON BILLIJIDH
- +V+Ind+Prs: VSUF-CONTR-PRS ;
- +V+Ind+Prt: VSUF-CONTR-PRT ;
- +V+Imp:     VSUF-CONTR-IMP ;
+ +V+Ind+Prs:%> VSUF-CONTR-PRS ;
+ +V+Ind+Prt:%> VSUF-CONTR-PRT ;
+ +V+Imp:%>     VSUF-CONTR-IMP ;
 
 ! Infinite forms
 ! --------------
@@ -251,51 +251,51 @@ LEXICON BILLIJIDH
 ! ===================
 
 LEXICON BÅETEDH ! row A
- +V+Ind+Prs: V-I-PRS-SG ; ! class I special
- +V+Ind+Prs:  V-PRS-DUPL ;
- +V+Ind+Prt:%>j  VSUF-PRT ;
- +V+Inf:%>dh FINAL1 ;
- +V+Ger:%>minI1 FINAL1 ;
- +V+PrtPrc:%>me FINAL1 ;
- +V+ConNeg:%>0h  FINAL1 ;
+ +V+Ind+Prs:%>%^1UMLa     V-I-PRS-SG ; ! class I special
+ +V+Ind+Prs:%>     V-PRS-DUPL ;
+ +V+Ind+Prt:%>j    VSUF-PRT ;
+ +V+Inf:%>dh       FINAL1 ;
+ +V+Ger:%>minI1    FINAL1 ;
+ +V+PrtPrc:%>me    FINAL1 ;
+ +V+ConNeg:%>0h    FINAL1 ;
  ! row F trigger for Umlaut Prt
 
 LEXICON TJEARODH ! row C
- +V+Ind+Prs:  V-II-PRS-SG ; ! class II special
- +V+Ind+Prs:  V-PRS-DUPL ;
+ +V+Ind+Prs:%>   V-II-PRS-SG ; ! class II special
+ +V+Ind+Prs:%>   V-PRS-DUPL ;
  +V+Ind+Prt:%>j  VSUF-PRT ;
- +V+Inf:%>dh FINAL1 ;
- +V+Ger:%>minI1 FINAL1 ;
- +V+PrtPrc:%>me FINAL1 ;
+ +V+Inf:%>dh     FINAL1 ;
+ +V+Ger:%>minI1  FINAL1 ;
+ +V+PrtPrc:%>me  FINAL1 ;
  +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON GUARKEDH ! row B
- +V+Ind+Prs: V-III-PRS-SG ; ! class III special
+ +V+Ind+Prs:%>   V-III-PRS-SG ; ! class III special
  +V+Ind+Prt:%>j  VSUF-PRT ;
- +V+Inf:%>dh FINAL1 ;
- +V+Ger:%>minI1 FINAL1 ;
- +V+PrtPrc:%>me FINAL1 ;
+ +V+Inf:%>dh     FINAL1 ;
+ +V+Ger:%>minI1  FINAL1 ;
+ +V+PrtPrc:%>me  FINAL1 ;
  +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON TJOEHPEDH ! row D
- +V+Ind+Prs:  VSUF-PRS ; 
- +V+Ind+Prt:  VSUF-PRT ;
- +V+Inf:%>dh FINAL1 ;
- +V+Ger:%>minI1 FINAL1 ;
- +V+PrtPrc:%>me FINAL1 ;
+ +V+Ind+Prs:%>   VSUF-PRS ; 
+ +V+Ind+Prt:%>   VSUF-PRT ;
+ +V+Inf:%>dh     FINAL1 ;
+ +V+Ger:%>minI1  FINAL1 ;
+ +V+PrtPrc:%>me  FINAL1 ;
  +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON VÅÅJNEDH ! row E
- +V+Ind+Prs:  VSUF-PRS ; 
- +V+Ind+Prt:  VSUF-PRT ;
+ +V+Ind+Prs:%>  VSUF-PRS ; 
+ +V+Ind+Prt:%>  VSUF-PRT ;
  +V+Inf:%>dh FINAL1 ;
  +V+Ger:%>minI1 FINAL1 ;
  +V+PrtPrc:%>me FINAL1 ;
  +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON GÖÖLEDH ! row F
- +V+Ind+Prs:  VSUF-PRS ; 
- +V+Ind+Prt:  VSUF-PRT ;
+ +V+Ind+Prs:%>  VSUF-PRS ; 
+ +V+Ind+Prt:%>  VSUF-PRT ;
  +V+Inf:%>dh FINAL1 ;
  +V+Ger:%>minI1 FINAL1 ;
  +V+PrtPrc:%>me FINAL1 ;
@@ -309,8 +309,8 @@ LEXICON GÖÖLEDH ! row F
 
 
 LEXICON V-I-PRS-SG
- :A1 V-PRS-SG-12 ;
- :A1 V-PRS-SG-3 ;
+ V-PRS-SG-12 ;
+ V-PRS-SG-3 ;
 
 LEXICON V-II-PRS-SG
      V-PRS-SG-12 ;
@@ -334,71 +334,72 @@ LEXICON V-III-PRS-SG
 ! Even
 
 LEXICON VSUF-PRS
- :%> V-PRS-SG-1 ;
- :%>    V-PRS-SG-2 ;
-     V-PRS-SG-3 ;
-     V-PRS-DUPL ;
+  V-PRS-SG-1 ;
+  V-PRS-SG-2 ;
+  V-PRS-SG-3 ;
+  V-PRS-DUPL ;
 
 
 ! Odd
 
 LEXICON VSUF-ODD-PRS
- :%^DISIMP%>e V-PRS-SG-1 ;
- :%^DISIMP%>  V-PRS-SG-2 ;
- :%^DISIMP%>e V-PRS-SG-3 ;
-              V-ODD-PRS-DUPL ;
+ :%^DISIMPe V-PRS-SG-1 ;
+ :%^DISIMP  V-PRS-SG-2 ;
+ :%^DISIMPe V-PRS-SG-3 ;
+            V-ODD-PRS-DUPL ;
 
 
 LEXICON V-ODD-PRS-DUPL
- +Du1:%>ien		FINAL1	;
- +Du2:%>idien		FINAL1	;
- +Du3:%>ægan		FINAL1	;
- +Pl1:%>ibie		FINAL1	;
- +Pl2:%>idie		FINAL1	;
- +Pl3:%>ieh		FINAL1	;
+ +Du1:ien		FINAL1	;
+ +Du2:idien		FINAL1	;
+ +Du3:ægan		FINAL1	;
+ +Pl1:ibie		FINAL1	;
+ +Pl2:idie		FINAL1	;
+ +Pl3:ieh		FINAL1	;
 
 
 LEXICON VSUF-ODD-PRT
 VSUF-PRT ;
 
 LEXICON VSUF-ODD-IMP
- +Sg2:%^DISIMP%>h	FINAL1  ;
- +Du2:%>idien           FINAL1  ;
- +Pl2:%>idie            FINAL1  ;
+ +Sg2:%^DISIMPh	FINAL1  ;
+ +Du2:idien       FINAL1  ;
+ +Pl2:idie        FINAL1  ;
 
 
 ! Contract
 
 
 LEXICON VSUF-CONTR-PRS
-     :%>e  V-PRS-SG-1 ;
-     :%>   V-PRS-SG-2 ;
-     :%>ie V-PRS-SG-3 ;
+     :e  V-PRS-SG-1 ;
+     :   V-PRS-SG-2 ;
+     :ie V-PRS-SG-3 ;
            VSUF-CONTR-DUPL ;
 
 LEXICON VSUF-CONTR-DUPL
- +Du1:%>ien		FINAL1	;
- +Du2:%>eden		FINAL1	;
- +Du3:%>ijægan		FINAL1	;
- +Pl1:%>ebe		FINAL1	;
- +Pl2:%>ede		FINAL1	;
- +Pl3:%>ieh		FINAL1	;
+ +Du1:ien		FINAL1	;
+ +Du2:eden		FINAL1	;
+ +Du3:ijægan		FINAL1	;
+ +Pl1:ebe		FINAL1	;
+ +Pl2:ede		FINAL1	;
+ +Pl3:ieh		FINAL1	;
 
 LEXICON VSUF-CONTR-PRT
-+Sg3:%>iji FINAL1 ;
++Sg3:iji FINAL1 ;
            VSUF-PRT ;
 
 LEXICON VSUF-CONTR-IMP
- +Sg2:%>h	 FINAL1  ;
- +Du2:%>eden FINAL1  ;
- +Pl2:%>ede  FINAL1  ;
+ +Sg2:h	 FINAL1  ;
+ +Du2:eden FINAL1  ;
+ +Pl2:ede  FINAL1  ;
 
 
 ! Common even-odd-contr
+! ---------------------
 
 LEXICON V-PRS-SG-12 ! Kutt denne viss ikkje ref til
- :%> V-PRS-SG-1 ;
- :%> V-PRS-SG-2 ;
+ : V-PRS-SG-1 ;
+ : V-PRS-SG-2 ;
 
 LEXICON V-PRS-SG-1 
  +Sg1:m			FINAL1	; ! Border in prev lex
@@ -418,15 +419,15 @@ LEXICON V-PRS-DUPL
  +Pl3:h		FINAL1	;
 
 LEXICON VSUF-PRT
-+Sg1:%>im		FINAL1	;
-+Sg2:%>ih		FINAL1	;
++Sg1:im		FINAL1	;
++Sg2:ih		FINAL1	;
 !+Sg3 was treated in GOLTELIDH / DÅERIEDIDH wrt. i/e
-+Du1:%>imen		FINAL1	;
-+Du2:%>iden		FINAL1	;
-+Du3:%>igan		FINAL1	;
-+Pl1:%>imh		FINAL1	;
-+Pl2:%>idh		FINAL1	;
-+Pl3:%>in		FINAL1	;
++Du1:imen		FINAL1	;
++Du2:iden		FINAL1	;
++Du3:igan		FINAL1	;
++Pl1:imh		FINAL1	;
++Pl2:idh		FINAL1	;
++Pl3:in		FINAL1	;
 
 
 
