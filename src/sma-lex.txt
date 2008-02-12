@@ -283,7 +283,7 @@ LEXICON GUARKEDH ! row B
  +V+ConNeg:%>0h   FINAL1 ;
 
 LEXICON TJOEHPEDH ! row D
- +V+Ind+Prs:%>     V-IV-PRS ; 
+ +V+Ind+Prs:%>     V-IV-EVEN-PRS ; 
  +V+Ind+Prt:%>     VSUF-PRT ;
  +V+Imp:%>         VSUF-IV-EVEN-IMP ;
  +V+Inf:%>edh      FINAL1 ;
@@ -361,20 +361,21 @@ LEXICON VSUF-V-EVEN-PRS
  :e  V-PRS-SG-1 ;
      V-PRS-SG-2 ;
  :oe V-PRS-SG-3 ;
- +Du1:oen       FINAL1	;
- +Du2:eden		FINAL1	;
- +Du3:ijægan	FINAL1	;
- +Du3:iben	    FINAL1	; !SUB
- +Pl1:ebe		FINAL1	;
- +Pl2:ede		FINAL1	;
- +Pl3:oeh		FINAL1	;
+ :e				VSUF-EVEN-PRS-DUPL ;
+! +Du1:oen       FINAL1	; !ee>oe
+! +Du2:eden		FINAL1	;
+! +Du3:ijægan	FINAL1	; !ee>i
+! +Du3:iben	    FINAL1	; !SUB !ee>i
+! +Pl1:ebe		FINAL1	;
+! +Pl2:ede		FINAL1	;
+! +Pl3:oeh		FINAL1	; !ee>oe
 
 
 
-LEXICON V-EVEN-PRS
-  V-PRS-SG-12 ;
-  V-PRS-SG-3 ;
-   V-EVEN-PRS-DUPL ;
+!! LEXICON V-EVEN-PRS
+!!   V-PRS-SG-12 ;
+!!   V-PRS-SG-3 ;
+!!    V-EVEN-PRS-DUPL ;
    
 LEXICON V-EVEN-PRS-DUPL
  :i			VSUF-EVEN-PRS-DUPL ;
@@ -387,10 +388,10 @@ LEXICON V-EVEN-PRS-DUPL
 ! +Pl3:ieh		FINAL1	;
 
 LEXICON VSUF-EVEN-PRS-DUPL
- +Du1:en       FINAL1	;
+ +Du1:en        FINAL1	;
  +Du2:den		FINAL1	;
  +Du3:ejægan	FINAL1	;
- +Du3:eben	FINAL1	; !SUB
+ +Du3:eben	    FINAL1	; !SUB
  +Pl1:be		FINAL1	;
  +Pl2:de		FINAL1	;
  +Pl3:eh		FINAL1	;
@@ -434,6 +435,7 @@ LEXICON V-IV-EVEN-PRS
  +Pl2:ede		  FINAL1	;
  +Pl3:%^3dUMLieh  FINAL1	;
 
+
 LEXICON VSUF-IV-EVEN-IMP
  +Sg2:h		    FINAL1  ;
  +Du2:eden      FINAL1  ;
@@ -446,10 +448,10 @@ LEXICON VSUF-VI-EVEN-PRS
  		          V-PRS-SG-2 ;
  +Sg3:ie     	  FINAL1 ;
  +Du1:ien         FINAL1	;
- +Du2:eden		  FINAL1	;
- +Du3:ijægan	  FINAL1	;
- +Du3:iben	      FINAL1	;
- +Pl1:ebe		  FINAL1	;
+ +Du2:eden		  FINAL1	; !i>e
+ +Du3:ijægan	  FINAL1	; !e>0
+ +Du3:iben	      FINAL1	; !e>0
+ +Pl1:ebe		  FINAL1	; !i>e
  +Pl2:ede		  FINAL1	;
  +Pl3:ieh         FINAL1	;
 
