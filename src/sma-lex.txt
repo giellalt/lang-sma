@@ -28,7 +28,7 @@ Multichar_Symbols
   +CS +CC +Pcle +CLB +PUNCT +LEFT +RIGHT
 
   A1 A2 A3 A4 E1 I1 I2 I3 I4 O1 O2 U1 U2 Æ Å1 Å2 Å3 Å4 D1
-  X2
+  X2 X3
   E2 ! insert e ! Fjern denne.
   %^DISIMP %^1UML %^2UML %^3UML %^3sUML %^3dUML %^iæUML
 
@@ -253,7 +253,7 @@ LEXICON BILLIJIDH
 
 LEXICON BÅETEDH ! row A
  +V+Ind+Prs:%>%^1UMLa         V-I-PRS-SG ; ! class I special
- +V+Ind+Prs:%>                V-EVEN-PRS-DUPL ;
+ +V+Ind+Prs:%>ie              VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>                VSUF-PRT ;
  +V+Imp:%>                    VSUF-EVEN-IMP ;
  +V+Inf:%>edh                 FINAL1 ;
@@ -264,7 +264,7 @@ LEXICON BÅETEDH ! row A
 
 LEXICON TJEARODH ! row C
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
- +V+Ind+Prs:%>          V-II-PRS-DUPL ;
+ +V+Ind+Prs:%>oe          VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>oej       VSUF-PRT ;
  +V+Imp:%>              VSUF-II-EVEN-IMP ;
  +V+Inf:%>odh           FINAL1 ;
@@ -274,10 +274,10 @@ LEXICON TJEARODH ! row C
 
 LEXICON GUARKEDH ! row B
  +V+Ind+Prs:%>    V-III-PRS-SG ; ! class III special
- +V+Ind+Prs:%>	  V-III-PRS-DUPL ;
+ +V+Ind+Prs:%>a	  VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>aj  VSUF-PRT ;
  +V+Imp:%>        VSUF-III-EVEN-IMP ;
- +V+Inf:%>adh     FINAL1 ;
+ +V+Inf:%>edh     FINAL1 ;
  +V+Ger:%>minI1   FINAL1 ;
  +V+PrfPrc:%>me   FINAL1 ;
  +V+ConNeg:%>0h   FINAL1 ;
@@ -294,7 +294,7 @@ LEXICON TJOEHPEDH ! row D
 LEXICON VÅÅJNEDH ! row E
  +V+Ind+Prs:%>   VSUF-V-EVEN-PRS ; 
  +V+Ind+Prt:%>   VSUF-PRT ;
- +V+Imp:%>       VSUF-EVEN-IMP ;
+ +V+Imp:%>       VSUF-IV-EVEN-IMP ;
  +V+Inf:%>edh    FINAL1 ;
  +V+Ger:%>eminie FINAL1 ;
  +V+PrfPrc:%>eme FINAL1 ;
@@ -303,7 +303,7 @@ LEXICON VÅÅJNEDH ! row E
 LEXICON GÖÖLEDH ! row F
  +V+Ind+Prs:%>    VSUF-VI-EVEN-PRS ; 
  +V+Ind+Prt:%>    VSUF-PRT ;
- +V+Imp:%>        VSUF-EVEN-IMP ;
+ +V+Imp:%>        VSUF-IV-EVEN-IMP ;
  +V+Inf:%>edh     FINAL1 ;
  +V+Ger:%>minie   FINAL1 ;
  +V+PrfPrc:%>eme  FINAL1 ;
@@ -330,16 +330,6 @@ LEXICON V-II-PRS-SG
  :oe       V-PRS-SG-12 ;
  :%^2UMLe  V-PRS-SG-3 ; ! ?? parallels the byörkesne case
 
-LEXICON V-II-PRS-DUPL
- :o			    VSUF-EVEN-PRS-DUPL ;
-! +Du1:oen      FINAL1	;
-! +Du2:oden		FINAL1	;
-! +Du3:oejægan	FINAL1	;
-! +Du3:oeben	FINAL1	; !SUB
-! +Pl1:obe		FINAL1	;
-! +Pl2:ode		FINAL1	;
-! +Pl3:oeh		FINAL1	;
-
 LEXICON V-III-PRS-SG
  :a  V-PRS-SG-12 ; ! This should give guarka
  :oe V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
@@ -347,69 +337,27 @@ LEXICON V-III-PRS-SG
 ! but then oe aff must come afterwards
  :oe FINAL1 ; ! well, perhaps a more archi-looking affix ?
 
-LEXICON V-III-PRS-DUPL
- :e			VSUF-EVEN-PRS-DUPL ;
-! +Du1:an       FINAL1	; !e>a
-! +Du2:eden		FINAL1	;
-! +Du3:ajægan	FINAL1	; !e>a 
-! +Du3:aben	FINAL1	; !SUB !e>a
-! +Pl1:ebe		FINAL1	;
-! +Pl2:ede		FINAL1	;
-! +Pl3:ah		FINAL1	; !e>a
-
 LEXICON VSUF-V-EVEN-PRS
  :e  V-PRS-SG-1 ;
      V-PRS-SG-2 ;
  :oe V-PRS-SG-3 ;
- :e				VSUF-EVEN-PRS-DUPL ;
-! +Du1:oen       FINAL1	; !ee>oe
-! +Du2:eden		FINAL1	;
-! +Du3:ijægan	FINAL1	; !ee>i
-! +Du3:iben	    FINAL1	; !SUB !ee>i
-! +Pl1:ebe		FINAL1	;
-! +Pl2:ede		FINAL1	;
-! +Pl3:oeh		FINAL1	; !ee>oe
+ :'e			VSUF-EVEN-PRS-DUPL ;
 
-
-
-!! LEXICON V-EVEN-PRS
-!!   V-PRS-SG-12 ;
-!!   V-PRS-SG-3 ;
-!!    V-EVEN-PRS-DUPL ;
-   
-LEXICON V-EVEN-PRS-DUPL
- :i			VSUF-EVEN-PRS-DUPL ;
-! +Du1:ien       FINAL1	;
-! +Du2:eden		FINAL1	; !i>e
-! +Du3:iejægan	FINAL1	; 
-! +Du3:ieben	FINAL1	; !SUB
-! +Pl1:ebe		FINAL1	; !i>e
-! +Pl2:ede		FINAL1	; !i>e
-! +Pl3:ieh		FINAL1	;
 
 LEXICON VSUF-EVEN-PRS-DUPL
- +Du1:en        FINAL1	;
- +Du2:den		FINAL1	;
- +Du3:ejægan	FINAL1	;
- +Du3:eben	    FINAL1	; !SUB
- +Pl1:be		FINAL1	;
- +Pl2:de		FINAL1	;
- +Pl3:eh		FINAL1	;
+ +Du1:X2n        			FINAL1	; !'e>oe
+ +Du2:d%^DISIMPen		FINAL1	; !oe>o a>e ie>e
+ +Du3:X3jægan				FINAL1	; !'e>0i
+ +Du3:X3ben	    		FINAL1	; !SUB !'e>0i
+ +Pl1:b%^DISIMPe		FINAL1	; !oe>o a>e ie>e
+ +Pl2:d%^DISIMPe		FINAL1	; !oe>o a>e ie>e
+ +Pl3:X2h					FINAL1	; !'e>oe
 
 
 LEXICON VSUF-EVEN-IMP
  +Sg2:ieh	    FINAL1  ;
  +Du2:eden      FINAL1  ;
  +Pl2:ede       FINAL1  ;
-
-
-!LEXICON V-II-EVEN-PRS-DUPL
-! +Du1:oen       FINAL1	;
-! +Du2:oden		FINAL1	;
-! +Du3:oejægan	FINAL1	;
-! +Pl1:obe		FINAL1	;
-! +Pl2:ode		FINAL1	;
-! +Pl3:oeh		FINAL1	;
 
 
 LEXICON VSUF-II-EVEN-IMP
@@ -448,11 +396,11 @@ LEXICON VSUF-VI-EVEN-PRS
  		          V-PRS-SG-2 ;
  +Sg3:ie     	  FINAL1 ;
  +Du1:ien         FINAL1	;
- +Du2:eden		  FINAL1	; !i>e
+ +Du2:eden		  FINAL1	; !i>0
  +Du3:ijægan	  FINAL1	; !e>0
  +Du3:iben	      FINAL1	; !e>0
- +Pl1:ebe		  FINAL1	; !i>e
- +Pl2:ede		  FINAL1	;
+ +Pl1:ebe		  FINAL1	; !i>0
+ +Pl2:ede		  FINAL1	; !i>0
  +Pl3:ieh         FINAL1	;
 
 
@@ -560,6 +508,51 @@ LEXICON VSUF-PRT-DUPL
 +Pl3:in		    FINAL1	;
 
 
+
+
+!LEXICON V-II-PRS-DUPL
+! :oe		    VSUF-EVEN-PRS-DUPL ;
+! +Du1:oen      FINAL1	;
+! +Du2:oden		FINAL1	; !e>0
+! +Du3:oejægan	FINAL1	;
+! +Du3:oeben	FINAL1	; !SUB
+! +Pl1:obe		FINAL1	; !e>0
+! +Pl2:ode		FINAL1	; !e>0
+! +Pl3:oeh		FINAL1	;
+
+!LEXICON V-III-PRS-DUPL
+! :a			VSUF-EVEN-PRS-DUPL ;
+! +Du1:an       FINAL1	;
+! +Du2:eden		FINAL1	; !a>e
+! +Du3:ajægan	FINAL1	; 
+! +Du3:aben	FINAL1	; !SUB
+! +Pl1:ebe		FINAL1	; !a>e
+! +Pl2:ede		FINAL1	; !a>e
+! +Pl3:ah		FINAL1	;
+
+! From V verbs
+! +Du1:oen       FINAL1	; !'e>oe
+! +Du2:eden		FINAL1	;
+! +Du3:ijægan	FINAL1	; !e>i
+! +Du3:iben	    FINAL1	; !SUB !e>i
+! +Pl1:ebe		FINAL1	;
+! +Pl2:ede		FINAL1	;
+! +Pl3:oeh		FINAL1	; !'e>oe
+
+!! LEXICON V-EVEN-PRS
+!!   V-PRS-SG-12 ;
+!!   V-PRS-SG-3 ;
+!!    V-EVEN-PRS-DUPL ;
+   
+!LEXICON V-EVEN-PRS-DUPL
+! :ie		VSUF-EVEN-PRS-DUPL ;
+! +Du1:ien       FINAL1	;
+! +Du2:eden		FINAL1	; !i>0
+! +Du3:iejægan	FINAL1	; 
+! +Du3:ieben	FINAL1	; !SUB
+! +Pl1:ebe		FINAL1	; !i>0
+! +Pl2:ede		FINAL1	; !i>0
+! +Pl3:ieh		FINAL1	;
 
 
 
