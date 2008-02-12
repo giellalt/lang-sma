@@ -263,17 +263,17 @@ LEXICON BÅETEDH ! row A
 
 LEXICON TJEARODH ! row C
  +V+Ind+Prs:%>   V-II-PRS-SG ; ! class II special
- +V+Ind+Prs:%>   V-EVEN-PRS-DUPL ;
- +V+Ind+Prt:%>j  VSUF-PRT ;
- +V+IMP:%>       VSUF-EVEN-IMP ;
- +V+Inf:%>dh     FINAL1 ;
- +V+Ger:%>minI1  FINAL1 ;
- +V+PrfPrc:%>me  FINAL1 ;
- +V+ConNeg:%>0h  FINAL1 ;
+ +V+Ind+Prs:%>   V-II-PRS-DUPL ;
+ +V+Ind+Prt:%>oej  VSUF-PRT ;
+ +V+Imp:%>       VSUF-II-EVEN-IMP ;
+ +V+Inf:%>odh     FINAL1 ;
+ +V+Ger:%>oeminie  FINAL1 ;
+ +V+PrfPrc:%>%^2UMLeme  FINAL1 ;
+ +V+ConNeg:%>oeh  FINAL1 ;
 
 LEXICON GUARKEDH ! row B
  +V+Ind+Prs:%>   V-III-PRS-SG ; ! class III special
- +V+Ind+Prt:%>j  VSUF-PRT ;
+ +V+Ind+Prt:%>aj  VSUF-PRT ;
  +V+IMP:%>                    VSUF-EVEN-IMP ;
  +V+Inf:%>dh     FINAL1 ;
  +V+Ger:%>minI1  FINAL1 ;
@@ -281,7 +281,7 @@ LEXICON GUARKEDH ! row B
  +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON TJOEHPEDH ! row D
- +V+Ind+Prs:%>   VSUF-PRS ; 
+ +V+Ind+Prs:%>   V-EVEN-PRS ; 
  +V+Ind+Prt:%>   VSUF-PRT ;
  +V+IMP:%>                    VSUF-EVEN-IMP ;
  +V+Inf:%>dh     FINAL1 ;
@@ -290,7 +290,7 @@ LEXICON TJOEHPEDH ! row D
  +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON VÅÅJNEDH ! row E
- +V+Ind+Prs:%>  VSUF-PRS ; 
+ +V+Ind+Prs:%>  V-EVEN-PRS ; 
  +V+Ind+Prt:%>  VSUF-PRT ;
  +V+IMP:%>                    VSUF-EVEN-IMP ;
  +V+Inf:%>dh FINAL1 ;
@@ -299,7 +299,7 @@ LEXICON VÅÅJNEDH ! row E
  +V+ConNeg:%>0h  FINAL1 ;
 
 LEXICON GÖÖLEDH ! row F
- +V+Ind+Prs:%>  VSUF-PRS ; 
+ +V+Ind+Prs:%>  V-EVEN-PRS ; 
  +V+Ind+Prt:%>  VSUF-PRT ;
  +V+IMP:%>                    VSUF-EVEN-IMP ;
  +V+Inf:%>dh FINAL1 ;
@@ -309,25 +309,6 @@ LEXICON GÖÖLEDH ! row F
 
 
 
-
-! Verbal sublexica
-! ================
-
-
-LEXICON V-I-PRS-SG
- V-PRS-SG-12 ;
- V-PRS-SG-3 ;
-
-LEXICON V-II-PRS-SG
-     V-PRS-SG-12 ;
- :A1 V-PRS-SG-3 ; ! ?? parallels the byörkesne case
-
-LEXICON V-III-PRS-SG
-  V-PRS-SG-12 ; ! This should give guarka
-! V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
-! perhaps use A2 as 0 rule, triggers deletion in front of aff border
-! but then oe aff must come afterwards
- :%>oe FINAL1 ; ! well, perhaps a more archi-looking affix ?
 
 
 
@@ -339,11 +320,43 @@ LEXICON V-III-PRS-SG
 
 ! Even
 
-LEXICON VSUF-PRS
-  V-PRS-SG-1 ;
-  V-PRS-SG-2 ;
-  V-PRS-SG-3 ;
+LEXICON V-I-PRS-SG ! Merge with V-EVEN-PRS if nothing special here.
+ V-PRS-SG-12 ;
+ V-PRS-SG-3 ;
 
+LEXICON V-II-PRS-SG
+ :oe       V-PRS-SG-12 ;
+ :%^2UMLe V-PRS-SG-3 ; ! ?? parallels the byörkesne case
+
+LEXICON V-II-PRS-DUPL
+ +Du1:oen       FINAL1	;
+ +Du2:oden		FINAL1	;
+ +Du3:oejægan	FINAL1	;
+ +Pl1:obe		FINAL1	;
+ +Pl2:ode		FINAL1	;
+ +Pl3:oeh		FINAL1	;
+
+LEXICON VSUF-II-EVEN-IMP
+ +Sg2:oeh	    FINAL1  ;
+ +Du2:oden      FINAL1  ;
+ +Pl2:ode       FINAL1  ;
+
+
+LEXICON V-III-PRS-SG
+  V-PRS-SG-12 ; ! This should give guarka
+! V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
+! perhaps use A2 as 0 rule, triggers deletion in front of aff border
+! but then oe aff must come afterwards
+ :%>oe FINAL1 ; ! well, perhaps a more archi-looking affix ?
+
+
+
+
+LEXICON V-EVEN-PRS
+  V-PRS-SG-12 ;
+  V-PRS-SG-3 ;
+   V-EVEN-PRS-DUPL ;
+   
 LEXICON V-EVEN-PRS-DUPL
  +Du1:ien       FINAL1	;
  +Du2:eden		FINAL1	;
@@ -356,7 +369,21 @@ LEXICON V-EVEN-PRS-DUPL
 LEXICON VSUF-EVEN-IMP
  +Sg2:ieh	    FINAL1  ;
  +Du2:eden      FINAL1  ;
- +Pl2:ede      FINAL1  ;
+ +Pl2:ede       FINAL1  ;
+
+LEXICON V-II-EVEN-PRS-DUPL
+ +Du1:oen       FINAL1	;
+ +Du2:oden		FINAL1	;
+ +Du3:oejægan	FINAL1	;
+ +Pl1:obe		FINAL1	;
+ +Pl2:ode		FINAL1	;
+ +Pl3:oeh		FINAL1	;
+
+
+LEXICON VSUF-II-EVEN-IMP
+ +Sg2:oeh	    FINAL1  ;
+ +Du2:oden      FINAL1  ;
+ +Pl2:ode      FINAL1  ;
 
 
 ! Odd
