@@ -149,6 +149,7 @@ LEXICON LEA-PRES
 +Du1:ean		FINAL1	;
 +Du2:idien		FINAL1	;
 +Du3:ægan		FINAL1	;
++Du3:æban		FINAL1	; !SUB
 +Pl1:ibie		FINAL1	;
 +Pl2:idie		FINAL1	;
 +Pl3:eah		FINAL1	;
@@ -262,51 +263,51 @@ LEXICON BÅETEDH ! row A
  ! row F trigger for Umlaut Prt
 
 LEXICON TJEARODH ! row C
- +V+Ind+Prs:%>   V-II-PRS-SG ; ! class II special
- +V+Ind+Prs:%>   V-II-PRS-DUPL ;
- +V+Ind+Prt:%>oej  VSUF-PRT ;
- +V+Imp:%>       VSUF-II-EVEN-IMP ;
- +V+Inf:%>odh     FINAL1 ;
- +V+Ger:%>oeminie  FINAL1 ;
+ +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
+ +V+Ind+Prs:%>          V-II-PRS-DUPL ;
+ +V+Ind+Prt:%>oej       VSUF-PRT ;
+ +V+Imp:%>              VSUF-II-EVEN-IMP ;
+ +V+Inf:%>odh           FINAL1 ;
+ +V+Ger:%>oeminie       FINAL1 ;
  +V+PrfPrc:%>%^2UMLeme  FINAL1 ;
- +V+ConNeg:%>oeh  FINAL1 ;
+ +V+ConNeg:%>oeh        FINAL1 ;
 
 LEXICON GUARKEDH ! row B
- +V+Ind+Prs:%>   V-III-PRS-SG ; ! class III special
- +V+Ind+Prs:%>	 V-III-PRS-DUPL ;
+ +V+Ind+Prs:%>    V-III-PRS-SG ; ! class III special
+ +V+Ind+Prs:%>	  V-III-PRS-DUPL ;
  +V+Ind+Prt:%>aj  VSUF-PRT ;
- +V+Imp:%>                    VSUF-III-EVEN-IMP ;
+ +V+Imp:%>        VSUF-III-EVEN-IMP ;
  +V+Inf:%>adh     FINAL1 ;
- +V+Ger:%>minI1  FINAL1 ;
- +V+PrfPrc:%>me  FINAL1 ;
- +V+ConNeg:%>0h  FINAL1 ;
+ +V+Ger:%>minI1   FINAL1 ;
+ +V+PrfPrc:%>me   FINAL1 ;
+ +V+ConNeg:%>0h   FINAL1 ;
 
 LEXICON TJOEHPEDH ! row D
- +V+Ind+Prs:%>   V-EVEN-PRS ; 
- +V+Ind+Prt:%>   VSUF-PRT ;
- +V+Imp:%>                    VSUF-EVEN-IMP ;
- +V+Inf:%>dh     FINAL1 ;
- +V+Ger:%>minI1  FINAL1 ;
- +V+PrfPrc:%>me  FINAL1 ;
- +V+ConNeg:%>0h  FINAL1 ;
+ +V+Ind+Prs:%>     V-IV-PRS ; 
+ +V+Ind+Prt:%>     VSUF-PRT ;
+ +V+Imp:%>         VSUF-IV-EVEN-IMP ;
+ +V+Inf:%>edh      FINAL1 ;
+ +V+Ger:%>eminie   FINAL1 ;
+ +V+PrfPrc:%>eme   FINAL1 ;
+ +V+ConNeg:%>0h    FINAL1 ;
 
 LEXICON VÅÅJNEDH ! row E
- +V+Ind+Prs:%>  V-EVEN-PRS ; 
- +V+Ind+Prt:%>  VSUF-PRT ;
- +V+Imp:%>                    VSUF-EVEN-IMP ;
- +V+Inf:%>dh FINAL1 ;
- +V+Ger:%>minI1 FINAL1 ;
- +V+PrfPrc:%>me FINAL1 ;
- +V+ConNeg:%>0h  FINAL1 ;
+ +V+Ind+Prs:%>   VSUF-V-EVEN-PRS ; 
+ +V+Ind+Prt:%>   VSUF-PRT ;
+ +V+Imp:%>       VSUF-EVEN-IMP ;
+ +V+Inf:%>edh    FINAL1 ;
+ +V+Ger:%>eminie FINAL1 ;
+ +V+PrfPrc:%>eme FINAL1 ;
+ +V+ConNeg:%>h   FINAL1 ;
 
 LEXICON GÖÖLEDH ! row F
- +V+Ind+Prs:%>  V-EVEN-PRS ; 
- +V+Ind+Prt:%>  VSUF-PRT ;
- +V+Imp:%>                    VSUF-EVEN-IMP ;
- +V+Inf:%>dh FINAL1 ;
- +V+Ger:%>minI1 FINAL1 ;
- +V+PrfPrc:%>me FINAL1 ;
- +V+ConNeg:%>0h  FINAL1 ;
+ +V+Ind+Prs:%>    VSUF-VI-EVEN-PRS ; 
+ +V+Ind+Prt:%>    VSUF-PRT ;
+ +V+Imp:%>        VSUF-EVEN-IMP ;
+ +V+Inf:%>edh     FINAL1 ;
+ +V+Ger:%>minie   FINAL1 ;
+ +V+PrfPrc:%>eme  FINAL1 ;
+ +V+ConNeg:%>h    FINAL1 ;
 
 
 
@@ -327,31 +328,46 @@ LEXICON V-I-PRS-SG ! Merge with V-EVEN-PRS if nothing special here.
 
 LEXICON V-II-PRS-SG
  :oe       V-PRS-SG-12 ;
- :%^2UMLe V-PRS-SG-3 ; ! ?? parallels the byörkesne case
+ :%^2UMLe  V-PRS-SG-3 ; ! ?? parallels the byörkesne case
 
 LEXICON V-II-PRS-DUPL
- +Du1:oen       FINAL1	;
- +Du2:oden		FINAL1	;
- +Du3:oejægan	FINAL1	;
- +Pl1:obe		FINAL1	;
- +Pl2:ode		FINAL1	;
- +Pl3:oeh		FINAL1	;
+ :o			    VSUF-EVEN-PRS-DUPL ;
+! +Du1:oen      FINAL1	;
+! +Du2:oden		FINAL1	;
+! +Du3:oejægan	FINAL1	;
+! +Du3:oeben	FINAL1	; !SUB
+! +Pl1:obe		FINAL1	;
+! +Pl2:ode		FINAL1	;
+! +Pl3:oeh		FINAL1	;
 
 LEXICON V-III-PRS-SG
  :a  V-PRS-SG-12 ; ! This should give guarka
  :oe V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
 ! perhaps use A2 as 0 rule, triggers deletion in front of aff border
 ! but then oe aff must come afterwards
- :%>oe FINAL1 ; ! well, perhaps a more archi-looking affix ?
+ :oe FINAL1 ; ! well, perhaps a more archi-looking affix ?
 
 LEXICON V-III-PRS-DUPL
- +Du1:an       FINAL1	;
+ :e			VSUF-EVEN-PRS-DUPL ;
+! +Du1:an       FINAL1	; !e>a
+! +Du2:eden		FINAL1	;
+! +Du3:ajægan	FINAL1	; !e>a 
+! +Du3:aben	FINAL1	; !SUB !e>a
+! +Pl1:ebe		FINAL1	;
+! +Pl2:ede		FINAL1	;
+! +Pl3:ah		FINAL1	; !e>a
+
+LEXICON VSUF-V-EVEN-PRS
+ :e  V-PRS-SG-1 ;
+     V-PRS-SG-2 ;
+ :oe V-PRS-SG-3 ;
+ +Du1:oen       FINAL1	;
  +Du2:eden		FINAL1	;
- +Du3:ajægan	FINAL1	;
+ +Du3:ijægan	FINAL1	;
+ +Du3:iben	    FINAL1	; !SUB
  +Pl1:ebe		FINAL1	;
  +Pl2:ede		FINAL1	;
- +Pl3:ah		FINAL1	;
-
+ +Pl3:oeh		FINAL1	;
 
 
 
@@ -361,12 +377,23 @@ LEXICON V-EVEN-PRS
    V-EVEN-PRS-DUPL ;
    
 LEXICON V-EVEN-PRS-DUPL
- +Du1:ien       FINAL1	;
- +Du2:eden		FINAL1	;
- +Du3:iejægan	FINAL1	;
- +Pl1:ebe		FINAL1	;
- +Pl2:ede		FINAL1	;
- +Pl3:ieh		FINAL1	;
+ :i			VSUF-EVEN-PRS-DUPL ;
+! +Du1:ien       FINAL1	;
+! +Du2:eden		FINAL1	; !i>e
+! +Du3:iejægan	FINAL1	; 
+! +Du3:ieben	FINAL1	; !SUB
+! +Pl1:ebe		FINAL1	; !i>e
+! +Pl2:ede		FINAL1	; !i>e
+! +Pl3:ieh		FINAL1	;
+
+LEXICON VSUF-EVEN-PRS-DUPL
+ +Du1:en       FINAL1	;
+ +Du2:den		FINAL1	;
+ +Du3:ejægan	FINAL1	;
+ +Du3:eben	FINAL1	; !SUB
+ +Pl1:be		FINAL1	;
+ +Pl2:de		FINAL1	;
+ +Pl3:eh		FINAL1	;
 
 
 LEXICON VSUF-EVEN-IMP
@@ -395,6 +422,39 @@ LEXICON VSUF-III-EVEN-IMP
  +Pl2:ede      FINAL1  ;
 
 
+LEXICON V-IV-EVEN-PRS
+ :e		          V-PRS-SG-1 ;
+ 		          V-PRS-SG-2 ;
+ +Sg3:%^3sUMLa	  FINAL1 ;
+ +Du1:%^3dUMLien  FINAL1	;
+ +Du2:eden		  FINAL1	;
+ +Du3:ijægan	  FINAL1	;
+ +Du3:iben	      FINAL1	;
+ +Pl1:ebe		  FINAL1	;
+ +Pl2:ede		  FINAL1	;
+ +Pl3:%^3dUMLieh  FINAL1	;
+
+LEXICON VSUF-IV-EVEN-IMP
+ +Sg2:h		    FINAL1  ;
+ +Du2:eden      FINAL1  ;
+ +Pl2:ede      FINAL1  ;
+
+
+
+LEXICON VSUF-VI-EVEN-PRS
+ :e		          V-PRS-SG-1 ;
+ 		          V-PRS-SG-2 ;
+ +Sg3:ie     	  FINAL1 ;
+ +Du1:ien         FINAL1	;
+ +Du2:eden		  FINAL1	;
+ +Du3:ijægan	  FINAL1	;
+ +Du3:iben	      FINAL1	;
+ +Pl1:ebe		  FINAL1	;
+ +Pl2:ede		  FINAL1	;
+ +Pl3:ieh         FINAL1	;
+
+
+
 ! Odd
 
 LEXICON VSUF-ODD-PRS
@@ -408,6 +468,7 @@ LEXICON V-ODD-PRS-DUPL
  +Du1:ien		FINAL1	;
  +Du2:idien		FINAL1	;
  +Du3:ægan		FINAL1	;
+ +Du3:æban		FINAL1	; !SUB
  +Pl1:ibie		FINAL1	;
  +Pl2:idie		FINAL1	;
  +Pl3:ieh		FINAL1	;
@@ -437,6 +498,7 @@ LEXICON VSUF-CONTR-DUPL
  +Du1:ien		FINAL1	;
  +Du2:eden		FINAL1	;
  +Du3:ijægan	FINAL1	;
+ +Du3:iben	FINAL1	; !SUB
  +Pl1:ebe		FINAL1	;
  +Pl2:ede		FINAL1	;
  +Pl3:ieh		FINAL1	;
@@ -455,8 +517,8 @@ LEXICON VSUF-CONTR-IMP
 ! ---------------------
 
 LEXICON V-PRS-SG-12 ! Kutt denne viss ikkje ref til
- : V-PRS-SG-1 ;
- : V-PRS-SG-2 ;
+ V-PRS-SG-1 ;
+ V-PRS-SG-2 ;
 
 LEXICON V-PRS-SG-1 
  +Sg1:m			FINAL1	; ! Border in prev lex
