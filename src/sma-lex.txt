@@ -273,9 +273,10 @@ LEXICON TJEARODH ! row C
 
 LEXICON GUARKEDH ! row B
  +V+Ind+Prs:%>   V-III-PRS-SG ; ! class III special
+ +V+Ind+Prs:%>	 V-III-PRS-DUPL ;
  +V+Ind+Prt:%>aj  VSUF-PRT ;
- +V+IMP:%>                    VSUF-EVEN-IMP ;
- +V+Inf:%>dh     FINAL1 ;
+ +V+Imp:%>                    VSUF-EVEN-IMP ;
+ +V+Inf:%>adh     FINAL1 ;
  +V+Ger:%>minI1  FINAL1 ;
  +V+PrfPrc:%>me  FINAL1 ;
  +V+ConNeg:%>0h  FINAL1 ;
@@ -343,11 +344,19 @@ LEXICON VSUF-II-EVEN-IMP
 
 
 LEXICON V-III-PRS-SG
-  V-PRS-SG-12 ; ! This should give guarka
-! V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
+ :a  V-PRS-SG-12 ; ! This should give guarka
+ :oe V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
 ! perhaps use A2 as 0 rule, triggers deletion in front of aff border
 ! but then oe aff must come afterwards
  :%>oe FINAL1 ; ! well, perhaps a more archi-looking affix ?
+
+LEXICON V-III-PRS-DUPL
+ +Du1:an       FINAL1	;
+ +Du2:eden		FINAL1	;
+ +Du3:ajægan	FINAL1	;
+ +Pl1:ebe		FINAL1	;
+ +Pl2:ede		FINAL1	;
+ +Pl3:ah		FINAL1	;
 
 
 
