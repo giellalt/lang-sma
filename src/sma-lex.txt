@@ -38,7 +38,7 @@ Multichar_Symbols
 
 LEXICON Root
   0:#			Noun	;
-  0:#			ProperNoun	;  
+  0:#			ProperNoun	;
   0:#			Verb	;
   0:#			Pronoun	;
   0:#			Adverb	;
@@ -46,8 +46,8 @@ LEXICON Root
   0:#			Conjunction	;
   0:#			Particle	;
   0:#			Adposition	;
-  0:#			Punctuation	;  
-  0:#			Interjection	;  
+  0:#			Punctuation	;
+  0:#			Interjection	;
   0:#			Numeral ;
 
 
@@ -108,7 +108,7 @@ LEXICON J-CLASS
 
 
 LEXICON J-LESS-CASE
-  +Sg+Nom:  	    FINAL1  ; 
+  +Sg+Nom:  	    FINAL1  ;
   +Sg+Acc:%>m		FINAL1	;
   +Sg+Gen:%>n		FINAL1	;
   +Sg+Ine:%>snI1	FINAL1	;
@@ -139,8 +139,11 @@ LEXICON IJ-CASE
 
 LEXICON LEA
 
++Inf:lea	FINAL1 ;
 +Ind+Prs:l LEA-PRES	;
 +Ind+Prt:l LEA-PRET	;
++Imp:l		LEA-IMP ;
++ConNeg:leah	FINAL1 ;
 
 LEXICON LEA-PRES
 +Sg1:eam		FINAL1	;
@@ -164,6 +167,11 @@ LEXICON LEA-PRET
 +Pl1:imh	FINAL1	;
 +Pl2:idh	FINAL1	;
 +Pl3:in		FINAL1	;
+
+LEXICON LEA-IMP
++Sg2:eah	FINAL1 ;
++Du2:idien	FINAL1 ;
++Pl2:idie	FINAL1 ;
 
 
 ! The negative verb
@@ -283,7 +291,7 @@ LEXICON GUARKEDH ! row B
  +V+ConNeg:%>0h   FINAL1 ;
 
 LEXICON TJOEHPEDH ! row D
- +V+Ind+Prs:%>     V-IV-EVEN-PRS ; 
+ +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
  +V+Ind+Prt:%>     VSUF-PRT ;
  +V+Imp:%>         VSUF-IV-EVEN-IMP ;
  +V+Inf:%>edh      FINAL1 ;
@@ -292,7 +300,7 @@ LEXICON TJOEHPEDH ! row D
  +V+ConNeg:%>0h    FINAL1 ;
 
 LEXICON VÅÅJNEDH ! row E
- +V+Ind+Prs:%>   VSUF-V-EVEN-PRS ; 
+ +V+Ind+Prs:%>   VSUF-V-EVEN-PRS ;
  +V+Ind+Prt:%>   VSUF-PRT ;
  +V+Imp:%>       VSUF-IV-EVEN-IMP ;
  +V+Inf:%>edh    FINAL1 ;
@@ -301,7 +309,7 @@ LEXICON VÅÅJNEDH ! row E
  +V+ConNeg:%>h   FINAL1 ;
 
 LEXICON GÖÖLEDH ! row F
- +V+Ind+Prs:%>    VSUF-VI-EVEN-PRS ; 
+ +V+Ind+Prs:%>    VSUF-VI-EVEN-PRS ;
  +V+Ind+Prt:%>    VSUF-PRT ;
  +V+Imp:%>        VSUF-IV-EVEN-IMP ;
  +V+Inf:%>edh     FINAL1 ;
@@ -472,10 +480,10 @@ LEXICON V-PRS-SG-12 ! Kutt denne viss ikkje ref til
  V-PRS-SG-1 ;
  V-PRS-SG-2 ;
 
-LEXICON V-PRS-SG-1 
+LEXICON V-PRS-SG-1
  +Sg1:m			FINAL1	; ! Border in prev lex
 
-LEXICON V-PRS-SG-2 
+LEXICON V-PRS-SG-2
  +Sg2:h		FINAL1	;
 
 LEXICON V-PRS-SG-3
@@ -494,14 +502,14 @@ LEXICON VSUF-PRT
  VSUF-PRT-SG-3 ;
  VSUF-PRT-DUPL ;
 
-LEXICON VSUF-PRT-SG-12 
+LEXICON VSUF-PRT-SG-12
 +Sg1:im		FINAL1	;
 +Sg2:ih		FINAL1	;
 
-LEXICON VSUF-PRT-SG-3 
+LEXICON VSUF-PRT-SG-3
 +Sg3:i		FINAL1	;
 
-LEXICON VSUF-PRT-DUPL 
+LEXICON VSUF-PRT-DUPL
 +Du1:imen		FINAL1	;
 +Du2:iden		FINAL1	;
 +Du3:igan		FINAL1	;
@@ -526,7 +534,7 @@ LEXICON VSUF-PRT-DUPL
 ! :a			VSUF-EVEN-PRS-DUPL ;
 ! +Du1:an       FINAL1	;
 ! +Du2:eden		FINAL1	; !a>e
-! +Du3:ajægan	FINAL1	; 
+! +Du3:ajægan	FINAL1	;
 ! +Du3:aben	FINAL1	; !SUB
 ! +Pl1:ebe		FINAL1	; !a>e
 ! +Pl2:ede		FINAL1	; !a>e
@@ -545,12 +553,12 @@ LEXICON VSUF-PRT-DUPL
 !!   V-PRS-SG-12 ;
 !!   V-PRS-SG-3 ;
 !!    V-EVEN-PRS-DUPL ;
-   
+
 !LEXICON V-EVEN-PRS-DUPL
 ! :ie		VSUF-EVEN-PRS-DUPL ;
 ! +Du1:ien       FINAL1	;
 ! +Du2:eden		FINAL1	; !i>0
-! +Du3:iejægan	FINAL1	; 
+! +Du3:iejægan	FINAL1	;
 ! +Du3:ieben	FINAL1	; !SUB
 ! +Pl1:ebe		FINAL1	; !i>0
 ! +Pl2:ede		FINAL1	; !i>0
