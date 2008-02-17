@@ -122,13 +122,13 @@ Rules
 ! ===============================
 
   "I1 as ie"
-  I1:i <=> Syllable _ 0:e Cons [Nucleus %>: | V:0 %>: Nucleus] 
+  I1:i <=> Syllable _ 0:e Cons+ [Nucleus %>: | V:0 %>: Nucleus] 
                                          OpenFinal ;
 
-           Syllable Nucleus Cons [Nucleus %>: | (V:0) %>: Nucleus]
-                                        Cons _ 0:e DomainBound:;
+           Syllable Nucleus Cons+ [Nucleus %>: | (V:0) %>: Nucleus]
+                                        Cons+ _ 0:e DomainBound:;
   "O1 as oe"
-  O1:o <=> Syllable _ 0:e Cons [Nucleus %>: | (V:0) %>: Nucleus]
+  O1:o <=> Syllable _ 0:e Cons+ [Nucleus %>: | (V:0) %>: Nucleus]
                                          OpenFinal ;
 
  "A3, I1, O1 when preceding v"
@@ -158,7 +158,7 @@ Rules
    I1:e <=> Syllable _ 
             ConsJV [ Nucleus (AccGenSg) | V:0 %>:  [h | :i ]] DomainBound: ;
             Syllable [ [I2:e | O2:o | A2:e | U2:e ] %>: | 
-                                           V:0 %>: [:e | :i]] Cons _ DomainBound: ;
+                                           V:0 %>: [:e | :i]] Cons+ _ DomainBound: ;
 
   "O1 as o, A3 as e"
    Vx:Vy <=> Syllable _ ConsJV [Nucleus (AccGenSg) | V:0 %>:
@@ -169,19 +169,19 @@ Rules
 
 ! Rules for I4:
   "I4 as e"
-   I4:e <=> Syllable Nucleus Cons _ (AccGenSg) DomainBound: ;
+   I4:e <=> Syllable Nucleus Cons+ _ (AccGenSg) DomainBound: ;
 
   "I4 as i"
-   I4:i <=> Syllable Nucleus Cons _ %>: OpenFinal ;
+   I4:i <=> Syllable Nucleus Cons+ _ %>: OpenFinal ;
 
   "I4 as 0"
-   I4:0 <=> Syllable Nucleus Cons _ %>: [Nucleus (Cons Nucleus) | h]
+   I4:0 <=> Syllable Nucleus Cons+ _ %>: [Nucleus (Cons+ Nucleus) | h]
                                                          DomainBound: ;
 
 ! Rule for U2
 "U2 as 0"
-U2:0 <=> DomainBound: C* Nucleus Cons  _ 
-      %>: [ h | Nucleus ( Cons ) ( Nucleus ) ] DomainBound: ;
+U2:0 <=> DomainBound: C* Nucleus Cons+  _ 
+      %>: [ h | Nucleus ( Cons+ ) ( Nucleus ) ] DomainBound: ;
 
 
 "Consonant doubling"
@@ -254,7 +254,7 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row F in the umlaut table
   "Umlaut before affixes on -i, row F, monopthongs"
-  Vx:Vy <=> Onset _ Cons+ I2:0 %>: :i (Cons Nucleus) DomainBound: ;
+  Vx:Vy <=> Onset _ Cons+ I2:0 %>: :i (Cons+ Nucleus) DomainBound: ;
         where Vx in (Æ A4 Å1)
 	          Vy in (i  i u )
 	    matched ;
@@ -265,7 +265,7 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row A in the umlaut table
   "Umlaut in ie-context, diphthongs"
-  Vx:Vy <=> Onset _ 0:e Cons [ I2:i | I2:e ] ;
+  Vx:Vy <=> Onset _ 0:e Cons+ [ I2:i | I2:e ] ;
     where Vx in (E1 Å2 Å3 U1)
           Vy in (i  a  å  u )
     matched;
@@ -282,7 +282,7 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row B in the umlaut table
   "Umlaut in a-context, diphthongs"
-  Vx:Vy <=> Onset _ 0:a Cons I2: %>: A1:a ;
+  Vx:Vy <=> Onset _ 0:a Cons+ I2: %>: A1:a ;
 	    where Vx in (E1 Å2 Å3 U1)
               Vy in (e  a  å  u )
         matched;
@@ -290,7 +290,7 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row C in the umlaut table
   "Umlaut in oe-context, diphthongs"
-  Vx:Vy <=> Onset _ 0:a Cons O2:o ;
+  Vx:Vy <=> Onset _ 0:a Cons+ O2:o ;
 	    where Vx in (E1 Å2 Å3 U1)
               Vy in (e  a  å  å )
         matched;
@@ -301,7 +301,7 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row E in the umlaut table
   "Umlaut before affixes with A1:e, row E, diphthongs"
-  Vx:Vy <=> Onset _ 0:Vy Cons [I2:0 | O2:0] %>: A1:e
+  Vx:Vy <=> Onset _ 0:Vy Cons+ [I2:0 | O2:0] %>: A1:e
                               OpenOrClosedFinal ;
             where Vx in (Å2 Å3 U1)
                   Vy in (å  å  å )
@@ -310,14 +310,14 @@ D1:X <=> A1:a X: _ ;
 
 ! Umlaut in row E in the umlaut table ie->yö
   "Umlaut before affixes with A1, row E, ie->yö"
-  E1:y <=> Onset _ 0:ö Cons [I2:0 | O2:0] %>: [A1:a | A1:e]
+  E1:y <=> Onset _ 0:ö Cons+ [I2:0 | O2:0] %>: [A1:a | A1:e]
                               OpenOrClosedFinal ;
 
 
 ! Umlaut in row F in the umlaut table
   "Umlaut before affixes on -i, row F, diphthongs"
-  Vx:Vy <=> Onset _ 0:Vy Cons I2:0 %>: :i
-                              (Cons Nucleus) DomainBound: ;
+  Vx:Vy <=> Onset _ 0:Vy Cons+ I2:0 %>: :i
+                              (Cons+ Nucleus) DomainBound: ;
             where Vx in (E1 Å2 Å3 U1)
                   Vy in (e  e  ö  ö )
             matched;
@@ -332,50 +332,50 @@ D1:X <=> A1:a X: _ ;
    I3:j <=> [I2:i 0:e | A2: | O2:o 0:e] %>: _ DomainBound: ;
 
   "I2 not as 0"
-   I2:0 /<= Onset Å4:å 0:e Cons _ %>: I3: DomainBound: ;
+   I2:0 /<= Onset Å4:å 0:e Cons+ _ %>: I3: DomainBound: ;
 
 
 ! Rules for surface dipthtongs
 ! ============================
 
 !  "Inserted a"
-!  0:a <=>  Onset [E1:| Å2: | Å3: | U1:] _ Cons I2: %>: A1:a ;
-!           Onset [E1:| Å2: | Å3:| U1:]  _ Cons O2:o ;
+!  0:a <=>  Onset [E1:| Å2: | Å3: | U1:] _ Cons+ I2: %>: A1:a ;
+!           Onset [E1:| Å2: | Å3:| U1:]  _ Cons+ O2:o ;
 !           Onset Å4:                    _ C+ I2: %>: A1: ;
 
 !  "Inserted e" !E2 must in again.
 !  E2:e <=>
-!  Syllable [I2: | O2: ]                      _ (%>: [ I3:j | Cons ]) DomainBound:;
-!  Syllable I1:                               _ Cons [Nucleus %>: | V:0 %>: Nucleus] OpenFinal ;
-!  Syllable Nucleus Cons 
-!  [Nucleus %>: | (V:0) %>: Nucleus] Cons I1: _ DomainBound:;
-!          Syllable O1:                       _ Cons [Nucleus %>: | (V:0) %>: Nucleus] OpenFinal ;
-!          Onset [E1:| Å2:| Å3:| U1:]         _ Cons [ I2:i | I2:e ] ;
+!  Syllable [I2: | O2: ]                      _ (%>: [ I3:j | Cons+ ]) DomainBound:;
+!  Syllable I1:                               _ Cons+ [Nucleus %>: | V:0 %>: Nucleus] OpenFinal ;
+!  Syllable Nucleus Cons+ 
+!  [Nucleus %>: | (V:0) %>: Nucleus] Cons+ I1: _ DomainBound:;
+!          Syllable O1:                       _ Cons+ [Nucleus %>: | (V:0) %>: Nucleus] OpenFinal ;
+!          Onset [E1:| Å2:| Å3:| U1:]         _ Cons+ [ I2:i | I2:e ] ;
 !          Onset Å4:                          _ C+ [I2:i |I2:e | I2:0 %>: Nucleus] ;
 !!          [I2: | O2:]                       _ %>: I3: DomainBound: ;
-!          Onset [E1:|Å2:]                    _ Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
+!          Onset [E1:|Å2:]                    _ Cons+ I2:0 %>: :i (Cons+ Nucleus) DomainBound: ;
 
   "Inserted e" !E2 must in again. (080209 this now happens)
   0:e <=>
-  Syllable [I2: | O2: ]                      _ (%>: [ I3:j | Cons ]) DomainBound:;
-  Syllable I1:                               _ Cons [Nucleus %>: | V:0 %>: Nucleus] OpenFinal ;
-  Syllable Nucleus Cons 
-  [Nucleus %>: | (V:0) %>: Nucleus] Cons I1: _ DomainBound:;
-          Syllable O1:                       _ Cons [Nucleus %>: | (V:0) %>: Nucleus] OpenFinal ;
-          Onset [E1:| Å2:| Å3:| U1:]         _ Cons [ I2:i | I2:e ] ;
+  Syllable [I2: | O2: ]                      _ (%>: [ I3:j | Cons+ ]) DomainBound:;
+  Syllable I1:                               _ Cons+ [Nucleus %>: | V:0 %>: Nucleus] OpenFinal ;
+  Syllable Nucleus Cons+ 
+  [Nucleus %>: | (V:0) %>: Nucleus] Cons+ I1: _ DomainBound:;
+          Syllable O1:                       _ Cons+ [Nucleus %>: | (V:0) %>: Nucleus] OpenFinal ;
+          Onset [E1:| Å2:| Å3:| U1:]         _ Cons+ [ I2:i | I2:e ] ;
           Onset Å4:                          _ C+ [I2:i |I2:e | I2:0 %>: Nucleus] ;
 !         [I2: | O2:]                       _ %>: I3: DomainBound: ;
-          Onset [E1:|Å2:]                    _ Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
+          Onset [E1:|Å2:]                    _ Cons+ I2:0 %>: :i (Cons+ Nucleus) DomainBound: ;
 
   "Inserted ö"
   0:ö <=> Onset E1: _ 
-          Cons [I2:0 | O2:0] %>: [A1:a | A1:e] OpenOrClosedFinal ;
+          Cons+ [I2:0 | O2:0] %>: [A1:a | A1:e] OpenOrClosedFinal ;
           Onset [Å3:|U1:] _
-          Cons I2:0 %>: :i (Cons Nucleus) DomainBound: ;
+          Cons+ I2:0 %>: :i (Cons+ Nucleus) DomainBound: ;
 
   "Inserted å"
   0:å <=> Onset [Å2:| Å3:| U1:] _
-          Cons [I2:0 | O2:0] %>: A1:e OpenOrClosedFinal ;
+          Cons+ [I2:0 | O2:0] %>: A1:e OpenOrClosedFinal ;
 
 
 
