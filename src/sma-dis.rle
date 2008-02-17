@@ -194,11 +194,14 @@ CONSTRAINTS
 
 REMOVE ("Da" N) IF (0 ("dïhte"));
 
-SELECT ConNeg IF (-1 Neg);
+SELECT ConNeg IF (-1 Neg) ; # Why does this require the two next???
+REMOVE Imp IF (-1 Neg)(0 ConNeg);
+REMOVE Ind IF (-1 Neg)(0 ConNeg);
 
 REMOVE ConNeg IF (NOT *-1 Neg); # should go both directions.
 
 SELECT Pl3 IF (-1 (N Pl Nom))(0 ("lea" V));
 
 SELECT Gen IF (1 Adp);
+REMOVE Nom IF (1 Adp);
 
