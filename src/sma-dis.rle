@@ -1,0 +1,204 @@
+# Distributed under the terms of the GNU General Public License version 2 
+# or any later version.
+
+# =================================================================== #
+# =================================================================== #
+#            S O U T H   S Á M I   D I S A M B I G U A T O R          #
+# =================================================================== #
+# =================================================================== #
+
+            # =========================================== #
+            #            Short table of contents          #
+            # =========================================== #
+
+            # Delimiters
+            # Tags and sets
+	        # Mapping rules
+            # Disambiguation rules
+              # One-cohort disambiguation - cycle 0
+              # Local disambiguation - cycles 1 and 2
+              # Cycle 2: Other local disambiguation         
+              # Cycle 3: Global disambiguation 
+	          # Cycle 4: Syntactic disambiguation 
+	          # Cycle 5: Post-syntactic morphological disambiguation
+
+
+# ========== #
+# Delimiters #
+# ========== #
+
+
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>";
+
+
+# ============= #
+# Tags and sets #
+# ============= #
+
+
+# ========
+   SETS
+# ========
+
+LIST BOS = (>>>) (<s>); 
+LIST EOS = (<<<) (</s>); # vislcg and CG-2 together.
+
+# Tags declared as single-membered LISTs 
+# ======================================
+
+LIST N = N ;
+LIST Sg = Sg ;
+LIST Pl = Pl ;
+LIST Nom = Nom ;
+LIST Acc = Acc ;
+LIST Gen = Gen ;
+LIST Ine = Ine ;
+LIST Ela = Ela ;
+LIST Ill = Ill ;
+LIST Com = Com ;
+LIST Ess = Ess ;
+
+LIST PxSg1 = PxSg1 ;
+LIST PxSg2 = PxSg2 ;
+LIST PxSg3 = PxSg3 ;
+
+LIST PxDu1 = PxDu1 ;
+LIST PxDu2 = PxDu2 ;
+LIST PxDu3 = PxDu3 ;
+
+LIST PxPl1 = PxPl1 ;
+LIST PxPl2 = PxPl2 ;
+LIST PxPl3 = PxPl3 ;
+
+LIST V = V ;
+LIST Prs = Prs ;
+LIST Prt = Prt ;
+
+LIST Sg1 = Sg1 ;
+LIST Sg2 = Sg2 ;
+LIST Sg3 = Sg3 ;
+
+LIST Du1 = Du1 ;
+LIST Du2 = Du2 ;
+LIST Du3 = Du3 ;
+
+LIST Pl1 = Pl1 ;
+LIST Pl2 = Pl2 ;
+LIST Pl3 = Pl3 ;
+
+LIST Inf = Inf ;
+LIST Neg = Neg ;
+LIST ConNeg = ConNeg ;
+
+LIST PrfPrc = PrfPrc ;
+LIST VGen = VGen ;
+LIST Ger = Ger ;
+
+LIST Ind = Ind ;
+
+LIST Imp = Imp ;
+LIST ImpII = ImpII ;
+
+LIST Pot = Pot ;
+LIST Cond = Cond ;
+
+LIST Opt = Opt ;
+
+LIST Actor = Actor ;
+LIST Clt = Clt ;
+LIST A = A ;
+
+LIST Comp = Comp ;
+LIST Superl = Superl ;
+
+LIST Attr = Attr ;
+
+LIST Pron = Pron ;
+LIST Pers = Pers ;
+LIST Dem = Dem ;
+LIST Adp = Adp ;
+LIST Po = Po ;
+LIST Adv = Adv ;
+LIST Interj = Interj ;
+LIST Num = Num ;
+
+LIST CS = CS ;
+LIST CC = CC ;
+LIST Pcle = Pcle ;
+LIST CLB = CLB ;
+LIST PUNCT = PUNCT ;
+LIST LEFT = LEFT ;
+LIST RIGHT = RIGHT ;
+
+
+
+# Syntactic tags
+# --------------
+
+LIST @+FAUXV = @+FAUXV ; 
+LIST @+FMAINV = @+FMAINV ; 
+LIST @-FAUXV = @-FAUXV ;
+LIST @-FMAINV = @-FMAINV ; 
+LIST @-FSUBJ = @-FSUBJ ;
+
+SET FMAINV = @-FMAINV | @+FMAINV ;
+
+LIST @ADV-A = @ADV-A ; 
+LIST @ADV-ADV = @ADV-ADV ; 
+LIST @ADVL = @ADVL ;
+
+LIST @AN> = @AN> ; 
+LIST @ActioN> = @ActioN> ; 
+LIST @CC = @CC ; 
+LIST @CMPND = @CMPND ; 
+LIST @CS = @CS ;
+LIST @DN> = @DN> ; 
+LIST @GA> = @GA> ; 
+LIST @GN> = @GN> ; 
+LIST @GP< = @GP< ; 
+LIST @GP> = @GP> ;
+LIST @HNOUN = @HNOUN ; 
+LIST @INTERJ = @INTERJ ; 
+LIST @MEASURE = @MEASURE ;
+LIST @NNum> = @NNum>; 
+LIST @NumN< = @NumN<;
+LIST @NPron< = @NPron< ;
+LIST @NQ< = @NQ< ; 
+LIST @NUM-PRON = @NUM-PRON ; 
+LIST @OBJ = @OBJ ;
+LIST @OPRED = @OPRED ; 
+LIST @PCLE = @PCLE ; 
+LIST @PCLE-COMPL = @PCLE-COMPL ; 
+LIST @PROP> = @PROP> ;
+LIST @PrcN> = @PrcN> ; 
+LIST @PronN< = @PronN< ; 
+LIST @PronN> = @PronN> ; 
+ LIST @QN< = @QN< ;
+LIST @QN> = @QN> ; 
+LIST @SPRED = @SPRED ; 
+LIST @SUBJ = @SUBJ ; 
+LIST @SUBJ-QH = @SUBJ-QH ;
+
+
+LIST @TITLE = @TITLE ; 
+LIST @VOC = @VOC ; 
+LIST @X = @X ;
+
+
+
+
+
+CONSTRAINTS
+
+# Cycle 0
+
+REMOVE ("Da" N) IF (0 ("dïhte"));
+
+SELECT ConNeg IF (-1 Neg);
+
+REMOVE ConNeg IF (NOT *-1 Neg); # should go both directions.
+
+SELECT Pl3 IF (-1 (N Pl Nom))(0 ("lea" V));
+
+SELECT Gen IF (1 Adp);
+
