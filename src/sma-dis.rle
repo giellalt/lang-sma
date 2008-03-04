@@ -141,7 +141,7 @@ LIST @-FAUXV = @-FAUXV ;
 LIST @-FMAINV = @-FMAINV ; 
 LIST @-FSUBJ = @-FSUBJ ;
 
-SET FMAINV = @-FMAINV | @+FMAINV ;
+SET FMAINV = @-FMAINV OR @+FMAINV ;
 
 LIST @ADV-A = @ADV-A ; 
 LIST @ADV-ADV = @ADV-ADV ; 
@@ -197,13 +197,14 @@ REMOVE ("Da" N) IF (0 ("dïhte"));
 SELECT:ConNeg ConNeg IF (*-1 Neg BARRIER Ind) ; 
 # Why does this require the two next???
 
-REMOVE Imp IF (*-1 Neg BARRIER Ind)(0 ConNeg);
-REMOVE Ind IF (*-1 Neg BARRIER Ind)(0 ConNeg);
+REMOVE:NotImp Imp IF (*-1 Neg BARRIER Ind)(0 ConNeg);
+REMOVE:NotInd Ind IF (*-1 Neg BARRIER Ind)(0 ConNeg);
 
-REMOVE ConNeg IF (NEGATE *-1 Neg); # should go both directions.
+REMOVE:NotConNeg ConNeg IF (NEGATE *-1 Neg); # should go both directions.
 
-SELECT Pl3 IF (-1 (N Pl Nom))(0 ("lea" V));
+SELECT:Pl3WhenPlSubj Pl3 IF (-1 (N Pl Nom))(0 ("lea" V));
 
-SELECT Gen IF (1 Adp);
-REMOVE Nom IF (1 Adp);
+#SELECT:GenToAdp Gen IF (1 Adp);
+#REMOVE:NotNomToAdp Nom IF (1 Adp);
 
+END
