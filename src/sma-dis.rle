@@ -173,7 +173,7 @@ LIST @PROP> = @PROP> ;
 LIST @PrcN> = @PrcN> ; 
 LIST @PronN< = @PronN< ; 
 LIST @PronN> = @PronN> ; 
- LIST @QN< = @QN< ;
+LIST @QN< = @QN< ;
 LIST @QN> = @QN> ; 
 LIST @SPRED = @SPRED ; 
 LIST @SUBJ = @SUBJ ; 
@@ -194,11 +194,13 @@ CONSTRAINTS
 
 REMOVE ("Da" N) IF (0 ("dïhte"));
 
-SELECT ConNeg IF (-1 Neg) ; # Why does this require the two next???
-REMOVE Imp IF (-1 Neg)(0 ConNeg);
-REMOVE Ind IF (-1 Neg)(0 ConNeg);
+SELECT:ConNeg ConNeg IF (*-1 Neg BARRIER Ind) ; 
+# Why does this require the two next???
 
-REMOVE ConNeg IF (NOT *-1 Neg); # should go both directions.
+REMOVE Imp IF (*-1 Neg BARRIER Ind)(0 ConNeg);
+REMOVE Ind IF (*-1 Neg BARRIER Ind)(0 ConNeg);
+
+REMOVE ConNeg IF (NEGATE *-1 Neg); # should go both directions.
 
 SELECT Pl3 IF (-1 (N Pl Nom))(0 ("lea" V));
 
