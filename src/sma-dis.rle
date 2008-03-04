@@ -200,7 +200,8 @@ SELECT:ConNeg ConNeg IF (*-1 Neg BARRIER Ind) ;
 REMOVE:NotImp Imp IF (*-1 Neg BARRIER Ind)(0 ConNeg);
 REMOVE:NotInd Ind IF (*-1 Neg BARRIER Ind)(0 ConNeg);
 
-IFF:IsItConNeg ConNeg IF (NEGATE *0 Neg); # a quite brave one... should of course be a barrier..
+#REMOVE:NotConNeg ConNeg IF (NEGATE *-1 Neg); # should go both directions.
+IFF:IsItConNeg ConNeg (*-1 Neg);
 
 SELECT:Pl3WhenPlSubj Pl3 IF (-1 (N Pl Nom))(0 ("lea" V));
 
