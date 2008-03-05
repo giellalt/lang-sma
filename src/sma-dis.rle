@@ -132,6 +132,7 @@ LIST RIGHT = RIGHT ;
 
 # SETS
 LIST WORD = N A V Adv Pron Interj Adp Num CS CC Pcle ;
+LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS Adp ;
 
 SET NOT-ADV = WORD - Adv ;
 
@@ -189,8 +190,6 @@ LIST @X = @X ;
 
 #SETS
 
-LIST WORD = N A Num Pron A Adv Pcle Interj V CC CS Adp ;
-LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS Adp ;
 LIST INFV = "aelkedh" "båetedh" "edtjedh" "galkedh" "maehtedh" "provhkedh" "sjïdtedh" ; 
 # These are often followed by an infitive. To the set belong also some verbs which are not in the lex: tjoeveridh tjoeredh
 
@@ -212,18 +211,15 @@ REMOVE ("Da" N) IF (0 ("dïhte"));
 
 IFF:IsItConNeg ConNeg (*-1 Neg BARRIER ConNeg); 
 
-#REMOVE:NotConNeg ConNeg IF (NEGATE *-1 Neg); 
-#SELECT:ConNeg ConNeg IF (*-1 Neg BARRIER Ind) ; 
-# Why does this require the two next???
-
-#REMOVE:NotImp Imp IF (*-1 Neg BARRIER Ind)(0 ConNeg);
-#REMOVE:NotInd Ind IF (*-1 Neg BARRIER Ind)(0 ConNeg);
-
+# Imperative
 REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
+REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
+       ## 
+
 
 SELECT:Pl3WhenPlSubj Pl3 IF (1 (N Pl Nom))(0 ("lea" V));
 
-SELECT (V Inf) IF (*-1 INFV) ; 
+SELECT:InfIfInfv (V Inf) IF (*-1 INFV BARRIER V OR CS OR CC) ; 
 # Should be BARRIER V OR CS OR CC # It doesn´t work...
 	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
 
@@ -234,6 +230,14 @@ SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") BARRIER V);
 
 SELECT:PlIfPlSubj Pl3 IF (*-1 (Pl Nom) BARRIER NOT-ADV);
 
+# Contract or not
+
+REMOVE:NotContrIfEven (".*ijidh"r) IF (0 (".*[oe]dh"r));		
+		     
+
+# Span sentences
+
+"<lea>" REMOVE Pl3 IF (<*-1 Sg1 OR Sg2)(NOT *-1 (N Pl Nom));
 
 # Nomen
 
@@ -273,16 +277,3 @@ SELECT:InterjIfInterj Interj (0 ("ho"))(1 ("ho"));
 
 
 	
-# Contract or not
-
-REMOVE:NotContrIfEven (".*ijidh"r) IF (0 (".*[oe]dh"r));		
-		     
-
-# Imperative
-
-REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
-       ## 
-
-# Span sentences
-
-"<lea>" REMOVE Pl3 IF (<*-1 Sg1 OR Sg2)(NOT *-1 (N Pl Nom));
