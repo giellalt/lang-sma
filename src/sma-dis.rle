@@ -130,7 +130,10 @@ LIST PUNCT = PUNCT ;
 LIST LEFT = LEFT ;
 LIST RIGHT = RIGHT ;
 
+# SETS
+LIST WORD = N A V Adv Pron Interj Adp Num CS CC Pcle ;
 
+SET NOT-ADV = WORD - Adv ;
 
 # Syntactic tags
 # --------------
@@ -228,12 +231,23 @@ SELECT:VSg2IfPersSg2 (V Sg2) (*-1 (Pers Sg2) BARRIER V);
 
 SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") BARRIER V);
 
+
+SELECT:PlIfPlSubj Pl3 IF (*-1 (Pl Nom) BARRIER NOT-ADV);
+
+
 # Nomen
+
 SELECT:GenToAdp Gen IF (1 Adp);
 REMOVE:NotNomToAdp Nom IF (1 Adp);
 
 SELECT:GenIfLeaNom Gen (1 ("lea" V) LINK 0 Pl3 OR Sg3)(*1 (N Nom) BARRIER NPNH) ; 
 	# Dan lin baenieh njaelmesne.
+
+
+# Verb or Noun
+
+REMOVE (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
+       ## jieledh.
 
 # Dem
 SELECT:DemGenIfNGen (Dem Pl Gen)(*1 (N Pl Gen) BARRIER NPNH);
@@ -259,5 +273,16 @@ SELECT:InterjIfInterj Interj (0 ("ho"))(1 ("ho"));
 
 
 	
-		
-	
+# Contract or not
+
+REMOVE:NotContrIfEven (".*ijidh"r) IF (0 (".*[oe]dh"r));		
+		     
+
+# Imperative
+
+REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
+       ## 
+
+# Span sentences
+
+"<lea>" REMOVE Pl3 IF (<*-1 Sg1 OR Sg2)(NOT *-1 (N Pl Nom));
