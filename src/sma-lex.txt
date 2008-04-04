@@ -4,7 +4,7 @@ Multichar_Symbols
   +PxSg1 +PxSg2 +PxSg3
   +PxDu1 +PxDu2 +PxDu3
   +PxPl1 +PxPl2 +PxPl3
-
+  
   +V +Prs +Prt
   +Sg1 +Sg2 +Sg3
   +Du1 +Du2 +Du3
@@ -20,7 +20,7 @@ Multichar_Symbols
 
 ! Frå nordsamisk:
 ! +Actor +Clt
-! +A
+  +A
   +Comp +Superl
   +Attr
 
@@ -42,6 +42,7 @@ LEXICON Root
   0:#			Noun	;
   0:#			ProperNoun	;
   0:#			Verb	;
+  0:#			Adjective	;
   0:#			Pronoun	;
   0:#			Adverb	;
   0:#			Subjunction	;
@@ -129,6 +130,15 @@ LEXICON IJ-CASE
 
 
 
+
+
+! ===============================
+! Adjectival inflection sublexica
+! ===============================
+
+
+LEXICON adj
++A+Attr: FINAL1 ; ! just a dummy
 
 
 ! ===========================
@@ -295,8 +305,12 @@ LEXICON GOLTELIDH
 LEXICON BILLIJIDH
  +V+CTR+Ind+Prs:%> VSUF-CONTR-PRS ;
  +V+ODD+Ind+Prs:ij VSUF-ODD-PRS ;
- +V+CTR+Ind+Prt:%> VSUF-CONTR-PRT ;
- +V+ODD+Ind+Prt:ij VSUF-ODD-PRT ;
+ +V+Ind+Prt+Sg3:iji FINAL1 ;        ! Prt Sg3 identical
+ +V+CTR+Ind+Prt:%> VSUF-CONTR-PRT ; ! Not to Prt Sg3
+ +V+ODD+Ind+Prt:ij VSUF-PRT-SG-12 ; ! Also not to
+ +V+ODD+Ind+Prt:ij VSUF-PRT-DUPL ;  ! Prt Sg3
+
+
  +V+CTR+Imp:%>     VSUF-CONTR-IMP ;
  +V+ODD+Imp:ij     VSUF-ODD-IMP ;
 
@@ -526,7 +540,6 @@ LEXICON VSUF-CONTR-DUPL
  +Pl3:ieh		FINAL1	;
 
 LEXICON VSUF-CONTR-PRT
-+Sg3:iji FINAL1 ;
          VSUF-PRT-SG-12 ;
          VSUF-PRT-DUPL ;
 
