@@ -28,25 +28,35 @@
 ! - - - - - - - - -
 
 LEXICON VNAME ! Names ending in stressless vowel
- N_OTHERS ;
+ +N+Prop+Sg+Ill:%>sse FINAL1 ;
+ +N+Prop+Ess:%>ine FINAL1 ;
+ +N+Prop+Attr: FINAL ;
+ +N+Prop: J-LESS-CASE ;
+ +N+Prop: I-CLASS ;
 
 
 LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
- N_OTHERS ; ! check whether this is correct!
+ VNAME ; ! check whether this is correct!
 
 
 LEXICON SNAME ! Southern Sami names
- N_OTHERS ;
+ VNAME ;
 
 LEXICON PN_IE ! as N_IE, but (later) with Prop tag
- N_IE ;
+  +N+Prop+Sg+Ill:%>an	FINAL1	;	! Special Ill
+  +N+Prop+Ess:%>ine		FINAL1	;	! Special Ess
+ +N+Prop+Attr: FINAL ;
+  +N+Prop: J-LESS-CASE		;	! cases without -i/j-
+  +N+Prop: I-CLASS			;	! cases with -i-
+
 
 ! Consonant-filal names
 ! - - - - - - - - - - -
 
 LEXICON CNAME
- +N+Sg+Nom:0 FINAL1 ; ! The bare nominative, of unassimilated names
- :e N_OTHERS ; ! making C-final names into vowel stems
+ +N+Prop+Sg+Nom:0 FINAL1 ; ! The bare nominative, of unassimilated names
+ +N+Prop+Attr:0 FINAL1 ; ! The attributive version
+ :e VNAME ; ! making C-final names into vowel stems
 
 
 ! The lexica
