@@ -351,7 +351,18 @@ MAP (@SPRED) TARGET NP-HEAD + Nom + Sg IF (*-1 V + Sg3 LINK -1 (Nom Sg));
 
 MAP (@SUBJ) TARGET NP-HEAD + Nom + Sg IF (NEGATE *-1 V + Sg3 LINK -1 (Nom Sg));
 
+MAP (@ADVL) TARGET Adv ;
 
 MAP (@X) TARGET WORD ;
 
+
+
+# =============== #
+# Syntactic rules #
+# =============== #
+
+SECTION
+
+
+REMOVE (@X);
 
