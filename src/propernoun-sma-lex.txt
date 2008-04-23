@@ -56,7 +56,12 @@ LEXICON PN_IE ! as N_IE, but (later) with Prop tag
 LEXICON CNAME
  +N+Prop+Sg+Nom:0 FINAL1 ; ! The bare nominative, of unassimilated names
  +N+Prop+Attr:0 FINAL1 ; ! The attributive version
- :e VNAME ; ! making C-final names into vowel stems
+ +N+Prop+Sg+Ill:%>esse FINAL1 ;
+ +N+Prop+Ess:%>ine FINAL1 ;
+ +N+Prop:e OBLIQUE ;
+ +N+Prop: I-CLASS ;
+
+
 
 
 ! The lexica
