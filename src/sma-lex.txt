@@ -308,21 +308,26 @@ LEXICON GOLTELIDH
 ! Contract verbs
 ! ==============
 
-! standing in gt/sma/
-! cat texts | preprocess | lookup -flags mbTT -utf8 bin/sma.fst | less 
-! cat texts | preprocess | lookup -flags mbTT -utf8 bin/sma.fst | lookup2cg | vislcg3 -g src/sma-dis.rle | less
+! It is unclear whether there is such a stem class, or whether these verbs
+! are actually odd-syllable verbs.
+! Thus, we divide the contract verbforms in two:
+! Some would be identically inflected as contract and odd; they are unmarked
+! In the other cases, we give two versions, marked with +CTR and +ODD, 
+! respectively, so that we can trace their usage in corpora. 
+! The goal is then to choose between the two (or to have a normative decision).
 
 LEXICON BILLIJIDH
- +V+CTR+Ind+Prs:%>  VSUF-CONTR-PRS ;
- +V+ODD+Ind+Prs:ij  VSUF-ODD-PRS ;
- +V+Ind+Prt+Sg3:iji FINAL1 ;        ! Prt Sg3 identical
- +V+CTR+Ind+Prt:%>  VSUF-CONTR-PRT ; ! Not to Prt Sg3
- +V+ODD+Ind+Prt:ij  VSUF-PRT-SG-12 ; ! Also not to
- +V+ODD+Ind+Prt:ij  VSUF-PRT-DUPL ;  ! Prt Sg3
-
+ +V+CTR+Ind+Prs:%>  VSUF-CONTR-PRS ;    ! All except Du3
+ +V+ODD+Ind+Prs:%>ij  V-ODD-PRS-SG ;    ! All sg
+ +V+ODD+Ind+Prs:%>ij  ODD_PRS_NON_DU3 ; ! Al except Du3
+ +V+Ind+Prs+Du3:%>ijægan FINAL1 ;       ! Prs Du3 identical
+ +V+Ind+Prt+Sg3:%>iji FINAL1 ;          ! Prt Sg3 identical
+ +V+CTR+Ind+Prt:%>  VSUF-CONTR-PRT ;    ! Not to Prt Sg3
+ +V+ODD+Ind+Prt:%>ij  VSUF-PRT-SG-12 ;  ! Also not to Prt Sg3
+ +V+ODD+Ind+Prt:%>ij  VSUF-PRT-DUPL ;   
 
  +V+CTR+Imp:%>      VSUF-CONTR-IMP ;
- +V+ODD+Imp:ij      VSUF-ODD-IMP ;
+ +V+ODD+Imp:%>ij    VSUF-ODD-IMP ;
 
 ! Infinite forms
 ! --------------
@@ -504,21 +509,28 @@ LEXICON VSUF-VI-EVEN-PRS
 ! Odd
 
 LEXICON VSUF-ODD-PRS
+    V-ODD-PRS-SG ;
+    V-ODD-PRS-DUPL ;
+
+LEXICON V-ODD-PRS-SG
  :%^DISIMPe V-PRS-SG-1 ;
  :%^DISIMP  V-PRS-SG-2 ;
  :%^DISIMPe V-PRS-SG-3 ;
-            V-ODD-PRS-DUPL ;
-
 
 LEXICON V-ODD-PRS-DUPL
+ ODD_PRS_NON_DU3 ;
+ ODD_PRS_DU3 ;
+
+LEXICON ODD_PRS_NON_DU3
  +Du1:ien		FINAL1	;
  +Du2:idien		FINAL1	;
- +Du3:ægan		FINAL1	;
- +Du3:æban		FINAL1	; !SUB
  +Pl1:ibie		FINAL1	;
  +Pl2:idie		FINAL1	;
  +Pl3:ieh		FINAL1	;
 
+LEXICON ODD_PRS_DU3
+ +Du3:ægan		FINAL1	;
+ +Du3:æban		FINAL1	; !SUB
 
 LEXICON VSUF-ODD-PRT
 VSUF-PRT-SG-12 ;
@@ -543,7 +555,7 @@ LEXICON VSUF-CONTR-PRS
 LEXICON VSUF-CONTR-DUPL
  +Du1:ien		FINAL1	;
  +Du2:eden		FINAL1	;
- +Du3:ijægan	FINAL1	;
+! Dual third does not get an +CTR tag
  +Du3:eben		FINAL1	; !SUB
  +Pl1:ebe		FINAL1	;
  +Pl2:ede		FINAL1	;
