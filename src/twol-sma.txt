@@ -38,7 +38,7 @@ Alphabet
   %#:0 %>:0 %+:0 
   X2:0 X3:0
   ':0 !'
-  %^DISIMP:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML ;
+  %^DISIMP:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -603,6 +603,37 @@ o:0 <=> %>: %^2UML: _ e  ;
 ! prob delete this after testing
 ! " verbs Sg3 + PrfPtc ÅÅ II"
 !  a:å <=> _ a:å C+ o:0 e: %^2UML: ;
+
+
+
+
+! Umlaut rules for even-syll past tense
+
+
+"ie:ee and ae:ee past tense"
+Vx:e <=> _ e C* %>: %^iUML: ;
+	where Vx in ( a i );
+
+!€# jieht%>%^iUMLim
+!€0 jeehtim
+
+!€# tjael%>%^iUML
+!€0 tjeel00im
+
+
+"åe:öö and ue:öö past tense I"
+Vx:ö <=> _ e: C* %>: %^iUML: ;
+	where Vx in ( u å ) ;
+
+"åe:öö and ue:öö past tense II"
+e:ö <=> [ å: | u: ] _ C* %>: %^iUML: ;
+
+!€# bået%>%^iUMLim
+!€0 bööt00im
+
+!€# vuejn%>%^iUMLim
+!€0 vööjn00im
+
 
 
 
