@@ -9,6 +9,9 @@ SHELL = /bin/sh
 # VARIABLE DEFINITIONS
 # ====================
 
+# Tools used when compiling
+XFST = xfst -utf8
+
 # Where all the perl scripts are:
 BINDIR = ../../script/testing
 
@@ -25,8 +28,8 @@ TEMP = ../../tmp
 # This variable is holding the filename of the save file:
 # (makes the Makefile truly language independent for
 # the Sami languages)
-SAVEFILE = $(wildcard $(FSTDIR)/sm?.save)
-
+SAVEFILE = $(wildcard $(FSTDIR)/ism?-norm.fst)
+#SAVEFILE = $(wildcard $(FSTDIR)/ism?-restr.fst)
 # Copied from old LS makefile:
 # Bond, James Bond
 UMASK=@umask 007
@@ -57,6 +60,8 @@ all: n-g.summary \
 	 n-a.summary \
 	 v-g.summary \
 	 v-a.summary \
+	 num-a.summary \
+	 num-g.summary
 #	 a-g.summary \
 #	 a-a.summary
 
@@ -71,6 +76,10 @@ all-v: v-g.summary v-a.summary
 # If you only want to test adjectives:
 .PHONY: all-a
 all-a: a-g.summary a-a.summary
+
+# If you only want to test numerals:
+.PHONY: all-num
+all-num: num-g.summary num-a.summary
 
 # If you only want to test verbal generation, use v-g.summary
 # as target. Etc. for the other cases. And do you only want to
@@ -100,7 +109,55 @@ clean:
 		  *paradigm \
 		  *.tgz	\
 		  *~ \
+		  *.in \
+		  *.out \
 		  $(TEMP)/*test-script
+	@rm -f a*.xml
+	@rm -f b*.xml
+	@rm -f c*.xml
+	@rm -f č*.xml
+	@rm -f d*.xml
+	@rm -f e*.xml
+	@rm -f f*.xml
+	@rm -f g*.xml
+	@rm -f h*.xml
+	@rm -f i*.xml
+	@rm -f j*.xml
+	@rm -f k*.xml
+	@rm -f l*.xml
+	@rm -f m*.xml
+	@rm -f n*.xml
+	@rm -f o*.xml
+	@rm -f p*.xml
+	@rm -f r*.xml
+	@rm -f s*.xml
+	@rm -f t*.xml
+	@rm -f u*.xml
+	@rm -f v*.xml
+	@rm -f *.xml
+	@rm -f a*.paradigm
+	@rm -f b*.paradigm
+	@rm -f c*.paradigm
+	@rm -f č*.paradigm
+	@rm -f d*.paradigm
+	@rm -f e*.paradigm
+	@rm -f f*.paradigm
+	@rm -f g*.paradigm
+	@rm -f h*.paradigm
+	@rm -f i*.paradigm
+	@rm -f j*.paradigm
+	@rm -f k*.paradigm
+	@rm -f l*.paradigm
+	@rm -f m*.paradigm
+	@rm -f n*.paradigm
+	@rm -f o*.paradigm
+	@rm -f p*.paradigm
+	@rm -f r*.paradigm
+	@rm -f s*.paradigm
+	@rm -f t*.paradigm
+	@rm -f u*.paradigm
+	@rm -f v*.paradigm
+	@rm -f *.paradigm
 
 .PHONY: almost-clean
 almost-clean:
@@ -119,6 +176,8 @@ almost-clean:
 		  *.ptest \
 		  *.tgz	\
 		  *~ \
+		  *.in \
+		  *.out \
 		  $(TEMP)/*test-script
 
 
@@ -291,12 +350,128 @@ a-paradigm: a-para.ptest savefile
 	@less $(WORD).paradigm
 
 
+# NUMERALS
+# ========
+
+# Create all the noun test file bases:
+num-%.testbase: num-%.txt num-codes.txt
+	@echo
+	@echo "*** Creating the test base for num-$*.txt ***"
+	@echo
+	@rm -f $@
+	$(UMASK) && \
+	$(BINDIR)/merge-codesNforms.pl num-codes.txt $< > $@
+	@chmod 660 $@
+
+# Finally, we concatenate all *.greports
+num-g.summary: $(NGenFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All noun word form generation testing is done.      ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# Finally, we concatenate all *.areports:
+num-a.summary: $(NAnaFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All noun word form analysis testing is done.        ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# Create noun paradigm generation input file:
+num-para.ptest: num-codes.txt
+	@echo
+	@echo "*** Creating the noun paradigm input file for '$(WORD)' ***"
+	@echo
+	@rm -f $@
+	$(UMASK) && \
+	$(BINDIR)/merge-codesNword.pl $< $(WORD) > $@
+	@chmod 660 $@
+
+# Paradigm generation:
+.PHONY: num-paradigm
+num-paradigm: num-para.ptest savefile
+	@echo
+	@echo "*** Running the paradigm generator for '$(WORD)' ***"
+	@echo
+	@printf "load $(SAVEFILE) \n\
+	apply up < $< \n\
+	quit \n" > $(TEMP)/$@-gtest-script
+	$(XFST) < $(TEMP)/$@-gtest-script > $(WORD).paradigm
+	@rm -f $(TEMP)/$@-gtest-script
+	@rm -f $<
+#	@less $(WORD).paradigm
+
+
+# PROPER NOUNS
+# ============
+
+# Create all the proper noun test file bases:
+prop-%.testbase: prop-%.txt prop-codes.txt
+	@echo
+	@echo "*** Creating the test base for prop-$*.txt ***"
+	@echo
+	@rm -f $@
+	$(UMASK) && \
+	$(BINDIR)/merge-codesNforms.pl prop-codes.txt $< > $@
+	@chmod 660 $@
+
+# Finally, we concatenate all *.greports
+prop-g.summary: $(NGenFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All noun word form generation testing is done.      ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# Finally, we concatenate all *.areports:
+prop-a.summary: $(NAnaFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All noun word form analysis testing is done.        ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# Create noun paradigm generation input file:
+prop-para.ptest: prop-codes.txt
+	@echo
+	@echo "*** Creating the noun paradigm input file for '$(WORD)' ***"
+	@echo
+	@rm -f $@
+	$(UMASK) && \
+	$(BINDIR)/merge-codesNword.pl $< $(WORD) > $@
+	@chmod 660 $@
+
+# Paradigm generation:
+.PHONY: prop-paradigm
+prop-paradigm: prop-para.ptest savefile
+	@echo
+	@echo "*** Running the paradigm generator for '$(WORD)' ***"
+	@echo
+	@printf "load $(SAVEFILE) \n\
+	apply up < $< \n\
+	quit \n" > $(TEMP)/$@-gtest-script
+	$(XFST) < $(TEMP)/$@-gtest-script > $(WORD).paradigm
+	@rm -f $(TEMP)/$@-gtest-script
+	@rm -f $<
+#	@less $(WORD).paradigm
+
+
+
 # POS-independent parts:
 # ======================
 
 # Make sure there is an available smX.save in the parent directory:
 savefile:
-	@cd $(SRCDIR)/ && $(MAKE) TARGET=sma
+#	@cd $(SRCDIR)/ && $(MAKE) ifst-restr TARGET=sma
+	@cd $(SRCDIR)/ && $(MAKE) ifst-norm TARGET=sma
+#	@cd $(SRCDIR)/ && $(MAKE) ifst TARGET=sma
+# Harmonize the choice here with the choice of SAVEFILE at appr line 30
 
 # Word form generation:
 # ---------------------
@@ -405,24 +580,26 @@ savefile:
 	-@diff --side-by-side --width=70 $< $*.afacit > $@
 
 
-
-
 # TWOL-testing :
 #===============
 
 # Usage:
-# make twol-test (extracts the test words from src/twol-sme.txt)
-# make twol-pos  (tests for the positive test pairs, prints output to twol-pos.out)
-# make twol-neg  (tests for the positive test pairs, prints output to twol-neg.out)
+# make twol-test (extracts the test words from src/twol-sma.txt, and runs them
+#                 through both the normative and descriptive twols)
+# make twol-pos  (tests for the positive test pairs, output to twol-pos.out)
+# make twol-neg  (tests for the positive test pairs, output to twol-neg.out)
 # make twol-test FILE=filename.txt (test for pairs in filename.txt)
+# make twol      (recompiles the twol binaries when the twol rules are changed)
 
 TWOLC = twolc -utf8
 TYPE = pos
 FILEPOS = twol-pos.in
 FILENEG = twol-neg.in
 FILE = $(FILEPOS)
+M4 = m4
+M4FLAGS = 
 
-twol-extract: ../src/twol-sma-descriptive.txt
+twol-extract: ../src/twol-sma.txt
 	@echo
 	@echo "*** Extracting twol tests ***"
 	@echo
@@ -431,15 +608,37 @@ twol-extract: ../src/twol-sma-descriptive.txt
 	@touch twol-pos.out
 	@touch twol-neg.out
 
-twol-test: ../bin/twol-sma.bin twol-extract
+twol-test: twol-test-desc twol-test-norm
+	diff -s twol-$(TYPE)-desc.out twol-$(TYPE)-norm.out
+
+twol-test-desc: twol-desc twol-extract
 	@echo
-	@echo "*** Testing twolc rules ***"
+	@echo "*** Testing descriptive twolc rules ***"
 	@echo
-	@printf "install-binary $< \n\
-	pair-test-file $(FILE) twol-$(TYPE).out \n\
-	quit \n" > $(TEMP)/twol-test-script
-	$(TWOLC) < $(TEMP)/twol-test-script
-	@rm -f $(TEMP)/twol-test-script
+	@printf "install-binary ../bin/twol-sma-descriptive.bin \n\
+	pair-test-file $(FILE) twol-$(TYPE)-desc.out \n\
+	quit \n" > $(TEMP)/twol-test-desc-script
+	$(TWOLC) < $(TEMP)/twol-test-desc-script
+	@rm -f     $(TEMP)/twol-test-desc-script
+
+twol-test-norm: twol-norm twol-extract
+	@echo
+	@echo "*** Testing normative twolc rules ***"
+	@echo
+	@printf "install-binary ../bin/twol-sma.bin \n\
+	pair-test-file $(FILE) twol-$(TYPE)-norm.out \n\
+	quit \n" > $(TEMP)/twol-test-norm-script
+	$(TWOLC) < $(TEMP)/twol-test-norm-script
+	@rm -f     $(TEMP)/twol-test-norm-script
+
+
+# Make sure there are up-to-date twol binaries:
+twol: twol-desc twol-norm
+twol-desc:
+	@cd $(SRCDIR)/ && $(MAKE) TARGET=sma twol-descriptive
+twol-norm:
+	@cd $(SRCDIR)/ && $(MAKE) TARGET=sma twol
+
 
 twol-pos: TYPE=pos
 twol-pos: FILE=$(FILEPOS)
@@ -449,4 +648,5 @@ twol-neg: TYPE=neg
 twol-neg: FILE=$(FILENEG)
 twol-neg: twol-test
 
+# This doesn't work, because both twol-pos and twol-neg call twol-test
 twol-both: twol-pos twol-neg
