@@ -207,25 +207,12 @@ D1:X <=> A1:a X: _ ;
 !€ abba
 !€ abba
 
-!€# bÆssI2%>dh#
-!€0 bisse0dh0
-
-!€# bA4ltI2%>dh#
-!€0 belte0dh0
-
-!€# bÅ1htjI2%>dh#
-!€0 buhtje0dh0
-
-
 ! Umlaut in row B in the umlaut table
   "Umlaut in a-context, monopthongs"
   Vx:Vy <=> Onset _ Cons+ I2:0 %>: A1:a ;
         where Vx in (Æ A4 Å1)
 	          Vy in (æ a  å )
     	matched ;
-
-
-
 
 ! Umlaut in row C in the umlaut table
   "Umlaut in oe-context, monopthongs"
@@ -234,23 +221,12 @@ D1:X <=> A1:a X: _ ;
      	      Vy in (æ a  å )
      	matched ;
 
-!€# ÆbjO2%>dh#
-!€0 æbjo0dh0
-
-!€# hÅ4jkO2%>dh#
-!€0 hajko0dh0
-
-!€# gÅ1hpO2%>dh#
-!€0 gåhpo0dh0
-
-
 ! Umlaut in row E in the umlaut table
   "Umlaut before affixes on A1:e, row E, monophtongs"
   Vx:Vy <=> Onset _ Cons+ [I2:0|O2:0] %>: A1:e OpenOrClosedFinal ;
         where Vx in (Æ A4 Å1)
               Vy in (y o  o )
     	matched ;
-
 
 ! Umlaut in row F in the umlaut table
   "Umlaut before affixes on -i, row F, monopthongs"
@@ -269,16 +245,6 @@ D1:X <=> A1:a X: _ ;
     where Vx in (E1 Å2 Å3 U1)
           Vy in (i  a  å  u )
     matched;
-
-!€# pE10kI2%>dh 
-!€0 paeke0dh
-
-!€#  
-!€0  
-
-!€#  
-!€0  
-
 
 ! Umlaut in row B in the umlaut table
   "Umlaut in a-context, diphthongs"
@@ -386,7 +352,7 @@ D1:X <=> A1:a X: _ ;
    e:0 <=> _ X2:0 i: ;
 
 !€# manneX2ine
-!€0 mann0ine
+!€0 mann00ine
 
 
 
@@ -400,16 +366,16 @@ D1:X <=> A1:a X: _ ;
 !$0 dåeried000em
 
   "Diphthong simplification oe:o"
-   e:0 <=> o _  C+ %^DISIMP: ;
+   e:0 <=> o _  C+ (%>:) %^DISIMP: ;
 
-!€# daaroest%^DISIMP%>em
+!€# daaroest%>%^DISIMPem
 !€0 daaro0st00em
 
-!$# daaroest%^DISIMP%>em
+!$# daaroest%>%^DISIMPem
 !$0 daaroest00em
 
   "a/e alternation"
-   a:e <=> _ [ C - j ] (C) %^DISIMP: ;
+   a:e <=> _ [ C - j ] (C) (%>:) %^DISIMP: ;
 
 !€# aatskad%^DISIMP%>em
 !€0 aatsked00em
@@ -418,7 +384,7 @@ D1:X <=> A1:a X: _ ;
 !$0 aatskad00em
 
   "a/i alternation"
-   a:i <=> _ j %^DISIMP: ;
+   a:i <=> _ j (%>:) %^DISIMP: ;
 
 !€# jåhtaj%^DISIMP%>em
 !€0 jåhtij00em
@@ -512,27 +478,27 @@ D1:X <=> A1:a X: _ ;
 !€# biss%>%^1UMLam
 !€0 bæss00am
 
-!€# beltedh
-!€0 balta
+!€# belt%>%^1UMLam
+!€0 balt00am
 
-!€# buhtjedh
-!€0 båhtja
+!€# buhtj%>%^1UMLa
+!€0 båhtj00a
 
-!€# paekedh
-!€0 paaka
+!€# paek%>%^1UMLa
+!€0 paak00a
 
-!€# båetedh
-!€0 båata
+!€# bået%>%^1UMLa
+!€0 båat00a
 
-!€# bueledh
-!€0 buala
+!€# buel%>%^1UMLa
+!€0 bual00a
 
 
 "Even syllabic verbs present sg, diphth ie-ea" 
  i:e <=>  _ e:a C+ %>:0 %^1UML:0 ;
 
-!€# jiehtedh
-!€0 jeahta
+!€# jieht%>%^1UMLa
+!€0 jeaht00a
 
 
 "Even syllabic verbs Sg3 + PrfPtc E II"
@@ -544,11 +510,12 @@ D1:X <=> A1:a X: _ ;
 !€# gælj%>%^2UMLe
 !€0 gylj00e
 
-"o Deletion verbs Sg3 - PrfPtc II"
-o:0 <=> %>: %^2UML: _ e  ;
-!
-!"e Deletion" 	
-!e:0 <=> o _ (Dummy:) %>: [b|d]; ! Dummy being %^2UML
+!! "o Deletion verbs Sg3 - PrfPtc II"
+!! o:0 <=> %>: %^2UML: _ e  ;
+!! !
+!! !"e Deletion" 	
+!! !e:0 <=> o _ (Dummy:) %>: [b|d]; ! Dummy being %^2UML
+
 
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yø II a"
@@ -589,7 +556,7 @@ o:0 <=> %>: %^2UML: _ e  ;
  e:a <=> [ï:|o:] _ C+ %>:0 %^3sUML: ; ! or %^iæUML
 
 !€# tjïer%>%^3sUMLa
-!€0 tjea00a
+!€0 tjear00a
 
 
 
@@ -602,11 +569,11 @@ o:0 <=> %>: %^2UML: _ e  ;
 !€# mïnn%>%^3dUMLien
 !€0 minn00ien
 
-!€# barke%>%^3dUMLien
-!€0 berke00ien
+!€# bark%>%^3dUMLien
+!€0 berk00ien
 
-!€# jovke%>%^3dUMLien
-!€0 juvke00ien
+!€# jovk%>%^3dUMLien
+!€0 juvk00ien
 
 !€# jårr%>%^3dUMLien
 !€0 jerr00ien
@@ -632,9 +599,9 @@ Vx:e <=> _ e C* %>: %^iUML: ;
 	where Vx in ( a i );
 
 !€# jieht%>%^iUMLim
-!€0 jeehtim
+!€0 jeeht00im
 
-!€# tjael%>%^iUML
+!€# tjael%>%^iUMLim
 !€0 tjeel00im
 
 
@@ -659,107 +626,107 @@ e:ø <=> [ å: | u: ] _ C* %>: %^iUML: ;
 ! ===================
 
 
-!€0 dÅ30rI20dI2%>dh
-!€0 dåeriedi0dh
+!0 dÅ30rI20dI2%>dh
+!0 dåeriedi0dh
  
-!€# bÆssI2%>dh
-!€0 bisse0dh
+!# bÆssI2%>dh
+!0 bisse0dh
  
-!€# bA4ltI2%>dh
-!€0 belte0dh
+!# bA4ltI2%>dh
+!0 belte0dh
  
-!€# bÅ1htjI2%>dh
-!€0 buhtje0dh
+!# bÅ1htjI2%>dh
+!0 buhtje0dh
  
-!€# pE1kI2%>dh
-!€0 paeke0dh
+!# pE1kI2%>dh
+!0 paeke0dh
  
-!€# bÅ30tI2%>dh
-!€0 båete0dh
+!# bÅ30tI2%>dh
+!0 båete0dh
  
-!€# bU1lI2%>dh
-!€0 buele0dh
+!# bU1lI2%>dh
+!0 buele0dh
  
-!€# ÆbjO2%>dh
-!€0 æbjo0dh
+!# ÆbjO2%>dh
+!0 æbjo0dh
  
-!€# hÅ4jkO2%>dh
-!€0 hajko0dh
+!# hÅ4jkO2%>dh
+!0 hajko0dh
  
-!€# gÅ1hpO2%>dh
-!€0 gåhpo0dh
+!# gÅ1hpO2%>dh
+!0 gåhpo0dh
  
-!€# tjE1rO2%>dh
-!€0 tjearo0dh
+!# tjE1rO2%>dh
+!0 tjearo0dh
  
-!€# bÅ2jskO2%>dh
-!€0 baajsko0dh
+!# bÅ2jskO2%>dh
+!0 baajsko0dh
  
-!€# gÅ3rO2%>dh
-!€0 gåaro0dh
+!# gÅ3rO2%>dh
+!0 gåaro0dh
  
-!€# skÆlkA2%>dh
-!€0 skælke0dh
+!# skÆlkA2%>dh
+!0 skælke0dh
  
-!€# skÅ4jkA2%>dh
-!€0 skajke0dh
+!# skÅ4jkA2%>dh
+!0 skajke0dh
  
-!€# plÅ1tjkA2%>dh
-!€0 plåjke0dh
+!# plÅ1tjkA2%>dh
+!0 plåjke0dh
  
-!€# slE1pkA2%>dh
-!€0 sleapke0dh
+!# slE1pkA2%>dh
+!0 sleapke0dh
  
-!€# snjÅ3rkA2%>dh
-!€0 snjåarke0dh
+!# snjÅ3rkA2%>dh
+!0 snjåarke0dh
  
-!€# sÆrr%>dh
-!€0 sïrre0dh
+!# sÆrr%>dh
+!0 sïrre0dh
  
-!€# sÅ4rj%>dh
-!€0 sarje0dh
+!# sÅ4rj%>dh
+!0 sarje0dh
  
-!€# sÅ1dt%>dh
-!€0 sodte0dh
+!# sÅ1dt%>dh
+!0 sodte0dh
  
-!€# skE1rk%>dh
-!€0 skïerke0dh
+!# skE1rk%>dh
+!0 skïerke0dh
  
-!€# slÅ2pk%>dh
-!€0 slaapke0dh
+!# slÅ2pk%>dh
+!0 slaapke0dh
  
-!€# snjÅ3r%>dh
-!€0 snjåare0dh
+!# snjÅ3r%>dh
+!0 snjåare0dh
  
-!€# tjU1hp%>dh
-!€0 tjoehpe0dh
+!# tjU1hp%>dh
+!0 tjoehpe0dh
  
-!€# skyll%>dh
-!€0 skylle0dh
+!# skyll%>dh
+!0 skylle0dh
  
-!€# aalhterost%>dh
-!€0 aalhteroste0dh
+!# aalhterost%>dh
+!0 aalhteroste0dh
  
-!€# skyör%>dh
-!€0 skyöre0dh
+!# skyör%>dh
+!0 skyöre0dh
  
-!€# vååjn%>dh
-!€0 vååjne0dh
+!# vååjn%>dh
+!0 vååjne0dh
  
-!€# skilhte%>dh
-!€0 skilhte0dh
+!# skilhte%>dh
+!0 skilhte0dh
  
-!€# sijle%>dh
-!€0 sijle0dh
+!# sijle%>dh
+!0 sijle0dh
  
-!€# snjurme%>dh
-!€0 snjurme0dh
+!# snjurme%>dh
+!0 snjurme0dh
  
-!€# snjeere%>dh
-!€0 snjeere0dh
+!# snjeere%>dh
+!0 snjeere0dh
  
-!€# gööle%>dh
-!€0 gööle0dh
+!# gööle%>dh
+!0 gööle0dh
 
 
 
