@@ -599,6 +599,7 @@ FILE = $(FILEPOS)
 M4 = m4
 M4FLAGS = 
 
+
 twol-extract: ../src/twol-sma.txt
 	@echo
 	@echo "*** Extracting twol tests ***"
