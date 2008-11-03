@@ -144,9 +144,57 @@ LEXICON IJ-CASE
 ! ===============================
 
 
-LEXICON adj
-+A+Attr: FINAL1 ; ! just a dummy
+LEXICON null-null-even
++A+Attr: FINAL1 ;
++A:      RELEVANTNOUNLEX ;
++A:      evencomp ;
 
+LEXICON s-null-even
++A+Attr:%>s FINAL1 ;
++A:         RELEVANTNOUNLEX ;
++A:         evencomp ;
+
+LEXICON null-s-even
++A+Attr:   FINAL1 ;
++A:%>s     RELEVANTNOUNLEX ;
++A:        evencomp ;
+
+LEXICON null-null-odd
++A+Attr:   FINAL1 ;
++A:        RELEVANTNOUNLEX ;
++A:        oddcomp ;
+
+LEXICON s-null-odd
++A+Attr:%>s FINAL1 ;
++A:         RELEVANTNOUNLEX ;
++A:         oddcomp ;
+
+
+LEXICON null-s-odd
++A+Attr:   FINAL1 ;
++A:%>s     RELEVANTNOUNLEX ;
++A:        oddcomp ;
+
+LEXICON s-s-odd
++A+Attr:%>s   FINAL1 ;
++A:%>s     RELEVANTNOUNLEX ;
++A:        oddcomp ;
+
+
+! Predicative forms, case inflected forms
+
+LEXICON RELEVANTNOUNLEX
++Nom: FINAL1 ; ! Awaiting the noun fix
+
+! Comparative forms
+
+LEXICON evencomp
++Comp:%>be      FINAL1 ;
++Superl:%>mes   FINAL1 ;
+
+LEXICON oddcomp
++Comp:%>åbpoe    FINAL1 ;
++Superl:%>ommes  FINAL1 ;
 
 ! ===========================
 ! Verbal inflection sublexica
