@@ -35,7 +35,15 @@ Multichar_Symbols
   A1 A2 A3 A4 E1 I1 I2 I3 I4 O1 O2 U1 U2 Æ Å1 Å2 Å3 Å4 D1
   X2 X3
   E2 ! insert e ! Fjern denne.
-  %^DISIMP %^1UML %^2UML %^3UML %^3sUML %^3dUML %^iæUML %^iUML 
+  !Umlaut and diphthong simplification triggers:
+  %^DISIMP
+  %^1UML !
+  %^2UML
+  %^3UML
+  %^3sUML
+  %^3dUML
+  %^iæUML
+  %^iUML 
 
 ! ================
 ! The root lexicon
@@ -62,7 +70,13 @@ LEXICON Root
 ! ============================
 
 
+! Starting the new system
 
+LEXICON N_ODD_I
+# ;
+
+
+! The old system:
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
 
@@ -147,44 +161,63 @@ LEXICON IJ-CASE
 
 
 LEXICON null-null-even
-+A+Attr: FINAL1 ;
-+A:      RELEVANTNOUNLEX ;
+ATTR0 ;
+PRED0 ;
 +A:      evencomp ;
 
 LEXICON s-null-even
-+A+Attr:%>s FINAL1 ;
-+A:         RELEVANTNOUNLEX ;
+ATTR0 ;
+PRED0 ;
 +A:         evencomp ;
 
 LEXICON null-s-even
-+A+Attr:   FINAL1 ;
-+A:%>s     RELEVANTNOUNLEX ;
+ATTR0 ;
+PREDS ;
 +A:        evencomp ;
 
 LEXICON null-null-odd
-+A+Attr:   FINAL1 ;
-+A:        RELEVANTNOUNLEX ;
+ATTR0 ;
+PRED0 ;
 +A:        oddcomp ;
 
 LEXICON s-null-odd
-+A+Attr:%>s FINAL1 ;
-+A:         RELEVANTNOUNLEX ;
+ATTRS ;
+PRED0 ;
 +A:         oddcomp ;
 
 
 LEXICON null-s-odd
-+A+Attr:   FINAL1 ;
-+A:%>s     RELEVANTNOUNLEX ;
+ATTR0 ;
+PREDS ;
 +A:        oddcomp ;
 
 LEXICON s-s-odd
-+A+Attr:%>s   FINAL1 ;
-+A:%>s     RELEVANTNOUNLEX ;
+ATTRS ;
+PREDS ;
 +A:        oddcomp ;
+
+
+! Attribute lexica
+
+LEXICON ATTRS
++A+Attr:%>s FINAL1 ;
+
+LEXICON ATTR0
++A+Attr: FINAL1 ;
+
+
+! Predicative lexica
+
+LEXICON PRED0
++A:      RELEVANTNOUNLEX ;
+
+LEXICON PREDS
++A:%>s     RELEVANTNOUNLEX ;
 
 
 LEXICON adj-dirty
 +A+Dirty # ;
+
 
 ! Predicative forms, case inflected forms
 
