@@ -37,13 +37,13 @@ Multichar_Symbols
   E2 ! insert e ! Fjern denne.
   !Umlaut and diphthong simplification triggers:
   %^DISIMP
-  %^1UML !
-  %^2UML
-  %^3UML
-  %^3sUML
-  %^3dUML
-  %^iæUML
-  %^iUML 
+  %^1UML  ! a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
+  %^2UML  ! dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
+  %^3UML  ! not used
+  %^3sUML ! a-uml in 3sg prs of V-IV (roehtedh - ruahta)
+  %^3dUML ! ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
+  %^iæUML ! not used
+  %^iUML  ! i-uml in pret of V-I (båetedh - böötim)
 
 ! ================
 ! The root lexicon
@@ -72,11 +72,26 @@ LEXICON Root
 
 ! Starting the new system
 
-LEXICON N_ODD_I
-# ;
+LEXICON N_ODD
+  +N+Sg+Nom:e%^DISIMP         FINAL1 ;
+  +N+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
+  +N+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
+  +N+Sg+Ill:%>asse            FINAL1 ;
+  +N+Sg+Ine:%>isnie           FINAL1 ;
+  +N+Sg+Ela:%>istie           FINAL1 ;
+  +N+Sg+Com:%>inie            FINAL1 ;
+  +N+Pl+Nom:%>%^DISIMPh       FINAL1 ;
+  +N+Pl+Acc:%>idie            FINAL1 ;
+  +N+Pl+Gen:%>%^DISIMPi       FINAL1 ;
+  +N+Pl+Ill:%>idie            FINAL1 ;
+  +N+Pl+Ine:%>inie            FINAL1 ;
+  +N+Pl+Ela:%>ijstie          FINAL1 ;
+  +N+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
+  +N+Ess:%>isnie              FINAL1 ;
 
 
 ! The old system:
+
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
 
@@ -379,16 +394,16 @@ LEXICON GOLTELIDH
 
 ! Infinite forms
 ! --------------
- +V+Inf:idh		        FINAL1 ;
- +V+VGen:%^DISIMPeminie	FINAL1 ; ! GH Modalis, KB måtesform
+ +V+Inf:%>idh		        FINAL1 ;
+ +V+VGen:%>%^DISIMPeminie	FINAL1 ; ! GH Modalis, KB måtesform
 		                 		 ! GH Voluntativ
- +V+Act:amme		    FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+Ger:%^DISIMPeminie	FINAL1 ;
- +V+PrsPrc:ije	        FINAL1 ; ! must go to nominal lexicon instead
+ +V+Act:%>amme		    FINAL1 ; ! GH verbalsubst, KB nomen actionis
+ +V+Ger:%>%^DISIMPeminie	FINAL1 ;
+ +V+PrsPrc:%>ije	        FINAL1 ; ! must go to nominal lexicon instead
 				                 ! Ptz.Fut b'ïssejässaa
- +V+PrfPrc:amme	        FINAL1 ;
- +V+ConNeg:%^DISIMPh    FINAL1 ;
- +V+VAbess:h		    FINAL1 ; ! Check
+ +V+PrfPrc:%>amme	        FINAL1 ;
+ +V+ConNeg:%>%^DISIMPh    FINAL1 ;
+ +V+VAbess:%>h		    FINAL1 ; ! Check
 
 
 ! Contract verbs

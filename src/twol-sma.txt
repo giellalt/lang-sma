@@ -66,9 +66,6 @@ Definitions
 
 Rules
  
-! This is a dummy negative test, in order to get the test paradigm work.
-!$ a
-!$ b
 
 
 ! Bisyllabic stems
@@ -355,15 +352,22 @@ D1:X <=> A1:a X: _ ;
 !€0 mann00ine
 
 
+!!! Odd-syllabic verbs and nouns:
 
   "Diphthong simplification ie:e"
-   i:0 <=> _ e  C+ (%>:) %^DISIMP: ;
+   i:0 <=> _ e  C+ (e) (%>:) %^DISIMP: ;
 
-!€# dåeried%>%^DISIMP%>em
-!€0 dåer0ed000em
+!€# dåeried%>%^DISIMPem
+!€0 dåer0ed00em
 
-!$# dåeried%>%^DISIMP%>em
-!$0 dåeried000em
+!$# dåeried%>%^DISIMPem
+!$0 dåeried00em
+
+!€# gieriehtse%>%^DISIMPm
+!€0 gier0ehtse00m
+
+!$# gieriehtse%>%^DISIMPm
+!$0 gieriehtse00m
 
   "Diphthong simplification oe:o"
    e:0 <=> o _  C+ (%>:) %^DISIMP: ;
@@ -375,13 +379,19 @@ D1:X <=> A1:a X: _ ;
 !$0 daaroest00em
 
   "a/e alternation"
-   a:e <=> _ [ C - j ] (C) (%>:) %^DISIMP: ;
+   a:e <=> _ [ C - j ] (C) (e) (%>:) %^DISIMP: ;
 
-!€# aatskad%^DISIMP%>em
+!€# aatskad%>%^DISIMPem
 !€0 aatsked00em
 
-!$# aatskad%^DISIMP%>em
+!$# aatskad%>%^DISIMPem
 !$0 aatskad00em
+
+!€# daktare%>%^DISIMPm
+!€0 daktere00m
+
+!$# daktare%>%^DISIMPm
+!$0 daktare00m
 
   "a/i alternation"
    a:i <=> _ j (%>:) %^DISIMP: ;
@@ -462,6 +472,9 @@ D1:X <=> A1:a X: _ ;
 !! ziza CL ;
 !! in lexicon          
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! New style Umlaut rules. !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 !!!Class Even I
 
@@ -538,26 +551,35 @@ D1:X <=> A1:a X: _ ;
 
 
 "Even syllabic verbs Sg3 ï-æ IV"
- Vx:Vy <=> _ C+ %>:0 %^3sUML: ; ! or %^iæUML
+ Vx:Vy <=> _ C+ %>:0 %^3sUML: ;
  	where Vx in (ï o)
  	      Vy in (æ å)
  	matched ;
 
+! Verbs like: mïnnedh, jovkedh
+
 !€# mïnn%>%^3sUMLa
 !€0 mænn00a
 
-"1st rule for even syllabic verbs Sg3 ïe-ea IV a"
- Vx:Vy <=> [ C | #: ] _ e: C+ %>:0 %^3sUML: ; ! or %^iæUML
+!€# jovk%>%^3sUMLa
+!€0 jåvk00a
+
+"1st rule for even syllabic verbs Sg3 ïe-ea IV"
+ Vx:Vy <=> [ C | #: ] _ e: C+ %>:0 %^3sUML: ;
 	where Vx in (ï o)
 	      Vy in (e u)
 	matched ;
 
 "2nd rule for even syllabic verbs Sg3 ïe-ea IV"
- e:a <=> [ï:|o:] _ C+ %>:0 %^3sUML: ; ! or %^iæUML
+ e:a <=> [ï:|o:] _ C+ %>:0 %^3sUML: ;
 
-!€# tjïer%>%^3sUMLa
-!€0 tjear00a
+! Verbs like: tjïeledh, roehtedh
 
+!€# tjïel%>%^3sUMLa
+!€0 tjeal00a
+
+!€# roeht%>%^3sUMLa
+!€0 ruaht00a
 
 
 "Even syllabic verbs Du1Pl3 IV"
