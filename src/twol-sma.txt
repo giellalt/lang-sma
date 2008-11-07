@@ -490,9 +490,10 @@ D1:X <=> A1:a X: _ ;
 ! i:æ e:a ae:aa u:å 
 ! Pres Sg123
 ! V28, V30, V32, V36, V38, V40
+! N §102
 
 "Even syllabic verbs present sg, monophpt E I"
- Vx:Vy <=>  _ C+ %>: %^1UML:0 ;
+ Vx:Vy <=>  _ C+ (V) %>: %^1UML:0 ;
  	where Vx in (i e u)
  	      Vy in (æ a å)
  	matched ;
@@ -515,6 +516,24 @@ D1:X <=> A1:a X: _ ;
 !€# buel%>%^1UMLa
 !€0 bual00a
 
+!€# kliht%>%^1UMLan
+!€0 klæht00an
+
+!€# jepts%>%^1UMLan
+!€0 japts00an
+
+!€# gull%>%^1UMLan
+!€0 gåll00an
+
+!€# gaevl%>%^1UMLan
+!€0 gaavl00an
+
+!€# gået%>%^1UMLan
+!€0 gåat00an
+
+!€# njuesl%>%^1UMLan
+!€0 njuasl00an
+
 
 "Even syllabic verbs present sg, diphth ie-ea" 
  i:e <=>  _ e:a C+ %>:0 %^1UML:0 ;
@@ -522,7 +541,10 @@ D1:X <=> A1:a X: _ ;
 !€# jieht%>%^1UMLa
 !€0 jeaht00a
 
+!€# sjiell%>%^1UMLan
+!€0 sjeall00an
 
+! [C|#:] constraint is to avoid collission with diphthong contexts
 "Even syllabic verbs Sg3 + PrfPtc E II"
  Vx:Vy <=> [ C | #: ] _ C+ (V) %>: %^2UML: ;
  	where Vx in (æ a å)

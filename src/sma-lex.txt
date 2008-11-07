@@ -97,10 +97,30 @@ LEXICON N_ODD
 ! ------------------------------------
 
 LEXICON N_IE
-  +N+Sg+Ill:%>A1n	FINAL1	;	! Special Ill
-  +N+Ess:%>inI1		FINAL1	;	! Special Ess
-  +N: J-LESS-CASE		;	! cases without -i/j-
-  +N: I-CLASS			;	! cases with -i-
+  +N+Sg+Nom:ie                  FINAL1 ;
+  +N+Sg+Acc:ie%>m               FINAL1 ;
+  +N+Sg+Gen:ie%>n               FINAL1 ;
+  +N+Sg+Ill:%>an                FINAL1 ;
+  +N+Sg+Ill+Uml:%>%^1UMLan      FINAL1 ;
+  +N+Sg+Ine:e%>sne              FINAL1 ;
+  +N+Sg+Ela:e%>ste              FINAL1 ;
+  +N+Sg+Com:%>ine               FINAL1 ;
+  +N+Sg+Com+Uml:%>%^iUMLine     FINAL1 ;
+  +N+Pl+Nom:ie%>h               FINAL1 ;
+  +N+Pl+Acc:%>ide               FINAL1 ;
+  +N+Pl+Acc+Uml:%>%^iUMLide     FINAL1 ;
+  +N+Pl+Gen:ie%>j               FINAL1 ;
+  +N+Pl+Gen+Uml:%>%^iUMLi       FINAL1 ;
+  +N+Pl+Ill:%>ide               FINAL1 ;
+  +N+Pl+Ill+Uml:%>%^iUMLide     FINAL1 ;
+  +N+Pl+Ine:%>ine               FINAL1 ;
+  +N+Pl+Ine+Uml:%>%^iUMLine     FINAL1 ;
+  +N+Pl+Ela:%>ijste             FINAL1 ;
+  +N+Pl+Ela+Uml:%>%^iUMLijste   FINAL1 ;
+  +N+Pl+Com:ie%>jgujmie     	FINAL1 ;
+  +N+Pl+Com+Uml:%>%^iUMLigujmie FINAL1 ;
+  +N+Ess:%>ine                  FINAL1 ;
+  +N+Ess+Uml:%>%^iUMLine        FINAL1 ;
 
 
 ! Inflection for nouns ending in oe
