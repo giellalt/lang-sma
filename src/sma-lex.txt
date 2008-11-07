@@ -26,6 +26,7 @@ Multichar_Symbols
   +Dirty ! Only until we have adj grammar in place - this tags mark adjectives
   		 ! with missing grammatical description
 
+  +Uml   ! A tag to indicate realised Umlaut in words where it is optional or very rare
   +Pron +Pers +Dem +Adp +Po +Adv +Interj +Num
   +Prop +Mal +Fem +Sur
   +CS +CC +Pcle +CLB +PUNCT +LEFT +RIGHT
@@ -105,13 +106,33 @@ LEXICON N_IE
 ! Inflection for nouns ending in oe
 ! ---------------------------------
 
-LEXICON N_OE
-  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Causes Umlaut
-  +N+Sg+Ill:%>se	FINAL1	;	! does NOT cause Umlaut
-  +N+Ess:%>jnI1		FINAL1	;	! cases without -i/j-
-  +N: J-LESS-CASE		;	! cases with -j-
-  +N: J-CLASS			;
+!LEXICON N_OE
+!  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Causes Umlaut
+!  +N+Sg+Ill:%>se	FINAL1	;	! does NOT cause Umlaut
+!  +N+Ess:%>jnI1		FINAL1	;	! cases without -i/j-
+!  +N: J-LESS-CASE		;	! cases with -j-
+!  +N: J-CLASS			;
 
+LEXICON N_OE_UML
+  +N+Sg+Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
+                        N_OE ;
+
+LEXICON N_OE
+  +N+Sg+Nom:oe          FINAL1 ;
+  +N+Sg+Acc:oe%>m       FINAL1 ;
+  +N+Sg+Gen:oe%>n       FINAL1 ;
+  +N+Sg+Ill:o%>se       FINAL1 ;
+  +N+Sg+Ine:o%>sne      FINAL1 ;
+  +N+Sg+Ela:o%>ste      FINAL1 ;
+  +N+Sg+Com:o%>jne      FINAL1 ;
+  +N+Pl+Nom:oe%>h       FINAL1 ;
+  +N+Pl+Acc:o%>jde      FINAL1 ;
+  +N+Pl+Gen:oe%>j       FINAL1 ;
+  +N+Pl+Ill:o%>jde      FINAL1 ;
+  +N+Pl+Ine:o%>jne      FINAL1 ;
+  +N+Pl+Ela:o%>jste     FINAL1 ;
+  +N+Pl+Com:oe%>jgujmie FINAL1 ;
+  +N+Ess:o%>jne         FINAL1 ;
 
 ! Inflection for all other nouns
 ! ------------------------------
