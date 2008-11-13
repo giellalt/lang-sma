@@ -26,7 +26,7 @@ Multichar_Symbols
   +Dirty ! Only until we have adj grammar in place - this tags mark adjectives
   		 ! with missing grammatical description
 
-  +Uml   ! A tag to indicate realised Umlaut in words where it is optional or very rare
+  +Uml   ! A tag to indicate realised or potential Umlaut
   +Pron +Pers +Dem +Adp +Po +Adv +Interj +Num
   +Prop +Mal +Fem +Sur
   +CS +CC +Pcle +CLB +PUNCT +LEFT +RIGHT
@@ -91,8 +91,6 @@ LEXICON N_ODD
   +N+Ess:%>inie               FINAL1 ;
 
 
-! The old system:
-
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
 
@@ -125,14 +123,6 @@ LEXICON N_IE
 
 ! Inflection for nouns ending in oe
 ! ---------------------------------
-
-!LEXICON N_OE
-!  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Causes Umlaut
-!  +N+Sg+Ill:%>se	FINAL1	;	! does NOT cause Umlaut
-!  +N+Ess:%>jnI1		FINAL1	;	! cases without -i/j-
-!  +N: J-LESS-CASE		;	! cases with -j-
-!  +N: J-CLASS			;
-
 LEXICON N_OE_UML
   +N+Sg+Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
                         N_OE ;
@@ -154,9 +144,8 @@ LEXICON N_OE
   +N+Pl+Com:oe%>jgujmie FINAL1 ;
   +N+Ess:o%>jne         FINAL1 ;
 
-! Inflection for all other nouns
+! Inflection for maana-type nouns
 ! ------------------------------
-
 LEXICON MAANA
   +N+Sg+Nom:a          FINAL1 ;
   +N+Sg+Acc:a%>m       FINAL1 ;
@@ -174,6 +163,8 @@ LEXICON MAANA
   +N+Pl+Com:a%>jgujmie FINAL1 ;
   +N+Ess:%>ine         FINAL1 ;
 
+! Inflection for nïejte-type nouns
+! ------------------------------
 LEXICON NIEJTE
   +N+Sg+Nom:e          FINAL1 ;
   +N+Sg+Acc:e%>m       FINAL1 ;
@@ -191,18 +182,27 @@ LEXICON NIEJTE
   +N+Pl+Com:%>igujmie  FINAL1 ;
   +N+Ess:%>ine         FINAL1 ;
 
-LEXICON N_OTHERS
-  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Special Ill
-  +N+Sg+Ess:%>inI1	FINAL1	;	! Special Ess
-  +N: J-LESS-CASE		;	! cases without -i/j-
-  +N: I-CLASS			;	! cases with -i-
+!!!! The old system:
+!!!
+!!!LEXICON N_OE
+!!!  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Causes Umlaut
+!!!  +N+Sg+Ill:%>se	FINAL1	;	! does NOT cause Umlaut
+!!!  +N+Ess:%>jnI1		FINAL1	;	! cases without -i/j-
+!!!  +N: J-LESS-CASE		;	! cases with -j-
+!!!  +N: J-CLASS			;
 
-
-
-
-! Sublexica to handle the i/j difference between oe nouns and other
-! -----------------------------------------------------------------
-
+!!!LEXICON N_OTHERS
+!!!  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Special Ill
+!!!  +N+Sg+Ess:%>inI1	FINAL1	;	! Special Ess
+!!!  +N: J-LESS-CASE		;	! cases without -i/j-
+!!!  +N: I-CLASS			;	! cases with -i-
+!!!
+!!!
+!!!
+!!!
+!!!! Sublexica to handle the i/j difference between oe nouns and other
+!!!! -----------------------------------------------------------------
+!!!
 LEXICON I-CLASS
   +Pl+Ela:%>ijstI1	FINAL1	;	! Ela has -iste
   :%>i			IJ-CASE ;	! others have -ine etc.
