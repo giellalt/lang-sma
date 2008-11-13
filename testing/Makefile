@@ -232,7 +232,7 @@ n-paradigm: n-para.ptest savefile
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
 	@printf "load $(SAVEFILE) \n\
-	apply down <$< \n\
+	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
 	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
