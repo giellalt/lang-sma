@@ -27,6 +27,7 @@ Multichar_Symbols
   		 ! with missing grammatical description
 
   +Uml   ! A tag to indicate realised or potential Umlaut
+  +Hyph  ! A tag to indicate that a hyphen was used when compounding
   +Pron +Pers +Dem +Adp +Po +Adv +Interj +Num
   +Prop +Mal +Fem +Sur
   +CS +CC +Pcle +CLB +PUNCT +LEFT +RIGHT
@@ -71,12 +72,11 @@ LEXICON Root
 ! =============================
 LEXICON R
  # Noun ;                           ! This is the normal case.		         ^C^
- -# Noun ;                           ! This is the normal case, with hyphen  ^C^
  #@P.NeedNoun.ON@  Verb ;      ! Flag diacr declares that the compound   ^C^
  #@P.NeedNoun.ON@  Adjective ; ! needs a +N tag later in the derivation  ^C^
- #:%- Noun ;                        ! These 3 cases add a hyphen, so     ^C^
- #:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and the like	     ^C^
- #:%-@P.NeedNoun.ON@  Adjective ;   ! is allowed.			             ^C^
+ +Hyph#:%- Noun ;                        ! These 3 cases add a hyphen, so     ^C^
+ +Hyph#:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and the like	     ^C^
+ +Hyph#:%-@P.NeedNoun.ON@  Adjective ;   ! is allowed.			             ^C^
 ! # ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-^C^
  #:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu     ^C^
                     ! and viessuLondon are now all ok. Some refinement could ^C^
@@ -85,13 +85,12 @@ LEXICON R
 
 LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
  # Noun ;                             ! This is the normal case.		       ^C^
- -# Noun ;                            ! This is the normal case, with hyphen   ^C^
 ! # NounSecond ;			          ! Testing some quasisuff, cf. noun file  ^C^
  #@P.NeedNoun.ON@  Verb ;         ! Flag diacr declares that the compound  ^C^
 ! #@P.NeedNoun.ON@  AdjectiveRoot ;   ! needs a +N tag later in the derivation ^C^
- #:%- Noun ;                          ! These 3 cases add a hyphen, so         ^C^
- #:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	           ^C^
- #:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.			                   ^C^
+ +Hyph#:%- Noun ;                          ! These 3 cases add a hyphen, so         ^C^
+ +Hyph#:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	           ^C^
+ +Hyph#:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.			                   ^C^
 !# ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-   ^C^
 !#:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu       ^C^
                     ! and viessuLondon are now all ok. Some refinement could   ^C^
