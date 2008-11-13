@@ -66,13 +66,44 @@ LEXICON Root
   0:#			Numeral ;
 
 
+! =============================
+! Compounding - copied from SMJ
+! =============================
+LEXICON R
+ # Noun ;                           ! This is the normal case.		         ^C^
+ -# Noun ;                           ! This is the normal case, with hyphen  ^C^
+ #@P.NeedNoun.ON@  Verb ;      ! Flag diacr declares that the compound   ^C^
+ #@P.NeedNoun.ON@  Adjective ; ! needs a +N tag later in the derivation  ^C^
+ #:%- Noun ;                        ! These 3 cases add a hyphen, so     ^C^
+ #:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and the like	     ^C^
+ #:%-@P.NeedNoun.ON@  Adjective ;   ! is allowed.			             ^C^
+! # ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-^C^
+ #:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu     ^C^
+                    ! and viessuLondon are now all ok. Some refinement could ^C^
+                    ! perhaps be done, but corpus research is needed.	     ^C^
+ +Cmpnd:%- # ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
+
+LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
+ # Noun ;                             ! This is the normal case.		       ^C^
+ -# Noun ;                            ! This is the normal case, with hyphen   ^C^
+! # NounSecond ;			          ! Testing some quasisuff, cf. noun file  ^C^
+ #@P.NeedNoun.ON@  Verb ;         ! Flag diacr declares that the compound  ^C^
+! #@P.NeedNoun.ON@  AdjectiveRoot ;   ! needs a +N tag later in the derivation ^C^
+ #:%- Noun ;                          ! These 3 cases add a hyphen, so         ^C^
+ #:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	           ^C^
+ #:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.			                   ^C^
+!# ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-   ^C^
+!#:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu       ^C^
+                    ! and viessuLondon are now all ok. Some refinement could   ^C^
+                    ! perhaps be done, but corpus research is needed.	       ^C^
+ +Cmpnd: # ;        ! This to take care of Oahpo- ja dutkandept - want this in speller
+
 ! ============================
 ! Nominal inflection sublexica
 ! ============================
 
-
-! Starting the new system
-
+! Inflection for odd-syllable nouns
+! ---------------------------------
 LEXICON N_ODD
   +N+Sg+Nom:e%^DISIMP         FINAL1 ;
   +N+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
@@ -89,6 +120,9 @@ LEXICON N_ODD
   +N+Pl+Ela:%>ijstie          FINAL1 ;
   +N+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
   +N+Ess:%>inie               FINAL1 ;
+  +N+SgNomCmp:            R ;
+  +N+SgGenCmp:%>n         R ;
+  +N+PlGenCmp:%>%^DISIMPi R ;
 
 
 ! Inflection for nouns ending in '-ie'
@@ -119,6 +153,10 @@ LEXICON N_IE
   +N+Pl+Com+Uml:%>%^iUMLigujmie FINAL1 ;
   +N+Ess:%>ine                  FINAL1 ;
   +N+Ess+Uml:%>%^iUMLine        FINAL1 ;
+  +N+SgNomCmp:ie              R ;
+  +N+SgGenCmp:ie%>n           R ;
+  +N+PlGenCmp:ie%>j           R ;
+  +N+PlGenCmp+Uml:ie%>%^iUMLi R ;
 
 
 ! Inflection for nouns ending in oe
@@ -143,9 +181,12 @@ LEXICON N_OE
   +N+Pl+Ela:o%>jste     FINAL1 ;
   +N+Pl+Com:oe%>jgujmie FINAL1 ;
   +N+Ess:o%>jne         FINAL1 ;
+  +N+SgNomCmp:oe    R ;
+  +N+SgGenCmp:oe%>n R ;
+  +N+PlGenCmp:oe%>j R ;
 
 ! Inflection for maana-type nouns
-! ------------------------------
+! -------------------------------
 LEXICON MAANA
   +N+Sg+Nom:a          FINAL1 ;
   +N+Sg+Acc:a%>m       FINAL1 ;
@@ -162,9 +203,12 @@ LEXICON MAANA
   +N+Pl+Ela:%>ijste    FINAL1 ;
   +N+Pl+Com:a%>jgujmie FINAL1 ;
   +N+Ess:%>ine         FINAL1 ;
+  +N+SgNomCmp:a    R ;
+  +N+SgGenCmp:a%>n R ;
+  +N+PlGenCmp:a%>j R ;
 
 ! Inflection for nïejte-type nouns
-! ------------------------------
+! --------------------------------
 LEXICON NIEJTE
   +N+Sg+Nom:e          FINAL1 ;
   +N+Sg+Acc:e%>m       FINAL1 ;
@@ -181,6 +225,9 @@ LEXICON NIEJTE
   +N+Pl+Ela:%>ijste    FINAL1 ;
   +N+Pl+Com:%>igujmie  FINAL1 ;
   +N+Ess:%>ine         FINAL1 ;
+  +N+SgNomCmp:e    R ;
+  +N+SgGenCmp:e%>n R ;
+  +N+PlGenCmp:%>i  R ;
 
 !!!! The old system:
 !!!
