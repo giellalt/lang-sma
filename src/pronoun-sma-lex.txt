@@ -200,24 +200,46 @@ LEXICON Indefinite
 naan ind ;
 seamma ind ; !XXX
 muvhtie ind ;
-muvhte ind ;
+muvhte:muvht ind ;
 gellie ind ;
 måedtie ind ;
 måadtesh ind ;
-jijnie ind ;
+jïjne:jïjn 	 ind ;
+jeenje:jeenj ind ;
+jeene:jeen	 ind ;
 jijnjh ind ;
 jienebe ind ;
 jeenjemes ind ;
 jeenjesh ind ;
-gaajhke ind ;
+gaajhke:gaajhk ind ;
 gaajhkesh ind ;
-dovne ind ;
+dovne:dovn ind ;
 dovnesh ind ;
-åbpe ind ;
-abpe ind ;
+åbpe:åbp ind ;
+abpe:abp ind ;
 
 LEXICON ind
-+Pron+Indef:0 # ;
+indsg ;
+indpl ;
+
+LEXICON indsg
++Pron+Indef+Sg+Nom:e       # ;
++Pron+Indef+Sg+Acc:e%>m    # ;
++Pron+Indef+Sg+Gen:e%>n    # ;
++Pron+Indef+Sg+Ill:e%>se   # ;
++Pron+Indef+Sg+Ine:e%>sne  # ;
++Pron+Indef+Sg+Ela:e%>ste  # ;
++Pron+Indef+Sg+Com:e%>jste # ;
++Pron+Indef+Ess:e%>jne     # ;
+
+LEXICON indpl
++Pron+Indef+Pl+Nom:%>h  # ;
++Pron+Indef+Pl+Acc:%>te # ;
++Pron+Indef+Pl+Gen:%>j  # ;
++Pron+Indef+Pl+Ill:%>te # ;
++Pron+Indef+Pl+Ine:%>ne # ;
++Pron+Indef+Pl+Ela:%>   # ;
++Pron+Indef+Pl+Com:%>jgujme  # ;
 
 
 
@@ -240,19 +262,12 @@ LEXICON OBLREFL
 +Acc+Sg3:emse # ;
 
 +Gen+Sg1:ene # ;
-+Gen+Sg1:en # ;
++Gen+Sg1:en # ; !SUB
 +Gen+Sg2:edh # ;
-+Gen+Sg3:ese # ;
-+Gen+Sg3:se # ;
-
++Gen+Sg3:ese # ; !SUB
 +Gen+Pl1:emh # ;
 +Gen+Pl2:edh # ;
-+Gen+Pl3:esh # ;
-+Gen+Pl3:sh # ;
-
-+Ill+Sg1:sanne # ;
-+Ill+Sg2:sadth # ;
-+Ill+Sg3:sissie # ;
++Gen+Pl3:esh # ; !SUB
 
 +Ela+Sg1:estanne # ;
 +Ela+Sg2:estadth # ;
@@ -260,7 +275,6 @@ LEXICON OBLREFL
 
 +Com+Sg1:enæjnene # ;
 +Com+Sg2:enæjnedh # ;
-
 
 +Ill+Pl1:sanne # ;
 +Ill+Pl2:sadth # ;
@@ -273,14 +287,14 @@ LEXICON OBLREFL
 +Com+Pl1:enæjnene # ;
 +Com+Pl2:enæjnedh # ;
 
-
-
 LEXICON OBLREFL-NONPAL
++Ill+Sg1:sanne # ;
++Ill+Sg2:sadth # ;
++Ill+Sg3:sissie # ;
 +Ill+Sg3:sasse # ;
-+Ela+Sg3:sistie # ;
-+Ill+Pl3:sasse # ;
-+Ela+Pl3:sistie # ;
-+Com+Pl3:sinie # ;
-
-
-
++Gen+Sg3:se # ;
++Gen+Pl3:sh # ; 
++Ela+Sg3:sistie # ; !SUB
++Ill+Pl3:sasse # ; !SUB
++Ela+Pl3:sistie # ; !SUB
++Com+Pl3:sinie # ; !SUB
