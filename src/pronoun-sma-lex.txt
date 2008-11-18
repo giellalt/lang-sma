@@ -219,27 +219,30 @@ dovnesh ind ;
 abpe:abp ind ;
 
 LEXICON ind
-indsg ;
-indpl ;
++Pron+Indef+Sg: indsg ;
++Pron+Indef+Pl: indpl ;
++Pron+Indef:    indess ;
 
 LEXICON indsg
-+Pron+Indef+Sg+Nom:e       # ;
-+Pron+Indef+Sg+Acc:e%>m    # ;
-+Pron+Indef+Sg+Gen:e%>n    # ;
-+Pron+Indef+Sg+Ill:e%>se   # ;
-+Pron+Indef+Sg+Ine:e%>sne  # ;
-+Pron+Indef+Sg+Ela:e%>ste  # ;
-+Pron+Indef+Sg+Com:e%>jste # ;
-+Pron+Indef+Ess:e%>jne     # ;
++Nom:e       # ;
++Acc:e%>m    # ;
++Gen:e%>n    # ;
++Ill:e%>se   # ;
++Ine:e%>sne  # ;
++Ela:e%>ste  # ;
++Com:e%>jste # ;
+
+LEXICON indess
++Ess:e%>jne     # ;
 
 LEXICON indpl
-+Pron+Indef+Pl+Nom:%>h  # ;
-+Pron+Indef+Pl+Acc:%>te # ;
-+Pron+Indef+Pl+Gen:%>j  # ;
-+Pron+Indef+Pl+Ill:%>te # ;
-+Pron+Indef+Pl+Ine:%>ne # ;
-+Pron+Indef+Pl+Ela:%>   # ;
-+Pron+Indef+Pl+Com:%>jgujme  # ;
++Nom:%>h  # ;
++Acc:%>te # ;
++Gen:%>j  # ;
++Ill:%>te # ;
++Ine:%>ne # ;
++Ela:%>   # ;
++Com:%>jgujme  # ;
 
 
 
