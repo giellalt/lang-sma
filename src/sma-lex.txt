@@ -114,186 +114,223 @@ LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
 ! Inflection for odd-syllable nouns
 ! ---------------------------------
 LEXICON N_ODD
-  +N+Sg+Nom:e%^DISIMP         FINAL1 ;
-  +N+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
-  +N+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
-  +N+Sg+Ill:%>asse            FINAL1 ;
-  +N+Sg+Ine:%>isnie           FINAL1 ;
-  +N+Sg+Ela:%>istie           FINAL1 ;
-  +N+Sg+Com:%>inie            FINAL1 ;
-  +N+Pl+Nom:%>%^DISIMPh       FINAL1 ;
-  +N+Pl+Acc:%>idie            FINAL1 ;
-  +N+Pl+Gen:%>%^DISIMPi       FINAL1 ;
-  +N+Pl+Ill:%>idie            FINAL1 ;
-  +N+Pl+Ine:%>inie            FINAL1 ;
-  +N+Pl+Ela:%>ijstie          FINAL1 ;
-  +N+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-  +N+Ess:%>inie               FINAL1 ;
+ +N+Sg: N_ODD_SG ;
+ +N+Pl: N_ODD_PL ;
+ +N:    N_ODD_ESS ;
   +N+SgNomCmp:            R ;
-  +N+SgGenCmp:%>n         R ;
+  +N+SgGenCmp:e%>n        R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
+
+LEXICON N_ODD_SG
+  +Nom:e%^DISIMP         FINAL1 ;
+  +Acc:e%>%^DISIMPm      FINAL1 ;
+  +Gen:e%>%^DISIMPn      FINAL1 ;
+  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ine:%>isnie           FINAL1 ;
+  +Ela:%>istie           FINAL1 ;
+  +Com:%>inie            FINAL1 ;
+
+LEXICON N_ODD_PL
+  +Nom:%>%^DISIMPh       FINAL1 ;
+  +Acc:%>idie            FINAL1 ;
+  +Gen:%>%^DISIMPi       FINAL1 ;
+  +Ill:%>idie            FINAL1 ;
+  +Ine:%>inie            FINAL1 ;
+  +Ela:%>ijstie          FINAL1 ;
+  +Com:%>%^DISIMPigujmie FINAL1 ;
+
+LEXICON N_ODD_ESS
+  +Ess:%>inie          FINAL1 ;
 
 
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
 
 LEXICON N_IE
-  +N+Sg+Nom:ie                  FINAL1 ;
-  +N+Sg+Acc:ie%>m               FINAL1 ;
-  +N+Sg+Gen:ie%>n               FINAL1 ;
-! +N+Sg+Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
-  +N+Sg+Ill+Uml:%>%^1UMLan      FINAL1 ;
-  +N+Sg+Ine:e%>sne              FINAL1 ;
-  +N+Sg+Ela:e%>ste              FINAL1 ;
-  +N+Sg+Com:%>ine               FINAL1 ;
-  +N+Sg+Com+Uml:%>%^iUMLine     FINAL1 ;
-  +N+Pl+Nom:ie%>h               FINAL1 ;
-  +N+Pl+Acc:%>ide               FINAL1 ;
-  +N+Pl+Acc+Uml:%>%^iUMLide     FINAL1 ;
-  +N+Pl+Gen:ie%>j               FINAL1 ;
-  +N+Pl+Gen+Uml:%>%^iUMLi       FINAL1 ;
-  +N+Pl+Ill:%>ide               FINAL1 ;
-  +N+Pl+Ill+Uml:%>%^iUMLide     FINAL1 ;
-  +N+Pl+Ine:%>ine               FINAL1 ;
-  +N+Pl+Ine+Uml:%>%^iUMLine     FINAL1 ;
-  +N+Pl+Ela:%>ijste             FINAL1 ;
-  +N+Pl+Ela+Uml:%>%^iUMLijste   FINAL1 ;
-  +N+Pl+Com:ie%>jgujmie     	FINAL1 ;
-  +N+Pl+Com+Uml:%>%^iUMLigujmie FINAL1 ;
-  +N+Ess:%>ine                  FINAL1 ;
-  +N+Ess+Uml:%>%^iUMLine        FINAL1 ;
+  +N+Sg: N_IE_SG ;
+  +N+Pl: N_IE_PL ;
+  +N:    N_IE_ESS ;
   +N+SgNomCmp:ie              R ;
   +N+SgGenCmp:ie%>n           R ;
   +N+PlGenCmp:ie%>j           R ;
   +N+PlGenCmp+Uml:ie%>%^iUMLi R ;
 
+LEXICON N_IE_SG
+  +Nom:ie                  FINAL1 ;
+  +Acc:ie%>m               FINAL1 ;
+  +Gen:ie%>n               FINAL1 ;
+! +Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
+  +Ill+Uml:%>%^1UMLan      FINAL1 ;
+  +Ine:e%>sne              FINAL1 ;
+  +Ela:e%>ste              FINAL1 ;
+  +Com:%>ine               FINAL1 ;
+  +Com+Uml:%>%^iUMLine     FINAL1 ;
+
+LEXICON N_IE_PL
+  +Nom:ie%>h               FINAL1 ;
+  +Acc:%>ide               FINAL1 ;
+  +Acc+Uml:%>%^iUMLide     FINAL1 ;
+  +Gen:ie%>j               FINAL1 ;
+  +Gen+Uml:%>%^iUMLi       FINAL1 ;
+  +Ill:%>ide               FINAL1 ;
+  +Ill+Uml:%>%^iUMLide     FINAL1 ;
+  +Ine:%>ine               FINAL1 ;
+  +Ine+Uml:%>%^iUMLine     FINAL1 ;
+  +Ela:%>ijste             FINAL1 ;
+  +Ela+Uml:%>%^iUMLijste   FINAL1 ;
+  +Com:ie%>jgujmie         FINAL1 ;
+  +Com+Uml:%>%^iUMLigujmie FINAL1 ;
+
+LEXICON N_IE_ESS
+  +N+Ess:%>ine                  FINAL1 ;
+  +N+Ess+Uml:%>%^iUMLine        FINAL1 ;
+
 
 ! Inflection for nouns ending in oe
 ! ---------------------------------
 LEXICON N_OE_UML
-  +N+Sg+Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
-                        N_OE ;
+  +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
+         N_OE ;
+
+LEXICON N_OE_SGILL_UML
+  +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
 
 LEXICON N_OE
-  +N+Sg+Nom:oe          FINAL1 ;
-  +N+Sg+Acc:oe%>m       FINAL1 ;
-  +N+Sg+Gen:oe%>n       FINAL1 ;
-  +N+Sg+Ill:o%>se       FINAL1 ;
-  +N+Sg+Ine:o%>sne      FINAL1 ;
-  +N+Sg+Ela:o%>ste      FINAL1 ;
-  +N+Sg+Com:o%>jne      FINAL1 ;
-  +N+Pl+Nom:oe%>h       FINAL1 ;
-  +N+Pl+Acc:o%>jde      FINAL1 ;
-  +N+Pl+Gen:oe%>j       FINAL1 ;
-  +N+Pl+Ill:o%>jde      FINAL1 ;
-  +N+Pl+Ine:o%>jne      FINAL1 ;
-  +N+Pl+Ela:o%>jste     FINAL1 ;
-  +N+Pl+Com:oe%>jgujmie FINAL1 ;
-  +N+Ess:o%>jne         FINAL1 ;
+  +N+Sg: N_OE_SG  ;
+  +N+Sg: N_OE_PL  ;
+  +N+Sg: N_OE_ESS ;
   +N+SgNomCmp:oe    R ;
   +N+SgGenCmp:oe%>n R ;
   +N+PlGenCmp:oe%>j R ;
 
+LEXICON N_OE_SG
+  +Nom:oe          FINAL1 ;
+  +Acc:oe%>m       FINAL1 ;
+  +Gen:oe%>n       FINAL1 ;
+  +Ill:o%>se       FINAL1 ;
+  +Ine:o%>sne      FINAL1 ;
+  +Ela:o%>ste      FINAL1 ;
+  +Com:o%>jne      FINAL1 ;
+
+LEXICON N_OE_PL
+  +Nom:oe%>h       FINAL1 ;
+  +Acc:o%>jde      FINAL1 ;
+  +Gen:oe%>j       FINAL1 ;
+  +Ill:o%>jde      FINAL1 ;
+  +Ine:o%>jne      FINAL1 ;
+  +Ela:o%>jste     FINAL1 ;
+  +Com:oe%>jgujmie FINAL1 ;
+
+LEXICON N_OE_ESS
+  +Ess:o%>jne         FINAL1 ;
+
 ! Inflection for maana-type nouns
 ! -------------------------------
 LEXICON MAANA
-  +N+Sg+Nom:a          FINAL1 ;
-  +N+Sg+Acc:a%>m       FINAL1 ;
-  +N+Sg+Gen:a%>n       FINAL1 ;
-  +N+Sg+Ill:e%>se      FINAL1 ;
-  +N+Sg+Ine:e%>sne     FINAL1 ;
-  +N+Sg+Ela:e%>ste     FINAL1 ;
-  +N+Sg+Com:%>ine      FINAL1 ;
-  +N+Pl+Nom:a%>h       FINAL1 ;
-  +N+Pl+Acc:%>ide      FINAL1 ;
-  +N+Pl+Gen:a%>j       FINAL1 ;
-  +N+Pl+Ill:%>ide      FINAL1 ;
-  +N+Pl+Ine:%>ine      FINAL1 ;
-  +N+Pl+Ela:%>ijste    FINAL1 ;
-  +N+Pl+Com:a%>jgujmie FINAL1 ;
-  +N+Ess:%>ine         FINAL1 ;
+  +N+Sg: MAANA_SG  ;
+  +N+Pl: MAANA_PL  ;
+  +N:    EVEN_ESS ;
   +N+SgNomCmp:a    R ;
   +N+SgGenCmp:a%>n R ;
   +N+PlGenCmp:a%>j R ;
 
+LEXICON MAANA_SG
+  +Nom:a          FINAL1 ;
+  +Acc:a%>m       FINAL1 ;
+  +Gen:a%>n       FINAL1 ;
+  +Ill:e%>se      FINAL1 ;
+  +Ine:e%>sne     FINAL1 ;
+  +Ela:e%>ste     FINAL1 ;
+  +Com:%>ine      FINAL1 ;
+
+LEXICON MAANA_PL
+  +Nom:a%>h       FINAL1 ;
+  +Acc:%>ide      FINAL1 ;
+  +Gen:a%>j       FINAL1 ;
+  +Ill:%>ide      FINAL1 ;
+  +Ine:%>ine      FINAL1 ;
+  +Ela:%>ijste    FINAL1 ;
+  +Com:a%>jgujmie FINAL1 ;
+
 ! Inflection for nïejte-type nouns
 ! --------------------------------
 LEXICON NIEJTE
-  +N+Sg+Nom:e          FINAL1 ;
-  +N+Sg+Acc:e%>m       FINAL1 ;
-  +N+Sg+Gen:e%>n       FINAL1 ;
-  +N+Sg+Ill:e%>se      FINAL1 ;
-  +N+Sg+Ine:e%>sne     FINAL1 ;
-  +N+Sg+Ela:e%>ste     FINAL1 ;
-  +N+Sg+Com:%>ine      FINAL1 ;
-  +N+Pl+Nom:%>h        FINAL1 ;
-  +N+Pl+Acc:%>ide      FINAL1 ;
-  +N+Pl+Gen:%>i        FINAL1 ;
-  +N+Pl+Ill:%>ide      FINAL1 ;
-  +N+Pl+Ine:%>ine      FINAL1 ;
-  +N+Pl+Ela:%>ijste    FINAL1 ;
-  +N+Pl+Com:%>igujmie  FINAL1 ;
-  +N+Ess:%>ine         FINAL1 ;
+  +N+Sg: NIEJTE_SG  ;
+  +N+Sg: NIEJTE_PL  ;
+  +N:    EVEN_ESS ;
   +N+SgNomCmp:e    R ;
   +N+SgGenCmp:e%>n R ;
   +N+PlGenCmp:%>i  R ;
 
-!!!! The old system:
-!!!
-!!!LEXICON N_OE
-!!!  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Causes Umlaut
-!!!  +N+Sg+Ill:%>se	FINAL1	;	! does NOT cause Umlaut
-!!!  +N+Ess:%>jnI1		FINAL1	;	! cases without -i/j-
-!!!  +N: J-LESS-CASE		;	! cases with -j-
-!!!  +N: J-CLASS			;
+LEXICON NIEJTE_SG
+  +Nom:e          FINAL1 ;
+  +Acc:e%>m       FINAL1 ;
+  +Gen:e%>n       FINAL1 ;
+  +Ill:e%>se      FINAL1 ;
+  +Ine:e%>sne     FINAL1 ;
+  +Ela:e%>ste     FINAL1 ;
+  +Com:%>ine      FINAL1 ;
 
-!!!LEXICON N_OTHERS
-!!!  +N+Sg+Ill:%>A1sD1e	FINAL1	;	! Special Ill
-!!!  +N+Sg+Ess:%>inI1	FINAL1	;	! Special Ess
-!!!  +N: J-LESS-CASE		;	! cases without -i/j-
-!!!  +N: I-CLASS			;	! cases with -i-
-!!!
-!!!
-!!!
-!!!
-!!!! Sublexica to handle the i/j difference between oe nouns and other
-!!!! -----------------------------------------------------------------
-!!!
-LEXICON I-CLASS ! Links from propernoun (revise?)
-  +Pl+Ela:%>ijstI1	FINAL1	;	! Ela has -iste
-  :%>i			IJ-CASE ;	! others have -ine etc.
+LEXICON NIEJTE_PL
+  +Nom:%>h        FINAL1 ;
+  +Acc:%>ide      FINAL1 ;
+  +Gen:%>i        FINAL1 ;
+  +Ill:%>ide      FINAL1 ;
+  +Ine:%>ine      FINAL1 ;
+  +Ela:%>ijste    FINAL1 ;
+  +Com:%>igujmie  FINAL1 ;
 
-!LEXICON J-CLASS
-!  +Pl+Ela:%>jstI1	FINAL1	;	! Ela has -ijste
-!  :%>j			IJ-CASE ;	! others have -jne etc.
+! Sub-paradigm inflections:
+! -------------------------
+
+LEXICON EVEN_ESS
+  +Ess:%>ine         FINAL1 ;
 
 
+! Old, not used, retained at the moment to remember the history:
+!LEXICON I-CLASS ! Links from propernoun (revise?)
+!  :%>i			IJ-CASE ;	! others have -ine etc.
+!                I-EVEN ;
+!                I-ODD ;
+!
+!LEXICON I-EVEN
+!  +Pl+Ela:%>ijste	FINAL1	;	! Ela has -iste
+!
+!LEXICON I-ODD
+!  +Pl+Ela:%>ijstie	FINAL1	;	! Ela has -iste
 
-! Remaining grammatical case lexica for the nouns
-! ===============================================
 
 
-LEXICON J-LESS-CASE
+! Special for cns-final names, due to nomsg
+! =========================================
+
+LEXICON CNAME_ODD_SG
  NOMSG ;
- OBLIQUE ;
+ OBLIQUE_COMMON ;
+ OBLIQUE_ODD ;
+
+LEXICON CNAME_EVEN_SG
+ NOMSG ;
+ OBLIQUE_COMMON ;
+ OBLIQUE_EVEN ;
+
 
 LEXICON NOMSG
-  +Sg+Nom:  	        FINAL1  ;
+  +Sg+Nom:  	        FINAL1 ;
 
-LEXICON OBLIQUE
-  +Sg+Acc:%>m		FINAL1	;
-  +Sg+Gen:%>n		FINAL1	;
-  +Sg+Ine:%>snI1	FINAL1	;
-  +Sg+Ela:%>stI1	FINAL1	;
-  +Pl+Nom:%>h		FINAL1	;
-  +Pl+Gen:%>I3		FINAL1	;
-  +Pl+Com:%>I3+gujmie	FINAL1	;
+LEXICON OBLIQUE_COMMON
+  +Sg+Acc:e%>m      FINAL1 ;
+  +Sg+Gen:e%>n      FINAL1 ;
 
-LEXICON IJ-CASE
-  +Sg+Com:nI1		FINAL1	;
-  +Pl+Acc:dI1		FINAL1	;
-  +Pl+Ill:dI1		FINAL1	;
-  +Pl+Ine:nI1		FINAL1	;
+LEXICON OBLIQUE_ODD
+  +Sg+Ine:e%>snie   FINAL1 ;
+  +Sg+Ela:e%>stie   FINAL1 ;
+  +Sg+Com:e%>nie    FINAL1 ;
+
+LEXICON OBLIQUE_EVEN
+  +Sg+Ine:e%>sne    FINAL1 ;
+  +Sg+Ela:e%>ste    FINAL1 ;
+  +Sg+Com:e%>ne     FINAL1 ;
 
 
 
