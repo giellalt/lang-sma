@@ -1,4 +1,3 @@
-
 ! Proper nouns
 ! ============
  
@@ -26,39 +25,82 @@
 ! Vowel final names
 ! - - - - - - - - -
 
-LEXICON VNAME ! Names ending in stressless vowel
- +N+Prop+Sg+Ill:%>sse FINAL1 ;
- +N+Prop+Ess:%>ine FINAL1 ;
+LEXICON VNAME_ODD ! Names ending in stressless vowel
+ +N+Prop+Sg: N_ODD_SG ;
+ +N+Prop+Pl: N_ODD_PL ;
+ +N+Prop:    N_ODD_ESS ;
  +N+Prop+Attr: FINAL1 ;
- +N+Prop: J-LESS-CASE ;
- +N+Prop: I-CLASS ;
+
+LEXICON VNAME_EVEN ! Names ending in stressless vowel
+ +N+Prop+Sg: NIEJTE_SG ;
+ +N+Prop+Pl: NIEJTE_PL ;
+ +N+Prop:    EVEN_ESS ;
+ +N+Prop+Attr: FINAL1 ;
+
+
+! Consonant final names
+! - - - - - - - - -
+
+LEXICON CNAME_ODD ! Names ending in stressless vowel
+ +N+Prop+Sg: CNAME_ODD_SG ; ! name special
+ +N+Prop+Pl: N_ODD_PL ;     ! normal noun
+ +N+Prop:    N_ODD_ESS ;    ! normal noun
+ +N+Prop+Attr: FINAL1 ;     ! name special
+
+LEXICON CNAME_EVEN ! Names ending in stressless vowel
+ +N+Prop+Sg: NIEJTE_SG ;
+ +N+Prop+Pl: NIEJTE_PL ;
+ +N+Prop:    EVEN_ESS ;
+ +N+Prop+Attr: FINAL1 ;
 
 
 LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
  VNAME ; ! check whether this is correct!
 
 
-LEXICON SNAME ! Southern Sami names
- VNAME ;
+LEXICON SNAME_ODD ! Southern Sami names
+ VNAME_ODD ;
 
-LEXICON PN_IE ! as N_IE, but (later) with Prop tag
-  +N+Prop+Sg+Ill:%>an	FINAL1	;	! Special Ill
-  +N+Prop+Ess:%>ine		FINAL1	;	! Special Ess
-  +N+Prop+Attr: FINAL1 ;
-  +N+Prop: J-LESS-CASE		;	! cases without -i/j-
-  +N+Prop: I-CLASS			;	! cases with -i-
+! Even syllable Sámi names:
+LEXICON PN_IE ! as N_IE, but with Prop tag
+ +N+Prop+Sg: N_IE_SG ;
+ +N+Prop+Pl: N_IE_PL ;
+ +N+Prop:    N_IE_ESS ;
+ +N+Prop+Attr: FINAL1 ;
+
+LEXICON PN_OE_UML ! as N_OE_UML, but with Prop tag
+ +N+Prop: N_OE_SGILL_UML ;
+          PN_OE ;
+
+LEXICON PN_OE ! as N_OE, but with Prop tag
+ +N+Prop+Sg: N_OE_SG ;
+ +N+Prop+Pl: N_OE_PL ;
+ +N+Prop:    N_OE_ESS ;
+ +N+Prop+Attr: FINAL1 ;
+
+LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
+ +N+Prop+Sg: MAANA_SG ;
+ +N+Prop+Pl: MAANA_PL ;
+ +N+Prop:    EVEN_ESS ;
+ +N+Prop+Attr: FINAL1 ;
+
+LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
+ +N+Prop+Sg: NIEJTE_SG ;
+ +N+Prop+Pl: NIEJTE_PL ;
+ +N+Prop:    EVEN_ESS ;
+ +N+Prop+Attr: FINAL1 ;
 
 
-! Consonant-filal names
-! - - - - - - - - - - -
+! Old names, for backwards compatibility until all entries have got new names
+! ---------------------------------------------------------------------------
 
 LEXICON CNAME
- +N+Prop+Sg+Nom:0 FINAL1 ; ! The bare nominative, of unassimilated names
- +N+Prop+Attr:0 FINAL1 ; ! The attributive version
- +N+Prop+Sg+Ill:%>esse FINAL1 ;
- +N+Prop+Ess:%>ine FINAL1 ;
- +N+Prop:e OBLIQUE ;
- +N+Prop: I-CLASS ;
+ CNAME_EVEN ; ! Even syllable as default - rename using either CNAME_EVEN or
+              ! CNAME_ODD.
+
+LEXICON VNAME
+ SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
+                ! the appropriate even syllable lexicons.
 
 
 ! The lexica
@@ -69,12 +111,12 @@ LEXICON ProperNoun
 ! Southern Sami person names (to be alphabetized when we have a stable lexicon)
 ! -----------------------------------------------------------------------------
 
-Jense SNAME ;
-Jeesuse SNAME ;
-Karijuse SNAME ;
-Baktuse SNAME ;
-Maarja SNAME ;
-Movsese SNAME ;
+Jense SNAME_NIEJTE ;
+Jeesuse SNAME_ODD ;
+Karijuse SNAME_ODD ;
+Baktuse SNAME_ODD ;
+Maarja:Maarj SNAME_MAANA ;
+Movsese SNAME_ODD ;
 
  ! Some Sami family names
 
@@ -82,46 +124,46 @@ Kappfjell CNAME ;
 Bransfjell CNAME ;
 Fjellheim CNAME ;
 Dunfjell CNAME ;
-Jåma VNAME ;
+Jåma SNAME_MAANA ;
 
-Saemiedigkie:SaemiedÆgkI2 PN_IE ;
+Saemiedigkie:Saemiedigk PN_IE ;
 
 
  ! South Sámi place names, from Sámediggi list
  
-Nöörje VNAME ;
-Nordlaante VNAME ;
-Divtasvuodna VNAME ;
-Hattfjellda VNAME ;
-Aarporte VNAME ;
-Grane VNAME ;
-Gaala VNAME ;
-Noerhte% Trööndelaage VNAME ;
-Snåase VNAME ;
-Stientje VNAME ;
-Åarjel% Trööndelaage VNAME ;
-Plassje VNAME ;
-Röörovse VNAME ;
-Tråante VNAME ; ! Trondheim
-Heedmarhke VNAME ;
-Eengerdaelie VNAME ;
-Guovdageaidnu VNAME ;
-Romssa VNAME ; ! Troms
-Romsa VNAME ; ! Tromsø
-Sveerje VNAME ;
-Jïemhte VNAME ;
-Bovdene VNAME ;
-Ubmeje VNAME ;
-Luvliemearoe VNAME ;
-Europa VNAME ;
-Beerlijne VNAME ;
-Bryssele VNAME ;
-Danmarhke VNAME ;
-Eenglaante VNAME ;
-Såevmie VNAME ;
-Frankrijhke VNAME ;
+Nöörje:Nöörj SNAME_NIEJTE ;
+Nordlaante:Nordlaant SNAME_NIEJTE ;
+Divtasvuodna:Divtasvuodn SNAME_MAANA ;
+Hattfjelldal CNAME_EVEN ;
+Aarporte:Aarport SNAME_NIEJTE ;
+Grane:Gran SNAME_NIEJTE ;
+Gaala:Gaal SNAME_MAANA ;
+Noerhte% Trööndelaage:Noerhte% Trööndelaag SNAME_NIEJTE ;
+Snåase:Snåas SNAME_NIEJTE ;
+Stientje:Stientj SNAME_NIEJTE ;
+Åarjel% Trööndelaage:Åarjel% Trööndelaag SNAME_NIEJTE ;
+Plassje:Plassj SNAME_NIEJTE ;
+Röörovse:Röörovs SNAME_NIEJTE ;
+Tråante:Tråant SNAME_NIEJTE ; ! Trondheim
+Heedmarhke:Heedmarhk SNAME_NIEJTE ;
+Eengerdaelie:Eengerdael PN_IE ;
+Guovdageaidnu VNAME_EVEN ;
+Romssa:Romss SNAME_MAANA ; ! Troms
+Romsa:Roms SNAME_MAANA ; ! Tromsø
+Sveerje:Sveerj SNAME_NIEJTE ;
+Jïemhte:Jïemht SNAME_NIEJTE ;
+Bovdene:Bovden VNAME_ODD ;
+Ubmeje:Ubmej VNAME_ODD ;
+Luvliemearoe:Luvliemear PN_OE ;
+Europa:Europ SNAME_MAANA ;
+Beerlijne:Beerlijn SNAME_NIEJTE ; !(x)(x.) => EVEN => Berlijnesne = LONDON Londonis
+Bryssele:Bryssel VNAME_ODD ;       !(x..) => ODD => Brysselesnie = BERN Bernas
+Danmarhke:Danmarhk SNAME_NIEJTE ;
+Eenglaante:Eenglaant SNAME_NIEJTE ;
+Såevmie:Såevm PN_IE ;
+Frankrijhke:Frankrijhk SNAME_NIEJTE ;
 Geeneve VNAME ;
-Islaante VNAME ;
+Islaante:Islaant SNAME_NIEJTE ;
 Slovenije VNAME ;
 Aafrika VNAME ;
 Åarjelafrika VNAME ;
@@ -129,14 +171,14 @@ Indonesija VNAME ;
 Australija VNAME ;
 Kaalifornija VNAME ;
 Kaanada VNAME ;
-Russlaante VNAME ;
-Leeningrade VNAME ;
-Lovjaevrie VNAME ;
-Mongolija VNAME ;
-Sibirije VNAME ;
-Sovjete VNAME ;
-Sovjeten-ektiedimmie VNAME ;
-Tjeernovbyjle VNAME ;
+Russlaante:Russlaant SNAME_NIEJTE ;
+Leeningrade:Leeningrad SNAME_NIEJTE ;
+Lovjaevrie:Lovjaevr PN_IE ;
+Mongolija:Mongolij SNAME_MAANA ;
+Sibirije:Sibirij SNAME_NIEJTE ;
+Sovjete:Sovjet VNAME_ODD ;
+Sovjeten-ektiedimmie:Sovjeten-ektiedimm PN_IE ;
+Tjeernovbyjle:Tjeernovbyjl SNAME_NIEJTE ;
  
 
 
