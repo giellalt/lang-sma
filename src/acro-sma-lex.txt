@@ -1,0 +1,848 @@
+!Distributed under the terms of the GNU General Public License version 2
+! or any later version.
+
+LEXICON Acronym
+
+ FIRSTLETTER ;  ! Dynamically generated acronyms, 	!^C^ Remove these from nonrec?
+               ! between two and four letters long.
+ LETTERNUMBER ; ! Listed (still not monitored)		!^C^
+               ! Perhaps we should allow for a final arabic number at
+               ! the end of the acronyms, the NRK and NRK2 pattern.
+ SOMELONGACRO ; ! Here, we collect some long acronyms, perhaps we should  !^C^
+               ! open for dynamic generation of longer acronyms, if this
+               ! list gets long.
+ smallacro ;    ! This is a pointer to a lexicon of manually listed small-letter
+               ! acronyms. They are not generated, since it would interfer with the
+               ! ordinary transducer, but listed here, as they then can point to the
+               ! same ACRO lexicon as the generated capital-letter acronyms.
+
+
+LEXICON FIRSTLETTER	!^C^
+B SCND ; C SCND ; Č SCND ; D  SCND ; Đ SCND ; F  SCND ; G  SCND ; 	!^C^
+H SCND ; J SCND ; K  SCND ; L  SCND ; M  SCND ; N  SCND ; Ŋ SCND ; 	!^C^
+P SCND ; R SCND ; S  SCND ; Š SCND ; T  SCND ; Ŧ SCND ; V  SCND ; 	!^C^
+W SCND ; X SCND ; Z  SCND ; Ž SCND ; 								!^C^
+A SCND ; Á SCND ; E  SCND ; I  SCND ; O  SCND ; U  SCND ; 			!^C^
+Æ SCND ; Ø SCND ; Y  SCND ; Ä  SCND ; Ö  SCND ; Å  SCND ; 			!^C^
+
+LEXICON SCND			!^C^
+B THRD ; C THRD ; Č THRD ; D  THRD ; Đ THRD ; F  THRD ; G  THRD ; 	!^C^
+H THRD ; J THRD ; K  THRD ; L  THRD ; M  THRD ; N  THRD ; Ŋ THRD ; 	!^C^
+P THRD ; R THRD ; S  THRD ; Š THRD ; T  THRD ; Ŧ THRD ; V  THRD ; 	!^C^
+W THRD ; X THRD ; Z  THRD ; Ž THRD ; 								!^C^
+A THRD ; Á THRD ; E  THRD ; I  THRD ; O  THRD ; U  THRD ; 			!^C^
+Æ THRD ; Ø THRD ; Y  THRD ; Ä  THRD ; Ö  THRD ; Å  THRD ; 			!^C^
+
+LEXICON THRD			!^C^
+B FRTH ; C FRTH ; Č FRTH ; D  FRTH ; Đ FRTH ; F  FRTH ; G  FRTH ; 	!^C^
+H FRTH ; J FRTH ; K  FRTH ; L  FRTH ; M  FRTH ; N  FRTH ; Ŋ FRTH ; 	!^C^
+P FRTH ; R FRTH ; S  FRTH ; Š FRTH ; T  FRTH ; Ŧ FRTH ; V  FRTH ; 	!^C^
+W FRTH ; X FRTH ; Z  FRTH ; Ž FRTH ; 								!^C^
+A FRTH ; Á FRTH ; E  FRTH ; I  FRTH ; O  FRTH ; U  FRTH ; 			!^C^
+Æ FRTH ; Ø FRTH ; Y  FRTH ; Ä  FRTH ; Ö  FRTH ; Å  FRTH ; 			!^C^
+  ACRO ;				!^C^
+
+LEXICON FRTH			!^C^
+B ACRO ; C ACRO ; Č ACRO ; D  ACRO ; Đ ACRO ; F  ACRO ; G  ACRO ; 	!^C^
+H ACRO ; J ACRO ; K  ACRO ; L  ACRO ; M  ACRO ; N  ACRO ; Ŋ ACRO ; 	!^C^
+P ACRO ; R ACRO ; S  ACRO ; Š ACRO ; T  ACRO ; Ŧ ACRO ; V  ACRO ; 	!^C^
+W ACRO ; X ACRO ; Z  ACRO ; Ž ACRO ; 								!^C^
+A ACRO ; Á ACRO ; E  ACRO ; I  ACRO ; O  ACRO ; U  ACRO ; 			!^C^
+Æ ACRO ; Ø ACRO ; Y  ACRO ; Ä  ACRO ; Ö  ACRO ; Å  ACRO  ; 			!^C^
+ACRO ;				!^C^
+! # ; !To prevent cases like :as, `as and as. But this gives tagless 3-letter ACR.
+
+LEXICON LETTERNUMBER
+A4 ACRO ;
+A5 ACRO ;
+A3 ACRO ;
+O97S ACRO ;
+Bb ACRO ;
+NRK1 ACRO ;
+NRK2 ACRO ;
+TV2 ACRO ;
+E6 ACRO ;
+LU1 ACRO ;
+LU2 ACRO ;
+P1 ACRO ;
+P2 ACRO ;
+A/L ACRO ;
+A/S ACRO ;
+ECHAM/OPYC3 ACRO ;
+L/L ACRO ;
+U19 ACRO ;
+U-19 ACRO ;
+U23 ACRO ;
+U-23 ACRO ;
+4-A ACRO ;
+5-G ACRO ;
+2-C ACRO ;
+1-D ACRO ;
+3-A ACRO ;
+6-B ACRO ;
+K/S ACRO ;
+D/S ACRO ;
+S/S ACRO ;
+L-97 ACRO ;
+L97S ACRO ;
+LA21 ACRO ;
+O-97 ACRO ;
+4/OPYC ACRO ;
+P3 ACRO ;
+CSM_1 ACRO ;
+Jk1 ACRO ;
+P4 ACRO ;
+P-1 ACRO ;
+P-2 ACRO ;
+P-3 ACRO ;
+P-4 ACRO ;
+SVT1 ACRO ;
+SVT2 ACRO ;
+SVT24 ACRO ;
+TV4 ACRO ;
+UU2 ACRO ;
+Q-2 ACRO ;
+T5PC ACRO ;
+km/t ACRO ;
+km/d ACRO ;
+km/h ACRO ;
+! Here, we need a good regex for
+! letter - number combination.
+
+LEXICON SOMELONGACRO		!^C^
+EXFACFON ACRO ;			!^C^
+EXFACHS ACRO ;			!^C^
+mánáid-TV ACRO ;
+mánáj-TV ACRO ;
+tæksta-TV ACRO ;
+
+! Here comes 500 predefined acronyms, for speller use
+! (the acro generator is circular)
+
+AB ACRO ;
+BASIC ACRO ;
+SKINN ACRO ;
+BDF ACRO ;
+UNIKOM ACRO ;
+CCITT ACRO ;
+COCOM ACRO ;
+FORTRAN ACRO ;
+FUG ACRO ;
+MGP ACRO ;
+COMECON ACRO ;
+ISAN ACRO ;
+UEFA ACRO ;
+EFS ACRO ;
+ICES ACRO ;
+BT ACRO ;
+EKG ACRO ;
+NSR ACRO ;
+NRK ACRO ;
+NBR ACRO ;
+INTEREG ACRO ;
+NIPIAA ACRO ;
+MD ACRO ;
+ARN ACRO ;
+NTNU ACRO ;
+BI ACRO ;
+II ACRO ;
+UR ACRO ;
+ON ACRO ;
+UN ACRO ;
+MSN ACRO ;
+EU ACRO ;
+IOC ACRO ;
+TV ACRO ;
+IV ACRO ;
+III ACRO ;
+AS ACRO ;
+JA ACRO ;
+NOU ACRO ;
+CD ACRO ;
+BK ACRO ;
+SKR ACRO ;
+ILO ACRO ;
+USA ACRO ;
+SSO ACRO ;
+SVL ACRO ;
+IL ACRO ;
+VI ACRO ;
+SMK ACRO ;
+SÅG ACRO ;
+RD ACRO ;
+GD ACRO ;
+DD ACRO ;
+JPD ACRO ;
+OED ACRO ;
+SOD ACRO ;
+BHD ACRO ;
+WC ACRO ;
+AD ACRO ;
+BNB ACRO ;
+PM ACRO ;
+ÅT ACRO ;
+OT ACRO ;
+ER ACRO ;
+PPS ACRO ;
+JOD ACRO ;
+SG ACRO ;
+HE ACRO ;
+SF ACRO ;
+BB ACRO ;
+SPR ACRO ;
+SSA ACRO ;
+YLE ACRO ;
+OS ACRO ;
+OG ACRO ;
+GLR ACRO ;
+SNPN ACRO ;
+FO ACRO ;
+ASVO ACRO ;
+HBO ACRO ;
+EES ACRO ;
+EG ACRO ;
+RDA ACRO ;
+NAVO ACRO ;
+PPT ACRO ;
+NVE ACRO ;
+NAČ ACRO ;
+IF ACRO ;
+DJ ACRO ;
+UNESCO ACRO ;
+SNF ACRO ;
+NEG ACRO ;
+LEA ACRO ;
+SÁB ACRO ;
+DL ACRO ;
+SEG ACRO ;
+SVD ACRO ;
+SVT ACRO ;
+IPS ACRO ;
+TIL ACRO ;
+GOD ACRO ;
+GB ACRO ;
+VS ACRO ;
+OSL ACRO ;
+FFF ACRO ;
+SDD ACRO ;
+VII ACRO ;
+IKT ACRO ;
+KLM ACRO ;
+SAFE ACRO ;
+SJ ACRO ;
+NSB ACRO ;
+VR ACRO ;
+SIFI ACRO ;
+AR ACRO ;
+ILIOS ACRO ;
+AN ACRO ;
+NKS ACRO ;
+SVL-N ACRO ;
+SVL-S ACRO ;
+EO ACRO ;
+SND ACRO ;
+SM ACRO ;
+FFR ACRO ;
+RS ACRO ;
+NNS ACRO ;
+IS ACRO ;
+PC ACRO ;
+KSS ACRO ;
+GO ACRO ;
+WHO ACRO ;
+NIBR ACRO ;
+FD ACRO ;
+BONO ACRO ;
+VBL ACRO ;
+NATO ACRO ;
+KPK ACRO ;
+HO ACRO ;
+SSL ACRO ;
+YSS ACRO ;
+VG ACRO ;
+SSB ACRO ;
+FFA ACRO ;
+PFK ACRO ;
+IT ACRO ;
+SLF ACRO ;
+SAS ACRO ;
+BUL ACRO ;
+SSF ACRO ;
+SL ACRO ;
+SFS ACRO ;
+DAT ACRO ;
+BA ACRO ;
+UKM ACRO ;
+STIL ACRO ;
+SGP ACRO ;
+SF ACRO ;
+SDS ACRO ;
+MNP ACRO ;
+AP ACRO ;
+TCO ACRO ;
+HFK ACRO ;
+SGS ACRO ;
+SÁL ACRO ;
+NOK ACRO ;
+NJFF ACRO ;
+NJ ACRO ;
+IN ACRO ;
+RV ACRO ;
+SOL ACRO ;
+SKES ACRO ;
+OD ACRO ;
+MK ACRO ;
+FIM ACRO ;
+FAB ACRO ;
+DN ACRO ;
+POT ACRO ;
+DA ACRO ;
+OSS ACRO ;
+NM ACRO ;
+EAI ACRO ;
+HK ACRO ;
+DSF ACRO ;
+RUF ACRO ;
+OB ACRO ;
+LO ACRO ;
+KF ACRO ;
+SOG ACRO ;
+NN ACRO ;
+FMX ACRO ;
+SR ACRO ;
+NGO ACRO ;
+MBD ACRO ;
+LEI ACRO ;
+HIV ACRO ;
+RSS ACRO ;
+ISBN ACRO ;
+VUK ACRO ;
+PS ACRO ;
+JPG ACRO ;
+GSS ACRO ;
+GSM ACRO ;
+AUF ACRO ;
+SJS ACRO ;
+MW ACRO ;
+ANS ACRO ;
+SS ACRO ;
+SNO ACRO ;
+SFF ACRO ;
+RO ACRO ;
+FAF ACRO ;
+SSG ACRO ;
+LKAB ACRO ;
+KKS ACRO ;
+ICC ACRO ;
+SNJ ACRO ;
+SI ACRO ;
+PIL ACRO ;
+NOR ACRO ;
+NÁČ ACRO ;
+MS ACRO ;
+ILO ACRO ;
+DÁL ACRO ;
+BOF ACRO ;
+AIDS ACRO ;
+UNTAK ACRO ;
+NINA ACRO ;
+GL ACRO ;
+GGD ACRO ;
+FUOM ACRO ;
+FK ACRO ;
+ASA ACRO ;
+ODD ACRO ;
+NORUT ACRO ;
+MEGA ACRO ;
+LHL ACRO ;
+KS ACRO ;
+ADHD ACRO ;
+UNICEF ACRO ;
+SVF ACRO ;
+SDR ACRO ;
+SAK ACRO ;
+REMA ACRO ;
+PETA ACRO ;
+OHCAN ACRO ;
+MUHTO ACRO ;
+KJSS ACRO ;
+DE ACRO ;
+CERD ACRO ;
+BST ACRO ;
+USKAV ACRO ;
+SV ACRO ;
+SD ACRO ;
+PPB ACRO ;
+NSR-N ACRO ;
+FJ ACRO ;
+SSSR ACRO ;
+SOS ACRO ;
+SB ACRO ;
+NU ACRO ;
+NIF ACRO ;
+MY ACRO ;
+MÁ ACRO ;
+HEI ACRO ;
+GJ ACRO ;
+EP ACRO ;
+DON ACRO ;
+CV ACRO ;
+CO ACRO ;
+AT ACRO ;
+YEH ACRO ;
+WCIP ACRO ;
+UNN ACRO ;
+SGL ACRO ;
+SF-012 ACRO ;
+OVDAL ACRO ;
+OH ACRO ;
+NOS ACRO ;
+LMK ACRO ;
+KOAS ACRO ;
+IW ACRO ;
+GP ACRO ;
+GDL ACRO ;
+BD ACRO ;
+SAÁO ACRO ;
+PFU ACRO ;
+NČE ACRO ;
+INTERREG ACRO ;
+FN ACRO ;
+ČSV ACRO ;
+TONO ACRO ;
+SMS ACRO ;
+SÁ ACRO ;
+PIPE ACRO ;
+MGD ACRO ;
+JUO ACRO ;
+JSL ACRO ;
+IMA ACRO ;
+FE ACRO ;
+EZLN ACRO ;
+DVD ACRO ;
+DAN ACRO ;
+CIA ACRO ;
+WTO ACRO ;
+UD ACRO ;
+SOF ACRO ;
+SFO ACRO ;
+RKTL ACRO ;
+OL ACRO ;
+NSI ACRO ;
+MUVÁ ACRO ;
+MIELDE ACRO ;
+MIEHTÁ ACRO ;
+LMS ACRO ;
+LLH ACRO ;
+KU ACRO ;
+FAS ACRO ;
+EØS ACRO ;
+ESA ACRO ;
+EGD ACRO ;
+DNA ACRO ;
+DILLI ACRO ;
+ADSL ACRO ;
+VIII ACRO ;
+UDI ACRO ;
+TRAS ACRO ;
+SK ACRO ;
+NORAD ACRO ;
+NMK ACRO ;
+NLS ACRO ;
+JK ACRO ;
+HT ACRO ;
+EEK ACRO ;
+ED ACRO ;
+DS ACRO ;
+DFD ACRO ;
+DAB ACRO ;
+CNN ACRO ;
+BOL ACRO ;
+AWG ACRO ;
+AL ACRO ;
+XX ACRO ;
+WWF ACRO ;
+UEW ACRO ;
+SUF ACRO ;
+SP ACRO ;
+SLČ ACRO ;
+SE ACRO ;
+SBB ACRO ;
+SÁLAS ACRO ;
+KD ACRO ;
+JUS ACRO ;
+ILUS ACRO ;
+IBM ACRO ;
+GPS ACRO ;
+FS ACRO ;
+FIFA ACRO ;
+FÁGA ACRO ;
+EEO ACRO ;
+DPS ACRO ;
+BBL ACRO ;
+BBC ACRO ;
+ATSIC ACRO ;
+ÁJA ACRO ;
+ABC ACRO ;
+VM ACRO ;
+SN ACRO ;
+SKS ACRO ;
+SISA ACRO ;
+SFT ACRO ;
+SDGB ACRO ;
+NMT ACRO ;
+MNOSS ACRO ;
+FNUC ACRO ;
+LU ACRO ;
+LA ACRO ;
+JL ACRO ;
+ECA ACRO ;
+DSE ACRO ;
+DBE ACRO ;
+ÁLGU ACRO ;
+AFS ACRO ;
+TT ACRO ;
+TNT ACRO ;
+SUS ACRO ;
+SSN ACRO ;
+SEK ACRO ;
+OK ACRO ;
+NASCO ACRO ;
+MC ACRO ;
+KRIPOS ACRO ;
+KIBK ACRO ;
+KGD ACRO ;
+IFU ACRO ;
+HRW ACRO ;
+FGDL ACRO ;
+DSJ ACRO ;
+DES ACRO ;
+BUP ACRO ;
+BUORIT ACRO ;
+BU ACRO ;
+BSS ACRO ;
+WWM ACRO ;
+WWA ACRO ;
+WINHEC ACRO ;
+VW ACRO ;
+US ACRO ;
+URACCAN ACRO ;
+UNEP ACRO ;
+SUFUR ACRO ;
+SRV ACRO ;
+SOU ACRO ;
+SBSS ACRO ;
+OAS ACRO ;
+NSD ACRO ;
+NGU ACRO ;
+MMI ACRO ;
+ML ACRO ;
+KIM ACRO ;
+ID ACRO ;
+HVS ACRO ;
+HB ACRO ;
+GS ACRO ;
+GG ACRO ;
+FC ACRO ;
+ETA ACRO ;
+ENA ACRO ;
+EM ACRO ;
+EFTA ACRO ;
+EDB ACRO ;
+DIR ACRO ;
+CPJ ACRO ;
+BNO ACRO ;
+ATV ACRO ;
+APTN ACRO ;
+VOX ACRO ;
+UDSL ACRO ;
+SUPU ACRO ;
+SU ACRO ;
+SSS ACRO ;
+SSR ACRO ;
+SPOR ACRO ;
+SFR ACRO ;
+SBS ACRO ;
+SAP ACRO ;
+RSR ACRO ;
+RAG ACRO ;
+PR ACRO ;
+PFL ACRO ;
+PB ACRO ;
+OLU ACRO ;
+OAFIR ACRO ;
+NTB ACRO ;
+NKK ACRO ;
+NB ACRO ;
+MAS ACRO ;
+LOBI ACRO ;
+LD ACRO ;
+KBB ACRO ;
+JH ACRO ;
+IWGIA ACRO ;
+IKO ACRO ;
+IIIA ACRO ;
+IBK ACRO ;
+GJSL ACRO ;
+GII ACRO ;
+FPPS ACRO ;
+FLS ACRO ;
+FA ACRO ;
+ECOSOC ACRO ;
+DT ACRO ;
+DSK ACRO ;
+CC ACRO ;
+BMB ACRO ;
+AYC ACRO ;
+ANC ACRO ;
+UNG ACRO ;
+UNDP ACRO ;
+UB ACRO ;
+TSI ACRO ;
+SIVA ACRO ;
+SGR ACRO ;
+SGRN ACRO ;
+AU ACRO ;
+KM ACRO ;
+KISP ACRO ;
+KR ACRO ;
+TAC ACRO ;
+SOR ACRO ;
+SNPL ACRO ;
+SEFO ACRO ;
+SDG ACRO ;
+SATØ ACRO ;
+SÁMAS ACRO ;
+SAF ACRO ;
+ROP ACRO ;
+RNNU ACRO ;
+RBL ACRO ;
+RBK ACRO ;
+PUT ACRO ;
+RSDAP ACRO ;
+RSFSR ACRO ;
+RMS ACRO ;
+PL ACRO ;
+TD ACRO ;
+SRJ ACRO ;
+ORO ACRO ;
+OIPA ACRO ;
+OASIS ACRO ;
+NTL ACRO ;
+NINA-NIKU ACRO ;
+NILF ACRO ;
+NHO ACRO ;
+NCS ACRO ;
+NAF ACRO ;
+NA ACRO ;
+DKS ACRO ;
+MM ACRO ;
+MBL ACRO ;
+KRD ACRO ;
+KLP ACRO ;
+KJJS ACRO ;
+KAB ACRO ;
+JR ACRO ;
+ISDN ACRO ;
+ILAR ACRO ;
+GJSS ACRO ;
+GHVS ACRO ;
+FAO ACRO ;
+DUS ACRO ;
+DSI ACRO ;
+DGT ACRO ;
+DÁ ACRO ;
+COOP ACRO ;
+BES ACRO ;
+AV ACRO ;
+ASS ACRO ;
+AMT ACRO ;
+ACTA ACRO ;
+AÁF ACRO ;
+VVS ACRO ;
+PDF ACRO ;
+ERUF ACRO ;
+BPA ACRO ;
+BIBSYS ACRO ;
+WRH ACRO ;
+SKUP ACRO ;
+FM ACRO ;
+LSD ACRO ;
+MB ACRO ;
+MP ACRO ;
+SCA ACRO ;
+CBS ACRO ;
+CNN ACRO ;
+IRE ACRO ;
+IRA ACRO ;
+RAF ACRO ;
+FLL ACRO ;
+EØF ACRO ;
+
+
+LEXICON smallacro
+as ACRO ; !A/S
+cd ACRO ;
+tv ACRO ;
+mánáj-tv:mánáj-tv ACRO ;
+teaksta-tv ACRO ;
+SMSAm ACRO ;
+!Here comes the set of acronyms that
+!are moved from abbr-sme-lex.txt
+AciA ACRO ;
+AiS ACRO ;
+Art ACRO ;
+Bb ACRO ;
+DuÅ ACRO ;
+Bbl ACRO ;
+BfS ACRO ;
+DeS ACRO ;
+FeFo ACRO ;
+DnB ACRO ;
+Dssn ACRO ;
+EtMk ACRO ;
+FBb ACRO ;
+FGb ACRO ;
+Flf ACRO ;
+FoU ACRO ;
+Frp ACRO ;
+FrS ACRO ;
+Gb ACRO ;
+Ger ACRO ;
+pdf ACRO ;
+Gwh ACRO ;
+HadCM ACRO ;
+ImO ACRO ;
+Jd ACRO ;
+Ji ACRO ;
+K-ent ACRO ;
+KBb ACRO ;
+KiMK ACRO ;
+SVL-Fi ACRO ;
+KoKo ACRO ;
+KoKS ACRO ;
+Krf ACRO ;
+KrÁ ACRO ;
+KáB ACRO ;
+LaMk ACRO ;
+LaW ACRO ;
+LuW ACRO ;
+MiF ACRO ;
+Med-fak ACRO ;
+MuVá ACRO ;
+NgL ACRO ;
+NoKTuRNL ACRO ;
+Norfu ACRO ;
+Or ACRO ;
+Rp ACRO ;
+ekg ACRO ;
+pc ACRO ;
+komvux ACRO ;
+SamS ACRO ;
+Sf ACRO ;
+kB ACRO ;
+kVA ACRO ;
+lsd ACRO ;
+pps ACRO ;
+wc ACRO ;
+SfB ACRO ;
+SfF ACRO ;
+Rv ACRO ;
+Sfruo ACRO ;
+SMSAm ACRO ;
+StA ACRO ;
+SáB ACRO ;
+UiO ACRO ;
+UiT ACRO ;
+UiTø ACRO ;
+Rp ACRO ;
+SvJT ACRO ;
+UiB ACRO ;
+SUKPb ACRO ;
+SkL ACRO ;
+PhD ACRO ;
+KrF ACRO ;
+FrP ACRO ;
+
+!<-----the alphabet----->
+a ACRO ;
+á ACRO ;
+b ACRO ;
+c ACRO ;
+d ACRO ;
+e ACRO ;
+f ACRO ;
+g ACRO ;
+h ACRO ;
+i ACRO ;
+j ACRO ;
+k ACRO ;
+l ACRO ;
+m ACRO ;
+n ACRO ;
+o ACRO ;
+p ACRO ;
+q ACRO ;
+r ACRO ;
+s ACRO ;
+t ACRO ;
+u ACRO ;
+v ACRO ;
+x ACRO ;
+y ACRO ;
+z ACRO ;
+å ACRO ;
+æ ACRO ;
+ø ACRO ;
+ä ACRO ;
+ö ACRO ;
+
+
+
+LEXICON ACRO               ! Here we add the POS tag
++N+ACR: acroconnector ;
+
+LEXICON acroconnector      ! Here comes a set of possible symbols to
+    acrosuff ;!SUB         ! put between the abbreviation and its suffix
+:%>%: acrosuff ;             ! The lexica are split in order to avoid the POS
+:'7 acrosuff ;!SUB         ! tag for other symbols using the acroconnector
+:%` acrosuff ;!SUB         ! lexicon. (cf. the punct-sme-lex.txt file)
+:%>%- RAbbr ;
+    acronull    ;
+
+LEXICON acronull
++Sg+Nom:%> K ;
++Sg+Gen:%> K ;
++Sg+Acc:%> K ;
++Pl+Nom:%> K ;
+
+
+
+LEXICON acrosuff
++Sg+Gen:en K ; 
++Sg+Acc:am K ; 
+!+Sg+Ill:aj K ; !SUB
+!+Sg+Acc:v K ;
+!+Sg+Ill:j K ;
+!!+Sg+Ill:i K ;   ! NSR:i
+!+Sg+Ine:n K ;   ! NRK:n
+!+Sg+Ine:an K ;  ! NRK:an  !SUB
+!+Sg+Ela:s K ;   ! NRK:s
+!+Sg+Ela:as K ;  ! NRK:as !SUB
+!+Sg+Com:jn K ;
+!+Ess:n K ;	! NBR:n
+!+Ess:an K ; !SUB
+!+Pl+Nom:a K ;  !SUB
+!+Pl+Gen:aj K ; !SUB
+!+Pl+Acc:ajt K ; !SUB
+!+Pl+Ill:ajda K ; !SUB
+!+Pl+Ine:ajn K ; !SUB
+!+Pl+Ela:ajs K ; !SUB
+!+Pl+Com:aj K ; !SUB
+!+Pl+Gen:j K ;
+!+Pl+Acc:jt K ;
+!+Pl+Ill:jda K ;
+!+Pl+Ine:jn K ;
+!+Pl+Ela:js K ;
+!+Pl+Com:j K ;
+
