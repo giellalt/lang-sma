@@ -520,16 +520,23 @@ LEXICON GOLTELIDH
 
 ! Infinite forms
 ! --------------
- +V+Inf:%>idh		        FINAL1 ;
- +V+VGen:%>%^DISIMPeminie	FINAL1 ; ! GH Modalis, KB måtesform
-		                 		 ! GH Voluntativ
- +V+Act:%>amme		    FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+Ger:%>%^DISIMPeminie	FINAL1 ;
- +V+PrsPrc:%>ije	        FINAL1 ; ! must go to nominal lexicon instead
-				                 ! Ptz.Fut b'ïssejässaa
- +V+PrfPrc:%>amme	        FINAL1 ;
+ +V+Inf:%>idh             FINAL1 ;
  +V+ConNeg:%>%^DISIMPh    FINAL1 ;
- +V+VAbess:%>h		    FINAL1 ; ! Check
+ +V+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +V+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +V+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +V+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   ! GH Ptz.Fut. b'ïssejässaa missing here
+ 
+!+V+VAbess:%>h            FINAL1 ; 
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen
+! äbreks der nicht regnet
+! baal'eks der nicht gräbt
+! b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
 
 
 ! Contract verbs
@@ -544,33 +551,33 @@ LEXICON GOLTELIDH
 ! The goal is then to choose between the two (or to have a normative decision).
 
 LEXICON BILLIJIDH
- +V+CTR+Ind+Prs:%>  VSUF-CONTR-PRS ;    ! All except Du3
- +V+ODD+Ind+Prs:%>ij  V-ODD-PRS-SG ;    ! All sg
- +V+ODD+Ind+Prs:%>ij  ODD_PRS_NON_DU3 ; ! Al except Du3
- +V+Ind+Prs+Du3:%>ijægan FINAL1 ;       ! Prs Du3 identical
- +V+Ind+Prt+Sg3:%>iji FINAL1 ;          ! Prt Sg3 identical
- +V+CTR+Ind+Prt:%>  VSUF-CONTR-PRT ;    ! Not to Prt Sg3
- +V+ODD+Ind+Prt:%>ij  VSUF-PRT-SG-12 ;  ! Also not to Prt Sg3
- +V+ODD+Ind+Prt:%>ij  VSUF-PRT-DUPL ;   
+ +V+CTR+Ind+Prs:%>       VSUF-CONTR-PRS ;  ! All except Du3
+ +V+ODD+Ind+Prs:%>ij     V-ODD-PRS-SG ;    ! All sg
+ +V+ODD+Ind+Prs:%>ij     ODD_PRS_NON_DU3 ; ! Al except Du3
+ +V+Ind+Prs+Du3:%>ijægan FINAL1 ;          ! Prs Du3 identical
+ +V+Ind+Prt+Sg3:%>iji    FINAL1 ;          ! Prt Sg3 identical
+ +V+CTR+Ind+Prt:%>       VSUF-CONTR-PRT ;  ! Not to Prt Sg3
+ +V+ODD+Ind+Prt:%>ij     VSUF-PRT-SG-12 ;  ! Also not to Prt Sg3
+ +V+ODD+Ind+Prt:%>ij     VSUF-PRT-DUPL ;   
 
- +V+CTR+Imp:%>      VSUF-CONTR-IMP ;
- +V+ODD+Imp:%>ij    VSUF-ODD-IMP ;
+ +V+CTR+Imp:%>           VSUF-CONTR-IMP ;
+ +V+ODD+Imp:%>ij         VSUF-ODD-IMP ;
 
 ! Infinite forms
 ! --------------
  +V+Inf:%>ijidh		        FINAL1 ;
- +V+CTR+VGen:%>eminie	    FINAL1 ; ! GH Modalis, KB måtesform
-            		    		 ! GH Voluntativ
- +V+ODD+VGen:%>ijen	        FINAL1 ; 
- +V+Act:%>eme		        FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+CTR+Ger:%>eminie	    FINAL1 ;
- +V+ODD+Ger:%>ijeminie	    FINAL1 ;
- +V+PrsPrc:%>ije	        FINAL1 ; ! must go to nominal lexicon instead
-				                 ! Ptz.Fut b'ïssejässaa
- +V+CTR+PrfPrc:%>eme	    FINAL1 ;
- +V+ODD+PrfPrc:%>jamme	    FINAL1 ;
  +V+CTR+ConNeg:%^DISIMP%>h  FINAL1 ;
- +V+ODD+ConNeg:%>ijh	    FINAL1 ;
+ +V+ODD+ConNeg:%>ijh        FINAL1 ;
+ +V+CTR+VGen:%>eminie       FINAL1 ; ! GH Modalis, KB måtesform ! GH Voluntativ
+ +V+ODD+VGen:%>ijen         FINAL1 ; 
+ +V+CTR+Act:%>eme           FINAL1 ; ! GH verbalsubst, KB nomen actionis
+ +V+ODD+Act:%>immie         FINAL1 ; ! GH verbalsubst, KB nomen actionis
+ +V+CTR+Ger:%>eminie        FINAL1 ;
+ +V+ODD+Ger:%>ijeminie      FINAL1 ;
+ +V+CTR+PrsPrc:%>ije        FINAL1 ; ! must go to nominal lexicon instead
+ +V+ODD+PrsPrc:%>æjja       FINAL1 ; ! must go to nominal lexicon instead
+ +V+CTR+PrfPrc:%>eme        FINAL1 ;
+ +V+ODD+PrfPrc:%>jamme      FINAL1 ;
 ! +V+VAbess:%>h		    FINAL1 ; ! This one is not given in Verbh.
 
 
@@ -579,25 +586,31 @@ LEXICON BILLIJIDH
 ! ===================
 
 LEXICON BÅETEDH ! row A
- +V+Ind+Prs:%>%^1UMLa         V-I-PRS-SG ; ! class I special
- +V+Ind+Prs:%>ie              VSUF-EVEN-PRS-DUPL ;
- +V+Ind+Prt:%>%^iUML           VSUF-PRT ;
- +V+Imp:%>                    VSUF-EVEN-IMP ;
- +V+Inf:%>edh                 FINAL1 ;
- +V+Ger:%>ieminie             FINAL1 ;
- +V+PrfPrc:%>%^1UMLeme        FINAL1 ;
- +V+ConNeg:%>ieh              FINAL1 ;
+ +V+Ind+Prs:%>%^1UMLa   V-I-PRS-SG ; ! class I special
+ +V+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
+ +V+Ind+Prt:%>%^iUML    VSUF-PRT ;
+ +V+Imp:%>              VSUF-EVEN-IMP ;
+ +V+Inf:%>edh           FINAL1 ;
+ +V+ConNeg:%>ieh        FINAL1 ;
+ +V+VGen:%>ien          FINAL1 ;
+ +V+Act:%>eme           FINAL1 ;
+ +V+Ger:%>ieminie       FINAL1 ;
+ +V+PrsPrc:%>ije        FINAL1 ;
+ +V+PrfPrc:%>%^1UMLeme  FINAL1 ;
  ! row F trigger for Umlaut Prt
 
 LEXICON TJEARODH ! row C
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
- +V+Ind+Prs:%>oe          VSUF-EVEN-PRS-DUPL ;
+ +V+Ind+Prs:%>oe        VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>oej       VSUF-PRT ;
  +V+Imp:%>              VSUF-II-EVEN-IMP ;
  +V+Inf:%>odh           FINAL1 ;
- +V+Ger:%>oeminie       FINAL1 ;
- +V+PrfPrc:%>%^2UMLeme  FINAL1 ;
  +V+ConNeg:%>oeh        FINAL1 ;
+ +V+VGen:%>oen          FINAL1 ;
+ +V+Act:%>eme           FINAL1 ;
+ +V+Ger:%>oeminie       FINAL1 ;
+ +V+PrsPrc:%>oje        FINAL1 ;
+ +V+PrfPrc:%>%^2UMLeme  FINAL1 ;
 
 LEXICON GUARKEDH ! row B
  +V+Ind+Prs:%>    V-III-PRS-SG ; ! class III special
@@ -605,7 +618,10 @@ LEXICON GUARKEDH ! row B
  +V+Ind+Prt:%>aj  VSUF-PRT ;
  +V+Imp:%>        VSUF-III-EVEN-IMP ;
  +V+Inf:%>edh     FINAL1 ;
+ +V+VGen:%>an     FINAL1 ;
+ +V+Act:%>eme     FINAL1 ;
  +V+Ger:%>aminie  FINAL1 ;
+ +V+PrsPrc:%>eje  FINAL1 ;
  +V+PrfPrc:%>eme  FINAL1 ;
  +V+ConNeg:%>0h   FINAL1 ;
 
@@ -614,7 +630,10 @@ LEXICON TJOEHPEDH ! row D
  +V+Ind+Prt:%>     VSUF-PRT ;
  +V+Imp:%>         VSUF-IV-EVEN-IMP ;
  +V+Inf:%>edh      FINAL1 ;
+ +V+VGen:%>en      FINAL1 ;
+ +V+Act:%>eme      FINAL1 ;
  +V+Ger:%>eminie   FINAL1 ;
+ +V+PrsPrc:%>eje   FINAL1 ;
  +V+PrfPrc:%>eme   FINAL1 ;
  +V+ConNeg:%>0h    FINAL1 ;
 
@@ -623,18 +642,24 @@ LEXICON VÅÅJNEDH ! row E
  +V+Ind+Prt:%>   VSUF-PRT ;
  +V+Imp:%>       VSUF-IV-EVEN-IMP ;
  +V+Inf:%>edh    FINAL1 ;
+ +V+VGen:%>en    FINAL1 ;
+ +V+Act:%>eme    FINAL1 ;
  +V+Ger:%>eminie FINAL1 ;
+ +V+PrsPrc:%>eje FINAL1 ;
  +V+PrfPrc:%>eme FINAL1 ;
  +V+ConNeg:%>h   FINAL1 ;
 
 LEXICON GÖÖLEDH ! row F
- +V+Ind+Prs:%>    VSUF-VI-EVEN-PRS ;
- +V+Ind+Prt:%>    VSUF-PRT ;
- +V+Imp:%>        VSUF-IV-EVEN-IMP ;
- +V+Inf:%>edh     FINAL1 ;
- +V+Ger:%>minie   FINAL1 ;
- +V+PrfPrc:%>eme  FINAL1 ;
- +V+ConNeg:%>h    FINAL1 ;
+ +V+Ind+Prs:%>   VSUF-VI-EVEN-PRS ;
+ +V+Ind+Prt:%>   VSUF-PRT ;
+ +V+Imp:%>       VSUF-IV-EVEN-IMP ;
+ +V+Inf:%>edh    FINAL1 ;
+ +V+VGen:%>en    FINAL1 ;
+ +V+Act:%>eme    FINAL1 ;
+ +V+Ger:%>minie  FINAL1 ;
+ +V+PrsPrc:%>eje FINAL1 ;
+ +V+PrfPrc:%>eme FINAL1 ;
+ +V+ConNeg:%>h   FINAL1 ;
 
 
 
