@@ -74,6 +74,8 @@ LEXICON Root
   0:#			Punctuation	;
   0:#			Interjection	;
   0:#			Numeral ;
+  0:#			Abbreviation ;
+  0:#			Acronym ;
 
 
 ! =============================
@@ -347,8 +349,14 @@ ATTR0 ;
 PRED0 ;
 +A:      evencomp ;
 
-LEXICON s-null-even
+LEXICON s-s-even
 ATTR0 ;
+PRED0 ;
++A:      evencomp ; ! check this!
+
+
+LEXICON s-null-even
+ATTRS ;
 PRED0 ;
 +A:         evencomp ;
 
