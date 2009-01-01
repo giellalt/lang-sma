@@ -1,4 +1,9 @@
 LEXICON Root
+< [a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|q|y|z|æ|ø|å|ä|ö|á|č|đ|ŋ|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|Æ|Ø|Å|Ä|Ö|Á|Č|Đ|Ŋ|Š|Ŧ|Ž]* > COMMA ; ! This first line is to allow all letter strings.
+NUMBERSECTION ;
+COMMASECTION ;
+
+LEXICON NUMBERSECTION
 HUNDREDSM ;		! 200M
 tjuetie:1 HUNDREDM ;	! 100M
 TENSM ;			! 20-99M
@@ -29,53 +34,53 @@ LEXICON CUODIM
 tjuetie: HUNDREDM ;
 
 LEXICON HUNDREDM
-TENSM ;
-TEENSM ;
-:%0 ONESM ;
+      TENSM ;
+      TEENSM ;
+:%0   ONESM ;
 :%0%0 MILJON ;
 
 LEXICON TEENSM
 luhkie:1 TEENM ;
 
 LEXICON TEENM
-akte:1 LOHKAIM ;
-göökte:2 LOHKAIM ;
-golme:3 LOHKAIM ;
+akte:1     LOHKAIM ;
+göökte:2   LOHKAIM ;
+golme:3    LOHKAIM ;
 njieljie:4 LOHKAIM ;
-vïjhte:5 LOHKAIM ;
-govhte:6 LOHKAIM ;
+vïjhte:5   LOHKAIM ;
+govhte:6   LOHKAIM ;
 tjïjhtje:7 LOHKAIM ;
 gaektsie:8 LOHKAIM ;
-uktsie:9 LOHKAIM ;
+uktsie:9   LOHKAIM ;
 
 LEXICON LOHKAIM
 MILJON ;
 
 LEXICON TENSM
 luhkie:1%0 MILJON ;
-göökte:2 LUHKIEM ;
-golme:3 LUHKIEM ;
+göökte:2   LUHKIEM ;
+golme:3    LUHKIEM ;
 njieljie:4 LUHKIEM ;
-vïjhte:5 LUHKIEM ;
-govhte:6 LUHKIEM ;
+vïjhte:5   LUHKIEM ;
+govhte:6   LUHKIEM ;
 tjïjhtje:7 LUHKIEM ;
 gaektsie:8 LUHKIEM ;
-uktsie:9 LUHKIEM ;
+uktsie:9   LUHKIEM ;
 
 LEXICON LUHKIEM
 luhkie:%0 MILJON ;
-luhkie: ONESM ;
+luhkie:   ONESM ;
 
 LEXICON ONESM
 akte% miljon% :1 OVERTHOUSANDS ;
-göökte:2 MILJON ;
-golme:3 MILJON ;
-njieljie:4 MILJON ;
-vïjhte:5 MILJON ;
-govhte:6 MILJON ;
-tjïjhtje:7 MILJON ;
-gaektsie:8 MILJON ;
-uktsie:9 MILJON ; 
+göökte:2         MILJON ;
+golme:3          MILJON ;
+njieljie:4       MILJON ;
+vïjhte:5         MILJON ;
+govhte:6         MILJON ;
+tjïjhtje:7       MILJON ;
+gaektsie:8       MILJON ;
+uktsie:9         MILJON ; 
 
 LEXICON MILJON
 % miljona% : OVERTHOUSANDS ;
@@ -95,17 +100,17 @@ tåvsene:%0%01 THOUSAND ;	!   1.000.000
 :%0%0%0%0 TENS ;
 :%0%0%0%0 TEENS ;
 :%0%0%0%0%0 ONES ;
-:%0%0%0%0%0%0 # ;	!  x000000
+:%0%0%0%0%0%0 COMMA ;	!  x000000
 
 LEXICON HUNDREDST
-göökte:2  CUODIT ;	! 200000-299999
-golme:3 CUODIT ;	! 300000-399999
+göökte:2   CUODIT ;	! 200000-299999
+golme:3    CUODIT ;	! 300000-399999
 njieljie:4 CUODIT ;	! 400000-499999
-vïjhte:5 CUODIT ;	! 500000-599999
-govhte:6 CUODIT ;	! 600000-699999
+vïjhte:5   CUODIT ;	! 500000-599999
+govhte:6   CUODIT ;	! 600000-699999
 tjïjhtje:7 CUODIT ;	! 700000-799999
 gaektsie:8 CUODIT ;	! 800000-899999
-uktsie:9 CUODIT ;	! 900000-999999
+uktsie:9   CUODIT ;	! 900000-999999
 
 LEXICON CUODIT
 tjuetie: HUNDREDT ;	! 100000-199999
@@ -118,32 +123,32 @@ akte:%01 THOUSANDS ;
 :%0%0 THOUSANDS ;	! X00YYY
 
 LEXICON TEENST
-luhkie:1 TEENT ;
+luhkie:1   TEENT ;
 luhkie:1%0 THOUSANDS ;
 
 LEXICON TEENT
-akte:1 LOHKAIT ;
-göökte:2 LOHKAIT ;
-golme:3 LOHKAIT ;
+akte:1     LOHKAIT ;
+göökte:2   LOHKAIT ;
+golme:3    LOHKAIT ;
 njieljie:4 LOHKAIT ;
-vïjhte:5 LOHKAIT ;
-govhte:6 LOHKAIT ;
+vïjhte:5   LOHKAIT ;
+govhte:6   LOHKAIT ;
 tjïjhtje:7 LOHKAIT ;
 gaektsie:8 LOHKAIT ;
-uktsie:9 LOHKAIT ;
+uktsie:9   LOHKAIT ;
 
 LEXICON LOHKAIT
 THOUSANDS ;
 
 LEXICON TENST
-göökteluhkie:2 LUHKIET ;
-golmeluhkie:3 LUHKIET ;
+göökteluhkie:2   LUHKIET ;
+golmeluhkie:3    LUHKIET ;
 njieljieluhkie:4 LUHKIET ;
-vïjhteluhkie:5 LUHKIET ;
-govhteluhkie:6 LUHKIET ;
+vïjhteluhkie:5   LUHKIET ;
+govhteluhkie:6   LUHKIET ;
 tjïjhtjeluhkie:7 LUHKIET ;
 gaektsieluhkie:8 LUHKIET ;
-uktsieluhkie:9 LUHKIET ;
+uktsieluhkie:9   LUHKIET ;
 
 LEXICON LUHKIET
 :%0 THOUSANDS ;
@@ -168,7 +173,7 @@ UNDERTHOUSAND ;	   ! 1100-1999
 :%0 TENS ;	   ! 1020-1099
 :%0 TEENS ;	   ! 1010-1019
 :%0%0 ONES ;	   ! 1001-1009
-:%0%0%0 # ;	   ! 1000
+:%0%0%0 COMMA ;	   ! 1000
 
 !===========================
 !Here starts the 999 numbers
@@ -177,45 +182,38 @@ UNDERTHOUSAND ;	   ! 1100-1999
 LEXICON UNDERTHOUSAND
 HUNDREDS ;
 tjuetie:1 HUNDRED ;
+tjuatede:1  CUODAAT ;
 
 LEXICON HUNDREDS
-göökte:2  CUODI ;
-golme:3 CUODI ;
+göökte:2   CUODI ;
+golme:3    CUODI ;
 njieljie:4 CUODI ;
-vïjhte:5 CUODI ;
-govhte:6 CUODI ;
+vïjhte:5   CUODI ;
+govhte:6   CUODI ;
 tjïjhtje:7 CUODI ;
 gaektsie:8 CUODI ;
-uktsie:9 CUODI ;
+uktsie:9   CUODI ;
 
 LEXICON CUODI
-tjuetie: HUNDRED ;
+tjuetie:   HUNDRED ;
+tjuatede:  CUODAAT ;
 
 LEXICON HUNDRED
-TENS ;
-TEENS ;
-:%0 ONES ;
-:%0%0 # ;
+      TENS ;
+      TEENS ;
+:%0   ONES ;
+:%0%0 COMMA ;
+
+LEXICON CUODAAT
+:%0%0%.    COMMA ;
 
 LEXICON TEENS
-luhkie:1 TEEN ;
+luhkie:1 ONES ;
 
-LEXICON TEEN
-akte:1 LOHKAI ;
-göökte:2 LOHKAI ;
-golme:3 LOHKAI ;
-njieljie:4 LOHKAI ;
-vïjhte:5 LOHKAI ;
-govhte:6 LOHKAI ;
-tjïjhtje:7 LOHKAI ;
-gaektsie:8 LOHKAI ;
-uktsie:9 LOHKAI ;
-
-LEXICON LOHKAI
- # ;
 
 LEXICON TENS
-luhkie:1%0 # ;
+luhkie:1%0 COMMA ;
+låhkede:1%0%. COMMA ;
 göökte:2 LUHKIE ;
 golme:3 LUHKIE ;
 njieljie:4 LUHKIE ;
@@ -226,17 +224,50 @@ gaektsie:8 LUHKIE ;
 uktsie:9 LUHKIE ;
 
 LEXICON LUHKIE
-luhkie:%0 # ;
+luhkie:%0 COMMA ;
 luhkie: ONES ;
 
 LEXICON ONES
-akte:1 # ;
-göökte:2 # ;
-golme:3 # ;
-njieljie:4 # ;
-vïjhte:5 # ;
-govhte:6 # ;
-tjïjhtje:7 # ;
-gaektsie:8 # ;
-uktsie:9 # ;
+CARDINAL ;
+ORDINAL ;
 
+LEXICON CARDINAL
+akte:1 COMMA ;
+göökte:2 COMMA ;
+golme:3 COMMA ;
+njieljie:4 COMMA ;
+vïjhte:5 COMMA ;
+govhte:6 COMMA ;
+tjïjhtje:7 COMMA ;
+gaektsie:8 COMMA ;
+uktsie:9 COMMA ;
+
+LEXICON ORDINAL
+voestes:1%.     COMMA ;
+mubpie:2%.   COMMA ;
+gåalmede:3%.   COMMA ;
+njealjede:4%. COMMA ;
+vijhtede:5%.   COMMA ;
+govhtede:6%.   COMMA ;
+tjijhtjede:7%.    COMMA ;
+gaaktsede:8%.   COMMA ;
+åktsede:9%.    COMMA ;
+
+LEXICON COMMA
+ ENDLEX ;
+ COMMASECTION ;
+
+LEXICON COMMASECTION  ! these are not spellchecked!!!
+                  ENDLEX ;
+! % komma% :,      Root ;
+! % tjuohkkis% :%. Root ;
+! % kolon% :%:     Root ;
+! % sárggis% :%-   Root ; 
+ % la% :%=         Root ; 
+ % gráda% :%°      Root ; 
+ % paragráfa% :§   Root ; 
+! % násti% :%*     Root ; 
+ % ja% :&          Root ; 
+
+LEXICON ENDLEX
+ # ;
