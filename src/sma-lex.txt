@@ -346,68 +346,69 @@ LEXICON OBLIQUE_EVEN
 
 
 LEXICON null-null-even
-ATTR0 ;
-PRED0 ;
-+A:      evencomp ;
+ATTR-0 ;
+PRED-0 ;
++A:      EVENCOMP ;
 
 LEXICON s-s-even
-ATTR0 ;
-PRED0 ;
-+A:      evencomp ; ! check this!
+ATTR-0 ;
+PRED-0 ;
++A:      EVENCOMP ; ! check this!
 
 
 LEXICON s-null-even
-ATTRS ;
-PRED0 ;
-+A:         evencomp ;
+ATTR-S ;
+PRED-0 ;
++A:         EVENCOMP ;
 
-LEXICON null-s-even
-ATTR0 ;
-PREDS ;
-+A:        evencomp ;
+
+LEXICON NULL-S-EVEN
+ATTR-0 ;
+PRED-S ;
++A:        EVENCOMP-UML ;
 
 LEXICON h-n-even
 +A+Attr:%>h   FINAL1 ;
 +A:%>n     RELEVANTNOUNLEX ;
-+A:        evencomp ;
++A:        EVENCOMP ;
 
 LEXICON null-null-odd
-ATTR0 ;
-PRED0 ;
-+A:        oddcomp ;
+ATTR-0 ;
+PRED-0 ;
++A:        ODDCOMP ;
 
 LEXICON s-null-odd
-ATTRS ;
-PRED0 ;
-+A:         oddcomp ;
+ATTR-S ;
+PRED-0 ;
++A:         ODDCOMP ;
 
 
 LEXICON null-s-odd
-ATTR0 ;
-PREDS ;
-+A:        oddcomp ;
+ATTR-0 ;
+PRED-S ;
++A:        ODDCOMP ;
 
 LEXICON s-s-odd
-ATTRS ;
-PREDS ;
-+A:        oddcomp ;
+ATTR-S ;
+PRED-S ;
++A:        ODDCOMP ;
 
 
 ! Attribute lexica
 
-LEXICON ATTRS
+LEXICON ATTR-S
 +A+Attr:%>s FINAL1 ;
 
-LEXICON ATTR0
+LEXICON ATTR-0
 +A+Attr: FINAL1 ;
 
 
 ! Predicative lexica
 
-LEXICON PRED0
+LEXICON PRED-0
 +A:      RELEVANTNOUNLEX ;
 
-LEXICON PREDS
+LEXICON PRED-S
 +A:%>s     RELEVANTNOUNLEX ;
 
 
@@ -422,12 +423,16 @@ LEXICON RELEVANTNOUNLEX
 
 ! Comparative forms
 
-LEXICON evencomp
-+Comp:%>be      FINAL1 ;
+LEXICON EVENCOMP
+  +Comp:%>be    FINAL1 ;
 +Superl:%>mes   FINAL1 ;
 
-LEXICON oddcomp
-+Comp:%>åbpoe    FINAL1 ;
+LEXICON EVENCOMP-UML
+  +Comp:%>be    FINAL1 ;
++Superl:%>mes   FINAL1 ;
+
+LEXICON ODDCOMP
+  +Comp:%>åbpoe  FINAL1 ;
 +Superl:%>ommes  FINAL1 ;
 
 ! ===========================
