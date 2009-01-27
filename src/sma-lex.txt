@@ -96,13 +96,13 @@ LEXICON R
  +Cmpnd:%- # ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
 
 LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
- # Noun ;                             ! This is the normal case.		       ^C^
-! # NounSecond ;			          ! Testing some quasisuff, cf. noun file  ^C^
- #@P.NeedNoun.ON@  Verb ;         ! Flag diacr declares that the compound  ^C^
-! #@P.NeedNoun.ON@  AdjectiveRoot ;   ! needs a +N tag later in the derivation ^C^
- +Hyph#:%- Noun ;                          ! These 3 cases add a hyphen, so         ^C^
- +Hyph#:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	           ^C^
- +Hyph#:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.			                   ^C^
+ # Noun ;                              ! This is the normal case.               ^C^
+! # NounSecond ;                       ! Testing some quasisuff, cf. noun file  ^C^
+ #@P.NeedNoun.ON@  Verb ;              ! Flag diacr declares that the compound  ^C^
+! #@P.NeedNoun.ON@  AdjectiveRoot ;    ! needs a +N tag later in the derivation ^C^
+ +Hyph#:%- Noun ;                      ! These 3 cases add a hyphen, so         ^C^
+ +Hyph#:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	        ^C^
+ +Hyph#:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.                            ^C^
 !# ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-   ^C^
 !#:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu       ^C^
                     ! and viessuLondon are now all ok. Some refinement could   ^C^
@@ -587,7 +587,7 @@ LEXICON GOLTELIDH
  +V+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
  +V+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +V+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
-                                   ! GH Ptz.Fut. b'ïssejässaa missing here
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
  
 !+V+VAbess:%>h            FINAL1 ; 
 ! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
