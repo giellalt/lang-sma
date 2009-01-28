@@ -344,96 +344,174 @@ LEXICON OBLIQUE_EVEN
 ! Adjectival inflection sublexica
 ! ===============================
 
+! Basic adjectival lexica, infl types
+! -----------------------------------
 
-LEXICON null-null-even
-ATTR-0 ;
-PRED-0 ;
-+A:      EVENCOMP ;
+! even stems
+! - - - - - 
 
-LEXICON s-s-even
-ATTR-0 ;
-PRED-0 ;
-+A:      EVENCOMP ; ! check this!
+! type 1
+
+!!1a: Vowel stem in a and p, c = be
+!
+!    a = V, p = V, c = Vbe
+!    plaave måvhkah, pred : måvhkah leah plaave
+!    plaave, plaave ("blå")
+!    plaavebe  / plååvebe
+!    plaavemes
+
+LEXICON NULL-NULL-EVEN
+     ATTR-0 ;
+     PRED-0 ;
++A:  EVENCOMP ;
+
+!!1b: -s in a and p, c = be/hkåbpoe
+!
+!     a = s, p = s, c = suffixes (be/hkåbpoe)
+! 
+! Subgroups:
+! 
+! * Vokalstamme med omlyd i komparativ
+! * Vokalstamme med eller utan omlyd i komparativ
+! * Vokalstamme utan omlyd i komparativ
+! * Konsonantstamme
+
+LEXICON S-S-EVEN
+     ATTR-0 ;
+     PRED-0 ;
++A:  EVENCOMP ; ! check this!
+
+LEXICON N-N-EVEN
+     ATTR-N ;
+     PRED-N ;
++A:  EVENCOMP ;
 
 
-LEXICON s-null-even
-ATTR-S ;
-PRED-0 ;
-+A:         EVENCOMP ;
-
-
+! type 2
 LEXICON NULL-S-EVEN
-ATTR-0 ;
-PRED-S ;
-+A:        EVENCOMP-UML ;
+     ATTR-0 ;
+     PRED-S ;
++A:  EVENCOMP-UML ;
+
+LEXICON null-n-even
+     ATTR-0 ;
+     PRED-N ;
++A:  EVENCOMP ;
+
+
+! type 3
+LEXICON S-NULL-EVEN
+     ATTR-S ;
+     PRED-0 ;
++A:  EVENCOMP ;
+
+LEXICON h-null-even
+     ATTR-H ;
+     PRED-0 ;
++A:  EVENCOMP ;
+
+
+! type 4
+LEXICON s-n-even
+     ATTR-S ;
+     PRED-N ;
++A:  EVENCOMP ; ! check this!
 
 LEXICON h-n-even
-+A+Attr:%>h   FINAL1 ;
-+A:%>n     RELEVANTNOUNLEX ;
-+A:        EVENCOMP ;
+     ATTR-H ;
+     PRED-N ;
++A:  EVENCOMP ;
 
+! odd stems
+! - - - - -
+
+! type 1
 LEXICON null-null-odd
-ATTR-0 ;
-PRED-0 ;
-+A:        ODDCOMP ;
+     ATTR-0 ;
+     PRED-0 ;
++A:  ODDCOMP ;
 
-LEXICON s-null-odd
-ATTR-S ;
-PRED-0 ;
-+A:         ODDCOMP ;
+LEXICON S-S-ODD
+     ATTR-S ;
+     PRED-S ;
++A:  ODDCOMP ;
 
-
+! type 2
 LEXICON null-s-odd
-ATTR-0 ;
-PRED-S ;
-+A:        ODDCOMP ;
+     ATTR-0 ;
+     PRED-S ;
++A:  ODDCOMP ;
 
-LEXICON s-s-odd
-ATTR-S ;
-PRED-S ;
-+A:        ODDCOMP ;
+! type 3
+LEXICON S-NULL-ODD
+     ATTR-S ;
+     PRED-0 ;
++A:  ODDCOMP ;
+
+
+
+
+
+! This lexicon is for the adjs we
+! have not classified yet
+LEXICON ADJ-DIRTY
++A+Dirty # ;
 
 
 ! Attribute lexica
-
-LEXICON ATTR-S
-+A+Attr:%>s FINAL1 ;
+! ----------------
 
 LEXICON ATTR-0
 +A+Attr: FINAL1 ;
 
+LEXICON ATTR-S
++A+Attr:%>s FINAL1 ;
+
+LEXICON ATTR-H
++A+Attr:%>h   FINAL1 ;
+
+LEXICON ATTR-N
++A+Attr:%>n FINAL1 ;
+
 
 ! Predicative lexica
+! ------------------
 
 LEXICON PRED-0
 +A:      RELEVANTNOUNLEX ;
 
 LEXICON PRED-S
-+A:%>s     RELEVANTNOUNLEX ;
++A:%>s   RELEVANTNOUNLEX ;
 
+LEXICON PRED-N
++A:%>n   RELEVANTNOUNLEX ;
 
-LEXICON adj-dirty
-+A+Dirty # ;
 
 
 ! Predicative forms, case inflected forms
+! ---------------------------------------
 
 LEXICON RELEVANTNOUNLEX
 +Nom: FINAL1 ; ! Awaiting the noun fix
 
+
 ! Comparative forms
+! -----------------
 
 LEXICON EVENCOMP
-  +Comp:%>be    FINAL1 ;
-+Superl:%>mes   FINAL1 ;
+  +Comp:%>be     FINAL1 ;
++Superl:%>mes    FINAL1 ;
 
 LEXICON EVENCOMP-UML
-  +Comp:%>be    FINAL1 ;
-+Superl:%>mes   FINAL1 ;
+  +Comp:%>be     FINAL1 ;
++Superl:%>mes    FINAL1 ;
 
 LEXICON ODDCOMP
   +Comp:%>åbpoe  FINAL1 ;
 +Superl:%>ommes  FINAL1 ;
+
+
+
 
 ! ===========================
 ! Verbal inflection sublexica
@@ -445,48 +523,48 @@ LEXICON ODDCOMP
 
 LEXICON LEA
 
-!+Inf:lea	FINAL1 ; ! Uses årrodh
-+Ind+Prs:l LEA-PRES	;
-+Ind+Prt:l LEA-PRET	;
-+Imp:l		LEA-IMP ;
-+ConNeg:leah	FINAL1 ;
+!+Inf:lea	  FINAL1 ; ! Uses årrodh
++Ind+Prs:l    LEA-PRES	;
++Ind+Prt:l    LEA-PRET	;
++Imp:l		  LEA-IMP ;
++ConNeg:leah  FINAL1 ;
 
 LEXICON LEA-PRES
-+Sg1:eam		FINAL1	;
-+Sg2:eah		FINAL1	;
-+Sg3:ea			FINAL1	;
-+Du1:ean		FINAL1	;
-+Du2:idien		FINAL1	;
-+Du3:ægan		FINAL1	;
-+Du3:æban		FINAL1	; !SUB
-+Pl1:ibie		FINAL1	;
-+Pl2:idie		FINAL1	;
-+Pl3:eah		FINAL1	;
++Sg1:eam    FINAL1	;
++Sg2:eah    FINAL1	;
++Sg3:ea     FINAL1	;
++Du1:ean    FINAL1	;
++Du2:idien  FINAL1	;
++Du3:ægan   FINAL1	;
++Du3:æban   FINAL1	; !SUB
++Pl1:ibie   FINAL1	;
++Pl2:idie   FINAL1	;
++Pl3:eah    FINAL1	;
 
 LEXICON LEA-PRET
-+Sg1:im		FINAL1	;
-+Sg2:ih		FINAL1	;
-+Sg3:ij		FINAL1	;
-+Du1:imen	FINAL1	;
-+Du2:iden	FINAL1	;
-+Du3:igan	FINAL1	;
-+Pl1:imh	FINAL1	;
-+Pl2:idh	FINAL1	;
-+Pl3:in		FINAL1	;
++Sg1:im     FINAL1	;
++Sg2:ih     FINAL1	;
++Sg3:ij     FINAL1	;
++Du1:imen   FINAL1	;
++Du2:iden   FINAL1	;
++Du3:igan   FINAL1	;
++Pl1:imh    FINAL1	;
++Pl2:idh    FINAL1	;
++Pl3:in     FINAL1	;
 
 LEXICON LEA-IMP
-+Sg2:eah	FINAL1 ;
-+Du2:idien	FINAL1 ;
-+Pl2:idie	FINAL1 ;
++Sg2:eah    FINAL1 ;
++Du2:idien  FINAL1 ;
++Pl2:idie   FINAL1 ;
 
 
 ! The negative verb
 ! =================
 
 LEXICON NEG
-+Ind+Prs:	IJ-PRES ;
-+Ind+Prt:idtj	VSUF-PRT ;
-+Imp:aell  NEGIMP ;
++Ind+Prs:      IJ-PRES ;
++Ind+Prt:idtj  VSUF-PRT ;
++Imp:aell      NEGIMP ;
 
 
 LEXICON NEGIMP
@@ -495,53 +573,53 @@ LEXICON NEGIMP
 +Pl2:ede    FINAL1 ;
 
 LEXICON IJ-PRES
-+Sg1:im		FINAL1	;
-+Sg2:ih		FINAL1	;
-+Sg3:ij		FINAL1	;
-+Du1:ean	FINAL1	;
-+Du2:idien	FINAL1	;
-+Du3:eakan	FINAL1	;
-+Pl1:ibie	FINAL1	;
-+Pl2:idie	FINAL1	;
-+Pl3:eah	FINAL1	;
++Sg1:im     FINAL1	;
++Sg2:ih     FINAL1	;
++Sg3:ij     FINAL1	;
++Du1:ean    FINAL1	;
++Du2:idien  FINAL1	;
++Du3:eakan  FINAL1	;
++Pl1:ibie   FINAL1	;
++Pl2:idie   FINAL1	;
++Pl3:eah    FINAL1	;
 
 LEXICON EDTJEDH
-+Ind+Prs: ED-PRES ;
-+Ind+Prt: ED-PRET ;
-+Imp:     ED-IMP  ;
-+Inf:edh	FINAL1	;
-+VGen:eminie	FINAL1	;
-+Act:eme	FINAL1	;
-+ConNeg:h	FINAL1	;
-+VAbess:h	FINAL1	;
-+PrfPrc:eme	FINAL1  ;
++Ind+Prs:       ED-PRES ;
++Ind+Prt:       ED-PRET ;
++Imp:           ED-IMP  ;
++Inf:edh        FINAL1	;
++VGen:eminie    FINAL1	;
++Act:eme        FINAL1	;
++ConNeg:h       FINAL1	;
++VAbess:h       FINAL1	;
++PrfPrc:eme     FINAL1  ;
 
 LEXICON ED-PRES
-+Sg1:em		FINAL1	;
-+Sg2:h		FINAL1	;
-+Sg3:a			FINAL1	;
-+Du1:ien		FINAL1	;
-+Du2:eden		FINAL1	;
-+Du3:ijægan		FINAL1	;
-+Pl1:ebe		FINAL1	;
-+Pl2:ede		FINAL1	;
-+Pl3:ieh		FINAL1	;
++Sg1:em         FINAL1	;
++Sg2:h          FINAL1	;
++Sg3:a          FINAL1	;
++Du1:ien        FINAL1	;
++Du2:eden       FINAL1	;
++Du3:ijægan     FINAL1	;
++Pl1:ebe        FINAL1	;
++Pl2:ede        FINAL1	;
++Pl3:ieh        FINAL1	;
 
 LEXICON ED-PRET
-+Sg1:im		FINAL1	;
-+Sg2:ih		FINAL1	;
-+Sg3:i		FINAL1	;
-+Du1:imen	FINAL1	;
-+Du2:iden	FINAL1	;
-+Du3:igan	FINAL1	;
-+Pl1:imh	FINAL1	;
-+Pl2:idh	FINAL1	;
-+Pl3:ih 	FINAL1	;
++Sg1:im     FINAL1	;
++Sg2:ih     FINAL1	;
++Sg3:i      FINAL1	;
++Du1:imen   FINAL1	;
++Du2:iden   FINAL1	;
++Du3:igan   FINAL1	;
++Pl1:imh    FINAL1	;
++Pl2:idh    FINAL1	;
++Pl3:ih     FINAL1	;
 
 LEXICON ED-IMP
- +Sg2:h		FINAL1  ;
- +Du2:eden      FINAL1  ;
- +Pl2:ede       FINAL1  ;
+ +Sg2:h      FINAL1  ;
+ +Du2:eden   FINAL1  ;
+ +Pl2:ede    FINAL1  ;
 
 
 
