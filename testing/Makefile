@@ -10,12 +10,12 @@ SHELL = /bin/sh
 # ====================
 
 # Tools used when compiling
-XFST = xfst -utf8
+XFST = xfst #-utf8
 
 # Where all the perl scripts are:
 BINDIR = ../../script/testing
 
-# Directory where all the compiled fst's are:
+# Directory where all the compiled facitst's are:
 FSTDIR = ../bin
 
 # Directory for the source files (which compile into fst's):
@@ -28,7 +28,8 @@ TEMP = ../../tmp
 # This variable is holding the filename of the save file:
 # (makes the Makefile truly language independent for
 # the Sami languages)
-SAVEFILE = $(wildcard $(FSTDIR)/ism?-norm.fst)
+SAVEFILE = $(wildcard $(FSTDIR)/ism?.fst)
+#SAVEFILE = $(wildcard $(FSTDIR)/ism?-norm.fst)
 #SAVEFILE = $(wildcard $(FSTDIR)/ism?-restr.fst)
 # Copied from old LS makefile:
 # Bond, James Bond
@@ -287,7 +288,7 @@ v-paradigm: v-para.ptest savefile
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
 	@printf "load $(SAVEFILE) \n\
-	apply down <$< \n\
+	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
 	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
@@ -342,7 +343,7 @@ a-paradigm: a-para.ptest savefile
 	@echo "*** Running the paradigm generator for '$(WORD)' ***"
 	@echo
 	@printf "load $(SAVEFILE) \n\
-	apply down <$< \n\
+	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
 	@xfst < $(TEMP)/$@-gtest-script > $(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
@@ -504,7 +505,7 @@ savefile:
 	@echo "*** Running the word form generator test for $*.txt ***"
 	@echo
 	@printf "load $(SAVEFILE) \n\
-	apply down <$< \n\
+	apply up < $< \n\
 	quit \n" > $(TEMP)/$*-gtest-script
 	@xfst < $(TEMP)/$*-gtest-script > $@
 	@rm -f $(TEMP)/$*-gtest-script
