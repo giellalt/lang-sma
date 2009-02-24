@@ -52,9 +52,15 @@ Multichar_Symbols
 ! 1              2               3                4                         POS type
 +Der1           +Der2           +Der3            +Der4
 ! Der#1
+! Der#2
+! Der#3
+! Der#4
+! Der#other
 +Der/Pass                                                                   ! VV - long only
-+Der/NomAg
-+Der/NomAct
++Der/NomAg                                                                  ! VN
++Der/NomAct                                                                 ! VN
++Der/htidh                                                                  ! VV - Causative
++Der/didh                                                                   ! VV - Causative
 ! Der#end
 
 ! ================
@@ -680,16 +686,17 @@ LEXICON GOLTELIDH
 ! -----------
  +V+Der/NomAg:%»æjj     MAANA ;
  +V+Der/NomAct:%»imm    N_IE ;
+! +V+Der/Pass:e%»sovv TJOEHPEDH ; ! XXX - the stem is quite varying for passives of this class
 
 
 
 ! Even-syllable verbs
 ! ===================
 
-LEXICON BÅETEDH ! row A
- +V+Ind+Prs:%>%^1UMLa   V-I-PRS-SG ; ! class I special
+LEXICON BÅETEDH ! row A - Group I
+ +V+Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +V+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
- +V+Ind+Prt:%>%^iUML    VSUF-PRT ;
+ +V+Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
  +V+Imp:%>              VSUF-EVEN-IMP ;
 ! Infinite forms
 ! --------------
@@ -699,15 +706,17 @@ LEXICON BÅETEDH ! row A
  +V+Act:%>eme           FINAL1 ;
  +V+Ger:%>ieminie       FINAL1 ;
  +V+PrsPrc:%>ije        FINAL1 ;
- +V+PrfPrc:%>%^1UMLeme  FINAL1 ;
+ +V+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
  ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
  +V+Der/NomAg:%»iej     N_ODD ;
  +V+Der/NomAct:%»iem    N_ODD ;
+ +V+Der/Pass+Uml:%»%^1UMLasovv TJOEHPEDH ;
+! +V+Der/Pass+Uml:%»%^1UML TJOEHPEDH ;
 
 
-LEXICON TJEARODH ! row C
+LEXICON TJEARODH ! row C - Group II
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
  +V+Ind+Prs:%>oe        VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>oej       VSUF-PRT ;
@@ -720,13 +729,14 @@ LEXICON TJEARODH ! row C
  +V+Act:%>eme           FINAL1 ;
  +V+Ger:%>oeminie       FINAL1 ;
  +V+PrsPrc:%>oje        FINAL1 ;
- +V+PrfPrc:%>%^2UMLeme  FINAL1 ;
+ +V+PrfPrc+Uml:%>%^2UMLeme  FINAL1 ;
 ! Derivations
 ! -----------
  +V+Der/NomAg:%»oej     N_ODD ;
  +V+Der/NomAct:%»oem    N_ODD ;
+ +V+Der/Pass+Uml:%»%^2UMLesovv TJOEHPEDH ;
 
-LEXICON GUARKEDH ! row B
+LEXICON GUARKEDH ! row B - Group III
  +V+Ind+Prs:%>    V-III-PRS-SG ; ! class III special
  +V+Ind+Prs:%>a	  VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>aj  VSUF-PRT ;
@@ -744,8 +754,9 @@ LEXICON GUARKEDH ! row B
 ! -----------
  +V+Der/NomAg:%»ej     N_ODD ;
  +V+Der/NomAct:%»em    N_ODD ;
+ +V+Der/Pass:a%»sovv TJOEHPEDH ;
 
-LEXICON TJOEHPEDH ! row D
+LEXICON TJOEHPEDH ! row D - Group IV
  +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
  +V+Ind+Prt:%>     VSUF-PRT ;
  +V+Imp:%>         VSUF-IV-EVEN-IMP ;
@@ -762,8 +773,9 @@ LEXICON TJOEHPEDH ! row D
 ! -----------
  +V+Der/NomAg:%»ej     N_ODD ;
  +V+Der/NomAct:%»em    N_ODD ;
+ +V+Der/Pass:e%»sovv TJOEHPEDH ;
 
-LEXICON VÅÅJNEDH ! row E
+LEXICON VÅÅJNEDH ! row E - Group V
  +V+Ind+Prs:%>   VSUF-V-EVEN-PRS ;
  +V+Ind+Prt:%>   VSUF-PRT ;
  +V+Imp:%>       VSUF-IV-EVEN-IMP ;
@@ -780,8 +792,9 @@ LEXICON VÅÅJNEDH ! row E
 ! -----------
  +V+Der/NomAg:%»ej     N_ODD ;
  +V+Der/NomAct:%»em    N_ODD ;
+ +V+Der/Pass:e%»sovv TJOEHPEDH ;
 
-LEXICON GÖÖLEDH ! row F
+LEXICON GÖÖLEDH ! row F - Group VI
  +V+Ind+Prs:%>   VSUF-VI-EVEN-PRS ;
  +V+Ind+Prt:%>   VSUF-PRT ;
  +V+Imp:%>       VSUF-IV-EVEN-IMP ;
@@ -798,6 +811,7 @@ LEXICON GÖÖLEDH ! row F
 ! -----------
  +V+Der/NomAg:%»ej     N_ODD ;
  +V+Der/NomAct:%»em    N_ODD ;
+ +V+Der/Pass:e%»sovv TJOEHPEDH ;
 
 
 
@@ -816,7 +830,7 @@ LEXICON V-I-PRS-SG ! Merge with V-EVEN-PRS if nothing special here.
 
 LEXICON V-II-PRS-SG
  :oe       V-PRS-SG-12 ;
- :%^2UMLe  V-PRS-SG-3 ; ! ?? parallels the byörkesne case
+ +Uml:%^2UMLe  V-PRS-SG-3 ; ! ?? parallels the byörkesne case
 
 LEXICON V-III-PRS-SG
  :a  V-PRS-SG-12 ; ! This should give guarka
@@ -865,14 +879,14 @@ LEXICON VSUF-III-EVEN-IMP
 LEXICON V-IV-EVEN-PRS
  :e		          V-PRS-SG-1 ;
  		          V-PRS-SG-2 ;
- +Sg3:%^3sUMLa	  FINAL1 ;
- +Du1:%^3dUMLien  FINAL1	;
+ +Sg3+Uml:%^3sUMLa	  FINAL1 ;
+ +Du1+Uml:%^3dUMLien  FINAL1	;
  +Du2:eden		  FINAL1	;
  +Du3:ijægan	  FINAL1	;
  !+Du3:iben	      FINAL1	;
  +Pl1:ebe		  FINAL1	;
  +Pl2:ede		  FINAL1	;
- +Pl3:%^3dUMLieh  FINAL1	;
+ +Pl3+Uml:%^3dUMLieh  FINAL1	;
 
 
 LEXICON VSUF-IV-EVEN-IMP
