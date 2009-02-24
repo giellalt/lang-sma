@@ -180,7 +180,7 @@ Rules
 ! N §102
 
 "Even syllabic verbs present sg, monophpt E I"
- Vx:Vy <=>  _ C+ (V) %>: %^1UML:0 ;
+ Vx:Vy <=>  _ C+ (V) [ %>: | %»: ] %^1UML:0 ;
  	where Vx in (i e u)
  	      Vy in (æ a å)
  	matched ;
@@ -223,7 +223,7 @@ Rules
 
 
 "Even syllabic verbs present sg, diphth ie-ea" 
- i:e <=>  _ e:a C+ %>:0 %^1UML:0 ;
+ i:e <=>  _ e:a C+ [ %>: | %»: ] %^1UML:0 ;
 
 !€# jieht%>%^1UMLa
 !€0 jeaht00a
@@ -233,7 +233,7 @@ Rules
 
 ! [C|#:] constraint is to avoid collission with diphthong contexts
 "Even syllabic verbs Sg3 + PrfPtc E II"
- Vx:Vy <=> [ C | #: ] _ C+ (V) %>: %^2UML: ;
+ Vx:Vy <=> [ C | #: ] _ C+ (V) [ %>: | %»: ] %^2UML: ;
  	where Vx in (æ a å)
  	      Vy in (y o o)
  	matched ;
@@ -268,11 +268,11 @@ Rules
 
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yø II a"
- e:y <=>    _ a: C+ (V) %>: %^2UML: ;
+ e:y <=>    _ a: C+ (V) [ %>: | %»: ] %^2UML: ;
  
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yø II b"
- a:ø <=> e: _    C+ (V) %>: %^2UML: ;
+ a:ø <=> e: _    C+ (V) [ %>: | %»: ] %^2UML: ;
  
 !€# tjear%>%^2UMLe
 !€0 tjyør00e
@@ -293,8 +293,8 @@ Rules
 !$0 mearhtje00se
 
 "Even syllabic verbs Sg3 + PrfPtc aa-åå åa-åå II"
- a:å <=> [a:|å:] _    C+ (V) %>: %^2UML: ; 
-                 _ a: C+ (V) %>: %^2UML: ; 
+ a:å <=> [a:|å:] _    C+ (V) [ %>: | %»: ] %^2UML: ; 
+                 _ a: C+ (V) [ %>: | %»: ] %^2UML: ; 
 
 !aa åa
 !åå åå
@@ -313,7 +313,7 @@ Rules
 
 
 "Even syllabic verbs Sg3 ï-æ IV"
- Vx:Vy <=> _ C+ %>:0 %^3sUML: ;
+ Vx:Vy <=> _ C+ [ %>: | %»: ] %^3sUML: ;
  	where Vx in (ï o)
  	      Vy in (æ å)
  	matched ;
@@ -327,13 +327,13 @@ Rules
 !€0 jåvk00a
 
 "1st rule for even syllabic verbs Sg3 ïe-ea IV"
- Vx:Vy <=> [ C | #: ] _ e: C+ %>:0 %^3sUML: ;
+ Vx:Vy <=> [ C | #: ] _ e: C+ [ %>: | %»: ] %^3sUML: ;
 	where Vx in (ï o)
 	      Vy in (e u)
 	matched ;
 
 "2nd rule for even syllabic verbs Sg3 ïe-ea IV"
- e:a <=> [ï:|o:] _ C+ %>:0 %^3sUML: ;
+ e:a <=> [ï:|o:] _ C+ [ %>: | %»: ] %^3sUML: ;
 
 ! Verbs like: tjïeledh, roehtedh
 
@@ -345,7 +345,7 @@ Rules
 
 
 "Even syllabic verbs Du1Pl3 IV"
- Vx:Vy <=> [ C | #: ] _ (e) C+ %>:0 %^3dUML: ; !(e) due to îe:ie
+ Vx:Vy <=> [ C | #: ] _ (e) C+ [ %>: | %»: ] %^3dUML: ; !(e) due to îe:ie
 	where Vx in (ï a o å)
 	      Vy in (i e u e)
 	matched ;
@@ -379,7 +379,7 @@ Rules
 
 
 "ie:ee and ae:ee past tense"
-Vx:e <=> _ e C* %>: %^iUML: ;
+Vx:e <=> _ e C* [ %>: | %»: ] %^iUML: ;
 	where Vx in ( a i );
 
 !€# jieht%>%^iUMLim
@@ -390,11 +390,11 @@ Vx:e <=> _ e C* %>: %^iUML: ;
 
 
 "åe:øø and ue:øø past tense I"
-Vx:ø <=> _ e: C* %>: %^iUML: ;
+Vx:ø <=> _ e: C* [ %>: | %»: ] %^iUML: ;
 	where Vx in ( u å ) ;
 
 "åe:øø and ue:øø past tense II"
-e:ø <=> [ å: | u: ] _ C* %>: %^iUML: ;
+e:ø <=> [ å: | u: ] _ C* [ %>: | %»: ] %^iUML: ;
 
 !€# bået%>%^iUMLim
 !€0 bøøt00im
