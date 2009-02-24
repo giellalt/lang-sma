@@ -682,54 +682,6 @@ LEXICON GOLTELIDH
  +V+Der/NomAct:%»imm    N_IE ;
 
 
-! Contract verbs
-! ==============
-
-! It is unclear whether there is such a stem class, or whether these verbs
-! are actually odd-syllable verbs.
-! Thus, we divide the contract verbforms in two:
-! Some would be identically inflected as contract and odd; they are unmarked
-! In the other cases, we give two versions, marked with +CTR and +ODD, 
-! respectively, so that we can trace their usage in corpora. 
-! The goal is then to choose between the two (or to have a normative decision).
-
-LEXICON BILLIJIDH
- +V+CTR+Ind+Prs:%>       VSUF-CONTR-PRS ;  ! All except Du3
- +V+ODD+Ind+Prs:%>ij     V-ODD-PRS-SG ;    ! All sg
- +V+ODD+Ind+Prs:%>ij     ODD_PRS_NON_DU3 ; ! Al except Du3
- +V+Ind+Prs+Du3:%>ijægan FINAL1 ;          ! Prs Du3 identical
- +V+Ind+Prt+Sg3:%>iji    FINAL1 ;          ! Prt Sg3 identical
- +V+CTR+Ind+Prt:%>       VSUF-CONTR-PRT ;  ! Not to Prt Sg3
- +V+ODD+Ind+Prt:%>ij     VSUF-PRT-SG-12 ;  ! Also not to Prt Sg3
- +V+ODD+Ind+Prt:%>ij     VSUF-PRT-DUPL ;   
-
- +V+CTR+Imp:%>           VSUF-CONTR-IMP ;
- +V+ODD+Imp:%>ij         VSUF-ODD-IMP ;
-
-! Infinite forms
-! --------------
- +V+Inf:%>ijidh		        FINAL1 ;
- +V+CTR+ConNeg:%^DISIMP%>h  FINAL1 ;
- +V+ODD+ConNeg:%>ijh        FINAL1 ;
- +V+CTR+VGen:%>eminie       FINAL1 ; ! GH Modalis, KB måtesform ! GH Voluntativ
- +V+ODD+VGen:%>ijen         FINAL1 ; 
- +V+CTR+Act:%>eme           FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+ODD+Act:%>immie         FINAL1 ; ! GH verbalsubst, KB nomen actionis
- +V+CTR+Ger:%>eminie        FINAL1 ;
- +V+ODD+Ger:%>ijeminie      FINAL1 ;
- +V+CTR+PrsPrc:%>ije        FINAL1 ; ! must go to nominal lexicon instead
- +V+ODD+PrsPrc:%>æjja       FINAL1 ; ! must go to nominal lexicon instead
- +V+CTR+PrfPrc:%>eme        FINAL1 ;
- +V+ODD+PrfPrc:%>jamme      FINAL1 ;
-! +V+VAbess:%>h		    FINAL1 ; ! This one is not given in Verbh.
-! Derivations
-! -----------
- +V+CTR+Der/NomAg:%»iej     N_ODD ;
- +V+ODD+Der/NomAg:%»æjj     MAANA ;
- +V+CTR+Der/NomAct:%»iem    N_ODD ;
- +V+ODD+Der/NomAct:%»imm    N_IE ;
-
-
 
 ! Even-syllable verbs
 ! ===================
