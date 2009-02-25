@@ -596,7 +596,7 @@ savefile:
 # make twol-test FILE=filename.txt (test for pairs in filename.txt)
 # make twol      (recompiles the twol binaries when the twol rules are changed)
 
-TWOLC = twolc -utf8
+TWOLC = twolc
 TYPE = pos
 FILEPOS = twol-pos.in
 FILENEG = twol-neg.in
