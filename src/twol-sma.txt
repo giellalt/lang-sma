@@ -14,7 +14,7 @@ Alphabet
   %#:0 %>:0 %+:0 »:0
   X2:0 X3:0
   ':0 !'
-  %^DISIMP:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 ;
+  %^DISIMP:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -267,27 +267,27 @@ Rules
 
 
 
-"Even syllabic verbs Sg3 + PrfPtc ea-yø II a"
+"Even syllabic verbs Sg3 + PrfPtc ea-yö II a"
  e:y <=>    _ a: C+ (V) [ %>: | %»: ] %^2UML: ;
  
 
-"Even syllabic verbs Sg3 + PrfPtc ea-yø II b"
- a:ø <=> e: _    C+ (V) [ %>: | %»: ] %^2UML: ;
+"Even syllabic verbs Sg3 + PrfPtc ea-yö II b"
+ a:ö <=> e: _    C+ (V) [ %>: | %»: ] %^2UML: ;
  
 !€# tjear%>%^2UMLe
-!€0 tjyør00e
+!€0 tjyör00e
 
 !$# tjear%>%^2UMLe
 !$0 tjear00e
 
 !€# bearke%>%^2UMLse
-!€0 byørke00se
+!€0 byörke00se
 
 !$# bearko%>%^2UMLse
 !$0 bearke00se
 
 !€# mearhtje%>%^2UMLse
-!€0 myørhtje00se
+!€0 myörhtje00se
 
 !$# mearhtje%>%^2UMLse
 !$0 mearhtje00se
@@ -389,19 +389,71 @@ Vx:e <=> _ e C* [ %>: | %»: ] %^iUML: ;
 !€0 tjeel00im
 
 
-"åe:øø and ue:øø past tense I"
-Vx:ø <=> _ e: C* [ %>: | %»: ] %^iUML: ;
+"åe:öö and ue:öö past tense I"
+Vx:ö <=> _ e: C* [ %>: | %»: ] %^iUML: ;
 	where Vx in ( u å ) ;
 
-"åe:øø and ue:øø past tense II"
-e:ø <=> [ å: | u: ] _ C* [ %>: | %»: ] %^iUML: ;
+"åe:öö and ue:öö past tense II"
+e:ö <=> [ å: | u: ] _ C* [ %>: | %»: ] %^iUML: ;
 
 !€# bået%>%^iUMLim
-!€0 bøøt00im
+!€0 bööt00im
 
 !€# vuejn%>%^iUMLim
-!€0 vøøjn00im
+!€0 vööjn00im
 
+
+
+! Umlaut rules for even-syll short passive
+! All Umlaut rows R1-R6 gets umlauted to R5 in short passives
+
+"Short passive Umlaut Column1"
+Vx:y <=> _ C* (%»:)  %^PASSUML: ;
+         where Vx in (i æ ï y) ;
+
+! bissedh -> byssedh
+!€# biss%»%^PASSUMLedh
+!€0 byss00edh
+
+!"Short passive Umlaut Column2"
+!Vx:o <=> _ C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (e a o i) ;
+!
+!"Short passive Umlaut Column3"
+!Vx:o <=> _ C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (u å o) ;
+
+!"Short passive Umlaut Column4 - part 1"
+!Vx:y <=> _ :ö C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (i e ï y) ;
+!
+!"Short passive Umlaut Column4 - part 2"
+!Vx:ö <=> :y _ C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (e a ö) ;
+!
+!"Short passive Umlaut Column5 - part 1"
+!Vx:å <=> _ :å C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (e a å) ;
+!
+!"Short passive Umlaut Column5 - part 2"
+!Vx:å <=> :å _ C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (e a å) ;
+!
+!"Short passive Umlaut Column6 - part 1"
+!Vx:å <=> _ :å C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (a e ö å) ;
+!
+!"Short passive Umlaut Column6 - part 2"
+!Vx:å <=> :å _ C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (a e ö å) ;
+!
+!"Short passive Umlaut Column7 - part 1"
+!Vx:å <=> _ :å C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (u o ö å) ;
+!
+!"Short passive Umlaut Column7 - part 2"
+!Vx:å <=> :å _ C* [ %>: | %»: ] %^PASSUML: ;
+!         where Vx in (a e ö) ;
 
 
 
