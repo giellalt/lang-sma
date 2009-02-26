@@ -408,17 +408,17 @@ e:ö <=> [ å: | u: ] _ C* [ %>: | %»: ] %^iUML: ;
 ! All Umlaut rows R1-R6 gets umlauted to R5 in short passives
 
 "Short passive Umlaut Column1"
-Vx:y <=> _ C* (%»:)  %^PASSUML: ;
-         where Vx in (i æ ï y) ;
+Vx:y <=> _ C+ %»:  %^PASSUML: ;
+         where Vx in (i æ ï) ;
 
 ! bissedh -> byssedh
 !€# biss%»%^PASSUMLedh
 !€0 byss00edh
 
-!"Short passive Umlaut Column2"
-!Vx:o <=> _ C* [ %>: | %»: ] %^PASSUML: ;
-!         where Vx in (e a o i) ;
-!
+"Short passive Umlaut Column2"
+Vx:o <=> _ C+ [ %>: | %»: ] %^PASSUML: ;
+         where Vx in (e a i) ;
+
 !"Short passive Umlaut Column3"
 !Vx:o <=> _ C* [ %>: | %»: ] %^PASSUML: ;
 !         where Vx in (u å o) ;
