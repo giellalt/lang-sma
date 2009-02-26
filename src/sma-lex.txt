@@ -92,12 +92,12 @@ LEXICON R
  #@P.NeedNoun.ON@  Verb ;      ! Flag diacr declares that the compound   ^C^
  #@P.NeedNoun.ON@  Adjective ; ! needs a +N tag later in the derivation  ^C^
  +Hyph#:%- Noun ;                        ! These 3 cases add a hyphen, so     ^C^
- +Hyph#:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and the like	     ^C^
- +Hyph#:%-@P.NeedNoun.ON@  Adjective ;   ! is allowed.			             ^C^
-! # ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-^C^
- #:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu     ^C^
-                    ! and viessuLondon are now all ok. Some refinement could ^C^
-                    ! perhaps be done, but corpus research is needed.	     ^C^
+ +Hyph#:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and the like	      ^C^
+ +Hyph#:%-@P.NeedNoun.ON@  Adjective ;   ! is allowed.			              ^C^
+! # ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com- ^C^
+ #:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu      ^C^
+                    ! and viessuLondon are now all ok. Some refinement could  ^C^
+                    ! perhaps be done, but corpus research is needed.	      ^C^
  +Cmpnd:%- # ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
 
 LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
@@ -108,10 +108,10 @@ LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
  +Hyph#:%- Noun ;                      ! These 3 cases add a hyphen, so         ^C^
  +Hyph#:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	        ^C^
  +Hyph#:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.                            ^C^
-!# ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-   ^C^
-!#:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu       ^C^
-                    ! and viessuLondon are now all ok. Some refinement could   ^C^
-                    ! perhaps be done, but corpus research is needed.	       ^C^
+!# ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-    ^C^
+!#:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu        ^C^
+                    ! and viessuLondon are now all ok. Some refinement could    ^C^
+                    ! perhaps be done, but corpus research is needed.	        ^C^
  +Cmpnd: # ;        ! This to take care of Oahpo- ja dutkandept - want this in speller
 
 ! ============================
@@ -204,8 +204,8 @@ LEXICON N_OE_SGILL_UML
 
 LEXICON N_OE
   +N+Sg: N_OE_SG  ;
-  +N+Sg: N_OE_PL  ;
-  +N+Sg: N_OE_ESS ;
+  +N+Pl: N_OE_PL  ;
+  +N: N_OE_ESS ;
   +N+SgNomCmp:oe    R ;
   +N+SgGenCmp:oe%>n R ;
   +N+PlGenCmp:oe%>j R ;
@@ -263,7 +263,7 @@ LEXICON MAANA_PL
 ! --------------------------------
 LEXICON NIEJTE
   +N+Sg: NIEJTE_SG  ;
-  +N+Sg: NIEJTE_PL  ;
+  +N+Pl: NIEJTE_PL  ;
   +N:    EVEN_ESS ;
   +N+SgNomCmp:e    R ;
   +N+SgGenCmp:e%>n R ;
@@ -712,7 +712,7 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Der/NomAg:%»iej     N_ODD ;
  +V+Der/NomAct:%»iem    N_ODD ;
  +V+Der/Pass+Uml:%»%^1UMLasovv TJOEHPEDH ;
- +V+Der/Pass+Uml:%»%^PASSUML TJOEHPEDH ;
+! +V+Der/Pass+Uml:%»%^PASSUML TJOEHPEDH ;
 
 
 LEXICON TJEARODH ! row C - Group II
