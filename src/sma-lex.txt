@@ -45,6 +45,8 @@ Multichar_Symbols
   %^iæUML ! not used
   %^iUML  ! i-uml in pret of V-I (båetedh - böötim)
   %^PASSUML ! Short passive Umlaut Rx->R5
+  %^aLATUS  ! Latus-Umlaut for -ie stems
+  %^uLATUS  ! Latus-Umlaut for -oe stems
 
 ! Der#begin
 ! Derivation position in a derivation row:  Affix and:
@@ -55,7 +57,8 @@ Multichar_Symbols
 ! Der#3
 ! Der#4
 ! Der#other
-+Der/Pass                                                                   ! VV - long only
++Der/PassL                                                                  ! VV - long only
++Der/PassS                                                                  ! VV - short only
 +Der/NomAg                                                                  ! VN
 +Der/NomAct                                                                 ! VN
 +Der/htidh                                                                  ! VV - Causative
@@ -685,7 +688,7 @@ LEXICON GOLTELIDH
 ! -----------
  +V+Der/NomAg:%»æjj     MAANA ;
  +V+Der/NomAct:%»imm    N_IE ;
-! +V+Der/Pass:e%»sovv TJOEHPEDH ; ! XXX - the stem is quite varying for passives of this class
+! +V+Der/PassL:e%»sovv TJOEHPEDH ; ! XXX - the stem is quite varying for passives of this class
 
 
 
@@ -711,8 +714,8 @@ LEXICON BÅETEDH ! row A - Group I
 ! -----------
  +V+Der/NomAg:%»iej     N_ODD ;
  +V+Der/NomAct:%»iem    N_ODD ;
- +V+Der/Pass+Uml:%»%^1UMLasovv TJOEHPEDH ;
-! +V+Der/Pass+Uml:%»%^PASSUML TJOEHPEDH ;
+ +V+Der/PassL+Uml:%»%^1UMLasovv TJOEHPEDH ;
+! +V+Der/PassS+Uml:%»%^PASSUML TJOEHPEDH ;
 
 
 LEXICON TJEARODH ! row C - Group II
@@ -733,8 +736,8 @@ LEXICON TJEARODH ! row C - Group II
 ! -----------
  +V+Der/NomAg:%»oej     N_ODD ;
  +V+Der/NomAct:%»oem    N_ODD ;
- +V+Der/Pass+Uml:%»%^2UMLesovv TJOEHPEDH ;
-! +V+Der/Pass+Uml:%»%^PASSUML TJOEHPEDH ;
+ +V+Der/PassL+Uml:%»%^2UMLesovv TJOEHPEDH ;
+! +V+Der/PassS+Uml:%»%^PASSUML TJOEHPEDH ;
 
 LEXICON GUARKEDH ! row B - Group III
  +V+Ind+Prs:%>    V-III-PRS-SG ; ! class III special
@@ -754,8 +757,8 @@ LEXICON GUARKEDH ! row B - Group III
 ! -----------
  +V+Der/NomAg:%»ej     N_ODD ;
  +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/Pass:a%»sovv TJOEHPEDH ;
-! +V+Der/Pass+Uml:%»%^PASSUML TJOEHPEDH ;
+ +V+Der/PassL:a%»sovv TJOEHPEDH ;
+! +V+Der/PassS+Uml:%»%^PASSUML TJOEHPEDH ;
 
 LEXICON TJOEHPEDH ! row D - Group IV
  +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
@@ -774,8 +777,8 @@ LEXICON TJOEHPEDH ! row D - Group IV
 ! -----------
  +V+Der/NomAg:%»ej     N_ODD ;
  +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/Pass:e%»sovv TJOEHPEDH ;
-! +V+Der/Pass+Uml:%»%^PASSUML TJOEHPEDH ;
+ +V+Der/PassL:e%»sovv TJOEHPEDH ;
+! +V+Der/PassS+Uml:%»%^PASSUML TJOEHPEDH ;
 
 LEXICON VÅÅJNEDH ! row E - Group V
  +V+Ind+Prs:%>   VSUF-V-EVEN-PRS ;
@@ -794,8 +797,8 @@ LEXICON VÅÅJNEDH ! row E - Group V
 ! -----------
  +V+Der/NomAg:%»ej     N_ODD ;
  +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/Pass:e%»sovv TJOEHPEDH ;
-! +V+Der/Pass+Uml:%»%^PASSUML TJOEHPEDH ;
+ +V+Der/PassL:e%»sovv TJOEHPEDH ;
+! +V+Der/PassS+Uml:%»%^PASSUML TJOEHPEDH ;
 
 LEXICON GÖÖLEDH ! row F - Group VI
  +V+Ind+Prs:%>   VSUF-VI-EVEN-PRS ;
@@ -814,8 +817,8 @@ LEXICON GÖÖLEDH ! row F - Group VI
 ! -----------
  +V+Der/NomAg:%»ej     N_ODD ;
  +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/Pass:e%»sovv TJOEHPEDH ;
-! +V+Der/Pass+Uml:%»%^PASSUML TJOEHPEDH ;
+ +V+Der/PassL:e%»sovv TJOEHPEDH ;
+! +V+Der/PassS+Uml:%»%^PASSUML TJOEHPEDH ;
 
 
 
