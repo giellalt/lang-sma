@@ -29,7 +29,8 @@ Sets
 
 Definitions
 
-!  Dummy     =   %^DISIMP: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: ;
+  Triggers     =   %^DISIMP: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML:
+                   %^PASSUML: %^aLATUS: %^uLATUS: ;
 
 Rules
  
@@ -404,8 +405,14 @@ e:ö <=> [ å: | u: ] _ C* [ %>: | %»: ] %^iUML: ;
 !€0 vööjn00im
 
 "a-Latus as e in 3-syllable words"
-%^aLATUS:e <=> _ :C+ :V+ :C* #: ;
+%^aLATUS:e <=> _ ( %»: ) :C+ ( %>: ) :V+ ( %>: ) ( %^DISIMP: ) :C* #: ;
 
+! maana -> maanetje
+!€# maan%^aLATUS%»tje%^DISIMP#
+!€0 maane0tje00
+
+!$# maan%^aLATUS%»tje%^DISIMP#
+!$0 maana0tje00
 
 ! Umlaut rules for even-syll short passive
 ! All Umlaut rows R1-R6 gets umlauted to R5 in short passives
