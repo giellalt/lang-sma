@@ -63,8 +63,12 @@ Multichar_Symbols
 +Der/NomAg                                                                  ! VN
 +Der/NomAct                                                                 ! VN
 +Der/htidh                                                                  ! VV - Causative
-+Der/didh                                                                   ! VV - Causative THOM:do not think this is productive enough
++Der/lidh                                                                   !VV - Subitive
++Der/stidh                                                                  !VV - Diminutive
++Der/ahtje                                                                  !VV - Inchoative
+                                +Der/gåete                                 ! VV - Inchoative
 +Der/Dim                                                                    ! NN - Diminutive
+
 ! Der#end
 
 ! ================
@@ -694,6 +698,7 @@ LEXICON GOLTELIDH
  +V+Der/NomAg:%»æjj     MAANA ;
  +V+Der/NomAct:%»imm    N_IE ;
 ! +V+Der/PassL:e%»sovv TJOEHPEDH ; ! XXX - the stem is quite varying for passives of this class
+ +V+Der/ahtje:%>ahtj AHTJE ;
 
 
 
@@ -721,6 +726,10 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Der/NomAct:%»iem    N_ODD ;
  +V+Der/PassL+Uml:%»%^1UMLasovv TJOEHPEDH ;
  +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der/gåete:%»iegået GÅETEDH ;
+ +V+Der/stidh:%»iest GOLTELIDH ;
+ +V+Der/lidh:%»iel GOLTELIDH ;
+ +V+Der/htidh:%»ieht GOLTELIDH ;
 
 
 LEXICON TJEARODH ! row C - Group II
@@ -743,6 +752,12 @@ LEXICON TJEARODH ! row C - Group II
  +V+Der/NomAct:%»oem    N_ODD ;
  +V+Der/PassL+Uml:%»%^2UMLesovv TJOEHPEDH ;
  +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der/gåete:%»oegået GÅETEDH ;
+ +V+Der/stidh:%»oest GOLTELIDH ;
+ +V+Der/lidh:%»oel GOLTELIDH ;
+ +V+Der/htidh:%»oeht GOLTELIDH ;
+
+
 
 LEXICON GUARKEDH ! row B - Group III
  +V+Ind+Prs:%>    V-III-PRS-SG ; ! class III special
@@ -764,6 +779,11 @@ LEXICON GUARKEDH ! row B - Group III
  +V+Der/NomAct:%»em    N_ODD ;
  +V+Der/PassL:a%»sovv TJOEHPEDH ;
  +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der/gåete:%»agået GÅETEDH ;
++V+Der/stidh:%»ast GOLTELIDH ;
++V+Der/lidh:%»al GOLTELIDH ;
++V+Der/htidh:%»aht GOLTELIDH ;
+
 
 LEXICON TJOEHPEDH ! row D - Group IV
  +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
@@ -784,6 +804,11 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +V+Der/NomAct:%»em    N_ODD ;
  +V+Der/PassL:e%»sovv TJOEHPEDH ;
  +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der/gåete:%»egået GÅETEDH ;
+ +V+Der/stidh:%»est GOLTELIDH ;
+ +V+Der/lidh:%»el GOLTELIDH ;
+ +V+Der/htidh:%»eht GOLTELIDH ;
+
 
 LEXICON VÅÅJNEDH ! row E - Group V
  +V+Ind+Prs:%>   VSUF-V-EVEN-PRS ;
@@ -804,6 +829,11 @@ LEXICON VÅÅJNEDH ! row E - Group V
  +V+Der/NomAct:%»em    N_ODD ;
  +V+Der/PassL:e%»sovv TJOEHPEDH ;
 ! +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group V
+ +V+Der/gåete:%»egået GÅETEDH ;
+ +V+Der/stidh:%»est GOLTELIDH ;
+ +V+Der/lidh:%»el GOLTELIDH ;
+ +V+Der/htidh:%»eht GOLTELIDH ;
+
 
 LEXICON GÖÖLEDH ! row F - Group VI
  +V+Ind+Prs:%>   VSUF-VI-EVEN-PRS ;
@@ -824,6 +854,42 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +V+Der/NomAct:%»em    N_ODD ;
  +V+Der/PassL:e%»sovv TJOEHPEDH ;
 ! +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
+ +V+Der/gåete:%»egået GÅETEDH ;
+ +V+Der/stidh:%»est GOLTELIDH ;
+ +V+Der/lidh:%»el GOLTELIDH ;
+ +V+Der/htidh:%»eht GOLTELIDH ;
+
+
+
+! ---- Verbal derivation sublexica ----
+
+LEXICON GÅETEDH ! from Der/gåete
+ +V+Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
+ +V+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
+ +V+Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
+ +V+Imp:%>              VSUF-EVEN-IMP ;
+! Infinite forms
+! --------------
+ +V+Inf:%>edh           FINAL1 ;
+ +V+ConNeg:%>ieh        FINAL1 ;
+ +V+VGen:%>ien          FINAL1 ;
+ +V+Act:%>eme           FINAL1 ;
+ +V+Ger:%>ieminie       FINAL1 ;
+ +V+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
+ ! row F trigger for Umlaut Prt
+
+LEXICON AHTJE ! row D - Group IV
+ +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
+ +V+Ind+Prt:%>     VSUF-PRT ;
+ +V+Imp:%>         VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+ +V+Inf:%>edh      FINAL1 ;
+ +V+VGen:%>en      FINAL1 ;
+ +V+Act:%>eme      FINAL1 ;
+ +V+Ger:%>eminie   FINAL1 ;
+ +V+PrfPrc:%>eme   FINAL1 ;
+ +V+ConNeg:%>0h    FINAL1 ;
 
 
 
