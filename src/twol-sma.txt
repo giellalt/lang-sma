@@ -160,10 +160,12 @@ Rules
 ! N §102
 
 "Even syllabic verbs present sg, monophpt E I"
- Vx:Vy <=> [ #: | C+ ] _ C+ ( [ V | %^aLATUS: ] ) [ %>: %^1UML:0 | %»: ] ;
+ Vx:Vy <=> [ #: | #: C+ ] _ C+ ( [ V | %^aLATUS: ] ) [ %>: %^1UML:0 | %»: ] ;
  	where Vx in (i e u)
  	      Vy in (æ a å)
  	matched ;
+ 
+!THOM 2009-03-04: added #: in front of C+ in left-hand context because rule overgenerated to 3-syllable verbs, so we got goltelidh > goltalahtjedh. The change aimed to restrict the context to 2-syllable stems.
 
 ! klihtie -> klæhtetje
 !€# kliht%^aLATUS%»tje%^DISIMP#
