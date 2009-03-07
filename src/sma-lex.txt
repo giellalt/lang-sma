@@ -143,7 +143,7 @@ LEXICON N_ODD
   +N+SgNomCmp:            R ;
   +N+SgGenCmp:e%>n        R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
-  +Der/Dim:%»atj NIEJTE ;
+  +Der/Dim:%»atj GIERIEHTSATJE ;
 
 
 LEXICON N_ODD_SG
@@ -179,7 +179,7 @@ LEXICON N_IE
   +N+SgGenCmp:ie%>n           R ;
   +N+PlGenCmp:ie%>j           R ;
   +N+PlGenCmp+Uml:ie%>%^iUMLi R ;
-  +Der/Dim:%^aLATUS%»tj N_ODD ;
+  +Der/Dim:%^aLATUS%»tj GÅATETJE ;
 
 LEXICON N_IE_SG
   +Nom:ie                  FINAL1 ;
@@ -228,7 +228,7 @@ LEXICON N_OE
   +N+SgNomCmp:oe    R ;
   +N+SgGenCmp:oe%>n R ;
   +N+PlGenCmp:oe%>j R ;
-  +Der/Dim:e%»%^2UMLtj N_ODD ;
+  +Der/Dim:e%»%^2UMLtj GÅATETJE ;
 
 LEXICON N_OE_SG
   +Nom:oe          FINAL1 ;
@@ -260,7 +260,7 @@ LEXICON MAANA
   +N+SgNomCmp:a    R ;
   +N+SgGenCmp:a%>n R ;
   +N+PlGenCmp:a%>j R ;
-  +Der/Dim:%^aLATUS%»tj N_ODD ;
+  +Der/Dim:%^aLATUS%»tj GÅATETJE ;
 
 LEXICON MAANA_SG
   +Nom:a          FINAL1 ;
@@ -289,7 +289,7 @@ LEXICON NIEJTE
   +N+SgNomCmp:e    R ;
   +N+SgGenCmp:e%>n R ;
   +N+PlGenCmp:%>i  R ;
-  +Der/Dim:e%»tj   N_ODD ;
+  +Der/Dim:e%»tj   GÅATETJE ;
 
 LEXICON NIEJTE_SG
   +Nom:e          FINAL1 ;
@@ -361,6 +361,23 @@ LEXICON OBLIQUE_EVEN
   +Sg+Ela:e%>ste    FINAL1 ;
   +Sg+Com:e%>ne     FINAL1 ;
 
+! ---- Nominal derivation sublexica ----
+
+LEXICON GIERIEHTSATJE
+  +N+Sg:           NIEJTE_SG  ;
+  +N+Pl:           NIEJTE_PL  ;
+  +N:              EVEN_ESS ;
+  +N+SgNomCmp:e    R ;
+  +N+SgGenCmp:e%>n R ;
+  +N+PlGenCmp:%>i  R ;
+
+LEXICON GÅATETJE
+ +N+Sg: N_ODD_SG ;
+ +N+Pl: N_ODD_PL ;
+ +N:    N_ODD_ESS ;
+  +N+SgNomCmp:            R ;
+  +N+SgGenCmp:e%>n        R ;
+  +N+PlGenCmp:%>%^DISIMPi R ;
 
 
 
