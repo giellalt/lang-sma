@@ -145,7 +145,7 @@ LEXICON N_ODD
   +N+SgNomCmp:            R ;
   +N+SgGenCmp:e%>n        R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
-  +Der/Dim:%»atj GIERIEHTSATJE ;
+  +Der1+Der/Dim:%»atj GIERIEHTSATJE ;
 
 
 LEXICON N_ODD_SG
@@ -181,7 +181,7 @@ LEXICON N_IE
   +N+SgGenCmp:ie%>n           R ;
   +N+PlGenCmp:ie%>j           R ;
   +N+PlGenCmp+Uml:ie%>%^iUMLi R ;
-  +Der/Dim:%^aLATUS%»tj GÅATETJE ;
+  +Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
 
 LEXICON N_IE_SG
   +Nom:ie                  FINAL1 ;
@@ -230,7 +230,7 @@ LEXICON N_OE
   +N+SgNomCmp:oe    R ;
   +N+SgGenCmp:oe%>n R ;
   +N+PlGenCmp:oe%>j R ;
-  +Der/Dim:e%»%^2UMLtj GÅATETJE ;
+  +Der1+Der/Dim:e%»%^2UMLtj GÅATETJE ;
 
 LEXICON N_OE_SG
   +Nom:oe          FINAL1 ;
@@ -262,7 +262,7 @@ LEXICON MAANA
   +N+SgNomCmp:a    R ;
   +N+SgGenCmp:a%>n R ;
   +N+PlGenCmp:a%>j R ;
-  +Der/Dim:%^aLATUS%»tj GÅATETJE ;
+  +Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
 
 LEXICON MAANA_SG
   +Nom:a          FINAL1 ;
@@ -291,7 +291,7 @@ LEXICON NIEJTE
   +N+SgNomCmp:e    R ;
   +N+SgGenCmp:e%>n R ;
   +N+PlGenCmp:%>i  R ;
-  +Der/Dim:e%»tj   GÅATETJE ;
+  +Der1+Der/Dim:e%»tj   GÅATETJE ;
 
 LEXICON NIEJTE_SG
   +Nom:e          FINAL1 ;
@@ -486,17 +486,17 @@ LEXICON BAENEHTS
 :eht     ATTR-S ;
 :iehtadtje     PRED-S ;
 +A:iehtadtje  ODDCOMP ;
-+A+Der/htovve:%»%^1UMLahtovv SOVVEDH ;
-+A+Der/htoeve:%»%^1UMLahtoev SOVVEDH ;
-+A+Der/htehte:%»%^1UMLahteht ÅARAJEHTEDH ;
++A+Der1+Der/htovve:%»%^1UMLahtovv SOVVEDH ;
++A+Der1+Der/htoeve:%»%^1UMLahtoev SOVVEDH ;
++A+Der1+Der/htehte:%»%^1UMLahteht ÅARAJEHTEDH ;
 
 LEXICON TJOHKETS
 :eht     ATTR-S ;
 :ehtadtje     PRED-S ;
 +A:ehtadtje  ODDCOMP ;
-+A+Der/htovve:%»ehtovv SOVVEDH ;
-+A+Der/htoeve:%»ehtoev SOVVEDH ;
-+A+Der/htehte:%»ehteht ÅARAJEHTEDH ;
++A+Der1+Der/htovve:%»ehtovv SOVVEDH ;
++A+Der1+Der/htoeve:%»ehtoev SOVVEDH ;
++A+Der1+Der/htehte:%»ehteht ÅARAJEHTEDH ;
 
 ! type 2
 LEXICON null-s-odd
@@ -525,19 +525,19 @@ LEXICON ADJ-DIRTY
 
 LEXICON ATTR-0
 +A+Attr: FINAL1 ;
-+A+Attr+Der/voete:%»voet GIERIEHTSATJE ;
++A+Attr+Der2+Der/voete:%»voet GIERIEHTSATJE ;
 
 LEXICON ATTR-S
 +A+Attr:%>s FINAL1 ;
-+A+Attr+Der/voete:%>s%»voet GIERIEHTSATJE ;
++A+Attr+Der2+Der/voete:%>s%»voet GIERIEHTSATJE ;
 
 LEXICON ATTR-H
 +A+Attr:%>h   FINAL1 ;
-+A+Attr+Der/voete:%>h%»voet GIERIEHTSATJE ;
++A+Attr+Der2+Der/voete:%>h%»voet GIERIEHTSATJE ;
 
 LEXICON ATTR-N
 +A+Attr:%>n FINAL1 ;
-+A+Attr+Der/voete:%>n%»voet GIERIEHTSATJE ;
++A+Attr+Der2+Der/voete:%>n%»voet GIERIEHTSATJE ;
 
 
 
@@ -568,20 +568,20 @@ LEXICON RELEVANTNOUNLEX
 LEXICON EVENCOMP
  +Comp:%>be     FINAL1 ;
  +Superl:%>mes    FINAL1 ;
- +Comp+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
- +Comp+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
+ +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
+ +Comp+Der1+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
 
 
 LEXICON EVENCOMP-UML
  +Comp:%>be     FINAL1 ;
  +Superl:%>mes    FINAL1 ;
- +Comp+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
- +Comp+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
+ +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
+ +Comp+Der1+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
 
 LEXICON ODDCOMP
  +Comp:%>åbpoe  FINAL1 ;
  +Superl:%>ommes  FINAL1 ;
- +Comp+Der/Dim:%>åbpe%»tj  GÅATETJE ;
+ +Comp+Der1+Der/Dim:%>åbpe%»tj  GÅATETJE ;
 
 
 
@@ -751,12 +751,12 @@ LEXICON GOLTELIDH
 
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»æjj     MAANA ;
- +V+Der/NomAct:%»imm    N_IE ;
-! +V+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
- +V+Der/ahtje:%»ahtj AHTJE ;
- +V+Der/ehte:%»eht ÅARAJEHTEDH ;
-! +V+Der/adte:%»XXXadt ÅARAJEHTEDH ; XXX Umlaut row 1 > 2 + PASSUM
+ +V+Der1+Der/NomAg:%»æjj     MAANA ;
+ +V+Der1+Der/NomAct:%»imm    N_IE ;
+! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
+ +V+Der3+Der/ahtje:%»ahtj AHTJE ;
+ +V+Der2+Der/ehte:%»eht ÅARAJEHTEDH ;
+! +V+Der2+Der/adte:%»XXXadt ÅARAJEHTEDH ; XXX Umlaut row 1 > 2 + PASSUM
 
 LEXICON DÅAJVOEHTIDH  !for stems ending -t-: dåajvoeht-
 
@@ -788,12 +788,12 @@ LEXICON DÅAJVOEHTIDH  !for stems ending -t-: dåajvoeht-
 
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»æjj     MAANA ;
- +V+Der/NomAct:%»imm    N_IE ;
-! +V+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
- +V+Der/ahtje:%»ahtj AHTJE ;
- +V+Der/ehte:%»eht ÅARAJEHTEDH ;
-! +V+Der/alle:%»XXXall ÅARAJEHTEDH ; XXX Umlaut row 1 > 2 + PASSUM
+ +V+Der1+Der/NomAg:%»æjj     MAANA ;
+ +V+Der1+Der/NomAct:%»imm    N_IE ;
+! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
+ +V+Der3+Der/ahtje:%»ahtj AHTJE ;
+ +V+Der2+Der/ehte:%»eht ÅARAJEHTEDH ;
+! +V+Der2+Der/alle:%»XXXall ÅARAJEHTEDH ; XXX Umlaut row 1 > 2 + PASSUM
 
 
 ! Even-syllable verbs
@@ -816,17 +816,17 @@ LEXICON BÅETEDH ! row A - Group I
  ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»iej     N_ODD ;
- +V+Der/NomAct:%»iem    N_ODD ;
- +V+Der/les:%»%^1UMLales null-null-odd ;
- +V+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
- +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
- +V+Der/gåete:%»iegået GÅETEDH ;
- +V+Der/stidh:%»iest DÅAJVOEHTIDH ;
- +V+Der/lidh:%»iel GOLTELIDH ;
- +V+Der/htidh:%»ieht DÅAJVOEHTIDH ;
- +V+Der/ahtje:%»iejahtj AHTJE ;
- +V+Der/htalle:%»%^1UMLahtall SOVVEDH ; !1UML Umlaut row 1 > 2    !Passive, only from transitive verbs
+ +V+Der1+Der/NomAg:%»iej     N_ODD ;
+ +V+Der1+Der/NomAct:%»iem    N_ODD ;
+ +V+Der1+Der/les:%»%^1UMLales null-null-odd ;
+ +V+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
+ +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der3+Der/gåete:%»iegået GÅETEDH ;
+ +V+Der1+Der/stidh:%»iest DÅAJVOEHTIDH ;
+ +V+Der1+Der/lidh:%»iel GOLTELIDH ;
+ +V+Der1+Der/htidh:%»ieht DÅAJVOEHTIDH ;
+ +V+Der3+Der/ahtje:%»iejahtj AHTJE ;
+ +V+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !1UML Umlaut row 1 > 2    !Passive, only from transitive verbs
 
 
 LEXICON TJEARODH ! row C - Group II
@@ -845,18 +845,18 @@ LEXICON TJEARODH ! row C - Group II
  +V+PrfPrc+Uml:%>%^2UMLeme  FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»oej     N_ODD ;
- +V+Der/NomAct:%»oem    N_ODD ;
- +V+Der/les:%»%^PASSUMLeles null-null-odd ;
- +V+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
- +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
- +V+Der/gåete:%»oegået GÅETEDH ;
- +V+Der/stidh:%»oest DÅAJVOEHTIDH ;
- +V+Der/lidh:%»oel GOLTELIDH ;
- +V+Der/htidh:%»oeht DÅAJVOEHTIDH ;
- +V+Der/ahtje:%»oejahtj AHTJE ;
- +V+Der/didh:%»%^PASSUMLed TJYÖREDIDH ;
- +V+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/NomAg:%»oej     N_ODD ;
+ +V+Der1+Der/NomAct:%»oem    N_ODD ;
+ +V+Der1+Der/les:%»%^PASSUMLeles null-null-odd ;
+ +V+Der3+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
+ +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der3+Der/gåete:%»oegået GÅETEDH ;
+ +V+Der1+Der/stidh:%»oest DÅAJVOEHTIDH ;
+ +V+Der1+Der/lidh:%»oel GOLTELIDH ;
+ +V+Der1+Der/htidh:%»oeht DÅAJVOEHTIDH ;
+ +V+Der3+Der/ahtje:%»oejahtj AHTJE ;
+ +V+Der1+Der/didh:%»%^PASSUMLed TJYÖREDIDH ;
+ +V+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
 
 LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on -estit
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
@@ -874,17 +874,17 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
  +V+PrfPrc+Uml:%>%^2UMLeme  FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»oej     N_ODD ;
- +V+Der/NomAct:%»oem    N_ODD ;
- +V+Der/les:%»%^PASSUMLeles null-null-odd ;
- +V+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
- +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
- +V+Der/gåete:%»oegået GÅETEDH ;
- +V+Der/lidh:%»oel GOLTELIDH ;
- +V+Der/htidh:%»oeht DÅAJVOEHTIDH ;
- +V+Der/ahtje:%»oejahtj AHTJE ;
- +V+Der/didh:%»%^PASSUMLed TJYÖREDIDH ;
- +V+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/NomAg:%»oej     N_ODD ;
+ +V+Der1+Der/NomAct:%»oem    N_ODD ;
+ +V+Der1+Der/les:%»%^PASSUMLeles null-null-odd ;
+ +V+Der3+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
+ +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der3+Der/gåete:%»oegået GÅETEDH ;
+ +V+Der1+Der/lidh:%»oel GOLTELIDH ;
+ +V+Der1+Der/htidh:%»oeht DÅAJVOEHTIDH ;
+ +V+Der3+Der/ahtje:%»oejahtj AHTJE ;
+ +V+Der1+Der/didh:%»%^PASSUMLed TJYÖREDIDH ;
+ +V+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
 
 
 LEXICON GUARKEDH ! row B - Group III
@@ -903,18 +903,18 @@ LEXICON GUARKEDH ! row B - Group III
  +V+ConNeg:%>0h   FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»ej     N_ODD ;
- +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/les:a%»les null-null-odd ;
- +V+Der/PassL:a%»sovv SOVVEDH ;
- +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
- +V+Der/gåete:%»agået GÅETEDH ;
- +V+Der/stidh:%»ast DÅAJVOEHTIDH ;
- +V+Der/lidh:%»al GOLTELIDH ;
- +V+Der/htidh:%»aht DÅAJVOEHTIDH ;
- +V+Der/ahtje:%»ajahtj AHTJE ;
-! +V+Der/didh:%»XXXed TJYÖREDIDH ; XXX Umlaut row 2 > 4
- +V+Der/htalle:%»ahtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/NomAg:%»ej     N_ODD ;
+ +V+Der1+Der/NomAct:%»em    N_ODD ;
+ +V+Der1+Der/les:a%»les null-null-odd ;
+ +V+Der3+Der/PassL:a%»sovv SOVVEDH ;
+ +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der3+Der/gåete:%»agået GÅETEDH ;
+ +V+Der1+Der/stidh:%»ast DÅAJVOEHTIDH ;
+ +V+Der1+Der/lidh:%»al GOLTELIDH ;
+ +V+Der1+Der/htidh:%»aht DÅAJVOEHTIDH ;
+ +V+Der3+Der/ahtje:%»ajahtj AHTJE ;
+! +V+Der1+Der/didh:%»XXXed TJYÖREDIDH ; XXX Umlaut row 2 > 4
+ +V+Der1+Der/htalle:%»ahtall SOVVEDH ; !Passive, only from transitive verbs
 
 
 LEXICON TJOEHPEDH ! row D - Group IV
@@ -932,18 +932,18 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +V+ConNeg:%>0h    FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»ej     N_ODD ;
- +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/les:e%»les null-null-odd ;
- +V+Der/PassL:e%»sovv SOVVEDH ;
- +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
- +V+Der/gåete:%»egået GÅETEDH ;
- +V+Der/stidh:%»est DÅAJVOEHTIDH ;
- +V+Der/lidh:%»el GOLTELIDH ;
- +V+Der/htidh:%»eht DÅAJVOEHTIDH ;
- +V+Der/ahtje:%»ijahtj AHTJE ;
- +V+Der/didh:%»ed TJYÖREDIDH ;
- +V+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/NomAg:%»ej     N_ODD ;
+ +V+Der1+Der/NomAct:%»em    N_ODD ;
+ +V+Der1+Der/les:e%»les null-null-odd ;
+ +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
+ +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der3+Der/gåete:%»egået GÅETEDH ;
+ +V+Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
+ +V+Der1+Der/lidh:%»el GOLTELIDH ;
+ +V+Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
+ +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
+ +V+Der1+Der/didh:%»ed TJYÖREDIDH ;
+ +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
 
 
 LEXICON VÅÅJNEDH ! row E - Group V
@@ -961,18 +961,18 @@ LEXICON VÅÅJNEDH ! row E - Group V
  +V+ConNeg:%>h   FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»ej     N_ODD ;
- +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/les:e%»les null-null-odd ;
- +V+Der/PassL:e%»sovv SOVVEDH ;
-! +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group V
- +V+Der/gåete:%»egået GÅETEDH ;
- +V+Der/stidh:%»est DÅAJVOEHTIDH ;
- +V+Der/lidh:%»el GOLTELIDH ;
- +V+Der/htidh:%»eht DÅAJVOEHTIDH ;
- +V+Der/ahtje:%»ejahtj AHTJE ;
- +V+Der/didh:%»ed TJYÖREDIDH ;
- +V+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/NomAg:%»ej     N_ODD ;
+ +V+Der1+Der/NomAct:%»em    N_ODD ;
+ +V+Der1+Der/les:e%»les null-null-odd ;
+ +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
+! +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group V
+ +V+Der3+Der/gåete:%»egået GÅETEDH ;
+ +V+Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
+ +V+Der1+Der/lidh:%»el GOLTELIDH ;
+ +V+Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
+ +V+Der3+Der/ahtje:%»ejahtj AHTJE ;
+ +V+Der1+Der/didh:%»ed TJYÖREDIDH ;
+ +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
 
 
 
@@ -991,18 +991,18 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +V+ConNeg:%>h   FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»ej     N_ODD ;
- +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/les:e%»les null-null-odd ;
- +V+Der/PassL:e%»sovv SOVVEDH ;
-! +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
- +V+Der/gåete:%»egået GÅETEDH ;
- +V+Der/stidh:%»est DÅAJVOEHTIDH ;
- +V+Der/lidh:%»el GOLTELIDH ;
- +V+Der/htidh:%»eht DÅAJVOEHTIDH ;
- +V+Der/ahtje:%»ijahtj AHTJE ;
- +V+Der/didh:%»ed TJYÖREDIDH ;
- +V+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/NomAg:%»ej     N_ODD ;
+ +V+Der1+Der/NomAct:%»em    N_ODD ;
+ +V+Der1+Der/les:e%»les null-null-odd ;
+ +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
+! +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
+ +V+Der3+Der/gåete:%»egået GÅETEDH ;
+ +V+Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
+ +V+Der1+Der/lidh:%»el GOLTELIDH ;
+ +V+Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
+ +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
+ +V+Der1+Der/didh:%»ed TJYÖREDIDH ;
+ +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
 
 
 
@@ -1025,12 +1025,12 @@ LEXICON ÅARAJEHTEDH ! row A - Group I
  ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»iej     N_ODD ;
- +V+Der/NomAct:%»iem    N_ODD ;
- +V+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
- +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
- +V+Der/gåete:%»iegået GÅETEDH ;
- +V+Der/ahtje:%»iejahtj AHTJE ;
+ +V+Der1+Der/NomAg:%»iej     N_ODD ;
+ +V+Der1+Der/NomAct:%»iem    N_ODD ;
+ +V+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
+ +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der3+Der/gåete:%»iegået GÅETEDH ;
+ +V+Der3+Der/ahtje:%»iejahtj AHTJE ;
 
 
 LEXICON GÅETEDH ! from Der/gåete
@@ -1076,10 +1076,10 @@ LEXICON SOVVEDH ! row D - Group IV
  +V+ConNeg:%>0h    FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»ej     N_ODD ;
- +V+Der/NomAct:%»em    N_ODD ;
- +V+Der/gåete:%»egået GÅETEDH ;
- +V+Der/ahtje:%»ijahtj AHTJE ;
+ +V+Der1+Der/NomAg:%»ej     N_ODD ;
+ +V+Der1+Der/NomAct:%»em    N_ODD ;
+ +V+Der3+Der/gåete:%»egået GÅETEDH ;
+ +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
 
 LEXICON TJYÖREDIDH
 
@@ -1111,10 +1111,10 @@ LEXICON TJYÖREDIDH
 
 ! Derivations
 ! -----------
- +V+Der/NomAg:%»æjj     MAANA ;
- +V+Der/NomAct:%»imm    N_IE ;
-! +V+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
- +V+Der/ahtje:%»ahtj AHTJE ;
+ +V+Der1+Der/NomAg:%»æjj     MAANA ;
+ +V+Der1+Der/NomAct:%»imm    N_IE ;
+! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
+ +V+Der3+Der/ahtje:%»ahtj AHTJE ;
 
 
 ! Verbal affixes
