@@ -60,7 +60,8 @@ Multichar_Symbols
 ! Der#other
 								+Der/PassL                                  ! VV - long only
 								+Der/PassS                                  ! VV - short only
-+Der/htalle                                                               ! VV - Passive
++Der/htalle                                                                 ! VV - Passive
++Der/lgidh                                                                  ! VV - Passive
 +Der/NomAg                                                                  ! VN
 +Der/NomAct                                                                 ! VN
 +Der/les                                                                    !VA
@@ -827,6 +828,7 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Der1+Der/htidh:%»ieht DÅAJVOEHTIDH ;
  +V+Der3+Der/ahtje:%»iejahtj AHTJE ;
  +V+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !1UML Umlaut row 1 > 2    !Passive, only from transitive verbs
+ +V+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !1UML Umlaut row 1 > 2    !Passive, only from transitive verbs
 
 
 LEXICON TJEARODH ! row C - Group II
@@ -857,6 +859,9 @@ LEXICON TJEARODH ! row C - Group II
  +V+Der3+Der/ahtje:%»oejahtj AHTJE ;
  +V+Der1+Der/didh:%»%^PASSUMLed TJYÖREDIDH ;
  +V+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/lgidh:%»%^PASSUMLelg LGIDH ; !Passive, only from transitive verbs
+
+ 
 
 LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on -estit
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
@@ -885,6 +890,8 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
  +V+Der3+Der/ahtje:%»oejahtj AHTJE ;
  +V+Der1+Der/didh:%»%^PASSUMLed TJYÖREDIDH ;
  +V+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/lgidh:%»%^PASSUMLelg LGIDH ; !Passive, only from transitive verbs
+
 
 
 LEXICON GUARKEDH ! row B - Group III
@@ -915,6 +922,8 @@ LEXICON GUARKEDH ! row B - Group III
  +V+Der3+Der/ahtje:%»ajahtj AHTJE ;
 ! +V+Der1+Der/didh:%»XXXed TJYÖREDIDH ; XXX Umlaut row 2 > 4
  +V+Der1+Der/htalle:%»ahtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/lgidh:%»alg LGIDH ; !Passive, only from transitive verbs
+
 
 
 LEXICON TJOEHPEDH ! row D - Group IV
@@ -944,6 +953,8 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
  +V+Der1+Der/didh:%»ed TJYÖREDIDH ;
  +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
+
 
 
 LEXICON VÅÅJNEDH ! row E - Group V
@@ -973,6 +984,8 @@ LEXICON VÅÅJNEDH ! row E - Group V
  +V+Der3+Der/ahtje:%»ejahtj AHTJE ;
  +V+Der1+Der/didh:%»ed TJYÖREDIDH ;
  +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
+
 
 
 
@@ -1003,6 +1016,8 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
  +V+Der1+Der/didh:%»ed TJYÖREDIDH ;
  +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
+
 
 
 
@@ -1114,6 +1129,40 @@ LEXICON TJYÖREDIDH
  +V+Der1+Der/NomAg:%»æjj     MAANA ;
  +V+Der1+Der/NomAct:%»imm    N_IE ;
 ! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
+ +V+Der3+Der/ahtje:%»ahtj AHTJE ;
+
+LEXICON LGIDH
+
+! Finite forms
+! ------------
+ +V+Ind+Prs:%> VSUF-ODD-PRS ;
+ +V+Ind+Prt:%> VSUF-ODD-PRT ;
+ +V+Imp:%>     VSUF-ODD-IMP ;
+
+! Infinite forms
+! --------------
+ +V+Inf:%>idh             FINAL1 ;
+ +V+ConNeg:%>%^DISIMPh    FINAL1 ;
+ +V+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +V+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +V+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +V+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
+ 
+!+V+VAbess:%>h            FINAL1 ; 
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen
+! äbreks der nicht regnet
+! baal'eks der nicht gräbt
+! b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
+
+! Derivations
+! -----------
+ +V+Der1+Der/NomAg:%»æjj     MAANA ;
+ +V+Der1+Der/NomAct:%»imm    N_IE ;
  +V+Der3+Der/ahtje:%»ahtj AHTJE ;
 
 
