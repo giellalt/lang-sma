@@ -382,6 +382,19 @@ LEXICON GÅATETJE
  +SgGenCmp:e%>n        R ;
  +PlGenCmp:%>%^DISIMPi R ;
 
+LEXICON MES
+  +Sg+Nom:          FINAL1 ;
+  +Sg+Acc:e%>m       FINAL1 ;
+  +Sg+Gen:e%>n       FINAL1 ;
+  +Sg+Ill:e%>se      FINAL1 ;
+  +Sg+Ine:e%>sne     FINAL1 ;
+  +Sg+Ela:e%>ste     FINAL1 ;
+  +Sg+Com:%>ine      FINAL1 ;
+  +Pl:           NIEJTE_PL  ;
+                 EVEN_ESS ;
+  +SgNomCmp:e    R ;
+  +SgGenCmp:e%>n R ;
+  +PlGenCmp:%>i  R ;
 
 
 
@@ -461,6 +474,11 @@ LEXICON FAAVROE
  :oe  ATTR-S ;
      FAAVROE-PRED ;
 +A:oe  EVENCOMP ;
+
+LEXICON BAHHA
+ :a  ATTR-S ;
+     BAHHA-PRED ;
++A:a  EVENCOMP ;
 
 
 LEXICON h-null-even
@@ -575,6 +593,15 @@ LEXICON FAAVROE-PRED
   +A+SgGenCmp:oe%>n R ;
   +A+PlGenCmp:oe%>j R ;
   +A+Der1+Der/Dim:e%»%^2UMLtj GÅATETJE ;
+  
+ LEXICON BAHHA-PRED
+  +A+Sg: MAANA_SG  ;
+  +A+Pl: MAANA_PL  ;
+  +A:    EVEN_ESS ;
+  +A+SgNomCmp:a    R ;
+  +A+SgGenCmp:a%>n R ;
+  +A+PlGenCmp:a%>j R ;
+  +A+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
 
   
  LEXICON PRED-0
@@ -601,7 +628,7 @@ LEXICON RELEVANTNOUNLEX
 
 LEXICON EVENCOMP
  +Comp:%>b     GÅATETJE ;
- +Superl:%>mes    GÅATETJE ;
+ +Superl:%>mes    MES ;
  +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
  +Comp+Der1+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
 
