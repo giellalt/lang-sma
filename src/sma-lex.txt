@@ -22,6 +22,7 @@ Multichar_Symbols
 ! Frå nordsamisk:
 ! +Actor +Clt
   +A
+  +Pred
   +Comp +Superl
   +Attr
   +Dirty ! Only until we have adj grammar in place - this tags mark adjectives
@@ -468,19 +469,22 @@ LEXICON S-NULL-EVEN
 LEXICON AELHKIE
  :ie  ATTR-S ;
      AELHKIE-PRED ;
++A+Pred:ie FINAL1 ;
 +A:ie  EVENCOMP ;
 
 LEXICON GAERTJIE
  :ie  ATTR-S ;
      AELHKIE-PRED ;
-+A+Sg+Nom:ies FINAL1 ;
++A+Pred:ie FINAL1 ;
++A+Pred:ies FINAL1 ;
 +A+SgNomCmp:ies R ;
 +A:ie  EVENCOMP ;
 
 LEXICON TSÅEKIE
  :ie  ATTR-S ;
      AELHKIE-PRED ;
-+A+Sg+Nom:ies FINAL1 ;
++A+Pred:ies FINAL1 ;
++A+Pred:ie FINAL1 ;
 +A+SgNomCmp:ies R ;
 +A:ie  EVENCOMP ;
 +A:ies  ODDCOMP ;
@@ -491,34 +495,40 @@ LEXICON TSÅEKIE
 LEXICON FAAVROE
  :oe  ATTR-S ;
      FAAVROE-PRED ;
++A+Pred:oe FINAL1 ;
 +A:oe  EVENCOMP ;
 
 LEXICON SPÆNTJOE
  :oe  ATTR-H ;
      FAAVROE-PRED ;
++A+Pred:oe FINAL1 ;
 +A:oe  EVENCOMP ;
 
 
 LEXICON FRASKA
  :a  ATTR-S ;
      FRASKA-PRED ;
++A+Pred:a FINAL1 ;
 +A:a  EVENCOMP ;
 
 LEXICON JÅABPA
  :a  ATTR-H ;
      FRASKA-PRED ;
++A+Pred:a FINAL1 ;
 +A:a  EVENCOMP ;
 
 
 LEXICON GEAMHPE
  :e  ATTR-S ;
      GEAMHPE-PRED ;
++A+Pred:e FINAL1 ;
 +A:e  EVENCOMP ;
 
 LEXICON RAAJNE
  :e  ATTR-S ;
      GEAMHPE-PRED ;
-+A+Sg+Nom:es FINAL1 ;
++A+Pred:es FINAL1 ;
++A+Pred:e FINAL1 ;
 +A+SgNomCmp:es R ;
 +A:e  EVENCOMP ;
 
