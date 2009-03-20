@@ -633,6 +633,7 @@ LEXICON AELHKIE-PRED
   +A+SgGenCmp:ie%>n           R ;
   +A+PlGenCmp:ie%>j           R ;
   +A+PlGenCmp+Uml:ie%>%^iUMLi R ;
+  +A+Der1+Der/Dim+Pred:%^aLATUS%»tje   FINAL1 ;
   +A+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
  
 LEXICON FAAVROE-PRED
@@ -643,6 +644,7 @@ LEXICON FAAVROE-PRED
   +A+SgNomCmp:oe    R ;
   +A+SgGenCmp:oe%>n R ;
   +A+PlGenCmp:oe%>j R ;
+  +A+Der1+Der/Dim+Pred:e%»%^2UMLtje   FINAL1 ;
   +A+Der1+Der/Dim:e%»%^2UMLtj GÅATETJE ;
   
  LEXICON FRASKA-PRED
@@ -652,6 +654,7 @@ LEXICON FAAVROE-PRED
   +A+SgNomCmp:a    R ;
   +A+SgGenCmp:a%>n R ;
   +A+PlGenCmp:a%>j R ;
+  +A+Der1+Der/Dim+Pred:%^aLATUS%»tje   FINAL1 ;
   +A+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
 
  LEXICON GEAMHPE-PRED
@@ -661,6 +664,7 @@ LEXICON FAAVROE-PRED
   +A+SgNomCmp:e    R ;
   +A+SgGenCmp:e%>n R ;
   +A+PlGenCmp:%>i  R ;
+  +A+Der1+Der/Dim+Pred:e%»tje   FINAL1 ;
   +A+Der1+Der/Dim:e%»tj   GÅATETJE ;
 
   
@@ -687,21 +691,32 @@ LEXICON RELEVANTNOUNLEX
 ! -----------------
 
 LEXICON EVENCOMP
+ +Comp+Pred:%>be FINAL1 ;
  +Comp:%>b     GÅATETJE ;
+ +Superl+Pred:%>mes FINAL1 ;
  +Superl:%>mes    MES ;
+ +Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
+ +Comp+Der1+Der/Dim+Pred:%>b%»odtje FINAL1 ;
  +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
  +Comp+Der1+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
 
 
 LEXICON EVENCOMP-UML
+ +Comp+Pred:%>be FINAL1 ;
  +Comp:%>be     FINAL1 ;
+ +Superl+Pred:%>mes FINAL1 ;
  +Superl:%>mes    FINAL1 ;
+ +Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
+ +Comp+Der1+Der/Dim+Pred:%>b%»odtje FINAL1 ;
  +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
  +Comp+Der1+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
 
 LEXICON ODDCOMP
+ +Comp+Pred:%>åbpoe FINAL1 ;
  +Comp:%>åbpoe  FINAL1 ;
+ +Superl+Pred:%>ommes FINAL1 ;
  +Superl:%>ommes  FINAL1 ;
+ +Comp+Der1+Der/Dim+Pred:%>åbpoe%»tje FINAL1 ;
  +Comp+Der1+Der/Dim:%>åbpoe%»tj  GÅATETJE ;
 
 
