@@ -468,19 +468,19 @@ LEXICON S-NULL-EVEN
 
 LEXICON NJALHKEDIHKS
  :  ATTR-S ;
-     AELHKIE-PRED ;
+     AELHKIEcase ;
 +A+Pred:ie FINAL1 ;
 +A:ie  EVENCOMP ;
 
 LEXICON AELHKIE
  :ie  ATTR-S ;
-     AELHKIE-PRED ;
+     AELHKIEcase ;
 +A+Pred:ie FINAL1 ;
 +A:ie  EVENCOMP ;
 
 LEXICON GAERTJIE
  :ie  ATTR-S ;
-     AELHKIE-PRED ;
+     AELHKIEcase ;
 +A+Pred:ie FINAL1 ;
 +A+Pred:ies FINAL1 ;
 +A+SgNomCmp:ies R ;
@@ -488,7 +488,7 @@ LEXICON GAERTJIE
 
 LEXICON TSÅEKIE
  :ie  ATTR-S ;
-     AELHKIE-PRED ;
+     AELHKIEcase ;
 +A+Pred:ies FINAL1 ;
 +A+Pred:ie FINAL1 ;
 +A+SgNomCmp:ies R ;
@@ -500,56 +500,72 @@ LEXICON TSÅEKIE
 
 LEXICON FAAVROE
  :oe  ATTR-S ;
-     FAAVROE-PRED ;
+     FAAVROEcase ;
 +A+Pred:oe FINAL1 ;
 +A:oe  EVENCOMP ;
 
 LEXICON SPÆNTJOE
  :oe  ATTR-H ;
-     FAAVROE-PRED ;
+     FAAVROEcase ;
 +A+Pred:oe FINAL1 ;
 +A:oe  EVENCOMP ;
 
 
 LEXICON FRASKA
  :a  ATTR-S ;
-     FRASKA-PRED ;
+     FRASKAcase ;
 +A+Pred:a FINAL1 ;
 +A:a  EVENCOMP ;
 
 LEXICON JÅABPA
  :a  ATTR-H ;
-     FRASKA-PRED ;
+     FRASKAcase ;
 +A+Pred:a FINAL1 ;
 +A:a  EVENCOMP ;
 
 LEXICON ÅAJVAH
  :a  ATTR-H ;
-     FRASKA-PRED ;
+     FRASKAcase ;
 +A+Pred:ah FINAL1 ;
 +A:e  EVENCOMP ;
 
 
 LEXICON GEAMHPE
  :e  ATTR-S ;
-     GEAMHPE-PRED ;
+     GEAMHPEcase ;
 +A+Pred:e FINAL1 ;
 +A:e  EVENCOMP ;
 
 LEXICON STIJVE
  :e  ATTR-N ;
-     GEAMHPE-PRED ;
+     GEAMHPEcase ;
 +A+Pred:e FINAL1 ;
 +A:e  EVENCOMP ;
 
 
 LEXICON RAAJNE
  :e  ATTR-S ;
-     GEAMHPE-PRED ;
+     GEAMHPEcase ;
 +A+Pred:es FINAL1 ;
 +A+Pred:e FINAL1 ;
 +A+SgNomCmp:es R ;
 +A:e  EVENCOMP ;
+
+LEXICON DOLVE
+  : ATTR-0 ;
+  :s  DOLVEcase ;
++A+Pred:s FINAL1 ;
++A+SgNomCmp:s R ;
++A:s  ODDCOMP ;
+
+LEXICON JIEGKE
+  : ATTR-0 ;
+  :s  DOLVEcase ;
++A+Pred:s FINAL1 ;
++A+SgNomCmp:s R ;
++A:s  ODDCOMP ;
++A:  EVENCOMP ;
+
 
 LEXICON h-null-even
      ATTR-H ;
@@ -644,7 +660,7 @@ LEXICON ATTR-N
 ! Predicative lexica
 ! ------------------
 
-LEXICON AELHKIE-PRED
+LEXICON AELHKIEcase
   +A+Sg: N_IE_SG ;
   +A+Pl: N_IE_PL ;
   +A:    N_IE_ESS ;
@@ -655,7 +671,7 @@ LEXICON AELHKIE-PRED
   +A+Der1+Der/Dim+Pred:%^aLATUS%»tje   FINAL1 ;
   +A+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
  
-LEXICON FAAVROE-PRED
+LEXICON FAAVROEcase
   +A+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
   +A+Sg: N_OE_SG  ;
   +A+Pl: N_OE_PL  ;
@@ -666,7 +682,7 @@ LEXICON FAAVROE-PRED
   +A+Der1+Der/Dim+Pred:e%»%^2UMLtje   FINAL1 ;
   +A+Der1+Der/Dim:e%»%^2UMLtj GÅATETJE ;
   
- LEXICON FRASKA-PRED
+ LEXICON FRASKAcase
   +A+Sg: MAANA_SG  ;
   +A+Pl: MAANA_PL  ;
   +A:    EVEN_ESS ;
@@ -676,7 +692,7 @@ LEXICON FAAVROE-PRED
   +A+Der1+Der/Dim+Pred:%^aLATUS%»tje   FINAL1 ;
   +A+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
 
- LEXICON GEAMHPE-PRED
+ LEXICON GEAMHPEcase
   +A+Sg:           NIEJTE_SG  ;
   +A+Pl:           NIEJTE_PL  ;
   +A:              EVEN_ESS ;
@@ -686,7 +702,23 @@ LEXICON FAAVROE-PRED
   +A+Der1+Der/Dim+Pred:e%»tje   FINAL1 ;
   +A+Der1+Der/Dim:e%»tj   GÅATETJE ;
 
-  
+ LEXICON DOLVEcase
+ +A+Sg+Nom:%^DISIMP         FINAL1 ;
+ +A+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
+ +A+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
+ +A+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +A+Sg+Ine:%>isnie           FINAL1 ;
+ +A+Sg+Ela:%>istie           FINAL1 ;
+ +A+Sg+Com:%>inie            FINAL1 ;
+ +A+Pl: N_ODD_PL ;
+ +A:    N_ODD_ESS ;
+  +A+SgNomCmp:            R ;
+  +A+SgGenCmp:e%>n        R ;
+  +A+PlGenCmp:%>%^DISIMPi R ;
+  +A+Der1+Der/Dim:%»atj GIERIEHTSATJE ;
+
+
+ 
  LEXICON PRED-0
 +A:   RELEVANTNOUNLEX ;
 
