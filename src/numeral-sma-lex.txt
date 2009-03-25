@@ -57,9 +57,22 @@ gaaktsesh  COLLTAG ;
 låhkesh	   COLLTAG ;
 
 LEXICON NUMTAG
-+Num+Sg: indsg ;
-+Num: indess ;
-+Num+Pl: indpl ;
++Num+Sg+Nom:       # ;
++Num+Sg+Acc:%>m    # ;
++Num+Sg+Gen:%>n    # ;
++Num+Sg+Ill:%>se   # ;
++Num+Sg+Ine:%>sne  # ;
++Num+Sg+Ela:%>ste  # ;
++Num+Sg+Com:%>jste # ;
++Num+Ess:%>jne    # ;
++Num+Pl+Nom:%>h  # ;
++Num+Pl+Acc:%>te # ;
++Num+Pl+Gen:%>j  # ;
++Num+Pl+Ill:%>te # ;
++Num+Pl+Ine:%>ne # ;
+!+Num+Pl+Ela:%>   # ; ! Tag?
++Num+Pl+Com:%>jgujme  # ;
+
 
 LEXICON ORDTAG
 +A+ORD: # ;
@@ -76,7 +89,7 @@ LEXICON COLLTAG
 ! ---------------
 
 
-LEXICON NUM-PREFIXES                                        !^C^
+LEXICON NUM-PREFIXES                         !^C^
  §    ARABIC ;   ! §24                                    !^C^
  §§    ARABIC ;  ! §§24                                   !^C^
  §%     ARABIC ; ! § 24                                   !^C^
@@ -86,18 +99,20 @@ LEXICON NUM-PREFIXES                                        !^C^
  %–    ARABIC ;  ! -24 U+2013 en dash                     !^C^
  %—    ARABIC ;  ! -24 U+2014 em dash                     !^C^
  %―    ARABIC ;  ! -24 U+2015 horizontal l                !^C^
- %+    ARABIC ;  ! +24                                    !^C^
- %-%     ARABIC ; ! - 24                                  !^C^
- %‒%     ARABIC ; ! - 24 2012                             !^C^
- %–%     ARABIC ; ! - 24 2013                             !^C^
- %—%     ARABIC ; ! - 24 2014                             !^C^
- %―%     ARABIC ; ! - 24 2015                             !^C^
- %+%     ARABIC ; ! + 24                                  !^C^
+ %-%     ARABIC ;! - 24                                  !^C^
+ %‒%     ARABIC ;! - 24 2012                             !^C^
+ %–%     ARABIC ;! - 24 2013                             !^C^
+ %—%     ARABIC ;! - 24 2014                             !^C^
+ %―%     ARABIC ;! - 24 2015                             !^C^
  %*    ARABIC ;  ! *24                                    !^C^
  %$    ARABIC ;  ! $24  ! And the Euro?                   !^C^
  %<    ARABIC ;  ! <24                                    !^C^
  %>:%>7    ARABIC ;  ! >24                                !^C^
  %.    ARABIC ;  ! s.24                                  !^C^
+! %+%     ARABIC ;! + 24                                  !^C^
+! %+    ARABIC ; ! +24 ! out bec. of %+:0 in twol file   !^C^
+! If lack of analysis for +34 etc becomes a problem, we will need
+! a new border symbol in twol instead of +.
 
 
 
