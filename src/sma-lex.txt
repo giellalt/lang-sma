@@ -530,26 +530,39 @@ LEXICON ÅAJVAH
 +A:e  EVENCOMP ;
 
 
-LEXICON GEAMHPE
+LEXICON NJOEKTSE
  :e  ATTR-S ;
-     GEAMHPEcase ;
+     NJOEKTSEcase ;
 +A+Pred:e FINAL1 ;
 +A:e  EVENCOMP ;
 
 LEXICON STIJVE
  :e  ATTR-N ;
-     GEAMHPEcase ;
+     NJOEKTSEcase ;
 +A+Pred:e FINAL1 ;
 +A:e  EVENCOMP ;
 
 
 LEXICON RAAJNE
  :e  ATTR-S ;
-     GEAMHPEcase ;
+ :e  ATTR-0 ;
+     NJOEKTSEcase ;
 +A+Pred:es FINAL1 ;
 +A+Pred:e FINAL1 ;
 +A+SgNomCmp:es R ;
 +A:e  EVENCOMP ;
+
+LEXICON NÅAKE
+   ATTR-0 ;
+   NJOEKTSEcase ;
++A+Pred: FINAL1 ;
++A:  EVENCOMP ;
+
+LEXICON SAATNA
+   ATTR-0 ;
+   FRASKAcase ;
++A+Pred: FINAL1 ;
++A:  EVENCOMP ;
 
 LEXICON DOLVE
   : ATTR-0 ;
@@ -692,7 +705,7 @@ LEXICON FAAVROEcase
   +A+Der1+Der/Dim+Pred:%^aLATUS%»tje   FINAL1 ;
   +A+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
 
- LEXICON GEAMHPEcase
+ LEXICON NJOEKTSEcase
   +A+Sg:           NIEJTE_SG  ;
   +A+Pl:           NIEJTE_PL  ;
   +A:              EVEN_ESS ;
@@ -703,13 +716,7 @@ LEXICON FAAVROEcase
   +A+Der1+Der/Dim:e%»tj   GÅATETJE ;
 
  LEXICON DOLVEcase
- +A+Sg+Nom:%^DISIMP         FINAL1 ;
- +A+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
- +A+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
- +A+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
- +A+Sg+Ine:%>isnie           FINAL1 ;
- +A+Sg+Ela:%>istie           FINAL1 ;
- +A+Sg+Com:%>inie            FINAL1 ;
+ +A+Sg: N_ODD_SG ;
  +A+Pl: N_ODD_PL ;
  +A:    N_ODD_ESS ;
   +A+SgNomCmp:            R ;
