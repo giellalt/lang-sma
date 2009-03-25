@@ -186,7 +186,9 @@ REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
        ## 
 
 
-SELECT:Pl3WhenPlSubj Pl3 IF (1 (N Pl Nom))(0 ("lea" V));
+# Person
+
+SELECT:Pl3WhenPlSubj Pl3 IF (1 (N Pl Nom) OR (Num Sg Nom))(0 ("lea" V));
 
 SELECT:InfIfInfv (V Inf) IF (*-1 INFV BARRIER V OR CS OR CC) ; 
 # Should be BARRIER V OR CS OR CC # It doesn´t work...
@@ -248,10 +250,13 @@ REMOVE:NotCsIfCc CS (-1 CC OR ("mij" Nom))(0 Adv) ;
 REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 
 
+# Num
+
+SELECT Num IF (-1 CC)(*-2C Num BARRIER V);
+
 # Putative contract verb
 
 
-# Verb person
 
 
 
@@ -269,30 +274,31 @@ SECTION
 LIST @+FAUXV = @+FAUXV ; 
 LIST @+FMAINV = @+FMAINV ; 
 LIST @-FAUXV = @-FAUXV ;
-LIST @-FMAINV = @-FMAINV ; 
-LIST @-FSUBJ = @-FSUBJ ;
+LIST @-FMAINV = @-FMAINV ;
+ 
+LIST @-FSUBJ> = @-FSUBJ> ;
 
 SET FMAINV = @-FMAINV OR @+FMAINV ;
 
 LIST @ADV-A = @ADV-A ; 
 LIST @ADV-ADV = @ADV-ADV ; 
+LIST @>ADVL = @>ADVL ;
+LIST @ADVL< = @ADVL< ;
+
 LIST @ADVL = @ADVL ;
 
-LIST @AN> = @AN> ; 
+LIST @>N = @>N ; 
+LIST @P< = @P< ; 
+LIST @>P = @>P ;
+
 LIST @ActioN> = @ActioN> ; 
 LIST @CC = @CC ; 
 LIST @CMPND = @CMPND ; 
 LIST @CS = @CS ;
-LIST @DN> = @DN> ; 
 LIST @GA> = @GA> ; 
-LIST @GN> = @GN> ; 
-LIST @GP< = @GP< ; 
-LIST @GP> = @GP> ;
 LIST @HNOUN = @HNOUN ; 
 LIST @INTERJ = @INTERJ ; 
 LIST @MEASURE = @MEASURE ;
-LIST @NNum> = @NNum>; 
-LIST @NumN< = @NumN<;
 LIST @NPron< = @NPron< ;
 LIST @NQ< = @NQ< ; 
 LIST @NUM-PRON = @NUM-PRON ; 
@@ -304,12 +310,10 @@ LIST @PROP> = @PROP> ;
 LIST @PrcN> = @PrcN> ; 
 LIST @PronN< = @PronN< ; 
 LIST @PronN> = @PronN> ; 
-LIST @QN< = @QN< ;
-LIST @QN> = @QN> ; 
 LIST @SPRED = @SPRED ; 
 LIST @SUBJ = @SUBJ ; 
 LIST @SUBJ-QH = @SUBJ-QH ;
-
+LIST @Num< = @Num< ;
 
 LIST @TITLE = @TITLE ; 
 LIST @VOC = @VOC ; 
@@ -328,11 +332,13 @@ MAP (@INTERJ) TARGET Interj ;
 
 MAP (@PCLE) TARGET Pcle ;
 
+MAP (@Num<) TARGET (N Pl Nom) IF (*-1 Num BARRIER NPNH);
   	
 ADD (@TITLE) TARGET TITLE IF (1 Prop LINK 0 Fem OR Mal OR Sur);
 
-MAP (@DN>) TARGET (Dem Nom) IF (*1 NP-HEAD + Nom BARRIER NPNH);
-MAP (@AN>) TARGET (A Attr) IF (*1 NP-HEAD + Nom BARRIER NPNH);
+MAP (@>N) TARGET (Dem Nom) IF (*1 N BARRIER NPNH);
+MAP (@>N) TARGET (A Attr) IF (*1 N BARRIER NPNH);
+MAP (@>N) TARGET (N Gen) IF (*1 N BARRIER NPNH);
 
 MAP (@+FAUXV) TARGET Neg OR ("lea") IF (*1 V BARRIER CLB);
 
