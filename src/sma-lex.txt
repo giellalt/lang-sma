@@ -466,6 +466,8 @@ LEXICON S-NULL-EVEN
      PRED-0 ;
 +A:  EVENCOMP ;
 
+!--- S-EVENs (even stem predicate)---
+
 LEXICON NJALHKEDIHKS
  :  ATTR-S ;
      AELHKIEcase ;
@@ -496,13 +498,36 @@ LEXICON TSÅEKIE
 +A:ies  ODDCOMP ;
 
 
-
-
 LEXICON FAAVROE
  :oe  ATTR-S ;
      FAAVROEcase ;
 +A+Pred:oe FINAL1 ;
 +A:oe  EVENCOMP ;
+
+LEXICON FRASKA
+ :a  ATTR-S ;
+     FRASKAcase ;
++A+Pred:a FINAL1 ;
++A:a  EVENCOMP ;
+
+LEXICON NJOEKTSE
+ :e  ATTR-S ;
+     NJOEKTSEcase ;
++A+Pred:e FINAL1 ;
++A:e  EVENCOMP ;
+
+LEXICON RAAJNE
+ :e  ATTR-S ;
+ :e  ATTR-0 ;
+     NJOEKTSEcase ;
++A+Pred:es FINAL1 ;
++A+Pred:e FINAL1 ;
++A+SgNomCmp:es R ;
++A:e  EVENCOMP ;
+
+
+
+!--- H-EVENs (even stem predicate)---
 
 LEXICON SPÆNTJOE
  :oe  ATTR-H ;
@@ -510,12 +535,6 @@ LEXICON SPÆNTJOE
 +A+Pred:oe FINAL1 ;
 +A:oe  EVENCOMP ;
 
-
-LEXICON FRASKA
- :a  ATTR-S ;
-     FRASKAcase ;
-+A+Pred:a FINAL1 ;
-+A:a  EVENCOMP ;
 
 LEXICON JÅABPA
  :a  ATTR-H ;
@@ -529,12 +548,7 @@ LEXICON ÅAJVAH
 +A+Pred:ah FINAL1 ;
 +A:e  EVENCOMP ;
 
-
-LEXICON NJOEKTSE
- :e  ATTR-S ;
-     NJOEKTSEcase ;
-+A+Pred:e FINAL1 ;
-+A:e  EVENCOMP ;
+!--- N-EVENs (even stem predicate)---
 
 LEXICON STIJVE
  :e  ATTR-N ;
@@ -543,14 +557,7 @@ LEXICON STIJVE
 +A:e  EVENCOMP ;
 
 
-LEXICON RAAJNE
- :e  ATTR-S ;
- :e  ATTR-0 ;
-     NJOEKTSEcase ;
-+A+Pred:es FINAL1 ;
-+A+Pred:e FINAL1 ;
-+A+SgNomCmp:es R ;
-+A:e  EVENCOMP ;
+!--- NULL-EVENs (even stem predicate)---
 
 LEXICON NÅAKE
    ATTR-0 ;
@@ -563,6 +570,9 @@ LEXICON SAATNA
    FRASKAcase ;
 +A+Pred: FINAL1 ;
 +A:  EVENCOMP ;
+
+
+!--- NULL-ODDs (odd stem predicate)---
 
 LEXICON DOLVE
   : ATTR-0 ;
