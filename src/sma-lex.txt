@@ -530,6 +530,9 @@ LEXICON RAAJNE
 +A+SgNomCmp:es R ;
 +A:e  EVENCOMP ;
 
+LEXICON LEEVLE
+ :  ATTR-S ;
++A:  EVENCOMP ;
 
 
 !--- H-EVENs---
@@ -593,18 +596,19 @@ LEXICON DOLVE
   : ATTR-0 ;
   :s  DOLVEcase ;
 +A+Pred:s FINAL1 ;
-+A+SgNomCmp:s R ;
 +A:s  ODDCOMP ;
 
 LEXICON JIEGKE
   : ATTR-0 ;
   :s  DOLVEcase ;
 +A+Pred:s FINAL1 ;
-+A+SgNomCmp:s R ;
 +A:s  ODDCOMP ;
 +A:  EVENCOMP ;
 
-
+LEXICON LYÖVLEHKE
+  :  DOLVEcase ;
++A+Pred:e FINAL1 ;
++A:  ODDCOMP ;
 
 
 LEXICON h-null-even
