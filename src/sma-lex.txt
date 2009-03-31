@@ -577,12 +577,9 @@ LEXICON ÅAJVAH
 
 
 LEXICON GÆHTJAH
- :a  ATTR-H ;
-+A:e  EVENCOMP ;
+ :  ATTR-H ;
++A:%^DISIMP EVENCOMP ;
 
-LEXICON GÆHTJOEH
- :oe  ATTR-H ;
-+A:e  EVENCOMP ;
 
 LEXICON IJTJE-RAADH
  :  ATTR-H ;
@@ -622,6 +619,14 @@ LEXICON GELJIE
 
 
 
+!--- NULL-EVEN attr-lexicas---
+! -------------------------
+
+
+
+LEXICON JEARKOE
+ :  ATTR-0 ;
++A:  EVENCOMP ;
 
 ! ODD-stems (odd stem declension)
 ! ===============================
@@ -817,10 +822,10 @@ LEXICON RELEVANTNOUNLEX
 ! -----------------
 
 LEXICON EVENCOMP
- +Comp+Pred:%>be FINAL1 ;
- +Comp:%>b     GÅATETJE ;
- +Superl+Pred:%>mes FINAL1 ;
- +Superl:%>mes    MES ;
+ +Comp+Pred:%>%^DISIMPbe FINAL1 ;
+ +Comp:%>%^DISIMPb     GÅATETJE ;
+ +Superl+Pred:%>%^DISIMPmes FINAL1 ;
+ +Superl:%>%^DISIMPmes    MES ;
  +Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>b%»odtje FINAL1 ;
  +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
@@ -828,10 +833,10 @@ LEXICON EVENCOMP
 
 
 LEXICON EVENCOMP-UML
- +Comp+Pred:%>be FINAL1 ;
- +Comp:%>be     FINAL1 ;
- +Superl+Pred:%>mes FINAL1 ;
- +Superl:%>mes    FINAL1 ;
+ +Comp+Pred:%>%^DISIMPbe FINAL1 ;
+ +Comp:%>%^DISIMPbe     FINAL1 ;
+ +Superl+Pred:%>%^DISIMPmes FINAL1 ;
+ +Superl:%>%^DISIMPmes    FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>b%»odtje FINAL1 ;
  +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
