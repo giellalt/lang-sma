@@ -14,8 +14,7 @@ Alphabet
   %#:0 %>:0 %+:0 »:0
   X2:0 X3:0
   ':0 !'
-  %^DISIMP:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0
-  %^PASSUML:0 %^aLATUS:a %^uLATUS:e ;
+  %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^aLATUS:a %^uLATUS:e ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -29,8 +28,7 @@ Sets
 
 Definitions
 
-  Triggers     =   %^DISIMP: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML:
-                   %^PASSUML: %^aLATUS: %^uLATUS: ;
+  Triggers     =   %^DISIMP: %^DISIMP2: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^aLATUS: %^uLATUS: ;
 
 Rules
  
@@ -75,7 +73,7 @@ Rules
 
 
   "Diphthong simplification oe:e" !in comparatives
-   o:0 <=> _ e  (%>:)  %^DISIMP: [b:|m:] ;
+   o:0 <=> _ e  (%>:)  %^DISIMP2: [b:|m:] ;
 
 !€# jearkoe%>%^DISIMPbe
 !€0 jeark0e00be
