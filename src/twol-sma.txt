@@ -43,6 +43,8 @@ Rules
 
   "Diphthong simplification ie:e"
    i:0 <=> _ e  C+ (e) (%>:) %^DISIMP: ;
+           _ e  (%>:)  %^DISIMP2: [b:|m:] ;
+
 
 !€# dåeried%>%^DISIMPem
 !€0 dåer0ed00em
@@ -55,6 +57,13 @@ Rules
 
 !$# gieriehtse%>%^DISIMPm
 !$0 gieriehtse00m
+
+!€# gijmie%>%^DISIMPbe
+!€0 gijm0e00be
+
+!$# gijmie%>%^DISIMPbe
+!$0 gijmie00be
+
 
   "Diphthong simplification oe:o"
    e:0 <=> o _  C+ (e) (%>:) %^DISIMP: ;
@@ -84,6 +93,7 @@ Rules
 
   "a/e alternation"
    a:e <=> _ [ C - j ] (C) (e) (%>:) %^DISIMP: ;
+           _   (%>:)  %^DISIMP2: [b:|m:] ;
 
 !€# aatskad%>%^DISIMPem
 !€0 aatsked00em
@@ -96,6 +106,14 @@ Rules
 
 !$# daktare%>%^DISIMPm
 !$0 daktare00m
+
+
+!€# gæhtja%>%^DISIMPbe
+!€0 gæhtje00be
+
+!$# gæhtja%>%^DISIMPbe
+!$0 gæhtja00be
+
 
   "a/i alternation"
    a:i <=> _ j (e) (%>:) %^DISIMP: ;
