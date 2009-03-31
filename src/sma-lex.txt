@@ -467,12 +467,17 @@ LEXICON S-NULL-EVEN
      PRED-0 ;
 +A:  EVENCOMP ;
 
+
+
 !---- EVEN-stems (even stem declension)
 ! =====================================
 
 
 !--- S-EVENs---
 ! -------------
+
+
+!--- ie-stems---
 
 LEXICON NJALHKEDIHKS
  :  ATTR-S ;
@@ -504,17 +509,24 @@ LEXICON TSÅEKIES
 +A:ies  ODDCOMP ;
 
 
+!--- oe-stems---
+
 LEXICON FAAVROES
  :oe  ATTR-S ;
      FAAVROEScase ;
 +A+Pred:oe FINAL1 ;
 +A:e  EVENCOMP ;
 
+!--- a-stems---
+
 LEXICON FRASKAS
  :a  ATTR-S ;
      FRASKAScase ;
 +A+Pred:a FINAL1 ;
 +A:e  EVENCOMP ;
+
+
+!--- e-stems---
 
 LEXICON NJOEKTSES
  :e  ATTR-S ;
@@ -531,6 +543,7 @@ LEXICON RAAJNES
 +A+SgNomCmp:es R ;
 +A:e  EVENCOMP ;
 
+
 !--- S-EVEN attr-lexicas---
 ! -------------------------
 
@@ -543,12 +556,16 @@ LEXICON GIJMIES
 !--- H-EVENs---
 ! -------------
 
+!--- oe-stems---
+
 LEXICON SPÆNTJOEH
  :oe  ATTR-H ;
      FAAVROEScase ;
 +A+Pred:oe FINAL1 ;
 +A:e  EVENCOMP ;
 
+
+!--- a-stems---
 
 LEXICON JÅABPAH
  :a  ATTR-H ;
@@ -561,6 +578,8 @@ LEXICON ÅAJVAH
      FRASKAScase ;
 +A+Pred:ah FINAL1 ;
 +A:e  EVENCOMP ;
+
+
 
 !--- H-EVEN attr-lexicas---
 ! -------------------------
@@ -576,6 +595,7 @@ LEXICON IJTJE-RAADH
 +A:e  EVENCOMP ;
 
 
+
 !--- N-EVENs---
 ! -------------
 
@@ -589,17 +609,25 @@ LEXICON STIJVEN
 !--- NULL-EVENs---
 ! ----------------
 
+!--- e-stems---
+
 LEXICON NÅAKE
   :e  ATTR-0 ;
    NJOEKTSEScase ;
 +A+Pred:e FINAL1 ;
 +A:e  EVENCOMP ;
 
+
+!--- a-stems---
+
 LEXICON SAATNA
   :a ATTR-0 ;
    FRASKAScase ;
 +A+Pred:a FINAL1 ;
 +A:e  EVENCOMP ;
+
+
+!--- ie-stems---
 
 LEXICON GELJIE
   :ie ATTR-0 ;
@@ -613,10 +641,12 @@ LEXICON GELJIE
 ! -------------------------
 
 
-
 LEXICON JEARKOE
  :  ATTR-0 ;
 +A:  EVENCOMP ;
+
+
+
 
 ! ODD-stems (odd stem declension)
 ! ===============================
