@@ -33,7 +33,7 @@ LEXICON Adjective
 !båajpoeh+A+Attr:båajpoeh FINAL1 ;!NORTH
 !båantah+A+Attr:båantah FINAL1 ;!SOUTH
 !båantas+A+Attr:båantas FINAL1 ;!SOUTH
-!båantoes+A+Attr:båantoes FINAL1 ;!NORTH 
+!båantoes+A+Attr:båantoes FINAL1 ;!NORTH! 
 !buajhtah+A+Attr:buajhtah FINAL1 ;!SOUTH
 !båajhtoeh+A+Attr:båajhtoeh FINAL1 ;!NORTH
 !båeries NULL-NULL-EVEN ;
@@ -41,12 +41,12 @@ LEXICON Adjective
 !banhkoeh+A+Attr:banhkoeh FINAL1 ;       !NORTH
 !bankas S-S-ODD ;        !SOUTH
 !bankes S-S-ODD ;        !SOUTH 
-!barkoes S-S-ODD ;
+!barkoes S-S-ODD ;!system1
 !barmah:barma h-n-even ;     !SOUTH
 !batnjah:batnja h-n-even ;       !SOUTH
-!buerie NULL-NULL-EVEN ;
-!daerpies:daerpies S-S-ODD ;
-
+!buerie NULL-NULL-EVEN ;!system1,Attr=pred
+!daerpies:daerpies S-S-ODD ;!system1, Attr=pred
+!plievties!system1, attr=pred
 
 !SYSTEM1 og 3:
 baahke:baahk NÅAKE ;     !NÅAKE OG NÅAKES 
@@ -146,15 +146,19 @@ buesjies:buesj AELHKIES ;
 byvnehke+A+Attr:byvnehke FINAL1 ;
 
 båadtsah:båadtsa h-n-even ;!SOUTH
+båadtsoeh:båadts h-n-even;!NORTH,SYSTEM4,attr=båadtsoeh og pred=båadtsan
 
 
 båarhtoes:båarht FAAVROES ;
 
-båavhra h-n-even ; !Only pred
-båavjah:båavja h-n-even ;!SOUTH
+båavhra h-n-even ; !SOUTH
+båavhroeh h-n-even;!NORTH,SYSTEM4,ATTR=båavhroeh, pred =båavhran
+båavjah:båavja h-h-even ;!SOUTH,SYSTEM1,ATTR=PRED
+båavjoeh:båavj h-h-even;!NORTH;SYSTEM!,ATTR=PRED
 
 båevties+A+Attr:båevties FINAL1 ;!SYSTEM1
-bågkoeh:bågk  oeh-an-even ;!SYSTEM1
+bågkoeh:bågk  oeh-an-even ;!SOUTH,SYSTEM4
+bagkoeh:bagk oeh-an-even;!NORTH,SYSTEM4
 
 bårkoes S-S-ODD ;!SYSTEM1,attr=pred
 
@@ -465,7 +469,7 @@ jahtsas+A+Attr:jahtsas FINAL1 ;  !SOUTH
 jahtses+A+Attr:jahtses FINAL1 ;
 jaknge:jakng DOLVE ;
 
-jalke:jalkede NULL-S-EVEN ;
+jalke:jalkede NULL-S-EVEN ;!attr=jalke og pred = jalke 
 japtjah:japtja h-n-even ; !SOUTH ONLY PRED.
 japtsah:japtsa h-n-even ;
 
@@ -475,7 +479,7 @@ jarhpan+A+Attr:jarhpan FINAL1 ;  !'OE' ELLER 'A'
 jarhpoeh+A+Attr:jarhpoeh FINAL1 ;   !'OE' ELLER 'A'
 
 
-jarpe JEARKOE ;
+jarpe JEARKOE ;! jorpe, attr= jarpe/ jorpe og pred= jarpe/jorpe 
 jorpehke:jorpehk LYÖVLEHKE ;
 
 jassijes:jassije S-NULL-ODD ;  !IJES/ IJS
@@ -616,7 +620,7 @@ liskes:liske GIJMIES ;
 lissehts+A+Attr:lissehts FINAL1 ;
 loektije null-null-odd ;
 
-lopmes+A+Attr:lopmes FINAL1 ;
+lopmes+A+Attr:lopmes FINAL1 ;!SYSTEM1,ATTR=PRED
 lopmijs+A+Attr:lopmijs FINAL1 ; !SOUTH  
 
 lovve:lovv DOLVE ;
@@ -850,7 +854,7 @@ preangkah:preangka h-n-even ; !SOUTH  !'OE' ELLER 'A'
 prihtjies:prihtjie GIJMIES ;
 pryhtjehke:pryhtjehk LYÖVLEHKE ;
 
-pruvres+A+Attr:pruvres FINAL1 ;
+pruvres+A+Attr:pruvres FINAL1 ;!system1
 
 prïhtjediks:prïhtede S-NULL-ODD ;
 
@@ -1194,11 +1198,11 @@ streahkehke:streahkehk LYÖVLEHKE ; !XXX Uml
 striehkies:striehkie GIJMIES ; !XXX Uml
 
 striehkies:striehkie AELHKIES ;
-striengkies+A+Attr:striengkies FINAL1 ;
+striengkies+A+Attr:striengkies FINAL1 ;!system1
 
-strijdies:strijd AELHKIES ; !'D' ELLER 'R'
+strijdies:strijd AELHKIES ; !south
 
-strijries:strijr AELHKIES ;
+strijries:strijr AELHKIES ;!north 
 
 
 stråadtsah:stråadtsa h-n-even ;
@@ -1217,7 +1221,7 @@ stööregs:stöörege S-NULL-ODD ;
 
 stööves:stööve GIJMIES ;
 
-suajas+A+Attr:suajas FINAL1 ; !'OE' ELLER 'A'
+suajas+A+Attr:suajas FINAL1 ; !system1, attr=pred
 suajja:suajja null-n-even ;  !'OE' ELLER 'A'
 
 sueleds+A+Attr:sueleds FINAL1 ;
@@ -1229,8 +1233,8 @@ suerkehke+A+Attr:suerkehke FINAL1 ;
 svaalas:svaal FRASKAS ; !'OE' eller 'A'
 svaaloes:svaal FAAVROES ;! 'OE' eller 'A'
 
-svalkah+A+Attr:svalkah FINAL1 ; !'A' eller 'OE'
-svalkoeh+A+Attr:svalkoeh FINAL1 ;! 'A' ELELR 'OE'
+svalkah+A+Attr:svalkah FINAL1 ; !south, SYSTEM1, attr=pred
+svalkoeh+A+Attr:svalkoeh FINAL1 ;! north, SYSTEM1, attr=pred 
 
 svarhkoeh+A+Attr:svarhkoeh FINAL1 ;
 
@@ -1247,16 +1251,16 @@ såastoeh+A+Attr:såastoeh FINAL1 ;
 såavmijes+A+Attr:såavmijes FINAL1 ; ! IJES/IJS
 såavmijs+A+Attr:såavmijs FINAL1 ;   ! IJES/IJS
 
-såebries:såebrie s-n-even ; !substantive
+såebries:såebrie s-n-even ;!SYSTEM4,Attr=såebries og pred=såabran
 
 såevlies+A+Attr:såevlies FINAL1 ;
 
 
-sårhpoeh:sårhpoe h-n-even ;
+sårhpoeh:sårhpoe h-n-even ;!SYSTEM1,attr=pred
 
-sårjoeh+A+Attr:sårjoeh FINAL1 ;
+sårjoeh+A+Attr:sårjoeh FINAL1 ;!SYSTEM1, attr=pred
 
-såvsah:såvsa h-n-even ; !'A' eller 'OE'
+såvsah:såvsa h-n-even ; !south, SYSTEM1, attr=pred
 
 såålhtehks:såålhtehk VYRTEHKE ;
 sååmehke+A+Attr:sååmehke FINAL1 ;
@@ -1391,7 +1395,8 @@ tsaajhtsehks:tsaajhtsehk VYRTEHKE ;
 tseagkah:tseagka h-n-even ;
 
 tsåakeles+A+Attr:tsåakeles FINAL1 ;
-tsåaloeh+A+Attr:tsåaloeh FINAL1 ;
+tsåaloeh+A+Attr:tsåaloeh FINAL1 ;!
+
 
 tsåekies:tsåek TSÅEKIES ; ! -> tsåakoes - tsåekie
 !tsåekies S-S-ODD ; !no 3-syllable paradigm
@@ -1598,7 +1603,7 @@ gåabroeh:gåabr oeh-an-even ;
 gåangkoeh:gåangk oeh-an-even ;!SYSTEM4
 gåarhmoeh:gåarhm oeh-an-even ;  !SYSTEM4
 gåarvoeh:gåarv oeh-an-even ;  !NORTH
-gåavoeh:gåav oeh-an-even ;!NORTH!SYSTEM1 ELLER 4
+gåavoeh:gåav oeh-an-even ;!NORTH!SYSTEM1 og 4, Attr og pred =gåavoeh, pred=gåavan
 gåpmoeh:gåpm oeh-an-even ;!SYSTEM4 
 gåvhtoeh:gåvht oeh-an-even ;
 gæjhnoeh:gæjhn oeh-an-even ;!VENT
@@ -1682,17 +1687,17 @@ steadtjoeh:steadtj oeh-an-even ; ! 'OE' ELLER 'A'
 straptjoeh:straptj oeh-an-even ;
 stålhtjoeh:stålhtj oeh-an-even ;
 stæhtjoeh:stæhtj oeh-an-even ;!'OE' ELLER 'A'
-såajjoeh:såajj oeh-an-even ;
-såvsoeh:såvs oeh-an-even ;! 'A' eller 'OE'
-sæjkoeh:sæjk oeh-an-even ;
-sæjngoeh:sæjng oeh-an-even ;
-tjanhtjoeh:tjanhtj oeh-an-even ;
+såajjoeh:såajj oeh-an-even ;!SYSTEM4, attr=såajjoeh og pred= suajjan
+såvsoeh:såvs oeh-an-even ;!!SYSTEM1, attr=pred
+sæjkoeh:sæjk oeh-an-even ;!
+sæjngoeh:sæjng oeh-an-even ;!SYSTEM4,attr=sæjngoeh pg pred=sæjngan
+tjanhtjoeh:tjanhtj oeh-an-even ;!
 tjåaloeh:tjåal oeh-an-even ;
 tjålhtoeh:tjålht oeh-an-even ;
 tseagkoeh:tseagk oeh-an-even ;
 tåaskoeh:tåask oeh-an-even "dum, tosken" ;
-tåasoeh:tåas oeh-an-even ;
-vealoeh:veal oeh-an-even ;
+tåasoeh:tåas oeh-an-even ;!SYSTEM1 og 4, attr=tåasoeh, pred =tåasan og tåasoeh
+vealoeh:veal oeh-an-even ;!SYSTEM4, 
 vælnjoeh:vælnj oeh-an-even ; !'skjev'/skrå/utoverhellende!NORTH
 !bårras, barras:bårran, barran ADJ-DIRTY ;! bårroes = attr. jih 'bårran' = pred. SUB= bårras, barras,barran.        'BÅRROES' ELLER 'BÅRRAS'
 !gorrehke se garre ADJ-DIRTY ;RAAJNES       'GARRE' OG 'GARRES'
