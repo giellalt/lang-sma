@@ -41,11 +41,11 @@ LEXICON VNAME_EVEN ! Names ending in stressless vowel
 ! Consonant final names
 ! - - - - - - - - -
 
-LEXICON CNAME_ODD ! Names ending in stressless vowel
- +N+Prop+Sg: CNAME_ODD_SG ; ! name special
- +N+Prop+Pl: N_ODD_PL ;     ! normal noun
- +N+Prop:    N_ODD_ESS ;    ! normal noun
- +N+Prop+Attr: FINAL1 ;     ! name special
+! LEXICON CNAME_ODD ! Names ending in stressless vowel (still) not in use
+!  +N+Prop+Sg: CNAME_ODD_SG ; ! name special
+!  +N+Prop+Pl: N_ODD_PL ;     ! normal noun
+!  +N+Prop:    N_ODD_ESS ;    ! normal noun
+!  +N+Prop+Attr: FINAL1 ;     ! name special
 
 LEXICON CNAME_EVEN ! Names ending in stressless vowel
  +N+Prop+Sg: NIEJTE_SG ;
@@ -68,9 +68,9 @@ LEXICON PN_IE ! as N_IE, but with Prop tag
  +N+Prop:    N_IE_ESS ;
  +N+Prop+Attr: FINAL1 ;
 
-LEXICON PN_OE_UML ! as N_OE_UML, but with Prop tag
- +N+Prop: N_OE_SGILL_UML ;
-          PN_OE ;
+! LEXICON PN_OE_UML ! as N_OE_UML, but with Prop tag ! (still) not in use
+!  +N+Prop: N_OE_SGILL_UML ;
+!           PN_OE ;
 
 LEXICON PN_OE ! as N_OE, but with Prop tag
  +N+Prop+Sg: N_OE_SG ;
