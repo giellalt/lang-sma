@@ -338,33 +338,33 @@ LEXICON EVEN_ESS
 ! Special for cns-final names, due to nomsg
 ! =========================================
 
-LEXICON CNAME_ODD_SG
- NOMSG ;
- OBLIQUE_COMMON ;
- OBLIQUE_ODD ;
+! LEXICON CNAME_ODD_SG !(still) not in use
+!  NOMSG ;
+!  OBLIQUE_COMMON ;
+!  OBLIQUE_ODD ;
+!
+!LEXICON CNAME_EVEN_SG !(still) not in use
+! NOMSG ;
+! OBLIQUE_COMMON ;
+! OBLIQUE_EVEN ;
 
-LEXICON CNAME_EVEN_SG
- NOMSG ;
- OBLIQUE_COMMON ;
- OBLIQUE_EVEN ;
 
+! LEXICON NOMSG !(still) not in use
+!   +Sg+Nom:  	        FINAL1 ;
+! 
+! LEXICON OBLIQUE_COMMON !(still) not in use
+!   +Sg+Acc:e%>m      FINAL1 ;
+!   +Sg+Gen:e%>n      FINAL1 ;
+! 
+! LEXICON OBLIQUE_ODD !(still) not in use
+!   +Sg+Ine:e%>snie   FINAL1 ;
+!   +Sg+Ela:e%>stie   FINAL1 ;
+!   +Sg+Com:e%>nie    FINAL1 ;
 
-LEXICON NOMSG
-  +Sg+Nom:  	        FINAL1 ;
-
-LEXICON OBLIQUE_COMMON
-  +Sg+Acc:e%>m      FINAL1 ;
-  +Sg+Gen:e%>n      FINAL1 ;
-
-LEXICON OBLIQUE_ODD
-  +Sg+Ine:e%>snie   FINAL1 ;
-  +Sg+Ela:e%>stie   FINAL1 ;
-  +Sg+Com:e%>nie    FINAL1 ;
-
-LEXICON OBLIQUE_EVEN
-  +Sg+Ine:e%>sne    FINAL1 ;
-  +Sg+Ela:e%>ste    FINAL1 ;
-  +Sg+Com:e%>ne     FINAL1 ;
+! LEXICON OBLIQUE_EVEN !(still) not in use
+!   +Sg+Ine:e%>sne    FINAL1 ;
+!   +Sg+Ela:e%>ste    FINAL1 ;
+!   +Sg+Com:e%>ne     FINAL1 ;
 
 ! ---- Nominal derivation sublexica ----
 
@@ -686,6 +686,11 @@ LEXICON h-null-even
      PRED-0 ;
 +A:  EVENCOMP ;
 
+LEXICON h-h-even
+     ATTR-H ;
+     PRED-H ;
++A:  EVENCOMP ;
+
 
 ! type 4
 LEXICON s-n-even
@@ -716,6 +721,11 @@ LEXICON oeh-oeh-an-even
 LEXICON null-null-odd
      ATTR-0 ;
      PRED-0 ;
++A:  ODDCOMP ;
+
+LEXICON E-E-ODD
+:e     ATTR-0 ;
+:e     PRED-0 ;
 +A:  ODDCOMP ;
 
 LEXICON S-S-ODD
@@ -844,6 +854,10 @@ LEXICON FAAVROEScase
 
 LEXICON PRED-S
 +A:%>s   RELEVANTNOUNLEX ;
+
+LEXICON PRED-H
++A:%>h   RELEVANTNOUNLEX ; ! check whether needed! XXX
+
 
 LEXICON PRED-N
 +A:%>n   RELEVANTNOUNLEX ;
@@ -1576,29 +1590,29 @@ LEXICON VSUF-ODD-IMP
 ! Contract
 
 
-LEXICON VSUF-CONTR-PRS
-     :e  V-PRS-SG-1 ;
-     :   V-PRS-SG-2 ;
-     :ie V-PRS-SG-3 ;
-           VSUF-CONTR-DUPL ;
-
-LEXICON VSUF-CONTR-DUPL
- +Du1:ien		FINAL1	;
- +Du2:eden		FINAL1	;
-! Dual third does not get an +CTR tag
- +Du3:eben		FINAL1	; !SUB
- +Pl1:ebe		FINAL1	;
- +Pl2:ede		FINAL1	;
- +Pl3:ieh		FINAL1	;
-
-LEXICON VSUF-CONTR-PRT
-         VSUF-PRT-SG-12 ;
-         VSUF-PRT-DUPL ;
-
-LEXICON VSUF-CONTR-IMP
- +Sg2:h    FINAL1  ;
- +Du2:eden FINAL1  ;
- +Pl2:ede  FINAL1  ;
+! LEXICON VSUF-CONTR-PRS
+!      :e  V-PRS-SG-1 ;
+!      :   V-PRS-SG-2 ;
+!      :ie V-PRS-SG-3 ;
+!            VSUF-CONTR-DUPL ;
+! 
+! LEXICON VSUF-CONTR-DUPL
+!  +Du1:ien		FINAL1	;
+!  +Du2:eden		FINAL1	;
+! ! Dual third does not get an +CTR tag
+!  +Du3:eben		FINAL1	; !SUB
+!  +Pl1:ebe		FINAL1	;
+!  +Pl2:ede		FINAL1	;
+!  +Pl3:ieh		FINAL1	;
+! 
+! LEXICON VSUF-CONTR-PRT
+!          VSUF-PRT-SG-12 ;
+!          VSUF-PRT-DUPL ;
+! 
+! LEXICON VSUF-CONTR-IMP
+!  +Sg2:h    FINAL1  ;
+!  +Du2:eden FINAL1  ;
+!  +Pl2:ede  FINAL1  ;
 
 
 ! Common even-odd-contr
