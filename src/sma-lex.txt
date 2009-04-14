@@ -399,8 +399,56 @@ LEXICON MES
   +PlGenCmp:%>i  R ;
 
 
+LEXICON ÅBPOE
+  +Sg: ÅBPOE_SGILL_UML ; ! Causes Umlaut
+         ÅBPOE_N_OE ;
+
+LEXICON ÅBPOE_SGILL_UML
+  +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
+
+LEXICON ÅBPOE_N_OE
+  +Sg: ÅBPOE_N_OE_SG  ;
+  +Pl: ÅBPOE_N_OE_PL  ;
+  : ÅBPOE_N_OE_ESS ;
+  +SgNomCmp:oe    R ;
+  +SgGenCmp:oe%>n R ;
+  +PlGenCmp:oe%>j R ;
+
+LEXICON ÅBPOE_N_OE_SG
+  +Nom:oe          FINAL1 ;
+  +Acc:oe%>m       FINAL1 ;
+  +Gen:oe%>n       FINAL1 ;
+  +Ill:o%>se       FINAL1 ;
+  +Ine:o%>sne      FINAL1 ;
+  +Ela:o%>ste      FINAL1 ;
+  +Com:o%>jne      FINAL1 ;
+
+LEXICON ÅBPOE_N_OE_PL
+  +Nom:oe%>h       FINAL1 ;
+  +Acc:o%>jde      FINAL1 ;
+  +Gen:oe%>j       FINAL1 ;
+  +Ill:o%>jde      FINAL1 ;
+  +Ine:o%>jne      FINAL1 ;
+  +Ela:o%>jste     FINAL1 ;
+  +Com:oe%>jgujmie FINAL1 ;
+
+LEXICON ÅBPOE_N_OE_ESS
+  +Ess:o%>jne         FINAL1 ;
 
 
+LEXICON OMMES
+ +Sg+Nom:%^DISIMP         FINAL1 ;
+ +Sg+Acc:e%>%^DISIMPm      FINAL1 ;
+ +Sg+Gen:e%>%^DISIMPn      FINAL1 ;
+ +Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Sg+Ine:%>isnie           FINAL1 ;
+ +Sg+Ela:%>istie           FINAL1 ;
+ +Sg+Com:%>inie            FINAL1 ;
+ +Pl: N_ODD_PL ;
+      N_ODD_ESS ;
+ +SgNomCmp:            R ;
+ +SgGenCmp:e%>n        R ;
+ +PlGenCmp:%>%^DISIMPi R ;
 
 ! ===========================================
 ! Adjectives: Adjectival inflection sublexica
@@ -885,10 +933,14 @@ LEXICON RELEVANTNOUNLEX
 ! -----------------
 
 LEXICON EVENCOMP
+ +Comp+Attr:%>%^DISIMP2be FINAL1 ;
  +Comp+Pred:%>%^DISIMP2be FINAL1 ;
  +Comp:%>%^DISIMP2b     GÅATETJE ;
+ +Superl+Attr:%>%^DISIMP2mes FINAL1 ;
  +Superl+Pred:%>%^DISIMP2mes FINAL1 ;
  +Superl:%>%^DISIMP2mes    MES ;
+ +Comp+Der1+Der/Dim+Attr:%>b%»adtje FINAL1 ;
+ +Comp+Der1+Der/Dim+Attr:%>b%»odtje FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>b%»odtje FINAL1 ;
  +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
@@ -896,20 +948,27 @@ LEXICON EVENCOMP
 
 
 LEXICON EVENCOMP-UML
+ +Comp+Attr:%>%^DISIMP2be FINAL1 ;
  +Comp+Pred:%>%^DISIMP2be FINAL1 ;
  +Comp:%>%^DISIMP2be     FINAL1 ;
+ +Superl+Attr:%>%^DISIMP2mes FINAL1 ;
  +Superl+Pred:%>%^DISIMP2mes FINAL1 ;
  +Superl:%>%^DISIMP2mes    FINAL1 ;
+ +Comp+Der1+Der/Dim+Attr:%>b%»adtje FINAL1 ;
+ +Comp+Der1+Der/Dim+Attr:%>b%»odtje FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>b%»odtje FINAL1 ;
  +Comp+Der1+Der/Dim:%>b%»adtj GIERIEHTSATJE ;
  +Comp+Der1+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
 
 LEXICON ODDCOMP
+ +Comp+Attr:%>åbpoe FINAL1 ;
  +Comp+Pred:%>åbpoe FINAL1 ;
- +Comp:%>åbpoe  FINAL1 ;
+ +Comp:%>åbp ÅBPOE ;
+ +Superl+Attr:%>ommes FINAL1 ;
  +Superl+Pred:%>ommes FINAL1 ;
- +Superl:%>ommes  FINAL1 ;
+ +Superl:%>ommes  OMMES ;
+ +Comp+Der1+Der/Dim+Attr:%>åbpoe%»tje FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>åbpoe%»tje FINAL1 ;
  +Comp+Der1+Der/Dim:%>åbpoe%»tj  GÅATETJE ;
 
