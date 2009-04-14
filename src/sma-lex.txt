@@ -637,50 +637,6 @@ LEXICON GELJIE
 
 
 
-!--- NULL-EVEN attr-lexicas---
-! -------------------------
-
-
-LEXICON JEARKOE
- :  ATTR-0 ;
-+A:  EVENCOMP ;
-
-
-
-
-! ODD-stems (odd stem declension)
-! ===============================
-
-!--- NULL-ODDs---
-! ---------------
-
-LEXICON DOLVE
-  :e ATTR-0 ;
-  :es  DOLVEcase ;
-+A+Pred:es FINAL1 ;
-+A:es  ODDCOMP ;
-
-LEXICON JIEGKE
-  :e ATTR-0 ;
-  :es  DOLVEcase ;
-+A+Pred:es FINAL1 ;
-+A:es  ODDCOMP ;
-+A:e  EVENCOMP ;
-
-LEXICON LYÖVLEHKE
-  :  DOLVEcase ;
-+A+Pred:e FINAL1 ;
-+A:  ODDCOMP ;
-
-LEXICON VYRTEHKE
-  : ATTR-S ;
-  :e ATTR-0 ;
-  :  DOLVEcase ;
-+A+Pred:e FINAL1 ;
-+A+Pred:s FINAL1 ;
-+A:  ODDCOMP ;
-
-
 LEXICON h-null-even
      ATTR-H ;
      PRED-0 ;
@@ -714,8 +670,20 @@ LEXICON oeh-oeh-an-even
 :a   PRED-N ;
 +A:  EVENCOMP ;
 
-! odd stems
-! - - - - -
+!--- NULL-EVEN attr-lexicas---
+! -------------------------
+
+
+LEXICON JEARKOE
+ :  ATTR-0 ;
++A:  EVENCOMP ;
+
+
+
+
+! ODD-stems (odd stem declension)
+! ===============================
+
 
 ! type 1
 LEXICON null-null-odd
@@ -749,6 +717,8 @@ LEXICON S-S-ODD
 !+A+Der1+Der/htoeve:%»ehtoev SOVVEDH ;
 !+A+Der1+Der/htehte:%»ehteht ÅARAJEHTEDH ;
 
+
+
 ! type 2
 LEXICON null-s-odd
      ATTR-0 ;
@@ -760,6 +730,46 @@ LEXICON S-NULL-ODD
      ATTR-S ;
      PRED-0 ;
 +A:  ODDCOMP ;
+
+LEXICON ES-E-ODD
+:e     ATTR-S;
+:e     PRED-O;
++A:  ODDCOMP ; 
+
+
+
+
+!--- NULL-ODDs---
+! ---------------
+
+LEXICON DOLVE
+  :e ATTR-0 ;
+  :es  DOLVEcase ;
++A+Pred:es FINAL1 ;
++A:es  ODDCOMP ;
+
+LEXICON JIEGKE
+  :e ATTR-0 ;
+  :es  DOLVEcase ;
++A+Pred:es FINAL1 ;
++A:es  ODDCOMP ;
++A:e  EVENCOMP ;
+
+LEXICON LYÖVLEHKE
+  :  DOLVEcase ;
++A+Pred:e FINAL1 ;
++A:  ODDCOMP ;
+
+LEXICON VYRTEHKE
+  : ATTR-S ;
+  :e ATTR-0 ;
+  :  DOLVEcase ;
++A+Pred:e FINAL1 ;
++A+Pred:s FINAL1 ;
++A:  ODDCOMP ;
+
+
+
 
 
 
