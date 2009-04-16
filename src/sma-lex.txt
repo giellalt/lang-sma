@@ -690,7 +690,7 @@ LEXICON h-null-even
      PRED-0 ;
 +A:  EVENCOMP ;
 
-LEXICON h-h-even
+LEXICON H-H-EVEN
      ATTR-H ;
      PRED-H ;
 +A:  EVENCOMP ;
@@ -702,21 +702,23 @@ LEXICON s-n-even
      PRED-N ;
 +A:  EVENCOMP ; ! check this!
 
-LEXICON h-n-even
+LEXICON H-N-EVEN
      ATTR-H ;
      PRED-N ;
 +A:  EVENCOMP ;
 
-LEXICON oeh-an-even
-:oe  ATTR-H ;
-:a   PRED-N ;
-+A:  EVENCOMP ;
+LEXICON OEH-AN-ODD
+:oe   ATTR-H ;
+:a    PRED-N ;
++A:ahk ODDCOMP ;
++A:oehk ODDCOMP ; !XXX check this o
 
-LEXICON oeh-oeh-an-even 
+LEXICON OEH-OEH-AN-ODD 
 :oe  ATTR-H ;
 :oeh PRED-0 ;
 :a   PRED-N ;
-+A:  EVENCOMP ;
++A:ahk ODDCOMP ;
++A:oehk ODDCOMP ; !XXX check this o
 
 !--- NULL-EVEN attr-lexicas---
 ! -------------------------
@@ -734,20 +736,21 @@ LEXICON JEARKOE
 
 
 ! type 1
-LEXICON null-null-odd
+LEXICON NULL-NULL-ODD
      ATTR-0 ;
      PRED-0 ;
 +A:  ODDCOMP ;
 
-LEXICON E-E-ODD
+LEXICON E-E-ODD !bårreske
 :e     ATTR-0 ;
 :e     PRED-0 ;
 +A:  ODDCOMP ;
 
-LEXICON S-S-ODD
+LEXICON S-S-ODD !
      ATTR-S ;
      PRED-S ;
-+A:  ODDCOMP ;
++A:ahk ODDCOMP ;
++A:oehk ODDCOMP ; !XXX check this o
 
 !LEXICON BAENEHTS
 !:eht     ATTR-S ;
@@ -768,15 +771,15 @@ LEXICON S-S-ODD
 
 
 ! type 2
-LEXICON null-s-odd
-     ATTR-0 ;
-     PRED-S ;
+LEXICON NULL-S-ODD
+     ATTR-0 ;    
+:e   PRED-S ;
 +A:  ODDCOMP ;
 
 ! type 3
 LEXICON S-NULL-ODD
      ATTR-S ;
-     PRED-0 ;
+:e   PRED-0 ;
 +A:  ODDCOMP ;
 
 LEXICON ES-E-ODD
@@ -908,17 +911,21 @@ LEXICON FAAVROEScase
 
  
  LEXICON PRED-0
++A+Pred: FINAL1 ; ! Awaiting full adj analysis 
 +A:   RELEVANTNOUNLEX ;
 
 
 LEXICON PRED-S
++A+Pred:%>s FINAL1 ; ! Awaiting full adj analysis 
 +A:%>s   RELEVANTNOUNLEX ;
 
 LEXICON PRED-H
++A+Pred:%>h FINAL1 ; ! Awaiting full adj analysis 
 +A:%>h   RELEVANTNOUNLEX ; ! check whether needed! XXX
 
 
 LEXICON PRED-N
++A+Pred:%>n FINAL1 ; ! Awaiting full adj analysis 
 +A:%>n   RELEVANTNOUNLEX ;
 
 
@@ -927,7 +934,7 @@ LEXICON PRED-N
 ! ---------------------------------------
 
 LEXICON RELEVANTNOUNLEX
-+Nom: FINAL1 ; ! Awaiting the noun fix
++Sg+Nom: FINAL1 ; ! Awaiting the noun fix
 
 
 ! Comparative forms
@@ -1178,7 +1185,7 @@ LEXICON BÅETEDH ! row A - Group I
 ! -----------
  +V+Der1+Der/NomAg:%»iej     N_ODD ;
  +V+Der1+Der/NomAct:%»iem    N_ODD ;
- +V+Der1+Der/les:%»%^1UMLales null-null-odd ;
+ +V+Der1+Der/les:%»%^1UMLales NULL-NULL-ODD ;
  +V+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+Der3+Der/gåete:%»iegået GÅETEDH ;
@@ -1208,7 +1215,7 @@ LEXICON TJEARODH ! row C - Group II
 ! -----------
  +V+Der1+Der/NomAg:%»oej     N_ODD ;
  +V+Der1+Der/NomAct:%»oem    N_ODD ;
- +V+Der1+Der/les:%»%^PASSUMLeles null-null-odd ;
+ +V+Der1+Der/les:%»%^PASSUMLeles NULL-NULL-ODD ;
  +V+Der3+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+Der3+Der/gåete:%»oegået GÅETEDH ;
@@ -1240,7 +1247,7 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
 ! -----------
  +V+Der1+Der/NomAg:%»oej     N_ODD ;
  +V+Der1+Der/NomAct:%»oem    N_ODD ;
- +V+Der1+Der/les:%»%^PASSUMLeles null-null-odd ;
+ +V+Der1+Der/les:%»%^PASSUMLeles NULL-NULL-ODD ;
  +V+Der3+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+Der3+Der/gåete:%»oegået GÅETEDH ;
@@ -1271,7 +1278,7 @@ LEXICON GUARKEDH ! row B - Group III
 ! -----------
  +V+Der1+Der/NomAg:%»ej     N_ODD ;
  +V+Der1+Der/NomAct:%»em    N_ODD ;
- +V+Der1+Der/les:a%»les null-null-odd ;
+ +V+Der1+Der/les:a%»les NULL-NULL-ODD ;
  +V+Der3+Der/PassL:a%»sovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+Der3+Der/gåete:%»agået GÅETEDH ;
@@ -1302,7 +1309,7 @@ LEXICON TJOEHPEDH ! row D - Group IV
 ! -----------
  +V+Der1+Der/NomAg:%»ej     N_ODD ;
  +V+Der1+Der/NomAct:%»em    N_ODD ;
- +V+Der1+Der/les:e%»les null-null-odd ;
+ +V+Der1+Der/les:e%»les NULL-NULL-ODD ;
  +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+Der3+Der/gåete:%»egået GÅETEDH ;
@@ -1333,7 +1340,7 @@ LEXICON VÅÅJNEDH ! row E - Group V
 ! -----------
  +V+Der1+Der/NomAg:%»ej     N_ODD ;
  +V+Der1+Der/NomAct:%»em    N_ODD ;
- +V+Der1+Der/les:e%»les null-null-odd ;
+ +V+Der1+Der/les:e%»les NULL-NULL-ODD ;
  +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
 ! +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group V
  +V+Der3+Der/gåete:%»egået GÅETEDH ;
@@ -1365,7 +1372,7 @@ LEXICON GÖÖLEDH ! row F - Group VI
 ! -----------
  +V+Der1+Der/NomAg:%»ej     N_ODD ;
  +V+Der1+Der/NomAct:%»em    N_ODD ;
- +V+Der1+Der/les:e%»les null-null-odd ;
+ +V+Der1+Der/les:e%»les NULL-NULL-ODD ;
  +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
 ! +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
  +V+Der3+Der/gåete:%»egået GÅETEDH ;
