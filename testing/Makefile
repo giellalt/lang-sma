@@ -163,6 +163,7 @@ clean:
 	@rm -f u*.paradigm
 	@rm -f v*.paradigm
 	@rm -f *.paradigm
+	@rm -f Gen_tmp/Para_tmp/*.paradigm
 
 .PHONY: almost-clean
 almost-clean:
@@ -242,7 +243,7 @@ n-paradigm: n-para.ptest savefile
 	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(WORD).paradigm
+	@less $(WORD).paradigm
 
 
 # VERBS
@@ -297,7 +298,7 @@ v-paradigm: v-para.ptest savefile
 	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(WORD).paradigm
+	@less $(WORD).paradigm
 
 
 # ADJECTIVES
@@ -352,7 +353,7 @@ a-paradigm: a-para.ptest savefile
 	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(WORD).paradigm
+	@less $(WORD).paradigm
 
 
 # NUMERALS
