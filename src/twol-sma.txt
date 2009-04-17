@@ -14,7 +14,7 @@ Alphabet
   %#:0 %>:0 %+:0 »:0
   X2:0 X3:0
   ':0 !'
-  %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^aLATUS:a %^uLATUS:e ;
+  %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^aLATUS:a %^uLATUS:e ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -28,7 +28,7 @@ Sets
 
 Definitions
 
-  Triggers     =   %^DISIMP: %^DISIMP2: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^aLATUS: %^uLATUS: ;
+  Triggers     =   %^DISIMP: %^DISIMP2: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^didhUML: %^aLATUS: %^uLATUS: ;
 
 Rules
  
@@ -595,6 +595,49 @@ Vx:å <=> _ [ a: | e: ] C+ %»: %^PASSUML: ;
 ! voessjedh - vååssjedh
 !€# voessj%»%^PASSUMLedh
 !€0 vååssj00edh
+
+"Der/didh Umlaut for GUARKEDH-words Column 1 æ:ï and Column 3 å:o"
+Vx:Vy <=> _ C+ %»: %^didhUML: e d ;
+   where Vx in (æ å)
+         Vy in (ï o)
+   matched ;
+
+! skælkedh - skïlkedidh
+!€# skælk%»%^didhUMLedidh
+!€0 skïlk00edidh
+
+!$# skælk%»%^didhUMLedidh
+!$0 skælk00edidh
+
+plåtjkedh - plotjkedidh
+!€# plåtjk%»%^didhUMLedidh
+!€0 plotjk00edidh
+
+!$# plåtjk%»%^didhUMLedidh
+!$0 plåtjk00edidh
+
+"Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe and Column 7 ua:oe part 1"
+Vx:Vy <=> _ a:e C+ %»: %^didhUML: e d ;
+   where Vx in (e u)
+         Vy in (ï o)
+   matched ;
+
+"Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe and Column 7 ua:oe part 2"
+a:e <=> [e:ï|u:o] _ C+ %»: %^didhUML: e d ;
+
+! veajedh - vïejedidh
+!€# veaj%»%^didhUMLedidh
+!€0 vïej00edidh
+
+!$# veaj%»%^didhUMLedidh
+!$0 veaj00edidh
+
+! guarkedh - goerkedidh
+!€# guark%»%^didhUMLedidh
+!€0 goerk00edidh
+
+!$# guark%»%^didhUMLedidh
+!$0 guark00edidh
 
 
 ! Lexical test suites
