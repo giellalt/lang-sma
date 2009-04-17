@@ -753,6 +753,12 @@ LEXICON S-S-ODD !
 +A:ahk ODDCOMP ;
 +A:oehk ODDCOMP ; !XXX check this o
 
+LEXICON ES-ES-ODD !
+:e     ATTR-S ;
+:e     PRED-S ;
++A:ahk ODDCOMP ;
++A:oehk ODDCOMP ; !XXX check this o
+
 !LEXICON BAENEHTS
 !:eht     ATTR-S ;
 !:iehtadtje     PRED-S ;
@@ -1146,6 +1152,8 @@ LEXICON COMMON-ODD
  +V+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
  +V+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
  +V+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +V+A+Der/æjja+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +V+A+Der/ihks+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
  +V+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
                                    !   GH Ptz.Fut. b'ïssejässaa missing here
  
