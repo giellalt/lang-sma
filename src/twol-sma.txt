@@ -14,7 +14,7 @@ Alphabet
   %#:0 %>:0 %+:0 »:0
   X2:0 X3:0
   ':0 !'
-  %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^aLATUS:a %^uLATUS:e ;
+  %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^adteUML:0 %^aLATUS:a %^uLATUS:e ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -28,7 +28,7 @@ Sets
 
 Definitions
 
-  Triggers     =   %^DISIMP: %^DISIMP2: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^didhUML: %^aLATUS: %^uLATUS: ;
+  Triggers     =   %^DISIMP: %^DISIMP2: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^didhUML: %^adteUML: %^aLATUS: %^uLATUS: ;
 
 Rules
  
@@ -187,7 +187,7 @@ Rules
 ! N §102
 
 "Even syllabic verbs present sg, monophpt E I"
- Vx:Vy <=> [ #: | #: C+ ] _ C+ ( [ V | %^aLATUS: ] ) [ %>: %^1UML:0 | %»: ] ;
+ Vx:Vy <=> [ #: | #: C+ ] _ C+ [[ V %»: | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 |%»: %^adteUML: ]] ;
  	where Vx in (i e u)
  	      Vy in (æ a å)
  	matched ;
@@ -256,7 +256,7 @@ Rules
 
 
 "Even syllabic verbs present sg, diphth ie-ea part 1" 
- i:e <=> [ #: | #: C+ ] _ e:a C+ ( [ V | %^aLATUS: ] ) [ %>: %^1UML:0 | %»: ] ;
+ i:e <=> [ #: | #: C+ ] _ e:a C+ [ [ V %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 |%»: %^adteUML: ]] ;
 
 !€# jieht%>%^1UMLa
 !€0 jeaht00a
@@ -372,8 +372,8 @@ Rules
 
 "2nd rule for even syllabic verbs Sg3 ïe-ea IV"
  e:a <=> [ï:|o:] _ C+ [ %>: | %»: ] %^3sUML: ;
-         [ #: | #: C+ ] i:e _ C+ ( [ V | %^aLATUS: ] ) [ %>: %^1UML:0 | %»: ] ; !Even syllabic verbs present sg, diphth ie-ea part 2
-         [ #: | #: C+ ] [å|a|u] _ C+ ( [ V | %^aLATUS: ] ) [ %>: %^1UML:0 | %»: ] ; !Even syllabic verbs present sg, diphth ae-aa, åe-åa, ue-ua
+         [ #: | #: C+ ] i:e _ C+ [ [ V %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 |%»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ie-ea part 2
+         [ #: | #: C+ ] [å|a|u] _ C+ [ [ V %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 |%»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ae-aa, åe-åa, ue-ua
 
 ! Verbs like: tjïeledh, roehtedh
 
