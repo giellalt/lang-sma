@@ -49,6 +49,7 @@ Multichar_Symbols
   %^iUML  ! i-uml in pret of V-I (båetedh - böötim)
   %^PASSUML ! Short passive Umlaut Rx->R5
   %^didhUML !Der/didh Umlaut for GUARKEDH-words
+  %^adteUML !Umlaut für Der/adte and Der/alle derivations
   %^aLATUS  ! Latus-Umlaut for -ie stems
   %^uLATUS  ! Latus-Umlaut for -oe stems
 
@@ -1128,11 +1129,11 @@ LEXICON ED-IMP
 
 LEXICON GOLTELIDH !odd-syll with -adte- as Der2
  COMMON-ODD ;
-!+V+Der2+Der/adte:%»XXXadt ÅARAJEHTEDH ; XXX Umlaut row 1 > 2 + PASSUM
++V+Der2+Der/adte:%»%^adteUMLadt ÅARAJEHTEDH ;
 
-LEXICON DÅAJVOEHTIDH  !for stems ending -t-: dåajvoeht-, odd-syll with -all- as Der2
+LEXICON DÅAJVOEHTIDH  !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
  COMMON-ODD ;
-!+V+Der2+Der/alle:%»XXXall ÅARAJEHTEDH ; XXX Umlaut row 1 > 2 + PASSUM
++V+Der2+Der/alle:%»%^adteUMLall ÅARAJEHTEDH ;
 
 
 
@@ -1202,8 +1203,8 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Der1+Der/lidh:%»iel GOLTELIDH ;
  +V+Der1+Der/htidh:%»ieht DÅAJVOEHTIDH ;
  +V+Der3+Der/ahtje:%»iejahtj AHTJE ;
- +V+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !1UML Umlaut row 1 > 2    !Passive, only from transitive verbs
- +V+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !1UML Umlaut row 1 > 2    !Passive, only from transitive verbs
+ +V+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
 
 
 LEXICON TJEARODH ! row C - Group II
