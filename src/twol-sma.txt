@@ -44,7 +44,7 @@ Rules
   "Diphthong simplification ie:e"
    i:0 <=> _ e  C+ (e) (%>:) %^DISIMP: ;
            _ e  (%>:)  %^DISIMP2: [b:|m:] ;
-           (%»:) _ V+ C+ %»: %^adteUML: ;
+           (%»:) _ e: C+ %»: %^adteUML: ;
 
 
 !€# dåeried%>%^DISIMPem
@@ -84,6 +84,8 @@ Rules
 
   "Diphthong simplification oe:e" !in comparatives
    o:0 <=> _ e  (%>:)  %^DISIMP2: [b:|m:] ;
+           (%»:) _ e C+ %»: %^adteUML: ;
+
 
 !€# jearkoe%>%^DISIMPbe
 !€0 jeark0e00be
@@ -309,11 +311,13 @@ Rules
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yö II a"
  e:y <=>    _ a: C+ (V) [ %>: | %»: ] %^2UML: ;
- 
+            [ #: | #: C+ ] _ a: C+ (%»:) o: e: C+ %»: %^adteUML: ;
+
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yö II b"
  a:ö <=> e: _    C+ (V) [ %>: | %»: ] %^2UML: ;
- 
+         [ #: | #: C+ ] e: _ C+ (%»:) o: e: C+ %»: %^adteUML: ;
+
 !€# tjear%>%^2UMLe
 !€0 tjyör00e
 
@@ -562,6 +566,7 @@ Vx:ö <=> [ e: | i: | ï: ] _ C+ %»: %^PASSUML: ;
 
 "Short passive Umlaut Column 5 - part 1"
 a:å  <=> _ [ a: | e: ] C+ %»: %^PASSUML: ;
+         [ #: | #: C+ ] ([a|å]) _ (a) C+ (%»:) o: e: C+ %»: %^adteUML: ;
 
 ! daejredh -> dååjredh
 !€# daejr%»%^PASSUMLedh
@@ -644,6 +649,14 @@ plåtjkedh - plotjkedidh
 
 !$# plåtjk%»%^didhUMLedidh
 !$0 plåtjk00edidh
+
+"Der/adte Umlaut for oe-verbs Column 1 æ:y, Column 2 a:o and Column 3 å:o"
+Vx:Vy <=> [ #: | #: C+ ] _ C+ (%»:) o: e: C+ %»: %^adteUML: ;
+ 	where Vx in (æ a å)
+ 	      Vy in (y o o)
+ 	matched ;
+
+
 
 ! Lexical test suites
 ! ===================
