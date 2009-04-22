@@ -141,7 +141,7 @@ buasjerge:buasjerg E-E-ODD ;!Attt=pred: buasjerge
 
 
 !IJES-avledninger: 'ije'=substantiv/ -ende(momentan), mens 'ijes' (durativ) 
-!aalhkije NULL-NULL-ODD ;  !XXXpred
+!aalhkije NULL-NULL-ODD ;  !XXXpred 
 !bealjijes:bealjije S-NULL-ODD ; !-
 !bealjijs:bealjije S-NULL-ODD ;  !->
 !båavhlijes:båavhlije S-NULL-ODD ;
@@ -231,24 +231,15 @@ lohkije NULL-NULL-ODD ; !Attr=pred
 !moerijes, moerijs
 !gïrrijes, gïrrijs
 !hapsijes, hapsijs
-laavlojes:laavloj ES-ES-ODD ;!attr=pred 
-laavlojs NULL-NULL-ODD ; !Attr=pred
-laavloje NULL-NULL-ODD ; !Attr=laavloje, pred=Verbform
-galkije NULL-NULL-ODD ; ! attr=galkije, pred=Verbform
-daanhtsoje NULL-NULL-ODD ; !attr=daanhtsoje, pred=Verbform
-aelkije NULL-NULL-ODD ; !Attr=aelkije, pred =Verbform 
-jielije NULL-NULL-ODD ; !Attr=jielije, pred =Verbform 
-
-
 !veasoje
 !nåajtoje=nåajtijes 
 
 !ÆJJA - stort sett bare som attributtform, mens pred= verbform (3.sg eller --minie) 
-!borrestæjja ; !attr=borrestæjja, pred: verbform
-!gurriestæjja ; !attr=gurriestæjja, pred: verbform
-!giejmiesdæjja ;!attr=giejmiesdæjja, pred: verbform
+gurriestæjja+A+Attr:gurriestæjja FINAL ; !attr=gurriestæjja, pred: verbform
+giejmiesdæjja+A+Attr:giejmiesdæjja FINAL ; !attr=giejmiesdæjja, pred: verbform
 !giejmies:giejmies NULL-NULL-ODD ; !attr=pred 
-!gaasedæjja ; !attr=gaasedæjja, pred:verbform
+gaasedæjja+A+Attr:gaasedæjja FINAL ; 
+borrestæjja+A+Attr:borrestæjja FINAL1 ;
 
 sïejhme NULL-NULL-ODD ; ! Attr=Pred, Comp= ebe, Substantiv=som attr og pred
 
@@ -497,10 +488,9 @@ gearts+A+Attr:gearts FINAL1 ; !SOUTH
 geesjegs:geesjege S-NULL-ODD ;
 
 
+geljie:gelj GELJIE ;!SYSTEM 3, j                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              KB= geljies = attr, geljie = pred 
+geljies S-S-ODD ;!adjektivet 
 
-
-geljie:gelj GELJIE ;
-geljies S-S-ODD ;
 !GELJIES
 
 gellien-gïerts+A+Attr:gellien-gïerts FINAL1 ; 
@@ -510,6 +500,8 @@ gerperes+A+Attr:gerperes FINAL1 ;
 
 giefies:gief GAERTJIES ;
 !giefies S-S-ODD ; !nob 3-syllable paradigm
+giehpies:giehp AELHKIES "bred"; !giehpies= attr og pred 
+giehpies S-S-ODD ; !SYSTEM1 
 gieries:gearehke S-NULL-ODD ; !-a-! 
 
 gyjmehke:gyjmehk LYÖVLEHKE ;
@@ -1981,7 +1973,7 @@ narvoeh+A+Attr:narvoeh FINAL1 ;! SYSTEM1, Attr=pred
 nasjovne:nasjovne NULL-NULL-ODD ; ! govne, SYSTEM1, attr= pred 
 naskah:naskah NULL-NULL-EVEN ;  !SYSTEM1, attr=pred
 naskoeh:naskoeh NULL-NULL-EVEN ; !SYSTEM1, attr= pred 
-njarhkes:njarhk NJOEKTSES ;! Denne er umulig. DETTE ER SOM SYSTEM1, ATTR= PRED, 'NJARHKE' ER ET SUSBTANTIV  OG KAN DERFOR IKKE GÅ SOM 'NJOEKTSES', DET SAMME SOM SUBSTANTIV SOM BLRI AVLEDET TIL ADJEKTIV, SOM F.EKS  REAJNOE + S, HVOR DET kUN BLIR ET SUBSTANTIV VED ADVERBIALER.
+njarhkes:njarhk NJOEKTSES ;! DETTE ER SOM SYSTEM1, ATTR= PRED, 'NJARHKE' ER ET SUSBTANTIV  OG KAN DERFOR IKKE GÅ SOM 'NJOEKTSES', DET SAMME SOM SUBSTANTIV SOM BLRI AVLEDET TIL ADJEKTIV, SOM F.EKS  REAJNOE + S, HVOR DET kUN BLIR ET SUBSTANTIV VED ADVERBIALER.
 njeerpes:njåårpehke S-S-ODD "tunn" ;!  SYSTEM1, ATTR= PRED
 njeerpes S-S-ODD ;!SYSTEM1, ATTR= PRED 
 onne:unnie S-NULL-EVEN ;  ! SYSTEM1, Attr= onne og pred= onne
