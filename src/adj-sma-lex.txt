@@ -243,7 +243,7 @@ borrestæjja+A+Attr:borrestæjja FINAL1 ;
 
 sïejhme NULL-NULL-ODD ; ! Attr=Pred, Comp= ebe, Substantiv=som attr og pred
 
-!VI programmerer dette i morgen: eds, ijes, æjja, masten,eles
+! Vi må først v´finne ut av det med didh-derivasjoner i verb, før vi avleder fra didh-verb -> eds-adjektiver
 !EDS-AVLEDNINGER - går som SYSTEM1- Avledninger av verb gruppe 2 verb+ omlyd = sjeakodh ->sjïekedidh, tjearodh -> tjyöredidh + s = sjïekeds, tjyöreds som er attr= pred. gåatodh -> gååtedidh -> gååteds som er attr. og pred. Resten av verb har ikke omlyd; eks: tjaekeds
 !amhkeds:amhkeds S-NULL-ODD ; ! amhkedh ved adverbial 
 !bihtjeds:bihtjede S-NULL-ODD ; 
@@ -259,6 +259,16 @@ laenjeds+A+Attr:laenjeds FINAL1 ;
 liebkeds+A+Attr:liebkeds FINAL1 ; !NORTH   'M' ELLER 'B'
 liemkeds+A+Attr:liemkeds FINAL1 ; ! 'M' ELLER 'B'
 murreds:murrede S-NULL-ODD ;! iforbindelse med adverbial vlir det ede, ellers er prediaktivformen også 'eds' på 'eds'-adjektiver.  
+njahpeds:njahpede S-NULL-ODD ;! attr=pred, njahpde=adverbial i forbindelse med dagkoe
+prïhtjeds:prïhtjede S-NULL-ODD ;!prïhtjedidh->prïhtjede->prïhtjeds
+njalhkeds:njalhked S-NULL-ODD ;! attr=pred, njalhkede= adverbial i forbindelse med f.eks dagkoe 
+snjahpeds+A+Attr:snjaehpeds FINAL1 ;
+sueleds+A+Attr:sueleds FINAL1 ;! sueleden
+
+!gæljodh - >gæljadidh 
+! sjeakodh -> sjïekedidh - sjïekedh-> sjïekeds gåetie - 
+!murriedidh- murreds
+
 
 !MASTEN-avledninger: avledninger fra adjektiv og verb 
 !masten og masts er attributt, mens masten ser ut til å være pred. 
@@ -289,6 +299,9 @@ murreds:murrede S-NULL-ODD ;! iforbindelse med adverbial vlir det ede, ellers er
 
 !Les/le: 
 !tjogkeles:tjogkel S-NULL-ODD ;! tjogkeles =attr, og tjogkele=pred 
+
+!skibtjies Attr/Pred > skïbtjeles Attr/Pred
+!alle adj på ies dannar adj på eles
 
 !vïdtjele
 !vïetjele
@@ -877,9 +890,8 @@ neatsmas+A+Attr:neatsmas FINAL1 ;
 njaatjeles+A+Attr:njaatjeles FINAL1 ;
 
 
-njahpeds:njahpede S-NULL-ODD ;! attr=pred, njahpde=adverbial i forbindelse med dagkoe
 njalhkedihks:njalhkedihk NJALHKEDIHKS ;!attr= njalhkedihks
-njalhkeds:njalhked S-NULL-ODD ;! attr=pred, njalhkede= adverbial i forbindelse med f.eks dagkoe 
+
 
 
 !njalke:njalk      ;  Njalke =bare attr, njalkeme= pred, verbform eller Nomen actionis 
@@ -982,7 +994,7 @@ pryhtjehke:pryhtjehk LYÖVLEHKE ;
 
 prïhtjediks:prïhtede S-NULL-ODD ;
 
-prïhtjeds:prïhtjede S-NULL-ODD ;
+
 
 pröösenahke+A+Attr:pröösenahke FINAL1 ; !  ??????
 
@@ -1242,7 +1254,7 @@ snååhpehke S-S-EVEN "snabb, rask" ; ! [snææ-]  'SNEEHPES' ELLER 'SNÆÆHPES'
 
 snjadtsah:snjadtsa H-N-EVEN ; ! 'OE' ELLER 'A'
 
-snjahpeds+A+Attr:snjaehpeds FINAL1 ;
+
 snjallah:snjalla H-N-EVEN ;
 snjaltje+A+Attr:snaltje FINAL1 ;
 
@@ -1334,7 +1346,7 @@ stööves:stööve GIJMIES ;
 
 suajja:suajja null-n-even ;  !'OE' ELLER 'A'
 
-sueleds+A+Attr:sueleds FINAL1 ;
+
 
 suepies+A+Attr:suepies FINAL1 ;
 suerkehke+A+Attr:suerkehke FINAL1 ;
@@ -1985,7 +1997,9 @@ naskoeh:naskoeh NULL-NULL-EVEN ; !SYSTEM1, attr= pred
 njarhkes:njarhk NJOEKTSES ;! DETTE ER SOM SYSTEM1, ATTR= PRED, 'NJARHKE' ER ET SUSBTANTIV  OG KAN DERFOR IKKE GÅ SOM 'NJOEKTSES', DET SAMME SOM SUBSTANTIV SOM BLRI AVLEDET TIL ADJEKTIV, SOM F.EKS  REAJNOE + S, HVOR DET kUN BLIR ET SUBSTANTIV VED ADVERBIALER.
 njeerpes:njåårpehke S-S-ODD "tunn" ;!  SYSTEM1, ATTR= PRED
 njeerpes S-S-ODD ;!SYSTEM1, ATTR= PRED 
-onne:unnie S-NULL-EVEN ;  ! SYSTEM1, Attr= onne og pred= onne
+!onne:unnie S-NULL-EVEN ;  ! SYSTEM1, Attr= onne og pred= onne
+!onne+A+Pred:onne FINAL1 ; !SUB
+onne NULL-NULL-EVEN ; !Maja
 pruvres+A+Attr:pruvres FINAL1 ; ! SYSTEM1, attr= PRED 
 reajnas+A+Attr:reajnas FINAL1 ; ! SYSTEM1, ATTR= PRED
 reajnoes+A+Attr:reajnoes FINAL1 ; !  SYSTEM1, ATTR= PRED 
