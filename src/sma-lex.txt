@@ -67,7 +67,7 @@ Multichar_Symbols
 +Der/htalle                                                                 ! VV - Passive
 +Der/lgidh                                                                  ! VV - Passive
 +Der/NomAg                                                                  ! VN
-+Der/ijes                                                                    ! NA/NN
++Der/ijes                                                                    ! NA
 +Der/NomAct                                                                 ! VN
 +Der/les                                                                    !VA
                 +Der/voete                                                  !AN
@@ -191,7 +191,6 @@ LEXICON N_IE
   +N+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
   +N+Der1+Der/ijes+A+Attr:%»%^1UMLijes ATTR-0 ;
   +N+Der1+Der/ijes+A+Pred:%»%^1UMLijes FINAL1 ;
- ! +N+Der1+Der/eds
 
 LEXICON N_IE_SG
   +Nom:ie                  FINAL1 ;
@@ -1119,7 +1118,6 @@ LEXICON ED-IMP
 ! WITH GOLTELIDH.
 
 LEXICON DÅERIEDIDH ! This one is commented out now that GOLTELIDH works
-!+V+Der2+Der/eds:%^DISIMPs 0-0-ODD ;
  GOLTELIDH ;       ! Next step is to remove it.
 
 !LEXICON GOLTELIDH ! one Verbh class
@@ -1177,6 +1175,8 @@ LEXICON COMMON-ODD
 ! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
  +V+Der3+Der/ahtje:%»ahtj AHTJE ;
  +V+Der2+Der/ehte:%»eht ÅARAJEHTEDH ;
+ +V+Der2+Der/eds:%^DISIMPs NULL-NULL-ODD ;
+
 
 
 ! Even-syllable verbs
@@ -1212,7 +1212,6 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Der3+Der/ahtje:%»iejahtj AHTJE ;
  +V+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
  +V+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
-
 
 LEXICON TJEARODH ! row C - Group II
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
