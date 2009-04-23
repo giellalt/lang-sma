@@ -83,6 +83,7 @@ Multichar_Symbols
                 +Der/ehte                                                     !VV - Causative
                 +Der/adte                                                 !VV - Frequentative
                 +Der/alle                                                   !VV - Frequentative
+                +Der/eds
 ! Der#end
 
 ! ================
@@ -187,6 +188,7 @@ LEXICON N_IE
   +N+PlGenCmp:ie%>j           R ;
   +N+PlGenCmp+Uml:ie%>%^iUMLi R ;
   +N+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
+ ! +N+Der1+Der/eds
 
 LEXICON N_IE_SG
   +Nom:ie                  FINAL1 ;
@@ -1113,8 +1115,9 @@ LEXICON ED-IMP
 ! Thus, the form in -e is wrong, and we wil replace DÅERIEDIDH 
 ! WITH GOLTELIDH.
 
-!LEXICON DÅERIEDIDH ! This one is commented out now that GOLTELIDH works
-! GOLTELIDH ;       ! Next step is to remove it.
+LEXICON DÅERIEDIDH ! This one is commented out now that GOLTELIDH works
+!+V+Der2+Der/eds:%^DISIMPs 0-0-ODD ;
+ GOLTELIDH ;       ! Next step is to remove it.
 
 !LEXICON GOLTELIDH ! one Verbh class
 !+V+Ind+Prt+Sg3:%>i FINAL1 ;
@@ -1189,6 +1192,7 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Act:%>eme           FINAL1 ;
  +V+Ger:%>ieminie       FINAL1 ;
  +V+PrsPrc:%>ije        FINAL1 ;
+ +V+PrsPrc:%>ijes        FINAL1 ;
  +V+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
  ! row F trigger for Umlaut Prt
 ! Derivations
@@ -1220,6 +1224,7 @@ LEXICON TJEARODH ! row C - Group II
  +V+Act:%>eme           FINAL1 ;
  +V+Ger:%>oeminie       FINAL1 ;
  +V+PrsPrc:%>oje        FINAL1 ;
+ +V+PrsPrc:%>ojes        FINAL1 ;
  +V+PrfPrc+Uml:%>%^2UMLeme  FINAL1 ;
 ! Derivations
 ! -----------
@@ -1252,6 +1257,7 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
  +V+Act:%>eme           FINAL1 ;
  +V+Ger:%>oeminie       FINAL1 ;
  +V+PrsPrc:%>oje        FINAL1 ;
+ +V+PrsPrc:%>ojes        FINAL1 ;
  +V+PrfPrc+Uml:%>%^2UMLeme  FINAL1 ;
 ! Derivations
 ! -----------
@@ -1281,7 +1287,8 @@ LEXICON GUARKEDH ! row B - Group III
  +V+VGen:%>an     FINAL1 ;
  +V+Act:%>eme     FINAL1 ;
  +V+Ger:%>aminie  FINAL1 ;
- +V+PrsPrc:%>eje  FINAL1 ;
+ +V+PrsPrc:%>eje  FINAL1 ;! ??? i eller e?
+ +V+PrsPrc:%>ejes  FINAL1 ;! ??? i eller e?
  +V+PrfPrc:%>eme  FINAL1 ;
  +V+ConNeg:%>0h   FINAL1 ;
 ! Derivations
@@ -1312,7 +1319,8 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +V+VGen:%>en      FINAL1 ;
  +V+Act:%>eme      FINAL1 ;
  +V+Ger:%>eminie   FINAL1 ;
- +V+PrsPrc:%>eje   FINAL1 ;
+ +V+PrsPrc:%>ije   FINAL1 ;
+ +V+PrsPrc:%>ijes  FINAL1 ;
  +V+PrfPrc:%>eme   FINAL1 ;
  +V+ConNeg:%>0h    FINAL1 ;
 ! Derivations
@@ -1343,7 +1351,8 @@ LEXICON VÅÅJNEDH ! row E - Group V
  +V+VGen:%>en    FINAL1 ;
  +V+Act:%>eme    FINAL1 ;
  +V+Ger:%>eminie FINAL1 ;
- +V+PrsPrc:%>eje FINAL1 ;
+ +V+PrsPrc:%>ije FINAL1 ;
+ +V+PrsPrc:%>ijes  FINAL1 ;
  +V+PrfPrc:%>eme FINAL1 ;
  +V+ConNeg:%>h   FINAL1 ;
 ! Derivations
@@ -1375,7 +1384,8 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +V+VGen:%>en    FINAL1 ;
  +V+Act:%>eme    FINAL1 ;
  +V+Ger:%>minie  FINAL1 ;
- +V+PrsPrc:%>eje FINAL1 ;
+ +V+PrsPrc:%>ije FINAL1 ;
+ +V+PrsPrc:%>ijes FINAL1 ;
  +V+PrfPrc:%>eme FINAL1 ;
  +V+ConNeg:%>h   FINAL1 ;
 ! Derivations
@@ -1412,6 +1422,7 @@ LEXICON ÅARAJEHTEDH ! row A - Group I
  +V+Act:%>eme           FINAL1 ;
  +V+Ger:%>ieminie       FINAL1 ;
  +V+PrsPrc:%>ije        FINAL1 ;
+ +V+PrsPrc:%>ijes        FINAL1 ;
  +V+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
  ! row F trigger for Umlaut Prt
 ! Derivations
@@ -1462,7 +1473,8 @@ LEXICON SOVVEDH ! row D - Group IV
  +V+VGen:%>en      FINAL1 ;
  +V+Act:%>eme      FINAL1 ;
  +V+Ger:%>eminie   FINAL1 ;
- +V+PrsPrc:%>eje   FINAL1 ;
+ +V+PrsPrc:%>ije   FINAL1 ;
+ +V+PrsPrc:%>ijes   FINAL1 ;
  +V+PrfPrc:%>eme   FINAL1 ;
  +V+ConNeg:%>0h    FINAL1 ;
 ! Derivations
