@@ -10,7 +10,7 @@ LEXICON Adjective
 
 ! The adjective list itself
 ! ==========================
-
+!OK
 bårreske:bårresk E-E-ODD ; !attr=pred:bårreske
 balneske:balnesk E-E-ODD ; !attr=pred:balneske
 gaarhtseske:gaarhtsesk E-E-ODD ; !attr=pred:gaarhtseske-> gaahtsehke
@@ -30,7 +30,7 @@ nålleske:nållesk E-E-ODD ; !attr=pred:nålleske
 tjalmeske:tjalmesk E-E-ODD ; !attr=pred:tjalmeske
 mojjehtje:mojjehtj E-E-ODD ; !attr=pred:tjalmeske
 daej-baaletje:daej-baaletje E-E-ODD ;
-
+!OK
 !EHTJE_Avledninger
 !jaahkoeladtje:jaahkoeladtj E-E-ODD ; !Attr=pred:jaahkoeladtje
 !læhkoeladtje:læhkoeladtj E-E-ODD ; !Attr=Pred:læhkoeladtje
@@ -125,7 +125,7 @@ daan-beajjetje:daan-beajjetj E-E-ODD ;
 !dovletje
 !soejmetji
 
-
+!OK
 !Erge-avledninger:! Umlaut ie-stammer, muhto dat 
 bieljerge:bieljerg E-E-ODD ;!attr=pred:bieljerge 
 bealjerge:bealjerg E-E-ODD ;!SOUTH Attr=pred:bealjerge
@@ -139,7 +139,9 @@ buasjerge:buasjerg E-E-ODD ;!Attt=pred: buasjerge
 
 !DIHKS-Avledninger 
 
-
+! sub-adj=OK
+!verb-sub-adj=ok
+! ADJEKTIVENE!!
 !IJES-avledninger: 'ije'=substantiv/ -ende(momentan), mens 'ijes' (durativ) 
 !aalhkije NULL-NULL-ODD ;  !XXXpred 
 !bealjijes:bealjije S-NULL-ODD ; !-
@@ -231,8 +233,14 @@ lohkije NULL-NULL-ODD ; !Attr=pred
 !moerijes, moerijs
 !gïrrijes, gïrrijs
 !hapsijes, hapsijs
-!veasoje
+!veasoje -s 
 !nåajtoje=nåajtijes 
+
+!manuelt= adj->adj 
+!kraajhpijes
+!raajnijes 
+!såejries -> sååjrijes 
+!
 
 !ÆJJA - stort sett bare som attributtform, mens pred= verbform (3.sg eller --minie) 
 gurriestæjja+A+Attr:gurriestæjja FINAL1 ; !attr=gurriestæjja, pred: verbform
@@ -243,6 +251,8 @@ borrestæjja+A+Attr:borrestæjja FINAL1 ;
 
 sïejhme NULL-NULL-ODD ; ! Attr=Pred, Comp= ebe, Substantiv=som attr og pred
 
+!Verb = adj= OK
+!Nomen -> adj = ??? 
 ! Vi må først v´finne ut av det med didh-derivasjoner i verb, før vi avleder fra didh-verb -> eds-adjektiver
 !EDS-AVLEDNINGER - går som SYSTEM1- Avledninger av verb gruppe 2 verb+ omlyd = sjeakodh ->sjïekedidh, tjearodh -> tjyöredidh + s = sjïekeds, tjyöreds som er attr= pred. gåatodh -> gååtedidh -> gååteds som er attr. og pred. Resten av verb har ikke omlyd; eks: tjaekeds
 !amhkeds:amhkeds S-NULL-ODD ; ! amhkedh ved adverbial 
@@ -264,12 +274,14 @@ prïhtjeds:prïhtjede S-NULL-ODD ;!prïhtjedidh->prïhtjede->prïhtjeds
 njalhkeds:njalhked S-NULL-ODD ;! attr=pred, njalhkede= adverbial i forbindelse med f.eks dagkoe 
 snjahpeds+A+Attr:snjaehpeds FINAL1 ;
 sueleds+A+Attr:sueleds FINAL1 ;! sueleden
+tjaekeds:tjakede S-NULL-ODD ;
+tjuavkeds:tjuavkede S-NULL-ODD ;
 
 !gæljodh - >gæljadidh 
 ! sjeakodh -> sjïekedidh - sjïekedh-> sjïekeds gåetie - 
 !murriedidh- murreds
 
-
+!Manuell
 !MASTEN-avledninger: avledninger fra adjektiv og verb 
 !masten og masts er attributt, mens masten ser ut til å være pred. 
 !-masth:-maste H-N-EVEN ;     !   'MASTEN'
@@ -370,14 +382,15 @@ gæjhteles:gæjhtel NULL-NULL-ODD ;
 
 !EGS-avledninger har både attr=s og pred=s, attr=vokal og pred=vokal og og attr= s og pred = v. 
 
-!Nomen actionos  - åbpoe - ommes 
-!gadtsemes = attr=pred
-!lohkemes=attr=pred
-!iehtsemes=attr=pred
-!jovhkemes=attr=pred
-!vöörhkemed=attr=pred
-!dabtemes=attr=pred(North)
-!damtemes=attr=pred(south) 
+
+!Nomen actionos ! OK! 
+gadtsemes:gadtsem E-E-ODD ;! = attr=pred
+lohkemes:lohkem E-E-ODD ;!=attr=pred
+iehtsemes:iehtsem E-E-ODD ;!=attr=pred
+jovhkemes:jovhkem E-E-ODD ;!=attr=pred
+vöörhkemes:vöörhkem E-E-ODD ; !=attr=pred
+dabtemes:dabtem E-E-ODD ;!=attr=pred(North)
+damtemes:damtem E-E-ODD ;!=attr=pred(south) 
 
 !Tjåetskeme - spesiell!! 
 !tjåetskemes /tjåetskemes - ved adverbial er det tjåetskeme 'daen biejjien lea tjåetskeme' - kaldere-> mest vanlig å gradere som reinterminologi, graderer kulde etter ord f.eks 'baajkoe' som er kaldere enn tjåetskeme.  tjåetskiekåbpoe - men don biejjien lij dïhte tjåetskemes biejjie, jååktan lij dïhte tjåetskemes biejjie(igår var den kaldeste dagen!)  'daelie dobtoe tjåetskeste' (nå kuldner det til) stammen må jo da ha vært 'tjåetskie' hvis 'tjåetskemes' også er superlativ.  
@@ -1402,7 +1415,6 @@ tjaebpies:tjaebp GAERTJIES ;
 
 
 tjaejieh+A+Attr:tjaejieh FINAL1 ;
-tjaekeds:tjakede S-NULL-ODD ;
 tjaekeres:tjaekere S-NULL-ODD ;
 tjaerries+A+Attr:tjaerries FINAL1 ;
 tjaetsie-jovkehtje+A+Attr:tjatsie-jovkehtje FINAL1 ;
