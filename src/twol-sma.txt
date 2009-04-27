@@ -14,7 +14,7 @@ Alphabet
   %#:0 %>:0 %+:0 »:0
   X2:0 X3:0
   ':0 !'
-  %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^adteUML:0 %^aLATUS:a %^uLATUS:e ;
+  %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^adteUML:0 %^htjidhUML:0 %^aLATUS:a %^uLATUS:e ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
@@ -28,7 +28,7 @@ Sets
 
 Definitions
 
-  Triggers     =   %^DISIMP: %^DISIMP2: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^didhUML: %^adteUML: %^aLATUS: %^uLATUS: ;
+  Triggers     =   %^DISIMP: %^DISIMP2: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^didhUML: %^adteUML: %^htjidhUML: %^aLATUS: %^uLATUS: ;
 
 Rules
  
@@ -380,6 +380,7 @@ Rules
  e:a <=> [ï:|o:] _ C+ [ %>: | %»: ] %^3sUML: ;
          [ #: | #: C+ ] i:e _ C+ [ [ V %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: C+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ie-ea part 2
          [ #: | #: C+ ] [å|a|u] _ C+ [ [ V %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: C+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ae-aa, åe-åa, ue-ua
+         [ #: | #: C+ ] ([å|a]) _ C+ %»: %^htjidhUML: e h t j ;
          (%»:) i: _ C+ %»: %^adteUML: ;
 
 
@@ -609,6 +610,31 @@ Vx:å <=> _ [ a: | e: ] C+ %»: %^PASSUML: ;
 !€0 vååssj00edh
 
 
+"Der/htjidh Umlaut i(e):ï(e) and u(e):o(e)"
+Vx:Vy <=> [ #: | #: C+ ] _ (e) C+ %»: %^htjidhUML: e h t j ;
+ 	where Vx in (i u)
+ 	      Vy in (ï o)
+ 	matched ;
+
+bueledh->boelehtjidh
+!€# buel%»%^htjidhUMLehtjidh
+!€0 boel00ehtjidh
+
+!$# buel%»%^htjidhUMLehtjidh
+!$0 buel00ehtjidh
+
+
+paekedh->paakehtjidh
+!€# paek%»%^htjidhUMLehtjidh
+!€0 paak00ehtjidh
+
+!$# paek%»%^htjidhUMLehtjidh
+!$0 paek00ehtjidh
+
+
+
+
+
 "Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe and Column 7 ua:oe part 1"
 Vx:Vy <=> _ a: C+ %»: %^didhUML: e d ;
  	where Vx in (e u)
@@ -650,11 +676,14 @@ plåtjkedh - plotjkedidh
 !$# plåtjk%»%^didhUMLedidh
 !$0 plåtjk00edidh
 
+
+
 "Der/adte Umlaut for oe-verbs Column 1 æ:y, Column 2 a:o and Column 3 å:o"
 Vx:Vy <=> [ #: | #: C+ ] _ C+ (%»:) o: e: C+ %»: %^adteUML: ;
  	where Vx in (æ a å)
  	      Vy in (y o o)
  	matched ;
+
 
 båetedh - båetiestidh - båatastalledh
 !€# bået%»iest%»%^adteUMLalledh
@@ -676,6 +705,8 @@ tjearodh - tjearoelidh - tjyöreladtedh
 
 !$# tjear%»oel%»%^adteUMLadtedh
 !$0 tjyör0oel00adtedh
+
+
 
 
 ! Lexical test suites
