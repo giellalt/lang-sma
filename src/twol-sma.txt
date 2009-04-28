@@ -6,10 +6,11 @@
 
 Alphabet
   a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å
+  A B C D E F G H I Ï J K L M N O P Q R S T U V W X Y Z
   á é í 
   Å Ä Ö Ø Æ Á
-  Á É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Â Ê Ô Û Î Ã Ý þ Ñ Ð
-  á é ó ú í à è ò ù ì ë ü ï â ê ô û î ã ý þ ñ ð ß ª ß ç
+  Á É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Â Ê Ô Û Î Ã Ý þ Ñ Ð Ŋ Ŧ Č Ž     
+  á é ó ú í à è ò ù ì ë ü ï â ê ô û î ã ý þ ñ ð đ ß ª ß ç ŋ ŧ č ž 
 
   %#:0 %>:0 %+:0 »:0
   X2:0 X3:0
@@ -17,10 +18,15 @@ Alphabet
   %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^adteUML:0 %^htjidhUML:0 %^aLATUS:a %^uLATUS:e ;
 
 Sets
-  Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å ;
-  C      =   b c d   f g h     j k l m n   p q r s t   v w x   z           ;
-  CJV    =   b c d   f g h       k l m n   p q r s t     w x   z           ;
-  V      = a       e       i ï           o           u       y   æ ä ø ö å ;
+  Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å
+           A B C D E F G H I Ï J K L M N O P Q R S T U V W X Y Z Ä Æ Ä Æ Å ;
+  Cns    =   b c d   f g h     j k l m n   p q r s t   v w x   z           
+             B C D   F G H     J K L M N   P Q R S T   V W X   Z           ;
+
+  CJV    =   b c d   f g h       k l m n   p q r s t     w x   z           
+             B C D   F G H     J K L M N   P Q R S T   V W X   Z           ;
+  Vow    = a       e       i ï           o           u       y   æ ä ø ö å 
+           A       E       I Ï           O           U       Y   Ä Æ Ä Æ Å ;
   DobCons = s m ;
 !  Bound   = # %> ;
 !  WordBound = # ;
@@ -42,9 +48,9 @@ Rules
 !!! Odd-syllabic verbs and nouns: !!!
 
   "Diphthong simplification ie:e"
-   i:0 <=> _ e  C+ (e) (%>:) %^DISIMP: ;
+   i:0 <=> _ e  Cns+ (e) (%>:) %^DISIMP: ;
            _ e  (%>:)  %^DISIMP2: [b:|m:] ;
-           (%»:) _ e: C+ %»: %^adteUML: ;
+           (%»:) _ e: Cns+ %»: %^adteUML: ;
 
 
 !€# dåeried%>%^DISIMPem
@@ -67,7 +73,7 @@ Rules
 
 
   "Diphthong simplification oe:o"
-   e:0 <=> o _  C+ (e) (%>:) %^DISIMP: ;
+   e:0 <=> o _  Cns+ (e) (%>:) %^DISIMP: ;
 
 !€# daaroest%>%^DISIMPem
 !€0 daaro0st00em
@@ -84,7 +90,7 @@ Rules
 
   "Diphthong simplification oe:e" !in comparatives
    o:0 <=> _ e  (%>:)  %^DISIMP2: [b:|m:] ;
-           (%»:) _ e C+ %»: %^adteUML: ;
+           (%»:) _ e Cns+ %»: %^adteUML: ;
 
 
 !€# jearkoe%>%^DISIMPbe
@@ -95,9 +101,9 @@ Rules
 
 
   "a/e alternation"
-   a:e <=> _ [ C - j ] (C) (e) (%>:) %^DISIMP: ;
+   a:e <=> _ [ Cns - j ] (Cns) (e) (%>:) %^DISIMP: ;
            _   (%>:)  %^DISIMP2: [b:|m:] ;
-           [e:|u:] _ C+ %»: %^didhUML: e d ; !Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe and Column 7 ua:oe part 2
+           [e:|u:] _ Cns+ %»: %^didhUML: e d ; !Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe and Column 7 ua:oe part 2
 
 !€# aatskad%>%^DISIMPem
 !€0 aatsked00em
@@ -132,10 +138,10 @@ Rules
 
 
   "Even syllabic verbs Du1Pl3 e/oe V"
-  ':o <=> _ e: X2: C ;
+  ':o <=> _ e: X2: Cns ;
   
   "Even syllabic verbs Du3 e/i alternation V"
-  e:i <=> ': _ X3: C ;
+  e:i <=> ': _ X3: Cns ;
 
 
 
@@ -191,12 +197,12 @@ Rules
 ! N §102
 
 "Even syllabic verbs present sg, monophpt E I"
- Vx:Vy <=> [ #: | #: C+ ] _ C+ [[ V %»: | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: C+ %»: %^adteUML: ]] ;
+ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ [[ Vow %»: | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ;
  	where Vx in (i e u)
  	      Vy in (æ a å)
  	matched ;
  
-!THOM 2009-03-04: added #: in front of C+ in left-hand context because rule overgenerated to 3-syllable verbs, so we got goltelidh > goltalahtjedh. The change aimed to restrict the context to 2-syllable stems.
+!THOM 2009-03-04: added #: in front of Cns+ in left-hand context because rule overgenerated to 3-syllable verbs, so we got goltelidh > goltalahtjedh. The change aimed to restrict the context to 2-syllable stems.
 
 ! klihtie -> klæhtetje
 !€# kliht%^aLATUS%»tje%^DISIMP#
@@ -260,7 +266,7 @@ Rules
 
 
 "Even syllabic verbs present sg, diphth ie-ea part 1" 
- i:e <=> [ #: | #: C+ ] _ e:a C+ [ [ V %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: C+ %»: %^adteUML: ]] ;
+ i:e <=> [ #: | #: Cns+ ] _ e:a Cns+ [ [ Vow %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ;
 
 !€# jieht%>%^1UMLa
 !€0 jeaht00a
@@ -273,9 +279,9 @@ Rules
      !€# gået%^aLATUS%»tje%^DISIMP#
      !€0 gåate0tje00
 
-! [C|#:] constraint is to avoid collission with diphthong contexts
+! [Cns|#:] constraint is to avoid collission with diphthong contexts
 "Even syllabic verbs Sg3 + PrfPtc E II"
- Vx:Vy <=> [ C | #: ] _ C+ (V) [ %>: | %»: ] %^2UML: ;
+ Vx:Vy <=> [ Cns | #: ] _ Cns+ (Vow) [ %>: | %»: ] %^2UML: ;
  	where Vx in (æ a å)
  	      Vy in (y o o)
  	matched ;
@@ -310,13 +316,13 @@ Rules
 
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yö II a"
- e:y <=>    _ a: C+ (V) [ %>: | %»: ] %^2UML: ;
-            [ #: | #: C+ ] _ a: C+ (%»:) o: e: C+ %»: %^adteUML: ;
+ e:y <=>    _ a: Cns+ (Vow) [ %>: | %»: ] %^2UML: ;
+            [ #: | #: Cns+ ] _ a: Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 
 
 "Even syllabic verbs Sg3 + PrfPtc ea-yö II b"
- a:ö <=> e: _    C+ (V) [ %>: | %»: ] %^2UML: ;
-         [ #: | #: C+ ] e: _ C+ (%»:) o: e: C+ %»: %^adteUML: ;
+ a:ö <=> e: _    Cns+ (Vow) [ %>: | %»: ] %^2UML: ;
+         [ #: | #: Cns+ ] e: _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 
 !€# tjear%>%^2UMLe
 !€0 tjyör00e
@@ -337,8 +343,8 @@ Rules
 !$0 mearhtje00se
 
 "Even syllabic verbs Sg3 + PrfPtc aa-åå åa-åå II"
- a:å <=> [a:|å:] _    C+ (V) [ %>: | %»: ] %^2UML: ; 
-                 _ a: C+ (V) [ %>: | %»: ] %^2UML: ; 
+ a:å <=> [a:|å:] _    Cns+ (Vow) [ %>: | %»: ] %^2UML: ; 
+                 _ a: Cns+ (Vow) [ %>: | %»: ] %^2UML: ; 
 
 !aa åa
 !åå åå
@@ -357,7 +363,7 @@ Rules
 
 
 "Even syllabic verbs Sg3 ï-æ IV"
- Vx:Vy <=> _ C+ [ %>: | %»: ] %^3sUML: ;
+ Vx:Vy <=> _ Cns+ [ %>: | %»: ] %^3sUML: ;
  	where Vx in (ï o)
  	      Vy in (æ å)
  	matched ;
@@ -371,17 +377,17 @@ Rules
 !€0 jåvk00a
 
 "1st rule for even syllabic verbs Sg3 ïe-ea IV"
- Vx:Vy <=> [ C | #: ] _ e: C+ [ %>: | %»: ] %^3sUML: ;
+ Vx:Vy <=> [ Cns | #: ] _ e: Cns+ [ %>: | %»: ] %^3sUML: ;
 	where Vx in (ï o)
 	      Vy in (e u)
 	matched ;
 
 "2nd rule for even syllabic verbs Sg3 ïe-ea IV"
- e:a <=> [ï:|o:] _ C+ [ %>: | %»: ] %^3sUML: ;
-         [ #: | #: C+ ] i:e _ C+ [ [ V %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: C+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ie-ea part 2
-         [ #: | #: C+ ] [å|a|u] _ C+ [ [ V %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: C+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ae-aa, åe-åa, ue-ua
-         [ #: | #: C+ ] ([å|a]) _ C+ %»: %^htjidhUML: e h t j ;
-         (%»:) i: _ C+ %»: %^adteUML: ;
+ e:a <=> [ï:|o:] _ Cns+ [ %>: | %»: ] %^3sUML: ;
+         [ #: | #: Cns+ ] i:e _ Cns+ [ [ Vow %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ie-ea part 2
+         [ #: | #: Cns+ ] [å|a|u] _ Cns+ [ [ Vow %»:| %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ae-aa, åe-åa, ue-ua
+         [ #: | #: Cns+ ] ([å|a]) _ Cns+ %»: %^htjidhUML: e h t j ;
+         (%»:) i: _ Cns+ %»: %^adteUML: ;
 
 
 ! Verbs like: tjïeledh, roehtedh
@@ -394,7 +400,7 @@ Rules
 
 
 "Even syllabic verbs Du1Pl3 IV"
- Vx:Vy <=> [ C | #: ] ([å|a]) _ (e) C+ [ %>: | %»: ] %^3dUML: ;
+ Vx:Vy <=> [ Cns | #: ] ([å|a]) _ (e) Cns+ [ %>: | %»: ] %^3dUML: ;
 	where Vx in (ï a o å)
 	      Vy in (i e u e)
 	matched ;
@@ -419,7 +425,7 @@ Rules
 
 ! prob delete this after testing
 ! " verbs Sg3 + PrfPtc ÅÅ II"
-!  a:å <=> _ a:å C+ o:0 e: %^2UML: ;
+!  a:å <=> _ a:å Cns+ o:0 e: %^2UML: ;
 
 
 
@@ -428,7 +434,7 @@ Rules
 
 
 "ie:ee and ae:ee past tense"
-Vx:e <=> _ e C* [ %>: | %»: ] %^iUML: ;
+Vx:e <=> _ e Cns* [ %>: | %»: ] %^iUML: ;
 	where Vx in ( a i );
 
 !€# jieht%>%^iUMLim
@@ -439,11 +445,11 @@ Vx:e <=> _ e C* [ %>: | %»: ] %^iUML: ;
 
 
 "åe:öö and ue:öö past tense I"
-Vx:ö <=> _ e: C* [ %>: | %»: ] %^iUML: ;
+Vx:ö <=> _ e: Cns* [ %>: | %»: ] %^iUML: ;
 	where Vx in ( u å ) ;
 
 "åe:öö and ue:öö past tense II"
-e:ö <=> [ å: | u: ] _ C* [ %>: | %»: ] %^iUML: ;
+e:ö <=> [ å: | u: ] _ Cns* [ %>: | %»: ] %^iUML: ;
 
 !€# bået%>%^iUMLim
 !€0 bööt00im
@@ -452,7 +458,7 @@ e:ö <=> [ å: | u: ] _ C* [ %>: | %»: ] %^iUML: ;
 !€0 vööjn00im
 
 "a-Latus as e in 3-syllable words"
-%^aLATUS:e <=> _ ( %»: ) :C+ ( %>: ) :V+ ( %>: ) ( %^DISIMP: ) :C* #: ;
+%^aLATUS:e <=> _ ( %»: ) :Cns+ ( %>: ) :Vow+ ( %>: ) ( %^DISIMP: ) :Cns* #: ;
 
 ! maana -> maanetje
 !€# maan%^aLATUS%»tje%^DISIMP#
@@ -472,7 +478,7 @@ e:ö <=> [ å: | u: ] _ C* [ %>: | %»: ] %^iUML: ;
 ! All Umlaut rows R1-R6 gets umlauted to R5 in short passives
 
 "Short passive Umlaut Column 1"
-Vx:y <=> _ C+ %»:  %^PASSUML: ;
+Vx:y <=> _ Cns+ %»:  %^PASSUML: ;
          where Vx in (i ï æ) ;
 
 ! bissedh -> byssedh
@@ -496,7 +502,7 @@ Vx:y <=> _ C+ %»:  %^PASSUML: ;
 
 
 "Short passive Umlaut Column 2"
-Vx:o <=> [ C | #: ] _ C+ %»: %^PASSUML: ;
+Vx:o <=> [ Cns | #: ] _ Cns+ %»: %^PASSUML: ;
          where Vx in (a e) ;
 
 ! bestedh -> bostedh
@@ -515,7 +521,7 @@ Vx:o <=> [ C | #: ] _ C+ %»: %^PASSUML: ;
 
 
 "Short passive Umlaut Column 3"
-Vx:o <=> _ C+ %»: %^PASSUML: ;
+Vx:o <=> _ Cns+ %»: %^PASSUML: ;
          where Vx in (u å) ;
 
 ! juhtedh -> johtedh
@@ -537,11 +543,11 @@ Vx:o <=> _ C+ %»: %^PASSUML: ;
 !€0 govl00edh
 
 "Short passive Umlaut Column 4 - part 1"
-Vx:y <=> _ [ a: | e: ] C+ %»: %^PASSUML: ;
+Vx:y <=> _ [ a: | e: ] Cns+ %»: %^PASSUML: ;
          where Vx in (e i ï) ;
 
 "Short passive Umlaut Column 4 - part 2"
-Vx:ö <=> [ e: | i: | ï: ] _ C+ %»: %^PASSUML: ;
+Vx:ö <=> [ e: | i: | ï: ] _ Cns+ %»: %^PASSUML: ;
          where Vx in (a e) ;
 
 ! viedtedh -> vyödtedh
@@ -566,8 +572,8 @@ Vx:ö <=> [ e: | i: | ï: ] _ C+ %»: %^PASSUML: ;
 !$0 bïepm00edh
 
 "Short passive Umlaut Column 5 - part 1"
-a:å  <=> _ [ a: | e: ] C+ %»: %^PASSUML: ;
-         [ #: | #: C+ ] ([a|å]) _ (a) C+ (%»:) o: e: C+ %»: %^adteUML: ;
+a:å  <=> _ [ a: | e: ] Cns+ %»: %^PASSUML: ;
+         [ #: | #: Cns+ ] ([a|å]) _ (a) Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 
 ! daejredh -> dååjredh
 !€# daejr%»%^PASSUMLedh
@@ -578,7 +584,7 @@ a:å  <=> _ [ a: | e: ] C+ %»: %^PASSUML: ;
 !€0 gååt00edh
 
 "Short passive Umlaut Column 5, 6, 7 part 2" ! No rule needed for column 6 part 1
-Vx:å <=> [ a: | u: | o: | å: ] _ C+ %»: %^PASSUML: ;
+Vx:å <=> [ a: | u: | o: | å: ] _ Cns+ %»: %^PASSUML: ;
          where Vx in (a e) ;
 
 ! åadtjodh - åådtjedh
@@ -590,7 +596,7 @@ Vx:å <=> [ a: | u: | o: | å: ] _ C+ %»: %^PASSUML: ;
 !€0 ååst00edh
 
 "Short passive Umlaut Column 7 - part 1"
-Vx:å <=> _ [ a: | e: ] C+ %»: %^PASSUML: ;
+Vx:å <=> _ [ a: | e: ] Cns+ %»: %^PASSUML: ;
          where Vx in (a u o) ;
 
 ! vuejnedh - vååjnedh
@@ -611,7 +617,7 @@ Vx:å <=> _ [ a: | e: ] C+ %»: %^PASSUML: ;
 
 
 "Der/htjidh Umlaut i(e):ï(e) and u(e):o(e)"
-Vx:Vy <=> [ #: | #: C+ ] _ (e) C+ %»: %^htjidhUML: e h t j ;
+Vx:Vy <=> [ #: | #: Cns+ ] _ (e) Cns+ %»: %^htjidhUML: e h t j ;
  	where Vx in (i u)
  	      Vy in (ï o)
  	matched ;
@@ -636,7 +642,7 @@ paekedh->paakehtjidh
 
 
 "Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe and Column 7 ua:oe part 1"
-Vx:Vy <=> _ a: C+ %»: %^didhUML: e d ;
+Vx:Vy <=> _ a: Cns+ %»: %^didhUML: e d ;
  	where Vx in (e u)
  	      Vy in (ï o)
  	matched ;
@@ -657,7 +663,7 @@ Vx:Vy <=> _ a: C+ %»: %^didhUML: e d ;
 !$0 guark00edidh
 
 "Der/didh Umlaut for GUARKEDH-words Column 1 æ:ï and Column 3 å:o"
-Vx:Vy <=> _ C+ %»: %^didhUML: e d ;
+Vx:Vy <=> _ Cns+ %»: %^didhUML: e d ;
    where Vx in (æ å)
          Vy in (ï o)
    matched ;
@@ -679,7 +685,7 @@ plåtjkedh - plotjkedidh
 
 
 "Der/adte Umlaut for oe-verbs Column 1 æ:y, Column 2 a:o and Column 3 å:o"
-Vx:Vy <=> [ #: | #: C+ ] _ C+ (%»:) o: e: C+ %»: %^adteUML: ;
+Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
  	where Vx in (æ a å)
  	      Vy in (y o o)
  	matched ;
