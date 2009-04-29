@@ -181,7 +181,8 @@ gie+Pron+Interr+Pl+Com:geajgujmie	FINAL1	;
 gie+Pron+Interr:gie			INTERR	;
 
 guhte+Pron+Interr+Sg+Nom:guhte          FINAL1  ;
-guhte+Pron+Interr:gu			INTERR	;
+gusnie+Pron+Interr+Sg+Ine:gusnie        FINAL1  ;
+gustie+Pron+Interr+Sg+Ene:gustie        FINAL1  ;
 
 mij+Pron+Interr+Sg+Nom:mij		FINAL1	;
 mij+Pron+Interr+Sg+Acc:maam		FINAL1	;
@@ -193,26 +194,18 @@ mij+Pron+Interr+Pl+Gen:maj		FINAL1	;
 mij+Pron+Interr+Pl+Com:majgujmie	FINAL1	;
 mij+Pron+Interr:me			INTERR	;
 
-magkere+Pron+Interr+Sg+nom:magkere  FINAL1 ;
-magkere+Pron+Interr+Sg+Com:magkerinie  FINAL1 ;
-magkere+Pron+Interr:magkere			INTERR	;
+magkere+Pron+Interr+Sg+Nom+Attr:magkere  FINAL1 ;
+magkere+Pron+Interr+Sg+Nom+Pred:magkeres  FINAL1 ;
+magkere+Pron+Interr+Sg+Com:magkarinie  FINAL1 ;
+magkere+Pron+Interr+Pl+Nom:magkerh  FINAL1 ;
+
 
 gogkoe+Pron+Interr:gogkoe FINAL1 ;
-gogkoe+Pron+Interr:gogkoe INTERR ;
-
 gosse+Pron+Interr:gosse FINAL1 ;
-gosse+Pron+Interr:gosse INTERR ;
-
 gåabph+Pron+Interr:gåabph FINAL1 ;
-gåabph+Pron+Interr:gåabph INTERR ;
-
-guktie+Pron+Interr:guktie INTERR ;
-guktie+Pron+Interr:gukt FINAL1 ;
-
-gåabpa+Pron+Interr:gåabpa INTERR ;
+guktie+Pron+Interr:guktie FINAL1 ;
 gåabpa+Pron+Interr:gåabpa FINAL1 ;
 
-! the way I've encoded this creates invalid forms like *gåabpasnie. Have to take care of this, perhaps by setting up another lexicon for them.
 
 gåabpoeh+Pron+Interr:gåabpoeh INTERR ;
 gåabpoeh+Pron+Interr:gåabpoeh FINAL1 ;
@@ -234,7 +227,7 @@ LEXICON INTERR
 
 LEXICON Indefinite
 
-naan ind ;
+naan ind ; !does not have inflection
 seamma ind ; !XXX
 muvhtie ind ;
 muvhte:muvht ind ;
@@ -248,12 +241,12 @@ jijnjh ind ;
 jienebe ind ;
 jeenjemes ind ;
 jeenjesh ind ;
-gaajhke:gaajhk ind ;
+gaajhke:gaajhk ind ; !has an attributive form which in congruent with inessive: gaajhkene
 gaajhkesh ind ;
-dovne:dovn ind ;
+dovne ind ;
 dovnesh ind ;
-åbpe:åbp ind ;
-abpe:abp ind ;
+åbpe ind ; !probably does not have inflection, so it was removed
+abpe ind ; !probably does not have inflection, so it was removed
 
 LEXICON ind
 +Pron+Indef+Sg: indsg ;
@@ -267,7 +260,7 @@ LEXICON indsg
 +Ill:e%>se   # ;
 +Ine:e%>sne  # ;
 +Ela:e%>ste  # ;
-+Com:e%>jste # ;
++Com:%>ine # ;
 
 LEXICON indess
 +Ess:e%>jne     # ;
