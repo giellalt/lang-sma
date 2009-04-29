@@ -541,13 +541,21 @@ LEXICON S-S-EVEN
 +A:  EVENCOMP ; ! check this!
 
 
+
+
 !--- ie-stems---
 
 LEXICON NJALHKEDIHKS
  :  ATTR-S ;
-     AELHKIEScase ; 
+!     AELHKIEScase ;   !have they got case?
 +A+Pred:ie FINAL1 ;
-+A:e  EVENCOMP ;
+!+A:e  EVENCOMP ; !these words do not seem to have comparation
+
+LEXICON DIHKS
+ :  ATTR-S ;
+!     AELHKIEScase ;  !have they got case?
++A+Pred:s FINAL1 ;
+! +A:e  EVENCOMP ; !these words do not seem to have comparation
 
 LEXICON AELHKIES! attr= s, predikat = Ø, comp jih case: even (ebe/emes/esne) 
  :ie  ATTR-S ;
