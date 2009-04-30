@@ -229,11 +229,11 @@ LEXICON INTERR
 
 LEXICON Indefinite
 
-naan ind ;
-seamma ind ; !XXX
+naan ind_noninfl ;
+seamma ind_noninfl ; !XXX
 muvhtie ind ;
 muvhte:muvht ind ; 
-gellie ind ;
+gellie ind_noninfl ;
 måedtie ind ;
 måadtesh ind ;
 jïjnje:jïjnj 	 ind ;
@@ -248,13 +248,16 @@ gaajhkesh ind ;
 naakene:naaken ind ; !this most be pointed towards another lexicon due to it being three-syllabic
 dovne ind ;
 dovnesh ind ;
-åbpe ind ; !probably does not have inflection, so it was removed
-abpe ind ; !probably does not have inflection, so it was removed
+åbpe ind_noninfl ; !probably does not have inflection, so it was removed
+abpe ind_noninfl ; !probably does not have inflection, so it was removed
 
 LEXICON ind
 +Pron+Indef+Sg: indsg ;
 +Pron+Indef+Pl: indpl ;
 +Pron+Indef:    indess ;
+
+LEXICON ind_noninfl
++Pron+Indef: FINAL1 ;
 
 LEXICON indsg
 +Nom:e       # ;
