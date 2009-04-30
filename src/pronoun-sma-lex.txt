@@ -190,7 +190,11 @@ gie+Pron+Interr:gie			INTERR	;
 
 guhte+Pron+Interr+Sg+Nom:guhte          FINAL1  ;
 gusnie+Pron+Interr+Sg+Ine:gusnie        FINAL1  ;
-gustie+Pron+Interr+Sg+Ene:gustie        FINAL1  ;
+gustie+Pron+Interr+Sg+Ela:gustie        FINAL1  ;
+
+gubpede+Pron+Interr+sg+Ela:gubpede  FINAL1 ;
+gubpene+Pron+Interr+sg+Ine:gubpene  FINAL1 ;
+
 
 mij+Pron+Interr+Sg+Nom:mij		FINAL1	;
 mij+Pron+Interr+Sg+Acc:maam		FINAL1	;
@@ -239,34 +243,39 @@ LEXICON Indefinite
 
 naan ind_noninfl ;
 seamma ind_noninfl ; !XXX
-muvhtie ind ;
-muvhte:muvht ind ; 
+muvhtie indeven ;
+muvhte:muvht indeven ; 
 gellie ind_noninfl ;
-måedtie ind ;
-måadtesh ind ;
-jïjnje:jïjnj 	 ind ;
-jeenje:jeenj ind ; !It's uncertain if this word can be inflected in all these cases
-jeene:jeen	 ind ;
-jijnjh ind ;
-jienebe ind ;
-jeenjemes ind ;
-jeenjesh ind ;
-gaajhke:gaajhk ind ; !has an attributive form which in congruent with inessive: gaajhkene
-gaajhkesh ind ;
-naakene:naaken ind ; !this most be pointed towards another lexicon due to it being three-syllabic
-dovne ind ;
-dovnesh ind ;
+måedtie indeven ;
+måadtesh indeven ;
+jïjnje:jïjnj 	 indeven ;
+jeenje:jeenj indeven ; !It's uncertain if this word can be inflected in all these cases
+jeene:jeen	 indeven ;
+jijnjh indeven ;
+jienebe indeven ;
+jeenjemes indeven ;
+jeenjesh indeven ;
+gaajhke:gaajhk indeven ; !has an attributive form which in congruent with inessive: gaajhkene
+gaajhkesh indeven ; !perhaps we could add the ending -sh to numerals and some pronouns
+naakene:naaken indeven ; !this most be pointed towards another lexicon due to it being three-syllabic
+dovne indeven ;
+dovnesh indeven ;
 åbpe ind_noninfl ; !probably does not have inflection, so it was removed
 abpe ind_noninfl ; !probably does not have inflection, so it was removed
 såemies ind_noninfl ;
 
-LEXICON ind
+LEXICON indeven
++Pron+Indef+Sg: indsg ;
++Pron+Indef+Pl: indpl ;
++Pron+Indef:    indess ;
+
+LEXICON indodd
 +Pron+Indef+Sg: indsg ;
 +Pron+Indef+Pl: indpl ;
 +Pron+Indef:    indess ;
 
 LEXICON ind_noninfl
-+Pron+Indef: FINAL1 ;
++Pron+Indef: # ;
 
 LEXICON indsg
 +Nom:e       # ;
