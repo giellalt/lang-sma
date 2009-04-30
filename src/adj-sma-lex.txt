@@ -1476,7 +1476,7 @@ stunkes:stunke GIJMIES ; !SOUTH   'STONKES' ELLER 'STUNKES'
 stonkehke:stonkehk LYÖVLEHKE ; !SOUTH   'STONKES' ELLER 'STUNKES'
 
 
-stæhtjah:stæhtja H-N-EVEN ; !'OE' ELLER 'A'
+stæhtjah:stæhtja H-N-EVEN ; ! 
 
 stöödegs:stöödege S-NULL-ODD ; !'DEGS' ELLER 'REGS'
 stööregs:stöörege S-NULL-ODD ;
@@ -1484,7 +1484,7 @@ stööregs:stöörege S-NULL-ODD ;
 stööves:stööve GIJMIES ;
 
 
-suajja:suajja null-n-even ;  !'OE' ELLER 'A'
+suajja:suajja null-n-even ;  !
 
 
 
@@ -2145,32 +2145,36 @@ kruana:kruana NÅAKE ;
 !kroenes+Attr:!kroenes+Attr NÅAKE ;
 !(bare:!(bare attributt) NÅAKE ;
 njoetse:njoets NÅAKE ;
+fïjne:fïjn NÅAKE ; 
 tseagkoetjåervie:tseagkoetjåervi NÅAKE ;! ikke comp
 jaesiegoelke/-goelkije:jaesiegoelke/-goelkij NÅAKE ;!ikke comp 
 
 ! end of list added by Trond
+!!Attr=h, Pred=h, Comp=ODD, CASE =ODD LEXICON H-H-ODD
+aareh H-H-ODD ; !aarehkåbpoe
+aareh:aareg ODDCOMP ; !XXX norm? (Lohkede saemien s.116)"dagkoe gogkoe dle aaregommes"
+mööreh H-H-ODD ; !XXX norm? -möörehkåbpoe s.27. Donjih dan bïjre :"..dïhte 
+!bearkoeh såvrooestidh jih möörehkåbpoe sjidtedh'
+skuapmah H-H-ODD ; 
+namhtah H-H-ODD ; 
 
-!!Attr=h, Pred=h, Comp=ODD, CASE =ODD
-!!aareh
-!!mööreh
-!!skuapmah
-!!namhtah 
-!
-!!Attr=h, Pred=h,Comp=EVEN, Case=EVEN
-!!aareh 
-!
+!!Attr=h, Pred=h,Comp=EVEN, Case=EVEN LEXICON H-H-EVEN
+!!aareh  -aarebe- aaremes
+aareh:aare H-H-EVEN ;
+
+
 !! Attr= s, Pred = s, konsonsnatstamme, Comp=ODD, Case= ODD 
 !!båantoes- båandtahkåbpoe
 !gæhtjoes -gyhtjekåbpoe-gyhtjekommes - (substantiv=gyhtje)
 !!såejries-såejriehkåbpoe/ (såajrahkåbpoe?)
-!!fahkoes-fahkasåbpoe
+!!fahkoes-fahkasåbpoe - 
 !!gahkoes-gahkasåbpoe
 !!båadtsoes-båadtsahkåbpoe
 !!båajoes-båajasåbpoe
-!!mæjkes- mæjkesåbpoe
-!!låapsoes- låapsahkåbpoe
-!!jadtnoes- jadtnahkåbpoe 
-!!gööles-göölesåbpoe
+!!mæjkes- mæjkesåbpoe   -e-e
+!!låapsoes- låapsahkåbpoe oe-a
+!!jadtnoes- jadtnahkåbpoe oe-a  
+!!gööles-göölesåbpoe -e-e
 !!geeles-geelesåbpoe     
 !!båeries-båarasåbpoe
 !!faavroes- faavroehkåbpoe  
@@ -2178,10 +2182,10 @@ jaesiegoelke/-goelkije:jaesiegoelke/-goelkij NÅAKE ;!ikke comp
 !!sïerres
 !!Giejmies 
 !!aevies
-!!starhtes-starhtesåbpoe
+!!starhtes-starhtesåbpoe e-e
 !!voeres
-!!Reegkes-reegkesåbpoe
-!!Radtjoes-radtjahkåbpoe
+!!Reegkes-reegkesåbpoe e-e
+!!Radtjoes-radtjahkåbpoe oe-a 
 !!bragkes
 !!sudties-sudtiekåbpoe
 !!geerhpmes
@@ -2326,44 +2330,43 @@ jaesiegoelke/-goelkije:jaesiegoelke/-goelkij NÅAKE ;!ikke comp
 !
 !
 !! Attr=hth, pred=hth,Konsonantstamme, comp=ODD, Case=ODD
-!!baenehth
-!!tjelmehth
-!!bieljehth
-!!maanehth
-!!gaamehth
-!!saeltehth
-!!raajohth
-!!ållesth
-!!eejhtegapth
-!
-!! Attr= hts, pred=hts, konsonanstamme, Comp= ODD, Case= ODD
-!!mæjkehts:mæjkehts S-S-ODD ; 
-!!baenehts:baenehts S-S-ODD ;
-!!nealehts
-!!nielehts ((nealan) 
-!!aeblehts
-!!bieljehts
-!!tjelmehts
-!!maanehts
-!!jissehts
-!!hiejjehts
-!!tjåagkohts
-!!viesjehts
-!!ov-luhpehts 
-!!tjohkehts
-!!saeltehts
-!!ealjohts
-!!hajkehts
-!!lyjkeds
-!!buerie-sjugnehts 
-!!buerie-sjugnehts 
-!!jiermehts
-!!mæjkehts
+baenehth:baenieht H-H-ODD ;! baeniehtåbpoe
+tjelmehth:tjelmieht H-H-ODD ;! tjelmiehtåbpoe
+bieljehth:bieljieht H-H-ODD ;!  bieljiehtåbpoe
+maanehth:maaneht H-H-ODD ;!  maanehtåbpoe
+gaamehth:gaameht H-H-ODD ; ! gaamehtåbpoe
+saelhtehth:saelhtieht H-H-ODD ;! saelhtietåbpoe
+raajohth:raajoeht H-H-ODD ; ! raajoehtåbpoe
+ållesth:ållesth H-H-ODD ; !ållesthåbpoe
+
+!eejhtegapth:!In diede
+
+!Attr= hts, pred=hts, konsonanstamme, Comp= ODD, Case= ODD
+mæjkehts:mæjkeht S-S-ODD ; 
+baenehts:baenieht S-S-ODD ;
+nealehts:nealeht S-S-ODD ;!nealehtsåbpoe e-ie
+nielehts:nieleht S-S-ODD ;! nielehtsåbpoe ((nealan) 
+aeblehts:aeblieht S-S-ODD ;! aeblieh
+bieljehts:bieljieht S-S-ODD ; !bieljie
+tjelmehts:tjelmieht S-S-ODD ;
+maanehts:maaneht S-S-OSS ;
+jissehts:jissieht S-S-ODD ;
+hiejjehts:hiejjieht S-S-ODD ;
+tjåagkohts:tjåagkoeht S-S-ODD ;  o-oe
+viesjehts:viesjieht S-S-ODD ;
+ov-luhpehts:ov-luhpieh S-S-ODD ;
+luhpehts:luhpieh S-S-ODD ; 
+tjohkehts:tjohkeht S-S-ODD ;
+saelhtehts:saelhtieht S-S-ODD ;
+ealjohts:ealjoeht S-S-ODD ;
+hajkehts:hajkeht S-S-ODD ;
+buerie-sjugnehts:buerie-sjugnieht S-S-ODD ; 
+jiermehts:jiermieht S-S-ODD ; 
+beapmohts:beapmoeht S-S-ODD ; 
+
+!!beetnehgapta! gradbøying mangler
 !!eejhtegapts
-!!beapmohts
-!!beetnehgapta
-!
-!
+
 
 
 !N-N-gruppen -an and N-N-ODD looks like an error:
