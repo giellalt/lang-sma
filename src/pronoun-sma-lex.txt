@@ -3,14 +3,22 @@
 
 !Pointing to all the subgrops, presented in this order below.
 LEXICON Pronoun
+
+ Reciprocal ;
  Personal ;
  Demonstrative ;
  Interrogative ;
  Indefinite ;
  Reflexive ;
- 
-!need to add sinsitnie - varandra, which is reciproke, right?
-!and såemies
+
+! The Reciprocal pronoun
+
+LEXICON Reciprocal
+sinsitnie+Pron+Reci+Sg+Ack:sinsitniem  FINAL1 ;
+sinsitnie+Pron+Reci+Sg+Gen:sinsitnien  FINAL1 ;
+sinsitnie+Pron+Reci+Sg+Ill:sinsætnan   FINAL1 ;
+sinsitnie+Pron+Reci+Sg+Ela:sinsitneste FINAL1 ;
+sinsitnie+Pron+Reci+Sg+Com:sinsitnine  FINAL1 ;
 
 ! Personal pronouns
 ! -----------------
@@ -250,6 +258,7 @@ dovne ind ;
 dovnesh ind ;
 åbpe ind_noninfl ; !probably does not have inflection, so it was removed
 abpe ind_noninfl ; !probably does not have inflection, so it was removed
+såemies ind_noninfl ;
 
 LEXICON ind
 +Pron+Indef+Sg: indsg ;
