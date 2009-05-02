@@ -546,16 +546,16 @@ LEXICON S-S-EVEN
 !--- ie-stems---
 
 LEXICON NJALHKEDIHKS
- :  ATTR-S ;
+      ATTR-S ;
 !     AELHKIEScase ;   !have they got case?
 +A+Pred:ie FINAL1 ;
 !+A:e  EVENCOMP ; !these words do not seem to have comparation
 
 LEXICON DIHKS
- :  ATTR-S ;
-!     AELHKIEScase ;  !have they got case?
+          ATTR-S ;
+!         AELHKIEScase ;  !have they got case?
 +A+Pred:s FINAL1 ;
-! +A:e  EVENCOMP ; !these words do not seem to have comparation
+! +A:e   EVENCOMP ; !these words do not seem to have comparation
 
 LEXICON AELHKIES! attr= s, predikat = Ø, comp jih case: even (ebe/emes/esne) 
  :ie  ATTR-S ;
@@ -565,7 +565,7 @@ LEXICON AELHKIES! attr= s, predikat = Ø, comp jih case: even (ebe/emes/esne)
 
 LEXICON GAERTJIES! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
  :ie  ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
-     AELHKIEScase ;
+      AELHKIEScase ;
 +A+Pred:ie FINAL1 ;
 +A+Pred:ies FINAL1 ;
 +A+SgNomCmp:ies R ;
@@ -573,7 +573,7 @@ LEXICON GAERTJIES! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/e
 
 LEXICON TSÅEKIES ! Attr= s, pred=s jih Ø, Comp = EVEN jih ODD(åbpoe, ommes) Case = even =faavroe 
  :ie  ATTR-S ;
-     AELHKIEScase ;
+      AELHKIEScase ;
 +A+Pred:ies FINAL1 ;
 +A+Pred:ie FINAL1 ;
 +A+SgNomCmp:ies R ;
@@ -621,7 +621,7 @@ LEXICON RAAJNES! Attr: s jih attr=Ø,  Pred= s jih Ø,Comp=even(ebe, emes), Case
 
 
 LEXICON GIJMIES
- :  ATTR-S ;! Attr= s , Comp=Even, 
+     ATTR-S ;! Attr= s , Comp=Even, 
 +A:  EVENCOMP ;
 
 
@@ -631,10 +631,10 @@ LEXICON GIJMIES
 !--- oe-stems---
 
 LEXICON SPÆNTJOEH ! Attr= h, Pred= Ø, Comp= EVEN, Case/Substantiv= EVEN
- :oe  ATTR-H ;
-     FAAVROEScase ;
+ :oe       ATTR-H ;
+           FAAVROEScase ;
 +A+Pred:oe FINAL1 ;
-+A:e  EVENCOMP ;
++A:e       EVENCOMP ;
 
 
 !--- a-stems---
@@ -658,12 +658,12 @@ LEXICON ÅAJVAH! Attr=h, Pred=h, Comp=EVEN, Case/substantiv=EVEN
 
 
 LEXICON GÆHTJAH ! Attr= h, Comp= Even(klåtnjah)
- :  ATTR-H ;
+    ATTR-H ;
 +A: EVENCOMP ;
 
 
 LEXICON IJTJE-RAADH! Attr= h, Comp =Even( Jïjtje-raarh) 
- :  ATTR-H ;
+    ATTR-H ;
 +A:e  EVENCOMP ;
 
 
@@ -684,28 +684,28 @@ LEXICON STIJVEN! attr=n, pred=Ø, Comp=Even, Case= even(
 !--- e-stems---
 
 LEXICON NÅAKE! attr=Ø, pred=Ø, comp=even, case= EVEN   (VOKAL=VOKAL) = E-stamme 
-  :e  ATTR-0 ;
-   NJOEKTSEScase ;
+  :e      ATTR-0 ;
+          NJOEKTSEScase ;
 +A+Pred:e FINAL1 ;
-+A:e  EVENCOMP ;
++A:e      EVENCOMP ;
 
 
 !--- a-stems---
 
 LEXICON SAATNA! attr= Ø, Pred = Ø, =A-stamme, Comp= even, case= even 
-  :a ATTR-0 ;
-   FRASKAScase ;
+  :a      ATTR-0 ;
+          FRASKAScase ;
 +A+Pred:a FINAL1 ;
-+A:e  EVENCOMP ;
++A:e      EVENCOMP ;
 
 
 !--- ie-stems---
 
 LEXICON GELJIE! attr= Ø, pred=Ø, Comp=EVEN, case=EVEN - 
-  :ie ATTR-0 ;
-   AELHKIEScase ;
+  :ie      ATTR-0 ;
+           AELHKIEScase ;
 +A+Pred:ie FINAL1 ;
-+A:e  EVENCOMP ;
++A:e       EVENCOMP ;
 
 
 
@@ -749,7 +749,7 @@ LEXICON OEH-OEH-AN-ODD
 
 
 LEXICON JEARKOE
- :  ATTR-0 ;
+     ATTR-0 ;
 +A:  EVENCOMP ;
 
 
@@ -771,9 +771,9 @@ LEXICON H-H-ODD
 +A:  ODDCOMP ;
 
 LEXICON E-E-ODD !bårreske
-:e     ATTR-0 ;
-:e     PRED-0 ;
-+A:  ODDCOMP ;
+ :e     ATTR-0 ;
+ :e     PRED-0 ;
+ +A:  ODDCOMP ;
 
 LEXICON S-S-ODD !
      ATTR-S ;
@@ -781,7 +781,7 @@ LEXICON S-S-ODD !
 +A:ahk ODDCOMP ;
 +A:oehk ODDCOMP ; !XXX check this o
 
-LEXICON ES-ES-ODD !
+LEXICON ES-ES-ODD 
 :e     ATTR-S ;
 :e     PRED-S ;
 +A:ahk ODDCOMP ;
@@ -830,7 +830,7 @@ LEXICON S-NULL-ODD
 LEXICON ES-E-ODD
 :e     ATTR-S;
 :e     PRED-0;
-+A:  ODDCOMP ; 
++A:    ODDCOMP ; 
 
 
 
@@ -858,9 +858,9 @@ LEXICON LYÖVLEHKE! Attr=Ø, Pred=Ø, ComP=ODD, case= ODD
 +A:  ODDCOMP ;
 
 LEXICON VYRTEHKE! Attr=Ø jih s, Pred= Ø jih s, Comp= ODD, Case= ODD
-  : ATTR-S ;
+     ATTR-S ;
   :e ATTR-0 ;
-  :  DOLVEcase ;
+     DOLVEcase ;
 +A+Pred:e FINAL1 ;
 +A+Pred:s FINAL1 ;
 +A:  ODDCOMP ;
