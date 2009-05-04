@@ -16,17 +16,17 @@ göökte NUMTAG ;
 golme NUMTAG ;
 njieljie NUMTAG ;
 njielje NUMTAG ; !Saemesth amma
-vijhte NUMTAG ;
+vïjhte NUMTAG ;
 govhte NUMTAG ;
-tjijhtje NUMTAG ;
+tjïjhtje NUMTAG ;
 gaektsie NUMTAG ;
 uktsie NUMTAG ;
 luhkie NUMTAG ;
 
 ikth	  ORDTAG1 ;
 göökth	  ORDTAG1 ;
-gulh	  ORDTAG1 ;
-gjeeljh	  ORDTAG1 ;
+gulmh	  ORDTAG1 ;
+njeeljh	  ORDTAG1 ;
 vijhth	  ORDTAG1 ;
 guvhth	  ORDTAG1 ;
 tjijhtjh  ORDTAG1 ;
@@ -34,16 +34,24 @@ geektsh	  ORDTAG1 ;
 utksh	  ORDTAG1 ;
 luhkh	  ORDTAG1 ;
 
-voestes:voest           ORDTAG ; !XXX check this
-mubpie:mubp             ORDTAG ;
-gåalmede:gåalmed        ORDTAG ;
+voestes+Num+Sg+Nom:voestes         FINAL1 ; !XXX check this
+voestegh+Num+Adv:voestegh          FINAL1 ; !this form is in my point of view (David) an adverb, so perhaps it should be relocated, on the other hand it is a form of voeste-
+voestemes+Num+Adv:voestemes        FINAL1 ; !this form is in my point of view (David) an adverb, so perhaps it should be relocated, on the other hand it is a form of voeste-
+mubpie+Num+Sg:mubp           N_IE_SG ;
+mubpie+Num+Pl:mubp           N_IE_PL ;
+mubpie+Num:mubp           N_IE_ESS ;
+gåalmede:gåalmad        ORDTAG ;
 njieljede:njieljed      ORDTAG ;
+njealjede:njealjad      ORDTAG ;
 vïjhtede:vïjhted        ORDTAG ;
 govhtede:govhted        ORDTAG ;
-tjïjhtjhede:tjijhtje    ORDTAG ;
-gaaktsede:gaaktsed      ORDTAG ;
-åktsede:åksed           ORDTAG ;
-låhkede:låhked          ORDTAG ;
+tjïjhtjhede:tjijhtjed    ORDTAG ;
+gaaktsede:gaaktsad      ORDTAG ;
+åktsede:åksad           ORDTAG ;
+låhkede:låhkad          ORDTAG ;
+tjuatede:tjuata         ORDTAG ;
+tovsene:tovsen         ORDTAG ;
+tåvsene:tåvsan         ORDTAG ;
 
 gööktesh   COLLTAG ;
 golmesh	   COLLTAG ;
@@ -73,11 +81,13 @@ LEXICON NUMTAG
 +Num+Pl+Com:%>jgujme  # ;
 
 
-LEXICON ORDTAG
-+A+ORD: # ;
+!LEXICON ORDTAG1
+!+A+ORD: # ;
 
-LEXICON ORDTAG1
-+A+ORD: # ;
+LEXICON ORDTAG
+ +Num+Sg: N_ODD_SG ;
+! +Num+Pl: N_ODD_PL ; unsure if this rule is necessary for numerals
+ +Num:    N_ODD_ESS ;
 
 LEXICON COLLTAG
 +N+Coll: # ; !Case should be added, I think,
