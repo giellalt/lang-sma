@@ -110,7 +110,10 @@ majkehtje:majkehtj E-E-ODD ;
 beajjetje:beajjetj E-E-ODD ; 
 daan-beajjetje:daan-beajjetj E-E-ODD ; 
 !EHTJE-Avledninger 
-!bavvehtje+A+Attr:bevvehtje FINAL1 ;   !-> bovvehtje  
+bavvehtje:bavvehtj E-E-ODD ; 
+vyjrehtje:vyjrehtj E-E-ODD ; !'ehtje'- viser tendenser til, har anlegg for, frek.kon!SYSTEM1, attr=pred
+tjaetsie-jovkehtje+A+Attr:tjatsie-jovkehtje FINAL1 ;
+ 
 
 !!ADVERBIALER: 
 !sïejhmetji
@@ -557,6 +560,7 @@ jalkede:jalked DOLVEcase ;
 jalkede:jalked ODDCOMP ;
 jalkede+A+Pred:jalkede FINAL1 ;
 
+
 !EHKE-DERIVATIONS 
 gaarhtseske:gaarhtsesk E-E-ODD ; !attr=pred:gaarhtseske-> gaahtsehke
 tjelmie-byölehke:tjelmie-byölehk LYÖVLEHKE ; !- tjelmie-bieles 
@@ -664,8 +668,6 @@ daalmasmasth:daalmasmasten S-S-EVEN ; ! SYSTEM1, ATTR= DALLAMASTEN
 !barkehks:barkehk VYRTEHKE ; 
 
 !EGS-avledninger har både attr=s og pred=s, attr=vokal og pred=vokal og og attr= s og pred = v.
-
-
 !Nomen actionos ! OK! 
 gadtsemes:gadtsem E-E-ODD ;! = attr=pred
 lohkemes:lohkem E-E-ODD ;!=attr=pred
@@ -673,7 +675,8 @@ iehtsemes:iehtsem E-E-ODD ;!=attr=pred
 jovhkemes:jovhkem E-E-ODD ;!=attr=pred
 vöörhkemes:vöörhkem E-E-ODD ; !=attr=pred
 dabtemes:dabtem E-E-ODD ;!=attr=pred(North)
-damtemes:damtem E-E-ODD ;!=attr=pred(south) 
+damtemes:damtem E-E-ODD ;!=attr=pred(south)
+voessjemes:voessjem E-E-ODD ;  
 
 !Tjåetskeme - spesiell!! 
 !tjåetskemes /tjåetskemes - ved adverbial er det tjåetskeme 'daen biejjien lea tjåetskeme' - kaldere-> mest vanlig å gradere som reinterminologi, graderer kulde etter ord f.eks 'baajkoe' som er kaldere enn tjåetskeme.  tjåetskiekåbpoe - men don biejjien lij dïhte tjåetskemes biejjie, jååktan lij dïhte tjåetskemes biejjie(igår var den kaldeste dagen!)  'daelie dobtoe tjåetskeste' (nå kuldner det til) stammen må jo da ha vært 'tjåetskie' hvis 'tjåetskemes' også er superlativ.  
@@ -745,8 +748,8 @@ tjïjhtjen-laaves+A+Attr:tjïjhtjen-laaves FINAL1 ;
 bååresihks+A+Attr:bååresihks FINAL1 ; 
 gellien-gïerts+A+Attr:gellien-gïerts FINAL1 ; 
 vihties S-S-ODD ; 
-sjalloeh:sjalloe H-H-ODD
-sjalloeh:sjall H-N-ODD ; 
+sjalloeh:sjalloe H-H-ODD ;
+sjalloeh:sjall H-H-ODD ; 
 eeptsh:eeptsege S-S-EVEN ; 
 prihtjies:prihtjie GIJMIES ; 
 
@@ -844,11 +847,11 @@ tjatnerge+A+Attr:tjatnerge FINAL1 ;
 gaertjie+A+Attr:gaertjie FINAL1 ;
 vijnie+A+Attr:vijnie FINAL1 ;
 skïebtje+A+Attr:skïebtje FINAL1 ;
-tjaetsie-jovkehtje+A+Attr:tjatsie-jovkehtje FINAL1 ;
+
 haaltje+A+Attr:haaltje FINAL1 ;
 snjaltje+A+Attr:snaltje FINAL1 ;
 skïemtje+A+Attr:skïemtje FINAL1 ;
-vaavleske+A+Attr:vaavleske FINAL1 ;
+
 gåajpe+A+Attr:gåajpe FINAL1 ;
 skïelpe+A+Attr:skïelpe FINAL1 ;
 sillere+A+Attr:sillere FINAL1 ;
@@ -1566,10 +1569,12 @@ aareh:aare H-H-EVEN ;
 !båevties+A+Attr:båevties FINAL1 ; !SYSTEM1
 !gaalas+A+Attr:gaalas FINAL1 ; !SOUTH, SYSTEM1
 gaaloes+A+Attr:gaaloes FINAL1 ; !NORTH, SYSTEM1 
+suajas+A+Attr:suajas FINAL1 ; !SYSTEM1, attr=pred 
 
 !
 !! Attr= s, Pred= s, Vokalstamme, Comp= EVEN, CASE= EVEN
-!!veelkes S-S-EVEN ;
+reepses:reepse S-S-EVEN ;! SYSTEM1, rööpses-ruepsebe-rööpsemes  
+!!veelkes S-S-EVEN ;!veelkes-vielkebe-veelkemes 
 !!tjeehpes S-S-EVEN ;
 !!hiejjies:hiejj S-S-EVEN ;  
 !!dulvies:dulv S-S-EVEN ;
@@ -1667,18 +1672,18 @@ gaaloes+A+Attr:gaaloes FINAL1 ; !NORTH, SYSTEM1
 !gåersies:gåers GAERTJIES ;
 !saevries:saevr GAERTJIES ;
 !!lïhkes:lïhke GAERTJIES ; 
-giefies:gief GAERTJIES!nob 3-syllable paradigm
-laejjies:laejj GAERTJIES !no 3-syllable paradigm
+giefies:gief GAERTJIES ;!nob 3-syllable paradigm
+laejjies:laejj GAERTJIES ; !no 3-syllable paradigm
 låedtjie:låedtj GAERTJIES; !no 3-syllable paradigm
-tsåekies:tsåek GAERTJIES !no 3-syllable paradigm
-siegkies:siegk GAERTJIES !no 3-syllable paradigm
-guhkies:guhk GAERTJIES!no 3-syllable paradigm
-snaevkies:snaevk GAERTJIES; !no 3-syllable paradigm
+tsåekies:tsåek GAERTJIES ; !no 3-syllable paradigm
+siegkies:siegk GAERTJIES ; !no 3-syllable paradigm
+guhkies:guhk GAERTJIES ;!no 3-syllable paradigm
+snaevkies:snaevk GAERTJIES ; !no 3-syllable paradigm
 kraejhpies:kraejhp GAERTJIES ; !no 3-syllable paradigm
-giedtsies:giedts GAERTJIES; !no 3-syllable paradigm
-guelhties:guelhtGAERTJIES; !no 3-syllable paradigm
-vesties:vest GAERTJIES!no 3-syllable paradigm
-raejnies:raejn GAERTJIES!no 3-syllable paradigm
+giedtsies:giedts GAERTJIES ; !no 3-syllable paradigm
+guelhties:guelht GAERTJIES ; !no 3-syllable paradigm
+vesties:vest GAERTJIES ;!no 3-syllable paradigm
+raejnies:raejn GAERTJIES ;!no 3-syllable paradigm
 
 !
 !
@@ -1752,14 +1757,14 @@ beapmohts:beapmoeht S-S-ODD ;
 !hijven:hijven ! buerebe -bööremes ! 
 
 ! OEH-OEH-Gruppen- OK! 
-åajvoeh:åajvoe H-H_ODD ; 
+åajvoeh:åajvoe H-H-ODD ; 
 hartjoeh:hartjoe H-H-ODD ; 
 jåalhkoeh:jåalhkoe H-H-ODD ; 
 svalkoeh:svalkoe H-H-ODD ; 
 gæhtjoeh:gæhtjoe H-H-ODD ; 
 måsnoeh:måsnoe H-H-ODD ; 
 faavroeh:faavroe H-H-ODD ; 
-Målhvoeh:målhvoe H-H-ODD ;
+målhvoeh:målhvoe H-H-ODD ;
 harhpoeh:harhpoe H-H-ODD ;
 sårhpoeh:sårhpoe H-H-ODD ;
 såvsoeh:såvsoe H-H-ODD ;
@@ -1840,8 +1845,13 @@ gaarroeh:gaarr H-H-ODD ;
 såvsoeh:såvs H-H-ODD ; !
 gåvsoeh:gåvs H-H-ODD ; !  
 habjoeh:habj H-H-ODD ; !SYSTEM1, ATTR=PRED
-
-
+haarroeh:haarroe H-H-ODD ; !SYSTEM1, ATTR=PRED
+narvoeh:narvoe H-H-ODD ;! SYSTEM1, Attr=pred 
+naskoeh:naskoeh H-H-ODD ; !SYSTEM1, attr= pred
+svalkoeh:svalkoe H-H-ODD ; ! north, SYSTEM1, attr=pred 
+sårhpoeh:sårhpoe H-H-ODD ; !SYSTEM1,attr=pred
+sårjoeh:sårjoe H-H-ODD ; !SYSTEM1, attr=pred
+vædtsoeh:vædtsoe H-H-ODD ; ! -vaedtsoehkåbpoe! SYSTEM1, ATTR=PRED
 
 bårkoes NULL-NULL-ODD ; !SYSTEM1, attr=pred
 bårrohks:bårrohk VYRTEHKE ; !SYSTEM1 !attr=bårrohke, pred=bårrohke
@@ -1861,7 +1871,7 @@ gålhpoeh+A+Attr:gålhpoeh FINAL1 ; !SYSTEM1
 gårroeh+A+Attr:gårroeh FINAL1 ;  !NORTH! SYSTEM1
 
 
-haarroeh+A+Attr:haarroeh FINAL1 ; !SYSTEM1, ATTR=PRED
+
 haarroes+A+Attr:haarroes FINAL1 ; !SYSTEM1, ATTR=PRED
 
 hamhpas:hamhp FRASKAS ;  !SOUTH, SYSTEM1, ATTR=HÅMHPOES, PRED =HÅMHPOES
@@ -1874,16 +1884,11 @@ hiejjies+A+Attr:hiejjies FINAL1 ; !SYSTEM1, ATTR=PRED
 lopmes+A+Attr:lopmes FINAL1 ; !SYSTEM1,ATTR=PRED 
 læhkas+A+Attr:læhkeas FINAL1 ;  !SYSTEM1, attr=pred
 læhkoes+A+Attr:læhkoes FINAL1 ;  !SYSTEM1, attr= pred
-lïevles:lïevle GIJMIES ;!SYSTEM1
-löövles:löövle GIJMIES ;!SYSTEM1
-luevles:luevle GIJMIES ;!SYSTEM1
-leevles:leevle GIJMIES ;!SYSTEM1
-lyövles:lyövle GIJMIES ;!SYSTEM1
 mådtsas+A+Attr:mådtsas FINAL1 ; !  SYSTEM1, Attr=pred 
 !mïetskes     ; !SYSTEM1    
-narvoeh+A+Attr:narvoeh FINAL1 ;! SYSTEM1, Attr=pred 
+
 nasjovne:nasjovne NULL-NULL-ODD ; ! govne, SYSTEM1, attr= pred 
-naskoeh:naskoeh NULL-NULL-EVEN ; !SYSTEM1, attr= pred 
+ 
 njarhkes:njarhk NJOEKTSES ;! DETTE ER SOM SYSTEM1, ATTR= PRED, 'NJARHKE' ER ET SUSBTANTIV  OG KAN DERFOR IKKE GÅ SOM 'NJOEKTSES', DET SAMME SOM SUBSTANTIV SOM BLRI AVLEDET TIL ADJEKTIV, SOM F.EKS  REAJNOE + S, HVOR DET kUN BLIR ET SUBSTANTIV VED ADVERBIALER.
 njeerpes S-S-ODD ;!SYSTEM1, ATTR= PRED 
 !onne:unnie S-NULL-EVEN ;  ! SYSTEM1, Attr= onne og pred= onne
@@ -1895,23 +1900,19 @@ reajnoes+A+Attr:reajnoes FINAL1 ; !  SYSTEM1, ATTR= PRED
 reejnes:reejn NJOEKTSES ;! SYSTEM1, ee+ s = SYSTEM1, attr=reejnes, pred= reejnes
 reejne+A+Attr:reejne FINAL1 ;! SYSTEM1, reejne= attr og pred
 !raajnes              ;!SYSTEM1, attr= raajnes, pred = raajnes 
-reepses:reepse GIJMIES ;! SYSTEM1, 
+
 striengkies+A+Attr:striengkies FINAL1 ; ! SYSTEM1
-suajas+A+Attr:suajas FINAL1 ; !SYSTEM1, attr=pred 
-svalkoeh+A+Attr:svalkoeh FINAL1 ; ! north, SYSTEM1, attr=pred 
-sårhpoeh:sårhpoe H-N-EVEN ; !SYSTEM1,attr=pred
-sårjoeh+A+Attr:sårjoeh FINAL1 ; !SYSTEM1, attr=pred
+
+
 tjïerves+A+Attr:tjïerves FINAL1 ; ! SYSTEM1
 tjïevhles:tjïevhle GIJMIES ;! SYSTEM1
 voenjes+A+Attr:voenjes FINAL1 ; !'tam, spak (om fugl og annet vilt)' ; !SYSTEM1
 vuesvies+A+Attr:vuesvies FINAL1 ; !komp : vuesviekåbpoe, vuesvies attr. ; komp. vuesviehkåbpoe ; *vuesmies lysten ; lekker, velsmakende  (slik som svangre kvinner liker)!SYSTEM1, attr=pred
-vyjrehtje+A+Attr:vyjrehtje FINAL1 ; !'ehtje'- viser tendenser til, har anlegg for, frek.kon!SYSTEM1, attr=pred
-vædtsoeh+A+Attr:vædtsoeh FINAL1 ; ! -vaedtsoehkåbpoe! SYSTEM1, ATTR=PRED
+
 
 
 båmhpoeh:båmhp OEH-AN-ODD ; !SYSTEM1
 dearjoeh:dearj OEH-AN-ODD ; !NORTH, SYSTEM1
-
 vöökes ADJ-DIRTY ; !SYSTEM1, ATTR=PRED
 !åajvoes ADJ-DIRTY ; ! = åajvoeh  (SYSTEM1) 'særdeles' durativ, emfatisk 
 åavras ADJ-DIRTY ; !SOUTH, SYSTEM1, ATTR=PRED
@@ -1921,7 +1922,6 @@ vöökes ADJ-DIRTY ; !SYSTEM1, ATTR=PRED
 åhtoes ADJ-DIRTY ; !NORTH, SYSTEM1,ATTR=PRED
 !barkoes S-S-ODD ; ! SYSTEM1
 !daerpies:daerpies S-S-ODD ; !SYSTEM1, Attr=pred
-
 plievties:plievt GAERTJIES ;  ! SYSTEM1, attr=pred
 snaehpies:snaehp AELHKIES ;! 
 
