@@ -71,26 +71,26 @@ define S [ S | s ] ; define Cnss [ Cns - S ] ;
 
 echo << Rules>>
 
-define beforedipht [..] -> %- ||     Vow            _ dipht ;
-define nodipht     [..] -> %- || Cns Vow            _ VowNot2ndVow , 
+define beforedipht [..] -> %^ ||     Vow            _ dipht ;
+define nodipht     [..] -> %^ || Cns Vow            _ VowNot2ndVow , 
                                  Cns VowNotAEUÅ     _ vA , 
                                  Cns VowNotAEIOUÅ   _ vE , 
                                  Cns VowNotYØ       _ vØ , 
                                  Cns VowNotÅ        _ vÅ ;
-define divdigraph   [..] -> %- || Vow  Cns*         _ n g  Vow ; ! !jar-ngas
-!define divdigraph  [..] -> %- || Vow           n g _ Cns+ Vow ; ! !jarn-gas, a-nga
-define unvoiced     [..] -> %- || Vow (Cns)         _ h [ n | m | l | j | r | v ] Vow ;
-define preaspirated [..] -> %- || Vow  Cns          _ h [ p | t | k ] ([ s | j ]) Vow ;
-define palatal      [..] -> %- || Vow (Cns) n       _ n j ; 
-define s2cns        [..] -> %- || Vow [Cns - t]     _ s Cnss Vow ; ! máj-stet,
-define j4cns        [..] -> %- || Vow  Cns Cns Cns  _ [ [b|n|s|t] j | [t|d] s ] Vow ;
-define j3cns        [..] -> %- || Vow  Cns Cns      _ [ [b|n|s|t] j | [t|d] s ] Vow ;
-define j2cns        [..] -> %- || Vow  Cns          _ [ [b|n|s|t] j | [t|d] s ] Vow ;
-define j1cns        [..] -> %- || Vow               _ [ [  n|s|t] j | [t|d] s ] Vow ;
-define 4cns         [..] -> %- || Vow  Cns Cns  Cns _  Cns Vow ;
-define 3cns         [..] -> %- || Vow  Cns Cns      _  Cns Vow ;
-define 2cns         [..] -> %- || Vow  Cns          _  Cns Vow ;
-define 1cns         [..] -> %- || Vow               _  Cns Vow ;
+define divdigraph   [..] -> %^ || Vow  Cns*         _ n g  Vow ; ! !jar-ngas
+!define divdigraph  [..] -> %^ || Vow           n g _ Cns+ Vow ; ! !jarn-gas, a-nga
+define unvoiced     [..] -> %^ || Vow (Cns)         _ h [ n | m | l | j | r | v ] Vow ;
+define preaspirated [..] -> %^ || Vow  Cns          _ h [ p | t | k ] ([ s | j ]) Vow ;
+define palatal      [..] -> %^ || Vow (Cns) n       _ n j ; 
+define s2cns        [..] -> %^ || Vow [Cns - t]     _ s Cnss Vow ; ! máj-stet,
+define j4cns        [..] -> %^ || Vow  Cns Cns Cns  _ [ [b|n|s|t] j | [t|d] s ] Vow ;
+define j3cns        [..] -> %^ || Vow  Cns Cns      _ [ [b|n|s|t] j | [t|d] s ] Vow ;
+define j2cns        [..] -> %^ || Vow  Cns          _ [ [b|n|s|t] j | [t|d] s ] Vow ;
+define j1cns        [..] -> %^ || Vow               _ [ [  n|s|t] j | [t|d] s ] Vow ;
+define 4cns         [..] -> %^ || Vow  Cns Cns  Cns _  Cns Vow ;
+define 3cns         [..] -> %^ || Vow  Cns Cns      _  Cns Vow ;
+define 2cns         [..] -> %^ || Vow  Cns          _  Cns Vow ;
+define 1cns         [..] -> %^ || Vow               _  Cns Vow ;
 
 !Error: We fail with: jijnjebh        jijn-jebh Vow Cns _ n j Vow = 72 should be jij-nj     
 ! Wrong: lokn-ge-sieh
