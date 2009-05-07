@@ -613,9 +613,9 @@ vijsies:vijsie GIJMIES ; !-> væjsehke
 vyjsehke:vyjsehk LYÖVLEHKE ; !-> væjsehke 
 væjsehke:væjsehk LYÖVLEHKE ; !-> væjsehke
 dovres:dovrehke S-NULL-ODD ; !SYSTEM1 ATTR og PRED=DOVRES, DOVREHKE=ATTR.OG PRED
-dånghkoeh:donghkehke S-S-ODD ; !NORTH! SYSTEM1, ATTR OG PRED= DÅNGHKOEH
-geehpes:gyöhpehke S-S-ODD ; !SYSTEM1
-njeerpes:njåårpehke S-S-ODD "tunn" ; !  SYSTEM1, ATTR= PRED
+
+gyöhpehke:gyöhpehke LYÔVLEHKE ; !SYSTEM1
+njåårpehke:njåårpehke LYÔVLEHKE ; !  SYSTEM1, ATTR= PRED "tynnflytende"
 vyskehke:vyskehk LYÖVLEHKE ; !SYSTEM1
 vyölkehke:vyölkehk LYÖVLEHKE ; !begge,
 
@@ -656,19 +656,6 @@ gåersies:gåers GAERTJIES ;
 !Også avledninger fra verb
 
 
-!MASTEN-avledninger: avledninger fra adjektiv og verb 
-!-masth:-maste H-N-EVEN ;     !   'MASTEN'
-!kruepies-mastes! SOUTH
-!fiejliesmaste! SOUTH
-!gejhkiemastes!SOUTH
-!masten og masts er attributt, mens masten ser ut til å være pred. 
-!gaajhkeden-masten ;
-!rööpses-masten ;
-!kruana-masten ;
-!plaave-masten ;
-!gaaseden-masten ;
-!reepses-masten, !SOUTH
-daalmasmasth:daalmasmasten S-S-EVEN ; ! SYSTEM1, ATTR= DALLAMASTEN 
 
 
 !Nomen actionos ! OK! 
@@ -1556,7 +1543,7 @@ reepses:reepse S-S-EVEN ; ! SYSTEM1, rööpses-ruepsebe-rööpsemes
 !dovres:dovr S-S-EVEN ;
 !nænnoes:nænn S-S-EVEN ;
 !njeerpes:njeerp S-S-EVEN ;
-!pliejhkies
+!pliejhkies /attr=pred= pliejkies, pred= plæjhkan
 !prihtjies
 !rutjkes
 !ræjhkoes
@@ -1694,31 +1681,42 @@ beapmohts:beapmoeht S-S-ODD ;
 
 
 
-!N-N-gruppen -an and N-N-ODD looks like an error:
-!tjakngan:tjakng N-N-ODD ;
-!treaptjan:treaptj N-N-ODD ;
-!Nahkeren:nahker N-N-ODD ; 
-!skråajhvan:skråajhv N-N-ODD ;
-!skråajhpan:skråajhp N-N-ODD ;
-!njamhkan:njamhk N-N-ODD ;
-!båvsan:båvs N-N-ODD ;
-!slahtjan:slahtj N-N-ODD ;
-!sleagran:sleagr N-N-ODD ;
-!nåajsan:nåajs N-N-ODD ;
-!håvnjan:håvnj N-N-ODD ;
-!nåajjan:nuajja N-N-ODD ;
-!nåajjoeh:nåajjoe H-H-ODD ;
-!suajjoeh:såajjoe H-H-ODD ;
-!suajjan:suajja N-N-ODD ;
-!fråpman:fråpma N-N-ODD ;
-!madtan:madta N-N-ODD ;
-!mådtan:mådta N-N-ODD ;
-!gængsjan:gængsja N-N-ODD ;
+!N-N-gruppen -an and N-N-ODD looks like an error: Attr=pred= N 
+tjakngan:tjakng N-N-ODD ;
+treaptjan:treaptj N-N-ODD ;
+Nahkeren:nahker N-N-ODD ; 
+skråajhvan:skråajhv N-N-ODD ;
+skråajhpan:skråajhp N-N-ODD ;
+njamhkan:njamhk N-N-ODD ;
+båvsan:båvs N-N-ODD ;
+slahtjan:slahtj N-N-ODD ;
+sleagran:sleagr N-N-ODD ;
+nåajsan:nåajs N-N-ODD ;
+håvnjan:håvnj N-N-ODD ;
+nåajjan:nuajja N-N-ODD ;
+nåajjoeh:nåajjoe H-H-ODD ;
+suajjoeh:såajjoe H-H-ODD ;
+suajjan:suajja N-N-ODD ;
+fråpman:fråpma N-N-ODD ;
+madtan:madta N-N-ODD ;
+mådtan:mådta N-N-ODD ;
+gængsjan:gængsja N-N-ODD ;
 !!! båadtsoeh-åejjiej/-åejjien
-!searran:searra N-N-ODD ;
-!ragkoeh:ragkoe H-H-ODD ;
-!ragkan:ragka N-N-ODD ;
-!baandtsan:baandtsa N-N-ODD ;  
+searran:searra N-N-ODD ;
+ragkoeh:ragkoe H-H-ODD ;
+ragkan:ragka N-N-ODD ;
+baandtsan:baandtsa N-N-ODD ; 
+
+!masten, masth og masts er attributt, mens masten er pred.  
+gaajhkeden-maste:gaajhkeden-mast MASTEN ; ! Ikke gradbøy!
+rööpses-maste:rööpses-mast MASTEN ;!Ikke gradbøy!
+kruana-masten:kruana-mast MASTEN ;!Ikke gradbøy!
+plaave-masten:plaave-mast MASTEN ;! Ikke gradbøy
+gaaseden-maste:gaaseden-mast MASTEN ;! IKKE gradbøy!
+reepses-maste:reepses-mast MASTEN ; !SOUTH - skal antageligvis ikke gradbøyes! 
+kruepies-maste:kruepies-mast MASTEN ; !SOUTH
+fiejliesmasten:fiejliesmast MASTEN ;    !SOUTH
+daalmasmasth:daalmasmasten MASTEN ; ! SYSTEM1, ATTR= DALLAMASTEN 
 !hijven:hijven ! buerebe -bööremes ! 
 
 
@@ -2267,6 +2265,7 @@ båtnjoeh:båtnj OEH-OEH-AN-ODD ;! båtnjoeh     Båtnjoeh/båtnjan
 tåassoeh:tåass OEH-OEH-AN-ODD ;! tåassoeh     Tåassoeh/tåassan
 gåavoeh:gåav OEH-OEH-AN-ODD ; ! gåavoeh      Gåavoeh/gåavan
 mealtjoeh:mealtj OEH-OEH-ODD ;! mealtjoeh    Mealtjoeh/mealtjan
+dånghkoeh:dånghk OEH-OEH-ODD ; !NORTH! SYSTEM1, ATTR OG PRED= DÅNGHKOEH
 mealtjan:mealtj N-N-ODD ;
 krænhtjoeh:krænhtj OEH-OEH-AN-ODD ; ! kræntjoeh    Krænhtjoeh/krånhtjan
 håvhnjoeh:håvhnj OEH-OEH-AN-ODD ; ! håvhnjoeh     Håvhnjoeh/håvhnjan
