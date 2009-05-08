@@ -619,8 +619,8 @@ vyjsehke:vyjsehk LYÖVLEHKE ; !-> væjsehke
 væjsehke:væjsehk LYÖVLEHKE ; !-> væjsehke
 dovres:dovrehke S-NULL-ODD ; !SYSTEM1 ATTR og PRED=DOVRES, DOVREHKE=ATTR.OG PRED
 
-gyöhpehke:gyöhpehke LYÔVLEHKE ; !SYSTEM1
-njåårpehke:njåårpehke LYÔVLEHKE ; !  SYSTEM1, ATTR= PRED "tynnflytende"
+gyöhpehke:gyöhpehke LYÖVLEHKE ; !SYSTEM1
+njåårpehke:njåårpehke LYÖVLEHKE ; !  SYSTEM1, ATTR= PRED "tynnflytende"
 vyskehke:vyskehk LYÖVLEHKE ; !SYSTEM1
 vyölkehke:vyölkehk LYÖVLEHKE ; !begge,
 
@@ -688,7 +688,7 @@ våårtegs:våårteg S-NULL-EVEN ; !'verdig'
 åehpies S-S-ODD ; !ATTR= ÅEHPIES ALMETJE (ET KJENT MENNESKE), PRED= DIHTE LEA ÅAHPEHTJE (HAN ER EN KJENNING) DIHTE LEA ÅEHPIES DAGKOE (HAN ER KJENT DER)  
 vyljehks:vyljehk VYRTEHKE ; !-> 'villig' -  
 tjevties:tjevtie GIJMIES ; ! Hva betyr det at det ligger under lexiconet GIJMIES ?tjevties er både attr og pred.  
-saetnies:saatn  ;  
+!saetnies:saatn  ;  
 smaave:smaav NÅAKE ;  
 lopmijs+A+Attr:lopmijs FINAL1 ; !SOUTH  
 tjaejieh+A+Attr:tjaejieh FINAL1 ;   
@@ -1294,10 +1294,9 @@ vuelie+A+Attr:vuelie FINAL1 ;
 gårroeh+A+Attr:gårr FINAL1 ; 
 
 ! SYSTEM1 A=P: 
-!aares S-S-EVEN ;
+aares S-S-EVEN ;
 !aeblehts:aebliehtadtje S-S-ODD ;  !AEBLEHTS BÅDE ATTR. OG AEBLEHTH/AEBLEHTH
-!baenehts:baeniehtadtje S-S-ODD ;
-!bahhas:bahhas S-S-ODD ;
+bahhas:bahhas S-S-ODD ;
 !asvoeh+A+Attr:asvoeh FINAL1 ; 
 !bapkoeh+A+Attr:bapkoeh FINAL1 ;     !NORTH 
 !barhkoeh+A+Attr:barhkoeh FINAL1 ;       !NORTH
@@ -1306,8 +1305,7 @@ båantas S-S-ODD ;!båantahkåbpoe, båantahkommes
 båantoes:båanta S-S-ODD ; !båantahkåbpoe, båantahkommes 
 !båajhtoeh+A+Attr:båajhtoeh FINAL1 ; !NORTH
 båeries S-S-ODD ;  ;
-!bieljehts:bieljiehtadtje S-S-ODD ;
-!banhkoeh+A+Attr:banhkoeh FINAL1 ;       !NORTH
+banhkoeh:banhkoe S-S-ODD ; 
 !bankas S-S-ODD ;        !SOUTH
 !bankes S-S-ODD ;        !SOUTH 
 
@@ -1316,27 +1314,6 @@ båeries S-S-ODD ;  ;
 
 !japtjan: H-N-EVEN ; !SOUTH ONLY PRED. XXX
 
-
-
-
-!from åarjelsaemien 6:
-!daerpies
-!dovres
-!Buerie
-!båeries
-!geerjene
-!aajne
-!aajmene
-!aelpies
-!ammes
-!baahkes
-!baetjkies
-!daemies
-!faatoes
-!gaavnoes
-!gaervies
-!geerjene
-!geesjele
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! sorted by Ciprian
 
@@ -1432,7 +1409,7 @@ hovme:hovm NÅAKE ;
 jalke:jalk NÅAKE ; 
 drabloe-tjööse:drabloe-tjöös NÅAKE ; ! OBS! gradbøyer ikke reinterm
 tjööse:tjöös NÅAKE ; ! OBS!gradbøyer ikke reinterm
-kruana:kruana NÅAKE ;
+kruana:kruan NÅAKE ;
 !kroenes+Attr:!kroenes+Attr NÅAKE ;
 ! (bare:! (bare attributt) NÅAKE ;
 njoetse:njoets NÅAKE ;
@@ -1479,24 +1456,28 @@ aareh:aare H-H-EVEN ;
 !!geeles-geelesåbpoe     
 !!båeries-båarasåbpoe
 !!faavroes- faavroehkåbpoe  
-!!jïegkes
-!!sïerres
+!!jïegkes_ jïegkesåbpoe
+
+sïerres:sïerr S-S-EVEN ; !-sïerrebe/sïerremes 
+sïerres:sïerr S-S-ODD ; ! - sïerrehkåbpoe/sïerrehkommes
+  
+!gæhtjoes-gyhtjekåbpoe
 !!Giejmies 
-!!aevies
+!!aevies-aeviesåbpoe
 !!starhtes-starhtesåbpoe e-e
 !!voeres
 !!Reegkes-reegkesåbpoe e-e
 !!Radtjoes-radtjahkåbpoe oe-a 
-!!bragkes
+!!bragkes -bragkesåbpoe
 !!sudties-sudtiekåbpoe
-!!geerhpmes
+!!geerhpmes ! ikke gradbøy
 !!nealkoes -nealkasåbpoe 
-!!læjnoes
-!!sæjjoes
-!!stueries
+!!læjnoes_ lænjoesåbpoe eller lyjnehkåbpoe 
+!!sæjjoes- sæjjoesåbpoe
+!!stueries- stueriesåbpoe 
 !!bahhas-bahhasåbpoe
-!!barkoes
-!!banhkoes
+!!barkoes- barkoesåbpoe 
+!!banhkoes-banhkoesåbpoe
 !!Våaltoes (JPK)
 !!Svalkoes (JPK)
 !!tsåalkoes
@@ -1521,73 +1502,76 @@ aareh:aare H-H-EVEN ;
 !!gaervies (ikke comp) 
 !geehpes-geehpesåbpoe
 !gaaloes:
-!suajas-suajasåbpoe
-!!viskes:-viskesåbpoe 
+!suajas-suajasåbpoe 
 !båevties+A+Attr:båevties FINAL1 ; !SYSTEM1
 !gaalas+A+Attr:gaalas FINAL1 ; !SOUTH, SYSTEM1
 gaaloes+A+Attr:gaaloes FINAL1 ; !NORTH, SYSTEM1 
-suajas+A+Attr:suajas FINAL1 ; !SYSTEM1, attr=pred 
+suajas:suaja S-S-ODD ; 
 
 !
 !! Attr= s, Pred= s, Vokalstamme, Comp= EVEN, CASE= EVEN
 reepses:reepse S-S-EVEN ; ! SYSTEM1, rööpses-ruepsebe-rööpsemes  
-!!veelkes S-S-EVEN ; !veelkes-vielkebe-veelkemes 
-!!tjeehpes S-S-EVEN ;
-!!hiejjies:hiejj S-S-EVEN ;  
-!!dulvies:dulv S-S-EVEN ;
-!rööpses (Omlyd i komp:ruepsebe) rööpsemes
-!Liehties:lieht S-S-EVEN ;
-!kruepies:kruep S-S-EVEN ;
-!veelkes:veelk S-S-EVEN ; ! også omlyd i komp:vïelkebe
-!geehpes:geehp GAERTJIES ; 
-!löövles (omlyd i komp:lïevlebe) löövlemes
-!lievles:lievl
-!luevles:luevl S-S-EVEN ;
-!leevles:leevl S-S-EVEN ;
-!gåersies
-!dovres:dovr S-S-EVEN ;
-!nænnoes:nænn S-S-EVEN ;
-!njeerpes:njeerp S-S-EVEN ;
+veelkes:vielk S-S-EVEN ; !veelkes-vielkebe-veelkemes 
+tjeehpes:tjeehp S-S-EVEN ;
+hiejjies:hiejj S-S-EVEN ;  
+dulvies:dulv S-S-EVEN ;
+rööpses:rueps S-S-EVEN; ! (Omlyd i komp:ruepsebe) rööpsemes
+Liehties:lieht S-S-EVEN ;
+kruepies:kruep S-S-EVEN ;
+geehpes:giehp S-S-EVEN ; 
+geehpes:geehp S-S-EVEN;
+löövles:lïevl S-S-EVEN ; !(omlyd i komp:lïevlebe) löövlemes
+lievles:lievl S-S-EVEN; 
+luevles:luevl S-S-EVEN ;
+leevles:leevl S-S-EVEN ;
+gåersies:gåers GAERTJIES ; 
+dovres:dovr S-S-EVEN ;
+nænnoes:nænn S-S-EVEN ;
+nænnoes:nænnoe S-S-ODD ; 
+njeerpes:njeerp S-S-EVEN ;
+pliejhkies:pliejhk S-S-EVEN; 
 !pliejhkies /attr=pred= pliejkies, pred= plæjhkan
-!prihtjies
-!rutjkes
+prihtjies:priehtj S-S-EVEN ; 
+rutjkes: 
 !ræjhkoes
-!rööpses_ (omlyd i komp:ruepsebe) 
-!stinkes:stink S-S-EVEN ;
+rööpses:rueps S-S-EVEN ; !_ (omlyd i komp:ruepsebe) 
+stinkes:stink S-S-EVEN ;
 !Sööjmes: (Omlyd i komp:suejmebe også sööjmebe)
-!söökes: (omlyd i komp:suekebe) 
-!saelties
-!tjelmie-bieles (ikke komp)  
-!tjelmie-bielies (ikke komp)
-!tjevties:tjev S-S-EVEN ;
-!truvkes:truvk S-S-EVEN ;
-!sneehpes:sneehp S-S-EVEN ; 
+söökes:suek S-S-EVEN ;! (omlyd i komp:suekebe) 
+saelties:saelt S-S-EVEN ; ! 
+tjelmie-bieles:tjelmie-biele S-S-EVEN ; !(ikke komp)  
+tjelmie-bielies:tjelmie-bielie S-S-EVEN ; !(ikke komp)
+tjevties:tjev S-S-EVEN ;
+truvkes:truvk S-S-EVEN ;
+sneehpes:sneehp S-S-EVEN ; 
 !Måjkoes
 !tjåervie-bieles (Ikke comp)
 !tjåervie-bielies (ikke komp)
 !tjelmie-bieles (ikke komp)
 !tjelmie-bielies (ikke komp) 
-!lustes:lust S-S-EVEN ;
-!vesties
-!njaelkies
-!sneehpes (pred=sneehpes) 
-!tjiehpies
-!snaares
-!laejjies
-!njeerpes:njeerp S-S-EVEN ;
+lustes:lust S-S-EVEN ;
+vesties:vest S-S-EVEN ; 
+njaelkies:njaelk S-S-EVEN ; 
+sneehpes:sneehp S-S-EVEN ; ! (pred=sneehpes) 
+tjiehpies:tjiehp S-S-EVEN ; 
+snaare:snaar DOLVE ; ! 
+laejjies:laejj S-S-EVEN ; 
+njeerpes:njeerp S-S-EVEN ;
 !hearhkoes
-!vïskes
-!geehpes: (omlyd giehpebe)
-!nænnoes:nænn S-S-EVEN ;
-!pliejhkies
-!ræjhkoes (ODD eller EVEN?) 
+vïskes:vïsk S-S-EVEN ; 
+geehpes:giehp S-S-EVEN ; (omlyd giehpebe)
+nænnoes:nænn S-S-EVEN ;!nænnobe,nænnomes
+nænnoes:nænn S-S-ODD ;!nænnoehkåbpoe, nænnoehkommes  
+pliejhkies
+ræjhkoes:ræjhk S-S-EVEN ;
+ræjhkoes:ræjhk S-S-ODD ; ! (ODD eller EVEN?) 
 !stinkes
-!sööjmes
-!söökes
-!saelhties
-!truvhkes
+sööjmes:
+söökes:suek S-S-EVEN ; 
+saelhties:saelht S-S-EVEN ;
+truvhkes:trovhk S-S-EVEN ; 
 !stööves
-!gåersies
+gåersies
 !dovres:dovr S-S-EVEN ; 
 !dulvies
 !saevries
@@ -1599,22 +1583,22 @@ reepses:reepse S-S-EVEN ; ! SYSTEM1, rööpses-ruepsebe-rööpsemes
 !striengkies
 !Plievties:plievt S-S-EVEN ;
 liehties:lieht S-S-EVEN ;!lïehtebe, lïehtemes 
-!aelpies:aelp S-S-EVEN ; 
-!tsåekies:tsåek S-S-EVEN ; 
-!vihties:viht S-S-EVEN ;
-!saejkies
+aelpies:aelp S-S-EVEN ; 
+tsåekies:tsåek S-S-EVEN ; 
+vihties:viht S-S-EVEN ;
+saejkies:saejk S-S-EVEN ;
 !aejlies
-!giefies:gief S-S-EVEN ;
-!!sieties:siet S-S-EVEN ;
-!
+giefies:gief S-S-EVEN ;
+sieties:siet S-S-EVEN ;
+
 !!Attr=s, Pred=Ø og 's',Vokalstamme,ComP=EVEN, Case=EVEN
-!giefies:gief GAERTJIES ;
-!saejkies:saejk GAERTJIES ;
-!vihties:viht GAERTJIES ;
-!tsåekies:tsåek GAERTJIES ;
-!aelpies:aelpi GAERTJIES ;
-!liehties:lieht GAERTJIES ;
-!giefies:gief GAERTJIES ; 
+giefies:gief GAERTJIES ;
+saejkies:saejk GAERTJIES ;
+vihties:viht GAERTJIES ;
+tsåekies:tsåek GAERTJIES ;
+aelpies:aelpi GAERTJIES ;
+liehties:lieht GAERTJIES ;
+giefies:gief GAERTJIES ; 
 guhkies:guhk GAERTJIES ;!Comp: guhkebe, guhkemes
 !siegkies:siegk GAERTJIES ;
 !giedtsies:giedts GAERTJIES ;
