@@ -687,7 +687,7 @@ sveartoeh+A+Attr:sveartoeh FINAL1 ; !'OE' ELLER 'A'
 våårtegs:våårteg S-NULL-EVEN ; !'verdig'  
 åehpies:åehpie S-S-ODD ; !ATTR= ÅEHPIES ALMETJE (ET KJENT MENNESKE), PRED= DIHTE LEA ÅAHPEHTJE (HAN ER EN KJENNING) DIHTE LEA ÅEHPIES DAGKOE (HAN ER KJENT DER)  
 vyljehks:vyljehk VYRTEHKE ; !-> 'villig' -  
-tjevties:tjevtie GIJMIES ; ! Hva betyr det at det ligger under lexiconet GIJMIES ?tjevties er både attr og pred.  
+tjevties:tjevtie S-S-EVEN ;   
 !saetnies:saatn  ;  
 smaave:smaav NÅAKE ;  
 lopmijs+A+Attr:lopmijs FINAL1 ; !SOUTH  
@@ -696,7 +696,7 @@ tjaejieh+A+Attr:tjaejieh FINAL1 ;
 miesehts:miesehth S-S-ODD ; !'sjekke opp'! 
 moerehts:moerehth S-S-ODD ; ! 'moerehth' (uten ved for tilfellet, uten ved, nå) og 'moerehts' (uten ved) 
 jorpe JEARKOE ;  ! =>   JORPE, JARPE, 
-veelkes:veelke GIJMIES ; !begge, 
+veelkes:veelke S-S-EVEN ;
 tjalmijes:tjalmije S-NULL-ODD ; ! feil ijes er både attr. og pred, mens tjalmije er attr. men også et susbtantiv. 
 giehpies:giehpie S-S-EVEN ; !SYSTEM1 
 !SISSE/-SASSA/-SÆSSA :  ! viskesisse+A+Attr:viskesisse FINAL1 ; 
@@ -722,9 +722,9 @@ seekes:seeke GIJMIES ; !SOUTH! - SEEKES/ SØØKES
 hearlohke:hearlohk LYÖVLEHKE ; !AVLEDNING AV LØØVLES 
 ræhpas+A+Attr:ræhpas FINAL1 ; !komp: ræhpasabpa 
 tjeakoes+A+Attr:tjeakoes FINAL1 ; !feil: attr og  pred 
-geljie:gelj GELJIE ; !SYSTEM 3, j   KB= geljies = attr, geljie = pred 
-giehpies:giehp AELHKIES "bred" ; !giehpies= attr og pred 
-vilhties+A+Attr:vilhties FINAL1 ; !'skråning' - hellende, skrånende 
+geljie:gelj GAERTJIES ; 
+giehpies:giehp GAERTJIES ;!  
+vilhties:vielht GAERTJIES ;!'skråning' - hellende, skrånende 
 jalke:jalkede NULL-S-EVEN ; !attr=jalke og pred = jalke 
 jarpe JEARKOE ; ! jorpe, attr= jarpe/ jorpe og pred= jarpe/jorpe 
 nymmehts+A+Attr:nymmehts FINAL1 ; ! Attr= nymmehts, pred= nymmehth 
@@ -798,17 +798,17 @@ stejkede S-NULL-ODD ; !only pred.  -ie-
 mævhkas PRED-0 ; !XXXobs enbart pred.
 skaamehts S-NULL-ODD ; !Only attr.
 !dákkárat leat ovdal leamasan (visot LYØVLEHKE - GIJMIES/GÆHTJAH/IJTJE-RAADH/JEARKOE):
-nuhtegs:nuhtege S-NULL-ODD "nyttig" ;
-sneehpes S-S-EVEN "snabb, rask" ;
+nuhtegs:nuhtege S-NULL-ODD ; !"nyttig" ;
+sneehpes:sneehp S-S-EVEN ; !"snabb, rask" ;
 naabrege+A+Attr:naabrege FINAL1 ;
 tjatnerge+A+Attr:tjatnerge FINAL1 ;
-gaertjie+A+Attr:gaertjie FINAL1 ;
+gaertjies:gaertj GAERTJIES ; 
 vijnie+A+Attr:vijnie FINAL1 ;
-skïebtje DOLVE ;
+skïebtje:skïebtj DOLVE ;
 
 haaltje+A+Attr:haaltje FINAL1 ;
 snjaltje+A+Attr:snaltje FINAL1 ;
-skïemtje+A+Attr:skïemtje FINAL1 ;
+skïemtje:skïemtj DOLVE ; 
 !  SE PÅ DISSE!!! 
 gåajpe+A+Attr:gåajpe FINAL1 ;
 skïelpe+A+Attr:skïelpe FINAL1 ;
@@ -937,8 +937,8 @@ tjidtjehts:tjidtjehth S-S-ODD ;
 joekehth:joekehth S-S-ODD ;
 sjavhkas S-S-ODD ;
 meammas S-S-ODD ;
-gåedtjies:gåedtji S-S-ODD ; !XXX Maja, check this!! 090506
-gåedtsies:gåedtsie S-S-ODD ;
+gåedtjies:gåedtji GAERTJIES ; !XXX Maja, check this!! 090506
+gåedtsies:gåedtsie GAERTJIES ;
 tjeavlijes:tjeavlijes S-S-ODD ;
 saajpes:saajpe S-S-ODD ;
 ïlveligs:ïlvelig S-S-ODD ;
@@ -1072,7 +1072,7 @@ saetnies+A+Attr:saetnies FINAL1 ; !OK
 siegkies:siegk GAERTJIES ; ! ADJEKTIV/ ADVERBIAL
 vååvne+A+Attr:vååvne FINAL1 ; ! emfatisk PARTIKKEL
 steeves:steeve GIJMIES ; !SOUTH! 'STEEVES' ELLER 'STØØVES' ELLER
-gæjmoes S-S-ODD ;  !ATTR= GIEJMIES OG PRED = GIEJMIES
+gæjmoes S-NULL-ODD ;  !
 seejmes:seejme GIJMIES ; ! -> SØØJMES
 klaajpijes+A+Attr:klaajpijes FINAL1 ; !  IJES/ IJS
 krobpijes:krobpije  S-NULL-ODD ; ! IJES/ IJS
@@ -1295,17 +1295,18 @@ vuelie+A+Attr:vuelie FINAL1 ;
 gårroeh+A+Attr:gårr FINAL1 ; 
 
 ! SYSTEM1 A=P: 
-aares S-S-EVEN ;
+aares:aare S-S-EVEN ;
+aareh:aare H-H-ODD ; 
 !aeblehts:aebliehtadtje S-S-ODD ;  !AEBLEHTS BÅDE ATTR. OG AEBLEHTH/AEBLEHTH
-bahhas:bahhas S-S-ODD ;
+bahhas:bahha S-S-ODD ;
 !asvoeh+A+Attr:asvoeh FINAL1 ; 
 !bapkoeh+A+Attr:bapkoeh FINAL1 ;     !NORTH 
 !barhkoeh+A+Attr:barhkoeh FINAL1 ;       !NORTH
 !båajpoeh+A+Attr:båajpoeh FINAL1 ; !NORTH
-båantas S-S-ODD ;!båantahkåbpoe, båantahkommes  
+båantas:båanta S-S-ODD ;!båantahkåbpoe, båantahkommes  
 båantoes:båanta S-S-ODD ; !båantahkåbpoe, båantahkommes 
 !båajhtoeh+A+Attr:båajhtoeh FINAL1 ; !NORTH
-båeries S-S-ODD ;  ;
+båeries:båerie S-S-ODD ;  ! båarasåbpoe, båarasommes 
 banhkoeh:banhkoe S-S-ODD ; 
 !bankas S-S-ODD ;        !SOUTH
 !bankes S-S-ODD ;        !SOUTH 
@@ -1533,7 +1534,7 @@ njeerpes:njeerp S-S-EVEN ;
 pliejhkies:pliejhk S-S-EVEN; 
 !pliejhkies /attr=pred= pliejkies, pred= plæjhkan
 prihtjies:priehtj S-S-EVEN ; 
-rutjkes: 
+rutjkes:rutjke S-S-EVEN ;  
 !ræjhkoes
 rööpses:rueps S-S-EVEN ; !_ (omlyd i komp:ruepsebe) 
 stinkes:stink S-S-EVEN ;
@@ -1542,7 +1543,7 @@ söökes:suek S-S-EVEN ;! (omlyd i komp:suekebe)
 saelties:saelt S-S-EVEN ; ! 
 tjelmie-bieles:tjelmie-biele S-S-EVEN ; !(ikke komp)  
 tjelmie-bielies:tjelmie-bielie S-S-EVEN ; !(ikke komp)
-tjevties:tjev S-S-EVEN ;
+tjevties:tjev GAERTJIES ;
 truvkes:truvk S-S-EVEN ;
 sneehpes:sneehp S-S-EVEN ; 
 !Måjkoes
@@ -1560,19 +1561,19 @@ laejjies:laejj S-S-EVEN ;
 njeerpes:njeerp S-S-EVEN ;
 !hearhkoes
 vïskes:vïsk S-S-EVEN ; 
-geehpes:giehp S-S-EVEN ; (omlyd giehpebe)
+geehpes:giehp S-S-EVEN ; !(omlyd giehpebe)
 nænnoes:nænn S-S-EVEN ;!nænnobe,nænnomes
 nænnoes:nænn S-S-ODD ;!nænnoehkåbpoe, nænnoehkommes  
-pliejhkies
+pliejhkies:pliejhkie S-S-EVEN ; !XXX an
 ræjhkoes:ræjhk S-S-EVEN ;
 ræjhkoes:ræjhk S-S-ODD ; ! (ODD eller EVEN?) 
 !stinkes
-sööjmes:
+sööjmes:sööjme S-S-EVEN ; 
 söökes:suek S-S-EVEN ; 
 saelhties:saelht S-S-EVEN ;
 truvhkes:trovhk S-S-EVEN ; 
 !stööves
-gåersies
+gåersies:gåersie GAERTJIES ; 
 !dovres:dovr S-S-EVEN ; 
 !dulvies
 !saevries
@@ -1627,10 +1628,6 @@ guelhties:guelht GAERTJIES ; !Comp:guelhtebe, guelhtemes
 vesties:vest GAERTJIES ; !no 3-syllable paradigm
 raejnies:raejn GAERTJIES ; !no 3-syllable paradigm
 
-!
-!
-!
-!
 !! Attr=hth, pred=hth,Konsonantstamme, comp=ODD, Case=ODD  _OK 
 baenehth:baenieht H-H-ODD ; ! baeniehtåbpoe
 tjelmehth:tjelmieht H-H-ODD ; ! tjelmiehtåbpoe
@@ -2197,9 +2194,9 @@ muetkies:muetk AELHKIES ; !
 raehkies:raehk AELHKIES ;
 slehties:sleht AELHKIES ;
 
-gåedtjies:gåedtj GAERTJIES ; !SOUTH! ATTR=GÅEDTJIES, PRED=GÅEDTJIES
-gåedtsies:gåedts GAERTJIES ; !NORTH! ATTR=GÅEDTSIES, PRED=GÅEDTSIES
-buesjies:buesj GAERTJIES ; ! buesjie er subtanative, buesjies er adjektivet, attr= buesjies=pred
+gåedtjies:gåedtj GAERTJIES ;
+gåedtsies:gåedts GAERTJIES ;
+buesjies:buesj GAERTJIES ;  
 jueskies:juesk GAERTJIES ; 
 låebties:låebt GAERTJIES ;  
 låemties:låemt GAERTJIES ;  
@@ -2304,14 +2301,14 @@ tåassoeh:tåass OEH-OEH-AN-ODD ;! tåassoeh     Tåassoeh/tåassan
 gåavoeh:gåav OEH-OEH-AN-ODD ; ! gåavoeh      Gåavoeh/gåavan
 mealtjoeh:mealtj OEH-OEH-ODD ;! mealtjoeh    Mealtjoeh/mealtjan
 dånghkoeh:dånghk OEH-OEH-ODD ; !NORTH! SYSTEM1, ATTR OG PRED= DÅNGHKOEH
-mealtjan:mealtj N-N-ODD ;
+mealtjan:mealtja N-N-ODD ;
 krænhtjoeh:krænhtj OEH-OEH-AN-ODD ; ! kræntjoeh    Krænhtjoeh/krånhtjan
 håvhnjoeh:håvhnj OEH-OEH-AN-ODD ; ! håvhnjoeh     Håvhnjoeh/håvhnjan
 krånhtjoeh:krånhtj OEH-AN-ODD ; ! krånthtjoeh   krånhtjan
-jåasoeh:jåas-OEH-OEH-AN-ODD ; ! jåasoeh      Jåasoeh (jåasan)
+jåasoeh:jåas OEH-OEH-AN-ODD ; ! jåasoeh      Jåasoeh (jåasan)
 håkngoeh:håkng OEH-OEH-AN-ODD ;! håkngoeh     håkngoeh/håkngan
 krahtjoeh:krahtj OEH-OEH-AN-ODD ;! krahtjoeh     Krahtjoeh/krahtjoen
-længhkoeh:længk OEH-OEH-ODD ;! længhkoeh     Længkoeh/lingkese
+længhkoeh:længkoe H-H-ODD ;! længhkoeh     Længkoeh/lingkese
 !lingkese 
 kråavvoeh:kråavv OEH-OEH-AN-ODD ; ! kråavvoeh     Kråavvoeh/kråavvan -
 skabroeh:skabr OEH-OEH-AN-ODD ; ! skabroeh      Skabroeh/skabran
@@ -2320,10 +2317,10 @@ håvnjoeh:håvnj OEH-AN-ODD ; ! håvnjoeh      håvnjan
 meammoeh:meamm OEH-OEH-AN-ODD ; ! meammoeh      Meammoeh/meamman 
 ! bæjngoeh     bæjngolen
 marngoeh:marng OEH-OEH-ODD ; ! marngoeh/marngan    Marngan/marngoeh  ! spes: 
-marngan:marng  N-N-ODD ; både entall og flertall
-skabroeh:skabr OEH-OEH-AN-ODD ;       Skabroeh/skabran
+marngan:marng  N-N-ODD ; !både entall og flertall
+skabroeh:skabr OEH-OEH-AN-ODD ;     !  Skabroeh/skabran
 ! bagkoeh        ????
-sjalloeh:sjall OEH-OEH-AN-ODD ;       Sjalloeh/ sjallan
+sjalloeh:sjall OEH-OEH-AN-ODD ;      ! Sjalloeh/ sjallan
 preanghkoeh:preanghk OEH-OEH-AN ; ! preanghkoeh    preanghkoeh/preanghkan
 tjåkngoeh:tjåkng OEH-OEH-AN-ODD ; ! tjåkngoeh      Tjåkngoeh/tjåkngan
 skåalloeh:skåall OEH-OEH-AN-ODD ; ! skåalloeh      skåalloeh/skåallan
@@ -2338,7 +2335,7 @@ tåasoeh:tåas OEH-OEH-AN-ODD ; !SYSTEM1 og 4, attr=tåasoeh, pred =tåasan og t
 !daerpies
 !dovres
 !Buerie
-!båeries
+
 !geerjene
 !aajne
 !aajmene
