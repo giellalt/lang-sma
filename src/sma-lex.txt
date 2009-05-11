@@ -736,18 +736,7 @@ LEXICON H-N-EVEN
      PRED-N ;
 +A:  EVENCOMP ;
 
-LEXICON OEH-AN-ODD
-:oe   ATTR-H ;
-:a    PRED-N ;
-+A:ahk ODDCOMP ;
-+A:oehk ODDCOMP ; !XXX check this o
 
-LEXICON OEH-OEH-AN-ODD 
-:oe  ATTR-H ;
-:oeh PRED-0 ;
-:a   PRED-N ;
-+A:ahk ODDCOMP ;
-+A:oehk ODDCOMP ; !XXX check this o
 
 !--- NULL-EVEN attr-lexicas---
 ! -------------------------
@@ -798,6 +787,11 @@ LEXICON ES-ES-ODD
 +A:ahk ODDCOMP ;
 +A:oehk ODDCOMP ; !XXX check this o
 
+LEXICON OEH-OEH-ODD 
+:oe  ATTR-H ;
+:oeh PRED-0 ;
+! comparative missing! XXX
+
 !LEXICON BAENEHTS
 !:eht     ATTR-S ;
 !:iehtadtje     PRED-S ;
@@ -845,6 +839,26 @@ LEXICON ES-E-ODD
 
 
 
+! type 4
+
+LEXICON H-N-ODD
+ ATTR-H ;
+ PRED-N ;
+ ! no comparative forms!!!
+
+LEXICON OEH-AN-ODD
+:oe   ATTR-H ;
+:a    PRED-N ;
++A:ahk ODDCOMP ;
++A:oehk ODDCOMP ; !XXX check this o
+
+LEXICON OEH-OEH-AN-ODD 
+:oe  ATTR-H ;
+:oeh PRED-0 ;
+:a   PRED-N ;
++A:ahk ODDCOMP ;
++A:oehk ODDCOMP ; !XXX check this o
+ 
 
 !--- NULL-ODDs---
 ! ---------------
