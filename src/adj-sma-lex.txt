@@ -608,12 +608,12 @@ laenjeds:laenjied EDS-EDS/EDE ;    !SOUTH! (ie-stammer occet ie+dåbpoe)
  
 låabpeds+A+Attr:låabpeds FINAL1 ;
 låabpede:låabped DOLVEcase ;
-låabpede:låabped ODDCOMP ;
+låabpede+A:låabped ODDCOMP ;
 låabpede+A+Pred:låabpede FINAL1 ;
 
 jalkeds+A+Attr:jalkeds FINAL1 ;
 jalkede:jalked DOLVEcase ;
-jalkede:jalked ODDCOMP ;
+jalkede+A:jalked ODDCOMP ;
 jalkede+A+Pred:jalkede FINAL1 ;
 geahpeds+A+Attr:geahpeds FINAL1 ; ! SOUTH! (Mun in diede dán birra, ferte dusse lehket nie)
 
@@ -1446,7 +1446,7 @@ seejke:seejk NÅAKE ;
 ! end of list added by Trond
 !!Attr=h, Pred=h, Comp=ODD, CASE =ODD LEXICON H-H-ODD
 aareh H-H-ODD ; !aarehkåbpoe
-aareh:aareg ODDCOMP ; !XXX norm? (Lohkede saemien s.116)"dagkoe gogkoe dle aaregommes"
+aareh+A:aareg ODDCOMP ; !XXX norm? (Lohkede saemien s.116)"dagkoe gogkoe dle aaregommes"
 mööreh H-H-ODD ; !XXX norm? -möörehkåbpoe s.27. Donjih dan bïjre :"..dïhte 
 !bearkoeh såvrooestidh jih möörehkåbpoe sjidtedh'
 
@@ -2287,27 +2287,57 @@ friskies:friskie GAERTJIES ;
 daejkies:daejkie GAERTJIES ; 
 dukvies:dulvie GAERTJIES ; 
 ejties:ejtie GAERTJIES ; 
-gaertjies:gaertj GAERTJIES ; !KB= SYSTEM3, MLK= SYSTEM1   
-njaelkies:njaelk GAERTJIES ; !attr= pred:njaelkies (god), pred=njaelkie (godt)
-guhkies:guhk GAERTJIES ; !Attr=pred ; guhkies (lang), pred=guhkie (langt)
-tjaebpies:tjaebp GAERTJIES ; !attr=pred ;tjaebpies (fin), pred= tjaebpie (fint)
-gietskies:gietsk GAERTJIES ; !attr=pred ; gietskies (trang),pred=  
-!åehpies almetje         ; !!attr=pred (dïhte lea guht dagkoe åehpies) åahpetje=sub
-gaertjies:gaertj GAERTJIES ; !attr=pred ;gaertjies (trang), pred=aertjie (trangt)
-siegkies:siegk GAERTJIES ; !Comp: siegkebe, siegkemes   
-faavroes:faavre GAERTJIES ; !attr=pred ; faavroes (vakker, pred/sub=faavroe=
-njaerpies:njaerp GAERTJIES ; ! SYSTEM3 ATTR= NJAERPIES, PRED= NJAERPIE, OG SYSTEM1: ATTR=PRED=NJAERPIES 
-plievhties:plievht GAERTJIES ; ! SYSTEM1 ; attr=pred, og SYSTEM3 ; attr= plievties pred = plievtie 
+gaertjies:gaertj GAERTJIES ;  
+njaelkies:njaelk GAERTJIES ; 
+guhkies:guhk GAERTJIES ; 
+tjaebpies:tjaebp GAERTJIES ; 
+gietskies:gietsk GAERTJIES ;  
+gaertjies:gaertj GAERTJIES ; 
+siegkies:siegk GAERTJIES ;  
+faavroes:faavre GAERTJIES ; 
+njaerpies:njaerp GAERTJIES ; 
+plievhties:plievht GAERTJIES ; 
 hearhkoes:hearhkoe GAERTJIES ; 
-!hearhkoes beapmoe/ dïhte beapmoeh lea hearhkoes, pred= hearhkoe 
-!     dïhte lea gujht aaj hearkoe (
 åhtoes:åhtoe GAERTJIES ; 
 åhtas:åhta GAERTJIES ;
 
 plaave:plaav NÅAKE ; 
-plaave:plaave DOLVE ;  
+plaave:plaave DOLVE ;
+
+! Attributtform = attributtform og predikatform = substantiv
+åehpies+A:åahpas ODDCOMP ; !åahpasåbpoe, åahpasommes dás boahtá
+aavoes+A:aavoes ODDCOMP ;
+hujnies+A:håjnas ODDCOMP ;
+mujvies+A:måjvas ODDCOMP ; !måjvasåbpoe
+fuehpies+A:fuahpas ODDCOMP ;
+saetnies+A:saatnas ODDCOMP ;
+
+mujvies tjaetsie= tjaetsie lea mujvene= vannet er skittent nå
+mujvie
+mujviegidh, måjvanidh, mujviehtidh
+fuehpies= fuehpesne- fuahpan sjïdtedh 
+
+tjåenghkies - tjåengheksne - tjåenghkies - tjåanghkan =illativ. 
+tjåenghkies krievvie= en fokk som er slik at den holder seg samlet, dïhte krievvie tjåenghkies= den flkken er slika t den holder seg samlet= egenskap,
+krievvie lea tjåenghkesne= den er samlet (nå) 
+=eallu lea čoahkis= mii lea dát?= samlet nå, vai lea ' er slik at en holder seg samlet?samlet nå, ok, muhto lea go lokativa vai 's'ok!!YES!!  lokativa
+seamma: dat lea ávus (lok) = dihte lea aavosne, muhto movt cadda: krievvie lea tjåenghkies(er slik at den holderseg samlet, av egenskap)? hmmm...in riekta diede, soaitá nu ahte ferte ollát iezá ládje dan dadjat dego: lea dakkár eallu mii bissu coahkis= en sån flock att den håller sej samlad ok ..hmm..
+mun jáhkan ahte dat sysnte 4 lea - pliejhkies- pliejhkies 0 pleajhkan, ahte lea momentane 
 
 
+
+
+aavoes+A+Attr:aavoes FINAL1 ;
+hujnies+A+Attr:hujnies FINAL1 ;
+åehpies+A+Attr:åehpies FINAL1 ;
+mujvies+A+Attr:mujvies FINAL1 ;
+fuehpies+A+Attr:fuehpies FINAL1 ;
+saetnies+A+Attr:saetnies FINAL1 ;
+
+!naba- åehpies åehpies lea dál attr, muhto dát lea åahpasåbpoeja!muhto predhámis maid lea åahpasåbpoe,åahpasommes ok. giitu veahki ovddas. :-) mun ferten revideret olles oppgava dál. :-( lea váivves bargu diet, lean ilus go in leat studeanta šat a-a, dát ii daga maiddege, dát lea buorre. ii miige giitámusaid: mus lea bálká ;-) åahpetje bidjat substantiv-fiilii
+!
+
+seamma mujvies: 
 !åavroes, åavras ADJ-DIRTY ; 
 
 
@@ -2315,7 +2345,7 @@ plaave:plaave DOLVE ;
 baahke:baahk DOLVE ;  
 
 
-!!SYSTEM4 : has to be systematised
+!!SYSTEM4 : 
 båavhroeh:båavhra H-N-EVEN ; 
 bågkoeh:bågk  OEH-AN-ODD ;
 bagkoeh:bagk OEH-AN-ODD ;
