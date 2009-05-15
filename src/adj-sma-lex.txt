@@ -783,7 +783,7 @@ rovnege:rovneg NULL-NULL-ODD ;
 !Has to be systematized = I dont know
 bårrohks:bårrohk VYRTEHKE ; !SYSTEM1 !attr=bårrohke, pred=bårrohke
 bööntes:böönt NJOEKTSES ; !SYSTEM1,ATTR=PRED
-daakte+A+Attr:daakte FINAL1 ; !SYSTEM1 , ATTR=PRED
+daakte:daakte NULL-NULL-EVEN ; !SYSTEM1 , ATTR=PRED
 flueries+A+Attr:flueries FINAL1 ; !SYSTEM1
 flævroeh+A+Attr:flævroeh FINAL1 ; !SYSTEM1
 gaajle+A+Attr:gaajle FINAL1 ; !SOUTH SYSTEM1
@@ -826,7 +826,7 @@ tjïjhtjen-laaves+A+Attr:tjïjhtjen-laaves FINAL1 ;
 
 bååresihks+A+Attr:bååresihks FINAL1 ; 
 gellien-gïerts+A+Attr:gellien-gïerts FINAL1 ; 
-vihties:vihtie GAERTJIES ; 
+ 
 
 eeptsh:eeptsege S-S-EVEN ; 
 prihtjies:prihtjie GAERTJIES ; 
@@ -957,15 +957,17 @@ haalloeh+A+Attr:haalloeh FINAL1 ;
 falloeh+A+Attr:falloeh FINAL1 ;
 veavloeh+A+Attr:veavloeh FINAL1 ;
 
+!OK
 låannoeh:låannoeh H-H-ODD  ;
 skreahpoeh:skreahpoeh H-H-ODD ;
-
+vihties:vihtie GAERTJIES 
 ræsnoeh+A+Attr:ræsnoeh FINAL1 ;
-
-sahpoeh+A+Attr:sahpoeh FINAL1 ;
 skråmhpoeh+A+Attr:skråmhpoeh FINAL1 ;
 skabroeh+A+Attr:skabroeh FINAL1 ;
 skågroeh+A+Attr:skågroeh FINAL1 ;
+sahpoeh+A+Attr:sahpoeh FINAL1 ;
+
+! Chaotic part
 speajroeh+A+Attr:speajroeh FINAL1 ;
 rapsoeh+A+Attr:rapsoeh FINAL1 ;
 råpsoeh+A+Attr:råpsoeh FINAL1 ;
@@ -986,7 +988,7 @@ praades+A+Attr:praades FINAL1 ;
 vissjies+A+Attr:vissjies FINAL1 ;
 nåekies+A+Attr:nåekies FINAL1 ;
 viehkies+A+Attr:viehkies FINAL1 ;
-tjåenghkies+A+Attr:tjåenghkies FINAL1 ;
+
 umhkies+A+Attr:umhkies FINAL1 ;
 humhkies+A+Attr:humhkies FINAL1 ;
 såevlies+A+Attr:såevlies FINAL1 ;
@@ -1025,10 +1027,6 @@ loektije NULL-NULL-ODD ;
 gætsmas:gætsmije  S-NULL-ODD ;
 iemies:iemede S-NULL-ODD ;
 prïhtjediks:prïhtede S-NULL-ODD ;
-geesjegs:geesjege S-NULL-ODD ;
-jïermegs:jïermege S-NULL-ODD ;
-rovnegs:rovnege S-NULL-ODD ;
-stööregs:stöörege S-NULL-ODD ;
 tjåetskemes:tjåetskeme S-NULL-ODD ;
 diptems:dipteme S-NULL-ODD ;
 mïevers:mïevere S-NULL-ODD ;
@@ -1039,8 +1037,6 @@ tjidtjehts:tjidtjehth S-S-ODD ;
 joekehth:joekehth S-S-ODD ;
 sjavhkas:sjavhka S-S-ODD ;
 meammas:meamma S-S-ODD ;
-gåedtjies:gåedtji GAERTJIES ; !XXX Maja, check this!! 090506
-gåedtsies:gåedtsie GAERTJIES ;
 saajpes:saajpe S-S-ODD ;
 ïlveligs:ïlvelig S-S-ODD ;
 sleeke:sleek NÅAKE ;
@@ -1097,19 +1093,8 @@ sïerres S-S-EVEN ;
 stijven:stijv STIJVEN ;
 malfas:malf FRASKAS ;
 tjalhvas:tjalhv FRASKAS ;
-giefies:gief GAERTJIES ;
-laejjies:laejj GAERTJIES ;
-låedtjies:låedtj GAERTJIES ;
-låeblies:låebl GAERTJIES ;
-tjaebpies:tjaebp GAERTJIES ;
-kraejhpies:kraejhp GAERTJIES ;
-snaevkies:snaevk TSÅEKIES ;
-saevries:saevrie  GIJMIES ;
 fraapmas:fraapma GIJMIES ;
 ov-dearas:ov-deara GIJMIES ;
-kruepies:kruepie GAERTJIES ;!kruepebe, kruepemes
-liehties:liehtie GAERTJIES ;!liehtebe, liehtemes
-smaejvies:smaejvie GAERTJIES ;!smaejvebe, smaejvemes
 rutjkes:rutjke GIJMIES ;
 stinkes:stinke GIJMIES ;
 stonkes:stonke GIJMIES ;
@@ -1149,7 +1134,19 @@ tjeakoes:tjeakoe S-S-ODD ;
 geljie:gelj GAERTJIES ; 
 giehpies:giehp GAERTJIES ;!  
 vilhties:vielht GAERTJIES ;!'skråning' - hellende, skrånende 
-
+kruepies:kruepie GAERTJIES ;!kruepebe, kruepemes
+liehties:liehtie GAERTJIES ;!liehtebe, liehtemes
+smaejvies:smaejvie GAERTJIES ;!smaejvebe, smaejvemes
+giefies:gief GAERTJIES ;
+laejjies:laejj GAERTJIES ;
+låedtjies:låedtj GAERTJIES ;
+låeblies:låebl GAERTJIES ;
+tjaebpies:tjaebp GAERTJIES ;
+kraejhpies:kraejhp GAERTJIES ;
+snaevkies:snaevk TSÅEKIES ;
+saevries:saevrie  GIJMIES ;
+gåedtjies:gåedtji GAERTJIES ; !XXX Maja, check this!! 090506
+gåedtsies:gåedtsie GAERTJIES ;
 
 !OK!
 jorpe:jorpe NULL-NULL-EVEN ;  
@@ -1326,7 +1323,7 @@ værsjoes ADJ-DIRTY ; !NORTH
 væssjas ADJ-DIRTY ; 
 
 !COMMENTS: 
-! 1) SPØRSMÅL: voejelags:voejel ADJ-DIRTY ; ! 'lags'-endelsen er ikke funnet noe sted hverken blant informanter eller tekster? -> 
+! 1) voejelags:voejel ADJ-DIRTY ; ! 'lags'-endelsen er ikke funnet noe sted hverken blant informanter eller tekster? -> 
 !!tjåervie-bielien = the same as 'båadtsoeh-åejjien',  this one is a substantive!
 ! COMMENTS AND (PERHAPS) CLEVER THOUGHTS:  
 ! 2) aajmone:aajmone S-NULL-EVEN ;MII LEA DAT EVEN? In diede manin diet lea EVEN= even-stem, soaitá boastut cállojuvvon, diet hal lea adv! (eller kasusform av subst)
@@ -2359,7 +2356,8 @@ hujnies+A+Attr:hujnies FINAL1 ;
 mujvies+A+Attr:mujvies FINAL1 ;
 fuehpies+A+Attr:fuehpies FINAL1 ;
 saetnies+A+Attr:saetnies FINAL1 ;
-
+tjåenghkies+A+Attr:tjåenghkies FINAL1 ;
+måeries+A+Attr:måeries FINAL1 ; 
 
 åavroes:åavroe S-S-ODD ;
 åavras:åavra S-S-ODD ;  
