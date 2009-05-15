@@ -586,7 +586,7 @@ LEXICON TSÅEKIES ! Attr= s, pred=s jih Ø, Comp = EVEN jih ODD(åbpoe, ommes) C
 LEXICON FAAVROES! attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/substantiven hammoe= Even
  :oe  ATTR-S ;
      FAAVROEScase ;
- :oe PRED-Ø ;
+ :oe PRED-0 ;
 +A:e  EVENCOMP ;
 
 LEXICON OEH-OEH-ODD ! Attr=pred
@@ -603,8 +603,8 @@ LEXICON OEH-OEH-AN-ODD ! Attr=oeh, Pred=oeh og an
 +A:oe ODDCOMP ; 
 
 LEXICON N-N-ODD ! attr=n, pred= n
-:a ATTR=N ;
-:a  PRED=N ;
+:a ATTR-N ;
+:a  PRED-N ;
 +A:a ODDCOMP ; 
  ATTR-N ;
  PRED-N ;
@@ -866,11 +866,20 @@ LEXICON S-NULL-ODD
 :e   PRED-0 ;
 +A:  ODDCOMP ;
 
+LEXICON S-N-ODD
+     ATTR-S ;
+   PRED-N ;
++A:  ODDCOMP ;
+
 LEXICON ES-E-ODD
 :e     ATTR-S;
 :e     PRED-0;
 +A:    ODDCOMP ; 
 
+LEXICON E-S-ODD
+:e     ATTR-S;
+:s     PRED-0;
++A:    ODDCOMP ; 
 
 
 ! type 4
@@ -1031,6 +1040,10 @@ LEXICON PRED-H
 LEXICON PRED-N
 +A+Pred:%>n FINAL1 ; ! Awaiting full adj analysis 
 +A:%>n   RELEVANTNOUNLEX ;
+
+LEXICON PRED-AN
++A+Pred:%>an FINAL1 ; ! Awaiting full adj analysis 
++A:%>an   RELEVANTNOUNLEX ;
 
 
 
