@@ -723,6 +723,8 @@ ussjedammes:ussjedamme S-S-ODD ;
 moenedammes:moenedamme S-S-ODD ;   
 
 ! ege- adjektiver 
+skaavhtege:skaavhteg E-E-ODD ; 
+skaavhteges:skaavhteg E-S-ODD ; 
 geahpegs+A+Attr:geahpegs FINAL1 ;
 nuhtegs:nuhtege S-NULL-ODD ; !"nyttig" ;
 naabrege:naabreg E-E-ODD ;
@@ -824,16 +826,14 @@ tjïjhtjen-laaves+A+Attr:tjïjhtjen-laaves FINAL1 ;
 
 bååresihks+A+Attr:bååresihks FINAL1 ; 
 
-eeptsh:eeptsege S-S-EVEN ; 
-
 !saatnems+A+Attr:saatnems FINAL1 ; 
 ! gearts+A+Attr:gearts FINAL1 ;
 !gåajpa NULL-NULL-EVEN ; !XXXpred!SOUTH 
 
 jalke:jalkede NULL-S-EVEN ; !attr=jalke og pred = jalke 
 jarpe JEARKOE ; ! jorpe, attr= jarpe/ jorpe og pred= jarpe/jorpe 
-nymmehts+A+Attr:nymmehts FINAL1 ; ! Attr= nymmehts, pred= nymmehth 
-!gaertjies S-S-ODD ; !no 3-syllable paradigm 
+
+
 !njalke:njalk      ;  Njalke =bare attr, njalkeme= pred, verbform eller Nomen actionis 
 
 tsåaloeh+A+Attr:tsåaloeh FINAL1 ; !
@@ -890,7 +890,7 @@ haaltje+A+Attr:haaltje FINAL1 ;
 snjaltje+A+Attr:snaltje FINAL1 ;
 skïemtje:skïemtj NULL-S-EVEN ; 
 
-!  SE PÅ DISSE!!! 
+!  Chaotic part!!! 
 gåajpe+A+Attr:gåajpe FINAL1 ;
 skïelpe+A+Attr:skïelpe FINAL1 ;
 sillere+A+Attr:sillere FINAL1 ;
@@ -918,13 +918,11 @@ veagloeh+A+Attr:veagloeh FINAL1 ;
 haalloeh+A+Attr:haalloeh FINAL1 ;
 falloeh+A+Attr:falloeh FINAL1 ;
 veavloeh+A+Attr:veavloeh FINAL1 ;
-
 ! Chaotic part
 daeptems:daepteme S-NULL-ODD ;  ! SOUTH - DONT KNOW
 gumhtems:gumhteme S-NULL-ODD ;  !SOUTH - DONT KNOW
 pröösenahke+A+Attr:pröösenahke FINAL1 ; !  
 dumhtems:dumhteme S-NULL-ODD ; !SOUTH - DONT KNOW
-
 speajroeh+A+Attr:speajroeh FINAL1 ;
 rapsoeh+A+Attr:rapsoeh FINAL1 ;
 råpsoeh+A+Attr:råpsoeh FINAL1 ;
@@ -1038,10 +1036,18 @@ stijven:stijv STIJVEN ;
 malfas:malf FRASKAS ;
 tjalhvas:tjalhv FRASKAS ;
 ov-dearas:ov-deara GIJMIES ;
+vijnie+A+Attr:vijnie FINAL1 ;
+skïebtje:skïebtj DOLVE ;!??????
+ræsnoeh+A+Attr:ræsnoeh FINAL1 ;
+skågroeh+A+Attr:skågroeh FINAL1 ;
+sahpoeh+A+Attr:sahpoeh FINAL1 ;
+rïejhpegïdtes+A+Attr:rïejhpegïdtes FINAL1 ;
+
 
 
 skaajmes:skaajme GIJMIES ;
 
+!  --question--
 ! ??   frååpmes:frååpme GIJMIES ;
 ! ??   fraapmas:fraapma GIJMIES ;
 ! ??   geamhpes:geamhp RAAJNES ;
@@ -1053,6 +1059,11 @@ skaajmes:skaajme GIJMIES ;
 ! ??   seejnes:seejn NJOEKTSES ;
 ! ??   mïevres:mïevr NJOEKTSES ;
 ! ??   njoektses:njoekts NJOEKTSES ;
+
+!eeptsh:eeptsege S-S-EVEN ; 
+
+
+
 
 ! SOUTH- adjectives 
 båavhra H-N-EVEN ; !SOUTH
@@ -1081,7 +1092,6 @@ saajpe:saajp NULL-S-EVEN ;
 habroeh:habroe H-H-ODD ; 
 habrah:habra H-H-ODD ; 
 vijdies:vijdie GAERTJIES ; 
-
 seekes:seeke S-S-ODD ; !SOUTH! - SEEKES/ SØØKES 
 hearlohke:hearlohk LYÖVLEHKE ; !AVLEDNING AV LØØVLES 
 ræhpas:ræhpa S-S-oDD ; !komp: ræhpasabpa 
@@ -1117,13 +1127,6 @@ nænnoes:nænnoe S-S-EVEN ;
 nåjjoeh:nåjjoe H-H-ODD ; !'OE' ELLER 'A'
 gaertjies:gaertj GAERTJIES ; 
 
-
-vijnie+A+Attr:vijnie FINAL1 ;
-skïebtje:skïebtj DOLVE ;!??????
-ræsnoeh+A+Attr:ræsnoeh FINAL1 ;
-skågroeh+A+Attr:skågroeh FINAL1 ;
-sahpoeh+A+Attr:sahpoeh FINAL1 ;
-rïejhpegïdtes+A+Attr:rïejhpegïdtes FINAL1 ;
 
 
 !OK
@@ -1193,8 +1196,6 @@ låeblies:låeblie GAERTJIES ;
 veaksehks:veaksehk VYRTEHKE ; ! 1) durativ og 2) momentan
 fraskoes:frask FAAVROES ;
 skaavhtes:skaavhte S-S-EVEN ; 
-skaavhtege:skaavhteg E-E-ODD ; 
-skaavhteges:skaavhteg E-S-ODD ; 
 !    *********
 
 !OK!
@@ -1485,7 +1486,7 @@ tseagkoetjåervie:tseagkoetjåervi NÅAKE ; ! OBS! gradbøyer ikke reinterm
 jaesiegoelke/-goelkije:jaesiegoelke/-goelkij NÅAKE ; !OBS! ikke gradbøy 
 gabte:gabt NÅAKE ;
 gamte:gamt NÅAKE ; 
-gamte:gamtege NULL-S-EVEN ;  !SYSTEM1, SOUTH
+gamte:gamtege NULL-S-EVEN ; 
 gabte:gabtege NULL-S-EVEN ;
 !!!!!!noere:nuer NÅAKE ; ! noere-nuerebe- nööremes! OMLYD!!!! 
 !!!!!!stoerre:stue NÅAKE ; !stoerre-stuerebe-stööremes OMLYD!!
@@ -1703,6 +1704,7 @@ raajohth:raajoeht H-H-ODD ; ! raajoehtåbpoe
 !eejhtegapth:!In diede
 
 !Attr= hts, pred=hts, konsonanstamme, Comp= ODD, Case= ODD-OK
+
 mæjkehts:mæjkeht S-S-ODD ; 
 baenehts:baenieht S-S-ODD ;
 nealehts:nealeht S-S-ODD ; !nealehtsåbpoe e-ie
@@ -1729,6 +1731,7 @@ beapmohts:beapmoeht S-S-ODD ;
 !nirrehts:nirreht S-H-ODD ;
 !Nommehts:nommeht S-H-ODD ; 
 !nïmmehts:nïmmeht S-H-ODD ;
+!nymmehts+A+Attr:nymmehts FINAL1 ; ! Attr= nymmehts, pred= nymmehth 
 !såajehts:såajeht S-H-ODD ; 
 !moerehts:moereht S-H-ODD ; 
 !tjidtjehts:tjidtjeht S-H-ODD ; 
