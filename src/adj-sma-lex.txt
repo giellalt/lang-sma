@@ -505,7 +505,7 @@ tjeavlijs NULL-NULL-ODD ;  !XXXpred
 !sïjmijes, sïjmijs
 !aalmijes, aalmijs
 !byöpmijes, byöpmijs ! (SOUTH) 
-!jïermijes, jïermijs= jiermege?
+!jïermijes, jïermijs= 
 !fååmijes, fååmijs ! (SOUTH) 
 !njuanijes, njuanijs ! (SOUTH) !
 !voevnijes, voevnijs
@@ -697,7 +697,7 @@ slaahpoe-gåålehke:slaahpoe-gåålehk LYÖVLEHKE ;
 suerkehke+A+Attr:suerkehke FINAL1 ;
 vaeljehke+A+Attr:vaeljehke FINAL1 ;
 vuasehks:vuasehk VYRTEHKE ; !vuasehke ; komp. vuasahkåbpoe dristig, dumdristig ; pågående, nærgående (om ulv)
-vuelehks:vuelehk VYRTEHKE ; ! -> ehke/ege- endelsen -> ege 
+
 vyrtehks:vyrtehk VYRTEHKE ; !- vyrtehks ; pred. vyrtehke velgjørende, virksom (om medisin) 1) durativ og 2) momentan = begge er attr. og predform. mun jáhkan
 !syögkehke se siegkies ADJ-DIRTY ; !avledning av 'siegkies', syögkehke = er 'tynnaktig', f.eks siegkies almetje jih dïhte almetje lea siegkies (stadfester) 
 !gorrehke se garre ADJ-DIRTY ;RAAJNES       'GARRE' OG 'GARRES'
@@ -765,18 +765,34 @@ heelege:heeleg NULL-S-ODD ;
 heelegs:heeleg S-S-ODD ; 
 garhpege:garhpeg NULL-NULL-ODD ; 
 rovnege:rovneg NULL-NULL-ODD ; 
-!rovnegs
-!Jiermege/jiermegs
-!våårtegs 
-!gielteges
-!Lïenegs 
-!Buajtegs
-!mådtege
-!gujtege
-!låetege
-!stabrege
-luvdegs:luvdege S-NULL-ODD ; ! 'D' ELLER 'R'
-luvregs:luvrege S-NULL-ODD ; ! 'D' ELLER 'R'
+rovnegs:rovneg S-S-ODD ; 
+jiermege:jiermeg S-NULL-ODD ;
+jiermegs:jiermeg S-NULL-ODD ; 
+våårtegs:våårteg S-S-ODD ;  
+gielteges:gieltege S-NULL-ODD ; 
+gielteges:gieltege S-S-ODD ; 
+lïenegs:lïeneg S-S-ODD ; 
+bieljege:bieljege NULL-NULL-ODD ;  
+buajtegs:buajteg S-S-ODD ;
+mådtege:mådtege NULL-NULL-ODD ;
+madtege:madtege NULL-NULL-ODD ;  
+gujtege:gujtege NULL-NULL-ODD ; 
+låetege:låetege NULL-NULL-ODD ; 
+stabrege:stabrege NULL-NULL-ODD ; 
+luvdegs:luvdege S-NULL-ODD ; ! 
+luvregs:luvrege S-NULL-ODD ; ! 
+
+!Chaotic part of ege-adjectives
+eeptsegs:eeptsege S-S-EVEN ;
+stöödegs:stöödege S-NULL-ODD ; 
+!eeptsh:eeptsege S-S-EVEN ;
+
+! NORMATIVE ENQUIRY
+gamte:gamtege NULL-S-EVEN ; 
+gabte:gabtege NULL-S-EVEN ;
+vuelehks:vuelehk VYRTEHKE ; ! -> ehke/ege- endelsen -> ege: I think this one is vuelegs, not vuelehks  
+
+!   ******
 
 
 !Tjåetskeme - spesiell!! 
@@ -877,7 +893,7 @@ krahtjoeh+A+Attr:krahtjoeh FINAL1 ; ! 'A' ELLER 'OE'
 ijtje-raadh:ijtje-raad IJTJE-RAADH ; !SOUTH!   'RAADH' ELLER 'RAARH'
 
 
-stöödegs:stöödege S-NULL-ODD ; !'DEGS' ELLER 'REGS'
+
 stoere:stoer NÅAKE ; !StuerebeStööremes XXX clearly unsystematical bastard !'STOERRE' ELLER 'STOERE' (substantive)
 stejkede S-NULL-ODD ; !only pred.  -ie-
 mævhkas PRED-0 ; !XXXobs enbart pred.
@@ -1022,14 +1038,11 @@ målhtjoes:målhtja H-N-EVEN ;
 sjuejmieh:sjåajma H-N-EVEN ;
 tjåalpa:tjåalpa H-N-EVEN ;
 nearran N-N-EVEN ;
-eeptsegs:eeptsege S-S-EVEN ;
+
 saatnan:saatnan S-S-EVEN ;
 spatnas S-S-EVEN ;
 sïerres S-S-EVEN ;
 stijven:stijv STIJVEN ;
-malfas:malf FRASKAS ;
-tjalhvas:tjalhv FRASKAS ;
-ov-dearas:ov-deara GIJMIES ;
 vijnie+A+Attr:vijnie FINAL1 ;
 skïebtje:skïebtj DOLVE ;!??????
 ræsnoeh+A+Attr:ræsnoeh FINAL1 ;
@@ -1054,12 +1067,7 @@ skaajmes:skaajme GIJMIES ;
 ! ??   mïevres:mïevr NJOEKTSES ;
 ! ??   njoektses:njoekts NJOEKTSES ;
 
-!eeptsh:eeptsege S-S-EVEN ; 
-
-
-
-
-! SOUTH- adjectives 
+! SOUTH- adjectives  = DONT KNOW
 båavhra H-N-EVEN ; !SOUTH
 tjiehties S-S-EVEN ; !SOUTH
 fraskas:frask FRASKAS ; !SOUTH
@@ -1067,6 +1075,12 @@ skaajmoes:skaajmoe GIJMIES ; !SOUTH
 tjielhves:tjielhve GIJMIES ; !SOUTH
 platka H-N-EVEN ; !SOUTH pred
 nåasjlan NULL-S-EVEN ;  !SOUTH  XXX pred
+
+malfas:malf FRASKAS ;
+tjalhvas:tjalhv FRASKAS ;
+ov-dearas:ov-deara GIJMIES ;
+
+
 
 !KOMPARASJON:  2. STAVELSE: VAEJKELE-VÆJKELÅBPOE / A  ? OE- væjkodh
 !  SIENGELE -SIENGIELÅBPOE / A ?
@@ -1314,7 +1328,7 @@ slapsoeh:slapsoe H-H-ODD ;
 !gæjmas:gæjman ADJ-DIRTY ; ! ATTR=GIEJMIES OG PRED =GIEJMIES
 
 
-!TO BE SYSTEMIZED!! Need a S-N-ODD lexicon! 
+!Need a S-N-ODD lexicon! 
 barras:barran ADJ-DIRTY ;
 dakngas:dakngan ADJ-DIRTY ;
 duasvas:duasvan ADJ-DIRTY ;
@@ -1455,6 +1469,7 @@ skåhtjoe-juelkie:skåhtjoe-juelki NÅAKE ;
 !golmen-juelkie:!golmen-juelki NÅAKE ;
 skaejlie:skaejli NÅAKE ;
 madtege-raerie:madtege-raeri NÅAKE ;
+mådtege-raerie:mådtege-raeri NÅAKE ; 
 njabre:njabr NÅAKE ;
 fïjne:fïjn NÅAKE ;
 kvïhke:kvïhk NÅAKE ;
@@ -1478,8 +1493,6 @@ tseagkoetjåervie:tseagkoetjåervi NÅAKE ; ! OBS! gradbøyer ikke reinterm
 jaesiegoelke/-goelkije:jaesiegoelke/-goelkij NÅAKE ; !OBS! ikke gradbøy 
 gabte:gabt NÅAKE ;
 gamte:gamt NÅAKE ; 
-gamte:gamtege NULL-S-EVEN ; 
-gabte:gabtege NULL-S-EVEN ;
 !!!!!!noere:nuer NÅAKE ; ! noere-nuerebe- nööremes! OMLYD!!!! 
 !!!!!!stoerre:stue NÅAKE ; !stoerre-stuerebe-stööremes OMLYD!!
 !!!!!!orre:urr NÅAKE ; ! orre-urrebe, orremes OMLYD!!! 
@@ -1731,28 +1744,24 @@ moerehts:moerehtz S-S-ODD ;
 !ejtehts:ejteht S-H-ODD ; 
 !mæjkehts:mæjkeht S-H-ODD ;
 
-!Chaotic part - NORMATIVE ENQUIRY  
+! Chaotic part of ehts-adjectives-NORMATIVE question
 buerie-sjugnehts+A+Attr:buerie-sjugnehts FINAL1 ;!   think this one is eds-adjective 
 hiejjehts:hiejjie S-S-ODD ;
 skaemehts:skaemiehtadtje S-S-ODD ; !SOUTH 
 tjelmehts:tjelmiehtadtje S-S-ODD ;
 jissehts:jissiehtadtje S-S-ODD ;
 tjidtjehts:tjidtjehth S-S-ODD ;
-
 jïrrehts+A+Attr:jïrrehts FINAL1 ;
 lissehts+A+Attr:lissehts FINAL1 ;
-miesehts:miesehth S-S-ODD ; !'sjekke opp'! 
-
-
+miesehts:miesehth S-S-ODD ;  
 jiermehts+A+Attr:jiermehts FINAL1 ; ! 'EHTS' ELLER 'ADTJE'
 skaamehts S-NULL-ODD ; !Only attr.
 !aeblehts:aebleht S-S-ODD ;  !AEBLEHTS BÅDE ATTR. OG AEBLEHTH/AEBLEHTH
 !nommehts:nommeht S-H-ODD ; ! Attr= nommehts, pred = nommehth
 !nïmmehts:nïmmeht S-H-ODD ; ! Attr=nommehts, pred = nommehth
-
-
 !!beetnehgapta! gradbøying mangler
 !!eejhtegapts
+
 
 !N-N-gruppen - OK!! 
 tjakngan+A+Attr:tjakngan FINAL1 ;
