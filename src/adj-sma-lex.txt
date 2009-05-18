@@ -220,32 +220,39 @@ skuekierdihks:skuekierdihks DIHKS ;
 
 ! ELE derivations :
 bijveles:bijvel ES-ES-ODD ;
-bijveles:bijvele S-NULL-ODD ; 
-tjogkeles:tjogkele S-NULL-ODD ;
+bijveles:bijvele ES-E-ODD ; 
+tjogkeles:tjogkel ES-E-ODD ;
 tjogkeles:tjogkel ES-ES-ODD ; 
-skïebtjeles:skïebtjele S-NULL-ODD ; 
+skïebtjeles:skïebtjel ES-E-ODD ; 
 skïebtjeles:skïebtjel ES-ES-ODD ; 
-skïemtjeles:skïemtjele S-NULL-ODD ; 
+skïemtjeles:skïemtjel ES-E-ODD ; 
 skïemtjeles:skïemtjel ES-ES-ODD ; 
 tsuejhkeles:tsuejhkel ES-ES-ODD ; 
-joejkeles:joejkele S-NULL-ODD ;
+joejkeles:joejkel ES-E-ODD ;
 joejkeles:joejkel ES-ES-ODD ;  
-jupmeles:jupmele S-NULL-ODD ; 
+jupmeles:jupmel ES-E-ODD ; 
 jupmeles:jupmel ES-ES-ODD ; 
-dååreles:dåårele S-NULL-ODD ;
+dååreles:dåårel ES-E-ODD ;
 dååreles:dåårel ES-ES-ODD ;  
 iehtseles:iehtsel ES-ES-ODD ;
 jihtseles:jihtsel ES-ES-ODD ;
 gadteles:gadtel ES-ES-ODD ;
-gijhteles:gijhtel ES-NULL-ODD ;
-gæjhteles:gæjhtel NULL-NULL-ODD ;
-håhteles:håhtele S-NULL ODD ; !(South)
+gijhteles:gijhtel ES-E-ODD ;
+gæjhteles:gæjhtel E-E-ODD ;
+håhteles:håhtel ES-E-ODD ; 
 håhteles:håhtel ES-ES-ODD ; 
-huhteles:huhtele S-NULL-ODD ; !  (North) 
-huhteles:huhtel ES-NULL-ODD ; 
-aajteles:aajtele S-NULL-ODD ;
-besteles:bestele S-NULL-ODD ;
+huhteles:huhtele ES-E-ODD ; 
+huhteles:huhtel ES-E-ODD ; 
+aajteles:aajtel ES-E-ODD ;
+besteles:bestel ES-E-ODD ;
 besteles:bestel ES-ES-ODD ; 
+vedteles:vedtel ES-E-ODD ;
+vietjeles:vietsel ES-E-ODD ;
+vietseles:vietsel ES-E-ODD ;
+vihkeles:vihkel ES-E-ODD ;
+væjkeles:væjkel ES-ES-ODD ; !ATTR= VÆJKELE (S) OG PRED= VÆJKELE (S)
+væjkele:væjkel E-E-ODD ; 
+
 !bihtseles+A+Attr:bihtseles FINAL1 ; 
 !byögkeles+A+Attr:byökgeles FINAL1 ;
 !dispeles:dispele S-NULL-ODD ;
@@ -277,12 +284,6 @@ besteles:bestel ES-ES-ODD ;
 !siengeles:siengele S-NULL-ODD ; ! -> komp. siengielåbpoe somlete, langsom, sendrektig (om person, rein)
 sjiehteles:sjiehtele S-NULL-ODD ; ! 
 sjiehteles+A+Pred:sjiehteles FINAL1 ; 
-skïebtjeles:skïebtjele S-NULL-ODD ; !
-skïebtjeles+A+Pred:skïebtjeles FINAL1 ; 
-skïemtjeles:skïemtjele S-NULL-ODD ; 
-
-
-
 slaahpoe-geeles:slaahpoe-geele GIJMIES ;
 snjuhtjeles:snjuhtjele S-NULL-ODD ;
 stompeles:stompele S-NULL-ODD ;
@@ -295,21 +296,19 @@ tsåakeles+A+Attr:tsåakeles FINAL1 ;
 tsåeptseles:tsåeptsele S-NULL-ODD ; ! -ie-
 tsåvveles+A+Attr:tsåvveles FINAL1 ;
 vaeteles+A+Attr:vaeteles FINAL1 ;
-vedteles:vedtele S-NULL-ODD ;
-vietjeles:vietsele S-NULL-ODD ;
-vietseles:vietsele S-NULL-ODD ;
-vihkeles:vihkele S-NULL-EVEN ;
-væjkeles:væjkele S-NULL-ODD ; !ATTR= VÆJKELE (S) OG PRED= VÆJKELE (S)
-væjkele:væjkele NULL-NULL-ODD ; 
+
+
 
 !ELE-Avledninger: har både v/v og s/s  -åbpoe-, -ommes- 
 !ELE-avledninger : som har vokal i attributt og predikativ
-!gijvele= attr=pred
-!maehtele=attr=pred  
-!mastele=attr=pred
-!stompele=attr =pred
-!siengele=attr=pred 
-!væjkele= attr=pred 
+gijvele:gijvel E-E-ODD ;
+maehteles:maehtel ES-E-ODD ;
+maehteles:maehtel ES-ES-ODD ;   
+mastele:mastel E-E-ODD ; !attr=pred
+stompele:stompele E-E-ODD ; !=attr =pred
+siengele:siengel E-E-ODD ; ! =attr=pred 
+væjkele:væjkel E-E-ODD ; ! = attr=pred 
+
 !ELES-AVledninger som har s i attributt og pred
 !Les/le: 
 !alle adj på ies dannar adj på eles
@@ -365,18 +364,25 @@ tjåervie-bielies:tjåervie-bielie S-S-ODD ;
 !tjåervie-bielien = substantiv Nickel side 
 
 !!ERES-avledninger: 
-!!abperes:abpere S-NULL-ODD ;
-!!bååvteres:bååvtere S-NULL-ODD ; !Attr=pred:båavteres
-!!fååhperes:fååhper.            ; !Attr=fååhperes, pred= fååhpere
-!gaarmeres:gaarmer ES-E-ODD ; !Attr=gaarmeres, pred=gaarmere og gaarmeres
-!bolteres:bolter              ; !attr=bolteres, pred = bolteres og boltere
-!barkeres:barker              ; !att=barkeres og pred = barkeres
-!boffere:boffer               ; !Attr=pred:boffere
-!ïeskeres:ïesker              ; !Attr=pred:ïeskeres
-!geajhkeres:geajhker          ; !Attr=pred:geajhkeres
-!joevteres:joevter            ; !Attr=joevteres og joevtere og pred=joevteres
-!dealhveres:dealhver          ; !Attr= dealhvere, dealhveres og pred=dealhvere og dealhveres
-!sådteres:sådter              ; !Attr:sådteres og pred=sådteres og sådtere
+abperes:abpere S-NULL-ODD ;
+bååvteres:bååvtere S-NULL-ODD ; !Attr=pred:båavteres
+båavteres:båavter ES-ES-ODD ; 
+fååhperes:fååhpere S-NULL-ODD ; !Attr=fååhperes, pred= fååhpere
+fååhprees:fååhper ES-ES-ODD ; 
+gaarmeres:gaarmer ES-E-ODD ; !Attr=gaarmeres, pred=gaarmere og gaarmeres
+gaarmeres:gaarmer ES-ES-ODD ; 
+bolteres:boltere S-NULL-ODD ; !attr=bolteres, pred = bolteres og boltere
+barkeres:barker ES-S-ODD ; !att=barkeres og pred = barkeres
+barkeres:barker ES-NULL-ODD ; 
+boffere:boffere NULL-NULL-ODD ;  !Attr=pred:boffere
+ïeskeres:ïesker ES-NULL-ODD ;   !Attr=pred:ïeskeres
+geajhkeres:geajhker ES-NULL-ODD ; !Attr=pred:geajhkeres
+geajhkeres:geajhker ES-S-ODD ; !Attr=pred:geajhkeres
+joevteres:joevter ES-ES-ODD ;  !Attr=joevteres og joevtere og pred=joevteres
+joevtere:joevetere NULL-NULL-ODD ; 
+dealhveres:dealhver ES-ES-ODD ; 
+dealhvere:dealhvere NULL-NULL-ODD ;         
+sådteres:sådter ES-E-ODD ;  !Attr:sådteres og pred=sådteres og sådtere
 !tjagkere:tjagker             ; !Attr=Pred:tjagkere
 !!bohteres:bohtere S-NULL-ODD ; !SOUTH!
 !!laahtjeres:laahtjere        ; !SOUTH
