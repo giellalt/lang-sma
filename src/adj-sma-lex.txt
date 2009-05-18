@@ -180,9 +180,7 @@ domsedihks:domsedihk DIHKS ;  !              domsedidh
 dåeriedihks:dåeriedihk DIHKS ; !             dåeriedidh
 dåålvedihks:dåålvedihk DIHKS ; !             dåålvedidh
 garmerdihks:garmerdihk DIHKS ; !             garmerdidh
-geehpedihks:geehpedihk DIHKS ; !            geehpedidh
-    ! (SK:kan si det,men det er uhøflig/sier det ikke slik) 
-    
+geehpedihks:geehpedihk DIHKS ; !            geehpedidh    
 gïebredihks:gïebredihk DIHKS ; !             gïebredidh
 gyrredihks:gyrredihk DIHKS ; !               gyrredidh 
 gærroedihks:gærroedihk DIHKS ; !             gærroedidh
@@ -219,42 +217,44 @@ skuekierdihks:skuekierdihks DIHKS ;
 
 
 ! ELE derivations :
-bijveles:bijvel ES-ES-ODD ;
-bijveles:bijvele ES-E-ODD ; 
-tjogkeles:tjogkel ES-E-ODD ;
-tjogkeles:tjogkel ES-ES-ODD ; 
-skïebtjeles:skïebtjel ES-E-ODD ; 
-skïebtjeles:skïebtjel ES-ES-ODD ; 
-skïemtjeles:skïemtjel ES-E-ODD ; 
-skïemtjeles:skïemtjel ES-ES-ODD ; 
-tsuejhkeles:tsuejhkel ES-ES-ODD ; 
-joejkeles:joejkel ES-E-ODD ;
-joejkeles:joejkel ES-ES-ODD ;  
-jupmeles:jupmel ES-E-ODD ; 
-jupmeles:jupmel ES-ES-ODD ; 
-dååreles:dåårel ES-E-ODD ;
-dååreles:dåårel ES-ES-ODD ;  
-iehtseles:iehtsel ES-ES-ODD ;
-jihtseles:jihtsel ES-ES-ODD ;
-gadteles:gadtel ES-ES-ODD ;
-gijhteles:gijhtel ES-E-ODD ;
+bijveles:bijvel ES-ES+E-ODD ;
+!bijveles:bijvele ES-E-ODD ; !
+!tjogkeles:tjogkel ES-E-ODD ; ! tjogkeldidh
+tjogkeles:tjogkel ES-ES+E-ODD ; 
+!skïebtjeles:skïebtjel ES-E-ODD ; !   e(2)-stamme 
+skïebtjeles:skïebtjel ES-ES+E-ODD ;!   e(2)-stamme
+!skïemtjeles:skïemtjel ES-E-ODD ; !   e(2)-stamme 
+skïemtjeles:skïemtjel ES-ES+E-ODD ; 
+tsuejhkeles:tsuejhkel ES-ES+E-ODD ; 
+!joejkeles:joejkel ES-E-ODD ;
+joejkeles:joejkel ES-ES+E-ODD ;  
+!jupmeles:jupmel ES-E-ODD ; 
+jupmeles:jupmel ES-ES+E-ODD ; 
+!dååreles:dåårel ES-E-ODD ;! dåarodh_oe-stamme UMLAUT
+dååreles:dåårel ES-ES+E-ODD ; !dåarodh = oe-stamme UMLAUT 
+iehtseles:iehtsel ES-ES+E-ODD ;! iehtsedh = ie-stamme
+jihtseles:jihtsel ES-ES+E-ODD ;
+gadteles:gadtel ES-ES+E-ODD ;
+!gijhteles:gijhtel ES-E-ODD ;
 gæjhteles:gæjhtel E-E-ODD ;
-håhteles:håhtel ES-E-ODD ; 
-håhteles:håhtel ES-ES-ODD ; 
-huhteles:huhtele ES-E-ODD ; 
-huhteles:huhtel ES-E-ODD ; 
-aajteles:aajtel ES-E-ODD ;
-besteles:bestel ES-E-ODD ;
-besteles:bestel ES-ES-ODD ; 
-vedteles:vedtel ES-E-ODD ;
+!håhteles:håhtel ES-E-ODD ; 
+håhteles:håhtel ES-ES+E-ODD ; !huhtedh -ie-stamme
+!huhteles:huhtel ES-E-ODD ; !huhtedh= ie-stamme
+huhteles:huhtel ES-ES+E-ODD ;  !huhtedh= ie-stamme
+aajteles:aajtel ES-E-ODD ;!
+!besteles:bestel ES-E-ODD ;
+besteles:bestel ES-ES+E-ODD ; 
+vedteles:vedtel ES-E-ODD ;! vedtedh = ie-stamme
 vietjeles:vietsel ES-E-ODD ;
-vietseles:vietsel ES-E-ODD ;
-vihkeles:vihkel ES-E-ODD ;
-væjkeles:væjkel ES-ES-ODD ; !ATTR= VÆJKELE (S) OG PRED= VÆJKELE (S)
-væjkele:væjkel E-E-ODD ; 
+vietseles:vietsel ES-E-ODD ;! 
+!vihkeles:vihkel ES-E-ODD ;
+væjkeles:væjkel ES-ES+E-ODD ; !væjkodh = oe-stamme 
+væjkele:væjkel E-E-ODD ; ! oe-stamme 
 
-!bihtseles+A+Attr:bihtseles FINAL1 ; 
-!byögkeles+A+Attr:byökgeles FINAL1 ;
+bihtseles:bihtsel ES-E-ODD ; !bihtsielåbpoe = ie-stamme  
+byögkeles:byögkele ES-ES+E-ODD ;! byögke = e(2)-stamme 
+byögkeles:byögkel ES-E-ODD ;! byögke = e(2)-stamme
+ 
 !dispeles:dispele S-NULL-ODD ;
 !båvveles+A+Attr:båvveles FINAL1 ;
 !bijveles 
@@ -274,7 +274,8 @@ væjkele:væjkel E-E-ODD ;
 !maereles:maerele S-NULL-ODD ;
 !marveles:marvele S-NULL-ODD ;
 !masteles:mastele S-NULL-ODD ;
-!mujhteles:mujhtele S-NULL-ODD ; !
+mujhteles:mujhtel ES-ES-ODD ; ! mujhtedh = ie-stamme 
+mujhteles:mujhtel ES-E-ODD ;  !mujhtedh= ie-stamme 
 !moeveles:moevele S-NULL-ODD ;
 !njaatjeles+A+Attr:njaatjeles FINAL1 ;
 !njoetjeles+A+Attr:njoetjeles FINAL1 ;
@@ -282,7 +283,7 @@ væjkele:væjkel E-E-ODD ;
 !ov-vissjeles+A+Attr:ov-vissjeles FINAL1 ; !komp:ov-vissjelåbpoe 
 !sehpeles+A+Attr:sehpeles FINAL1 ;              !sehpieldidh
 !siengeles:siengele S-NULL-ODD ; ! -> komp. siengielåbpoe somlete, langsom, sendrektig (om person, rein)
-sjiehteles:sjiehtele S-NULL-ODD ; ! 
+sjiehteles:sjiehtele S-NULL-ODD ; ! sjiehtedh - ie-stamme  
 sjiehteles+A+Pred:sjiehteles FINAL1 ; 
 slaahpoe-geeles:slaahpoe-geele GIJMIES ;
 snjuhtjeles:snjuhtjele S-NULL-ODD ;
@@ -304,35 +305,73 @@ maehteles:maehtel ES-E-ODD ;
 maehteles:maehtel ES-ES-ODD ;   
 mastele:mastel E-E-ODD ; !attr=pred
 stompele:stompele E-E-ODD ; !=attr =pred
-siengele:siengel E-E-ODD ; ! =attr=pred 
-væjkele:væjkel E-E-ODD ; ! = attr=pred 
+siengele:siengel E-E-ODD ; ! =attr=pred  , siengielåbåpe
+væjkele:væjkel E-E-ODD ; ! = attr=pred , væjkalåbpoe
 
-!ELES-AVledninger som har s i attributt og pred
-!Les/le: 
+!ELES-AVledninger som har s i attributt og pred. komparativ? 
+!Les/le: ! og kva er les-le for noko??
 !alle adj på ies dannar adj på eles
+!byögke, 
+
+! geesjele:geesjele S-S-ODD ;
+! rievtie-gaatjele:rievtie-gaatjele S-S-ODD ;
+! tjïektjele:tjïektjele S-S-ODD ;
+! byögkele:byögkele S-S-ODD ;
+! jaahkele:jaahkele S-S-ODD ;
+! tsïhkele:tsïhkele S-S-ODD ;
+! naaskele:naaskele S-S-ODD ;
+! jåvkele:jåvkele S-S-ODD ;
+! javkele:javkele S-S-ODD ;
+! voemele:voemele S-S-ODD ;
+! aesmele:aesmele S-S-ODD ;
+! aasmele:aasmele S-S-ODD ;
+! baajnele:baajnele S-S-ODD ;
+! daapele:daapele S-S-ODD ;
+! dåapele:dåapele S-S-ODD ;
+! njiepele:njiepele S-S-ODD ;
+! svååjpele:svååjpele S-S-ODD ;
+! staerele:staerele S-S-ODD ;
+! öörele:öörele S-S-ODD ;
+! naassele:naassele S-S-ODD ;
+! båatalasse:båatalasse S-S-ODD ;
+! båatele:båatele S-S-ODD ;
+! beadtele:beadtele S-S-ODD ;
+! sjadtele:sjadtele S-S-ODD ;
+! ov-sjïehtele:ov-sjïehtele S-S-ODD ;
+! baejhtele:baejhtele S-S-ODD ;
+! voessen-åvtele:voessen-åvtele S-S-ODD ;
+! gyövele:gyövele S-S-ODD ;
+! vaane-jaahkole:vaane-jaahkole S-S-ODD ;
+
+
+! kva er dette?
 !vïdtjele
 !vïetjele
 !soejhkele
 !jemhkele
 !gojkele
 !vååvnele
-!svååjpele
+!svååjpele 
 !ov-dæjpele
 !gïmpele
 !soetele
-!bïjvele
-!stååpele ; komp. stååpelåbpoe
-!vaanhtse-minngeles
-!geesjele, geesjeles
+!bïjvele -bijvielåbpoe
+!stååpele
+!vaanhtse-minngele
+!geesjele
+
+!geesjeles
 !rievtie-gaatjeles
-!tjïektjeles
-!byögke, byögkeles
-!jaahkeles
+!tjïektjeles - tjïektjelåbpoe
+!byögkeles
+!jaahkeles - jaehkedh -ie-stamme ,men jaahkel
 !tsïhkeles
 !naaskeles
-!jåvkeles, javkeles
+!jåvkeles - jovhkelåbpoe
+!javkeles
 !voemeles
-!aesmeles, aasmeles
+!aesmeles
+!aasmeles
 !baajneles
 !daapeles
 !dåapeles
@@ -341,7 +380,8 @@ væjkele:væjkel E-E-ODD ; ! = attr=pred
 !staereles
 !ööreles
 !naasseles
-!båatalasse, båateles
+!båatalasse
+!båateles
 !beadteles
 !sjadteles
 !ov-sjïehteles
@@ -349,7 +389,9 @@ væjkele:væjkel E-E-ODD ; ! = attr=pred
 !voessen-åvteles
 !gyöveles
 !vaane-jaahkoles
-!gertele -ie-
+
+
+!gertele -ie- gaerhtele= 
 !gaelvere -ie-
 !tsåatskeles, tsåaktsels
 !bossele+A+Attr:bossele FINAL1 ;
@@ -371,8 +413,8 @@ tjaekeres:tjaekere ES-ES-ODD ; ! tjaekedh = ie-stamme =tjaekiedåbpoe
 laktjeres:laktjer ES-E-ODD ; ! latjkedh   = III = a-stamme
 laktjeres:laktjer ES-ES-ODD ;  
 feavseres+A+Atrr:feavseres FINAL1 ; ! feavsodh = oe-stamme = fïevse=fjøs!
-barkeres:barker ES-S-ODD ; ! barkedh = a-stamme
-barkeres:barker ES-NULL-ODD ; 
+barkeres:barker ES-ES-ODD ; ! barkedh = a-stamme
+barkeres:barker ES-E-ODD ; 
 vuajneres+A+Attr:vuajneres FINAL1 ; ! vuejnedh = I = ie-stamme = UMLAUT 
 vaeteres+A+Attr:vaeteres FINAL1 ; ! vaetedh = ie-stamme = NO UMLAUT  
 
@@ -398,7 +440,7 @@ sådteres:sådter ES-ES-ODD ;  !Attr:sådteres og pred=sådteres og sådtere
 sadteres:sadter ES-ES-ODD ; 
 fååhperes:fååhpere S-NULL-ODD ; !Attr=fååhperes, pred= fååhpere
 fååhperes:fååhper ES-ES-ODD ; 
-abperes:abpere ES-E-ODD ;
+abperes:abper ES-E-ODD ;
 dealhveres:dealhver ES-ES-ODD ; 
 dealhvere:dealhvere NULL-NULL-ODD ; ! dealhverem tjuatsa
 bååvteres:bååvter ES-ES-ODD ; ! bååvterem
@@ -451,7 +493,7 @@ govlijes NULL-NULL-ODD ; !Attr=Pred
 gualijes:gualije S-S-ODD ;   !SOUTH
 göölijes:göölije S-S-ODD ; !NORTH attr=pred: göölijes 
 gualmijes:gualmije S-S-ODD ;  !IJES/IJS
-guarkijes:guarkije S-NULL-ODD ;  ; ! IJES/IJS
+guarkijes:guarkije S-NULL-ODD ;  
 gåartijes+A+Attr:gåartijes FINAL1 ;  !'IJES'/ 'IJS'
 !tjöönghkijes ! (Ikke ) 
 !jovkijes 
@@ -712,7 +754,7 @@ gieries:gearehke S-NULL-ODD ; ! DENNE er Spesiell! PRED = substantivform
 ! RENE EHKE-ADJEKTIVER
 gaarhtseske:gaarhtsesk E-E-ODD ; !attr=pred:gaarhtseske-> gaahtsehke
 gaahtsehke:gaahtsehk VYRTEHKE ; 
-dorjehkes:dorjehke VYÖRTEHKE ; ! 
+dorjehkes:dorjehke VYRTEHKE ; ! 
 gaahtsehkes:gaahtsehke S-NULL-ODD ;
 
 
@@ -880,7 +922,7 @@ jarpe JEARKOE ; ! jorpe, attr= jarpe/ jorpe og pred= jarpe/jorpe
 
 !njalke:njalk      ;  Njalke =bare attr, njalkeme= pred, verbform eller Nomen actionis 
 
-tsåaloeh+A+Attr:tsåaloeh FINAL1 ; !
+tsåaloeh:tsåaloeh FINAL1 ; !
 hårsoeh+A+Attr:hårsoeh FINAL1 ; !
 neahka+A+Attr:neahka FINAL1 ; !
 neahkoe+A+Attr:neahkoe FINAL1 ; !
@@ -1132,7 +1174,7 @@ habrah:habra H-H-ODD ;
 vijdies:vijdie GAERTJIES ; 
 seekes:seeke S-S-ODD ; !SOUTH! - SEEKES/ SØØKES 
 hearlohke:hearlohk LYÖVLEHKE ; !AVLEDNING AV LØØVLES 
-ræhpas:ræhpa S-S-oDD ; !komp: ræhpasabpa 
+ræhpas:ræhpa S-S-ODD ; !komp: ræhpasabpa 
 geljies S-S-ODD ; !adjektivet 
 !pleahkoeh:pleahk ;  !  pleahkoeh=pleahkan 
 suajja:suajja NULL-N-EVEN ;  !
