@@ -545,11 +545,11 @@ LEXICON S-S-EVEN
 
 !--- ie-stems---
 
-LEXICON NJALHKEDIHKS
-      ATTR-S ;
-!     AELHKIEScase ;   !have they got case?
-+A+Pred:ie FINAL1 ;
-!+A:e  EVENCOMP ; !these words do not seem to have comparation
+!! not used: LEXICON NJALHKEDIHKS
+!! not used:       ATTR-S ;
+!! not used: !     AELHKIEScase ;   !have they got case?
+!! not used: +A+Pred:ie FINAL1 ;
+!! not used: !+A:e  EVENCOMP ; !these words do not seem to have comparation
 
 LEXICON DIHKS
           ATTR-S ;
@@ -571,14 +571,14 @@ LEXICON GAERTJIES! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/e
 +A+SgNomCmp:ies R ;
 +A:e  EVENCOMP ;
 
-LEXICON TSÅEKIES ! Attr= s, pred=s jih Ø, Comp = EVEN jih ODD(åbpoe, ommes) Case = even =faavroe 
- :ie  ATTR-S ;
-      AELHKIEScase ;
-+A+Pred:ies FINAL1 ;
-+A+Pred:ie FINAL1 ;
-+A+SgNomCmp:ies R ;
-+A:e  EVENCOMP ;
-+A:ies  ODDCOMP ;
+!! not used: LEXICON TSÅEKIES ! Attr= s, pred=s jih Ø, Comp = EVEN jih ODD(åbpoe, ommes) Case = even =faavroe 
+!! not used:  :ie  ATTR-S ;
+!! not used:       AELHKIEScase ;
+!! not used: +A+Pred:ies FINAL1 ;
+!! not used: +A+Pred:ie FINAL1 ;
+!! not used: +A+SgNomCmp:ies R ;
+!! not used: +A:e  EVENCOMP ;
+!! not used: +A:ies  ODDCOMP ;
 
 
 !--- oe-stems---
@@ -731,11 +731,11 @@ LEXICON SAATNA! attr= Ø, Pred = Ø, =A-stamme, Comp= even, case= even
 
 !--- ie-stems---
 
-LEXICON GELJIE! attr= Ø, pred=Ø, Comp=EVEN, case=EVEN - 
-  :ie      ATTR-0 ;
-           AELHKIEScase ;
-+A+Pred:ie FINAL1 ;
-+A:e       EVENCOMP ;
+!! not used: LEXICON GELJIE! attr= Ø, pred=Ø, Comp=EVEN, case=EVEN - 
+!! not used:   :ie      ATTR-0 ;
+!! not used:            AELHKIEScase ;
+!! not used: +A+Pred:ie FINAL1 ;
+!! not used: +A:e       EVENCOMP ;
 
 LEXICON MASTEN
      ATTR-S ;
@@ -793,12 +793,6 @@ LEXICON H-H-ODD
      PRED-H ;
 +A:  ODDCOMP ;
 
-LEXICON N-N-ODD
-     ATTR-N ;
-     PRED-N ;
-+A:  ODDCOMP ;
-
-
 LEXICON E-E-ODD !bårreske
  :e     ATTR-0 ;
  :e     PRED-0 ;
@@ -816,23 +810,7 @@ LEXICON ES-ES-ODD
 +A:ahk ODDCOMP ;
 +A:oehk ODDCOMP ; !XXX check this o
 
-LEXICON OEH-AN-ODD
-:oe   ATTR-H ;
-:a    PRED-N ;
-+A:ahk ODDCOMP ;
-+A:oehk ODDCOMP ; !XXX check this o
 
-LEXICON OEH-OEH-AN-ODD 
-:oe  ATTR-H ;
-:oeh PRED-0 ;
-:a   PRED-N ;
-+A:ahk ODDCOMP ;
-+A:oehk ODDCOMP ; !XXX check this o
-
-LEXICON OEH-OEH-ODD 
-:oe  ATTR-H ;
-:oeh PRED-0 ;
-! comparative missing! XXX
 
 !LEXICON BAENEHTS
 !:eht     ATTR-S ;
@@ -884,6 +862,12 @@ LEXICON ES-E-ODD
 :e     PRED-0;
 +A:    ODDCOMP ; 
 
+LEXICON ES-ES+E-ODD
+:e     ATTR-S;
+:e     PRED-S;
+:e     PRED-0;
++A:    ODDCOMP ; 
+
 LEXICON E-S-ODD
 :e     ATTR-S;
 :s     PRED-0;
@@ -903,13 +887,6 @@ LEXICON OEH-AN-ODD
 +A:ahk ODDCOMP ;
 +A:oehk ODDCOMP ; !XXX check this o
 
-LEXICON OEH-OEH-AN-ODD 
-:oe  ATTR-H ;
-:oeh PRED-0 ;
-:a   PRED-N ;
-+A:ahk ODDCOMP ;
-+A:oehk ODDCOMP ; !XXX check this o
- 
 
 !--- NULL-ODDs---
 ! ---------------
