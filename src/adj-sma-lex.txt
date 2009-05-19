@@ -267,9 +267,11 @@ gaaveles:gaavel ES-ES-ODD ; !                   a, oe eller e(1)-stamme
 gijveles:gijvel ES-ES-ODD ;!
 gijvele:gijvel E-E-ODD ; 
 gijveles:gijvel ES-E-ODD ;! gijveldidh 
-!guhtseles+A+Attr:guhtseles FINAL1 ;
-!gååvhkeles S-S-ODD ;
-!gïengeles:gïengele S-NULL-ODD ;
+guhtseles:guhtsel ES-ES-ODD ;! guhtsedh          ie-stamme 
+guhtseles:guhtsel ES-E-ODD ; !guhtsedh           ie-stamme 
+gååvhkeles:gååvhkele ES-ES-ODD ;!                         e(2)-stamme 
+gïengeles:gïengel ES-ES-ODD ;
+gïengeles:gïengel ES-E-ODD ; !                            e(1)-stamme 
 !gïepmeles+A+Attr:gïepmeles FINAL1 ;
 !iejneles+A+Attr:iejneles FINAL1 ;
 !juhteles:juhtele S-NULL-ODD ;
@@ -296,8 +298,6 @@ snjuhtjeles:snjuhtjele S-NULL-ODD ;
 stompeles:stompele S-NULL-ODD ;
 
 tjoejeles+A+Attr:tjoejeles FINAL1 ;
-tjogkeles:tjogkele S-NULL-ODD ; ! 
-tjogkele:tjogkel NULL-NULL-ODD ; 
 tjyöreles+A+Attr:tjyøreles FINAL1 ;
 tsåakeles+A+Attr:tsåakeles FINAL1 ;
 tsåeptseles:tsåeptsele S-NULL-ODD ; ! -ie-
@@ -367,9 +367,6 @@ væjkele:væjkel E-E-ODD ; !                         oe-a-stamme
 tjåeptjels:tsåeptsele S-NULL-ODD ; ! -ie- SOUTH
 
 tjelmie-beeles:tjelmie-beele S-S-ODD ; !- tjelmie-bieles 
-
-
-
 !guhtseles+A+Attr:guhtseles FINAL1 ;
 !gååvhkeles S-S-ODD ;
 !gïengeles:gïengele S-NULL-ODD ;
@@ -451,7 +448,6 @@ væjkele:væjkel E-E-ODD ; ! = attr=pred , væjkalåbpoe
 ! gyövele:gyövele S-S-ODD ;
 ! vaane-jaahkole:vaane-jaahkole S-S-ODD ;
 
-
 ! kva er dette?
 !vïdtjele
 !vïetjele
@@ -497,8 +493,6 @@ væjkele:væjkel E-E-ODD ; ! = attr=pred , væjkalåbpoe
 !voessen-åvteles
 !gyöveles
 !vaane-jaahkoles
-
-
 !gertele -ie- gaerhtele= 
 !gaelvere -ie-
 !tsåatskeles, tsåaktsels
@@ -799,7 +793,7 @@ geahpeds+A+Attr:geahpeds FINAL1 ; ! SOUTH! (Mun in diede dán birra, ferte dusse
 
 !EHKE-DERIVATIONS : omlyd ved ie-stammer og e-stammer:adjektiver. Når avledinger fra e- skjer ofte ikke, oe-stammer 
 
-! EHKE-DERIVASJONER: 
+! EHKE-DERIVASJONER:  ehke-ehke 
 tjelmie-byölehke:tjelmie-byölehk LYÖVLEHKE ; !Derivert av - tjelmie-bieles 
 geeles:gåålehke S-S-ODD ; ![gææ-]! !hmmm jmf:slaahpoe-geeles (former S-S-EVEN!)!SYSTEM1 Derivert av geeles_ e-stamme 
 dolvehke S-S-ODD ; !dolves : e-stamme
@@ -809,14 +803,13 @@ gyjmehke:gyjmehk LYÖVLEHKE ;
 gåårsehke NULL-NULL-ODD ; !AVLEDNING: GÅÅRSEHKE= ATTR OG PRED
 gååstehke NULL-NULL-ODD ; !AVLEDNING: GÅÅSTEHKE=ATTR OG PRED
 gyhtjehke:gyhtjehk LYÖVLEHKE ; !AVLEDNING AV GÆHTJOES: GYHTJEHKE BÅDE ATTR. OG PRED. 
-gööles:göölehke S-NULL-ODD ; ! göölehke er avledning, 
+göölehke:göölehke LYÖVLEHKE ; ! göölehke er avledning, 
 ijtje-raadehke:ijtje-raadehk LYÖVLEHKE ; !SOUTH!   'RAADH' ELLER 'RAARH'
 jorpehke:jorpehk LYÖVLEHKE ;
 jyörkehke:jyörkehk LYÖVLEHKE ;
 jïjtje-raarehke:jïjtje-raarehk LYÖVLEHKE ;
 jïjtje-råårehke:jïjtje-råårehk LYÖVLEHKE ;
 klytnjehke:klytnjehk LYÖVLEHKE ;
-klåtnjoeh:klytnjehke S-NULL-ODD ;
 staarehke:staarehk LYÖVLEHKE ; !Avledet av staeries-staaran 
 krååpehke:krååpehk LYÖVLEHKE ; !Avledet av kruepies
 lyöhtehke:lyöhtehk LYÖVLEHKE ; !XXXlyöhtehke -> lyöhtekåbpoe-> lyöhtekommes
@@ -828,7 +821,6 @@ pryhtjehke:pryhtjehk LYÖVLEHKE ;
 rååpsehke:rååpsehk LYÖVLEHKE ;
 rutjkehke:rutjkehk LYÖVLEHKE ;
 rååpsehke:rååpsehk LYÖVLEHKE ;
-snååhpehke S-S-EVEN "snabb, rask" ; ! [snææ-]  'SNEEHPES' ELLER 'SNÆÆHPES'
 stååvehke:stååvehk LYÖVLEHKE ; !SOUTH! 'STEEVES' ELLER 'STØØVES' ELLER
 stynkehke:stynkehk LYÖVLEHKE ;
 stankehke:stankehk LYÖVLEHKE ;
@@ -984,7 +976,7 @@ vuelehks:vuelehk VYRTEHKE ; ! -> ehke/ege- endelsen -> ege: I think this one is 
 
 
 ! Chaotic part, to be systematised:
-!Has to be systematized = I dont know
+!Has to be systematized = 
 bårrohks:bårrohk VYRTEHKE ; !SYSTEM1 !attr=bårrohke, pred=bårrohke
 bööntes:böönt NJOEKTSES ; !SYSTEM1,ATTR=PRED
 daakte:daakte NULL-NULL-EVEN ; !SYSTEM1 , ATTR=PRED
@@ -1087,7 +1079,8 @@ skïemtje:skïemtj NULL-S-EVEN ;
 gåajpe+A+Attr:gåajpe FINAL1 ;
 skïelpe+A+Attr:skïelpe FINAL1 ;
 
-
+!oeh -an = oe - oeh/oeh
+!oeh-an = a- an/an 
 
 maarhke-tjåelieh+A+Attr:maarhke-tjåelieh FINAL1 ;
 smeelnjeh+A+Attr:smeelnjeh FINAL1 ;
@@ -1112,6 +1105,7 @@ veagloeh+A+Attr:veagloeh FINAL1 ;
 haalloeh+A+Attr:haalloeh FINAL1 ;
 falloeh+A+Attr:falloeh FINAL1 ;
 veavloeh+A+Attr:veavloeh FINAL1 ;
+
 ! Chaotic part
 daeptems:daepteme S-NULL-ODD ;  ! SOUTH - DONT KNOW
 gumhtems:gumhteme S-NULL-ODD ;  !SOUTH - DONT KNOW
@@ -1125,9 +1119,10 @@ såastoeh+A+Attr:såastoeh FINAL1 ;
 laahvoeh+A+Attr:laahvoeh FINAL1 ;
 skaajhvoeh+A+Attr:skaajhvoeh FINAL1 ;
 snårvoeh+A+Attr:snårvoeh FINAL1 ;
+
 njieljien-joelkh+A+Attr:njieljien-joelkh FINAL1 ;
 
-urkies+A+Attr:urkie%>s FINAL1 ;
+urkies:urkie GAERTJIES ;
 laaffas+A+Attr:laaffas FINAL1 ;
 skramhkas+A+Attr:skramhkas FINAL1 ;
 vearhkas+A+Attr:vearhkas FINAL1 ;
@@ -1173,7 +1168,7 @@ vearije NULL-S-ODD ;
 joekehth:joekehth S-S-ODD ;
 sjavhkas:sjavhka S-S-ODD ;
 meammas:meamma S-S-ODD ;
-saajpes:saajpe S-S-ODD ;
+saajpe:saajp E-ES-ODD ;
 ïlveligs:ïlvelig S-S-ODD ;
 sleeke:sleek NÅAKE ;
 tsællohke:tsællohk LYÖVLEHKE ;
@@ -1232,14 +1227,42 @@ sahpoeh+A+Attr:sahpoeh FINAL1 ;
 rïejhpegïdtes+A+Attr:rïejhpegïdtes FINAL1 ;
 
 
+!syllable system 1
+!ATTR=PRED = V/V= e(1), ie,
+!,           S/S = ie, 
+!           oeh/oeh = oe-stamme
+!           ah/ah = a-stamme
+!           an/an  = a-stamme
+!                  =e(1)-stamme
 
+!System2
+!Attr=Ø, Pred= s 
+! e(1)  
+! e(2)   !raajne-raajnes (2)
+
+!system3
+!Attr= s, pred= Ø
+! ie
+!( e(1)  - geehpes - giehpies - giehpie    
+          !raejnies- raejnie (3)
+
+
+!system 4= omlyd
+!attr =/= pred   staeries -> staaran
+!                sæjngoeh-sæjngan 
+!ie -> a 
+!oe -> a
+
+
+
+ 
 skaajmes:skaajme GIJMIES ;
 
 !  --question--
-! ??   frååpmes:frååpme GIJMIES ;
-! ??   fraapmas:fraapma GIJMIES ;
+! ??   frååpmes:frååpme NULL-S-EVEN ; =  attr=Ø, pred=s= EVEN 
+! ??   fraapmas:fraapma NULL-S-EVEN ;
 ! ??   geamhpes:geamhp RAAJNES ;
-! ??   gïemhpes:gïemhp RAAJNES ;
+! ??   gïemhpes:gïemhp E-ES-EVEN ;
 
 ! ??   njoektjes:njoektj NJOEKTSES ;
 ! ??   sajkes:sajk NJOEKTSES ;
