@@ -906,6 +906,12 @@ LEXICON DOLVE
 +A+Pred:es FINAL1 ;
 +A:es  ODDCOMP ;
 
+LEXICON DOLVEs
+   ATTR-S ; ! attr=s, pred=s, comp= ODD, Case:ODD
+  :es  DOLVEcase ;
+  :e   PRED-0 ;
++A:es  ODDCOMP ;
+
 LEXICON JIEGKE!attr=Ø, Pred=s, Comp=even jih ODD, Case= ODD
   :e ATTR-0 ;
   :es  DOLVEcase ;
@@ -937,8 +943,9 @@ LEXICON VYRTEHKE! Attr=Ø jih s, Pred= Ø jih s, Comp= ODD, Case= ODD
 ! This lexicon is for the adjs we
 ! have not classified yet
 LEXICON ADJ-DIRTY
++A+Attr: # ;
++A+Pred: # ;
 +A+Dirty: # ;
-
 
 ! Attribute lexica
 ! ----------------
