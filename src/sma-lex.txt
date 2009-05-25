@@ -641,14 +641,15 @@ LEXICON NJOEKTSES
 +A+Pred:e FINAL1 ;
 +A:e  EVENCOMP ;
 
-LEXICON RAAJNES! Attr: s jih attr=Ø,  Pred= s jih Ø,Comp=even(ebe, emes), Case/substantiv= even  
- :e  ATTR-S ;
- :e  ATTR-0 ;
-     NJOEKTSEScase ;
-+A+Pred:es FINAL1 ;
-+A+Pred:e FINAL1 ;
-+A+SgNomCmp:es R ;
-+A:e  EVENCOMP ;
+!LEXICON RAAJNES
+! Attr: s jih attr=Ø,  Pred= s jih Ø,Comp=even(ebe, emes), Case/substantiv= even  
+! :e  ATTR-S ;
+! :e  ATTR-0 ;
+!     NJOEKTSEScase ;
+!+A+Pred:es FINAL1 ;
+!+A+Pred:e FINAL1 ;
+!+A+SgNomCmp:es R ;
+!+A:e  EVENCOMP ;
 
 
 !--- S-EVEN attr-lexicas---
@@ -680,11 +681,11 @@ LEXICON JÅABPAH! Attr= h, Pred=Ø, Comp=EVEN, Case/Substantiv= EVEN
 +A+Pred:a FINAL1 ;
 +A:e  EVENCOMP ;
 
-LEXICON ÅAJVAH! Attr=h, Pred=h, Comp=EVEN, Case/substantiv=EVEN
- :a  ATTR-H ;
-     FRASKAScase ;
-+A+Pred:ah FINAL1 ;
-+A:e  EVENCOMP ;
+! LEXICON ÅAJVAH! Attr=h, Pred=h, Comp=EVEN, Case/substantiv=EVEN
+!:a  ATTR-H ;
+!     FRASKAScase ;
+!+A+Pred:ah FINAL1 ;
+!+A:e  EVENCOMP ;
 
 
 
@@ -727,11 +728,11 @@ LEXICON NÅAKE! attr=Ø, pred=Ø, comp=even, case= EVEN   (VOKAL=VOKAL) = E-stam
 
 !--- a-stems---
 
-LEXICON SAATNA! attr= Ø, Pred = Ø, =A-stamme, Comp= even, case= even 
-  :a      ATTR-0 ;
-          FRASKAScase ;
-+A+Pred:a FINAL1 ;
-+A:e      EVENCOMP ;
+!LEXICON SAATNA! attr= Ø, Pred = Ø, =A-stamme, Comp= even, case= even 
+!  :a      ATTR-0 ;
+!          FRASKAScase ;
+!+A+Pred:a FINAL1 ;
+!+A:e      EVENCOMP ;
 
 
 !--- ie-stems---
@@ -761,15 +762,15 @@ LEXICON H-H-EVEN ! Attr= h, pred= h, comp=even, case= even
 
 
 ! type 4
-LEXICON S-N-EVEN
-     ATTR-S ;
-     PRED-N ;
-+A:  EVENCOMP ; ! check this!
+!LEXICON S-N-EVEN
+!     ATTR-S ;
+!     PRED-N ;
+!+A:  EVENCOMP ; ! check this!
 
-LEXICON H-N-EVEN
-     ATTR-H ;
-     PRED-N ;
-+A:  EVENCOMP ;
+LEXICON H-N-ODD
++A:  ATTR-H ;
++A:  PRED-N ;
++A:  ODDCOMP ;
 
 
 !--- NULL-EVEN attr-lexicas---
@@ -857,10 +858,10 @@ LEXICON S-NULL-ODD
 :e   PRED-0 ;
 +A:  ODDCOMP ;
 
-LEXICON S-N-ODD
-     ATTR-S ;
-   PRED-N ;
-+A:  ODDCOMP ;
+!LEXICON S-N-ODD
+!     ATTR-S ;
+!   PRED-N ;
+!+A:  ODDCOMP ;
 
 LEXICON ES-E-ODD
 :e     ATTR-S;
