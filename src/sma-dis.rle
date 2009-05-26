@@ -156,10 +156,13 @@ SET NPNH = WORD - PRE-NP-HEAD OR (ABBR) ;       # NPNH  = "NOT-PRE-NP-HEAD"
 LIST VFIN = Ind OR Imp ;
 
 
-LIST INFV = "aelkedh" "båetedh" "edtjedh" "galkedh" "maehtedh" "provhkedh" "sjïdtedh" ; 
-# These are often followed by an infitive. To the set belong also some verbs which are not in the lex: tjoeveridh tjoeredh
+LIST INFV = "aelkedh" "båetedh" "edtjedh" "galkedh" "maehtedh" "provhkedh" "sjïdtedh" "tjoeveridh" "tjoeredh" ; 
+# These are often followed by an infitive.
 
 
+# BOUNDARY SETS
+
+SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("MEN")  OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS ;
 
 
 # ============== #
@@ -174,6 +177,7 @@ SECTION
 # Cycle 0
 
 REMOVE ("Da" N) IF (0 ("dïhte"));
+REMOVE ("m" N ACR Sg Gen) IF (0 ("men"));
 
 
 # Verbs
@@ -234,6 +238,12 @@ REMOVE:NotNomIfInf (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
 SELECT:DemGenIfNGen (Dem Pl Gen)(*1 (N Pl Gen) BARRIER NPNH);
 	# Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
 
+REMOVE:PronIfV Dem IF (0 Pron)(1C Adv OR V);
+	## 
+	
+REMOVE Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
+	
+	
 # CC and CS or Adv
 REMOVE:GoNotCs CS (-1 Neg)(0 ("goh")); 
 
@@ -338,6 +348,7 @@ ADD (@TITLE) TARGET TITLE IF (1 Prop LINK 0 Fem OR Mal OR Sur);
 
 MAP (@>N) TARGET (Dem Nom) IF (*1 N BARRIER NPNH);
 MAP (@>N) TARGET (A Attr) IF (*1 N BARRIER NPNH);
+MAP (@>P) TARGET (N Gen) IF (1 Po);
 MAP (@>N) TARGET (N Gen) IF (*1 N BARRIER NPNH);
 
 MAP (@+FAUXV) TARGET Neg OR ("lea") IF (*1 V BARRIER CLB);
