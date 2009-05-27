@@ -511,8 +511,9 @@ LEXICON N-N-EVEN
 
 ! type 2
 LEXICON NULL-S-EVEN
-     ATTR-0 ;
-     PRED-S ;
+ :e    ATTR-0 ;
+ :e    PRED-S ;
+     NIEJTE ;
 +A:  EVENCOMP-UML ;
 
 LEXICON NULL-N-EVEN
@@ -604,7 +605,7 @@ LEXICON OEH-OEH-ODD ! Attr=pred
 LEXICON OEH-OEH-AN-ODD ! Attr=oeh, Pred=oeh og an 
 :oe ATTR-H ;
 :oe PRED-H ;
-:a  PRED-AN ; 
+  PRED-AN ; 
 +A:a ODDCOMP ;
 +A:oe ODDCOMP ; 
 
@@ -667,11 +668,11 @@ LEXICON GIJMIES
 
 !--- oe-stems---
 
-LEXICON SPÆNTJOEH ! Attr= h, Pred= Ø, Comp= EVEN, Case/Substantiv= EVEN
- :oe       ATTR-H ;
-           FAAVROEScase ;
-+A+Pred:oe FINAL1 ;
-+A:e       EVENCOMP ;
+!LEXICON SPÆNTJOEH ! Attr= h, Pred= Ø, Comp= EVEN, Case/Substantiv= EVEN
+! :oe       ATTR-H ;
+!           FAAVROEScase ;
+!+A+Pred:oe FINAL1 ;
+!+A:e       EVENCOMP ;
 
 
 !--- a-stems---
@@ -708,11 +709,11 @@ LEXICON IJTJE-RAADH! Attr= h, Comp =Even( Jïjtje-raarh)
 !--- N-EVENs---
 ! -------------
 
-LEXICON STIJVEN! attr=n, pred=Ø, Comp=Even, Case= even(
- :e  ATTR-N ;
-     NJOEKTSEScase ;
-+A+Pred:e FINAL1 ;
-+A:e  EVENCOMP ;
+!LEXICON STIJVEN! attr=n, pred=Ø, Comp=Even, Case= even(
+! :e  ATTR-N ;
+!     NJOEKTSEScase ;
+!+A+Pred:e FINAL1 ;
+!+A:e  EVENCOMP ;
 
 
 !--- NULL-EVENs---
