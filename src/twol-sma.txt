@@ -145,46 +145,6 @@ Rules
 
 
 
-! Blocking rules to prevent overgeneration
-! ========================================
-
-
-"Berre 0:e etter leksikalsk vokal"
-  0:e => E1:i _ ;
-         E1:e _ ;
-         I1:i _ ;
-         I2:i _ ;
-         O1:o _ ;
-         O2:o _ ;
-         U1:u _ ;
-         Å2:a _ ;
-         Å2:e _ ;
-         Å3:å _ ;
-         Å4:å _ ;
-
-"Berre 0:a etter leksikalsk vokal"
-  0:a => E1:e _ ;
-         U1:u _ ;
-         Å2:a _ ;
-         Å3:å _ ;
-         Å4:å _ ;
-
-"Berre 0:ö etter leksikalsk vokal"
-  0:ö => E1:y _ ;
-         U1:ö _ ;
-         Å3:ö _ ;
-
-"Berre 0:å etter leksikalsk vokal"
-  0:å => U1:å _ ;
-         Å2:å _ ;
-         Å3:å _ ;
-
-
-
-
-
-
-
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!! New style Umlaut rules. !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -622,7 +582,7 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ (e) Cns+ %»: %^htjidhUML: e h t j ;
  	      Vy in (ï o)
  	matched ;
 
-bueledh->boelehtjidh
+!bueledh->boelehtjidh
 !€# buel%»%^htjidhUMLehtjidh
 !€0 boel00ehtjidh
 
@@ -630,7 +590,7 @@ bueledh->boelehtjidh
 !$0 buel00ehtjidh
 
 
-paekedh->paakehtjidh
+!paekedh->paakehtjidh
 !€# paek%»%^htjidhUMLehtjidh
 !€0 paak00ehtjidh
 
@@ -691,7 +651,7 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
  	matched ;
 
 
-båetedh - båetiestidh - båatastalledh
+!båetedh - båetiestidh - båatastalledh
 !€# bået%»iest%»%^adteUMLalledh
 !€0 båat00ast00alledh
 
@@ -702,7 +662,7 @@ båetedh - båetiestidh - båatastalledh
 !$0 båat0iest00alledh
 
 
-tjearodh - tjearoelidh - tjyöreladtedh
+!tjearodh - tjearoelidh - tjyöreladtedh
 !€# tjear%»oel%»%^adteUMLadtedh
 !€0 tjyör00el00adtedh
 
@@ -715,112 +675,107 @@ tjearodh - tjearoelidh - tjyöreladtedh
 
 
 
-! Lexical test suites
-! ===================
+! Lexical test suites - infinitives
+! =================================
 
+!€0 dåeriedi%>dh
+!€0 dåeriedi0dh
 
-!0 dÅ30rI20dI2%>dh
-!0 dåeriedi0dh
- 
-!# bÆssI2%>dh
-!0 bisse0dh
- 
-!# bA4ltI2%>dh
-!0 belte0dh
- 
-!# bÅ1htjI2%>dh
-!0 buhtje0dh
- 
-!# pE1kI2%>dh
-!0 paeke0dh
- 
-!# bÅ30tI2%>dh
-!0 båete0dh
- 
-!# bU1lI2%>dh
-!0 buele0dh
- 
-!# ÆbjO2%>dh
-!0 æbjo0dh
- 
-!# hÅ4jkO2%>dh
-!0 hajko0dh
- 
-!# gÅ1hpO2%>dh
-!0 gåhpo0dh
- 
-!# tjE1rO2%>dh
-!0 tjearo0dh
- 
-!# bÅ2jskO2%>dh
-!0 baajsko0dh
- 
-!# gÅ3rO2%>dh
-!0 gåaro0dh
- 
-!# skÆlkA2%>dh
-!0 skælke0dh
- 
-!# skÅ4jkA2%>dh
-!0 skajke0dh
- 
-!# plÅ1tjkA2%>dh
-!0 plåjke0dh
- 
-!# slE1pkA2%>dh
-!0 sleapke0dh
- 
-!# snjÅ3rkA2%>dh
-!0 snjåarke0dh
- 
-!# sÆrr%>dh
-!0 sïrre0dh
- 
-!# sÅ4rj%>dh
-!0 sarje0dh
- 
-!# sÅ1dt%>dh
-!0 sodte0dh
- 
-!# skE1rk%>dh
-!0 skïerke0dh
- 
-!# slÅ2pk%>dh
-!0 slaapke0dh
- 
-!# snjÅ3r%>dh
-!0 snjåare0dh
- 
-!# tjU1hp%>dh
-!0 tjoehpe0dh
- 
-!# skyll%>dh
-!0 skylle0dh
- 
-!# aalhterost%>dh
-!0 aalhteroste0dh
- 
-!# skyör%>dh
-!0 skyöre0dh
- 
-!# vååjn%>dh
-!0 vååjne0dh
- 
-!# skilhte%>dh
-!0 skilhte0dh
- 
-!# sijle%>dh
-!0 sijle0dh
- 
-!# snjurme%>dh
-!0 snjurme0dh
- 
-!# snjeere%>dh
-!0 snjeere0dh
- 
-!# gööle%>dh
-!0 gööle0dh
+!€# bisse%>dh
+!€0 bisse0dh
 
+!€# belte%>dh
+!€0 belte0dh
 
+!€# buhtje%>dh
+!€0 buhtje0dh
 
+!€# paeke%>dh
+!€0 paeke0dh
 
+!€# båete%>dh
+!€0 båete0dh
+
+!€# buele%>dh
+!€0 buele0dh
+
+!€# æbjo%>dh
+!€0 æbjo0dh
+
+!€# hajko%>dh
+!€0 hajko0dh
+
+!€# gåhpo%>dh
+!€0 gåhpo0dh
+
+!€# tjearo%>dh
+!€0 tjearo0dh
+
+!€# baajsko%>dh
+!€0 baajsko0dh
+
+!€# gåaro%>dh
+!€0 gåaro0dh
+
+!€# skælke%>dh
+!€0 skælke0dh
+
+!€# skajke%>dh
+!€0 skajke0dh
+
+!€# plåtjke%>dh
+!€0 plåtjke0dh
+
+!€# sleapke%>dh
+!€0 sleapke0dh
+
+!€# snjåarke%>dh
+!€0 snjåarke0dh
+
+!€# sïrre%>dh
+!€0 sïrre0dh
+
+!€# sarje%>dh
+!€0 sarje0dh
+
+!€# sodte%>dh
+!€0 sodte0dh
+
+!€# skïerke%>dh
+!€0 skïerke0dh
+
+!€# slaapke%>dh
+!€0 slaapke0dh
+
+!€# snjåare%>dh
+!€0 snjåare0dh
+
+!€# tjoehpe%>dh
+!€0 tjoehpe0dh
+
+!€# skylle%>dh
+!€0 skylle0dh
+
+!€# aalhteroste%>dh
+!€0 aalhteroste0dh
+
+!€# skyöre%>dh
+!€0 skyöre0dh
+
+!€# vååjne%>dh
+!€0 vååjne0dh
+
+!€# skilhte%>dh
+!€0 skilhte0dh
+
+!€# sijle%>dh
+!€0 sijle0dh
+
+!€# snjurme%>dh
+!€0 snjurme0dh
+
+!€# snjeere%>dh
+!€0 snjeere0dh
+
+!€# gööle%>dh
+!€0 gööle0dh
