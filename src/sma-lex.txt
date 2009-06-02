@@ -516,10 +516,10 @@ LEXICON NULL-S-EVEN
      NIEJTE ;
 +A:  EVENCOMP-UML ;
 
-LEXICON NULL-N-EVEN
-     ATTR-0 ;
-     PRED-N ;
-+A:  EVENCOMP ;
+!LEXICON NULL-N-EVEN
+!     ATTR-0 ;
+!     PRED-N ;
+!+A:  EVENCOMP ;
 
 !LEXICON E-ES-EVEN ! not in use
 !:e   ATTR-0 ;
@@ -623,12 +623,12 @@ LEXICON N-N-ODD ! attr=n, pred= n
 +A:a ODDCOMP ; 
  ATTR-N ;
  PRED-N ;
-! Comparative missing
+! Comparative missing - åbpoe/ommes
 
 
 !--- a-stems---
 
-LEXICON FRASKAS! attr= s, pred= Ø, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
+LEXICON FRASKAS! attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
  :a  ATTR-S ;
      FRASKAScase ;
 +A+Pred:a FINAL1 ;
@@ -638,7 +638,7 @@ LEXICON FRASKAS! attr= s, pred= Ø, comp=EVEN(ebe,emes), Case/Substantvien hammo
 !--- e-stems---
 
 LEXICON NJOEKTSES
- :e  ATTR-S ;! Attr=s, Pred= Ø, Comp= EVEN(ebe, emes), case/substantiv= EVEN 
+ :e  ATTR-S ;! Attr=s, Pred= e, Comp= EVEN(ebe, emes), case/substantiv= EVEN 
      NJOEKTSEScase ;
 +A+Pred:e FINAL1 ;
 +A:e  EVENCOMP ;
@@ -681,7 +681,7 @@ LEXICON JÅABPAH! Attr= h, Pred=Ø, Comp=EVEN, Case/Substantiv= EVEN
  :a  ATTR-H ;
      FRASKAScase ;
 +A+Pred:a FINAL1 ;
-+A:e  EVENCOMP ;
++A:e  COMP ;
 
 ! LEXICON ÅAJVAH! Attr=h, Pred=h, Comp=EVEN, Case/substantiv=EVEN
 !:a  ATTR-H ;
@@ -695,9 +695,9 @@ LEXICON JÅABPAH! Attr= h, Pred=Ø, Comp=EVEN, Case/Substantiv= EVEN
 ! -------------------------
 
 
-LEXICON GÆHTJAH ! Attr= h, Comp= Even(klåtnjah)
-    ATTR-H ;
-+A: EVENCOMP ;
+!LEXICON GÆHTJAH ! Attr= h, Comp= Even(klåtnjah)
+!    ATTR-H ;
+!+A: EVENCOMP ;
 
 
 LEXICON IJTJE-RAADH! Attr= h, Comp =Even( Jïjtje-raarh) 
@@ -802,6 +802,12 @@ LEXICON E-E-ODD !bårreske
  :e     ATTR-0 ;
  :e     PRED-0 ;
  +A:  ODDCOMP ;
+ 
+LEXICON S-E-ODD ! eeptsegs
+     ATTR-S ;
+     PRED-0 ;
+ +A: ODDCOMP ; 
+       
 
 LEXICON S-S-ODD !
      ATTR-S ;
@@ -877,10 +883,10 @@ LEXICON ES-ES-E-ODD
 :e     PRED-0;
 +A:    ODDCOMP ; 
 
-LEXICON E-S-ODD
-:e     ATTR-S;
-:s     PRED-0;
-+A:    ODDCOMP ; 
+!LEXICON E-S-ODD
+!:e     ATTR-S;
+!s     PRED-0;
+!A:    ODDCOMP ; 
 
 
 ! type 4
@@ -902,7 +908,7 @@ LEXICON OEH-AN-ODD
 ! ---------------
 
 LEXICON DOLVE
-  :e ATTR-0 ;! attr=Ø, pred=s, comp= EVEN, Case:EVEN
+  :e ATTR-0 ;! attr=e, pred=s, comp= EVEN, Case:EVEN
   :es  DOLVEcase ;
 +A+Pred:es FINAL1 ;
 +A:es  EVENCOMP ;
@@ -913,12 +919,16 @@ LEXICON DOLVEs
   :e   PRED-0 ;
 +A:es  ODDCOMP ;
 
-LEXICON JIEGKE!attr=Ø, Pred=s, Comp=even jih ODD, Case= ODD
+LEXICON JIEGKE!attr=e, Pred=s, Comp=even jih ODD, Case= ODD
   :e ATTR-0 ;
   :es  DOLVEcase ;
 +A+Pred:es FINAL1 ;
 +A:es  ODDCOMP ;
 +A:e  EVENCOMP ;
+
+!LEXICON UMLAUT! 
+!  :ie ATTR=S ;
+!  :oe ATTR=S ;
 
 LEXICON LYÖVLEHKE! Attr=Ø, Pred=Ø, ComP=ODD, case= ODD
   :e ATTR-0 ;
