@@ -739,6 +739,12 @@ LEXICON NÅAKE! attr=Ø, pred=Ø, comp=even, case= EVEN   (VOKAL=VOKAL) = E-stam
 
 !--- ie-stems---
 
+!LEXICON S-S-ODD_IE_COMPUML 
+!S-S-ODD ;
+!+A: N_IE_SG ;
+!+A: N_IE_PL ;
+!COMPUML ;
+
 !! not used: LEXICON GELJIE! attr= Ø, pred=Ø, Comp=EVEN, case=EVEN - 
 !! not used:   :ie      ATTR-0 ;
 !! not used:            AELHKIEScase ;
@@ -752,10 +758,10 @@ LEXICON MASTEN
   :e PRED-N ;
 
 
-!LEXICON H-NULL-EVEN ! attr= h, pred=Ø, Comp=EVEN,
-!     ATTR-H ;
-!     PRED-0 ;
-!+A:  EVENCOMP ;
+!!Not used: LEXICON H-NULL-EVEN ! attr= h, pred=Ø, Comp=EVEN,
+!!Not used:      ATTR-H ;
+!!Not used:      PRED-0 ;
+!!Not used: +A:  EVENCOMP ;
 
 LEXICON H-H-EVEN ! Attr= h, pred= h, comp=even, case= even
      ATTR-H ;
@@ -944,17 +950,24 @@ LEXICON VYRTEHKE! Attr=Ø jih s, Pred= Ø jih s, Comp= ODD, Case= ODD
 +A+Pred:s FINAL1 ;
 +A:  ODDCOMP ;
 
-
-
-
-
-
+!!LEXICON UMLAUT PRED
+!A+Ill:n ; 
+!A+Comp:hkåbpoe ; 
+!
+!
+!!LEXICON UMLAUT KASUS
+!A+Attr: ies ;
+!A+Ines:esne ;
+!A+Acc:iem ; 
+!
+!
+!!LEXICON UMLAUT COMP
+!
 
 
 ! This lexicon is for the adjs we
 ! have not classified yet
 LEXICON ADJ-DIRTY
-+A+Attr: # ;
 +A+Pred: # ;
 +A+Dirty: # ;
 
