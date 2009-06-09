@@ -25,8 +25,7 @@ Multichar_Symbols
   +Pred
   +Comp +Superl
   +Attr
-  +Dirty ! Only until we have adj grammar in place - this tags mark adjectives
-  		 ! with missing grammatical description
+
 
   +Uml   ! A tag to indicate realised or potential Umlaut
   +Hyph  ! A tag to indicate that a hyphen was used when compounding
@@ -51,6 +50,8 @@ Multichar_Symbols
   %^PASSUML ! Short passive Umlaut Rx->R5
   %^didhUML !Der/didh Umlaut for GUARKEDH-words
   %^htjidhUML !Umlaut für der/htjidh derivations
+  %^noerecompUML !Umlaut für STOERRE-NOERRE comparatives
+  %^noeresupUML !Umlaut für STOERRE-NOERRE superlatives
   %^adteUML !Umlaut für Der/adte and Der/alle derivations
   %^aLATUS  ! Latus-Umlaut for -ie stems
   %^uLATUS  ! Latus-Umlaut for -oe stems
@@ -950,26 +951,46 @@ LEXICON VYRTEHKE! Attr=Ø jih s, Pred= Ø jih s, Comp= ODD, Case= ODD
 +A+Pred:s FINAL1 ;
 +A:  ODDCOMP ;
 
-!!LEXICON UMLAUT PRED
+!!!LEXICON UMLAUT PRED
 !A+Ill:n ; 
-!A+Comp:hkåbpoe ; 
-!
-!
-!!LEXICON UMLAUT KASUS
+!!A+Comp:hkåbpoe ; 
+!!
+!!
+!LEXICON UMLAUT_KASUS
 !A+Attr: ies ;
+!A+Acc:iem ;
 !A+Ines:esne ;
-!A+Acc:iem ; 
 !
-!
+! 
+!!
+!!
 !!LEXICON UMLAUT COMP
-!
 
+!
+LEXICON UMLAUT-STOERRE-NOERE
+
++A+Attr:e FINAL1 ;
++A+Pred:e FINAL1 ;
++A+Pred:es FINAL1 ;
++A+Comp+Attr:%>%^noerecompUMLebe FINAL1 ;
++A+Comp+Pred:%>%^noerecompUMLebe FINAL1 ;
++A+Comp:%>%^noerecompUMLeb     GÅATETJE ;
++A+Superl+Attr:%>%^noeresupUMLemes FINAL1 ;
++A+Superl+Pred:%>%^noeresupUMLemes FINAL1 ;
++A+Superl:%>%^noeresupUMLemes    MES ;
++A+Comp+Der1+Der/Dim+Attr:%>%^noerecompUMLieb%»adtje FINAL1 ;
++A+Comp+Der1+Der/Dim+Attr:%>%^noerecompUMLieb%»odtje FINAL1 ;
++A+Comp+Der1+Der/Dim+Pred:%>%^noerecompUMLieb%»adtje FINAL1 ;
++A+Comp+Der1+Der/Dim+Pred:%>%^noerecompUMLieb%»odtje FINAL1 ;
++A+Comp+Der1+Der/Dim:%>%^noerecompUMLieb%»adtj GIERIEHTSATJE ;
++A+Comp+Der1+Der/Dim:%>%^noerecompUMLieb%»odtj GIERIEHTSATJE ;
 
 ! This lexicon is for the adjs we
 ! have not classified yet
-LEXICON ADJ-DIRTY
+LEXICON IES/OES_AN_UMLAUT
 +A+Pred: # ;
-+A+Dirty: # ;
+
+
 
 ! Attribute lexica
 ! ----------------
