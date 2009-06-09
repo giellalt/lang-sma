@@ -1363,9 +1363,9 @@ jarpe:jarp NÅAKE ;!jarpe-jorpebe-jorpemes
 jorpe:jorp NÅAKE ;!jorpe-jorpebe-jorpemes
 praare:praar NÅAKE ;!praare-praarebe-praaremes
 njabre:njabr NÅAKE ;
-stabre:stabr NÅAKE ; !
-noere:noer NÅAKE ;! UMLAUT COMP : noere-nuerebe-nööremes
-stoere:stoer NÅAKE ; ! UMLAUT COMP: stoerre-stuerebe-stööremes 
+stabre:stabr NÅAKE ; ! 
+noere:noer UMLAUT-STOERRE-NOERE ;! UMLAUT COMP : noere-nuerebe-nööremes
+stoere:stoer UMLAUT-STOERRE-NOERE ; ! UMLAUT COMP: stoerre-stuerebe-stööremes
 maana-buerie:maana-buer NÅAKE ; !NOT GRADUATION !
 baenie-buerie:baenie-buer NÅAKE ; !NOT GRADUATION
 stoerre:stoerr NÅAKE ; ! UMLAUT COMP:stoerre-stuerebe-stööremes 
@@ -1498,6 +1498,7 @@ vyrtehks:vyrtehk VYRTEHKE ; !- vyrtehks , pred. vyrtehke velgjørende, virksom (
 bårrohks:bårrohk VYRTEHKE ; !VOKALUTVIDELSE COMP:OE
 skåernehks:skåernehks VYRTEHKE ; 
 jarpe JEARKOE ; !jorpe, attr= jarpe/ jorpe og pred= jarpe/jorpe
+noere:noere DOLVE ; !UMLAUT COMP
 praade:praade DOLVE ; 
 samhtje:samhtje DOLVE ; ! Attr=samhtje, Pred=samhtjes: samhtjesåbpoe
 fïerske:fïerske DOLVE ;
@@ -1637,7 +1638,7 @@ tjakngan+A:tjakngan ODDCOMP ;
 nahkeren+A:nahker ODDCOMP ;! komp. nahkeråbpoe
 saetnies+A:saatnas ODDCOMP ;
 fuehpies+A:fuahpas ODDCOMP ;
-åehpies+A:åahpas ODDCOMP ; !UMLAUT COMP åahpasåbpoe, åahpasommes dás boahtá
+åehpies+A:åahpas ODDCOMP ;
 båeries+A:båaras ODDCOMP ; 
 mujvies+A:måjvas ODDCOMP ; !mujviesåbpoe
 aavoes+A:aavoes ODDCOMP ;
@@ -1726,6 +1727,7 @@ gåedtsies:gåedt GAERTJIES ;
 sudties:sudt GAERTJIES ; !-sudtiekåbpoe
 tjiehties:tjieht GAERTJIES ; !SOUTH
 liehties:lieht GAERTJIES ;!liehtebe, liehtemes
+suelnies:sueln GAERTJIES ; !komp=suelnebe,suelnemes
 slehties:sleht GAERTJIES ;
 vihties:viht GAERTJIES ;
 saelhties:saelht GAERTJIES ;
@@ -1806,43 +1808,44 @@ garmerdihks:garmerdihk DIHKS ; !garmerdidh
 jïemperdihks:jïemperdihk DIHKS ; !jïemperdidh
 gaavnedihks:gaavnedihks DIHKS ;
 gaarvanihks:gaarvanihks DIHKS ;
-hujnies:håjna ADJ-DIRTY ; !ies-an =SYSTEM4 !UMLAUT PRED
-saptas:sapt ADJ-DIRTY ; !UMLAUT PRED !saptja=lus, saptjah=fl.tall lus, innesiv
-dihkies+A+Attr:dihkies FINAL1 ; !Pred=Substantiv :Innesiv= dihkine 
+hujnies:håjna IES/OES_AN_UMLAUT ; !ies-an =SYSTEM4 !UMLAUT PRED
+saptas:sapt IES/OES_AN_UMLAUT ; !UMLAUT PRED !saptja=lus, saptjah=fl.tall lus, innesiv
+dihkies+A+Attr:dihkies FINAL1 ; !Pred=Substantiv :Innesiv= dihkine
 dakngas+A+Attr:dakngas FINAL1 ; 
-dakngas:dakngan ADJ-DIRTY ; ! UMLAUT PRED 
+sueleds+A+Attr:sueleds FINAL1 ;!Pred=Substantiv: sueleden, suelien, suelede
+dakngas:dakngan IES/OES_AN_UMLAUT ; ! UMLAUT PRED 
 samhtjas+A+Attr:samhtjas FINAL1 ; 
-samhtjas:samhtjan ADJ-DIRTY ; ! UMLAUT PRED= 
+samhtjas:samhtjan IES/OES_AN_UMLAUT ; ! UMLAUT PRED= 
 suvhtjies+A+Attr:suvhtjies FINAL1 ; 
-suvhtjies:såvhtjan ADJ-DIRTY ; !UMLAUT PRED bruker verbform=sovhtjehtidh
+suvhtjies:såvhtjan IES/OES_AN_UMLAUT ; !UMLAUT PRED bruker verbform=sovhtjehtidh
 snartjas+A+Attr:snartjas FINAL1 ; 
-snartjas:snartjan ADJ-DIRTY ; !UMLAUT PRED 
+snartjas:snartjan IES/OES_AN_UMLAUT ; !UMLAUT PRED 
 måajkoes+A+Attr:måajkoes FINAL1 ; 
-måajkoes:måajkan ADJ-DIRTY ; !UMLAUT PRED , oes-an
+måajkoes:måajkan IES/OES_AN_UMLAUT ; !UMLAUT PRED , oes-an
 samskoes+A+Attr:samskoes FINAL1 ; 
-samskoes:samskan ADJ-DIRTY ;!UMLAUT PRED
+samskoes:samskan IES/OES_AN_UMLAUT ;!UMLAUT PRED
 hajnas+A+Attr:hajnas FINAL1 ; 
-hajnas:hajnan ADJ-DIRTY ;! UMLAUT PRED 
+hajnas:hajnan IES/OES_AN_UMLAUT ;! UMLAUT PRED 
 barras+A+Attr:barras FINAL1 ; 
-barras:barran ADJ-DIRTY ; ! UMLAUT PRED Has to make a lexicon which have oes-an Umlaut and ies-an Umlaut 
+barras:barran IES/OES_AN_UMLAUT ; ! UMLAUT PRED Has to make a lexicon which have oes-an Umlaut and ies-an Umlaut 
 bårroes+A+Attr:bårroes FINAL1 ; 
-bårroes:bårran ADJ-DIRTY ; ! UMLAUT PRED, s-n
+bårroes:bårran IES/OES_AN_UMLAUT ; ! UMLAUT PRED, s-n
 duasvas+A+Attr:duasvas FINAL1 ; 
-duasvas:duasvan ADJ-DIRTY ;! UMLAUT PRED=
+duasvas:duasvan IES/OES_AN_UMLAUT ;! UMLAUT PRED=
 smohkes+A+Attr:smohkes FINAL1 ;  
-smohkes:smohken ADJ-DIRTY ; !? KB= DONT KNOW
+smohkes:smohken IES/OES_AN_UMLAUT ; !? KB= DONT KNOW
 samskas+A+Attr:samskas FINAL1 ;  
-samskas:samskas ADJ-DIRTY ; !UMLAUT PRED
+samskas:samskas IES/OES_AN_UMLAUT ; !UMLAUT PRED
 fahkoes:fahkoe S-S-ODD ; 
-fahkoes:fahkan ADJ-DIRTY ; !!UMLAUT PRED= fahkoeh ->fahkan s->n
+fahkoes:fahkan IES/OES_AN_UMLAUT ; !!UMLAUT PRED= fahkoeh ->fahkan s->n
 såmskoes+A+Attr:såmskoes FINAL1 ; 
-såmskoes:såmskan ADJ-DIRTY ; ! UMLAUT PRED 
-jatnoes:jatnan ADJ-DIRTY ; !!UMLAUT PRED s->
+såmskoes:såmskan IES/OES_AN_UMLAUT ; ! UMLAUT PRED 
+jatnoes:jatnan IES/OES_AN_UMLAUT ; !!UMLAUT PRED s->
 tjakngan DOLVEcase ;
 jalkede:jalked DOLVEs ;! jalkedåbpoe -jalkedommes
 låabpeds:låabped DOLVEs ;
 værsjoes:værsjoe S-S-ODD; ! værsjoe=substantiv, daen biejjien værsjoe 
-gaskeplehtie-jovje:gaskeplehtiejovje NÅAKE; 
+gaskeplehtiejovje:gaskeplehtiejovje NÅAKE; 
 tjiehpiebuktie:tjiehpiebuktie NULL-NULL-EVEN; !NOT GRADUATION
 gaevnjieruktie:gaevnjieruktie NULL-NULL-EVEN; !NOT GRADUATION
 måesieruktie:måesieruktie NULL-NULL-EVEN; !NOT GRADUATION
