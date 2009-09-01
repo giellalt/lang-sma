@@ -874,9 +874,9 @@ LEXICON eDISIMP-eDISIMP-ODD
  +A:  ODDCOMP ;
 
  
-LEXICON S-E-ODD ! eeptsegs
+LEXICON s-e-ODD ! eeptsegs
      ATTR-S ;
-     PRED-0 ;
+ :e  PRED-0 ;
  +A: ODDCOMP ; 
        
 
@@ -979,10 +979,21 @@ LEXICON S-N-ODD
    PRED-N ;
 +A:  ODDCOMP ;
 
-LEXICON ES-E-ODD
+LEXICON es-e-ODD
 :e     ATTR-S;
 :e     PRED-0;
-+A:    ODDCOMP ; 
++A:    ODDCOMP ;
+
+LEXICON esDISIMP-eDISIMP-ODD
+:%^DISIMPe     ATTR-S;
+:%^DISIMPe     PRED-0;
++A:    ODDCOMP ;
+
+
+LEXICON es-e-ODDNOCOMP
+:e     ATTR-S;
+:e     PRED-0;
+
 
 LEXICON ES-E-ES-E-ODD! as ES-ES-E-ODD, but with ATTR-0
        ATTR-0 ;
