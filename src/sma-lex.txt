@@ -650,7 +650,7 @@ LEXICON FAAVROES! attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/substantiven ham
  :oe PRED-0 ;
 +A:e  EVENCOMP ;
 
-LEXICON OEH-OEH-ODD ! Attr=pred
+LEXICON oeh-oeh-ODD ! Attr=pred
 :oe ATTR-H ;
 :oe PRED-H ;
 +A:a ODDCOMP ;
@@ -849,8 +849,8 @@ LEXICON JEARKOE
 
 ! type 1
 LEXICON NULL-NULL-ODD
-     ATTR-0 ;
-     PRED-0 ;
+ :%^DISIMPe    ATTR-0 ;
+ :%^DISIMPe    PRED-0 ;
 +A:  ODDCOMP ;
 
 LEXICON h-h-ODD
@@ -859,8 +859,8 @@ LEXICON h-h-ODD
 +A:hk  ODDCOMP ;
 
 LEXICON hth-hth-ODD
-     ATTR-H ;
-     PRED-H ;
+ :%^DISIMP    ATTR-H ;
+ :%^DISIMP    PRED-H ;
 +A:  ODDCOMP ;
 
 
@@ -872,13 +872,6 @@ LEXICON e-e-ODD !bårreske
 LEXICON e-e-ODDNOCOMP
  :e     ATTR-0 ;
  :e     PRED-0 ;
-
- 
- 
-LEXICON s-e-ODD ! eeptsegs
-     ATTR-S ;
- :e  PRED-0 ;
- +A: ODDCOMP ; 
        
 
 LEXICON s-s-ODD
@@ -965,10 +958,15 @@ LEXICON NULL-S-ODD
 +A:  ODDCOMP ;
 
 ! type 3
-LEXICON S-NULL-ODD
-     ATTR-S ;
+LEXICON s-e-ODD
+    ATTR-S ;
 :e   PRED-0 ;
 +A:  ODDCOMP ;
+
+LEXICON s-e-ODDNOCOMP
+    ATTR-S ;
+:e   PRED-0 ;
+
 
 LEXICON S-N-ODD
    ATTR-S ;
@@ -1004,7 +1002,7 @@ LEXICON es-es-e-ODDNOCOMP
 :%^DISIMPe     PRED-S;
 :%^DISIMPe     PRED-0;
 
-LEXICON CONSs-CONSs-e-ODD
+LEXICON s-s-e-ODD
 :%^DISIMP     ATTR-S;
 :%^DISIMP     PRED-S;
 :%^DISIMPe     PRED-0;
