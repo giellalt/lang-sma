@@ -653,31 +653,29 @@ LEXICON FAAVROES! attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/substantiven ham
 LEXICON oeh-oeh-ODD ! Attr=pred
 :oe ATTR-H ;
 :oe PRED-H ;
-+A:a ODDCOMP ;
-+A:oe ODDCOMP ;
++A:ahk ODDCOMP ;
++A:oehk ODDCOMP ;
 
-LEXICON OEH-OEH-AN-ODD ! Attr=oeh, Pred=oeh og an 
+LEXICON oeh-oeh-an-ODD ! Attr=oeh, Pred=oeh og an 
 :oe ATTR-H ;
 :oe PRED-H ;
-  PRED-AN ; 
-+A:a ODDCOMP ;
-+A:oe ODDCOMP ; 
+   PRED-AN ; 
++A:ahk ODDCOMP ;
++A:oehk ODDCOMP ; 
 
-LEXICON H-AN-ODD ! 
-    ATTR-H ;
-    PRED-H ;
-+A: ODDCOMP ; 
-
+LEXICON e-an-ODD
+:e ATTR-0 ;
+   PRED-AN ; 
 
 
-
-LEXICON N-N-ODD ! attr=n, pred= n
-:a ATTR-N ;
-:a  PRED-N ;
-+A:a ODDCOMP ; 
+LEXICON n-n-ODD ! attr=n, pred= n
  ATTR-N ;
  PRED-N ;
-! Comparative missing - åbpoe/ommes
++A:k ODDCOMP ; 
+
+LEXICON n-n-ODDNOCOMP ! attr=n, pred= n
+ ATTR-N ;
+ PRED-N ;
 
 
 !--- a-stems---
@@ -906,20 +904,14 @@ LEXICON s-s-ODDUML
 +A:hk ODDCOMP ;
 
 
-LEXICON CONSs-CONSs-ODD
-   :%^DISIMP  ATTR-S ;
-   :%^DISIMP  PRED-S ;
-+A: ODDCOMP ;
-
 LEXICON s-s-ODDEVEN !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og illativ tjåenghkesne -tjåanghkan
      ATTR-S ;
      PRED-S ;
 
-LEXICON ES-ES-ODD 
-:e     ATTR-S ;
-:e     PRED-S ;
-+A:ahk ODDCOMP ;
-+A:oehk ODDCOMP ; !XXX check this o
+LEXICON es-es-ODD 
+:%^DISIMPe     ATTR-S ;
+:%^DISIMPe     PRED-S ;
++A: ODDCOMP ;
 
 
 
@@ -939,23 +931,19 @@ LEXICON ES-ES-ODD
 !+A+Der1+Der/htoeve:%»ehtoev SOVVEDH ;
 !+A+Der1+Der/htehte:%»ehteht ÅARAJEHTEDH ;
 
-LEXICON EDS-EDS/EDE
+LEXICON eds-eds/ede-ODD
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
   :%^DISIMPe   PRED-0 ;
 +A:  ODDCOMP ;
 
-LEXICON EDS-EDS
+LEXICON eds-eds-ODD
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
 +A:  ODDCOMP ;
 
 
 ! type 2
-LEXICON NULL-S-ODD
-     ATTR-0 ;    
-:e   PRED-S ;
-+A:  ODDCOMP ;
 
 ! type 3
 LEXICON s-e-ODD
@@ -968,10 +956,21 @@ LEXICON s-e-ODDNOCOMP
 :e   PRED-0 ;
 
 
-LEXICON S-N-ODD
+LEXICON s-n-ODD
    ATTR-S ;
    PRED-N ;
-+A:  ODDCOMP ;
++A:k  ODDCOMP ;
+
+LEXICON oes-an-ODD
+:oe   ATTR-S ;
+:a    PRED-N ;
++A:k  ODDCOMP ;
+
+LEXICON ies-an-ODD
+:ie   ATTR-S ;
+:a    PRED-N ;
++A:k  ODDCOMP ;
+
 
 LEXICON es-e-ODD
 :%^DISIMPe     ATTR-S;
@@ -995,6 +994,10 @@ LEXICON es-es-e-ODD
 :%^DISIMPe     PRED-0;
 +A:    ODDCOMP ;
 
+LEXICON e-es-ODD
+:e     ATTR-0;
+:e     PRED-S;
++A:    ODDCOMP ;
 
 
 LEXICON es-es-e-ODDNOCOMP
@@ -1019,16 +1022,21 @@ LEXICON s-s-e-ODD
 
 ! type 4
 
-LEXICON H-N-ODD
+LEXICON h-n-ODD
  ATTR-H ;
  PRED-N ;
-+A:  ODDCOMP ; 
++A:k  ODDCOMP ; 
 
-LEXICON OEH-AN-ODD
+LEXICON oeh-an-ODD
 :oe   ATTR-H ;
 :a    PRED-N ;
 +A:ahk ODDCOMP ;
 +A:oehk ODDCOMP ; !XXX check this o
+
+LEXICON NULL-n-ODD
+ ATTR-0 ;
+ PRED-N ;
++A:k  ODDCOMP ; 
 
 
 !--- NULL-ODDs---
