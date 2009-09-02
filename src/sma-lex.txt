@@ -853,14 +853,20 @@ LEXICON NULL-NULL-ODD
      PRED-0 ;
 +A:  ODDCOMP ;
 
-LEXICON H-H-ODD
+LEXICON h-h-ODD
+     ATTR-H ;
+     PRED-H ;
++A:hk  ODDCOMP ;
+
+LEXICON hth-hth-ODD
      ATTR-H ;
      PRED-H ;
 +A:  ODDCOMP ;
 
+
 LEXICON e-e-ODD !bårreske
- :e     ATTR-0 ;
- :e     PRED-0 ;
+ :%^DISIMPe     ATTR-0 ;
+ :%^DISIMPe     PRED-0 ;
  +A:  ODDCOMP ;
  
 LEXICON e-e-ODDNOCOMP
@@ -868,11 +874,6 @@ LEXICON e-e-ODDNOCOMP
  :e     PRED-0 ;
 
  
-LEXICON DISIMPe-DISIMPe-ODD
- :%^DISIMPe     ATTR-0 ;
- :%^DISIMPe     PRED-0 ;
- +A:  ODDCOMP ;
-
  
 LEXICON s-e-ODD ! eeptsegs
      ATTR-S ;
@@ -911,13 +912,8 @@ LEXICON s-s-ODDUML
      PRED-S ;
 +A:hk ODDCOMP ;
 
+
 LEXICON CONSs-CONSs-ODD
-     ATTR-S ;
-     PRED-S ;
-+A: ODDCOMP ;
-
-
-LEXICON CONSDISIMPs-CONSDISIMPs-ODD
    :%^DISIMP  ATTR-S ;
    :%^DISIMP  PRED-S ;
 +A: ODDCOMP ;
@@ -980,11 +976,6 @@ LEXICON S-N-ODD
 +A:  ODDCOMP ;
 
 LEXICON es-e-ODD
-:e     ATTR-S;
-:e     PRED-0;
-+A:    ODDCOMP ;
-
-LEXICON DISIMPes-DISIMPs-ODD
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-0;
 +A:    ODDCOMP ;
@@ -996,45 +987,30 @@ LEXICON es-e-ODDNOCOMP
 
 
 LEXICON es-e-es-e-ODD  !as es-es-e-ODD, but with ATTR-0
-:e     ATTR-0 ;
+:%^DISIMPe     ATTR-0 ;
        es-es-e-ODD ;
        
-LEXICON DISIMPes-DISIMPe-DISIMPes-DISIMPe-ODD  !as DISIMPes-DISIMPes-DISIMPe-ODD, but with ATTR-0
-:e     ATTR-0 ;
-       DISIMPes-DISIMPes-DISIMPe-ODD ;
-
        
 LEXICON es-es-e-ODD
-:e     ATTR-S;
-:e     PRED-S;
-:e     PRED-0;
-+A:    ODDCOMP ;
-
-LEXICON DISIMPes-DISIMPes-DISIMPe-ODD
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-S;
 :%^DISIMPe     PRED-0;
 +A:    ODDCOMP ;
 
 
-LEXICON DISIMPes-DISIMPes-DISIMPe-ODDNOCOMP
+
+LEXICON es-es-e-ODDNOCOMP
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-S;
 :%^DISIMPe     PRED-0;
 
-LEXICON CONSDISIMPs-CONSDISIMPs-DISIMPe-ODD
+LEXICON CONSs-CONSs-e-ODD
 :%^DISIMP     ATTR-S;
 :%^DISIMP     PRED-S;
 :%^DISIMPe     PRED-0;
 +A:    ODDCOMP ;
 
 
-
-LEXICON CONSs-CONSs-e-ODD
-:     ATTR-S;
-:     PRED-S;
-:e     PRED-0;
-+A:    ODDCOMP ;
 
 
 !LEXICON E-S-ODD
