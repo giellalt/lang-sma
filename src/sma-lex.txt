@@ -847,9 +847,9 @@ LEXICON JEARKOE
 
 ! type 1
 LEXICON NULL-NULL-ODD
- :%^DISIMPe    ATTR-0 ;
- :%^DISIMPe    PRED-0 ;
-+A:  ODDCOMP ;
+     ATTR-0 ;
+     PRED-0 ;
++A:g  ODDCOMP ;
 
 LEXICON h-h-ODD
      ATTR-H ;
@@ -862,12 +862,19 @@ LEXICON hth-hth-ODD
 +A:  ODDCOMP ;
 
 
-LEXICON e-e-ODD !bårreske
+LEXICON Ce-Ce-ODD !bårreske
  :%^DISIMPe     ATTR-0 ;
  :%^DISIMPe     PRED-0 ;
  +A:  ODDCOMP ;
  
-LEXICON e-e-ODDNOCOMP
+LEXICON Ce-Ce-ODDEVEN !rudtjege
+ :ge     ATTR-0 ;
+ :ge     PRED-0 ;
+ +A:g  ODDCOMP ;
+ +A:   EVENCOMP ;
+
+ 
+LEXICON Ce-Ce-ODDNOCOMP
  :e     ATTR-0 ;
  :e     PRED-0 ;
        
@@ -908,20 +915,20 @@ LEXICON s-s-ODDEVEN !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og illati
      ATTR-S ;
      PRED-S ;
 
-LEXICON es-es-ODD 
+LEXICON Ces-Ces-ODD 
 :%^DISIMPe     ATTR-S ;
 :%^DISIMPe     PRED-S ;
 +A: ODDCOMP ;
 
 
 
-LEXICON eds-eds/ede-ODD
+LEXICON Cs-Cs-Ce-ODD
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
   :%^DISIMPe   PRED-0 ;
 +A:  ODDCOMP ;
 
-LEXICON eds-eds-ODD
+LEXICON Cs-Cs-ODD
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
 +A:  ODDCOMP ;
@@ -930,12 +937,12 @@ LEXICON eds-eds-ODD
 ! type 2
 
 ! type 3
-LEXICON s-e-ODD
+LEXICON Cs-Ce-ODD
     ATTR-S ;
 :e   PRED-0 ;
 +A:  ODDCOMP ;
 
-LEXICON s-e-ODDNOCOMP
+LEXICON Cs-Ce-ODDNOCOMP
     ATTR-S ;
 :e   PRED-0 ;
 
@@ -956,44 +963,38 @@ LEXICON ies-an-ODD
 +A:k  ODDCOMP ;
 
 
-LEXICON es-e-ODD
+LEXICON Ces-Ce-ODD
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-0;
 +A:    ODDCOMP ;
 
 
-LEXICON es-e-ODDNOCOMP
+LEXICON Ces-Ce-ODDNOCOMP
 :e     ATTR-S;
 :e     PRED-0;
 
 
-LEXICON es-e-es-e-ODD  !as es-es-e-ODD, but with ATTR-0
+LEXICON Ces-Ce-Ces-Ce-ODD  !as Ces-Ces-Ce-ODD, but with ATTR-0
 :%^DISIMPe     ATTR-0 ;
-       es-es-e-ODD ;
+       Ces-Ces-Ce-ODD ;
        
        
-LEXICON es-es-e-ODD
+LEXICON Ces-Ces-Ce-ODD
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-S;
 :%^DISIMPe     PRED-0;
 +A:    ODDCOMP ;
 
-LEXICON e-es-ODD
+LEXICON Ce-Ces-ODD
 :e     ATTR-0;
 :e     PRED-S;
 +A:    ODDCOMP ;
 
 
-LEXICON es-es-e-ODDNOCOMP
+LEXICON Ces-Ces-Ce-ODDNOCOMP
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-S;
 :%^DISIMPe     PRED-0;
-
-LEXICON s-s-e-ODD
-:%^DISIMP     ATTR-S;
-:%^DISIMP     PRED-S;
-:%^DISIMPe     PRED-0;
-+A:    ODDCOMP ;
 
 
 
@@ -1015,34 +1016,35 @@ LEXICON NULL-n-ODD
  PRED-N ;
 +A:k  ODDCOMP ; 
 
-LEXICON hks/hke-hks/hke-ODD
+LEXICON hks-hke-hks-hke-ODD
 :%^DISIMP     ATTR-S ;
 :%^DISIMPe    ATTR-0 ;
 :%^DISIMP     PRED-S;
 :%^DISIMPe    PRED-0;
 +A:  ODDCOMP ;
 
-!--- NULL-ODDs---
-! ---------------
+
+
+LEXICON NULL-s-ODDEVEN !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
+  :e ATTR-0 ;
+  :es  DOLVEcase ;
++A+Pred:es FINAL1 ;
++A:es  ODDCOMP ;
++A:e  EVENCOMP ;
+
+LEXICON NULL-s-ODD !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
+  :e ATTR-0 ;
+  :es  DOLVEcase ;
++A+Pred:es FINAL1 ;
++A:es  ODDCOMP ;
+
+
 
 LEXICON DOLVE
   :e ATTR-0 ;! attr=e, pred=s, comp= EVEN, Case:EVEN
   :es  DOLVEcase ;
 +A+Pred:es FINAL1 ;
 +A:es  EVENCOMP ;
-
-LEXICON DOLVEs
-   ATTR-S ; ! attr=s, pred=s, comp= ODD, Case:ODD
-  :es  DOLVEcase ;
-  :e   PRED-0 ;
-+A:es  ODDCOMP ;
-
-LEXICON JIEGKE!attr=e, Pred=s, Comp=even jih ODD, Case= ODD
-  :e ATTR-0 ;
-  :es  DOLVEcase ;
-+A+Pred:es FINAL1 ;
-+A:es  ODDCOMP ;
-+A:e  EVENCOMP ;
 
 !LEXICON UMLAUT! 
 !  :ie ATTR=S ;
