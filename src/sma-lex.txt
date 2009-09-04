@@ -471,6 +471,42 @@ LEXICON ÅBPOE_N_OE_PL
 LEXICON ÅBPOE_N_OE_ESS
   +Ess:o%>jne         FINAL1 ;
 
+LEXICON ABPA
+  +Sg: ABPA_SGILL_UML ; ! Causes Umlaut
+         ABPA_N_OE ;
+
+LEXICON ABPA_SGILL_UML
+  +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
+
+LEXICON ABPA_N_OE
+  +Sg: ABPA_N_OE_SG  ;
+  +Pl: ABPA_N_OE_PL  ;
+  : ABPA_N_OE_ESS ;
+  +SgNomCmp:a    R ;
+  +SgGenCmp:a%>n R ;
+  +PlGenCmp:a%>j R ;
+
+LEXICON ABPA_N_OE_SG
+  +Nom:a          FINAL1 ;
+  +Acc:a%>m       FINAL1 ;
+  +Gen:a%>n       FINAL1 ;
+  +Ill:e%>se       FINAL1 ;
+  +Ine:e%>sne      FINAL1 ;
+  +Ela:e%>ste      FINAL1 ;
+  +Com:%>ine      FINAL1 ;
+
+LEXICON ABPA_N_OE_PL
+  +Nom:a%>h       FINAL1 ;
+  +Acc:%>ide      FINAL1 ;
+  +Gen:a%>j       FINAL1 ;
+  +Ill:%>ide      FINAL1 ;
+  +Ine:%>ine      FINAL1 ;
+  +Ela:%>ijste     FINAL1 ;
+  +Com:a%>jgujmie FINAL1 ;
+
+LEXICON ABPA_N_OE_ESS
+  +Ess:%>ine         FINAL1 ;
+
 
 LEXICON OMMES
  +Sg+Nom:%^DISIMP         FINAL1 ;
@@ -856,27 +892,51 @@ LEXICON h-h-ODD
      PRED-H ;
 +A:hk  ODDCOMP ;
 
+LEXICON h-h-ODDNOCOMP
+     ATTR-H ;
+     PRED-H ;
+
+
+
 LEXICON hth-hth-ODD
  :%^DISIMP    ATTR-H ;
  :%^DISIMP    PRED-H ;
+ :h  ODDCASE ;
++A+Sg+Nom:%^DISIMPh         FINAL1 ;
++A+SgNomCmp:%^DISIMPh            R ;
 +A:  ODDCOMP ;
 
 
 LEXICON Ce-Ce-ODD !bårreske
  :%^DISIMPe     ATTR-0 ;
  :%^DISIMPe     PRED-0 ;
- +A:  ODDCOMP ;
+ :  ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
++A:  ODDCOMP ;
  
 LEXICON Ce-Ce-ODDEVEN !rudtjege
- :ge     ATTR-0 ;
- :ge     PRED-0 ;
- +A:g  ODDCOMP ;
- +A:   EVENCOMP ;
+ :ege     ATTR-0 ;
+ :ege     PRED-0 ;
+ :eg  ODDCASE ;
++A+Sg+Nom:eg%^DISIMPe         FINAL1 ;
++A+SgNomCmp:eg%^DISIMPe            R ;
++A+Sg:           NIEJTE_SG  ;
++A+Pl:           NIEJTE_PL  ;
++A:              EVEN_ESS ;
++A+SgNomCmp:e    R ;
++A+SgGenCmp:e%>n R ;
++A+PlGenCmp:%>i  R ;
++A:eg  ODDCOMP ;
++A:e   EVENCOMP ;
 
  
 LEXICON Ce-Ce-ODDNOCOMP
  :e     ATTR-0 ;
  :e     PRED-0 ;
+ :  ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
        
 
 LEXICON s-s-ODD
@@ -906,9 +966,9 @@ LEXICON oes-oes-ODDas
 
 
 LEXICON s-s-ODDUML
-     ATTR-S ;
-     PRED-S ;
-+A:hk ODDCOMP ;
+ :ie    ATTR-S ;
+ :ie    PRED-S ;
++A:%^iUMLas ODDCOMP ;
 
 
 LEXICON s-s-ODDEVEN !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og illativ tjåenghkesne -tjåanghkan
@@ -1004,6 +1064,13 @@ LEXICON h-n-ODD
  ATTR-H ;
  PRED-N ;
 +A:k  ODDCOMP ; 
+
+LEXICON h-n-NULL-ODD
+ ATTR-H ;
+ PRED-N ;
+ PRED-0 ;
++A:k  ODDCOMP ; 
+
 
 LEXICON oeh-an-ODD
 :oe   ATTR-H ;
@@ -1117,6 +1184,21 @@ LEXICON ATTR-N
 ! Predicative lexica
 ! ------------------
 
+LEXICON ODDCASE
++A+Acc:e%>%^DISIMPm      FINAL1 ;
++A+Gen:e%>%^DISIMPn      FINAL1 ;
++A+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++A+Ine:%>isnie           FINAL1 ;
++A+Ela:%>istie           FINAL1 ;
++A+Com:%>inie            FINAL1 ;
++A+Pl: N_ODD_PL ;
++A:    N_ODD_ESS ;
++A+SgGenCmp:e%>%^DISIMPn        R ;
++A+PlGenCmp:%>%^DISIMPi R ;
+
+
+
+
 LEXICON AELHKIEScase
   +A+Sg: N_IE_SG ;
   +A+Pl: N_IE_PL ;
@@ -1172,33 +1254,33 @@ LEXICON FAAVROEScase
  
  LEXICON PRED-0
 +A+Pred: FINAL1 ; ! Awaiting full adj analysis 
-+A:   RELEVANTNOUNLEX ;
+!+A:   RELEVANTNOUNLEX ;
 
 
 LEXICON PRED-S
 +A+Pred:%>s FINAL1 ; ! Awaiting full adj analysis 
-+A:%>s   RELEVANTNOUNLEX ;
+!+A:%>s   RELEVANTNOUNLEX ;
 
 LEXICON PRED-H
 +A+Pred:%>h FINAL1 ; ! Awaiting full adj analysis 
-+A:%>h   RELEVANTNOUNLEX ; ! check whether needed! XXX
+!+A:%>h   RELEVANTNOUNLEX ; ! check whether needed! XXX
 
 
 LEXICON PRED-N
 +A+Pred:%>n FINAL1 ; ! Awaiting full adj analysis 
-+A:%>n   RELEVANTNOUNLEX ;
+!+A:%>n   RELEVANTNOUNLEX ;
 
 LEXICON PRED-AN
 +A+Pred:%>an FINAL1 ; ! Awaiting full adj analysis 
-+A:%>an   RELEVANTNOUNLEX ;
+!+A:%>an   RELEVANTNOUNLEX ;
 
 
 
 ! Predicative forms, case inflected forms
 ! ---------------------------------------
 
-LEXICON RELEVANTNOUNLEX
-+Sg+Nom: FINAL1 ; ! Awaiting the noun fix
+!LEXICON RELEVANTNOUNLEX
+!+Sg+Nom: FINAL1 ; ! Awaiting the noun fix
 
 
 ! Comparative forms
@@ -1239,11 +1321,20 @@ LEXICON ODDCOMP
  +Comp:%>åbp ÅBPOE ;
  +Superl+Attr:%>ommes FINAL1 ;
  +Superl+Pred:%>ommes FINAL1 ;
- +Superl:%>ommes  OMMES ;
+ +Superl:%>ommes OMMES ;
  +Comp+Der1+Der/Dim+Attr:%>åbpoe%»tje FINAL1 ;
  +Comp+Der1+Der/Dim+Pred:%>åbpoe%»tje FINAL1 ;
  +Comp+Der1+Der/Dim:%>åbpoe%»tj  GÅATETJE ;
 
+ +Comp+Attr:%>abpa FINAL1 ;
+ +Comp+Pred:%>abpa FINAL1 ;
+ +Comp:%>abp ABPA ;
+ +Superl+Attr:%>ammes FINAL1 ;
+ +Superl+Pred:%>ammes FINAL1 ;
+ +Superl:%>ammes OMMES ;
+ +Comp+Der1+Der/Dim+Attr:%>abpa%»tje FINAL1 ;
+ +Comp+Der1+Der/Dim+Pred:%>abpa%»tje FINAL1 ;
+ +Comp+Der1+Der/Dim:%>abpa%»tj  GÅATETJE ;
 
 
 
