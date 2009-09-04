@@ -40,6 +40,7 @@ jiermege:jiermieg Ce-Ce-ODD ;!VOKALUTVIDELSE COMP:IE
 garhpege:garhpeg Ce-Ce-ODD ;
 naabrege:naabreg Ce-Ce-ODD ;
 nieljen-raadtege:nieljen-raadteg Ce-Ce-ODDNOCOMP ;
+dovletje:dovletj Ce-Ce-ODDNOCOMP ;
 rådtege:rådteg Ce-Ce-ODD ;
 moehtege:moehteg Ce-Ce-ODD ;
 skaavhtege:skaavhteg Ce-Ce-ODD ;
@@ -386,7 +387,7 @@ harvah:harva h-h-ODD ; !SOUTH
 gåffoeh:gåffoe h-h-ODD ;
 habjoeh:habjoe h-h-ODD ; !SYSTEM1, ATTR=PRED
 båavhjoeh:båavhjoe h-h-ODD ;
-nåajjoeh:nåajjoe h-h-ODD ;!čččnåajjakåbpoe
+nåajjoeh:nåajjoe h-h-ODDNOCOMP ;!nåajjakåbpoe
 såajjoeh:såajjoe h-h-ODD ;
 nåjjoeh:nåjjoe h-h-ODD ; !'OE' ELLER 'A'
 laanjoeh:laanjoe h-h-ODD ; 
@@ -404,7 +405,8 @@ kråaptjoeh:kråaptjoe h-h-ODD ;
 hartjoeh:hartjoe h-h-ODD ;
 båavjoeh:båavjoe h-h-ODD ;
 låagkoeh:låagkoe h-h-ODD ;
-snåagkoeh:snåagkoe h-h-ODD ; !snoegke (substantiv) - snoegkesjid-> snoegkedidh
+snåagkoeh:snåagkoe h-h-ODD ;
+snåagkoeh+A+Pred:snoegke FINAL1 ; !snoegke (substantiv) - snoegkesjid-> snoegkedidh
 krangkoeh:krangkoe h-h-ODD ;
 længhkoeh:længkoe h-h-ODD ;!længhkoeh Længkoeh/lingkese
 lingkese+A+Pred:lingkese FINAL1 ; 
@@ -455,7 +457,8 @@ galhpoeh:galhpoe h-h-ODD ;
 gålhpoeh:gålhpoe h-h-ODD ;
 tjålhpoeh:tjålhpoe h-h-ODD ;
 håmhpoeh:håmhpoe h-h-ODD ;
-tjåmhpoeh:tjåmhpoe h-h-ODD ; !UMLAUT FROM ADJ-SUBSTANTIV=tjumhpie 
+tjåmhpoeh:tjåmhpoe h-h-ODD ;
+tjåmhpoeh+A+Pred:tjumhpie FINAL1 ; !UMLAUT FROM ADJ-SUBSTANTIV=tjumhpie
 skearhpoeh:skearhpoe h-h-ODD ; 
 harhpoeh:harhpoe h-h-ODD ;
 jarhpoeh:jarhpoe h-h-ODD ;
@@ -490,10 +493,13 @@ båajhtoeh:båajhtoe h-h-ODD ;
 sveartoeh:sveartoe h-h-ODD ;
 gaastoeh:gaastoe h-h-ODD ; 
 såastoeh:såastoe h-h-ODD ;! substantiv= såaste, såasta
+såastoeh+A+Pred:såaste FINAL1 ;
+såastoeh+A+Pred:såasta FINAL1 ;
 laahvoeh:laahvoe h-h-ODD ;
 skaajhvoeh:skaajhvoe h-h-ODD ;
 målhvoeh:målhvoe h-h-ODD ;
-åajvoeh:åajvoe h-h-ODD ;!čččKB: komp. åajvebe, og MLK: åajvahkåbpoe
+åajvoeh:åajvoe h-h-ODDNOCOMP ;
+åajvoeh+A:åajve EVENCOMP ;!KB: komp. åajvebe, og MLK: åajvahkåbpoe
 snjearvoeh:snjearvoe h-h-ODD ;
 narvoeh:narvoe h-h-ODD ; !SYSTEM1, Attr=pred
 snårvoeh:snårvoe h-h-ODD ;!misfornøyd 
@@ -512,7 +518,8 @@ hårsoeh:hårsoe h-h-ODD ; !
 moerehth:moereht hth-hth-ODD ; !eejhtegapth:!In diede
 ållesth:ållesth hth-hth-ODD ; !ållesthåbpoe
 joekehth:joekeht hth-hth-ODD ; 
-staavlah:staavla h-h-ODD ; !ččč Staavla =Substantiv 
+staavlah:staavla h-h-ODD ; 
+staavlah+A+Pred:staavla FINAL1 ; ! Staavla =Substantiv
 gaarroeh:gaarr h-h-ODD ; !ččč
 bieljehth:bieljieht hth-hth-ODD ; ! VOKALUTVIDELSE VED COMP:IE !bieljiehtåbpoe
 tjelmehth:tjelmieht hth-hth-ODD ; ! VOKALUTVIDELSE VED COMP:IE !tjelmiehtåbpoe
@@ -528,7 +535,7 @@ mårroeh:mårr oeh-oeh-ODD ; !ččč OEH=EVEN COMP
 mealtjoeh:mealtj oeh-oeh-ODD ;!mealtjoeh Mealtjoeh/mealtjan
 dånghkoeh:dånghk oeh-oeh-ODD ; !NORTH!SYSTEM1, ATTR OG PRED= DÅNGHKOEH
 båajpoeh:båajp oeh-oeh-ODD ; !båajpoehkåbpoe
-rudtjege:rudtje Ce-Ce-ODDEVEN ; !EGE= EVEN OD ODD COMP : rudtjebe, rudtjegåbpoe
+rudtjege:rudtj Ce-Ce-ODDEVEN ; !EGE= EVEN OD ODD COMP : rudtjebe, rudtjegåbpoe
 eensi:eensi NULL-NULL-ODD ; !eensigåbpoe 
 heelege:heeleg Ce-Ce-ODD ;
 stabrege:stabreg Ce-Ce-ODD ;
@@ -538,8 +545,8 @@ låetege:låeteg Ce-Ce-ODD ;
 laelije:laelij Ce-Ce-ODD ; !Attr=laelije, Pred=ofte bare verbform
 veassohke:veassohk Ce-Ce-ODD ;
 geesjele:geesjel Ce-Ce-ODD ; 
-sïejhme NULL-NULL-ODD ; !čččAttr=Pred, Comp= ebe, Substantiv=som attr og pred
-nasjovne:nasjovn Ce-Ce-ODDNOCOMP ; !This should point to a lexicon which not have comparative
+sïejhme NULL-NULL-EVEN ; !Attr=Pred, Comp= ebe, Substantiv=som attr og pred
+nasjovne:nasjovn Ce-Ce-ODDNOCOMP ;
 soelege:soeleg Ce-Ce-ODD ;!
 vuelege:vuelieg Ce-Ce-ODD ;!VOKALUTVIDELSE COMP:IE vueliegåbpoe
 åårmege:åårmeg Ce-Ce-ODD ;! 
@@ -561,7 +568,7 @@ bårhvijes:bårhvij Ces-Ces-Ce-ODD ; !ATTR:BÅRHVIJES/ PRED: BÅRHVIJES/BÅRHVIJ
 bæjngah:bæjnga h-n-ODD ; !UMLAUT PRED
 gakngah:gaknga h-n-ODD ; !UMLAUT PRED!
 tjakngah:tjaknga h-n-ODD ; !UMLAUT PRED
-laabjah:laabja h-n-ODD ; !UMLAUT PRED ! laabja= substantiv 
+laabjah:laabja h-n-NULL-ODD ; !UMLAUT PRED ! laabja= substantiv 
 jabjah:jabja h-n-ODD ;!UMLAUT PRED
 njåajjah:njåajja h-n-ODD ; !UMLAUT PRED
 nåjjah:nåjja h-n-ODD ; !UMLAUT PRED
@@ -616,7 +623,7 @@ sleavnah:sleavna h-n-ODD ; !UMLAUT PRED !slakk
 jarhpa:jarhpa h-n-ODD ; !UMLAUT PRED
 sarhpah:sarhpa h-n-ODD ;
 tjåalpah:tjåalpa h-n-ODD ; !UMLAUT PRED 
-laabrah:laabra h-n-ODD ; !UMLAUT PRED ! laabra= substantiv 
+laabrah:laabra h-n-NULL-ODD ; !UMLAUT PRED ! laabra= substantiv 
 slabrah:slabra h-n-ODD ; !UMLAUT PRED!slabrah-bieljie :nedhengende
 leagrah:leagra h-n-ODD ;!UMLAUT PRED
 sleagrah:sleagra h-n-ODD ; !UMLAUT PRED
@@ -632,7 +639,7 @@ dåassah:dåassa h-n-ODD ; !UMLAUT PRED !SOUTH
 madtsah:madtsa h-n-ODD ; !UMLAUT PRED 
 båadtsah:båadtsa h-n-ODD ; !UMLAUT PRED 
 stråadtsah:stråadtsa h-n-ODD ; !UMLAUT PRED!KB
-råavtsah:råavhtsa h-n-ODD ; !UMLAUT PRED , Pred=Substantiv=råavtja,råavtsa
+råavtsah:råavhtsa h-n-NULL-ODD ; !UMLAUT PRED , Pred=Substantiv=råavtja,råavtsa
 japtsah:japtsa h-n-ODD ; !SOUTH ONLY PRED.!UMLAUT PRED
 meartsah:meartsa h-n-ODD ; !UMLAUT PRED
 savsah:savsa h-n-ODD ;!UMLAUT PRED
@@ -700,7 +707,8 @@ krænkoeh:krænk oeh-an-ODD ;!UMLAUT PRED!UMLAUT PRED
 bæjngoeh:bæjng oeh-an-ODD ;!UMLAUT PRED!UMLAUT PRED
 spæjngoeh:spæjng oeh-an-ODD ;!UMLAUT PRED 
 sæjngoeh:sæjng oeh-an-ODD ;!UMLAUT PRED !SYSTEM4,attr=sæjngoeh pg pred=sæjngan
-laabjoeh:laabj oeh-an-ODD ;!UMLAUT PRED ! laabjoe= substantiv !UMLAUT PRED
+laabjoeh:laabj oeh-an-ODD ;!UMLAUT PRED
+laabjoeh+A+Pred:laabjoe FINAL1 ; ! laabjoe= substantiv
 sabjoeh:sabj oeh-an-ODD ; !UMLAUT PRED 
 kråabjoeh:kråabj oeh-an-ODD ;!UMLAUT PRED !UMLAUT PRED
 njåajjoeh:njåajj oeh-an-ODD ;!UMLAUT PRED 
@@ -877,6 +885,7 @@ klåtnjas:klåtnja s-s-ODD ;!-asåbpoe
 værsjas:værsja s-s-ODD ; 
 njæssjas:njæssja s-s-ODD ; 
 væssjas:væssja s-s-ODD ;!væssja=substantiv 
+væssjas+A+Pred:væssja FINAL1 ;
 gæhtjas:gæhtja s-s-ODD ;
 tjeakas:tjeaka s-s-ODD ; 
 fahkas:fahka s-s-ODD ;
@@ -915,7 +924,7 @@ giejmies:giejmie s-s-ODD ; !gæjma=substantiv
 skåernies:skåernie s-s-ODD ; 
 ebries:ebrie s-s-ODD ; !-ebriesåbpoe
 stueries:stuerie s-s-ODD ; !stueriesåbpoe
-båeries:båerie s-s-ODDUML ; !čččbåarasåbpoe, båarasommes
+båeries:båer s-s-ODDUML ; !båarasåbpoe, båarasommes
 såejries:såejrie s-s-ODDhk ; !-såejriehkåbpoe/ (såajrahkåbpoe?)
 nåejties:nåejtie s-s-ODDNOCOMP ; ! egentlig ikke gradbøy
 aevies:aevie s-s-ODD ; !-aeviesåbpoe
@@ -964,6 +973,7 @@ stædtjoes:stædtjoe s-s-ODDNOCOMP ; !NOT GRADUATION
 målhtjoes:målhtjoe s-s-ODD ;
 gæhtjoes:gæhtjoe s-s-ODDNOCOMP ;
 gæhtjoes+A:gyhtjek ODDCOMP ; !-gyhtjekåbpoe-gyhtjekommes - (substantiv=gyhtje) UMLAUT IN COMP
+gæhtjoes+A+Pred:gyhtje FINAL1 ;
 tjeakoes:tjeakoe s-s-ODD ;
 seakoes:seakoe s-s-ODD ; !seakoesåbpoe
 neahkoes:neahkoe s-s-ODD ;
@@ -987,7 +997,7 @@ gaaloes:gaaloe s-s-ODD ; !gaaloesåbpoe
 svaaloes:svaaloe s-s-ODD ; 
 sæjloes:sæjloe s-s-ODD ; !sæjloesåbpoe
 hearloes:hearloe s-s-ODD ;
-skaajmoes:skaajmoe oes-oes-ODDas ; !Pred=Substantiv : skaajmesisnie - skaajme(substantiv) skaajmasåbpoe
+skaajmoes:skaajmoe oes-oes-ODDas ; !Pred=Substantiv : čččskaajmesisnie - skaajme(substantiv) skaajmasåbpoe
 bårmoes:bårmoe s-s-ODD ;
 njeatsmoes:njeatsmoe s-s-ODD ; 
 reajnoes:reajnoe s-s-ODD ;
@@ -1064,7 +1074,7 @@ guelehks:guelehk Cs-Cs-ODD ;
 gåassehks:gåassehk Cs-Cs-ODD ;
 preanghkohks:preanghkohk Cs-Cs-ODD ; ! ehke, ehks/ehke, ehks
 veasohks:veasohk Cs-Cs-ODD ;
-sijngers:sijnger s-s-ODD ; !čččDerivert av sæjngoeh = oe-stamme =UMLAUTmun jáhkan dat lea sijngieråbpoe
+sijngers:sijngier Cs-Cs-ODD ; !Derivert av sæjngoeh = oe-stamme =UMLAUTmun jáhkan dat lea sijngieråbpoe
 sïerres:sïerre s-s-ODD ; !- sïerresåbpoe/sïerresommes
 madtjas:madtja s-s-ODD ; !SOUTH
 neahkas:neahka s-s-ODD ;
@@ -1721,7 +1731,8 @@ jatnoes:jatnan IES/OES_AN_UMLAUT ; !!UMLAUT PRED s->
 tjakngan DOLVEcase ;
 jalkeds:jalked Cs-Cs-Ce-ODD ;! jalkedåbpoe -jalkedommes
 låabpeds:låabped Cs-Cs-Ce-ODD ;
-værsjoes:værsjoe s-s-ODD; ! værsjoe=substantiv, daen biejjien værsjoe 
+værsjoes:værsjoe s-s-ODD; 
+værsjoes+A+Pred:værsjoe FINAL1 ; ! værsjoe=substantiv, daen biejjien værsjoe
 gaskeplehtiejovje:gaskeplehtiejovje NÅAKE; 
 tjiehpiebuktie:tjiehpiebuktie NULL-NULL-EVEN; !NOT GRADUATION
 gaevnjieruktie:gaevnjieruktie NULL-NULL-EVEN; !NOT GRADUATION
@@ -1849,6 +1860,7 @@ staelhpesne+A+Pred:staelhpesne FINAL1 ;
 stedtjesne+A+Pred:stedtjesne FINAL1 ;
 stïeresne+A+Pred:stïeresne FINAL1 ;
 skïemtjine+A+Pred:skïemtjine FINAL1 ;
+skïebtjine+A+Pred:skïebtjine FINAL1 ;
 veljesne+A+Pred:veljesne FINAL1 ;
 veljene+A+Pred:veljene FINAL1 ;
 vervesne+A+Pred:vervesne FINAL1 ;
@@ -1954,7 +1966,7 @@ sarhkah ATTR-0 ;
 reavkah ATTR-0 ;! reavkoehtidh = bjeffe om rev
 tjualah ATTR-0 ;!KB 
 skualah ATTR-0 ;!KB -Dont know
-snåalah ATTR-0 ;!snåale 'h' -adjektivmerke på substantiver, lånord fra 'snål'. 
+snåalah ATTR-0 ;!čččsnåale 'h' -adjektivmerke på substantiver, lånord fra 'snål'. 
 våalah ATTR-0 ; 
 tjallah ATTR-0 ;
 leapmah ATTR-0 ; !
@@ -2066,7 +2078,7 @@ guektien-gierts ATTR-0 ;! ATTR-0 tall
 dihkies ATTR-0 ; !Pred=Substantiv :Innesiv= dihkine
 seamma-plieres ATTR-0 ;
 dakngas ATTR-0 ; 
-sueleds ATTR-0 ;!Pred=Substantiv: sueleden, suelien, suelede
+sueleds ATTR-0 ;!Adv: sueleden, suelien, suelede
 samhtjas ATTR-0 ; 
 suvhtjies ATTR-0 ; 
 snartjas ATTR-0 ; 
@@ -2080,26 +2092,26 @@ smohkes ATTR-0 ;
 samskas ATTR-0 ;  
 såmskoes ATTR-0 ; 
 stöörelihks ATTR-0 ;
-! laaketje 		 :
-akte-laaketje:akte-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-balvedh-laaketje:balvedh-laaketj Ce-Ce-ODD ;  !NOT Graduate
-gaajhke-laaketje:gaajhke-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-gejhkie-laaketje:gejhkie-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-goekedh-laaketje:goekedh-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-hïerres-laaketje:hïerres-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-joevje-laaketje:joevje-laaketj Ce-Ce-ODD ; 		    !NOT Graduate
-jovje-laaketje:jovje-laaketj Ce-Ce-ODD ; 		    !NOT Graduate
-kraevies-laaketje:kraevies-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-mïrhke-laaketje:mïrhke-laaketj Ce-Ce-ODD ; 		    !NOT Graduate
-mullies-laaketje:mullies-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-plaave-laaketje:plaave-laaketj Ce-Ce-ODD ; 		    !NOT Graduate
-rööpses-laaketje:rööpses-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-reepses-laaketje:reepses-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-stuara-laakasadtj:stuara-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-stuerie-laaketje:stuerie-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-tjeehpes-laaketje:tjeehpes-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-veelkes-laaketje:veelkes-laaketj Ce-Ce-ODD ; 	    !NOT Graduate
-gellie-laaketje:gellie-laaketj Ce-Ce-ODD ;     
+! laaketje
+akte-laaketje:akte-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+balvedh-laaketje:balvedh-laaketj Ce-Ce-ODDNOCOMP ;  !NOT Graduate
+gaajhke-laaketje:gaajhke-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+gejhkie-laaketje:gejhkie-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+goekedh-laaketje:goekedh-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+hïerres-laaketje:hïerres-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+joevje-laaketje:joevje-laaketj Ce-Ce-ODDNOCOMP ; 		    !NOT Graduate
+jovje-laaketje:jovje-laaketj Ce-Ce-ODDNOCOMP ; 		    !NOT Graduate
+kraevies-laaketje:kraevies-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+mïrhke-laaketje:mïrhke-laaketj Ce-Ce-ODDNOCOMP ; 		    !NOT Graduate
+mullies-laaketje:mullies-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+plaave-laaketje:plaave-laaketj Ce-Ce-ODDNOCOMP ; 		    !NOT Graduate
+rööpses-laaketje:rööpses-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+reepses-laaketje:reepses-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+stuara-laakasadtj:stuara-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+stuerie-laaketje:stuerie-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+tjeehpes-laaketje:tjeehpes-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+veelkes-laaketje:veelkes-laaketj Ce-Ce-ODDNOCOMP ; 	    !NOT Graduate
+gellie-laaketje:gellie-laaketj Ce-Ce-ODDNOCOMP ;     
 gåaroes:gåaroe s-s-ODD ; 
 rovneges:rovneg Ces-Ces-Ce-ODD ;  
 sjalkes:sjalke s-s-ODD ;
