@@ -978,8 +978,20 @@ LEXICON s-s-ODDEVEN !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og illati
 LEXICON Ces-Ces-ODD 
 :%^DISIMPe     ATTR-S ;
 :%^DISIMPe     PRED-S ;
+ :  ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
 +A: ODDCOMP ;
 
+LEXICON Ces-Ces-ODDNOCOMP
+:%^DISIMPe     ATTR-S ;
+:%^DISIMPe     PRED-S ;
+
+
+LEXICON les-les-ODD 
+:%^DISIMPe     ATTR-S ;
+:%^DISIMPe     PRED-S ;
++A: ODDCOMP ;
 
 
 LEXICON Cs-Cs-Ce-ODD
@@ -992,6 +1004,10 @@ LEXICON Cs-Cs-ODD
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
 +A:  ODDCOMP ;
+
+LEXICON Cs-Cs-ODDNOCOMP
+  :%^DISIMP   ATTR-S ;
+  :%^DISIMP   PRED-S ;
 
 
 ! type 2
@@ -1165,9 +1181,11 @@ LEXICON IES/OES_AN_UMLAUT
 
 LEXICON ATTR-0
 +A+Attr: FINAL1 ;
++A+Attr: R ;
 +A+Attr+Der2+Der/voete:%»voet GIERIEHTSATJE ;
 
 LEXICON ATTR-S
++A+Attr:%>s FINAL1 ;
 +A+Attr:%>s FINAL1 ;
 +A+Attr+Der2+Der/voete:%>s%»voet GIERIEHTSATJE ;
 
