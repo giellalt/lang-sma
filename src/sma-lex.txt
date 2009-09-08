@@ -1030,8 +1030,11 @@ LEXICON hts-hts-ODD
 
 ! type 3
 LEXICON Cs-Ce-ODD
-    ATTR-S ;
-:e   PRED-0 ;
+       ATTR-S ;
+  :e   PRED-0 ;
+  :  ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
 +A:  ODDCOMP ;
 
 LEXICON Cs-Ce-ODDNOCOMP
@@ -1058,12 +1061,18 @@ LEXICON ies-an-ODD
 LEXICON Ces-Ce-ODD
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-0;
+  :  ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
 +A:    ODDCOMP ;
 
 
 LEXICON Ces-Ce-ODDNOCOMP
-:e     ATTR-S;
-:e     PRED-0;
+:%^DISIMPe     ATTR-S;
+:%^DISIMPe     PRED-0;
+  :  ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
 
 
 LEXICON Ces-Ce-Ces-Ce-ODD  !as Ces-Ces-Ce-ODD, but with ATTR-0
@@ -1075,6 +1084,9 @@ LEXICON Ces-Ces-Ce-ODD
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-S;
 :%^DISIMPe     PRED-0;
+  :  ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
 +A:    ODDCOMP ;
 
 LEXICON Ce-Ces-ODD
@@ -1219,12 +1231,12 @@ LEXICON ATTR-N
 ! ------------------
 
 LEXICON ODDCASE
-+A+Acc:e%>%^DISIMPm      FINAL1 ;
-+A+Gen:e%>%^DISIMPn      FINAL1 ;
-+A+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-+A+Ine:%>isnie           FINAL1 ;
-+A+Ela:%>istie           FINAL1 ;
-+A+Com:%>inie            FINAL1 ;
++A+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
++A+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
++A+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++A+Sg+Ine:%>isnie           FINAL1 ;
++A+Sg+Ela:%>istie           FINAL1 ;
++A+Sg+Com:%>inie            FINAL1 ;
 +A+Pl: N_ODD_PL ;
 +A:    N_ODD_ESS ;
 +A+SgGenCmp:e%>%^DISIMPn        R ;
