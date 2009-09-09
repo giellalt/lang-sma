@@ -398,13 +398,6 @@ LEXICON GÅATETJE
  +SgGenCmp:e%>n        R ;
  +PlGenCmp:%>%^DISIMPi R ;
  
-LEXICON GÅATETJE
- +Sg: N_ODD_SG ;
- +Pl: N_ODD_PL ;
-      N_ODD_ESS ;
- +SgNomCmp:            R ;
- +SgGenCmp:e%>n        R ;
- +PlGenCmp:%>%^DISIMPi R ;
 
 LEXICON EVENCOMPCASE
  +Sg+Nom:%>%^DISIMP2be%^DISIMP         FINAL1 ;
@@ -592,6 +585,8 @@ LEXICON OMMES
 ! * Vokalstamme utan omlyd i komparativ
 ! * Konsonantstamme
 
+! type 1
+
 LEXICON e-e-EVEN
   :e   ATTR-0 ;
   :e   PRED-0 ;
@@ -603,12 +598,6 @@ LEXICON e-e-EVENNOCOMP
   :e   PRED-0 ;
        eCASE ;
 
-
-LEXICON a-a-EVEN
-  :a   ATTR-0 ;
-  :a   PRED-0 ;
-       aCASE ;
-+A:a  EVENCOMP ; ! check this!
 
 
 LEXICON a-a-EVENNOCOMP
@@ -628,41 +617,33 @@ LEXICON ie-ie-EVENNOCOMP
        ieCASE ;
 
 
-!LEXICON N-N-EVEN
-!     ATTR-N ;
-!     PRED-N ;
-!+A:  EVENCOMP ;
-
 
 ! type 2
-LEXICON NULL-S-EVEN
+LEXICON e-es-EVEN
  :e    ATTR-0 ;
  :e    PRED-S ;
-     NIEJTE ;
-+A:  EVENCOMP-UML ;
+       eCASE ;
++A:e  EVENCOMP ;
 
-!LEXICON NULL-N-EVEN
-!     ATTR-0 ;
-!     PRED-N ;
-!+A:  EVENCOMP ;
-
-!LEXICON E-ES-EVEN ! not in use
-!:e   ATTR-0 ;
-!:e   PRED-S ;
-!+A:  EVENCOMP-UML ;
-
-
-! type 3
-LEXICON S-NULL-EVEN
-     ATTR-S ;
-     PRED-0 ;
-+A:  EVENCOMP ;
+LEXICON e-es-EVENNOCOMP
+ :e    ATTR-0 ;
+ :e    PRED-S ;
+       eCASE ;
 
 LEXICON DOLVE
   :e ATTR-0 ;! attr=e, pred=s, comp= EVEN, Case:EVEN
   :es  DOLVEcase ;
   :e PRED-S ;
 +A:es  EVENCOMP ;
+
+
+! type 3
+LEXICON es-e-EVEN
+ :e   ATTR-S ;
+ :e    PRED-0 ;
+     eCASE ;
++A:e  EVENCOMP ;
+
 
 
 !---- EVEN-stems (even stem declension)
@@ -1451,13 +1432,13 @@ LEXICON EVENCOMP
 ! +Comp+Der1+Der/Dim:%>b%»odtj GIERIEHTSATJE ;
 
 
-LEXICON EVENCOMP-UML
- +Comp+Attr:%>%^DISIMP2be FINAL1 ;
- +Comp+Pred:%>%^DISIMP2be FINAL1 ;
- +Comp:%>%^DISIMP2be     FINAL1 ;
- +Superl+Attr:%>%^DISIMP2mes FINAL1 ;
- +Superl+Pred:%>%^DISIMP2mes FINAL1 ;
- +Superl:%>%^DISIMP2mes    FINAL1 ;
+!LEXICON EVENCOMP-UML
+! +Comp+Attr:%>%^DISIMP2be FINAL1 ;
+! +Comp+Pred:%>%^DISIMP2be FINAL1 ;
+! +Comp:%>%^DISIMP2be     FINAL1 ;
+! +Superl+Attr:%>%^DISIMP2mes FINAL1 ;
+! +Superl+Pred:%>%^DISIMP2mes FINAL1 ;
+! +Superl:%>%^DISIMP2mes    FINAL1 ;
 ! +Comp+Der1+Der/Dim+Attr:%>b%»adtje FINAL1 ;
 ! +Comp+Der1+Der/Dim+Attr:%>b%»odtje FINAL1 ;
 ! +Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
