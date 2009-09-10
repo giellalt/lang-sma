@@ -585,7 +585,6 @@ LEXICON OMMES
 ! * Vokalstamme utan omlyd i komparativ
 ! * Konsonantstamme
 
-! type 1
 
 LEXICON NULL-NULL-EVEN
 
@@ -619,7 +618,42 @@ LEXICON ie-ie-EVENNOCOMP
   :ie   ATTR-0 ;
   :ie   PRED-0 ;
        ieCASE ;
+       
+LEXICON es-es-EVEN
+  :e   ATTR-S ;
+  :e   PRED-S ;
+       eCASE ;
++A:e  EVENCOMP ; ! check this!
 
+LEXICON es-es-EVENNOCOMP
+  :e   ATTR-S ;
+  :e   PRED-S ;
+       eCASE ;
+
+
+LEXICON as-as-EVEN
+  :a   ATTR-S ;
+  :a   PRED-S ;
+       aCASE ;
++A:a  EVENCOMP ; ! check this!
+
+LEXICON ies-ies-EVEN
+  :ie   ATTR-S ;
+  :ie   PRED-S ;
+       ieCASE ;
++A:ie  EVENCOMP ; ! check this!
+
+LEXICON oes-oes-EVEN
+  :oe   ATTR-S ;
+  :oe   PRED-S ;
+       oeCASE ;
++A:oe  EVENCOMP ; ! check this!
+
+LEXICON Cs-Cs-EVEN
+  :   ATTR-S ;
+  :   PRED-S ;
+       eCASE ;
++A:e  EVENCOMP ; ! check this!
 
 
 ! type 2
@@ -633,12 +667,17 @@ LEXICON e-es-EVENNOCOMP
  :e    ATTR-0 ;
  :e    PRED-S ;
        eCASE ;
+       
+LEXICON e-es-EVENODD
+ :e    ATTR-0 ;
+ :e    PRED-S ;
+       eCASE ;
+ :es  ODDCASE ;
++A+Sg+Nom:es         FINAL1 ;
++A+SgNomCmp:es            R ;
++A:e  EVENCOMP ;
++A:es ODDCOMP ;
 
-LEXICON DOLVE
-  :e ATTR-0 ;! attr=e, pred=s, comp= EVEN, Case:EVEN
-  :es  DOLVEcase ;
-  :e PRED-S ;
-+A:es  EVENCOMP ;
 
 
 ! type 3
@@ -650,17 +689,9 @@ LEXICON es-e-EVEN
 
 
 
-!---- EVEN-stems (even stem declension)
-! =====================================
 
 
-!--- S-EVENs---
-! -------------
 
-LEXICON S-S-EVEN
-     ATTR-S ;
-     PRED-S ;
-+A:  EVENCOMP ; ! check this!
 
 
 
@@ -993,7 +1024,6 @@ LEXICON Ce-Ce-ODDNOCOMP
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
        
-
 LEXICON s-s-ODD
      ATTR-S ;
      PRED-S ;
@@ -1330,6 +1360,41 @@ LEXICON ieCASE
   +A+SgGenCmp:ie%>n           R ;
   +A+PlGenCmp:ie%>j           R ;
   +A+PlGenCmp+Uml:ie%>%^iUMLi R ;
+
+LEXICON oeCASE
+  +A+Sg: A_OE_SGILL_UML ; ! Causes Umlaut
+         A_OE ;
+LEXICON A_OE_SGILL_UML
+  +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
+
+LEXICON A_OE
+  +A+Sg: A_OE_SG  ;
+  +A+Pl: A_OE_PL  ;
+  +A: A_OE_ESS ;
+  +A+SgNomCmp:oe    R ;
+  +A+SgGenCmp:oe%>n R ;
+  +A+PlGenCmp:oe%>j R ;
+
+LEXICON A_OE_SG
+  +Nom:oe          FINAL1 ;
+  +Acc:oe%>m       FINAL1 ;
+  +Gen:oe%>n       FINAL1 ;
+  +Ill:o%>se       FINAL1 ;
+  +Ine:o%>sne      FINAL1 ;
+  +Ela:o%>ste      FINAL1 ;
+  +Com:o%>jne      FINAL1 ;
+
+LEXICON A_OE_PL
+  +Nom:oe%>h       FINAL1 ;
+  +Acc:o%>jde      FINAL1 ;
+  +Gen:oe%>j       FINAL1 ;
+  +Ill:o%>jde      FINAL1 ;
+  +Ine:o%>jne      FINAL1 ;
+  +Ela:o%>jste     FINAL1 ;
+  +Com:oe%>jgujmie FINAL1 ;
+
+LEXICON A_OE_ESS
+  +Ess:o%>jne         FINAL1 ;
 
 
 
