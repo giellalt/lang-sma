@@ -650,10 +650,16 @@ LEXICON oes-oes-EVEN
 +A:oe  EVENCOMP ; ! check this!
 
 LEXICON Cs-Cs-EVEN
-  :   ATTR-S ;
-  :   PRED-S ;
-       eCASE ;
+     ATTR-S ;
+     PRED-S ;
+     eCASE ;
 +A:e  EVENCOMP ; ! check this!
+
+LEXICON ihks-ihks-EVEN
+          ATTR-S ;
+!   !have they got case?
+          PRED-S ;
+! +A:e   EVENCOMP ; !these words do not seem to have comparation
 
 
 ! type 2
@@ -682,15 +688,44 @@ LEXICON e-es-EVENODD
 
 ! type 3
 LEXICON es-e-EVEN
- :e   ATTR-S ;
+ :e    ATTR-S ;
  :e    PRED-0 ;
-     eCASE ;
-+A:e  EVENCOMP ;
+       eCASE ;
++A:e   EVENCOMP ;
 
 
+LEXICON ies-ie-EVEN! attr= s, predikat = Ø, comp jih case: even (ebe/emes/esne) 
+ :ie    ATTR-S ;
+ :ie    PRED-0 ;
+        ieCASE ;
++A:ie  EVENCOMP ;
 
+LEXICON ies-ies-ie-EVEN! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
+ :ie   ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
+ :ie    PRED-0 ;
+ :ie    PRED-S ;
+        ieCASE ;
++A:ie  EVENCOMP ;
 
+LEXICON ies-ies-ie-EVENNOCOMP! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
+ :ie   ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
+ :ie    PRED-0 ;
+ :ie    PRED-S ;
+        ieCASE ;
 
+LEXICON as-as-a-EVEN! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
+ :a   ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
+ :a    PRED-0 ;
+ :a    PRED-S ;
+       aCASE ;
++A:a   EVENCOMP ;
+
+LEXICON oes-oes-oe-EVEN! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
+ :oe   ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
+ :oe    PRED-0 ;
+ :oe    PRED-S ;
+        oeCASE ;
++A:oe  EVENCOMP ;
 
 
 
@@ -704,25 +739,8 @@ LEXICON es-e-EVEN
 !! not used: +A+Pred:ie FINAL1 ;
 !! not used: !+A:e  EVENCOMP ; !these words do not seem to have comparation
 
-LEXICON DIHKS
-          ATTR-S ;
-!         AELHKIEScase ;  !have they got case?
-+A+Pred:s FINAL1 ;
-! +A:e   EVENCOMP ; !these words do not seem to have comparation
 
-LEXICON AELHKIES! attr= s, predikat = Ø, comp jih case: even (ebe/emes/esne) 
- :ie  ATTR-S ;
-     AELHKIEScase ;
-+A+Pred:ie FINAL1 ;
-+A:e  EVENCOMP ;
 
-LEXICON GAERTJIES! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
- :ie  ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
-      AELHKIEScase ;
-+A+Pred:ie FINAL1 ;
-+A+Pred:ies FINAL1 ;
-+A+SgNomCmp:ies R ;
-+A:e  EVENCOMP ;
 
 !! not used: LEXICON TSÅEKIES ! Attr= s, pred=s jih Ø, Comp = EVEN jih ODD(åbpoe, ommes) Case = even =faavroe 
 !! not used:  :ie  ATTR-S ;
@@ -1397,18 +1415,6 @@ LEXICON A_OE_ESS
   +Ess:o%>jne         FINAL1 ;
 
 
-
-
-LEXICON AELHKIEScase
-  +A+Sg: N_IE_SG ;
-  +A+Pl: N_IE_PL ;
-  +A:    N_IE_ESS ;
-  +A+SgNomCmp:ie              R ;
-  +A+SgGenCmp:ie%>n           R ;
-  +A+PlGenCmp:ie%>j           R ;
-  +A+PlGenCmp+Uml:ie%>%^iUMLi R ;
-  +A+Der1+Der/Dim+Pred:%^aLATUS%»tje   FINAL1 ;
-  +A+Der1+Der/Dim:%^aLATUS%»tj GÅATETJE ;
  
 LEXICON FAAVROEScase
   +A+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
