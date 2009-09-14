@@ -693,13 +693,14 @@ baandtsan:baandtsa n-n-ODD ; !baandtsakåbpoe
 madtan:madta n-n-ODD ;!madtakåbpoe
 mådtan:mådta n-n-ODD ;!mådtakåbpoe
 skråajhvan:skråajhva n-n-ODD ; !skråajhvakåbpoe
-såmskoes:såmsk oes-an-ODD ;! UMLAUT PRED
-håjnoes:håjn oes-an-ODD ; !oeh-an = !UMLAUT PRED 
-såebries:såabr ies-an-ODD ; !UMLAUT PRED
-bårras:bårra s-n-ODD ; !!UMLAUT PRED
-såebries:såebrie s-n-ODD ; !UMLAUT PRED, Attr=såebries og pred=såabran
+såmskoes:såmsk oes-an-ODD ;! UMLAUT PRED ččč såmskoekåbpoe såmskakåbpe?
+håjnoes:håjn oes-an-ODD ; !oeh-an = !UMLAUT PRED ččč håjnoekåbpoe håjnakåbpoe?
+såebries ATTR-0 ;
+såebries+A+Pred:såabran FINAL1 ; !UMLAUT PRED
+såebries:såebriek ODDCOMP ; !ččč såebriekåbpoe såabrakåbpoe?
+bårras:bårra as-an-ODD ; !!UMLAUT PRED
 bårroes ATTR-0 ;
-samkas:samka s-n-ODD ; !UMLAUT PRED 
+samkas:samka as-an-ODD ; !UMLAUT PRED 
 snjåammah:snjåamma h-n-ODD ; 
 kråhtjoeh:kråhtjoe h-n-ODD ;
 sæjkah:sæjka h-n-ODD ; !
@@ -1601,7 +1602,9 @@ onne:unnie EVENCOMP ; !UMLAUT COMP : unnebe, unnemes
 mïevres:mïevr es-e-EVEN ; 
 bööntes:böönt es-e-EVEN ;!Attr=bööntes, pred=böönte (system 3) 
 tjalhves:tjalhv es-e-EVEN ; 
-staeries:staara s-n-ODD ; !čččODD?!UMLAUT PRED 
+staeries ATTR-0 ;
+staeries+A+Pred:staaran FINAL1 ; !UMLAUT PRED
+staeries:staeriek ODDCOMP ; !ččč ODD? staeriekåbpoe staarakåbpoe?
 jaame:jaam e-es-EVENNOCOMP ;
 aasne:aasn e-es-EVEN ;
 nannas:nann as-as-EVEN ;
@@ -1749,8 +1752,8 @@ fuehpies:fuahpas ODDCOMP ;
 båeries:båaras ODDCOMP ; 
 mujvies:måjvas ODDCOMP ; !mujviesåbpoe
 aavoes:aavoes ODDCOMP ;
-malfas:malf as-e-EVEN ;!malfa=substantiv 
-tjalhvas:tjalhv as-e-EVEN ;
+malfas:malf as-a-EVEN ;!malfa=substantiv 
+tjalhvas:tjalhv as-a-EVEN ;
 bårhveds:bårhvad Cs-Cs-ODD ;
 råevhnjeds:råevhnjied Cs-Cs-ODD ; !VOKALUTVIDELSE COMP:IE råevhnjiedåbpoe
 buerie-sjigneds:buerie-sjignied Cs-Cs-ODD ;!VOKALUTVIDELSE COMP:IE
@@ -1940,24 +1943,30 @@ garmerdihks:garmerdihk ihks-ihks-EVEN ; !garmerdidh
 jïemperdihks:jïemperdihk ihks-ihks-EVEN ; !jïemperdidh
 gaavnedihks:gaavnedihk ihks-ihks-EVEN ;
 gaarvanihks:gaarvanihk ihks-ihks-EVEN ;
-hujnies:håjna IES/OES_AN_UMLAUT ; !ies-an =SYSTEM4 !UMLAUT PRED
-saptas:sapt IES/OES_AN_UMLAUT ; !UMLAUT PRED !saptja=lus, saptjah=fl.tall lus, innesiv
-dakngas:dakngan IES/OES_AN_UMLAUT ; ! UMLAUT PRED 
-samhtjas:samhtjan IES/OES_AN_UMLAUT ; ! UMLAUT PRED= 
-suvhtjies:såvhtjan IES/OES_AN_UMLAUT ; !UMLAUT PRED bruker verbform=sovhtjehtidh
-snartjas:snartjan IES/OES_AN_UMLAUT ; !UMLAUT PRED 
-måajkoes:måajkan IES/OES_AN_UMLAUT ; !UMLAUT PRED , oes-an
-samskoes:samskan IES/OES_AN_UMLAUT ;!UMLAUT PRED
-hajnas:hajnan IES/OES_AN_UMLAUT ;! UMLAUT PRED 
-barras:barran IES/OES_AN_UMLAUT ; ! UMLAUT PRED Has to make a lexicon which have oes-an Umlaut and ies-an Umlaut 
-bårroes:bårran IES/OES_AN_UMLAUT ; ! UMLAUT PRED, s-n
-duasvas:duasvan IES/OES_AN_UMLAUT ;! UMLAUT PRED=
-smohkes:smohken IES/OES_AN_UMLAUT ; !? KB= DONT KNOW
-samskas:samskas IES/OES_AN_UMLAUT ; !UMLAUT PRED
+hujnies ATTR-0 ;
+hujnies+A+Pred:håjnan FINAL1 ; !UMLAUT PRED
+hujnies:hujniek ODDCOMP ; !ččč hujniekåbpoe håjnakåbpoe?
+saptas:sapta as-an-ODD ; !UMLAUT PRED !čččsaptja=lus, saptjah=fl.tall lus, innesiv
+dakngas:daknga as-an-ODD ; ! UMLAUT PRED 
+samhtjas:samhtja as-an-ODD ; ! UMLAUT PRED= verbform=sovhtjehtidh
+suvhtjies ATTR-0 ;
+suvhtjies+A+Pred:såvhtjan FINAL1 ; !UMLAUT PRED
+suvhtjies:suvhtjiek ODDCOMP ; !ččč suvhtjiekåbpoe såvhtjakåbpoe?
+snartjas:snartja as-an-ODD ; !UMLAUT PRED 
+måajkoes:måajk oes-an-ODD ; !UMLAUT PRED , oes-an
+samskoes:samsk oes-an-ODD ;!UMLAUT PRED
+hajnas:hajna as-an-ODD ;! UMLAUT PRED 
+barras:barra as-an-ODD ; ! UMLAUT PRED 
+bårroes:bårr oes-an-ODD ; ! UMLAUT PRED, s-n
+duasvas:duasva as-an-ODD ;! UMLAUT PRED=
+smohkes ATTR-0 ; !? KB= DONT KNOW
+smohkes+A+Pred:smohken FINAL1 ; !UMLAUT PRED !? KB= DONT KNOW
+smohkes:smohkek ODDCOMP ; ! !? KB= DONT KNOW
+samskas:samska as-an-ODD ; !UMLAUT PRED
 fahkoes:fahkoe s-s-ODD ; 
-fahkoes:fahkan IES/OES_AN_UMLAUT ; !!UMLAUT PRED= fahkoeh ->fahkan s->n
-såmskoes:såmskan IES/OES_AN_UMLAUT ; ! UMLAUT PRED 
-jatnoes:jatnan IES/OES_AN_UMLAUT ; !!UMLAUT PRED s->
+fahkoes:fahk oes-an-ODD ; !!UMLAUT PRED= fahkoeh ->fahkan s->n
+såmskoes:såmsk oes-an-ODD ; ! UMLAUT PRED 
+jatnoes:jatn oes-an-ODD ; !!UMLAUT PRED s->
 jalkeds:jalked Cs-Cs-Ce-ODD ;! jalkedåbpoe -jalkedommes
 låabpeds:låabped Cs-Cs-Ce-ODD ;
 værsjoes:værsjoe s-s-ODD; 
@@ -1967,7 +1976,7 @@ tjiehpiebuktie:tjiehpiebukt ie-ie-EVENNOCOMP; !NOT GRADUATION
 gaevnjieruktie:gaevnjierukt ie-ie-EVENNOCOMP; !NOT GRADUATION
 måesieruktie:måesierukt ie-ie-EVENNOCOMP; !NOT GRADUATION
 lïevles:lïevl es-es-EVEN;
-fraskas:frask as-e-EVEN; !SOUTH!fraska=substantiv 
+fraskas:frask as-a-EVEN; !SOUTH!fraska=substantiv 
 !åerjege -åerjiegåbpoe;!åerjege -åerjiegåbpoe
 gyjhteladtje:gyjhteladtj Ce-Ce-ODDNOCOMP ; ! NOT GRADUATION
 bualijes:bualij Ces-Ce-Ces-Ce-ODD ;
