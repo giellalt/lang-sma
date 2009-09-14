@@ -459,7 +459,7 @@ LEXICON LDAHKE
 
 
 LEXICON NULL-NULL-EVEN
-
+!ATTR-0 case comp?
 FINAL1 ;
 
 LEXICON e-e-EVEN
@@ -583,7 +583,7 @@ LEXICON es-e-EVEN
 
 
 
-LEXICON as-e-EVEN! attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
+LEXICON as-a-EVEN! attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
  :a    ATTR-S ;
  :a    PRED-0 ;
        aCASE ;
@@ -834,24 +834,9 @@ LEXICON Cs-Ce-ODD
        ODDCOMP ;
 
 LEXICON Cs-Ce-ODDNOCOMP
-    ATTR-S ;
+     ATTR-S ;
 :e   PRED-0 ;
 
-
-LEXICON s-n-ODD
-   ATTR-S ;
-   PRED-N ;
-:k  ODDCOMP ;
-
-LEXICON oes-an-ODD
-:oe   ATTR-S ;
-:a    PRED-N ;
-:k  ODDCOMP ;
-
-LEXICON ies-an-ODD
-:ie   ATTR-S ;
-:a    PRED-N ;
-:k  ODDCOMP ;
 
 
 LEXICON Ces-Ce-ODD
@@ -898,6 +883,19 @@ LEXICON Ces-Ces-Ce-ODDNOCOMP
 
 
 ! type 4
+
+LEXICON as-an-ODD
+   ATTR-S ;
+   PRED-N ;
+:k  ODDCOMP ;
+
+LEXICON oes-an-ODD
+:oe   ATTR-S ;
+:a    PRED-N ;
+:oek  ODDCOMP ;
+:ak  ODDCOMP ;
+
+
 
 LEXICON h-n-ODD
  ATTR-H ;
@@ -948,12 +946,6 @@ LEXICON e-an-ODD
    PRED-AN ; 
 
 
-
-
-! This lexicon is for the adjs we
-! have not classified yet
-LEXICON IES/OES_AN_UMLAUT
-+A+Pred: # ;
 
 
 
@@ -1087,39 +1079,39 @@ LEXICON PRED-AN
 ! -----------------
 
 LEXICON EVENCOMP
-A+Comp+Attr:%>%^COMPDISIMPbe FINAL1 ;
-A+Comp+Pred:%>%^COMPDISIMPbe FINAL1 ;
-A+Comp:     EVENCOMPCASE ;
-A+Superl+Attr:%>%^COMPDISIMPmes FINAL1 ;
-A+Superl+Pred:%>%^COMPDISIMPmes FINAL1 ;
++A+Comp+Attr:%>%^COMPDISIMPbe FINAL1 ;
++A+Comp+Pred:%>%^COMPDISIMPbe FINAL1 ;
++A+Comp:     EVENCOMPCASE ;
++A+Superl+Attr:%>%^COMPDISIMPmes FINAL1 ;
++A+Superl+Pred:%>%^COMPDISIMPmes FINAL1 ;
    MES ;
-A+Comp+Der1+Der/Dim+Attr:%>b%»adtje FINAL1 ;
-A+Comp+Der1+Der/Dim+Attr:%>b%»odtje FINAL1 ;
-A+Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
-A+Comp+Der1+Der/Dim+Pred:%>b%»odtje FINAL1 ;
++A+Comp+Der1+Der/Dim+Attr:%>b%»adtje FINAL1 ;
++A+Comp+Der1+Der/Dim+Attr:%>b%»odtje FINAL1 ;
++A+Comp+Der1+Der/Dim+Pred:%>b%»adtje FINAL1 ;
++A+Comp+Der1+Der/Dim+Pred:%>b%»odtje FINAL1 ;
  DIMCOMPCASE ;
  DIMCOMPCASE ;
 
 
 LEXICON ODDCOMP
-A+Comp+Attr:%>åbpoe FINAL1 ;
-A+Comp+Pred:%>åbpoe FINAL1 ;
-A+Comp:%>åbp ÅBPOE ;
-A+Superl+Attr:%>ommes FINAL1 ;
-A+Superl+Pred:%>ommes FINAL1 ;
++A+Comp+Attr:%>åbpoe FINAL1 ;
++A+Comp+Pred:%>åbpoe FINAL1 ;
++A+Comp:%>åbp ÅBPOE ;
++A+Superl+Attr:%>ommes FINAL1 ;
++A+Superl+Pred:%>ommes FINAL1 ;
 :%>ommes OMMES ;
-A+Comp+Der1+Der/Dim+Attr:%>åbpoe%»tje FINAL1 ;
-A+Comp+Der1+Der/Dim+Pred:%>åbpoe%»tje FINAL1 ;
-A+Comp+Der1+Der/Dim:%>åbpoe%»tj  GÅATETJE ;
-A+Comp+Attr:%>abpa FINAL1 ;
-A+Comp+Pred:%>abpa FINAL1 ;
-A+Comp:%>abp ABPA ;
-A+Superl+Attr:%>ammes FINAL1 ;
-A+Superl+Pred:%>ammes FINAL1 ;
++A+Comp+Der1+Der/Dim+Attr:%>åbpoe%»tje FINAL1 ;
++A+Comp+Der1+Der/Dim+Pred:%>åbpoe%»tje FINAL1 ;
++A+Comp+Der1+Der/Dim:%>åbpoe%»tj  GÅATETJE ;
++A+Comp+Attr:%>abpa FINAL1 ;
++A+Comp+Pred:%>abpa FINAL1 ;
++A+Comp:%>abp ABPA ;
++A+Superl+Attr:%>ammes FINAL1 ;
++A+Superl+Pred:%>ammes FINAL1 ;
 :%>ammes OMMES ;
-A+Comp+Der1+Der/Dim+Attr:%>abpa%»tje FINAL1 ;
-A+Comp+Der1+Der/Dim+Pred:%>abpa%»tje FINAL1 ;
-A+Comp+Der1+Der/Dim:%>abpa%»tj  GIERIEHTSATJE ;
++A+Comp+Der1+Der/Dim+Attr:%>abpa%»tje FINAL1 ;
++A+Comp+Der1+Der/Dim+Pred:%>abpa%»tje FINAL1 ;
++A+Comp+Der1+Der/Dim:%>abpa%»tj  GIERIEHTSATJE ;
 
 
 LEXICON EVENCOMPCASE
