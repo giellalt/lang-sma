@@ -15,7 +15,7 @@ Alphabet
   %#:0 %>:0 %+:0 »:0
   X2:0 X3:0
   ':0 !'
-  %^DISIMP:0 %^DISIMP2:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^adteUML:0 %^htjidhUML:0 %^noerecompUML:0 %^noeresupUML:0 %^aLATUS:a %^uLATUS:e ;
+  %^DISIMP:0 %^COMPDISIMP:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^adteUML:0 %^htjidhUML:0 %^aLATUS:a %^uLATUS:e ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å
@@ -34,7 +34,7 @@ Sets
 
 Definitions
 
-  Triggers     =   %^DISIMP: %^DISIMP2: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^didhUML: %^adteUML: %^htjidhUML: %^noerecompUML: %^noeresupUML: %^aLATUS: %^uLATUS: ;
+  Triggers     =   %^DISIMP: %^COMPDISIMP: %^1UML: %^2UML: %^3UML: %^3sUML: %^3dUML: %^iæUML: %^PASSUML: %^didhUML: %^adteUML: %^htjidhUML: %^aLATUS: %^uLATUS: ;
 
 Rules
  
@@ -49,7 +49,7 @@ Rules
 
   "Diphthong simplification ie:e"
    i:0 <=> _ e  Cns+ (e) (%>:) %^DISIMP: ;
-           _ e  (%>:)  %^DISIMP2: [b:|m:] ;
+           _ e  (%>:) %^COMPDISIMP: [b:|m:] ;
            (%»:) _ e: Cns+ %»: %^adteUML: ;
 
 
@@ -89,7 +89,7 @@ Rules
 
 
   "Diphthong simplification oe:e" !in comparatives
-   o:0 <=> _ e  (%>:)  %^DISIMP2: [b:|m:] ;
+   o:0 <=> _ e  (%>:) %^COMPDISIMP: [b:|m:] ;
            (%»:) _ e Cns+ %»: %^adteUML: ;
 
 
@@ -102,7 +102,7 @@ Rules
 
   "a/e alternation"
    a:e <=> _ [ Cns - j ] (Cns) (e) (%>:) %^DISIMP: ;
-           _   (%>:)  %^DISIMP2: [b:|m:] ;
+           _   (%>:) %^COMPDISIMP: [b:|m:] ;
            [e:|u:] _ Cns+ %»: %^didhUML: e d ; !Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe and Column 7 ua:oe part 2
 
 !€# aatskad%>%^DISIMPem
@@ -337,7 +337,7 @@ Rules
 !€0 jåvk00a
 
 "1st rule for even syllabic verbs Sg3 ïe-ea IV"
- Vx:Vy <=> [ Cns | #: ] _ e: Cns+ [ %>: | %»: ] [%^3sUML:|%^noerecompUML:] ;
+ Vx:Vy <=> [ Cns | #: ] _ e: Cns+ [ %>: | %»: ] %^3sUML: ;
 	where Vx in (ï o)
 	      Vy in (e u)
 	matched ;
@@ -357,12 +357,6 @@ Rules
 
 !€# roeht%>%^3sUMLa
 !€0 ruaht00a
-
-!€# noer%>%^noerecompUMLebe
-!€0 nuer00ebe
-
-!$# noer%>%^noerecompUMLebe
-!$0 noer00ebe
 
 
 "Even syllabic verbs Du1Pl3 IV"
@@ -411,11 +405,11 @@ Vx:e <=> _ e Cns* [ %>: | %»: ] %^iUML: ;
 
 
 "åe:öö and ue:öö past tense I"
-Vx:ö <=> _ e: Cns* [ %>: | %»: ] [%^iUML:|%^noeresupUML:] ;
+Vx:ö <=> _ e: Cns* [ %>: | %»: ] %^iUML: ;
 	where Vx in ( u å o ) ;
 
 "åe:öö and ue:öö past tense II"
-e:ö <=> [ å: | u: | o: ] _ Cns* [ %>: | %»: ] [%^iUML:|%^noeresupUML:] ;
+e:ö <=> [ å: | u: | o: ] _ Cns* [ %>: | %»: ] %^iUML: ;
 
 !€# bået%>%^iUMLim
 !€0 bööt00im
@@ -423,11 +417,6 @@ e:ö <=> [ å: | u: | o: ] _ Cns* [ %>: | %»: ] [%^iUML:|%^noeresupUML:] ;
 !€# vuejn%>%^iUMLim
 !€0 vööjn00im
 
-!€# noer%>%^noeresupUMLemes
-!€0 nöör00emes
-
-!$# noer%>%^noeresupUMLemes
-!$0 noer00emes
 
 "a-Latus as e in 3-syllable words"
 %^aLATUS:e <=> _ ( %»: ) :Cns+ ( %>: ) (:Vow+) ( %>: ) ( %^DISIMP: ) [:Cns* | :Cns* :Vow |:Cns* :Vow+ g u j m i e] #: ;
