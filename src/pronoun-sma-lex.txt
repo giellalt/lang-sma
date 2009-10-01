@@ -259,7 +259,7 @@ måadtesh indeven ;
 jïjnje:jïjnj 	 indeven ;
 jeenje:jeenj indeven ; !It's uncertain if this word can be inflected in all these cases
 jeene:jeen	 indeven ;
-jienebe:jieneb indodd ;
+jienebe:jienieb indodd ;
 jijnjh indeven ;
 jeenjemes indeven ;
 jeenjesh:jeenjes indcoll ;
@@ -284,9 +284,9 @@ LEXICON indeven
 
 LEXICON indodd ! This lexicon cannot be removed before lexica pointing here
                ! get another contlex!
-+Pron+Indef+Sg: indsg ;
-+Pron+Indef+Pl: indpl ;
-+Pron+Indef:    indess ;
++Pron+Indef+Sg: indsg_odd ;
++Pron+Indef+Pl: indpl_odd ;
++Pron+Indef:    indess_odd ;
 
 LEXICON ind_noninfl
 +Pron+Indef: # ;
@@ -312,14 +312,26 @@ LEXICON indpl
 +Ela:%>ijste   # ;
 +Com:%>igujmie  # ;
 
+LEXICON indsg_odd
+  +Nom:e%^DISIMP         FINAL1 ;
+  +Acc:e%>%^DISIMPm      FINAL1 ;
+  +Gen:e%>%^DISIMPn      FINAL1 ;
+  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ine:%>isnie           FINAL1 ;
+  +Ela:%>istie           FINAL1 ;
+  +Com:%>inie            FINAL1 ;
+
 LEXICON indpl_odd
-+Nom:%>h  # ;
-+Acc:%>idie # ;
-+Gen:%>i  # ;
-+Ill:%>idie # ;
-+Ine:%>inie # ;
-+Ela:%>ijstie   # ;
-+Com:%>igujmie  # ;
+  +Nom:%>%^DISIMPh       FINAL1 ;
+  +Acc:%>idie            FINAL1 ;
+  +Gen:%>%^DISIMPi       FINAL1 ;
+  +Ill:%>idie            FINAL1 ;
+  +Ine:%>inie            FINAL1 ;
+  +Ela:%>ijstie          FINAL1 ;
+  +Com:%>%^DISIMPigujmie FINAL1 ;
+
+LEXICON indess_odd
+  +Ess:%>inie          FINAL1 ;
 
 LEXICON indcoll
 +Pron+Coll+Pl: indpl_odd ;
