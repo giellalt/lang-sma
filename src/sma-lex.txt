@@ -459,8 +459,8 @@ LEXICON LDAHKE
 
 
 LEXICON NULL-NULL-EVEN
-!ATTR-0 case comp?
-FINAL1 ;
+ATTR-0 ;
+PRED-0 ;
 
 LEXICON e-e-EVEN
   :e   ATTR-0 ;
@@ -515,6 +515,10 @@ LEXICON ies-ies-EVEN
        ieCASE ;
   :ie  EVENCOMP ; ! check this!
 
+LEXICON ies-ies-EVENNOCOMP
+  :ie   ATTR-S ;
+  :ie   PRED-S ;
+
 LEXICON oes-oes-EVEN
   :oe   ATTR-S ;
   :oe   PRED-S ;
@@ -535,7 +539,7 @@ LEXICON ihks-ihks-EVEN
 
 LEXICON Ch-Ch-EVEN ! Attr= h, Comp =Even( Jïjtje-raarh) 
     ATTR-H ;
-:e  EVENCOMP ;
+    PRED-H ;
 
 LEXICON h-h-EVEN ! Attr= h, pred= h, comp=even, case= even
      ATTR-H ;
@@ -543,8 +547,9 @@ LEXICON h-h-EVEN ! Attr= h, pred= h, comp=even, case= even
      EVENCOMP ;
 
 
-LEXICON mastes-masth-masten
+LEXICON MAST
      ATTR-S ;
+  :e ATTR-S ;
      ATTR-H ;
   :e ATTR-N ;
   :e PRED-N ;
@@ -601,6 +606,10 @@ LEXICON ies-ie-EVEN! attr= s, predikat = Ø, comp jih case: even (ebe/emes/esne)
  :ie    PRED-0 ;
         ieCASE ;
  :ie  EVENCOMP ;
+ 
+LEXICON ies-ie-EVENNOCOMP! attr= s, predikat = Ø, comp jih case: even (ebe/emes/esne) 
+ :ie    ATTR-S ;
+ :ie    PRED-0 ;
 
 LEXICON ies-ies-ie-EVEN! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
  :ie   ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
@@ -643,7 +652,6 @@ LEXICON oes-oes-oe-EVEN! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/
 LEXICON NULL-NULL-ODD
      ATTR-0 ;
      PRED-0 ;
- :g  ODDCOMP ;
 
 LEXICON h-h-ODD
      ATTR-H ;
@@ -732,6 +740,13 @@ LEXICON s-s-ODDUML
 LEXICON s-s-ODDEVEN !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og illativ tjåenghkesne -tjåanghkan
      ATTR-S ;
      PRED-S ;
+:s   ODDCOMP ;
+
+LEXICON s-s-ODDEVENNOCOMP !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og illativ tjåenghkesne -tjåanghkan
+     ATTR-S ;
+     PRED-S ;
+:s   ODDCOMP ;
+
 
 LEXICON Ces-Ces-ODD 
 :%^DISIMPe     ATTR-S ;
@@ -895,7 +910,11 @@ LEXICON oes-an-ODD
 :oek  ODDCOMP ;
 :ak  ODDCOMP ;
 
-
+LEXICON oes-an-ODDNOCOMP
+:oe   ATTR-S ;
+:a    PRED-N ;
+:oek  ODDCOMP ;
+:ak  ODDCOMP ;
 
 LEXICON h-n-ODD
  ATTR-H ;
