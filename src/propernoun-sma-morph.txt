@@ -1,0 +1,135 @@
+
+! Proper nouns morphology
+! =======================
+
+! Table of content
+! ----------------
+! Continuation lexica
+! Personal names
+!  First names
+!  Surnames
+! Place names
+! ----------------
+
+
+! Continuation lexica
+! ===================
+
+! Continuation lexica for personal names
+! --------------------------------------
+
+
+! At the moment, these continuation lexica are identical. But since I
+! suspect that linguistic input will prove that the words behave
+! differently, they are kept distinct.
+
+! Names from Sweden
+
+LEXICON NAME ! these are the non-vow-final names from Sweden
+CNAME_EVEN ;
+
+! Vowel final names
+! - - - - - - - - -
+
+LEXICON VNAME_ODD ! Names ending in stressless vowel
++N+Prop+Sg: N_ODD_SG ;
++N+Prop+Pl: N_ODD_PL ;
++N+Prop:    N_ODD_ESS ;
++N+Prop+Attr: FINAL1 ;
+
+LEXICON VNAME_EVEN ! Names ending in stressless vowel
++N+Prop+Sg: NIEJTE_SG ;
++N+Prop+Pl: NIEJTE_PL ;
++N+Prop:    EVEN_ESS ;
++N+Prop+Attr: FINAL1 ;
+
+
+! Consonant final names
+! - - - - - - - - -
+
+! LEXICON CNAME_ODD ! Names ending in stressless vowel (still) not in use
+!  +N+Prop+Sg: CNAME_ODD_SG ; ! name special
+!  +N+Prop+Pl: N_ODD_PL ;     ! normal noun
+!  +N+Prop:    N_ODD_ESS ;    ! normal noun
+!  +N+Prop+Attr: FINAL1 ;     ! name special
+
+LEXICON CNAME_EVEN ! Names ending in stressless vowel
++N+Prop+Sg: NIEJTE_SG ;
++N+Prop+Pl: NIEJTE_PL ;
++N+Prop:    EVEN_ESS ;
++N+Prop+Attr: FINAL1 ;
+
+
+LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
+VNAME ; ! check whether this is correct!
+
+
+LEXICON SNAME_ODD ! Southern Sami names
+VNAME_ODD ;
+
+! Even syllable Sámi names:
+LEXICON PN_IE ! as N_IE, but with Prop tag
++N+Prop+Sg: N_IE_SG ;
++N+Prop+Pl: N_IE_PL ;
++N+Prop:    N_IE_ESS ;
++N+Prop+Attr: FINAL1 ;
+
+! LEXICON PN_OE_UML ! as N_OE_UML, but with Prop tag ! (still) not in use
+!  +N+Prop: N_OE_SGILL_UML ;
+!           PN_OE ;
+
+LEXICON PN_OE ! as N_OE, but with Prop tag
++N+Prop+Sg: N_OE_SG ;
++N+Prop+Pl: N_OE_PL ;
++N+Prop:    N_OE_ESS ;
++N+Prop+Attr: FINAL1 ;
+
+LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
++N+Prop+Sg: MAANA_SG ;
++N+Prop+Pl: MAANA_PL ;
++N+Prop:    EVEN_ESS ;
++N+Prop+Attr: FINAL1 ;
+
+LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
++N+Prop+Sg: NIEJTE_SG ;
++N+Prop+Pl: NIEJTE_PL ;
++N+Prop:    EVEN_ESS ;
++N+Prop+Attr: FINAL1 ;
+
+
+! Old names, for backwards compatibility until all entries have got new names
+! ---------------------------------------------------------------------------
+
+LEXICON CNAME
+CNAME_EVEN ; ! Even syllable as default - rename using either CNAME_EVEN or
+! CNAME_ODD.
+
+LEXICON VNAME
+SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
+! the appropriate even syllable lexicons.
+
+LEXICON ONAME
+  +Nom:          FINAL1 ;
+  +Acc:e%>m       FINAL1 ;
+  +Gen:e%>n       FINAL1 ;
+  +Acc:%>m       FINAL1 ;
+  +Gen:%>n       FINAL1 ;
+  +Ill:%>se       FINAL1 ;
+  +Ine:%>sne      FINAL1 ;
+  +Ela:%>ste      FINAL1 ;
+  +Com:%>jne      FINAL1 ;
+
+! the sne / snie business remains to be sorted out.
+
+LEXICON UNAME
+UNAME_EVEN ;
+
+LEXICON UNAME_EVEN
+  +Nom:          FINAL1 ;
+  +Acc:ve%>m       FINAL1 ;
+  +Gen:ve%>n       FINAL1 ;
+  +Ill:ve%>se       FINAL1 ;
+  +Ine:ve%>sne      FINAL1 ;
+  +Ela:ve%>ste      FINAL1 ;
+  +Com:ve%>jne      FINAL1 ;
+
