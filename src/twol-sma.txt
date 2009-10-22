@@ -157,13 +157,13 @@ Rules
 ! N §102
 
 "Even syllabic verbs present sg, monophpt E I"
- Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ [[ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ;
+ Vx:Vy <=> [ #: | Cns+ ] _ Cns+ [[ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ;
  	where Vx in (i e u)
  	      Vy in (æ a å)
  	matched ;
  
 !THOM 2009-03-04: added #: in front of Cns+ in left-hand context because rule overgenerated to 3-syllable verbs, so we got goltelidh > goltalahtjedh. The change aimed to restrict the context to 2-syllable stems.
-
+!THOM 2009-10-22: removed the #: in front of Cns+ in left-hand context beacause we got wrong analyze:vuesiehtimman instead of vuesiehtæmman. It does not seem to overgenerate to 3-syllable verbs anymore, so I leave it like this for now. 
 ! klihtie -> klæhtetje
 !€# kliht%^aLATUS%»tje%^DISIMP#
 !€0 klæhte0tje00
@@ -226,7 +226,7 @@ Rules
 
 
 "Even syllabic verbs present sg, diphth ie-ea part 1" 
- i:e <=> [ #: | #: Cns+ ] _ e:a Cns+ [ [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ;
+ i:e <=> [ #: | Cns+ ] _ e:a Cns+ [ [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ;
 
 !€# jieht%>%^1UMLa
 !€0 jeaht00a
@@ -344,8 +344,8 @@ Rules
 
 "2nd rule for even syllabic verbs Sg3 ïe-ea IV"
  e:a <=> [ï:|o:] _ Cns+ [ %>: | %»: ] %^3sUML: ;
-         [ #: | #: Cns+ ] i:e _ Cns+ [ [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ie-ea part 2
-         [ #: | #: Cns+ ] [å|a|u] _ Cns+ [ [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ae-aa, åe-åa, ue-ua
+         [ #: | Cns+ ] i:e _ Cns+ [ [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ie-ea part 2
+         [ #: | Cns+ ] [å|a|u] _ Cns+ [ [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] | [ [%>:|%»:] %^1UML:0 ]|[(%»:) i: e: Cns+ %»: %^adteUML: ]] ; !Even syllabic verbs present sg, diphth ae-aa, åe-åa, ue-ua
          [ #: | #: Cns+ ] ([å|a]) _ Cns+ %»: %^htjidhUML: e h t j ;
          (%»:) i: _ Cns+ %»: %^adteUML: ;
 
