@@ -54,6 +54,12 @@ Multichar_Symbols
   %^aLATUS  ! Latus-Umlaut for -ie stems
   %^uLATUS  ! Latus-Umlaut for -oe stems
 
+! Flag diacritics
+ @P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@ ! (Dis)allowing compounds
+ @U.Cap.Obl@  @U.Cap.Opt@			! Allowing downcasing of
+						            ! derived names: deatnulasj.
+        							! Actually, downcasing should be obligatory
+
 ! Der#begin
 ! Derivation position in a derivation row:  Affix and:
 ! 1              2               3                4                         POS type
@@ -1492,8 +1498,8 @@ LEXICON COMMON-ODD
 
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»æjj     MAANA ;
- +V+Der1+Der/NomAct:%»imm    NomActEven ;
+ +V+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+ +V+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
 ! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
  +V+Der3+Der/ahtje:%»ahtj AHTJE ;
  +V+Der2+Der/ehte:%»eht ÅARAJEHTEDH ;
@@ -1523,8 +1529,8 @@ LEXICON BÅETEDH ! row A - Group I
  ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»ij     N_ODD ;
- +V+Der1+Der/NomAct:%»iem    NomActOdd ;
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»iem@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:%»%^1UMLales NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
@@ -1561,8 +1567,8 @@ LEXICON TJEARODH ! row C - Group II
  +V+PrfPrc+Uml:%>%^2UMLeme  FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»oej     N_ODD ;
- +V+Der1+Der/NomAct:%»oem    NomActOdd ;
+ +V+Der1+Der/NomAg:%»oej@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»oem@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:%»%^PASSUMLeles NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
@@ -1601,8 +1607,8 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
  +V+PrfPrc+Uml:%>%^2UMLeme  FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»oej     N_ODD ;
- +V+Der1+Der/NomAct:%»oem    NomActOdd ;
+ +V+Der1+Der/NomAg:%»oej@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»oem@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:%»%^PASSUMLeles NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
@@ -1642,8 +1648,8 @@ LEXICON GUARKEDH ! row B - Group III
  +V+ConNeg:%>0h   FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»ij     N_ODD ;
- +V+Der1+Der/NomAct:%»em    NomActOdd ;
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:a%»les NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL:a%»sovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
@@ -1679,8 +1685,8 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +V+ConNeg:%>0h    FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»ij     N_ODD ;
- +V+Der1+Der/NomAct:%»em    NomActOdd ;
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:e%»les NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
@@ -1718,8 +1724,8 @@ LEXICON VÅÅJNEDH ! row E - Group V
  +V+ConNeg:%>h   FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»ij     N_ODD ;
- +V+Der1+Der/NomAct:%»em    NomActOdd ;
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:e%»les NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
 ! +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group V
@@ -1758,8 +1764,8 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +V+ConNeg:%>h   FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»ij     N_ODD ;
- +V+Der1+Der/NomAct:%»em    NomActOdd ;
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:e%»les NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
 ! +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
@@ -1802,8 +1808,8 @@ LEXICON ÅARAJEHTEDH ! row A - Group I
  ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»ij     N_ODD ;
- +V+Der1+Der/NomAct:%»iem    NomActOdd ;
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»iem@C.NeedNoun@    NomActOdd ;
  +V+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+Der3+Der/gåete:%»iegået GÅETEDH ;
@@ -1854,8 +1860,8 @@ LEXICON SOVVEDH ! row D - Group IV
  +V+ConNeg:%>0h    FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»ij     N_ODD ;
- +V+Der1+Der/NomAct:%»em    NomActOdd ;
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
  +V+Der3+Der/gåete:%»egået GÅETEDH ;
  +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
 
@@ -1889,8 +1895,8 @@ LEXICON TJYÖREDIDH
 
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»æjj     MAANA ;
- +V+Der1+Der/NomAct:%»imm    NomActEven ;
+ +V+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+ +V+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
 ! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
  +V+Der3+Der/ahtje:%»ahtj AHTJE ;
 
@@ -1924,8 +1930,8 @@ LEXICON LGIDH
 
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»æjj     MAANA ;
- +V+Der1+Der/NomAct:%»imm    NomActEven ;
+ +V+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+ +V+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
  +V+Der3+Der/ahtje:%»ahtj AHTJE ;
 
 
@@ -2183,4 +2189,5 @@ LEXICON VSUF-PRT-DUPL
 
 
 LEXICON FINAL1
-  0:#			#	;
+   @D.NeedNoun.ON@ # ;
+
