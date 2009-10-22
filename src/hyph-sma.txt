@@ -89,7 +89,9 @@ define j2cns        [..] -> %^ || Vow  Cns          _ [ [b|n|s|t] j | [t|d] s ] 
 define j1cns        [..] -> %^ || Vow               _ [ [  n|s|t] j | [t|d] s ] Vow ;
 define 4cns         [..] -> %^ || Vow  Cns Cns  Cns _  Cns Vow ;
 define 3cns         [..] -> %^ || Vow  Cns Cns      _  Cns Vow ;
+define s3cns        [..] -> %^ || Vow  Cns Cns      _  s j Vow ;
 define 2cns         [..] -> %^ || Vow  Cns          _  Cns Vow ;
+define s2cns        [..] -> %^ || Vow  Cns          _  s j Vow ;
 define 1cns         [..] -> %^ || Vow               _  Cns Vow ;
 
 !Error: We fail with: jijnjebh        jijn-jebh Vow Cns _ n j Vow = 72 should be jij-nj     
@@ -144,7 +146,11 @@ j1cns
 .o.
 4cns
 .o.
+s3cns
+.o.
 3cns
+.o.
+s2cns
 .o.
 2cns
 .o.
