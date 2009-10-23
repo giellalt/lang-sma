@@ -1,3 +1,14 @@
+!Distributed under the terms of the GNU General Public License version 2
+! or any later version.
+
+! ========================================================================== !
+!                     South Sámi morphological analyser                      !
+! ========================================================================== !
+!
+! sma-lex.txt
+! The file contains morphological affixes for the nouns, verbs and adjectives
+
+
 Multichar_Symbols
 
   +N +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Com +Ess
@@ -9,30 +20,34 @@ Multichar_Symbols
   +Sg1 +Sg2 +Sg3
   +Du1 +Du2 +Du3
   +Pl1 +Pl2 +Pl3
-
-  +Inf +Neg  +PrfPrc
+  +ConNeg +VAbess
+  
+  +Inf +Neg  +PrfPrc +PrsPrc
 ! +VGen +Ger
   +Ind
-  +Imp +ImpII !Den siste berre nektingsverbet
+  +Imprt +ImprtII !Den siste berre nektingsverbet
   +Coll ! Collective numeral
 
 ! Berre hjelpeverbet/nektingsverbet (Pot. for andre V?):
   +Pot +Cond  ! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21)
+  +Act ! -eme, could be chagned to +Actio
 
-! Frå nordsamisk:
 ! +Actor +Clt
   +A
   +Pred
   +Comp +Superl
   +Attr
-
+  +ABBR +ACR
+  +TV +IV
 
   +Uml   ! A tag to indicate realised or potential Umlaut
   +Hyph  ! A tag to indicate that a hyphen was used when compounding
-  +Pron +Pers +Dem +Po +Adv +Interj +Num +Ord
+  +Pron +Pers +Refl +Recipr +Dem +Indef +Interr
+  +Po +Pr +Adv +Interj +Num +Ord
   +Prop +Mal +Fem +Sur
   +CS +CC +Pcle +CLB +PUNCT +LEFT +RIGHT
-  +SgNomCmp
+  +Cmpnd
+  +SgNomCmp +PlGenCmp +SgGenCmp
 
   X2 X3
   E2 ! insert e ! Fjern denne.
@@ -74,22 +89,24 @@ Multichar_Symbols
 +Der/htalle                                                                 ! VV - Passive
 +Der/lgidh                                                                  ! VV - Passive
 +Der/NomAg                                                                  ! VN
-+Der/ijes                                                                    ! NA
++Der/ijes                                                                   ! NA
 +Der/NomAct                                                                 ! VN
-+Der/les                                                                    !VA
-+Der/ldihkie                                                                !VA
-+Der/ldahke                                                                 !VA
-+Der/ldh                                                                    !VA
-                +Der/voete                                                  !AN
++Der/æjja                                                                   ! VA
++Der/ihks                                                                   ! VA
++Der/les                                                                    ! VA
++Der/ldihkie                                                                ! VA
++Der/ldahke                                                                 ! VA
++Der/ldh                                                                    ! VA
+                +Der/voete                                                  ! AN
 +Der/htidh                                                                  ! VV - Causative
 +Der/dehte                                                                  ! VV - Causative
-+Der/lidh                                                                   !VV - Subitive
-+Der/stidh                                                                  !VV - Diminutive
-+Der/didh                                                                  !VV - Continuative
-+Der/htjidh                                                                  !Dim-cont.
-+Der/htovve                                                                  !AV 
-+Der/htoeve                                                                  !AV 
-+Der/htehte                                                                  !AV
++Der/lidh                                                                   ! VV - Subitive
++Der/stidh                                                                  ! VV - Diminutive
++Der/didh                                                                   ! VV - Continuative
++Der/htjidh                                                                 ! Dim-cont.
++Der/htovve                                                                 ! AV 
++Der/htoeve                                                                 ! AV 
++Der/htehte                                                                 ! AV
                                 +Der/ahtje                                  !VV - Inchoative
                                 +Der/gåete                                 ! VV - Inchoative
 +Der/Dim                                                                    ! NN - Diminutive
@@ -1335,7 +1352,7 @@ LEXICON LEA
 !+Inf:lea	  FINAL1 ; ! Uses årrodh
 +Ind+Prs:l    LEA-PRES	;
 +Ind+Prt:l    LEA-PRET	;
-+Imp:l		  LEA-IMP ;
++Imprt:l		  LEA-IMP ;
 +ConNeg:leah  FINAL1 ;
 
 LEXICON LEA-PRES
@@ -1373,8 +1390,8 @@ LEXICON LEA-IMP
 LEXICON NEG
 +Ind+Prs:      IJ-PRES ;
 +Ind+Prt:idtj  VSUF-PRT ;
-+Imp:aell      NEGIMP ;
-+Imp:oll       OLLE ;
++Imprt:aell      NEGIMP ;
++Imprt:oll       OLLE ;
 
 LEXICON OLLE
 +Sg1:em     FINAL1 ;
@@ -1406,7 +1423,7 @@ LEXICON IJ-PRES
 LEXICON EDTJEDH
 +Ind+Prs:       ED-PRES ;
 +Ind+Prt:       ED-PRET ;
-+Imp:           ED-IMP  ;
++Imprt:           ED-IMP  ;
 +Inf:edh        FINAL1	;
 +VGen:eminie    FINAL1	;
 +Act:eme        FINAL1	;
@@ -1491,7 +1508,7 @@ LEXICON COMMON-ODD
 ! ------------
  +V+Ind+Prs:%> VSUF-ODD-PRS ;
  +V+Ind+Prt:%> VSUF-ODD-PRT ;
- +V+Imp:%>     VSUF-ODD-IMP ;
+ +V+Imprt:%>     VSUF-ODD-IMP ;
 
 ! Infinite forms
 ! --------------
@@ -1501,8 +1518,8 @@ LEXICON COMMON-ODD
  +V+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
  +V+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
  +V+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
- +V+A+Der/æjja+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
- +V+A+Der/ihks+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +V+A+Der1+Der/æjja+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +V+A+Der1+Der/ihks+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
  +V+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
                                    !   GH Ptz.Fut. b'ïssejässaa missing here
  
@@ -1531,7 +1548,7 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>iej        VSUF-ODD-PRT ;
  +V+Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
- +V+Imp:%>              VSUF-EVEN-IMP ;
+ +V+Imprt:%>              VSUF-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +V+Inf:%>edh           FINAL1 ;
@@ -1569,7 +1586,7 @@ LEXICON TJEARODH ! row C - Group II
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
  +V+Ind+Prs:%>oe        VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>oej       VSUF-PRT ;
- +V+Imp:%>              VSUF-II-EVEN-IMP ;
+ +V+Imprt:%>              VSUF-II-EVEN-IMP ;
  +V+Ind+Prt+Sg3:%>oej FINAL1 ;
 ! Infinite forms
 ! --------------
@@ -1609,7 +1626,7 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
  +V+Ind+Prs:%>oe        VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>oej       VSUF-PRT ;
- +V+Imp:%>              VSUF-II-EVEN-IMP ;
+ +V+Imprt:%>              VSUF-II-EVEN-IMP ;
  +V+Ind+Prt+Sg3:%>oej FINAL1 ;
 ! Infinite forms
 ! --------------
@@ -1650,7 +1667,7 @@ LEXICON GUARKEDH ! row B - Group III
  +V+Ind+Prs:%>    V-III-PRS-SG ; ! class III special
  +V+Ind+Prs:%>a	  VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt:%>aj  VSUF-PRT ;
- +V+Imp:%>        VSUF-III-EVEN-IMP ;
+ +V+Imprt:%>        VSUF-III-EVEN-IMP ;
  +V+Ind+Prt+Sg3:%>aj FINAL1 ;
 ! Infinite forms
 ! --------------
@@ -1688,7 +1705,7 @@ LEXICON GUARKEDH ! row B - Group III
 LEXICON TJOEHPEDH ! row D - Group IV
  +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
  +V+Ind+Prt:%>     VSUF-PRT ;
- +V+Imp:%>         VSUF-IV-EVEN-IMP ;
+ +V+Imprt:%>         VSUF-IV-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +V+Inf:%>edh      FINAL1 ;
@@ -1727,7 +1744,7 @@ LEXICON TJOEHPEDH ! row D - Group IV
 LEXICON VÅÅJNEDH ! row E - Group V
  +V+Ind+Prs:%>   VSUF-V-EVEN-PRS ;
  +V+Ind+Prt:%>   VSUF-PRT ;
- +V+Imp:%>       VSUF-IV-EVEN-IMP ;
+ +V+Imprt:%>       VSUF-IV-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +V+Inf:%>edh    FINAL1 ;
@@ -1767,7 +1784,7 @@ LEXICON VÅÅJNEDH ! row E - Group V
 LEXICON GÖÖLEDH ! row F - Group VI
  +V+Ind+Prs:%>   VSUF-VI-EVEN-PRS ;
  +V+Ind+Prt:%>   VSUF-PRT ;
- +V+Imp:%>       VSUF-IV-EVEN-IMP ;
+ +V+Imprt:%>       VSUF-IV-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +V+Inf:%>edh    FINAL1 ;
@@ -1810,7 +1827,7 @@ LEXICON ÅARAJEHTEDH ! row A - Group I
  +V+Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +V+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
- +V+Imp:%>              VSUF-EVEN-IMP ;
+ +V+Imprt:%>              VSUF-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +V+Inf:%>edh           FINAL1 ;
@@ -1836,7 +1853,7 @@ LEXICON GÅETEDH ! from Der/gåete
  +V+Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +V+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +V+Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
- +V+Imp:%>              VSUF-EVEN-IMP ;
+ +V+Imprt:%>              VSUF-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +V+Inf:%>edh           FINAL1 ;
@@ -1850,7 +1867,7 @@ LEXICON GÅETEDH ! from Der/gåete
 LEXICON AHTJE ! row D - Group IV
  +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
  +V+Ind+Prt:%>     VSUF-PRT ;
- +V+Imp:%>         VSUF-IV-EVEN-IMP ;
+ +V+Imprt:%>         VSUF-IV-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +V+Inf:%>edh      FINAL1 ;
@@ -1863,7 +1880,7 @@ LEXICON AHTJE ! row D - Group IV
 LEXICON SOVVEDH ! row D - Group IV
  +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
  +V+Ind+Prt:%>     VSUF-PRT ;
- +V+Imp:%>         VSUF-IV-EVEN-IMP ;
+ +V+Imprt:%>         VSUF-IV-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +V+Inf:%>edh      FINAL1 ;
@@ -1887,7 +1904,7 @@ LEXICON TJYÖREDIDH
 ! ------------
  +V+Ind+Prs:%> VSUF-ODD-PRS ;
  +V+Ind+Prt:%> VSUF-ODD-PRT ;
- +V+Imp:%>     VSUF-ODD-IMP ;
+ +V+Imprt:%>     VSUF-ODD-IMP ;
 
 ! Infinite forms
 ! --------------
@@ -1922,7 +1939,7 @@ LEXICON LGIDH
 ! ------------
  +V+Ind+Prs:%> VSUF-ODD-PRS ;
  +V+Ind+Prt:%> VSUF-ODD-PRT ;
- +V+Imp:%>     VSUF-ODD-IMP ;
+ +V+Imprt:%>     VSUF-ODD-IMP ;
 
 ! Infinite forms
 ! --------------
