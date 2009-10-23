@@ -187,6 +187,22 @@ LEXICON N_ODD_PL
 
 LEXICON N_ODD_ESS
   +Ess:%>inie          FINAL1 ;
+  
+LEXICON N_ODD_C
+ +N+Sg+Nom:%^DISIMP         FINAL1 ;
+ +N+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
+ +N+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
+ +N+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +N+Sg+Ine:%>isnie           FINAL1 ;
+ +N+Sg+Ela:%>istie           FINAL1 ;
+ +N+Sg+Com:%>inie            FINAL1 ;
+ +N+Pl: N_ODD_PL ;
+ +N:    N_ODD_ESS ;
+  +N+SgNomCmp:%^DISIMP            R ;
+  +N+SgGenCmp:e%>%^DISIMPn        R ;
+  +N+PlGenCmp:%>%^DISIMPi R ;
+  +N+Der1+Der/Dim:%»atj GIERIEHTSATJE ;
+
 
 
 ! Inflection for nouns ending in '-ie'
