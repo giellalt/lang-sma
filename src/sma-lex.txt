@@ -181,7 +181,7 @@ LEXICON N_ODD
   +N+SgNomCmp:e%^DISIMP            R ;
   +N+SgGenCmp:e%>%^DISIMPn        R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
-  +N+Der1+Der/Dim:%»atj GIERIEHTSATJE ;
+  +N+Der1+Der/Dim:%»adtj GIERIEHTSATJE ;
 
 
 LEXICON N_ODD_SG
@@ -218,8 +218,38 @@ LEXICON N_ODD_C
   +N+SgNomCmp:%^DISIMP            R ;
   +N+SgGenCmp:e%>%^DISIMPn        R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
-  +N+Der1+Der/Dim:%»atj GIERIEHTSATJE ;
+  +N+Der1+Der/Dim:%»adtj GIERIEHTSATJE ;
 
+LEXICON ÅERUVE
+ +N+Sg: ÅERUVE_SG ;
+ +N+Pl: ÅERUVE_PL ;
+ +N:    ÅERUVE_ESS ;
+  +N+SgNomCmp:uve%^DISIMP            R ;
+  +N+SgGenCmp:uve%>%^DISIMPn        R ;
+  +N+PlGenCmp:uv%>%^DISIMPi R ;
+  +N+Der1+Der/Dim:%»ievadtj GIERIEHTSATJE ;
+
+
+LEXICON ÅERUVE_SG
+  +Nom:uve%^DISIMP         FINAL1 ;
+  +Acc:uve%>%^DISIMPm      FINAL1 ;
+  +Gen:uve%>%^DISIMPn      FINAL1 ;
+  +Ill:iev%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ine:iev%>isnie           FINAL1 ;
+  +Ela:iev%>istie           FINAL1 ;
+  +Com:iev%>inie            FINAL1 ;
+
+LEXICON ÅERUVE_PL
+  +Nom:uv%>%^DISIMPh       FINAL1 ;
+  +Acc:iev%>idie            FINAL1 ;
+  +Gen:uv%>%^DISIMPi       FINAL1 ;
+  +Ill:iev%>idie            FINAL1 ;
+  +Ine:iev%>inie            FINAL1 ;
+  +Ela:iev%>ijstie          FINAL1 ;
+  +Com:uve%>%^DISIMPigujmie FINAL1 ;
+
+LEXICON ÅERUVE_ESS
+  +Ess:iev%>inie          FINAL1 ;
 
 
 ! Inflection for nouns ending in '-ie'
