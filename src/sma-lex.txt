@@ -39,7 +39,7 @@ Multichar_Symbols
   +Attr
   +ABBR +ACR
   +TV +IV
-
+  +LOAN  ! ad hoc tag for development purposes.
   +Uml   ! A tag to indicate realised or potential Umlaut
   +Hyph  ! A tag to indicate that a hyphen was used when compounding
   +Pron +Pers +Refl +Recipr +Dem +Indef +Interr
@@ -650,7 +650,7 @@ LEXICON e-es-EVENODD-2
 
 
 ! type 3
-LEXICON es-e-EVEN-3
+LEXICON es-e-EVEN-3 
  :e    ATTR-S ;
  :e    PRED-0 ;
        eCASE ;
@@ -1035,6 +1035,18 @@ LEXICON e-an-ODD-4
    PRED-AN ; 
 
 
+
+
+
+! Some loanword lexica, awaiting a proper treatment
+! they have a +LOAN tag to identify them.
+
+LEXICON LOANADJ
++LOAN: NULL-s-ODDEVEN-2  ; ! the idea here is to get both -e and -es
+
+LEXICON ISKADJ
++LOAN:sk NULL-s-ODDEVEN-2 ; 
++LOAN:hk e-es-EVEN-2 ;
 
 
 
