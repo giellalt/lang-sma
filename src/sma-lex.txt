@@ -252,6 +252,37 @@ LEXICON ÅERUVE_PL
 LEXICON ÅERUVE_ESS
   +Ess:iev%>inie          FINAL1 ;
 
+LEXICON BÅERUJE
+ +N+Sg: BÅERUJE_SG ;
+ +N+Pl: BÅERUJE_PL ;
+ +N:    BÅERUJE_ESS ;
+  +N+SgNomCmp:uje%^DISIMP            R ;
+  +N+SgGenCmp:uje%>%^DISIMPn        R ;
+  +N+PlGenCmp:uj%>%^DISIMPi R ;
+  +N+Der1+Der/Dim:%»iejadtj GIERIEHTSATJE ;
+
+
+LEXICON BÅERUJE_SG
+  +Nom:uje%^DISIMP         FINAL1 ;
+  +Acc:uje%>%^DISIMPm      FINAL1 ;
+  +Gen:uje%>%^DISIMPn      FINAL1 ;
+  +Ill:iej%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ine:iej%>isnie           FINAL1 ;
+  +Ela:iej%>istie           FINAL1 ;
+  +Com:iej%>inie            FINAL1 ;
+
+LEXICON BÅERUJE_PL
+  +Nom:uj%>%^DISIMPh       FINAL1 ;
+  +Acc:iej%>idie            FINAL1 ;
+  +Gen:uj%>%^DISIMPi       FINAL1 ;
+  +Ill:iej%>idie            FINAL1 ;
+  +Ine:iej%>inie            FINAL1 ;
+  +Ela:iej%>ijstie          FINAL1 ;
+  +Com:uje%>%^DISIMPigujmie FINAL1 ;
+
+LEXICON BÅERUJE_ESS
+  +Ess:iej%>inie          FINAL1 ;
+
 
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
@@ -1761,7 +1792,7 @@ LEXICON GUARKEDH ! row B - Group III
  +V+ConNeg:%>0h   FINAL1 ;
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»aj@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
  +V+Der1+Der/NomAct:%»am@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:a%»les NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL:a%»sovv SOVVEDH ;
