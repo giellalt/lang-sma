@@ -56,6 +56,7 @@ Multichar_Symbols
   %^DISIMP
   %^COMPDISIMP
   %^COMPDISIMP2
+  %^NOMAGieDISIMP
   %^1UML  ! a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
   %^2UML  ! dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
   %^3UML  ! not used
@@ -283,6 +284,36 @@ LEXICON BÅERUJE_PL
 LEXICON BÅERUJE_ESS
   +Ess:iej%>inie          FINAL1 ;
 
+LEXICON NOMAG_IE_ODD
+ +N+Sg: NOMAG_IE_ODD_SG ;
+ +N+Pl: NOMAG_IE_ODD_PL ;
+ +N:    NOMAG_IE_ODD_ESS ;
+  +N+SgNomCmp:e%^NOMAGieDISIMP            R ;
+  +N+SgGenCmp:e%>%^NOMAGieDISIMPn        R ;
+  +N+PlGenCmp:%>%^NOMAGieDISIMPi R ;
+  +N+Der1+Der/Dim:%»adtj GIERIEHTSATJE ;
+
+
+LEXICON NOMAG_IE_ODD_SG
+  +Nom:e%^NOMAGieDISIMP         FINAL1 ;
+  +Acc:e%>%^NOMAGieDISIMPm      FINAL1 ;
+  +Gen:e%>%^NOMAGieDISIMPn      FINAL1 ;
+  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ine:%>isnie           FINAL1 ;
+  +Ela:%>istie           FINAL1 ;
+  +Com:%>inie            FINAL1 ;
+
+LEXICON NOMAG_IE_ODD_PL
+  +Nom:%>%^NOMAGieDISIMPh       FINAL1 ;
+  +Acc:%>idie            FINAL1 ;
+  +Gen:%>%^NOMAGieDISIMPi       FINAL1 ;
+  +Ill:%>idie            FINAL1 ;
+  +Ine:%>inie            FINAL1 ;
+  +Ela:%>ijstie          FINAL1 ;
+  +Com:%>%^NOMAGieDISIMPigujmie FINAL1 ;
+
+LEXICON NOMAG_IE_ODD_ESS
+  +Ess:%>inie          FINAL1 ;
 
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
@@ -1674,7 +1705,7 @@ LEXICON BÅETEDH ! row A - Group I
  ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»iej@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAg:%»iej@C.NeedNoun@     NOMAG_IE_ODD ;
  +V+Der1+Der/NomAct:%»iem@C.NeedNoun@    NomActOdd ;
  +V+Der1+Der/les:%»%^1UMLales NULL-NULL-ODD-1 ;
  +V+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
