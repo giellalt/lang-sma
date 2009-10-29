@@ -57,10 +57,7 @@ luhkh	  ORDTAG1 ;
 voestes+A+Ord+Sg+Nom:voestes         FINAL1 ; !XXX check this
 voestegh+A+Ord+Adv:voestegh          FINAL1 ; !this form is in my point of view (David) an adverb, so perhaps it should be relocated, on the other hand it is a form of voeste-
 voestemes+A+Ord+Adv:voestemes        FINAL1 ; !this form is in my point of view (David) an adverb, so perhaps it should be relocated, on the other hand it is a form of voeste-
-mubpie+A+Ord+Sg:mubp           N_IE_SG ;
-mubpie+A+Ord+Pl:mubp           N_IE_PL ;
-mubpie+A+Ord:mubp           N_IE_ESS ;
-mubpie+A+Ord+Sg+Ine+Attr:mubpene FINAL1 ;
+mubpie:mubp           MUBPIE ;
 
 gåalmede:gåalmad        ORDTAG ;
 njieljede:njieljed      ORDTAG ;
@@ -92,6 +89,7 @@ LEXICON NUMTAG
 +Num+Sg+Gen:%>n    # ;
 +Num+Sg+Ill:%>se   # ;
 +Num+Sg+Ine:%>sne  # ;
++Num+Sg+Part:%>de  # ;
 +Num+Sg+Ela:%>ste  # ;
 +Num+Sg+Com:%>jste # ;
 +Num+Ess:%>jne    # ;
@@ -114,6 +112,34 @@ LEXICON ORDTAG
 
 LEXICON COLLTAG
 +Num+Coll: # ; !Case should be added, I think,
+
+LEXICON MUBPIE
+  +A+Ord+Sg+Nom:ie                  FINAL1 ;
+  +A+Ord+Sg+Acc:ie%>m               FINAL1 ;
+  +A+Ord+Sg+Gen:ie%>n               FINAL1 ;
+! +A+Ord+Sg+Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
+  +A+Ord+Sg+Ill+Uml:%>%^1UMLan      FINAL1 ;
+  +A+Ord+Sg+Ine:e%>sne              FINAL1 ;
+  +A+Ord+Sg+Ine+Attr:e%>ne FINAL1 ;
+  +A+Ord+Sg+Ela+Attr:e%>de              FINAL1 ;
+  +A+Ord+Sg+Ela:e%>ste              FINAL1 ;
+  +A+Ord+Sg+Com:%>ine               FINAL1 ;
+  +A+Ord+Sg+Com+Uml:%>%^iUMLine     FINAL1 ;
+  +A+Ord+Pl+Nom:ie%>h               FINAL1 ;
+  +A+Ord+Pl+Acc:%>ide               FINAL1 ;
+  +A+Ord+Pl+Acc+Uml:%>%^iUMLide     FINAL1 ;
+  +A+Ord+Pl+Gen:ie%>j               FINAL1 ;
+  +A+Ord+Pl+Gen+Uml:%>%^iUMLi       FINAL1 ;
+  +A+Ord+Pl+Ill:%>ide               FINAL1 ;
+  +A+Ord+Pl+Ill+Uml:%>%^iUMLide     FINAL1 ;
+  +A+Ord+Pl+Ine:%>ine               FINAL1 ;
+  +A+Ord+Pl+Ine+Uml:%>%^iUMLine     FINAL1 ;
+  +A+Ord+Pl+Ela:%>ijste             FINAL1 ;
+  +A+Ord+Pl+Ela+Uml:%>%^iUMLijste   FINAL1 ;
+  +A+Ord+Pl+Com:ie%>jgujmie         FINAL1 ;
+  +A+Ord+Pl+Com+Uml:%>%^iUMLigujmie FINAL1 ;
+  +A+Ord+Ess:%>ine                  FINAL1 ;
+  +A+Ord+Ess+Uml:%>%^iUMLine        FINAL1 ;
 
 
 
@@ -360,6 +386,7 @@ LEXICON ROMNUMTAGOBL                           !^C^
 +Acc:%>m # ; !SUB                                 !^C^
 +Ill:%>ese # ;                                  !^C^ 
 +Ine:%>esne # ;                                  !^C^
++Part:%>ede # ;                                  !^C^
 +Ela:%>este # ;                                  !^C^
 +Com:%>ine # ;                                 !^C^
 +Ess:%>in # ;                                  !^C^
