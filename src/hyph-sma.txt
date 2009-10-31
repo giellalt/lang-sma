@@ -71,7 +71,9 @@ define S [ S | s ] ; define Cnss [ Cns - S ] ;
 
 echo << Rules>>
 
-define beforedipht [..] -> %^ ||     Vow            _ dipht ;
+! problem word: åejvieaamhtesh
+
+define beforedipht [..] -> %^ || [Cns|.#.] Vow      _ dipht ;
 define nodipht     [..] -> %^ || Cns Vow            _ VowNot2ndVow , 
                                  Cns VowNotAEUÅ     _ vA , 
                                  Cns VowNotAEIOUÅ   _ vE , 
@@ -79,7 +81,7 @@ define nodipht     [..] -> %^ || Cns Vow            _ VowNot2ndVow ,
                                  Cns VowNotÅ        _ vÅ ;
 define divdigraph   [..] -> %^ || Vow  Cns*         _ n g  Vow ; ! !jar-ngas
 !define divdigraph  [..] -> %^ || Vow           n g _ Cns+ Vow ; ! !jarn-gas, a-nga
-define unvoiced     [..] -> %^ || Vow (Cns)         _ h [ n | m | l | j | r | v ] Vow ;
+define unvoiced     [..] -> %^ || Vow (Cns)         _ h [ n | m | l | j | r | p | t | k | v ] Vow ;
 define preaspirated [..] -> %^ || Vow  Cns          _ h [ p | t | k ] ([ s | j ]) Vow ;
 define palatal      [..] -> %^ || Vow (Cns) n       _ n j ; 
 define s2cns        [..] -> %^ || Vow [Cns - t]     _ s Cnss Vow ; ! máj-stet,
