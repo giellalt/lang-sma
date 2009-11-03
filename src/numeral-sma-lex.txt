@@ -10,24 +10,24 @@ NUMBERLIKE ;      ! a dustbin
 
 
 LEXICON NUMBERWORDS
-nulle NUMTAG ;
-akte NUMTAG ;
+nulle:null NUMTAGe ;
+akte:akt NUMTAGe ;
 akti-akti+Num+Pl+Gen:akti-akti FINAL1 ;
 aktesi-aktesi+Num+Pl+Gen:akti-akti FINAL1 ;
 göökti-göökti+Num+Pl+Gen:akti-akti FINAL1 ;
 gööktesi-gööktesi+Num+Pl+Gen:akti-akti FINAL1 ;
-göökte NUMTAG ;
-golme NUMTAG ;
-njieljie NUMTAG ;
-njielje NUMTAG ; !Saemesth amma
-nieljie NUMTAG ;
-nielje NUMTAG ; 
-vïjhte NUMTAG ;
-govhte NUMTAG ;
-tjïjhtje NUMTAG ;
-gaektsie NUMTAG ;
-uktsie NUMTAG ;
-luhkie NUMTAG ;
+göökte:göökt NUMTAGe ;
+golme:golm NUMTAGe ;
+njieljie:njielj NUMTAGie ;
+njielje:njielj NUMTAGe ; !Saemesth amma
+nieljie:nielj NUMTAGie ;
+nielje:nielj NUMTAGe ; 
+vïjhte:vïjht NUMTAGe ;
+govhte:govht NUMTAGe ;
+tjïjhtje:tjïjhtj NUMTAGe ;
+gaektsie:gaekts NUMTAGe ;
+uktsie:ukts NUMTAGie ;
+luhkie:luhk NUMTAGie ;
 
 veete+SgNomCmp:veete R ;
 
@@ -87,6 +87,45 @@ tjïjhtjesh  COLLTAG ;
 gaaktsesh  COLLTAG ;
 åktsesh	   COLLTAG ;
 låhkesh	   COLLTAG ;
+
+LEXICON NUMTAGe ! akte:akt
++Num+Sg+Nom:e       # ;
++Num+Sg+Acc:%>em    # ;
++Num+Sg+Gen:%>en    # ;
++Num+Sg+Ill:%>ese   # ;
++Num+Sg+Ine:%>esne  # ;
++Num+Sg+Ine+Attr:%>ene  # ;
++Num+Sg+Ela+Attr:%>ede  # ;
++Num+Sg+Ela:%>este  # ;
++Num+Sg+Com:%>ine # ;
++Num+Ess:%>ijne    # ;
++Num+Pl+Nom:%>eh  # ;
++Num+Pl+Acc:%>ede # ;
++Num+Pl+Gen:%>i  # ;
++Num+Pl+Ill:%>ede # ;
++Num+Pl+Ine:%>ene # ;
++Num+Pl+Ela:%>ijste   # ; !
++Num+Pl+Com:%>ijgujme  # ;
+
+LEXICON NUMTAGie !njieljie:njielj
++Num+Sg+Nom:ie       # ;
++Num+Sg+Acc:%>em    # ;
++Num+Sg+Gen:%>en    # ;
++Num+Sg+Ill+Uml:%>%^1UMLane   # ;
++Num+Sg+Ine:%>esne  # ;
++Num+Sg+Ine+Attr:%>ine  # ;
++Num+Sg+Ela+Attr:%>ede  # ;
++Num+Sg+Ela:%>este  # ;
++Num+Sg+Com:%>ine # ;
++Num+Ess:%>ijne    # ;
++Num+Pl+Nom:%>ieh  # ;
++Num+Pl+Acc:%>de # ;
++Num+Pl+Gen:%>i  # ;
++Num+Pl+Ill:%>de # ;
++Num+Pl+Ine:%>ne # ;
++Num+Pl+Ela:%>ijste   # ; !
++Num+Pl+Com:%>jgujme  # ;
+
 
 LEXICON NUMTAG
 +Num+Sg+Nom:       # ;
