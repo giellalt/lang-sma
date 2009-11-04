@@ -334,45 +334,45 @@ LIST @X = @X ;
 
 
 
-MAP (@CC) TARGET CC ;
-MAP (@CS) TARGET CS ;
-
-
-MAP (@PROP>) TARGET (Prop Attr);
-
-MAP (@INTERJ) TARGET Interj ;
-
-MAP (@PCLE) TARGET Pcle ;
-
-MAP (@Num<) TARGET (N Pl Nom) IF (*-1 Num BARRIER NPNH);
-  	
-ADD (@TITLE) TARGET TITLE IF (1 Prop LINK 0 Fem OR Mal OR Sur);
-
-MAP (@>N) TARGET (Dem Nom) IF (*1 N BARRIER NPNH);
-MAP (@>N) TARGET (A Attr) IF (*1 N BARRIER NPNH);
-MAP (@>P) TARGET (N Gen) IF (1 Po);
-MAP (@>N) TARGET (N Gen) IF (*1 N BARRIER NPNH);
-
+#MAP (@CC) TARGET CC ;
+#MAP (@CS) TARGET CS ;
+#
+#
+#MAP (@PROP>) TARGET (Prop Attr);
+#
+#MAP (@INTERJ) TARGET Interj ;
+#
+#MAP (@PCLE) TARGET Pcle ;
+#
+#MAP (@Num<) TARGET (N Pl Nom) IF (*-1 Num BARRIER NPNH);
+#  	
+#ADD (@TITLE) TARGET TITLE IF (1 Prop LINK 0 Fem OR Mal OR Sur);
+#
+#MAP (@>N) TARGET (Dem Nom) IF (*1 N BARRIER NPNH);
+#MAP (@>N) TARGET (A Attr) IF (*1 N BARRIER NPNH);
+#MAP (@>P) TARGET (N Gen) IF (1 Po);
+#MAP (@>N) TARGET (N Gen) IF (*1 N BARRIER NPNH);
+#
 MAP (@+FAUXV) TARGET Neg OR ("lea") IF (*1 V BARRIER CLB);
 
 MAP (@+FMAINV) TARGET VFIN IF (NOT *0 VFIN BARRIER CLB) ;
-
-MAP (@ADVL) TARGET Po ;
-MAP (@ADVL) TARGET Ine OR Ela OR Ill ;
-
-# MAP (@P<) TARGET (N Gen) IF (*-1 Pr BARRIER NPNH) ; # No Pr
-
-MAP (@>P) TARGET Gen IF (1 Po);
-
-MAP (@OBJ) TARGET Acc ;
-
-MAP (@SPRED) TARGET NP-HEAD + Nom + Sg IF (*-1 V + Sg3 LINK -1 (Nom Sg));
-
-MAP (@SUBJ) TARGET NP-HEAD + Nom + Sg IF (NEGATE *-1 V + Sg3 LINK -1 (Nom Sg));
-
-MAP (@ADVL) TARGET Adv ;
-
-MAP (@X) TARGET WORD ;
+#
+#MAP (@ADVL) TARGET Po ;
+#MAP (@ADVL) TARGET Ine OR Ela OR Ill ;
+#
+## MAP (@P<) TARGET (N Gen) IF (*-1 Pr BARRIER NPNH) ; # No Pr
+#
+#MAP (@>P) TARGET Gen IF (1 Po);
+#
+#MAP (@OBJ) TARGET Acc ;
+#
+#MAP (@SPRED) TARGET NP-HEAD + Nom + Sg IF (*-1 V + Sg3 LINK -1 (Nom Sg));
+#
+#MAP (@SUBJ) TARGET NP-HEAD + Nom + Sg IF (NEGATE *-1 V + Sg3 LINK -1 (Nom Sg));
+#
+#MAP (@ADVL) TARGET Adv ;
+#
+#MAP (@X) TARGET WORD ;
 
 
 
@@ -384,4 +384,22 @@ SECTION
 
 
 REMOVE (@X);
+
+
+            AFTER-SECTIONS #34              #
+# ======================================== #
+   
+SUBSTITUTE (A) (A <sma>) WORD ;
+SUBSTITUTE (N) (N <sma>) WORD ;
+SUBSTITUTE (Adv) (Adv <sma>) WORD ;
+SUBSTITUTE (V) (V <sma>) WORD ;
+SUBSTITUTE (Num) (Num <sma>) WORD ;
+SUBSTITUTE (Interj) (Interj <sma>) WORD ;
+SUBSTITUTE (Po) (Po <sma>) WORD ;
+SUBSTITUTE (Pr) (Pr <sma>) WORD ;
+SUBSTITUTE (Pron) (Pron <sma>) WORD ;
+SUBSTITUTE (CC) (CC <sma>) WORD ;
+SUBSTITUTE (CS) (CS <sma>) WORD ;
+SUBSTITUTE (Pcle) (Pcle <sma>) WORD ;
+
 
