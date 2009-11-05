@@ -288,7 +288,7 @@ muvhtie indeven ;
 muvhte:muvht indeven ; 
 gellie ind_noninfl ; !also inessive for gellene e.g. gellene lehkesne - på många ställen. Example in Åarjelsaemien 6 (2000:6).
 gellieh ind_noninfl ; 
-måedtie indeven ;
+måedtie:måedt indeven2 ;
 måadtesh indeven ;
 jïjnje:jïjnj indeven ;
 jeenje:jeenj indeven ; !It's uncertain if this word can be inflected in all these cases
@@ -340,6 +340,11 @@ LEXICON indeven
 +Pron+Indef+Pl: indpl ;
 +Pron+Indef: indess ;
 
+!kongruensContlex
+LEXICON indeven2
++Pron+Indef+Sg: indsg2 ;
++Pron+Indef+Pl: indpl ;
+
 LEXICON indodd ! This lexicon cannot be removed before lexica pointing here
  ! get another contlex!
 +Pron+Indef+Sg: indsg_odd ;
@@ -347,28 +352,39 @@ LEXICON indodd ! This lexicon cannot be removed before lexica pointing here
 +Pron+Indef: indess_odd ;
 
 LEXICON ind_noninfl
-+Pron+Indef: # ;
++Pron+Indef: FINAL1 ;
 
 LEXICON indsg
-+Nom:e # ;
-+Acc:e%>m # ;
-+Gen:e%>n # ;
-+Ill:e%>se # ;
-+Ine:e%>sne # ;
-+Ela:e%>ste # ;
-+Com:%>ine # ;
++Nom:e FINAL1 ;
++Acc:e%>m FINAL1 ;
++Gen:e%>n FINAL1 ;
++Ill:e%>se FINAL1 ;
++Ine:e%>sne FINAL1 ;
++Ela:e%>ste FINAL1 ;
++Com:i%>ne FINAL1 ;
+
+!KongruensContLex
+LEXICON indsg2
++Nom:ie FINAL1 ;
++Acc:ie%>m FINAL1 ;
++Gen:ie%>n FINAL1 ;
++Ill:ie%>n FINAL1 ;
++Ine:i%>ne FINAL1 ;
++Ela:i%>de FINAL1 ;
++Com:%>ne FINAL1 ;
+
 
 LEXICON indess
-+Ess:e%>jne # ;
++Ess:e%>jne FINAL1 ;
 
 LEXICON indpl
-+Nom:%>h # ;
-+Acc:%>ide # ;
-+Gen:%>i # ;
-+Ill:%>ide # ;
-+Ine:%>ine # ;
-+Ela:%>ijste # ;
-+Com:%>igujmie # ;
++Nom:%>h FINAL1 ;
++Acc:%>ide FINAL1 ;
++Gen:%>i FINAL1 ;
++Ill:%>ide FINAL1 ;
++Ine:%>ine FINAL1 ;
++Ela:%>ijste FINAL1 ;
++Com:%>igujmie FINAL1 ;
 
 LEXICON indsg_odd
  +Nom:e%^DISIMP FINAL1 ;
@@ -401,58 +417,58 @@ LEXICON indcoll
 ! ------------------
 
 LEXICON Reflexive
-+Pron+Refl+Nom+Sg:jïjtje # ;
-+Pron+Refl+Nom+Sg:jeetje # ;
-+Pron+Refl+Nom+Sg:ijtje # ;
-+Pron+Refl+Nom+Pl:jïjtjh # ;
-+Pron+Refl+Ill+Sg3:altasasse # ;
-+Pron+Refl+Ill+Pl3:altasissie # ;
-+Pron+Refl+Acc+Sg3:altemse # ;
-+Pron+Refl+Gen+Sg3:altese # ;
-+Pron+Refl+Gen+Sg3:elties # ; 
++Pron+Refl+Nom+Sg:jïjtje FINAL1 ;
++Pron+Refl+Nom+Sg:jeetje FINAL1 ;
++Pron+Refl+Nom+Sg:ijtje FINAL1 ;
++Pron+Refl+Nom+Pl:jïjtjh FINAL1 ;
++Pron+Refl+Ill+Sg3:altasasse FINAL1 ;
++Pron+Refl+Ill+Pl3:altasissie FINAL1 ;
++Pron+Refl+Acc+Sg3:altemse FINAL1 ;
++Pron+Refl+Gen+Sg3:altese FINAL1 ;
++Pron+Refl+Gen+Sg3:elties FINAL1 ; 
 +Pron+Refl:jïjtj OBLREFL ;
 +Pron+Refl:jïjt OBLREFL-NONPAL ;
 
 LEXICON OBLREFL
-+Acc+Sg1:eme # ;
-+Acc+Sg1:emem # ;
-+Acc+Sg2:emdh # ;
-+Acc+Sg3:emse # ;
++Acc+Sg1:eme FINAL1 ;
++Acc+Sg1:emem FINAL1 ;
++Acc+Sg2:emdh FINAL1 ;
++Acc+Sg3:emse FINAL1 ;
 
-+Gen+Sg1:ene # ;
-+Gen+Sg1:en # ; !SUB
-+Gen+Sg2:edh # ;
-+Gen+Sg3:ese # ; !SUB
-+Gen+Pl1:emh # ;
-+Gen+Pl2:edh # ;
-+Gen+Pl3:esh # ; !SUB
++Gen+Sg1:ene FINAL1 ;
++Gen+Sg1:en FINAL1 ; !SUB
++Gen+Sg2:edh FINAL1 ;
++Gen+Sg3:ese FINAL1 ; !SUB
++Gen+Pl1:emh FINAL1 ;
++Gen+Pl2:edh FINAL1 ;
++Gen+Pl3:esh FINAL1 ; !SUB
 
-+Ela+Sg1:estanne # ;
-+Ela+Sg2:estadth # ;
-+Ela+Sg3:estissie # ;
++Ela+Sg1:estanne FINAL1 ;
++Ela+Sg2:estadth FINAL1 ;
++Ela+Sg3:estissie FINAL1 ;
 
-+Com+Sg1:enæjnene # ;
-+Com+Sg2:enæjnedh # ;
++Com+Sg1:enæjnene FINAL1 ;
++Com+Sg2:enæjnedh FINAL1 ;
 
-+Ill+Pl1:sanne # ;
-+Ill+Pl2:sadth # ;
-+Ill+Pl3:sissie # ;
++Ill+Pl1:sanne FINAL1 ;
++Ill+Pl2:sadth FINAL1 ;
++Ill+Pl3:sissie FINAL1 ;
 
-+Ela+Pl1:estanne # ;
-+Ela+Pl2:estadth # ;
-+Ela+Pl3:estissie # ;
++Ela+Pl1:estanne FINAL1 ;
++Ela+Pl2:estadth FINAL1 ;
++Ela+Pl3:estissie FINAL1 ;
 
-+Com+Pl1:enæjnene # ;
-+Com+Pl2:enæjnedh # ;
++Com+Pl1:enæjnene FINAL1 ;
++Com+Pl2:enæjnedh FINAL1 ;
 
 LEXICON OBLREFL-NONPAL
-+Ill+Sg1:sanne # ;
-+Ill+Sg2:sadth # ;
-+Ill+Sg3:sissie # ;
-+Ill+Sg3:sasse # ;
-+Gen+Sg3:se # ;
-+Gen+Pl3:sh # ; 
-+Ela+Sg3:sistie # ; !SUB
-+Ill+Pl3:sasse # ; !SUB
-+Ela+Pl3:sistie # ; !SUB
-+Com+Pl3:sinie # ; !SUB
++Ill+Sg1:sanne FINAL1 ;
++Ill+Sg2:sadth FINAL1 ;
++Ill+Sg3:sissie FINAL1 ;
++Ill+Sg3:sasse FINAL1 ;
++Gen+Sg3:se FINAL1 ;
++Gen+Pl3:sh FINAL1 ; 
++Ela+Sg3:sistie FINAL1 ; !SUB
++Ill+Pl3:sasse FINAL1 ; !SUB
++Ela+Pl3:sistie FINAL1 ; !SUB
++Com+Pl3:sinie FINAL1 ; !SUB
