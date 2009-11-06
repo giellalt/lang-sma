@@ -47,17 +47,54 @@ LEXICON VNAME_EVEN ! Names ending in stressless vowel
 ! Consonant final names
 ! - - - - - - - - -
 
-! LEXICON CNAME_ODD ! Names ending in stressless vowel (still) not in use
-!  +N+Prop+Sg: CNAME_ODD_SG ; ! name special
-!  +N+Prop+Pl: N_ODD_PL ;     ! normal noun
-!  +N+Prop:    N_ODD_ESS ;    ! normal noun
-!  +N+Prop+Attr: FINAL1 ;     ! name special
+ LEXICON CNAME_ODD ! Names ending in stressless vowel
+  +N+Prop+Sg: CNAME_ODD_SG ; ! name special
+  +N+Prop+Pl: N_ODD_PL ;     ! normal noun
+  +N+Prop:    N_ODD_ESS ;    ! normal noun
+  +N+Prop+Attr: FINAL1 ;     ! name special
+  
+  LEXICON CNAME_ODD_SG
+  +Nom:         FINAL1 ;
+  +Acc:e%>%^DISIMPm      FINAL1 ;
+  +Gen:e%>%^DISIMPn      FINAL1 ;
+  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ine:%>isnie           FINAL1 ;
+  +Ela:%>istie           FINAL1 ;
+  +Com:%>inie            FINAL1 ;
+
+
 
 LEXICON CNAME_EVEN ! Names ending in stressless vowel
-+N+Prop+Sg: NIEJTE_SG ;
++N+Prop+Sg: CNAME_EVEN_SG ;
 +N+Prop+Pl: NIEJTE_PL ;
 +N+Prop:    EVEN_ESS ;
 +N+Prop+Attr: FINAL1 ;
+
+  LEXICON CNAME_EVEN_SG
+  +Nom:          FINAL1 ;
+  +Acc:e%>m       FINAL1 ;
+  +Gen:e%>n       FINAL1 ;
+  +Ill:e%>se      FINAL1 ;
+  +Ine:e%>sne     FINAL1 ;
+  +Ela:e%>ste     FINAL1 ;
+  +Com:%>ine      FINAL1 ;
+
+
+LEXICON SAAMI_CNAME_EVEN ! Names ending in stressless vowel
++N+Prop+Sg: SAAMI_CNAME_EVEN_SG ;
++N+Prop+Pl: NIEJTE_PL ;
++N+Prop:    EVEN_ESS ;
++N+Prop+Attr: FINAL1 ;
+
+  LEXICON SAAMI_CNAME_EVEN_SG
+  +Nom:          FINAL1 ;
+  +Nom:e          FINAL1 ;
+  +Acc:e%>m       FINAL1 ;
+  +Gen:e%>n       FINAL1 ;
+  +Ill:e%>se      FINAL1 ;
+  +Ine:e%>sne     FINAL1 ;
+  +Ela:e%>ste     FINAL1 ;
+  +Com:%>ine      FINAL1 ;
 
 
 LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
