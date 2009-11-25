@@ -1411,40 +1411,29 @@ LEXICON ÅBPOE_N_OE_ESS
   +Ess:o%>jne         FINAL1 ;
 
 LEXICON ABPA
-  +Sg: ABPA_SGILL_UML ; ! Causes Umlaut
-         ABPA_N_OE ;
+  +Sg: ABPA_SG ; ! Causes Umlaut
+  +Pl: ABPA_PL  ;
+  +Ess:%>ine         FINAL1 ;
 
-LEXICON ABPA_SGILL_UML
-  +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
 
-LEXICON ABPA_N_OE
-  +Sg: ABPA_N_OE_SG  ;
-  +Pl: ABPA_N_OE_PL  ;
-  : ABPA_N_OE_ESS ;
-  +SgNomCmp:a    R ;
-  +SgGenCmp:a%>n R ;
-  +PlGenCmp:a%>j R ;
-
-LEXICON ABPA_N_OE_SG
+LEXICON ABPA_SG
   +Nom:a          FINAL1 ;
   +Acc:a%>m       FINAL1 ;
   +Gen:a%>n       FINAL1 ;
-  +Ill:e%>se       FINAL1 ;
-  +Ine:e%>sne      FINAL1 ;
-  +Ela:e%>ste      FINAL1 ;
+  +Ill:e%>se      FINAL1 ;
+  +Ine:e%>sne     FINAL1 ;
+  +Ela:e%>ste     FINAL1 ;
   +Com:%>ine      FINAL1 ;
 
-LEXICON ABPA_N_OE_PL
+LEXICON ABPA_PL
   +Nom:a%>h       FINAL1 ;
   +Acc:%>ide      FINAL1 ;
   +Gen:a%>j       FINAL1 ;
   +Ill:%>ide      FINAL1 ;
   +Ine:%>ine      FINAL1 ;
-  +Ela:%>ijste     FINAL1 ;
+  +Ela:%>ijste    FINAL1 ;
   +Com:a%>jgujmie FINAL1 ;
 
-LEXICON ABPA_N_OE_ESS
-  +Ess:%>ine         FINAL1 ;
 
 LEXICON MES
 +A+Superl+Sg+Nom:%>%^COMPDISIMPmes          FINAL1 ;
@@ -1642,17 +1631,17 @@ LEXICON ED-IMP
 
 LEXICON GOLTELIDH !odd-syll with -adte- as Der2
  COMMON-ODD ;
-+V+Der2+Der/adte:%»%^adteUMLadt ÅARAJEHTEDH ;
++V+Der2+Der/adte:%»%^adteUMLadt GOEGKERDADTEDH ;
 
 !LEXICON AERVIEDIDH !odd-syll with -adte- as Der2 and eds-derivation
 ! COMMON-ODD ;
-!+V+Der2+Der/adte:%»%^adteUMLadt ÅARAJEHTEDH ;
+!+V+Der2+Der/adte:%»%^adteUMLadt GOEGKERDADTEDH ;
 !+V+Der2+Der/eds:%^DISIMPs NULL-NULL-ODD-1 ;
 
 
 LEXICON DÅAJVOEHTIDH  !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
  COMMON-ODD ;
-+V+Der2+Der/alle:%»%^adteUMLall ÅARAJEHTEDH ;
++V+Der2+Der/alle:%»%^adteUMLall GOEGKERDADTEDH ;
 
 
 
@@ -2002,6 +1991,32 @@ LEXICON ÅARAJEHTEDH ! row A - Group I
  +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+Der3+Der/gåete:%»iegået GÅETEDH ;
  +V+Der3+Der/ahtje:%»iejahtj AHTJE ;
+ 
+ 
+LEXICON GOEGKERDADTEDH ! row D - Group IV
+ +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
+ +V+Ind+Prt:%>     VSUF-PRT ;
+ +V+Imprt:%>         VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+ +V+Inf:%>edh      FINAL1 ;
+ +V+VGen:%>en      FINAL1 ;
+ +V+Act:%>eme      FINAL1 ;
+ +V+Ger:%>eminie   FINAL1 ;
+ +V+PrsPrc:%>ije   FINAL1 ;
+ +V+PrsPrc:%>ijes  FINAL1 ;
+ +V+PrfPrc:%>eme   FINAL1 ;
+ +V+ConNeg:%>0h    FINAL1 ;
+! Derivations
+! -----------
+ +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
+ +V+Der1+Der/les:e%»les NULL-NULL-ODD-1 ;
+ +V+Der3+Der/PassL:e%»sovv SOVVEDH ;
+ +V+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+Der3+Der/gåete:%»egået GÅETEDH ;
+ +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
+
 
 
 LEXICON GÅETEDH ! from Der/gåete
