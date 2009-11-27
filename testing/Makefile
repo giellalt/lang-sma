@@ -34,7 +34,7 @@ PARA_TMP = Para_tmp
 # the Sami languages)
 SAVEFILE = $(wildcard $(FSTDIR)/ism?.fst)
 #SAVEFILE = $(wildcard $(FSTDIR)/ism?-norm.fst)
-#SAVEFILE = $(wildcard $(FSTDIR)/ism?-restr.fst)
+#SAVEFILE = $(wildcard $(FSTDIR)/ism?-$(DIALECT).restr.fst)
 # Copied from old LS makefile:
 # Bond, James Bond
 UMASK=@umask 007
