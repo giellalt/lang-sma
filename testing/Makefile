@@ -32,9 +32,9 @@ PARA_TMP = Para_tmp
 # This variable is holding the filename of the save file:
 # (makes the Makefile truly language independent for
 # the Sami languages)
-SAVEFILE = $(wildcard $(FSTDIR)/ism?.fst)
-#SAVEFILE = $(wildcard $(FSTDIR)/ism?-norm.fst)
-#SAVEFILE = $(wildcard $(FSTDIR)/ism?-$(DIALECT).restr.fst)
+SAVEFILE = $(FSTDIR)/isma.fst
+#SAVEFILE = $(FSTDIR)/isma-norm.fst
+#SAVEFILE = $(FSTDIR)/isma-$(DIALECT).restr.fst
 # Copied from old LS makefile:
 # Bond, James Bond
 UMASK=@umask 007
@@ -465,7 +465,7 @@ prop-paradigm: prop-para.ptest savefile
 	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(WORD).paradigm
+	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
 
 
 
@@ -474,6 +474,9 @@ prop-paradigm: prop-para.ptest savefile
 
 # Make sure there is an available smX.save in the parent directory:
 savefile:
+	@echo
+	@echo "*** Go to $$GTHOME and make the required transducer: ***"
+	@echo
 	@cd $(SRCDIR)/ && $(MAKE) $(notdir $(SAVEFILE)) TARGET=sma
 
 # Word form generation:
