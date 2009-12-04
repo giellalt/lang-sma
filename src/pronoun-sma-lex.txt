@@ -1,6 +1,7 @@
 ! Pronoun
 ! =======
 
+
 !Pointing to all the subgrops, presented in this order below.
 LEXICON Pronoun
 
@@ -21,6 +22,8 @@ sinsitnie+Pron+Recipr+Sg+Ela:sinsitneste FINAL1 ;
 sinsitnie+Pron+Recipr+Sg+Com:sinsitnine FINAL1 ;
 !LEXICON RECIPROCALpr - sáhtan nie cállit? jes!
 sinsitnie+Pron+Recipr+Pl+Acc:sinsitnide FINAL1 ;
+
+
 ! Personal pronouns
 ! -----------------
  
@@ -38,17 +41,6 @@ satne+Pron+Pers+Sg3:s nonfirstperspronsg ;
 satne+Pron+Pers+Du3:s nonfirstpersprondu ;
 satne+Pron+Pers+Pl3:s perspronpl ;
 
-!mån+Pron+Pers+Sg1:m firstperspronsg ;
-!mån+Pron+Pers+Du1:m firstpersprondu ;
-!mån+Pron+Pers+Pl1:m perspronpl ;
-!dån+Pron+Pers+Sg2:d nonfirstperspronsg ;
-!dån+Pron+Pers+Du2:d nonfirstpersprondu ;
-!dån+Pron+Pers+Pl2:d perspronpl ;
-!sånPron+Pers+Sg3:s nonfirstperspronsg ;
-!sån+Pron+Pers+Du3:s nonfirstpersprondu ;
-!sån+Pron+Pers+Pl3:s perspronpl ;
-
-!these forms will need to be included in the analasys eventually.
 
 ! Lexica for sg
 ! - - - - - - - 
@@ -86,15 +78,7 @@ LEXICON nonfirstpersprondu
  +Ela:otneste FINAL1 ;
  :onne longproncase ;
 
-!LEXICON nonfirstpersprondu
-! +Nom:in FINAL1 ;
-! +Nom:åtnoeh FINAL1 ;
-! +Nom:otnoej FINAL1 ;
-! +Gen:otnen FINAL1 ;
-! +Ill:otnese FINAL1 ;
-! +Ela:otneste FINAL1 ;
-! :onne longproncase ;
-!
+
 
 ! Lexica for pl
 ! - - - - - - - 
@@ -132,67 +116,88 @@ LEXICON longproncase
 ! - - - - - - - - - - - - - - - - 
 
 LEXICON Demonstrative
+!daate-Sg
 daate+Pron+Dem+Sg+Nom:daate FINAL1 ; ! ideosyncratic nominative
-daate+Pron+Dem+Sg+Ill:daase FINAL1 ; ! ideosyncratic illative
+daate+Pron+Dem+Sg+Akk:daam FINAL1 ; ! ideosyncratic nominative
+daate+Pron+Dem+Sg+Gen:daan FINAL1 ; ! ideosyncratic nominative
+daate+Pron+Dem+Sg+Ill:daase FINAL1 ; ! ideosyncratic nominative
+daate+Pron+Dem+Sg+Ine:daesnie FINAL1 ; ! ideosyncratic nominative
+daate+Pron+Dem+Sg+Ela:daeste FINAL1 ; ! ideosyncratic nominative
+daate+Pron+Dem+Sg+Com:daejnie FINAL1 ; ! ideosyncratic nominative
+!daaate-Pl
+daate+Pron+Dem+Pl+Nom:daah FINAL1 ; ! ideosyncratic comitative
+daate+Pron+Dem+Pl+Akk:daejtie FINAL1 ; ! ideosyncratic comitative
+daate+Pron+Dem+Pl+Gen:daaj FINAL1 ; ! ideosyncratic comitative
+daate+Pron+Dem+Pl+Gen:daej FINAL1 ; ! ideosyncratic comitative
+daate+Pron+Dem+Pl+Ill:daejtie FINAL1 ; ! ideosyncratic comitative
+daate+Pron+Dem+Pl+Ine:daejnie FINAL1 ; ! ideosyncratic comitative
+daate+Pron+Dem+Pl+Ela:daejstie FINAL1 ; ! ideosyncratic comitative
 daate+Pron+Dem+Pl+Com:daajgujmie FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem:daa DEM1 ; ! points to case endings for the first stem
-daate+Pron+Dem:dae DEM1b ; ! This is for a set of common forms daem, daen, daeh.
-daate+Pron+Dem:dae DEM2 ; ! points to case endings for the second stem
+daate+Pron+Dem+Pl+Com:daejgujmie FINAL1 ; ! ideosyncratic comitative
 
+! dïhte-Sg
 dïhte+Pron+Dem+Sg+Nom:dïhte FINAL1 ; ! The same pattern is repeated for each
+dïhte+Pron+Dem+Sg+Akk:dam FINAL1 ; ! 
+dïhte+Pron+Dem+Sg+Gen:dan FINAL1 ; ! 
 dïhte+Pron+Dem+Sg+Ill:dïsse FINAL1 ; ! demonstrative pronoun
-dïhte+Pron+Dem+Pl+Com:dajgujmie FINAL1 ;
-dïhte+Pron+Dem+Pl+Com:dejgujmie FINAL1 ;
-dïhte+Pron+Dem+Pl+Gen:dej FINAL1 ;
-dïhte+Pron+Dem:da DEM1 ;
-dïhte+Pron+Dem:de DEM2 ;
+dïhte+Pron+Dem+Sg+Ine:desnie FINAL1 ; ! demonstrative pronoun
+dïhte+Pron+Dem+Sg+Ela:destie FINAL1 ; ! demonstrative pronoun
+dïhte+Pron+Dem+Sg+Com:dejnie FINAL1 ; ! demonstrative pronoun
+!dïhte- Pl
+dïhte+Pron+Dem+Pl+Nom:dah FINAL1 ; ! The same pattern is repeated for each
+dïhte+Pron+Dem+Pl+Akk:dejtie FINAL1 ; ! 
+dïhte+Pron+Dem+Pl+Gen:daj FINAL1 ; !
+dïhte+Pron+Dem+Pl+Gen:dej FINAL1 ; !
+dïhte+Pron+Dem+Pl+Ill:dejtie FINAL1 ; ! demonstrative pronoun
+dïhte+Pron+Dem+Pl+Ine:dejnie FINAL1 ; ! demonstrative pronoun
+dïhte+Pron+Dem+Pl+Ela:dejstie FINAL1 ; ! demonstrative pronoun
+dïhte+Pron+Dem+Pl+Com:dejgujmie FINAL1 ; ! demonstrative pronoun
+dïhte+Pron+Dem+Pl+Com:dajgujmie FINAL1 ; ! demonstrative pronoun
 
+!doete-Sg
 doete+Pron+Dem+Sg+Nom:doete FINAL1 ;
+dohte+Pron+Dem+Sg+Acc:doem FINAL1 ;
+dohte+Pron+Dem+Sg+Gen:doen FINAL1 ;
 doete+Pron+Dem+Sg+Ill:doese FINAL1 ;
-doete+Pron+Dem+Pl+Com:doejgujmie FINAL1 ;
-doete+Pron+Dem:doe DEM1 ;
-doete+Pron+Dem:due DEM2 ;
+dohte+Pron+Dem+Sg+Ine:duesnie FINAL1 ;
+dohte+Pron+Dem+Sg+Ela:duestie FINAL1 ;
+dohte+Pron+Dem+Sg+Com:duejnie FINAL1 ;
+!doete-Pl
+doete+Pron+Dem+Pl+Nom:doeh FINAL1 ;
+dohte+Pron+Dem+Pl+Acc:duejtie FINAL1 ;
+dohte+Pron+Dem+Pl+Gen:doej FINAL1 ;
+dohte+Pron+Dem+Pl+Gen:duej FINAL1 ;
+doete+Pron+Dem+Pl+Ill:duejtie FINAL1 ;
+dohte+Pron+Dem+Pl+Ine:duejnie FINAL1 ;
+dohte+Pron+Dem+Pl+Ela:duejstie FINAL1 ;
+dohte+Pron+Dem+Pl+Com:duejgujmie FINAL1 ;
+dohte+Pron+Dem+Pl+Com:doejgujmie FINAL1 ;
 
+!dohte-Sg
 dohte+Pron+Dem+Sg+Nom:dohte FINAL1 ;
+dohte+Pron+Dem+Sg+Acc:dom FINAL1 ;
+dohte+Pron+Dem+Sg+Gen:don FINAL1 ;
 dohte+Pron+Dem+Sg+Ill:dosse FINAL1 ;
+dohte+Pron+Dem+Sg+Ine:dusnie FINAL1 ;
+dohte+Pron+Dem+Sg+Ela:dustie FINAL1 ;
+dohte+Pron+Dem+Sg+Com:dujnie FINAL1 ;
+!dohte-Pl
+dohte+Pron+Dem+Pl+Nom:doh FINAL1 ;
+dohte+Pron+Dem+Pl+Acc:dujtie FINAL1 ;
+dohte+Pron+Dem+Pl+Gen:doj FINAL1 ;
+dohte+Pron+Dem+Pl+Gen:dyj FINAL1 ;
+dohte+Pron+Dem+Pl+Ill:dujtie FINAL1 ;
+dohte+Pron+Dem+Pl+Ine:dujnie FINAL1 ;
+dohte+Pron+Dem+Pl+Ela:dujstie FINAL1 ;
 dohte+Pron+Dem+Pl+Com:dojgujmie FINAL1 ;
 dohte+Pron+Dem+Pl+Com:dyjgujmie FINAL1 ;
-dohte+Pron+Dem:do DEM1 ;
-dohte+Pron+Dem:du DEM2 ;
 
 
 
 
 
-
-
-! The two sublexica, one for each stem
+! Interrogative and relative pronouns
 ! - - - - - - - - - - - - - - - - - - 
-
-LEXICON DEM1
-+Sg+Acc:m FINAL1 ;
-+Sg+Gen:n FINAL1 ;
-+Pl+Nom:h FINAL1 ;
-+Pl+Gen:j FINAL1 ;
-+Pl+Com:j FINAL1 ;
-
-LEXICON DEM1b
-+Sg+Acc:m FINAL1 ; ! These were in DEM1 only, check this!!! daem
-+Sg+Gen:n FINAL1 ; ! These were in DEM1 only, check this!!! daen
-+Pl+Nom:h FINAL1 ; ! These were in DEM1 only, check this!!! daeh
-
-LEXICON DEM2
-+Pl+Gen:j FINAL1 ;
-+Sg+Ine:snie FINAL1 ;
-+Sg+Ine:nnie FINAL1 ; ! Attributive form
-+Sg+Ela:stie FINAL1 ;
-+Sg+Ela:htie FINAL1 ; ! Attributive form
-+Sg+Com:jnie FINAL1 ;
-+Pl+Acc:jtie FINAL1 ;
-+Pl+Ill:jtie FINAL1 ;
-+Pl+Ine:jnie FINAL1 ;
-+Pl+Ela:jstie FINAL1 ;
-
 
 LEXICON Interrogative
 gie+Pron+Interr+Sg+Nom:gie FINAL1 ;
@@ -207,16 +212,27 @@ gie+Pron+Interr+Pl+Nom:geah FINAL1 ;
 gie+Pron+Interr+Pl+Gen:geaj FINAL1 ;
 gie+Pron+Interr+Pl+Com:geajgujmie FINAL1 ;
 gie+Pron+Interr:gie INTERR ;
+
+!Guhte-Sg
 guhte+Pron+Interr+Sg+Nom:guhte FINAL1 ;
 guhte+Pron+Interr+Sg+Acc:guhtem FINAL1 ;
 guhte+Pron+Interr+Sg+Gen:guhten FINAL1 ;
 guhte+Pron+Interr+Sg+Ill:guhtese FINAL1 ;
+guhte+Pron+Interr+Sg+Ine:guhtesne FINAL1 ;
+guhte+Pron+Interr+Sg+Ine+Attr:guhtene FINAL1 ;
+guhte+Pron+Interr+Sg+Ela:guhteste FINAL1 ;
+guhte+Pron+Interr+Sg+Ela+Attr:guhtede FINAL1 ;
+guhte+Pron+Interr+Sg+Com:guhtine FINAL1 ; !? !SUB
+!Guhte-Pl
+guhte+Pron+Interr+Pl+Nom:guhth FINAL1 ;
+guhte+Pron+Interr+Pl+Acc:guhtide FINAL1 ;
 guhte+Pron+Interr+Pl+Gen:guhti FINAL1 ;
-guhte+Pron+Interr+Sg+Ill:guhtide FINAL1 ;
-gusnie+Pron+Interr+Sg+Ine:gusnie FINAL1 ;
-gustie+Pron+Interr+Sg+Ela:gustie FINAL1 ;
-gubpede+Pron+Interr+Sg+Ela:gubpede FINAL1 ;
-gubpene+Pron+Interr+Sg+Ine:gubpene FINAL1 ;
+guhte+Pron+Interr+Pl+Ill:guhtide FINAL1 ;
+guhte+Pron+Interr+Pl+Ine:guhtine FINAL1 ;
+guhte+Pron+Interr+Pl+Ela:guhtijste FINAL1 ;
+guhte+Pron+Interr+Pl+Com:guhtigujmie FINAL1 ; !? !SUB
+
+
 mij+Pron+Interr+Sg+Nom:mij FINAL1 ;
 mij+Pron+Interr+Sg+Acc:maam FINAL1 ;
 mij+Pron+Interr+Sg+Gen:man FINAL1 ;
@@ -225,19 +241,38 @@ mij+Pron+Interr+Sg+Ill:masse FINAL1 ;
 mij+Pron+Interr+Sg+Ine:mannasinie FINAL1 ;
 mij+Pron+Interr+Pl+Nom:mah FINAL1 ;
 mij+Pron+Interr+Pl+Gen:maj FINAL1 ;
+mij+Pron+Interr+Pl+Gen:mej FINAL1 ;
 mij+Pron+Interr+Pl+Com:majgujmie FINAL1 ;
+mij+Pron+Interr+Pl+Com:mejgujmie FINAL1 ;
 mij+Pron+Interr:me INTERR ;
+
 magkere+Pron+Interr+Sg+Nom+Attr:magkere FINAL1 ;
 magkere+Pron+Interr+Sg+Nom+Pred:magkeres FINAL1 ;
 magkere+Pron+Interr+Sg+Com:magkarinie FINAL1 ;
 magkere+Pron+Interr+Pl+Nom:magkerh FINAL1 ;
-gogkoe+Pron+Interr:gogkoe FINAL1 ;
-gosse+Pron+Interr:gosse FINAL1 ;
-gåabph+Pron+Interr:gåabph FINAL1 ;
-guktie+Pron+Interr:guktie FINAL1 ;
-gåabpa+Pron+Interr:gåabpa FINAL1 ;
-gåabpoeh+Pron+Interr:gåabpoeh INTERR ;
-gåabpoeh+Pron+Interr:gåabpoeh FINAL1 ;
+
+gåabpa+Pron+Interr+Sg+Nom:gåabpa        FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Interr+Sg+Acc:gåabpam       FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Interr+Sg+Gen:gåabpan       FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Interr+Sg+Ill:gåabpese      FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Interr+Sg+Ine:gåabpesne     FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Interr+Sg+Ine+Attr:gåabpene FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Interr+Sg+Ela:gåabpeste     FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Interr+Sg+Ela+Attr:gåabpede FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Interr+Sg+Com:gåabpine      FINAL1 "hvilken (av to)" ;
+
+gåabpetje+Pron+Interr+Sg+Nom:gåabpetje     FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Interr+Sg+Acc:gåabpetjem    FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Interr+Sg+Gen:gåabpetjen    FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Interr+Sg+Ill:gåabpatjasse  FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Interr+Sg+Ine:gåabpatjisnie FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Interr+Sg+Ela:gåabpatjistie FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Interr+Sg+Com:gåabpatjinie  FINAL1 "hvilken (av to)" ;!?
+
+
+! This second half of the lexicon Interrogative
+! shall be identical to the first, save the tag
+! +Interr, which shall be +Rel in this second part.
 
 gie+Pron+Rel+Sg+Nom:gie FINAL1 ;
 gie+Pron+Rel+Sg+Acc:gïem FINAL1 ;
@@ -251,11 +286,27 @@ gie+Pron+Rel+Pl+Nom:geah FINAL1 ;
 gie+Pron+Rel+Pl+Gen:geaj FINAL1 ;
 gie+Pron+Rel+Pl+Com:geajgujmie FINAL1 ;
 gie+Pron+Rel:gie INTERR ;
+
+!Guhte-Sg
 guhte+Pron+Rel+Sg+Nom:guhte FINAL1 ;
-gusnie+Pron+Rel+Sg+Ine:gusnie FINAL1 ;
-gustie+Pron+Rel+Sg+Ela:gustie FINAL1 ;
-gubpede+Pron+Rel+Sg+Ela:gubpede FINAL1 ;
-gubpene+Pron+Rel+Sg+Ine:gubpene FINAL1 ;
+guhte+Pron+Rel+Sg+Acc:guhtem FINAL1 ;
+guhte+Pron+Rel+Sg+Gen:guhten FINAL1 ;
+guhte+Pron+Rel+Sg+Ill:guhtese FINAL1 ;
+guhte+Pron+Rel+Sg+Ine:guhtesne FINAL1 ;
+guhte+Pron+Rel+Sg+Ine+Attr:guhtene FINAL1 ;
+guhte+Pron+Rel+Sg+Ela:guhteste FINAL1 ;
+guhte+Pron+Rel+Sg+Ela+Attr:guhtede FINAL1 ;
+guhte+Pron+Rel+Sg+Com:guhtine FINAL1 ; !? !SUB
+!Guhte-Pl
+guhte+Pron+Rel+Pl+Nom:guhth FINAL1 ;
+guhte+Pron+Rel+Pl+Acc:guhtide FINAL1 ;
+guhte+Pron+Rel+Pl+Gen:guhti FINAL1 ;
+guhte+Pron+Rel+Pl+Ill:guhtide FINAL1 ;
+guhte+Pron+Rel+Pl+Ine:guhtine FINAL1 ;
+guhte+Pron+Rel+Pl+Ela:guhtijste FINAL1 ;
+guhte+Pron+Rel+Pl+Com:guhtigujmie FINAL1 ; !? !SUB
+
+
 mij+Pron+Rel+Sg+Nom:mij FINAL1 ;
 mij+Pron+Rel+Sg+Acc:maam FINAL1 ;
 mij+Pron+Rel+Sg+Gen:man FINAL1 ;
@@ -264,19 +315,33 @@ mij+Pron+Rel+Sg+Ill:masse FINAL1 ;
 mij+Pron+Rel+Sg+Ine:mannasinie FINAL1 ;
 mij+Pron+Rel+Pl+Nom:mah FINAL1 ;
 mij+Pron+Rel+Pl+Gen:maj FINAL1 ;
+mij+Pron+Rel+Pl+Gen:mej FINAL1 ;
 mij+Pron+Rel+Pl+Com:majgujmie FINAL1 ;
+mij+Pron+Rel+Pl+Com:mejgujmie FINAL1 ;
 mij+Pron+Rel:me INTERR ;
+
 magkere+Pron+Rel+Sg+Nom+Attr:magkere FINAL1 ;
 magkere+Pron+Rel+Sg+Nom+Pred:magkeres FINAL1 ;
 magkere+Pron+Rel+Sg+Com:magkarinie FINAL1 ;
 magkere+Pron+Rel+Pl+Nom:magkerh FINAL1 ;
-gogkoe+Pron+Rel:gogkoe FINAL1 ;
-gosse+Pron+Rel:gosse FINAL1 ;
-gåabph+Pron+Rel:gåabph FINAL1 ;
-guktie+Pron+Rel:guktie FINAL1 ;
-gåabpa+Pron+Rel:gåabpa FINAL1 ;
-gåabpoeh+Pron+Rel:gåabpoeh INTERR ;
-gåabpoeh+Pron+Rel:gåabpoeh FINAL1 ;
+
+gåabpa+Pron+Rel+Sg+Nom:gåabpa        FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Rel+Sg+Acc:gåabpam       FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Rel+Sg+Gen:gåabpan       FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Rel+Sg+Ill:gåabpese      FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Rel+Sg+Ine:gåabpesne     FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Rel+Sg+Ine+Attr:gåabpene FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Rel+Sg+Ela:gåabpeste     FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Rel+Sg+Ela+Attr:gåabpede FINAL1 "hvilken (av to)" ;
+gåabpa+Pron+Rel+Sg+Com:gåabpine      FINAL1 "hvilken (av to)" ;
+
+gåabpetje+Pron+Rel+Sg+Nom:gåabpetje     FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Rel+Sg+Acc:gåabpetjem    FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Rel+Sg+Gen:gåabpetjen    FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Rel+Sg+Ill:gåabpatjasse  FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Rel+Sg+Ine:gåabpatjisnie FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Rel+Sg+Ela:gåabpatjistie FINAL1 "hvilken (av to)" ;
+gåabpetje+Pron+Rel+Sg+Com:gåabpatjinie  FINAL1 "hvilken (av to)" ;!?
 
 LEXICON INTERR
 +Sg+Ine:snie FINAL1 ;
@@ -296,51 +361,31 @@ LEXICON INTERR
 
 LEXICON Indefinite
 
-naan ind_noninfl ;
-seamma ind_noninfl ; !XXX
-muvhtie indeven ;
-muvhte:muvht indeven ; 
-gellie ind_noninfl ; !also inessive for gellene e.g. gellene lehkesne - på många ställen. Example in Åarjelsaemien 6 (2000:6).
-gellieh ind_noninfl ; 
-måedtie:måedt indeven2 ;
-måadtesh indeven ;
-jïjnje:jïjnj indeven ;
-jeenje:jeenj indeven ; !It's uncertain if this word can be inflected in all these cases
-jeene:jeen indeven ;
-jienebe:jienieb indodd ;
-jijnjh:jijnj indeven ;!SUB
-jïjnjh:jïjnj indeven ;
-jeenjemes indeven ;
-jeenjesh:jeenjes indcoll ;
-jïjnjesh:jïjnjes indcoll ;
-jijnjesh:jijnjes indcoll ; !SUB
-jïenesh:jïenes indcoll ;
-jienesh:jienes indcoll ; !SUB
-gaajhke:gaajhk indeven ;
-gaajhke+Pron+Indef+Sg+Ela+Attr:gaajhkede FINAL1 ;
-jeatjh:jeatj indeven ;
-eatjh:eatj indeven ;
-jeatjah:jeatja indeven ;
-eatjah:eatja indeven ;   
-gaajhke+Pron+Indef+Sg+Ine:gaajhkene FINAL1 ;
-gaajhkesh:gaajhkes indcoll ;
-gallesh:gallas indcoll ;
-såamesh:såames indcoll ; !SUB
-naakene:naaken indodd ; !this most be pointed towards another lexicon due to it being three-syllabic
-dovne indeven ;
-dovnesh:dovnes indcoll ;
-åbpe ind_noninfl ; !probably does not have inflection, so it was removed
-abpe ind_noninfl ; !probably does not have inflection, so it was removed
-såemies ind_noninfl ;
-såamesh:såamas indcoll ;
-fïereguhte:fïereguht indeven ; !this means basicly each and every, but I'm unsure what kind of pronoun it is, so I leave it here (David)
-fïerhte:fïerht indeven ;
-fïerhte+Pron+Indef+Sg+Gen:fïerhten FINAL1 ;
-fïerhtene+Pron+Indef+Sg+Gen:fïerhtene FINAL1 ;
-gåabpatjahkh:gåabpatjahk indeven ;
-gåabpatjahkh+Pron+Indef+Sg+Ela+Attr:gåabpatjahke%>de FINAL1 ;
+abpe ind_noninfl "hele" ; !probably does not have inflection, so it was removed
 
-gåabpegh+Pron+Indef+Pl+Nom:gåabpegh FINAL1 ; ! XXX Comment this set in or out.
+dovne indeven "helt, alt" ;
+dovnesh:dovnes indcoll "alle" ;
+
+eatjah:eatja indeven "annen, de andre" ;
+eatjah:eatj indeven "annen, de andre" ; 
+
+fïereguhte:fïereguht indeven "hver og en" ;
+
+fïerhte:fïerht indeven "hver, hverthver" ;
+
+gaajhke:gaajhk indeven "alle" ;
+gaajhke+Pron+Indef+Sg+Ela+Attr:gaajhkede FINAL1 "alle" ;
+gaajhke+Pron+Indef+Sg+Ine+Attr:gaajhkene FINAL1 "alle" ;
+
+gaajhkesh:gaajhkes indcoll "alle sammen" ;
+
+gallesh:gallas indcoll "mange sammen" ;
+gellie ind_noninfl "mange" ; !also inessive for gellene e.g. gellene lehkesne - på många ställen. Example in Åarjelsaemien 6 (2000:6).
+gellieh ind_noninfl ; 
+
+gåabpatjahkh+Pron+Indef+Sg+Ela+Attr:gåabpatjahke%>de FINAL1 "både" ;
+gåabpatjahkh:gåabpatjahk indeven "både" ;
+gåabpegh+Pron+Indef+Pl+Nom:gåabpegh FINAL1 "både" ; ! XXX Comment this set in or out.
 !gåabpegh+Pron+Indef+Pl+Acc:gåabpagidie
 !gåabpegh+Pron+Indef+Pl+Gen:gåabpegi
 !gåabpegh+Pron+Indef+Pl+Ill:gåabpagidie
@@ -350,6 +395,38 @@ gåabpegh+Pron+Indef+Pl+Nom:gåabpegh FINAL1 ; ! XXX Comment this set in or out.
 
 !gåabpatjahkh begge gåabpatjahken aejkien begge ganger; gåabpatjahkem gåetiem begge telt (objekt); gåabpatjahken bealan til begge sider
 !gåabpatjahkide= til begge to(om personer) 
+
+jeatjah:jeatja indeven "annen, de andre"  ;
+jeatjh:jeatj indeven "annen, de andre"  ;
+jeene:jeen indeven "mange, mye" ;
+jeenje:jeenj indeven "mange, mye" ; !It's uncertain if this word can be inflected in all these cases
+jeenjemes indeven "de fleste" ;
+jeenjesh:jeenjes indcoll "mange sammen" ;
+jienebe:jienieb indodd "flere" ;
+jïenesh:jienes indcoll "mange sammen" ; !SUB
+jïjnjesh:jijnjes indcoll "mange sammen" ; !SUB
+jïjnjh:jijnj indeven "mange, mye" ;!SUB
+jïenesh:jïenes indcoll "mange sammen" ;
+jïjnje:jïjnj indeven "mange, mye" ;
+jïjnjesh:jïjnjes indcoll "mange sammen" ;
+jïjnjh:jïjnj indeven "mange, mye" ;
+
+muvhte:muvht indeven "noen" ; 
+muvhtie indeven "noen" ;
+
+måadtesh indeven "mangen" ;
+måedtie:måedt indeven2 "mange"  ;
+
+naakene:naaken indodd "noen, noe" ; !this most be pointed towards another lexicon due to it being three-syllabic
+naan ind_noninfl "noen, noe" ;
+
+seamma ind_noninfl "samme" ; !XXX
+
+såamesh:såamas indcoll "noen, noe" ;
+såamesh:såames indcoll "noen, noe" ; !SUB
+såemies ind_noninfl "noen, noe" ;
+
+åbpe ind_noninfl "hele" ; !probably does not have inflection, so it was removed
 
 LEXICON indeven
 +Pron+Indef+Sg: indsg ;
@@ -429,62 +506,75 @@ LEXICON indess_odd
 LEXICON indcoll
 +Pron+Coll+Pl: indpl_odd ;
 
+
+
 ! Reflexive pronouns
 ! ------------------
 
 LEXICON Reflexive
+
 jïjtje+Pron+Refl+Nom+Sg:jïjtje FINAL1 ;
 jïjtje+Pron+Refl+Nom+Sg:jeetje FINAL1 ;
 jïjtje+Pron+Refl+Nom+Sg:ijtje FINAL1 ;
-jïjtje+Pron+Refl+Nom+Pl:jïjtjh FINAL1 ;
-jïjtje+Pron+Refl+Ill+Sg3:altasasse FINAL1 ;
-jïjtje+Pron+Refl+Ill+Pl3:altasissie FINAL1 ;
-jïjtje+Pron+Refl+Acc+Sg3:altemse FINAL1 ;
-jïjtje+Pron+Refl+Gen+Sg3:altese FINAL1 ;
-jïjtje+Pron+Refl+Gen+Sg3:elties FINAL1 ; 
+dihte+Pron+Pers+Sg+Acc+PxSg3:altemse FINAL1 ;
+dihte+Pron+Pers+Sg+Gen+PxSg3:altese FINAL1 ;
+dihte+Pron+Pers+Sg+Gen+PxSg3:elties FINAL1 ;
+jïjtje+Pron+Refl+Sg+Ill+PxSg3:altasasse FINAL1 ;
+jïjtje+Pron+Refl+Sg+Ill+PxPl3:altasissie FINAL1 ;
 jïjtje+Pron+Refl:jïjtj OBLREFL ;
 jïjtje+Pron+Refl:jïjt OBLREFL-NONPAL ;
+jïjtje+Pron+Refl+Nom+Pl:jïjtjh FINAL1 ;
+
+! example from sme:
+!allasis	ieš+Pron+Refl+Ill+PxSg3
+!alcces	    ieš+Pron+Refl+Ill+PxSg3
+!alddis	ieš+Pron+Refl+Loc+PxSg3
+!ieža	    ieš+Pron+Refl+Du+Nom
+!ieža	    ieš+Pron+Refl+Pl+Nom
+!ieš	    ieš+Pron+Refl+Sg+Nom
+!iežame	    ieš+Pron+Refl+Gen+PxDu1
+!iežame	    ieš+Pron+Refl+Acc+PxDu1
 
 LEXICON OBLREFL
-+Acc+Sg1:eme FINAL1 ;
-+Acc+Sg1:emem FINAL1 ;
-+Acc+Sg2:emdh FINAL1 ;
-+Acc+Sg3:emse FINAL1 ;
++Acc+PxSg1:eme  FINAL1 ;
++Acc+PxSg1:emem FINAL1 ;
++Acc+PxSg2:emdh FINAL1 ;
++Acc+PxSg3:emse FINAL1 ;
 
-+Gen+Sg1:ene FINAL1 ;
-+Gen+Sg1:en FINAL1 ; !SUB
-+Gen+Sg2:edh FINAL1 ;
-+Gen+Sg3:ese FINAL1 ; !SUB
-+Gen+Pl1:emh FINAL1 ;
-+Gen+Pl2:edh FINAL1 ;
-+Gen+Pl3:esh FINAL1 ; !SUB
++Gen+PxSg1:ene FINAL1 ;
++Gen+PxSg1:en  FINAL1 ; !SUB
++Gen+PxSg2:edh FINAL1 ;
++Gen+PxSg3:ese FINAL1 ; !SUB
++Gen+PxPl1:emh FINAL1 ;
++Gen+PxPl2:edh FINAL1 ;
++Gen+PxPl3:esh FINAL1 ; !SUB
 
-+Ela+Sg1:estanne FINAL1 ;
-+Ela+Sg2:estadth FINAL1 ;
-+Ela+Sg3:estissie FINAL1 ;
++Ela+PxSg1:estanne  FINAL1 ;
++Ela+PxSg2:estadth  FINAL1 ;
++Ela+PxSg3:estissie FINAL1 ;
 
-+Com+Sg1:enæjnene FINAL1 ;
-+Com+Sg2:enæjnedh FINAL1 ;
++Com+PxSg1:enæjnene FINAL1 ;
++Com+PxSg2:enæjnedh FINAL1 ;
 
-+Ill+Pl1:sanne FINAL1 ;
-+Ill+Pl2:sadth FINAL1 ;
-+Ill+Pl3:sissie FINAL1 ;
++Ill+PxPl1:sanne  FINAL1 ;
++Ill+PxPl2:sadth  FINAL1 ;
++Ill+PxPl3:sissie FINAL1 ;
 
-+Ela+Pl1:estanne FINAL1 ;
-+Ela+Pl2:estadth FINAL1 ;
-+Ela+Pl3:estissie FINAL1 ;
++Ela+PxPl1:estanne  FINAL1 ;
++Ela+PxPl2:estadth  FINAL1 ;
++Ela+PxPl3:estissie FINAL1 ;
 
-+Com+Pl1:enæjnene FINAL1 ;
-+Com+Pl2:enæjnedh FINAL1 ;
++Com+PxPl1:enæjnene FINAL1 ;
++Com+PxPl2:enæjnedh FINAL1 ;
 
 LEXICON OBLREFL-NONPAL
-+Ill+Sg1:sanne FINAL1 ;
-+Ill+Sg2:sadth FINAL1 ;
-+Ill+Sg3:sissie FINAL1 ;
-+Ill+Sg3:sasse FINAL1 ;
-+Gen+Sg3:se FINAL1 ;
-+Gen+Pl3:sh FINAL1 ; 
-+Ela+Sg3:sistie FINAL1 ; !SUB
-+Ill+Pl3:sasse FINAL1 ; !SUB
-+Ela+Pl3:sistie FINAL1 ; !SUB
-+Com+Pl3:sinie FINAL1 ; !SUB
++Ill+PxSg1:sanne  FINAL1 ;
++Ill+PxSg2:sadth  FINAL1 ;
++Ill+PxSg3:sissie FINAL1 ;
++Ill+PxSg3:sasse  FINAL1 ;
++Gen+PxSg3:se     FINAL1 ;
++Gen+PxPl3:sh     FINAL1 ; 
++Ela+PxSg3:sistie FINAL1 ; !SUB
++Ill+PxPl3:sasse  FINAL1 ; !SUB
++Ela+PxPl3:sistie FINAL1 ; !SUB
++Com+PxPl3:sinie  FINAL1 ; !SUB
