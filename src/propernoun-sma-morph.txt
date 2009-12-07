@@ -145,6 +145,24 @@ LEXICON VNAME
 SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
 ! the appropriate even syllable lexicons.
 
+LEXICON INAME ! Names ending in stressless vowel
+ +N+Prop+Sg+Nom:i          FINAL1 ;
+ +N+Prop+Sg+Acc:i%>m       FINAL1 ;
+ +N+Prop+Sg+Gen:i%>n       FINAL1 ;
+ +N+Prop+Sg+Ill:e%>se      FINAL1 ;
+ +N+Prop+Sg+Ine:e%>sne     FINAL1 ;
+ +N+Prop+Sg+Ela:e%>ste     FINAL1 ;
+ +N+Prop+Sg+Com:%>ine      FINAL1 ;
+ +N+Prop+Pl+Nom:i%>h       FINAL1 ;
+ +N+Prop+Pl+Acc:%>ide      FINAL1 ;
+ +N+Prop+Pl+Gen:%>ij       FINAL1 ;
+ +N+Prop+Pl+Ill:%>ide      FINAL1 ;
+ +N+Prop+Pl+Ine:%>ine      FINAL1 ;
+ +N+Prop+Pl+Ela:%>ijste    FINAL1 ;
+ +N+Prop+Pl+Com:%>igujmie  FINAL1 ;
+ +N+Prop+Ess:%>ine         FINAL1 ;
+ +N+Prop+Attr:i FINAL1 ;
+
 LEXICON ONAME
   +Nom:          FINAL1 ;
   +Acc:e%>m       FINAL1 ;
@@ -169,4 +187,20 @@ LEXICON UNAME_EVEN
   +Ine:ve%>sne      FINAL1 ;
   +Ela:ve%>ste      FINAL1 ;
   +Com:ve%>jne      FINAL1 ;
+
+ LEXICON INAME_ODD ! Names ending in stressless vowel
+  +N+Prop+Sg+Nom:%>i         FINAL1 ;
+  +N+Prop+Sg: INAME_ODD_SG ; ! name special
+  +N+Prop+Pl: N_ODD_PL ;     ! normal noun
+  +N+Prop:    N_ODD_ESS ;    ! normal noun
+  +N+Prop+Attr:%>i FINAL1 ;     ! name special
+  
+  LEXICON INAME_ODD_SG
+  +Acc:e%>%^DISIMPm      FINAL1 ;
+  +Gen:e%>%^DISIMPn      FINAL1 ;
+  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ine:%>isnie           FINAL1 ;
+  +Ela:%>istie           FINAL1 ;
+  +Com:%>inie            FINAL1 ;
+
 
