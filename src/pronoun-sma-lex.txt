@@ -118,7 +118,7 @@ LEXICON longproncase
 LEXICON Demonstrative
 !daate-Sg
 daate+Pron+Dem+Sg+Nom:daate FINAL1 ; ! ideosyncratic nominative
-daate+Pron+Dem+Sg+Akk:daam FINAL1 ; ! ideosyncratic nominative
+daate+Pron+Dem+Sg+Acc:daam FINAL1 ; ! ideosyncratic nominative
 daate+Pron+Dem+Sg+Gen:daan FINAL1 ; ! ideosyncratic nominative
 daate+Pron+Dem+Sg+Ill:daase FINAL1 ; ! ideosyncratic nominative
 daate+Pron+Dem+Sg+Ine:daesnie FINAL1 ; ! ideosyncratic nominative
@@ -126,7 +126,7 @@ daate+Pron+Dem+Sg+Ela:daeste FINAL1 ; ! ideosyncratic nominative
 daate+Pron+Dem+Sg+Com:daejnie FINAL1 ; ! ideosyncratic nominative
 !daaate-Pl
 daate+Pron+Dem+Pl+Nom:daah FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Akk:daejtie FINAL1 ; ! ideosyncratic comitative
+daate+Pron+Dem+Pl+Acc:daejtie FINAL1 ; ! ideosyncratic comitative
 daate+Pron+Dem+Pl+Gen:daaj FINAL1 ; ! ideosyncratic comitative
 daate+Pron+Dem+Pl+Gen:daej FINAL1 ; ! ideosyncratic comitative
 daate+Pron+Dem+Pl+Ill:daejtie FINAL1 ; ! ideosyncratic comitative
@@ -137,7 +137,7 @@ daate+Pron+Dem+Pl+Com:daejgujmie FINAL1 ; ! ideosyncratic comitative
 
 ! dïhte-Sg
 dïhte+Pron+Dem+Sg+Nom:dïhte FINAL1 ; ! The same pattern is repeated for each
-dïhte+Pron+Dem+Sg+Akk:dam FINAL1 ; ! 
+dïhte+Pron+Dem+Sg+Acc:dam FINAL1 ; ! 
 dïhte+Pron+Dem+Sg+Gen:dan FINAL1 ; ! 
 dïhte+Pron+Dem+Sg+Ill:dïsse FINAL1 ; ! demonstrative pronoun
 dïhte+Pron+Dem+Sg+Ine:desnie FINAL1 ; ! demonstrative pronoun
@@ -145,7 +145,7 @@ dïhte+Pron+Dem+Sg+Ela:destie FINAL1 ; ! demonstrative pronoun
 dïhte+Pron+Dem+Sg+Com:dejnie FINAL1 ; ! demonstrative pronoun
 !dïhte- Pl
 dïhte+Pron+Dem+Pl+Nom:dah FINAL1 ; ! The same pattern is repeated for each
-dïhte+Pron+Dem+Pl+Akk:dejtie FINAL1 ; ! 
+dïhte+Pron+Dem+Pl+Acc:dejtie FINAL1 ; ! 
 dïhte+Pron+Dem+Pl+Gen:daj FINAL1 ; !
 dïhte+Pron+Dem+Pl+Gen:dej FINAL1 ; !
 dïhte+Pron+Dem+Pl+Ill:dejtie FINAL1 ; ! demonstrative pronoun
@@ -453,6 +453,7 @@ LEXICON indsg
 +Gen:e%>n FINAL1 ;
 +Ill:e%>se FINAL1 ;
 +Ine:e%>sne FINAL1 ;
++Ine:e%>ne FINAL1 ;
 +Ela:e%>ste FINAL1 ;
 +Com:i%>ne FINAL1 ;
 
@@ -519,21 +520,11 @@ jïjtje+Pron+Refl+Nom+Sg:ijtje FINAL1 ;
 dihte+Pron+Pers+Sg+Acc+PxSg3:altemse FINAL1 ;
 dihte+Pron+Pers+Sg+Gen+PxSg3:altese FINAL1 ;
 dihte+Pron+Pers+Sg+Gen+PxSg3:elties FINAL1 ;
-jïjtje+Pron+Refl+Sg+Ill+PxSg3:altasasse FINAL1 ;
-jïjtje+Pron+Refl+Sg+Ill+PxPl3:altasissie FINAL1 ;
+jïjtje+Pron+Refl+Sg+Ill+PxSg3:altasasse FINAL1 ;!dïhte
+jïjtje+Pron+Refl+Sg+Ill+PxPl3:altasissie FINAL1 ;!dïhte
 jïjtje+Pron+Refl:jïjtj OBLREFL ;
-jïjtje+Pron+Refl:jïjt OBLREFL-NONPAL ;
+jïjtje+Pron+Refl:jïjt  OBLREFL-NONPAL ;
 jïjtje+Pron+Refl+Nom+Pl:jïjtjh FINAL1 ;
-
-! example from sme:
-!allasis	ieš+Pron+Refl+Ill+PxSg3
-!alcces	    ieš+Pron+Refl+Ill+PxSg3
-!alddis	ieš+Pron+Refl+Loc+PxSg3
-!ieža	    ieš+Pron+Refl+Du+Nom
-!ieža	    ieš+Pron+Refl+Pl+Nom
-!ieš	    ieš+Pron+Refl+Sg+Nom
-!iežame	    ieš+Pron+Refl+Gen+PxDu1
-!iežame	    ieš+Pron+Refl+Acc+PxDu1
 
 LEXICON OBLREFL
 +Acc+PxSg1:eme  FINAL1 ;
