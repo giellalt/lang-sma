@@ -364,17 +364,17 @@ LEXICON Indefinite
 
 abpe ind_noninfl "hele" ; !probably does not have inflection, so it was removed
 
-dovne indeven "helt, alt" ;
+dovne:dovn indeven-e "helt, alt" ;
 dovnesh:dovnes indcoll "alle" ;
 
-eatjah:eatja indeven "annen, de andre" ;
-eatjah:eatj indeven "annen, de andre" ; 
+eatjah:eatj indeven-a "annen, de andre" ;
+eatjah:eatj indeven-e "annen, de andre" ; 
 
-fïereguhte:fïereguht indeven "hver og en" ;
+fïereguhte:fïereguht indeven-e "hver og en" ;
 
-fïerhte:fïerht indeven "hver, hverthver" ;
+fïerhte:fïerht indeven-e "hver, hverthver" ;
 
-gaajhke:gaajhk indeven "alle" ;
+gaajhke:gaajhk indeven-e "alle" ;
 gaajhke+Pron+Indef+Sg+Ela+Attr:gaajhkede FINAL1 "alle" ;
 gaajhke+Pron+Indef+Sg+Ine+Attr:gaajhkene FINAL1 "alle" ;
 
@@ -385,7 +385,7 @@ gellie ind_noninfl "mange" ; !also inessive for gellene e.g. gellene lehkesne - 
 gellieh ind_noninfl ; 
 
 gåabpatjahkh+Pron+Indef+Sg+Ela+Attr:gåabpatjahke%>de FINAL1 "både" ;
-gåabpatjahkh:gåabpatjahk indeven "både" ;
+gåabpatjahkh:gåabpatjahk indeven-e "både" ;
 gåabpegh+Pron+Indef+Pl+Nom:gåabpegh FINAL1 "både" ; ! XXX Comment this set in or out.
 !gåabpegh+Pron+Indef+Pl+Acc:gåabpagidie
 !gåabpegh+Pron+Indef+Pl+Gen:gåabpegi
@@ -397,26 +397,35 @@ gåabpegh+Pron+Indef+Pl+Nom:gåabpegh FINAL1 "både" ; ! XXX Comment this set in
 !gåabpatjahkh begge gåabpatjahken aejkien begge ganger; gåabpatjahkem gåetiem begge telt (objekt); gåabpatjahken bealan til begge sider
 !gåabpatjahkide= til begge to(om personer) 
 
-jeatjah:jeatja indeven "annen, de andre"  ;
-jeatjh:jeatj indeven "annen, de andre"  ;
-jeene:jeen indeven "mange, mye" ;
-jeenje:jeenj indeven "mange, mye" ; !It's uncertain if this word can be inflected in all these cases
-jeenjemes indeven "de fleste" ;
+jeatjah:jeatj indeven-a "annen, de andre"  ;
+jeatjh:jeatj indeven-e "annen, de andre"  ;
+jeene:jeen indeven-e "mange, mye" ;
+jeenje:jeenj indeven-e "mange, mye" ; !It's uncertain if this word can be inflected in all these cases
+jeenjemes indpl-e "de fleste" ;
+jeenjemes indess ;
+jeenjemes+Nom:jeenjemes FINAL1 ;
+jeenjemes+Acc:jeenjemese%>m FINAL1 ;
+jeenjemes+Gen:jeenjemese%>n FINAL1 ;
+jeenjemes+Ill:jeenjemese%>se FINAL1 ;
+jeenjemes+Ine:jeenjemese%>sne FINAL1 ;
+jeenjemes+Ine+Attr:jeenjemese%>ne FINAL1 ;
+jeenjemes+Ela:jeenjemese%>ste FINAL1 ;
+jeenjemes+Com:jeenjemes%>ine FINAL1 ;
 jeenjesh:jeenjes indcoll "mange sammen" ;
 jienebe:jienieb indodd "flere" ;
 jïenesh:jienes indcoll "mange sammen" ; !SUB
 jïjnjesh:jijnjes indcoll "mange sammen" ; !SUB
-jïjnjh:jijnj indeven "mange, mye" ;!SUB
+jïjnjh:jijnj indeven-e "mange, mye" ;!SUB
 jïenesh:jïenes indcoll "mange sammen" ;
-jïjnje:jïjnj indeven "mange, mye" ;
+jïjnje:jïjnj indeven-e "mange, mye" ;
 jïjnjesh:jïjnjes indcoll "mange sammen" ;
-jïjnjh:jïjnj indeven "mange, mye" ;
+jïjnjh:jïjnj indeven-e "mange, mye" ;
 
-muvhte:muvht indeven "noen" ; 
-muvhtie indeven "noen" ;
+muvhte:muvht indeven-e "noen" ; 
+muvhtie:muvht muvhtiecase "noen" ;
 
-måadtesh indeven "mangen" ;
-måedtie:måedt indeven2 "mange"  ;
+måadtesh:måadtas indcoll "mangen" ;
+måedtie:måedt muvhtiecase "mange"  ;
 
 naakene:naaken indodd "noen, noe" ; !this most be pointed towards another lexicon due to it being three-syllabic
 naan ind_noninfl "noen, noe" ;
@@ -429,15 +438,22 @@ såemies ind_noninfl "noen, noe" ;
 
 åbpe ind_noninfl "hele" ; !probably does not have inflection, so it was removed
 
-LEXICON indeven
-+Pron+Indef+Sg: indsg ;
-+Pron+Indef+Pl: indpl ;
+LEXICON indeven-e
++Pron+Indef+Sg: indsg-e ;
++Pron+Indef+Pl: indpl-e ;
 +Pron+Indef: indess ;
 
+LEXICON indeven-a
++Pron+Indef+Sg: indsg-a ;
++Pron+Indef+Pl: indpl-a ;
++Pron+Indef: indess ;
+
+
 !kongruensContlex
-LEXICON indeven2
-+Pron+Indef+Sg: indsg2 ;
-+Pron+Indef+Pl: indpl ;
+LEXICON muvhtiecase
++Pron+Indef+Sg: muvhtiesg ;
++Pron+Indef+Pl: muvhtiepl ;
+
 
 LEXICON indodd ! This lexicon cannot be removed before lexica pointing here
  ! get another contlex!
@@ -448,31 +464,29 @@ LEXICON indodd ! This lexicon cannot be removed before lexica pointing here
 LEXICON ind_noninfl
 +Pron+Indef: FINAL1 ;
 
-LEXICON indsg
+LEXICON indsg-e
 +Nom:e FINAL1 ;
 +Acc:e%>m FINAL1 ;
 +Gen:e%>n FINAL1 ;
 +Ill:e%>se FINAL1 ;
 +Ine:e%>sne FINAL1 ;
-+Ine:e%>ne FINAL1 ;
++Ine+Attr:e%>ne FINAL1 ;
 +Ela:e%>ste FINAL1 ;
-+Com:i%>ne FINAL1 ;
++Com:%>ine FINAL1 ;
 
-!KongruensContLex
-LEXICON indsg2
-+Nom:ie FINAL1 ;
-+Acc:ie%>m FINAL1 ;
-+Gen:ie%>n FINAL1 ;
-+Ill:ie%>n FINAL1 ;
-+Ine:i%>ne FINAL1 ;
-+Ela:i%>de FINAL1 ;
-+Com:%>ne FINAL1 ;
+LEXICON indsg-a
++Nom:a FINAL1 ;
++Acc:a%>m FINAL1 ;
++Gen:a%>n FINAL1 ;
++Ill:e%>se FINAL1 ;
++Ine:e%>sne FINAL1 ;
++Ine+Attr:e%>ne FINAL1 ;
++Ela:e%>ste FINAL1 ;
++Com:%>ine FINAL1 ;
 
 
-LEXICON indess
-+Ess:e%>jne FINAL1 ;
 
-LEXICON indpl
+LEXICON indpl-e
 +Nom:%>h FINAL1 ;
 +Acc:%>ide FINAL1 ;
 +Gen:%>i FINAL1 ;
@@ -480,6 +494,42 @@ LEXICON indpl
 +Ine:%>ine FINAL1 ;
 +Ela:%>ijste FINAL1 ;
 +Com:%>igujmie FINAL1 ;
+
+LEXICON indpl-a
++Nom:a%>h FINAL1 ;
++Acc:%>ide FINAL1 ;
++Gen:a%>j FINAL1 ;
++Ill:%>ide FINAL1 ;
++Ine:%>ine FINAL1 ;
++Ela:%>ijste FINAL1 ;
++Com:a%>jgujmie FINAL1 ;
+
+
+LEXICON indess
++Ess:%>ine FINAL1 ;
+
+
+!KongruensContLex
+LEXICON muvhtiesg
++Nom:ie FINAL1 ;
++Acc:ie%>m FINAL1 ;
++Gen:ie%>n FINAL1 ;
++Ill+Attr:ie%>n FINAL1 ;
++Ine+Attr:%>ine FINAL1 ;
++Ela+Attr:%>ide FINAL1 ;
++Com:%>ine FINAL1 ;
+
+!KongruensContLex
+LEXICON muvhtiepl
++Nom:ie FINAL1 ;
++Acc:ie%>m FINAL1 ;
++Gen:ie%>n FINAL1 ;
++Ill+Attr:ie%>n FINAL1 ;
++Ine+Attr:i%>ne FINAL1 ;
++Ela+Attr:i%>de FINAL1 ;
++Com:%>ne FINAL1 ;
+
+
 
 LEXICON indsg_odd
  +Nom:e%^DISIMP FINAL1 ;
