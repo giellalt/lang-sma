@@ -142,7 +142,23 @@ CNAME_EVEN ; ! Even syllable as default - rename using either CNAME_EVEN or
 ! CNAME_ODD.
 
 LEXICON VNAME
-SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
+ +N+Prop+Sg+Nom:          FINAL1 ;
+ +N+Prop+Sg+Acc:%>m       FINAL1 ;
+ +N+Prop+Sg+Gen:%>n       FINAL1 ;
+ +N+Prop+Sg+Ill:%>se      FINAL1 ;
+ +N+Prop+Sg+Ine:%>sne     FINAL1 ;
+ +N+Prop+Sg+Ela:%>ste     FINAL1 ;
+ +N+Prop+Sg+Com:%>jne      FINAL1 ;
+ +N+Prop+Pl+Nom:%>h       FINAL1 ;
+ +N+Prop+Pl+Acc:%>jde      FINAL1 ;
+ +N+Prop+Pl+Gen:%>j       FINAL1 ;
+ +N+Prop+Pl+Ill:%>jde      FINAL1 ;
+ +N+Prop+Pl+Ine:%>jne      FINAL1 ;
+ +N+Prop+Pl+Ela:%>jste    FINAL1 ;
+ +N+Prop+Pl+Com:%>jgujmie  FINAL1 ;
+ +N+Prop+Ess:%>jne         FINAL1 ;
+ +N+Prop+Attr: FINAL1 ;
+!SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
 ! the appropriate even syllable lexicons.
 
 LEXICON INAME ! Names ending in stressless vowel
@@ -164,29 +180,31 @@ LEXICON INAME ! Names ending in stressless vowel
  +N+Prop+Attr:i FINAL1 ;
 
 LEXICON ONAME
-  +Nom:          FINAL1 ;
-  +Acc:e%>m       FINAL1 ;
-  +Gen:e%>n       FINAL1 ;
-  +Acc:%>m       FINAL1 ;
-  +Gen:%>n       FINAL1 ;
-  +Ill:%>se       FINAL1 ;
-  +Ine:%>sne      FINAL1 ;
-  +Ela:%>ste      FINAL1 ;
-  +Com:%>jne      FINAL1 ;
+VNAME ; !until we get answer from SGM
+  +Nom:          FINAL1 ; !SUB !until we get answer from SGM
+  +Acc:e%>m       FINAL1 ; !SUB !until we get answer from SGM
+  +Gen:e%>n       FINAL1 ; !SUB !until we get answer from SGM
+  +Acc:%>m       FINAL1 ; !SUB !until we get answer from SGM
+  +Gen:%>n       FINAL1 ; !SUB !until we get answer from SGM
+  +Ill:%>se       FINAL1 ; !SUB !until we get answer from SGM
+ +Ine:%>sne      FINAL1 ; !SUB !until we get answer from SGM
+  +Ela:%>ste      FINAL1 ; !SUB !until we get answer from SGM
+  +Com:%>jne      FINAL1 ; !SUB !until we get answer from SGM
 
 ! the sne / snie business remains to be sorted out.
 
 LEXICON UNAME
-UNAME_EVEN ;
+VNAME ; !until we get answer from SGM
+UNAME_EVEN ; !SUB !until we get answer from SGM
 
 LEXICON UNAME_EVEN
-  +Nom:          FINAL1 ;
-  +Acc:ve%>m       FINAL1 ;
-  +Gen:ve%>n       FINAL1 ;
-  +Ill:ve%>se       FINAL1 ;
-  +Ine:ve%>sne      FINAL1 ;
-  +Ela:ve%>ste      FINAL1 ;
-  +Com:ve%>jne      FINAL1 ;
+  +Nom:          FINAL1 ;  !SUB !until we get answer from SGM
+  +Acc:ve%>m       FINAL1 ; !SUB !until we get answer from SGM
+  +Gen:ve%>n       FINAL1 ; !SUB !until we get answer from SGM
+  +Ill:ve%>se       FINAL1 ; !SUB !until we get answer from SGM
+  +Ine:ve%>sne      FINAL1 ; !SUB !until we get answer from SGM
+  +Ela:ve%>ste      FINAL1 ; !SUB !until we get answer from SGM
+  +Com:ve%>jne      FINAL1 ; !SUB !until we get answer from SGM
 
  LEXICON INAME_ODD ! Names ending in stressless vowel
   +N+Prop+Sg+Nom:%>i         FINAL1 ;
