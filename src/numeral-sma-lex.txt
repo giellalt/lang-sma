@@ -51,7 +51,7 @@ ikth	  ORDTAG1 ;
 göökth	  ORDTAG1 ;
 gulmh	  ORDTAG1 ;
 njeeljh	  ORDTAG1 ;
-vijhth	  ORDTAG1 ;
+vïjhth	  ORDTAG1 ;
 guvhth	  ORDTAG1 ;
 tjijhtjh  ORDTAG1 ;
 geektsh	  ORDTAG1 ;
@@ -63,20 +63,20 @@ voestegh+A+Ord+Adv:voestegh          FINAL1 ; !this form is in my point of view 
 voestemes+A+Ord+Adv:voestemes        FINAL1 ; !this form is in my point of view (David) an adverb, so perhaps it should be relocated, on the other hand it is a form of voeste-
 mubpie:mubp           MUBPIE ;
 
-gåalmede:gåalmad ORDTAG ;
-njieljede:njieljed ORDTAG ;
-njealjede:njealjad ORDTAG ;
-nealjede:nealjad ORDTAG ;
-nieljede:nieljed ORDTAG ;
-vïjhtede:vïjhted ORDTAG ;
-govhtede:govhted ORDTAG ;
-tjïjhtjhede:tjïjhtjed ORDTAG ;
-gaaktsede:gaaktsad ORDTAG ;
-åktsede:åktsad ORDTAG ;
-låhkede:låhkad ORDTAG ;
-tjuatede:tjuatad ORDTAG ;
-tovsene:tovsen ORDTAG ;
-tåvsene:tåvsan ORDTAG ;
+gåalmede:gåalm GÅALMEDE ;
+njieljede:njieljed ORDTAG2 ;
+njealjede:njealjad ORDTAG1 ;
+nealjede:nealjad ORDTAG1 ;
+nieljede:nieljed ORDTAG2 ;
+vïjhtede:vïjhted ORDTAG2 ;
+govhtede:govhted ORDTAG2 ;
+tjïjhtjede:tjïjhtjed ORDTAG2 ;
+gaaktsede:gaakts ORDTAG1 ;
+åktsede:åkts ORDTAG1 ;
+låhkede:låhk ORDTAG1 ;
+tjuatede:tjuat ORDTAG1 ;
+!tovsene:tovsen ORDTAG1 ;
+!tåvsene:tåvsan ORDTAG1 ;
 
 gööktesh COLLTAG ;
 golmesh COLLTAG ;
@@ -127,28 +127,42 @@ LEXICON NUMTAGie !njieljie:njielj
 +Num+Pl+Com:%>jgujme  # ;
 
 
-!LEXICON NUMTAG
-!+Num+Sg+Nom:       # ;
-!+Num+Sg+Acc:%>m    # ;
-!+Num+Sg+Gen:%>n    # ;
-!+Num+Sg+Ill:%>se   # ;
-!+Num+Sg+Ine:%>sne  # ;
-!+Num+Sg+Ine+Attr:%>ne  # ;
-!+Num+Sg+Ela+Attr:%>de  # ;
-!+Num+Sg+Ela:%>ste  # ;
-!+Num+Sg+Com:%>ine # ;
-!+Num+Ess:%>jne    # ;
-!+Num+Pl+Nom:%>h  # ;
-!+Num+Pl+Acc:%>ide # ;
-!+Num+Pl+Gen:%>i  # ;
-!+Num+Pl+Ill:%>ide # ;
-!+Num+Pl+Ine:%>ne # ;
-!+Num+Pl+Ela:%>ijste   # ; !
-!+Num+Pl+Com:%>jgujme  # ;
+LEXICON ORDTAG1! denne funker 
++Ord+Sg+Nom:ede # ;
++Ord+Sg+Acc:%>edem    # ;
++Ord+Sg+Gen:%>eden    # ;
++Ord+Sg+Ill+Uml:%>%^1UMLadasse   # ;
++Ord+Sg+Ine:%>adisnie  # ;
++Ord+Sg+Ine+Attr:%>adinie  # ;
++Ord+Sg+Ela+Attr:%>adihtie  # ;
++Ord+Sg+Ela:%>adistie # ;
++Ord+Sg+Com:%>adine # ;
++Ord+Pl+Nom:%>edh  # ;
++Ord+Pl+Acc:%>adidie # ;
++Ord+Pl+Gen:%>edi  # ;
++Ord+Pl+Ill:%>adidie # ;
++Ord+Pl+Ine:%>adine # ;
++Ord+Pl+Ela:%>adijstie   # ; !
++Ord+Pl+Com:%>edigujme  # ;
 
-
-LEXICON ORDTAG1
-+A+Ord: # ;
+LEXICON ORDTAG2 ! denne funker
++Ord+Sg+Nom:e # ;
++Ord+Sg+Acc:%>em # ;
++Ord+Sg+Gen:%>en # ;
++Ord+Sg+Ill:%>ese # ;
++Ord+Sg+Ine:%>esne # ;
++Ord+Sg+Ine+Attr:%>ene # ;
++Ord+Sg+Ela+Attr:%>ede # ;
++Ord+Sg+Ela:%>este # ;
++Ord+Sg+Com:%>ine # ;
++Ord+Ess:%>ijne # ;
++Ord+Pl+Nom:%>eh # ;
++Ord+Pl+Acc:%>ide # ;
++Ord+Pl+Gen:%>i # ;
++Ord+Pl+Ill:%>ide # ;
++Ord+Pl+Ine:%>ene # ;
++Ord+Pl+Ela:%>ijste # ; !
++Ord+Pl+Com:%>ijgujme # ; 
 
 LEXICON ORDTAG
  +Num+Sg: N_ODD_SG ;
@@ -186,10 +200,22 @@ LEXICON MUBPIE
   +A+Ord+Ess:%>ine                  FINAL1 ;
   +A+Ord+Ess+Uml:%>%^iUMLine        FINAL1 ;
 
-
-
-
-
+LEXICON GÅALMEDE ! denne funker heller ikke
+  +A+Ord+Sg+Nom:ede                  FINAL1 ;
+  +A+Ord+Sg+Acc:e%>dem               FINAL1 ;
+  +A+Ord+Sg+Gen:e%>den               FINAL1 ;
+  +A+Ord+Sg+Ine:a%>disnie              FINAL1 ;
+  +A+Ord+Sg+Ine+Attr:a%>dine FINAL1 ;
+  +A+Ord+Sg+Ela+Attr:a%>dihtie              FINAL1 ;
+  +A+Ord+Sg+Ela:a%>distie              FINAL1 ;
+  +A+Ord+Sg+Com:a%>dine               FINAL1 ;
+  +A+Ord+Pl+Nom:e%>dh               FINAL1 ;
+  +A+Ord+Pl+Acc:a%>didie               FINAL1 ;
+  +A+Ord+Pl+Gen:e%>di               FINAL1 ;
+  +A+Ord+Pl+Ill:a%>didie               FINAL1 ;
+  +A+Ord+Pl+Ine:a%>dinie               FINAL1 ;
+  +A+Ord+Pl+Ela:a%>dijstie             FINAL1 ;
+  +A+Ord+Pl+Com:e%>digujmie         FINAL1 ;
 
 ! Arabic numerals
 ! ---------------
