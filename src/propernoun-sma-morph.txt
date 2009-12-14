@@ -25,8 +25,6 @@
 
 ! Names from Sweden
 
-LEXICON NAME ! these are the non-vow-final names from Sweden
-CNAME_EVEN ;
 
 ! Vowel final names
 ! - - - - - - - - -
@@ -35,7 +33,7 @@ LEXICON VNAME_ODD ! Names ending in stressless vowel
 +N+Prop+Sg: N_ODD_SG ;
 +N+Prop+Pl: N_ODD_PL ;
 +N+Prop:    N_ODD_ESS ;
-+N+Prop+Attr: FINAL1 ;
++N+Prop+Attr:e FINAL1 ;
 
 !LEXICON VNAME_EVEN ! Names ending in stressless vowel
 !+N+Prop+Sg: NIEJTE_SG ;
@@ -157,6 +155,57 @@ LEXICON ZEENAME
 LEXICON SNAME_ODD ! Southern Sami names
 VNAME_ODD ;
 
+LEXICON VAARATJE !names vowel expansion in all cases
++N+Prop+Sg+Nom:e         FINAL1 ;
+ +N+Prop+Sg+Acc:e%>m      FINAL1 ;
+ +N+Prop+Sg+Gen:e%>n      FINAL1 ;
+ +N+Prop+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +N+Prop+Sg+Ine:%>isnie           FINAL1 ;
+ +N+Prop+Sg+Ela:%>istie           FINAL1 ;
+ +N+Prop+Sg+Com:%>inie            FINAL1 ;
+ +N+Prop+Pl+Nom:%>h       FINAL1 ;
+ +N+Prop+Pl+Acc:%>idie            FINAL1 ;
+ +N+Prop+Pl+Gen:%>i       FINAL1 ;
+ +N+Prop+Pl+Ill:%>idie            FINAL1 ;
+ +N+Prop+Pl+Ine:%>inie            FINAL1 ;
+ +N+Prop+Pl+Ela:%>ijstie          FINAL1 ;
+ +N+Prop+Pl+Com:%>igujmie FINAL1 ;
+ +N+Prop+Ess:%>inie          FINAL1 ;
++N+Prop+Attr:e FINAL1 ;
+
+LEXICON JALKEDSEN ! Names ending in stressless vowel
+ +N+Prop+Sg+Nom:e%^DISIMPn         FINAL1 ;
+ +N+Prop+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
+ +N+Prop+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
+ +N+Prop+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +N+Prop+Sg+Ine:%>isnie           FINAL1 ;
+ +N+Prop+Sg+Ela:%>istie           FINAL1 ;
+ +N+Prop+Sg+Com:%>inie            FINAL1 ;
++N+Prop+Pl: N_ODD_PL ;
++N+Prop:    N_ODD_ESS ;
++N+Prop+Attr:en FINAL1 ;
+
+
+
+LEXICON SNAME_ODD_PLUR ! Southern Sami names
++N+Prop+Pl: N_ODD_PL ;
++N+Prop:    N_ODD_ESS ;
+!+N+Prop+Attr: FINAL1 ;
+
+
+LEXICON JAAVRETJEH
+  +N+Prop+Pl+Nom:%>%^DISIMPeh       FINAL1 ;
+  +N+Prop+Pl+Acc:%>idie            FINAL1 ;
+  +N+Prop+Pl+Gen:%>%^DISIMPi       FINAL1 ;
+  +N+Prop+Pl+Ill:%>idie            FINAL1 ;
+  +N+Prop+Pl+Ine:%>inie            FINAL1 ;
+  +N+Prop+Pl+Ela:%>ijstie          FINAL1 ;
+  +N+Prop+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
+  +N+Prop+Pl+Com:%>%^DISIMPigyjmie FINAL1 ; !SUB
++N+Prop:    N_ODD_ESS ;
+!+N+Prop+Attr: FINAL1 ;
+
+
 ! Even syllable Sámi names:
 LEXICON PN_IE ! as N_IE, but with Prop tag
 +N+Prop+Sg: N_IE_SG ;
@@ -168,7 +217,7 @@ LEXICON PN_IE ! as N_IE, but with Prop tag
 LEXICON PN_IE_PLUR ! as N_IE, but with Prop tag
 +N+Prop+Pl: N_IE_PL ;
 +N+Prop:    N_IE_ESS ;
-+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr: FINAL1 ;
 
 
 ! LEXICON PN_OE_UML ! as N_OE_UML, but with Prop tag ! (still) not in use
@@ -190,7 +239,7 @@ LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
 LEXICON SNAME_MAANA_PLUR ! as MAANA, but with Prop tag
 +N+Prop+Pl: MAANA_PL ;
 +N+Prop:    EVEN_ESS ;
-+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr: FINAL1 ;
 
 
 LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
@@ -198,6 +247,23 @@ LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
 +N+Prop+Pl: NIEJTE_PL ;
 +N+Prop:    EVEN_ESS ;
 +N+Prop+Attr: FINAL1 ;
+
+LEXICON SNAME_NIEJTE_PLUR ! as NIEJTE, but with Prop tag
++N+Prop+Pl: NIEJTE_PL ;
++N+Prop:    EVEN_ESS ;
+!+N+Prop+Attr: FINAL1 ;
+
+LEXICON STAABREH ! as NIEJTE, but with Prop tag
+  +N+Prop+Pl+Nom:%>eh        FINAL1 ;
+  +N+Prop+Pl+Acc:%>ide      FINAL1 ;
+  +N+Prop+Pl+Gen:%>i        FINAL1 ;
+  +N+Prop+Pl+Ill:%>ide      FINAL1 ;
+  +N+Prop+Pl+Ine:%>ine      FINAL1 ;
+  +N+Prop+Pl+Ela:%>ijste    FINAL1 ;
+  +N+Prop+Pl+Com:%>igujmie  FINAL1 ;
++N+Prop:    EVEN_ESS ;
+!+N+Prop+Attr: FINAL1 ;
+
 
 LEXICON NJEERUVE
 +N+Prop+Sg: ÅERUVE_SG ;
@@ -277,8 +343,17 @@ LEXICON DÅERIES
   +N+Prop:ies    N_ODD_ESS ;    ! normal noun
   +N+Prop+Attr:ies FINAL1 ;     ! name special
 
-  
-  
+LEXICON TJIRREDS
+ +N+Prop+Sg+Nom:d%>%^DISIMPs             FINAL1 ;
+  +A+Sg+Acc:de%>%^DISIMPm      FINAL1 ;
++A+Sg+Gen:de%>%^DISIMPn      FINAL1 ;
++A+Sg+Ill:d%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++A+Sg+Ine:d%>isnie           FINAL1 ;
++A+Sg+Ela:d%>istie           FINAL1 ;
++A+Sg+Com:d%>inie            FINAL1 ;
++A+Pl:d N_ODD_PL ;
++A:d    N_ODD_ESS ;
+
 
 
 ! Old names, for backwards compatibility until all entries have got new names
