@@ -40,6 +40,7 @@ datne+Pron+Pers+Pl2:d perspronpl ;
 satne+Pron+Pers+Sg3:s nonfirstperspronsg ;
 satne+Pron+Pers+Du3:s nonfirstpersprondu ;
 satne+Pron+Pers+Pl3:s perspronpl ;
+DIHTE ; ! this is for personal pronoun use of dïhte
 
 
 ! Lexica for sg
@@ -109,70 +110,115 @@ LEXICON longproncase
 
 
 
+LEXICON DIHTE
+! this is a personal pronoun
+! demonstrative dïhte is treated below.
+dïhte+Pron+Pers+Sg3+Nom:dïhte FINAL1 ;  
+dïhte+Pron+Pers+Sg3+Acc:dam FINAL1 ;  
+dïhte+Pron+Pers+Sg3+Gen:dan FINAL1 ;  
+dïhte+Pron+Pers+Sg3+Ill:dïsse FINAL1 ;  
+dïhte+Pron+Pers+Sg3+Ine:desnie FINAL1 ; 
+dïhte+Pron+Pers+Sg3+Ela:destie FINAL1 ; 
+dïhte+Pron+Pers+Sg3+Com:dejnie FINAL1 ; 
+
+dïhte+Pron+Pers+Pl3+Nom:dah FINAL1 ;  
+dïhte+Pron+Pers+Pl3+Acc:dejtie FINAL1 ;  
+dïhte+Pron+Pers+Pl3+Gen:daj FINAL1 ; 
+dïhte+Pron+Pers+Pl3+Gen:dej FINAL1 ; 
+dïhte+Pron+Pers+Pl3+Ill:dejtie FINAL1 ;  
+dïhte+Pron+Pers+Pl3+Ine:dejnie FINAL1 ;  
+dïhte+Pron+Pers+Pl3+Ela:dejstie FINAL1 ; 
+dïhte+Pron+Pers+Pl3+Com:dejgujmie FINAL1 ;
+dïhte+Pron+Pers+Pl3+Com:dajgujmie FINAL1 ;
+
+
+
+
 ! Demonstrative pronouns
 ! ----------------------
+
+! This is for:
+! the attributive forms of dïhte
+! all forms of the other pronouns
 
 ! The initial demonstrative lexica
 ! - - - - - - - - - - - - - - - - 
 
 LEXICON Demonstrative
+! Same as above, with exceptions in 
+! Sg Ill, Sg Ine, Sg Ela, Pl Com
+! Still open: analyse morphologically or not...
+dïhte+Pron+Dem+Sg+Nom:dïhte FINAL1 ;  
+dïhte+Pron+Dem+Sg+Acc:dam FINAL1 ;    
+dïhte+Pron+Dem+Sg+Gen:dan FINAL1 ;    
+dïhte+Pron+Dem+Sg+Ill:dan FINAL1 ;    ! Problem: Gen (as in sme) or own Ill ???
+dïhte+Pron+Dem+Sg+Ine:dennie FINAL1 ; 
+dïhte+Pron+Dem+Sg+Ela:dehtie FINAL1 ; 
+dïhte+Pron+Dem+Sg+Com:dejnie FINAL1 ; 
+
+dïhte+Pron+Dem+Pl+Nom:dah FINAL1 ;  
+dïhte+Pron+Dem+Pl+Acc:dejtie FINAL1 ;  
+dïhte+Pron+Dem+Pl+Gen:daj FINAL1 ; 
+dïhte+Pron+Dem+Pl+Gen:dej FINAL1 ; 
+dïhte+Pron+Dem+Pl+Ill:dejtie FINAL1 ;  
+dïhte+Pron+Dem+Pl+Ine:dejnie FINAL1 ;  
+dïhte+Pron+Dem+Pl+Ela:dejstie FINAL1 ; 
+dïhte+Pron+Dem+Pl+Com:dej FINAL1 ; ! Problem: Gen (as in sme) or own Com ??
+dïhte+Pron+Dem+Pl+Com:daj FINAL1 ;
+
+! Here come the unambiguous demonstratives:
+! Separate attributive forms are marked as such in the commentary field
+
 !daate-Sg
-daate+Pron+Dem+Sg+Nom:daate FINAL1 ; ! ideosyncratic nominative
-daate+Pron+Dem+Sg+Acc:daam FINAL1 ; ! ideosyncratic nominative
-daate+Pron+Dem+Sg+Gen:daan FINAL1 ; ! ideosyncratic nominative
-daate+Pron+Dem+Sg+Ill:daase FINAL1 ; ! ideosyncratic nominative
-daate+Pron+Dem+Sg+Ine:daesnie FINAL1 ; ! ideosyncratic nominative
-daate+Pron+Dem+Sg+Ine:daennie FINAL1 ; ! KB§134, attr Ine
-daate+Pron+Dem+Sg+Ela:daeste FINAL1 ; ! ideosyncratic nominative
-daate+Pron+Dem+Sg+Com:daejnie FINAL1 ; ! ideosyncratic nominative
-!daaate-Pl
-daate+Pron+Dem+Pl+Nom:daah FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Acc:daejtie FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Gen:daaj FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Gen:daej FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Ill:daejtie FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Ine:daejnie FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Ela:daejstie FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Com:daajgujmie FINAL1 ; ! ideosyncratic comitative
-daate+Pron+Dem+Pl+Com:daejgujmie FINAL1 ; ! ideosyncratic comitative
+daate+Pron+Dem+Sg+Nom:daate FINAL1 ;
+daate+Pron+Dem+Sg+Acc:daam FINAL1 ;
+daate+Pron+Dem+Sg+Gen:daan FINAL1 		;
+daate+Pron+Dem+Sg+Gen:daen FINAL1 		;
+daate+Pron+Dem+Sg+Ill:daase FINAL1 		;
+daate+Pron+Dem+Sg+Ill:daan FINAL1 		; ! XXX Attr form (Gen analysis?)
+daate+Pron+Dem+Sg+Ine:daesnie FINAL1 	;
+daate+Pron+Dem+Sg+Ine:daennie FINAL1 	; ! XXX Attr form
+daate+Pron+Dem+Sg+Ela:daestie FINAL1 	;
+daate+Pron+Dem+Sg+Ela:daehtie FINAL1 	; ! XXX Attr form
+daate+Pron+Dem+Sg+Com:daejnie FINAL1 	;
+!daaate-Pl								;
+daate+Pron+Dem+Pl+Nom:daah FINAL1 		;
+daate+Pron+Dem+Pl+Acc:daejtie FINAL1 	;
+daate+Pron+Dem+Pl+Gen:daaj FINAL1 		;
+daate+Pron+Dem+Pl+Gen:daej FINAL1 		;
+daate+Pron+Dem+Pl+Ill:daejtie FINAL1 	;
+daate+Pron+Dem+Pl+Ine:daejnie FINAL1 	;
+daate+Pron+Dem+Pl+Ela:daejstie FINAL1 	;
+daate+Pron+Dem+Pl+Com:daajgujmie FINAL1 ;
+daate+Pron+Dem+Pl+Com:daaj FINAL1 ;       ! XXX Attr form (Gen analysis?)
+daate+Pron+Dem+Pl+Com:daejgujmie FINAL1 ;
 
-! dïhte-Sg
-dïhte+Pron+Dem+Sg+Nom:dïhte FINAL1 ; ! The same pattern is repeated for each
-dïhte+Pron+Dem+Sg+Acc:dam FINAL1 ; ! 
-dïhte+Pron+Dem+Sg+Gen:dan FINAL1 ; ! 
-dïhte+Pron+Dem+Sg+Ill:dïsse FINAL1 ; ! demonstrative pronoun
-dïhte+Pron+Dem+Sg+Ine:desnie FINAL1 ; ! demonstrative pronoun
-dïhte+Pron+Dem+Sg+Ela:destie FINAL1 ; ! demonstrative pronoun
-dïhte+Pron+Dem+Sg+Com:dejnie FINAL1 ; ! demonstrative pronoun
-!dïhte- Pl
-dïhte+Pron+Dem+Pl+Nom:dah FINAL1 ; ! The same pattern is repeated for each
-dïhte+Pron+Dem+Pl+Acc:dejtie FINAL1 ; ! 
-dïhte+Pron+Dem+Pl+Gen:daj FINAL1 ; !
-dïhte+Pron+Dem+Pl+Gen:dej FINAL1 ; !
-dïhte+Pron+Dem+Pl+Ill:dejtie FINAL1 ; ! demonstrative pronoun
-dïhte+Pron+Dem+Pl+Ine:dejnie FINAL1 ; ! demonstrative pronoun
-dïhte+Pron+Dem+Pl+Ela:dejstie FINAL1 ; ! demonstrative pronoun
-dïhte+Pron+Dem+Pl+Com:dejgujmie FINAL1 ; ! demonstrative pronoun
-dïhte+Pron+Dem+Pl+Com:dajgujmie FINAL1 ; ! demonstrative pronoun
-
+	
 !doete-Sg
 doete+Pron+Dem+Sg+Nom:doete FINAL1 ;
 dohte+Pron+Dem+Sg+Acc:doem FINAL1 ;
 dohte+Pron+Dem+Sg+Gen:doen FINAL1 ;
 doete+Pron+Dem+Sg+Ill:doese FINAL1 ;
 dohte+Pron+Dem+Sg+Ine:duesnie FINAL1 ;
+doete+Pron+Dem+Sg+Ine:duennie FINAL1 ;! these are Attr forms, demonstr
 dohte+Pron+Dem+Sg+Ela:duestie FINAL1 ;
+doete+Pron+Dem+Sg+Ela:duehtie FINAL1 ;! these are Attr forms, demonstr
 dohte+Pron+Dem+Sg+Com:duejnie FINAL1 ;
 !doete-Pl
 doete+Pron+Dem+Pl+Nom:doeh FINAL1 ;
-dohte+Pron+Dem+Pl+Acc:duejtie FINAL1 ;
-dohte+Pron+Dem+Pl+Gen:doej FINAL1 ;
-dohte+Pron+Dem+Pl+Gen:duej FINAL1 ;
+doete+Pron+Dem+Pl+Acc:duejtie FINAL1 ;
+doete+Pron+Dem+Pl+Gen:doej FINAL1 ;
+doete+Pron+Dem+Pl+Gen:duej FINAL1 ;
 doete+Pron+Dem+Pl+Ill:duejtie FINAL1 ;
-dohte+Pron+Dem+Pl+Ine:duejnie FINAL1 ;
-dohte+Pron+Dem+Pl+Ela:duejstie FINAL1 ;
-dohte+Pron+Dem+Pl+Com:duejgujmie FINAL1 ;
-dohte+Pron+Dem+Pl+Com:doejgujmie FINAL1 ;
+doete+Pron+Dem+Pl+Ine:duejnie FINAL1 ;
+doete+Pron+Dem+Pl+Ela:duejstie FINAL1 ;
+doete+Pron+Dem+Pl+Com:duejgujmie FINAL1 ;
+doete+Pron+Dem+Pl+Com:duej FINAL1 ; ! XXX Attr form
+doete+Pron+Dem+Pl+Com:doejgujmie FINAL1 ;
+
+
+
+
 
 !dohte-Sg
 dohte+Pron+Dem+Sg+Nom:dohte FINAL1 ;
@@ -180,7 +226,9 @@ dohte+Pron+Dem+Sg+Acc:dom FINAL1 ;
 dohte+Pron+Dem+Sg+Gen:don FINAL1 ;
 dohte+Pron+Dem+Sg+Ill:dosse FINAL1 ;
 dohte+Pron+Dem+Sg+Ine:dusnie FINAL1 ;
+dohte+Pron+Dem+Sg+Ine:dunnie FINAL1 ; ! these are Attr forms, demonstr
 dohte+Pron+Dem+Sg+Ela:dustie FINAL1 ;
+dohte+Pron+Dem+Sg+Ela:duhtie FINAL1 ; ! these are Attr forms, demonstr
 dohte+Pron+Dem+Sg+Com:dujnie FINAL1 ;
 !dohte-Pl
 dohte+Pron+Dem+Pl+Nom:doh FINAL1 ;
@@ -191,6 +239,7 @@ dohte+Pron+Dem+Pl+Ill:dujtie FINAL1 ;
 dohte+Pron+Dem+Pl+Ine:dujnie FINAL1 ;
 dohte+Pron+Dem+Pl+Ela:dujstie FINAL1 ;
 dohte+Pron+Dem+Pl+Com:dojgujmie FINAL1 ;
+dohte+Pron+Dem+Pl+Com:doj FINAL1 ; ! XXX Attr form
 dohte+Pron+Dem+Pl+Com:dyjgujmie FINAL1 ;
 
 
