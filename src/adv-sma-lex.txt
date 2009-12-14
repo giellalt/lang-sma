@@ -3,6 +3,10 @@
 LEXICON adv
 +Adv:0 FINAL1 ;
 
+LEXICON adv-interr-rel
++Adv+Interr:0 FINAL1 ;
++Adv+Rel:0 FINAL1 ;
+
 ! Then comes the Adverb lexicon itself. There are many (sub)regular adverbial
 ! case patterns here, they are not encoded in the present system.
 
@@ -521,6 +525,8 @@ joevege adv ;
 avtel-bodti adv ; 
 aktelen adv ;
 ektelen adv ; 
+båajhtede adv ; 
+båajhtode adv ; 
    
  
 !!this is an ending used to create adverbs from nouns, but it's probably a closed group so we can put all forms of them here. ! Its not so many ege-adverbs, so we can just add them here:
@@ -644,6 +650,9 @@ dubpielisnie adv ;
 bårrode adv ; 
 maam-akt	adv ;
 gåebpelen	adv ; 
+gåebpieliste adv ;
+gåabpalistie adv ; 
+
 ovmessie-laakan adv ; 
  
 
@@ -656,5 +665,19 @@ ovmessie-laakan adv ;
 !siegkie adv ;!Disse prolativiske predikativene (predikativer uten -s i system 3) viser til adverbialet i setningen. De er ikke adverb, etter mye diskusjon, men prediaktiver. 
 
 
- 
- 
+! Interrogative adverbs:
+! Could these be adverbs instead of pron? jes§! 
+! Being unflected, it looks like adverbs
+gogkoe   adv-interr-rel ; ! váccán dagkoe, gogkoe don vázzet  +  gogkoe don bohtet?
+gosse    adv-interr-rel ; !  mon boadán, gosse don boadát
+guktie   adv-interr-rel ;  !slik som/at
+gusnie   adv-interr-rel ;
+gustie   adv-interr-rel ;
+gubpene  adv-interr-rel ;
+gubpede  adv-interr-rel ;
+gåabpoeh adv-interr-rel ;
+gåabpah  adv-interr-rel ;
+gåaph    adv-interr-rel ;
+
+! 
+gåabph+Pron+Interr:gåabph FINAL1 ;	   !! <== why no case?
