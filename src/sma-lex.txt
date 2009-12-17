@@ -112,6 +112,7 @@ Multichar_Symbols
                                 +Der/ahtje                                  !VV - Inchoative
                                 +Der/gåete                                 ! VV - Inchoative
 +Der/Dim                                                                    ! NN - Diminutive
++Der/Rec                                                                    ! NN - Forholdsformer
                 +Der/ehte                                                     !VV - Causative
                 +Der/adte                                                 !VV - Frequentative
                 +Der/alle                                                   !VV - Frequentative
@@ -204,6 +205,7 @@ LEXICON N_ODD_PL
   +Ela:%>ijstie          FINAL1 ;
   +Com:%>%^DISIMPigujmie FINAL1 ;
   +Com:%>%^DISIMPigyjmie FINAL1 ; !SUB
+
 LEXICON N_ODD_ESS
   +Ess:%>inie          FINAL1 ;
   
@@ -317,6 +319,18 @@ LEXICON NOMAG_IE_ODD_PL
   
 LEXICON NOMAG_IE_ODD_ESS
   +Ess:%>inie          FINAL1 ;
+  
+LEXICON DAKTERE
+  +N+Der1+Der/Rec+N: LAAHKOEH_ODD ;
+  +N+Sg: N_ODD_SG ;
+  +N+Pl: N_ODD_PL ;
+  +N:    N_ODD_ESS ;
+  +N+SgNomCmp:e%^DISIMP            R ;
+  +N+SgGenCmp:e%>%^DISIMPn        R ;
+  +N+PlGenCmp:%>%^DISIMPi R ;
+  +N+Der1+Der/Dim+N:%»adtj GIERIEHTSADTJE ;
+
+
 
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
@@ -367,6 +381,22 @@ LEXICON N_IE_ESS
   +Ess+Uml:%>%^iUMLine        FINAL1 ;
 
 
+LEXICON TJIDTJIE
+  +N+Der1+Der/Rec+N:ie LAAHKOEH_EVEN ;
+  +N+Sg: N_IE_SG ;
+  +N+Pl: N_IE_PL ;
+  +N:    N_IE_ESS ;
+  +N+SgNomCmp:ie              R ;
+  +N+SgGenCmp:ie%>n           R ;
+  +N+PlGenCmp:ie%>j           R ;
+  +N+PlGenCmp+Uml:%>%^iUMLi R ;
+  +N+Der1+Der/Dim+N:%^aLATUS%»tj GÅATETJE ;
+  +N+Der1+Der/ijes+A+Attr:%»%^1UMLijes ATTR-0 ;
+  +N+Der1+Der/ijes+A+Pred:%»%^1UMLijes FINAL1 ;
+  +N+Der1+Der/ijes:%»%^1UMLij ODDCOMP ;
+
+
+
 ! Inflection for nouns ending in oe
 ! ---------------------------------
 LEXICON N_OE_UML
@@ -406,6 +436,12 @@ LEXICON N_OE_PL
 
 LEXICON N_OE_ESS
   +Ess:o%>jne         FINAL1 ;
+  
+LEXICON LAAHKOE
+  +N+Der1+Der/Rec+N:oe LAAHKOEH_EVEN ;
+  +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
+         N_OE ;
+
 
 ! Inflection for maana-type nouns
 ! -------------------------------
@@ -437,6 +473,16 @@ LEXICON MAANA_PL
   +Com:a%>jgujmie FINAL1 ;
   +Com:a%>jgyjmie FINAL1 ; !SUB
 
+LEXICON AAHKA
+  +N+Der1+Der/Rec+N:a LAAHKOEH_EVEN ;
+  +N+Sg: MAANA_SG  ;
+  +N+Pl: MAANA_PL  ;
+  +N:    EVEN_ESS ;
+  +N+SgNomCmp:a    R ;
+  +N+SgGenCmp:a%>n R ;
+  +N+PlGenCmp:a%>j R ;
+  +N+Der1+Der/Dim+N:%^aLATUS%»tj GÅATETJE ;
+
 ! Inflection for nïejte-type nouns
 ! --------------------------------
 LEXICON NIEJTE
@@ -466,6 +512,18 @@ LEXICON NIEJTE_PL
   +Ela:%>ijste    FINAL1 ;
   +Com:%>igujmie  FINAL1 ;
   +Com:%>igyjmie  FINAL1 ; !SUB
+  
+  LEXICON MAAKE
+  +N+Der1+Der/Rec+N:e LAAHKOEH_EVEN ;
+  +N+Sg:           NIEJTE_SG  ;
+  +N+Pl:           NIEJTE_PL  ;
+  +N:              EVEN_ESS ;
+  +N+SgNomCmp:e    R ;
+  +N+SgGenCmp:e%>n R ;
+  +N+PlGenCmp:%>i  R ;
+  +N+Der1+Der/Dim+N:e%»tj   GÅATETJE ;
+
+
   
 ! Sub-paradigm inflections:
 ! -------------------------
@@ -1458,15 +1516,15 @@ LEXICON MES
 +A+Superl+Sg+Ine:mese%>sne     FINAL1 ;
 +A+Superl+Sg+Ela:mese%>ste     FINAL1 ;
 +A+Superl+Sg+Com:mes%>ine      FINAL1 ;
-+A+Superl+Pl+Nom:%>%^COMPDISIMP%>mesh        FINAL1 ;
-+A+Superl+Pl+Nom:%>%^COMPDISIMP2%>mesh        FINAL1 ;
-+A+Superl+Pl+Acc:%>meside      FINAL1 ;
-+A+Superl+Pl+Gen:%>%^COMPDISIMP%>mesi        FINAL1 ;
-+A+Superl+Pl+Gen:%>%^COMPDISIMP2%>mesi        FINAL1 ;
-+A+Superl+Pl+Ill:%>meside      FINAL1 ;
-+A+Superl+Pl+Ine:%>mesine      FINAL1 ;
-+A+Superl+Pl+Ela:%>mesijste    FINAL1 ;
-+A+Superl+Pl+Com:%>mesigujmie  FINAL1 ;
++A+Superl+Pl+Nom:%>%^COMPDISIMP%>mes%>h        FINAL1 ;
++A+Superl+Pl+Nom:%>%^COMPDISIMP2%>mes%>h        FINAL1 ;
++A+Superl+Pl+Acc:%>mes%>ide      FINAL1 ;
++A+Superl+Pl+Gen:%>%^COMPDISIMP%>mes%>i        FINAL1 ;
++A+Superl+Pl+Gen:%>%^COMPDISIMP2%>mes%>i        FINAL1 ;
++A+Superl+Pl+Ill:%>mes%>ide      FINAL1 ;
++A+Superl+Pl+Ine:%>mes%>ine      FINAL1 ;
++A+Superl+Pl+Ela:%>mes%>ijste    FINAL1 ;
++A+Superl+Pl+Com:%>mes%>igujmie  FINAL1 ;
 +A+Superl:mes            EVEN_ESS ;
 +A+Superl+SgNomCmp:%>%^COMPDISIMPmes    R ;
 +A+Superl+SgNomCmp:%>%^COMPDISIMP2mes    R ;
@@ -1729,7 +1787,7 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Der1+Der/lidh:%»iel GOLTELIDH ;
  +V+Der1+Der/htjidh:%»%^htjidhUMLehtj GOLTELIDH ;
  +V+Der1+Der/htidh:%»ieht DÅAJVOEHTIDH ;
-! +V+Der1+Der/dehte:%»iedeht ÅARAJEHTEDH ; !this is -didh + -ehtedh, we have not got it in northsámi, and I don't think it is really worth it here either
+! +V+Der1+Der/dehte:%»iedeht ÅARAJEHTEDH ; !we have -didh + -ehte
  +V+Der3+Der/ahtje:%»iejahtj AHTJE ;
  +V+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
  +V+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
@@ -1766,7 +1824,7 @@ LEXICON TJEARODH ! row C - Group II
  +V+Der1+Der/stidh:%»oest DÅAJVOEHTIDH ;
  +V+Der1+Der/lidh:%»oel GOLTELIDH ;
  +V+Der1+Der/htidh:%»oeht DÅAJVOEHTIDH ;
-! +V+Der1+Der/dehte:%»oedeht ÅARAJEHTEDH ; !this is -didh + -ehtedh, we have not got it in northsámi, and I don't think it is really worth it here either
+! +V+Der1+Der/dehte:%»oedeht ÅARAJEHTEDH ; !we have -didh + -ehte 
  +V+Der3+Der/ahtje:%»oejahtj AHTJE ;
  +V+Der1+Der/didh:%»%^PASSUMLed GOLTELIDH ;
  +V+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
@@ -1805,7 +1863,7 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
  +V+Der3+Der/gåete:%»oegået GÅETEDH ;
  +V+Der1+Der/lidh:%»oel GOLTELIDH ;
  +V+Der1+Der/htidh:%»oeht DÅAJVOEHTIDH ;
-! +V+Der1+Der/dehte:%»oedeht ÅARAJEHTEDH ; !this is -didh + -ehtedh, we have not got it in northsámi, and I don't think it is really worth it here either
+! +V+Der1+Der/dehte:%»oedeht ÅARAJEHTEDH ; !we have -didh + -ehte 
  +V+Der3+Der/ahtje:%»oejahtj AHTJE ;
  +V+Der1+Der/didh:%»%^PASSUMLed GOLTELIDH ;
  +V+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
@@ -1848,7 +1906,7 @@ LEXICON GUARKEDH ! row B - Group III
  +V+Der1+Der/stidh:%»ast DÅAJVOEHTIDH ;
  +V+Der1+Der/lidh:%»al GOLTELIDH ;
  +V+Der1+Der/htidh:%»aht DÅAJVOEHTIDH ;
-! +V+Der1+Der/dehte:%»adeht ÅARAJEHTEDH ; !this is -didh + -ehtedh, we have not got it in northsámi, and I don't think it is really worth it here either
+! +V+Der1+Der/dehte:%»adeht ÅARAJEHTEDH ; !we have -didh + -ehtedh
  +V+Der3+Der/ahtje:%»ajahtj AHTJE ;
  +V+Der1+Der/didh:%»%^didhUMLed GOLTELIDH ;
  +V+Der1+Der/htalle:%»ahtall SOVVEDH ; !Passive, only from transitive verbs
@@ -1885,7 +1943,7 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +V+Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
  +V+Der1+Der/lidh:%»el GOLTELIDH ;
  +V+Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
-! +V+Der1+Der/dehte:%»edeht ÅARAJEHTEDH ; !this is -didh + -ehtedh, we have not got it in northsámi, and I don't think it is really worth it here either
+! +V+Der1+Der/dehte:%»edeht ÅARAJEHTEDH ; !we have -didh + -ehtedh
  +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
  +V+Der1+Der/didh:%»ed GOLTELIDH ;
  +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
@@ -1924,7 +1982,7 @@ LEXICON VÅÅJNEDH ! row E - Group V
  +V+Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
  +V+Der1+Der/lidh:%»el GOLTELIDH ;
  +V+Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
-! +V+Der1+Der/dehte:%»edeht ÅARAJEHTEDH ; !this is -didh + -ehtedh, we have not got it in northsámi, and I don't think it is really worth it here either
+! +V+Der1+Der/dehte:%»edeht ÅARAJEHTEDH ; !we have -didh + -ehte
  +V+Der3+Der/ahtje:%»ejahtj AHTJE ;
  +V+Der1+Der/didh:%»ed GOLTELIDH ;
  +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
@@ -1964,7 +2022,7 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +V+Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
  +V+Der1+Der/lidh:%»el GOLTELIDH ;
  +V+Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
-! +V+Der1+Der/dehte:%»edeht ÅARAJEHTEDH ; !this is -didh + -ehtedh, we have not got it in northsámi, and I don't think it is really worth it here either
+! +V+Der1+Der/dehte:%»edeht ÅARAJEHTEDH ; !we have -didh + -ehte
  +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
  +V+Der1+Der/didh:%»ed GOLTELIDH ;
  +V+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
@@ -2082,6 +2140,127 @@ LEXICON SOVVEDH ! row D - Group IV
  +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
  +V+Der3+Der/gåete:%»egået GÅETEDH ;
  +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
+ 
+LEXICON LAAHKOEH_EVEN
+LAAHKOEH_BE ;
+LAAHKOEH_MES ;
+
+LEXICON LAAHKOEH_BE
+ +Sg+Nom:%>%^COMPDISIMPbe%^DISIMP         FINAL1 ;
+ +Sg+Acc:%>%^COMPDISIMPbe%>%^DISIMPm      FINAL1 ;
+ +Sg+Gen:%>%^COMPDISIMPbe%>%^DISIMPn      FINAL1 ;
+ +Sg+Nom:%>%^COMPDISIMP2be%^DISIMP         FINAL1 ;
+ +Sg+Acc:%>%^COMPDISIMP2be%>%^DISIMPm      FINAL1 ;
+ +Sg+Gen:%>%^COMPDISIMP2be%>%^DISIMPn      FINAL1 ;
+ +Sg+Ill:b%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Sg+Ine:b%>isnie           FINAL1 ;
+ +Sg+Ela:b%>istie           FINAL1 ;
+ +Sg+Com:b%>inie            FINAL1 ;
+ +Pl+Nom:%>%^COMPDISIMPb%>%^DISIMPh       FINAL1 ;
+ +Pl+Nom:%>%^COMPDISIMP2b%>%^DISIMPh       FINAL1 ;
+ +Pl+Acc:b%>idie            FINAL1 ;
+ +Pl+Gen:%>%^COMPDISIMPb%>%^DISIMPi       FINAL1 ;
+ +Pl+Gen:%>%^COMPDISIMP2b%>%^DISIMPi       FINAL1 ;
+ +Pl+Ill:b%>idie            FINAL1 ;
+ +Pl+Ine:b%>inie            FINAL1 ;
+ +Pl+Ela:b%>ijstie          FINAL1 ;
+ +Pl+Com:b%>%^DISIMPigujmie FINAL1 ;
+  +Ess:b%>inie          FINAL1 ;
+
+LEXICON LAAHKOEH_MES
++Sg+Nom:%>%^COMPDISIMPmes          FINAL1 ;
++Sg+Nom:%>%^COMPDISIMP2mes          FINAL1 ;
++Sg+Acc:mese%>m       FINAL1 ;
++Sg+Gen:mese%>n       FINAL1 ;
++Sg+Ill:mese%>se      FINAL1 ;
++Sg+Ine:mese%>sne     FINAL1 ;
++Sg+Ela:mese%>ste     FINAL1 ;
++Sg+Com:mes%>ine      FINAL1 ;
++Pl+Nom:%>%^COMPDISIMP%>mes%>h        FINAL1 ;
++Pl+Nom:%>%^COMPDISIMP2%>mes%>h        FINAL1 ;
++Pl+Acc:%>mes%>ide      FINAL1 ;
++Pl+Gen:%>%^COMPDISIMP%>mes%>i        FINAL1 ;
++Pl+Gen:%>%^COMPDISIMP2%>mes%>i        FINAL1 ;
++Pl+Ill:%>mes%>ide      FINAL1 ;
++Pl+Ine:%>mes%>ine      FINAL1 ;
++Pl+Ela:%>mes%>ijste    FINAL1 ;
++Pl+Com:%>mes%>igujmie  FINAL1 ;
+  +Ess:mes%>ine         FINAL1 ;
+
+
+LEXICON LAAHKOEH_ODD
+LAAHKOEH_ÅBPOE ;
+LAAHKOEH_OMMES ;
+
+LEXICON LAAHKOEH_ÅBPOE
+ +Sg+Nom:%>åbpoe          FINAL1 ;
+ +Sg+Acc:%>åbpoe%>m       FINAL1 ;
+ +Sg+Gen:%>åbpoe%>n       FINAL1 ;
+ +Sg+Ill:%>åbpo%>se       FINAL1 ;
+ +Sg+Ill+Uml:%>åbpe%>%^2UMLse	FINAL1      ; ! Causes Umlaut
+ +Sg+Ine:%>åbpo%>sne      FINAL1 ;
+ +Sg+Ela:%>åbpo%>ste      FINAL1 ;
+ +Sg+Com:%>åbpo%>jne      FINAL1 ;
+ +Pl+Nom:%>åbpoe%>h       FINAL1 ;
+ +Pl+Acc:%>åbpo%>jde      FINAL1 ;
+ +Pl+Gen:%>åbpoe%>j       FINAL1 ;
+ +Pl+Ill:%>åbpo%>jde      FINAL1 ;
+ +Pl+Ine:%>åbpo%>jne      FINAL1 ;
+ +Pl+Ela:%>åbpo%>jste     FINAL1 ;
+ +Pl+Com:%>åbpoe%>jgujmie FINAL1 ;
+  +Ess:%>åbpo%>jne         FINAL1 ;
+  
+  +Sg+Nom:%>abpa          FINAL1 ;
+  +Sg+Acc:%>abpa%>m       FINAL1 ;
+  +Sg+Gen:%>abpa%>n       FINAL1 ;
+  +Sg+Ill:%>abpe%>se      FINAL1 ;
+  +Sg+Ine:%>abpe%>sne     FINAL1 ;
+  +Sg+Ela:%>abpe%>ste     FINAL1 ;
+  +Sg+Com:%>abp%>ine      FINAL1 ;
+  +Ess:%>abp%>ine         FINAL1 ;
+  +Pl+Nom:%>abpa%>h       FINAL1 ;
+  +Pl+Acc:%>abp%>ide      FINAL1 ;
+  +Pl+Gen:%>abpa%>j       FINAL1 ;
+  +Pl+Ill:%>abp%>ide      FINAL1 ;
+  +Pl+Ine:%>abp%>ine      FINAL1 ;
+  +Pl+Ela:%>abp%>ijste    FINAL1 ;
+  +Pl+Com:%>abpa%>jgujmie FINAL1 ;
+
+LEXICON LAAHKOEH_OMMES
+  +Sg+Nom:%>ommes%^DISIMP         FINAL1 ;
++Sg+Acc:%>ommese%>%^DISIMPm      FINAL1 ;
++Sg+Gen:%>ommese%>%^DISIMPn      FINAL1 ;
++Sg+Ill:%>ommes%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++Sg+Ine:%>ommes%>isnie           FINAL1 ;
++Sg+Ela:%>ommes%>istie           FINAL1 ;
++Sg+Com:%>ommes%>inie            FINAL1 ;
+ +Pl+Nom:%>ommes%>%^DISIMPh       FINAL1 ;
+ +Pl+Acc:%>ommes%>idie            FINAL1 ;
+ +Pl+Gen:%>ommes%>%^DISIMPi       FINAL1 ;
+ +Pl+Ill:%>ommes%>idie            FINAL1 ;
+ +Pl+Ine:%>ommes%>inie            FINAL1 ;
+ +Pl+Ela:%>ommes%>ijstie          FINAL1 ;
+ +Pl+Com:%>ommes%>%^DISIMPigujmie FINAL1 ;
+ +Pl+Com:%>ommes%>%^DISIMPigyjmie FINAL1 ; !SUB
+  +Ess:%>ommes%>inie          FINAL1 ;
+
+  +Sg+Nom:%>ammes%^DISIMP         FINAL1 ;
++Sg+Acc:%>ammese%>%^DISIMPm      FINAL1 ;
++Sg+Gen:%>ammese%>%^DISIMPn      FINAL1 ;
++Sg+Ill:%>ammes%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++Sg+Ine:%>ammes%>isnie           FINAL1 ;
++Sg+Ela:%>ammes%>istie           FINAL1 ;
++Sg+Com:%>ammes%>inie            FINAL1 ;
+ +Pl+Nom:%>ammes%>%^DISIMPh       FINAL1 ;
+ +Pl+Acc:%>ammes%>idie            FINAL1 ;
+ +Pl+Gen:%>ammes%>%^DISIMPi       FINAL1 ;
+ +Pl+Ill:%>ammes%>idie            FINAL1 ;
+ +Pl+Ine:%>ammes%>inie            FINAL1 ;
+ +Pl+Ela:%>ammes%>ijstie          FINAL1 ;
+ +Pl+Com:%>ammes%>%^DISIMPigujmie FINAL1 ;
+ +Pl+Com:%>ammes%>%^DISIMPigyjmie FINAL1 ; !SUB
+  +Ess:%>ammes%>inie          FINAL1 ;
+
 
 !LEXICON TJYÖREDIDH
 
@@ -2151,6 +2330,9 @@ LEXICON LGIDH
  +V+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
  +V+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
  +V+Der3+Der/ahtje:%»ahtj AHTJE ;
+
+
+
 
 
 ! Verbal affixes
