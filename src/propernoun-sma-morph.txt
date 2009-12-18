@@ -33,13 +33,13 @@ LEXICON VNAME_ODD ! Names ending in stressless vowel
 +N+Prop+Sg: N_ODD_SG ;
 +N+Prop+Pl: N_ODD_PL ;
 +N+Prop:    N_ODD_ESS ;
-+N+Prop+Attr:e FINAL1 ;
++N+Prop+Attr:e%^DISIMP FINAL1 ;
 
 !LEXICON VNAME_EVEN ! Names ending in stressless vowel
 !+N+Prop+Sg: NIEJTE_SG ;
 !+N+Prop+Pl: NIEJTE_PL ;
 !+N+Prop:    EVEN_ESS ;
-!+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr:e FINAL1 ;
 
 LEXICON VNAME
  +N+Prop+Sg+Nom:          FINAL1 ;
@@ -183,14 +183,14 @@ LEXICON JALKEDSEN ! Names ending in stressless vowel
  +N+Prop+Sg+Com:%>inie            FINAL1 ;
 +N+Prop+Pl: N_ODD_PL ;
 +N+Prop:    N_ODD_ESS ;
-+N+Prop+Attr:en FINAL1 ;
++N+Prop+Attr:e%^DISIMPn FINAL1 ;
 
 
 
 LEXICON SNAME_ODD_PLUR ! Southern Sami names
 +N+Prop+Pl: N_ODD_PL ;
 +N+Prop:    N_ODD_ESS ;
-!+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr:%>%^DISIMPh FINAL1 ;
 
 
 LEXICON JAAVRETJEH
@@ -203,7 +203,7 @@ LEXICON JAAVRETJEH
   +N+Prop+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
   +N+Prop+Pl+Com:%>%^DISIMPigyjmie FINAL1 ; !SUB
 +N+Prop:    N_ODD_ESS ;
-!+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr:e%>%^DISIMPh FINAL1 ;
 
 
 ! Even syllable Sámi names:
@@ -211,13 +211,29 @@ LEXICON PN_IE ! as N_IE, but with Prop tag
 +N+Prop+Sg: N_IE_SG ;
 +N+Prop+Pl: N_IE_PL ;
 +N+Prop:    N_IE_ESS ;
-+N+Prop+Attr: FINAL1 ;
++N+Prop+Attr:ie FINAL1 ;
+
+LEXICON MEHKIEN ! as N_IE, but with Prop tag
++N+Prop+Sg: N_IE_SG ;
++N+Prop+Sg+Nom:ie%>n               FINAL1 ;
++N+Prop+Sg+Acc:ie%>m               FINAL1 ;
++N+Prop+Sg+Gen:ie%>n               FINAL1 ;
+! +N+Prop+Sg+Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
++N+Prop+Sg+Ill+Uml:%>%^1UMLan      FINAL1 ;
++N+Prop+Sg+Ine:e%>sne              FINAL1 ;
++N+Prop+Sg+Ela:e%>ste              FINAL1 ;
++N+Prop+Sg+Com:%>ine               FINAL1 ;
++Com+Uml:%>%^iUMLine     FINAL1 ;
++N+Prop+Pl: N_IE_PL ;
++N+Prop:    N_IE_ESS ;
++N+Prop+Attr:ie%>n FINAL1 ;
+
 
 ! Even syllable Sámi names:
 LEXICON PN_IE_PLUR ! as N_IE, but with Prop tag
 +N+Prop+Pl: N_IE_PL ;
 +N+Prop:    N_IE_ESS ;
-!+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr:ie%>h FINAL1 ;
 
 
 ! LEXICON PN_OE_UML ! as N_OE_UML, but with Prop tag ! (still) not in use
@@ -228,33 +244,66 @@ LEXICON PN_OE ! as N_OE, but with Prop tag
 +N+Prop+Sg: N_OE_SG ;
 +N+Prop+Pl: N_OE_PL ;
 +N+Prop:    N_OE_ESS ;
-+N+Prop+Attr: FINAL1 ;
++N+Prop+Attr:oe FINAL1 ;
 
 LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
 +N+Prop+Sg: MAANA_SG ;
 +N+Prop+Pl: MAANA_PL ;
 +N+Prop:    EVEN_ESS ;
-+N+Prop+Attr: FINAL1 ;
++N+Prop+Attr:a FINAL1 ;
 
 LEXICON SNAME_MAANA_PLUR ! as MAANA, but with Prop tag
 +N+Prop+Pl: MAANA_PL ;
 +N+Prop:    EVEN_ESS ;
-!+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr:a%>h FINAL1 ;
+
+LEXICON JÆLLAN ! as MAANA, but with Prop tag
++N+Prop+Sg+Nom:a%>n       FINAL1 ;
++N+Prop+Sg+Acc:a%>m       FINAL1 ;
++N+Prop+Sg+Gen:a%>n       FINAL1 ;
++N+Prop+Sg+Ill:e%>se      FINAL1 ;
++N+Prop+Sg+Ine:e%>sne     FINAL1 ;
++N+Prop+Sg+Ela:e%>ste     FINAL1 ;
++N+Prop+Sg+Com:%>ine      FINAL1 ;
++N+Prop+Pl: MAANA_PL ;
++N+Prop:    EVEN_ESS ;
++N+Prop+Attr:a%>n FINAL1 ;
+
 
 
 LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
 +N+Prop+Sg: NIEJTE_SG ;
 +N+Prop+Pl: NIEJTE_PL ;
 +N+Prop:    EVEN_ESS ;
-+N+Prop+Attr: FINAL1 ;
++N+Prop+Attr:e FINAL1 ;
+
+LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
++N+Prop+Sg+Nom:i%>n          FINAL1 ;
++N+Prop+Sg+Acc:i%>m       FINAL1 ;
++N+Prop+Sg+Gen:i%>n       FINAL1 ;
++N+Prop+Sg+Ill:e%>se      FINAL1 ;
++N+Prop+Sg+Ine:e%>sne     FINAL1 ;
++N+Prop+Sg+Ela:e%>ste     FINAL1 ;
++N+Prop+Sg+Com:%>ine      FINAL1 ;
++N+Prop+Pl+Nom:i%>h        FINAL1 ;
++N+Prop+Pl+Acc:%>ide      FINAL1 ;
++N+Prop+Pl+Gen:%>i        FINAL1 ;
++N+Prop+Pl+Ill:%>ide      FINAL1 ;
++N+Prop+Pl+Ine:%>ine      FINAL1 ;
++N+Prop+Pl+Ela:%>ijste    FINAL1 ;
++N+Prop+Pl+Com:%>igujmie  FINAL1 ;
++N+Prop+Pl+Com:%>igyjmie  FINAL1 ; !SUB
++N+Prop:    EVEN_ESS ;
++N+Prop+Attr:i%>n FINAL1 ;
+
 
 LEXICON SNAME_NIEJTE_PLUR ! as NIEJTE, but with Prop tag
 +N+Prop+Pl: NIEJTE_PL ;
 +N+Prop:    EVEN_ESS ;
-!+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr:%>h FINAL1 ;
 
 LEXICON STAABREH ! as NIEJTE, but with Prop tag
-  +N+Prop+Pl+Nom:%>eh        FINAL1 ;
+  +N+Prop+Pl+Nom:e%>h        FINAL1 ;
   +N+Prop+Pl+Acc:%>ide      FINAL1 ;
   +N+Prop+Pl+Gen:%>i        FINAL1 ;
   +N+Prop+Pl+Ill:%>ide      FINAL1 ;
@@ -262,7 +311,7 @@ LEXICON STAABREH ! as NIEJTE, but with Prop tag
   +N+Prop+Pl+Ela:%>ijste    FINAL1 ;
   +N+Prop+Pl+Com:%>igujmie  FINAL1 ;
 +N+Prop:    EVEN_ESS ;
-!+N+Prop+Attr: FINAL1 ;
+!+N+Prop+Attr:e%>h FINAL1 ;
 
 
 LEXICON NJEERUVE
@@ -353,13 +402,14 @@ LEXICON TJIRREDS
 +A+Sg+Com:d%>inie            FINAL1 ;
 +A+Pl:d N_ODD_PL ;
 +A:d    N_ODD_ESS ;
++N+Prop+Attr:d%>%^DISIMPs FINAL1 ;     ! name special
 
 
 
 ! Old names, for backwards compatibility until all entries have got new names
 ! ---------------------------------------------------------------------------
 
-LEXICON CNAME
-CNAME_EVEN ; ! Even syllable as default - rename using either CNAME_EVEN or
+!LEXICON CNAME
+!CNAME_EVEN ; ! Even syllable as default - rename using either CNAME_EVEN or
 ! CNAME_ODD.
 
