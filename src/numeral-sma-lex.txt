@@ -95,6 +95,8 @@ uktsie#   JUSTTÅVSENE ;
 
 LEXICON O-JUSTLUHKIEF
 luhkie# JUSTTÅVSENE ;
+luhkie#akte# JUSTTÅVSENE ;
+luhkie# O-2TO9F ;
 ! This lexicon is for the number 10000 only. it is separated from the
 ! rest to avoid forms like *luhkieluhkietåvsene, etc.
 
@@ -103,12 +105,12 @@ LEXICON O-LUHKIEF
 luhkie# JUSTTÅVSENE ;
 luhkie# O-X1000 ;
 luhkie# O-2TO9F ;
-luhkie# JUSTTÅVSENE ;
-luhkie# O-X1000 ;
-luhkie# O-2TO9F ;
 ! this lexicon is accessed only via other O-lexica, and not directly 
 ! from OVERTUVSÁN. Thus, *luhkieluhkietåvsene, etc. is avoided.
 
+LEXICON O-LUHKIE123456789
+luhkie#akte# JUSTTÅVSENE ;
+luhkie# O-2TO9F ;
 
 LEXICON O-2TO9LUHKIE  
 göökte# O-LUHKIEF ;
@@ -133,6 +135,7 @@ tjuetie# JUSTTÅVSENE ; ! 100000
 tjuetie# O-X1000 ;    ! 101000
 tjuetie# O-2TO9F ;    ! 102000, 103000, ...
 tjuetie# O-LUHKIEF ;   ! 110000, 113000, ...
+tjuetie# O-LUHKIE123456789 ;  !100011, 100012, ...
 tjuetie# O-2TO9LUHKIE ;  ! 120000, 123000, ...
 !tjuetie# O-LÅGENAN ;  ! 115000, ...
 
@@ -142,6 +145,7 @@ tjuetie# JUSTTÅVSENE ;  ! 200000
 tjuetie# O-X1000 ;     ! 201000
 tjuetie# O-2TO9F ;     ! 202000, 203000, ...
 tjuetie# O-LUHKIEF ;    ! 210000, 213000, ...
+tjuetie# O-LUHKIE123456789 ;  !200011, 200012, ...
 tjuetie# O-2TO9LUHKIE ;   ! 220000, 223000, ...
 !tjuetie# O-LÅGENAN ;   ! 215000, ...
 
@@ -163,15 +167,15 @@ uktsie# O-TJUETIE2 ;
 
 LEXICON JUSTTOVSENE
 tåvsene# UNDERTÅVSENE ;
-tåvsene ORDTAGEVEN ;                    ! Case infl of tuvsán
+tåvsene:tåvsen ORDTAGODD ;                    ! Case infl of tuvsán
 tåvsenede+A+Ord:tåvsened ORDTAGEVEN ;
 
-! Justtuvsán, for numerals going via 1000
+! Justtåvsene, for numerals going via 1000
 ! -------------------------------------
 
 LEXICON JUSTTÅVSENE
 tåvsene# UNDERTÅVSENE ;             ! Thousand-and-something
-tåvsene ORDTAGEVEN ;                   ! Case infl of tuvsán
+tåvsene:tåvsen ORDTAGODD ;                   ! Case infl of tuvsán
 tåvsenede+A+Ord:tåvsened ORDTAGEVEN ;
 
 
@@ -273,6 +277,8 @@ LEXICON NUMTAGie !njieljie:njielj
 
 LEXICON LUHKIEF
 luhkie:luhk NUMTAGie ;
+luhkie# AKTEF ;
+luhkie# 2TO9F ;
 låhkede+A+Ord:låhkad ORDTAGODD ;
 låhkesh:låhkas COLLTAG ;
 
