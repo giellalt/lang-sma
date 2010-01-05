@@ -19,8 +19,9 @@ MILLIJOVNE ;       ! a noun of its own
 OVERTÅVSENE ;       ! for generator over 1000
 JUSTTÅVSENE ;       ! going via 1000
 UNDERTÅVSENE ;      ! for generator under 1000
+OLD ;              ! for "thirteen hundred, etc.	
 !num-imprecise ;                              
-!COLLECTIVE ;                            
+COLLECTIVE ;                            
 ARABIC ;           ! for the arabic numerals !^C^
 ROMAN ;            ! for the roman numerals!^C^
 NUM-PREFIXES ;     ! for §34 etc.!^C^
@@ -44,14 +45,6 @@ millijovne:millijovn NUMTAGe ;
 millijovnede+A+Ord:millijovned ORDTAGODD ;
 millijarde:millijard NUMTAGe ;! Num or N?
 millijardede+A+Ord:millijarded ORDTAGODD ;
-
-stoere#luhkie:stoere#luhk NUMTAGie ;
-
-stoere#tjuetie:stoere#tjuet NUMTAGie ;
-
-stoere#nïmme:stoere#nïmm NUMTAGe ;
-stoere#nymme:stoere#nymm NUMTAGe ;
-stoere#nomme:stoere#nomm NUMTAGe ;
 
 nulle:null NUMTAGe ;
 
@@ -139,7 +132,36 @@ tjuetie# O-2TO9F ;    ! 102000, 103000, ...
 tjuetie# O-LUHKIEF ;   ! 110000, 113000, ...
 tjuetie# O-LUHKIE123456789 ;  !100011, 100012, ...
 tjuetie# O-2TO9LUHKIE ;  ! 120000, 123000, ...
-!tjuetie# O-LÅGENAN ;  ! 115000, ...
+nïmme# JUSTTÅVSENE ; ! 100000
+nïmme# O-X1000 ;    ! 101000
+nïmme# O-2TO9F ;    ! 102000, 103000, ...
+nïmme# O-LUHKIEF ;   ! 110000, 113000, ...
+nïmme# O-LUHKIE123456789 ;  !100011, 100012, ...
+nïmme# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+nymme# JUSTTÅVSENE ; ! 100000
+nymme# O-X1000 ;    ! 101000
+nymme# O-2TO9F ;    ! 102000, 103000, ...
+nymme# O-LUHKIEF ;   ! 110000, 113000, ...
+nymme# O-LUHKIE123456789 ;  !100011, 100012, ...
+nymme# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+nomme# JUSTTÅVSENE ; ! 100000
+nomme# O-X1000 ;    ! 101000
+nomme# O-2TO9F ;    ! 102000, 103000, ...
+nomme# O-LUHKIEF ;   ! 110000, 113000, ...
+nomme# O-LUHKIE123456789 ;  !100011, 100012, ...
+nomme# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+stoere#luhkie# JUSTTÅVSENE ; ! 100000
+stoere#luhkie# O-X1000 ;    ! 101000
+stoere#luhkie# O-2TO9F ;    ! 102000, 103000, ...
+stoere#luhkie# O-LUHKIEF ;   ! 110000, 113000, ...
+stoere#luhkie# O-LUHKIE123456789 ;  !100011, 100012, ...
+stoere#luhkie# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+stoerre#luhkie# JUSTTÅVSENE ; ! 100000
+stoerre#luhkie# O-X1000 ;    ! 101000
+stoerre#luhkie# O-2TO9F ;    ! 102000, 103000, ...
+stoerre#luhkie# O-LUHKIEF ;   ! 110000, 113000, ...
+stoerre#luhkie# O-LUHKIE123456789 ;  !100011, 100012, ...
+stoerre#luhkie# O-2TO9LUHKIE ;  ! 120000, 123000, ...
 
 
 LEXICON O-TJUETIE2
@@ -149,7 +171,36 @@ tjuetie# O-2TO9F ;     ! 202000, 203000, ...
 tjuetie# O-LUHKIEF ;    ! 210000, 213000, ...
 tjuetie# O-LUHKIE123456789 ;  !200011, 200012, ...
 tjuetie# O-2TO9LUHKIE ;   ! 220000, 223000, ...
-!tjuetie# O-LÅGENAN ;   ! 215000, ...
+nïmme# JUSTTÅVSENE ;  ! 200000
+nïmme# O-X1000 ;     ! 201000
+nïmme# O-2TO9F ;     ! 202000, 203000, ...
+nïmme# O-LUHKIEF ;    ! 210000, 213000, ...
+nïmme# O-LUHKIE123456789 ;  !200011, 200012, ...
+nïmme# O-2TO9LUHKIE ;   ! 220000, 223000, ...
+nymme# JUSTTÅVSENE ;  ! 200000
+nymme# O-X1000 ;     ! 201000
+nymme# O-2TO9F ;     ! 202000, 203000, ...
+nymme# O-LUHKIEF ;    ! 210000, 213000, ...
+nymme# O-LUHKIE123456789 ;  !200011, 200012, ...
+nymme# O-2TO9LUHKIE ;   ! 220000, 223000, ...
+nomme# JUSTTÅVSENE ;  ! 200000
+nomme# O-X1000 ;     ! 201000
+nomme# O-2TO9F ;     ! 202000, 203000, ...
+nomme# O-LUHKIEF ;    ! 210000, 213000, ...
+nomme# O-LUHKIE123456789 ;  !200011, 200012, ...
+nomme# O-2TO9LUHKIE ;   ! 220000, 223000, ...
+stoere#luhkie# JUSTTÅVSENE ;  ! 200000
+stoere#luhkie# O-X1000 ;     ! 201000
+stoere#luhkie# O-2TO9F ;     ! 202000, 203000, ...
+stoere#luhkie# O-LUHKIEF ;    ! 210000, 213000, ...
+stoere#luhkie# O-LUHKIE123456789 ;  !200011, 200012, ...
+stoere#luhkie# O-2TO9LUHKIE ;   ! 220000, 223000, ...
+stoerre#luhkie# JUSTTÅVSENE ;  ! 200000
+stoerre#luhkie# O-X1000 ;     ! 201000
+stoerre#luhkie# O-2TO9F ;     ! 202000, 203000, ...
+stoerre#luhkie# O-LUHKIEF ;    ! 210000, 213000, ...
+stoerre#luhkie# O-LUHKIE123456789 ;  !200011, 200012, ...
+stoerre#luhkie# O-2TO9LUHKIE ;   ! 220000, 223000, ...
 
 
 LEXICON O-2TO9TJUETIE
@@ -169,18 +220,72 @@ uktsie# O-TJUETIE2 ;
 
 LEXICON JUSTTOVSENE
 tåvsene# UNDERTÅVSENE ;
-tåvsene:tåvsen ORDTAGODD ;                    ! Case infl of tuvsán
-tåvsenede+A+Ord:tåvsened ORDTAGEVEN ;
+tåvsene+Num:tåvsan ORDTAGODD ;                    ! Case infl of tåvsene
+tåvsanede+A+Ord:tåvsaned ORDTAGEVEN ;
+tovsene# UNDERTÅVSENE ;
+tovsene+Num:tovsen ORDTAGODD ;                    ! Case infl of tovsene
+tovsenede+A+Ord:tovsened ORDTAGEVEN ;
+stoere#tjuetie# UNDERTÅVSENE ;
+stoere#tjuetie:stoere#tjuet NUMTAGie ;        ! Case infl of tåvsene
+stoerre#tjuetie# UNDERTÅVSENE ;
+stoerre#tjuetie:stoerre#tjuet NUMTAGie ;      ! Case infl of tåvsene
+stoerre#nïmme# UNDERTÅVSENE ;
+stoerre#nïmme:stoerre#nïmm NUMTAGe ;      ! Case infl of tåvsene
+stoerre#nymme# UNDERTÅVSENE ;
+stoerre#nymme:stoerre#nymm NUMTAGe ;      ! Case infl of tåvsene
+stoerre#nomme# UNDERTÅVSENE ;
+stoerre#nomme:stoerre#nomm NUMTAGe ;      ! Case infl of tåvsene
+stoere#nïmme# UNDERTÅVSENE ;
+stoere#nïmme:stoere#nïmm NUMTAGe ;      ! Case infl of tåvsene
+stoere#nymme# UNDERTÅVSENE ;
+stoere#nymme:stoere#nymm NUMTAGe ;      ! Case infl of tåvsene
+stoere#nomme# UNDERTÅVSENE ;
+stoere#nomme:stoere#nomm NUMTAGe ;      ! Case infl of tåvsene
 
 ! Justtåvsene, for numerals going via 1000
 ! -------------------------------------
 
 LEXICON JUSTTÅVSENE
 tåvsene# UNDERTÅVSENE ;             ! Thousand-and-something
-tåvsene:tåvsen ORDTAGODD ;                   ! Case infl of tuvsán
-tåvsenede+A+Ord:tåvsened ORDTAGEVEN ;
+tåvsene+Num:tåvsan ORDTAGODD ;                   ! Case infl of tåvsene
+tåvsenede+A+Ord:tåvsaned ORDTAGEVEN ;
+tovsene# UNDERTÅVSENE ;             ! Thousand-and-something
+tovsene+Num:tovsen ORDTAGODD ;                   ! Case infl of tovsene
+tovsenede+A+Ord:tovsened ORDTAGEVEN ;
+stoere#tjuetie# UNDERTÅVSENE ;
+stoere#tjuetie:stoere#tjuet NUMTAGie ;        ! Case infl of tåvsene
+stoerre#tjuetie# UNDERTÅVSENE ;
+stoerre#tjuetie:stoerre#tjuet NUMTAGie ;      ! Case infl of tåvsene
+stoerre#nïmme# UNDERTÅVSENE ;
+stoerre#nïmme:stoerre#nïmm NUMTAGe ;      ! Case infl of tåvsene
+stoerre#nymme# UNDERTÅVSENE ;
+stoerre#nymme:stoerre#nymm NUMTAGe ;      ! Case infl of tåvsene
+stoerre#nomme# UNDERTÅVSENE ;
+stoerre#nomme:stoerre#nomm NUMTAGe ;      ! Case infl of tåvsene
+stoere#nïmme# UNDERTÅVSENE ;
+stoere#nïmme:stoere#nïmm NUMTAGe ;      ! Case infl of tåvsene
+stoere#nymme# UNDERTÅVSENE ;
+stoere#nymme:stoere#nymm NUMTAGe ;      ! Case infl of tåvsene
+stoere#nomme# UNDERTÅVSENE ;
+stoere#nomme:stoere#nomm NUMTAGe ;      ! Case infl of tåvsene
 
 
+! Old, for the old counting thirteen hundred etc.	
+! -----------------------------------------------
+
+LEXICON OLD					
+luhkie#akte GTJUETIE ;						
+luhkie#göökte GTJUETIE ;					
+luhkie#golme GTJUETIE ;	
+luhkie#njieljie GTJUETIE ;									
+luhkie#njielje GTJUETIE ;					
+luhkie#niellja GTJUETIE ;			
+luhkie#nielje GTJUETIE ;		
+luhkie#vïjhte GTJUETIE ;					
+luhkie#govhte GTJUETIE ;					
+luhkie#tjïjhtje GTJUETIE ;	
+luhkie#gaektsie GTJUETIE ;					
+luhkie#uktsie GTJUETIE ;									
 
 
 
@@ -647,9 +752,17 @@ LEXICON ISOLATED-NUMEXP                        !^C^
 ¾+Num:¾ # ;
 
 
-!LEXICON COLLECTIVE    !Some collective numbers that do not fit in anywhere else
-
-
+LEXICON COLLECTIVE    !Some collective numbers that do not fit in anywhere else
+gööktege+Num+Coll:göökteg ORDTAGODD ;
+golmege+Num+Coll:golmeg  ORDTAGODD ;
+gåalmege+Num+Coll:gåalmag  ORDTAGODD ;
+njealjege+Num+Coll:njealjag  ORDTAGODD ;
+vïjhtege+Num+Coll:vïjhteg  ORDTAGODD ;
+govhtege+Num+Coll:govhteg  ORDTAGODD ;
+tjïjhtjege+Num+Coll:tjïjhtjeg  ORDTAGODD ;
+gaaktsege+Num+Coll:gaaktsag  ORDTAGODD ;
+uktsege+Num+Coll:uktsieg  ORDTAGODD ;
+låhkege+Num+Coll:låhkag  ORDTAGODD ;
 
 LEXICON 2TO9LUHKIE
 göökte# LUHKIE- ;
@@ -682,9 +795,33 @@ tjuetie LUHKIEF ;
 tjuetie# 2TO9LUHKIE ;
 tjuetie# AKTEF ;
 tjuetie# 2TO9F ;
-!tjuetie# LÅGENAN ;
 tjuetie:tjuet NUMTAGie ;
 tjuatede+A+Ord:tjuatad ORDTAGODD ;
+nïmme LUHKIEF ;
+nïmme# 2TO9LUHKIE ;
+nïmme# AKTEF ;
+nïmme# 2TO9F ;
+nïmme:nïmm NUMTAGe ;
+nymme LUHKIEF ;
+nymme# 2TO9LUHKIE ;
+nymme# AKTEF ;
+nymme# 2TO9F ;
+nymme:nymm NUMTAGe ;
+nomme LUHKIEF ;
+nomme# 2TO9LUHKIE ;
+nomme# AKTEF ;
+nomme# 2TO9F ;
+nomme:nomm NUMTAGe ;
+stoere#luhkie# LUHKIEF ;
+stoere#luhkie# 2TO9LUHKIE ;
+stoere#luhkie# AKTEF ;
+stoere#luhkie# 2TO9F ;
+stoere#luhkie:stoere#luhk NUMTAGie ;
+stoerre#luhkie# LUHKIEF ;
+stoerre#luhkie# 2TO9LUHKIE ;
+stoerre#luhkie# AKTEF ;
+stoerre#luhkie# 2TO9F ;
+stoerre#luhkie:stoerre#luhk NUMTAGie ;
 
 LEXICON TJUETIE
 tjuetie:tjuet NUMTAGie ;
@@ -693,7 +830,6 @@ tjuetie# LUHKIE- ;
 tjuetie# 2TO9LUHKIE ;
 tjuetie# AKTEF ;
 tjuetie# 2TO9F ;
-!tjuetie# LÅGENAN ;
 tjuatede+A+Ord:tjuatad ORDTAGODD ;
 akte#tjuetie:akte#tjuet NUMTAGie ;
 akte#tjuohte# LUHKIEF ;
@@ -701,7 +837,36 @@ akte#tjuohte# LUHKIE- ;
 akte#tjuohte# 2TO9LUHKIE ;
 akte#tjuohte# AKTEF ;
 akte#tjuohte# 2TO9F ;
-!akte#tjuohte# LÅGENAN ;
+nïmme:nïmm NUMTAGe ;
+nïmme# LUHKIEF ;
+nïmme# LUHKIE- ;
+nïmme# 2TO9LUHKIE ;
+nïmme# AKTEF ;
+nïmme# 2TO9F ;
+nymme:nymm NUMTAGe ;
+nymme# LUHKIEF ;
+nymme# LUHKIE- ;
+nymme# 2TO9LUHKIE ;
+nymme# AKTEF ;
+nymme# 2TO9F ;
+nomme:nomm NUMTAGe ;
+nomme# LUHKIEF ;
+nomme# LUHKIE- ;
+nomme# 2TO9LUHKIE ;
+nomme# AKTEF ;
+nomme# 2TO9F ;
+stoere#luhkie:stoere#luhk NUMTAGie ;
+stoere#luhkie# LUHKIEF ;
+stoere#luhkie# LUHKIE- ;
+stoere#luhkie# 2TO9LUHKIE ;
+stoere#luhkie# AKTEF ;
+stoere#luhkie# 2TO9F ;
+stoerre#luhkie:stoerre#luhk NUMTAGie ;
+stoerre#luhkie# LUHKIEF ;
+stoerre#luhkie# LUHKIE- ;
+stoerre#luhkie# 2TO9LUHKIE ;
+stoerre#luhkie# AKTEF ;
+stoerre#luhkie# 2TO9F ;
 
 
 
