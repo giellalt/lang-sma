@@ -1,8 +1,36 @@
-! South Sámi TWOLC file
-!
-! $Id$
-!
-! Aft
+!Distributed under the terms of the GNU General Public License version 2
+! or any later version.
+
+! ========================================================================== !
+!                   South Sámi morphophonological rule set                   !
+! ========================================================================== !
+
+! twol-sma.txt
+! The file contains the rule set for the non-segmental
+! South Sámi morphophonological rules
+
+! m4 rules for selecting parts of the file for certain applications.
+changequote(<<,>>)
+changecom(<<!>>,<<
+>>)
+define(<<FLAGINIT>>,
+<<ifdef(<<$1>>,<<define(<<$1>>,1)>>,<<define(<<$1>>,0)>>)>>)dnl
+dnl
+define(<<DIVNUM>>,0)dnl
+define(<<ENDOMIT>>,<<popdef(<<DIVNUM>>)divert(DIVNUM)dnl>>)dnl
+define(<<ENDKEEP>>,<<popdef(<<DIVNUM>>)divert(DIVNUM)dnl>>)dnl
+define(<<OMITIF>>,
+  <<pushdef(<<DIVNUM>>,ifelse(eval($1),0,0,-1))divert(DIVNUM)dnl>>)dnl
+define(<<KEEPIF>>,
+  <<pushdef(<<DIVNUM>>,ifelse(eval($1),0,-1,0))divert(DIVNUM)dnl>>)dnl
+define(<<ELSE>>,
+  <<define(<<DIVNUM>>,ifelse(DIVNUM,0,-1,0))divert(DIVNUM)dnl>>)dnl
+
+FLAGINIT(<<HYPHENATE>>)
+FLAGINIT(<<DESCRIPTIVE>>)
+
+! HYPHENATE = To be used when making hyphenators - it allows surfacing of # and ^
+! DESCRIPTIVE = Variants or sections used for the non-normative grammar
 
 Alphabet
   a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å
@@ -12,10 +40,49 @@ Alphabet
   Á É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Â Ê Ô Û Î Ã Ý þ Ñ Ð Ŋ Ŧ Č Ž     
   á é ó ú í à è ò ù ì ë ü ï â ê ô û î ã ý þ ñ ð đ ß ª ß ç ŋ ŧ č ž 
 
-  %#:0 %>:0 %+:0 »:0 %^:0
-  X2:0 X3:0 X4:0
   ':0 !'
-  %^DISIMP:0 %^COMPDISIMP:0 %^COMPDISIMP2:0 %^NOMAGieDISIMP:0 %^1UML:0 %^2UML:0 %^3UML:0 %^3sUML:0 %^3dUML:0 %^iæUML:0 %^iUML:0 %^PASSUML:0 %^didhUML:0 %^adteUML:0 %^htjidhUML:0 %^aLATUS:a %^uLATUS:e ;
+
+! Border symbols:
+! # = word boundary
+! > = stem-inflection boundary
+! » = derivation boundary
+! + = metric foot boundary (is it used any more?)
+! ^ = explicit hyphenation point
+KEEPIF(HYPHENATE)
+ %# %^
+ELSE
+
+KEEPIF(DESCRIPTIVE)
+ %#:%-  %#:0
+ELSE
+ %#:0
+ENDKEEP
+
+ %^:0
+ENDKEEP
+
+ %>:0 %+:0 »:0
+
+! Triggers:
+  X2:0
+  X3:0
+  X4:0
+  %^DISIMP:0
+  %^COMPDISIMP:0
+  %^COMPDISIMP2:0
+  %^NOMAGieDISIMP:0
+  %^1UML:0 %^2UML:0
+  %^3UML:0
+  %^3sUML:0
+  %^3dUML:0
+  %^iæUML:0
+  %^iUML:0
+  %^PASSUML:0
+  %^didhUML:0
+  %^adteUML:0
+  %^htjidhUML:0
+  %^aLATUS:a
+  %^uLATUS:e ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å
@@ -556,8 +623,9 @@ Vx:ö <=> [ e: | i: | ï: ] _ Cns+ %»: %^PASSUML: ;
 !$0 bïepm00edh
 
 "Short passive Umlaut Column 5 - part 1"
-a:å  <=> _ [ a: | e: ] Cns+ %»: %^PASSUML: ;
-         [ #: | #: Cns+ ] ([a|å]) _ (a) Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
+a:å  <=>                        _ [ a: | e: ] Cns+  %»:                 %^PASSUML: ;
+         [ #: | #: Cns+ ] [a|å] _             Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
+         [ #: | #: Cns+ ]       _   a         Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 
 ! daejredh -> dååjredh
 !€# daejr%»%^PASSUMLedh
@@ -581,7 +649,9 @@ Vx:å <=> [ a: | u: | o: | å: ] _ Cns+ %»: %^PASSUML: ;
 
 "Short passive Umlaut Column 7 - part 1"
 Vx:å <=> _ [ a: | e: ] Cns+ %»: %^PASSUML: ;
-         where Vx in (a u o) ;
+         where Vx in (   u o) ;
+!         where Vx in (a u o) ; ! Removed a, since it conflicts with the rule
+                                ! "Short passive Umlaut Column 5 - part 1" above
 
 ! vuejnedh - vååjnedh
 !€# vuejn%»%^PASSUMLedh
@@ -803,3 +873,6 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 
 !€# gööle%>dh
 !€0 gööle0dh
+
+!"No word boundary as hyphen in the beginning of a string"
+!#:% /<= .#. _ ;
