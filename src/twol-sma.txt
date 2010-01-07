@@ -51,14 +51,15 @@ Alphabet
 KEEPIF(HYPHENATE)
  %# %^
 ELSE
+ %^:0
+ENDKEEP
+
+OMITIF(HYPHENATE)
+ %#:0
+ENDOMIT
 
 KEEPIF(DESCRIPTIVE)
  %#:%-  %#:0
-ELSE
- %#:0
-ENDKEEP
-
- %^:0
 ENDKEEP
 
  %>:0 %+:0 »:0
