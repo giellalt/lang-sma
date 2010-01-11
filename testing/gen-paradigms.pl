@@ -30,7 +30,7 @@ while ( <FILE> ) {
     my $command = "gmake $pos-paradigm WORD\=$word GEN_TMP\=$gen_tmp PARA_TMP\=$para_tmp" ;
     #    print "$command\n";
     system($command);
-    my $xmlcommand = "perl paradigm2xml.pl $gen_tmp/$para_tmp/$word.paradigm > $gen_tmp/$xml_tmp/$word_pos.xml";
+    my $xmlcommand = "perl paradigm2xml_sma.pl $gen_tmp/$para_tmp/$word.paradigm > $gen_tmp/$xml_tmp/$word_pos.xml";
     system($xmlcommand);
     
     $abs_path = File::Spec->rel2abs("$gen_tmp/$xml_tmp/$word_pos.xml");
