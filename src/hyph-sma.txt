@@ -69,9 +69,7 @@ define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ |
 
 define S [ S | s ] ; define Cnss [ Cns - S ] ;
 
-!define Sgm [ Cns | Vow ] ;
 
-!define Cns [ Cnssymb | Vow i ] ;
 
 echo << Rules>>
 
@@ -83,22 +81,24 @@ define nodipht     [..] -> %^ || Cns Vow            _ VowNot2ndVow ,
                                  Cns VowNotAEIOUÅ   _ vE , 
                                  Cns VowNotYØ       _ vØ , 
                                  Cns VowNotÅ        _ vÅ ;
+define sj           [..] -> %^ || Vow               _  s j Vow ; !                             
+define unvoiced     [..] -> %^ || Vow (Cns) h       _ [ n | m | l | j | r | v ] Vow ;
 define divdigraph   [..] -> %^ || Vow  Cns*         _ n g  Vow ; ! !jar-ngas
-!define divdigraph  [..] -> %^ || Vow           n g _ Cns+ Vow ; ! !jarn-gas, a-nga
-define unvoiced     [..] -> %^ || Vow (Cns)         _ h [ n | m | l | j | r | p | t | k | v ] Vow ;
-define preaspirated [..] -> %^ || Vow  Cns          _ h [ p | t | k ] ([ s | j ]) Vow ;
-define palatal      [..] -> %^ || Vow (Cns) n       _ n j ; 
+define preaspirated [..] -> %^ || Vow (Cns) h       _ [ p | t | k ] ([ s | j ]) Vow ;
+define palatal      [..] -> %^ || Vow (Cns) n       _ n [j|g] ,
+                                  Vow (Cns) l       _ l j ,
+                                  Vow (Cns) r       _ r j ,
+                                  Vow (Cns) t       _ t j ,                                  
+                                  Vow (Cns) l       _ l j ; ! mæn-nja
+define konset       [..] -> %^ || Vow Cns*          _ k [r|l|v|j] Vow ; 
 define s2cns        [..] -> %^ || Vow [Cns - t]     _ s Cnss Vow ; ! máj-stet,
-define j4cns        [..] -> %^ || Vow  Cns Cns Cns  _ [ [b|n|s|t] j | [t|d] s ] Vow ;
-define j3cns        [..] -> %^ || Vow  Cns Cns      _ [ [b|n|s|t] j | [t|d] s ] Vow ;
-define j2cns        [..] -> %^ || Vow  Cns          _ [ [b|n|s|t] j | [t|d] s ] Vow ;
-define j1cns        [..] -> %^ || Vow               _ [ [  n|s|t] j | [t|d] s ] Vow ;
+
 define 4cns         [..] -> %^ || Vow  Cns Cns  Cns _  Cns Vow ;
 define 3cns         [..] -> %^ || Vow  Cns Cns      _  Cns Vow ;
-define s3cns        [..] -> %^ || Vow  Cns Cns      _  s j Vow ;
-define 2cns         [..] -> %^ || Vow  Cns          _  Cns Vow ;
-define s2cns        [..] -> %^ || Vow  Cns          _  s j Vow ;
-define 1cns         [..] -> %^ || Vow               _  Cns Vow ;
+define s3cns        [..] -> %^ || Vow  Cns Cns      _  s j Vow ; ! 
+define 2cns         [..] -> %^ || Vow  Cns          _  Cns Vow ; ! et-te
+define sjcns        [..] -> %^ || Vow  Cns          _  s j Vow ; ! et-sje
+define 1cns         [..] -> %^ || Vow               _  Cns Vow ; ! e-te
 
 !Error: We fail with: jijnjebh        jijn-jebh Vow Cns _ n j Vow = 72 should be jij-nj     
 ! Wrong: lokn-ge-sieh
@@ -132,23 +132,17 @@ beforedipht
 .o.
 nodipht
 .o.
+sj
+.o.
+konset
+.o.
 unvoiced
 .o.
 divdigraph
 .o.
-preaspirated
-.o.
+!preaspirated
+!.o.
 palatal 
-.o.
-s2cns
-.o.
-j4cns
-.o.
-j3cns
-.o.
-j2cns
-.o.
-j1cns
 .o.
 4cns
 .o.
@@ -157,6 +151,8 @@ s3cns
 3cns
 .o.
 s2cns
+.o.
+sjcns
 .o.
 2cns
 .o.
