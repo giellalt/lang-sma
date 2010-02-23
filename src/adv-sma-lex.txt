@@ -7,8 +7,9 @@ LEXICON adv
 +Adv:0 FINAL1 ;
 
 LEXICON adv-interr-rel
-+Adv+Interr:0 FINAL1 ;
-+Adv+Rel:0 FINAL1 ;
++Adv:0 FINAL1 ; ! We go for the sme way of doing things.
+!+Adv+Interr:0 FINAL1 ;
+!+Adv+Rel:0 FINAL1 ;
 
 ! Then comes the Adverb lexicon itself. There are many (sub)regular adverbial
 ! case patterns here, they are not encoded in the present system.
@@ -704,6 +705,7 @@ vïssjelsligke adv ;
 ! Being unflected, it looks like adverbs
 gogkoe   adv-interr-rel ; ! váccán dagkoe, gogkoe don vázzet  +  gogkoe don bohtet?
 gosse    adv-interr-rel ; !  mon boadán, gosse don boadát
+goske    adv-interr-rel ; !  mon boadán, gosse don boadát
 guktie   adv-interr-rel ;  !slik som/at
 gusnie   adv-interr-rel ;
 gustie   adv-interr-rel ;
@@ -716,5 +718,5 @@ gåaph    adv-interr-rel ;
 ! 
 
 
-gåabph+Pron+Interr:gåabph FINAL1 ;	   !! <== why no case?
+gåabph adv-interr-rel ;	   !! <== why no case?
 
