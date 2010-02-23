@@ -186,6 +186,19 @@ REMOVE ("m" N ACR Sg Gen) IF (0 ("men"));
 
 IFF:IsItConNeg ConNeg (*-1 Neg BARRIER ConNeg); 
 
+REMOVE:PrtInNeg Prs IF (0 Neg)(*1C ConNeg + Prt BARRIER NOT-ADV);
+
+REMOVE:PrsInNeg Prt IF (0 Neg)(*1C ConNeg BARRIER NOT-ADV LINK NOT 0 Prt);
+
+SELECT:PersonInNeg Sg3 IF (0 Neg + Prt)(*1C ConNeg + Sg3 BARRIER NOT-ADV);
+SELECT:PersonInNeg Du1 IF (0 Neg + Prt)(*1C ConNeg + Du1 BARRIER NOT-ADV);
+SELECT:PersonInNeg Du2 IF (0 Neg + Prt)(*1C ConNeg + Du2 BARRIER NOT-ADV);
+SELECT:PersonInNeg Du3 IF (0 Neg + Prt)(*1C ConNeg + Du3 BARRIER NOT-ADV);
+SELECT:PersonInNeg Pl1 IF (0 Neg + Prt)(*1C ConNeg + Pl1 BARRIER NOT-ADV);
+SELECT:PersonInNeg Pl2 IF (0 Neg + Prt)(*1C ConNeg + Pl2 BARRIER NOT-ADV);
+SELECT:PersonInNeg Pl3 IF (0 Neg + Prt)(*1C ConNeg + Pl3 BARRIER NOT-ADV);
+
+
 # Imperative
 REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
 REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
