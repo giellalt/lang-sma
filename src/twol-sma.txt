@@ -28,6 +28,7 @@ define(<<ELSE>>,
 
 FLAGINIT(<<HYPHENATE>>)
 FLAGINIT(<<DESCRIPTIVE>>)
+FLAGINIT(<<HUNSPELL>>)
 
 ! HYPHENATE = To be used when making hyphenators - it allows surfacing of # and ^
 ! DESCRIPTIVE = Variants or sections used for the non-normative grammar
@@ -62,7 +63,12 @@ KEEPIF(DESCRIPTIVE)
  %#:%-  %#:0
 ENDKEEP
 
- %>:0 %+:0 »:0
+OMITIF(HUNSPELL)
+ %>:0 %+:0 »:0  ! stem-suffix border mark, unvisible for normal use
+ELSE
+ %> »:%>            ! stem-suffix border mark, only visible in Hunspell
+ENDOMIT
+
 
 ! Triggers:
   X2:0
