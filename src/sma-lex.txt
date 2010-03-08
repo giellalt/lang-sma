@@ -330,6 +330,23 @@ LEXICON DAKTERE
   +N+PlGenCmp:%>%^DISIMPi R ;
   +N+Der1+Der/Dim+N:%»adtj GIERIEHTSADTJE ;
 
+LEXICON ÅABPETJH
+  N+Pl+Nom:%>%^DISIMPh       FINAL1 ;
+  N+Pl+Acc:%>idie            FINAL1 ;
+  N+Pl+Gen:%>%^DISIMPi       FINAL1 ;
+  N+Pl+Ill:%>idie            FINAL1 ;
+  N+Pl+Ine:%>inie            FINAL1 ;
+  N+Pl+Ela:%>ijstie          FINAL1 ;
+  N+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
+  N+Pl+Com:%>%^DISIMPigyjmie FINAL1 ; !SUB
+  N+Ess:%>inie          FINAL1 ;
+  +N+SgNomCmp:e%^DISIMP            R ;
+  +N+PlGenCmp:%>%^DISIMPi R ;
+  +N+Der1+Der/Dim+N+Pl:%»adtj NIEJTE_PL ;
+  +N+Der1+Der/Dim+N:%»adtj EVEN_ESS ;
+  +N+Der1+Der/Dim+N+SgNomCmp:%»adtje    R ;
+  +N+Der1+Der/Dim+N+PlGenCmp:%»adtj%>i  R ;
+
 
 
 ! Inflection for nouns ending in '-ie'
@@ -442,6 +459,23 @@ LEXICON LAAHKOE
   +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
          N_OE ;
 
+LEXICON GAAROEH
+  +N+Pl+Nom:oe%>h       FINAL1 ;
+  +N+Pl+Acc:o%>jde      FINAL1 ;
+  +N+Pl+Gen:oe%>j       FINAL1 ;
+  +N+Pl+Ill:o%>jde      FINAL1 ;
+  +N+Pl+Ine:o%>jne      FINAL1 ;
+  +N+Pl+Ela:o%>jste     FINAL1 ;
+  +N+Pl+Com:oe%>jgujmie FINAL1 ;
+  +N+Pl+Com:oe%>jgyjmie FINAL1 ; !SUB
+  +N+Ess:o%>jne         FINAL1 ;
+  +N+SgNomCmp:oe    R ;
+  +N+PlGenCmp:oe%>j R ;
+  +N+Der1+Der/Dim+N+Pl:e%»%^2UMLtj N_ODD_PL ;
+  +N+Der1+Der/Dim+N:e%»%^2UMLtj N_ODD_ESS ;
+  +N+Der1+Der/Dim+N+SgNomCmp:e%»%^2UMLtje R ;
+  +N+Der1+Der/Dim+N+PlGenCmp:e%»%^2UMLtj%>%^DISIMPi R ;
+
 
 ! Inflection for maana-type nouns
 ! -------------------------------
@@ -482,6 +516,26 @@ LEXICON AAHKA
   +N+SgGenCmp:a%>n R ;
   +N+PlGenCmp:a%>j R ;
   +N+Der1+Der/Dim+N:%^aLATUS%»tj GÅATETJE ;
+  
+ LEXICON MÅVHKAH
+  +N+Pl+Nom:a%>h       FINAL1 ;
+  +N+Pl+Acc:%>ide      FINAL1 ;
+  +N+Pl+Gen:a%>j       FINAL1 ;
+  +N+Pl+Ill:%>ide      FINAL1 ;
+  +N+Pl+Ine:%>ine      FINAL1 ;
+  +N+Pl+Ela:%>ijste    FINAL1 ;
+  +N+Pl+Com:a%>jgujmie FINAL1 ;
+  +N+Pl+Com:a%>jgyjmie FINAL1 ; !SUB
+  +N+Ess:%>ine         FINAL1 ;
+  +N+SgNomCmp:a    R ;
+  +N+PlGenCmp:a%>j R ;
+  +N+Der1+Der/Dim+N+Pl:%^aLATUS%»tj N_ODD_PL ;
+  +N+Der1+Der/Dim+N:%^aLATUS%»tj N_ODD_ESS ;
+  +N+Der1+Der/Dim+N+SgNomCmp:%^aLATUS%»tje R ;
+  +N+Der1+Der/Dim+N+PlGenCmp:%^aLATUS%»tj%>%^DISIMPi R ;
+
+
+
 
 ! Inflection for nïejte-type nouns
 ! --------------------------------
@@ -523,8 +577,23 @@ LEXICON NIEJTE_PL
   +N+PlGenCmp:%>i  R ;
   +N+Der1+Der/Dim+N:e%»tj   GÅATETJE ;
 
+LEXICON ÅERPIENADTJH
+  +N+SgNomCmp:e    R ;
+  +N+PlGenCmp:%>i  R ;
+  +N+Pl+Nom:%>h        FINAL1 ;
+  +N+Pl+Acc:%>ide      FINAL1 ;
+  +N+Pl+Gen:%>i        FINAL1 ;
+  +N+Pl+Ill:%>ide      FINAL1 ;
+  +N+Pl+Ine:%>ine      FINAL1 ;
+  +N+Pl+Ela:%>ijste    FINAL1 ;
+  +N+Pl+Com:%>igujmie  FINAL1 ;
+  +N+Pl+Com:%>igyjmie  FINAL1 ; !SUB
+  +N+Ess:%>ine         FINAL1 ;
+  +N+Der1+Der/Dim+N+Pl:e%»tj   N_ODD_PL ;
+  +N+Der1+Der/Dim+N:e%»tj   N_ODD_ESS ;
+  +N+Der1+Der/Dim+N+SgNomCmp:e%»tje            R ;
+  +N+Der1+Der/Dim+N+PlGenCmp:e%»tj%>%^DISIMPi R ;
 
-  
 ! Sub-paradigm inflections:
 ! -------------------------
 
@@ -591,7 +660,7 @@ LEXICON GÅATETJE
  +Sg: N_ODD_SG ;
  +Pl: N_ODD_PL ;
       N_ODD_ESS ;
- +SgNomCmp:            R ;
+ +SgNomCmp:e            R ;
  +SgGenCmp:e%>n        R ;
  +PlGenCmp:%>%^DISIMPi R ;
  
