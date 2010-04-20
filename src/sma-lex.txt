@@ -24,6 +24,7 @@ Multichar_Symbols
 
   +Inf +Neg  +PrfPrc +PrsPrc
 ! +VGen +Ger
+  +Ger
   +Ind
   +Imprt +ImprtII !Den siste berre nektingsverbet
   +Coll ! Collective numeral
@@ -48,6 +49,10 @@ Multichar_Symbols
   +CS +CC +Pcle +CLB +PUNCT +LEFT +RIGHT
   +Cmpnd
   +SgNomCmp +PlGenCmp +SgGenCmp
+  +CmpOnly
+  +SgCmp +SgNomCmp +SgGenCmp +PlGenCmp +Cmpnd +Cmpnd+ +Guess +ShCmp !testing ShCmp
+  +First +Last +None +CmpOnly +SgNomLeft +SgGenLeft +PlGenLeft +SgLeft +AllCmp
+  
   
   +Use/Sub
   +Use/Marg
@@ -171,7 +176,7 @@ LEXICON Root
 LEXICON R
  # Noun ;                           ! This is the normal case.		         ^C^
  #@P.NeedNoun.ON@  Verb ;      ! Flag diacr declares that the compound   ^C^
- #@P.NeedNoun.ON@  Adjective ; ! needs a +N tag later in the derivation  ^C^
+ #@P.NeedNoun.ON@  Adjective ; ! needs a N tag later in the derivation  ^C^
  +Hyph#:%- Noun ;                        ! These 3 cases add a hyphen, so     ^C^
  +Hyph#:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and the like	      ^C^
  +Hyph#:%-@P.NeedNoun.ON@  Adjective ;   ! is allowed.			              ^C^
@@ -185,7 +190,7 @@ LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
  # Noun ;                              ! This is the normal case.               ^C^
 ! # NounSecond ;                       ! Testing some quasisuff, cf. noun file  ^C^
  #@P.NeedNoun.ON@  Verb ;              ! Flag diacr declares that the compound  ^C^
-! #@P.NeedNoun.ON@  AdjectiveRoot ;    ! needs a +N tag later in the derivation ^C^
+! #@P.NeedNoun.ON@  AdjectiveRoot ;    ! needs a N tag later in the derivation ^C^
  +Hyph#:%- Noun ;                      ! These 3 cases add a hyphen, so         ^C^
  +Hyph#:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	        ^C^
  +Hyph#:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.                            ^C^
