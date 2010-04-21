@@ -64,7 +64,7 @@ LEXICON VNAME
 ! the appropriate even syllable lexicons.
 
 LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
-SNAME_NIEJTE ; ! check whether this is correct!
+ SNAME_NIEJTE ; ! check whether this is correct!
 +N+Prop+Attr: FINAL1 ;
 
 
@@ -91,16 +91,16 @@ LEXICON OENAME
 SNAME_NIEJTE ;
 
 LEXICON ONAME
-                            VNAME ; !until we get answer from SGM
-  +N+Prop+Sg+Nom:           FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Acc:e%>m       FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Gen:e%>n       FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Acc:%>m        FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Gen:%>n        FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Ill:%>se       FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Ine:%>sne      FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Ela:%>ste      FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Com:%>jne      FINAL1 ; !SUB !until we get answer from SGM
+ VNAME ; !until we get answer from SGM
+ +N+Prop+Sg+Nom+Use/Sub:           FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Acc+Use/Sub:e%>m       FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Gen+Use/Sub:e%>n       FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Acc+Use/Sub:%>m        FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Gen+Use/Sub:%>n        FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Ill+Use/Sub:%>se       FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Ine+Use/Sub:%>sne      FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Ela+Use/Sub:%>ste      FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Com+Use/Sub:%>jne      FINAL1 ; ! !until we get answer from SGM
 
 ! the sne / snie business remains to be sorted out.
 
@@ -108,17 +108,17 @@ LEXICON UENAME
 SNAME_NIEJTE ;
 
 LEXICON UNAME
-VNAME ; !until we get answer from SGM
-UNAME_EVEN ; !SUB !until we get answer from SGM
+ VNAME ; !until we get answer from SGM
+ +Use/Sub: UNAME_EVEN ; ! !until we get answer from SGM
 
 LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
-  +N+Prop+Sg+Nom:          FINAL1 ;  !SUB !until we get answer from SGM
-  +N+Prop+Sg+Acc:ve%>m       FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Gen:ve%>n       FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Ill:ve%>se       FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Ine:ve%>sne      FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Ela:ve%>ste      FINAL1 ; !SUB !until we get answer from SGM
-  +N+Prop+Sg+Com:ve%>jne      FINAL1 ; !SUB !until we get answer from SGM
+ +N+Prop+Sg+Nom+Use/Sub:          FINAL1 ;  ! !until we get answer from SGM
+ +N+Prop+Sg+Acc+Use/Sub:ve%>m       FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Gen+Use/Sub:ve%>n       FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Ill+Use/Sub:ve%>se       FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Ine+Use/Sub:ve%>sne      FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Ela+Use/Sub:ve%>ste      FINAL1 ; ! !until we get answer from SGM
+ +N+Prop+Sg+Com+Use/Sub:ve%>jne      FINAL1 ; ! !until we get answer from SGM
   
 LEXICON ZEENAME
  +N+Prop+Sg+Nom:e          FINAL1 ;
@@ -141,15 +141,15 @@ LEXICON ZEENAME
 
  LEXICON INAME_ODD ! Names ending in stressless vowel
   +N+Prop+Sg+Nom:%>i         FINAL1 ;
-  +N+Prop+Sg: INAME_ODD_SG ; ! name special
-  +N+Prop+Pl: N_ODD_PL ;     ! normal noun
-  +N+Prop:    N_ODD_ESS ;    ! normal noun
-  +N+Prop+Attr:%>i FINAL1 ;     ! name special
+ +N+Prop+Sg: INAME_ODD_SG ; ! name special
+ +N+Prop+Pl: N_ODD_PL ;     ! normal noun
+ +N+Prop:    N_ODD_ESS ;    ! normal noun
+ +N+Prop+Attr:%>i FINAL1 ;     ! name special
   
   LEXICON INAME_ODD_SG
   +Acc:e%>%^DISIMPm      FINAL1 ;
   +Gen:e%>%^DISIMPn      FINAL1 ;
-  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
   +Ine:%>isnie           FINAL1 ;
   +Ela:%>istie           FINAL1 ;
   +Com:%>inie            FINAL1 ;
@@ -205,7 +205,7 @@ LEXICON JAAVRETJEH
   +N+Prop+Pl+Ine:%>inie            FINAL1 ;
   +N+Prop+Pl+Ela:%>ijstie          FINAL1 ;
   +N+Prop+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-  +N+Prop+Pl+Com:%>%^DISIMPigyjmie FINAL1 ; !SUB
+ +N+Prop+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
   +N+Prop:    N_ODD_ESS ;
 !+N+Prop+Attr:e%>%^DISIMPh FINAL1 ;
 
@@ -213,7 +213,7 @@ LEXICON RITCHIE ! Ritchie:Ritchijasse
 +N+Prop+Sg+Nom:e%^DISIMP          FINAL1 ;
 +N+Prop+Sg+Acc:je%>%^DISIMPm      FINAL1 ;
 +N+Prop+Sg+Gen:je%>%^DISIMPn      FINAL1 ;
-+N+Prop+Sg+Ill:j%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +N+Prop+Sg+Ill:j%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
 +N+Prop+Sg+Ine:j%>isnie           FINAL1 ;
 +N+Prop+Sg+Ela:j%>istie           FINAL1 ;
 +N+Prop+Sg+Com:j%>inie            FINAL1 ;
@@ -307,7 +307,7 @@ LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
 +N+Prop+Pl+Ine:%>ine      FINAL1 ;
 +N+Prop+Pl+Ela:%>ijste    FINAL1 ;
 +N+Prop+Pl+Com:%>igujmie  FINAL1 ;
-+N+Prop+Pl+Com:%>igyjmie  FINAL1 ; !SUB
+ +N+Prop+Pl+Com+Use/Sub:%>igyjmie  FINAL1 ; !
 +N+Prop:    EVEN_ESS ;
 +N+Prop+Attr:i%>n FINAL1 ;
 
@@ -340,16 +340,16 @@ LEXICON AEKTUVE
 ! - - - - - - - - -
 
  LEXICON CNAME_ODD ! Names ending in stressless vowel
-  +N+Prop+Sg: CNAME_ODD_SG ; ! name special
-  +N+Prop+Pl: N_ODD_PL ;     ! normal noun
-  +N+Prop:    N_ODD_ESS ;    ! normal noun
-  +N+Prop+Attr: FINAL1 ;     ! name special
+ +N+Prop+Sg: CNAME_ODD_SG ; ! name special
+ +N+Prop+Pl: N_ODD_PL ;     ! normal noun
+ +N+Prop:    N_ODD_ESS ;    ! normal noun
+ +N+Prop+Attr: FINAL1 ;     ! name special
   
   LEXICON CNAME_ODD_SG
   +Nom:         FINAL1 ;
   +Acc:e%>%^DISIMPm      FINAL1 ;
   +Gen:e%>%^DISIMPn      FINAL1 ;
-  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
   +Ine:%>isnie           FINAL1 ;
   +Ela:%>istie           FINAL1 ;
   +Com:%>inie            FINAL1 ;
@@ -404,20 +404,20 @@ LEXICON DÅERIES
  +N+Prop+Pl+Ine:%^1UMLas%>inie            FINAL1 ;
  +N+Prop+Pl+Ela:%^1UMLas%>ijstie          FINAL1 ;
  +N+Prop+Pl+Com:%^1UMLas%>igujmie FINAL1 ;
-  +N+Prop:ies    N_ODD_ESS ;    ! normal noun
-  +N+Prop+Attr:ies FINAL1 ;     ! name special
+ +N+Prop:ies    N_ODD_ESS ;    ! normal noun
+ +N+Prop+Attr:ies FINAL1 ;     ! name special
 
 LEXICON TJIRREDS
 +N+Prop+Sg+Nom:d%>%^DISIMPs             FINAL1 ;
 +A+Sg+Acc:de%>%^DISIMPm      FINAL1 ;
 +A+Sg+Gen:de%>%^DISIMPn      FINAL1 ;
-+A+Sg+Ill:d%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +A+Sg+Ill:d%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
 +A+Sg+Ine:d%>isnie           FINAL1 ;
 +A+Sg+Ela:d%>istie           FINAL1 ;
 +A+Sg+Com:d%>inie            FINAL1 ;
 +A+Pl:d N_ODD_PL ;
 +A:d    N_ODD_ESS ;
-+N+Prop+Attr:d%>%^DISIMPs FINAL1 ;     ! name special
+ +N+Prop+Attr:d%>%^DISIMPs FINAL1 ;     ! name special
 
 
 

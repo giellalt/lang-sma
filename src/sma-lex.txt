@@ -174,26 +174,26 @@ LEXICON Root
 ! Compounding - copied from SMJ
 ! =============================
 LEXICON R
- # Noun ;                           ! This is the normal case.		         ^C^
- #@P.NeedNoun.ON@  Verb ;      ! Flag diacr declares that the compound   ^C^
- #@P.NeedNoun.ON@  Adjective ; ! needs a N tag later in the derivation  ^C^
- +Hyph#:%- Noun ;                        ! These 3 cases add a hyphen, so     ^C^
- +Hyph#:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and the like	      ^C^
- +Hyph#:%-@P.NeedNoun.ON@  Adjective ;   ! is allowed.			              ^C^
+ #+Use/Circ:# Noun;                           ! This is the normal case.		         
+ #@P.NeedNoun.ON@+Use/Circ:#@P.NeedNoun.ON@ Verb;      ! Flag diacr declares that the compound   
+ #@P.NeedNoun.ON@+Use/Circ:#@P.NeedNoun.ON@ Adjective; ! needs a N tag later in the derivation  
+ +Hyph#+Use/Circ:%- Noun ;                        ! These 3 cases add a hyphen, so     
+ +Hyph#+Use/Circ:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and the like	      
+ +Hyph#+Use/Circ:%-@P.NeedNoun.ON@  Adjective ;   ! is allowed.			              
 ! # ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com- ^C^
- #:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu      ^C^
+ #+Use/Circ:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu      
                     ! and viessuLondon are now all ok. Some refinement could  ^C^
                     ! perhaps be done, but corpus research is needed.	      ^C^
  +Cmpnd:%- # ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
 
 LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
- # Noun ;                              ! This is the normal case.               ^C^
+ #+Use/Circ:# Noun;                              ! This is the normal case.               
 ! # NounSecond ;                       ! Testing some quasisuff, cf. noun file  ^C^
- #@P.NeedNoun.ON@  Verb ;              ! Flag diacr declares that the compound  ^C^
+ #@P.NeedNoun.ON@+Use/Circ:#@P.NeedNoun.ON@ Verb;              ! Flag diacr declares that the compound  
 ! #@P.NeedNoun.ON@  AdjectiveRoot ;    ! needs a N tag later in the derivation ^C^
- +Hyph#:%- Noun ;                      ! These 3 cases add a hyphen, so         ^C^
- +Hyph#:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	        ^C^
- +Hyph#:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.                            ^C^
+ +Hyph#+Use/Circ:%- Noun ;                      ! These 3 cases add a hyphen, so         
+ +Hyph#+Use/Circ:%-@P.NeedNoun.ON@  Verb ;      ! Sem-julggaštus and the like	        
+ +Hyph#+Use/Circ:%-@P.NeedNoun.ON@  Adjective ; ! is allowed.                            
 !# ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-    ^C^
 !#:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu        ^C^
                     ! and viessuLondon are now all ok. Some refinement could    ^C^
@@ -226,7 +226,7 @@ LEXICON N_ODD_SG
   +Gen+PxSg1:%>anne FINAL1 ;
   +Gen+PxSg2:%>anne FINAL1 ;
   +Gen+PxSg3:%>anne FINAL1 ;
-  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
   +Ill+PxSg2:%>assedh FINAL1 ;
   +Ine:%>isnie           FINAL1 ;
   +Ela:%>istie           FINAL1 ;
@@ -241,7 +241,7 @@ LEXICON N_ODD_PL
   +Ine:%>inie            FINAL1 ;
   +Ela:%>ijstie          FINAL1 ;
   +Com:%>%^DISIMPigujmie FINAL1 ;
-  +Com:%>%^DISIMPigyjmie FINAL1 ; !SUB
+ +Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
 
 LEXICON N_ODD_ESS
   +Ess:%>inie          FINAL1 ;
@@ -396,7 +396,7 @@ LEXICON ÅERUVE_SG
   +Nom:uve%^DISIMP         FINAL1 ;
   +Acc:uve%>%^DISIMPm      FINAL1 ;
   +Gen:uve%>%^DISIMPn      FINAL1 ;
-  +Ill:iev%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Ill:iev%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
   +Ine:iev%>isnie           FINAL1 ;
   +Ela:iev%>istie           FINAL1 ;
   +Com:iev%>inie            FINAL1 ;
@@ -409,7 +409,7 @@ LEXICON ÅERUVE_PL
   +Ine:iev%>inie            FINAL1 ;
   +Ela:iev%>ijstie          FINAL1 ;
   +Com:uve%>%^DISIMPigujmie FINAL1 ;
-  +Com:uve%>%^DISIMPigyjmie FINAL1 ; !SUB
+ +Com+Use/Sub:uve%>%^DISIMPigyjmie FINAL1 ; !
   
 LEXICON ÅERUVE_ESS
   +Ess:iev%>inie          FINAL1 ;
@@ -433,7 +433,7 @@ LEXICON BÅERUVE_SG
   +Gen+PxSg1:uv%>anne FINAL1 ;
   +Gen+PxSg2:uv%>anne FINAL1 ;
   +Gen+PxSg3:uv%>anne FINAL1 ;
-  +Ill:uev%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Ill:uev%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
   +Ill+PxSg2:uv%>assedh FINAL1 ;
   +Ine:uev%>isnie           FINAL1 ;
   +Ela:uev%>istie           FINAL1 ;
@@ -449,7 +449,7 @@ LEXICON BÅERUVE_PL
   +Ine:uev%>inie            FINAL1 ;
   +Ela:uev%>ijstie          FINAL1 ;
   +Com:uve%>%^DISIMPigujmie FINAL1 ;
-  +Com:uve%>%^DISIMPigyjmie FINAL1 ; !SUB
+ +Com+Use/Sub:uve%>%^DISIMPigyjmie FINAL1 ; !
   
 LEXICON BÅERUVE_ESS
   +Ess:uev%>inie          FINAL1 ;
@@ -468,7 +468,7 @@ LEXICON BÅERUJE_SG
   +Nom:uje%^DISIMP         FINAL1 ;
   +Acc:uje%>%^DISIMPm      FINAL1 ;
   +Gen:uje%>%^DISIMPn      FINAL1 ;
-  +Ill:iej%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Ill:iej%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
   +Ine:iej%>isnie           FINAL1 ;
   +Ela:iej%>istie           FINAL1 ;
   +Com:iej%>inie            FINAL1 ;
@@ -481,7 +481,7 @@ LEXICON BÅERUJE_PL
   +Ine:iej%>inie            FINAL1 ;
   +Ela:iej%>ijstie          FINAL1 ;
   +Com:uje%>%^DISIMPigujmie FINAL1 ;
-  +Com:uje%>%^DISIMPigyjmie FINAL1 ; !SUB
+ +Com+Use/Sub:uje%>%^DISIMPigyjmie FINAL1 ; !
 
 LEXICON BÅERUJE_ESS
   +Ess:iej%>inie          FINAL1 ;
@@ -506,7 +506,7 @@ LEXICON IJE_ODD_SG
   +Gen+PxSg1:%>anne FINAL1 ;
   +Gen+PxSg2:%>anne FINAL1 ;
   +Gen+PxSg3:%>anne FINAL1 ;
-  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
   +Ill+PxSg2:%>assedh FINAL1 ;
   +Ine:%>isnie           FINAL1 ;
   +Ela:%>istie           FINAL1 ;
@@ -522,7 +522,7 @@ LEXICON IJE_ODD_PL
   +Ine:%>inie            FINAL1 ;
   +Ela:%>ijstie          FINAL1 ;
   +Com:%>%^NOMAGieDISIMPigujmie FINAL1 ;
-  +Com:%>%^NOMAGieDISIMPigyjmie FINAL1 ; !SUB
+ +Com+Use/Sub:%>%^NOMAGieDISIMPigyjmie FINAL1 ; !
   
 LEXICON IJE_ODD_ESS
   +Ess:%>inie          FINAL1 ;
@@ -545,7 +545,7 @@ LEXICON ÅABPETJH
   N+Pl+Ine:%>inie            FINAL1 ;
   N+Pl+Ela:%>ijstie          FINAL1 ;
   N+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-  N+Pl+Com:%>%^DISIMPigyjmie FINAL1 ; !SUB
+ N+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
   N+Ess:%>inie          FINAL1 ;
   +N+SgNomCmp:e%^DISIMP            R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
@@ -610,8 +610,8 @@ LEXICON N_IE_PL
   +Ela:%>ijste             FINAL1 ;
   +Ela+Uml:%>%^iUMLijste   FINAL1 ;
   +Com:ie%>jgujmie         FINAL1 ;
-  +Com+Uml:%>%^iUMLigyjmie FINAL1 ; !SUB
-  +Com:ie%>jgyjmie         FINAL1 ; !SUB
+ +Com+Uml+Use/Sub:%>%^iUMLigyjmie FINAL1 ; !
+ +Com+Use/Sub:ie%>jgyjmie         FINAL1 ; !
   +Com+Uml:%>%^iUMLigujmie FINAL1 ;
 
 LEXICON N_IE_ESS
@@ -646,8 +646,8 @@ LEXICON TJÅENIEH
   +N+Pl+Ela:%>ijste             FINAL1 ;
   +N+Pl+Ela+Uml:%>%^iUMLijste   FINAL1 ;
   +N+Pl+Com:ie%>jgujmie         FINAL1 ;
-  +N+Pl+Com+Uml:%>%^iUMLigyjmie FINAL1 ; !SUB
-  +N+Pl+Com:ie%>jgyjmie         FINAL1 ; !SUB
+ +N+Pl+Com+Uml+Use/Sub:%>%^iUMLigyjmie FINAL1 ; !
+ +N+Pl+Com+Use/Sub:ie%>jgyjmie         FINAL1 ; !
   +N+Pl+Com+Uml:%>%^iUMLigujmie FINAL1 ;
   +N+Ess:%>ine                  FINAL1 ;
   +N+Ess+Uml:%>%^iUMLine        FINAL1 ;
@@ -661,11 +661,11 @@ LEXICON TJÅENIEH
 ! Inflection for nouns ending in oe
 ! ---------------------------------
 LEXICON N_OE_UML
-  +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
+ +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
          N_OE ;
 
 LEXICON N_OE_SGILL_UML
-  +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
+ +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
   +Ill+Uml+PxSg1:e%>%^2UMLsanne FINAL1 ;
   +Ill+Uml+PxSg2:e%>%^2UMLsadth FINAL1 ;
 
@@ -707,14 +707,14 @@ LEXICON N_OE_PL
   +Ine:o%>jne      FINAL1 ;
   +Ela:o%>jste     FINAL1 ;
   +Com:oe%>jgujmie FINAL1 ;
-  +Com:oe%>jgyjmie FINAL1 ; !SUB
+ +Com+Use/Sub:oe%>jgyjmie FINAL1 ; !
 
 LEXICON N_OE_ESS
   +Ess:o%>jne         FINAL1 ;
   
 LEXICON LAAHKOE
   +N+Der1+Der/Rec+N:oe LAAHKOEH_EVEN ;
-  +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
+ +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
          N_OE ;
 
 LEXICON GAAROEH
@@ -725,7 +725,7 @@ LEXICON GAAROEH
   +N+Pl+Ine:o%>jne      FINAL1 ;
   +N+Pl+Ela:o%>jste     FINAL1 ;
   +N+Pl+Com:oe%>jgujmie FINAL1 ;
-  +N+Pl+Com:oe%>jgyjmie FINAL1 ; !SUB
+ +N+Pl+Com+Use/Sub:oe%>jgyjmie FINAL1 ; !
   +N+Ess:o%>jne         FINAL1 ;
   +N+SgNomCmp:oe    R ;
   +N+PlGenCmp:oe%>j R ;
@@ -776,7 +776,7 @@ LEXICON MAANA_PL
   +Ine:%>ine      FINAL1 ;
   +Ela:%>ijste    FINAL1 ;
   +Com:a%>jgujmie FINAL1 ;
-  +Com:a%>jgyjmie FINAL1 ; !SUB
+ +Com+Use/Sub:a%>jgyjmie FINAL1 ; !
 
 LEXICON AAHKA
   +N+Der1+Der/Rec+N:a LAAHKOEH_EVEN ;
@@ -796,7 +796,7 @@ LEXICON AAHKA
   +N+Pl+Ine:%>ine      FINAL1 ;
   +N+Pl+Ela:%>ijste    FINAL1 ;
   +N+Pl+Com:a%>jgujmie FINAL1 ;
-  +N+Pl+Com:a%>jgyjmie FINAL1 ; !SUB
+ +N+Pl+Com+Use/Sub:a%>jgyjmie FINAL1 ; !
   +N+Ess:%>ine         FINAL1 ;
   +N+SgNomCmp:a    R ;
   +N+PlGenCmp:a%>j R ;
@@ -856,7 +856,7 @@ LEXICON NIEJTE_PL
   +Ine:%>ine      FINAL1 ;
   +Ela:%>ijste    FINAL1 ;
   +Com:%>igujmie  FINAL1 ;
-  +Com:%>igyjmie  FINAL1 ; !SUB
+ +Com+Use/Sub:%>igyjmie  FINAL1 ; !
   
   LEXICON MAAKE
   +N+Der1+Der/Rec+N:e LAAHKOEH_EVEN ;
@@ -878,7 +878,7 @@ LEXICON ÅERPIENADTJH
   +N+Pl+Ine:%>ine      FINAL1 ;
   +N+Pl+Ela:%>ijste    FINAL1 ;
   +N+Pl+Com:%>igujmie  FINAL1 ;
-  +N+Pl+Com:%>igyjmie  FINAL1 ; !SUB
+ +N+Pl+Com+Use/Sub:%>igyjmie  FINAL1 ; !
   +N+Ess:%>ine         FINAL1 ;
   +N+Der1+Der/Dim+N+Pl:e%»tj   N_ODD_PL ;
   +N+Der1+Der/Dim+N:e%»tj   N_ODD_ESS ;
@@ -1027,13 +1027,13 @@ LEXICON e-e-EVEN-1
   :e   ATTR-0 ;
   :e   PRED-0 ;
        eCASE ;
-  :e   EVENCOMP ; ! check this!
+ :e   EVENCOMP ; ! check this!
   
 LEXICON i-i-EVEN-1
   :e   ATTR-0 ;
   :e   PRED-0 ;
        eCASE ;
-  :e   EVENCOMP ; ! check this!
+ :e   EVENCOMP ; ! check this!
 
 LEXICON e-e-EVENNOCOMP-1
   :e   ATTR-0 ;
@@ -1051,7 +1051,7 @@ LEXICON ie-ie-EVEN-1
   :ie   ATTR-0 ;
   :ie   PRED-0 ;
        ieCASE ;
-  :ie  EVENCOMP ; ! check this!
+ :ie  EVENCOMP ; ! check this!
 
 LEXICON ie-ie-EVENNOCOMP-1
   :ie   ATTR-0 ;
@@ -1062,7 +1062,7 @@ LEXICON es-es-EVEN-1
   :e   ATTR-S ;
   :e   PRED-S ;
        eCASE ;
-  :e  EVENCOMP ; ! check this!
+ :e  EVENCOMP ; ! check this!
 
 LEXICON es-es-EVENNOCOMP-1
   :e   ATTR-S ;
@@ -1074,13 +1074,13 @@ LEXICON as-as-EVEN-1
   :a   ATTR-S ;
   :a   PRED-S ;
        aCASE ;
-  :a  EVENCOMP ; ! check this!
+ :a  EVENCOMP ; ! check this!
 
 LEXICON ies-ies-EVEN-1
   :ie   ATTR-S ;
   :ie   PRED-S ;
        ieCASE ;
-  :ie  EVENCOMP ; ! check this!
+ :ie  EVENCOMP ; ! check this!
 
 LEXICON ies-ies-EVENNOCOMP-1
   :ie   ATTR-S ;
@@ -1090,13 +1090,13 @@ LEXICON oes-oes-EVEN-1
   :oe   ATTR-S ;
   :oe   PRED-S ;
        oeCASE ;
-  :oe  EVENCOMP_oe ; ! check this!
+ :oe  EVENCOMP_oe ; ! check this!
 
 LEXICON Cs-Cs-EVEN-1
      ATTR-S ;
      PRED-S ;
      eCASE ;
-  :e  EVENCOMP ; ! check this! -igs is the same as ihks - ebe/emes 
+ :e  EVENCOMP ; ! check this! -igs is the same as ihks - ebe/emes 
 
 LEXICON ihks-ihks-EVEN-1
           ATTR-S ;
@@ -1499,7 +1499,7 @@ LEXICON oeh-an-ODD-4
 :oe   ATTR-H ;
       PRED-AN ;
 :ahk ODDCOMP ;
-:oehk ODDCOMP ; !XXX check this o
+ :oehk ODDCOMP ; !XXX check this o
 
 LEXICON oeh-oeh-an-ODD-4 ! Attr=oeh, Pred=oeh og an 
 :oe ATTR-H ;
@@ -1583,7 +1583,7 @@ LEXICON ATTR-N
 LEXICON ODDCASE
 +A+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
 +A+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
-+A+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +A+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
 +A+Sg+Ine:%>isnie           FINAL1 ;
 +A+Sg+Ela:%>istie           FINAL1 ;
 +A+Sg+Com:%>inie            FINAL1 ;
@@ -1619,11 +1619,11 @@ LEXICON ieCASE
   +A+PlGenCmp+Uml:%>%^iUMLi R ;
 
 LEXICON oeCASE
-  +A+Sg: A_OE_SGILL_UML ; ! Causes Umlaut
+ +A+Sg: A_OE_SGILL_UML ; ! Causes Umlaut
          A_OE ;
 
 LEXICON A_OE_SGILL_UML
-  +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
+ +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
 
 LEXICON A_OE
   +A+Sg: A_OE_SG  ;
@@ -1658,21 +1658,21 @@ LEXICON A_OE_ESS
 
  
  LEXICON PRED-0
-+A+Pred: FINAL1 ; ! Awaiting full adj analysis 
+ +A+Pred: FINAL1 ; ! Awaiting full adj analysis 
 
 
 LEXICON PRED-S
-+A+Pred:%>s FINAL1 ; ! Awaiting full adj analysis 
+ +A+Pred:%>s FINAL1 ; ! Awaiting full adj analysis 
 
 LEXICON PRED-H
-+A+Pred:%>h FINAL1 ; ! Awaiting full adj analysis 
+ +A+Pred:%>h FINAL1 ; ! Awaiting full adj analysis 
 
 
 LEXICON PRED-N
-+A+Pred:%>n FINAL1 ; ! Awaiting full adj analysis 
+ +A+Pred:%>n FINAL1 ; ! Awaiting full adj analysis 
 
 LEXICON PRED-AN
-+A+Pred:%>an FINAL1 ; ! Awaiting full adj analysis 
+ +A+Pred:%>an FINAL1 ; ! Awaiting full adj analysis 
 
 
 
@@ -1840,11 +1840,11 @@ LEXICON DIMCOMPCASE
 
 
 LEXICON ÅBPOE
-  +Sg: ÅBPOE_SGILL_UML ; ! Causes Umlaut
+ +Sg: ÅBPOE_SGILL_UML ; ! Causes Umlaut
          ÅBPOE_N_OE ;
 
 LEXICON ÅBPOE_SGILL_UML
-  +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
+ +Ill+Uml:e%>%^2UMLse	FINAL1      ; ! Causes Umlaut
 
 LEXICON ÅBPOE_N_OE
   +Sg: ÅBPOE_N_OE_SG  ;
@@ -1876,7 +1876,7 @@ LEXICON ÅBPOE_N_OE_ESS
   +Ess:o%>jne         FINAL1 ;
 
 LEXICON ABPA
-  +Sg: ABPA_SG ; ! Causes Umlaut
+ +Sg: ABPA_SG ; ! Causes Umlaut
   +Pl: ABPA_PL  ;
   +Ess:%>ine         FINAL1 ;
 
@@ -1947,7 +1947,7 @@ LEXICON OMMES
 +A+Superl+Sg+Nom:%^DISIMP         FINAL1 ;
 +A+Superl+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
 +A+Superl+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
-+A+Superl+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +A+Superl+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
 +A+Superl+Sg+Ine:%>isnie           FINAL1 ;
 +A+Superl+Sg+Ela:%>istie           FINAL1 ;
 +A+Superl+Sg+Com:%>inie            FINAL1 ;
@@ -2274,7 +2274,7 @@ LEXICON BÅETEDH ! row A - Group I
  +V+Der1+Der/ldahke:%»%^1UMLaldahk LDAHKE ;
  +V+Der1+Der/ldh+N+SgNomCmp:%»%^1UMLeldh R ;
  +V+Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
- +V+Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeld FINAL1 ; !SUB
+ +V+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
  
 LEXICON TJEARODH ! row C - Group II
  +V+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
@@ -2312,7 +2312,7 @@ LEXICON TJEARODH ! row C - Group II
  +V+Der1+Der/ldahke:%»%^PASSUMLeldahk LDAHKE ;
  +V+Der1+Der/ldh+N+SgNomCmp:%»%^PASSUMLeldh R ;
  +V+Der1+Der/ldh+N+Sg+Nom:%»%^PASSUMLeldh FINAL1 ;
- +V+Der1+Der/ldh+N+Sg+Nom:%»%^PASSUMLeld FINAL1 ; !SUB
+ +V+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^PASSUMLeld FINAL1 ; !
 
  
 
@@ -2431,7 +2431,7 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +V+Der1+Der/ldahke:%»eldahk LDAHKE ;
  +V+Der1+Der/ldh+N+SgNomCmp:%»eldh R ;
  +V+Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
- +V+Der1+Der/ldh+N+Sg+Nom:%»eld FINAL1 ; !SUB
+ +V+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
 
 
@@ -2470,7 +2470,7 @@ LEXICON VÅÅJNEDH ! row E - Group V
  +V+Der1+Der/ldahke:%»eldahk LDAHKE ;
  +V+Der1+Der/ldh+N+SgNomCmp:%»eldh R ;
  +V+Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
- +V+Der1+Der/ldh+N+Sg+Nom:%»eld FINAL1 ; !SUB
+ +V+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
 
 
@@ -2510,7 +2510,7 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +V+Der1+Der/ldahke:%»eldahk LDAHKE ;
  +V+Der1+Der/ldh+N+SgNomCmp:%»eldh R ;
  +V+Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
- +V+Der1+Der/ldh+N+Sg+Nom:%»eld FINAL1 ; !SUB
+ +V+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
 
 
@@ -2709,7 +2709,7 @@ LEXICON LAAHKOEH_OMMES
   +Sg+Nom:%>ommes%^DISIMP         FINAL1 ;
 +Sg+Acc:%>ommese%>%^DISIMPm      FINAL1 ;
 +Sg+Gen:%>ommese%>%^DISIMPn      FINAL1 ;
-+Sg+Ill:%>ommes%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Sg+Ill:%>ommes%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
 +Sg+Ine:%>ommes%>isnie           FINAL1 ;
 +Sg+Ela:%>ommes%>istie           FINAL1 ;
 +Sg+Com:%>ommes%>inie            FINAL1 ;
@@ -2720,13 +2720,13 @@ LEXICON LAAHKOEH_OMMES
  +Pl+Ine:%>ommes%>inie            FINAL1 ;
  +Pl+Ela:%>ommes%>ijstie          FINAL1 ;
  +Pl+Com:%>ommes%>%^DISIMPigujmie FINAL1 ;
- +Pl+Com:%>ommes%>%^DISIMPigyjmie FINAL1 ; !SUB
+ +Pl+Com+Use/Sub:%>ommes%>%^DISIMPigyjmie FINAL1 ; !
   +Ess:%>ommes%>inie          FINAL1 ;
 
   +Sg+Nom:%>ammes%^DISIMP         FINAL1 ;
 +Sg+Acc:%>ammese%>%^DISIMPm      FINAL1 ;
 +Sg+Gen:%>ammese%>%^DISIMPn      FINAL1 ;
-+Sg+Ill:%>ammes%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +Sg+Ill:%>ammes%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
 +Sg+Ine:%>ammes%>isnie           FINAL1 ;
 +Sg+Ela:%>ammes%>istie           FINAL1 ;
 +Sg+Com:%>ammes%>inie            FINAL1 ;
@@ -2737,7 +2737,7 @@ LEXICON LAAHKOEH_OMMES
  +Pl+Ine:%>ammes%>inie            FINAL1 ;
  +Pl+Ela:%>ammes%>ijstie          FINAL1 ;
  +Pl+Com:%>ammes%>%^DISIMPigujmie FINAL1 ;
- +Pl+Com:%>ammes%>%^DISIMPigyjmie FINAL1 ; !SUB
+ +Pl+Com+Use/Sub:%>ammes%>%^DISIMPigyjmie FINAL1 ; !
   +Ess:%>ammes%>inie          FINAL1 ;
 
 
@@ -2849,7 +2849,7 @@ LEXICON VSUF-EVEN-PRS-DUPL
  +Du2:X4jidien            FINAL1	; !Long form
  +Du2:d%^DISIMPen		FINAL1	; !oe>o a>e ie>e
  +Du3:X3jægan			FINAL1	; !'e>0i
- +Du3:b%^DISIMPen	    FINAL1	; !SUB !'e>0i
+ +Du3+Use/Sub:b%^DISIMPen	    FINAL1	; ! !'e>0i
  +Pl1:b%^DISIMPe		FINAL1	; !oe>o a>e ie>e
  +Pl1:X4jibie		        FINAL1	; ! Long form
  +Pl2:X4jidie		        FINAL1	; ! Long form
@@ -3009,7 +3009,7 @@ LEXICON VSUF-PRT-SG-12
 
 LEXICON VSUF-PRT-SG-3
 +Sg3:i		FINAL1	;
-+Sg3:%^DISIMPi		FINAL1	; !SUB
+ +Sg3+Use/Sub:%^DISIMPi		FINAL1	; !
 
 
 LEXICON VSUF-PRT-DUPL
@@ -3078,10 +3078,10 @@ LEXICON VSUF-PRT-DUPL
 
 LEXICON FINAL1
  ENDLEX ;
- +Foc/ge:#ge ENDLEX ; !^C^
- +Foc/gan:#gan ENDLEX ; !^C^
- +Foc/gih:#gih ENDLEX ;	!^C^
- +Foc/gænnah:#gænnah ENDLEX ;	!^C^
+ +Foc/ge+Use/Circ:#ge ENDLEX ; !
+ +Foc/gan+Use/Circ:#gan ENDLEX ; !
+ +Foc/gih+Use/Circ:#gih ENDLEX ;	!
+ +Foc/gænnah+Use/Circ:#gænnah ENDLEX ;	!
 
 LEXICON ENDLEX
    @D.NeedNoun.ON@ # ;
