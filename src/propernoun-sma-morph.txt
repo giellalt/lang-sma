@@ -339,13 +339,13 @@ LEXICON AEKTUVE
 ! Consonant final names
 ! - - - - - - - - -
 
- LEXICON CNAME_ODD ! Names ending in stressless vowel
- +N+Prop+Sg: CNAME_ODD_SG ; ! name special
+ LEXICON SAAMI_CNAME_ODD ! Names ending in stressless vowel
+ +N+Prop+Sg: SAAMI_CNAME_ODD_SG ; ! name special
  +N+Prop+Pl: N_ODD_PL ;     ! normal noun
  +N+Prop:    N_ODD_ESS ;    ! normal noun
  +N+Prop+Attr: FINAL1 ;     ! name special
   
-  LEXICON CNAME_ODD_SG
+  LEXICON SAAMI_CNAME_ODD_SG
   +Nom:         FINAL1 ;
   +Acc:e%>%^DISIMPm      FINAL1 ;
   +Gen:e%>%^DISIMPn      FINAL1 ;
@@ -353,6 +353,31 @@ LEXICON AEKTUVE
   +Ine:%>isnie           FINAL1 ;
   +Ela:%>istie           FINAL1 ;
   +Com:%>inie            FINAL1 ;
+  
+ LEXICON CNAME_ODD ! Names ending in stressless vowel
+ +N+Prop+Sg: CNAME_ODD_SG ; ! name special
+ +N+Prop+Pl: CNAME_ODD_PL ;     ! name special
+ +N+Prop:    N_ODD_ESS ;    ! normal noun
+ +N+Prop+Attr: FINAL1 ;     ! name special
+  
+  LEXICON CNAME_ODD_SG
+  +Nom:         FINAL1 ;
+  +Acc:e%>m      FINAL1 ;
+  +Gen:e%>DISIMPn      FINAL1 ;
+ +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ine:%>isnie           FINAL1 ;
+  +Ela:%>istie           FINAL1 ;
+  +Com:%>inie            FINAL1 ;
+
+LEXICON CNAME_ODD_PL
+  +Nom:%>h       FINAL1 ;
+  +Acc:%>idie            FINAL1 ;
+  +Gen:%>i       FINAL1 ;
+  +Ill:%>idie            FINAL1 ;
+  +Ine:%>inie            FINAL1 ;
+  +Ela:%>ijstie          FINAL1 ;
+  +Com:%>igujmie FINAL1 ;
+ +Com+Use/Sub:%>igyjmie FINAL1 ; !
 
 
 
