@@ -10,7 +10,7 @@ Dåehkie II
 
 dåalvoehtidh - dåalvodh (följa) "förfölja, jaga efter"
 dängkoehtidh - dängkodh (tinga, beställa) "beställa (flera saker)" Det här ger mer sken av en frekventativ
-dåajvoehtidh - dåajvodh X "lova, ge löfte" Y "lova någon (att göra något)"
+dåajvoehtidh - dåajvodh  (lova, ge löfte) "lova någon (att göra något)"
 dåarjoehtidh - dåarjodh ...
 dorjehtidh:dorjeht II göra sig till (äv. dorjedidh)
 gäljoehtidh (ej kaus men frek) - gæljadidh (momentan) - av gæljodh
@@ -367,7 +367,7 @@ tramhkoehtidh "blinka flera gånger"
 tsamkoehtidh "slå ihjäl (många udyr)"
 tsealhkahtidh - tsielhkedh () "slå (flera gånger)"
 tsegniehtidh "vara girig, hålle stive priser"
-tsenhkiehtidh:tsenhkieht samma som nedan
+tsenhkiehtidh:tsenhkieht %samma som nedan
 tsepkiehtidh "plötsligt ta slut (om livet)"
 tsevtsiehidh - tsevtsedh (styra (renen)i en bestämd riktning) "driva å å styra (renen) i en bestämd riktning (från flera håll)" 
 tsïevhkehtidh "härma, prata efter (om barn); kackla (om ripkycklingar), pistre etter moern (om fågelunge)"
@@ -384,13 +384,28 @@ vajmehtidh - vajmedh (vara grinig, klaga och bära sig åt) "få att gnälla, gr
 veajahtidh polera (ingen grund)
 viehkiehtidh - viehkie
 voerkehtidh "tillrättavisa"
-voessjehtidh - voessjedh (koka) få något att koka
+voessjehtidh - voessjedh (koka) "få något att koka"
 vuejiehtidh - vuejedh
 vuerkiehtidh - vuerkedh "vakna upp till medvetenhet (om sinnesjuk person)" / "forstå, bli bevisst; våkne; fatta, komma till förståelse, med ett fatta"
 vuesiehtidh - ingen grund
-våajahtidh "få till å sjunka, sänka"
+våajahtidh - grundord (betydelse) "få till å sjunka, sänka"
 våajoehtidh - våajodh (sjunka) "få till å sjunka, sänka"
 øøhpehtidh - åahpodh ?
 åajvahtidh/åajvahtehtedh - åajvedidh/åajvadidh/åajvadalledh (ge noen et råd) "råda, förmana"
 åanhtoehtidh "halta"
 ååltehtidh "halta (om ren)"
+
+kausativverb:kausativverbstam - grundverb (grundverbsbetydelse) "kausativverbbetydelse"
+
+cut -d"%" -f1 | cut -d"\"" -f1 | cut -d" " -f2 > grundverb.txt
+cut -d"%" -f1 | cut -d"\"" -f1 | cut -d" " -f1 | cut -d":" -f1 > kausativverb.txt
+
+kausativverb<tab>kausativverbstam<tab>grundverb<tab>grundverbsbetydelse<tab>kausativverbbetydelse
+
+kausativverb	kausativverbstam	grundverb	grundverbsbetydelse	kausativverbbetydelse
+
+htidh.csv
+
+
+
+
