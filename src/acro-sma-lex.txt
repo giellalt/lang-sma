@@ -888,7 +888,7 @@ LEXICON ACRO               ! Here we add the POS tag
 
 LEXICON acroconnector      ! Here comes a set of possible symbols to
  +Use/Sub: acrosuff ;!         ! put between the abbreviation and its suffix
- :%>%: acrosuff ;             ! The lexica are split in order to avoid the POS
+ %::%: acrosuff ;             ! The lexica are split in order to avoid the POS
  +Use/Sub:'7 acrosuff ;!         ! tag for other symbols using the acroconnector
  +Use/Sub:%` acrosuff ;!         ! lexicon. (cf. the punct-sme-lex.txt file)
 :%>%- RAbbr ;
