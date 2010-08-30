@@ -26,18 +26,18 @@
 ! ------------------
 
 LEXICON Numeral
- MILLIJOVNE ;       ! a noun of its own
- OVERTÅVSENE ;       ! for generator over 1000
- JUSTTÅVSENE ;       ! going via 1000
- UNDERTÅVSENE ;      ! for generator under 1000
- OLD ;              ! for "thirteen hundred, etc.	
-!num-imprecise ;                              
-COLLECTIVE ;                            
- +Use/Circ: ARABIC ;           ! for the arabic numerals !
- +Use/Circ: ROMAN ;            ! for the roman numerals!
- +Use/Circ: NUM-PREFIXES ;     ! for §34 etc.!
- +Use/Circ: ISOLATED-NUMEXP ;  ! for ½ etc.!
- NUMBERLIKE ;      ! a dustbin
+ MILLIJOVNE ; ! a noun of its own
+ OVERTÅVSENE ; ! for generator over 1000
+ JUSTTÅVSENE ; ! going via 1000
+ UNDERTÅVSENE ; ! for generator under 1000
+ OLD ; ! for "thirteen hundred, etc.	
+!num-imprecise ; 
+COLLECTIVE ; 
+ +Use/Circ:  ARABIC ; ! for the arabic numerals !
+ +Use/Circ: ROMAN ; ! for the roman numerals!
+ +Use/Circ: NUM-PREFIXES ; ! for §34 etc.!
+ +Use/Circ: ISOLATED-NUMEXP ; ! for ½ etc.!
+ NUMBERLIKE ; ! a dustbin
 
 
 
@@ -64,12 +64,12 @@ nulle:null NUMTAGe ;
 ! --------------------------------------
 
 LEXICON OVERTÅVSENE
- O-AKTEF ;      ! 1000
- O-2TO9F ;      ! 2000, 3000, ...
+ O-AKTEF ; ! 1000
+ O-2TO9F ; ! 2000, 3000, ...
  O-JUSTLUHKIEF ; ! 10000
- O-2TO9LUHKIE ;    ! 20000, 30000, ...
- O-TJUETIE ;    ! 100000
- O-2TO9TJUETIE ;   ! 200000, 300000, ...
+ O-2TO9LUHKIE ; ! 20000, 30000, ...
+ O-TJUETIE ; ! 100000
+ O-2TO9TJUETIE ; ! 200000, 300000, ...
 
 ! All the child lexica of OVERTUVSÁN have the prefix O-.
 ! They are directed via their respective numerals to the lexicon JUSTTÅVSENE.
@@ -84,18 +84,18 @@ JUSTTOVSENE ;
 LEXICON O-X1000
 akte# JUSTTÅVSENE ;
 
-LEXICON O-2TO9F                               
-göökte#  JUSTTÅVSENE ;       
-golme#  JUSTTÅVSENE ;  
-njieljie# JUSTTÅVSENE ;   
+LEXICON O-2TO9F 
+göökte# JUSTTÅVSENE ; 
+golme# JUSTTÅVSENE ; 
+njieljie# JUSTTÅVSENE ; 
  njielje# JUSTTÅVSENE ; !Saemesth amma
 nieljie# JUSTTÅVSENE ;
 nielje# JUSTTÅVSENE ; 
-vïjhte#  JUSTTÅVSENE ;       
-govhte#  JUSTTÅVSENE ;             
-tjïjhtje#  JUSTTÅVSENE ;
-gaektsie#  JUSTTÅVSENE ;         
-uktsie#   JUSTTÅVSENE ;            
+vïjhte# JUSTTÅVSENE ; 
+govhte# JUSTTÅVSENE ; 
+tjïjhtje# JUSTTÅVSENE ;
+gaektsie# JUSTTÅVSENE ; 
+uktsie# JUSTTÅVSENE ; 
 
 ! Tens of thousands
 
@@ -107,7 +107,7 @@ luhkie# O-2TO9F ;
 ! rest to avoid forms like *luhkieluhkietåvsene, etc.
 
 
-LEXICON O-LUHKIEF     
+LEXICON O-LUHKIEF 
 luhkie# JUSTTÅVSENE ;
 luhkie# O-X1000 ;
 luhkie# O-2TO9F ;
@@ -118,7 +118,7 @@ LEXICON O-LUHKIE123456789
 luhkie#akte# JUSTTÅVSENE ;
 luhkie# O-2TO9F ;
 
-LEXICON O-2TO9LUHKIE  
+LEXICON O-2TO9LUHKIE 
 göökte# O-LUHKIEF ;
 golme# O-LUHKIEF ;
 njieljie# O-LUHKIEF ;
@@ -138,84 +138,84 @@ uktsie# O-LUHKIEF ;
 
 LEXICON O-TJUETIE
  tjuetie# JUSTTÅVSENE ; ! 100000
- tjuetie# O-X1000 ;    ! 101000
- tjuetie# O-2TO9F ;    ! 102000, 103000, ...
- tjuetie# O-LUHKIEF ;   ! 110000, 113000, ...
- tjuetie# O-LUHKIE123456789 ;  !100011, 100012, ...
- tjuetie# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+ tjuetie# O-X1000 ; ! 101000
+ tjuetie# O-2TO9F ; ! 102000, 103000, ...
+ tjuetie# O-LUHKIEF ; ! 110000, 113000, ...
+ tjuetie# O-LUHKIE123456789 ; !100011, 100012, ...
+ tjuetie# O-2TO9LUHKIE ; ! 120000, 123000, ...
  nïmme# JUSTTÅVSENE ; ! 100000
- nïmme# O-X1000 ;    ! 101000
- nïmme# O-2TO9F ;    ! 102000, 103000, ...
- nïmme# O-LUHKIEF ;   ! 110000, 113000, ...
- nïmme# O-LUHKIE123456789 ;  !100011, 100012, ...
- nïmme# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+ nïmme# O-X1000 ; ! 101000
+ nïmme# O-2TO9F ; ! 102000, 103000, ...
+ nïmme# O-LUHKIEF ; ! 110000, 113000, ...
+ nïmme# O-LUHKIE123456789 ; !100011, 100012, ...
+ nïmme# O-2TO9LUHKIE ; ! 120000, 123000, ...
  nymme# JUSTTÅVSENE ; ! 100000
- nymme# O-X1000 ;    ! 101000
- nymme# O-2TO9F ;    ! 102000, 103000, ...
- nymme# O-LUHKIEF ;   ! 110000, 113000, ...
- nymme# O-LUHKIE123456789 ;  !100011, 100012, ...
- nymme# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+ nymme# O-X1000 ; ! 101000
+ nymme# O-2TO9F ; ! 102000, 103000, ...
+ nymme# O-LUHKIEF ; ! 110000, 113000, ...
+ nymme# O-LUHKIE123456789 ; !100011, 100012, ...
+ nymme# O-2TO9LUHKIE ; ! 120000, 123000, ...
  nomme# JUSTTÅVSENE ; ! 100000
- nomme# O-X1000 ;    ! 101000
- nomme# O-2TO9F ;    ! 102000, 103000, ...
- nomme# O-LUHKIEF ;   ! 110000, 113000, ...
- nomme# O-LUHKIE123456789 ;  !100011, 100012, ...
- nomme# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+ nomme# O-X1000 ; ! 101000
+ nomme# O-2TO9F ; ! 102000, 103000, ...
+ nomme# O-LUHKIEF ; ! 110000, 113000, ...
+ nomme# O-LUHKIE123456789 ; !100011, 100012, ...
+ nomme# O-2TO9LUHKIE ; ! 120000, 123000, ...
  stoere#luhkie# JUSTTÅVSENE ; ! 100000
- stoere#luhkie# O-X1000 ;    ! 101000
- stoere#luhkie# O-2TO9F ;    ! 102000, 103000, ...
- stoere#luhkie# O-LUHKIEF ;   ! 110000, 113000, ...
- stoere#luhkie# O-LUHKIE123456789 ;  !100011, 100012, ...
- stoere#luhkie# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+ stoere#luhkie# O-X1000 ; ! 101000
+ stoere#luhkie# O-2TO9F ; ! 102000, 103000, ...
+ stoere#luhkie# O-LUHKIEF ; ! 110000, 113000, ...
+ stoere#luhkie# O-LUHKIE123456789 ; !100011, 100012, ...
+ stoere#luhkie# O-2TO9LUHKIE ; ! 120000, 123000, ...
  stoerre#luhkie# JUSTTÅVSENE ; ! 100000
- stoerre#luhkie# O-X1000 ;    ! 101000
- stoerre#luhkie# O-2TO9F ;    ! 102000, 103000, ...
- stoerre#luhkie# O-LUHKIEF ;   ! 110000, 113000, ...
- stoerre#luhkie# O-LUHKIE123456789 ;  !100011, 100012, ...
- stoerre#luhkie# O-2TO9LUHKIE ;  ! 120000, 123000, ...
+ stoerre#luhkie# O-X1000 ; ! 101000
+ stoerre#luhkie# O-2TO9F ; ! 102000, 103000, ...
+ stoerre#luhkie# O-LUHKIEF ; ! 110000, 113000, ...
+ stoerre#luhkie# O-LUHKIE123456789 ; !100011, 100012, ...
+ stoerre#luhkie# O-2TO9LUHKIE ; ! 120000, 123000, ...
 
 
 LEXICON O-TJUETIE2
- tjuetie# JUSTTÅVSENE ;  ! 200000
- tjuetie# O-X1000 ;     ! 201000
- tjuetie# O-2TO9F ;     ! 202000, 203000, ...
- tjuetie# O-LUHKIEF ;    ! 210000, 213000, ...
- tjuetie# O-LUHKIE123456789 ;  !200011, 200012, ...
- tjuetie# O-2TO9LUHKIE ;   ! 220000, 223000, ...
- nïmme# JUSTTÅVSENE ;  ! 200000
- nïmme# O-X1000 ;     ! 201000
- nïmme# O-2TO9F ;     ! 202000, 203000, ...
- nïmme# O-LUHKIEF ;    ! 210000, 213000, ...
- nïmme# O-LUHKIE123456789 ;  !200011, 200012, ...
- nïmme# O-2TO9LUHKIE ;   ! 220000, 223000, ...
- nymme# JUSTTÅVSENE ;  ! 200000
- nymme# O-X1000 ;     ! 201000
- nymme# O-2TO9F ;     ! 202000, 203000, ...
- nymme# O-LUHKIEF ;    ! 210000, 213000, ...
- nymme# O-LUHKIE123456789 ;  !200011, 200012, ...
- nymme# O-2TO9LUHKIE ;   ! 220000, 223000, ...
- nomme# JUSTTÅVSENE ;  ! 200000
- nomme# O-X1000 ;     ! 201000
- nomme# O-2TO9F ;     ! 202000, 203000, ...
- nomme# O-LUHKIEF ;    ! 210000, 213000, ...
- nomme# O-LUHKIE123456789 ;  !200011, 200012, ...
- nomme# O-2TO9LUHKIE ;   ! 220000, 223000, ...
- stoere#luhkie# JUSTTÅVSENE ;  ! 200000
- stoere#luhkie# O-X1000 ;     ! 201000
- stoere#luhkie# O-2TO9F ;     ! 202000, 203000, ...
- stoere#luhkie# O-LUHKIEF ;    ! 210000, 213000, ...
- stoere#luhkie# O-LUHKIE123456789 ;  !200011, 200012, ...
- stoere#luhkie# O-2TO9LUHKIE ;   ! 220000, 223000, ...
- stoerre#luhkie# JUSTTÅVSENE ;  ! 200000
- stoerre#luhkie# O-X1000 ;     ! 201000
- stoerre#luhkie# O-2TO9F ;     ! 202000, 203000, ...
- stoerre#luhkie# O-LUHKIEF ;    ! 210000, 213000, ...
- stoerre#luhkie# O-LUHKIE123456789 ;  !200011, 200012, ...
- stoerre#luhkie# O-2TO9LUHKIE ;   ! 220000, 223000, ...
+ tjuetie# JUSTTÅVSENE ; ! 200000
+ tjuetie# O-X1000 ; ! 201000
+ tjuetie# O-2TO9F ; ! 202000, 203000, ...
+ tjuetie# O-LUHKIEF ; ! 210000, 213000, ...
+ tjuetie# O-LUHKIE123456789 ; !200011, 200012, ...
+ tjuetie# O-2TO9LUHKIE ; ! 220000, 223000, ...
+ nïmme# JUSTTÅVSENE ; ! 200000
+ nïmme# O-X1000 ; ! 201000
+ nïmme# O-2TO9F ; ! 202000, 203000, ...
+ nïmme# O-LUHKIEF ; ! 210000, 213000, ...
+ nïmme# O-LUHKIE123456789 ; !200011, 200012, ...
+ nïmme# O-2TO9LUHKIE ; ! 220000, 223000, ...
+ nymme# JUSTTÅVSENE ; ! 200000
+ nymme# O-X1000 ; ! 201000
+ nymme# O-2TO9F ; ! 202000, 203000, ...
+ nymme# O-LUHKIEF ; ! 210000, 213000, ...
+ nymme# O-LUHKIE123456789 ; !200011, 200012, ...
+ nymme# O-2TO9LUHKIE ; ! 220000, 223000, ...
+ nomme# JUSTTÅVSENE ; ! 200000
+ nomme# O-X1000 ; ! 201000
+ nomme# O-2TO9F ; ! 202000, 203000, ...
+ nomme# O-LUHKIEF ; ! 210000, 213000, ...
+ nomme# O-LUHKIE123456789 ; !200011, 200012, ...
+ nomme# O-2TO9LUHKIE ; ! 220000, 223000, ...
+ stoere#luhkie# JUSTTÅVSENE ; ! 200000
+ stoere#luhkie# O-X1000 ; ! 201000
+ stoere#luhkie# O-2TO9F ; ! 202000, 203000, ...
+ stoere#luhkie# O-LUHKIEF ; ! 210000, 213000, ...
+ stoere#luhkie# O-LUHKIE123456789 ; !200011, 200012, ...
+ stoere#luhkie# O-2TO9LUHKIE ; ! 220000, 223000, ...
+ stoerre#luhkie# JUSTTÅVSENE ; ! 200000
+ stoerre#luhkie# O-X1000 ; ! 201000
+ stoerre#luhkie# O-2TO9F ; ! 202000, 203000, ...
+ stoerre#luhkie# O-LUHKIEF ; ! 210000, 213000, ...
+ stoerre#luhkie# O-LUHKIE123456789 ; !200011, 200012, ...
+ stoerre#luhkie# O-2TO9LUHKIE ; ! 220000, 223000, ...
 
 
 LEXICON O-2TO9TJUETIE
- akte# O-TJUETIE ;       ! #one# hundred...
+ akte# O-TJUETIE ; ! #one# hundred...
 göökte# O-TJUETIE2 ;
 golme# O-TJUETIE2 ;
 njieljie# O-TJUETIE2 ;
@@ -231,58 +231,58 @@ uktsie# O-TJUETIE2 ;
 
 LEXICON JUSTTOVSENE
 tåvsene# UNDERTÅVSENE ;
- tåvsene+Num:tåvsan ORDTAGODD ;                    ! Case infl of tåvsene
+ tåvsene+Num:tåvsan ORDTAGODD ; ! Case infl of tåvsene
 tåvsanede+A+Ord:tåvsaned ORDTAGEVEN ;
 tovsene# UNDERTÅVSENE ;
- tovsene+Num:tovsen ORDTAGODD ;                    ! Case infl of tovsene
+ tovsene+Num:tovsen ORDTAGODD ; ! Case infl of tovsene
 tovsenede+A+Ord:tovsened ORDTAGEVEN ;
 stoere#tjuetie# UNDERTÅVSENE ;
 stoere#tjuetie+Num+Sg+Nom:stoere#tjuetie FINAL1 ;
- stoere#tjuetie:stoere#tjuet NUMTAGie ;        ! Case infl of tåvsene
+ stoere#tjuetie:stoere#tjuet NUMTAGie ; ! Case infl of tåvsene
 stoerre#tjuetie# UNDERTÅVSENE ;
 stoerre#tjuetie+Num+Sg+Nom:stoerre#tjuetie FINAL1 ;
- stoerre#tjuetie:stoerre#tjuet NUMTAGie ;      ! Case infl of tåvsene
+ stoerre#tjuetie:stoerre#tjuet NUMTAGie ; ! Case infl of tåvsene
 stoerre#nïmme# UNDERTÅVSENE ;
- stoerre#nïmme:stoerre#nïmm NUMTAGe ;      ! Case infl of tåvsene
+ stoerre#nïmme:stoerre#nïmm NUMTAGe ; ! Case infl of tåvsene
 stoerre#nymme# UNDERTÅVSENE ;
- stoerre#nymme:stoerre#nymm NUMTAGe ;      ! Case infl of tåvsene
+ stoerre#nymme:stoerre#nymm NUMTAGe ; ! Case infl of tåvsene
 stoerre#nomme# UNDERTÅVSENE ;
- stoerre#nomme:stoerre#nomm NUMTAGe ;      ! Case infl of tåvsene
+ stoerre#nomme:stoerre#nomm NUMTAGe ; ! Case infl of tåvsene
 stoere#nïmme# UNDERTÅVSENE ;
- stoere#nïmme:stoere#nïmm NUMTAGe ;      ! Case infl of tåvsene
+ stoere#nïmme:stoere#nïmm NUMTAGe ; ! Case infl of tåvsene
 stoere#nymme# UNDERTÅVSENE ;
- stoere#nymme:stoere#nymm NUMTAGe ;      ! Case infl of tåvsene
+ stoere#nymme:stoere#nymm NUMTAGe ; ! Case infl of tåvsene
 stoere#nomme# UNDERTÅVSENE ;
- stoere#nomme:stoere#nomm NUMTAGe ;      ! Case infl of tåvsene
+ stoere#nomme:stoere#nomm NUMTAGe ; ! Case infl of tåvsene
 
 ! Justtåvsene, for numerals going via 1000
 ! -------------------------------------
 
 LEXICON JUSTTÅVSENE
- tåvsene# UNDERTÅVSENE ;             ! Thousand-and-something
- tåvsene+Num:tåvsan ORDTAGODD ;                   ! Case infl of tåvsene
+ tåvsene# UNDERTÅVSENE ; ! Thousand-and-something
+ tåvsene+Num:tåvsan ORDTAGODD ; ! Case infl of tåvsene
 tåvsanede+A+Ord:tåvsaned ORDTAGEVEN ;
- tovsene# UNDERTÅVSENE ;             ! Thousand-and-something
- tovsene+Num:tovsen ORDTAGODD ;                   ! Case infl of tovsene
+ tovsene# UNDERTÅVSENE ; ! Thousand-and-something
+ tovsene+Num:tovsen ORDTAGODD ; ! Case infl of tovsene
 tovsenede+A+Ord:tovsened ORDTAGEVEN ;
 stoere#tjuetie# UNDERTÅVSENE ;
 stoere#tjuetie+Num+Sg+Nom:stoere#tjuetie FINAL1 ;
- stoere#tjuetie:stoere#tjuet NUMTAGie ;        ! Case infl of tåvsene
+ stoere#tjuetie:stoere#tjuet NUMTAGie ; ! Case infl of tåvsene
 stoerre#tjuetie# UNDERTÅVSENE ;
 stoerre#tjuetie+Num+Sg+Nom:stoerre#tjuetie FINAL1 ;
- stoerre#tjuetie:stoerre#tjuet NUMTAGie ;      ! Case infl of tåvsene
+ stoerre#tjuetie:stoerre#tjuet NUMTAGie ; ! Case infl of tåvsene
 stoerre#nïmme# UNDERTÅVSENE ;
- stoerre#nïmme:stoerre#nïmm NUMTAGe ;      ! Case infl of tåvsene
+ stoerre#nïmme:stoerre#nïmm NUMTAGe ; ! Case infl of tåvsene
 stoerre#nymme# UNDERTÅVSENE ;
- stoerre#nymme:stoerre#nymm NUMTAGe ;      ! Case infl of tåvsene
+ stoerre#nymme:stoerre#nymm NUMTAGe ; ! Case infl of tåvsene
 stoerre#nomme# UNDERTÅVSENE ;
- stoerre#nomme:stoerre#nomm NUMTAGe ;      ! Case infl of tåvsene
+ stoerre#nomme:stoerre#nomm NUMTAGe ; ! Case infl of tåvsene
 stoere#nïmme# UNDERTÅVSENE ;
- stoere#nïmme:stoere#nïmm NUMTAGe ;      ! Case infl of tåvsene
+ stoere#nïmme:stoere#nïmm NUMTAGe ; ! Case infl of tåvsene
 stoere#nymme# UNDERTÅVSENE ;
- stoere#nymme:stoere#nymm NUMTAGe ;      ! Case infl of tåvsene
+ stoere#nymme:stoere#nymm NUMTAGe ; ! Case infl of tåvsene
 stoere#nomme# UNDERTÅVSENE ;
- stoere#nomme:stoere#nomm NUMTAGe ;      ! Case infl of tåvsene
+ stoere#nomme:stoere#nomm NUMTAGe ; ! Case infl of tåvsene
 
 
 ! Old, for the old counting thirteen hundred etc.	
@@ -308,17 +308,17 @@ luhkie#uktsie GTJUETIE ;
 
 
 LEXICON UNDERTÅVSENE
- AKTEF ;     ! 1
- 2TO9F ;     ! 2-9
- LUHKIEF ;     ! 10
-!LÅGENAN ;   ! 11-19             
- 2TO9LUHKIE ;   ! 20-99
- TJUETIE ;     ! 100-199
- 2TO9TJUETIE ;   ! 200-999
+ AKTEF ; ! 1
+ 2TO9F ; ! 2-9
+ LUHKIEF ; ! 10
+!LÅGENAN ; ! 11-19 
+ 2TO9LUHKIE ; ! 20-99
+ TJUETIE ; ! 100-199
+ 2TO9TJUETIE ; ! 200-999
 
 LEXICON AKTEF
-akte:akt NUMTAGe ;        
- voestes+A+Ord+Sg+Nom:voestes         FINAL1 ; !XXX check this
+akte:akt NUMTAGe ; 
+ voestes+A+Ord+Sg+Nom:voestes FINAL1 ; !XXX check this
 
 
 LEXICON 2TO9F
@@ -338,8 +338,8 @@ gaektsie+Num+Sg+Nom:gaektsie FINAL1 ;
 gaektsie:gaekts NUMTAGie ;
 uktsie+Num+Sg+Nom:uktsie FINAL1 ;
 uktsie:ukts NUMTAGie ;
-mubpie+A+Ord:mubp           MUBPIE ;
-nubpie+A+Ord:nubp           MUBPIE ;
+mubpie+A+Ord:mubp MUBPIE ;
+nubpie+A+Ord:nubp MUBPIE ;
 gåalmede+A+Ord:gåalmad ORDTAGODD ;
 njieljede+A+Ord:njieljied ORDTAGODD ;
 njealjede+A+Ord:njealjad ORDTAGODD ;
@@ -382,22 +382,22 @@ LEXICON NUMTAGe ! akte:akt
 +Num+Pl+Com:%>igujmie FINAL1 ;
 
 LEXICON NUMTAGie !njieljie:njielj
-+Num+Sg+Acc:ie%>m    FINAL1 ;
-+Num+Sg+Gen:ie%>n    FINAL1 ;
-+Num+Sg+Ill+Uml:%>%^1UMLan   FINAL1 ;
-+Num+Sg+Ine:%>esne  FINAL1 ;
-+Num+Sg+Ine+Attr:%>ene  # ;
-+Num+Sg+Ela+Attr:%>ede  # ;
-+Num+Sg+Ela:%>este  FINAL1 ;
++Num+Sg+Acc:ie%>m FINAL1 ;
++Num+Sg+Gen:ie%>n FINAL1 ;
++Num+Sg+Ill+Uml:%>%^1UMLan FINAL1 ;
++Num+Sg+Ine:%>esne FINAL1 ;
++Num+Sg+Ine+Attr:%>ene # ;
++Num+Sg+Ela+Attr:%>ede # ;
++Num+Sg+Ela:%>este FINAL1 ;
 +Num+Sg+Com:%>ine FINAL1 ;
-+Num+Ess:%>ine    FINAL1 ;
-+Num+Pl+Nom:ie%>h  FINAL1 ;
++Num+Ess:%>ine FINAL1 ;
++Num+Pl+Nom:ie%>h FINAL1 ;
 +Num+Pl+Acc:%>ide FINAL1 ;
-+Num+Pl+Gen:ie%>j  FINAL1 ;
++Num+Pl+Gen:ie%>j FINAL1 ;
 +Num+Pl+Ill:%>ide FINAL1 ;
 +Num+Pl+Ine:%>ine FINAL1 ;
- +Num+Pl+Ela:%>ijste   FINAL1 ; !
-+Num+Pl+Com:ie%>jgujmie  FINAL1 ;
+ +Num+Pl+Ela:%>ijste FINAL1 ; !
++Num+Pl+Com:ie%>jgujmie FINAL1 ;
 
 
 LEXICON LUHKIEF
@@ -419,53 +419,53 @@ låhkesh:låhkas COLLTAG ;
 ! ---------------
 
 LEXICON MUBPIE
-  +Sg+Nom:ie                  FINAL1 ;
-  +Sg+Acc:ie%>m               FINAL1 ;
-  +Sg+Gen:ie%>n               FINAL1 ;
-! +Sg+Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
-  +Sg+Ill+Uml:%>%^1UMLan      FINAL1 ;
-  +Sg+Ine:e%>sne              FINAL1 ;
-  +Sg+Ine+Attr:e%>ne # ;
-  +Sg+Ela+Attr:e%>de              # ;
-  +Sg+Ela:e%>ste              FINAL1 ;
-  +Sg+Com:%>ine               FINAL1 ;
-  +Sg+Com+Uml:%>%^iUMLine     FINAL1 ;
-  +Pl+Nom:ie%>h               FINAL1 ;
-  +Pl+Acc:%>ide               FINAL1 ;
-  +Pl+Acc+Uml:%>%^iUMLide     FINAL1 ;
-  +Pl+Gen:ie%>j               FINAL1 ;
-  +Pl+Gen+Uml:%>%^iUMLi       FINAL1 ;
-  +Pl+Ill:%>ide               FINAL1 ;
-  +Pl+Ill+Uml:%>%^iUMLide     FINAL1 ;
-  +Pl+Ine:%>ine               FINAL1 ;
-  +Pl+Ine+Uml:%>%^iUMLine     FINAL1 ;
-  +Pl+Ela:%>ijste             FINAL1 ;
-  +Pl+Ela+Uml:%>%^iUMLijste   FINAL1 ;
-  +Pl+Com:ie%>jgujmie         FINAL1 ;
-  +Pl+Com+Uml:%>%^iUMLigujmie FINAL1 ;
-  +Ess:%>ine                  FINAL1 ;
-  +Ess+Uml:%>%^iUMLine        FINAL1 ;
+ +Sg+Nom:ie FINAL1 ;
+ +Sg+Acc:ie%>m FINAL1 ;
+ +Sg+Gen:ie%>n FINAL1 ;
+! +Sg+Ill:%>an FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
+ +Sg+Ill+Uml:%>%^1UMLan FINAL1 ;
+ +Sg+Ine:e%>sne FINAL1 ;
+ +Sg+Ine+Attr:e%>ne # ;
+ +Sg+Ela+Attr:e%>de # ;
+ +Sg+Ela:e%>ste FINAL1 ;
+ +Sg+Com:%>ine FINAL1 ;
+ +Sg+Com+Uml:%>%^iUMLine FINAL1 ;
+ +Pl+Nom:ie%>h FINAL1 ;
+ +Pl+Acc:%>ide FINAL1 ;
+ +Pl+Acc+Uml:%>%^iUMLide FINAL1 ;
+ +Pl+Gen:ie%>j FINAL1 ;
+ +Pl+Gen+Uml:%>%^iUMLi FINAL1 ;
+ +Pl+Ill:%>ide FINAL1 ;
+ +Pl+Ill+Uml:%>%^iUMLide FINAL1 ;
+ +Pl+Ine:%>ine FINAL1 ;
+ +Pl+Ine+Uml:%>%^iUMLine FINAL1 ;
+ +Pl+Ela:%>ijste FINAL1 ;
+ +Pl+Ela+Uml:%>%^iUMLijste FINAL1 ;
+ +Pl+Com:ie%>jgujmie FINAL1 ;
+ +Pl+Com+Uml:%>%^iUMLigujmie FINAL1 ;
+ +Ess:%>ine FINAL1 ;
+ +Ess+Uml:%>%^iUMLine FINAL1 ;
 
 
 LEXICON ORDTAGODD
-+Sg+Nom:e%^DISIMP         FINAL1 ;
-+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
-+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
- +Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-+Sg+Ine+Attr:%>inie  # ;
-+Sg+Ela+Attr:%>ihtie  # ;
-+Sg+Ine:%>isnie           FINAL1 ;
-+Sg+Ela:%>istie           FINAL1 ;
-+Sg+Com:%>inie            FINAL1 ;
-+Pl+Nom:%>%^DISIMPh       FINAL1 ;
-+Pl+Acc:%>idie            FINAL1 ;
-+Pl+Gen:%>%^DISIMPi       FINAL1 ;
-+Pl+Ill:%>idie            FINAL1 ;
-+Pl+Ine:%>inie            FINAL1 ;
-+Pl+Ela:%>ijstie          FINAL1 ;
++Sg+Nom:e%^DISIMP FINAL1 ;
++Sg+Acc:e%>%^DISIMPm FINAL1 ;
++Sg+Gen:e%>%^DISIMPn FINAL1 ;
+ +Sg+Ill:%>asse FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++Sg+Ine+Attr:%>inie # ;
++Sg+Ela+Attr:%>ihtie # ;
++Sg+Ine:%>isnie FINAL1 ;
++Sg+Ela:%>istie FINAL1 ;
++Sg+Com:%>inie FINAL1 ;
++Pl+Nom:%>%^DISIMPh FINAL1 ;
++Pl+Acc:%>idie FINAL1 ;
++Pl+Gen:%>%^DISIMPi FINAL1 ;
++Pl+Ill:%>idie FINAL1 ;
++Pl+Ine:%>inie FINAL1 ;
++Pl+Ela:%>ijstie FINAL1 ;
 +Pl+Com:%>%^DISIMPigujmie FINAL1 ;
  +Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
-+Ess:%>inie          FINAL1 ;
++Ess:%>inie FINAL1 ;
 
 LEXICON ORDTAGEVEN
 +Sg+Nom:e FINAL1 ;
@@ -485,7 +485,7 @@ LEXICON ORDTAGEVEN
 +Pl+Ine:%>ine FINAL1 ;
  +Pl+Ela:%>ijste FINAL1 ; !
 +Pl+Com:%>ijgujmie FINAL1 ; 
- +Pl+Com+Use/Sub:%>igyjmie  FINAL1 ; !
+ +Pl+Com+Use/Sub:%>igyjmie FINAL1 ; !
 
 
  
@@ -495,163 +495,163 @@ LEXICON ORDTAGEVEN
 
 
 LEXICON COLLTAG
-+Num+Coll+Pl+Nom:%>%^DISIMPh       FINAL1 ;
-+Num+Coll+Pl+Acc:%>idie            FINAL1 ;
-+Num+Coll+Pl+Gen:%>%^DISIMPi       FINAL1 ;
-+Num+Coll+Pl+Ill:%>idie            FINAL1 ;
-+Num+Coll+Pl+Ine:%>inie            FINAL1 ;
-+Num+Coll+Pl+Ela:%>ijstie          FINAL1 ;
++Num+Coll+Pl+Nom:%>%^DISIMPh FINAL1 ;
++Num+Coll+Pl+Acc:%>idie FINAL1 ;
++Num+Coll+Pl+Gen:%>%^DISIMPi FINAL1 ;
++Num+Coll+Pl+Ill:%>idie FINAL1 ;
++Num+Coll+Pl+Ine:%>inie FINAL1 ;
++Num+Coll+Pl+Ela:%>ijstie FINAL1 ;
 +Num+Coll+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
  +Num+Coll+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
-+Num+Coll+Ess:%>inie          FINAL1 ;
++Num+Coll+Ess:%>inie FINAL1 ;
 
 ! Arabic numerals
 ! ---------------
 
 
 
-LEXICON NUM-PREFIXES                         !^C^
- §+Use/Circ:§ ARABIC;   ! §24                                    !
- §§+Use/Circ:§§ ARABIC;  ! §§24                                   !
- §% +Use/Circ:§%  ARABIC; ! § 24                                   !
- §§% +Use/Circ:§§%  ARABIC; ! §§ 24                                  !
- %-+Use/Circ:%- ARABIC;  ! -24                                    !
- %‒+Use/Circ:%‒ ARABIC;  ! -24 U
- %–+Use/Circ:%– ARABIC;  ! -24 U
- %—+Use/Circ:%— ARABIC;  ! -24 U
- %―+Use/Circ:%― ARABIC;  ! -24 U
- %-% +Use/Circ:%-%  ARABIC;! - 24                                  !
- %‒% +Use/Circ:%‒%  ARABIC;! - 24 2012                             !
- %–% +Use/Circ:%–%  ARABIC;! - 24 2013                             !
- %—% +Use/Circ:%—%  ARABIC;! - 24 2014                             !
- %―% +Use/Circ:%―%  ARABIC;! - 24 2015                             !
- %*+Use/Circ:%* ARABIC;  ! *24                                    !
- %$+Use/Circ:%$ ARABIC;  ! $24  ! And the Euro?                   !
- %<+Use/Circ:%< ARABIC;  ! <24                                    !
- %>+Use/Circ:%>7    ARABIC ;  ! >24                                !
- %.+Use/Circ:%. ARABIC;  ! s.24                                  !
-! %+%     ARABIC ;! <plus> 24                                  !^C^
-! %+    ARABIC ; ! <plus>24 ! out bec. of %<plus>:0 in twol file   !^C^
+LEXICON NUM-PREFIXES !
+ §+Use/Circ:§  ARABIC; ! §24 !
+ §§+Use/Circ:§§  ARABIC; ! §§24 !
+ §% +Use/Circ:§%  ARABIC; ! § 24 !
+ §§% +Use/Circ:§§%  ARABIC; ! §§ 24 !
+ %-+Use/Circ:%-  ARABIC; ! -24 !
+ %‒+Use/Circ:%‒  ARABIC; ! -24 U
+ %–+Use/Circ:%–  ARABIC; ! -24 U
+ %—+Use/Circ:%—  ARABIC; ! -24 U
+ %―+Use/Circ:%―  ARABIC; ! -24 U
+ %-% +Use/Circ:%-%  ARABIC;! - 24 !
+ %‒% +Use/Circ:%‒%  ARABIC;! - 24 2012 !
+ %–% +Use/Circ:%–%  ARABIC;! - 24 2013 !
+ %—% +Use/Circ:%—%  ARABIC;! - 24 2014 !
+ %―% +Use/Circ:%―%  ARABIC;! - 24 2015 !
+ %*+Use/Circ:%*  ARABIC; ! *24 !
+ %$+Use/Circ:%$  ARABIC; ! $24 ! And the Euro? !
+ %<+Use/Circ:%<  ARABIC; ! <24 !
+ %>+Use/Circ:%>7  ARABIC ; ! >24!
+ %.+Use/Circ:%.  ARABIC; ! s.24 !
+! %+%  ARABIC ;! <plus> 24 !
+! %+  ARABIC ; ! <plus>24 ! out bec. of %<plus>:0 in twol file !
 ! If lack of analysis for +34 etc becomes a problem, we will need
 ! a new border symbol in twol instead of +.
 
 
 
-LEXICON ARABIC  !^C^
-< [%0|1|2|3|4|5|6|7|8|9] >  ARABICLOOP ; !^C^
+LEXICON  ARABIC !
+< [%0|1|2|3|4|5|6|7|8|9] >  ARABICLOOP ; !
 
-LEXICON ARABICLOOP      !^C^
- +Use/Circ: ARABIC ;        !
- %-+Use/Sub+Use/Circ:%- ARABIC;          ! 1-2    multipart numbers         !                 !
- %.%-+Use/Sub+Use/Circ:%.%- ARABIC;          ! 1.-2   multipart numbers           !                 !
- %-% +Use/Sub+Use/Circ:%-%  ARABIC;          ! 1- 2   multipart numbers        !                 !
- % %-+Use/Sub+Use/Circ:% %- ARABIC;          ! 1 -2   multipart numbers        !                 !
- % %-% +Use/Sub+Use/Circ:% %-%  ARABIC;          ! 1 - 2  multipart numbers        !                 !
- % %-%-% +Use/Sub+Use/Circ:% %-%-%  ARABIC;          ! 1 -- 2 multipart numbers       !                  !
- % %-+Use/Sub+Use/Circ:% %- ARABICDELIMITER; ! 1 -    multipart numbers   - "1 - :s" - do we find it?  !!
- % %-%-+Use/Sub+Use/Circ:% %-%- ARABICDELIMITER; ! 1 --   multipart numbers        !                 !
- %.+Use/Sub+Use/Circ:%. ARABIC;                                            !                 !
- %,+Use/Sub+Use/Circ:%, ARABIC;                                            !                 !
- %+Use/Sub+Use/Circ:      ARABIC ;                                            !                 !
- % +Use/Sub+Use/Circ:%  ARABIC;    ! Allowing for "23 500".                !                 !
- +Use/Circ: ARABIC ;    ! Allowing for "23 500" w/nbsp (init char is alt-space)         !
- %/+Use/Circ:%/ ARABIC;    ! 24/12                                                         !
- %/% +Use/Circ:%/%  ARABIC;    ! 24/ 12                                                        !
- % %/+Use/Circ:% %/ ARABIC;    ! 24 /12                                                        !
- +A+Ord+Use/Circ:%.   # ;                                                                     !
- ,%-+Num+Use/Sub+Use/Circ:,%-       ARABICCASE ;      ! 10,-                                          ! !
- ,%-+Num+Use/Sub+Use/Circ:.%-       ARABICCASE ;      ! 10.- It is wrong, but written.                ! !
- %%+Num+Nom+Use/Sub+Use/Circ:%%     ARABICDELIMITER ; ! 50%. It is wrong, but 75 % of us write "75%". ! !
- % %%+Num+Nom+Use/Sub+Use/Circ:% %% ARABICDELIMITER ; ! the correct ones as well... 50 % etc.         ! !
- +Num+Use/Sub+Use/Circ:             ARABICDELIMITER ; ! list of number-case delimiters                ! !
-
-
-LEXICON ARABICDELIMITER ! blank + 3 delim, what does the lg counc prefer? !SUB !^C^
- +Use/Sub+Use/Circ: ARABICCASE ; ! This is the 1984s case.     !                       !
- +Use/Sub+Use/Circ:%-   ARABICCASE ; ! This is the 1984-s case.   !                       !
+LEXICON  ARABICLOOP !
+ +Use/Circ:  ARABIC ; !
+ %-+Use/Sub+Use/Circ:%-  ARABIC; ! 1-2 multipart numbers 
+ %.%-+Use/Sub+Use/Circ:%.%-  ARABIC; ! 1.-2 multipart numbers 
+ %-% +Use/Sub+Use/Circ:%-%  ARABIC; ! 1- 2 multipart 
+ % %-+Use/Sub+Use/Circ:% %-  ARABIC; ! 1 -2 multipart 
+ % %-% +Use/Sub+Use/Circ:% %-%  ARABIC; ! 1 - 2 multipart 
+ % %-%-% +Use/Sub+Use/Circ:% %-%-%  ARABIC; ! 1 -- 2 multipart 
+ % %-+Use/Sub+Use/Circ:% %-  ARABICDELIMITER; ! 1 - multipart numbers - "1 - :s" - do we find it? !!
+ % %-%-+Use/Sub+Use/Circ:% %-%-  ARABICDELIMITER; ! 1 -- multipart numbers ! 
+ %.+Use/Sub+Use/Circ:%.  ARABIC; 
+ %,+Use/Sub+Use/Circ:%,  ARABIC; 
+ %+Use/Sub+Use/Circ:  ARABIC ; ! 
+ % +Use/Sub+Use/Circ:%  ARABIC; ! Allowing for "23 500". 
+ +Use/Circ:   ARABIC ; ! Allowing for "23 500" w/nbsp (init char is alt-space) !
+ %/+Use/Circ:%/  ARABIC; 
+ %/% +Use/Circ:%/%  ARABIC; ! 24/ 12 !
+ % %/+Use/Circ:% %/  ARABIC; ! 24 /12 !
+ +A+Ord+Use/Circ:%. # ; !
+ ,%-+Num+Use/Sub+Use/Circ:,%-  ARABICCASE ; ! 10,- ! !
+ .%-+Num+Use/Sub+Use/Circ:.%-  ARABICCASE ; ! 10.- It is wrong, but written. 
+ %%+Num+Nom+Use/Sub+Use/Circ:%%  ARABICDELIMITER ; ! 50%. It is wrong, but 75 % of us write "75%".
+ % %%+Num+Nom+Use/Sub+Use/Circ:% %%  ARABICDELIMITER ; ! the correct ones as well... 50 % etc. 
+ +Num+Use/Sub+Use/Circ:  ARABICDELIMITER ; ! list of number-case delimiters 
 
 
+LEXICON  ARABICDELIMITER ! blank + 3 delim, what does the lg counc prefer? !SUB !
+ +Use/Sub+Use/Circ:  ARABICCASE ; ! This is the 1984s case. ! !
+ %-+Use/Sub+Use/Circ:%-  ARABICCASE ; ! This is the 1984-s case. ! !
 
-LEXICON ARABICCASE                      !SUB              !^C^
- +Nom+Use/Sub+Use/Circ:f   # ;     ! s. 123f.          !                   !
- +Nom+Use/Sub+Use/Circ:ff   # ;     ! s. 123ff.        !                   !
- +Sg+Nom+Use/Sub+Use/Circ:b # ;     ! § 123b         !                   !
- +Sg+Nom+Use/Sub+Use/Circ:c # ;     ! § 123c         !                   !
- +Sg+Nom+Use/Sub+Use/Circ:d # ;     ! § 123d         !                   !
- +Sg+Nom+Use/Sub+Use/Circ:e # ;     ! § 123e         !                   !
- +Sg+Nom+Use/Sub+Use/Circ:  # ;                        !                  !
+
+
+LEXICON  ARABICCASE !SUB !
+ f+Nom+Use/Sub+Use/Circ:f # ; ! s. 123f. ! !
+ ff+Nom+Use/Sub+Use/Circ:ff # ; ! s. 123ff. ! !
+ b+Sg+Nom+Use/Sub+Use/Circ:b # ; ! § 123b ! !
+ c+Sg+Nom+Use/Sub+Use/Circ:c # ; ! § 123c ! !
+ d+Sg+Nom+Use/Sub+Use/Circ:d # ; ! § 123d ! !
+ e+Sg+Nom+Use/Sub+Use/Circ:e # ; ! § 123e ! !
+ +Sg+Nom+Use/Sub+Use/Circ: # ; ! !
 
 ! The Roman numerals !
 ! ------------------ !
 
-LEXICON ROMAN                                !^C^
- +Use/Circ: ROM-THOUSAND ;                             !
- +Use/Circ: ROM-HUNDRED ;                             !
- +Use/Circ: ROM-TEN ;                                 !
- +Use/Circ: ROM-ONE ;                                 !
+LEXICON ROMAN!
+ +Use/Circ: ROM-THOUSAND ; !
+ +Use/Circ: ROM-HUNDRED ; !
+ +Use/Circ: ROM-TEN ; !
+ +Use/Circ: ROM-ONE ; !
 
-LEXICON ROM-THOUSAND                          !^C^
- M+Use/Circ:M ROM-THOUSAND-TAG;                     !
- MM+Use/Circ:MM ROM-THOUSAND-TAG;                     !
- MMM+Use/Circ:MMM ROM-THOUSAND-TAG;                     !
- MMMM+Use/Circ:MMMM ROM-THOUSAND-TAG;                 !
- MMMMM+Use/Circ:MMMMM ROM-THOUSAND-TAG;                 !
+LEXICON ROM-THOUSAND !
+ M+Use/Circ:M ROM-THOUSAND-TAG; !
+ MM+Use/Circ:MM ROM-THOUSAND-TAG; !
+ MMM+Use/Circ:MMM ROM-THOUSAND-TAG; !
+ MMMM+Use/Circ:MMMM ROM-THOUSAND-TAG; !
+ MMMMM+Use/Circ:MMMMM ROM-THOUSAND-TAG; !
 
-LEXICON ROM-THOUSAND-TAG                    !^C^
- +Use/Circ: ROMNUMTAG ;                             !
- +Use/Circ: ROM-HUNDRED ;                             !
+LEXICON ROM-THOUSAND-TAG !
+ +Use/Circ: ROMNUMTAG ; !
+ +Use/Circ: ROM-HUNDRED ; !
  +Use/Circ: ROM-TEN ;!
  +Use/Circ: ROM-ONE ;!
- +Use/Circ: ROM-SPLIT ;                             !
+ +Use/Circ: ROM-SPLIT ; !
 
-LEXICON ROM-HUNDRED                            !^C^
- C+Use/Circ:C ROM-HUNDRED-TAG;                     !
- CC+Use/Circ:CC ROM-HUNDRED-TAG;                     !
- CCC+Use/Circ:CCC ROM-HUNDRED-TAG;                     !
- CD+Use/Circ:CD ROM-HUNDRED-TAG;                     !
- D+Use/Circ:D ROM-HUNDRED-TAG;                     !
- DC+Use/Circ:DC ROM-HUNDRED-TAG;                     !
- DCC+Use/Circ:DCC ROM-HUNDRED-TAG;                     !
- DCCC+Use/Circ:DCCC ROM-HUNDRED-TAG;                     !
- CM+Use/Circ:CM ROM-HUNDRED-TAG;                     !
+LEXICON ROM-HUNDRED !
+ C+Use/Circ:C ROM-HUNDRED-TAG; !
+ CC+Use/Circ:CC ROM-HUNDRED-TAG; !
+ CCC+Use/Circ:CCC ROM-HUNDRED-TAG; !
+ CD+Use/Circ:CD ROM-HUNDRED-TAG; !
+ D+Use/Circ:D ROM-HUNDRED-TAG; !
+ DC+Use/Circ:DC ROM-HUNDRED-TAG; !
+ DCC+Use/Circ:DCC ROM-HUNDRED-TAG; !
+ DCCC+Use/Circ:DCCC ROM-HUNDRED-TAG; !
+ CM+Use/Circ:CM ROM-HUNDRED-TAG; !
 
-LEXICON ROM-HUNDRED-TAG                        !^C^
- +Use/Circ: ROMNUMTAG ;                             !
- +Use/Circ: ROM-TEN ;                                 !
+LEXICON ROM-HUNDRED-TAG !
+ +Use/Circ: ROMNUMTAG ; !
+ +Use/Circ: ROM-TEN ; !
  +Use/Circ: ROM-ONE ;!
- +Use/Circ: ROM-SPLIT ;                             !
+ +Use/Circ: ROM-SPLIT ; !
 
-LEXICON ROM-TEN                                !^C^
- X+Use/Circ:X ROM-TEN-TAG;                         !
- XX+Use/Circ:XX ROM-TEN-TAG;                         !
- XXX+Use/Circ:XXX ROM-TEN-TAG;                         !
- XL+Use/Circ:XL ROM-TEN-TAG;                         !
- L+Use/Circ:L ROM-TEN-TAG;                         !
- LX+Use/Circ:LX ROM-TEN-TAG;                         !
- LXX+Use/Circ:LXX ROM-TEN-TAG;                         !
- LXXX+Use/Circ:LXXX ROM-TEN-TAG;                         !
- XC+Use/Circ:XC ROM-TEN-TAG;                         !
+LEXICON ROM-TEN!
+ X+Use/Circ:X ROM-TEN-TAG; !
+ XX+Use/Circ:XX ROM-TEN-TAG; !
+ XXX+Use/Circ:XXX ROM-TEN-TAG; !
+ XL+Use/Circ:XL ROM-TEN-TAG; !
+ L+Use/Circ:L ROM-TEN-TAG; !
+ LX+Use/Circ:LX ROM-TEN-TAG; !
+ LXX+Use/Circ:LXX ROM-TEN-TAG; !
+ LXXX+Use/Circ:LXXX ROM-TEN-TAG; !
+ XC+Use/Circ:XC ROM-TEN-TAG; !
 
-LEXICON ROM-TEN-TAG                            !^C^
- +Use/Circ: ROMNUMTAG ;                             !
- +Use/Circ: ROM-ONE ;                                 !
- +Use/Circ: ROM-SPLIT ;                             !
+LEXICON ROM-TEN-TAG !
+ +Use/Circ: ROMNUMTAG ; !
+ +Use/Circ: ROM-ONE ; !
+ +Use/Circ: ROM-SPLIT ; !
 
-LEXICON ROM-ONE                                !^C^
- I+Use/Circ:I ROM-ONE-TAG;                         !
- II+Use/Circ:II ROM-ONE-TAG;                         !
- III+Use/Circ:III ROM-ONE-TAG;                         !
- IV+Use/Circ:IV ROM-ONE-TAG;                         !
- V+Use/Circ:V ROM-ONE-TAG;                         !
- VI+Use/Circ:VI ROM-ONE-TAG;                         !
- VII+Use/Circ:VII ROM-ONE-TAG;                         !
- VIII+Use/Circ:VIII ROM-ONE-TAG;                         !
- IX+Use/Circ:IX ROM-ONE-TAG;                         !
+LEXICON ROM-ONE!
+ I+Use/Circ:I ROM-ONE-TAG; !
+ II+Use/Circ:II ROM-ONE-TAG; !
+ III+Use/Circ:III ROM-ONE-TAG; !
+ IV+Use/Circ:IV ROM-ONE-TAG; !
+ V+Use/Circ:V ROM-ONE-TAG; !
+ VI+Use/Circ:VI ROM-ONE-TAG; !
+ VII+Use/Circ:VII ROM-ONE-TAG; !
+ VIII+Use/Circ:VIII ROM-ONE-TAG; !
+ IX+Use/Circ:IX ROM-ONE-TAG; !
 
-LEXICON ROM-ONE-TAG                            !^C^
- +Use/Circ: ROMNUMTAG ;                             !
-! +N: ROMNUMTAG ;                         !^C^ !The Olav viđeš fix (Roman V now gets A)
- +Use/Circ: ROM-SPLIT ;                             !
+LEXICON ROM-ONE-TAG !
+ +Use/Circ: ROMNUMTAG ; !
+! +N: ROMNUMTAG ; ! !The Olav viđeš fix (Roman V now gets A)
+ +Use/Circ: ROM-SPLIT ; !
 
 ! Here, we split the Roman numerals, in order to account for cases like "Kapihtal II-IV".
 ! We may send this first part directly to ROM-TAG below (and get the +Num tag), or we may
@@ -660,128 +660,128 @@ LEXICON ROM-ONE-TAG                            !^C^
 ! like "II-IV-VI-VII-IX". If that should turn out to be a good idea, a loop would do the
 ! trick.
 
-LEXICON ROM-SPLIT                            !^C^
- +Use/Circ:%- 2ROMAN ; ! II-VI, etc.                    !
+LEXICON ROM-SPLIT !
+ +Use/Circ:%- 2ROMAN ; ! II-VI, etc. !
 
 
 ! Here goes loop 2.
 
-LEXICON 2ROMAN                                !^C^
- +Use/Circ: 2ROM-THOUSAND ;                         !
- +Use/Circ: 2ROM-HUNDRED ;                             !
- +Use/Circ: 2ROM-TEN ;                                  !
- +Use/Circ: 2ROM-ONE ;                                  !
+LEXICON 2ROMAN!
+ +Use/Circ: 2ROM-THOUSAND ; !
+ +Use/Circ: 2ROM-HUNDRED ; !
+ +Use/Circ: 2ROM-TEN ; !
+ +Use/Circ: 2ROM-ONE ; !
 
-LEXICON 2ROM-THOUSAND                       !^C^
- M+Use/Circ:M 2ROM-THOUSAND-TAG;                     !
- MM+Use/Circ:MM 2ROM-THOUSAND-TAG;                     !
- MMM+Use/Circ:MMM 2ROM-THOUSAND-TAG;                 !
- MMMM+Use/Circ:MMMM 2ROM-THOUSAND-TAG;                 !
- MMMMM+Use/Circ:MMMMM 2ROM-THOUSAND-TAG;                 !
+LEXICON 2ROM-THOUSAND !
+ M+Use/Circ:M 2ROM-THOUSAND-TAG; !
+ MM+Use/Circ:MM 2ROM-THOUSAND-TAG; !
+ MMM+Use/Circ:MMM 2ROM-THOUSAND-TAG; !
+ MMMM+Use/Circ:MMMM 2ROM-THOUSAND-TAG; !
+ MMMMM+Use/Circ:MMMMM 2ROM-THOUSAND-TAG; !
 
-LEXICON 2ROM-THOUSAND-TAG                    !^C^
- +Use/Circ: ROMNUMTAG ;                             !
- +Use/Circ: 2ROM-HUNDRED ;                             !
- +Use/Circ: 2ROM-TEN ;   !
+LEXICON 2ROM-THOUSAND-TAG !
+ +Use/Circ: ROMNUMTAG ; !
+ +Use/Circ: 2ROM-HUNDRED ; !
+ +Use/Circ: 2ROM-TEN ; !
  +Use/Circ: 2ROM-ONE ;!
 
-LEXICON 2ROM-HUNDRED                        !^C^
- C+Use/Circ:C 2ROM-HUNDRED-TAG;                     !
- CC+Use/Circ:CC 2ROM-HUNDRED-TAG;                     !
- CCC+Use/Circ:CCC 2ROM-HUNDRED-TAG;                     !
- CD+Use/Circ:CD 2ROM-HUNDRED-TAG;                     !
- D+Use/Circ:D 2ROM-HUNDRED-TAG;                     !
- DC+Use/Circ:DC 2ROM-HUNDRED-TAG;                     !
- DCC+Use/Circ:DCC 2ROM-HUNDRED-TAG;                     !
- DCCC+Use/Circ:DCCC 2ROM-HUNDRED-TAG;                 !
- CM+Use/Circ:CM 2ROM-HUNDRED-TAG;                     !
+LEXICON 2ROM-HUNDRED !
+ C+Use/Circ:C 2ROM-HUNDRED-TAG; !
+ CC+Use/Circ:CC 2ROM-HUNDRED-TAG; !
+ CCC+Use/Circ:CCC 2ROM-HUNDRED-TAG; !
+ CD+Use/Circ:CD 2ROM-HUNDRED-TAG; !
+ D+Use/Circ:D 2ROM-HUNDRED-TAG; !
+ DC+Use/Circ:DC 2ROM-HUNDRED-TAG; !
+ DCC+Use/Circ:DCC 2ROM-HUNDRED-TAG; !
+ DCCC+Use/Circ:DCCC 2ROM-HUNDRED-TAG; !
+ CM+Use/Circ:CM 2ROM-HUNDRED-TAG; !
 
-LEXICON 2ROM-HUNDRED-TAG                    !^C^
- +Use/Circ: ROMNUMTAG ;                             !
- +Use/Circ: 2ROM-TEN ;                                 !
+LEXICON 2ROM-HUNDRED-TAG !
+ +Use/Circ: ROMNUMTAG ; !
+ +Use/Circ: 2ROM-TEN ; !
  +Use/Circ: 2ROM-ONE ;!
-LEXICON 2ROM-TEN                               !^C^
- X+Use/Circ:X 2ROM-TEN-TAG;                           !
- XX+Use/Circ:XX 2ROM-TEN-TAG;                          !
- XXX+Use/Circ:XXX 2ROM-TEN-TAG;                         !
- XL+Use/Circ:XL 2ROM-TEN-TAG;                          !
- L+Use/Circ:L 2ROM-TEN-TAG;                           !
- LX+Use/Circ:LX 2ROM-TEN-TAG;                          !
- LXX+Use/Circ:LXX 2ROM-TEN-TAG;                         !
- LXXX+Use/Circ:LXXX 2ROM-TEN-TAG;                        !
- XC+Use/Circ:XC 2ROM-TEN-TAG;                          !
+LEXICON 2ROM-TEN !
+ X+Use/Circ:X 2ROM-TEN-TAG; !
+ XX+Use/Circ:XX 2ROM-TEN-TAG; !
+ XXX+Use/Circ:XXX 2ROM-TEN-TAG; !
+ XL+Use/Circ:XL 2ROM-TEN-TAG; !
+ L+Use/Circ:L 2ROM-TEN-TAG; !
+ LX+Use/Circ:LX 2ROM-TEN-TAG; !
+ LXX+Use/Circ:LXX 2ROM-TEN-TAG; !
+ LXXX+Use/Circ:LXXX 2ROM-TEN-TAG; !
+ XC+Use/Circ:XC 2ROM-TEN-TAG; !
 
-LEXICON 2ROM-TEN-TAG                           !^C^
- +Use/Circ: ROMNUMTAG ;                               !
- +Use/Circ: 2ROM-ONE ;                                 !
+LEXICON 2ROM-TEN-TAG !
+ +Use/Circ: ROMNUMTAG ; !
+ +Use/Circ: 2ROM-ONE ; !
 
-LEXICON 2ROM-ONE                               !^C^
- I+Use/Circ:I 2ROM-ONE-TAG;                           !
- II+Use/Circ:II 2ROM-ONE-TAG;                          !
- III+Use/Circ:III 2ROM-ONE-TAG;                         !
- IV+Use/Circ:IV 2ROM-ONE-TAG;                         !
- V+Use/Circ:V 2ROM-ONE-TAG;                           !
- VI+Use/Circ:VI 2ROM-ONE-TAG;                          !
- VII+Use/Circ:VII 2ROM-ONE-TAG;                         !
- VIII+Use/Circ:VIII 2ROM-ONE-TAG;                        !
- IX+Use/Circ:IX 2ROM-ONE-TAG;                          !
+LEXICON 2ROM-ONE !
+ I+Use/Circ:I 2ROM-ONE-TAG; !
+ II+Use/Circ:II 2ROM-ONE-TAG; !
+ III+Use/Circ:III 2ROM-ONE-TAG; !
+ IV+Use/Circ:IV 2ROM-ONE-TAG; !
+ V+Use/Circ:V 2ROM-ONE-TAG; !
+ VI+Use/Circ:VI 2ROM-ONE-TAG; !
+ VII+Use/Circ:VII 2ROM-ONE-TAG; !
+ VIII+Use/Circ:VIII 2ROM-ONE-TAG; !
+ IX+Use/Circ:IX 2ROM-ONE-TAG; !
 
-LEXICON 2ROM-ONE-TAG                           !^C^
- +Use/Circ: ROMNUMTAG ;                               !
+LEXICON 2ROM-ONE-TAG !
+ +Use/Circ: ROMNUMTAG ; !
 
-LEXICON ROMNUMTAG                              !^C^
- +Num+Nom+Use/Circ:%> # ;                              !
- +Num+Gen+Use/Circ:%> # ;                              !
- +Num+Acc+Use/Circ:%> # ;                              !
- +A+Ord+Use/Circ:%.%> # ;                              ! !III. as ordinal.
- +A+Ord+Use/Circ:%> # ;                                ! !Looking for trouble...
- +Num+Use/Circ:%: ROMNUMTAGOBL ;                     !
- +Num+Use/Circ:'7 ROMNUMTAGOBL ;                     !
- +Num+Use/Circ:%- ROMNUMTAGOBL ;                     !
- +Num+Use/Circ:%´ ROMNUMTAGOBL ;                     !
-! +Num:   ROMNUMTAGOBL ;                     !^C^
+LEXICON ROMNUMTAG !
+ +Num+Nom+Use/Circ:%> # ; !
+ +Num+Gen+Use/Circ:%> # ; !
+ +Num+Acc+Use/Circ:%> # ; !
+ +A+Ord+Use/Circ:%.%> # ; ! !III. as ordinal.
+ +A+Ord+Use/Circ:%> # ;! !Looking for trouble...
+ +Num+Use/Circ:%: ROMNUMTAGOBL ; !
+ +Num+Use/Circ:'7 ROMNUMTAGOBL ; !
+ +Num+Use/Circ:%- ROMNUMTAGOBL ; !
+ +Num+Use/Circ:%´ ROMNUMTAGOBL ; !
+! +Num: ROMNUMTAGOBL ; !
 
-LEXICON ROMNUMTAGOBL                           !^C^
+LEXICON ROMNUMTAGOBL !
  +Gen+Use/Sub+Use/Circ:%>n # ; ! ! But here 123a 123
- +Acc+Use/Sub+Use/Circ:%>m # ; !                                 !
- +Ill+Use/Circ:%>ese # ;                                  ! 
- +Ine+Use/Circ:%>esne # ;                                  !
- +Ine+Attr+Use/Circ:%>ene # ;                                  !
- +Ela+Attr+Use/Circ:%>ede # ;                                  !
- +Ela+Use/Circ:%>este # ;                                  !
- +Com+Use/Circ:%>ine # ;                                 !
- +Ess+Use/Circ:%>in # ;                                  !
+ +Acc+Use/Sub+Use/Circ:%>m # ; ! !
+ +Ill+Use/Circ:%>ese # ; ! 
+ +Ine+Use/Circ:%>esne # ; !
+ +Ine+Attr+Use/Circ:%>ene # ; !
+ +Ela+Attr+Use/Circ:%>ede # ; !
+ +Ela+Use/Circ:%>este # ; !
+ +Com+Use/Circ:%>ine # ; !
+ +Ess+Use/Circ:%>in # ; !
 
 LEXICON NUMBERLIKE
- gellie+Num+Sg:gell           N_IE_SG ; ! as sme máŋga
+ gellie+Num+Sg:gell N_IE_SG ; ! as sme máŋga
 gellie+Num+Sg+Ine+Attr:gelle%>ne # ;
-gellie+Num+Sg+Ela+Attr:gelle%>de              # ;
+gellie+Num+Sg+Ela+Attr:gelle%>de # ;
 
 
 ! A final section with some isolated numeral expresssions !
 ! ------------------------------------------------------- !
 
 
-LEXICON ISOLATED-NUMEXP                        !^C^
- ½+Num+Use/Circ:½ # ;                                 !
- ¹+Num+Use/Circ:¹ # ;                                 !
- ²+Num+Use/Circ:² # ;                                 !
- ³+Num+Use/Circ:³ # ;                                 !
- ¼+Num+Use/Circ:¼ # ;                                 !
+LEXICON ISOLATED-NUMEXP !
+ ½+Num+Use/Circ:½ # ; !
+ ¹+Num+Use/Circ:¹ # ; !
+ ²+Num+Use/Circ:² # ; !
+ ³+Num+Use/Circ:³ # ; !
+ ¼+Num+Use/Circ:¼ # ; !
 ¾+Num:¾ # ;
 
 
-LEXICON COLLECTIVE    !Some collective numbers that do not fit in anywhere else
+LEXICON COLLECTIVE !Some collective numbers that do not fit in anywhere else
 gööktege+Num+Coll:göökteg ORDTAGODD ;
-golmege+Num+Coll:golmeg  ORDTAGODD ;
-gåalmege+Num+Coll:gåalmag  ORDTAGODD ;
-njealjege+Num+Coll:njealjag  ORDTAGODD ;
-vïjhtege+Num+Coll:vïjhteg  ORDTAGODD ;
-govhtege+Num+Coll:govhteg  ORDTAGODD ;
-tjïjhtjege+Num+Coll:tjïjhtjeg  ORDTAGODD ;
-gaaktsege+Num+Coll:gaaktsag  ORDTAGODD ;
-uktsege+Num+Coll:uktsieg  ORDTAGODD ;
-låhkege+Num+Coll:låhkag  ORDTAGODD ;
+golmege+Num+Coll:golmeg ORDTAGODD ;
+gåalmege+Num+Coll:gåalmag ORDTAGODD ;
+njealjege+Num+Coll:njealjag ORDTAGODD ;
+vïjhtege+Num+Coll:vïjhteg ORDTAGODD ;
+govhtege+Num+Coll:govhteg ORDTAGODD ;
+tjïjhtjege+Num+Coll:tjïjhtjeg ORDTAGODD ;
+gaaktsege+Num+Coll:gaaktsag ORDTAGODD ;
+uktsege+Num+Coll:uktsieg ORDTAGODD ;
+låhkege+Num+Coll:låhkag ORDTAGODD ;
 
 LEXICON 2TO9LUHKIE
 göökte# LUHKIE- ;
@@ -897,20 +897,20 @@ stoerre#luhkie# 2TO9F ;
 
 
 
-  
+ 
 
 
 
 
 
 
-                  
-                                      
-!LEXICON NUMERALCOMPOUNDS  ! numeral as first part 
-! NAMÁK ;   ! tuvsánjienat, logigielat, etc. 
+ 
+ 
+!LEXICON NUMERALCOMPOUNDS ! numeral as first part 
+! NAMÁK ; ! tuvsánjienat, logigielat, etc. 
 ! SASJ ; 
 ! NounSecond ;! golmmačiegahas
-! geardásaš:geardás DABALAS ;   
+! geardásaš:geardás DABALAS ; 
 ! !tuvsán#geardásaš 
 ! jahkásaš:jahkás DABALAS ; 
 
