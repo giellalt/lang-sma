@@ -1704,8 +1704,8 @@ dohkese:dohkes N_ODD ;
 dohpe+CmpN/SgN+CmpN/SgG+CmpN/PlG:dohp NIEJTE ; !
 dohpere:dohper N_ODD ;
 doksetje:doksetj N_ODD ;
-doktore+CmpN/SgN+CmpN/SgG+CmpN/PlG:doktor N_ODD ; !
-doktovre+CmpN/SgN+CmpN/SgG+CmpN/PlG:doktovr NIEJTE ; !
+doktore+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:doktor N_ODD ; !
+doktovre+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:doktovr NIEJTE ; !
 dokumeantasjovne:dokumeantasjovn NIEJTE ;
 dokumentar#pro^gramme:dokumentar#pro^gramm NIEJTE ;
 dokumentar#seerije:dokumentar#seerij IJE_ODD ;
@@ -5554,7 +5554,7 @@ minudte+CmpN/SgN+CmpN/SgG+CmpN/PlG:minudt NIEJTE ; !
 minus#faktovre:minus#faktovr NIEJTE ;
 minus#vari^ante:minus#vari^ant NIEJTE ;
 minusevæhta:minusevæht MAANA ;
-mirakel#doktovre+CmpN/SgN+CmpN/SgG+CmpN/PlG:mirakel#doktovr NIEJTE ; !
+mirakel#doktovre+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:mirakel#doktovr NIEJTE ; !
 misjovne:misjovn NIEJTE ;
 missjovne:missjovn NIEJTE ;
 mitovse:mitovs NIEJTE ;
@@ -9322,14 +9322,15 @@ tore^adovre+CmpN/SgN+CmpN/SgG+CmpN/PlG:tore^adovr NIEJTE ; !
 torsjovne:torsjovn NIEJTE ;
 tortuvre:tortuvr NIEJTE ;
 total#pro^gramme:total#pro^gramm NIEJTE ;
-totalisatore:totalisator N_ODD ;
+totalisatore+Use/Sub:totalisator N_ODD ;
+totalisaatore:totalisaator N_ODD ;
 totalisatovre:totalisatovr NIEJTE ;
 total#vari^asjovne:total#vari^asjovn NIEJTE ;
 !tovsene:tovsen N_ODD ; moved to num.file
 traahpe:traahp NIEJTE ;
 traahpoe:traahp N_OE_UML ;
 traakoe:traak N_OE_UML ;
-traaktovre:traaktovr NIEJTE ;
+traaktovre+Use/Sub:traaktovr NIEJTE ;
 traapke+CmpN/SgN+CmpN/SgG+CmpN/PlG:traapk NIEJTE ; !
 traasta+CmpN/SgN+CmpN/SgG+CmpN/PlG:traast MAANA ; !
 traaste:traast NIEJTE ;
@@ -9337,29 +9338,45 @@ trabante:trabant NIEJTE ;
 trablehke+CmpN/SgN+CmpN/SgG+CmpN/PlG:trablahk N_ODD ; !
 tracerteknihke:tracerteknihk NIEJTE ;
 tracerteknigke:tracerteknigk NIEJTE ;
+tracerteknïhke:tracerteknïhk NIEJTE ;
+tracerteknïgke:tracerteknïgk NIEJTE ;
 tradisjovne:tradisjovn NIEJTE ;
 traemtjie:traemtj N_IE ;
 traeptsie:traepts N_IE ;
 trafigke:trafigk NIEJTE ;
 trafihke:trafihk NIEJTE ;
+trafïgke:trafïgk NIEJTE ;
+trafïhke:trafïhk NIEJTE ;
 trafik#kultuvre:trafik#kultuvr NIEJTE ;
 trafikante+CmpN/SgN+CmpN/SgG+CmpN/PlG:trafikant NIEJTE ; !
 trafikk#kultuvre:trafikk#kultuvr NIEJTE ;
 trafo#stasjovne+CmpN/SgN+CmpN/SgG+CmpN/PlG:trafo#stasjovn NIEJTE ; !
 tragedije:tragedij NIEJTE ;
+tragedïje:tragedïj NIEJTE ;
 tragi#komedije:tragi#komedij NIEJTE ;
+tragi#komedïje:tragi#komedïj NIEJTE ;
 tragigke:tragigk NIEJTE ;
 tragihke:tragihk NIEJTE ;
+tragïgke:tragïgk NIEJTE ;
+tragïhke:tragïhk NIEJTE ;
 tragikomigke:tragikomigk NIEJTE ;
 tragikomihke:tragikomihk NIEJTE ;
+tragikomïgke:tragikomïgk NIEJTE ;
+tragikomïhke:tragikomïhk NIEJTE ;
 trahpa:trahp MAANA ;
 trailer#trafigke:trailer#trafigk NIEJTE ;
 trailer#trafihke:trailer#trafihk NIEJTE ;
+trailer#trafïgke:trailer#trafïgk NIEJTE ;
+trailer#trafïhke:trailer#trafïhk NIEJTE ;
 trakasserije:trakasserij NIEJTE ;
+trakasserïje:trakasserïj NIEJTE ;
 traksjovne:traksjovn NIEJTE ;
-traktahte:traktaht NIEJTE ;
-traktate:traktat NIEJTE ;
+traktahte+Use/Sub:traktaht NIEJTE ;
+traktate+Use/Sub:traktat NIEJTE ;
+traktaahte:traktaaht NIEJTE ;
+traktaate:traktaat NIEJTE ;
 traktemente:traktement NIEJTE ;
+traktor#kom^pressore:traktor#kom^pressor N_ODD ;
 traktor#kom^pressovre:traktor#kom^pressovr NIEJTE ;
 traktore:traktor N_ODD ;
 traktovre:traktovr NIEJTE ;
@@ -9371,8 +9388,11 @@ trans^aksjovne:trans^aksjovn NIEJTE ;
 trans^plantasjovne:trans^plantasjovn NIEJTE ;
 transformasjons^grammatigke:transformasjons^grammatigk NIEJTE ;
 transformasjons^grammatihke:transformasjons^grammatihk NIEJTE ;
+transformasjons^grammatïgke:transformasjons^grammatïgk NIEJTE ;
+transformasjons^grammatïhke:transformasjons^grammatïhk NIEJTE ;
 transformasjovne:transformasjovn NIEJTE ;
-transformatore:transformator N_ODD ;
+transformatore+Use/Sub:transformator N_ODD ;
+transformaatore:transformaator N_ODD ;
 transformatovre:transformatovr NIEJTE ;
 transfusjovne:transfusjovn NIEJTE ;
 transisjovne:transisjovn NIEJTE ;
@@ -9382,6 +9402,10 @@ transit#trafigke:transit#trafigk NIEJTE ;
 transit#trafihke:transit#trafihk NIEJTE ;
 transitt#trafigke:transitt#trafigk NIEJTE ;
 transitt#trafihke:transitt#trafihk NIEJTE ;
+transit#trafïgke:transit#trafïgk NIEJTE ;
+transit#trafïhke:transit#trafïhk NIEJTE ;
+transitt#trafïgke:transitt#trafïgk NIEJTE ;
+transitt#trafïhke:transitt#trafïhk NIEJTE ;
 transitt-trafigke+Use/Sub:transitt-trafigk NIEJTE ; !
 transitt-trafihke+Use/Sub:transitt-trafihk NIEJTE ; !
 translatööre+CmpN/SgN+CmpN/SgG+CmpN/PlG:translatöör NIEJTE ; !
@@ -9389,35 +9413,53 @@ transmisjovne:transmisjovn NIEJTE ;
 transparente:transparent NIEJTE ;
 transport#konsulente+CmpN/SgN+CmpN/SgG+CmpN/PlG:transport#konsulent NIEJTE ; !
 transport#sektovre:transport#sektovr NIEJTE ;
+transport#sektore:transport#sektor N_ODD ;
 transport#subsidije:transport#subsidij IJE_ODD ;
 transport#teknigke:transport#teknigk NIEJTE ;
 transport#teknihke:transport#teknihk NIEJTE ;
+transport#teknïgke:transport#teknïgk NIEJTE ;
+transport#teknïhke:transport#teknïhk NIEJTE ;
 transportööre+CmpN/SgN+CmpN/SgG+CmpN/PlG:transportöör NIEJTE ; !
 trasmisjovne:trasmisjovn NIEJTE ;
-trassahte:trassaht NIEJTE ;
-trassate:trassat NIEJTE ;
+trassahte+Use/Sub:trassaht NIEJTE ;
+trassate+Use/Sub:trassat NIEJTE ;
+trassaahte:trassaaht NIEJTE ;
+trassaate:trassaat NIEJTE ;
 treahtoe:treaht N_OE_UML ;
 treavka:treavk MAANA ;
 treavkese:treavkas N_ODD ;
 trehpie:trehp N_IE ;
 tremulante:tremulant NIEJTE ;
-tri^ennale:tri^ennal NIEJTE ;
-triologe:triolog NIEJTE ;
+tri^ennale+Use/Sub:tri^ennal NIEJTE ;
+tri^ennaale:tri^ennaal NIEJTE ;
+triologe+Use/Sub:triolog NIEJTE ;
+triolååge:triolååg NIEJTE ;
 triologije:triologij NIEJTE ;
-tri^umfatore+CmpN/SgN+CmpN/SgG+CmpN/PlG:tri^umfator N_ODD ; !
+triologïje:triologïj NIEJTE ;
+tri^umfatore+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:tri^umfator N_ODD ; !
+tri^umfaatore+CmpN/SgN+CmpN/SgG+CmpN/PlG:tri^umfaator N_ODD ; !
 tri^umfatovre+CmpN/SgN+CmpN/SgG+CmpN/PlG:tri^umfatovr NIEJTE ; !
-tri^umvirahte:tri^umviraht NIEJTE ;
-tri^umvirate:tri^umvirat NIEJTE ;
-tribunale:tribunal NIEJTE ;
+tri^umviraahte:tri^umviraaht NIEJTE ;
+tri^umviraate:tri^umviraat NIEJTE ;
+tri^umvirahte+Use/Sub:tri^umviraht NIEJTE ;
+tri^umvirate+Use/Sub:tri^umvirat NIEJTE ;
+tribunale+Use/Sub:tribunal NIEJTE ;
+tribunaale:tribunaal NIEJTE ;
 triehpie:triehp N_IE ;
 trigonometrije:trigonometrij NIEJTE ;
+trigonometrïje:trigonometrïj NIEJTE ;
 trikinovse:trikinovs NIEJTE ;
 trikolovre:trikolovr NIEJTE ;
-trikotasje#fabrigke+CmpN/SgN+CmpN/SgG+CmpN/PlG:trikotasje#fabrigk NIEJTE ; !
-trikotasje#fabrihke+CmpN/SgN+CmpN/SgG+CmpN/PlG:trikotasje#fabrihk NIEJTE ; !
-trikotasje:trikotasj NIEJTE ;
+trikotaasje#fabrigke+CmpN/SgN+CmpN/SgG+CmpN/PlG:trikotaasje#fabrigk NIEJTE ; !
+trikotaasje#fabrihke+CmpN/SgN+CmpN/SgG+CmpN/PlG:trikotaasje#fabrihk NIEJTE ; !
+trikotaasje#fabrïgke+CmpN/SgN+CmpN/SgG+CmpN/PlG:trikotaasje#fabrïgk NIEJTE ; !
+trikotaasje#fabrïhke+CmpN/SgN+CmpN/SgG+CmpN/PlG:trikotaasje#fabrïhk NIEJTE ; !
+trikotasje+Use/Sub:trikotasj NIEJTE ;
+trikotaasje:trikotaasj NIEJTE ;
 trikïjne:trikïjn NIEJTE ;
+trikijne:trikijn NIEJTE ;
 trilogije:trilogij NIEJTE ;
+trilogïje:trilogïj NIEJTE ;
 trippel#alli^anse+CmpN/SgN+CmpN/SgG+CmpN/PlG:trippel#alli^ans NIEJTE ; !
 trivalente:trivalent NIEJTE ;
 trivial#litteratuvre:trivial#litteratuvr NIEJTE ;
@@ -9426,7 +9468,10 @@ tromhpe+CmpN/SgN+CmpN/SgG+CmpN/PlG:tromhp NIEJTE ; !
 trompe:tromp NIEJTE ;
 tropigke:tropigk NIEJTE ;
 tropihke:tropihk NIEJTE ;
-trotto^are:trotto^ar NIEJTE ;
+tropïgke:tropïgk NIEJTE ;
+tropïhke:tropïhk NIEJTE ;
+trotto^are+Use/Sub:trotto^ar NIEJTE ;
+trotto^aare:trotto^aar NIEJTE ;
 trubaduvre+CmpN/SgN+CmpN/SgG+CmpN/PlG:trubaduvr NIEJTE ; !
 truehkie:truehk N_IE ;
 truerie:truer N_IE ;
@@ -9523,11 +9568,14 @@ tumovre:tumovr NIEJTE ;
 tumultu^ante+CmpN/SgN+CmpN/SgG+CmpN/PlG:tumultu^ant NIEJTE ; !
 turbo^prop#motovre:turbo^prop#motovr NIEJTE ;
 turbïjne:turbïjn NIEJTE ;
+turbijne:turbijn NIEJTE ;
 turisme:turism NIEJTE ;
 turist#informasjovne:turist#informasjovn NIEJTE ;
 turist#kontovre+CmpN/SgN+CmpN/SgG+CmpN/PlG:turist#kontovr NIEJTE ; !
 turist#trafigke:turist#trafigk NIEJTE ;
 turist#trafihke:turist#trafihk NIEJTE ;
+turist#trafïgke:turist#trafïgk NIEJTE ;
+turist#trafïhke:turist#trafïhk NIEJTE ;
 turné#pro^gramme:turné#pro^gramm NIEJTE ;
 turïsme:turïsm NIEJTE ;
 tutovre:tutovr NIEJTE ;
@@ -9543,11 +9591,16 @@ tv-spïele:tv-spïel NIEJTE ;
 tyfovne+CmpN/SgN+CmpN/SgG+CmpN/PlG:tyfovn NIEJTE ; !
 tyjje:tyjj NIEJTE ;
 tyjke:tyjk NIEJTE ;
-typo^grafe+CmpN/SgN+CmpN/SgG+CmpN/PlG:typo^graf NIEJTE ; !
+typo^grafe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:typo^graf NIEJTE ;
+typo^graafe+CmpN/SgN+CmpN/SgG+CmpN/PlG:typo^graaf NIEJTE ;
 typo^grafije:typo^grafij NIEJTE ;
-typologe+CmpN/SgN+CmpN/SgG+CmpN/PlG:typolog NIEJTE ; !
+typo^grafïje:typo^grafïj NIEJTE ;
+typologe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:typolog NIEJTE ;
+typolååge+CmpN/SgN+CmpN/SgG+CmpN/PlG:typolååg NIEJTE ;
 typologije:typologij NIEJTE ;
 tyrannije:tyrannij NIEJTE ;
+typologïje:typologïj NIEJTE ;
+tyrannïje:tyrannïj NIEJTE ;
 tyske+CmpN/SgN+CmpN/SgG+CmpN/PlG:tysk NIEJTE ; !
 tåajje:tåajj NIEJTE ;
 tåallere+CmpN/SgN+CmpN/SgG+CmpN/PlG:tåaller N_ODD ; !
@@ -9565,7 +9618,8 @@ tæjmoe+CmpN/SgN+CmpN/SgG+CmpN/PlG:tæjm N_OE_UML ; !
 tïehke:tïehk NIEJTE ;
 tïjje+CmpN/SgN+CmpN/SgG+CmpN/PlG:tïjj NIEJTE ; !
 tïjme+CmpN/SgN+CmpN/SgG+CmpN/PlG:tïjm NIEJTE ; !
-ufologe+CmpN/SgN+CmpN/SgG+CmpN/PlG:ufolog NIEJTE ; !
+ufologe+CmpN/SgN+CmpN/SgG+CmpN/PlG:ufolog NIEJTE ;
+ufolååge+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:ufolååg NIEJTE ;
 !uhtjie:uhtj N_IE ;adj
 uhtsie:uhts N_IE ;
 ! uktsege:uktsieg N_ODD ; !numeral
@@ -9576,23 +9630,30 @@ ulpie:ulp N_IE ;
 umhkie+CmpN/SgN+CmpN/SgG+CmpN/PlG:umhk N_IE ; !
 un^iovne+CmpN/SgN+CmpN/SgG+CmpN/PlG:un^iovn NIEJTE ; !
 uniforme:uniform NIEJTE ;
-universal#genije+CmpN/SgN+CmpN/SgG+CmpN/PlG:universal#genij NIEJTE ; !
+universal#genije+CmpN/SgN+CmpN/SgG+CmpN/PlG:universal#genij NIEJTE ;
+universal#genïje+CmpN/SgN+CmpN/SgG+CmpN/PlG:universal#genïj NIEJTE ;
 universal#motovre:universal#motovr NIEJTE ;
 universe+CmpN/SgN+CmpN/SgG+CmpN/PlG:univers NIEJTE ; !
 universitets#klinigke+CmpN/SgN+CmpN/SgG+CmpN/PlG:universitets#klinigk NIEJTE ; !
 universitets#klinihke+CmpN/SgN+CmpN/SgG+CmpN/PlG:universitets#klinihk NIEJTE ; !
+universitets#klinïgke+CmpN/SgN+CmpN/SgG+CmpN/PlG:universitets#klinïgk NIEJTE ; !
+universitets#klinïhke+CmpN/SgN+CmpN/SgG+CmpN/PlG:universitets#klinïhk NIEJTE ; !
 unnebe#låhkoe+CmpN/SgN+CmpN/SgG+CmpN/PlG:unnebe#låhk N_OE_UML ; !
 uran#re^aktovre:uran#re^aktovr NIEJTE ;
 urkie+CmpN/SgN+CmpN/SgG+CmpN/PlG:urk N_IE ; !
-urologe+CmpN/SgN+CmpN/SgG+CmpN/PlG:urolog NIEJTE ; !
+urologe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:urolog NIEJTE ;
+urolååge+CmpN/SgN+CmpN/SgG+CmpN/PlG:urolååg NIEJTE ;
 urpie:urp N_IE ;
 urrehke+CmpN/SgN+CmpN/SgG+CmpN/PlG:urriehk N_ODD ; !
 urïjne:urïjn NIEJTE ;
-usurpatore:usurpator N_ODD ;
+urijne:urijn NIEJTE ;
+usurpatore+Use/Sub:usurpator N_ODD ;
+usurpaatore:usurpaator N_ODD ;
 usurpatovre:usurpatovr NIEJTE ;
 utilitarisme:utilitarism NIEJTE ;
 utilitarïsme:utilitarïsm NIEJTE ;
 utopije:utopij IJE_ODD ;
+utopïje:utopïj IJE_ODD ;
 uvrie+CmpN/SgN+CmpN/SgG+CmpN/PlG:uvr N_IE ; !
 uvtelasse:uvtelass NIEJTE ;
 vaadese:vaades N_ODD ;
@@ -9657,6 +9718,8 @@ vallovne+CmpN/SgN+CmpN/SgG+CmpN/PlG:vallovn NIEJTE ; !
 valse#tekstuvre:valse#tekstuvr NIEJTE ;
 valuta#politigke:valuta#politigk NIEJTE ;
 valuta#politihke:valuta#politihk NIEJTE ;
+valuta#politïgke:valuta#politïgk NIEJTE ;
+valuta#politïhke:valuta#politïhk NIEJTE ;
 valuta#re#forme:valuta#re#form NIEJTE ;
 valööre:valöör NIEJTE ;
 vandalisme:vandalism NIEJTE ;
@@ -9669,6 +9732,7 @@ vari^asjovne:vari^asjovn NIEJTE ;
 varrege:varreg N_ODD ;
 vaarrije+CmpN/SgN+CmpN/SgG+CmpN/PlG:vaarrij IJE_ODD ; !
 vaselïjne:vaselïjn NIEJTE ;
+vaselijne:vaselijn NIEJTE ;
 vasjnjetje:vasjnjatj N_ODD ;
 vaso#motovre:vaso#motovr NIEJTE ;
 veadta:veadt MAANA ;
@@ -9695,7 +9759,8 @@ veelteme:veeltem N_ODD ;
 veerbe#syjjehtimmie:veerbe#syjjehtimm N_IE ;
 veerbe-syjjehtimmie+Use/Sub:veerbe-syjjehtimm N_IE ; !
 vegetar#re^staurante+CmpN/SgN+CmpN/SgG+CmpN/PlG:vegetar#re^staurant NIEJTE ; !
-vegetare:vegetar NIEJTE ;
+vegetare+Use/Sub:vegetar NIEJTE ;
+vegetaare:vegetaar NIEJTE ;
 vegetasjovne:vegetasjovn NIEJTE ;
 vektordia^gramme:vektordia^gramm NIEJTE ;
 vektore:vektor N_ODD ;
@@ -9706,33 +9771,42 @@ venerasjovne:venerasjovn NIEJTE ;
 venndia^gramme:venndia^gramm NIEJTE ;
 ventijle:ventijl NIEJTE ;
 ventilasjovne:ventilasjovn NIEJTE ;
-ventilatore:ventilator N_ODD ;
+ventilatore+Use/Sub:ventilator N_ODD ;
+ventilaatore:ventilaator N_ODD ;
 ventilatovre:ventilatovr NIEJTE ;
 ventïjle:ventïjl NIEJTE ;
 verbal#forme:verbal#form NIEJTE ;
 verbe:verb NIEJTE ;
 verifikasjovne:verifikasjovn NIEJTE ;
 verk^sted#sektovre:verk^sted#sektovr NIEJTE ;
-vernissasje:vernissasj NIEJTE ;
+verk^sted#sektore:verk^sted#sektor N_ODD ;
+vernissasje+Use/Sub:vernissasj NIEJTE ;
+vernissaasje:vernissaasj NIEJTE ;
+versifikaatore:versifikaator N_ODD ;
 versifikatovre:versifikatovr NIEJTE ;
 versjovne:versjovn NIEJTE ;
 vesjnjeske+CmpN/SgN+CmpN/SgG+CmpN/PlG:vesjnjiesk N_ODD ; !XXX adj? !
 veteran#trigke:veteran#trigk NIEJTE ;
 veteran#trihke:veteran#trihk NIEJTE ;
+veteran#trïgke:veteran#trïgk NIEJTE ;
+veteran#trïhke:veteran#trïhk NIEJTE ;
 veterinær#studente+CmpN/SgN+CmpN/SgG+CmpN/PlG:veterinær#student NIEJTE ; !
 vetneme+CmpN/SgN+CmpN/SgG+CmpN/PlG:vetniem N_ODD ; !
 vibrafovne:vibrafovn NIEJTE ;
 vibrante:vibrant NIEJTE ;
 vibrasjovne:vibrasjovn NIEJTE ;
-vibratore:vibrator N_ODD ;
+vibratore+Use/Sub:vibrator N_ODD ;
+vibraatore:vibraator N_ODD ;
 vibratovre:vibratovr NIEJTE ;
 vibri^ovse:vibri^ovs NIEJTE ;
 video#butigke+CmpN/SgN+CmpN/SgG+CmpN/PlG:video#butigk NIEJTE ; !
 video^gramme:video^gramm NIEJTE ;
 video#in^stallasjovne:video#in^stallasjovn NIEJTE ;
 video#maskïjne:video#maskïjn NIEJTE ;
+video#maskijne:video#maskijn NIEJTE ;
 video#pro^gramme:video#pro^gramm NIEJTE ;
-video^grafe:video^graf NIEJTE ;
+video^grafe+Use/Sub:video^graf NIEJTE ;
+video^graafe:video^graaf NIEJTE ;
 video#butihke+CmpN/SgN+CmpN/SgG+CmpN/PlG:video#butihk NIEJTE ; !
 viedtehke+CmpN/SgN+CmpN/SgG+CmpN/PlG:viedtiehk N_ODD ; !
 viehkie#vierhtie:viehkie#vierht N_IE ;
@@ -9763,20 +9837,27 @@ vijne#moere#såafoe+CmpN/SgN+CmpN/SgG+CmpN/PlG:vijne#moere#såaf N_OE_UML ; !
 vijre+CmpN/SgN+CmpN/SgG+CmpN/PlG:vijr NIEJTE ; !
 vijreme:vijrem N_ODD ;
 vijrije+CmpN/SgN+CmpN/SgG+CmpN/PlG:vijrij IJE_ODD ; !
-vikari^ahte:vikari^aht NIEJTE ;
-vikari^ate:vikari^at NIEJTE ;
+vikari^aahte:vikari^aaht NIEJTE ;
+vikari^aate:vikari^aat NIEJTE ;
+vikari^ahte+Use/Sub:vikari^aht NIEJTE ;
+vikari^ate+Use/Sub:vikari^at NIEJTE ;
 vimpel#fabrigke+CmpN/SgN+CmpN/SgG+CmpN/PlG:vimpel#fabrigk NIEJTE ; !
 vimpel#fabrihke+CmpN/SgN+CmpN/SgG+CmpN/PlG:vimpel#fabrihk NIEJTE ; !
 vindikante:vindikant NIEJTE ;
 ving#sersjante+CmpN/SgN+CmpN/SgG+CmpN/PlG:ving#sersjant NIEJTE ; !
-virologe+CmpN/SgN+CmpN/SgG+CmpN/PlG:virolog NIEJTE ; !
+virologe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:virolog NIEJTE ;
+virolååge+CmpN/SgN+CmpN/SgG+CmpN/PlG:virolååg NIEJTE ;
 virologije:virologij NIEJTE ;
+virologïje:virologïj NIEJTE ;
 virulens#faktovre:virulens#faktovr NIEJTE ;
+virulens#faktore:virulens#faktor N_ODD ;
 virus#infeksjovne:virus#infeksjovn NIEJTE ;
-vise#presidente+CmpN/SgN+CmpN/SgG+CmpN/PlG:vise#president NIEJTE ; !
-vise#rektovre+CmpN/SgN+CmpN/SgG+CmpN/PlG:vise#rektovr NIEJTE ; !
+vise#presidente+CmpN/SgN+CmpN/SgG+CmpN/PlG:vise#president NIEJTE ;
+vise#rektovre+CmpN/SgN+CmpN/SgG+CmpN/PlG:vise#rektovr NIEJTE ;
+vise#rektore+CmpN/SgN+CmpN/SgG+CmpN/PlG:vise#rektor N_ODD ;
 visitasjovne:visitasjovn NIEJTE ;
 visitatovre:visitatovr NIEJTE ;
+visitaatore:visitaator N_ODD ;
 visjovne:visjovn NIEJTE ;
 viskovse:viskovs NIEJTE ;
 vitamïjne:vitamïjn NIEJTE ;
@@ -9819,6 +9900,8 @@ voestes#gietjie:voestes#gietj N_IE ;
 vokal#kombinasjovne:vokal#kombinasjovn NIEJTE ;
 vokal#musigke:vokal#musigk NIEJTE ;
 vokal#musihke:vokal#musihk NIEJTE ;
+vokal#musïgke:vokal#musïgk NIEJTE ;
+vokal#musïhke:vokal#musïhk NIEJTE ;
 vokale+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:vokal NIEJTE ;
 vokaale+CmpN/SgN+CmpN/SgG+CmpN/PlG:vokaal NIEJTE ;
 volon^trijse+CmpN/SgN+CmpN/SgG+CmpN/PlG:volon^trijs NIEJTE ; !
@@ -9929,6 +10012,8 @@ western#seerije:western#seerij IJE_ODD ;
 whiplash#pasi^ente+CmpN/SgN+CmpN/SgG+CmpN/PlG:whiplash#pasi^ent NIEJTE ; !
 wiener#musigke:wiener#musigk NIEJTE ;
 wiener#musihke:wiener#musihk NIEJTE ;
+wiener#musïgke:wiener#musïgk NIEJTE ;
+wiener#musïhke:wiener#musïhk NIEJTE ;
 wigwamme:wigwamm NIEJTE ;
 xero^graafe:xero^graaf NIEJTE ;
 xero^grafe+Use/Sub:xero^graf NIEJTE ;
@@ -9937,13 +10022,18 @@ xenofovne:xenofovn NIEJTE ;
 xero#forme:xero#form NIEJTE ;
 xero^grafije:xero^grafij NIEJTE ;
 xylo^grafije:xylo^grafij NIEJTE ;
+xero^grafïje:xero^grafïj NIEJTE ;
+xylo^grafïje:xylo^grafïj NIEJTE ;
 xylofovne:xylofovn NIEJTE ;
 zo^ologe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:zo^olog NIEJTE ;
 zo^olååge+CmpN/SgN+CmpN/SgG+CmpN/PlG:zo^olååg NIEJTE ;
 zo^ologije:zo^ologij NIEJTE ;
+zo^ologïje:zo^ologïj NIEJTE ;
 zo^onovse:zo^onovs NIEJTE ;
 zoofysigke:zoofysigk NIEJTE ;
 zoofysihke:zoofysihk NIEJTE ;
+zoofysïgke:zoofysïgk NIEJTE ;
+zoofysïhke:zoofysïhk NIEJTE ;
 åabpa+CmpN/SgN+CmpN/SgG+CmpN/PlG:åabp AAHKA "syster" ; !
 åabpetjh+CmpN/SgN+CmpN/PlG:åabpetj ÅABPETJH ; !
 giesie-dalhketjh+CmpN/SgN+CmpN/PlG+Use/Sub:giesie-dalhketj ÅABPETJH ; !
@@ -10026,6 +10116,7 @@ orgaane:orgaan NIEJTE ;
 ïentje+CmpN/SgN+CmpN/SgG+CmpN/PlG:ïentj NIEJTE ; !
 ïeske+CmpN/SgN+CmpN/SgG+CmpN/PlG:ïesk NIEJTE ; !
 ökonomije:ökonomij NIEJTE ;
+ökonomïje:ökonomïj NIEJTE ;
 övtiedimmie#soptsestalleme:övtiedimmie#soptsestallem N_ODD ;
 övtiedimmie:övtiedimm N_IE ;
 ööhpehtimmie#pro^gramme:ööhpehtimmie#pro^gramm NIEJTE ;
@@ -10040,20 +10131,29 @@ orgaane:orgaan NIEJTE ;
 økologe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:økolog NIEJTE ;
 økolååge+CmpN/SgN+CmpN/SgG+CmpN/PlG:økolååg NIEJTE ;
 økologije:økologij NIEJTE ;
+økologïje:økologïj NIEJTE ;
 økonomi#departemente+CmpN/SgN+CmpN/SgG+CmpN/PlG:økonomi#departement NIEJTE ; !
-økonomi#doktore+CmpN/SgN+CmpN/SgG+CmpN/PlG:økonomi#doktor N_ODD ; !
+økonomi#doktore+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:økonomi#doktor N_ODD ;
+økonomi#doktovre+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:økonomi#doktovr NIEJTE ;
 økonomi#konsulente+CmpN/SgN+CmpN/SgG+CmpN/PlG:økonomi#konsulent NIEJTE ; !
-økonomi#professovre+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:økonomi#professovr NIEJTE ;
+økonomi#professovre+CmpN/SgN+CmpN/SgG+CmpN/PlG:økonomi#professovr NIEJTE ;
 økonomi#professore+CmpN/SgN+CmpN/SgG+CmpN/PlG:økonomi#professor N_ODD ;
 økonomi#reglemente:økonomi#reglement NIEJTE ;
 økonomi#studente+CmpN/SgN+CmpN/SgG+CmpN/PlG:økonomi#student NIEJTE ; !
 økonomigke:økonomigk NIEJTE ;
 økonomihke:økonomihk NIEJTE ;
+økonomïgke:økonomïgk NIEJTE ;
+økonomïhke:økonomïhk NIEJTE ;
 økonomije:økonomij NIEJTE ;
+økonomïje:økonomïj NIEJTE ;
 økopolitigke:økopolitigk NIEJTE ;
 økopolitihke:økopolitihk NIEJTE ;
+økopolitïgke:økopolïtigk NIEJTE ;
+økopolitïhke:økopolïtihk NIEJTE ;
 økumenigke:økumenigk NIEJTE ;
 økumenihke:økumenihk NIEJTE ;
+økumenïgke:økumenïgk NIEJTE ;
+økumenïhke:økumenïhk NIEJTE ;
 ønologe+Use/Sub:ønolog NIEJTE ;
 ønolååge:ønolååg NIEJTE ;
 unnebe#låhkoe+CmpN/SgN+CmpN/SgG+CmpN/PlG:unnebe#låhk N_OE ; !
