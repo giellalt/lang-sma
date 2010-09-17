@@ -1,0 +1,171 @@
+Alphabet
+
+  a b c d e f g h i ï j k l m n o p q r s t u v w x y z æ ä ø ö å
+  A B C D E F G H I Ï J K L M N O P Q R S T U V W X Y Z
+  á é í 
+  Å Ä Ö Ø Æ Á
+  Á É Ó Ú Í À È Ò Ù Ì Ë Ü Ï Â Ê Ô Û Î Ã Ý þ Ñ Ð Ŋ Ŧ Č Ž     
+  á é ó ú í à è ò ù ì ë ü ï â ê ô û î ã ý þ ñ ð đ ß ª ß ç ŋ ŧ č ž 
+
+  %+N %+Sg %+Pl %+Nom %+Acc %+Gen %+Ine %+Ela %+Ill %+Com %+Ess
+  %+PxSg1 %+PxSg2 %+PxSg3
+  %+PxDu1 %+PxDu2 %+PxDu3
+  %+PxPl1 %+PxPl2 %+PxPl3
+  
+  %+V %+Prs %+Prt
+  %+Sg1 %+Sg2 %+Sg3
+  %+Du1 %+Du2 %+Du3
+  %+Pl1 %+Pl2 %+Pl3
+  
+  %+Neg    ! negation verb ij
+  %+ConNeg ! main verb complement to Neg, form identical to Imp
+  %+VAbess ! Verb Abessive
+
+  %+Inf  %+PrfPrc %+PrsPrc
+  %+Ger ! Gerund
+
+  %+Ind
+  %+Imprt %+ImprtII ! ImprtII only for Neg
+  %+Pot %+Cond  ! %+Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21)
+  %+Act ! -eme, could be chagned to %+Actio
+
+  %+A
+  %+Pred ! Predicative form, corresponds to %+A%+Nom%+Sg in sme
+  %+Comp %+Superl
+  %+Attr
+  
+  %+CS %+CC %+Pcle 
+  %+ABBR %+ACR ! Abbreviation, acronym
+  %+TV %+IV ! Transitivity tags
+  %+LOAN  ! ad hoc tag for development purposes.
+  %+Uml   ! A tag to indicate realised or potential Umlaut
+  %+Hyph  ! A tag to indicate that a hyphen was used when compounding
+
+  %+Pron %+Pers %+Refl %+Recipr %+Dem %+Indef %+Interr %+Rel
+  %+Po %+Pr %+Adv %+Interj %+Num %+Ord
+  %+Coll ! Collective numeral
+
+  %+Prop %+Mal %+Fem %+Sur ! Semantic properties of names
+  
+  %+CLB %+PUNCT %+LEFT %+RIGHT
+  
+  %+Cmpnd
+  %+SgNomCmp %+PlGenCmp %+SgGenCmp
+  %+CmpOnly
+  %+SgCmp %+SgNomCmp %+SgGenCmp %+PlGenCmp %+Cmpnd %+Cmpnd%+ %+Guess %+ShCmp !testing ShCmp
+  %+First %+Last %+None %+CmpOnly %+SgNomLeft %+SgGenLeft %+PlGenLeft %+SgLeft %+AllCmp
+  
+! Normative/prescriptive compounding tags:
+! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
+ %+First %+Last ! Spellertag: Can be first/last member of compound
+ %+None ! Spellertag: Can not participate in compounds
+ %+CmpOnly ! spellertag: can *only* participate in compounds
+ %+SgNomLeft %+SgGenLeft %+PlGenLeft %+SgLeft ! Restriction on compound to the left
+ %+AllCmp ! Allow all compounding patterns
+ %+DefSgGenCmp %+DefPlGenCmp %+DefCmp ! Default values
+! to be renamed:  %+§SgNomCmp %+§SgGenCmp %+§PlGenCmp
+
+ %+CmpN/Sg %+CmpN/SgN %+CmpN/SgG %+CmpN/PlG
+ %+CmpN/First %+CmpN/Last %+CmpN/None %+CmpN/Only
+ %+CmpN/SgLeft %+CmpN/SgNomLeft %+CmpN/SgGenLeft %+CmpN/PlGenLeft
+ %+CmpN/All %+CmpN/Def %+CmpN/DefSgGen %+CmpN/DefPlGen
+
+  
+  
+  %+Use/Sub   ! Substandard
+  %+Use/Marg  ! Marginal
+  %+Use/Circ  ! Circular path
+  %+Use/CircN ! ???
+  %+Use/Ped   ! Remove from pedagogical speller
+  %+Use/NG    ! Do not generate, for isme-ped.fst and apertium
+  %+Dial/%-S   ! Not in the South
+  %+Dial/%-N   ! Not in the North
+  
+  ! Different focus particles
+  %+Foc/ge
+  %+Foc/gan
+  %+Foc/gih
+  %+Foc/gænnah
+
+
+  X2 X3 X4
+  E2 ! insert e ! Fjern denne.
+
+  !Umlaut and diphthong simplification triggers:
+  %^DISIMP
+  %^COMPDISIMP
+  %^COMPDISIMP2
+  %^NOMAGieDISIMP
+  %^1UML  ! a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
+  %^2UML  ! dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
+  %^3UML  ! not used
+  %^3sUML ! a-uml in 3sg prs of V-IV (roehtedh - ruahta)
+  %^3dUML ! ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
+  %^iæUML ! not used
+  %^iUML  ! i-uml in pret of V-I (båetedh - böötim)
+  %^PASSUML ! Short passive Umlaut Rx->R5
+  %^didhUML !Der/didh Umlaut for GUARKEDH-words
+  %^htjidhUML !Umlaut für der/htjidh derivations
+  %^adteUML !Umlaut für Der/adte and Der/alle derivations
+  %^aLATUS  ! Latus-Umlaut for -ie stems
+  %^uLATUS  ! Latus-Umlaut for -oe stems
+
+! Flag diacritics
+ @P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@ ! (Dis)allowing compounds
+ @U.Cap.Obl@  @U.Cap.Opt@			! Allowing downcasing of
+						            ! derived names: deatnulasj.
+        							! Actually, downcasing should be obligatory
+
+! Der#begin
+! Derivation position in a derivation row:  Affix and:
+! 1              2               3                4                         POS type
+%+Der1           %+Der2           %+Der3            %+Der4
+! Der#1
+! Der#2
+! Der#3
+! Der#4
+! Der#other
+								%+Der/PassL                                  ! VV - long only
+								%+Der/PassS                                  ! VV - short only
+%+Der/htalle                                                                 ! VV - Passive
+%+Der/lgidh                                                                  ! VV - Passive
+%+Der/NomAg                                                                  ! VN
+%+Der/ijes                                                                   ! NA
+%+Der/NomAct                                                                 ! VN
+%+Der/æjja                                                                   ! VA
+%+Der/ihks                                                                   ! VA
+%+Der/les                                                                    ! VA
+%+Der/ldihkie                                                                ! VA
+%+Der/ldahke                                                                 ! VA
+%+Der/ldh                                                                    ! VA
+                %+Der/voete                                                  ! AN
+%+Der/htidh                                                                  ! VV - Causative
+!%+Der/dehte                                                                  ! VV - Causative
+%+Der/lidh                                                                   ! VV - Subitive
+%+Der/stidh                                                                  ! VV - Diminutive
+%+Der/didh                                                                   ! VV - Continuative
+%+Der/htjidh                                                                 ! Dim-cont.
+%+Der/htovve                                                                 ! AV 
+%+Der/htoeve                                                                 ! AV 
+%+Der/htehte                                                                 ! AV
+                                %+Der/ahtje                                  !VV - Inchoative
+                                %+Der/gåete                                 ! VV - Inchoative
+%+Der/Dim                                                                    ! NN - Diminutive
+%+Der/Rec                                                                    ! NN - Forholdsformer
+                %+Der/ehte                                                     !VV - Causative
+                %+Der/adte                                                 !VV - Frequentative
+                %+Der/alle                                                   !VV - Frequentative
+                %+Der/eds
+! Der#end
+
+;
+
+
+
+Rules
+
+"No substandard forms"
+%+Use/Sub /<= _ ;
+
+"No rare forms"
+%+Use/Marg /<= _ ;
