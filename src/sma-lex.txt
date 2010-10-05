@@ -279,25 +279,26 @@ LEXICON N_ODD_PL
 LEXICON N_ODD_ESS
   +Ess:%>inie          FINAL1 ;
   
-LEXICON BIEVSTERE
-  +N+Nom:%>%^DISIMPh       FINAL1 ;
-  +N+Acc:%>idie            FINAL1 ;
-  +N+Gen:%>%^DISIMPi       FINAL1 ;
-  +N+Ill:%>idie            FINAL1 ;
-  +N+Ine:%>inie            FINAL1 ;
-  +N+Ela:%>ijstie          FINAL1 ;
-  +N+Com:%>%^DISIMPigujmie FINAL1 ;
-  +N+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ;
+LEXICON ÅABPETJH !default N_ODD plural lexicon
+  +N+Pl+Nom:%>%^DISIMPh       FINAL1 ;
+  +N+Pl+Acc:%>idie            FINAL1 ;
+  +N+Pl+Gen:%>%^DISIMPi       FINAL1 ;
+  +N+Pl+Ill:%>idie            FINAL1 ;
+  +N+Pl+Ine:%>inie            FINAL1 ;
+  +N+Pl+Ela:%>ijstie          FINAL1 ;
+  +N+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
+  +N+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
+  +N+Ess:%>inie          FINAL1 ;
   +N+SgNomCmp:e%^DISIMP            R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
-  +N+Der1+Der/Dim+N+Pl:%»adtj           NIEJTE_PL  ;
-  +N+Der1+Der/Dim+N:%»adtj               EVEN_ESS ;
+  +N+Der1+Der/Dim+N+Pl:%»adtj NIEJTE_PL ;
+  +N+Der1+Der/Dim+N:%»adtj EVEN_ESS ;
   +N+Der1+Der/Dim+N+SgNomCmp:%»adtje    R ;
   +N+Der1+Der/Dim+N+PlGenCmp:%»adtj%>i  R ;
 
 
   
-LEXICON N_ODD_C
+LEXICON N_ODD_C   !this words have consonant-ending in nominative
  +N+Sg+Nom:%^DISIMP         FINAL1 ;
  +N+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
  +N+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
@@ -603,22 +604,6 @@ LEXICON DAKTERE
   +N+PlGenCmp:%>%^DISIMPi R ;
   +N+Der1+Der/Dim+N:%»adtj GIERIEHTSADTJE ;
 
-LEXICON ÅABPETJH
-  +N+Pl+Nom:%>%^DISIMPh       FINAL1 ;
-  +N+Pl+Acc:%>idie            FINAL1 ;
-  +N+Pl+Gen:%>%^DISIMPi       FINAL1 ;
-  +N+Pl+Ill:%>idie            FINAL1 ;
-  +N+Pl+Ine:%>inie            FINAL1 ;
-  +N+Pl+Ela:%>ijstie          FINAL1 ;
-  +N+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-  +N+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
-  +N+Ess:%>inie          FINAL1 ;
-  +N+SgNomCmp:e%^DISIMP            R ;
-  +N+PlGenCmp:%>%^DISIMPi R ;
-  +N+Der1+Der/Dim+N+Pl:%»adtj NIEJTE_PL ;
-  +N+Der1+Der/Dim+N:%»adtj EVEN_ESS ;
-  +N+Der1+Der/Dim+N+SgNomCmp:%»adtje    R ;
-  +N+Der1+Der/Dim+N+PlGenCmp:%»adtj%>i  R ;
 
 
 
