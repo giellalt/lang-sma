@@ -4,7 +4,17 @@ SHELL = /bin/sh
 # This is a makefile to automatise most of the testing.
 # It is language independent within the framework of the Sámi language
 # technology project. See further user documentation (and technical as well)
-# in $CVSROOT/gt/doc/docu-testing.html
+# in $GTHOME/techdoc/ling/docu-testing.html /
+# http://giellatekno.uit.no/doc/ling/docu-testing.html
+#
+# If you want to test a single word, use the command:
+#
+# make a-paradigm WORD=ammes
+#
+# (and similar for other words, with n- and v- for nouns, verbs)
+#
+# The output is found in ./Gen_tmp/Para_tmp/WORD.paradigm,
+# where WORD is the word tested.
 
 # VARIABLE DEFINITIONS
 # ====================
@@ -32,8 +42,8 @@ PARA_TMP = Para_tmp
 # This variable is holding the filename of the save file:
 # (makes the Makefile truly language independent for
 # the Sami languages)
-SAVEFILE = $(FSTDIR)/isma.fst
-#SAVEFILE = $(FSTDIR)/isma-norm.fst
+#SAVEFILE = $(FSTDIR)/isma.fst
+SAVEFILE = $(FSTDIR)/isma-norm.fst
 #SAVEFILE = $(FSTDIR)/isma-$(DIALECT).restr.fst
 # Copied from old LS makefile:
 # Bond, James Bond
