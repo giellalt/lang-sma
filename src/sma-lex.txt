@@ -653,7 +653,7 @@ LEXICON N_IE_PL
   +Acc:%>ide               FINAL1 ;
   +Acc+Uml+Use/NG:%>%^iUMLide     FINAL1 ;
   +Gen:ie%>j               FINAL1 ;
-  +Gen+Uml+Use/NG:%>%^iUMLi       FINAL1 ;
+  +Gen+Uml+Use/NG+Use/Sub:%>%^iUMLi FINAL1 ;
   +Ill:%>ide               FINAL1 ;
   +Ill+Uml+Use/NG:%>%^iUMLide     FINAL1 ;
   +Ine:%>ine               FINAL1 ;
@@ -1163,23 +1163,25 @@ LEXICON ie-ie-EVEN-1
   :ie   ATTR-0 ;
   :ie   PRED-0 ;
        ieCASE ;
- :ie  EVENCOMP ; ! check this!
+ :ie  EVENCOMP ; ! This one is ok!
 
 LEXICON ie-ie-EVENNOCOMP-1
   :ie   ATTR-0 ;
   :ie   PRED-0 ;
-       ieCASE ;
+        !eCASE ;  !This one is OK
        
 LEXICON es-es-EVEN-1
   :e   ATTR-S ;
   :e   PRED-S ;
-       eCASE ;
- :e  EVENCOMP ; ! check this!
+!       eCASE ; ! tentatively
+  :es ODDCASE ; ! veelkesem
+ :e  EVENCOMP ; ! check this! stamme 
 
 LEXICON es-es-EVENNOCOMP-1
   :e   ATTR-S ;
   :e   PRED-S ;
-       eCASE ;
+!       eCASE ; ! tentatively
+  :es ODDCASE ; ! veelkesem
 
 
 LEXICON as-as-EVEN-1
