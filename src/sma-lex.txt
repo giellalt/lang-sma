@@ -2399,9 +2399,6 @@ LEXICON COMMON-ODD
  ! ie and oe-stem goes to -sjidh vvith a umlaut, the rest of the stems =no 
  ! gidh, sid etc. how do this?
 
-
-
-
 ! Even-syllable verbs
 ! ===================
 
@@ -2991,6 +2988,9 @@ LEXICON LGIDH
 ! ------------
 
 ! Even
+! ----
+
+! Present
 
 LEXICON V-I-PRS-SG ! Merge with V-EVEN-PRS if nothing special here.
  V-PRS-SG-12 ;
@@ -3027,9 +3027,33 @@ LEXICON VSUF-EVEN-PRS-DUPL
  +Pl3:X2h				FINAL1	; !'e>oe
 
 
+
+
+LEXICON VSUF-VI-EVEN-PRS
+ :e	          V-PRS-SG-1 ;
+ 	          V-PRS-SG-2 ;
+ +Sg3:ie     	  FINAL1 ;
+! :ie		  VSUF-EVEN-PRS-DUPL ;
+ +Du1:ien         FINAL1	;
+ +Du2:eden	  FINAL1	; !i>0
+ +Du2:ijidien	  FINAL1	; !i>0
+ +Du3:ijægan	  FINAL1	; !e>0
+ +Pl1:ebe	  FINAL1	; !i>0
+ +Pl1:ijibie	  FINAL1	; !i>0
+ +Pl2:ijidie	  FINAL1	; !i>0
+ +Pl2:ede	  FINAL1	; !i>0
+ +Pl3:ieh         FINAL1	;
+
+
+! Imperative
+
 LEXICON VSUF-EVEN-IMP
+ +Sg1+Uml:%^1UMLam FINAL1 ;
  +Sg2:ieh FINAL1 ;
+ +Du1:ien FINAL1 ;  
  +Du2:eden FINAL1 ;
+ +Pl1:ebe FINAL1 ; 
+ +PL1:ijibie FINAL1 ; 
  +Pl2:ede FINAL1 ;
 
 
@@ -3066,24 +3090,9 @@ LEXICON VSUF-IV-EVEN-IMP
 
 
 
-LEXICON VSUF-VI-EVEN-PRS
- :e	          V-PRS-SG-1 ;
- 	          V-PRS-SG-2 ;
- +Sg3:ie     	  FINAL1 ;
-! :ie		  VSUF-EVEN-PRS-DUPL ;
- +Du1:ien         FINAL1	;
- +Du2:eden	  FINAL1	; !i>0
- +Du2:ijidien	  FINAL1	; !i>0
- +Du3:ijægan	  FINAL1	; !e>0
- +Pl1:ebe	  FINAL1	; !i>0
- +Pl1:ijibie	  FINAL1	; !i>0
- +Pl2:ijidie	  FINAL1	; !i>0
- +Pl2:ede	  FINAL1	; !i>0
- +Pl3:ieh         FINAL1	;
-
-
-
 ! Odd
+
+! Present
 
 LEXICON VSUF-ODD-PRS
     V-ODD-PRS-SG ;
@@ -3109,10 +3118,15 @@ LEXICON ODD_PRS_DU3
  +Du3:ægan		FINAL1	;
 ! +Du3:æban		FINAL1	; !SUB
 
+
+! Past
+
 LEXICON VSUF-ODD-PRT
 VSUF-PRT-SG-12 ;
 VSUF-PRT-SG-3 ;
 VSUF-PRT-DUPL ;
+
+! Imperative
 
 LEXICON VSUF-ODD-IMP
  +Sg2:%^DISIMPh FINAL1 ;
@@ -3121,8 +3135,6 @@ LEXICON VSUF-ODD-IMP
 
 
 ! Contract
-
-
 ! LEXICON VSUF-CONTR-PRS
 !      :e  V-PRS-SG-1 ;
 !      :   V-PRS-SG-2 ;
@@ -3148,8 +3160,11 @@ LEXICON VSUF-ODD-IMP
 !  +Pl2:ede  FINAL1  ;
 
 
-! Common even-odd-contr
-! ---------------------
+! Common even-odd
+! ---------------
+
+
+! Present
 
 LEXICON V-PRS-SG-12 ! Kutt denne viss ikkje ref til
  V-PRS-SG-1 ;
@@ -3163,6 +3178,9 @@ LEXICON V-PRS-SG-2
 
 LEXICON V-PRS-SG-3
  +Sg3: FINAL1 ;
+
+
+! Past
 
 LEXICON VSUF-PRT
  VSUF-PRT-SG-12 ;
