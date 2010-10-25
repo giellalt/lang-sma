@@ -26,7 +26,6 @@ Multichar_Symbols
   +PxSg1 +PxSg2 +PxSg3
   +PxDu1 +PxDu2 +PxDu3
   +PxPl1 +PxPl2 +PxPl3
-  
   +V +Prs +Prt
   +Sg1 +Sg2 +Sg3
   +Du1 +Du2 +Du3
@@ -1360,12 +1359,17 @@ LEXICON as-as-a-EVEN-3! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/e
        aCASE ;
  :a   EVENCOMP ;
 
+
 LEXICON oes-oes-oe-EVEN-3! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
  :oe   ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
  :oe    PRED-0 ;
  +Use/NG:oe    PRED-S ;
         oeCASE ;
  :oe  EVENCOMP_oe ;
+       :oes ODDCASE ;
++A+Sg+Nom:oes%^DISIMP         FINAL1 ;
++A+SgNomCmp:oes%^DISIMP            R ;
+
 
 
 
@@ -1385,7 +1389,7 @@ LEXICON NULL-NULL-ODD-1
 LEXICON h-h-ODD-1
      ATTR-H ;
      PRED-H ;
- :hk  ODDCOMP ;
+ :hk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN
 
 LEXICON h-h-ODDNOCOMP-1
      ATTR-H ;
