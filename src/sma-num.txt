@@ -15,11 +15,13 @@
 Multichar_Symbols
 
   +Use/NG    ! Do not generate, for isme-ped.fst and apertium
+  +String    ! Tag to denote non-numeric strings
+  +Num       ! Tag to denote real numbers in one form or another
 
 LEXICON Root
-< [a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|q|y|z|æ|ø|å|ä|ö|á|č|đ|ŋ|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|Æ|Ø|Å|Ä|Ö|Á|Č|Đ|Ŋ|Š|Ŧ|Ž]* > COMMA ; ! This first line is to allow all letter strings.
-NUMBERSECTION ;
-COMMASECTION ;
+< %+String [a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|q|y|z|æ|ø|å|ä|ö|á|č|đ|ŋ|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|Æ|Ø|Å|Ä|Ö|Á|Č|Đ|Ŋ|Š|Ŧ|Ž]* > COMMA ; ! This first line is to allow all letter strings.
++Num NUMBERSECTION ;
++Num COMMASECTION ;
 
 LEXICON NUMBERSECTION
 HUNDREDSM ;		! 200M
