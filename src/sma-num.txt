@@ -12,6 +12,9 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
+Multichar_Symbols
+
+  +Use/NG    ! Do not generate, for isme-ped.fst and apertium
 
 LEXICON Root
 < [a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|q|y|z|æ|ø|å|ä|ö|á|č|đ|ŋ|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|Æ|Ø|Å|Ä|Ö|Á|Č|Đ|Ŋ|Š|Ŧ|Ž]* > COMMA ; ! This first line is to allow all letter strings.
@@ -39,9 +42,9 @@ LEXICON HUNDREDSM
 göökte:2  CUODIM ;
 golme:3 CUODIM ;
 njieljie:4 CUODIM ; ! Google: 459
-!njielje:4 CUODIM ;  ! Google: 218
-!nieljie:4 CUODIM ;  ! Google:  61
-!nielje:4 CUODIM ;   ! Google: irrelevant (20,600)
+njielje+Use/NG:4 CUODIM ;  ! Google: 218
+nieljie+Use/NG:4 CUODIM ;  ! Google:  61
+ nielje+Use/NG:4 CUODIM ;  ! Google: irrelevant (20,600)
 vïjhte:5 CUODIM ;
 govhte:6 CUODIM ;
 tjïjhtje:7 CUODIM ;
@@ -65,9 +68,9 @@ akte:1     LOHKAIM ;
 göökte:2   LOHKAIM ;
 golme:3    LOHKAIM ;
 njieljie:4 LOHKAIM ;
-!njielje:4  LOHKAIM ;
-!nieljie:4  LOHKAIM ;
-!nielje:4   LOHKAIM ;
+njielje+Use/NG:4  LOHKAIM ;
+nieljie+Use/NG:4  LOHKAIM ;
+ nielje+Use/NG:4  LOHKAIM ;
 vïjhte:5   LOHKAIM ;
 govhte:6   LOHKAIM ;
 tjïjhtje:7 LOHKAIM ;
@@ -82,9 +85,9 @@ luhkie:1%0 MILJON ;
 göökte:2   LUHKIEM ;
 golme:3    LUHKIEM ;
 njieljie:4 LUHKIEM ;
-!njielje:4  LUHKIEM ;
-!nieljie:4  LUHKIEM ;
-!nielje:4   LUHKIEM ;
+njielje+Use/NG:4  LUHKIEM ;
+nieljie+Use/NG:4  LUHKIEM ;
+ nielje+Use/NG:4  LUHKIEM ;
 vïjhte:5   LUHKIEM ;
 govhte:6   LUHKIEM ;
 tjïjhtje:7 LUHKIEM ;
@@ -100,9 +103,9 @@ akte% miljon% :1 OVERTHOUSANDS ;
 göökte:2         MILJON ;
 golme:3          MILJON ;
 njieljie:4       MILJON ;
-!njielje:4        MILJON ;
-!nieljie:4        MILJON ;
-!nielje:4         MILJON ;
+njielje+Use/NG:4        MILJON ;
+nieljie+Use/NG:4        MILJON ;
+ nielje+Use/NG:4        MILJON ;
 vïjhte:5         MILJON ;
 govhte:6         MILJON ;
 tjïjhtje:7       MILJON ;
@@ -133,6 +136,9 @@ LEXICON HUNDREDST
 göökte:2   CUODIT ;	! 200000-299999
 golme:3    CUODIT ;	! 300000-399999
 njieljie:4 CUODIT ;	! 400000-499999
+njielje+Use/NG:4  CUODIT ;
+nieljie+Use/NG:4  CUODIT ;
+ nielje+Use/NG:4  CUODIT ;
 vïjhte:5   CUODIT ;	! 500000-599999
 govhte:6   CUODIT ;	! 600000-699999
 tjïjhtje:7 CUODIT ;	! 700000-799999
@@ -158,9 +164,9 @@ akte:1     LOHKAIT ;
 göökte:2   LOHKAIT ;
 golme:3    LOHKAIT ;
 njieljie:4 LOHKAIT ;
-!njielje:4  LOHKAIT ;
-!nieljie:4  LOHKAIT ;
-!nielje:4   LOHKAIT ;
+njielje+Use/NG:4  LOHKAIT ;
+nieljie+Use/NG:4  LOHKAIT ;
+ nielje+Use/NG:4  LOHKAIT ;
 vïjhte:5   LOHKAIT ;
 govhte:6   LOHKAIT ;
 tjïjhtje:7 LOHKAIT ;
@@ -174,9 +180,9 @@ LEXICON TENST
 göökteluhkie:2   LUHKIET ;
 golmeluhkie:3    LUHKIET ;
 njieljieluhkie:4 LUHKIET ;
-!njieljeluhkie:4  LUHKIET ;
-!nieljieluhkie:4  LUHKIET ;
-!nieljeluhkie:4   LUHKIET ;
+njieljeluhkie+Use/NG:4  LUHKIET ;
+nieljieluhkie+Use/NG:4  LUHKIET ;
+ nieljeluhkie+Use/NG:4  LUHKIET ;
 vïjhteluhkie:5   LUHKIET ;
 govhteluhkie:6   LUHKIET ;
 tjïjhtjeluhkie:7 LUHKIET ;
@@ -192,9 +198,9 @@ LEXICON ONEST
 göökte:2 THOUSANDS ;
 golme:3 THOUSANDS ;
 njieljie:4 THOUSANDS ;
-!njielje:4 THOUSANDS ;
-!nieljie:4 THOUSANDS ;  
-!nielje:4 THOUSANDS ;   
+njielje+Use/NG:4 THOUSANDS ;
+nieljie+Use/NG:4 THOUSANDS ;  
+ nielje+Use/NG:4 THOUSANDS ;   
 vïjhte:5 THOUSANDS ;
 govhte:6 THOUSANDS ;
 tjïjhtje:7 THOUSANDS ;
@@ -225,9 +231,9 @@ LEXICON HUNDREDS
 göökte:2   CUODI ;
 golme:3    CUODI ;
 njieljie:4 CUODI ;
-!njielje:4  CUODI ;
-!nieljie:4  CUODI ;  
-!nielje:4   CUODI ; 
+njielje+Use/NG:4  CUODI ;
+nieljie+Use/NG:4  CUODI ;
+ nielje+Use/NG:4  CUODI ;
 vïjhte:5   CUODI ;
 govhte:6   CUODI ;
 tjïjhtje:7 CUODI ;
@@ -257,9 +263,9 @@ låhkede:1%0%. COMMA ;
 göökte:2 LUHKIE ;
 golme:3 LUHKIE ;
 njieljie:4 LUHKIE ;
-!njielje:4 LUHKIE ;
-!nieljie:4 LUHKIE ;  
-!nielje:4 LUHKIE ; 
+njielje+Use/NG:4 LUHKIE ;
+nieljie+Use/NG:4 LUHKIE ;
+ nielje+Use/NG:4 LUHKIE ;
 vïjhte:5 LUHKIE ;
 govhte:6 LUHKIE ;
 tjïjhtje:7 LUHKIE ;
@@ -280,9 +286,9 @@ akte:1 COMMA ;
 göökte:2 COMMA ;
 golme:3 COMMA ;
 njieljie:4 COMMA ;
-!njielje:4 COMMA ;
-!nieljie:4 COMMA ;  
-!nielje:4 COMMA ; 
+njielje+Use/NG:4 COMMA ;
+nieljie+Use/NG:4 COMMA ;  
+ nielje+Use/NG:4 COMMA ; 
 vïjhte:5 COMMA ;
 govhte:6 COMMA ;
 tjïjhtje:7 COMMA ;
