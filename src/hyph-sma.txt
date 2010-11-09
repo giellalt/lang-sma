@@ -95,13 +95,12 @@ define nodipht     [..] -> %^ || Cns Vow            _ VowNot2ndVow ,
 define sj           [..] -> %^ || Vow               _  s j Vow ; ! 
 define tjts         [..] -> %^ || Vow               _  t [j|s] Vow ; !                                                         
 define unvoiced     [..] -> %^ || Vow (Cns) h       _ [ n | m | l | j | r | v ] Vow ;
-define divdigraph   [..] -> %^ || Vow  Cns*         _ n [g|j]  Vow ; ! !jar-ngas
+define divdigraph   [..] -> %^ || Vow  Cns*         _ [n [g|j]|l j]  Vow ; ! !jar-ngas
 define preaspirated [..] -> %^ || Vow (Cns) h       _ [ p | t | k ] ([ s | j ]) Vow ;
 define palatal      [..] -> %^ || Vow (Cns) n       _ n [j|g] ,
                                   Vow (Cns) l       _ l j ,
                                   Vow (Cns) r       _ r j ,
-                                  Vow (Cns) t       _ t j ,                                  
-                                  Vow (Cns) l       _ l j ; ! mæn-nja
+                                  Vow (Cns) t       _ t j ;                                  
 define konset       [..] -> %^ || Vow Cns*          _ k [r|l|v|j] Vow ; 
 define s2cns        [..] -> %^ || Vow [Cns - t]     _ s Cnss Vow ; ! máj-stet,
 
@@ -113,7 +112,7 @@ define 2cns         [..] -> %^ || Vow  Cns          _  Cns Vow ; ! et-te
 define sjcns        [..] -> %^ || Vow  Cns          _  s j Vow ; ! et-sje
 define 1cns         [..] -> %^ || Vow               _  Cns Vow ; ! e-te
 
-!Error: We fail with: jijnjebh        jijn-jebh Vow Cns _ n j Vow = 72 should be jij-nj     
+! jijn-jebh Vow Cns _ n j Vow = 72 should be jij-nj     
 ! Wrong: lokn-ge-sieh
 ! Corr:  lok-nge-sieh
 ! minn-ge-mes
