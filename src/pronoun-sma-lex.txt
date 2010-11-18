@@ -44,7 +44,7 @@ sinsitnide+Pron+Recipr+Pl+Acc:sinsitnide FINAL1 ;
 ! - - - - - - - - - - - - - - - - - - - - - - - 
 
 LEXICON Personal
-manne+Pron+Pers+Sg1:m shortproncase ; !added beacause of Oahpa
+manne+Pron+Pers+Sg1+Use/NG:m shortproncase ; !added beacause of Oahpa
 manne+Pron+Pers+Sg1+Gen:mov # ; ! Added to fill the gap, remove this or previous
 manne+Pron+Pers+Sg1:m firstperspronsg ;
 manne+Pron+Pers+Du1:m firstpersprondu ;
@@ -67,7 +67,7 @@ LEXICON firstperspronsg ! First pers has special consonantism
 +Ill:unnjan FINAL1 ;
 
 LEXICON nonfirstperspronsg ! 2nd and 3rd are identical
-shortproncase ;
++Use/NG: shortproncase ;
 :atne longproncase ;
 +Gen:ov FINAL1 ;
 +Ill:utnjien FINAL1 ;
@@ -78,17 +78,17 @@ shortproncase ;
 ! - - - - - - - 
 
 LEXICON firstpersprondu
-+Nom:in FINAL1 ;
-+Nom+Use/NG:ånnoeh FINAL1 ;
++Nom+Use/NG:in FINAL1 ;
++Nom:ånnoeh FINAL1 ;
 +Nom+Use/NG:onnoej FINAL1 ;
 +Gen:onnen FINAL1 ;
 +Ill:onnese FINAL1 ;
 :onne longproncase ;
 
 LEXICON nonfirstpersprondu
-+Nom:in FINAL1 ;
++Nom+Use/NG:in FINAL1 ;
 +Nom:åtnoeh FINAL1 ;
-+Nom:otnoej FINAL1 ;
++Nom+Use/NG:otnoej FINAL1 ;
 +Gen:otnen FINAL1 ;
 +Ill:otnese FINAL1 ;
 :otne longproncase ;
@@ -99,8 +99,8 @@ LEXICON nonfirstpersprondu
 ! - - - - - - - 
 
 LEXICON perspronpl
-+Nom:ih FINAL1 ;
-+Nom+Use/NG:ijjieh FINAL1 ;
++Nom+Use/NG:ih FINAL1 ;
++Nom:ijjieh FINAL1 ;
 +Nom+Use/NG:ijje FINAL1 ;
 +Acc:ijjem FINAL1 ;
 +Gen:ijjen FINAL1 ;
@@ -146,6 +146,8 @@ dïhte+Pron+Pers+Sg3+Ela:destie FINAL1 ;
 dïhte+Pron+Pers+Sg3+Ela+Use/NG:altasistie FINAL1 ; 
 dïhte+Pron+Pers+Sg3+Com:dejnie FINAL1 ;
 dïhte+Pron+Pers+Sg3+Com+Use/NG:altasinie FINAL1 ;  
+
+dïhte+Pron+Pers+Du3+Nom:dah% guaktah FINAL1 ; ! For oahpa use
 
 dïhte+Pron+Pers+Pl3+Nom:dah FINAL1 ;  
 dïhte+Pron+Pers+Pl3+Acc:dejtie FINAL1 ;  
