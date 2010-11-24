@@ -566,16 +566,15 @@ LEXICON ARABICLOOP				!^C^
  +Use/Circ: ARABIC ;	   ! Allowing for "23 500" w/nbsp (initial char is alt-space)	!
  %/+Use/Circ:%/ ARABIC;	   ! 24/12			!		
 !%' ARABIC ;	   ! Since ' denotes cons.grad. This is not optimal either. 
-!+Num:%- R ; !^C^	   	! Number compounds
- +Num+Use/Circ: R ; 			   	! Hyphen removed bec. of "123- ja 124-viessu" !
+ +Num+Use/Circ: RHyph ; 			   	! Hyphen removed bec. of "123- ja 124-viessu" !
 !+A+Ord:%. # ;							 !^C^
- ,%-+Num+Use/Circ:,%- # ;			! 10,-					 !
- %%+Num+Nom+Use/Circ:%% # ;		! 50%. It is wrong, but 75 % of us write "75%".		!
- % %%+Num+Nom+Use/Circ:% %% # ;	! We must analyse the correct ones as well... 50 % etc.	!
+ ,%-+Num:,%- # ;			! 10,-					 !
+ %%+Num+Nom:%% # ;		! 50%. It is wrong, but 75 % of us write "75%".		!
+ % %%+Num+Nom:% %% # ;	! We must analyse the correct ones as well... 50 % etc.	!
  +Num+Use/Circ: ARABICDELIMITER ; ! list of number-case delimiters			!
 
-LEXICON ARABICLOOPORD				!^C^
- +A+Ord+Use/Circ:%. # ;							 !
+LEXICON ARABICLOOPORD
+ +A+Ord:%. # ;
  +A+Ord+Use/Circ: ARABICDELIMITERORD ;                    !
 
 LEXICON ARABICLOOPCOLL				!^C^
@@ -604,17 +603,17 @@ LEXICON ARABICDELIMITERCOLL											!^C^
  %-+Use/Sub+Use/Circ:%- ARABICCASECOLL ;    ! This is the 1984-s case.		!			!
 
                      		
-LEXICON ARABICCASE0							!^C^
- +Sg+Nom+Use/Circ:%> # ;									!
+LEXICON ARABICCASE0
+ +Sg+Nom:%> # ;
 
 
 LEXICON ARABICCASE							!^C^
- f+Sg+Nom+Use/Sub+Use/Circ:f # ;		! s. 123f.	!				!
- ff+Sg+Nom+Use/Sub+Use/Circ:ff # ;		! s. 123ff.	!				!
- b+Sg+Nom+Use/Sub+Use/Circ:b # ;		! § 123b	!				!
- c+Sg+Nom+Use/Sub+Use/Circ:c # ;		! § 123c	!				!
- d+Sg+Nom+Use/Sub+Use/Circ:d # ;		! § 123d	!				!
- e+Sg+Nom+Use/Sub+Use/Circ:e # ;		! § 123e	!				!
+ f+Sg+Nom+Use/Sub:f # ;		! s. 123f.	!				!
+ff+Sg+Nom+Use/Sub:ff # ;		! s. 123ff.	!				!
+ b+Sg+Nom+Use/Sub:b # ;		! § 123b	!				!
+ c+Sg+Nom+Use/Sub:c # ;		! § 123c	!				!
+ d+Sg+Nom+Use/Sub:d # ;		! § 123d	!				!
+ e+Sg+Nom+Use/Sub:e # ;		! § 123e	!				!
 +Sg+Gen:n # ;
 +Sg+Acc:m # ;
 +Sg+Ill:se # ;
@@ -632,33 +631,33 @@ LEXICON ARABICCASE							!^C^
 !ordinals
 
 LEXICON ARABICCASEORD							!^C^
- +Sg+Nom+Use/Circ:%>de # ;  !
- +Sg+Gen+Use/Circ:%>den # ;  !
- +Sg+Acc+Use/Circ:%>dem # ;  !
- +Sg+Ill+Use/Circ:%>dasse # ; !
- +Sg+Ine+Attr+Use/Circ:%>dinie # ;
- +Sg+Ela+Attr+Use/Circ:%>dihtie # ;
- +Sg+Ine+Use/Circ:%>disnie # ;   !
- +Sg+Ela+Use/Circ:%>distie # ;   !
- +Sg+Com+Use/Circ:%>dinie # ;  !
- +Sg+Ess+Use/Circ:%>dinie # ;
- +Pl+Nom+Use/Circ:%>dh # ; !
- +Pl+Gen+Use/Circ:%>di # ; !
- +Pl+Acc+Use/Circ:%>didie # ; !
- +Pl+Ill+Use/Circ:%>didie # ; !
- +Pl+Ine+Use/Circ:%>dinie # ; !
- +Pl+Ela+Use/Circ:%>dijstie # ; !
- +Pl+Com+Use/Circ:%>digujmie  # ; !
+ +Sg+Nom:%>de # ;  !
+ +Sg+Gen:%>den # ;  !
+ +Sg+Acc:%>dem # ;  !
+ +Sg+Ill:%>dasse # ; !
+ +Sg+Ine+Attr:%>dinie # ;
+ +Sg+Ela+Attr:%>dihtie # ;
+ +Sg+Ine:%>disnie # ;   !
+ +Sg+Ela:%>distie # ;   !
+ +Sg+Com:%>dinie # ;  !
+ +Sg+Ess:%>dinie # ;
+ +Pl+Nom:%>dh # ; !
+ +Pl+Gen:%>di # ; !
+ +Pl+Acc:%>didie # ; !
+ +Pl+Ill:%>didie # ; !
+ +Pl+Ine:%>dinie # ; !
+ +Pl+Ela:%>dijstie # ; !
+ +Pl+Com:%>digujmie  # ; !
 
 LEXICON ARABICCASECOLL							!^C^
-+Pl+Nom+Use/Circ:%>sh # ;
-+Pl+Acc+Use/Circ:%>sidie # ;
-+Pl+Gen+Use/Circ:%>si # ;
-+Pl+Ill+Use/Circ:%>sidie # ;
-+Pl+Ine+Use/Circ:%>sinie # ;
-+Pl+Ela+Use/Circ:%>sijstie # ;
-+Pl+Com+Use/Circ:%>sigujmie # ;
-+Ess+Use/Circ:%>sinie # ;
++Pl+Nom:%>sh # ;
++Pl+Acc:%>sidie # ;
++Pl+Gen:%>si # ;
++Pl+Ill:%>sidie # ;
++Pl+Ine:%>sinie # ;
++Pl+Ela:%>sijstie # ;
++Pl+Com:%>sigujmie # ;
+   +Ess:%>sinie # ;
 
 
 ! The Roman numerals !
@@ -810,11 +809,11 @@ LEXICON 2ROM-ONE-TAG !
  +Use/Circ: ROMNUMTAG ; !
 
 LEXICON ROMNUMTAG !
- +Num+Nom+Use/Circ:%> # ; !
- +Num+Gen+Use/Circ:%> # ; !
- +Num+Acc+Use/Circ:%> # ; !
- +A+Ord+Use/Circ:%.%> # ; ! !III. as ordinal.
- +A+Ord+Use/Circ:%> # ;! !Looking for trouble...
+ +Num+Nom:%> # ; !
+ +Num+Gen:%> # ; !
+ +Num+Acc:%> # ; !
+   +A+Ord:%.%> # ; ! !III. as ordinal.
+   +A+Ord:%> # ;! !Looking for trouble...
  +Num+Use/Circ:%: ROMNUMTAGOBL ; !
  +Num+Use/Circ:'7 ROMNUMTAGOBL ; !
  +Num+Use/Circ:%- ROMNUMTAGOBL ; !
@@ -822,15 +821,15 @@ LEXICON ROMNUMTAG !
 ! +Num: ROMNUMTAGOBL ; !
 
 LEXICON ROMNUMTAGOBL !
- +Gen+Use/Sub+Use/Circ:%>n # ; ! ! But here 123a 123
- +Acc+Use/Sub+Use/Circ:%>m # ; ! !
- +Ill+Use/Circ:%>ese # ; ! 
- +Ine+Use/Circ:%>esne # ; !
- +Ine+Attr+Use/Circ:%>ene # ; !
- +Ela+Attr+Use/Circ:%>ede # ; !
- +Ela+Use/Circ:%>este # ; !
- +Com+Use/Circ:%>ine # ; !
- +Ess+Use/Circ:%>in # ; !
+ +Gen+Use/Sub:%>n # ; ! ! But here 123a 123
+ +Acc+Use/Sub:%>m # ; ! !
+ +Ill:%>ese # ; ! 
+ +Ine:%>esne # ; !
+ +Ine+Attr:%>ene # ; !
+ +Ela+Attr:%>ede # ; !
+ +Ela:%>este # ; !
+ +Com:%>ine # ; !
+ +Ess:%>in # ; !
 
 LEXICON NUMBERLIKE
  gellie+Num+Sg:gell N_IE_SG ; ! as sme máŋga
@@ -842,26 +841,26 @@ gellie+Num+Sg+Ela+Attr:gelle%>de # ;
 ! ------------------------------------------------------- !
 
 
-LEXICON ISOLATED-NUMEXP !
- ½+Num+Use/Circ:½ # ; !
- ¹+Num+Use/Circ:¹ # ; !
- ²+Num+Use/Circ:² # ; !
- ³+Num+Use/Circ:³ # ; !
- ¼+Num+Use/Circ:¼ # ; !
-¾+Num:¾ # ;
+LEXICON ISOLATED-NUMEXP
+ ½+Num:½ # ;
+ ¹+Num:¹ # ;
+ ²+Num:² # ;
+ ³+Num:³ # ;
+ ¼+Num:¼ # ;
+ ¾+Num:¾ # ;
 
 
 LEXICON COLLECTIVE !Some collective numbers that do not fit in anywhere else
-gööktege+N+Coll:göökteg ORDTAGODD ;
-golmege+N+Coll:golmeg ORDTAGODD ;
-gåalmege+N+Coll:gåalmag ORDTAGODD ;
-njealjege+N+Coll:njealjag ORDTAGODD ;
-vïjhtege+N+Coll:vïjhteg ORDTAGODD ;
-govhtege+N+Coll:govhteg ORDTAGODD ;
+  gööktege+N+Coll:göökteg ORDTAGODD ;
+   golmege+N+Coll:golmeg ORDTAGODD ;
+  gåalmege+N+Coll:gåalmag ORDTAGODD ;
+ njealjege+N+Coll:njealjag ORDTAGODD ;
+  vïjhtege+N+Coll:vïjhteg ORDTAGODD ;
+  govhtege+N+Coll:govhteg ORDTAGODD ;
 tjïjhtjege+N+Coll:tjïjhtjeg ORDTAGODD ;
-gaaktsege+N+Coll:gaaktsag ORDTAGODD ;
-uktsege+N+Coll:uktsieg ORDTAGODD ;
-låhkege+N+Coll:låhkag ORDTAGODD ;
+ gaaktsege+N+Coll:gaaktsag ORDTAGODD ;
+   uktsege+N+Coll:uktsieg ORDTAGODD ;
+   låhkege+N+Coll:låhkag ORDTAGODD ;
 
 LEXICON 2TO9LUHKIE
 göökte# LUHKIE- ;
@@ -975,16 +974,6 @@ stoerre#luhkie# AKTEF ;
 stoerre#luhkie# 2TO9F ;
 
 
-
-
- 
-
-
-
-
-
-
- 
  
 !LEXICON NUMERALCOMPOUNDS ! numeral as first part 
 ! NAMÁK ; ! tuvsánjienat, logigielat, etc. 
@@ -993,9 +982,6 @@ stoerre#luhkie# 2TO9F ;
 ! geardásaš:geardás DABALAS ; 
 ! !tuvsán#geardásaš 
 ! jahkásaš:jahkás DABALAS ; 
-
-
-
 
 
 ! Imprecise numbers
