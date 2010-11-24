@@ -222,8 +222,9 @@ LEXICON R
  +Hyph#+Use/Circ:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and maana-gåetie	      
  +Hyph#+Use/Circ:%-@P.NeedNoun.ON@  Adjective ;   ! are allowed.			              
 
- %-#+Use/Circ:%-# ProperNoun ; ! Proper nouns as the 2nd part of compounds.
-                               ! viessu-London goes through here.
+ %-#+Use/Circ:%-# Acronym ;    ! maana-tv, "lomme-cd-spelar"
+ %-#+Use/Circ:%-# ProperNoun ; ! Proper nouns as the 2nd part of compounds for non-hyph.
+                               ! words. viessu-London goes through here.
 
  +Cmpnd:%- # ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
 
@@ -235,15 +236,15 @@ LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
  %-#@P.NeedNoun.ON@+Use/Circ:%-#@P.NeedNoun.ON@ Verb;       ! Flag diacr declares that the compound
  %-#@P.NeedNoun.ON@+Use/Circ:%-#@P.NeedNoun.ON@ Adjective ; ! needs a N tag later in the derivation
 
+ %-#+Use/Circ:%-# Acronym ;    ! maana-tv, "lomme-cd-spelar"
  %-#+Use/Circ:%-# ProperNoun ; ! Proper nouns as the 2nd part of compounds for hyph-words.
-                               ! London-Hull, Hull-viessu
-                    ! and viessuLondon are now all ok.
+                               ! London-Hull is covered here, whereas Hull-viessu
+                               ! is covered by RHyph + Noun.
 
-!# ProperNoun ;     ! Now, let us allow proper nouns as the 2nd part of com-    ^C^
-!#:%- ProperNoun ;  ! pounds. Thus: London-Hull, LondonHull, Hull-viessu        ^C^
-                    ! and viessuLondon are now all ok. Some refinement could    ^C^
-                    ! perhaps be done, but corpus research is needed.	        ^C^
  +Cmpnd:%- # ;      ! This to take care of Oahpo- ja dutkandept - want this in speller
+
+! Proper noun compounds without hyphens are NOT presently covered - if they were
+! to be added, they need to be marked +Use/Sub. Examples: LondonHull & viessuLondon.
 
 ! ============================
 ! Nominal inflection sublexica
