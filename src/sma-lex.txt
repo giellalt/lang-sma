@@ -227,7 +227,8 @@ LEXICON R
                     ! perhaps be done, but corpus research is needed.	      ^C^
  +Cmpnd:%- # ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
 
-LEXICON RAbbr !From abbreviations and acronyms to avoid two hyphens: a-- and ...
+LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
+              ! NBNBNB!!! The hyphen should be added here! NOT in the other lexicons!
  #+Use/Circ:# Noun;                              ! This is the normal case.               
 ! # NounSecond ;                       ! Testing some quasisuff, cf. noun file  ^C^
  #@P.NeedNoun.ON@+Use/Circ:#@P.NeedNoun.ON@ Verb;              ! Flag diacr declares that the compound  
