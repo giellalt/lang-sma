@@ -40,6 +40,7 @@ Multichar_Symbols
 
   +Ind
   +Imprt 
+  +Cond ! for one form: lidtjie.  To be looked at.
  ! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21)
   +Act ! -eme, could be chagned to +Actio
 
@@ -1153,6 +1154,52 @@ LEXICON JOVKEMES
 +N+Sg+Ela+PxSg1:mass%>estanne FINAL1 ;
 +N+Sg+Ela+PxSg1+Use/NG:mass%>estadth FINAL1 ;
 +N+Sg+Com+PxSg2:mass%>enadth FINAL1 ;
+
+
+
+! lexicon for vowel-final words with invariant stems
+LEXICON KONTO
+  +N+Sg: KONTO_SG  ;
+  +N+Pl: KONTO_PL  ;
+  +N:    EVEN_ESS ;
+  +N+SgNomCmp:    R ;
+  +N+SgGenCmp:%>n R ;
+  +N+PlGenCmp:%>j R ;
+  +N+Der1+Der/Dim+N:%»tj GÅATETJE ;
+
+LEXICON KONTO_SG
+  +Nom:          FINAL1 ;
+  +Acc:%>m       FINAL1 ;
+  +Gen:%>n       FINAL1 ;
+  +Ill:%>se      FINAL1 ;
+  +Ine:%>sne     FINAL1 ;
+  +Ela:%>ste     FINAL1 ;
+  +Com:%>ine      FINAL1 ;
+! waiting with the Px forms for these (?) loanwords
+!  +Nom+PxSg1:%>me FINAL1 ;
+!  +Nom+PxSg2:%>dh FINAL1 ;
+!  +Nom+PxSg3:%>se FINAL1 ;
+!  +Acc+PxSg1:%>me FINAL1 ;
+!  +Acc+PxSg1+Use/NG:%>mem FINAL1 ;
+!  +Acc+PxSg2:%>mdh FINAL1 ;
+!  +Acc+PxSg3:e%>mse FINAL1 ;
+!  +Gen+PxSg1:%>ne FINAL1 ;
+!  +Ill+PxSg1:%>asanne FINAL1 ;
+!  +Ill+PxSg2:%>asadth FINAL1 ;
+!  +Ela+PxSg1:%>astanne FINAL1 ;
+!  +Ela+PxSg1+Use/NG:%>astadth FINAL1 ;
+!  +Com+PxSg2:%>anadth FINAL1 ;
+
+LEXICON KONTO_PL
+  +Nom:%>h       FINAL1 ;
+  +Acc:%>ide      FINAL1 ;
+  +Gen:%>j       FINAL1 ;
+  +Ill:%>ide      FINAL1 ;
+  +Ine:%>ine      FINAL1 ;
+  +Ela:%>ijste    FINAL1 ;
+  +Com:%>jgujmie FINAL1 ;
+ +Com+Use/Sub:%>jgyjmie FINAL1 ; !
+
 
 
 ! Sub-paradigm inflections:
@@ -2283,6 +2330,7 @@ LEXICON LEA
 +Ind+ConNeg+Prt:l    LEA-PRET	;
 +Imprt:l		  LEA-IMP ;
 +ConNeg:leah  FINAL1 ;
++Cond+Prs+Sg3:lidtjie FINAL1 ; ! Magkeres lidtjie deere orreme? 
 
 LEXICON LEA-PRES
 +Sg1:eam    FINAL1	;
