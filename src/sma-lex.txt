@@ -1159,13 +1159,17 @@ LEXICON JOVKEMES
 
 ! lexicon for vowel-final words with invariant stems
 LEXICON KONTO
-  +N+Sg: KONTO_SG  ;
-  +N+Pl: KONTO_PL  ;
-  +N:    EVEN_ESS ;
-  +N+SgNomCmp:    R ;
-  +N+SgGenCmp:%>n R ;
-  +N+PlGenCmp:%>j R ;
-  +N+Der1+Der/Dim+N:%»tj GÅATETJE ;
++N: KONTODECL ;
+
+
+LEXICON KONTODECL
+ +Sg: KONTO_SG  ;
+ +Pl: KONTO_PL  ;
+      EVEN_ESS ;
+ +SgNomCmp:    R ;
+ +SgGenCmp:%>n R ;
+ +PlGenCmp:%>j R ;
+ +Der1+Der/Dim+N:%»tj GÅATETJE ;
 
 LEXICON KONTO_SG
   +Nom:          FINAL1 ;
