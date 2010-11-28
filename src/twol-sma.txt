@@ -939,7 +939,7 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 !#:% /<= .#. _ ;
 
 "Prohibit invisible word boundary between matching vowels"
- #:0 /<= Vx _ Vx Vx ;
+ #:0 /<= :Vx _ :Vx :Vx ;        ! This should apply to only the surface side
  	where Vx in (e a) matched ;
 
 !€# laajhna#aaltoe
@@ -954,3 +954,12 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 !$# aerpie#eeke
 !$0 aerpie0eeke
 
+"Make hyphenation points visible when between identical vowels"
+ %^:%- <= :Vx _ :Vx :Vx ;        ! This should apply to only the surface side
+ 	where Vx in (e a) matched ;
+
+!€# Aevjie^aesie
+!€0 Aevjie0aesie
+
+!€# Aevjie^aesiede
+!€0 Aevjie-eesi0de
