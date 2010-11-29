@@ -492,9 +492,9 @@ LEXICON ORDTAGEVEN
 +Pl+Gen:%>i FINAL1 ;
 +Pl+Ill:%>ide FINAL1 ;
 +Pl+Ine:%>ine FINAL1 ;
- +Pl+Ela:%>ijste FINAL1 ; !
++Pl+Ela:%>ijste FINAL1 ;
 +Pl+Com:%>ijgujmie FINAL1 ; 
- +Pl+Com+Use/Sub:%>igyjmie FINAL1 ; !
++Pl+Com+Use/Sub:%>igyjmie FINAL1 ;
 
 
  
@@ -511,101 +511,94 @@ LEXICON COLLTAG
 +N+Coll+Pl+Ine:%>inie FINAL1 ;
 +N+Coll+Pl+Ela:%>ijstie FINAL1 ;
 +N+Coll+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
- +N+Coll+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
++N+Coll+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ;
 +N+Coll+Ess:%>inie FINAL1 ;
 
 ! Arabic numerals
 ! ---------------
 
 
-LEXICON NUM-PREFIXES				!!^C^
- §+Use/Circ:§ ARABIC;      ! §24			!
- §§+Use/Circ:§§ ARABIC;     ! §§24			!
- §% +Use/Circ:§%  ARABIC;    ! § 24			!
- §§% +Use/Circ:§§%  ARABIC;   ! §§ 24			!
- %-+Use/Circ:%- ARABIC;     ! -24			!
- %‒+Use/Circ:%‒ ARABIC;     ! -24 U
- %–+Use/Circ:%– ARABIC;     ! -24 U
- %—+Use/Circ:%— ARABIC;     ! -24 U
- %―+Use/Circ:%― ARABIC;     ! -24 U
- %++Use/Circ:%+ ARABIC;     ! <plus>24			!
- %-% +Use/Circ:%-%  ARABIC;	! - 24			!
- %‒% +Use/Circ:%‒%  ARABIC;	! - 24 2012		!
- %–% +Use/Circ:%–%  ARABIC;	! - 24 2013	 	!
- %—% +Use/Circ:%—%  ARABIC;	! - 24 2014		!
- %―% +Use/Circ:%―%  ARABIC;	! - 24 2015 		!
- %+% +Use/Circ:%+%  ARABIC;	! <plus> 24			!
- %*+Use/Circ:%* ARABIC;     ! *24			!
- %$+Use/Circ:%$ ARABIC;     ! $24  ! And the Euro?	!
- %<+Use/Circ:%< ARABIC;     ! <24			!
- %>+Use/Circ:%>7	ARABIC ;     ! >24			!
- s%.+Use/Circ:s%. ARABIC;     ! s.24			!
-	
+LEXICON NUM-PREFIXES
+ §+Use/Circ:§ ARABIC;       ! §24
+ §§+Use/Circ:§§ ARABIC;     ! §§24
+ §% +Use/Circ:§%  ARABIC;   ! § 24
+ §§% +Use/Circ:§§%  ARABIC; ! §§ 24
+ %-+Use/Circ:%- ARABIC;     ! -24 U+002D / regular hyphen
+ %‒+Use/Circ:%‒ ARABIC;     ! -24 U+2012 / figure dash
+ %–+Use/Circ:%– ARABIC;     ! -24 U+2013 / en dash
+ %—+Use/Circ:%— ARABIC;     ! -24 U+2014 / em dash
+ %―+Use/Circ:%― ARABIC;     ! -24 U02015 / horizontal bar
+ %++Use/Circ:%+ ARABIC;     ! <plus>24
+ %-% +Use/Circ:%-%  ARABIC;	! - 24
+ %‒% +Use/Circ:%‒%  ARABIC;	! - 24 U+2012
+ %–% +Use/Circ:%–%  ARABIC;	! - 24 U+2013
+ %—% +Use/Circ:%—%  ARABIC;	! - 24 U+2014
+ %―% +Use/Circ:%―%  ARABIC;	! - 24 U+2015
+ %+% +Use/Circ:%+%  ARABIC;	! <plus> 24
+ %*+Use/Circ:%* ARABIC;     ! *24
+ %$+Use/Circ:%$ ARABIC;     ! $24
+ %€+Use/Circ:%€ ARABIC;     ! €24
+ %<+Use/Circ:%< ARABIC;     ! <24
+ %>+Use/Circ:%>7 ARABIC ;   ! >24
+ s%.+Use/Circ:s%. ARABIC;   ! s.24
 
+LEXICON ARABIC
+< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOP ;
+< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOPORD ;
+< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOPCOLL ;
 
-LEXICON ARABIC					!^C^			
-< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOP ;	!^C^		
-< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOPORD ;	!^C^		
-< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOPCOLL ;	!^C^		
-
-
-LEXICON ARABICLOOP				!^C^
- +Use/Circ: ARABIC ;					!
- %-+Use/Circ:%- ARABIC;	      ! 1-2    multipart numbers	!
- %.%-+Use/Circ:%.%- ARABIC;	      ! 1.-2   multipart numbers	!
- %-% +Use/Circ:%-%  ARABIC;	      ! 1- 2   multipart numbers	!
- % %-+Use/Circ:% %- ARABIC;	      ! 1 -2   multipart numbers	!
- % %-% +Use/Circ:% %-%  ARABIC;	      ! 1 - 2  multipart numbers	!
- % %-%-% +Use/Circ:% %-%-%  ARABIC;	      ! 1 -- 2 multipart numbers	!
- % %-+Use/Circ:% %- ARABICDELIMITER;   ! 1 -   multipart numbers		!
- % %-%-+Use/Circ:% %-%- ARABICDELIMITER;   ! 1 --  multipart numbers		!
- %.+Use/Circ:%. ARABIC;							!
- %,+Use/Circ:%, ARABIC;							!
- %+Use/Circ: ARABIC ;							!
- % +Use/Circ:%  ARABIC;	   ! Allowing for "23 500". !			
- +Use/Circ: ARABIC ;	   ! Allowing for "23 500" w/nbsp (initial char is alt-space)	!
- %/+Use/Circ:%/ ARABIC;	   ! 24/12			!		
-!%' ARABIC ;	   ! Since ' denotes cons.grad. This is not optimal either. 
- +Num+Use/Circ: RHyph ; 			   	! Hyphen removed bec. of "123- ja 124-viessu" !
-!+A+Ord:%. # ;							 !^C^
- ,%-+Num:,%- # ;			! 10,-					 !
- %%+Num+Nom:%% # ;		! 50%. It is wrong, but 75 % of us write "75%".		!
- % %%+Num+Nom:% %% # ;	! We must analyse the correct ones as well... 50 % etc.	!
- +Num+Use/Circ: ARABICDELIMITER ; ! list of number-case delimiters			!
+LEXICON ARABICLOOP
+ +Use/Circ: ARABIC ;
+ %-+Use/Circ:%- ARABIC ;            ! 1-2    multipart numbers
+ %.%-+Use/Circ:%.%- ARABIC ;        ! 1.-2   multipart numbers
+ %-% +Use/Circ:%-%  ARABIC ;        ! 1- 2   multipart numbers
+ % %-+Use/Circ:% %- ARABIC ;        ! 1 -2   multipart numbers
+ % %-% +Use/Circ:% %-%  ARABIC ;    ! 1 - 2  multipart numbers
+ % %-%-% +Use/Circ:% %-%-%  ARABIC;	! 1 -- 2 multipart numbers
+ % %- ARABICDELIMITER ;             ! 1 -    multipart numbers
+ % %-%- ARABICDELIMITER ;           ! 1 --   multipart numbers
+ %.+Use/Circ:%. ARABIC ;
+ %,+Use/Circ:%, ARABIC ;
+ % +Use/Circ:%  ARABIC ; ! Allowing for "23 500".
+  +Use/Circ:    ARABIC ; ! Allowing for "23 500" w/nbsp (initial char is alt-space)
+ %/+Use/Circ:%/ ARABIC ; ! 24/12
+!%'             ARABIC ; ! Since ' denotes cons.grad. This is not optimal either. 
+!+A+Ord:%. # ;
+ ,%-+Num:,%- # ;			! 10,-
+ %%+Num+Nom:%% # ;		! 50%. It is wrong, but 75 % of us write "75%".
+ % %%+Num+Nom:% %% # ;	! We must analyse the correct ones as well... 50 % etc.
+ +Num: ARABICDELIMITER ; ! list of number-case delimiters
+ +Num: RHyph  ;          ! Hyphen and +Use/Circ added appropriately in RHyph
 
 LEXICON ARABICLOOPORD
  +A+Ord:%. # ;
- +A+Ord+Use/Circ: ARABICDELIMITERORD ;                    !
+ +A+Ord: ARABICDELIMITERORD ;
 
-LEXICON ARABICLOOPCOLL				!^C^
- +N+Coll+Use/Circ: ARABICDELIMITERCOLL ;                 !
+LEXICON ARABICLOOPCOLL
+ +N+Coll: ARABICDELIMITERCOLL ;
 
-
-LEXICON ARABICDELIMITER											!^C^
- +Use/Sub+Use/Circ: ARABICCASE ;      ! This is the 1984s case.	!			!
- +Use/Circ:%: ARABICCASE ;    ! This is the 1984:s case.					!
- +Use/Circ:   ARABICCASE0 ;    ! This is the 1984:s case.				!
- %'+Use/Sub+Use/Circ+Use/NG:%' ARABICCASE ;    ! This is the 1984's case.		!	!		!
- %-+Use/Sub+Use/Circ+Use/NG:%- ARABICCASE ;    ! This is the 1984-s case.		!	!		!
+LEXICON ARABICDELIMITER
+             ARABICCASE0 ;   ! This is the 1984 case (ie nominative).
+ :%:         ARABICCASE ;    ! This is the 1984:s case.
+ +Use/Sub:%> ARABICCASE ;    ! This is the 1984s case.
+ +Use/Sub:%' ARABICCASE ;    ! This is the 1984's case.
+ +Use/Sub:%- ARABICCASE ;    ! This is the 1984-s case.
                 
-LEXICON ARABICDELIMITERORD											!^C^
- +Use/Sub+Use/Circ: ARABICCASEORD ;      ! This is the 1984s case.	!			!
- +Use/Circ:%: ARABICCASEORD ;    ! This is the 1984:s case.				!
-! :   ARABICCASE0 ;    ! This is the 1984:s case.				!^C^
- +Use/Sub+Use/Circ:%' ARABICCASEORD ;    ! This is the 1984's case.		!			!
- +Use/Sub+Use/Circ:%- ARABICCASEORD ;    ! This is the 1984-s case.		!		!
+LEXICON ARABICDELIMITERORD
+ :%:         ARABICCASEORD ; ! This is the 1984:s case.
+ +Use/Sub:%> ARABICCASEORD ; ! This is the 1984s case.
+ +Use/Sub:%' ARABICCASEORD ; ! This is the 1984's case.
+ +Use/Sub:%- ARABICCASEORD ; ! This is the 1984-s case.
 
-LEXICON ARABICDELIMITERCOLL											!^C^
- +Use/Sub+Use/Circ: ARABICCASECOLL ;      ! This is the 1984s case.	!			!
- +Use/Circ:%: ARABICCASECOLL ;    ! This is the 1984:s case.					!
-! :   ARABICCASE0 ;    ! This is the 1984:s case.				!^C^
- %'+Use/Sub+Use/Circ:%' ARABICCASECOLL ;    ! This is the 1984's case.		!			!
- %-+Use/Sub+Use/Circ:%- ARABICCASECOLL ;    ! This is the 1984-s case.		!			!
+LEXICON ARABICDELIMITERCOLL
+ :%:         ARABICCASECOLL ; ! This is the 1984:s case.
+ +Use/Sub:%> ARABICCASECOLL ; ! This is the 1984s case.
+ +Use/Sub:%' ARABICCASECOLL ; ! This is the 1984's case.
+ +Use/Sub:%- ARABICCASECOLL ; ! This is the 1984-s case.
 
                      		
 LEXICON ARABICCASE0
- +Sg+Nom:%> # ;
-
+ +Sg+Nom: # ;
 
 LEXICON ARABICCASE							!^C^
  f+Sg+Nom+Use/Sub:f # ;		! s. 123f.	!				!
@@ -805,31 +798,29 @@ LEXICON 2ROM-ONE !
  VIII+Use/Circ:VIII 2ROM-ONE-TAG; !
  IX+Use/Circ:IX 2ROM-ONE-TAG; !
 
-LEXICON 2ROM-ONE-TAG !
- +Use/Circ: ROMNUMTAG ; !
+LEXICON 2ROM-ONE-TAG
+ +Use/Circ: ROMNUMTAG ;
 
 LEXICON ROMNUMTAG !
- +Num+Nom:%> # ; !
- +Num+Gen:%> # ; !
- +Num+Acc:%> # ; !
-   +A+Ord:%.%> # ; ! !III. as ordinal.
-   +A+Ord:%> # ;! !Looking for trouble...
- +Num+Use/Circ:%: ROMNUMTAGOBL ; !
- +Num+Use/Circ:'7 ROMNUMTAGOBL ; !
- +Num+Use/Circ:%- ROMNUMTAGOBL ; !
- +Num+Use/Circ:%´ ROMNUMTAGOBL ; !
-! +Num: ROMNUMTAGOBL ; !
+ +Num+Nom: # ;
+   +A+Ord:%. # ; ! !III. as ordinal.
+   +A+Ord:   # ;! !Looking for trouble...
+ +Num:%:         ROMNUMTAGOBL ; ! IV:se
+ +Num+Use/Sub:'7 ROMNUMTAGOBL ; ! IV'se
+ +Num+Use/Sub:%- ROMNUMTAGOBL ; ! IV-se
+ +Num+Use/Sub:%´ ROMNUMTAGOBL ; ! IV´se
+ +Num+Use/Sub:%> ROMNUMTAGOBL ; ! IVse
 
 LEXICON ROMNUMTAGOBL !
- +Gen+Use/Sub:%>n # ; ! ! But here 123a 123
- +Acc+Use/Sub:%>m # ; ! !
- +Ill:%>ese # ; ! 
- +Ine:%>esne # ; !
- +Ine+Attr:%>ene # ; !
- +Ela+Attr:%>ede # ; !
- +Ela:%>este # ; !
- +Com:%>ine # ; !
- +Ess:%>in # ; !
+ +Gen:n # ; ! But here 123a 123
+ +Acc:m # ;
+ +Ill:se # ;
+ +Ine:sne # ;
+ +Ine+Attr:ne # ;
+ +Ela+Attr:de # ;
+ +Ela:ste # ;
+ +Com:ine # ;
+ +Ess:ine # ;
 
 LEXICON NUMBERLIKE
  gellie+Num+Sg:gell N_IE_SG ; ! as sme máŋga
