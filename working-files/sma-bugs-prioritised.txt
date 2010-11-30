@@ -1,14 +1,13 @@
 Most important/urgent:
 
-URGENT 830	tomi.pieski@hum.uit.no	mostly fixed, only daennie + daehtie still missing
-URGENT 870	tomi.pieski@hum.uit.no	Default compounding: in sma it should be Sg+Nom & Sg+Gen: still broken
+I WANT THIS UP: Hmm, is it not working? we want penalties for hyphens, they should not be suggested
+URGENT 894	tomi.pieski@hum.uit.no	hyphens or not in compounds - yes, we want them for all words in all langs, but with penalties on the suggs - recompile with penalty on hyphen
+URGENT 805	tomi.pieski@hum.uit.no	Nouns+Acronyms - still broken, Tomi is working on it
+URGENT 892	tomi.pieski@hum.uit.no	noun+Acro without hyphen - duplicate of 805, broken
+URGENT 893	thomas.omma@samediggi.	wowels in compound - how should we resolve this? - a#aa & e#ee - still broken, see 805
 
 Second most important/urgent:
-894	tomi.pieski@hum.uit.no	hyphens or not in compounds - yes, we want them for all words in all langs, but with penalties on the suggs
-2URGENT 805	tomi.pieski@hum.uit.no	Nouns+Acronyms - still broken, Tomi is working on it
 2URGENT 889	tomi.pieski@hum.uit.no	number+case - fixed in sma, broken in sme & smj
-2URGENT 892	tomi.pieski@hum.uit.no	noun+Acro without hyphen - duplicate of 805, broken
-2URGENT 893	thomas.omma@samediggi.	wowels in compound - how should we resolve this? - a#aa & e#ee - still broken, see 805
 2URGENT 831	tomi.pieski@hum.uit.no	gellie not recognized - gellie added as pron lately - pronoun is ok, numeral is not
 
 The least urgent of the urgent bugs:
@@ -34,6 +33,10 @@ Regular bugs, mostly not sma-specific:
 802	sjur.moshagen@samediggi		multi word proper nouns
 803	tomi.pieski@hum.uit.no	    FINJU-/VINJU- words accepted single-handed
 
+Tomi's task list:
+1. recompile speller lexicon with hyphen penalty, redistribrute installer
+2. fix the hyphenated compounds bug (e-ee, noun+acro bug)
+3. fix the acro hyphen bug (NRK-nïejte bug)
 
 Proper nouns vs. common nouns: we misused an already existing set of PLX flags. The following works:
 
