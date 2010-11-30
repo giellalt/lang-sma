@@ -560,7 +560,7 @@ LEXICON ARABICLOOP
  %.+Use/Circ:%. ARABIC ;
  %,+Use/Circ:%, ARABIC ;
  % +Use/Circ:%  ARABIC ; ! Allowing for "23 500".
-  +Use/Circ:    ARABIC ; ! Allowing for "23 500" w/nbsp (initial char is alt-space)
+   +Use/Circ:   ARABIC ; ! Allowing for "23 500" w/nbsp (initial char is alt-space)
  %/+Use/Circ:%/ ARABIC ; ! 24/12
 !%'             ARABIC ; ! Since ' denotes cons.grad. This is not optimal either. 
 !+A+Ord:%. # ;
@@ -600,57 +600,57 @@ LEXICON ARABICDELIMITERCOLL
 LEXICON ARABICCASE0
  +Sg+Nom: # ;
 
-LEXICON ARABICCASE							!^C^
- f+Sg+Nom+Use/Sub:f # ;		! s. 123f.	!				!
-ff+Sg+Nom+Use/Sub:ff # ;		! s. 123ff.	!				!
- b+Sg+Nom+Use/Sub:b # ;		! § 123b	!				!
- c+Sg+Nom+Use/Sub:c # ;		! § 123c	!				!
- d+Sg+Nom+Use/Sub:d # ;		! § 123d	!				!
- e+Sg+Nom+Use/Sub:e # ;		! § 123e	!				!
-+Sg+Gen:n # ;
-+Sg+Acc:m # ;
-+Sg+Ill:se # ;
-+Sg+Ine:sne # ;   ! NRK:sne
-+Sg+Ela:ste # ;   ! NRK:ste
-+Sg+Com:ine # ;
-+Ess:ine # ;	! NBR:ine
-+Pl+Nom:h # ;  
-+Pl+Gen:j # ; 
-+Pl+Acc:ide # ; 
-+Pl+Ill:ide # ; 
-+Pl+Ine:ine # ; 
-+Pl+Ela:jste # ; 
+LEXICON ARABICCASE
+ f+Sg+Nom+Use/Sub:f  # ; ! s. 123f.
+ff+Sg+Nom+Use/Sub:ff # ; ! s. 123ff.
+ b+Sg+Nom+Use/Sub:b  # ; ! § 123b
+ c+Sg+Nom+Use/Sub:c  # ; ! § 123c
+ d+Sg+Nom+Use/Sub:d  # ; ! § 123d
+ e+Sg+Nom+Use/Sub:e  # ; ! § 123e
++Sg+Gen:n       # ;
++Sg+Acc:m       # ;
++Sg+Ill:se      # ;
++Sg+Ine:sne     # ; ! NRK:sne
++Sg+Ela:ste     # ; ! NRK:ste
++Sg+Com:ine     # ;
++Ess:ine        # ;	! NBR:ine
++Pl+Nom:h       # ;
++Pl+Gen:j       # ; 
++Pl+Acc:ide     # ; 
++Pl+Ill:ide     # ; 
++Pl+Ine:ine     # ; 
++Pl+Ela:jste    # ; 
 +Pl+Com:jgujmie # ; 
 !ordinals
 
-LEXICON ARABICCASEORD							!^C^
- +Sg+Nom:%>de # ;  !
- +Sg+Gen:%>den # ;  !
- +Sg+Acc:%>dem # ;  !
- +Sg+Ill:%>dasse # ; !
- +Sg+Ine+Attr:%>dinie # ;
+LEXICON ARABICCASEORD
+ +Sg+Nom:%>de          # ;
+ +Sg+Gen:%>den         # ;
+ +Sg+Acc:%>dem         # ;
+ +Sg+Ill:%>dasse       # ;
+ +Sg+Ine+Attr:%>dinie  # ;
  +Sg+Ela+Attr:%>dihtie # ;
- +Sg+Ine:%>disnie # ;   !
- +Sg+Ela:%>distie # ;   !
- +Sg+Com:%>dinie # ;  !
- +Sg+Ess:%>dinie # ;
- +Pl+Nom:%>dh # ; !
- +Pl+Gen:%>di # ; !
- +Pl+Acc:%>didie # ; !
- +Pl+Ill:%>didie # ; !
- +Pl+Ine:%>dinie # ; !
- +Pl+Ela:%>dijstie # ; !
- +Pl+Com:%>digujmie  # ; !
+ +Sg+Ine:%>disnie      # ;
+ +Sg+Ela:%>distie      # ;
+ +Sg+Com:%>dinie       # ;
+ +Sg+Ess:%>dinie       # ;
+ +Pl+Nom:%>dh          # ;
+ +Pl+Gen:%>di          # ;
+ +Pl+Acc:%>didie       # ;
+ +Pl+Ill:%>didie       # ;
+ +Pl+Ine:%>dinie       # ;
+ +Pl+Ela:%>dijstie     # ;
+ +Pl+Com:%>digujmie    # ;
 
-LEXICON ARABICCASECOLL							!^C^
-+Pl+Nom:%>sh # ;
-+Pl+Acc:%>sidie # ;
-+Pl+Gen:%>si # ;
-+Pl+Ill:%>sidie # ;
-+Pl+Ine:%>sinie # ;
-+Pl+Ela:%>sijstie # ;
+LEXICON ARABICCASECOLL
++Pl+Nom:%>sh       # ;
++Pl+Acc:%>sidie    # ;
++Pl+Gen:%>si       # ;
++Pl+Ill:%>sidie    # ;
++Pl+Ine:%>sinie    # ;
++Pl+Ela:%>sijstie  # ;
 +Pl+Com:%>sigujmie # ;
-   +Ess:%>sinie # ;
+   +Ess:%>sinie    # ;
 
 
 ! The Roman numerals !
