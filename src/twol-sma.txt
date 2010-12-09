@@ -74,9 +74,9 @@ ENDOMIT
  %#:0 %-
 
 OMITIF(HUNSPELL)
- %>:0 %+:0 »:0  ! stem-suffix border mark, unvisible for normal use
+ %>:0 %+:0 »:0  ! stem-suffix border mark, invisible in normal use
 ELSE
- %> »:%>            ! stem-suffix border mark, only visible in Hunspell
+ %> »:%>        ! stem-suffix border mark, only visible in Hunspell
 ENDOMIT
 
 
@@ -939,8 +939,8 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 !"No word boundary as hyphen in the beginning of a string"
 !#:% /<= .#. _ ;
 
-"Prohibit invisible word boundary between matching vowels"
- #:0 /<= :Vx _ :Vx :Vx ;        ! This should apply to only the surface side
+"Force word boundary as hyphen between matching vowels"
+ #:%- <= :Vx _ :Vx ;        ! This should apply to only the surface side
  	where Vx in (e a) matched ;
 
 !€# laajhna#aaltoe
