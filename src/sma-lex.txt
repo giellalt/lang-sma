@@ -262,6 +262,15 @@ LEXICON N_ODD
   +N+PlGenCmp:%>%^DISIMPi R ;
   +N+Der1+Der/Dim+N:%»adtj GIERIEHTSADTJE ;
 
+LEXICON N_ODD_LOAN
+ +N+Sg: N_ODD_SG ;
+ +N+Pl: N_ODD_PL ;
+ +N:    N_ODD_ESS ;
+   +N+SgNomCmp:%^DISIMP            R ;
+  +N+SgNomCmp:e%^DISIMP            R ;
+  +N+SgGenCmp:e%>%^DISIMPn        R ;
+  +N+PlGenCmp:%>%^DISIMPi R ;
+  +N+Der1+Der/Dim+N:%»adtj GIERIEHTSADTJE ;
 
 LEXICON N_ODD_SG
   +Nom:e%^DISIMP         FINAL1 ;
@@ -1092,6 +1101,18 @@ LEXICON LÅÅGE_LOAN
 LEXICON AALE_LOAN 
   :al   NIEJTE ; ! ikke les
   +N+SgNomCmp:l    R ;
+  
+LEXICON AATE_LOAN 
+  :at   NIEJTE ; ! ikke les
+  +N+SgNomCmp:t    R ;
+
+LEXICON EEME_LOAN 
+  :em   NIEJTE ; ! ikke les
+  +N+SgNomCmp:m    R ;
+
+LEXICON GRAMME_LOAN 
+  :m   NIEJTE ; ! ikke les
+  +N+SgNomCmp:    R ;
 
 LEXICON NIEJTE
   +N+Sg:           NIEJTE_SG  ;
