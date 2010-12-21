@@ -1,0 +1,25 @@
+daallamasten+A+Attr	daallamasth	daallamasten+A+Attr	daallamasts	daallamasten+A+Attr	daallamasten	daallamasten+A+Attr	daallamastes
+dallamasten+A+Attr	dallamasth	dallamasten+A+Attr	dallamasts	dallamasten+A+Attr	dallamasten	dallamasten+A+Attr	dallamastes
+fiejliesmasten+A+Attr	fiejliesmasth	fiejliesmasten+A+Attr	fiejliesmasts	fiejliesmasten+A+Attr	fiejliesmasten	fiejliesmasten+A+Attr	fiejliesmastes
+gaajhkedenmasten+A+Attr	gaajhkedenmasth	gaajhkedenmasten+A+Attr	gaajhkedenmasts	gaajhkedenmasten+A+Attr	gaajhkedenmasten	gaajhkedenmasten+A+Attr	gaajhkedenmastes
+gaasedenmasten+A+Attr	gaasedenmasth	gaasedenmasten+A+Attr	gaasedenmasts	gaasedenmasten+A+Attr	gaasedenmasten	gaasedenmasten+A+Attr	gaasedenmastes
+gåartijes+A+Attr	gåartijes	gåartijes+A+Attr	gåartije	gåartijes+A+Attr	gåartijes
+gåartijs+A+Attr	gåartijs	gåartijs+A+Attr	gåartije	gåartijs+A+Attr	gåartijes
+gåartijs+A+Attr	gåartijs	gåartijs+A+Attr	gåartije	gåartijs+A+Attr	gåartijes
+kruanamasten+A+Attr	kruanamasth	kruanamasten+A+Attr	kruanamasts	kruanamasten+A+Attr	kruanamasten	kruanamasten+A+Attr	kruanamastes
+kruepiesmasten+A+Attr	kruepiesmasth	kruepiesmasten+A+Attr	kruepiesmasts	kruepiesmasten+A+Attr	kruepiesmasten	kruepiesmasten+A+Attr	kruepiesmastes
+lovvesmasten+A+Attr	lovvesmasth	lovvesmasten+A+Attr	lovvesmasts	lovvesmasten+A+Attr	lovvesmasten	lovvesmasten+A+Attr	lovvesmastes
+mealhkijes+A+Attr	mealhkijes	mealhkijes+A+Attr	mealhkije	mealhkijes+A+Attr	mealhkijes
+plaavemasten+A+Attr	plaavemasth	plaavemasten+A+Attr	plaavemasts	plaavemasten+A+Attr	plaavemasten	plaavemasten+A+Attr	plaavemastes
+reepsesmasten+A+Attr	reepsesmasth	reepsesmasten+A+Attr	reepsesmasts	reepsesmasten+A+Attr	reepsesmasten	reepsesmasten+A+Attr	reepsesmastes
+rööpsesmasten+A+Attr	rööpsesmasth	rööpsesmasten+A+Attr	rööpsesmasts	rööpsesmasten+A+Attr	rööpsesmasten	rööpsesmasten+A+Attr	rööpsesmastes
+
+cat src/adj-sma-lex.txt |grep ';' |tr '[\!]' ':' |tr '+' ':'|cut -d":" -f1|grep -v '^$'|sed 's/$/+A+Attr/g;'|tr -d '[#^]'|dsma|grep -v '-'|uniq|tr '\n' '£'|sed 's/££/™/g;'|tr '™' '\n'|grep '£.*£'|tr '£' '\t'|see
+
+
+denne lista er svært, svært kort.
+eg har fjerna alle linjer med bindestrek
+det kan vere derfor det er så kort.
+det kan også vere at det er ein ny versjon av analysatoren som gjer det
+i alle fall er det 
+
