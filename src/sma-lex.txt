@@ -104,7 +104,8 @@ Multichar_Symbols
   +Use/NG    ! Do not generate, for isme-ped.fst and apertium
   +Dial/-S   ! Not in the South
   +Dial/-N   ! Not in the North
-  
+  +Dial/-NOR ! Not in Norway
+  +Dial/-SW  ! Not in Sweden
   ! Different focus particles
   +Foc/ge
   +Foc/gan
@@ -1028,8 +1029,8 @@ LEXICON IHKE_LOAN
  +Test/MørkI+Test/GK+Use/NG:ïgk IHKELES ; ! subbing these ones?
   +Test/LysI+Test/JK+Use/NG:ijk IHKELES ; ! subbing these ones?
  +Test/MørkI+Test/JK+Use/NG:ïjk IHKELES ; ! subbing these ones?
-  +N+SgNomCmp:ikk    R ; !NOR
-  +N+SgNomCmp:ik   R ; !SW
+  +N+SgNomCmp+Dial/-SW:ikk    R ; !NOR
+  +N+SgNomCmp+Dial/-NOR:ik   R ; !SW
 
 
 LEXICON ISME_LOAN
@@ -1053,19 +1054,19 @@ LEXICON IHKELES
 
 LEXICON SJOVNE_LOAN
  :sjovn IHKELES ;
- +N+SgNomCmp:sjons R ;   !NOR
- +N+SgNomCmp:tions R ;   !SW
+ +N+SgNomCmp+Dial/-SW:sjons R ;   !NOR
+ +N+SgNomCmp+Dial/-NOR:tions R ;   !SW
 
  
 LEXICON SJOVNE2_LOAN
   :sjovn IHKELES ;
- +N+SgNomCmp:sjons R ; !NOR
- +N+SgNomCmp:ssions R ; !SW
+ +N+SgNomCmp+Dial/-SW:sjons R ; !NOR
+ +N+SgNomCmp+Dial/-NOR:ssions R ; !SW
  
 LEXICON SJOVNE3_LOAN
   :sjovn IHKELES ;
- +N+SgNomCmp:sjons R ; !NOR
- +N+SgNomCmp:sions R ; !SW
+ +N+SgNomCmp+Dial/-SW:sjons R ; !NOR
+ +N+SgNomCmp+Dial/-NOR:sions R ; !SW
 
 
 LEXICON OVNE_LOAN
@@ -1091,8 +1092,8 @@ LEXICON GRAAFE_LOAN
 
 LEXICON ÖÖRE_LOAN
   :öör   NIEJTE ; ! ikke les
-  +N+SgNomCmp:ör    R ; !SW
-  +N+SgNomCmp:ør    R ; !NOR
+  +N+SgNomCmp+Dial/-NOR:ör    R ; !SW
+  +N+SgNomCmp+Dial/-SW:ør    R ; !NOR
 
 LEXICON LÅÅGE_LOAN
    :ååg  NIEJTE ; ! ikke les
@@ -1121,8 +1122,8 @@ LEXICON  AANE_LOAN
 
 LEXICON  AADE_LOAN 
   :ad   NIEJTE ; ! ikke les
-  +N+SgNomCmp:d    R ; !SW
-    +N+SgNomCmp:de    R ; !NOR
+  +N+SgNomCmp+Dial/-NOR:d    R ; !SW
+    +N+SgNomCmp+Dial/-SW:de    R ; !NOR
 
 
 LEXICON EEME_LOAN 
