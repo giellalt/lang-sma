@@ -54,6 +54,7 @@ Multichar_Symbols
   +TV +IV ! Transitivity tags
   +LOAN  ! ad hoc tag for development purposes.
   +Uml   ! A tag to indicate realised or potential Umlaut
+  +NoUml ! A tag to indicate the lack of realised or potential Umlaut
   +Hyph  ! A tag to indicate that a hyphen was used when compounding
 
   ! Tags for testing the frequency of loanwords in our corpora
@@ -769,7 +770,7 @@ LEXICON N_IE
   +N:    N_IE_ESS ;
   +N+SgNomCmp:ie              R ;
   +N+SgGenCmp:ie%>n           R ;
-  +N+PlGenCmp:ie%>j           R ;
+  +N+PlGenCmp+NoUml:ie%>j           R ;
   +N+PlGenCmp+Uml:%>%^iUMLi R ;
   +N+Der1+Der/Dim+N:%^aLATUS%»tj GÅATETJE ;
   +N+Der1+Der/ijes+A+Pred:%»%^1UMLijes FINAL1 ;
@@ -788,7 +789,6 @@ LEXICON N_IE_SG
   +Acc+PxSg3:e%>mse FINAL1 ;
   +Gen:ie%>n               FINAL1 ;
   +Gen+Uml+PxSg1+Use/NG:%>%^1UMLene FINAL1 ;
-! +Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
   +Ill+Uml:%>%^1UMLan      FINAL1 ;
   +Ill+Uml+PxSg1:%>%^1UMLasanne FINAL1 ;
   +Ill+Uml+PxSg2:%>%^1UMLasadth FINAL1 ;
@@ -803,23 +803,23 @@ LEXICON N_IE_SG
 
 LEXICON N_IE_PL
   +Nom:ie%>h               FINAL1 ;
-  +Acc:%>ide               FINAL1 ;
+  +Acc+NoUml:%>ide               FINAL1 ;
   +Acc+Uml+Use/NG:%>%^iUMLide     FINAL1 ;
-  +Gen:ie%>j               FINAL1 ;
+  +Gen+NoUml:ie%>j               FINAL1 ;
   +Gen+Uml+Use/NG+Use/Sub:%>%^iUMLi FINAL1 ;
-  +Ill:%>ide               FINAL1 ;
+  +Ill+NoUml:%>ide               FINAL1 ;
   +Ill+Uml+Use/NG:%>%^iUMLide     FINAL1 ;
-  +Ine:%>ine               FINAL1 ;
+  +Ine+NoUml:%>ine               FINAL1 ;
   +Ine+Uml+Use/NG:%>%^iUMLine     FINAL1 ;
-  +Ela:%>ijste             FINAL1 ;
+  +Ela+NoUml:%>ijste             FINAL1 ;
   +Ela+Uml+Use/NG:%>%^iUMLijste   FINAL1 ;
-  +Com:ie%>jgujmie         FINAL1 ;
- +Com+Uml+Use/Sub:%>%^iUMLigyjmie FINAL1 ; !
- +Com+Use/Sub:ie%>jgyjmie         FINAL1 ; !
+  +Com+NoUml:ie%>jgujmie         FINAL1 ;
+  +Com+Uml+Use/Sub:%>%^iUMLigyjmie FINAL1 ; !
+  +Com+NoUml+Use/Sub:ie%>jgyjmie         FINAL1 ; !
   +Com+Uml:%>%^iUMLigujmie FINAL1 ;
 
 LEXICON N_IE_ESS
-  +Ess:%>ine                  FINAL1 ;
+  +Ess+NoUml:%>ine                  FINAL1 ;
   +Ess+Uml+Use/NG:%>%^iUMLine        FINAL1 ;
 
 
@@ -839,24 +839,24 @@ LEXICON TJIDTJIE
 
 LEXICON TJÅENIEH !ie plural lexicon
   +N+Pl+Nom:ie%>h               FINAL1 ;
-  +N+Pl+Acc:%>ide               FINAL1 ;
+  +N+Pl+Acc+NoUml:%>ide               FINAL1 ;
   +N+Pl+Acc+Uml+Use/NG:%>%^iUMLide     FINAL1 ;
-  +N+Pl+Gen:ie%>j               FINAL1 ;
+  +N+Pl+Gen+NoUml:ie%>j               FINAL1 ;
   +N+Pl+Gen+Uml+Use/NG:%>%^iUMLi       FINAL1 ;
-  +N+Pl+Ill:%>ide               FINAL1 ;
+  +N+Pl+Ill+NoUml:%>ide               FINAL1 ;
   +N+Pl+Ill+Uml+Use/NG:%>%^iUMLide     FINAL1 ;
-  +N+Pl+Ine:%>ine               FINAL1 ;
+  +N+Pl+Ine+NoUml:%>ine               FINAL1 ;
   +N+Pl+Ine+Uml+Use/NG:%>%^iUMLine     FINAL1 ;
-  +N+Pl+Ela:%>ijste             FINAL1 ;
+  +N+Pl+Ela+NoUml:%>ijste             FINAL1 ;
   +N+Pl+Ela+Uml+Use/NG:%>%^iUMLijste   FINAL1 ;
-  +N+Pl+Com:ie%>jgujmie         FINAL1 ;
+  +N+Pl+Com+NoUml:ie%>jgujmie         FINAL1 ;
  +N+Pl+Com+Uml+Use/Sub:%>%^iUMLigyjmie FINAL1 ; !
- +N+Pl+Com+Use/Sub:ie%>jgyjmie         FINAL1 ; !
+ +N+Pl+Com+NoUml+Use/Sub:ie%>jgyjmie         FINAL1 ; !
   +N+Pl+Com+Uml:%>%^iUMLigujmie FINAL1 ;
-  +N+Ess:%>ine                  FINAL1 ;
+  +N+Ess+NoUml:%>ine                  FINAL1 ;
   +N+Ess+Uml+Use/NG:%>%^iUMLine        FINAL1 ;
   +N+SgNomCmp:ie              R ;
-  +N+PlGenCmp:ie%>j           R ;
+  +N+PlGenCmp+NoUml:ie%>j           R ;
   +N+PlGenCmp+Uml:%>%^iUMLi R ;
   +N+Der1+Der/Dim+N+Pl:%^aLATUS%»tj N_ODD_PL ;
   +N+Der1+Der/Dim+N:%^aLATUS%»tj N_ODD_ESS ;
@@ -1381,7 +1381,7 @@ LEXICON NomActEven
   +N:    N_IE_ESS ;
   +N+SgNomCmp:ie              R ;
   +N+SgGenCmp:ie%>n           R ;
-  +N+PlGenCmp:ie%>j           R ;
+  +N+PlGenCmp+NoUml:ie%>j           R ;
   +N+PlGenCmp+Uml:%>%^iUMLi R ;
 
 LEXICON LDAHKE
@@ -2066,7 +2066,7 @@ LEXICON ieCASE
   +A:    N_IE_ESS ;
   +A+SgNomCmp:ie              R ;
   +A+SgGenCmp:ie%>n           R ;
-  +A+PlGenCmp:ie%>j           R ;
+  +A+PlGenCmp+NoUml:ie%>j           R ;
   +A+PlGenCmp+Uml:%>%^iUMLi R ;
 
 LEXICON oeCASE
@@ -2913,7 +2913,8 @@ LEXICON TJOEHPEDH2 ! row D - Group IV
  +Ger:%>eminie   FINAL1 ;
  +PrsPrc:%>ije   FINAL1 ;
  +PrsPrc:%>ijes  FINAL1 ;
- +PrfPrc:%>eme   FINAL1 ;
+ +PrfPrc+NoUml:%>eme   FINAL1 ;          ! tjoehpeme, bïejeme
+ +PrfPrc+Uml:%>%^1UMLeme  FINAL1 ; ! tjuahpeme, beajeme
  +ConNeg:%>0h    FINAL1 ;
 ! Derivations
 ! -----------
