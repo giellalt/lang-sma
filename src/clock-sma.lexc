@@ -34,6 +34,14 @@ Multichar_Symbols
 @U.TIME.11@ 
 @U.TIME.12@ 
 
+! We make 3 clock automata
+! 1. (no tag removal): All 60 minutes: 13:00, 13:01, 13:02, … 
+! 2. (remove tag +Use/Medium): 13:00, 13:05, 13:10, …
+! 3. (remove both +Use tags): 13:00, 13:15, 13:30, …
+
++Use/Medium
++Use/Minimum
+
 LEXICON Root
 
 %01@U.TIME.1@:@U.TIME.1@     AFT ;    !01:00 - 01:19
@@ -89,67 +97,67 @@ LEXICON Root
 
 LEXICON BEF
 %:2%0:luhkie%               TOHALF ;
- %:21:uktsie%              TOHALF ;
- %:22:gaektsie%             TOHALF ;
- %:23:tjïjhtje%              TOHALF ;
- %:24:govhte%              TOHALF ;
- %:25:vïjhte%             TOHALF ;  
- %:26:njieljie%           TOHALF ;  
- %:27:golme%             TOHALF ;
- %:28:göökte%             TOHALF ; 
- %:29:akte%               TOHALF ;
+ %:21+Use/Minimum:uktsie%              TOHALF ;
+ %:22+Use/Minimum:gaektsie%             TOHALF ;
+ %:23+Use/Minimum:tjïjhtje%              TOHALF ;
+ %:24+Use/Minimum:govhte%              TOHALF ;
+ %:25+Use/Medium:vïjhte%             TOHALF ;  
+ %:26+Use/Minimum:njieljie%           TOHALF ;  
+ %:27+Use/Minimum:golme%             TOHALF ;
+ %:28+Use/Minimum:göökte%             TOHALF ; 
+ %:29+Use/Minimum:akte%               TOHALF ;
 %:3%0:bielie%               HOUR ;
-%:31:akte%               OVERHALF ;
-%:32:göökte%              OVERHALF ;
-%:33:golme%              OVERHALF ;
-%:34:njieljie%             OVERHALF ;
- %:35:vïjhte%             OVERHALF ;
- %:36:govhte%              OVERHALF ;
- %:37:tjïjhtje%              OVERHALF ;
- %:38:gaektsie%             OVERHALF ; 
- %:39:uktsie%              OVERHALF ;
- %:4%0:luhkie%              OVERHALF ;
- %:41:luhkieuktsie%     TO ;
- %:42:luhkiegaektsie%    TO ;
- %:43:luhkietjïjhtje%     TO ;
- %:44:luhkiegovhte%     TO ;
-  %:45:njealjehts%            TO ;
- %:46:luhkienjieljie%  TO ;
- %:47:luhkiegolme%    TO ;
- %:48:luhkiegöökte%    TO ;
- %:49:luhkieakte%      TO ;
- %:5%0:luhkie%              TO ;
- %:51:uktsie%              TO ;
- %:52:gaektsie%             TO ;
- %:53:tjïjhtje%              TO ;
- %:54:govhte%              TO ;
- %:55:vïjhte%             TO ;  
- %:56:njieljie%           TO ;  
- %:57:golme%             TO ;
- %:58:göökte%             TO ; 
+ %:31+Use/Minimum:akte%               OVERHALF ;
+ %:32+Use/Minimum:göökte%              OVERHALF ;
+ %:33+Use/Minimum:golme%              OVERHALF ;
+ %:34+Use/Minimum:njieljie%             OVERHALF ;
+ %:35+Use/Medium:vïjhte%             OVERHALF ;
+ %:36+Use/Minimum:govhte%              OVERHALF ;
+ %:37+Use/Minimum:tjïjhtje%              OVERHALF ;
+ %:38+Use/Minimum:gaektsie%             OVERHALF ; 
+ %:39+Use/Minimum:uktsie%              OVERHALF ;
+%:4%0:luhkie%              OVERHALF ;
+ %:41+Use/Minimum:luhkieuktsie%     TO ;
+ %:42+Use/Minimum:luhkiegaektsie%    TO ;
+ %:43+Use/Minimum:luhkietjïjhtje%     TO ;
+ %:44+Use/Minimum:luhkiegovhte%     TO ;
+ %:45+Use/Medium:njealjehts%            TO ;
+ %:46+Use/Minimum:luhkienjieljie%  TO ;
+ %:47+Use/Minimum:luhkiegolme%    TO ;
+ %:48+Use/Minimum:luhkiegöökte%    TO ;
+ %:49+Use/Minimum:luhkieakte%      TO ;
+%:5%0:luhkie%              TO ;
+ %:51+Use/Minimum:uktsie%              TO ;
+ %:52+Use/Minimum:gaektsie%             TO ;
+ %:53+Use/Minimum:tjïjhtje%              TO ;
+ %:54+Use/Minimum:govhte%              TO ;
+ %:55+Use/Medium:vïjhte%             TO ;  
+ %:56+Use/Minimum:njieljie%           TO ;  
+ %:57+Use/Minimum:golme%             TO ;
+ %:58+Use/Minimum:göökte%             TO ; 
  %:59:akte%               TO ;
 
 LEXICON AFT
 %:%0%0:                    HOUR ;
- %:%01:akte%               OVER ;
- %:%02:göökte%             OVER ;
- %:%03:golme%             OVER ;
- %:%04:njieljie%           OVER ;
- %:%05:vïjhte%             OVER ;
- %:%06:govhte%              OVER ;
- %:%07:tjïjhtje%              OVER ;
- %:%08:gaektsie%             OVER ;
- %:%09:uktsie%              OVER ;
+ %:%01+Use/Minimum:akte%               OVER ;
+ %:%02+Use/Minimum:göökte%             OVER ;
+ %:%03+Use/Minimum:golme%             OVER ;
+ %:%04+Use/Minimum:njieljie%           OVER ;
+ %:%05+Use/Medium:vïjhte%             OVER ;
+ %:%06+Use/Minimum:govhte%              OVER ;
+ %:%07+Use/Minimum:tjïjhtje%              OVER ;
+ %:%08+Use/Minimum:gaektsie%             OVER ;
+ %:%09+Use/Minimum:uktsie%              OVER ;
  %:1%0:luhkie%               OVER ;
- %:11:luhkieakte%       OVER ;
- %:12:luhkiegöökte%     OVER ;
- %:13:luhkiegolme%     OVER ;
- %:14:luhkienjieljie%   OVER ;
-  %:15:njealjehts%             OVER ; 
- %:16:govhtenuppelohkái%      OVER ;
- %:17:luhkietjïjhtje%      OVER ;
- %:18:luhkiegaektsie%     OVER ;
- %:19:luhkieuktsie%      OVER ;
+  %:11+Use/Minimum:luhkieakte%       OVER ;
+  %:12+Use/Minimum:luhkiegöökte%     OVER ;
+  %:13+Use/Minimum:luhkiegolme%     OVER ;
+  %:14+Use/Minimum:luhkienjieljie%   OVER ;
+  %:15+Use/Medium:njealjehts%             OVER ; 
+  %:16+Use/Minimum:govhtenuppelohkái%      OVER ;
+  %:17+Use/Minimum:luhkietjïjhtje%      OVER ;
+  %:18+Use/Minimum:luhkiegaektsie%     OVER ;
+  %:19+Use/Minimum:luhkieuktsie%      OVER ;
 
 LEXICON TOHALF
  :åvtelen% bielie%  HOUR ;
