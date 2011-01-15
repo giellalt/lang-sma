@@ -98,6 +98,7 @@ LIST ImpII = ImpII ;
 
 LIST Pot = Pot ;
 LIST Cond = Cond ;
+LIST Imprt = Imprt ;
 
 LIST Opt = Opt ;
 
@@ -117,6 +118,7 @@ LIST Interr = Interr ;
 LIST Rel = Rel ;
 LIST Adp = Adp ;
 LIST Po = Po ;
+LIST Pr = Pr ;
 LIST Adv = Adv ;
 LIST Interj = Interj ;
 LIST Num = Num ;
@@ -138,7 +140,7 @@ LIST TITLE = "prof" "cand.philol" ;
 
 
 
-LIST WORD = N A V Adv Pron Interj Adp Num CS CC Pcle ;
+LIST WORD = N A V Adv Pron Interj Adp Num CS CC Pcle Pr Po ;
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS Adp ;
 
 SET NOT-ADV = WORD - Adv ;
@@ -161,10 +163,11 @@ LIST VFIN = Ind OR Imp ;
 LIST INFV = "aelkedh" "båetedh" "edtjedh" "galkedh" "maehtedh" "provhkedh" "sjïdtedh" "tjoeveridh" "tjoeredh" ; 
 # These are often followed by an infitive.
 
+LIST ILLV = "ringkedh" ;
 
 # BOUNDARY SETS
 
-SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("MEN")  OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS ;
+SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men")  OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS ;
 
 
 # ============== #
@@ -205,6 +208,9 @@ REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
        ## 
 
 
+# PrfPrc
+#SELECT PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
+
 # Person
 
 SELECT:Pl3WhenPlSubj Pl3 IF (1 (N Pl Nom) OR (Num Sg Nom))(0 ("lea" V));
@@ -213,7 +219,9 @@ SELECT:InfIfInfv (V Inf) IF (*-1 INFV BARRIER V OR CS OR CC) ;
 # Should be BARRIER V OR CS OR CC # It doesn´t work...
 	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
 
-SELECT:VSg2IfPersSg2 (V Sg2) (*-1 (Pers Sg2) BARRIER V);
+SELECT:VSg2IfPersSg2 (V Sg2) (*-1 (Pers Nom Sg2) BARRIER V OR Nom);
+SELECT:VSg2IfPersSg2 (V Sg2) (1 (Pers Nom Sg2));
+REMOVE Imprt (-1 Interr OR Adv OR (Pers Sg2))(0 (Prs Sg2)) ;
 
 SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") BARRIER V);
 
@@ -231,7 +239,7 @@ REMOVE:NotContrIfEven (".*ijidh"r) IF (0 (".*[oe]dh"r));
 
 # Nomen
 
-SELECT Attr IF (0 Prop)(1 Prop); # Too hard.
+#SELECT Attr IF (0 Prop)(1 Prop); # Too hard.
 REMOVE (Prop Attr) IF (NOT 1 Prop);
 
 SELECT:GenToAdp Gen IF (1 Adp);
@@ -282,13 +290,23 @@ SELECT Num IF (-1 CC)(*-2C Num BARRIER V);
 # Putative contract verb
 
 
-
+# 
+SELECT Interr (0 Rel)(*1 ("?")) ; 
 
 
 
 # Interj
 SELECT:InterjIfInterj Interj (0 ("ho"))(1 ("ho"));
 
+
+# Po or Pr
+SELECT Po (0 Pr)(-1 Gen) ;
+
+# Illative or genetive
+SELECT Ill (0 Gen)(*1 ILLV BARRIER NOT-ADV);
+
+SELECT (Dem Gen)(1 (N Gen) LINK NOT 0 Ill) ;
+SELECT (N Gen)(-1C (Dem Gen)) ;
 
 	
 SECTION
