@@ -2770,12 +2770,10 @@ LEXICON BÅETEDH_IV ! row A - Group I
 
 LEXICON SEVTEDH ! row A - Group I  IMPERSONALS!
  +V+Ind+Prs+Uml+Sg3:%>%^1UMLa   FINAL1 ; ! class I special
- +V+Ind+Prs+Pl3:%>ieX2h        FINAL1 ;
  +V+Ind+Prt+Sg3+Use/Sub:%>ieji        FINAL1 ;
  +V+Ind+Prt+Sg3+Use/Sub:%>iej%^DISIMPi        FINAL1 ;
  +V+Ind+Prt+Uml+Sg3:%>%^iUMLi    FINAL1 ;
  +V+Ind+Prt+Uml+Sg3+Use/Sub:%>%^iUML%^DISIMPi		FINAL1 ;
- +V+Ind+Prt+Uml+Pl3:%>%^iUMLin    FINAL1 ;
 ! +V+Imprt:%>              VSUF-EVEN-IMP ;
 ! Infinite forms
 ! --------------
@@ -2790,25 +2788,82 @@ LEXICON SEVTEDH ! row A - Group I  IMPERSONALS!
  ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»iej@C.NeedNoun@     IJE_ODD ;
+! +V+Der1+Der/NomAg:%»iej@C.NeedNoun@     IJE_ODD ;
  +V+Der1+Der/NomAct:%»iem@C.NeedNoun@    NomActOdd ;
 ! +V+Der1+Der/les:%»%^1UMLa%^COMPDISIMPl LES ;
  +V+Der3+Der/PassL+Uml:%»%^1UMLasovv PASSIVE_L_IMPERSONAL ;
  +V+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH2 ;
- +V+Der3+Der/gåete:%»iegået GÅETEDH ;
- +V+Der1+Der/stidh:%»iest DÅAJVOEHTIDH ;
- +V+Der1+Der/lidh:%»iel GOLTELIDH ;
- +V+Der1+Der/htjidh:%»%^htjidhUMLehtj GOLTELIDH ;
+ +V+Der3+Der/gåete+V+Ind+Prs+Uml+Sg3:%»iegået%>%^1UMLa FINAL1 ;
+ +V+Der3+Der/gåete+V+Ind+Prt+Uml+Sg3:%»iegået%>%^iUMLi FINAL1 ;
+ +V+Der3+Der/gåete+V+Ind+Prt+Uml+Sg3+Use/Sub:%»iegået%>%^iUML%^DISIMPi FINAL1 ;
+ +V+Der1+Der/stidh+V+Ind+Prs+Sg3:%»iest%>%^DISIMPe FINAL1 ;
+ +V+Der1+Der/stidh+V+Ind+Prt+Sg3:%»iest%>i FINAL1 ;
+ +V+Der1+Der/stidh+V+Ind+Prt+Sg3+Use/Sub:%»iest%>%^DISIMPi FINAL1 ;
+ +V+Der1+Der/stidh+V+Inf:%»iest%>idh             FINAL1 ;
+ +V+Der1+Der/stidh+V+ConNeg:%»iest%>%^DISIMPh    FINAL1 ;
+ +V+Der1+Der/stidh+V+VGen:%»iest%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +V+Der1+Der/stidh+V+Act:%»iest%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+Der1+Der/stidh+V+Ger:%»iest%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +V+Der1+Der/stidh+V+PrsPrc:%»iest%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +V+Der1+Der/stidh+V+A+Der1+Der/æjja+Attr:%»iest%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +V+Der1+Der/stidh+V+A+Der1+Der/ihks+Attr:%»iest%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +V+Der1+Der/stidh+V+PrfPrc:%»iest%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
+ +V+Der1+Der/lidh+V+Ind+Prs+Sg3:%»iel%>%^DISIMPe FINAL1 ;
+ +V+Der1+Der/lidh+V+Ind+Prt+Sg3:%»iel%>i FINAL1 ;
+ +V+Der1+Der/lidh+V+Ind+Prt+Sg3+Use/Sub:%»iel%>%^DISIMPi FINAL1 ;
+ +V+Der1+Der/lidh+V+Inf:%»iel%>idh             FINAL1 ;
+ +V+Der1+Der/lidh+V+ConNeg:%»iel%>%^DISIMPh    FINAL1 ;
+ +V+Der1+Der/lidh+V+VGen:%»iel%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +V+Der1+Der/lidh+V+Act:%»iel%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+Der1+Der/lidh+V+Ger:%»iel%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +V+Der1+Der/lidh+V+PrsPrc:%»iel%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +V+Der1+Der/lidh+V+A+Der1+Der/æjja+Attr:%»iel%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +V+Der1+Der/lidh+V+A+Der1+Der/ihks+Attr:%»iel%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +V+Der1+Der/lidh+V+PrfPrc:%»iel%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
+ +V+Der1+Der/htjidh+V+Inf:%»%^htjidhUMLehtj%>idh             FINAL1 ;
+ +V+Der1+Der/htjidh+V+ConNeg:%»%^htjidhUMLehtj%>%^DISIMPh    FINAL1 ;
+ +V+Der1+Der/htjidh+V+VGen:%»%^htjidhUMLehtj%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +V+Der1+Der/htjidh+V+Act:%»%^htjidhUMLehtj%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+Der1+Der/htjidh+V+Ger:%»%^htjidhUMLehtj%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +V+Der1+Der/htjidh+V+PrsPrc:%»%^htjidhUMLehtj%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +V+Der1+Der/htjidh+V+A+Der1+Der/æjja+Attr:%»%^htjidhUMLehtj%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +V+Der1+Der/htjidh+V+A+Der1+Der/ihks+Attr:%»%^htjidhUMLehtj%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +V+Der1+Der/htjidh+V+PrfPrc:%»%^htjidhUMLehtj%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
  +V+Der1+Der/htidh:%»ieht DÅAJVOEHTIDH ;
+ +V+Der1+Der/htidh+V+Ind+Prs+Sg3:%»ieht%>%^DISIMPe FINAL1 ;
+ +V+Der1+Der/htidh+V+Ind+Prt+Sg3:%»ieht%>i FINAL1 ;
+ +V+Der1+Der/htidh+V+Ind+Prt+Sg3+Use/Sub:%»ieht%>%^DISIMPi FINAL1 ;
+ +V+Der1+Der/htidh+V+Inf:%»ieht%>idh             FINAL1 ;
+ +V+Der1+Der/htidh+V+ConNeg:%»ieht%>%^DISIMPh    FINAL1 ;
+ +V+Der1+Der/htidh+V+VGen:%»ieht%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +V+Der1+Der/htidh+V+Act:%»ieht%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+Der1+Der/htidh+V+Ger:%»ieht%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +V+Der1+Der/htidh+V+PrsPrc:%»ieht%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +V+Der1+Der/htidh+V+A+Der1+Der/æjja+Attr:%»ieht%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +V+Der1+Der/htidh+V+A+Der1+Der/ihks+Attr:%»ieht%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +V+Der1+Der/htidh+V+PrfPrc:%»ieht%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
 ! +V+Der1+Der/dehte:%»iedeht ÅARAJEHTEDH ; !we have -didh + -ehte
  +V+Der3+Der/ahtje:%»iejahtj AHTJE ;
+ +V+Der3+Der/ahtje+V+Inf:%»iejahtj%>edh      FINAL1 ;
+ +V+Der3+Der/ahtje+V+VGen:%»iejahtj%>en      FINAL1 ;
+ +V+Der3+Der/ahtje+V+Act:%»iejahtj%>eme      FINAL1 ;
+ +V+Der3+Der/ahtje+V+Ger:%»iejahtj%>eminie   FINAL1 ;
+ +V+Der3+Der/ahtje+V+PrfPrc:%»iejahtj%>eme   FINAL1 ;
+ +V+Der3+Der/ahtje+V+ConNeg:%»iejahtj%>0h    FINAL1 ;
+ +V+Ind+Prs+Sg3+Uml:%»iejahtj%>%^3sUMLa	  FINAL1 ;
+ +V+Ind+Prt+Sg3:%»iejahtj%>i     FINAL1 ;
+ +V+Ind+Prt+Sg3+Use/Sub:%»iejahtj%>%^DISIMPi     FINAL1 ;
 ! +V+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
 ! +V+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
- +V+Der1+Der/ldihkie:%»%^1UMLaldihkie NULL-NULL-EVEN ;
- +V+Der1+Der/ldahke:%»%^1UMLaldahk LDAHKE ;
- +V+Der1+Der/ldh+N+SgNomCmp:%»%^1UMLeldh R ;
- +V+Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
- +V+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
+! +V+Der1+Der/ldihkie:%»%^1UMLaldihkie NULL-NULL-EVEN ;
+! +V+Der1+Der/ldahke:%»%^1UMLaldahk LDAHKE ;
+! +V+Der1+Der/ldh+N+SgNomCmp:%»%^1UMLeldh R ;
+! +V+Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
+! +V+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
 
 
  
@@ -3223,8 +3278,10 @@ LEXICON PASSIVE_L_IMPERSONAL
 ! -----------
  +V+Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
  +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
- +V+Der3+Der/gåete:%»egået GÅETEDH ;
- +V+Der3+Der/ahtje:%»ijahtj AHTJE ;
+ +V+Der3+Der/gåete+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa FINAL1 ;
+ +V+Der3+Der/gåete+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi    FINAL1 ;
+ +V+Der3+Der/gåete+V+Ind+Prt+Uml+Sg3+Use/Sub:%»egået%>%^iUML%^DISIMPi FINAL1 ;
+ +V+Der3+Der/ahtje+V+Ind+Prs+Sg3+Uml:%»ijahtj%>%^3sUMLa	  FINAL1 ;
 
 
 LEXICON VÅÅJNEDH2 ! row E - Group V  NB! FOR already derivated PASSIVES!!!
@@ -3245,18 +3302,61 @@ LEXICON VÅÅJNEDH2 ! row E - Group V  NB! FOR already derivated PASSIVES!!!
  +ConNeg:%>h FINAL1 ;
 ! Derivations
 ! -----------
- +Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+! +Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
  +Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
 ! +Der1+Der/les:e%»l LES ;
 ! +Der3+Der/PassL:e%»sovv SOVVEDH ;
 ! +Der/PassS+Uml+V:%»%^PASSUML VÅÅJNEDH2 ; ! No short passives in Group V
- +Der3+Der/gåete:%»egået GÅETEDH ;
- +Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
+ +Der3+Der/gåete+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa FINAL1 ;
+ +Der3+Der/gåete+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi		FINAL1 ;
+ +Der3+Der/gåete+V+Ind+Prt+Uml+Sg3+Use/Sub:%»egået%>%^iUML%^DISIMPi		FINAL1 ;
+ +Der1+Der/stidh+V+Ind+Prs+Sg3:%»est%>%^DISIMPe FINAL1 ;
+ +Der1+Der/stidh+V+Ind+Prt+Sg3:%»est%>i FINAL1 ;
+ +Der1+Der/stidh+V+Ind+Prt+Sg3+Use/Sub:%»est%>%^DISIMPi FINAL1 ;
+ +Der1+Der/stidh+V+Inf:%»est%>idh             FINAL1 ;
+ +Der1+Der/stidh+V+ConNeg:%»est%>%^DISIMPh    FINAL1 ;
+ +Der1+Der/stidh+V+VGen:%»est%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +Der1+Der/stidh+V+Act:%»est%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +Der1+Der/stidh+V+Ger:%»est%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +Der1+Der/stidh+V+PrsPrc:%»est%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +Der1+Der/stidh+V+A+Der1+Der/æjja+Attr:%»est%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +Der1+Der/stidh+V+A+Der1+Der/ihks+Attr:%»est%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +Der1+Der/stidh+V+PrfPrc:%»est%>amme         FINAL1 ; ! = GH Ptz.Pt.
 ! +Der1+Der/lidh:%»el GOLTELIDH ;
- +Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
+ +Der1+Der/htidh+V+Ind+Prs+Sg3:%»eht%>%^DISIMPe FINAL1 ;
+ +Der1+Der/htidh+V+Ind+Prt+Sg3:%»eht%>i FINAL1 ;
+ +Der1+Der/htidh+V+Ind+Prt+Sg3+Use/Sub:%»eht%>%^DISIMPi FINAL1 ;
+ +Der1+Der/htidh+V+Inf:%»eht%>idh             FINAL1 ;
+ +Der1+Der/htidh+V+ConNeg:%»eht%>%^DISIMPh    FINAL1 ;
+ +Der1+Der/htidh+V+VGen:%»eht%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +Der1+Der/htidh+V+Act:%»eht%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +Der1+Der/htidh+V+Ger:%»eht%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +Der1+Der/htidh+V+PrsPrc:%»eht%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +Der1+Der/htidh+V+A+Der1+Der/æjja+Attr:%»eht%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +Der1+Der/htidh+V+A+Der1+Der/ihks+Attr:%»eht%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +Der1+Der/htidh+V+PrfPrc:%»eht%>amme         FINAL1 ; ! = GH Ptz.Pt.
 ! +Der1+Der/dehte:%»edeht ÅARAJEHTEDH ; !we have -didh + -ehte
- +Der3+Der/ahtje:%»ejahtj AHTJE ;
- +Der1+Der/didh:%»ed GOLTELIDH ;
+ +Der3+Der/ahtje+V+Inf:%»ejahtj%>edh      FINAL1 ;
+ +Der3+Der/ahtje+V+VGen:%»ejahtj%>en      FINAL1 ;
+ +Der3+Der/ahtje+V+Act:%»ejahtj%>eme      FINAL1 ;
+ +Der3+Der/ahtje+V+Ger:%»ejahtj%>eminie   FINAL1 ;
+ +Der3+Der/ahtje+V+PrfPrc:%»ejahtj%>eme   FINAL1 ;
+ +Der3+Der/ahtje+V+ConNeg:%»ejahtj%>0h    FINAL1 ;
+ +Der3+Der/ahtje+V+Ind+Prs+Sg3+Uml:%»ejahtj%>%^3sUMLa	  FINAL1  ;
+ +Der3+Der/ahtje+V+Ind+Prt+Sg3:%»ejahtj%>i     FINAL1 ;
+ +Der3+Der/ahtje+V+Ind+Prt+Sg3+Use/Sub:%»ejahtj%>%^DISIMPi		FINAL1 ;
+  +Der1+Der/didh+V+Ind+Prs+Sg3:%»ed%>%^DISIMPe FINAL1 ;
+ +Der1+Der/didh+V+Ind+Prt+Sg3:%»ed%>i FINAL1 ;
+ +Der1+Der/didh+V+Ind+Prt+Sg3+Use/Sub:%»ed%>%^DISIMPi FINAL1 ;
+ +Der1+Der/didh+V+Inf:%»ed%>idh             FINAL1 ;
+ +Der1+Der/didh+V+ConNeg:%»ed%>%^DISIMPh    FINAL1 ;
+ +Der1+Der/didh+V+VGen:%»ed%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+ +Der1+Der/didh+V+Act:%»ed%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +Der1+Der/didh+V+Ger:%»ed%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +Der1+Der/didh+V+PrsPrc:%»ed%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +Der1+Der/didh+V+A+Der1+Der/æjja+Attr:%»ed%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +Der1+Der/didh+V+A+Der1+Der/ihks+Attr:%»ed%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +Der1+Der/didh+V+PrfPrc:%»ed%>amme         FINAL1 ; ! = GH Ptz.Pt.
 ! +Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
 ! +Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
 ! +Der1+Der/ldihkie:%»eldihkie NULL-NULL-EVEN ;
