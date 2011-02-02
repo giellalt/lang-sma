@@ -2782,8 +2782,6 @@ LEXICON SEVTEDH ! row A - Group I  IMPERSONALS!
  +V+IV+VGen:%>ien          FINAL1 ;
  +V+IV+Act:%>eme           FINAL1 ;
  +V+IV+Ger:%>ieminie       FINAL1 ;
- +V+IV+PrsPrc:%>ije        FINAL1 ;
- +V+IV+PrsPrc:%>ijes        FINAL1 ;
  +V+IV+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
  ! row F trigger for Umlaut Prt
 ! Derivations
@@ -2991,10 +2989,10 @@ LEXICON TJEARODH_IV ! row C - Group II
 
 
 LEXICON ABRODH ! row C - Group II
- +V+IV+Ind+Prs:%>          V-II-PRS-SG ; ! class II special
- +V+IV+Ind+Prs:%>oe        VSUF-EVEN-PRS-DUPL ;
- +V+IV+Ind+Prt:%>oej       VSUF-PRT ;
- +V+IV+Imprt:%>              VSUF-II-EVEN-IMP ;
+ +V+IV+Ind+Prs+Uml+Sg3:%>%^2UMLe          FINAL1 ; ! class II special
+ +V+IV+Ind+Prt+Sg3:%>oeji		FINAL1 ;
+ +V+IV+Ind+Prt+Sg3+Use/Sub:%>oej%^DISIMPi		FINAL1 ;
+! +V+IV+Imprt:%>              VSUF-II-EVEN-IMP ;
  +V+IV+Ind+Prt+Sg3:%>oej FINAL1 ;
 ! Infinite forms
 ! --------------
@@ -3003,19 +3001,54 @@ LEXICON ABRODH ! row C - Group II
  +V+IV+VGen:%>oen          FINAL1 ;
  +V+IV+Act:%>eme           FINAL1 ;
  +V+IV+Ger:%>oeminie       FINAL1 ;
- +V+IV+PrsPrc:%>oje        FINAL1 ;
- +V+IV+PrsPrc:%>ojes        FINAL1 ;
  +V+IV+PrfPrc+Uml:%>%^2UMLeme  FINAL1 ;
 ! Derivations
 ! -----------
- +V+IV+Der1+Der/NomAg:%»oej@C.NeedNoun@     N_ODD ;
+! +V+IV+Der1+Der/NomAg:%»oej@C.NeedNoun@     N_ODD ;
  +V+IV+Der1+Der/NomAct:%»oem@C.NeedNoun@    NomActOdd ;
- +V+IV+Der1+Der/les:%»%^PASSUMLel LES ;
+! +V+IV+Der1+Der/les:%»%^PASSUMLel LES ;
  +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml+V:%»%^PASSUML IV_PASSIVE_S ;
- +V+IV+Der3+Der/gåete:%»oegået GÅETEDH ;
- +V+IV+Der1+Der/stidh:%»oest DÅAJVOEHTIDH ;
- +V+IV+Der1+Der/lidh:%»oel GOLTELIDH ;
+ +V+IV+Der3+Der/gåete+V+Ind+Prs+Uml+Sg3:%»oegået%>%^1UMLa FINAL1 ;
+ +V+IV+Der3+Der/gåete+V+Ind+Prt+Uml+Sg3:%»oegået%>%^iUMLi FINAL1 ;
+ +V+IV+Der3+Der/gåete+V+Ind+Prt+Uml+Sg3+Use/Sub:%»oegået%>%^iUML%^DISIMPi FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+Ind+Prs+Sg3:%»oest%>%^DISIMPe FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+Ind+Prt+Sg3:%»oest%>i FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+Ind+Prt+Sg3+Use/Sub:%»oest%>%^DISIMPi FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+Inf:%»oest%>idh             FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+ConNeg:%»oest%>%^DISIMPh    FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+VGen:%»oest%>%^DISIMPen     FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+Act:%»oest%>immie           FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+Ger:%»oest%>%^DISIMPeminie  FINAL1  ;
+ +V+IV+Der1+Der/stidh+V+PrfPrc:%»oest%>amme         FINAL1 ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/stidh+V+Der2+Der/alle:%»oest%»%^adteUMLall GOEGKERDADTEDH ;
+ +V+IV+Der1+Der/lidh+V+Ind+Prs+Sg3:%»oel%>%^DISIMPe FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Ind+Prt+Sg3:%»oel%>i FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Ind+Prt+Sg3+Use/Sub:%»oel%>%^DISIMPi FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Inf:%»oel%>idh FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+ConNeg:%»oel%>%^DISIMPh    FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+VGen:%»oel%>%^DISIMPen     FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Act:%»oel%>immie           FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Ger:%»oel%>%^DISIMPeminie  FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+PrfPrc:%»oel%>amme         FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»oel%»%^adteUMLadt%>%^3sUMLa	  FINAL1  ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»oel%»%^adteUMLadt%>i FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+Ind+Prt+Sg3+Use/Sub:%»oel%»%^adteUMLadt%>%^DISIMPi FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+Inf:%»oel%»%^adteUMLadt%>edh      FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+VGen:%»oel%»%^adteUMLadt%>en      FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+Act:%»oel%»%^adteUMLadt%>eme      FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+Ger:%»oel%»%^adteUMLadt%>eminie   FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+PrfPrc:%»oel%»%^adteUMLadt%>eme   FINAL1 ;
+ +V+IV+Der1+Der/lidh+V+Der2+Der/adte+V+ConNeg:%»oel%»%^adteUMLadt%>0h    FINAL1 ;
+
  +V+IV+Der1+Der/htidh:%»oeht DÅAJVOEHTIDH ;
 ! +V+IV+Der1+Der/dehte:%»oedeht ÅARAJEHTEDH ; !we have -didh + -ehte 
  +V+IV+Der3+Der/ahtje:%»oejahtj AHTJE ;
@@ -3247,8 +3280,6 @@ LEXICON BIEGKEDH ! row D - Group IV !impersonals
  +V+IV+VGen:%>en      FINAL1 ;
  +V+IV+Act:%>eme      FINAL1 ;
  +V+IV+Ger:%>eminie   FINAL1 ;
- +V+IV+PrsPrc:%>ije   FINAL1 ;
- +V+IV+PrsPrc:%>ijes  FINAL1 ;
  +V+IV+PrfPrc+NoUml:%>eme   FINAL1 ;          ! tjoehpeme, bïejeme
  +V+IV+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ; ! tjuahpeme, beajeme
  +V+IV+ConNeg:%>0h    FINAL1 ;
