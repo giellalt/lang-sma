@@ -189,14 +189,14 @@ SET AUX = COPULAS OR Neg OR MOD-ASP OR AUX-OR-MAIN ;
 LIST VFIN = Ind OR Imprt ;
 
 
-LIST INFV = "aelkedh" "provhkedh" ; 
+LIST INFV = "aavoedidh" "aelkedh" "provhkedh" ; 
 # These are often followed by an infitive.
 
 LIST ILLV = "ringkedh" ;
 
 # BOUNDARY SETS
 
-SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men")  OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS ;
+SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS ;
 
 
 # ============== #
@@ -258,12 +258,12 @@ MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc ;
 # leah Prs Sg2 = Pl3
 SELECT:VSg2IfPersSg2 (V Sg2) (*-1 (Pers Nom Sg2) OR (Rel Sg Nom) BARRIER V OR Nom);
 SELECT:VSg2IfPersSg2 (V Sg2) (1 (Pers Nom Sg2));
-SELECT:Pl3WhenPlSubj Pl3 IF (*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY)(0 ("lea" V));
-SELECT:Pl3WhenSubjCC Pl3 IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
-SELECT Sg2 (NOT *0 Nom BARRIER S-BOUNDARY) ;
+SELECT:Pl3WhenPlSubj (V Pl3) IF (*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY)(0 ("lea" V));
+SELECT:Pl3WhenSubjCC (V Pl3) IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
+REMOVE (V Pl3) (NOT *0 Nom BARRIER S-BOUNDARY) ;
 
 
-SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER V OR CS OR CC) ; 
+SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER S-BOUNDARY)(0 Ind) ; # BARRIER V OR S-BOUNDARY) ; 
 # Should be BARRIER V OR CS OR CC # It doesn´t work...
 	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
 
