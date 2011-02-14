@@ -86,6 +86,7 @@ LIST Pl3 = Pl3 ;
 LIST Inf = Inf ;
 LIST Neg = Neg ;
 LIST ConNeg = ConNeg ;
+LIST Foc/gan = Foc/gan ;
 
 LIST PrfPrc = PrfPrc ;
 LIST VGen = VGen ;
@@ -169,8 +170,6 @@ LIST REALCOPULAS = "lea" ;
 
 # The set COPULAS is for predicative constructions
 LIST COPULAS = "lea" ;
- #  "bissut" ?
- # 'Dáidit' can appear without 'leat'.
 
 SET V-NOT-COP = V - COPULAS ;
 
@@ -189,7 +188,7 @@ SET AUX = COPULAS OR Neg OR MOD-ASP OR AUX-OR-MAIN ;
 LIST VFIN = Ind OR Imprt ;
 
 
-LIST INFV = "aavoedidh" "aelkedh" "provhkedh" ; 
+LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ; 
 # These are often followed by an infitive.
 
 LIST ILLV = "ringkedh" ;
@@ -210,8 +209,9 @@ SECTION
 
 # Cycle 0
 
-REMOVE ("Da" N) IF (0 ("dïhte"));
+REMOVE ("Da") OR ("Dan") (0 Pers);
 REMOVE ("m" N ACR Sg Gen) IF (0 ("men"));
+REMOVE Num (0 Neg);
 
 
 # Verbs
@@ -237,13 +237,15 @@ SELECT:PersonInNeg Pl3 IF (0 Neg + Prt)(*1C ConNeg + Pl3 BARRIER NOT-ADV);
        ## 
 
 # There can be Interj, VOC, 
-SELECT Imprt (-1 Interj) ;
+SELECT Imprt (-1 BOS OR (":") OR Interj)(0 (V Sg2))(NOT *1 (Pers Sg2 Nom) BARRIER S-BOUNDARY) ;
+SELECT Imprt (-1 BOS OR (":") OR Interj)(1 COMMA) ;
 REMOVE Imprt (-1 Interr OR Adv OR (Pers Sg2))(0 (Prs Sg2)) ;
-REMOVE Imprt (*-1 WORD BARRIER CC OR COMMA OR BOS)(NOT 0 Neg) ;
+REMOVE Imprt (*-1 WORD BARRIER CC OR COMMA OR BOS)(NOT 0 Neg)(NEGATE -1 CC LINK *-1 Imprt BARRIER S-BOUNDARY OR V) ;
+SELECT (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) ;
 
 
 #
-MAP (@+FAUXV) TARGET Neg OR ("lea") OR MOD-ASP IF (*1 V BARRIER CLB);
+MAP (@+FAUXV) TARGET Neg OR ("lea") OR MOD-ASP (0 VFIN) (*1 V BARRIER CLB);
 
 MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) ;
 
@@ -261,9 +263,11 @@ SELECT:VSg2IfPersSg2 (V Sg2) (1 (Pers Nom Sg2));
 SELECT:Pl3WhenPlSubj (V Pl3) IF (*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY)(0 ("lea" V));
 SELECT:Pl3WhenSubjCC (V Pl3) IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
 REMOVE (V Pl3) (NOT *0 Nom BARRIER S-BOUNDARY) ;
+SELECT:Sg3WhenRelSg (V Sg3) (-1 (Rel Sg Nom));
+SELECT:Sg3WhenSg3toLeft (V Sg3) (-1 CC LINK *-1C (V Sg3) BARRIER S-BOUNDARY OR V);
 
 
-SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER S-BOUNDARY)(0 Ind) ; # BARRIER V OR S-BOUNDARY) ; 
+SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER S-BOUNDARY)(0 Ind) ; ; 
 # Should be BARRIER V OR CS OR CC # It doesn´t work...
 	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
 
@@ -271,6 +275,9 @@ SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") BARRIER V);
 
 
 SELECT:PlIfPlSubj Pl3 IF (*-1 (Pl Nom) BARRIER NOT-ADV);
+
+REMOVE Foc/gan (0 (V Du3)) ;
+SELECT Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY)
 
 # Contract or not
 
