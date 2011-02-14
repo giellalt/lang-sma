@@ -105,6 +105,8 @@ LIST Opt = Opt ;
 LIST Actor = Actor ;
 LIST Clt = Clt ;
 LIST A = A ;
+LIST Ord = Ord ;
+LIST ABBR = ABBR ;
 
 LIST Comp = Comp ;
 LIST Superl = Superl ;
@@ -135,12 +137,16 @@ LIST CLB = CLB ;
 LIST PUNCT = PUNCT ;
 LIST LEFT = LEFT ;
 LIST RIGHT = RIGHT ;
+LIST COMMA = "," ;
 
 LIST TITLE = "prof" "cand.philol" ;
 
 
 
 LIST WORD = N A V Adv Pron Interj Adp Num CS CC Pcle Pr Po ;
+SET REALWORD = WORD - Num - Ord ;
+SET REALWORD-NOTABBR = WORD - Num - Ord - ABBR ;
+
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS Adp ;
 
 SET NOT-ADV = WORD - Adv ;
@@ -157,10 +163,33 @@ SET NPNH = WORD - PRE-NP-HEAD OR (ABBR) ;       # NPNH  = "NOT-PRE-NP-HEAD"
 
 # Verb sets
 
-LIST VFIN = Ind OR Imp ;
+
+ # The set REALCOPULAS is smaller than COPULAS, made for verbs with PrfPrc complements: Seammás REALCOPULAS son dovdan iežas...
+LIST REALCOPULAS = "lea" ;
+
+# The set COPULAS is for predicative constructions
+LIST COPULAS = "lea" ;
+ #  "bissut" ?
+ # 'Dáidit' can appear without 'leat'.
+
+SET V-NOT-COP = V - COPULAS ;
+
+LIST MOD-ASP = "galkedh" "tjoeveridh" "edtjedh" "tjoeredh" "sååjhtedh" ;
+
+ # Verbs that never have arguments of their own 
+ 
+LIST AUX-OR-MAIN = "maehtedh" "sïjhtedh" "sjïdtedh" "båetedh" ;
+
+ # These verbs can take arguments, so they do not belong in the AUX group, 
+ # but they are nevertheless mapped to (@+FAUXV). 
+ 
+SET AUX = COPULAS OR Neg OR MOD-ASP OR AUX-OR-MAIN ;
 
 
-LIST INFV = "aelkedh" "båetedh" "edtjedh" "galkedh" "maehtedh" "provhkedh" "sjïdtedh" "tjoeveridh" "tjoeredh" ; 
+LIST VFIN = Ind OR Imprt ;
+
+
+LIST INFV = "aelkedh" "provhkedh" ; 
 # These are often followed by an infitive.
 
 LIST ILLV = "ringkedh" ;
@@ -203,25 +232,40 @@ SELECT:PersonInNeg Pl3 IF (0 Neg + Prt)(*1C ConNeg + Pl3 BARRIER NOT-ADV);
 
 
 # Imperative
-REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
-REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
+#REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
+#REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
        ## 
+
+# There can be Interj, VOC, 
+SELECT Imprt (-1 Interj) ;
+REMOVE Imprt (-1 Interr OR Adv OR (Pers Sg2))(0 (Prs Sg2)) ;
+REMOVE Imprt (*-1 WORD BARRIER CC OR COMMA OR BOS)(NOT 0 Neg) ;
+
+
+#
+MAP (@+FAUXV) TARGET Neg OR ("lea") OR MOD-ASP IF (*1 V BARRIER CLB);
+
+MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) ;
+
+MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc ;
+#
 
 
 # PrfPrc
 #SELECT PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
 
 # Person
+# leah Prs Sg2 = Pl3
+SELECT:VSg2IfPersSg2 (V Sg2) (*-1 (Pers Nom Sg2) OR (Rel Sg Nom) BARRIER V OR Nom);
+SELECT:VSg2IfPersSg2 (V Sg2) (1 (Pers Nom Sg2));
+SELECT:Pl3WhenPlSubj Pl3 IF (*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY)(0 ("lea" V));
+SELECT:Pl3WhenSubjCC Pl3 IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
+SELECT Sg2 (NOT *0 Nom BARRIER S-BOUNDARY) ;
 
-SELECT:Pl3WhenPlSubj Pl3 IF (1 (N Pl Nom) OR (Num Sg Nom))(0 ("lea" V));
 
-SELECT:InfIfInfv (V Inf) IF (*-1 INFV BARRIER V OR CS OR CC) ; 
+SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER V OR CS OR CC) ; 
 # Should be BARRIER V OR CS OR CC # It doesn´t work...
 	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
-
-SELECT:VSg2IfPersSg2 (V Sg2) (*-1 (Pers Nom Sg2) BARRIER V OR Nom);
-SELECT:VSg2IfPersSg2 (V Sg2) (1 (Pers Nom Sg2));
-REMOVE Imprt (-1 Interr OR Adv OR (Pers Sg2))(0 (Prs Sg2)) ;
 
 SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") BARRIER V);
 
@@ -311,7 +355,7 @@ SELECT (N Gen)(-1C (Dem Gen)) ;
 	
 SECTION
 
-# Syntactic tags
+# Syntactic tags for verbs
 # --------------
 
 LIST @+FAUXV = @+FAUXV ; 
@@ -319,83 +363,48 @@ LIST @+FMAINV = @+FMAINV ;
 LIST @-FAUXV = @-FAUXV ;
 LIST @-FMAINV = @-FMAINV ;
  
-LIST @-FSUBJ> = @-FSUBJ> ;
+#LIST @-FSUBJ> = @-FSUBJ> ;
 
 SET FMAINV = @-FMAINV OR @+FMAINV ;
 
-LIST @ADV-A = @ADV-A ; 
-LIST @ADV-ADV = @ADV-ADV ; 
-LIST @>ADVL = @>ADVL ;
-LIST @ADVL< = @ADVL< ;
-
-LIST @ADVL = @ADVL ;
-
-LIST @>N = @>N ; 
-LIST @P< = @P< ; 
-LIST @>P = @>P ;
-
-LIST @ActioN> = @ActioN> ; 
-LIST @CC = @CC ; 
-LIST @CMPND = @CMPND ; 
-LIST @CS = @CS ;
-LIST @GA> = @GA> ; 
-LIST @HNOUN = @HNOUN ; 
-LIST @INTERJ = @INTERJ ; 
-LIST @MEASURE = @MEASURE ;
-LIST @NPron< = @NPron< ;
-LIST @NQ< = @NQ< ; 
-LIST @NUM-PRON = @NUM-PRON ; 
-LIST @OBJ = @OBJ ;
-LIST @OPRED = @OPRED ; 
-LIST @PCLE = @PCLE ; 
-LIST @PCLE-COMPL = @PCLE-COMPL ; 
-LIST @PROP> = @PROP> ;
-LIST @PrcN> = @PrcN> ; 
-LIST @PronN< = @PronN< ; 
-LIST @PronN> = @PronN> ; 
-LIST @SPRED = @SPRED ; 
-LIST @SUBJ = @SUBJ ; 
-LIST @SUBJ-QH = @SUBJ-QH ;
-LIST @Num< = @Num< ;
-
-LIST @TITLE = @TITLE ; 
-LIST @VOC = @VOC ; 
-LIST @X = @X ;
-
-# Sets of elements with common syntactic behaviour
-# ================================================
-
-SETS
-
- # The set REALCOPULAS is smaller than COPULAS, made for verbs with PrfPrc complements: Seammás REALCOPULAS son dovdan iežas...
-LIST REALCOPULAS = "lea" ;
-
-# The set COPULAS is for predicative constructions
-LIST COPULAS = "lea" ;
- #  "bissut" ?
- # 'Dáidit' can appear without 'leat'.
-
-SET V-NOT-COP = V - COPULAS ;
-
-LIST MOD-ASP = "galkedh" "tjoeveridh" "edtjedh" "tjoeredh" "sååjhtedh" ;
-
- # Verbs that never have arguments of their own 
- 
-LIST AUX-OR-MAIN = "maehtedh" "sïjhtedh" "båetedh" ;
-
- # These verbs can take arguments, so they do not belong in the AUX group, 
- # but they are nevertheless mapped to (@+FAUXV). 
- 
-SET AUX = COPULAS OR Neg OR MOD-ASP OR AUX-OR-MAIN ;
-
-
+#LIST @ADV-A = @ADV-A ; 
+#LIST @ADV-ADV = @ADV-ADV ; 
+#LIST @>ADVL = @>ADVL ;
+#LIST @ADVL< = @ADVL< ;
 #
-MAP (@+FAUXV) TARGET Neg OR ("lea") OR MOD-ASP IF (*1 V BARRIER CLB);
-
-MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) ;
-
-MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc ;
+#LIST @ADVL = @ADVL ;
 #
+#LIST @>N = @>N ; 
+#LIST @P< = @P< ; 
+#LIST @>P = @>P ;
+#
+#LIST @ActioN> = @ActioN> ; 
+#LIST @CC = @CC ; 
+#LIST @CMPND = @CMPND ; 
+#LIST @CS = @CS ;
+#LIST @GA> = @GA> ; 
+#LIST @HNOUN = @HNOUN ; 
+#LIST @INTERJ = @INTERJ ; 
+#LIST @MEASURE = @MEASURE ;
+#LIST @NPron< = @NPron< ;
+#LIST @NQ< = @NQ< ; 
+#LIST @NUM-PRON = @NUM-PRON ; 
+#LIST @OBJ = @OBJ ;
+#LIST @OPRED = @OPRED ; 
+#LIST @PCLE = @PCLE ; 
+#LIST @PCLE-COMPL = @PCLE-COMPL ; 
+#LIST @PROP> = @PROP> ;
+#LIST @PrcN> = @PrcN> ; 
+#LIST @PronN< = @PronN< ; 
+#LIST @PronN> = @PronN> ; 
+#LIST @SPRED = @SPRED ; 
+#LIST @SUBJ = @SUBJ ; 
+#LIST @SUBJ-QH = @SUBJ-QH ;
+#LIST @Num< = @Num< ;
+#
+#LIST @TITLE = @TITLE ; 
+#LIST @VOC = @VOC ; 
+#LIST @X = @X ;
 
 
 
