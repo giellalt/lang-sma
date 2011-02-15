@@ -229,6 +229,8 @@ SELECT:PersonInNeg Du3 IF (0 Neg + Prt)(*1C ConNeg + Du3 BARRIER NOT-ADV);
 SELECT:PersonInNeg Pl1 IF (0 Neg + Prt)(*1C ConNeg + Pl1 BARRIER NOT-ADV);
 SELECT:PersonInNeg Pl2 IF (0 Neg + Prt)(*1C ConNeg + Pl2 BARRIER NOT-ADV);
 SELECT:PersonInNeg Pl3 IF (0 Neg + Prt)(*1C ConNeg + Pl3 BARRIER NOT-ADV);
+REMOVE (Neg Prt)(NEGATE 1 ("lea" ConNeg Prt)) ;
+## this is for removing the 'ij' etc. 
 
 
 # Imperative
