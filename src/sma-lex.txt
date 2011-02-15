@@ -90,10 +90,29 @@ Multichar_Symbols
  +DefSgGenCmp +DefPlGenCmp +DefCmp ! Default values
 ! to be renamed:  +§SgNomCmp +§SgGenCmp +§PlGenCmp
 
- +CmpN/Sg +CmpN/SgN +CmpN/SgG +CmpN/PlG
- +CmpN/First +CmpN/Last +CmpN/None +CmpN/Only
- +CmpN/SgLeft +CmpN/SgNomLeft +CmpN/SgGenLeft +CmpN/PlGenLeft
- +CmpN/All +CmpN/Def +CmpN/DefSgGen +CmpN/DefPlGen
+                 ! The first part of the component may be ..
++CmpN/Sg	     ! Sg
++CmpN/SgN	     ! SgN 
++CmpN/SgG	     ! etc.
++CmpN/PlG	     ! 
+
+			     ! This part of the component might be ..
++CmpN/First	     ! first
++CmpN/Last	     ! last
++CmpN/None	     ! ...
++CmpN/Only	     ! 
+
+			     ! This part of the compound may take ..
++CmpN/SgLeft     ! Sg to the left
++CmpN/SgNomLeft  ! etc.
++CmpN/SgGenLeft  ! 
++CmpN/PlGenLeft  ! 
+
+			     ! This part of the compound may ... 
++CmpN/All	     ! Tomi, Sjur, someone, fill in.
++CmpN/Def	     ! 
++CmpN/DefSgGen   ! 
++CmpN/DefPlGen   ! 
 
   
   
@@ -307,7 +326,7 @@ LEXICON N_ODD_ESS
 LEXICON ÅABPETJH !default N_ODD plural lexicon
   +N+Pl+Nom:%>%^DISIMPh       FINAL1 ;
   +N+Pl+Acc:%>idie            FINAL1 ;
-  +N+Pl+Gen:%>%^DISIMPi       FINAL1 ;
+  +N+Pl+Gen:%>%^DISIMP IGENSUFF ;
   +N+Pl+Ill:%>idie            FINAL1 ;
   +N+Pl+Ine:%>inie            FINAL1 ;
   +N+Pl+Ela:%>ijstie          FINAL1 ;
@@ -1200,7 +1219,7 @@ LEXICON ÅERPIENADTJH ! - plural noun
   +N+Pl+Nom:%>h        FINAL1 ;
   +N+Pl+Nom:%>eh       FINAL1 ;
   +N+Pl+Acc:%>ide      FINAL1 ;
-  +N+Pl+Gen:%>i        FINAL1 ;
+  +N+Pl+Gen:%> IGENSUFF ;
   +N+Pl+Ill:%>ide      FINAL1 ;
   +N+Pl+Ine:%>ine      FINAL1 ;
   +N+Pl+Ela:%>ijste    FINAL1 ;
@@ -1446,7 +1465,7 @@ LEXICON LES
 +A+Sg+Com:ass%>ine      FINAL1 ;
 +A+Pl+Nom:%>%^COMPDISIMP%>ass%>%^DISIMPh        FINAL1 ;
 +A+Pl+Acc:%>ass%>ide      FINAL1 ;
-+A+Pl+Gen:%>%^COMPDISIMP%>ass%>%^DISIMPi        FINAL1 ;
++A+Pl+Gen:%>%^COMPDISIMP%>ass%>%^DISIMP IGENSUFF ;
 +A+Pl+Ill:%>ass%>ide      FINAL1 ;
 +A+Pl+Ine:%>ass%>ine      FINAL1 ;
 +A+Pl+Ela:%>ass%>ijste    FINAL1 ;
@@ -1885,14 +1904,15 @@ LEXICON Ces-Ces-Ce-ODD-3
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 
-LEXICON Cs-Cs-Ce-ODD-3
-:%^DISIMP     ATTR-S;
-:%^DISIMP     PRED-S;
-+Use/NG:%^DISIMPe     PRED-0;
-   ODDCASE ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
-+A+SgNomCmp:%^DISIMPe            R ;
-   ODDCOMP ;
+! Not used, hence temporarily outcommented
+! LEXICON Cs-Cs-Ce-ODD-3
+! :%^DISIMP     ATTR-S;
+! :%^DISIMP     PRED-S;
+! +Use/NG:%^DISIMPe     PRED-0;
+!    ODDCASE ;
+! +A+Sg+Nom:%^DISIMPe         FINAL1 ;
+! +A+SgNomCmp:%^DISIMPe            R ;
+!    ODDCOMP ;
 
 LEXICON Ces-Ces-Ce-ODDNOCOMP-3
 :%^DISIMPe     ATTR-S;
@@ -2193,7 +2213,7 @@ LEXICON EVENCOMPCASE
  +Sg+Com:b%>inie            FINAL1 ;
  +Pl+Nom:%>%^COMPDISIMPb%>%^DISIMPh       FINAL1 ;
  +Pl+Acc:b%>idie            FINAL1 ;
- +Pl+Gen:%>%^COMPDISIMPb%>%^DISIMPi       FINAL1 ;
+ +Pl+Gen:%>%^COMPDISIMPb%>%^DISIMP IGENSUFF ;
  +Pl+Ill:b%>idie            FINAL1 ;
  +Pl+Ine:b%>inie            FINAL1 ;
  +Pl+Ela:b%>ijstie          FINAL1 ;
@@ -2217,8 +2237,8 @@ LEXICON EVENCOMPCASE_oe
  +Pl+Nom:%>%^COMPDISIMPb%>%^DISIMPh       FINAL1 ;
  +Pl+Nom+Use/NG:%>%^COMPDISIMP2b%>%^DISIMPh       FINAL1 ;
  +Pl+Acc:b%>idie            FINAL1 ;
- +Pl+Gen:%>%^COMPDISIMPb%>%^DISIMPi       FINAL1 ;
- +Pl+Gen+Use/NG:%>%^COMPDISIMP2b%>%^DISIMPi       FINAL1 ;
+ +Pl+Gen:%>%^COMPDISIMPb%>%^DISIMP IGENSUFF ;
+ +Pl+Gen+Use/NG:%>%^COMPDISIMP2b%>%^DISIMP IGENSUFF ;
  +Pl+Ill:b%>idie            FINAL1 ;
  +Pl+Ine:b%>inie            FINAL1 ;
  +Pl+Ela:b%>ijstie          FINAL1 ;
@@ -2249,7 +2269,7 @@ LEXICON DIMCOMPCASE
 +A+Comp+Der1+Der/Dim+Pl+Nom:%>b%»adtj%>eh        FINAL1 ;
 +A+Comp+Der1+Der/Dim+Pl+Acc:%>%^COMPDISIMPb%»adtj%>ide      FINAL1 ;
 +A+Comp+Der1+Der/Dim+Pl+Acc:%>%^COMPDISIMP2b%»adtj%>ide      FINAL1 ;
-+A+Comp+Der1+Der/Dim+Pl+Gen:%>b%»adtj%>i        FINAL1 ;
++A+Comp+Der1+Der/Dim+Pl+Gen:%>b%»adtj%> IGENSUFF ;
 +A+Comp+Der1+Der/Dim+Pl+Ill:%>%^COMPDISIMPb%»adtj%>ide      FINAL1 ;
 +A+Comp+Der1+Der/Dim+Pl+Ine:%>%^COMPDISIMPb%»adtj%>ine      FINAL1 ;
 +A+Comp+Der1+Der/Dim+Pl+Ela:%>%^COMPDISIMPb%»adtj%>ijste    FINAL1 ;
@@ -2277,7 +2297,7 @@ LEXICON DIMCOMPCASE
 +A+Comp+Der1+Der/Dim+Pl+Nom:%>b%»odtj%>eh        FINAL1 ;
 +A+Comp+Der1+Der/Dim+Pl+Acc:%>%^COMPDISIMPb%»odtj%>ide      FINAL1 ;
 +A+Comp+Der1+Der/Dim+Pl+Acc:%>%^COMPDISIMP2b%»odtj%>ide      FINAL1 ;
-+A+Comp+Der1+Der/Dim+Pl+Gen:%>b%»odtj%>i        FINAL1 ;
++A+Comp+Der1+Der/Dim+Pl+Gen:%>b%»odtj%> IGENSUFF ;
 +A+Comp+Der1+Der/Dim+Pl+Ill:%>%^COMPDISIMPb%»odtj%>ide      FINAL1 ;
 +A+Comp+Der1+Der/Dim+Pl+Ine:%>%^COMPDISIMPb%»odtj%>ine      FINAL1 ;
 +A+Comp+Der1+Der/Dim+Pl+Ela:%>%^COMPDISIMPb%»odtj%>ijste    FINAL1 ;
@@ -2363,7 +2383,7 @@ LEXICON MES
 +A+Superl+Sg+Com:mass%>ine      FINAL1 ;
 +A+Superl+Pl+Nom:%>%^COMPDISIMP%>mass%>%^DISIMPh        FINAL1 ;
 +A+Superl+Pl+Acc:%>mass%>ide      FINAL1 ;
-+A+Superl+Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMPi        FINAL1 ;
++A+Superl+Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMP IGENSUFF ;
 +A+Superl+Pl+Ill:%>mass%>ide      FINAL1 ;
 +A+Superl+Pl+Ine:%>mass%>ine      FINAL1 ;
 +A+Superl+Pl+Ela:%>mass%>ijste    FINAL1 ;
@@ -2385,8 +2405,8 @@ LEXICON MES_oe
 +A+Superl+Pl+Nom:%>%^COMPDISIMP%>mass%>%^DISIMPh        FINAL1 ;
 +A+Superl+Pl+Nom:%>%^COMPDISIMP2%>mass%>%^DISIMPh        FINAL1 ;
 +A+Superl+Pl+Acc:%>mass%>ide      FINAL1 ;
-+A+Superl+Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMPi        FINAL1 ;
-+A+Superl+Pl+Gen:%>%^COMPDISIMP2%>mass%>%^DISIMPi        FINAL1 ;
++A+Superl+Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMP IGENSUFF ;
++A+Superl+Pl+Gen:%>%^COMPDISIMP2%>mass%>%^DISIMP IGENSUFF ;
 +A+Superl+Pl+Ill:%>mass%>ide      FINAL1 ;
 +A+Superl+Pl+Ine:%>mass%>ine      FINAL1 ;
 +A+Superl+Pl+Ela:%>mass%>ijste    FINAL1 ;
@@ -3675,8 +3695,8 @@ LEXICON LAAHKOEH_BE
  +Pl+Nom:%>%^COMPDISIMPb%>%^DISIMPh       FINAL1 ;
  +Pl+Nom:%>%^COMPDISIMP2b%>%^DISIMPh       FINAL1 ;
  +Pl+Acc:b%>idie            FINAL1 ;
- +Pl+Gen:%>%^COMPDISIMPb%>%^DISIMPi       FINAL1 ;
- +Pl+Gen:%>%^COMPDISIMP2b%>%^DISIMPi       FINAL1 ;
+ +Pl+Gen:%>%^COMPDISIMPb%>%^DISIMP IGENSUFF ;
+ +Pl+Gen:%>%^COMPDISIMP2b%>%^DISIMP IGENSUFF ;
  +Pl+Ill:b%>idie            FINAL1 ;
  +Pl+Ine:b%>inie            FINAL1 ;
  +Pl+Ela:b%>ijstie          FINAL1 ;
@@ -3695,8 +3715,8 @@ LEXICON LAAHKOEH_MES
 +Pl+Nom:%>%^COMPDISIMP%>mass%>%^DISIMPh        FINAL1 ;
 +Pl+Nom:%>%^COMPDISIMP2%>mass%>%^DISIMPh        FINAL1 ;
 +Pl+Acc:%>mass%>ide      FINAL1 ;
-+Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMPi        FINAL1 ;
-+Pl+Gen:%>%^COMPDISIMP2%>mass%>%^DISIMPi        FINAL1 ;
++Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMP IGENSUFF ;
++Pl+Gen:%>%^COMPDISIMP2%>mass%>%^DISIMP IGENSUFF ;
 +Pl+Ill:%>mass%>ide      FINAL1 ;
 +Pl+Ine:%>mass%>ine      FINAL1 ;
 +Pl+Ela:%>mass%>ijste    FINAL1 ;
@@ -3752,7 +3772,7 @@ LEXICON LAAHKOEH_OMMES
 +Sg+Com:%>ommes%>inie            FINAL1 ;
  +Pl+Nom:%>ommes%>%^DISIMPh       FINAL1 ;
  +Pl+Acc:%>ommes%>idie            FINAL1 ;
- +Pl+Gen:%>ommes%>%^DISIMPi       FINAL1 ;
+ +Pl+Gen:%>ommes%>%^DISIMP IGENSUFF ;
  +Pl+Ill:%>ommes%>idie            FINAL1 ;
  +Pl+Ine:%>ommes%>inie            FINAL1 ;
  +Pl+Ela:%>ommes%>ijstie          FINAL1 ;
@@ -3769,7 +3789,7 @@ LEXICON LAAHKOEH_OMMES
 +Sg+Com:%>ammes%>inie            FINAL1 ;
  +Pl+Nom:%>ammes%>%^DISIMPh       FINAL1 ;
  +Pl+Acc:%>ammes%>idie            FINAL1 ;
- +Pl+Gen:%>ammes%>%^DISIMPi       FINAL1 ;
+ +Pl+Gen:%>ammes%>%^DISIMP IGENSUFF ;
  +Pl+Ill:%>ammes%>idie            FINAL1 ;
  +Pl+Ine:%>ammes%>inie            FINAL1 ;
  +Pl+Ela:%>ammes%>ijstie          FINAL1 ;
@@ -3848,7 +3868,10 @@ LEXICON LGIDH
  +V+Der3+Der/ahtje:%»ahtj AHTJE ;
 
 
-
+LEXICON IGENSUFF
+:i # ; ! The normative -i +Gen+Pl suffix
+:ij # ; ! A fairly common non-normative -ij suffix
+!+Use/Sub:ij # ; ! A fairly common non-normative -ij suffix
 
 
 ! Verbal affixes
