@@ -108,6 +108,7 @@ LIST Clt = Clt ;
 LIST A = A ;
 LIST Ord = Ord ;
 LIST ABBR = ABBR ;
+LIST ACR = ACR ;
 
 LIST Comp = Comp ;
 LIST Superl = Superl ;
@@ -212,6 +213,7 @@ SECTION
 REMOVE ("Da") OR ("Dan") (0 Pers);
 REMOVE ("m" N ACR Sg Gen) IF (0 ("men"));
 REMOVE Num (0 Neg);
+REMOVE ACR (0 CC);
 
 
 # Verbs
@@ -335,6 +337,10 @@ REMOVE:NotCsIfCc CS (-1 CC OR ("mij" Nom))(0 Adv) ;
 
 REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 
+# Adj or Adv
+REMOVE A (0 Adv)(1C V) ;
+
+SELECT (A Attr) (1C N) ;
 
 # Num
 
@@ -360,6 +366,11 @@ SELECT Ill (0 Gen)(*1 ILLV BARRIER NOT-ADV);
 
 SELECT (Dem Gen)(1 (N Gen) LINK NOT 0 Ill) ;
 SELECT (N Gen)(-1C (Dem Gen)) ;
+SELECT (Pron Pers Gen) (0 Pron LINK 1C Po) ;
+SELECT (Pron Dem Gen) (0 Pron LINK 1C (Ord Gen) OR (Num Gen)) ;
+SELECT (Pron Dem Pl) (1 (Indef Pl)) ;
+REMOVE Interr (0 Rel LINK -1 WORD LINK NOT 0 Interj OR CC OR CS) ;
+REMOVE Interr (NEGATE *1 ("?")) ;
 
 	
 SECTION
