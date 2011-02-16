@@ -61,9 +61,9 @@ Alphabet
 ! + = metric foot boundary (is it used any more?)
 ! ^ = explicit hyphenation point
 KEEPIF(HYPHENATE)
- %# %^
+ # %^
 ELSE
- %^:0
+ #:0 %^:0
 ENDKEEP
 
 OMITIF(HYPHENATE)
@@ -71,7 +71,8 @@ OMITIF(HYPHENATE)
 ENDOMIT
 
 ! %#:%- 
- %#:0 %-
+! %#:0 
+ %-
 
 OMITIF(HUNSPELL)
  %>:0 %+:0 »:0  ! stem-suffix border mark, invisible in normal use
