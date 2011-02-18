@@ -2635,33 +2635,27 @@ LEXICON ED-IMP
 ! Thus, the form in -e is wrong, and we wil replace DÅERIEDIDH 
 ! WITH GOLTELIDH.
 
-!LEXICON DÅERIEDIDH ! This one is commented out now that GOLTELIDH works
-! GOLTELIDH ;       ! Next step is to remove it.
+LEXICON GOLTELIDH_TV
+ +V+TV: GOLTELIDH ;
+ 
+LEXICON GOLTELIDH_IV
+ +V+IV: GOLTELIDH ;
 
-!LEXICON GOLTELIDH ! one Verbh class
-!+V+Ind+Prt+Sg3:%>i FINAL1 ;
-!              :%>  V-ODD ;
-
-!LEXICON DÅERIEDIDH ! The other 4 Verbh classes
-!+V+Ind+Prt+Sg3:%>i FINAL1 ;
-!              :%>  V-ODD ;
-
-
-!LEXICON V-ODD
 
 LEXICON GOLTELIDH !odd-syll with -adte- as Der2
  COMMON-ODD ;
-+V+Der2+Der/adte+V:%»%^adteUMLadt GOEGKERDADTEDH ;
+ +Der2+Der/adte+V:%»%^adteUMLadt GOEGKERDADTEDH ;
 
-!LEXICON AERVIEDIDH !odd-syll with -adte- as Der2 and eds-derivation
-! COMMON-ODD ;
-!+V+Der2+Der/adte+V:%»%^adteUMLadt GOEGKERDADTEDH ;
-!+V+Der2+Der/eds:%^DISIMPs NULL-NULL-ODD-1 ;
 
+LEXICON DÅAJVOEHTIDH_TV
+ +V+TV: DÅAJVOEHTIDH ;
+ 
+LEXICON DÅAJVOEHTIDH_IV
+ +V+IV: DÅAJVOEHTIDH ;
 
 LEXICON DÅAJVOEHTIDH  !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
  COMMON-ODD ;
-+V+Der2+Der/alle+V:%»%^adteUMLall GOEGKERDADTEDH ;
+ +Der2+Der/alle+V:%»%^adteUMLall GOEGKERDADTEDH ;
 
 
 
@@ -2669,24 +2663,24 @@ LEXICON COMMON-ODD
 
 ! Finite forms
 ! ------------
- +V+Ind+Prs:%> VSUF-ODD-PRS ;
- +V+Ind+Prt:%> VSUF-ODD-PRT ;
- +V+Imprt:%>     VSUF-ODD-IMP ;
+ +Ind+Prs:%> VSUF-ODD-PRS ;
+ +Ind+Prt:%> VSUF-ODD-PRT ;
+ +Imprt:%>     VSUF-ODD-IMP ;
 
 ! Infinite forms
 ! --------------
- +V+Inf:%>idh             FINAL1 ;
- +V+ConNeg:%>%^DISIMPh    FINAL1 ;
- +V+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
-! +V+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
- +V+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
- +V+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
- +V+A+Der1+Der/æjja+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
- +V+A+Der1+Der/ihks+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
- +V+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
+ +Inf:%>idh             FINAL1 ;
+ +ConNeg:%>%^DISIMPh    FINAL1 ;
+ +VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +A+Der1+Der/æjja+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+ +A+Der1+Der/ihks+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
                                    !   GH Ptz.Fut. b'ïssejässaa missing here
  
-!+V+VAbess:%>h            FINAL1 ; 
+!+VAbess:%>h            FINAL1 ; 
 ! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
 ! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
 ! äbrekh ohne zu regnen, äbreks der nicht regnet, baal'eks der nicht gräbt, b'üdnekh ungezwirnt
@@ -2695,16 +2689,13 @@ LEXICON COMMON-ODD
 
 ! Derivations
 ! -----------
- +V+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
- +V+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
-! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
- +V+Der3+Der/ahtje+V:%»ahtj AHTJE ;
- +V+Der2+Der/ehte:%»eht ÅARAJEHTEDH_TV ;
+ +Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+ +Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
+! +Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
+ +Der3+Der/ahtje+V:%»ahtj AHTJE ;
+ +Der2+Der/ehte:%»eht ÅARAJEHTEDH_TV ;
  
- !Derivation - from noun -verb
- !  sjidh, stidh, gidh, sidh
- ! ie and oe-stem goes to -sjidh vvith a umlaut, the rest of the stems =no 
- ! gidh, sid etc. how do this?
+
 
 ! Even-syllable verbs
 ! ===================
@@ -3835,7 +3826,46 @@ LEXICON IV_PASSIVE_S ! row E - Group V  NB! FOR already derivated PASSIVES!!!
  +V+Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
 
 
+LEXICON LGIDH
+
+! Finite forms
+! ------------
+ +V+IV+Ind+Prs:%> VSUF-ODD-PRS ;
+ +V+IV+Ind+Prt:%> VSUF-ODD-PRT ;
+ +V+IV+Imprt:%>     VSUF-ODD-IMP ;
+
+! Infinite forms
+! --------------
+ +V+IV+Inf:%>idh             FINAL1 ;
+ +V+IV+ConNeg:%>%^DISIMPh    FINAL1 ;
+ +V+IV+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +V+IV+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+IV+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+ +V+IV+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +V+IV+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
  
+!+V+IV+VAbess:%>h            FINAL1 ; 
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen
+! äbreks der nicht regnet
+! baal'eks der nicht gräbt
+! b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
+
+! Derivations
+! -----------
+ +V+IV+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+ +V+IV+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
+ +V+IV+Der3+Der/ahtje+V:%»ahtj AHTJE ;
+
+
+
+
+
+! ---- Nominal derivation sublexica ----
+
 LEXICON LAAHKOEH_EVEN
 LAAHKOEH_BE ;
 LAAHKOEH_MES ;
@@ -3955,76 +3985,6 @@ LEXICON LAAHKOEH_OMMES
  +Pl+Com:%>ammes%>%^DISIMPigujmie FINAL1 ;
  +Pl+Com+Use/Sub:%>ammes%>%^DISIMPigyjmie FINAL1 ; !
   +Ess:%>ammes%>inie          FINAL1 ;
-
-
-!LEXICON TJYÖREDIDH
-
-!! Finite forms
-!! ------------
-! +V+Ind+Prs:%> VSUF-ODD-PRS ;
-! +V+Ind+Prt:%> VSUF-ODD-PRT ;
-! +V+Imprt:%>     VSUF-ODD-IMP ;
-
-!! Infinite forms
-!! --------------
-! +V+Inf:%>idh             FINAL1 ;
-! +V+ConNeg:%>%^DISIMPh    FINAL1 ;
-! +V+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
-!! +V+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
-! +V+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
-! +V+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
-! +V+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
-                                   !   GH Ptz.Fut. b'ïssejässaa missing here
- 
-!!+V+VAbess:%>h            FINAL1 ; 
-!! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
-!! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
-!! äbrekh ohne zu regnen
-!! äbreks der nicht regnet
-!! baal'eks der nicht gräbt
-!! b'üdnekh ungezwirnt
-!! vädd'ekh ungegeben, ohne zu geben
-
-!! Derivations
-!! -----------
-! +V+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
-! +V+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
-!! +V+Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
-! +V+Der3+Der/ahtje+V:%»ahtj AHTJE ;
-
-LEXICON LGIDH
-
-! Finite forms
-! ------------
- +V+Ind+Prs:%> VSUF-ODD-PRS ;
- +V+Ind+Prt:%> VSUF-ODD-PRT ;
- +V+Imprt:%>     VSUF-ODD-IMP ;
-
-! Infinite forms
-! --------------
- +V+Inf:%>idh             FINAL1 ;
- +V+ConNeg:%>%^DISIMPh    FINAL1 ;
- +V+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
-! +V+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
- +V+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
- +V+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
- +V+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
-                                   !   GH Ptz.Fut. b'ïssejässaa missing here
- 
-!+V+VAbess:%>h            FINAL1 ; 
-! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
-! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
-! äbrekh ohne zu regnen
-! äbreks der nicht regnet
-! baal'eks der nicht gräbt
-! b'üdnekh ungezwirnt
-! vädd'ekh ungegeben, ohne zu geben
-
-! Derivations
-! -----------
- +V+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
- +V+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
- +V+Der3+Der/ahtje+V:%»ahtj AHTJE ;
 
 
 LEXICON IGENSUFF
