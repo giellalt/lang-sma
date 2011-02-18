@@ -3621,7 +3621,30 @@ LEXICON GOEGKERDADTEDH_IV
  +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
  
-LEXICON OBREDADTEDH !to be continued...
+
+LEXICON GOEGKERDADTEDH ! row D - Group IV
+ +Ind+Prs:%>     V-IV-EVEN-PRS ;
+ +Ind+Prt:%>     VSUF-PRT ;
+ +Imprt:%>         VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+ +Inf:%>edh      FINAL1 ;
+ +VGen:%>en      FINAL1 ;
+! +Act:%>eme      FINAL1 ;
+ +Ger:%>eminie   FINAL1 ;
+ +PrsPrc:%>ije   FINAL1 ;
+ +PrsPrc:%>ijes  FINAL1 ;
+ +PrfPrc:%>eme   FINAL1 ;
+ +ConNeg:%>0h    FINAL1 ;
+! Derivations
+! -----------
+ +Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
+ +Der1+Der/les:e%»l LES ;
+ +Der3+Der/gåete:%»egået GÅETEDH ;
+ +Der3+Der/ahtje:%»ijahtj AHTJE ;
+
+LEXICON OBREDADTEDH
  +V+IV+Ind+Prs+Sg3+Uml:%>%^3sUMLa	  FINAL1 ;
  +V+IV+Ind+Prt+Sg3:%>i		FINAL1 ;
  +V+IV+Ind+Prt+Sg3+Use/Sub:%>%^DISIMPi		FINAL1 ;
@@ -3658,45 +3681,41 @@ LEXICON OBREDADTEDH !to be continued...
  +V+IV+Der3+Der/ahtje+V+PrfPrc:%»ijahtj%>eme   FINAL1 ;
  +V+IV+Der3+Der/ahtje+V+ConNeg:%»ijahtj%>0h    FINAL1 ;
 
+LEXICON GÅETEDH_TV
++V+TV: GÅETEDH ;
 
-LEXICON GOEGKERDADTEDH ! row D - Group IV
- +Ind+Prs:%>     V-IV-EVEN-PRS ;
- +Ind+Prt:%>     VSUF-PRT ;
- +Imprt:%>         VSUF-IV-EVEN-IMP ;
-! Infinite forms
-! --------------
- +Inf:%>edh      FINAL1 ;
- +VGen:%>en      FINAL1 ;
-! +Act:%>eme      FINAL1 ;
- +Ger:%>eminie   FINAL1 ;
- +PrsPrc:%>ije   FINAL1 ;
- +PrsPrc:%>ijes  FINAL1 ;
- +PrfPrc:%>eme   FINAL1 ;
- +ConNeg:%>0h    FINAL1 ;
-! Derivations
-! -----------
- +Der1+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
- +Der1+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
- +Der1+Der/les:e%»l LES ;
- +Der3+Der/gåete:%»egået GÅETEDH ;
- +Der3+Der/ahtje:%»ijahtj AHTJE ;
-
+LEXICON GÅETEDH_IV
++V+IV: GÅETEDH ;
 
 
 LEXICON GÅETEDH ! from Der/gåete
- +V+Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
- +V+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
- +V+Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
- +V+Imprt:%>              VSUF-EVEN-IMP ;
+ +Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
+ +Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
+ +Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
+ +Imprt:%>              VSUF-EVEN-IMP ;
 ! Infinite forms
 ! --------------
- +V+Inf:%>edh           FINAL1 ;
- +V+ConNeg:%>ieh        FINAL1 ;
- +V+VGen:%>ien          FINAL1 ;
-! +V+Act:%>eme           FINAL1 ;
- +V+Ger:%>ieminie       FINAL1 ;
- +V+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
+ +Inf:%>edh           FINAL1 ;
+ +ConNeg:%>ieh        FINAL1 ;
+ +VGen:%>ien          FINAL1 ;
+! +Act:%>eme           FINAL1 ;
+ +Ger:%>ieminie       FINAL1 ;
+ +PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
  ! row F trigger for Umlaut Prt
+
+LEXICON STIEHPEGÅETEDH
+ +V+IV+Ind+Prs+Uml+Sg3:%>%^1UMLa   FINAL1 ; ! class I special
+ +V+IV+Ind+Prt+Uml+Sg3:%>%^iUMLi    FINAL1 ;
+ +V+IV+Ind+Prt+Uml+Sg3+Use/Sub:%>%^iUMLi    FINAL1 ;
+! +V+IV+Imprt:%>              VSUF-EVEN-IMP ;
+! Infinite forms
+! --------------
+ +V+IV+Inf:%>edh           FINAL1 ;
+ +V+IV+ConNeg:%>ieh        FINAL1 ;
+ +V+IV+VGen:%>ien          FINAL1 ;
+! +V+IV+Act:%>eme           FINAL1 ;
+ +V+IV+Ger:%>ieminie       FINAL1 ;
+ +V+IV+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
 
 LEXICON AHTJE ! row D - Group IV
  +V+Ind+Prs:%>     V-IV-EVEN-PRS ;
