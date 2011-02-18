@@ -174,11 +174,11 @@ LIST COPULAS = "lea" ;
 
 SET V-NOT-COP = V - COPULAS ;
 
-LIST MOD-ASP = "galkedh" "tjoeveridh" "edtjedh" "tjoeredh" "sååjhtedh" ;
+LIST MOD-ASP = "galkedh" "tjoeveridh" "tjoeredh" "sååjhtedh" ;
 
  # Verbs that never have arguments of their own 
  
-LIST AUX-OR-MAIN = "maehtedh" "sïjhtedh" "sjïdtedh" "båetedh" ;
+LIST AUX-OR-MAIN = "aelkedh" "edtjedh" "maehtedh" "sïjhtedh" "sjïdtedh" "båetedh" ;
 
  # These verbs can take arguments, so they do not belong in the AUX group, 
  # but they are nevertheless mapped to (@+FAUXV). 
@@ -249,11 +249,19 @@ SELECT (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) ;
 
 
 #
-MAP (@+FAUXV) TARGET Neg OR ("lea") OR MOD-ASP (0 VFIN) (*1 V BARRIER CLB);
+MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY);
+MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC) OR (-1 PrfPrc));
+MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
+
+MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 V BARRIER S-BOUNDARY OR CC);
+MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NOT *1 PrfPrc OR Ger BARRIER S-BOUNDARY);
+MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg);
+MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR CC);
 
 MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) ;
+MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NOT *1 Inf OR PrfPrc BARRIER S-BOUNDARY) ;
 
-MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc ;
+MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf ;
 #
 
 
