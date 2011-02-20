@@ -211,10 +211,11 @@ SECTION
 # Cycle 0
 
 REMOVE ("Da") OR ("Dan") (0 Pers);
-REMOVE ("m" N ACR Sg Gen) IF (0 ("men"));
 REMOVE Num (0 Neg);
 REMOVE ACR (0 CC);
 
+#foreløpig regel:
+REMOVE Interj ;
 
 # Verbs
 
@@ -247,6 +248,12 @@ REMOVE Imprt (-1 Interr OR Adv OR (Pers Sg2))(0 (Prs Sg2)) ;
 REMOVE Imprt (*-1 WORD BARRIER CC OR COMMA OR BOS)(NOT 0 Neg)(NEGATE -1 CC LINK *-1 Imprt BARRIER S-BOUNDARY OR V) ;
 SELECT (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) ;
 
+
+LIST @+FAUXV = @+FAUXV ; 
+LIST @+FMAINV = @+FMAINV ; 
+LIST @-FAUXV = @-FAUXV ;
+LIST @-FMAINV = @-FMAINV ;
+SET FMAINV = @-FMAINV OR @+FMAINV ;
 
 #
 MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY);
@@ -331,7 +338,10 @@ REMOVE Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
 	
 	
 # CC and CS or Adv
-REMOVE:GoNotCs CS (-1 Neg)(0 ("goh")); 
+IFF:GoNotCs Pcle (-1 Neg)(0 ("goh")); 
+	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
+	## Dallah goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. # CS
+
 
 REMOVE:NotNomIfCs (N Nom) (0 CS)(1 (N Nom)) ;
 	# Guktie vielle Baktuse, giehtelh maa!
@@ -347,8 +357,21 @@ REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 
 # Adj or Adv
 REMOVE A (0 Adv)(1C V) ;
+REMOVE A (0 Adv)(-1C V LINK NOT 0 COPULAS)(NEGATE 1 A OR N) ;
 
-SELECT (A Attr) (1C N) ;
+SELECT (A Attr) (1C N)(NEGATE 0 (A Nom) OR (Pred) LINK -1 N OR COPULAS) ;
+REMOVE (A Attr) (NOT 1 N OR A) ;
+
+
+# grammatisk ord eller N
+REMOVE N (0 ("daelie" Nom) LINK 1 Nom) ;
+	## Daelie Tåamma riejries dåakteren luvnie. 
+
+SELECT CC OR CS (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
+	## Tåamma gylje juktie bååktjehke dorje.
+
+# Adj or Indef
+SELECT (A Pl) (0 (Indef))(*1 (N Pl) BARRIER S-BOUNDARY) ;
 
 # Num
 
@@ -363,7 +386,6 @@ SELECT Interr (0 Rel)(*1 ("?")) ;
 
 
 # Interj
-SELECT:InterjIfInterj Interj (0 ("ho"))(1 ("ho"));
 
 
 # Po or Pr
@@ -371,6 +393,8 @@ SELECT Po (0 Pr)(-1 Gen) ;
 
 # Illative or genetive
 SELECT Ill (0 Gen)(*1 ILLV BARRIER NOT-ADV);
+REMOVE Gen (0 Ill)(NOT *-1 Pr BARRIER NPNH)(1 EOS OR S-BOUNDARY);
+	## Tåama fuehpesne gåatan.
 
 SELECT (Dem Gen)(1 (N Gen) LINK NOT 0 Ill) ;
 SELECT (N Gen)(-1C (Dem Gen)) ;
@@ -380,65 +404,9 @@ SELECT (Pron Dem Pl) (1 (Indef Pl)) ;
 REMOVE Interr (0 Rel LINK -1 WORD LINK NOT 0 Interj OR CC OR CS) ;
 REMOVE Interr (NEGATE *1 ("?")) ;
 
-	
-SECTION
-
-# Syntactic tags for verbs
-# --------------
-
-LIST @+FAUXV = @+FAUXV ; 
-LIST @+FMAINV = @+FMAINV ; 
-LIST @-FAUXV = @-FAUXV ;
-LIST @-FMAINV = @-FMAINV ;
- 
-#LIST @-FSUBJ> = @-FSUBJ> ;
-
-SET FMAINV = @-FMAINV OR @+FMAINV ;
-
-#LIST @ADV-A = @ADV-A ; 
-#LIST @ADV-ADV = @ADV-ADV ; 
-#LIST @>ADVL = @>ADVL ;
-#LIST @ADVL< = @ADVL< ;
-#
-#LIST @ADVL = @ADVL ;
-#
-#LIST @>N = @>N ; 
-#LIST @P< = @P< ; 
-#LIST @>P = @>P ;
-#
-#LIST @ActioN> = @ActioN> ; 
-#LIST @CC = @CC ; 
-#LIST @CMPND = @CMPND ; 
-#LIST @CS = @CS ;
-#LIST @GA> = @GA> ; 
-#LIST @HNOUN = @HNOUN ; 
-#LIST @INTERJ = @INTERJ ; 
-#LIST @MEASURE = @MEASURE ;
-#LIST @NPron< = @NPron< ;
-#LIST @NQ< = @NQ< ; 
-#LIST @NUM-PRON = @NUM-PRON ; 
-#LIST @OBJ = @OBJ ;
-#LIST @OPRED = @OPRED ; 
-#LIST @PCLE = @PCLE ; 
-#LIST @PCLE-COMPL = @PCLE-COMPL ; 
-#LIST @PROP> = @PROP> ;
-#LIST @PrcN> = @PrcN> ; 
-#LIST @PronN< = @PronN< ; 
-#LIST @PronN> = @PronN> ; 
-#LIST @SPRED = @SPRED ; 
-#LIST @SUBJ = @SUBJ ; 
-#LIST @SUBJ-QH = @SUBJ-QH ;
-#LIST @Num< = @Num< ;
-#
-#LIST @TITLE = @TITLE ; 
-#LIST @VOC = @VOC ; 
-#LIST @X = @X ;
 
 
-
-
-
-            AFTER-SECTIONS #34              #
+            AFTER-SECTIONS              #
 # ======================================== #
    
 #SUBSTITUTE (A) (A <sma>) WORD ;
