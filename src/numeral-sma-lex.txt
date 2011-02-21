@@ -33,7 +33,7 @@ LEXICON Numeral
  OLD ; ! for "thirteen hundred, etc.	
 !num-imprecise ; 
 COLLECTIVE ; 
- +Use/Circ:  ARABIC ; ! for the arabic numerals !
+ +Use/Circ: ARABIC ; ! for the arabic numerals !
  +Use/Circ: ROMAN ; ! for the roman numerals!
  +Use/Circ: NUM-PREFIXES ; ! for §34 etc.!
  +Use/Circ: ISOLATED-NUMEXP ; ! for ½ etc.!
@@ -519,28 +519,28 @@ LEXICON COLLTAG
 
 
 LEXICON NUM-PREFIXES
- §+Use/Circ:§ ARABIC;       ! §24
- §§+Use/Circ:§§ ARABIC;     ! §§24
- §% +Use/Circ:§%  ARABIC;   ! § 24
- §§% +Use/Circ:§§%  ARABIC; ! §§ 24
- %-+Use/Circ:%- ARABIC;     ! -24 U+002D / regular hyphen
- %‒+Use/Circ:%‒ ARABIC;     ! -24 U+2012 / figure dash
- %–+Use/Circ:%– ARABIC;     ! -24 U+2013 / en dash
- %—+Use/Circ:%— ARABIC;     ! -24 U+2014 / em dash
- %―+Use/Circ:%― ARABIC;     ! -24 U02015 / horizontal bar
- %++Use/Circ:%+ ARABIC;     ! <plus>24
- %-% +Use/Circ:%-%  ARABIC;	! - 24
- %‒% +Use/Circ:%‒%  ARABIC;	! - 24 U+2012
- %–% +Use/Circ:%–%  ARABIC;	! - 24 U+2013
- %—% +Use/Circ:%—%  ARABIC;	! - 24 U+2014
- %―% +Use/Circ:%―%  ARABIC;	! - 24 U+2015
- %+% +Use/Circ:%+%  ARABIC;	! <plus> 24
- %*+Use/Circ:%* ARABIC;     ! *24
- %$+Use/Circ:%$ ARABIC;     ! $24
- %€+Use/Circ:%€ ARABIC;     ! €24
- %<+Use/Circ:%< ARABIC;     ! <24
+ §+Use/Circ:§ ARABIC ;       ! §24
+ §§+Use/Circ:§§ ARABIC ;     ! §§24
+ §% +Use/Circ:§%  ARABIC ;   ! § 24
+ §§% +Use/Circ:§§%  ARABIC ; ! §§ 24
+ %-+Use/Circ:%- ARABIC ;     ! -24 U+002D / regular hyphen
+ %‒+Use/Circ:%‒ ARABIC ;     ! -24 U+2012 / figure dash
+ %–+Use/Circ:%– ARABIC ;     ! -24 U+2013 / en dash
+ %—+Use/Circ:%— ARABIC ;     ! -24 U+2014 / em dash
+ %―+Use/Circ:%― ARABIC ;     ! -24 U02015 / horizontal bar
+ %++Use/Circ:%+ ARABIC ;     ! <plus>24
+ %-% +Use/Circ:%-%  ARABIC ;	! - 24
+ %‒% +Use/Circ:%‒%  ARABIC ;	! - 24 U+2012
+ %–% +Use/Circ:%–%  ARABIC ;	! - 24 U+2013
+ %—% +Use/Circ:%—%  ARABIC ;	! - 24 U+2014
+ %―% +Use/Circ:%―%  ARABIC ;	! - 24 U+2015
+ %+% +Use/Circ:%+%  ARABIC ;	! <plus> 24
+ %*+Use/Circ:%* ARABIC ;     ! *24
+ %$+Use/Circ:%$ ARABIC ;     ! $24
+ %€+Use/Circ:%€ ARABIC ;     ! €24
+ %<+Use/Circ:%< ARABIC ;     ! <24
  %>+Use/Circ:%>7 ARABIC ;   ! >24
- s%.+Use/Circ:s%. ARABIC;   ! s.24
+ s%.+Use/Circ:s%. ARABIC ;   ! s.24
 
 LEXICON ARABIC
 < [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOP ;
@@ -554,7 +554,7 @@ LEXICON ARABICLOOP
  %-% +Use/Circ:%-%  ARABIC ;        ! 1- 2   multipart numbers
  % %-+Use/Circ:% %- ARABIC ;        ! 1 -2   multipart numbers
  % %-% +Use/Circ:% %-%  ARABIC ;    ! 1 - 2  multipart numbers
- % %-%-% +Use/Circ:% %-%-%  ARABIC;	! 1 -- 2 multipart numbers
+ % %-%-% +Use/Circ:% %-%-%  ARABIC ;	! 1 -- 2 multipart numbers
  % %- ARABICDELIMITER ;             ! 1 -    multipart numbers
  % %-%- ARABICDELIMITER ;           ! 1 --   multipart numbers
  %.+Use/Circ:%. ARABIC ;
@@ -567,7 +567,7 @@ LEXICON ARABICLOOP
  ,%-+Num:,%- # ;			! 10,-
  %%+Num+Nom:%% # ;		! 50%. It is wrong, but 75 % of us write "75%".
  % %%+Num+Nom:% %% # ;	! We must analyse the correct ones as well... 50 % etc.
- +Num: ARABICDELIMITER ; ! list of number-case delimiters
+ ARABICDELIMITER ; ! list of number-case delimiters
  +Num: RHyph  ;          ! Hyphen and +Use/Circ added appropriately in RHyph
 
 LEXICON ARABICLOOPORD
@@ -578,11 +578,11 @@ LEXICON ARABICLOOPCOLL
  +N+Coll: ARABICDELIMITERCOLL ;
 
 LEXICON ARABICDELIMITER
-             ARABICCASE0 ;   ! This is the 1984 case (ie nominative).
- :%:         ARABICCASE ;    ! This is the 1984:s case.
- +Use/Sub:%> ARABICCASE ;    ! This is the 1984s case.
- +Use/Sub:%' ARABICCASE ;    ! This is the 1984's case.
- +Use/Sub:%- ARABICCASE ;    ! This is the 1984-s case.
+ +Num:            ARABICCASE0 ;   ! This is the 1984 case (ie nominative).
+ +Num:%:         ARABICCASE ;    ! This is the 1984:s case.
+ +Num+Use/Sub:%> ARABICCASE ;    ! This is the 1984s case.
+ +Num+Use/Sub:%' ARABICCASE ;    ! This is the 1984's case.
+ +Num+Use/Sub:%- ARABICCASE ;    ! This is the 1984-s case.
                 
 LEXICON ARABICDELIMITERORD
  :%:         ARABICCASEORD ; ! This is the 1984:s case.
