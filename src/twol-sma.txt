@@ -75,7 +75,10 @@ ENDOMIT
  %-
 
 OMITIF(HUNSPELL)
- %>:0 %+:0 »:0  ! stem-suffix border mark, invisible in normal use
+! %>:0 %+:0 »:0  ! stem-suffix border mark, invisible in normal use
+! The previous line removed in order to have +23 work, and replaced with one w/0 +
+! Remove this and the previous two lines when we have a polderland run behind us
+ %>:0 »:0  ! stem-suffix border mark, invisible in normal use
 ELSE
  %> »:%>        ! stem-suffix border mark, only visible in Hunspell
 ENDOMIT
@@ -480,20 +483,22 @@ Rules
 	      Vy in (e u)
 	matched ;
 
-"2nd rule for even syllabic verbs Sg3 ïe-ea IV"
- e:a <=>              [ï:|o:] _ Cns+ [ %>: | %»: ] %^3sUML: ;
-         [ #: | Cns+ ] i:     _ Cns+ [
-                                         [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] |
-                                         [ ([%>:|%»:])                %^1UML:0    ] |
-                                         [ (     %»: ) i: e: Cns+ %»: %^adteUML:  ]
-                                      ] ; !Even syllabic verbs present sg, diphth ie-ea part 2
-         [ #: | Cns+ ] [å|a|u] _ Cns+ [
-                                         [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] |
-                                         [ ([%>:|%»:]) %^1UML:0 ]|
-                                         [ (     %»: ) i: e: Cns+ %»: %^adteUML: ]
-                                      ] ; !Even syllabic verbs present sg, diphth ae-aa, åe-åa, ue-ua
-         [#: | #: Cns+]([å|a]) _ Cns+ %»: %^htjidhUML: e h t j ;
-         (%»:)         i:      _ Cns+ %»: %^adteUML: ;
+"2nd rule for even syllabic verbs Sg3 ïe-ea IV, and for general a Umlaut"
+ e:a <=>        [ï:|o:] _ Cns+ [ %>: | %»: ] %^3sUML: ;
+   [ #: | Cns+ ] i:     _ Cns+ [
+                                   [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] |
+                                   [ ([%>:|%»:])                %^1UML:0    ] |
+                                   [ (     %»: ) i: e: Cns+ %»: %^adteUML:  ]
+                                ] ; ! Even syllabic verbs present sg, 
+                                    ! diphth ie-ea part 2
+   [ #: | Cns+ ] [å|a|u] _ Cns+ [
+                                   [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] |
+                                   [ ([%>:|%»:]) %^1UML:0 ]|
+                                   [ (     %»: ) i: e: Cns+ %»: %^adteUML: ]
+                                ] ; ! Even verbs pres sg, and nouns, 
+                                    ! diphth ae-aa, åe-åa, ue-ua
+   [#: | #: Cns+]([å|a]) _ Cns+ %»: %^htjidhUML: e h t j ;
+   (%»:)         i:      _ Cns+ %»: %^adteUML: ;
 
 
 ! Verbs like: tjïeledh, roehtedh
