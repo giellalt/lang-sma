@@ -1454,24 +1454,24 @@ ATTR-0 ;
 PRED-0 ;
 
 LEXICON LES 
-:es ATTR-0 ;
-:es PRED-0 ;
-+A+Sg+Nom:%>%^COMPDISIMPes%^DISIMP          FINAL1 ;
+:%>%^DISIMPes ATTR-0 ;
+:%>%^DISIMPes PRED-0 ;
++A+Sg+Nom:%>%^DISIMPes          FINAL1 ;
 +A+Sg+Acc:asse%>m       FINAL1 ;
 +A+Sg+Gen:asse%>n       FINAL1 ;
 +A+Sg+Ill:asse%>se      FINAL1 ;
 +A+Sg+Ine:asse%>sne     FINAL1 ;
 +A+Sg+Ela:asse%>ste     FINAL1 ;
 +A+Sg+Com:ass%>ine      FINAL1 ;
-+A+Pl+Nom:%>%^COMPDISIMP%>ass%>%^DISIMPh        FINAL1 ;
++A+Pl+Nom:%>%^DISIMP%>ass%>h        FINAL1 ;
 +A+Pl+Acc:%>ass%>ide      FINAL1 ;
-+A+Pl+Gen:%>%^COMPDISIMP%>ass%>%^DISIMP IGENSUFF ;
++A+Pl+Gen:%>%^DISIMP%>ass%> IGENSUFF ;
 +A+Pl+Ill:%>ass%>ide      FINAL1 ;
 +A+Pl+Ine:%>ass%>ine      FINAL1 ;
 +A+Pl+Ela:%>ass%>ijste    FINAL1 ;
 +A+Pl+Com:%>ass%>igujmie  FINAL1 ;
 +A:ass            EVEN_ESS ;
-+A+SgNomCmp:%>%^COMPDISIMPes%^DISIMP    R ;
++A+SgNomCmp:%>%^DISIMPes    R ;
 +A+SgGenCmp:asse%>n R ;
 +A+PlGenCmp:ass%>i  R ;
 
@@ -1893,6 +1893,7 @@ LEXICON Ces-Ce-ODDNOCOMP-3
 LEXICON Ces-Ce-Ces-Ce-ODD-3  !as Ces-Ces-Ce-ODD, but with ATTR-0
 :%^DISIMPe     ATTR-0 ;
 :%^DISIMPe     PRED-0 ;
+   ODDCOMP ;
        LES ;   !<===== gir Attr -s og Pred -s
        
 LEXICON Ces-Ces-Ce-ODD-3
