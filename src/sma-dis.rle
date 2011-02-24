@@ -192,7 +192,10 @@ LIST VFIN = Ind OR Imprt ;
 LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ; 
 # These are often followed by an infitive.
 
-LIST ILLV = "ringkedh" ;
+LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
+LIST COMV = "budtedh" "pruvredh" ;
+
+LIST ILLADV = "jallese" ;
 
 # BOUNDARY SETS
 
@@ -331,8 +334,17 @@ REMOVE:NotNomIfInf (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
 SELECT:DemGenIfNGen (Dem Pl Gen)(*1 (N Pl Gen) BARRIER NPNH);
 	# Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
 
+SELECT:DemNomIfNNom (Dem Pl Nom)(*1 (N Pl Nom) BARRIER NPNH);
+SELECT:DemNomIfNNom (Dem Sg Acc)(*1 (N Sg Acc) BARRIER NPNH);
+
 REMOVE:PronIfV Dem IF (0 Pron)(1C Adv OR V);
 	## 
+REMOVE:PronIfNotAgree (Dem Nom) IF (0 Pers)(NEGATE *1 Nom BARRIER NPNH);
+SELECT (Dem Gen)(1 (N Gen) LINK NOT 0 Ill) ;
+SELECT (N Gen)(-1C (Dem Gen)) ;
+SELECT (Pron Pers Gen) (0 Pron LINK 1C Po) ;
+SELECT (Pron Dem Gen) (0 Pron LINK 1C (Ord Gen) OR (Num Gen)) ;
+SELECT (Pron Dem Pl) (1 (Indef Pl)) ;
 	
 REMOVE Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
 	
@@ -359,7 +371,7 @@ REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 REMOVE A (0 Adv)(1C V) ;
 REMOVE A (0 Adv)(-1C V LINK NOT 0 COPULAS)(NEGATE 1 A OR N) ;
 
-SELECT (A Attr) (1C N)(NEGATE 0 (A Nom) OR (Pred) LINK -1 N OR COPULAS) ;
+SELECT (A Attr) (*1C N BARRIER NPNH) ;
 REMOVE (A Attr) (NOT 1 N OR A) ;
 
 
@@ -376,36 +388,55 @@ SELECT (A Pl) (0 (Indef))(*1 (N Pl) BARRIER S-BOUNDARY) ;
 # Num
 
 SELECT Num IF (-1 CC)(*-2C Num BARRIER V);
+SELECT (Num Ine) (0 ("akte") LINK *1 (N Ine) BARRIER NPNH);
 
 # Putative contract verb
 
 
-# 
-SELECT Interr (0 Rel)(*1 ("?")) ; 
+# Rel or Interr
+SELECT Interr (0 Rel LINK NEGATE *-1 Interr)(*1 ("?")) ; 
+REMOVE Interr (0 Rel LINK -1 WORD LINK NOT 0 Interj OR CC OR CS) ;
+REMOVE Interr (NEGATE *1 ("?")) ;
 
-
+SELECT (Rel Gen) (*-1 VFIN BARRIER S-BOUNDARY)(*1 N BARRIER NPNH);
+    ## Jaepien 1877 die pruvri aktine man nomme Jonas Mortensen.
 
 # Interj
 
 
 # Po or Pr
 SELECT Po (0 Pr)(-1 Gen) ;
+REMOVE Pr (NEGATE *1 N BARRIER V OR S-BOUNDARY) ;
+REMOVE Po (NEGATE *-1 Gen BARRIER V OR S-BOUNDARY) ;
+
+
+
+# Adv or Po/Pr
+SELECT Adv (0 Po)(NEGATE -1 Gen) ;
+    ## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
+
 
 # Illative or genetive
 SELECT Ill (0 Gen)(*1 ILLV BARRIER NOT-ADV);
 REMOVE Gen (0 Ill)(NOT *-1 Pr BARRIER NPNH)(1 EOS OR S-BOUNDARY);
-	## Tåama fuehpesne gåatan.
+	## Tåamma fuehpesne gåatan.
 
-SELECT (Dem Gen)(1 (N Gen) LINK NOT 0 Ill) ;
-SELECT (N Gen)(-1C (Dem Gen)) ;
-SELECT (Pron Pers Gen) (0 Pron LINK 1C Po) ;
-SELECT (Pron Dem Gen) (0 Pron LINK 1C (Ord Gen) OR (Num Gen)) ;
-SELECT (Pron Dem Pl) (1 (Indef Pl)) ;
-REMOVE Interr (0 Rel LINK -1 WORD LINK NOT 0 Interj OR CC OR CS) ;
-REMOVE Interr (NEGATE *1 ("?")) ;
+SELECT Ill (*0 ILLV BARRIER S-BOUNDARY OR ILLADV) ;
 
 
+# Com
+SELECT (N Com)(*-1 ("ektine") BARRIER NPNH) ;
+    ## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
 
+SELECT Com (*0 COMV BARRIER S-BOUNDARY) ;
+
+
+# special lemmas
+SELECT N (0 ("nomme") LINK 1 Prop) ;
+    ## Sara jaepien 1889 Röörosen dajvese bööti jih jaepien 1893 die pruvri aktine man nomme Anders Paulsen
+SELECT ("giesie" Gen)(1 Num);
+    
+    
             AFTER-SECTIONS              #
 # ======================================== #
    
