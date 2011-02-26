@@ -1476,6 +1476,21 @@ LEXICON LES
 +A+PlGenCmp:ass%>i  R ;
 
 
+LEXICON AALE
+! merging spinaale e-e-EVEN-1 and spinaales es-es-EVEN-1
+! they were set up as doublets in the lexicon and had 
+! identical comparatives and superlatives.
+! The new solution analyses the same wordforms as before,
+! but operates with a single lemma spinaale etc.
+! Todo: look into eCASE / ODDCASE -variation (double case paradigm?)
+  :e   ATTR-0 ;
+  :e   PRED-0 ;
+  :e   ATTR-S ;
+       eCASE ;
+  :e   PRED-S ;
+  :es  ODDCASE ;
+  :e   EVENCOMP ;     
+
 LEXICON e-e-EVEN-1
   :e   ATTR-0 ;
   :e   PRED-0 ;
