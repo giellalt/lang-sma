@@ -963,13 +963,16 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 !$0 aerpie0eeke
 
 !KEEPIF(HYPHENATE)
-"Make hyphenation points visible"
-%#:%- =>  _  ; ! sub
+!"Make hyphenation points visible"
+!%#:%- => [:Letter - :Vx] _ [:Letter - :Vx] [:Letter - :Vx] ;
+!    where Vx in (e a) matched ;
+    
 
 "Make hyphenation points visible when between identical vowels"
 %#:%- <=> :Vx _ :Vx :Vx ; ! This should apply to only the surface side
  	where Vx in (e a) matched ; !nonsub
 !ELSE
+
 !ENDKEEP
 
 
