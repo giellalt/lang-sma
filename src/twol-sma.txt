@@ -61,9 +61,9 @@ Alphabet
 ! » = derivation boundary
 ! + = metric foot boundary (is it used any more?)
 ! ^ = explicit hyphenation point
-KEEPIF(HYPHENATE)
- # %^
-ELSE
+KEEPIF(HYPHENATE) ! = sub
+ #:%- %^
+ELSE  ! Nonsub
  #:0 %^:0
 ENDKEEP
 
@@ -963,8 +963,21 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 !$0 aerpie0eeke
 
 "Make hyphenation points visible when between identical vowels"
- %#:%- <=> :Vx _ :Vx :Vx ;        ! This should apply to only the surface side
- 	where Vx in (e a) matched ;
+%#:%- <=>  :Vx _ :Vx :Vx ; ! This should apply to only the surface side
+ 	where Vx in (e a) matched ; 
+
+!---DUommá-Majja twol-practice, låt stå!
+!%#:%- <=> :Letter _ :Letter ;! Don leat hui ceahppi, Toamma!  
+!%#:%- <=> :Vz _ :Vy ;  
+!    where Vz in (Letter) ;
+!    where Vy in (Letter) ; 
+!%#:%- <=> :Vy _ :Vz ;  
+!    where Vz in (Letter) ;
+!    where Vy in (Letter) ; 
+!%#:%- <=>  :Vx _ :Vx :Vx ; ! This should apply to only the surface side
+!	where Vx in (e a) matched ; 
+ 	
+ 	! matched = alltid er samme bokstav, f.eks jåvle-eejehtalleme blir det bindestrek, mens i aevjie#aesie blir det ikke bindestrek. 
 
 !€# Aevjie^aesie
 !€0 Aevjie0aesie
