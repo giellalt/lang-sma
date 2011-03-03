@@ -195,7 +195,12 @@ LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ;
 LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" ;
 
-LIST ILLADV = "jallese" ;
+LIST ILLADV = "bæjjese" "davvese" "daase" "dahkoe" "diekie" "doekoe" "dohkoe" "jallese" "mænngese" "noerhtese" "olkese" "vueliebasse" "våålese" "åarjese" "åvtese" ;
+
+LIST INEADV =  "daebpene" "debpene" "duebpene" "dubpene" "daagkoe" "dagkoe" "doegkoe" "dogkoe" "daajkoe" "dajkoe" "doejkoe" "dojkoe" ;
+
+LIST ELAADV = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
+
 
 # BOUNDARY SETS
 
@@ -331,6 +336,15 @@ REMOVE:NotNomIfInf (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
        ## jieledh.
 
 # Dem
+# agreement:
+# Dem Sg Nom + N Sg Nom			Dem Pl Nom + N Pl Nom
+# Dem Sg Acc + N Sg Acc			Dem Pl Acc + N Pl Acc
+# Dem Sg Gen + N Sg Gen			Dem Pl Gen + N Pl Gen
+# Dem Sg Ill Attr + N Sg Ill	Dem Pl Ill + N Pl Ill
+# Dem Sg Ine + N Sg Ine			Dem	Pl Ine + N Pl Ine
+# Dem Sg Ela + N Sg Ela			Dem Pl Ela + N Pl Ela
+# Dem Sg Com + N Sg Com			Dem	Pl Com Attr + N Pl Com
+
 SELECT:DemGenIfNGen (Dem Pl Gen)(*1 (N Pl Gen) BARRIER NPNH);
 	# Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
 
