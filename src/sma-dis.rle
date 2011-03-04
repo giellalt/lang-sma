@@ -125,6 +125,7 @@ LIST Po = Po ;
 LIST Pr = Pr ;
 LIST Adv = Adv ;
 LIST Interj = Interj ;
+LIST Indef = Indef ;
 LIST Num = Num ;
 LIST Prop = Prop ;
 
@@ -144,6 +145,7 @@ LIST COMMA = "," ;
 LIST TITLE = "prof" "cand.philol" ;
 
 LIST CASES = Nom Acc Gen Ill Ine Ela Com Ess ;
+LIST NOMEN-NOT-PRON = N A Indef Num Ord ;  # they can have Dem as attr
 
 LIST WORD = N A V Adv Pron Interj Adp Num CS CC Pcle Pr Po ;
 SET REALWORD = WORD - Num - Ord ;
@@ -348,21 +350,23 @@ REMOVE:NotNomIfInf (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
 SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNH) ;
 SELECT:DemCom (Dem Com Attr)(*1 (N Pl Com) BARRIER NPNH) ;
 
-SELECT:unifDem $$CASES (0C Dem LINK *1 $$CASES BARRIER NPNH LINK 0 N) ;
+SELECT:unifDem $$CASES (0C Dem LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
 
 	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
 
 
-REMOVE:PronIfV Dem IF (0 Pron)(1C Adv OR V);
+REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES);
+	## Dihte fievsesne jih mov govse. 
+
 
 #REMOVE:PronIfNotAgree (Dem Nom) IF (0 Pers)(NEGATE *1 Nom BARRIER NPNH);
 
 SELECT (N Gen)(-1C (Dem Gen)) ;
 SELECT (Pron Pers Gen) (0 Pron LINK 1C Po) ;
-SELECT (Pron Dem Gen) (0 Pron LINK 1C (Ord Gen) OR (Num Gen)) ;
-SELECT (Pron Dem Pl) (1 (Indef Pl)) ;
+#SELECT (Pron Dem Gen) (0 Pron LINK 1C (Ord Gen) OR (Num Gen)) ;
+#SELECT (Pron Dem Pl) (1 (Indef Pl)) ;
 
-REMOVE Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
+#REMOVE Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
 	
 	
 # CC and CS or Adv
@@ -405,6 +409,8 @@ SELECT (A Pl) (0 (Indef))(*1 (N Pl) BARRIER S-BOUNDARY) ;
 
 SELECT Num IF (-1 CC)(*-2C Num BARRIER V);
 SELECT (Num Ine) (0 ("akte") LINK *1 (N Ine) BARRIER NPNH);
+SELECT (Ord Nom)(0 Num LINK 1 N);
+	## Manne skuvlesne vijhtede klaassesne.
 
 # Putative contract verb
 
