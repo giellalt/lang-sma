@@ -145,6 +145,7 @@ LIST COMMA = "," ;
 LIST TITLE = "prof" "cand.philol" ;
 
 LIST CASES = Nom Acc Gen Ill Ine Ela Com Ess ;
+LIST NUMBER = Sg Pl ;
 LIST NOMEN-NOT-PRON = N A Indef Num Ord ;  # they can have Dem as attr
 
 LIST WORD = N A V Adv Pron Interj Adp Num CS CC Pcle Pr Po ;
@@ -226,6 +227,19 @@ REMOVE ACR (0 CC);
 
 #foreløpig regel:
 REMOVE Interj ;
+
+# Short Pronouns
+
+REMOVE:dan Pers + Sg2 + Nom IF (NOT -1 V + Sg2)(0 ("dïhte" Pron Dem Sg Gen))
+	## dan
+	# short pronouns are placed after the finite verb.
+
+# Proper nouns
+
+#REMOVE Nom IF (0 ABBR + Attr)(1 Prop OR ABBR);
+REMOVE Nom IF (0 ABBR + Attr)(*1  Prop OR ABBR BARRIER WORD);
+REMOVE Nom IF (0 Prop + Attr)(*1 Prop BARRIER WORD);
+	## Trond Trosterud
 
 # Verbs
 
@@ -338,6 +352,14 @@ REMOVE:NotNomIfInf (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
        ## jieledh.
 
 # Dem
+
+# Trivialia
+
+REMOVE ("Daa") IF (0 ("daate"));
+REMOVE ("Daae") IF (0 ("daate"));
+	## Daah
+	# Problem: Person names Daa, Daae coded as placenames
+	
 # agreement:
 # Dem Sg Nom + N Sg Nom			Dem Pl Nom + N Pl Nom
 # Dem Sg Acc + N Sg Acc			Dem Pl Acc + N Pl Acc
@@ -351,9 +373,10 @@ SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNH) ;
 SELECT:DemCom (Dem Com Attr)(*1 (N Pl Com) BARRIER NPNH) ;
 
 SELECT:unifDem $$CASES (0C Dem LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
-
 	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
-
+REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NPNH);
+REMOVE:NotPersWhenDemSg Pers IF (0 Dem + Sg3 + $$CASES LINK *1 N + Sg + $$CASES BARRIER NPNH);
+REMOVE:NotPersWhenDemPl Pers IF (0 Dem + Pl3 + $$CASES LINK *1 N + Pl + $$CASES BARRIER NPNH);
 
 REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES);
 	## Dihte fievsesne jih mov govse. 
