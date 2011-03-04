@@ -263,7 +263,7 @@ LIST @+FAUXV = @+FAUXV ;
 LIST @+FMAINV = @+FMAINV ; 
 LIST @-FAUXV = @-FAUXV ;
 LIST @-FMAINV = @-FMAINV ;
-SET FMAINV = @-FMAINV OR @+FMAINV ;
+SET MAINV = @-FMAINV OR @+FMAINV ;
 
 #
 MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY);
@@ -358,6 +358,9 @@ SELECT:unifDem $$CASES (0C Dem LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRO
 REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES);
 	## Dihte fievsesne jih mov govse. 
 
+REMOVE:NotDem2 Dem IF (0 Pers)(NEGATE *1 NOMEN-NOT-PRON BARRIER NPNH);
+	## Dihte joekoen lustes jalhts ajve akten jaepien båeries.
+
 
 #REMOVE:PronIfNotAgree (Dem Nom) IF (0 Pers)(NEGATE *1 Nom BARRIER NPNH);
 
@@ -404,6 +407,8 @@ SELECT CC OR CS (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
 
 # Adj or Indef
 SELECT (A Pl) (0 (Indef))(*1 (N Pl) BARRIER S-BOUNDARY) ;
+REMOVE A (NEGATE 0 Nom)(1 MAINV) ;
+	## Mov aehtjie jijnjem maahta. 
 
 # Num
 
