@@ -209,6 +209,9 @@ LIST ELAADV = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
 
 SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS ;
 
+# The following set contains the one-letter abbrs from abbr-sma-lex.txt
+LIST SOMESMALLABBR = "a" "r" "c" "d" "e" "f" "f" "g" "h" "i" "l" "m" "b" "j" "s" ;
+LIST SOMECAPABBR = "A" "R" "C" "D" "E" "F" "F" "G" "H" "I" "L" "M" "B" "J" "S" ;
 
 # ============== #
 # Disambiguation #
@@ -237,9 +240,17 @@ REMOVE:dan Pers + Sg2 + Nom IF (NOT -1 V + Sg2)(0 ("dïhte" Pron Dem Sg Gen))
 # Proper nouns
 
 #REMOVE Nom IF (0 ABBR + Attr)(1 Prop OR ABBR);
-REMOVE Nom IF (0 ABBR + Attr)(*1  Prop OR ABBR BARRIER WORD);
-REMOVE Nom IF (0 Prop + Attr)(*1 Prop BARRIER WORD);
+REMOVE Nom IF (0 ABBR + Attr)(1  Prop OR ABBR);
+REMOVE Nom IF (0 Prop + Attr)(1 Prop OR ABBR);
+REMOVE Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
 	## Trond Trosterud
+
+REMOVE ("<[a-zäöåøæï]>"r) IF  (0 SOMECAPABBR);
+
+#REMOVE ("j") IF (0 ("J"));
+	
+#REMOVE ("<[a-zäöåøæï]>"r) IF (0 ("<[A-ZÄÖÅØÆÏ]>"r));
+	## J. A.	
 
 # Verbs
 
@@ -324,9 +335,8 @@ SELECT:PlIfPlSubj Pl3 IF (*-1 (Pl Nom) BARRIER NOT-ADV);
 REMOVE Foc/gan (0 (V Du3)) ;
 SELECT Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY)
 
-# Contract or not
-
-REMOVE:NotContrIfEven (".*ijidh"r) IF (0 (".*[oe]dh"r));		
+# Contract or not -- removed, we have removed the sma contract verb analysis
+# REMOVE:NotContrIfEven (".*ijidh"r) IF (0 (".*[oe]dh"r));		
 # This rule might be problematic in light of the empirical work.		     
 
 # Span sentences
@@ -402,10 +412,15 @@ IFF:GoNotCs Pcle (-1 Neg)(0 ("goh"));
 	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
 	## Dallah goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. # CS
 
+REMOVE CS IF (NOT *-1 VFIN OR ("jis" CS))(0 ("dellie") OR ("dle"));
+	##
 
 REMOVE:NotNomIfCs (N Nom) (0 CS)(1 (N Nom)) ;
 	# Guktie vielle Baktuse, giehtelh maa!
 
+
+SELECT CC IF (0 ("dovne"))(*1 ("jïh" CC) BARRIER VFIN);
+	## … almetjistie gieh maehtieh saemien dovne tjaaleldh jïh njaalmeldh barkoesijjide tjïeltesne.
 	
 REMOVE:CsIfNotFuncword Pcle (NEGATE *-1 NOT-ADV-INT-PCLE)(0 CS) ;
 	# Jaa, jis damth seekere.....	
