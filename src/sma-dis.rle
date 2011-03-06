@@ -164,7 +164,11 @@ SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron 
 SET NPNH = WORD - PRE-NP-HEAD OR (ABBR) ;       # NPNH  = "NOT-PRE-NP-HEAD" 
 
 
+# Noun sets
 
+SET PX = PxSg1 OR PxSg2 OR PxSg3 OR PxDu1 OR PxDu2 OR PxDu3 OR PxPl1 OR PxPl2 OR PxPl3 ;
+
+LIST FAMILY = "aahka" "aahkove" "aajja" "aajjove" "aajkoehkadtjh" "aajkohke" "aajnehke" "aarpije" "aehtjaahka" "aehtjaajja" "aehtjie" "baernie" "boelve" "daktere" "eejhtegh" "elkie" "fijrie" "fuelhkie" "gaalla" "geelle" "geellege" "gåeskie" "gåeskuve" "gåetehke" "gåmma" "gåmmebe" "ietnie" "jiekie" "jiekuve" "jijmie" "jijmuve" "jyöne" "jöömmetje" "krist’aehtjie" "krist’ietnie" "laahkoe" "laevie" "laeviehkadtjh" "maadteraahka" "maadteraajja" "maadtoe" "maake" "maaketje" "maana" "meata" "moehrele" "muahra" "månnja" "mænnja" "neapede" "neebne" "nååte" "nïejte" "onnevïelle" "onneåabpa" "seasa" "slïekte" "stoerrevïelle" "stoerreåabpa" "sïesele" "tjidtjaahka" "tjidtjaajja" "tjidtjie" "tjietsie" "tjietsuve" "voehpe" "voehpealmetjh" "vuanove" "vïelle" "vïjve" "åabpa" "åabpetjh" "åerpele" "åerpene" "åerpienadtjh" "vïelletjh" ;
 
 # Verb sets
 
@@ -230,6 +234,15 @@ REMOVE ACR (0 CC);
 
 #foreløpig regel:
 REMOVE Interj ;
+
+
+# Possessive suffix
+# Probably exists only for Refl and for kinship terms
+
+REMOVE:PrfPrc_Not_PxSg1 PxSg1 IF (0 PrfPrc);
+	## Mijjieh saemieh daarah aaj aalkeme gærjah lohkedh.
+	
+	
 
 # Short Pronouns
 
@@ -325,8 +338,6 @@ SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER S-BOUNDARY)(0 Ind) ; ;
 # Should be BARRIER V OR CS OR CC # It doesn´t work...
 	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
 
-REMOVE:InfNotPl2  (V TV Ind Prt Pl2) IF (*-1 VFIN BARRIER Pron + Pl2);
-
 SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") BARRIER V);
 
 
@@ -344,6 +355,9 @@ SELECT Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY)
 "<lea>" REMOVE Pl3 IF (<*-1 Sg1 OR Sg2)(NOT *-1 (N Pl Nom));
 
 # Nomen
+
+REMOVE:No_Px PX IF (0 N)(NOT 0 FAMILY);
+
 
 #SELECT Attr IF (0 Prop)(1 Prop); # Too hard.
 REMOVE (Prop Attr) IF (NOT 1 Prop);
@@ -439,13 +453,32 @@ REMOVE (A Attr) (NOT 1 N OR A) ;
 
 
 # grammatisk ord eller N
+
+
+# "<altese>" N Sg Nom  Pron Pers Pl3 Gen  Pron Pers Sg Gen PxSg3  Pron Pers Sg3 Gen 
+
+# Remove the "skotunge" reading if not in typical N position
+REMOVE:altese_Noun N IF (0 ("altese"))(NOT (1 VFIN + Sg3));
+	## Mov altese lea…
+	# Bad context, but the philosophy is ok.
+
+# "<daelie>" Adv  N Sg Nom 
 REMOVE N (0 ("daelie" Nom) LINK 1 Nom) ;
 	## Daelie Tåamma riejries dåakteren luvnie. 
 
 SELECT CC OR CS (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
 	## Tåamma gylje juktie bååktjehke dorje.
 
+
+# N or V
+
+# "<aejkien>" N Sg Gen  V IV Ind Prs Du1 @+FMAINV 
+
+
+
+
 # Adj or Indef
+
 SELECT (A Pl) (0 (Indef))(*1 (N Pl) BARRIER S-BOUNDARY) ;
 REMOVE A (NEGATE 0 Nom)(1 MAINV) ;
 	## Mov aehtjie jijnjem maahta. 
@@ -502,6 +535,23 @@ SELECT Com (*0 COMV BARRIER S-BOUNDARY) ;
 SELECT N (0 ("nomme") LINK 1 Prop) ;
     ## Sara jaepien 1889 Röörosen dajvese bööti jih jaepien 1893 die pruvri aktine man nomme Anders Paulsen
 SELECT ("giesie" Gen)(1 Num);
+
+
+# Verb person vs. Inf -- moved here in order to have the pronouns disambiguated first.
+
+REMOVE:Inf_Not_Sg2 (V TV Der1 Der/didh Ind Prs Sg2) IF (*-1 VFIN BARRIER Pron + Sg2 + Nom);
+REMOVE:Inf_Not_Pl2  (V TV Ind Prt Pl2) IF (*-1 VFIN BARRIER Pron + Pl2 + Nom);
+
+# These rules are too weak. I flip them around:
+REMOVE:Sg2_Not_Inf Inf IF (0 (V TV Der1 Der/didh Ind Prs Sg2)) (*-1 Pron + Sg2 + Nom BARRIER VFIN);
+REMOVE:Pl2_Not_Inf Inf IF (0 (V TV Ind Prt Pl2))(*-1 Pron + Pl2 + Nom BARRIER VFIN);
+
+# Even stronger. No pro-drop. ## WARNING! This is probably too strong.
+REMOVE:Inf_Not_Sg2_ProDrop (V TV Der1 Der/didh Ind Prs Sg2) IF (NOT *-1 Pron + Sg2 + Nom);
+REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NOT *-1 Pron + Pl2 + Nom);
+
+
+
     
     
             AFTER-SECTIONS              #
