@@ -141,8 +141,16 @@ LIST PUNCT = PUNCT ;
 LIST LEFT = LEFT ;
 LIST RIGHT = RIGHT ;
 LIST COMMA = "," ;
+LIST Der1 = Der1 ;
+LIST Der2 = Der2 ;
+LIST Der3 = Der3 ;
 
-LIST TITLE = "prof" "cand.philol" ;
+LIST REAL-TITLE = "prof" "cand.philol" ;
+LIST OFFICE = "gånka" ;
+SET TITLE = REAL-TITLE OR OFFICE ; 
+
+# SET TITLE = REAL-TITLE OR TITLE-LIKE OR PROFESSION OR OFFICE ; 
+
 
 LIST CASES = Nom Acc Gen Ill Ine Ela Com Ess ;
 LIST NUMBER = Sg Pl ;
@@ -158,7 +166,7 @@ SET NOT-ADV = WORD - Adv ;
 
 SET NP-HEAD = Num OR N OR Pron ;
 
-SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron Pers Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr ;
+SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron Pers Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr OR ("gånka") ;
          # The strict version of items that can only be premodifiers, not parts of the predicate - copied from sme-dis.rle
          
 SET NPNH = WORD - PRE-NP-HEAD OR (ABBR) ;       # NPNH  = "NOT-PRE-NP-HEAD" 
@@ -169,6 +177,10 @@ SET NPNH = WORD - PRE-NP-HEAD OR (ABBR) ;       # NPNH  = "NOT-PRE-NP-HEAD"
 SET PX = PxSg1 OR PxSg2 OR PxSg3 OR PxDu1 OR PxDu2 OR PxDu3 OR PxPl1 OR PxPl2 OR PxPl3 ;
 
 LIST FAMILY = "aahka" "aahkove" "aajja" "aajjove" "aajkoehkadtjh" "aajkohke" "aajnehke" "aarpije" "aehtjaahka" "aehtjaajja" "aehtjie" "baernie" "boelve" "daktere" "eejhtegh" "elkie" "fijrie" "fuelhkie" "gaalla" "geelle" "geellege" "gåeskie" "gåeskuve" "gåetehke" "gåmma" "gåmmebe" "ietnie" "jiekie" "jiekuve" "jijmie" "jijmuve" "jyöne" "jöömmetje" "krist’aehtjie" "krist’ietnie" "laahkoe" "laevie" "laeviehkadtjh" "maadteraahka" "maadteraajja" "maadtoe" "maake" "maaketje" "maana" "meata" "moehrele" "muahra" "månnja" "mænnja" "neapede" "neebne" "nååte" "nïejte" "onnevïelle" "onneåabpa" "seasa" "slïekte" "stoerrevïelle" "stoerreåabpa" "sïesele" "tjidtjaahka" "tjidtjaajja" "tjidtjie" "tjietsie" "tjietsuve" "voehpe" "voehpealmetjh" "vuanove" "vïelle" "vïjve" "åabpa" "åabpetjh" "åerpele" "åerpene" "åerpienadtjh" "vïelletjh" ;
+
+
+
+
 
 # Verb sets
 
@@ -202,6 +214,8 @@ LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ;
 LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" ;
 
+LIST STV = Der/ehte ;
+
 LIST ILLADV = "bæjjese" "davvese" "daase" "dahkoe" "diekie" "doekoe" "dohkoe" "jallese" "mænngese" "noerhtese" "olkese" "vueliebasse" "våålese" "åarjese" "åvtese" ;
 
 LIST INEADV =  "daebpene" "debpene" "duebpene" "dubpene" "daagkoe" "dagkoe" "doegkoe" "dogkoe" "daajkoe" "dajkoe" "doejkoe" "dojkoe" ;
@@ -211,11 +225,30 @@ LIST ELAADV = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
 
 # BOUNDARY SETS
 
-SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS ;
+SET GUKTIE = ("guktie" Adv)  ;
+
+SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIE OR BOS OR EOS ;
 
 # The following set contains the one-letter abbrs from abbr-sma-lex.txt
 LIST SOMESMALLABBR = "a" "r" "c" "d" "e" "f" "f" "g" "h" "i" "l" "m" "b" "j" "s" ;
 LIST SOMECAPABBR = "A" "R" "C" "D" "E" "F" "F" "G" "H" "I" "L" "M" "B" "J" "S" ;
+
+# Der sets
+LIST V-DER = Der/didh Der/htidh Der/alle Der/stidh Der/ehte Der/lidh Der/htalle Der/lgidh Der/PassS Der/PassL;
+
+LIST N-DER = Der/NomAct Der/NomAg Der/Dim ;
+
+LIST A-DER = Der/ldihkie Der/ijes ;
+
+LIST PASS = Der/PassS Der/PassL ;
+
+SET LEX-V = V - V-DER;
+
+SET LEX-N = N - N-DER;
+
+SET LEX-A = A - A-DER;
+
+LIST VERB-FORMS = Inf Sg1 Sg2 Sg3 ;
 
 # ============== #
 # Disambiguation #
@@ -231,9 +264,20 @@ SECTION
 REMOVE ("Da") OR ("Dan") (0 Pers);
 REMOVE Num (0 Neg);
 REMOVE ACR (0 CC);
+REMOVE (Pred) (0 (A Nom)) ;
 
 #foreløpig regel:
-REMOVE Interj ;
+REMOVE Interj (NEGATE *0 BOS OR EOS) ;
+
+
+REMOVE:testA A-DER (0 LEX-A);
+
+#REMOVE:testV1 Der1 IF (0 Der3 OR Der2);
+#REMOVE:testV2 Der2 IF (0 Der3);
+#REMOVE:testV3 Der1 ;
+
+#REMOVE:testV4 V-DER (0 LEX-V) ;  ## should be restriction
+#REMOVE:testN N-DER (0 LEX-N LINK NOT 0 PX) ;
 
 
 # Possessive suffix
@@ -242,8 +286,6 @@ REMOVE Interj ;
 REMOVE:PrfPrc_Not_PxSg1 PxSg1 IF (0 PrfPrc);
 	## Mijjieh saemieh daarah aaj aalkeme gærjah lohkedh.
 	
-	
-
 # Short Pronouns
 
 REMOVE:dan Pers + Sg2 + Nom IF (NOT -1 V + Sg2)(0 ("dïhte" Pron Dem Sg Gen))
@@ -264,6 +306,47 @@ REMOVE ("<[a-zäöåøæï]>"r) IF  (0 SOMECAPABBR);
 	
 #REMOVE ("<[a-zäöåøæï]>"r) IF (0 ("<[A-ZÄÖÅØÆÏ]>"r));
 	## J. A.	
+# Trivialia
+
+REMOVE ("Daa") IF (0 ("daate"));
+REMOVE ("Daae") IF (0 ("daate"));
+	## Daah
+	# Problem: Person names Daa, Daae coded as placenames
+	
+# agreement:
+# Dem Sg Nom + N Sg Nom			Dem Pl Nom + N Pl Nom
+# Dem Sg Acc + N Sg Acc			Dem Pl Acc + N Pl Acc
+# Dem Sg Gen + N Sg Gen			Dem Pl Gen + N Pl Gen
+# Dem Sg Ill Attr + N Sg Ill	Dem Pl Ill + N Pl Ill
+# Dem Sg Ine + N Sg Ine			Dem	Pl Ine + N Pl Ine
+# Dem Sg Ela + N Sg Ela			Dem Pl Ela + N Pl Ela
+# Dem Sg Com + N Sg Com			Dem	Pl Com Attr + N Pl Com
+
+SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNH) ;
+SELECT:DemCom (Dem Com Attr)(*1 (N Pl Com) BARRIER NPNH) ;
+
+SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
+	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
+REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NPNH);
+REMOVE:NotPersWhenDemSg Pers IF (0 Dem + Sg3 + $$CASES LINK *1 N + Sg + $$CASES BARRIER NPNH);
+REMOVE:NotPersWhenDemPl Pers IF (0 Dem + Pl3 + $$CASES LINK *1 N + Pl + $$CASES BARRIER NPNH);
+
+REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES);
+	## Dihte fievsesne jih mov govse. 
+
+REMOVE:NotDem2 Dem IF (0 Pers)(NEGATE *1 NOMEN-NOT-PRON BARRIER NPNH);
+	## Dihte joekoen lustes jalhts ajve akten jaepien båeries.
+
+
+#REMOVE:PronIfNotAgree (Dem Nom) IF (0 Pers)(NEGATE *1 Nom BARRIER NPNH);
+
+SELECT (N Gen)(-1C (Dem Gen)) ;
+SELECT (Pron Pers Gen) (0 Pron LINK 1C Po) ;
+#SELECT (Pron Dem Gen) (0 Pron LINK 1C (Ord Gen) OR (Num Gen)) ;
+#SELECT (Pron Dem Pl) (1 (Indef Pl)) ;
+
+#REMOVE Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
+	
 
 # Verbs
 
@@ -297,11 +380,33 @@ REMOVE Imprt (*-1 WORD BARRIER CC OR COMMA OR BOS)(NOT 0 Neg)(NEGATE -1 CC LINK 
 SELECT (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) ;
 
 
+
+LIST @CNP = @CNP ;
+LIST @CVP = @CVP ;
 LIST @+FAUXV = @+FAUXV ; 
 LIST @+FMAINV = @+FMAINV ; 
 LIST @-FAUXV = @-FAUXV ;
 LIST @-FMAINV = @-FMAINV ;
 SET MAINV = @-FMAINV OR @+FMAINV ;
+
+	# CC- and CS-Mapping
+	# -------------------
+# CASES
+
+MAP (@CNP) TARGET CC (0 ("gon")) ;
+MAP (@CNP) TARGET CS (0 ("goh") LINK *1 N OR Pers BARRIER NPNH LINK *1 S-BOUNDARY BARRIER V) ;
+MAP (@CNP) TARGET CS (0 ("goh") LINK *1 TITLE BARRIER NPNH LINK 1 N LINK *1 S-BOUNDARY BARRIER V) ;
+MAP (@>CC) TARGET CC (0 ("dovne")) ;
+
+MAP (@CNP) TARGET CC (-1 $$CASES LINK 2 $$CASES) ;
+MAP (@CNP) TARGET CC (-1C Inf LINK 2C Inf) ;
+MAP (@CNP) TARGET CC (*-1C (Pl Gen) BARRIER WORD)(1 (Pl Com)) ;
+
+MAP (@CVP) TARGET CS ;
+MAP (@CVP) TARGET CC (0 ("mohte") OR ("men")) ;
+
+MAP (@CVP) TARGET CC (*-1 MAINV BARRIER S-BOUNDARY)(*1 MAINV BARRIER S-BOUNDARY);
+
 
 #
 MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY);
@@ -322,6 +427,12 @@ MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf ;
 
 # PrfPrc
 #SELECT PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
+SELECT PrfPrc (0 (Der/NomAct) LINK *-1 S-BOUNDARY BARRIER V)(NEGATE *1 V BARRIER S-BOUNDARY) ;
+	## Disse maahtam tjaeledh gosse sijhtem, jih aaj lohkedh gosse båarasåbpoe  sjidteme.
+
+
+
+
 
 # Person
 # leah Prs Sg2 = Pl3
@@ -379,50 +490,9 @@ REMOVE:NotNomIfInf (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
 
 # Dem
 
-# Trivialia
-
-REMOVE ("Daa") IF (0 ("daate"));
-REMOVE ("Daae") IF (0 ("daate"));
-	## Daah
-	# Problem: Person names Daa, Daae coded as placenames
-	
-# agreement:
-# Dem Sg Nom + N Sg Nom			Dem Pl Nom + N Pl Nom
-# Dem Sg Acc + N Sg Acc			Dem Pl Acc + N Pl Acc
-# Dem Sg Gen + N Sg Gen			Dem Pl Gen + N Pl Gen
-# Dem Sg Ill Attr + N Sg Ill	Dem Pl Ill + N Pl Ill
-# Dem Sg Ine + N Sg Ine			Dem	Pl Ine + N Pl Ine
-# Dem Sg Ela + N Sg Ela			Dem Pl Ela + N Pl Ela
-# Dem Sg Com + N Sg Com			Dem	Pl Com Attr + N Pl Com
-
-SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNH) ;
-SELECT:DemCom (Dem Com Attr)(*1 (N Pl Com) BARRIER NPNH) ;
-
-SELECT:unifDem $$CASES (0C Dem LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
-	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
-REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NPNH);
-REMOVE:NotPersWhenDemSg Pers IF (0 Dem + Sg3 + $$CASES LINK *1 N + Sg + $$CASES BARRIER NPNH);
-REMOVE:NotPersWhenDemPl Pers IF (0 Dem + Pl3 + $$CASES LINK *1 N + Pl + $$CASES BARRIER NPNH);
-
-REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES);
-	## Dihte fievsesne jih mov govse. 
-
-REMOVE:NotDem2 Dem IF (0 Pers)(NEGATE *1 NOMEN-NOT-PRON BARRIER NPNH);
-	## Dihte joekoen lustes jalhts ajve akten jaepien båeries.
-
-
-#REMOVE:PronIfNotAgree (Dem Nom) IF (0 Pers)(NEGATE *1 Nom BARRIER NPNH);
-
-SELECT (N Gen)(-1C (Dem Gen)) ;
-SELECT (Pron Pers Gen) (0 Pron LINK 1C Po) ;
-#SELECT (Pron Dem Gen) (0 Pron LINK 1C (Ord Gen) OR (Num Gen)) ;
-#SELECT (Pron Dem Pl) (1 (Indef Pl)) ;
-
-#REMOVE Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
-	
 	
 # CC and CS or Adv
-IFF:GoNotCs Pcle (-1 Neg)(0 ("goh")); 
+IFF:GoNotCs Pcle (-1 Neg OR ConNeg OR ("sån"))(0 ("goh")); 
 	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
 	## Dallah goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. # CS
 
@@ -470,11 +540,32 @@ SELECT CC OR CS (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
 	## Tåamma gylje juktie bååktjehke dorje.
 
 
+REMOVE VFIN (0 ILLADV)(1 VFIN) ;
+REMOVE Nom (0 ILLADV)(1 VFIN) ;
+	## Dah aaj naan aejkien diekie båetieh, mohte eeremes tjidtjie dihte dahkoe vualka.
+
+
 # N or V
 
 # "<aejkien>" N Sg Gen  V IV Ind Prs Du1 @+FMAINV 
+REMOVE VFIN (0 ("aejkie" Gen) LINK -1 ("naan") OR (Indef Gen) OR ("aerebi") OR (Num Gen) OR Ord);
 
 
+REMOVE VFIN (0 ("aejkie" Gen) LINK 1 VFIN);
+	## Naan aejkien leah kruana jih jeatjebh aejkien provne.
+
+
+
+SELECT VFIN (0 (N Gen) LINK 1 S-BOUNDARY)(NEGATE -1 Pr)(NEGATE *-1 VFIN BARRIER S-BOUNDARY);
+	## Tjidtjie diekie juhtieji goh aehtjine pruvri.
+	
+SELECT (Num Gen)(0 ("golme"))(1 (N Gen)) ;
+	## Jih die libriem dijpebe, gulhkine tjaeliestibie golmen aejkien jih doeltehtibie.	
+
+
+# Ger or Der/NomAct
+SELECT Ger (NEGATE *-1 V BARRIER S-BOUNDARY)(0 (Der/NomAct) LINK 1 S-BOUNDARY) ;
+	## Mov leah aajkohkh, muahrah jih jyønh gieh desnie årroeminie.
 
 
 # Adj or Indef
@@ -529,6 +620,10 @@ SELECT (N Com)(*-1 ("ektine") BARRIER NPNH) ;
     ## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
 
 SELECT Com (*0 COMV BARRIER S-BOUNDARY) ;
+
+# Accusative or illative
+SELECT (N Acc) (0 (N Ill) LINK *1 STV BARRIER NOT-ADV) ;
+	## Mov aaj aehtjie gie båanta. Dihte fievsesne fierhten biejjien, govside båhtja, jih gaajhkide juvride biepmedahta.
 
 
 # special lemmas
