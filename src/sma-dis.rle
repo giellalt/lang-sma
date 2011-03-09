@@ -267,7 +267,7 @@ REMOVE:R_ACD ACR (0 CC);
 
 
 #foreløpig regel: 
-REMOVE:R_Interj Interj (NEGATE *0 BOS OR EOS) ; !NOTUSED
+REMOVE:R_Interj Interj (NEGATE *0 BOS OR EOS) ; #NOTUSED
 
 
 REMOVE:testA A-DER (0 LEX-A);
@@ -300,7 +300,7 @@ REMOVE:R_Nom_Prop Nom IF (0 Prop + Attr)(1 Prop OR ABBR);
 REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
 	## Trond Trosterud
 
-REMOVE:CAPABBR ("<[a-zäöåøæï]>"r) IF  (0 SOMECAPABBR); !NOTUSED does not work
+REMOVE:CAPABBR ("<[a-zäöåøæï]>"r) IF  (0 SOMECAPABBR); #NOTUSED does not work
 
 #REMOVE: ("j") IF (0 ("J"));
 	
@@ -358,7 +358,7 @@ REMOVE:PrsInNeg Prt IF (0 Neg)(*1C ConNeg BARRIER NOT-ADV LINK NOT 0 Prt);
 
 SELECT:PersonInNegSg3 Sg3 IF (0 Neg + Prt)(*1C ConNeg + Sg3 BARRIER NOT-ADV);
 SELECT:PersonInNegDu1 Du1 IF (0 Neg + Prt)(*1C ConNeg + Du1 BARRIER NOT-ADV);
-SELECT:PersonInNegDu2 Du2 IF (0 Neg + Prt)(*1C ConNeg + Du2 BARRIER NOT-ADV); !NOTUSED
+SELECT:PersonInNegDu2 Du2 IF (0 Neg + Prt)(*1C ConNeg + Du2 BARRIER NOT-ADV); #NOTUSED
 SELECT:PersonInNegDu3 Du3 IF (0 Neg + Prt)(*1C ConNeg + Du3 BARRIER NOT-ADV);
 SELECT:PersonInNegPl1 Pl1 IF (0 Neg + Prt)(*1C ConNeg + Pl1 BARRIER NOT-ADV);
 SELECT:PersonInNegPl2 Pl2 IF (0 Neg + Prt)(*1C ConNeg + Pl2 BARRIER NOT-ADV);
