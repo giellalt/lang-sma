@@ -14,56 +14,58 @@
 
 LEXICON Punctuation
 
-! Clause boundary symbols
+! Clause boundary symbols:
 
-%,+CLB:%,         # ;
-%.+CLB:%.         # ;
-%.%.+CLB:%.%.     # ;
-%.%.%.+CLB:%.%.%. # ;
-%:+CLB:%:         # ;
-%;+CLB:%;	      # ;
- ^excl+CLB+Use/Circ:%!	  # ;	!
-%?+CLB:%?	      # ;
-…+CLB:…		      # ;
- ¿+CLB:¿		      # ;	! Only seen as noise.
-¶+CLB:¶		      # ;	
+ %,+CLB:%,         # ;
+ %.+CLB:%.         # ;
+ %.%.+CLB:%.%.     # ;
+ %.%.%.+CLB:%.%.%. # ;
+ %:+CLB:%:         # ;
+ %;+CLB:%;         # ;
+ ^excl+CLB+Use/Circ:%! # ;
+ %?+CLB:%?         # ;
+ …+CLB:…           # ;
+ ¿+CLB:¿           # ; ! Only seen as noise.
+ ¶+CLB:¶           # ;
 
-•+PUNCT:•	      # ;
- -+PUNCT:-         # ; !hyphen
- --+PUNCT:--       # ; !double hyphen
- –+PUNCT:–         # ; !endash
- —+PUNCT:—         # ; !emdash
-=+PUNCT:=         # ;
-%%+PUNCT:%%       # ;
-&+PUNCT:&         # ;
-%"+PUNCT:%"       # ;
-'+PUNCT:'         # ;   
-%*+PUNCT:%*       # ;
-++PUNCT:+         # ;
-`+PUNCT:`         # ;
-´+PUNCT:´         # ;
-/+PUNCT:/         # ; 
-+/-+PUNCT:+/-     # ;
-%~+PUNCT:%~	      # ;
+! Inter-string / sentence-internal symbols:
+
+ •+PUNCT:•         # ;
+ -+PUNCT:-         # ; ! hyphen
+ --+PUNCT:--       # ; ! double hyphen
+ –+PUNCT:–         # ; ! endash
+ —+PUNCT:—         # ; ! emdash
+ =+PUNCT:=         # ;
+ %%+PUNCT:%%       # ;
+ &+PUNCT:&         # ;
+ %"+PUNCT:%"       # ;
+ '+PUNCT:'         # ;
+ %*+PUNCT:%*       # ;
+ ++PUNCT:+         # ;
+ `+PUNCT:`         # ;
+ ´+PUNCT:´         # ;
+ /+PUNCT:/         # ;
+ +/-+PUNCT:+/-     # ;
+ %~+PUNCT:%~       # ;
 
 
 ! Paired punctuation marks
 
-»+PUNCT+RIGHT:»7 # ; ! XXX Does not work!
-«+PUNCT+LEFT:«  # ;
-%“+PUNCT+LEFT:%“  # ;
-%„+PUNCT+LEFT:%„  # ;
-%”+PUNCT+RIGHT:%” # ;
-%‘+PUNCT+LEFT:%‘  # ;
-%’+PUNCT+RIGHT:%’ # ;
-%‹+PUNCT+LEFT:%‹  # ;
-%›+PUNCT+RIGHT:%› # ;
-%(+PUNCT+LEFT:%(  # ;
-%)+PUNCT+RIGHT:%) # ;
-%[+PUNCT+LEFT:%[  # ;
-%]+PUNCT+RIGHT:%] # ;
-%{+PUNCT+LEFT:%{  # ;
-%}+PUNCT+RIGHT:%} # ;
-%<+PUNCT+LEFT:%<  # ;
-%>+PUNCT+LEFT:%>7  # ;
+ »+PUNCT+RIGHT:»7  # ; ! XXX Does not work!
+ «+PUNCT+LEFT:«    # ;
+ %“+PUNCT+LEFT:%“  # ;
+ %„+PUNCT+LEFT:%„  # ;
+ %”+PUNCT+RIGHT:%” # ;
+ %‘+PUNCT+LEFT:%‘  # ;
+ %’+PUNCT+RIGHT:%’ # ;
+ %‹+PUNCT+LEFT:%‹  # ;
+ %›+PUNCT+RIGHT:%› # ;
+ %(+PUNCT+LEFT:%(  # ;
+ %)+PUNCT+RIGHT:%) # ;
+ %[+PUNCT+LEFT:%[  # ;
+ %]+PUNCT+RIGHT:%] # ;
+ %{+PUNCT+LEFT:%{  # ;
+ %}+PUNCT+RIGHT:%} # ;
+ %<+PUNCT+LEFT:%<  # ;
+ %>+PUNCT+LEFT:%>7 # ;
 
