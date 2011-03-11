@@ -41,20 +41,51 @@
 
 ! Vowel final names
 ! - - - - - - - - -
+LEXICON VNAME_ODD-plc
++N+Prop+Plc VNAME_ODD ;
+
+LEXICON VNAME_ODD-LOAN
++N+Prop+Plc+Sg+Nom:e%^DISIMP         FINAL1 ;
++N+Prop+Plc+Sg+Nom:e%^DISIMP         RHyph ;
+
+
+LEXICON VNAME_ODD-mal
++N+Prop+Mal VNAME_ODD ;
+
+LEXICON VNAME_ODD-sur
++N+Prop+Sur VNAME_ODD ;
+
+LEXICON VNAME_ODD-org
++N+Prop+Org VNAME_ODD ;
+
+LEXICON VNAME_ODD-fem
++N+Prop+Fem VNAME_ODD ;
+
+LEXICON VNAME_ODD-obj
++N+Prop+Obj VNAME_ODD ;
 
 LEXICON VNAME_ODD ! Names ending in stressless vowel
-+N+Prop+Plc+Sg: N_ODD_SG ;
-+N+Prop+Plc+Sg+Nom:e%^DISIMP         RHyph ;
-+N+Prop+Plc+Pl: N_ODD_PL ;
-+N+Prop+Plc:    N_ODD_ESS ;
-+N+Prop+Plc+Attr:e%^DISIMP FINAL1 ;
++Sg: N_ODD_SG ;
++Sg+Nom:e%^DISIMP         RHyph ;
++Pl: N_ODD_PL ;
+:    N_ODD_ESS ;
++Attr:e%^DISIMP FINAL1 ;
+
+LEXICON VNAME_ODD_NO_DISIMPH-plc
++N+Prop+Plc VNAME_ODD_NO_DISIMPH ;
+
+LEXICON VNAME_ODD_NO_DISIMPH-org
++N+Prop+Org VNAME_ODD_NO_DISIMPH ;
+
+LEXICON VNAME_ODD_NO_DISIMPH-LOAN
++N+Prop+Plc+Sg+Nom:e         FINAL1 ;
 
 LEXICON VNAME_ODD_NO_DISIMPH ! Names ending in stressless vowel
-+N+Prop+Plc+Sg: N_ODD_SG_NO_DISIMPH ;
-+N+Prop+Plc+Sg+Nom:e         RHyph ;
-+N+Prop+Plc+Pl: N_ODD_PL_NO_DISIMPH ;
-+N+Prop+Plc:    N_ODD_ESS ;
-+N+Prop+Plc+Attr:e FINAL1 ;
++Sg: N_ODD_SG_NO_DISIMPH ;
++Sg+Nom:e         RHyph ;
++Pl: N_ODD_PL_NO_DISIMPH ;
+:    N_ODD_ESS ;
++Attr:e FINAL1 ;
 
 LEXICON N_ODD_SG_NO_DISIMPH
   +Nom:e         FINAL1 ;
