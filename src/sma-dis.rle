@@ -285,7 +285,9 @@ LIST SOMESMALLABBR = "a" "r" "c" "d" "e" "f" "f" "g" "h" "i" "l" "m" "b" "j" "s"
 LIST SOMECAPABBR = "A" "R" "C" "D" "E" "F" "F" "G" "H" "I" "L" "M" "B" "J" "S" ;
 
 # Der sets
-LIST V-DER = Der/didh Der/htidh Der/alle Der/stidh Der/ehte Der/lidh Der/htalle Der/lgidh Der/PassS Der/PassL;
+LIST V-DER = Der/didh Der/htidh Der/alle Der/stidh Der/ehte Der/lidh Der/htalle Der/lgidh Der/PassL;
+
+LIST V-DER-SUF = (".*didh"r) (".*htidh"r)  (".*alle"r) (".*stidh"r) (".*ehte"r) (".*lidh"r)(".*htalle"r)(".*lgidh"r) Der/PassL ;
 
 LIST N-DER = Der/NomAct Der/NomAg Der/Dim ;
 
@@ -315,6 +317,10 @@ SECTION
 REMOVE:R_Num Num (0 Neg);
 REMOVE:R_ACD ACR (0 CC);
 
+#REMOVE:regex (Der/didh) (0 (".*didh"r)) ;
+#(".*advokáhta"r)
+
+REMOVE:bigregex V-DER (0 V-DER-SUF) ;
 
 #foreløpig regel: 
 SELECT:S_Interj Interj (-1 BOS)(1 EOS OR CLB) ; 
