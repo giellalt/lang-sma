@@ -1687,7 +1687,7 @@ LEXICON LOHKIJE
 :%^DISIMP   ATTR-S ;
 :%^DISIMP   PRED-S ;
 +Use/NG:%^DISIMPe     PRED-0;
-   ODDCASE ;
+   ije-ODDCASE ;
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
@@ -1723,6 +1723,15 @@ LEXICON Ce-Ce-ODD-1 !bårreske
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
     ODDCOMP ;
+    
+LEXICON BÅETIJE !bårreske
+ :%^DISIMPe     ATTR-0 ;
+ :%^DISIMPe     PRED-0 ;
+    ije-ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
+    ODDCOMP ;
+
  
  
 LEXICON Ce-Ce-ODDEVEN-1 !rudtjege  apparently not in use
@@ -1747,6 +1756,14 @@ LEXICON Ce-Ce-ODDNOCOMP-1
  :  ODDCASE ;
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
+
+LEXICON JEASIEGOELKIJE
+ :e     ATTR-0 ;
+ :e     PRED-0 ;
+ :  ije-ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
+
        
 LEXICON s-s-ODD-1
      ATTR-S ;
@@ -1807,6 +1824,15 @@ LEXICON Ces-Ces-ODD-1
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
+   
+LEXICON HUJNIJES 
+:%^DISIMPe     ATTR-S ;
+:%^DISIMPe     PRED-S ;
+   ije-ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
+   ODDCOMP ;
+
 
 !LEXICON Ces-Ces-ODDNOCOMP-1
 !:%^DISIMPe     ATTR-S ;
@@ -1827,6 +1853,16 @@ LEXICON Cs-Cs-Ce-ODD-1
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
+     
+LEXICON VOEJIJS
+  :%^DISIMP   ATTR-S ;
+  :%^DISIMP   PRED-S ;
+  +Use/NG:%^DISIMPe   PRED-0 ;
+     ije-ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
+     ODDCOMP ;
+
 
 LEXICON Cs-Cs-ODD-1
   :%^DISIMP   ATTR-S ;
@@ -1835,6 +1871,15 @@ LEXICON Cs-Cs-ODD-1
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
+     
+LEXICON JIERMIJS
+  :%^DISIMP   ATTR-S ;
+  :%^DISIMP   PRED-S ;
+     ije-ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
+     ODDCOMP ;
+
 
 LEXICON Cs-Cs-ODDNOCOMP-1
   :%^DISIMP   ATTR-S ;
@@ -1929,11 +1974,24 @@ LEXICON Ces-Ce-Ces-Ce-ODD-3  !as Ces-Ces-Ce-ODD, but with ATTR-0
    ODDCOMP ;
        LES ;   !<===== gir Attr -s og Pred -s
        
+
+       
 LEXICON Ces-Ces-Ce-ODD-3
 :%^DISIMPe     ATTR-S;   !<=====  gir Attr -s
 :%^DISIMPe     PRED-S;
 +Use/NG:%^DISIMPe     PRED-0;
    ODDCASE ;
++A+Sg+Nom:%^DISIMPe         FINAL1 ;
++A+SgNomCmp:%^DISIMPe            R ;
+   ODDCOMP ;
+   
+
+
+LEXICON DÅJMIJES
+:%^DISIMPe     ATTR-S;   !<=====  gir Attr -s
+:%^DISIMPe     PRED-S;
++Use/NG:%^DISIMPe     PRED-0;
+   ije-ODDCASE ;
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
@@ -2092,6 +2150,26 @@ LEXICON ODDCASE
 +A+Sg+Ela:%>istie           FINAL1 ;
 +A+Sg+Com:%>inie            FINAL1 ;
 +A+Pl: N_ODD_PL ;
++A:    N_ODD_ESS ;
++A+SgGenCmp:e%>%^DISIMPn        R ;
++A+PlGenCmp:%>%^DISIMPi R ;
+
+LEXICON ije-ODDCASE
++A+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
++A+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
++A+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++A+Sg+Ine:%>isnie           FINAL1 ;
++A+Sg+Ela:%>istie           FINAL1 ;
++A+Sg+Com:%>inie            FINAL1 ;
++A+Pl+Nom:%>h       FINAL1 ;
++A+Pl+Acc:%>idie            FINAL1 ;
++A+Pl+Gen:%>i       FINAL1 ;
++A+Pl+Ill:%>idie            FINAL1 ;
++A+Pl+Ine:%>inie            FINAL1 ;
++A+Pl+Ela:%>ijstie          FINAL1 ;
++A+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
++A+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
+
 +A:    N_ODD_ESS ;
 +A+SgGenCmp:e%>%^DISIMPn        R ;
 +A+PlGenCmp:%>%^DISIMPi R ;
@@ -2678,10 +2756,55 @@ LEXICON GOLTELIDH_IV
 
 LEXICON GOLTELIDH !odd-syll with -adte- as Der2
  COMMON-ODD ;
+ +Der2+Der/ehte:%»eht ÅARAJEHTEDH_TV ;
+ +Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+ +PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +Der2+Der/adte+V:%»%^adteUMLadt GOEGKERDADTEDH ;
 
-LEXICON BALVEDIDH !to be continued...
- +V+IV: GOLTELIDH ;
+LEXICON BALVEDIDH
+ +V+IV+Ind+Prs+Sg3:%>%^DISIMPe FINAL1 ;
+ +V+IV+Ind+Prt+Sg3:%>i FINAL1 ;
+ +V+IV+Ind+Prt+Sg3+Use/Sub:%>%^DISIMPi FINAL1 ;
+! +V+IV+Imprt:%>     VSUF-ODD-IMP ;
+
+! Infinite forms
+! --------------
+ +V+IV+Inf:%>idh             FINAL1 ;
+ +V+IV+ConNeg:%>%^DISIMPh    FINAL1 ;
+ +V+IV+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +V+IV+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+IV+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+! +V+IV+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+! +V+IV+A+Der1+Der/æjja+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+! +V+IV+A+Der1+Der/ihks+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +V+IV+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
+ 
+!+V+IV+VAbess:%>h            FINAL1 ; 
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen, äbreks der nicht regnet, baal'eks der nicht gräbt, b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
+
+
+! Derivations
+! -----------
+! +V+IV+Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+ +V+IV+Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
+ +V+IV+Der3+Der/ahtje+V+Inf:%»ahtj%>edh      FINAL1 ;
+ +V+IV+Der3+Der/ahtje+V+VGen:%»ahtj%>en      FINAL1 ;
+! +V+IV+Der3+Der/ahtje+V+Act:%»ahtj%>eme      FINAL1 ;
+ +V+IV+Der3+Der/ahtje+V+Ger:%»ahtj%>eminie   FINAL1 ;
+ +V+IV+Der3+Der/ahtje+V+PrfPrc:%»ahtj%>eme   FINAL1 ;
+ +V+IV+Der3+Der/ahtje+V+ConNeg:%»ahtj%>0h    FINAL1 ;
+ +V+IV+Der3+Der/ahtje+V+Sg3+Uml:%»ahtj%>%^3sUMLa	  FINAL1 ;
+ +V+IV+Der3+Der/ahtje+V+Sg3:%»ahtj%>i		FINAL1 ;
+ +V+IV+Der3+Der/ahtje+V+Sg3+Use/Sub:%»ahtj%>%^DISIMPi		FINAL1 ;
+
+LEXICON RIHPESIDH !-nidh and -sidh
+ +V+IV: COMMON-ODD ;
+ +V+IV+Der2+Der/alle+V:%»%^adteUMLall GOEGKERDADTEDH ;
+
 
 
 LEXICON DÅAJVOEHTIDH_TV
@@ -2692,10 +2815,11 @@ LEXICON DÅAJVOEHTIDH_IV
 
 LEXICON DÅAJVOEHTIDH  !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
  COMMON-ODD ;
+ +Der2+Der/ehte:%»eht ÅARAJEHTEDH_TV ;
+ +Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+ +PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +Der2+Der/alle+V:%»%^adteUMLall GOEGKERDADTEDH ;
 
-LEXICON OBRESTIDH !to be continued...
- +V+IV: DÅAJVOEHTIDH ;
 
 LEXICON COMMON-ODD
 
@@ -2712,7 +2836,6 @@ LEXICON COMMON-ODD
  +VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
 ! +Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
  +Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
- +PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +A+Der1+Der/æjja+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
  +A+Der1+Der/ihks+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
  +PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
@@ -2727,12 +2850,10 @@ LEXICON COMMON-ODD
 
 ! Derivations
 ! -----------
- +Der1+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
  +Der1+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
 ! +Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
  +Der3+Der/ahtje+V:%»ahtj AHTJE ;
- +Der2+Der/ehte:%»eht ÅARAJEHTEDH_TV ;
- 
+
 
 
 ! Even-syllable verbs
@@ -2778,7 +2899,7 @@ LEXICON BÅETEDH ! row A - Group I
  +Der1+Der/stidh:%»iest DÅAJVOEHTIDH ;
  +Der1+Der/lidh:%»iel GOLTELIDH ;
  +Der1+Der/htjidh:%»%^htjidhUMLehtj GOLTELIDH ;
- +Der1+Der/htidh:%»ieht DÅAJVOEHTIDH ;
+ +Der1+Der/htidh:%»ieht DÅAJVOEHTIDH_TV ;
 ! +Der1+Der/dehte:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
  +Der3+Der/ahtje+V:%»iejahtj AHTJE ;
  +Der1+Der/ldihkie:%»%^1UMLaldihkie NULL-NULL-EVEN ;
@@ -2926,7 +3047,7 @@ LEXICON ÅEREDH ! row A - Group I   NO -øø-UMLAUT!!!!
  +V+IV+Der1+Der/stidh:%»iest DÅAJVOEHTIDH ;
  +V+IV+Der1+Der/lidh:%»iel GOLTELIDH ;
  +V+IV+Der1+Der/htjidh:%»%^htjidhUMLehtj GOLTELIDH ;
- +V+IV+Der1+Der/htidh:%»ieht DÅAJVOEHTIDH ;
+ +V+IV+Der1+Der/htidh:%»ieht DÅAJVOEHTIDH_TV ;
 ! +V+IV+Der1+Der/dehte:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
  +V+IV+Der3+Der/ahtje+V:%»iejahtj AHTJE ;
 ! +V+IV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
@@ -2975,7 +3096,7 @@ LEXICON TJEARODH ! row C - Group II
  +Der3+Der/gåete+V:%»oegået GÅETEDH ;
  +Der1+Der/stidh:%»oest DÅAJVOEHTIDH ;
  +Der1+Der/lidh:%»oel GOLTELIDH ;
- +Der1+Der/htidh:%»oeht DÅAJVOEHTIDH ;
+ +Der1+Der/htidh:%»oeht DÅAJVOEHTIDH_TV ;
 ! +Der1+Der/dehte:%»oedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte 
  +Der3+Der/ahtje+V:%»oejahtj AHTJE ;
  +Der1+Der/didh:%»%^PASSUMLed GOLTELIDH ;
@@ -3125,7 +3246,7 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
  +Der1+Der/les:%»%^PASSUMLel LES ;
  +Der3+Der/gåete+V:%»oegået GÅETEDH ;
  +Der1+Der/lidh:%»oel GOLTELIDH ;
- +Der1+Der/htidh:%»oeht DÅAJVOEHTIDH ;
+ +Der1+Der/htidh:%»oeht DÅAJVOEHTIDH_TV ;
 ! +Der1+Der/dehte:%»oedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte 
  +Der3+Der/ahtje+V:%»oejahtj AHTJE ;
  +Der1+Der/didh:%»%^PASSUMLed GOLTELIDH ;
@@ -3174,7 +3295,7 @@ LEXICON GUARKEDH ! row B - Group III
  +Der3+Der/gåete+V:%»agået GÅETEDH ;
  +Der1+Der/stidh:%»ast DÅAJVOEHTIDH ;
  +Der1+Der/lidh:%»al GOLTELIDH ;
- +Der1+Der/htidh:%»aht DÅAJVOEHTIDH ;
+ +Der1+Der/htidh:%»aht DÅAJVOEHTIDH_TV ;
 ! +Der1+Der/dehte:%»adeht ÅARAJEHTEDH_TV ; !we have -didh + -ehtedh
  +Der3+Der/ahtje+V:%»ajahtj AHTJE ;
  +Der1+Der/didh:%»%^didhUMLed GOLTELIDH ;
@@ -3226,7 +3347,7 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +Der3+Der/gåete+V:%»egået GÅETEDH ;
  +Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
  +Der1+Der/lidh:%»el GOLTELIDH ;
- +Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
+ +Der1+Der/htidh:%»eht DÅAJVOEHTIDH_TV ;
 ! +Der1+Der/dehte:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehtedh
  +Der3+Der/ahtje+V:%»ijahtj AHTJE ;
  +Der1+Der/didh:%»ed GOLTELIDH ;
@@ -3373,7 +3494,7 @@ LEXICON BÅÅHKEDH ! row E - Group V
  +Der3+Der/gåete+V:%»egået GÅETEDH ;
  +Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
  +Der1+Der/lidh:%»el GOLTELIDH ;
- +Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
+ +Der1+Der/htidh:%»eht DÅAJVOEHTIDH_TV ;
 ! +Der1+Der/dehte:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
  +Der3+Der/ahtje+V:%»ejahtj AHTJE ;
  +Der1+Der/didh:%»ed GOLTELIDH ;
@@ -3406,7 +3527,7 @@ LEXICON VÅÅJNEDH
  +V+IV+Der3+Der/gåete+V:%»egået GÅETEDH ;
  +V+IV+Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
  +V+IV+Der1+Der/lidh:%»el GOLTELIDH ;
- +V+IV+Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
+ +V+IV+Der1+Der/htidh:%»eht DÅAJVOEHTIDH_TV ;
 ! +V+IV+Der1+Der/dehte:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
  +V+IV+Der3+Der/ahtje+V:%»ejahtj AHTJE ;
  +V+IV+Der1+Der/didh:%»ed GOLTELIDH ;
@@ -3455,7 +3576,7 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +Der3+Der/gåete+V:%»egået GÅETEDH ;
  +Der1+Der/stidh:%»est DÅAJVOEHTIDH ;
  +Der1+Der/lidh:%»el GOLTELIDH ;
- +Der1+Der/htidh:%»eht DÅAJVOEHTIDH ;
+ +Der1+Der/htidh:%»eht DÅAJVOEHTIDH_TV ;
 ! +Der1+Der/dehte:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
  +Der3+Der/ahtje+V:%»ijahtj AHTJE ;
  +Der1+Der/didh:%»ed GOLTELIDH ;
