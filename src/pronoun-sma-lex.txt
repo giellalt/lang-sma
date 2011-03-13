@@ -551,8 +551,7 @@ muvhtie:muvht muvhtiecase "noen" ;
 måadtesh:måadtas indcoll "mangen" ;
 måedtie:måedt muvhtiecase "mange"  ;
 
-naaken+Pron+Indef+Nom:naaken FINAL1 ; !XXX
-naakene:naaken indodd "noen, noe" ; !this most be pointed towards another lexicon due to it being three-syllabic
+naakene:naaken naakenlex "noen, noe" ; !this most be pointed towards another lexicon due to it being three-syllabic
 naan ind_noninfl "noen, noe" ;
 
 seamma ind_noninfl "samme" ; !XXX
@@ -578,6 +577,10 @@ LEXICON indeven-a
 LEXICON muvhtiecase
 +Pron+Indef+Sg: muvhtiesg ;
 +Pron+Indef+Pl: muvhtiepl ;
+
+LEXICON naakenlex
++Pron+Indef+Sg+Nom: FINAL1 ;
+indodd ;
 
 
 LEXICON indodd ! This lexicon cannot be removed before lexica pointing here
