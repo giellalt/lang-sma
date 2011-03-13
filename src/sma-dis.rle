@@ -562,10 +562,9 @@ REMOVE:NotAAttr (A Attr) (NOT 1 N OR A) ;
 # "<altese>" N Sg Nom  Pron Pers Pl3 Gen  Pron Pers Sg Gen PxSg3  Pron Pers Sg3 Gen 
 
 # Remove the "skotunge" reading if not in typical N position
-REMOVE:altese_Noun N IF (0 ("altese"))(NOT (1 VFIN + Sg3));
-	## Mov altese lea…
-	# Bad context, but the philosophy is ok.
-
+REMOVE:altese_Noun Nom IF (0 ("altese"))(0 Gen LINK *1 N BARRIER NPNH);
+	## Reerenasse tseegkie altese politihkem ...
+	
 # "<daelie>" Adv  N Sg Nom 
 REMOVE:daelie N (0 ("daelie" Nom) LINK 1 Nom) ;
 	## Daelie Tåamma riejries dåakteren luvnie. 
@@ -663,7 +662,7 @@ SELECT:AccNotIll (N Acc) (0 (N Ill) LINK *1 STV BARRIER NOT-ADV) ;
 # special lemmas
 
 
-SELECT Adv IF (0 ("daelie")); # meaning "dal (mest i stedsnavn)" discarded.
+SELECT:daelie Adv IF (0 ("daelie")); # meaning "dal (mest i stedsnavn)" discarded.
 
 SELECT:nomme N (0 ("nomme") LINK 1 Prop) ;
     ## Sara jaepien 1889 Röörosen dajvese bööti jih jaepien 1893 die pruvri aktine man nomme Anders Paulsen
@@ -724,23 +723,20 @@ REMOVE:r1886 (Prop Pl) IF (0 (Prop Sg))(NEGATE 0 ("Saemiedigkie"));
 	## Marit lea dál.
  # Marit N Sg, not Mari+t Pl Nom
 
-LIST PROP-OR-NOT1 = "Bergen" ;
+# Not this one…
+LIST PROP-OR-NOT2 = "Bergene" "Jeesus" "Kristus";
 
-LIST PROP-OR-NOT2 = "Bergene" ;
+# But this one!
+LIST PROP-OR-NOT1 = "Bergen" "Jeesuse" "Kristuse" ;
 		
-SELECT:r1887 PROP-OR-NOT1 IF (0 PROP-OR-NOT2)(NEGATE -1 BOS LINK 2 Prop);	
+SELECT:r1887 PROP-OR-NOT1 IF (0 PROP-OR-NOT2) ; #(NEGATE -1 BOS LINK 2 Prop);	
 
 REMOVE:r1888 (Prop Pl Nom) IF (-1 BOS)(NEGATE *1 V + Pl3 BARRIER S-BOUNDARY);	    # SV-BOUNDARY
 	## Unnit nuppástusaiguin.	
 
-SELECT:r1892 Prop IF (-1 BOS)(0 ("Saemie" Prop))(1 ORGANIZATION OR Org);
+#SELECT:r1892 Prop IF (-1 BOS)(0 ("Saemie" Prop))(1 ORGANIZATION OR Org);
   	## Sámi allaskuvla láhčá diliid dulkoma joatkkaoahppofáldahkii, mii oaivvilduvvo olbmuide, geat dovdet dearvvašvuođa- ja sosiálasuorggi, ja maiddái MBD ovddasvástádussuorggi.
   
-	# Propernoun modifiers
-  
-SELECT:r1893 Gen IF (0 Acc LINK 0 NORGA)(1 POLITICAL-INDUSTRY OR ORGANIZATION OR INSTITUTION);
-  	## ...čájeha, ahte Norgga sámipolitihkka lea duođas váikkuhišgoahtán..
-  	## DavviNorgga mánáidsuodjalusa ásahus- ja organisašuvdnaovddideames.  
 
 	# Removing proper nouns that are lookalikes
 	# - - - - - - - - - - - - - - - - - - - - -
@@ -768,18 +764,18 @@ LIST SAPMI-N-HEAD =  "gïele" "lidterature" "voestes" "sijjienomme" "tjaalaldahk
 		
 	# These should probably be unified later.
 	# Sámi + these words = common noun: (this is the open group, this should be default).
-REMOVE:r1908 Prop IF (0 ("Saemie" Gen))(1 SAPMI-N-HEAD);
+#REMOVE:r1908 Prop IF (0 ("Saemie" Gen))(1 SAPMI-N-HEAD);
 	## Sámi perspektiiva lea dehálaš.
 
 	# Sámi + these words = proper noun: (this is the closed set, the set of institutions)
-SELECT:r1909 Prop IF (0 ("Saemie"))(*1 SAPMI-PROP-HEAD BARRIER NPNH);
+#SELECT:r1909 Prop IF (0 ("Saemie"))(*1 SAPMI-PROP-HEAD BARRIER NPNH);
 	## Sámi dearvvašvuođadutkama guovddáš.
   	## Sámi Ovdanahttinfoanda ferte vuordit árra čakčii ovdal ruhtadilli čielga.
 
-REMOVE:r1910 Prop IF (0 (N Gen))(1 CC)(2 (N Gen))(NEGATE 2 Prop);
+#REMOVE:r1910 Prop IF (0 (N Gen))(1 CC)(2 (N Gen))(NEGATE 2 Prop);
 	## Sámi ja dáža kultuvra.
 	
-REMOVE:r1911 Prop IF (0 ("Saemie"))(NEGATE *1 SAPMI-PROP-HEAD BARRIER NPNH);
+#REMOVE:r1911 Prop IF (0 ("Saemie"))(NEGATE *1 SAPMI-PROP-HEAD BARRIER NPNH);
 	# We remove the last Prop-analysis.
 
 
