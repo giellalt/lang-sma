@@ -533,6 +533,60 @@ propPl-paradigm: propPl-para.ptest savefile
 #	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
 
 
+# pron indef
+# ============
+
+# Create all the pron test file bases:
+pron-%.testbase:pron-%.txt pronIndef-codes.txt
+	@echo
+	@echo "*** Creating the test base for pron-$*.txt ***"
+	@echo
+	@rm -f $@
+	$(UMASK) && \
+	$(BINDIR)/merge-codesNforms.pl pronIndef-codes.txt $< > $@
+	@chmod 660 $@
+
+# Finally, we concatenate all *.greports
+pron-g.summary: $(NGenFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All noun word form generation testing is done.      ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# Finally, we concatenate all *.areports:
+pron-a.summary: $(NAnaFiles)
+	@cat $^ > $@
+	@echo
+	@echo "*** All noun word form analysis testing is done.        ***"
+	@echo "*** The concatenated reports are stored in $@. ***"
+	@echo
+#	@less $@
+
+# Create noun paradigm generation input file:
+pron-para.ptest: pronIndef-codes.txt
+	@echo
+	@echo "*** Creating the noun paradigm input file for '$(WORD)' ***"
+	@echo
+	@rm -f $@
+	$(UMASK) && \
+	$(BINDIR)/merge-codesNword.pl $< $(WORD) > $@
+	@chmod 660 $@
+
+# Paradigm generation:
+.PHONY: pron-paradigm
+pron-paradigm: pron-para.ptest savefile
+	@echo
+	@echo "*** Running the paradigm generator for '$(WORD)' ***"
+	@echo
+	@printf "load $(SAVEFILE) \n\
+	apply up < $< \n\
+	quit \n" > $(TEMP)/$@-gtest-script
+	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+	@rm -f $(TEMP)/$@-gtest-script
+	@rm -f $<
+#	@less $(WORD).paradigm
 
 # POS-independent parts:
 # ======================
