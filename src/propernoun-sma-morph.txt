@@ -42,27 +42,28 @@
 ! Vowel final names
 ! - - - - - - - - -
 LEXICON VNAME_ODD-plc
-+N+Prop+Plc VNAME_ODD ;
++N+Prop+Plc: VNAME_ODD ;
 
 LEXICON VNAME_ODD-LOAN
 +N+Prop+Plc+Sg+Nom:e%^DISIMP         FINAL1 ;
 +N+Prop+Plc+Sg+Nom:e%^DISIMP         RHyph ;
++N+Prop+Plc+Use/Sub: VNAME_ODD ;
 
 
 LEXICON VNAME_ODD-mal
-+N+Prop+Mal VNAME_ODD ;
++N+Prop+Mal: VNAME_ODD ;
 
 LEXICON VNAME_ODD-sur
-+N+Prop+Sur VNAME_ODD ;
++N+Prop+Sur: VNAME_ODD ;
 
 LEXICON VNAME_ODD-org
-+N+Prop+Org VNAME_ODD ;
++N+Prop+Org: VNAME_ODD ;
 
 LEXICON VNAME_ODD-fem
-+N+Prop+Fem VNAME_ODD ;
++N+Prop+Fem: VNAME_ODD ;
 
 LEXICON VNAME_ODD-obj
-+N+Prop+Obj VNAME_ODD ;
++N+Prop+Obj: VNAME_ODD ;
 
 LEXICON VNAME_ODD ! Names ending in stressless vowel
 +Sg: N_ODD_SG ;
@@ -72,13 +73,14 @@ LEXICON VNAME_ODD ! Names ending in stressless vowel
 +Attr:e%^DISIMP FINAL1 ;
 
 LEXICON VNAME_ODD_NO_DISIMPH-plc
-+N+Prop+Plc VNAME_ODD_NO_DISIMPH ;
++N+Prop+Plc: VNAME_ODD_NO_DISIMPH ;
 
 LEXICON VNAME_ODD_NO_DISIMPH-org
-+N+Prop+Org VNAME_ODD_NO_DISIMPH ;
++N+Prop+Org: VNAME_ODD_NO_DISIMPH ;
 
 LEXICON VNAME_ODD_NO_DISIMPH-LOAN
 +N+Prop+Plc+Sg+Nom:e         FINAL1 ;
++N+Prop+Plc+Use/Sub: VNAME_ODD_NO_DISIMPH ;
 
 LEXICON VNAME_ODD_NO_DISIMPH ! Names ending in stressless vowel
 +Sg: N_ODD_SG_NO_DISIMPH ;
@@ -122,24 +124,50 @@ LEXICON N_ODD_PL_NO_DISIMPH
 !+N+Prop+Plc:    EVEN_ESS ;
 !+N+Prop+Plc+Attr:e FINAL1 ;
 
+LEXICON VNAME-plc
++N+Prop+Plc: VNAME ;
+
+LEXICON VNAME-surplc
++N+Prop+Plc: VNAME ;
++N+Prop+Sur: VNAME ;
+
+LEXICON VNAME-org
++N+Prop+Org: VNAME ;
+
+LEXICON VNAME-sur
++N+Prop+Sur: VNAME ;
+
+LEXICON VNAME-mal
++N+Prop+Mal: VNAME ;
+
+LEXICON VNAME-fem
++N+Prop+Fem: VNAME ;
+
+LEXICON VNAME-obj
++N+Prop+Obj: VNAME ;
+
+LEXICON VNAME-ani
++N+Prop+Ani: VNAME ;
+
+
 LEXICON VNAME
- +N+Prop+Plc+Sg+Nom:          FINAL1 ;
- +N+Prop+Plc+Sg+Nom:          RHyph ;
- +N+Prop+Plc+Sg+Acc:%>m       FINAL1 ;
- +N+Prop+Plc+Sg+Gen:%>n       FINAL1 ;
- +N+Prop+Plc+Sg+Ill:%>se      FINAL1 ;
- +N+Prop+Plc+Sg+Ine:%>sne     FINAL1 ;
- +N+Prop+Plc+Sg+Ela:%>ste     FINAL1 ;
- +N+Prop+Plc+Sg+Com:%>jne      FINAL1 ;
- +N+Prop+Plc+Pl+Nom:%>h       FINAL1 ;
- +N+Prop+Plc+Pl+Acc:%>jde      FINAL1 ;
- +N+Prop+Plc+Pl+Gen:%>j       FINAL1 ;
- +N+Prop+Plc+Pl+Ill:%>jde      FINAL1 ;
- +N+Prop+Plc+Pl+Ine:%>jne      FINAL1 ;
- +N+Prop+Plc+Pl+Ela:%>jste    FINAL1 ;
- +N+Prop+Plc+Pl+Com:%>jgujmie  FINAL1 ;
- +N+Prop+Plc+Ess:%>jne         FINAL1 ;
- +N+Prop+Plc+Attr: FINAL1 ;
+ +Sg+Nom:          FINAL1 ;
+ +Sg+Nom:          RHyph ;
+ +Sg+Acc:%>m       FINAL1 ;
+ +Sg+Gen:%>n       FINAL1 ;
+ +Sg+Ill:%>se      FINAL1 ;
+ +Sg+Ine:%>sne     FINAL1 ;
+ +Sg+Ela:%>ste     FINAL1 ;
+ +Sg+Com:%>jne      FINAL1 ;
+ +Pl+Nom:%>h       FINAL1 ;
+ +Pl+Acc:%>jde      FINAL1 ;
+ +Pl+Gen:%>j       FINAL1 ;
+ +Pl+Ill:%>jde      FINAL1 ;
+ +Pl+Ine:%>jne      FINAL1 ;
+ +Pl+Ela:%>jste    FINAL1 ;
+ +Pl+Com:%>jgujmie  FINAL1 ;
+ +Ess:%>jne         FINAL1 ;
+ +Attr: FINAL1 ;
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
 ! the appropriate even syllable lexicons.
 
@@ -173,7 +201,7 @@ LEXICON OENAME
 SNAME_NIEJTE ;
 
 LEXICON ONAME
- VNAME ; !until we get answer from SGM
+ +N+Prop+Plc: VNAME ; !until we get answer from SGM
  +N+Prop+Plc+Sg+Nom+Use/Sub:           FINAL1 ; ! !until we get answer from SGM
  +N+Prop+Plc+Sg+Nom+Use/Sub:           RHyph ; ! !until we get answer from SGM
  +N+Prop+Plc+Sg+Acc+Use/Sub:e%>m       FINAL1 ; ! !until we get answer from SGM
@@ -191,7 +219,7 @@ LEXICON UENAME
 SNAME_NIEJTE ;
 
 LEXICON UNAME
- VNAME ; !until we get answer from SGM
+ +N+Prop+Plc: VNAME ; !until we get answer from SGM
  +Use/Sub: UNAME_EVEN ; ! !until we get answer from SGM
 
 LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
