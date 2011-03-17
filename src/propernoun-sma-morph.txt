@@ -171,10 +171,32 @@ LEXICON VNAME
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
 ! the appropriate even syllable lexicons.
 
+LEXICON NYSTØ-plc
++N+Prop+Plc: NYSTØ ;
+
+LEXICON NYSTØ-org
++N+Prop+Org: NYSTØ ;
+
+LEXICON NYSTØ-sur
++N+Prop+Sur: NYSTØ ;
+
+LEXICON NYSTØ-surplc
++N+Prop+Sur: NYSTØ ;
++N+Prop+Plc: NYSTØ ;
+
+LEXICON NYSTØ-obj
++N+Prop+Obj: NYSTØ ;
+
+LEXICON NYSTØ-mal
++N+Prop+Mal: NYSTØ ;
+
+LEXICON NYSTØ-fem
++N+Prop+Fem: NYSTØ ;
+
 LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
  SNAME_NIEJTE ; ! check whether this is correct!
-+N+Prop+Plc+Attr: FINAL1 ;
- +N+Prop+Plc+Sg+Nom:          RHyph ;
++Attr: FINAL1 ;
++Sg+Nom:          RHyph ;
 
 
 
@@ -198,7 +220,7 @@ LEXICON INAME ! Names ending in stressless vowel
  +N+Prop+Plc+Attr:i FINAL1 ;
  
 LEXICON OENAME
-SNAME_NIEJTE ;
++N+Prop+Plc: SNAME_NIEJTE ;
 
 LEXICON ONAME
  +N+Prop+Plc: VNAME ; !until we get answer from SGM
@@ -216,7 +238,7 @@ LEXICON ONAME
 ! the sne / snie business remains to be sorted out.
 
 LEXICON UENAME
-SNAME_NIEJTE ;
++N+Prop+Plc: SNAME_NIEJTE ;
 
 LEXICON UNAME
  +N+Prop+Plc: VNAME ; !until we get answer from SGM
@@ -424,15 +446,18 @@ LEXICON JÆLLAN ! as MAANA, but with Prop tag
 
 
 LEXICON PERS_SNAME_NIEJTE
-SNAME_NIEJTE ;
++N+Prop+Plc: SNAME_NIEJTE ;
 +N+Prop+Der1+Der/Dim+N:e%»tj   GÅATETJE ; !Åvletje
 
+LEXICON SNAME_NIEJTE-plc
++N+Prop+Plc: SNAME_NIEJTE ;
+
 LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
-+N+Prop+Plc+Sg: NIEJTE_SG ;
-+N+Prop+Plc+Sg+Nom:e          RHyph ;
-+N+Prop+Plc+Pl: NIEJTE_PL ;
-+N+Prop+Plc:    EVEN_ESS ;
-+N+Prop+Plc+Attr:e FINAL1 ;
++Sg: NIEJTE_SG ;
++Sg+Nom:e          RHyph ;
++Pl: NIEJTE_PL ;
+:    EVEN_ESS ;
++Attr:e FINAL1 ;
 
 LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
 +N+Prop+Plc+Sg+Nom:i%>n          FINAL1 ;
@@ -484,7 +509,7 @@ LEXICON AEKTUVE
 
 LEXICON LAANTE
 land CNAME_EVEN ; ! Småland
-laante:laant SNAME_NIEJTE ; ! Smålaante
+laante+N+Prop+Plc:laant SNAME_NIEJTE ; ! Smålaante
 
 LEXICON NAME_KONTO
 +N+Prop: KONTODECL ;
