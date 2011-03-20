@@ -1684,15 +1684,16 @@ LEXICON IJLE_LOAN
 
 ! type 1
 
-LEXICON LOHKIJE
-! Meeting: attr = lohkijs, lohkijes; pred = lohkije.
+LEXICON LOHKIJES
+! Meeting: attr = lohkijs, lohkijes; !! pred = lohkije.
 :%^DISIMPe     ATTR-S;   ! +Attr lohkijes
 :%^DISIMP   ATTR-S ;     ! +Attr lohkijs
-:%^DISIMP   PRED-S ;         ! +Sg+Nom lohkijs
-+A+Sg+Nom:%^DISIMPe FINAL1 ; ! +Sg+Nom lohkije
-               ije-ODDCASE ; ! +Sg+Nom lohkijes 
-+A+SgNomCmp:%^DISIMPe            R ;
-   ODDCOMP ;
+! attr only
+!:%^DISIMP   PRED-S ;         ! +Sg+Nom lohkijs 
+!+A+Sg+Nom:%^DISIMPe FINAL1 ; ! +Sg+Nom lohkije
+!               ije-ODDCASE ; ! +Sg+Nom lohkijes 
+!+A+SgNomCmp:%^DISIMPe            R ;
+!   ODDCOMP ;
 
 LEXICON BÅETIJE !bårreske
  :%^DISIMPe     ATTR-0 ;
@@ -2004,11 +2005,16 @@ LEXICON Ces-Ces-Ce-ODD-3
    
 
 
-LEXICON DÅJMIJES
+LEXICON DÅAJMIJES
 :%^DISIMPe     ATTR-S;   !<=====  gir Attr -s
    ije-ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
-!   ODDCOMP ; ! Tentatively removing this one (jïermijes w/o comp).
+
+LEXICON GUALIJES
+:%^DISIMPe     ATTR-S;   !<=====  gir Attr -s
+   ije-ODDCASE ;
++A+SgNomCmp:%^DISIMPe            R ;
+   ODDCOMP ;
 
 ! Not used, hence temporarily outcommented
 ! LEXICON Cs-Cs-Ce-ODD-3
