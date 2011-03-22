@@ -249,7 +249,7 @@ LEXICON R
  %-#+Use/Circ:%-# ProperNoun ; ! Proper nouns as the 2nd part of compounds for non-hyph.
                                ! words. viessu-London goes through here.
 
- +Cmpnd:%- # ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
+ +Cmpnd:%- ENDLEX ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
 
 
 LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
@@ -264,7 +264,7 @@ LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
                                ! London-Hull is covered here, whereas Hull-viessu
                                ! is covered by RHyph + Noun.
 
- +Cmpnd:%- # ;      ! This to take care of Oahpo- ja dutkandept - want this in speller
+ +Cmpnd:%- ENDLEX ;      ! This to take care of Oahpo- ja dutkandept - want this in speller
 
 ! Proper noun compounds without hyphens are NOT presently covered - if they were
 ! to be added, they need to be marked +Use/Sub. Examples: LondonHull & viessuLondon.
@@ -4202,9 +4202,9 @@ LEXICON LAAHKOEH_OMMES
 
 
 LEXICON IGENSUFF
-:i # ; ! The normative -i +Gen+Pl suffix
-:ij # ; ! A fairly common non-normative -ij suffix
-!+Use/Sub:ij # ; ! A fairly common non-normative -ij suffix
+:i ENDLEX ; ! The normative -i +Gen+Pl suffix
+:ij ENDLEX ; ! A fairly common non-normative -ij suffix
+!+Use/Sub:ij ENDLEX ; ! A fairly common non-normative -ij suffix
 
 
 ! Verbal affixes
