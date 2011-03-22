@@ -1662,48 +1662,32 @@ LEXICON as-as-a-EVEN-3! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/e
 !OK!
 LEXICON oes-oes-oe-EVEN-3! Attr=s, Prediakt = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
  :oe   ATTR-S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
- +Use/NG:oes    ODDCASENOM ;
+! +Use/NG:oes    ODDCASENOM ; ! *faavroese
         oeCASE ;
  :oe  EVENCOMP_oe ;
        :oes ODDCASEOBL ;
 +A+Sg+Nom:oes%^DISIMP         FINAL1 ;
 +A+SgNomCmp:oes%^DISIMP            R ;
 
-
-
 LEXICON IJLE_LOAN
   +Test/LysI:ijl e-es-EVEN-2 ; !XXX check
  +Test/MørkI:ïjl e-es-EVEN-2 ;
 
 
-
-
-
-
 ! ODD-stems (odd stem declension)
 ! ===============================
 
-
 ! type 1
 
-LEXICON LOHKIJES
-! Meeting: attr = lohkijs, lohkijes; !! pred = lohkije.
+LEXICON LOHKIJES ! Meeting: attr = lohkijs, lohkijes; !! pred = lohkije.
 :%^DISIMPe     ATTR-S;   ! +Attr lohkijes
 :%^DISIMP   ATTR-S ;     ! +Attr lohkijs
-! attr only
-!:%^DISIMP   PRED-S ;         ! +Sg+Nom lohkijs 
-!+A+Sg+Nom:%^DISIMPe FINAL1 ; ! +Sg+Nom lohkije
-!               ije-ODDCASE ; ! +Sg+Nom lohkijes 
-!+A+SgNomCmp:%^DISIMPe            R ;
-!   ODDCOMP ;
 
 LEXICON BÅETIJE !bårreske
  :%^DISIMPe     ATTR-0 ;
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
     ije-ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
-!    ODDCOMP ; ! no comp
-
 
 LEXICON NULL-NULL-ODD-1
      ATTR-0 ;
@@ -1726,20 +1710,14 @@ LEXICON hth-hth-ODD-1
 +A+SgNomCmp:%^DISIMPh            R ;
     ODDCOMP ;
 
-
 LEXICON Ce-Ce-ODD-1 !bårreske
  :%^DISIMPe     ATTR-0 ;
-! :%^DISIMPe     PRED-0 ;
     ODDCASEOBL ;
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
-!+A+SgNomCmp:%^DISIMPe            R ;
     ODDCOMP ;
-    
- 
  
 LEXICON Ce-Ce-ODDEVEN-1 !rudtjege  apparently not in use
  :ege     ATTR-0 ;
-! :ege     PRED-0 ; !hardcoded below
  :eg  ODDCASEOBL ;
 +A+Sg+Nom:eg%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:eg%^DISIMPe            R ;
@@ -1751,22 +1729,18 @@ LEXICON Ce-Ce-ODDEVEN-1 !rudtjege  apparently not in use
 +A+PlGenCmp:%>i  R ;
  :eg  ODDCOMP ;
  :e   EVENCOMP ;
-
  
 LEXICON Ce-Ce-ODDNOCOMP-1
  :e     ATTR-0 ;
-! :e     PRED-0 ; ! Hardcoded below
     ODDCASEOBL ;
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON JEASIEGOELKIJE
  :e     ATTR-0 ; ! DISIMPL ??
-! :e     PRED-0 ; ! hardcoded below
- :  ije-ODDCASEOBL ;
+    ije-ODDCASEOBL ;
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
-
        
 LEXICON s-s-ODD-1
      ATTR-S ;
@@ -1778,7 +1752,6 @@ LEXICON s-s-ODDNOCOMP-1
      ATTR-S ;
      PRED-S ;
      ODDCASEOBL ;
-
 
 LEXICON s-s-ODDhk-1
      ATTR-S ;
@@ -1792,11 +1765,9 @@ oes-oes-ODDNOCOMP-1 ;
 
 LEXICON oes-oes-ODDNOCOMP-1
    :oe  ATTR-S ;
-!   :oe  PRED-S ; ! hardcoded
    :oes ODDCASEOBL ; ! låapsoesem XXX check
 +A+Sg+Nom:oes         FINAL1 ;
 +A+SgNomCmp:oes            R ;
-
 
 LEXICON oes-oes-ODDahk-1
    :oe  ATTR-S ;
@@ -1808,24 +1779,10 @@ LEXICON oes-oes-ODDas-1
    :oe  PRED-S ;
    :as ODDCOMP ;
 
-
-! Not in use.
-! LEXICON s-s-ODDUML-1
-!  :ie    ATTR-S ;
-!  :ie    PRED-S ;
-!  :%^iUMLas ODDCOMP ;
-
-! Not in use
-! LEXICON s-s-ODDEVEN-1 !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og illativ tjåenghkesne -tjåanghkan
-!      ATTR-S ;
-!      PRED-S ;
-! :s   ODDCOMP ;
-
 LEXICON s-s-ODDEVENNOCOMP-1 !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og illativ tjåenghkesne -tjåanghkan
      ATTR-S ;
      PRED-S ;
 :s   ODDCOMP ;
-
 
 LEXICON Ces-Ces-ODD-1 
 :%^DISIMPe     ATTR-S ;
@@ -1837,23 +1794,15 @@ LEXICON Ces-Ces-ODD-1
    
 LEXICON HUJNIJES 
 :%^DISIMPe     ATTR-S ; 
-!:%^DISIMPe     PRED-S ; ! oddcase
    ije-ODDCASE ;
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 
-
-!LEXICON Ces-Ces-ODDNOCOMP-1
-!:%^DISIMPe     ATTR-S ;
-!:%^DISIMPe     PRED-S ;
-
-
 LEXICON les-les-ODD-1 
 :%^DISIMPe     ATTR-S ;
 :%^DISIMPe     PRED-S ;
    ODDCOMP ;
-
 
 LEXICON Cs-Cs-Ce-ODD-1
  Cs-Cs-Ce-ODDNOCOMP-1 ;
@@ -1866,8 +1815,6 @@ LEXICON Cs-Cs-Ce-ODDNOCOMP-1
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      
-
-     
 LEXICON VOEJIJS
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
@@ -1875,7 +1822,6 @@ LEXICON VOEJIJS
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
-
 
 LEXICON Cs-Cs-ODD-1
   :%^DISIMP   ATTR-S ;
@@ -1892,7 +1838,6 @@ LEXICON JIERMIJS
 +A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
-
 
 LEXICON Cs-Cs-ODDNOCOMP-1
   :%^DISIMP   ATTR-S ;
@@ -1917,9 +1862,8 @@ LEXICON hts-hts-ODDhtCOMP-1
  ODDCOMP ; ! joekehtåbpoe
  
 LEXICON n-n-ODD-1 ! attr=n, pred= n
- ATTR-N ;
- PRED-N ;
-:k ODDCOMP ; 
+    n-n-ODDNOCOMP-1 ;
+ :k ODDCOMP ; 
 
 LEXICON n-n-ODDNOCOMP-1 ! attr=n, pred= n
  ATTR-N ;
@@ -2067,9 +2011,12 @@ LEXICON oes-an-ODD-4
 ! +Use/NG:ak  ODDCOMP ;
 
 LEXICON h-n-ODD-4
+    h-n-NULL-ODD-4
+:k  ODDCOMP ; 
+
+LEXICON h-n-ODDNOCOMP-4
  ATTR-H ;
  PRED-N ;
-:k  ODDCOMP ; 
 
 LEXICON h-n-NULL-ODD-4
  ATTR-H ;
@@ -2079,10 +2026,13 @@ LEXICON h-n-NULL-ODD-4
 
 
 LEXICON oeh-an-ODD-4
+oeh-an-ODDNOCOMP-4
+ :ahk ODDCOMP ;
+ :oehk ODDCOMP ; !XXX check this o
+
+LEXICON oeh-an-ODDNOCOMP-4
 :oe   ATTR-H ;
       PRED-AN ;
-:ahk ODDCOMP ;
- :oehk ODDCOMP ; !XXX check this o
 
 LEXICON oeh-oeh-an-ODD-4 ! Attr=oeh, Pred=oeh og an 
 :oe ATTR-H ;
