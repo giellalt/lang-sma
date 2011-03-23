@@ -379,13 +379,32 @@ LEXICON ZEENAME
  +Attr:e FINAL1 ;
 
 
+LEXICON INAME_ODD-plc
++N+Prop+Plc: INAME_ODD ;
+
+
+LEXICON INAME_ODD-sur
++N+Prop+Sur: INAME_ODD ;
+
+LEXICON INAME_ODD-surplc
++N+Prop+Sur: INAME_ODD ;
++N+Prop+Plc: INAME_ODD ;
+
+
+LEXICON INAME_ODD-mal
++N+Prop+Mal: INAME_ODD ;
+
+LEXICON INAME_ODD-fem
++N+Prop+Fem: INAME_ODD ;
+
+
  LEXICON INAME_ODD ! Names ending in stressless vowel
-  +N+Prop+Plc+Sg+Nom:%>i         FINAL1 ;
-  +N+Prop+Plc+Sg+Nom:%>i         RHyph ;
- +N+Prop+Plc+Sg: INAME_ODD_SG ; ! name special
- +N+Prop+Plc+Pl: N_ODD_PL ;     ! normal noun
- +N+Prop+Plc:    N_ODD_ESS ;    ! normal noun
- +N+Prop+Plc+Attr:%>i FINAL1 ;     ! name special
+  +Sg+Nom:%>i         FINAL1 ;
+  +Sg+Nom:%>i         RHyph ;
+ +Sg: INAME_ODD_SG ; ! name special
+ +Pl: N_ODD_PL ;     ! normal noun
+ :    N_ODD_ESS ;    ! normal noun
+ +Attr:%>i FINAL1 ;     ! name special
   
   LEXICON INAME_ODD_SG
   +Acc:e%>%^DISIMPm      FINAL1 ;
