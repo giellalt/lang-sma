@@ -1685,7 +1685,7 @@ LEXICON LOHKIJES ! Meeting: attr = lohkijs, lohkijes; !! pred = lohkije.
 
 LEXICON BÅETIJE !bårreske
  :%^DISIMPe     ATTR-0 ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
     ije-ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
@@ -1712,8 +1712,8 @@ LEXICON hth-hth-ODD-1
 
 LEXICON Ce-Ce-ODD-1 !bårreske
  :%^DISIMPe     ATTR-0 ;
+ :%^DISIMPe     PRED-0 ;
     ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
     ODDCOMP ;
  
 LEXICON Ce-Ce-ODDEVEN-1 !rudtjege  apparently not in use
@@ -1731,15 +1731,15 @@ LEXICON Ce-Ce-ODDEVEN-1 !rudtjege  apparently not in use
  :e   EVENCOMP ;
  
 LEXICON Ce-Ce-ODDNOCOMP-1
- :e     ATTR-0 ;
+ :e     ATTR-0 ; ! XXXX DISIMPL!
+ :%^DISIMPe     PRED-0 ;
     ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON JEASIEGOELKIJE
  :e     ATTR-0 ; ! DISIMPL ??
+ :%^DISIMPe     PRED-0 ;
     ije-ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
        
 LEXICON s-s-ODD-1
@@ -1788,14 +1788,14 @@ LEXICON Ces-Ces-ODD-1
 :%^DISIMPe     ATTR-S ;
 :%^DISIMPe     PRED-S ;
    ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
    
 LEXICON HUJNIJES 
 :%^DISIMPe     ATTR-S ; 
+ :%^DISIMPe     PRED-0 ;
    ije-ODDCASE ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 
@@ -1811,15 +1811,15 @@ LEXICON Cs-Cs-Ce-ODD-1
 LEXICON Cs-Cs-Ce-ODDNOCOMP-1
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
+ :%^DISIMPe     PRED-0 ;
      ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      
 LEXICON VOEJIJS
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
      ije-ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
 
@@ -1827,7 +1827,7 @@ LEXICON Cs-Cs-ODD-1
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
      ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
      
@@ -1835,7 +1835,7 @@ LEXICON JIERMIJS
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
      ije-ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
 
@@ -1843,7 +1843,7 @@ LEXICON Cs-Cs-ODDNOCOMP-1
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
      ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON hts-hts-ODD-1
@@ -1854,7 +1854,7 @@ LEXICON hts-hts-ODDNOCOMP-1
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
   :s  ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPs         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPs            R ;
 
 LEXICON hts-hts-ODDhtCOMP-1
@@ -1877,7 +1877,7 @@ LEXICON Ce-Ces-ODD-2
 :e     ATTR-0;
 :e     PRED-S;
        ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
        ODDCOMP ;
 
@@ -1905,7 +1905,6 @@ LEXICON Cs-Ce-ODD-3
   :%^DISIMP    ATTR-S ;
   :%^DISIMPe   PRED-0 ;
        ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
        ODDCOMP ;
 
@@ -1919,7 +1918,6 @@ LEXICON Ces-Ce-ODD-3
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-0;
    ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 
@@ -1928,7 +1926,6 @@ LEXICON Ces-Ce-ODDNOCOMP-3
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-0;
    ODDCASE ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 
@@ -1968,7 +1965,7 @@ LEXICON GUALIJES
 ! :%^DISIMP     PRED-S;
 ! +Use/NG:%^DISIMPe     PRED-0;
 !    ODDCASE ;
-! +A+Sg+Nom:%^DISIMPe         FINAL1 ;
+!  :%^DISIMPe     PRED-0 ;
 ! +A+SgNomCmp:%^DISIMPe            R ;
 !    ODDCOMP ;
 
@@ -1977,7 +1974,7 @@ LEXICON Ces-Ces-Ce-ODDNOCOMP-3
 :%^DISIMPe     PRED-S;
 !+Use/NG:%^DISIMPe     PRED-0;
    ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+ :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON hks-hke-hks-hke-ODD-3
@@ -1986,7 +1983,7 @@ LEXICON hks-hke-hks-hke-ODD-3
 :%^DISIMP     PRED-S;
 +Use/NG:%^DISIMPe    PRED-0;
    ODDCASEOBL ;
-!+A+Sg+Nom:%^DISIMPe         FINAL1 ;
+! :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 
