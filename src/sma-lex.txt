@@ -1693,12 +1693,21 @@ LEXICON NULL-NULL-ODD-1
      ATTR-0 ;
      PRED-0 ;
 
+LEXICON A-h-h-ODD-1
+ :a   ATTR-H ;
+ :a   PRED-H ;
+ :ahk AODDCOMP ; ! Wait: gaastoe - oe-NOUN
+
 LEXICON h-h-ODD-1
      ATTR-H ;
      PRED-H ;
  :hk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN
 
 LEXICON h-h-ODDNOCOMP-1
+     ATTR-H ;
+     PRED-H ;
+     
+LEXICON Cesk-Cesk-ODDNOCOMP-1
      ATTR-H ;
      PRED-H ;
 
@@ -1731,13 +1740,13 @@ LEXICON Ce-Ce-ODDEVEN-1 !rudtjege  apparently not in use
  :e   EVENCOMP ;
  
 LEXICON Ce-Ce-ODDNOCOMP-1
- :e     ATTR-0 ; ! XXXX DISIMPL!
+ :%^DISIMPe     ATTR-0 ;
  :%^DISIMPe     PRED-0 ;
     ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON JEASIEGOELKIJE
- :e     ATTR-0 ; ! DISIMPL ??
+ :%^DISIMPe     ATTR-0 ;
  :%^DISIMPe     PRED-0 ;
     ije-ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
@@ -1748,10 +1757,22 @@ LEXICON s-s-ODD-1
      ODDCASEOBL ;
   :s ODDCOMP ;
 
+LEXICON A-s-s-ODD-1
+  :a   ATTR-S ;
+  :a   PRED-S ;
+  :a   ODDCASEOBL ;
+  :as  AODDCOMP ;
+
 LEXICON s-s-ODDNOCOMP-1
      ATTR-S ;
      PRED-S ;
      ODDCASEOBL ;
+
+LEXICON A-s-s-ODDhk-1
+ :a    ATTR-S ;
+ :a    PRED-S ;
+ :a    ODDCASEOBL ;
+ :ahk  AODDCOMP ;
 
 LEXICON s-s-ODDhk-1
      ATTR-S ;
@@ -1793,7 +1814,7 @@ LEXICON Ces-Ces-ODD-1
    ODDCOMP ;
    
 LEXICON HUJNIJES 
-:%^DISIMPe     ATTR-S ; 
+ :%^DISIMPe     ATTR-S ; 
  :%^DISIMPe     PRED-0 ;
    ije-ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
@@ -1809,8 +1830,8 @@ LEXICON Cs-Cs-Ce-ODD-1
  ODDCOMP ;
 
 LEXICON Cs-Cs-Ce-ODDNOCOMP-1
-  :%^DISIMP   ATTR-S ;
-  :%^DISIMP   PRED-S ;
+ :%^DISIMP   ATTR-S ;
+ :%^DISIMP   PRED-S ;
  :%^DISIMPe     PRED-0 ;
      ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
@@ -2007,6 +2028,10 @@ LEXICON oes-an-ODD-4
 ! :oek  ODDCOMP ;
 ! +Use/NG:ak  ODDCOMP ;
 
+LEXICON A-h-n-ODD-4
+:a   h-n-NULL-ODD-4 ;
+:ak  AODDCOMP ; 
+
 LEXICON h-n-ODD-4
     h-n-NULL-ODD-4 ;
 :k  ODDCOMP ; 
@@ -2014,6 +2039,12 @@ LEXICON h-n-ODD-4
 LEXICON h-n-ODDNOCOMP-4
  ATTR-H ;
  PRED-N ;
+
+LEXICON A-h-n-NULL-ODD-4
+ :a ATTR-H ;
+ :a PRED-N ;
++Use/NG:a PRED-0 ;
+:ak  AODDCOMP ; 
 
 LEXICON h-n-NULL-ODD-4
  ATTR-H ;
@@ -2295,24 +2326,35 @@ LEXICON EVENCOMP_oe
 
 
 LEXICON ODDCOMP
-+A+Comp+Attr:%>åbpoe ATTRCONT ;
-+A+Comp+Attr:%>abpa ATTRCONT ;
-!+A+Comp+Sg+Nom:%>åbpoe FINAL1 ;
-!+A+Comp+Sg+Nom:%>abpa FINAL1 ;
++A+Comp+Attr:%>åbpoe ATTRCONT ; ! båajoesåbpoe, *båajasåbpoe
++A+Comp+Attr:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
 +A+Comp:%>abp ABPA ;
 +A+Comp:%>åbp ÅBPOE ;
 +A+Superl+Attr:%>ommes ATTRCONT ;
-!+A+Superl+Sg+Nom:%>ommes FINAL1 ;
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
-!+A+Comp+Der1+Der/Dim+Sg+Nom:%>obpe%»tje FINAL1 ;
 +A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
-+A+Superl+Attr:%>ammes ATTRCONT ;
-!+A+Superl+Sg+Nom:%>ammes FINAL1 ;
-:%>ammes OMMES ;
++A+Superl+Attr:%>oms ATTRCONT ; ! Bergsladn "sydlig"
+:%>oms OMMES ; ! ! Bergsland "sydlig"
+! +A+Superl+Attr:%>ammes ATTRCONT ;
+! :%>ammes OMMES ; ! unattested
 +A+Comp+Der1+Der/Dim+Attr:%>abpe%»tje ATTRCONT ;
-!+A+Comp+Der1+Der/Dim+Sg+Nom:%>abpe%»tje FINAL1 ;
 +A+Comp+Der1+Der/Dim:%>abpa%»tj  GÅATETJE ;
+
+LEXICON AODDCOMP
++A+Comp+Attr:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
++A+Comp:%>abp ABPA ;
++A+Superl+Attr:%>ommes ATTRCONT ;
+:%>ommes OMMES ;
++A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
++A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
++A+Superl+Attr:%>oms ATTRCONT ; ! Bergsladn "sydlig"
+:%>oms OMMES ; ! ! Bergsland "sydlig"
+! +A+Superl+Attr:%>ammes ATTRCONT ;
+! :%>ammes OMMES ; ! unattested
++A+Comp+Der1+Der/Dim+Attr:%>abpe%»tje ATTRCONT ;
++A+Comp+Der1+Der/Dim:%>abpa%»tj  GÅATETJE ;
+
 
 LEXICON EVENCOMPCASE
  +Sg+Nom:%>%^COMPDISIMPbe%^DISIMP         FINAL1 ;
@@ -4130,22 +4172,22 @@ LEXICON LAAHKOEH_OMMES
  +Pl+Com+Use/Sub:%>ommes%>%^DISIMPigyjmie FINAL1 ; !
   +Ess:%>ommes%>inie          FINAL1 ;
 
-  +Sg+Nom:%>ammes%^DISIMP         FINAL1 ;
-+Sg+Acc:%>ammese%>%^DISIMPm      FINAL1 ;
-+Sg+Gen:%>ammese%>%^DISIMPn      FINAL1 ;
- +Sg+Ill:%>ammes%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-+Sg+Ine:%>ammes%>isnie           FINAL1 ;
-+Sg+Ela:%>ammes%>istie           FINAL1 ;
-+Sg+Com:%>ammes%>inie            FINAL1 ;
- +Pl+Nom:%>ammes%>%^DISIMPh       FINAL1 ;
- +Pl+Acc:%>ammes%>idie            FINAL1 ;
- +Pl+Gen:%>ammes%>%^DISIMP IGENSUFF ;
- +Pl+Ill:%>ammes%>idie            FINAL1 ;
- +Pl+Ine:%>ammes%>inie            FINAL1 ;
- +Pl+Ela:%>ammes%>ijstie          FINAL1 ;
- +Pl+Com:%>ammes%>%^DISIMPigujmie FINAL1 ;
- +Pl+Com+Use/Sub:%>ammes%>%^DISIMPigyjmie FINAL1 ; !
-  +Ess:%>ammes%>inie          FINAL1 ;
+  +Sg+Nom:%>oms%^DISIMP         FINAL1 ;
++Sg+Acc:%>omse%>%^DISIMPm      FINAL1 ;
++Sg+Gen:%>omse%>%^DISIMPn      FINAL1 ;
+ +Sg+Ill:%>oms%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++Sg+Ine:%>oms%>isnie           FINAL1 ;
++Sg+Ela:%>oms%>istie           FINAL1 ;
++Sg+Com:%>oms%>inie            FINAL1 ;
+ +Pl+Nom:%>oms%>%^DISIMPh       FINAL1 ;
+ +Pl+Acc:%>oms%>idie            FINAL1 ;
+ +Pl+Gen:%>oms%>%^DISIMP IGENSUFF ;
+ +Pl+Ill:%>oms%>idie            FINAL1 ;
+ +Pl+Ine:%>oms%>inie            FINAL1 ;
+ +Pl+Ela:%>oms%>ijstie          FINAL1 ;
+ +Pl+Com:%>oms%>%^DISIMPigujmie FINAL1 ;
+ +Pl+Com+Use/Sub:%>oms%>%^DISIMPigyjmie FINAL1 ; !
+  +Ess:%>oms%>inie          FINAL1 ;
 
 
 LEXICON IGENSUFF
