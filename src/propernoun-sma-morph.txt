@@ -310,19 +310,44 @@ LEXICON UENAME-mal
 LEXICON UENAME
 SNAME_NIEJTE ;
 
+LEXICON UNAME-plc
++N+Prop+Plc: UNAME ;
+
+LEXICON UNAME-ani
++N+Prop+Ani: UNAME ;
+
+LEXICON UNAME-org
++N+Prop+Org: UNAME ;
+
+LEXICON UNAME-sur
++N+Prop+Sur: UNAME ;
+
+LEXICON UNAME-surplc
++N+Prop+Sur: UNAME ;
++N+Prop+Plc: UNAME ;
+
+LEXICON UNAME-obj
++N+Prop+Obj: UNAME ;
+
+LEXICON UNAME-mal
++N+Prop+Mal: UNAME ;
+
+LEXICON UNAME-fem
++N+Prop+Fem: UNAME ;
+
 LEXICON UNAME
- +N+Prop+Plc: VNAME ; !until we get answer from SGM
+ VNAME ; !until we get answer from SGM
  +Use/Sub: UNAME_EVEN ; ! !until we get answer from SGM
 
 LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
- +N+Prop+Plc+Sg+Nom+Use/Sub:          FINAL1 ;  ! !until we get answer from SGM
- +N+Prop+Plc+Sg+Nom+Use/Sub:          RHyph ;  ! !until we get answer from SGM
- +N+Prop+Plc+Sg+Acc+Use/Sub:ve%>m       FINAL1 ; ! !until we get answer from SGM
- +N+Prop+Plc+Sg+Gen+Use/Sub:ve%>n       FINAL1 ; ! !until we get answer from SGM
- +N+Prop+Plc+Sg+Ill+Use/Sub:ve%>se       FINAL1 ; ! !until we get answer from SGM
- +N+Prop+Plc+Sg+Ine+Use/Sub:ve%>sne      FINAL1 ; ! !until we get answer from SGM
- +N+Prop+Plc+Sg+Ela+Use/Sub:ve%>ste      FINAL1 ; ! !until we get answer from SGM
- +N+Prop+Plc+Sg+Com+Use/Sub:ve%>jne      FINAL1 ; ! !until we get answer from SGM
+ +Sg+Nom+Use/Sub:          FINAL1 ;  ! !until we get answer from SGM
+ +Sg+Nom+Use/Sub:          RHyph ;  ! !until we get answer from SGM
+ +Sg+Acc+Use/Sub:ve%>m       FINAL1 ; ! !until we get answer from SGM
+ +Sg+Gen+Use/Sub:ve%>n       FINAL1 ; ! !until we get answer from SGM
+ +Sg+Ill+Use/Sub:ve%>se       FINAL1 ; ! !until we get answer from SGM
+ +Sg+Ine+Use/Sub:ve%>sne      FINAL1 ; ! !until we get answer from SGM
+ +Sg+Ela+Use/Sub:ve%>ste      FINAL1 ; ! !until we get answer from SGM
+ +Sg+Com+Use/Sub:ve%>jne      FINAL1 ; ! !until we get answer from SGM
   
 LEXICON ZEENAME
  +N+Prop+Plc+Sg+Nom:e          FINAL1 ;
