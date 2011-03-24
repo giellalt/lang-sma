@@ -1536,14 +1536,14 @@ LEXICON ie-ie-EVENNOCOMP-1
        
 LEXICON es-es-EVEN-1
   :e   ATTR-S ;
-  :es ODDCASE ; ! veelkesem
- :e  EVENCOMP ; ! check this! stamme 
+  :e  PRED-S ; ! veelkes
+  :es ODDCASEOBL ; ! veelkesem
+  :e  EVENCOMP ; ! check this! stamme 
 
 LEXICON es-es-EVENNOCOMP-1
-  :e   ATTR-S ;
-!  :e   PRED-S ; !oddcase
-!       eCASE ; ! tentatively
-  :es ODDCASE ; ! veelkesem
+  :e  ATTR-S ;
+  :e  PRED-S ; ! veelkes
+  :es ODDCASEOBL ; ! veelkesem
 
 
 LEXICON ies-ies-EVENNOCOMP-1
@@ -1875,7 +1875,7 @@ LEXICON hts-hts-ODDNOCOMP-1
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
   :s  ODDCASEOBL ;
- :%^DISIMPe     PRED-0 ;
+ :%^DISIMPe     PRED-0 ; ! hiejjehte
 +A+SgNomCmp:%^DISIMPs            R ;
 
 LEXICON hts-hts-ODDhtCOMP-1
@@ -2334,10 +2334,6 @@ LEXICON ODDCOMP
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
-+A+Superl+Attr:%>oms ATTRCONT ; ! Bergsladn "sydlig"
-:%>oms OMMES ; ! ! Bergsland "sydlig"
-! +A+Superl+Attr:%>ammes ATTRCONT ;
-! :%>ammes OMMES ; ! unattested
 +A+Comp+Der1+Der/Dim+Attr:%>abpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dim:%>abpa%»tj  GÅATETJE ;
 
@@ -2348,10 +2344,6 @@ LEXICON AODDCOMP
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
-+A+Superl+Attr:%>oms ATTRCONT ; ! Bergsladn "sydlig"
-:%>oms OMMES ; ! ! Bergsland "sydlig"
-! +A+Superl+Attr:%>ammes ATTRCONT ;
-! :%>ammes OMMES ; ! unattested
 +A+Comp+Der1+Der/Dim+Attr:%>abpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dim:%>abpa%»tj  GÅATETJE ;
 
@@ -4172,22 +4164,6 @@ LEXICON LAAHKOEH_OMMES
  +Pl+Com+Use/Sub:%>ommes%>%^DISIMPigyjmie FINAL1 ; !
   +Ess:%>ommes%>inie          FINAL1 ;
 
-!!!   +Sg+Nom:%>oms%^DISIMP         FINAL1 ;
-!!! +Sg+Acc:%>omse%>%^DISIMPm      FINAL1 ;
-!!! +Sg+Gen:%>omse%>%^DISIMPn      FINAL1 ;
-!!!  +Sg+Ill:%>oms%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-!!! +Sg+Ine:%>oms%>isnie           FINAL1 ;
-!!! +Sg+Ela:%>oms%>istie           FINAL1 ;
-!!! +Sg+Com:%>oms%>inie            FINAL1 ;
-!!!  +Pl+Nom:%>oms%>%^DISIMPh       FINAL1 ;
-!!!  +Pl+Acc:%>oms%>idie            FINAL1 ;
-!!!  +Pl+Gen:%>oms%>%^DISIMP IGENSUFF ;
-!!!  +Pl+Ill:%>oms%>idie            FINAL1 ;
-!!!  +Pl+Ine:%>oms%>inie            FINAL1 ;
-!!!  +Pl+Ela:%>oms%>ijstie          FINAL1 ;
-!!!  +Pl+Com:%>oms%>%^DISIMPigujmie FINAL1 ;
-!!!  +Pl+Com+Use/Sub:%>oms%>%^DISIMPigyjmie FINAL1 ; !
-!!!   +Ess:%>oms%>inie          FINAL1 ;
 
 
 LEXICON IGENSUFF
