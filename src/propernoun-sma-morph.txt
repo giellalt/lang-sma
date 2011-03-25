@@ -737,13 +737,20 @@ LEXICON CNAME_ODD_PL
   +Com:%>igujmie FINAL1 ;
  +Com+Use/Sub:%>igyjmie FINAL1 ; !
 
+LEXICON CNAME_EVEN-sur ! generates
++N+Prop+Sur: CNAME_EVENLEX ;
 
+LEXICON CNAME_EVEN-mal ! generates
++N+Prop+Mal: CNAME_EVENLEX ;
 
-LEXICON CNAME_EVEN ! Names ending in stressless vowel
-+N+Prop+Plc+Sg: CNAME_EVEN_SG ;
-+N+Prop+Plc+Pl: NIEJTE_PL ;
-+N+Prop+Plc:    EVEN_ESS ;
-+N+Prop+Plc+Attr: FINAL1 ;
+LEXICON CNAME_EVEN ! Does not generate
++N+Prop+Plc: CNAME_EVENLEX ;
+
+LEXICON CNAME_EVENLEX
++Sg: CNAME_EVEN_SG ;
++Pl: NIEJTE_PL ;
+     EVEN_ESS ;
++Attr: FINAL1 ;
 
   LEXICON CNAME_EVEN_SG
   +Nom:          FINAL1 ;
