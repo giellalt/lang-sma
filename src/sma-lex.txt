@@ -1962,8 +1962,6 @@ LEXICON Ces-Ce-Ces-Ce-ODD-3  !as Ces-Ces-Ce-ODD, but with ATTR-0
 LEXICON Ces-Ces-Ce-ODD-3
 :%^DISIMPe     ATTR-S;   !<=====  gir Attr -s
 :%^DISIMPe     PRED-S;
-!+Use/NG:%^DISIMPe     PRED-0; ! Cf. next line.
-!+A+Sg+Nom:%^DISIMPe         FINAL1 ; 
    ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
@@ -1975,11 +1973,11 @@ LEXICON DÅAJMIJES
    ije-ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
-LEXICON GUALIJES
+LEXICON GUALIJES ! One member
 :%^DISIMPe     ATTR-S;   !<=====  gir Attr -s
    ije-ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
-   ODDCOMP ;
+
 
 ! Not used, hence temporarily outcommented
 ! LEXICON Cs-Cs-Ce-ODD-3
@@ -2064,11 +2062,15 @@ LEXICON oeh-an-ODDNOCOMP-4
       PRED-AN ;
 
 LEXICON oeh-oeh-an-ODD-4 ! Attr=oeh, Pred=oeh og an 
+      oeh-oeh-an-ODDNOCOMP-4 ;
+:ahk  ODDCOMP ;
+:oehk ODDCOMP ; 
+
+LEXICON oeh-oeh-an-ODDNOCOMP-4 ! Attr=oeh, Pred=oeh og an 
 :oe ATTR-H ;
 :oe PRED-H ;
     PRED-AN ; 
-:ahk  ODDCOMP ;
-:oehk ODDCOMP ; 
+
 
 LEXICON ah-ah-an-ODD-4   
 :a ATTR-H ;
@@ -2328,25 +2330,25 @@ LEXICON EVENCOMP_oe
 
 LEXICON ODDCOMP
 +A+Comp+Attr:%>åbpoe ATTRCONT ; ! båajoesåbpoe, *båajasåbpoe
-+A+Comp+Attr:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
-+A+Comp:%>abp ABPA ;
++A+Comp+Attr+Use/NG:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
++A+Comp+Use/NG:%>abp ABPA ;
 +A+Comp:%>åbp ÅBPOE ;
 +A+Superl+Attr:%>ommes ATTRCONT ;
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
-+A+Comp+Der1+Der/Dim+Attr:%>abpe%»tje ATTRCONT ;
-+A+Comp+Der1+Der/Dim:%>abpa%»tj  GÅATETJE ;
++A+Comp+Der1+Der/Dim+Attr+Use/NG:%>abpe%»tje ATTRCONT ;
++A+Comp+Der1+Der/Dim+Use/NG:%>abpa%»tj  GÅATETJE ;
 
 LEXICON AODDCOMP
-+A+Comp+Attr:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
-+A+Comp:%>abp ABPA ;
++A+Comp+Attr+Use/NG:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
++A+Comp+Use/NG:%>abp ABPA ;
 +A+Superl+Attr:%>ommes ATTRCONT ;
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
-+A+Comp+Der1+Der/Dim+Attr:%>abpe%»tje ATTRCONT ;
-+A+Comp+Der1+Der/Dim:%>abpa%»tj  GÅATETJE ;
++A+Comp+Der1+Der/Dim+Attr+Use/NG:%>abpe%»tje ATTRCONT ;
++A+Comp+Der1+Der/Dim+Use/NG:%>abpa%»tj  GÅATETJE ;
 
 
 LEXICON EVENCOMPCASE
@@ -4131,21 +4133,21 @@ LEXICON LAAHKOEH_ÅBPOE
  +Pl+Com:%>åbpoe%>jgujmie FINAL1 ;
   +Ess:%>åbpo%>jne         FINAL1 ;
   
-  +Sg+Nom:%>abpa          FINAL1 ;
-  +Sg+Acc:%>abpa%>m       FINAL1 ;
-  +Sg+Gen:%>abpa%>n       FINAL1 ;
-  +Sg+Ill:%>abpe%>se      FINAL1 ;
-  +Sg+Ine:%>abpe%>sne     FINAL1 ;
-  +Sg+Ela:%>abpe%>ste     FINAL1 ;
-  +Sg+Com:%>abp%>ine      FINAL1 ;
-  +Ess:%>abp%>ine         FINAL1 ;
-  +Pl+Nom:%>abpa%>h       FINAL1 ;
-  +Pl+Acc:%>abp%>ide      FINAL1 ;
-  +Pl+Gen:%>abpa%>j       FINAL1 ;
-  +Pl+Ill:%>abp%>ide      FINAL1 ;
-  +Pl+Ine:%>abp%>ine      FINAL1 ;
-  +Pl+Ela:%>abp%>ijste    FINAL1 ;
-  +Pl+Com:%>abpa%>jgujmie FINAL1 ;
+  +Sg+Nom+Use/NG:%>abpa          FINAL1 ;
+  +Sg+Acc+Use/NG:%>abpa%>m       FINAL1 ;
+  +Sg+Gen+Use/NG:%>abpa%>n       FINAL1 ;
+  +Sg+Ill+Use/NG:%>abpe%>se      FINAL1 ;
+  +Sg+Ine+Use/NG:%>abpe%>sne     FINAL1 ;
+  +Sg+Ela+Use/NG:%>abpe%>ste     FINAL1 ;
+  +Sg+Com+Use/NG:%>abp%>ine      FINAL1 ;
+  +Ess+Use/NG:%>abp%>ine         FINAL1 ;
+  +Pl+Nom+Use/NG:%>abpa%>h       FINAL1 ;
+  +Pl+Acc+Use/NG:%>abp%>ide      FINAL1 ;
+  +Pl+Gen+Use/NG:%>abpa%>j       FINAL1 ;
+  +Pl+Ill+Use/NG:%>abp%>ide      FINAL1 ;
+  +Pl+Ine+Use/NG:%>abp%>ine      FINAL1 ;
+  +Pl+Ela+Use/NG:%>abp%>ijste    FINAL1 ;
+  +Pl+Com+Use/NG:%>abpa%>jgujmie FINAL1 ;
 
 LEXICON LAAHKOEH_OMMES
   +Sg+Nom:%>ommes%^DISIMP         FINAL1 ;
