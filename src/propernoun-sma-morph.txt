@@ -689,14 +689,42 @@ LEXICON JÆLLAN ! as MAANA, but with Prop tag
 +N+Prop+Plc:    EVEN_ESS ;
 +N+Prop+Plc+Attr:a%>n FINAL1 ;
 
+LEXICON PERS_SNAME_NIEJTE-mal
++N+Prop+Mal: PERS_SNAME_NIEJTE ;
++N+Prop+Mal+Der1+Der/Dim+N:e%»tj   GÅATETJE ; !Åvletje
 
+LEXICON PERS_SNAME_NIEJTE-fem
++N+Prop+Fem: PERS_SNAME_NIEJTE ;
++N+Prop+Fem+Der1+Der/Dim+N:e%»tj   GÅATETJE ; !Åvletje
+
+LEXICON PERS_SNAME_NIEJTE-ani
++N+Prop+Ani: PERS_SNAME_NIEJTE ;
 
 LEXICON PERS_SNAME_NIEJTE
-+N+Prop+Plc: SNAME_NIEJTE ;
-+N+Prop+Der1+Der/Dim+N:e%»tj   GÅATETJE ; !Åvletje
+ SNAME_NIEJTE ;
+
 
 LEXICON SNAME_NIEJTE-plc
 +N+Prop+Plc: SNAME_NIEJTE ;
+
+LEXICON SNAME_NIEJTE-ani
++N+Prop+Ani: SNAME_NIEJTE ;
+
+LEXICON SNAME_NIEJTE-mal
++N+Prop+Mal: SNAME_NIEJTE ;
+
+LEXICON SNAME_NIEJTE-fem
++N+Prop+Fem: SNAME_NIEJTE ;
+
+LEXICON SNAME_NIEJTE-sur
++N+Prop+Sur: SNAME_NIEJTE ;
+
+LEXICON SNAME_NIEJTE-org
++N+Prop+Org: SNAME_NIEJTE ;
+
+LEXICON SNAME_NIEJTE-obj
++N+Prop+Obj: SNAME_NIEJTE ;
+
 
 LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
 +Sg: NIEJTE_SG ;
@@ -704,6 +732,33 @@ LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
 +Pl: NIEJTE_PL ;
 :    EVEN_ESS ;
 +Attr:e FINAL1 ;
+
+LEXICON SNAME_NIEJTE-LOAN ! as NIEJTE, but with Prop tag
+  +Sg+Nom:e          FINAL1 ;
+  +Sg+Nom+PxSg1+Use/Sub:%>eme FINAL1 ;
+  +Sg+Nom+PxSg2+Use/Sub:%>edh FINAL1 ;
+  +Sg+Nom+PxSg3+Use/Sub:e%>se FINAL1 ;
+  +Sg+Acc+Use/Sub:e%>m       FINAL1 ;
+  +Sg+Acc+PxSg1+Use/Sub:%>eme FINAL1 ;
+  +Sg+Acc+PxSg1+Use/NG+Use/Sub:%>emem FINAL1 ;
+  +Sg+Acc+PxSg2+Use/Sub:%>emdh FINAL1 ;
+  +Sg+Acc+PxSg3+Use/Sub:e%>mse FINAL1 ;
+  +Sg+Gen+Use/Sub:e%>n       FINAL1 ;
+  +Sg+Gen+PxSg1+Use/Sub:%>ene FINAL1 ;
+  +Sg+Ill+Use/Sub:e%>se      FINAL1 ;
+  +Sg+Ill+PxSg1+Use/Sub:%>esanne FINAL1 ;
+  +Sg+Ill+PxSg2+Use/Sub:%>esadth FINAL1 ;
+  +Sg+Ine+Use/Sub:e%>sne     FINAL1 ;
+  +Sg+Ela+Use/Sub:e%>ste     FINAL1 ;
+  +Sg+Ela+PxSg1+Use/Sub:%>estanne FINAL1 ;
+  +Sg+Ela+PxSg1+Use/NG+Use/Sub:%>estadth FINAL1 ;
+  +Sg+Com+Use/Sub:%>ine      FINAL1 ;
+  +Sg+Com+PxSg2+Use/Sub:%>enadth FINAL1 ;
++Sg+Nom:e          RHyph ;
++Pl+Use/Sub: NIEJTE_PL ;
++Use/Sub:    EVEN_ESS ;
++Attr:e FINAL1 ;
+
 
 LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
 +N+Prop+Plc+Sg+Nom:i%>n          FINAL1 ;
