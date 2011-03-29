@@ -1688,16 +1688,29 @@ LEXICON IJLE_LOAN
 ! ODD-stems (odd stem declension)
 ! ===============================
 
+! type 0 (attr only)
+
+LEXICON ATTR-es-s ! aajtijes
++A+Attr:es FINAL1 ;
++A+Attr:s FINAL1 ;
+
+
 ! type 1
 
 LEXICON LOHKIJES ! Meeting: attr = lohkijs, lohkijes; !! pred = lohkije.
-:%^DISIMPe     ATTR-S;   ! +Attr lohkijes
-:%^DISIMP   ATTR-S ;     ! +Attr lohkijs
+DÅAJMIJES ;
+
+!! LOHKIJES and DÅAJMIJES to be unified (?)
+!! (for ref: which is the following)
+!! :%^DISIMPe     ATTR-S;   ! +Attr lohkijes
+!! :%^DISIMP   ATTR-S ;     ! +Attr lohkijs
+!!  ije-ODDCASE ;
+!! +A+SgNomCmp:%^DISIMPe            R ;
+
 
 LEXICON BÅETIJE !bårreske
  :%^DISIMPe     ATTR-0 ;
- :%^DISIMPe     PRED-0 ;
-    ije-ODDCASEOBL ;
+    ije-ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON NULL-NULL-ODD-1
@@ -1850,8 +1863,8 @@ LEXICON Cs-Cs-Ce-ODDNOCOMP-1
 LEXICON VOEJIJS
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
-     ije-ODDCASEOBL ;
  :%^DISIMPe     PRED-0 ;
+     ije-ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
 
@@ -1976,17 +1989,15 @@ LEXICON Ces-Ces-Ce-ODD-3
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
    
-
-
 LEXICON DÅAJMIJES
-:%^DISIMPe     ATTR-S;   !<=====  gir Attr -s
+:%^DISIMPe     ATTR-S;  ! LMM: dåajmijes
+:%^DISIMP     ATTR-S;   ! LMM: dåajmijs
    ije-ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
-LEXICON GUALIJES ! One member
-:%^DISIMPe     ATTR-S;   !<=====  gir Attr -s
-   ije-ODDCASE ;
-+A+SgNomCmp:%^DISIMPe            R ;
+LEXICON GUALIJES 
+DÅAJMIJES ; ! attr -es, -s, pred -e
+ODDCOMP ;
 
 
 ! Not used, hence temporarily outcommented
@@ -2002,9 +2013,8 @@ LEXICON GUALIJES ! One member
 LEXICON Ces-Ces-Ce-ODDNOCOMP-3
 :%^DISIMPe     ATTR-S;
 :%^DISIMPe     PRED-S;
-!+Use/NG:%^DISIMPe     PRED-0;
+:%^DISIMPe     PRED-0 ;
    ODDCASEOBL ;
- :%^DISIMPe     PRED-0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON hks-hke-hks-hke-ODD-3
