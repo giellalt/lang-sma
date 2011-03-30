@@ -880,44 +880,37 @@ FrP ACRO ;
 ! ä ACRO ;
 ! ö ACRO ;
 
-
-
-LEXICON ACRO               ! Here we add the POS tag
+LEXICON ACRO              ! Here we add the POS tag
 +N+ACR: acroconnector ;
 
-LEXICON acroconnector      ! Here comes a set of possible symbols to
- +Use/Sub: acrosuff ;!         ! put between the abbreviation and its suffix
- ! %::%: acrosuff ;             ! The lexica are split in order to avoid the POS
-:%>%: acrosuff ; ! from sme
- +Use/Sub:' acrosuff ;!         ! tag for other symbols using the acroconnector
- +Use/Sub:%` acrosuff ;!         ! lexicon. (cf. the punct-sme-lex.txt file)
-:%> RHyph ;
-    acronull    ;
+LEXICON acroconnector     ! Here comes a set of possible symbols to
+ +Use/Sub:%>   acrosuff ; ! put between the abbreviation and its suffix
+ +Use/Sub:%>'  acrosuff ; ! No POS tag here in order to avoid the POS
+ +Use/Sub:%>%´ acrosuff ; ! tag for non-ACRO entries using the acroconnector
+ +Use/Sub:%>%` acrosuff ; ! inflection lexicon. (cf. the punct-sme-lex.txt file)
+ :%>%:         acrosuff ;
+ :%>           acronull ; ! SgNom only in sma
+               RHyph    ; ! Acros compound with a hyphen
 
 LEXICON acronull
-+Sg+Nom:%> # ;
-+Sg+Gen:%> # ;
-+Sg+Acc:%> # ;
-
-
++Sg+Nom: # ;
 
 LEXICON acrosuff
-+Sg+Gen+Use/Sub:en # ; 
-+Sg+Acc+Use/Sub:em # ; 
++Sg+Gen+Use/Sub:en   # ; 
++Sg+Acc+Use/Sub:em   # ; 
 +Sg+Ill+Use/Sub:asse # ;
 
-+Sg+Nom: # ;
-+Sg+Gen:n # ;
-+Sg+Acc:m # ;
-+Sg+Ill:se # ;
-+Sg+Ine:sne # ;   ! NRK:sne
-+Sg+Ela:ste # ;   ! NRK:ste
-+Sg+Com:ine # ;
-+Ess:ine # ;	! NBR:ine
-+Pl+Nom:h # ;  
-+Pl+Gen:j # ; 
-+Pl+Acc:ide # ; 
-+Pl+Ill:ide # ; 
-+Pl+Ine:ine # ; 
-+Pl+Ela:jste # ; 
++Sg+Gen:n       # ;
++Sg+Acc:m       # ;
++Sg+Ill:se      # ;
++Sg+Ine:sne     # ;   ! NRK:sne
++Sg+Ela:ste     # ;   ! NRK:ste
++Sg+Com:ine     # ;
++Pl+Nom:h       # ;  
++Pl+Gen:j       # ; 
++Pl+Acc:ide     # ; 
++Pl+Ill:ide     # ; 
++Pl+Ine:ine     # ; 
++Pl+Ela:jste    # ; 
 +Pl+Com:jgujmie # ; 
++Ess:ine        # ;	! NBR:ine
