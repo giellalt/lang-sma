@@ -44,6 +44,9 @@
 LEXICON VNAME_ODD-plc
 +N+Prop+Plc: VNAME_ODD ;
 
+LEXICON VNAME_ODD-LOAN-plc
+VNAME_ODD-LOAN ;
+
 LEXICON VNAME_ODD-LOAN
 +N+Prop+Plc+Sg+Nom:e%^DISIMP         FINAL1 ;
 +N+Prop+Plc+Sg+Nom:e%^DISIMP         RHyph ;
@@ -77,6 +80,9 @@ LEXICON VNAME_ODD_NO_DISIMPH-plc
 
 LEXICON VNAME_ODD_NO_DISIMPH-org
 +N+Prop+Org: VNAME_ODD_NO_DISIMPH ;
+
+LEXICON VNAME_ODD_NO_DISIMPH-LOAN-plc
+VNAME_ODD_NO_DISIMPH-LOAN ;
 
 LEXICON VNAME_ODD_NO_DISIMPH-LOAN
 +N+Prop+Plc+Sg+Nom:e         FINAL1 ;
@@ -449,6 +455,9 @@ LEXICON SNAME_ODD-fem
 LEXICON SNAME_ODD ! Southern Sami names
 VNAME_ODD ;
 
+LEXICON VAARATJE-plc
+VAARATJE ;
+
 LEXICON VAARATJE !names vowel expansion in all cases
  +N+Prop+Plc+Sg+Nom:e         FINAL1 ;
  +N+Prop+Plc+Sg+Nom:e         RHyph ;
@@ -738,6 +747,9 @@ LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
 :    EVEN_ESS ;
 +Attr:e FINAL1 ;
 
+LEXICON SNAME_NIEJTE-LOAN-plc
+SNAME_NIEJTE-LOAN ; ! To be fixed
+
 LEXICON SNAME_NIEJTE-LOAN ! as NIEJTE, but with Prop tag
   +N+Prop+Plc+Sg+Nom:e          FINAL1 ;
   +N+Prop+Plc+Sg+Nom+PxSg1+Use/Sub:%>eme FINAL1 ;
@@ -839,7 +851,20 @@ LEXICON NAME_KONTO
   +Ine:%>isnie           FINAL1 ;
   +Ela:%>istie           FINAL1 ;
   +Com:%>inie            FINAL1 ;
-  
+
+LEXICON CNAME_ODD-mal
++N+Prop+Mal+Sg: CNAME_ODD_SG ;  
+
+LEXICON CNAME_ODD-fem
++N+Prop+Fem+Sg: CNAME_ODD_SG ;  
+
+LEXICON CNAME_ODD-plc
++N+Prop+Plc+Sg: CNAME_ODD_SG ;  
+
+LEXICON CNAME_ODD-sur
++N+Prop+Sur+Sg: CNAME_ODD_SG ;  
+
+
  LEXICON CNAME_ODD ! Names ending in stressless vowel
  +N+Prop+Plc+Sg: CNAME_ODD_SG ; ! name special
  +N+Prop+Plc+Pl: CNAME_ODD_PL ;     ! name special
@@ -872,6 +897,9 @@ LEXICON CNAME_EVEN-sur ! generates
 LEXICON CNAME_EVEN-mal ! generates
 +N+Prop+Mal: CNAME_EVENLEX ;
 
+LEXICON CNAME_EVEN-org
++N+Prop+Org: CNAME_EVENLEX ;
+
 LEXICON CNAME_EVEN ! Does not generate
 +N+Prop+Plc: CNAME_EVENLEX ;
 
@@ -893,10 +921,10 @@ LEXICON CNAME_EVENLEX
 
 
 LEXICON SAAMI_CNAME_EVEN ! Names ending in stressless vowel
-+N+Prop+Plc+Sg: SAAMI_CNAME_EVEN_SG ;
-+N+Prop+Plc+Pl: NIEJTE_PL ;
-+N+Prop+Plc:    EVEN_ESS ;
-+N+Prop+Plc+Attr: FINAL1 ;
++N+Prop+Sur+Sg: SAAMI_CNAME_EVEN_SG ;
++N+Prop+Sur+Pl: NIEJTE_PL ;
++N+Prop+Sur:    EVEN_ESS ;
++N+Prop+Sur+Attr: FINAL1 ;
 
   LEXICON SAAMI_CNAME_EVEN_SG
   +Nom:          FINAL1 ;
