@@ -1700,14 +1700,6 @@ LEXICON ATTR-es-s ! aajtijes
 LEXICON LOHKIJES ! Meeting: attr = lohkijs, lohkijes; !! pred = lohkije.
 DÅAJMIJES ;
 
-!! LOHKIJES and DÅAJMIJES to be unified (?)
-!! (for ref: which is the following)
-!! :%^DISIMPe     ATTR-S;   ! +Attr lohkijes
-!! :%^DISIMP   ATTR-S ;     ! +Attr lohkijs
-!!  ije-ODDCASE ;
-!! +A+SgNomCmp:%^DISIMPe            R ;
-
-
 LEXICON BÅETIJE !bårreske
  :%^DISIMPe     ATTR-0 ;
     ije-ODDCASE ;
@@ -1717,11 +1709,6 @@ LEXICON NULL-NULL-ODD-1
      ATTR-0 ;
      PRED-0 ;
 
-LEXICON A-h-h-ODD-1
- :a   ATTR-H ;
- :a   PRED-H ;
- :ahk AODDCOMP ; ! Wait: gaastoe - oe-NOUN
-
 LEXICON h-h-ODD-1
      ATTR-H ;
      PRED-H ;
@@ -1730,16 +1717,11 @@ LEXICON h-h-ODD-1
 LEXICON h-h-ODDNOCOMP-1
      ATTR-H ;
      PRED-H ;
-     
-LEXICON Cesk-Cesk-ODDNOCOMP-1
-     ATTR-H ;
-     PRED-H ;
 
 LEXICON hth-hth-ODD-1
  :%^DISIMP    ATTR-H ;
  :%^DISIMP    PRED-H ;
     ODDCASEOBL ;
-+A+Sg+Nom:%^DISIMPh         FINAL1 ;
 +A+SgNomCmp:%^DISIMPh            R ;
     ODDCOMP ;
 
@@ -1781,22 +1763,10 @@ LEXICON s-s-ODD-1
      ODDCASEOBL ;
   :s ODDCOMP ;
 
-LEXICON A-s-s-ODD-1
-  :a   ATTR-S ;
-  :a   PRED-S ;
-  :a   ODDCASEOBL ;
-  :as  AODDCOMP ;
-
 LEXICON s-s-ODDNOCOMP-1
      ATTR-S ;
      PRED-S ;
      ODDCASEOBL ;
-
-LEXICON A-s-s-ODDhk-1
- :a    ATTR-S ;
- :a    PRED-S ;
- :a    ODDCASEOBL ;
- :ahk  AODDCOMP ;
 
 LEXICON s-s-ODDhk-1
      ATTR-S ;
@@ -2051,10 +2021,6 @@ LEXICON s-n-ODDNOCOMP-4
    ATTR-S ;
    PRED-N ;
 
-LEXICON A-h-n-ODD-4
-:a   h-n-NULL-ODD-4 ;
-!:ak  AODDCOMP ; 
-
 LEXICON h-n-ODD-4
     h-n-NULL-ODD-4 ;
 !:k  ODDCOMP ; 
@@ -2063,13 +2029,7 @@ LEXICON h-n-ODDNOCOMP-4
  ATTR-H ;
  PRED-N ;
 
-LEXICON A-h-n-NULL-ODD-4
- :a ATTR-H ;
- :a PRED-N ;
-+Use/NG:a PRED-0 ;
-:ak  AODDCOMP ; 
-
-LEXICON h-n-NULL-ODD-4
+ LEXICON h-n-NULL-ODD-4
  ATTR-H ;
  PRED-N ;
 +Use/NG: PRED-0 ;
