@@ -826,8 +826,16 @@ LEXICON AEKTUVE
 +N+Prop+Plc+Attr:uve FINAL1 ;
 
 LEXICON LAANTE
-land CNAME_EVEN ; ! Småland
+LAANTE-plc ;
+
+
+LEXICON LAANTE-plc
+land+N+Prop+Plc: CNAME_EVENLEX ; ! Småland
 laante+N+Prop+Plc:laant SNAME_NIEJTE ; ! Smålaante
+
+LEXICON LAANTE-sur
+land+N+Prop+Sur: CNAME_EVENLEX ; ! Småland
+laante+N+Prop+Sur:laant SNAME_NIEJTE ; ! Smålaante
 
 LEXICON NAME_KONTO
 +N+Prop: KONTODECL ;
@@ -919,6 +927,19 @@ LEXICON CNAME_EVENLEX
   +Ela:e%>ste     FINAL1 ;
   +Com:%>ine      FINAL1 ;
 
+
+LEXICON CNAME_EVEN-LOAN
++N+Prop+Plc+Sg+Nom:          FINAL1 ;
++N+Prop+Plc+Sg+Nom:          RHyph ;
++N+Prop+Plc+Sg+Acc+Use/Sub:e%>m       FINAL1 ;
++N+Prop+Plc+Sg+Gen+Use/Sub:e%>n       FINAL1 ;
++N+Prop+Plc+Sg+Ill+Use/Sub:e%>se      FINAL1 ;
++N+Prop+Plc+Sg+Ine+Use/Sub:e%>sne     FINAL1 ;
++N+Prop+Plc+Sg+Ela+Use/Sub:e%>ste     FINAL1 ;
++N+Prop+Plc+Sg+Com+Use/Sub:%>ine      FINAL1 ;
++N+Prop+Plc+Pl+Use/Sub: NIEJTE_PL ;
++N+Prop+Plc+Use/Sub:     EVEN_ESS ;
++N+Prop+Plc+Attr: FINAL1 ;
 
 LEXICON SAAMI_CNAME_EVEN ! Names ending in stressless vowel
 +N+Prop+Sur+Sg: SAAMI_CNAME_EVEN_SG ;
