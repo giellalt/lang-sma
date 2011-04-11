@@ -874,6 +874,18 @@ LEXICON CNAME_ODD-plc
 LEXICON CNAME_ODD-sur
 +N+Prop+Sur+Sg: CNAME_ODD_SG ;  
 
+LEXICON CNAME_ODD-obj
++N+Prop+Sur+Obj: CNAME_ODD_SG ;  
+
+LEXICON CNAME_ODD-ani
++N+Prop+Sur+Ani: CNAME_ODD_SG ;  
+
+LEXICON CNAME_ODD-org
++N+Prop+Sur+Org: CNAME_ODD_SG ;  
+
+LEXICON CNAME_ODD-surplc
++N+Prop+Sur+Sg: CNAME_ODD_SG ;  
++N+Prop+Plc+Sg: CNAME_ODD_SG ;  
 
  LEXICON CNAME_ODD ! Names ending in stressless vowel
  +N+Prop+Plc+Sg: CNAME_ODD_SG ; ! name special
@@ -900,6 +912,20 @@ LEXICON CNAME_ODD_PL
   +Ela:%>ijstie          FINAL1 ;
   +Com:%>igujmie FINAL1 ;
  +Com+Use/Sub:%>igyjmie FINAL1 ; !
+ 
+ LEXICON CNAME_ODD-LOAN ! Names ending in stressless vowel
+ +N+Prop+Plc+Sg+Nom:         FINAL1 ;
+ +N+Prop+Plc+Sg+Nom:         RHyph ;
+ +N+Prop+Plc+Sg+Acc+Use/Sub:e%>m      FINAL1 ;
+ +N+Prop+Plc+Sg+Gen+Use/Sub:e%>n      FINAL1 ;
+ +N+Prop+Plc+Sg+Ill+Use/Sub:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+ +N+Prop+Plc+Sg+Ine+Use/Sub:%>isnie           FINAL1 ;
+ +N+Prop+Plc+Sg+Ela+Use/Sub:%>istie           FINAL1 ;
+ +N+Prop+Plc+Sg+Com+Use/Sub:%>inie            FINAL1 ;
+ +N+Prop+Plc+Pl+Use/Sub: CNAME_ODD_PL ;     ! name special
+ +N+Prop+Plc+Use/Sub:    N_ODD_ESS ;    ! normal noun
+ +N+Prop+Plc+Attr: FINAL1 ;     ! name special
+
 
 LEXICON CNAME_EVEN-sur ! generates
 +N+Prop+Sur: CNAME_EVENLEX ;
