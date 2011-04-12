@@ -761,7 +761,7 @@ twol-test-norm: twol-norm twol-extract
 # Make sure there are up-to-date twol binaries:
 twol: twol-desc twol-norm
 twol-desc:
-	@cd $(SRCDIR)/ && $(MAKE) GTLANG=sma twol-descriptive
+	@cd $(SRCDIR)/ && $(MAKE) GTLANG=sma twol
 twol-norm:
 	@cd $(SRCDIR)/ && $(MAKE) GTLANG=sma twol
 
