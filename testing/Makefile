@@ -586,7 +586,7 @@ pron-paradigm: pron-para.ptest savefile
 	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(WORD).paradigm
+#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
 
 # POS-independent parts:
 # ======================
