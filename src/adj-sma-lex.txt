@@ -48,9 +48,9 @@ gahkestæjja+CmpN/SgN+CmpN/SgG+CmpN/PlG:gahkestæjja ATTR-0 ;
 aalmoestæjja+CmpN/SgG+CmpN/PlG:aalmoestæjja ATTR-0 ; !betler, tigger; tiggende
 golhpestæjja+CmpN/SgG+CmpN/PlG:golhpestæjja ATTR-0 ; !nybegynner i et språk; stotrende
 borrestæjja ATTR-0 ;
-haaltja+CmpN/SgN+CmpN/SgG+CmpN/PlG:haaltja ATTR-0 ;
-sarhka:sarhka PRED-0 ; ! Pred=Substantiv
-skealka ATTR-0 ; ! KB=DONT KNOW
+haaltja+CmpN/SgN+CmpN/SgG+CmpN/PlG:haaltja ATTR-0 ; ! LA: denne er pred av haaltje
+sarhka:sarhka PRED-0 ; ! Pred=Substantiv LA: subst
+skealka ATTR-0 ; ! KB=DONT KNOW LA: LMM ok
 kruana:kroene EVENSUPONLY ; ! kruonemes
 kruana:kruan a-a-EVENNOCOMP-1 ; ! kruana
 kruana:kruene EVENCOMPONLY ; ! kruenebe
@@ -58,21 +58,21 @@ kruana:kråane EVENCOMP ; ! kråanebe, kråanemes
 mïrhke#kruana:mïrhke#kruan a-a-EVENNOCOMP-1 ;
 laste#kruana:laste#kruan a-a-EVENNOCOMP-1 ;
 earna PRED-0 ;
-tjåalpa+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåalpa NULL-n-ODD-4 ;
-gåvva:gåvv a-a-EVENNOCOMP-1 ;
+tjåalpa+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåalpa NULL-n-ODD-4 ; !LA: + tjåalpah
+gåvva:gåvv a-a-EVENNOCOMP-1 ; !LA: ikke attr?
 minngebe ATTR-0 ;
-vuelebe+A+Comp+CmpN/SgN+CmpN/SgG+CmpN/PlG:vuelie EVENCOMPCASE ;
+vuelebe+A+Comp+CmpN/SgN+CmpN/SgG+CmpN/PlG:vuelie EVENCOMPCASE ; !LA: case adv?
 vuelebe+A+Comp+Der1+Der/Dim+Attr+CmpN/SgN+CmpN/SgG+CmpN/PlG:vuelie%>b%»adtje FINAL1 ;
 vuelebe+A+Comp+Der1+Der/Dim+Attr+CmpN/SgN+CmpN/SgG+CmpN/PlG:vuelie%>b%»odtje FINAL1 ;
 evtebe+A+Comp+Attr:evtie%>%^COMPDISIMPbe FINAL1 ;
-evtebe+A+Comp:evtie EVENCOMPCASE ;
+evtebe+A+Comp:evtie EVENCOMPCASE ; !LA: case adv?
 uvtebe+A+Comp+Attr:uvtie%>%^COMPDISIMPbe FINAL1 ;
 uvtebe+A+Comp+Sg+Nom:uvtie%>%^COMPDISIMPbe FINAL1 ;
-uvtebe+A+Comp:uvtie EVENCOMPCASE ;
-övtebe+A+Comp+Attr:övtie%>%^COMPDISIMPbe FINAL1 ;
-övtebe+A+Comp:övtie EVENCOMPCASE ;
+uvtebe+A+Comp:uvtie EVENCOMPCASE ; !LA: case adv?
+övtebe+A+Comp+Attr:övtie%>%^COMPDISIMPbe FINAL1 ; ! LA: + övtemes
+övtebe+A+Comp:övtie EVENCOMPCASE ; !LA: case adv?
 övtebe+A+Superl+Attr:övte%>%^COMPDISIMPmes FINAL1 ;
-övtebe:övtie MES ;
+övtebe:övtie MES ;  ! LA: + övtebe
 praade:praad e-es-EVENODD-2 ; ! e(1)-st.
 stejkede:stejkied Ces-Ces-Ce-ODD-3 ; !! COMP:IE !stejkiedåbpoe -ie-st.
 bieljege+CmpN/SgG+CmpN/PlG:bieljieg Ce-Ce-ODD-1 ; ! COMP:IE
@@ -393,7 +393,7 @@ råasohtje:råasoehtj Ce-Ce-ODDNOCOMP-1 ; !
 aavenaaktje+CmpN/SgN+CmpN/SgG+CmpN/PlG:aavenaaktj Ce-Ce-ODDNOCOMP-1 ;
 njoektje:njoektj e-es-EVENODD-2 ;
 mïektje:mïektj e-es-EVENODD-2 ; ! ! NI- kan ikke skrive ie uten ie-st. som 2.stavelse, bör skrives ´mïektje´ som ! e(2)-st. system2
-haaltje+CmpN/SgN+CmpN/SgG+CmpN/PlG:haaltje ATTR-0 ;
+haaltje+CmpN/SgN+CmpN/SgG+CmpN/PlG:haaltje ATTR-0 ;  ! LA: pred: haaltja, haaltjan
 snjaltje ATTR-0 ;
 skïemtje:skïemtj e-es-EVENODD-2 ; !Pred=Substantiv:skïemtjine ! e(2)-st. system2
 joevje:joevj e-e-EVEN-1 ;
@@ -1072,8 +1072,8 @@ snaare+A+Superl+Sg+Nom:sneere%>%^COMPDISIMPmes FINAL1 ;
 snaare:snaar e-es-EVENNOCOMP-2 ; ! Umlaut COMP snaerebe-sneeremes
 snaare:snaerie DIMCOMPCASE ;
 snaare:sneere MES ;
-praare:praar e-es-EVEN-2 ; !praare-praarebe-praaremes ! e(1)-st.
-praare:praar e-es-EVENODD-2 ; ! e(1)-st.
+!praare:praar e-es-EVEN-2 ; !praare-praarebe-praaremes ! e(1)-st. !LA : delete
+praare:praar e-es-EVENODD-2 ; ! e(1)-st. ! + oms?
 njabre:njabr e-e-EVEN-1 ; ! e(1)-st.
 stabre:stabr e-e-EVEN-1 ; ! e(1)-st.
 boffere+CmpN/SgG+CmpN/PlG:boffer Ce-Ce-ODD-1 ; !Attr=pred:boffere
@@ -1284,16 +1284,11 @@ dïeve:dïev e-es-EVENODD-2 ; !dïevebe, dïevemes ! e(2)-st. system2
 tjïeve:tjïev e-es-EVEN-2 ; ! tjïeves:tjïeve S-S-???
 tjalhve:tjalhv e-e-EVEN-1 ; ! tidligere ie-stam?
 positive+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:positiv e-es-EVEN-2 ;
-negatijve+CmpN/SgN+CmpN/SgG+CmpN/PlG:negatijv e-e-EVEN-1 ;
-transitijve:transitijv e-e-EVEN-1 ;
-positijve+CmpN/SgN+CmpN/SgG+CmpN/PlG:positijv e-es-EVEN-2 ;
-aktijve+CmpN/SgN+CmpN/SgG+CmpN/PlG:aktijv e-e-EVEN-1 ;
-interaktijve:interaktijv e-e-EVEN-1 ;
-negatïjve+CmpN/SgN+CmpN/SgG+CmpN/PlG:negatïjv e-e-EVEN-1 ;
-transitïjve:transitïjv e-e-EVEN-1 ;
-positïjve+CmpN/SgN+CmpN/SgG+CmpN/PlG:positïjv e-es-EVEN-2 ;
-aktïjve+CmpN/SgN+CmpN/SgG+CmpN/PlG:aktïjv e-e-EVEN-1 ;
-inter#aktïjve:inter#aktïjv e-e-EVEN-1 ;
+negatïjve+CmpN/SgN+CmpN/SgG+CmpN/PlG:negat IJVEadj ;
+transitïjve:transit IJVEadj ;
+positïjve+CmpN/SgN+CmpN/SgG+CmpN/PlG:posit IJVEadj ;
+aktïjve+CmpN/SgN+CmpN/SgG+CmpN/PlG:akt IJVEadj ;
+interaktïjve:inter#akt IJVEadj ;
 dolve:dolv NULL-s-ODD-2 ; !dulvebe, dulvemes eller dolvesåbpoe, dolvesommes ! e(1)-st. eller e(2)-st.
 geerve+A+Comp+Attr+CmpN/SgG+CmpN/PlG:giervie%>%^COMPDISIMPbe FINAL1 ; ! e(1)-st.
 geerve+A+Comp+CmpN/SgG+CmpN/PlG:giervie EVENCOMPCASE ; ! e(1)-st.
@@ -1909,7 +1904,7 @@ kambodsjan+CmpN/SgN+CmpN/SgG+CmpN/PlG:kambodsjan ATTR-0 ;
 gængsjan:gængsja n-n-ODDNOCOMP-1 ; !gængsjakåbpoe
 vædtjan+A+Sg+Nom:vædtjan FINAL1 ; ! attributt vædtjoeh?
 slahtjan:slahtja n-n-ODDNOCOMP-1 ; !slahtjakåbpoe
-haaltjan+A+Sg+Nom:haaltjan FINAL1 ;
+haaltjan+A+Sg+Nom:haaltjan FINAL1 ; ! LA: denne er pred a haaltje
 mealtjan:mealtja n-n-ODDNOCOMP-1 ;
 treaptjan:treaptja n-n-ODDNOCOMP-1 ; !treaptjakåbpoe
 seamma#laakan:seamma#laakan PRED-0 ;
