@@ -826,17 +826,17 @@ LEXICON AEKTUVE
 +N+Prop+Plc+Attr:uve FINAL1 ;
 
 LEXICON LAANTE-surplc
-land+N+Prop+Plc: CNAME_EVENLEX ; ! Småland
+land+N+Prop+Plc:land CNAME_EVENLEX ; ! Småland
 laante+N+Prop+Plc:laant SNAME_NIEJTE ; ! Smålaante
-land+N+Prop+Sur: CNAME_EVENLEX ; ! Småland
+land+N+Prop+Sur:land CNAME_EVENLEX ; ! Småland
 laante+N+Prop+Sur:laant SNAME_NIEJTE ; ! Smålaante
 
 LEXICON LAANTE-plc
-land+N+Prop+Plc: CNAME_EVENLEX ; ! Småland
+land+N+Prop+Plc:land CNAME_EVENLEX ; ! Småland
 laante+N+Prop+Plc:laant SNAME_NIEJTE ; ! Smålaante
 
 LEXICON LAANTE-sur
-land+N+Prop+Sur: CNAME_EVENLEX ; ! Småland
+land+N+Prop+Sur:land CNAME_EVENLEX ; ! Småland
 laante+N+Prop+Sur:laant SNAME_NIEJTE ; ! Smålaante
 
 LEXICON NAME_KONTO
@@ -863,35 +863,35 @@ LEXICON NAME_KONTO
   +Com:%>inie            FINAL1 ;
 
 LEXICON CNAME_ODD-mal
-+N+Prop+Mal+Sg: CNAME_ODD ;  
++N+Prop+Mal: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-fem
-+N+Prop+Fem+Sg: CNAME_ODD ;  
++N+Prop+Fem: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-plc
-+N+Prop+Plc+Sg: CNAME_ODD ;  
++N+Prop+Plc: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-sur
-+N+Prop+Sur+Sg: CNAME_ODD ;  
++N+Prop+Sur: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-obj
-+N+Prop+Sur+Obj: CNAME_ODD ;  
++N+Prop+Obj: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-ani
-+N+Prop+Sur+Ani: CNAME_ODD ;  
++N+Prop+Ani: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-org
-+N+Prop+Sur+Org: CNAME_ODD ;  
++N+Prop+Org: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-surplc
-+N+Prop+Sur+Sg: CNAME_ODD ;  
-+N+Prop+Plc+Sg: CNAME_ODD ;  
++N+Prop+Sg: CNAME_ODD ;  
++N+Prop+Plc: CNAME_ODD ;  
 
  LEXICON CNAME_ODD ! Names ending in stressless vowel
- +N+Prop+Plc+Sg: CNAME_ODD_SG ; ! name special
- +N+Prop+Plc+Pl: CNAME_ODD_PL ;     ! name special
- +N+Prop+Plc:    N_ODD_ESS ;    ! normal noun
- +N+Prop+Plc+Attr: FINAL1 ;     ! name special
+ +Sg: CNAME_ODD_SG ; ! name special
+ +Pl: CNAME_ODD_PL ;     ! name special
+     N_ODD_ESS ;    ! normal noun
+ +Attr: FINAL1 ;     ! name special
   
   LEXICON CNAME_ODD_SG
   +Nom:         FINAL1 ;
