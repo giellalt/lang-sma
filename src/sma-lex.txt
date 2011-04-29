@@ -1502,11 +1502,12 @@ LEXICON SOOKES
  :sööke MES ;
  :suekie DIMCOMPCASE ;  
 
-LEXICON SMAAVE
- :smaav e-e-EVENNOCOMP-1 ;
- :smaevie EVENCOMPCASE ;
- :smaevie MES ;
- :smaevie DIMCOMPCASE ;  
+LEXICON SMAAVE  ! both smaave and plaave
+ :aav e-e-EVENNOCOMP-1 ;
+ :aav e-es-EVENNOCOMP-2 ; ! LMM says so fro plaave
+ :aevie EVENCOMPCASE ;
+ :aevie MES ;
+ :aevie DIMCOMPCASE ;  
  
 LEXICON ORRE
  :urre EVENCOMPCASE ;
@@ -1557,6 +1558,32 @@ LEXICON KRUANA
  :kruene EVENCOMPONLY ;
  :kroene EVENSUPONLY ;  
  
+LEXICON VEELKES
+ :veelk es-es-EVENNOCOMP-1 ;
+ :vielkie EVENCOMPCASE ;
+ :vielkie DIMCOMPCASE ;
+ :veelke MES ;
+ 
+LEXICON ROOPSES
+ :rööps es-es-EVENNOCOMP-1 ;
+ :ruepsie EVENCOMPCASE ;
+ :ruepsie DIMCOMPCASE ;
+ :rööpse MES ;
+ 
+LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s-s-ODD-1 bort?
+ :sneehp es-es-EVEN-1 ; ! pga sneehpebe
+ :sneehpe s-s-ODD-1 ; ! ikke dokumentert i corp eller LMM
+ :snaebpie EVENCOMPCASE ;
+ :snaebpie DIMCOMPCASE ;
+
+LEXICON GEEHPES
+ :geehp es-es-EVENNOCOMP-1 ; !  s-s-ODD-1 bort?
+ :geehpe s-s-ODD-1 ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM
+ :geahpie EVENCOMPCASE ; ! -ie- i paradigmet for giehpies
+ :geahpie DIMCOMPCASE ;  ! -ie- i paradigmet for  giehpies
+ :geehpe MES ;
+  
+  
 LEXICON BURRIE
 #buerie+CmpN/SgN+CmpN/SgG+CmpN/PlG:#buer ie-ie-EVENNOCOMP-1 ; ! should they have the same lemma?
 #burrie+CmpN/SgN+CmpN/SgG+CmpN/PlG:#burr ie-ie-EVENNOCOMP-1 ;
