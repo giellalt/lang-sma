@@ -279,8 +279,8 @@ LEXICON N_ODD
  +N+Sg: N_ODD_SG ;
  +N+Pl: N_ODD_PL ;
  +N:    N_ODD_ESS ;
-  +N+SgNomCmp:e%^DISIMP            R ;
-  +N+SgGenCmp:e%>%^DISIMPn        R ;
+  +N+SgNomCmp:e%^DISIMP R ;
+  +N+SgGenCmp:e%>%^DISIMPn R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
   +N+Der1+Der/Dim+N:%»adtj GIERIEHTSADTJE ;
 
@@ -344,7 +344,7 @@ LEXICON ÅABPETJH !default N_ODD plural lexicon
 
 
   
-LEXICON N_ODD_C   !this words have consonant-ending in nominative
+LEXICON N_ODD_C   !these words have consonant-ending in nominative
  +N+Sg+Nom:%^DISIMP         FINAL1 ;
  +N+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
  +N+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
@@ -1462,31 +1462,7 @@ LEXICON LDAHKE
 ! even stems
 ! - - - - - 
 
-! type 1
-
-!!1a: Vowel stem in a and p, c = be
-!
-!    a = V, p = V, c = Vbe
-!    plaave måvhkah, pred : måvhkah leah plaave
-!    plaave, plaave ("blå")
-!    plaavebe  / plååvebe
-!    plaavemes
-
-!LEXICON NULL-NULL-EVEN
-!     ATTR-0 ;
-!     PRED-0 ;
-!     EVENCOMP ;
-
-!!1b: -s in a and p, c = be/hkåbpoe
-!
-!     a = s, p = s, c = suffixes (be/hkåbpoe)
-! 
-! Subgroups:
-! 
-! * Vokalstamme med omlyd i komparativ: 
-! * Vokalstamme med eller utan omlyd i komparativ
-! * Vokalstamme utan omlyd i komparativ
-! * Konsonantstamme
+! Lexical exceptions
 
 LEXICON NOERE
  :noer e-e-EVENNOCOMP-1 ;
@@ -1623,6 +1599,10 @@ LEXICON BURRIE
 #buerie+CmpN/SgN+CmpN/SgG+CmpN/PlG:#buer ie-ie-EVENNOCOMP-1 ; ! should they have the same lemma?
 #burrie+CmpN/SgN+CmpN/SgG+CmpN/PlG:#burr ie-ie-EVENNOCOMP-1 ;
  
+
+! Regular even stem types 
+ 
+
 LEXICON EVTEBE  
 :ie EVENSUPONLY ;
 :ie EVENCOMPCASE ;
@@ -1637,9 +1617,11 @@ LEXICON ATTR_ODD
  ATTR-0 ;
  ODDCOMP ;
 
+
 LEXICON NULL-NULL-EVEN 
 ATTR-0 ;
 PRED-0 ;
+    ! no case and comparation ?
 
 LEXICON IJVEadj
 :ijv e-e-EVEN-1 ; 
@@ -1736,6 +1718,7 @@ LEXICON Cs-Cs-EVEN-1
 LEXICON ihks-ihks-EVEN-1
           ATTR-S ;
           PRED-S ;
+    ! no case and comparation ?
 
 LEXICON Ch-Ch-EVEN-1 ! Attr= h, Comp =Even( Jïjtje-raarh) 
     ATTR-H ;
@@ -1780,7 +1763,7 @@ LEXICON e-es-EVENODD-2
  :es ODDCOMP ; ! Both even and odd?
 
 
-! type 3 Theese tree should be ok!
+! type 3 Theese three should be ok!
 LEXICON es-e-EVEN-3 
  :e    ATTR-S ;
        eCASE ;
@@ -1851,11 +1834,13 @@ LEXICON IJLE_LOAN
 LEXICON s-h-EVENNOCOMP-1 ! attr=s, pred= h
  ATTR-S ;
  PRED-H ;
+    ! no case ?
 
 
 
 ! ODD-stems (odd stem declension)
 ! ===============================
+
 
 ! type 0 (attr only)
 
@@ -1924,17 +1909,14 @@ LEXICON Ce-Ce-ODD-1 !bårreske
     ODDCASEOBL ;
     ODDCOMP ;
  
-LEXICON Ce-Ce-ODDEVEN-1 !rudtjege  apparently not in use
+LEXICON Ce-Ce-ODDEVEN-1 !rudtjege 
  :ege     ATTR-0 ;
  :eg  ODDCASEOBL ;
 +A+Sg+Nom:eg%^DISIMPe         FINAL1 ;
 +A+SgNomCmp:eg%^DISIMPe            R ;
-+A+Sg:           NIEJTE_SG  ;
-+A+Pl:           NIEJTE_PL  ;
-+A:              EVEN_ESS ;
-+A+SgNomCmp:e    R ;
-+A+SgGenCmp:e%>n R ;
-+A+PlGenCmp:%>i  R ;
++A+SgNomCmp:e    R ; ! sjekk
++A+SgGenCmp:e%>n R ; ! sjekk
++A+PlGenCmp:%>i  R ; ! sjekk
  :eg  ODDCOMP ;
  :e   EVENCOMP ;
  
@@ -2060,12 +2042,20 @@ LEXICON n-n-ODDNOCOMP-1 ! attr=n, pred= n
 
 ! type 2
 
+LEXICON AABELE
+        :aabel Ce-Ces-ODD-2 ; ! akseptaabele
++Use/Sub:abel Ce-Ces-ODD-2 ; ! akseptabele
+
+LEXICON IJBELE
+        :ijbel Ce-Ces-ODD-2 ; ! fleksijbele
++Use/Sub:ibel Ce-Ces-ODD-2 ; ! fleksibele
+
 LEXICON Ce-Ces-ODD-2
-:e     ATTR-0;
-:e     PRED-S;
+ :e     ATTR-0;
+ :e     PRED-S;
+! :e     PRED-0 ; ! jfr. leksikonnamnet, TT
        ODDCASEOBL ;
- :%^DISIMPe     PRED-0 ;
-+A+SgNomCmp:%^DISIMPe            R ;
+! +A+SgNomCmp:%^DISIMPe R ; ! dïhte komfortaabelegåetie ??
        ODDCOMP ;
 
 LEXICON NULL-s-ODDEVEN-2 !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
@@ -2499,16 +2489,6 @@ LEXICON ODDCOMP
 +A+Comp+Der1+Der/Dim+Attr+Use/NG:%>abpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dim+Use/NG:%>abpa%»tj  GÅATETJE ;
 
-!LEXICON AODDCOMP
-!+A+Comp+Attr+Use/NG:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
-!+A+Comp+Use/NG:%>abp ABPA ;
-!+A+Superl+Attr:%>ommes ATTRCONT ;
-!:%>ommes OMMES ;
-!+A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
-!+A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
-!+A+Comp+Der1+Der/Dim+Attr+Use/NG:%>abpe%»tje ATTRCONT ;
-!+A+Comp+Der1+Der/Dim+Use/NG:%>abpa%»tj  GÅATETJE ;
-
 
 LEXICON EVENCOMPCASE
 +A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP         FINAL1 ;
@@ -2683,6 +2663,7 @@ LEXICON ABPA_PL
   +Com:a%>jgujmie FINAL1 ;
 
 LEXICON MES
++A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP          FINAL1 ;
 +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP          FINAL1 ;
 +A+Superl+Sg+Acc:masse%>m       FINAL1 ;
 +A+Superl+Sg+Gen:masse%>n       FINAL1 ;
