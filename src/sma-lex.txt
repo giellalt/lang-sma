@@ -983,16 +983,26 @@ LEXICON GAAROEH ! -oe plural
 ! Inflection for maana-type nouns
 ! -------------------------------
 LEXICON MAANA
-  +N+Sg: MAANA_SG  ;
-  +N+Pl: MAANA_PL  ;
-  +N:    EVEN_ESS ;
-  +N+SgNomCmp:a    R ;
-  +N+SgGenCmp:a%>n R ;
-  +N+PlGenCmp:a%>j R ;
-  +N+Der1+Der/Dim+N:%^aLATUS%»tj GÅATETJE ;
++N+Sg: MAANASGNOM ;
++N:    MAANAOBL ;
 
 LEXICON MAANA_SG
++N+Sg: MAANASGNOM ;
++N+Sg: MAANASGOBL ;
+
+LEXICON MAANASGNOM
   +Nom:a          FINAL1 ;
+
+LEXICON MAANAOBL
+ +Sg: MAANASGOBL  ;
+ +Pl: MAANA_PL  ;
+     EVEN_ESS ;
+ +SgNomCmp:a    R ;
+ +SgGenCmp:a%>n R ;
+ +PlGenCmp:a%>j R ;
+ +Der1+Der/Dim+N:%^aLATUS%»tj GÅATETJE ;
+
+LEXICON MAANASGOBL
   +Nom+PxSg1:%>eme FINAL1 ;
   +Nom+PxSg2:%>edh FINAL1 ;
   +Nom+PxSg3:e%>se FINAL1 ;
@@ -1188,17 +1198,27 @@ LEXICON  OVSE_LOAN
 
 
 
+
 LEXICON NIEJTE
-  +N+Sg:           NIEJTE_SG  ;
-  +N+Pl:           NIEJTE_PL  ;
-  +N:              EVEN_ESS ;
-  +N+SgNomCmp:e    R ;
-  +N+SgGenCmp:e%>n R ;
-  +N+PlGenCmp:%>i  R ;
-  +N+Der1+Der/Dim+N:e%»tj   GÅATETJE ;
++N+Sg: NIEJTESGNOM ;
++N+Sg: NIEJTESGOBL ;
++N+Pl: NIEJTE_PL ;
++N: NIEJTEREST ;
+
+LEXICON NIEJTEOBL ! This for reference from A sublexica
++Sg: NIEJTESGOBL ;
++Pl: NIEJTE_PL ;
+     NIEJTEREST ;
+
 
 LEXICON NIEJTE_SG
++N+Sg: NIEJTESGNOM ;
++N+Sg: NIEJTESGOBL ;
+
+LEXICON NIEJTESGNOM
   +Nom:e          FINAL1 ;
+
+LEXICON NIEJTESGOBL
   +Nom+PxSg1:%>eme FINAL1 ;
   +Nom+PxSg2:%>edh FINAL1 ;
   +Nom+PxSg3:e%>se FINAL1 ;
@@ -1232,6 +1252,14 @@ LEXICON NIEJTE_PL
   +Com:%>igujmie  FINAL1 ;
   +Com+Use/Sub:%>ijgujmie  FINAL1 ;
  +Com+Use/Sub:%>igyjmie  FINAL1 ; !
+
+LEXICON NIEJTEREST
+              EVEN_ESS ;
+  +SgNomCmp:e    R ;
+  +SgGenCmp:e%>n R ;
+  +PlGenCmp:%>i  R ;
+  +Der1+Der/Dim+N:e%»tj   GÅATETJE ;
+
   
 LEXICON NIEJTE_COMP
 NIEJTE ;
@@ -1487,6 +1515,11 @@ LEXICON SOOKES
  :suekie EVENCOMPCASE ;
  :sööke MES ;
  :suekie DIMCOMPCASE ;  
+ 
+LEXICON SOOJMES
+ :söök es-es-EVEN-1 ;
+ :suejme EVENCOMPONLY ;
+ 
 
 LEXICON SMAAVE  ! both smaave and plaave
  :aav e-e-EVENNOCOMP-1 ;
@@ -1870,37 +1903,7 @@ LEXICON ATTR-es-s ! aajtijes
 
 ! type 1
 
-LEXICON LOHKIJES ! Meeting: attr = lohkijs, lohkijes; !! pred = lohkije.
-DÅAJMIJES ;
 
-LEXICON BÅETIJE !bårreske
- :%^DISIMPe     ATTR-0 ;
-    ije-ODDCASE ;
-+A+SgNomCmp:%^DISIMPe            R ;
-
-LEXICON HUJNIJES 
- :%^DISIMPe     ATTR-S ; 
- :%^DISIMPe     PRED-0 ;
-   ije-ODDCASE ;
-+A+SgNomCmp:%^DISIMPe            R ;
-   ODDCOMP ;
-
-LEXICON JIERMIJS
-  :%^DISIMP   ATTR-S ;
-  :%^DISIMP   PRED-S ;
-     ije-ODDCASEOBL ;
- :%^DISIMPe     PRED-0 ;
-+A+SgNomCmp:%^DISIMPe            R ;
-     ODDCOMP ;
-
-
-
-LEXICON JEASIEGOELKIJE
- :%^DISIMPe     ATTR-0 ;
- :%^DISIMPe     PRED-0 ;
-    ije-ODDCASEOBL ;
-+A+SgNomCmp:%^DISIMPe            R ;
-       
 
 LEXICON NULL-NULL-ODD-1
      ATTR-0 ;
@@ -1928,12 +1931,12 @@ LEXICON Ce-Ce-ODD-1 !bårreske
     ODDCASEOBL ;
     ODDCOMP ;
  
-LEXICON Ce-Ce-ODDEVEN-1 !rudtjege 
+LEXICON ege-EGE-ODDEVEN !rudtjege 
  :ege     ATTR-0 ;
+ :ege PRED-0          ;
  :eg  ODDCASEOBL ;
-+A+Sg+Nom:eg%^DISIMPe         FINAL1 ;
-+A+SgNomCmp:eg%^DISIMPe            R ;
-+A+SgNomCmp:e    R ; ! sjekk
++A+SgNomCmp:ege            R ;
+! +A+SgNomCmp:e    R ; ! sjekk
 +A+SgGenCmp:e%>n R ; ! sjekk
 +A+PlGenCmp:%>i  R ; ! sjekk
  :eg  ODDCOMP ;
@@ -1948,13 +1951,13 @@ LEXICON Ce-Ce-ODDNOCOMP-1
 LEXICON s-s-ODD-1
      ATTR-S ;
      PRED-S ;
-     ODDCASEOBL ;
+  :s  ODDCASEOBL ;  ! LA la til -s
   :s ODDCOMP ;
 
 LEXICON s-s-ODDNOCOMP-1
      ATTR-S ;
      PRED-S ;
-     ODDCASEOBL ;
+:s ODDCASEOBL ; !LA la til -s
 
 LEXICON s-s-ODDhk-1
      ATTR-S ;
@@ -2011,13 +2014,6 @@ LEXICON Cs-Cs-Ce-ODDNOCOMP-1
      ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
      
-LEXICON VOEJIJS
-  :%^DISIMP   ATTR-S ;
-  :%^DISIMP   PRED-S ;
- :%^DISIMPe     PRED-0 ;
-     ije-ODDCASEOBL ;
-+A+SgNomCmp:%^DISIMPe            R ;
-     ODDCOMP ;
 
 LEXICON Cs-Cs-ODD-1
   :%^DISIMP   ATTR-S ;
@@ -2041,7 +2037,7 @@ hts-hts-ODDNOCOMP-1 ;
 LEXICON hts-hts-ODDNOCOMP-1
   :%^DISIMP   ATTR-S ;
   :%^DISIMP   PRED-S ;
-  :s  ODDCASEOBL ;
+  :  ODDCASEOBL ; !LA tok vekk -s
  :%^DISIMPe     PRED-0 ; ! hiejjehte
 +A+SgNomCmp:%^DISIMPs            R ;
 
@@ -2096,15 +2092,58 @@ LEXICON NULL-s-ODD-2 !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
 
 ! type 3
 
-LEXICON DÅAJMIJES
-:%^DISIMPe     ATTR-S;  ! LMM: dåajmijes
-:%^DISIMP     ATTR-S;   ! LMM: dåajmijs, KB: gualijs 
+
+LEXICON JEASIEGOELKIJE
+ :%^DISIMPe     ATTR-0 ;
+ :%^DISIMPe     PRED-0 ;
+    ije-ODDCASEOBL ;
++A+SgNomCmp:%^DISIMPe            R ;
+       
+
+!LEXICON LOHKIJES ! Meeting: attr = lohkijs, lohkijes; !! pred = lohkije.
+!DÅAJMIJES ;
+
+LEXICON ije-ODDNOCOMP ! BÅETIJE !bårreske
+ ATTR-0 ;
+
+LEXICON HUJNIJES 
+ :%^DISIMPe     ATTR-S ; 
+ :%^DISIMPe     PRED-0 ;
    ije-ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
+   ODDCOMP ;
 
-LEXICON GUALIJES 
-DÅAJMIJES ; ! attr -es, -s, pred -e
-ODDCOMP ;
+LEXICON JIERMIJS ijs-IJS-IJE-ODD
+  :%^DISIMP  ATTR-S ;
+  :%^DISIMP  PRED-S ;
+ :%^DISIMPe  PRED-0 ;
+     ije-ODDCASEOBL ;
++A+SgNomCmp:%^DISIMPe            R ;
+     ODDCOMP ;
+
+LEXICON ijes-ijs-IJE-ODD ! GUALIJES
+ijes-ijs-IJE-ODDNOCOMP ; ! attr -es, -s, pred -e
+ ODDCOMP ;
+
+LEXICON ijes-ijs-IJE-ODDNOCOMP ! DÅAJMIJES
+:e   ATTR-S ;     ! LMM: dåajmijes
+     ATTR-S ;     ! LMM: dåajmijs, KB: gualijs 
+     ije-ODDCASE ;
++A+SgNomCmp:%^DISIMPe            R ;
+
+!LEXICON VOEJIJS ! ijs-IJE-ODD
+! :%^DISIMP   ATTR-S ;
+! :%^DISIMPe  PRED-0 ;
+!     ije-ODDCASEOBL ;
+!+A+SgNomCmp:%^DISIMPe            R ;
+!     ODDCOMP ;
+
+
+
+
+
+! type 3
+
 
 
 LEXICON Cs-Ce-ODD-3
@@ -2365,23 +2404,15 @@ eCASENOM ;
 eCASEOBL ;
 
 LEXICON eCASENOM
-+A+Sg:           NIEJTE_SG  ;
++A+Sg:           NIEJTESGNOM  ;
 
 LEXICON eCASEOBL
-+A+Pl:           NIEJTE_PL  ;
-+A:              EVEN_ESS ;
-+A+SgNomCmp:e    R ;
-+A+SgGenCmp:e%>n R ;
-+A+PlGenCmp:%>i  R ;
-
++A:           NIEJTEOBL  ;
 
 LEXICON aCASE
-+A+Sg:           MAANA_SG  ;
-+A+Pl:           MAANA_PL  ;
-+A:              EVEN_ESS ;
-+A+SgNomCmp:a    R ;
-+A+SgGenCmp:a%>n R ;
-+A+PlGenCmp:a%>j  R ;
++A+Sg: MAANASGNOM ;
++A:    MAANAOBL ;
+
 
 LEXICON ieCASE
  +A+Sg: N_IE_SG_NOM ;
