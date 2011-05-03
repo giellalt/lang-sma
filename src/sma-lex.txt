@@ -2050,9 +2050,9 @@ LEXICON hts_HTS_ODDhtCOMP
  hts_HTS_ODDNOCOMP  ;
  ODDCOMP ; ! joekehtåbpoe
  
-LEXICON n_N_ODD  ! attr=n, pred= n
-    n_N_ODDNOCOMP  ;
- :k ODDCOMP ; 
+!LEXICON n_N_ODD  ! attr=n, pred= n - ikke i bruk
+!    n_N_ODDNOCOMP  ;
+! :k ODDCOMP ; 
 
 LEXICON n_N_ODDNOCOMP  ! attr=n, pred= n
  ATTR_N ;
@@ -2118,7 +2118,7 @@ LEXICON HUJNIJES ! samme som ijes_ijs_IJE_ODD ? bare ett adj: hujnies
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 
-LEXICON js_jes_JS_JES_ODD
+LEXICON jes_js_JES_JS_ODD !to adj: bualijes, fååmijes
   :%^DISIMP  ATTR_S ;
   :%^DISIMPe  ATTR_S ;
   :%^DISIMP  PRED_S ;
@@ -2179,7 +2179,7 @@ LEXICON Ces_CE_ODDNOCOMP
 +A+SgNomCmp:%^DISIMPe            R ;
 
 
-LEXICON Ces-Ce-Ces_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
+LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
 :%^DISIMPe     ATTR_0 ;
 :%^DISIMPe     PRED_0 ;
    ODDCOMP ;
