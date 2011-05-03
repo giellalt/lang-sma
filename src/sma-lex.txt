@@ -1632,6 +1632,38 @@ LEXICON SAETNIES
  :saetnies ATTR_0 ;
  :saatnan PRED_0 ;
 
+LEXICON SUVHTJIES
+ :suvhtjies ATTR_0 ;
+ :såvhtjan PRED_0 ;
+! :suvhtjiek ODDCOMP ; ! suvhtjiekåbpoe? Im not sure..SJEKK LA: skal denne ha komp?
+! :såvhtjak ODDCOMP ; ! såvhtjakåbpoe? Im not sure..SJEKK LA: skal denne ha komp?
+
+LEXICON HUJNIES 
+ :hujnies ATTR_0 ; 
+ :hujnies PRED_0 ;
+ :håjnan PRED_0 ;
+ :hujnij ije_ODDCASE ;
+ +A+SgNomCmp:hujnije R ;
+ :hujnij ODDCOMP ;
+
+LEXICON SAEBRIES 
+ :såebries ATTR_0 ; 
+ :såabran PRED_0 ;
+ :såabrak ODDCOMP ; ! 4 såabrakåbpoe
+
+LEXICON STAERIES 
+ :staeries ATTR_0 ; 
+ :staaran PRED_0 ;
+
+LEXICON GIERIES 
+ :gieries ATTR_0 ; 
+ :gearehke PRED_0 ;
+ :geareh ODDCOMP ;
+
+LEXICON BAERIES 
+ :båer ies_IES_EVENNOCOMP ;
+ :båaras ODDCOMP ;
+
   
 LEXICON BURRIE
 #buerie+CmpN/SgN+CmpN/SgG+CmpN/PlG:#buer ie_IE_EVENNOCOMP  ; ! should they have the same lemma?
@@ -2111,12 +2143,6 @@ LEXICON JEASIEGOELKIJE
 LEXICON ije_ODDNOCOMP ! BÅETIJE !bårreske
  ATTR_0 ;
 
-LEXICON HUJNIJES ! samme som ijes_ijs_IJE_ODD ? bare ett adj: hujnies
- :%^DISIMPe     ATTR_S ; 
- :%^DISIMPe     PRED_0 ;
-   ije_ODDCASE ;
-+A+SgNomCmp:%^DISIMPe            R ;
-   ODDCOMP ;
 
 LEXICON jes_js_JES_JS_ODD !to adj: bualijes, fååmijes
   :%^DISIMP  ATTR_S ;
@@ -2236,6 +2262,12 @@ LEXICON s_N_ODDNOCOMP
    ATTR_S ;
    PRED_N ;
 
+LEXICON s_N_ODD 
+   ATTR_S ;
+   PRED_N ;
+ :k ODDCOMP ; 
+
+
 !LEXICON h_N_ODD  ! LA: 106 adjektiver - ingen grunn til at hele leksikonet fører til h_N_Ø_ODD 
 !    h_N_Ø_ODD  ;
 !!:k  ODDCOMP ; 
@@ -2296,7 +2328,14 @@ LEXICON e_AN_ODD
    PRED_AN ; 
 
 
+LEXICON ies_EME
+ :ies ATTR_0 ;
+ :eme PRED_0 ;
 
+
+LEXICON ies_ESNE
+ :ies ATTR_0 ;
+ :esne PRED_0 ;
 
 
 ! Some loanword lexica, awaiting a proper treatment
