@@ -1533,8 +1533,7 @@ gaarroeh:gaarr oeh_OEH_AN_ODD  "som går el. står brett med beina" ;
 haarroeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:haarroe h_H_ODD ;
 gårroeh ATTR_0 ;
 mårroeh:mårre EVENCOMP ;
-mårroeh:mårroe ATTR_H ;
-mårroeh:mårroe PRED_H ;
+mårroeh ø_Ø_EVEN ;
 snærroeh:snærroe h_H_ODD ;
 faavroeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:faavroe h_H_ODD ;
 skåavroeh:skåavroe h_H_ODD ; !Adj->Sub : skuevrie
@@ -1744,7 +1743,7 @@ jugo^slaavijen ATTR_0 ;
 skandinaavijen ATTR_0 ;
 maldijvijen ATTR_0 ;
 latvijen ATTR_0 ;
-feejjen+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:feejjen e_E_EVENNOCOMP ; ! i bruk?
+feejjene+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:feejjen e_E_EVENNOCOMP ; ! i bruk?
 feejjen+CmpN/SgN+CmpN/SgG+CmpN/PlG:feejje n_N_ODDNOCOMP ;
 sveerjen+CmpN/SgN+CmpN/SgG+CmpN/PlG:sveerjen ATTR_0 ;
 svïerjen+CmpN/SgN+CmpN/SgG+CmpN/PlG:svïerjen ATTR_0 ;
@@ -1967,7 +1966,6 @@ vissjies:vissj ies_IES_IE_EVEN ;
 dåedtjies:dåedtj ies_IES_IE_EVEN ;
 gåedtjies:gåedtj ies_IES_IE_EVEN ;
 låedtjies:låedtj ies_IES_IE_EVEN ; !no 3-syll paradigm
-låedtjies:låedtjie ATTR_0 ;
 miehtjies ATTR_0 ; !Pred:miehtjine
 prihtjies:prihtj ies_IES_IE_EVEN ; !XXX prihtjies/priehtjies?
 uhtjies+CmpN/SgN+CmpN/SgG+CmpN/PlG:uhtj ies_IE_EVEN ; ! LAok
@@ -2129,8 +2127,7 @@ njuevies:njuev ies_IES_IE_EVEN ;
 gaelhvies:gaelhv ies_IES_IE_EVEN ; 
 smaejvies:smaejv ies_IES_IE_EVEN ; !smaejvebe, smaejvemes
 vaejvies:vaejv ies_IES_IE_EVEN ;
-mujvies ATTR_0 ; ! Pred=Substantiv mujvine - måjvan
-mujvies:måjvas ODDCOMP ; !mujviesåbpoe
+mujvies: MUJVIES ; ! Pred=Substantiv mujvine - måjvan
 dulvies:dulv ies_IES_IE_EVEN ; !Pred:dulvesne, pred=dulvies= permanent egenskap UMLAUT KASUS
 gaervies:gaervie s_S_ODDNOCOMP ; ! (ikke comp)
 vervies ATTR_0 ; 
@@ -2657,8 +2654,9 @@ gaskemes:gaskem LES ; !superl
 tjåetskemes:tjåetskem es_ES_EVENNOCOMP ; !No Comp.
 tjaetsie#jovkemes:tjaetsie#jovkem LES ; !NOT GRADUATION
 doemes:doem es_ES_EVEN ;
-gadtsemes ø_Ø_ODD ;
-gadtsemes:gadtseme PRED_0 ;
+!gadtsemes ø_Ø_ODD ;  ! disse to kan unifiseres med LES som også gir komp. Finner ikke dokumentasjon på dette adj. Kan det være et substantiv? noe man kan spise med skje?
+!gadtsemes:gadtseme PRED_0 ;
+gadtsemes:gadtsem LES ;
 iehtsemes+CmpN/SgN+CmpN/SgG+CmpN/PlG:iehtsiem LES ; 
 dabtemes+CmpN/SgN+CmpN/SgG+CmpN/PlG:dabtem LES ; 
 damtemes+CmpN/SgN+CmpN/SgG+CmpN/PlG:damtem LES ; 
@@ -2691,9 +2689,7 @@ njæssjoes:njæssjoe s_S_ODD ;
 radtjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:radtj oes_OES_ODDahk ;
 stædtjoes:stædtjoe s_S_ODDNOCOMP ; !NOT GRADUATION
 målhtjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:målhtjoe s_S_ODD ;
-gæhtjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:gyhtje PRED_0 ;
-gæhtjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:gyhtjek ODDCOMP ; !-gyhtjekåbpoe-gyhtjekommes - (substantiv=gyhtje) UMLAUT IN COMP
-gæhtjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:gæhtjoe s_S_ODDNOCOMP ;
+gæhtjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG: GÆHTJOES ;
 aavtjoes ATTR_0 ;
 tjeakoes:tjeakoe s_S_ODDEVENNOCOMP ; !tjeakoesåbpoe XXXoehkåbpoe, vai ahkåbpoe?
 seakoes:seakoe s_S_ODD ; !seakoesåbpoe
