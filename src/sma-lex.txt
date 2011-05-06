@@ -2316,7 +2316,7 @@ LEXICON h_N_Ø_ODD  ! 3 adjektiver, alle har Majas kommentar om at -a formen er 
 
 
 LEXICON oeh_AN_ODD 
-oeh_AN_ODDNOCOMP  ;
+oeh_AN_ODDNOCOMP  ; ! Er det verkeleg rett at dette er utan comp??
 ! :ahk ODDCOMP ;
 ! :oehk ODDCOMP ; !XXX check this o
 
@@ -2592,15 +2592,15 @@ LEXICON EVENCOMP_oe
 
 LEXICON ODDCOMP
 +A+Comp+Attr:%>åbpoe ATTRCONT ; ! båajoesåbpoe, *båajasåbpoe
-+A+Comp+Attr+Use/NG:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
-+A+Comp+Use/NG:%>abp ABPA ;
++A+Comp+Attr+Use/NG+Use/Sub:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
++A+Comp+Use/NG+Use/Sub:%>abp ABPA ;
 +A+Comp:%>åbp ÅBPOE ;
 +A+Superl+Attr:%>ommes ATTRCONT ;
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
-+A+Comp+Der1+Der/Dim+Attr+Use/NG:%>abpe%»tje ATTRCONT ;
-+A+Comp+Der1+Der/Dim+Use/NG:%>abpa%»tj  GÅATETJE ;
++A+Comp+Der1+Der/Dim+Attr+Use/NG+Use/Sub:%>abpe%»tje ATTRCONT ;
++A+Comp+Der1+Der/Dim+Use/NG+Use/Sub:%>abpa%»tj  GÅATETJE ;
 
 
 LEXICON EVENCOMPCASE
@@ -4388,21 +4388,21 @@ LEXICON LAAHKOEH_ÅBPOE
  +Pl+Com:%>åbpoe%>jgujmie FINAL1 ;
   +Ess:%>åbpo%>jne         FINAL1 ;
   
-  +Sg+Nom+Use/NG:%>abpa          FINAL1 ;
-  +Sg+Acc+Use/NG:%>abpa%>m       FINAL1 ;
-  +Sg+Gen+Use/NG:%>abpa%>n       FINAL1 ;
-  +Sg+Ill+Use/NG:%>abpe%>se      FINAL1 ;
-  +Sg+Ine+Use/NG:%>abpe%>sne     FINAL1 ;
-  +Sg+Ela+Use/NG:%>abpe%>ste     FINAL1 ;
-  +Sg+Com+Use/NG:%>abp%>ine      FINAL1 ;
-  +Ess+Use/NG:%>abp%>ine         FINAL1 ;
-  +Pl+Nom+Use/NG:%>abpa%>h       FINAL1 ;
-  +Pl+Acc+Use/NG:%>abp%>ide      FINAL1 ;
-  +Pl+Gen+Use/NG:%>abpa%>j       FINAL1 ;
-  +Pl+Ill+Use/NG:%>abp%>ide      FINAL1 ;
-  +Pl+Ine+Use/NG:%>abp%>ine      FINAL1 ;
-  +Pl+Ela+Use/NG:%>abp%>ijste    FINAL1 ;
-  +Pl+Com+Use/NG:%>abpa%>jgujmie FINAL1 ;
+  +Sg+Nom+Use/NG+Use/Sub:%>abpa          FINAL1 ;
+  +Sg+Acc+Use/NG+Use/Sub:%>abpa%>m       FINAL1 ;
+  +Sg+Gen+Use/NG+Use/Sub:%>abpa%>n       FINAL1 ;
+  +Sg+Ill+Use/NG+Use/Sub:%>abpe%>se      FINAL1 ;
+  +Sg+Ine+Use/NG+Use/Sub:%>abpe%>sne     FINAL1 ;
+  +Sg+Ela+Use/NG+Use/Sub:%>abpe%>ste     FINAL1 ;
+  +Sg+Com+Use/NG+Use/Sub:%>abp%>ine      FINAL1 ;
+  +Ess+Use/NG:%>+Use/Subabp%>ine         FINAL1 ;
+  +Pl+Nom+Use/NG+Use/Sub:%>abpa%>h       FINAL1 ;
+  +Pl+Acc+Use/NG+Use/Sub:%>abp%>ide      FINAL1 ;
+  +Pl+Gen+Use/NG+Use/Sub:%>abpa%>j       FINAL1 ;
+  +Pl+Ill+Use/NG+Use/Sub:%>abp%>ide      FINAL1 ;
+  +Pl+Ine+Use/NG+Use/Sub:%>abp%>ine      FINAL1 ;
+  +Pl+Ela+Use/NG+Use/Sub:%>abp%>ijste    FINAL1 ;
+  +Pl+Com+Use/NG+Use/Sub:%>abpa%>jgujmie FINAL1 ;
 
 LEXICON LAAHKOEH_OMMES
   +Sg+Nom:%>ommes%^DISIMP         FINAL1 ;
