@@ -1517,7 +1517,7 @@ LEXICON SOOKES
  :suekie DIMCOMPCASE ;  
  
 LEXICON SOOJMES
- :söök es_ES_EVEN  ;
+ :sööjm es_ES_EVEN  ;
  :suejme EVENCOMPONLY ;
  
 
@@ -1545,10 +1545,13 @@ LEXICON STOERE
 
 LEXICON STOERRE
  :stoerr e_E_EVENNOCOMP  ;
++Use/Sub:stuerre EVENCOMPONLY ;
++Use/Sub:stoerre EVENCOMPONLY ;
  STOERE_COMP ;
 
 LEXICON STOERE_COMP
  :stuerie EVENCOMPONLY ;
++Use/Sub:stuerie EVENSUPONLY ;
  :stööre MES ;
  :stuerie DIMCOMPCASE ;  
 
@@ -1566,6 +1569,8 @@ LEXICON GISSE
  :gïss e_E_EVENNOCOMP  ;
  :gissie EVENCOMPONLY ;
  :gissie MES ;
++Use/Sub:gïssie EVENCOMPONLY ;
++Use/Sub:gïssie MES ;
  :gissie DIMCOMPCASE ; 
  :gïssege PRED_0 ;  ! eller er dette et annet lemma? jfr. -hke og gabtege 
  
@@ -1590,6 +1595,7 @@ LEXICON KRUANA
  :kråane EVENCOMP ;
  :kruene EVENCOMPONLY ;
  :kroene EVENSUPONLY ;  
++Use/Sub:kruane EVENCOMPONLY ;
  
 LEXICON VEELKES
  :veelk es_ES_EVENNOCOMP  ;
@@ -1922,8 +1928,8 @@ LEXICON oes_OES_OE_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/e
         oeCASE ;
  :oe  EVENCOMP_oe ;
        :oes ODDCASEOBL ;
-+A+Sg+Nom:oes%^DISIMP         FINAL1 ;
-+A+SgNomCmp:oes%^DISIMP            R ;
++A+Sg+Nom:oes         FINAL1 ;
++A+SgNomCmp:oes            R ;
 
 LEXICON IJLE_LOAN
   +Test/LysI:ijl e_ES_EVEN  ; !XXX check
@@ -2592,8 +2598,8 @@ LEXICON EVENCOMP_oe
 
 LEXICON ODDCOMP
 +A+Comp+Attr:%>åbpoe ATTRCONT ; ! båajoesåbpoe, *båajasåbpoe
-+A+Comp+Attr+Use/NG+Use/Sub:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
-+A+Comp+Use/NG+Use/Sub:%>abp ABPA ;
++A+Comp+Attr+Use/Sub:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
++A+Comp+Use/Sub:%>abp ABPA ;
 +A+Comp:%>åbp ÅBPOE ;
 +A+Superl+Attr:%>ommes ATTRCONT ;
 :%>ommes OMMES ;
