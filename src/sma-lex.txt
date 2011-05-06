@@ -1494,25 +1494,25 @@ LEXICON LDAHKE
 
 LEXICON NOERE
  :noer e_E_EVENNOCOMP  ;
- :nuerie EVENCOMPCASE ;
+ :nuerie EVENCOMPONLY ;
  :nööre MES ;
  :nuerie DIMCOMPCASE ;  
  
 LEXICON BUERIE
  :buer ie_IE_EVENNOCOMP  ;
- :buerie EVENCOMPCASE ;
+ :buerie EVENCOMPONLY ;
  :bööre MES ;
  :buerie DIMCOMPCASE ;  
  
 LEXICON LOOVLES
  :löövl es_ES_EVEN  ;
- :lïevle EVENCOMPCASE ;
+ :lïevle EVENCOMPONLY ;
  :löövle MES ;
  :lïevle DIMCOMPCASE ;  
  
 LEXICON SOOKES
  :söök es_ES_EVENNOCOMP  ;
- :suekie EVENCOMPCASE ;
+ :suekie EVENCOMPONLY ;
  :sööke MES ;
  :suekie DIMCOMPCASE ;  
  
@@ -1524,18 +1524,18 @@ LEXICON SOOJMES
 LEXICON SMAAVE  ! both smaave and plaave
  :aav e_E_EVENNOCOMP  ;
  :aav e_ES_EVENNOCOMP  ; ! LMM says so for plaave
- :aevie EVENCOMPCASE ;
+ :aevie EVENCOMPONLY ;
  :aevie MES ;
  :aevie DIMCOMPCASE ;  
  
 LEXICON SNAARE 
  :snaar e_ES_EVENNOCOMP  ;
- :snaerie EVENCOMPCASE ;
+ :snaerie EVENCOMPONLY ;
  :sneere MES ;
  :snaerie DIMCOMPCASE ;  
 
 LEXICON ORRE
- :urre EVENCOMPCASE ;
+ :urre EVENCOMPONLY ;
  :urre EVENCOMP ;
  :urre DIMCOMPCASE ;  
  
@@ -1548,14 +1548,14 @@ LEXICON STOERRE
  STOERE_COMP ;
 
 LEXICON STOERE_COMP
- :stuerie EVENCOMPCASE ;
+ :stuerie EVENCOMPONLY ;
  :stööre MES ;
  :stuerie DIMCOMPCASE ;  
 
 LEXICON NAAKE
  :nåak e_E_EVEN  ;  
- :vïerre EVENCOMPCASE ;
- :vearra EVENCOMPCASE ;
+ :vïerre EVENCOMPONLY ;
+ :vearra EVENCOMPONLY ;
  :vïerre MES ;
  :vearra MES ;
  :veerre MES ;
@@ -1564,7 +1564,7 @@ LEXICON NAAKE
 
 LEXICON GISSE
  :gïss e_E_EVENNOCOMP  ;
- :gissie EVENCOMPCASE ;
+ :gissie EVENCOMPONLY ;
  :gissie MES ;
  :gissie DIMCOMPCASE ; 
  :gïssege PRED_0 ;  ! eller er dette et annet lemma? jfr. -hke og gabtege 
@@ -1579,8 +1579,8 @@ LEXICON GABTE
  
 LEXICON GIEVTE
  :gïevt e_E_EVENNOCOMP  ;
- :geavte EVENCOMPCASE ;
- :gievte EVENCOMPCASE ;
+ :geavte EVENCOMPONLY ;
+ :gievte EVENCOMPONLY ;
  :gïevte MES ;
  :gievte DIMCOMPCASE ;  
  :geavte DIMCOMPCASE ;  
@@ -1593,38 +1593,38 @@ LEXICON KRUANA
  
 LEXICON VEELKES
  :veelk es_ES_EVENNOCOMP  ;
- :vielkie EVENCOMPCASE ;
+ :vielkie EVENCOMPONLY ;
  :vielkie DIMCOMPCASE ;
  :veelke MES ;
  
 LEXICON ROOPSES
  :rööps es_ES_EVENNOCOMP  ;
- :ruepsie EVENCOMPCASE ;
+ :ruepsie EVENCOMPONLY ;
  :ruepsie DIMCOMPCASE ;
  :rööpse MES ;
  
 LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
  :sneehp es_ES_EVEN  ; ! pga sneehpebe
  :sneehpe s_S_ODD  ; ! ikke dokumentert i corp eller LMM
- :snaebpie EVENCOMPCASE ;
+ :snaebpie EVENCOMPONLY ;
  :snaebpie DIMCOMPCASE ;
 
 LEXICON GEEHPES
  :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
  :geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM
- :geahpie EVENCOMPCASE ; ! -ie- i paradigmet for giehpies
+ :geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
  :geahpie DIMCOMPCASE ;  ! -ie- i paradigmet for  giehpies
  :geehpe MES ;
 
 LEXICON GEERVE
  :geerv e_E_EVEN  ;
- :giervie EVENCOMPCASE ;
+ :giervie EVENCOMPONLY ;
  :giervie MES ;
  :giervie DIMCOMPCASE ;  
 
 LEXICON TJOEVKES
  :tjoevke s_S_ODD  ; ! ODD ikke i LMM, ikke i corp
- :tjuevkie EVENCOMPCASE ; 
+ :tjuevkie EVENCOMPONLY ; 
  :tjuevkie DIMCOMPCASE ; 
  :tjoevke MES ; 
 
@@ -1698,8 +1698,7 @@ LEXICON EVTEBE
 
 LEXICON ATTR_EVEN  
 :ies ATTR_0 ;
-:e EVENSUPONLY ;
-:e EVENCOMPCASE ;
+:e EVENCOMP ;
 
 LEXICON ATTR_ODD  
  ATTR_0 ;
@@ -2656,7 +2655,7 @@ LEXICON EVENCOMPCASE_oe
   
 LEXICON DIMCOMPCASE
 +A+Comp+Der1+Der/Dim+Attr:%>b%»adtje          FINAL1 ;
-+A+Comp+Der1+Der/Dim+Attr:%>b%»adtje%>m       FINAL1 ;
++A+Comp+Der1+Der/Dim+Attr:%>b%»odtje       FINAL1 ;
 +A+Comp+Der1+Der/Dim+Sg+Nom:%>b%»adtje          FINAL1 ;
 +A+Comp+Der1+Der/Dim+Sg+Acc:%>b%»adtje%>m       FINAL1 ;
 +A+Comp+Der1+Der/Dim+Sg+Gen:%>b%»adtje%>n       FINAL1 ;
