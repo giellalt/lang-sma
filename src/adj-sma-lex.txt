@@ -1304,7 +1304,6 @@ skråadtjoeh:skråadtj oeh_AN_ODD ; !LAok
 skrådtjoeh:skrådtj oeh_AN_ODD ; !LAok
 pleahtjoeh:pleahtj oeh_AN_ODD ; !LAok
 krahtjoeh:krahtj oeh_OEH_AN_ODD ; !krahtjoeh Krahtjoeh/krahtjoen !
-krahtjoeh:krahtjoe h_H_ODD ;
 kranghtjoeh:kranghtj oeh_AN_ODD ; !
 snjæjhtjoeh:snjæjhtj oeh_OEH_AN_ODD ; !
 kræjhtjoeh:kræjhtj oeh_AN_ODD ; !
@@ -1840,9 +1839,9 @@ neatsmas:neatsma s_S_ODD ;
 dåsmas+CmpN/SgN+CmpN/SgG+CmpN/PlG:dåsma s_S_ODD ;
 reajnas:reajna s_S_ODD ;
 hajnas+CmpN/SgN+CmpN/SgG+CmpN/PlG:hajn as_AN_ODD ; ! 
-nannas:nann as_AS_A_EVEN ;
-nænnas:nænn as_AS_A_EVEN ; !'OE' eller 'A'
-spatnas:spatn as_AS_A_EVEN ; ! KB= DONT KNOW
+nannas:nann as_AS_EVEN ;
+nænnas:nænn as_AS_EVEN ; !'OE' eller 'A'
+spatnas:spatn as_AS_EVEN ; ! KB= DONT KNOW
 hamhpas+CmpN/SgN+CmpN/SgG+CmpN/PlG:hamhpa s_S_Ø_ODD ;
 ræhpas:ræhpa s_S_ODD ; !COMP: ræhpasabpa
 ovdearas:ovdeara s_S_ODDNOCOMP ; !ov-dearohke!ov-dearahkåbpoe
@@ -1855,8 +1854,8 @@ lapsas:lapsa s_S_ODD ;
 låssas ATTR_0 ;
 mådtsas:mådtsa s_S_ODD ;
 seadtas:seadta s_S_ODD ; ! -seadtasabpa
-åhtas:åht as_AS_A_EVEN ;
-båantas+CmpN/SgG+CmpN/PlG:båanta s_S_ODDhk ; !båantahkåbpoe, båantahkommes
+åhtas:åht as_AS_EVEN ; ! LMM: as attr.
+båantas+CmpN/SgG+CmpN/PlG:båanta es_ES_ODDhk ; !båantahkåbpoe, båantahkommes
 tjalhvas:tjalhv as_A_EVEN ;
 åajvas+CmpN/SgN+CmpN/SgG+CmpN/PlG:åajva s_S_ODD ;
 duasvas+CmpN/SgN+CmpN/SgG+CmpN/PlG:duasv as_AN_ODD ;
@@ -1943,7 +1942,7 @@ tjåenghkies:tjåenghkie s_S_ODDEVENNOCOMP ; !Pred=substantiv, innesiv og illati
 stråenghkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:stråenghkies ATTR_0 ; !Pred= Substantiv stråenghkine, stråenghkien
 dihkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:dihkies ATTR_0 ; !Pred=Substantiv :Innesiv= dihkine
 pliejhkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:pliejhk ies_IES_IE_EVEN ; 
-pliejhkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:pliejhkie s_S_ODD ; ! 4 
+pliejhkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:pliejhkies ODDCOMP ; ! 4 
 viejhkies:viejhk ies_IES_IE_EVEN ;
 aelhkies:aelhk ies_IE_EVEN ;
 faelhkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:faelhkie s_S_ODD ;
@@ -2095,7 +2094,7 @@ mujvies: MUJVIES ; ! Pred=Substantiv mujvine - måjvan
 dulvies:dulv ies_IES_IE_EVEN ; !Pred:dulvesne, pred=dulvies= permanent egenskap UMLAUT KASUS
 gaervies:gaervie s_S_ODDNOCOMP ; ! (ikke comp)
 vervies ATTR_0 ; 
-vuesvies:vuesvie s_S_ODDhk ; ! vuesviehkåbpoe
+vuesvies:vuesvi es_ES_ODDhk ; ! vuesviehkåbpoe
 voejijes+CmpN/SgN+CmpN/SgG+CmpN/PlG:voejij ijes_ijs_IJE_ODDNOCOMP ;
 tjåajjijes:tjåajjij ijes_ijs_IJE_ODDNOCOMP ;
 bealjijes:bealjij ijes_ijs_IJE_ODDNOCOMP ; 
@@ -2663,7 +2662,7 @@ gæhtjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG: GÆHTJOES ;
 aavtjoes ATTR_0 ;
 tjeakoes:tjeakoe s_S_ODDEVENNOCOMP ; !tjeakoesåbpoe XXXoehkåbpoe, vai ahkåbpoe?
 seakoes:seakoe s_S_ODD ; !seakoesåbpoe
-beagkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:beagkoe s_S_ODDhk ; ! LA
+beagkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:beagko es_ES_ODDhk ; ! LA
 neahkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:neahkoe s_S_ODD ;
 fahkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:fahkoe s_S_ODDNOCOMP ;
 fahkoes:fahkan PRED_0 ;
@@ -2703,7 +2702,8 @@ hearloes:hearloe s_S_ODD ;
 beavloes:beavloe s_S_ODDNOCOMP ;
 ajmoes:ajm oes_OES_ODDas ;
 skaajmoes:skaajm oes_OES_ODDas ; !Pred=Substantiv :skaajmesisnie - skaajme(substantiv) skaajmasåbpoe
-skaajmoes:skaajmes ODDCASE ;
+skaajmoes:skaajme PRED_S ;
+skaajmoes:skaajmes ODDCASEOBL ;
 bårmoes:bårmoe s_S_ODD ;
 dasmoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:dasm oes_OES_ODD ;
 njeatsmoes:njeatsmoe s_S_ODD ;
@@ -2716,7 +2716,7 @@ nannoes:nannoe s_S_ODD ;
 !nænnoes:nænn oes_OES_OE_EVEN ; LA finner ikke dok for denne, men nennebe
 nænnoes:nænnoe s_S_ODD ;
 jatnoes:jatnan PRED_0 ; ! s->
-jatnoes:jatnoe s_S_ODDhk ; !jadtnoehkåbpoe oe-a, jadtnoehkommes, jadtnahkommes
+jatnoes:jatno es_ES_ODDhk ; !jadtnoehkåbpoe oe-a, jadtnoehkommes, jadtnahkommes
 gaavnoes ATTR_0 ;
 skåabpoes:skåabpoe s_S_ODD ;
 skåhpoes ATTR_0 ;
@@ -2775,7 +2775,7 @@ laktjeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:laktjar Ces_CES_CE_ODD ; ! VED COMP:A
 tjaekeres+CmpN/SgG+CmpN/PlG:tjaekier Ces_CES_ODD ; ! VED COMP:IE tjaekiedåbpoe
 tjogkeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjogker Ces_Ce_CES_CE_ODD ;
 geajhkeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:geajhkar Ces_CES_CE_ODD ;
-stejkeres:stejker Ces_CE_ODDNOCOMP ;
+stejkeres:stejker Ces_CE_ODD ; ! LA komp i LMM
 barkeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:barker Ces_CES_CE_ODD ;
 yskeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:ysker Ces_CES_ODD ;
 ieskeres+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:iesker Ces_CES_ODD ;
@@ -2796,7 +2796,7 @@ væjreres+CmpN/SgN+CmpN/SgG+CmpN/PlG:væjreres ATTR_0 ;
 båånhtseres:båånhtser Ces_CES_ODD ; !baanhtsan, baenhtsesne,baenhtsie= ie-st.=UMLAUT
 feavseres+CmpN/SgN+CmpN/SgG+CmpN/PlG:feavseres ATTR_0 ; !feavsodh = oe-st. = fïevse=fjös! :-D
 sadteres+CmpN/SgN+CmpN/SgG+CmpN/PlG:sadter Ces_CES_CE_ODD ;
-sådteres:sådter Ces_CE_ODD ;
+sådteres:sådter Ces_CES_CE_ODD ;
 vaeteres+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpN/SgG+CmpN/PlG:vaetier Ces_CES_CE_ODD ; !vaetedh = ie-st.
 bohteres:bohter Ces_CE_ODD ; !SOUTH
 bolteres+CmpN/SgN+CmpN/SgG+CmpN/PlG:bolter Ces_CE_ODD ; !bolteråbpoe
