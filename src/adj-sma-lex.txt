@@ -499,7 +499,7 @@ stïerhke+CmpN/SgN+CmpN/SgG+CmpN/PlG:stïerhk e_ES_EVEN ;
 mïrhke+CmpN/SgN+CmpN/SgG+CmpN/PlG:mïrhk e_E_EVEN ; ! e(1)-st.
 sïrhke:sïrhk e_E_EVEN ; ! e(1)-st.
 mïevhke:mïevhk e_ES_ODDEVEN ; !Comp:mïevhkebe, mïevhkemes ! e(2)-st. system2 LAok
-mïevhke:mïevhkes ATTR_0 ; ! LMM has mïevhke as the only attr form, but "Ih vielie mijjen mievhkes gïelem soptsesth."
+mïevhke+Use/Sub:mïevhkes ATTR_0 ; ! LMM has mïevhke as the only attr form, but "Ih vielie mijjen mievhkes gïelem soptsesth."
 !myvhke:myvhk e_ES_EVEN ; ! ! e(2)-st. system2 LA 
 myvhke:myvhk e_ES_ODDEVEN ; ! ! e(2)-st. system2 LA: myövhke og mïevhke har EVENODD
 myövhke:myövhk e_ES_ODDEVEN ; !SYSTEM2, myövhke = attr= myövhkes= pred ! e(2)-st. system2 LAok
@@ -871,7 +871,6 @@ infame+Use/Sub:infam e_ES_LOAN ;
 monogame+Use/Sub:monogam e_ES_LOAN ;
 polygame+Use/Sub:polygam e_ES_LOAN ;
 saasneme PRED_0 ;
-jahtseme:jahtsem Ce_CE_ODD ;
 dakteme+CmpN/SgN+CmpN/SgG+CmpN/PlG:dakteme PRED_0 ;
 sïejhme:sïejhm e_E_EVEN ; !Attr=Pred, Comp= ebe, Substantiv=som attr og pred
 galme:galm e_ES_ODDEVEN ; ! e(2)-st. system2 LAok
@@ -1495,7 +1494,7 @@ gårroeh ATTR_0 ;
 mårroeh:mårre EVENCOMP ;
 mårroeh ø_Ø_EVEN ;
 snærroeh:snærroe h_H_ODD ;
-faavroeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:faavroe h_H_ODD ;
+!faavroeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:faavroe h_H_ODD ; LA ikke dok
 skåavroeh:skåavroe h_H_ODD ; !Adj->Sub : skuevrie
 flævroeh:flævroe h_H_ODD ;
 !feasoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:feasoe h_H_ODD ; !LA iflg. LMM
@@ -2697,13 +2696,13 @@ naskoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:naskoe s_S_ODD ;
 fraskoes+CmpN/SgG+CmpN/PlG:frask oes_OE_EVEN ; ! fraskoe=substantiv
 samskoes:samsk oes_AN_ODD ; !
 såmskoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:såmsk oes_AN_ODD ; ! XXXsåmskoekåbpoe såmskakåbpoe?
-hearskoes:hearsk oes_OES_OE_EVEN ;
+hearskoes:hearskoe s_S_ODD ; !LA
 måskoes:måsk oes_OES_ODDNOCOMP ;
 gaaloes:gaaloe s_S_ODD ; !gaaloesåbpoe
 svaaloes:svaaloe s_S_ODD ;
 sæjloes+CmpN/SgG+CmpN/PlG:sæjloe s_S_ODD ; !sæjloesåbpoe -
 aalloes ATTR_0 ;
-nålloes:nåll oes_OES_OE_EVEN ;
+nålloes:nålloe s_S_ODD ; !LA
 hearloes:hearloe s_S_ODD ;
 beavloes:beavloe s_S_ODDNOCOMP ;
 ajmoes:ajm oes_OES_ODDas ;
@@ -2716,9 +2715,9 @@ dåsmoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:dåsm oes_OES_ODD ;
 reajnoes:reajnoe s_S_ODD ;
 håjnoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:håjn oes_AN_ODD ;
 læjnoes:læjnoe s_S_ODD ;
-mannoes:mann oes_OES_OE_EVEN ;
+mannoes:mannoe s_S_ODD ; !LA  LMM: mannoes monnehke mynnehke mennebe
 nannoes:nannoe s_S_ODD ;
-nænnoes:nænn oes_OES_OE_EVEN ;
+!nænnoes:nænn oes_OES_OE_EVEN ; LA finner ikke dok for denne, men nennebe
 nænnoes:nænnoe s_S_ODD ;
 jatnoes:jatn oes_AN_ODD ; ! s->
 jatnoes:jatnoe s_S_ODDhk ; !jadtnoehkåbpoe oe-a, jadtnoehkommes, jadtnahkommes
@@ -2732,7 +2731,7 @@ daajroes:daajr oes_OES_ODDNOCOMP ;
 sæjroes:sæjr oes_OES_ODDas ; ! (sæjrasåbpoe)
 haarroes+CmpN/SgN+CmpN/SgG+CmpN/PlG:haarroe s_S_ODD ; !SYSTEM1, ATTR=PRED
 eadtjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:eadtjoe s_S_ODD ; ! LA corp
-faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG:faavr oes_OES_OE_EVEN ;
+faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG:faavroe s_S_ODD ; !LA LMM smanob, corp ODD-comp
 åavroes:åavr oes_OES_ODDas ; !"åavroes bijjjie-het dag"
 måasoes:måas oes_OE_EVENNOCOMP ; !
 jaksoes:jaks oes_OES_ODD ; ! LA jaksoesåbpoe i corp
@@ -2749,7 +2748,6 @@ faatoes:faatoe s_S_ODD ;
 dabtoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:dabt oes_OES_ODDas ;
 seadtoes:seadtoe s_S_ODD ; !-seadtoesåbpoe
 båarhtoes:båarht oes_OES_ODDas ;
-åhtoes:åht oes_OES_OE_EVEN ; ! XXX two åhtoes! unify them.
 åhtoes:åhtoe s_S_ODD ;
 våaltoes ATTR_0 ; ! Predikativ = Substantiv
 damtoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:damt oes_OES_ODDas ;
