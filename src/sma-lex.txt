@@ -1925,15 +1925,13 @@ LEXICON ies_IES_IE_EVENNOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even 
 +A+Sg+Nom:ies         FINAL1 ;
 +A+SgNomCmp:ies            R ;
                
-!OK!(Just one adjective to this lexicon- åhtas-åhtas-åhta)
-LEXICON as_AS_A_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
- :a   ATTR_S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
- +Use/NG:as    ODDCASENOM ; 
-       aCASE ;
+!OK!( åhtas spatnas)
+LEXICON as_AS_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
+ :a   ATTR_S ;!
+       aCASEOBL ;
  :a   EVENCOMP ;
-      :as ODDCASEOBL ;
-+A+Sg+Nom:as%^DISIMP         FINAL1 ;
-+A+SgNomCmp:as%^DISIMP            R ;
++A+Sg+Nom:as        FINAL1 ;
++A+SgNomCmp:as            R ;
 
 !OK!
 ! LA: fjerna dette leksikonet, ikke lenger ord som tilhører det
@@ -2049,11 +2047,11 @@ LEXICON s_S_ODDNOCOMP
      PRED_S ;
 :s ODDCASEOBL ; !LA la til -s
 
-LEXICON s_S_ODDhk 
-     ATTR_S ;
-     PRED_S ;
+LEXICON es_ES_ODDhk 
+ :e    ATTR_S ;
+ :e   PRED_S ;
      ODDCASEOBL ;
- :hk ODDCOMP ;
+ :ehk ODDCOMP ;
  
 LEXICON oes_OES_ODD 
 oes_OES_ODDNOCOMP  ;
@@ -2249,11 +2247,11 @@ LEXICON Ces_CE_ODD
    ODDCOMP ;
 
 
-LEXICON Ces_CE_ODDNOCOMP 
-:%^DISIMPe     ATTR_S ;
-:%^DISIMPe     PRED_0 ;
-   ODDCASE ;
-+A+SgNomCmp:%^DISIMPe            R ;
+!LEXICON Ces_CE_ODDNOCOMP 
+!:%^DISIMPe     ATTR_S ;
+!:%^DISIMPe     PRED_0 ;
+!   ODDCASEOBL ;
+!+A+SgNomCmp:%^DISIMPe            R ;
 
 
 LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
@@ -2498,7 +2496,14 @@ LEXICON eCASEOBL
 +A:           NIEJTEOBL  ;
 
 LEXICON aCASE
+aCASENOM ;
+aCASEOBL ;
+
+
+LEXICON aCASENOM
 +A+Sg: MAANASGNOM ;
+
+LEXICON aCASEOBL
 +A:    MAANAOBL ;
 
 
