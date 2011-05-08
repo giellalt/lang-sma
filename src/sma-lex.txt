@@ -2030,7 +2030,7 @@ LEXICON s_Ø_ODD
   :s ODDCOMP ;
 
 LEXICON s_E_ODD 
-  ATTR_S ;
+ :%^DISIMP ATTR_S ;
   ODDCASE ; 
   ODDCOMP ;
 
@@ -2238,6 +2238,8 @@ LEXICON Cs_CE_ODD
 LEXICON Cs_CE_ODDNOCOMP 
      ATTR_S ;
 :e   PRED_0 ;
+       ODDCASEOBL ; !LA
++A+SgNomCmp:%^DISIMPe            R ; !LA
 
 LEXICON Ces_CE_ODD 
 :%^DISIMPe     ATTR_S ;
