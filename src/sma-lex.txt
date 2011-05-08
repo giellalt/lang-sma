@@ -2159,7 +2159,7 @@ LEXICON Ce_CES_ODD
 ! +A+SgNomCmp:%^DISIMPe R ; ! dïhte komfortaabelegåetie ??
        ODDCOMP ;
 
-LEXICON ø_s_ODDEVEN  !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
+LEXICON ø_S_ODDEVEN  !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
   :e ATTR_0 ;
   :e PRED_S ;
   :es  ODDCASEOBL ;
@@ -2167,7 +2167,7 @@ LEXICON ø_s_ODDEVEN  !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
 :es  ODDCOMP ;
 :e  EVENCOMP ;
 
-LEXICON ø_s_ODD  !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
+LEXICON ø_S_ODD  !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
   : ATTR_0 ;
   : PRED_S ;
   :s  ODDCASEOBL ;
@@ -2257,10 +2257,14 @@ LEXICON Ces_CE_ODD
 
 
 LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
-:%^DISIMPe     ATTR_0 ;
-:%^DISIMPe     PRED_0 ;
-   ODDCOMP ;
-       LES ;   !<===== gir Attr -s og Pred -s
+ Ces_Ce_CES_CE_ODDNOCOMP ;
+ ODDCOMP ;
+
+LEXICON Ces_Ce_CES_CE_ODDNOCOMP
+ :%^DISIMPe ATTR_0 ;
+ :%^DISIMPe PRED_0 ;
+            LES ;   !<===== gir Attr -s og Pred -s
+
        
 
        
@@ -2368,7 +2372,7 @@ LEXICON ah_AH_AN_ODD
 :oehk ODDCOMP ; 
 
 
-LEXICON ø_n_ODD 
+LEXICON ø_N_ODD 
  ATTR_0 ;
  PRED_N ;
 :k  ODDCOMP ; 
@@ -2394,13 +2398,13 @@ LEXICON ies_ESNE
 ! they have a +LOAN tag to identify them.
 
 !LEXICON LOANADJ
-!+LOAN: ø_s_ODDEVEN   ; ! the idea here is to get both -e and -es
+!+LOAN: ø_S_ODDEVEN   ; ! the idea here is to get both -e and -es
 !+LOAN: ATTR_0 ;
 
 !hmmm...
 !LEXICON ISKADJ
 !+LOAN: ATTR_0 ;
-!+LOAN:sk ø_s_ODDEVEN  ; 
+!+LOAN:sk ø_S_ODDEVEN  ; 
 !+LOAN:hk e_ES_EVEN  ;
 
 !LEXICON LOANSUB
