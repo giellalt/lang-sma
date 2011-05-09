@@ -1964,7 +1964,7 @@ LEXICON s_H_EVENNOCOMP  ! attr=s, pred= h
  ATTR_S ;
  PRED_H ;
     ! no case ?
-
+ eCASE ; ! Sjekk dette !! 9.5.
 
 
 ! ODD-stems (odd stem declension)
@@ -1985,6 +1985,7 @@ LEXICON ATTR_es_s ! aajtijes
 LEXICON ø_Ø_ODD 
      ATTR_0 ;
      PRED_0 ;
+ :%^DISIMP   ODDCASEOBL ;
 
 LEXICON h_H_ODD 
      ATTR_H ;
@@ -1994,18 +1995,19 @@ LEXICON h_H_ODD
 LEXICON h_H_ODDNOCOMP 
      ATTR_H ;
      PRED_H ;
+     ODDCASEOBL ;
 
 LEXICON hth_HTH_ODD 
  :%^DISIMP    ATTR_H ;
  :%^DISIMP    PRED_H ;
-    ODDCASEOBL ;
+ :%^DISIMP   ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPh            R ;
     ODDCOMP ;
 
 LEXICON Ce_CE_ODD  !bårreske
  :%^DISIMPe     ATTR_0 ;
  :%^DISIMPe     PRED_0 ;
-    ODDCASEOBL ;
+ :%^DISIMP   ODDCASEOBL ;
     ODDCOMP ;
  
 LEXICON ege_EGE_ODDEVEN !rudtjege 
@@ -2022,7 +2024,7 @@ LEXICON ege_EGE_ODDEVEN !rudtjege
 LEXICON Ce_CE_ODDNOCOMP 
  :%^DISIMPe     ATTR_0 ;
  :%^DISIMPe     PRED_0 ;
-    ODDCASEOBL ;
+ :%^DISIMP   ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON s_S_Ø_ODD ! hamhpas
@@ -2036,12 +2038,12 @@ LEXICON s_S_Ø_ODD ! hamhpas
 LEXICON s_Ø_ODD 
      ATTR_S ;
      PRED_0 ;
-  :s  ODDCASEOBL ;  ! LA la til -s
+  :s ODDCASEOBL ;  ! LA la til -s
   :s ODDCOMP ;
 
 LEXICON s_E_ODD 
  :%^DISIMP ATTR_S ;
-  ODDCASE ; 
+ :%^DISIMP ODDCASE ; 
   ODDCOMP ;
 
 
@@ -2091,7 +2093,7 @@ LEXICON s_S_ODDEVENNOCOMP  !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og
 LEXICON Ces_CES_ODD  
 :%^DISIMPe     ATTR_S ;
 :%^DISIMPe     PRED_S ;
-   ODDCASEOBL ;
+:%^DISIMP   ODDCASEOBL ;
  :%^DISIMPe     PRED_0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
@@ -2099,6 +2101,7 @@ LEXICON Ces_CES_ODD
 LEXICON les_LES_ODD  
 :%^DISIMPe     ATTR_S ;
 :%^DISIMPe     PRED_S ;
+:%^DISIMP ODDCASEOBL ;
    ODDCOMP ;
 
 LEXICON Cs_CS_CE_ODD 
@@ -2109,21 +2112,21 @@ LEXICON Cs_CS_CE_ODDNOCOMP
  :%^DISIMP   ATTR_S ;
  :%^DISIMP   PRED_S ;
  :%^DISIMPe     PRED_0 ;
-     ODDCASEOBL ;
+ :%^DISIMP    ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
      
 
 LEXICON Cs_CS_ODD 
   :%^DISIMP   ATTR_S ;
   :%^DISIMP   PRED_S ;
-     ODDCASEOBL ;
+  :%^DISIMP   ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
      
 LEXICON Cs_CS_ODDNOCOMP 
   :%^DISIMP   ATTR_S ;
   :%^DISIMP   PRED_S ;
-     ODDCASEOBL ;
+  :%^DISIMP   ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON hts_HTS_ODD 
@@ -2131,24 +2134,24 @@ hts_HTS_ODDNOCOMP  ;
   :s  ODDCOMP ;
 
 LEXICON hts_HTS_ODDNOCOMP 
+! This lexicon is in reality hts_HTS_HTE
+! We have info on pred -e for two adjs:
+! heijjehts (corpus) and bieljehts (marit)
   :%^DISIMP   ATTR_S ;
   :%^DISIMP   PRED_S ;
-  :  ODDCASEOBL ; !LA tok vekk -s
  :%^DISIMPe     PRED_0 ; ! hiejjehte
+  :%^DISIMP  ODDCASEOBL ; !LA tok vekk -s
 +A+SgNomCmp:%^DISIMPs            R ;
 
 LEXICON hts_HTS_ODDhtCOMP 
  hts_HTS_ODDNOCOMP  ;
  ODDCOMP ; ! joekehtåbpoe
  
-!LEXICON n_N_ODD  ! attr=n, pred= n - ikke i bruk
-!    n_N_ODDNOCOMP  ;
-! :k ODDCOMP ; 
 
 LEXICON n_N_ODDNOCOMP  ! attr=n, pred= n
  ATTR_N ;
  PRED_N ;
-
+ ODDCASEOBL ;
 
 
 ! type 2
@@ -2192,7 +2195,7 @@ LEXICON ø_S_ODD  !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
 LEXICON JEASIEGOELKIJE
  :%^DISIMPe     ATTR_0 ;
  :%^DISIMPe     PRED_0 ;
-    ije_ODDCASEOBL ;
+ :%^DISIMP   ije_ODDCASEOBL ; 
 +A+SgNomCmp:%^DISIMPe            R ;
        
 
@@ -2208,7 +2211,7 @@ LEXICON jes_js_JES_JS_ODD !to adj: bualijes, fååmijes
   :%^DISIMPe  ATTR_S ;
   :%^DISIMP  PRED_S ;
  :%^DISIMPe  PRED_S ;
-     ije_ODDCASEOBL ;
+  :%^DISIMP   ije_ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
 
@@ -2241,7 +2244,7 @@ LEXICON ijes_ijs_IJE_ODDNOCOMP ! DÅAJMIJES
 LEXICON Cs_CE_ODD 
   :%^DISIMP    ATTR_S ;
   :%^DISIMPe   PRED_0 ;
-       ODDCASEOBL ;
+  :%^DISIMP     ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
        ODDCOMP ;
 
@@ -2254,7 +2257,7 @@ LEXICON Cs_CE_ODDNOCOMP
 LEXICON Ces_CE_ODD 
 :%^DISIMPe     ATTR_S ;
 :%^DISIMPe     PRED_0 ;
-   ODDCASEOBL ;
+ :%^DISIMP  ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 
@@ -2281,7 +2284,7 @@ LEXICON Ces_Ce_CES_CE_ODDNOCOMP
 LEXICON Ces_CES_CE_ODD 
 :%^DISIMPe     ATTR_S ;   !<=====  gir Attr -s
 :%^DISIMPe     PRED_S ;
-   ODDCASE ;
+:%^DISIMP   ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 +Use/Sub:%^DISIMP   ODDCOMP ;
@@ -2291,7 +2294,7 @@ LEXICON Ces_CES_CE_ODDNOCOMP
 :%^DISIMPe     ATTR_S ;
 :%^DISIMPe     PRED_S ;
 :%^DISIMPe     PRED_0 ;
-   ODDCASEOBL ;
+:%^DISIMP   ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
 LEXICON hks_hke_HKS_HKE_ODD 
@@ -2315,22 +2318,20 @@ LEXICON as_AN_ODD
 LEXICON oes_AN_ODD 
 :oe   ATTR_S ;
 :a    PRED_N ;
+! kasusparadigme ???
 !:oek  ODDCOMP ;
 !+Use/NG:ak  ODDCOMP ;
 
-! LEXICON oes_AN_ODDNOCOMP  ! not in use
-! :oe   ATTR_S ;
-! :a    PRED_N ;
-! :oek  ODDCOMP ;
-! +Use/NG:ak  ODDCOMP ;
 
 LEXICON s_N_ODDNOCOMP 
    ATTR_S ;
    PRED_N ;
+! kasusparadigme ?
 
 LEXICON s_N_ODD 
    ATTR_S ;
    PRED_N ;
+   
  :k ODDCOMP ; 
 
 
@@ -2346,6 +2347,7 @@ LEXICON h_N_ODD  ! LA: laga ny versjon, se kommentar over
 LEXICON h_N_ODDNOCOMP 
  ATTR_H ;
  PRED_N ;
+! kasusparadigme ?
 
 LEXICON h_N_Ø_ODD  ! 3 adjektiver, alle har Majas kommentar om at -a formen er subst. Bare en av dem finnes i noun-sma-lex.
  ATTR_H ;
@@ -2397,13 +2399,16 @@ LEXICON e_AN_ODD
 LEXICON ies_EME
  :ies ATTR_0 ;
  :eme PRED_0 ;
+ :em ODDCASEOBL ;
 
 
 LEXICON ies_ESNE
  :ies ATTR_0 ;
  :esne PRED_0 ;
-
-
+ ! One member only: vuerkies
+ ! vuerkesne er bevisst , i bevisst tilstand
+ ! vuerkies klar (i hodet) , som er ved bevissthet
+ ! tt: 
 ! Some loanword lexica, awaiting a proper treatment
 ! they have a +LOAN tag to identify them.
 
