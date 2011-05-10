@@ -171,6 +171,7 @@ SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron 
          # The strict version of items that can only be premodifiers, not parts of the predicate - copied from sme-dis.rle
          
 SET NPNH = WORD - PRE-NP-HEAD OR (ABBR) ;       # NPNH  = "NOT-PRE-NP-HEAD" 
+SET NPNHA = WORD - PRE-NP-HEAD OR (ABBR) OR Adv ;   
 
 
 # Noun sets
@@ -289,6 +290,10 @@ SET LEX-A = A - A-DER;
 
 LIST VERB-FORMS = Inf Sg1 Sg2 Sg3 ;
 
+SET FORMS = VERB-FORMS OR WORD ;
+
+LIST TIME = "måanta" "dæjsta" "daelvie" "gïjre" "tjaktje" "giesie" ;
+
 # ============== #
 # Disambiguation #
 # ============== #
@@ -385,6 +390,14 @@ SELECT:PronPers (Pron Pers Gen) (0 Pron LINK 1C Po) ;
 #SELECT: (Pron Dem Pl) (1 (Indef Pl)) ;
 
 #REMOVE: Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
+
+REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 N OR (Cmpnd))(*1 N BARRIER NPNHA) ;
+REMOVE:jallh (A Pl) (0 ("jallh" CC) LINK 1 Neg LINK 1 S-BOUNDARY OR ConNeg LINK NOT 0 Pl3) ;
+REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 FORMS)(1 FORMS) ;
+SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR COMMA) ;
+
+REMOVE:tjïrrh (N Pl) (0 ("tjïrrh" Po)) ;
+REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NPNH LINK NOT 0 TIME) ;
 	
 
 # Verbs
@@ -471,7 +484,7 @@ SELECT:PrfPrs_DerNomAct PrfPrc (0 (Der/NomAct) LINK *-1 S-BOUNDARY BARRIER V)(NE
 
 # Person
 # leah Prs Sg2 = Pl3
-SELECT:VSg2IfPersSg2a (V Sg2) ((*-1 (Pers Nom Sg2) OR (Rel Sg Nom) BARRIER V OR Nom) OR (1 (Pers Nom Sg2)));
+SELECT:VSg2IfPersSg2a (V Sg2)(NOT 0 N) ((*-1 (Pers Nom Sg2) OR (Rel Sg Nom) BARRIER V OR Nom) OR (1 (Pers Nom Sg2)));
 SELECT:Pl3WhenPlSubj (V Pl3) IF ((*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY) OR (-1 (N Sg Nom) LINK -1 CC))(0 ("lea" V));
 #SELECT:Pl3WhenSubjCC (V Pl3) IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
 REMOVE:Pl3 (V Pl3) (NOT *0 Nom BARRIER S-BOUNDARY) ;
@@ -522,6 +535,12 @@ SELECT:AccIfSVOV (Acc Sg) IF (*-1C INFV BARRIER NPNH)(1C V); # consider VFIN for
 REMOVE:NotNomIfInf (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
        ## jieledh.
 
+#gïelen: Gen vs. VGen gïelem: Sg1 vs. Acc gïelh: Pl vs. Sg2 
+
+REMOVE:gïele VFIN (0 ("gïele") LINK 0 Acc OR Nom)((*1 (V TV) OR Inf BARRIER S-BOUNDARY OR MAINV) OR (*-1 (V TV) BARRIER NPNH OR S-BOUNDARY)) ;
+REMOVE:gïele Sg2 (0 ("gïele") LINK -1 Num OR Indef) ;
+REMOVE:gïele VGen (0 ("gïele") LINK NEGATE -1 MAINV) ;
+
 # Dem
 
 	
@@ -556,7 +575,7 @@ SELECT:AAttr (A Attr) (*1C N BARRIER NPNH) ;
 REMOVE:NotAAttr (A Attr) (NOT 1 N OR A) ;
 
 
-# grammatisk ord eller N
+# grammatisk ord eller N eller A
 
 
 # "<altese>" N Sg Nom  Pron Pers Pl3 Gen  Pron Pers Sg Gen PxSg3  Pron Pers Sg3 Gen 
@@ -672,6 +691,7 @@ REMOVE:almetje1 ("alma") IF (0 ("almetje"));
 REMOVE:almetje2 ("elmie") IF (0 ("almetje"));
 
 SELECT:Jupmele ("Jupmele") IF (0 ("jupmele"));
+
 
 # Adverb context prefers Adv
 SELECT:vihth Adv IF (-1 V)(0 ("vihte"))(1 NPNH OR N);
