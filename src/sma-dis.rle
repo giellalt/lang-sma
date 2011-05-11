@@ -372,8 +372,8 @@ SELECT:DemCom (Dem Com Attr)(*1 (N Pl Com) BARRIER NPNH) ;
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
 	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
 REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NPNH);
-REMOVE:NotPersWhenDemSg Pers IF (0 Dem + Sg3 + $$CASES LINK *1 N + Sg + $$CASES BARRIER NPNH);
-REMOVE:NotPersWhenDemPl Pers IF (0 Dem + Pl3 + $$CASES LINK *1 N + Pl + $$CASES BARRIER NPNH);
+REMOVE:NotPersWhenDemSg Pers IF (0 Dem + Sg + $$CASES LINK *1 N + Sg + $$CASES BARRIER NPNH);
+REMOVE:NotPersWhenDemPl Pers IF (0 Dem + Pl + $$CASES LINK *1 N + Pl + $$CASES BARRIER NPNH);
 
 REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES);
 	## Dihte fievsesne jih mov govse. 
@@ -403,6 +403,7 @@ REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NPNH LINK NOT 0 TIME) 
 # Verbs
 
 IFF:IsItConNeg ConNeg (*-1 Neg BARRIER ConNeg); 
+	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
 
 REMOVE:PrtInNeg Prs IF (0 Neg)(*1C ConNeg + Prt BARRIER NOT-ADV);
 
@@ -523,7 +524,7 @@ REMOVE:PropAttr (Prop Attr) IF (NOT 1 Prop);
 #SELECT:GenToAdp Gen IF (1 Adp); #NOTUSED # check this
 #REMOVE:NotNomToAdp Nom IF (1 Adp); #NOTUSED # check this
 
-SELECT:GenIfLeaNom Gen (1 ("lea" V) LINK 0 Pl3 OR Sg3)(*1 (N Nom) BARRIER NPNH) ; 
+SELECT:GenIfLeaNom Gen (1 ("lea" V) LINK 0 Pl3 OR Sg3 LINK *1 (N Nom) BARRIER NPNH) ; 
 	# Dan lin baenieh njaelmesne.
 
 
@@ -833,15 +834,15 @@ REMOVE:waitwithDis (2 V) (0 (1 V))
 
 
 # Not in use:
-#"<lea>"
-#IFF:GoNotCs
-#IFF:IsItConNeg
-#IFF:S_Interj
-#REMOVE:NotPersWhenDemPl
-#REMOVE:NotPersWhenDemSg
-#REMOVE:r1901
-#SELECT:GenIfLeaNom
-#SELECT:r1894
-#SELECT:r1895
+#"<lea>" - ikke reell
+#IFF:GoNotCs - fungerer for eksempelsetninga
+#IFF:IsItConNeg  - fungerer for eksempelsetninga
+#IFF:S_Interj - fungerer - hvis setninga består bare av interj.
+#REMOVE:NotPersWhenDemPl - feil - fixed
+#REMOVE:NotPersWhenDemSg - feil - fixed
+#REMOVE:r1901 - rm Lea - tatt fra sme
+#SELECT:GenIfLeaNom - feil med regelen - fiksa
+#SELECT:r1894 - redd Dan
+#SELECT:r1895 - redd Dan
 
-
+ 
