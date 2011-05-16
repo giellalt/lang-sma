@@ -202,7 +202,8 @@ Multichar_Symbols
                 +Der/adte                                                 !VV - Frequentative
                 +Der/alle                                                   !VV - Frequentative
                 +Der/eds
-! Der#end
++Der/laakan																	!AAdv
+! Der#end																	
 
 ! ================
 ! The root lexicon
@@ -1506,25 +1507,25 @@ LEXICON NOERE
  :noer e_E_EVENNOCOMP  ;
  :nuerie EVENCOMPONLY ;
  :nööre MES ;
- :nuerie DIMCOMPCASE ;  
+ :nuerie DIMCOMP ;  
  
 LEXICON BUERIE
  :buer ie_IE_EVENNOCOMP  ;
  :buerie EVENCOMPONLY ;
  :bööre MES ;
- :buerie DIMCOMPCASE ;  
+ :buerie DIMCOMP ;  
  
 LEXICON LOOVLES
  :löövl es_ES_EVEN  ;
  :lïevle EVENCOMPONLY ;
  :löövle MES ;
- :lïevle DIMCOMPCASE ;  
+ :lïevle DIMCOMP ;  
  
 LEXICON SOOKES
  :söök es_ES_EVENNOCOMP  ;
  :suekie EVENCOMPONLY ;
  :sööke MES ;
- :suekie DIMCOMPCASE ;  
+ :suekie DIMCOMP ;  
  
 LEXICON SOOJMES
  :sööjm es_ES_EVEN  ;
@@ -1536,18 +1537,18 @@ LEXICON SMAAVE  ! both smaave and plaave
  :aav e_ES_EVENNOCOMP  ; ! LMM says so for plaave
  :aevie EVENCOMPONLY ;
  :aevie MES ;
- :aevie DIMCOMPCASE ;  
+ :aevie DIMCOMP ;  
  
 LEXICON SNAARE 
  :snaar e_ES_EVENNOCOMP  ;
  :snaerie EVENCOMPONLY ;
  :sneere MES ;
- :snaerie DIMCOMPCASE ;  
+ :snaerie DIMCOMP ;  
 
 LEXICON ORRE
  :urre EVENCOMPONLY ;
  :urre EVENCOMP ;
- :urre DIMCOMPCASE ;  
+ :urre DIMCOMP ;  
  
 LEXICON STOERE
  :stoer e_E_EVENNOCOMP  ;
@@ -1572,7 +1573,7 @@ LEXICON STOERE_COMP
  :stuerie EVENCOMPONLY ;
 +Use/Sub:stuerie EVENSUPONLY ;
  :stööre MES ;
- :stuerie DIMCOMPCASE ;  
+ :stuerie DIMCOMP ;  
 
 LEXICON NAAKE
  :nåak e_E_EVEN  ;  
@@ -1581,8 +1582,8 @@ LEXICON NAAKE
  :vïerre MES ;
  :vearra MES ;
  :veerre MES ;
- :vïerre DIMCOMPCASE ;  
- :vearra DIMCOMPCASE ;  
+ :vïerre DIMCOMP ;  
+ :vearra DIMCOMP ;  
 
 LEXICON GISSE
  :gïss e_E_EVENNOCOMP  ;
@@ -1590,7 +1591,7 @@ LEXICON GISSE
  :gissie MES ;
 +Use/Sub:gïssie EVENCOMPONLY ;
 +Use/Sub:gïssie MES ;
- :gissie DIMCOMPCASE ; 
+ :gissie DIMCOMP ; 
  :gïssege PRED_0 ;  ! eller er dette et annet lemma? jfr. -hke og gabtege 
  
 LEXICON GAMTE
@@ -1606,8 +1607,8 @@ LEXICON GIEVTE
  :geavte EVENCOMPONLY ;
  :gievte EVENCOMPONLY ;
  :gïevte MES ;
- :gievte DIMCOMPCASE ;  
- :geavte DIMCOMPCASE ;  
+ :gievte DIMCOMP ;  
+ :geavte DIMCOMP ;  
  
 LEXICON KRUANA
  :kruan a_A_EVENNOCOMP  ;
@@ -1619,38 +1620,38 @@ LEXICON KRUANA
 LEXICON VEELKES
  :veelk es_ES_EVENNOCOMP  ;
  :vielkie EVENCOMPONLY ;
- :vielkie DIMCOMPCASE ;
+ :vielkie DIMCOMP ;
  :veelke MES ;
  
 LEXICON ROOPSES
  :rööps es_ES_EVENNOCOMP  ;
  :ruepsie EVENCOMPONLY ;
- :ruepsie DIMCOMPCASE ;
+ :ruepsie DIMCOMP ;
  :rööpse MES ;
  
 LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
  :sneehp es_ES_EVEN  ; ! pga sneehpebe
  :sneehpe s_S_ODD  ; ! ikke dokumentert i corp eller LMM
  :snaebpie EVENCOMPONLY ;
- :snaebpie DIMCOMPCASE ;
+ :snaebpie DIMCOMP ;
 
 LEXICON GEEHPES
  :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
  :geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM
  :geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
- :geahpie DIMCOMPCASE ;  ! -ie- i paradigmet for  giehpies
+ :geahpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
  :geehpe MES ;
 
 LEXICON GEERVE
  :geerv e_E_EVEN  ;
  :giervie EVENCOMPONLY ;
  :giervie MES ;
- :giervie DIMCOMPCASE ;  
+ :giervie DIMCOMP ;  
 
 LEXICON TJOEVKES
  :tjoevke s_S_ODD  ; ! ODD ikke i LMM, ikke i corp
  :tjuevkie EVENCOMPONLY ; 
- :tjuevkie DIMCOMPCASE ; 
+ :tjuevkie DIMCOMP ; 
  :tjoevke MES ; 
 
 LEXICON SAETNIES
@@ -1983,8 +1984,8 @@ LEXICON s_H_EVENNOCOMP  ! attr=s, pred= h
 ! type 0 (attr only)
 
 LEXICON ATTR_es_s ! aajtijes
-+A+Attr:es FINAL1 ;
-+A+Attr:s FINAL1 ;
++A+Attr:e ATTR_S ;
++A+Attr: ATTR_S ;
 
 
 ! type 1
@@ -2440,30 +2441,22 @@ LEXICON ies_ESNE
 ! ----------------
 
 LEXICON ATTR_0
-+A+Attr: FINAL1 ;
-+A+Attr: R ;
-+A+Attr+Der2+Der/voete:%»voet GIERIEHTSADTJE ;
++A+Attr: ATTRCONT ;
 
 LEXICON ATTR_S
-+A+Attr:%>s FINAL1 ;
-+A+Attr:%>s R ;
-+A+Attr+Der2+Der/voete:%>s%»voet GIERIEHTSADTJE ;
++A+Attr:%>s ATTRCONT ;
 
 LEXICON ATTR_H
-+A+Attr:%>h   FINAL1 ;
-+A+Attr:%>h   R ;
-+A+Attr+Der2+Der/voete:%>h%»voet GIERIEHTSADTJE ;
++A+Attr:%>h   ATTRCONT ;
 
 LEXICON ATTR_N
-+A+Attr:%>n FINAL1 ;
-+A+Attr:%>n R ;
-+A+Attr+Der2+Der/voete:%>n%»voet GIERIEHTSADTJE ;
++A+Attr:%>n ATTRCONT ;
 
 LEXICON ATTRCONT
  FINAL1 ;
-+Use/Sub: R ;
+ R ;
 +Der2+Der/voete+Use/Sub:%»voet GIERIEHTSADTJE ;
-
+LAAKAN ;
 
 ! Predicative lexica
 ! ------------------
@@ -2619,13 +2612,8 @@ EVENSUPONLY ;
 
 LEXICON EVENCOMPONLY
 +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
-!+A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP FINAL1 ;
  EVENCOMPCASE ;
-+A+Comp+Der1+Der/Dim+Attr:%>b%»adtje ATTRCONT ;
-+A+Comp+Der1+Der/Dim+Attr:%>b%»odtje ATTRCONT ;
-+A+Comp+Der1+Der/Dim+Sg+Nom:%>b%»adtje FINAL1 ;
-+A+Comp+Der1+Der/Dim+Sg+Nom:%>b%»odtje FINAL1 ;
- DIMCOMPCASE ;
+ DIMCOMP ;
 
 LEXICON EVENSUPONLY
 +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
@@ -2634,20 +2622,12 @@ LEXICON EVENSUPONLY
 
 LEXICON EVENCOMP_oe
 +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
-!+A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP FINAL1 ;
 +A+Comp+Attr+Use/NG:%>%^COMPDISIMP2be%^DISIMP ATTRCONT ;
-!+A+Comp+Sg+Nom+Use/NG:%>%^COMPDISIMP2be%^DISIMP FINAL1 ;
  EVENCOMPCASE_oe ;
 +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
-!+A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP FINAL1 ;
 +A+Superl+Attr+Use/NG:%>%^COMPDISIMP2mes%^DISIMP ATTRCONT ;
-!+A+Superl+Sg+Nom+Use/NG:%>%^COMPDISIMP2mes%^DISIMP FINAL1 ;
    MES_oe ;
-+A+Comp+Der1+Der/Dim+Attr:%>b%»adtje ATTRCONT ;
-+A+Comp+Der1+Der/Dim+Attr:%>b%»odtje ATTRCONT ;
-! +A+Comp+Der1+Der/Dim+Sg+Nom:%>b%»adtje FINAL1 ;
-! +A+Comp+Der1+Der/Dim+Sg+Nom:%>b%»odtje FINAL1 ;
- DIMCOMPCASE ;
+ DIMCOMP ;
 
 
 LEXICON ODDCOMP
@@ -2713,7 +2693,7 @@ LEXICON EVENCOMPCASE_oe
 
 
   
-LEXICON DIMCOMPCASE
+LEXICON DIMCOMP
 +A+Comp+Der1+Der/Dim+Attr:%>b%»adtje          FINAL1 ;
 +A+Comp+Der1+Der/Dim+Attr:%>b%»odtje       FINAL1 ;
 +A+Comp+Der1+Der/Dim+Sg+Nom:%>b%»adtje          FINAL1 ;
@@ -2836,7 +2816,7 @@ LEXICON ABPA_PL
   +Com:a%>jgujmie FINAL1 ;
 
 LEXICON MES
-+A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP          FINAL1 ;
++A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP          ATTRCONT ;
 +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP          FINAL1 ;
 +A+Superl+Sg+Acc:masse%>m       FINAL1 ;
 +A+Superl+Sg+Gen:masse%>n       FINAL1 ;
@@ -2893,6 +2873,11 @@ LEXICON OMMES
 +A+Superl+SgNomCmp:            R ;
 +A+Superl+SgGenCmp:e%>n        R ;
 +A+Superl+PlGenCmp:%>%^DISIMPi R ;
+
+
+LEXICON LAAKAN
++Der1+Der/laakan:#laakan adv ;
++Der1+Der/laakan+Use/Sub:-laakan adv ;
 
 
 ! ===========================
