@@ -70,7 +70,7 @@ eerlege:eerleg Ce_CE_ODD ; !LA jfr corp og LMM
 jiermege+CmpN/SgN+CmpN/SgG+CmpN/PlG:jiermieg Ce_CE_ODD ;
 åårmege+CmpN/SgN+CmpN/SgG+CmpN/PlG:åårmeg Ce_CE_ODDNOCOMP ;
 !åårmege+CmpN/SgN+CmpN/SgG+CmpN/PlG:åårmeg Ce_CES_ODD ;
-!rovnege+CmpN/SgN+CmpN/SgG+CmpN/PlG:rovneg Ce_CE_ODD ; ! LA se rovnegs
+rovnege ATTR_0 ; ! LA i corp, se rovnegs - slås sammen?
 garhpege:garhpeg Ce_CE_ODDNOCOMP ;
 naabrege:naabreg Ce_CE_ODDNOCOMP ;
 stabrege:stabreg Ce_CE_ODDNOCOMP ;
@@ -595,7 +595,8 @@ baltïske+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub+Use/Sub:baltïsk e_ES_LOAN ; !SUB
 globaale:globa AALE ;
 verbaale:verba AALE ;
 feudaale:feuda AALE ;
-føydaale:føyda AALE ;
+föydaale:föyda AALE ;
+lojaale:loja AALE ;
 kata^strofaale:kata^strofa AALE ;
 legaale:lega AALE ;
 illegaale:illega AALE ;
@@ -871,6 +872,7 @@ polygame+Use/Sub:polygam e_ES_LOAN ;
 saasneme PRED_0 ;
 dakteme+CmpN/SgN+CmpN/SgG+CmpN/PlG:dakteme PRED_0 ;
 sïejhme:sïejhm e_E_EVEN ; !Attr=Pred, Comp= ebe, Substantiv=som attr og pred
+sïejve:sïejv e_E_EVEN ; !corp: sïejvemes
 galme:galm e_ES_ODDEVEN ; ! e(2)-st. system2 LAok
 skïelme:skïelm e_ES_ODDEVEN ; ! e(2)-st. system2
 hovme:hovm e_E_EVEN ; ! e(1)-st.
@@ -984,6 +986,8 @@ spaajhte:spaajht e_E_EVEN ;
 uvhte:uvht e_E_EVEN ;
 byjres ATTR_0 ;
 gåvloes ATTR_0 ;
+fåskoes s_S_ODDNOCOMP ; !LA LMM
+ohkenes ATTR_0 ; !LA korp
 daakte ATTR_0 ; !pred= perf.partisipp =dakteme
 rïekte:rïekt e_ES_ODDEVEN ; !rïektebe, rïektemes ! e(2)-st. system2
 njoetjelukte:njoetjelukt e_E_EVENNOCOMP ;
@@ -1245,6 +1249,7 @@ gåffoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:gåffoe h_H_ODD ;
 !råffoeh:råff oeh_OEH_AN_ODD ; !LA iflg. LMM
 råffoeh:råff oeh_AN_ODD ; !LA iflg. LMM
 reangoeh ATTR_0 ; !I think this one is reangoeh-juelkie, not just 'reangoeh'
+asvoeh ATTR_0 ;
 veangoeh:veang oeh_OEH_AN_ODD ; !
 bæjngoeh:bæjng oeh_AN_ODD ;
 spæjngoeh:spæjng oeh_AN_ODD ; !LAok
@@ -1900,7 +1905,7 @@ bårhveds:bårhvad Cs_CS_ODD ;
 jemhkelds ATTR_0 ; !PRED= INNESIV jemhkielisnie
 tjohkerds:tjohkerd Cs_CS_ODD ;
 jaahkevïddes+CmpN/SgN+CmpN/SgG+CmpN/PlG:jaahkevïdde s_S_ODD ; !jaahkevïddesabpa
-!rovneges+CmpN/SgN+CmpN/SgG+CmpN/PlG:rovneg Ces_CES_CE_ODD ; LA se rovnegs
+rovneges ø_Ø_ODD ; !LA i corp, se rovnegs
 gielteges+CmpN/SgN+CmpN/SgG+CmpN/PlG:gieltieg Ces_CES_CE_ODD ; ! XXX unify these.
 voenges:voenge s_S_ODD ;
 voernges:voernges ATTR_0 ;
@@ -2369,6 +2374,7 @@ panegyrihkeles:panegyrihkel LES ;
 lyrihkeles:lyrihkel LES ;
 sentral#lyrihkeles:sentral#lyrihkel LES ;
 klassihkeles:klassihkel LES ;
+histovrijeles+Use/Sub:histovrijel LES ;
 musihkeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:musihkel LES ;
 fysihkeles:fysihkel LES ;
 kvante#fysihkeles:kvante#fysihkel LES ;
@@ -2529,7 +2535,7 @@ gååvhkeles+CmpN/SgG+CmpN/PlG:gååvhkel les_LES_ODD ; !e(2)-st. !tyvaktig
 tsïhkeles:tsïhkel Ces_CES_CE_ODD ; !tsïhkedh
 joejkeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:joejkel Ces_CES_CE_ODD ; !joejkedh IV= e(1)-st.
 tjuejkeles:tjuejkiel Ces_CES_CE_ODD ; ! COMP:IE
-væjkeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:væjkal Ces_CE_ODD ; ! Ces_Ce_CES_CE_ODD  !væjkalåbpoe tj  
+væjkeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:væjkal Ces_Ce_CES_CE_ODD ; !   !væjkalåbpoe tj  
 gaarkeles:gaarkel Ces_Ce_CES_CE_ODD ; !dervert fra gaarkh
 garkeles:garkel Ces_CES_CE_ODD ; ! XXX usikkert kva som er rett, ikkje endra, 
 naaskeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:naaskel Ces_CES_CE_ODD ; !Naaskedh
@@ -2584,6 +2590,7 @@ gadteles:gadtel Ces_CES_CE_ODD ; !gadtelidh ??? -a-st.?
 sjadteles:sjadtel Ces_CES_CE_ODD ; !sjïdtedh=gevekst
 vedteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:vedtiel Ces_CES_CE_ODD ;
 vaeteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:vaetiel Ces_CES_CE_ODD ; ! COMP:IE, vaetedh - vaeteres
+gïele#maehteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïele#maehtiel Ces_CE_ODD ; !Ces_Ce_CES_CE_ODD ;
 maehteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:maehtiel Ces_CE_ODD ; !Ces_Ce_CES_CE_ODD ;
 sjiehteles:sjiehtiel Ces_CES_CE_ODD ; ! COMP:IE sjiehtedh - ie-st.
 ov^sjiehteles:ov^sjiehtiel Ces_CES_CE_ODD ; ! LA corp
@@ -2596,6 +2603,7 @@ gæjhteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:gæjhtal Ces_CES_CE_ODD ; ! COMP:IE, gijht
 gaerhteles:gaerhtel LES ;
 huhteles:huhtiel Ces_CES_CE_ODD ; ! COMP:IE
 juhteles:juhtiel Ces_CES_CE_ODD ; ! COMP:IE
+tïjje#juhteles:tïjje#juhtiel Ces_CES_CE_ODD ; ! COMP:IE
 ov^nuhteles:ov^nuhtel Ces_Ce_CES_CE_ODD ; !LA corp
 nuhteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:nuhtel Ces_Ce_CES_CE_ODD ; !from Åarjel-saemieh-Samer i sør:årbok 2
 håhteles:håhtel Ces_CES_CE_ODD ; !huhtedh =1 ie-st. -> a-st. UMLAUT
@@ -2657,6 +2665,7 @@ vïenes+CmpN/SgN+CmpN/SgG+CmpN/PlG:vïenes ATTR_0 ; !-> vïene 'venn'
 reejnes+CmpN/SgN+CmpN/SgG+CmpN/PlG:raajne EVENCOMP ;
 reejnes+CmpN/SgN+CmpN/SgG+CmpN/PlG:reejn es_ES_EVEN ;
 båajoes:båajoe s_S_ODDNOCOMP ;
+måsnoes:måsnoe s_N_ODDNOCOMP ; !LA: fra korp
 såajjoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:såajjoe s_S_ODD ; ! også om mnsk. «Manne dan suajjan
 sæjjoes:sæjjoe s_S_ODD ; !sæjjoesåbpoe
 værsjoes:værsjoe PRED_0 ; ! værsjoe=substantiv, daen biejjien værsjoe OBS
@@ -2687,6 +2696,7 @@ læhkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:læhkoe s_S_ODD ; ! Pred=Substantiv: innesiv
 måajkoes:måajk oes_AN_ODD ; ! , oes-an
 råatjkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:råatjkoe s_S_ODD ; ! UMLAUT from ADJ->= roetjke
 måjkoes:måjkoe s_S_ODD ; ! måjkasåbpoe
+åtnoes:åtnoe s_S_ODDNOCOMP ; ! 
 ræjkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:ræjk oes_OES_ODDas ;
 nealkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:nealkoe s_S_ODD ; !-nealkasåbpoe, nealkoesåbpoe
 svalkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:svalk oes_OES_ODDas ;
@@ -2723,7 +2733,7 @@ mannoes:manno es_ES_EVENNOCOMP ; !LA  LMM: mannoes monnehke mynnehke mennebe
 mannoes:menne EVENCOMP ; !LA  LMM: mannoes monnehke mynnehke mennebe
 nannoes:nanno es_ES_EVENNOCOMP ;
 nannoes:nenne EVENCOMP ;
-!nænnoes:nænn oes_OES_OE_EVEN ; LA finner ikke dok for denne, men nennebe
+nænnoes:nænno es_ES_EVEN ; ! LA i korp
 nænnoes:nænno es_ES_EVENNOCOMP ;
 nænnoes:nenne EVENCOMP ;
 jatnoes:jatnan PRED_0 ; ! s->
