@@ -172,6 +172,7 @@ SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron 
          
 SET NPNH = WORD - PRE-NP-HEAD OR (ABBR) ;       # NPNH  = "NOT-PRE-NP-HEAD" 
 SET NPNHA = WORD - PRE-NP-HEAD OR (ABBR) OR Adv ;   
+SET NPNHAI   = WORD - PRE-NP-HEAD - Adv - Indef ;              
 
 
 # Noun sets
@@ -307,13 +308,12 @@ SECTION
 
 REMOVE:R_Num Num (0 Neg);
 REMOVE:R_ACD ACR (0 CC);
+	## Im leah naan saemieskuvlesne vaadtseme.
+	## Jih daejtie gærjide edtjem aaj sjeakodh, – jijtje jeahta jih aalka sjeakodh.
 
 
 #foreløpig regel: 
 IFF:S_Interj Interj (-1 BOS)(1 EOS OR CLB) ; 
-
-#SELECT:S_Interj Interj (-1 BOS)(1 EOS OR CLB) ; 
-#REMOVE:R_Interj Interj ; # The rest
 
 #REMOVE:testA A-DER (0 LEX-A);
 
@@ -333,29 +333,22 @@ REMOVE:PrfPrc_Not_PxSg1 PxSg1 IF (0 PrfPrc);
 	
 # Short Pronouns
 
-#REMOVE:dan Pers + Sg2 + Nom IF (NOT -1 V + Sg2)(0 ("dïhte" Pron Dem Sg Gen))
-	## dan
-	# short pronouns are placed after the finite verb.
 
 # Proper nouns
 
-#REMOVE: Nom IF (0 ABBR + Attr)(1 Prop OR ABBR);
 REMOVE:R_Nom_ABBR_Prop Nom IF (0 (ABBR Attr) OR (Prop Attr))(1  Prop OR ABBR);
-#REMOVE:R_Nom_Prop Nom IF (0 Prop + Attr)(1 Prop OR ABBR);
 REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
 	## Trond Trosterud
 
 #REMOVE:CAPABBR ("<[a-zäöåøæï]>"r) IF  (0 SOMECAPABBR); #NOTUSED does not work
-
 #REMOVE: ("j") IF (0 ("J"));
-	
 #REMOVE: ("<[a-zäöåøæï]>"r) IF (0 ("<[A-ZÄÖÅØÆÏ]>"r));
 	## J. A.	
 # Trivialia
 
-REMOVE:prop_daate Prop IF (0 Pers);
-	## Daah
-	# Problem: Person names Daa, Daae coded as placenames
+REMOVE:prop_daate Prop IF (0 Pers); # too strong
+	## Altese voelph jeanoen nuelesne sealadamme.
+	## Dan eejhtegh nomme lea Laejsa gonnoeh Jåvvah Andersson.
 	
 # agreement:
 # Dem Sg Nom + N Sg Nom			Dem Pl Nom + N Pl Nom
@@ -366,14 +359,20 @@ REMOVE:prop_daate Prop IF (0 Pers);
 # Dem Sg Ela + N Sg Ela			Dem Pl Ela + N Pl Ela
 # Dem Sg Com + N Sg Com			Dem	Pl Com Attr + N Pl Com
 
-SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNH) ;
-SELECT:DemCom (Dem Com Attr)(*1 (N Pl Com) BARRIER NPNH) ;
+SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNHAI) ;
+SELECT:DemCom (Dem Com)(*1 (N Pl Com) BARRIER NPNHAI) ;
+	## Månnoeh aaj dijjem gijhtien guhth tjaalegh jih guvvieh daan learoegærjese vadteme.
+	## Daaj baakoejgujmie edtjede jisrajelehkidie bueriesjugiehtidh.
+	## Akte mubpie lea slaameme jallh slaameminie, båeries povlijtigkerh jis vienhtieh edtja maehtedh gaajhkem dam orrestehtedh, jih dellie traakestieh, sinsitniem dej seamma baakoejgujmie diblieh mejtie leah daah minngemes tjijhtje-gaektsie- jallh uktsieluhkie jaepieh klajkehtamme barre ov goh dihte dle ihkuven saatna.
 
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
 	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
+
 REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NPNH);
 REMOVE:NotPersWhenDemSg Pers IF (0 Dem + Sg + $$CASES LINK *1 N + Sg + $$CASES BARRIER NPNH);
 REMOVE:NotPersWhenDemPl Pers IF (0 Dem + Pl + $$CASES LINK *1 N + Pl + $$CASES BARRIER NPNH);
+	## Dah minngemes jaepieh jïjtje jåhta.
+	## Dihte saemien nyjsenæjja, gie dihte dan baantese soptsesteminie, jijtse jih gaalleben bijre soptseste, sotnoeh såemies aejkien, gijredaelvien, edtjægan naan bijjies jaavratjisnie minnedh gøølestidh.
 
 REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES);
 	## Dihte fievsesne jih mov govse. 
@@ -382,23 +381,25 @@ REMOVE:NotDem2 Dem IF (0 Pers)(NEGATE *1 NOMEN-NOT-PRON BARRIER NPNH);
 	## Dihte joekoen lustes jalhts ajve akten jaepien båeries.
 
 
-#REMOVE:PronIfNotAgree (Dem Nom) IF (0 Pers)(NEGATE *1 Nom BARRIER NPNH);
-
 SELECT:NGen (N Gen)(-1C (Dem Gen)) ;
+	## Daam jijjem hov lea fealadamme, daan aereden varki bøøti, tjoevere åadtjodh åeriestidh.
 SELECT:PronPers (Pron Pers Gen) (0 Pron LINK 1C Po) ;
-#SELECT: (Pron Dem Gen) (0 Pron LINK 1C (Ord Gen) OR (Num Gen)) ;
-#SELECT: (Pron Dem Pl) (1 (Indef Pl)) ;
+	## Johan jih aahkam joekoen gaskese dan åvteste satnem veelji.
 
-#REMOVE: Pron IF (-1 S-BOUNDARY)(0 (Dem Gen))(1 N OR Num OR A);
 
 REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 N OR (Cmpnd))(*1 N BARRIER NPNHA) ;
+	## Mohte ohtsedibie amma treavkah jallh tjielhketjem jih minnibie doh deavabaahkoeh gierestallibie.
 REMOVE:jallh (A Pl) (0 ("jallh" CC) LINK 1 Neg LINK 1 S-BOUNDARY OR ConNeg LINK NOT 0 Pl3) ;
+	## Jeenjh gujht saemieh gieh man akth åvteste eah saemesth jallh eah doesth saemiestidh jallts saemien hïjven guarkah.
 REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 FORMS)(1 FORMS) ;
+	## 	## Dagkeri tjoeverieh joekoen veaksehke juelkieh, mohte disse lissine tjoevere abpe almetje joekoen voerkes jallh fahkoes årrodh.
 SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR COMMA) ;
+	## Helena, jallh Aili man dan aaj nomme, lea saemien maadtoste.
+
 
 REMOVE:tjïrrh (N Pl) (0 ("tjïrrh" Po)) ;
 REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NPNH LINK NOT 0 TIME) ;
-	
+	## Bïegke vaarjoej tjïrrh bïegkedi.
 
 # Verbs
 
@@ -511,7 +512,7 @@ SELECT:Ger Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY)
 
 # Span sentences
 
-"<lea>" REMOVE:lea Pl3 IF (<*-1 Sg1 OR Sg2)(NOT *-1 (N Pl Nom));
+#"<lea>" REMOVE:lea Pl3 IF (<*-1 Sg1 OR Sg2)(NOT *-1 (N Pl Nom));
 
 # Nomen
 
