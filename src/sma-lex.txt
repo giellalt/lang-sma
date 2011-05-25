@@ -212,7 +212,7 @@ Multichar_Symbols
 
 LEXICON Root
  !   Prefixes ; 
-    Noun  ;
+    NounRoot  ;
      ProperNoun  ;
      Verb  ;
      Adjective  ;
@@ -252,7 +252,7 @@ LEXICON R
                                ! words. viessu-London goes through here.
 
  +Cmpnd:%- ENDLEX ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
-
+%-#+Use/Circ:%-# HyphNouns ; ! Go to words requiring hyphens, like -tv- and -cd-
 
 LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
               ! NBNBNB!!! The hyphen should be added here! NOT in the other lexicons!
@@ -267,6 +267,7 @@ LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
                                ! is covered by RHyph + Noun.
 
  +Cmpnd:%- ENDLEX ;      ! This to take care of Oahpo- ja dutkandept - want this in speller
+%-#+Use/Circ:%-# HyphNouns ; ! Go to words requiring hyphens, like -tv- and -cd-
 
 ! Proper noun compounds without hyphens are NOT presently covered - if they were
 ! to be added, they need to be marked +Use/Sub. Examples: LondonHull & viessuLondon.
