@@ -784,14 +784,24 @@ LEXICON DAKTERE
 
 LEXICON JEENERE
 +Sub:^eenar N_ODD ;
++Sub:^enar N_ODD ;
++Sub:jenar N_ODD ;
     :jeenar N_ODD ;
 +N+SgNomCmp+Dial/-SW:^ener    R ;
 
 LEXICON JAANERE
 +Sub:^aanar N_ODD ;
++Sub:^anar N_ODD ;
++Sub:janar N_ODD ;
     :jaanar N_ODD ;
 +N+SgNomCmp+Dial/-SW:^aner    R ;
 
+LEXICON JAATORE
++Sub:^aator N_ODD ;
++Sub:^ator N_ODD ;
++Sub:jator N_ODD ;
+    :jaator N_ODD ;
++N+SgNomCmp:^ator    R ;
 
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
@@ -1135,6 +1145,11 @@ LEXICON JOVNE
     :jovn NIEJTE ;
 +N+SgNomCmp:^on    R ;
 
+LEXICON JOVTE
++Sub:^ovt NIEJTE ;
+    :jovt NIEJTE ;
++N+SgNomCmp:^ot    R ;
+
 LEXICON OVNE_LOAN
  :ovn IHKELES ;
   +N+SgNomCmp:on    R ;
@@ -1143,6 +1158,14 @@ LEXICON UVRE_LOAN
  :vr   NIEJTE ;! vet ikke helt om denne skal ha les
 :vrel LES ;
   +N+SgNomCmp:r    R ;
+  
+LEXICON JEENE
++Sub:^een NIEJTE ;
++Sub:^en NIEJTE ;
++Sub:jen NIEJTE ;
+    :jeen NIEJTE ;
++N+SgNomCmp:^en    R ;
+
 
 LEXICON JENTE
 +Sub:^ent ANTE/ISTE_LOAN ;
@@ -1158,12 +1181,21 @@ LEXICON JANSE
     :jans NIEJTE ;
 +N+SgNomCmp:^ans    R ;
 
+
 LEXICON JANTE
 +Sub:^ant ANTE/ISTE_LOAN ;
 +Sub:^aant ANTE/ISTE_LOAN ;
 +Sub:jaant NIEJTE ;
     :jant NIEJTE ;
 +N+SgNomCmp:^ant    R ;
+
+LEXICON JASME
++Sub:^asm ANTE/ISTE_LOAN ;
++Sub:^aasm ANTE/ISTE_LOAN ;
++Sub:jaasm NIEJTE ;
+    :jasm NIEJTE ;
++N+SgNomCmp+Dial/-NOR:^asm    R ;
+
 
 LEXICON  ANTE/ISTE_LOAN
      NIEJTE ; ! ikke les
@@ -1239,7 +1271,11 @@ LEXICON EETE_LOAN
   :et   NIEJTE ; ! ikke les identiteete
   +N+SgNomCmp:t    R ;
 
-  
+LEXICON JAANE
+  +Use/Sub+Use/NG:an AANE_LOAN ; ! banane
+  :jaan   NIEJTE ; ! ikke les
+  +N+SgNomCmp:an    R ;
+
 LEXICON  AANE_LOAN 
   +Use/Sub+Use/NG:n   NIEJTE ; ! banane
   :an   NIEJTE ; ! ikke les
