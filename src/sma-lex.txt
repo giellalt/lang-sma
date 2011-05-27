@@ -1136,6 +1136,7 @@ LEXICON JENTE
 +Sub:^ent ANTE/ISTE_LOAN ;
     :jent NIEJTE ;
 +N+SgNomCmp:^ent    R ;
+
     
 LEXICON  ANTE/ISTE_LOAN
      NIEJTE ; ! ikke les
@@ -1166,7 +1167,12 @@ LEXICON AALE_LOAN
   :al   NIEJTE ; ! ikke les ! nasjovnaale
   +Use/Sub+Use/NG:l NIEJTE ; ! nasjovnale
   +N+SgNomCmp:l    R ;
-  
+
+LEXICON JAALE
++Use/Sub:a AALE_LOAN ;
+        :jaal NIEJTE ;
+  +N+SgNomCmp:al    R ;
+
 LEXICON AATE_LOAN 
   :at   NIEJTE ; ! ikke les
   +Use/Sub:t NIEJTE ; ! 
@@ -1769,9 +1775,6 @@ LEXICON LES ! Should contain only loanwords (?)
 +A+PlGenCmp:ass%>i  R ;
 
 
-LEXICON JAALE
- :a AALE ; ! begge norm?
- :ja AALE ;
 
 LEXICON AALE
                 :al AALEFORMS ; ! vitaale = norm
