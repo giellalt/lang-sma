@@ -552,13 +552,29 @@ LEXICON ARABIC
 LEXICON ARABICLOOP
  +Use/Circ: ARABIC ;
  %-+Use/Circ:%- ARABIC ;            ! 1-2    multipart numbers
+ %–+Use/Circ:%– ARABIC ;            ! 1–2    multipart numbers
+ %—+Use/Circ:%— ARABIC ;            ! 1—2    multipart numbers
  %.%-+Use/Circ:%.%- ARABIC ;        ! 1.-2   multipart numbers
+ %.%–+Use/Circ:%.%– ARABIC ;        ! 1.–2   multipart numbers
+ %.%—+Use/Circ:%.%— ARABIC ;        ! 1.—2   multipart numbers
  %-% +Use/Circ:%-%  ARABIC ;        ! 1- 2   multipart numbers
+ %–% +Use/Circ:%–%  ARABIC ;        ! 1– 2   multipart numbers
+ %—% +Use/Circ:%—%  ARABIC ;        ! 1— 2   multipart numbers
  % %-+Use/Circ:% %- ARABIC ;        ! 1 -2   multipart numbers
+ % %–+Use/Circ:% %– ARABIC ;        ! 1 –2   multipart numbers
+ % %—+Use/Circ:% %— ARABIC ;        ! 1 —2   multipart numbers
  % %-% +Use/Circ:% %-%  ARABIC ;    ! 1 - 2  multipart numbers
+ % %–% +Use/Circ:% %–%  ARABIC ;    ! 1 – 2  multipart numbers
+ % %—% +Use/Circ:% %—%  ARABIC ;    ! 1 — 2  multipart numbers
  % %-%-% +Use/Circ:% %-%-%  ARABIC ; ! 1 -- 2 multipart numbers
+ % %–%–% +Use/Circ:% %–%–%  ARABIC ; ! 1 –– 2 multipart numbers
+ % %—%—% +Use/Circ:% %—%—%  ARABIC ; ! 1 —— 2 multipart numbers
  % %- ARABICDELIMITER ;             ! 1 -    multipart numbers
+ % %– ARABICDELIMITER ;             ! 1 –    multipart numbers
+ % %— ARABICDELIMITER ;             ! 1 —    multipart numbers
  % %-%- ARABICDELIMITER ;           ! 1 --   multipart numbers
+ % %–%– ARABICDELIMITER ;           ! 1 ––   multipart numbers
+ % %—%— ARABICDELIMITER ;           ! 1 ——   multipart numbers
  %.+Use/Circ:%. ARABIC ;
  %,+Use/Circ:%, ARABIC ;
  % +Use/Circ:%  ARABIC ; ! Allowing for "23 500".
@@ -567,6 +583,8 @@ LEXICON ARABICLOOP
 !%'             ARABIC ; ! Since ' denotes cons.grad. This is not optimal either. 
 !+A+Ord:%. # ;
  ,%-+Num:,%- # ;   ! 10,-
+ ,%–+Num:,%– # ;   ! 10,–
+ ,%—+Num:,%— # ;   ! 10,—
  %%+Num+Nom:%% # ;  ! 50%. It is wrong, but 75 % of us write "75%".
  % %%+Num+Nom:% %% # ; ! We must analyse the correct ones as well... 50 % etc.
  ARABICDELIMITER ; ! list of number-case delimiters
