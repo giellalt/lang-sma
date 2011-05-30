@@ -288,7 +288,8 @@ LEXICON N_ODD
   +N+Der1+Der/Dim+N:%»adtj GIERIEHTSADTJE ;
 
 LEXICON N_ODD_LOAN
-  +N+Sg: N_ODD_SG ;
+  +N+Sg+Use/Sub: FINAL1 ;  ! romer
+  +N+Sg: N_ODD_SG ; ! romere etc.
   +N+Pl: N_ODD_PL ;
   +N:    N_ODD_ESS ;
   +N+SgNomCmp:%^DISIMP            R ;
@@ -1216,7 +1217,7 @@ LEXICON JASME
 +N+SgNomCmp+Dial/-NOR:^asm    R ;
 
 
-LEXICON  ANTE/ISTE_LOAN
+LEXICON ANTE/ISTE_LOAN
      NIEJTE ; ! ikke les
   +N+SgNomCmp:    R ;
   
@@ -1306,8 +1307,9 @@ LEXICON AATE_LOAN
   +N+SgNomCmp:t    R ;
   
 LEXICON AARE_LOAN 
-  :ar   NIEJTE ; ! ikke les
-  +Use/Sub:r NIEJTE ; ! 
+  :ar   NIEJTE ;              ! januaare
+  +N+Sg+Nom+Use/Sub:r FINAL1 ; ! januar
+  +Use/Sub:r NIEJTE ;         ! januare
   +N+SgNomCmp:r    R ;
  
 LEXICON IJLE_LOAN_N 
@@ -1535,6 +1537,15 @@ LEXICON KONTO_PL
   +Ela:%>ijste    FINAL1 ;
   +Com:%>jgujmie FINAL1 ;
  +Com+Use/Sub:%>jgyjmie FINAL1 ; !
+
+LEXICON MARS
++N+Sg+Nom: FINAL1 ; ! mars
+ NIEJTE ; ! marse
+
+
+LEXICON JUNI
++N+Sg+Nom:i FINAL1 ;  !juni
++N+Sg: NIEJTESGOBL ;  ! junesne
 
 
 
