@@ -127,6 +127,11 @@ Multichar_Symbols
   +Dial/-N   ! Not in the North
   +Dial/-NOR ! Not in Norway
   +Dial/-SW  ! Not in Sweden
+  +Dial/SH   ! Short forms
+  +Dial/L    ! Long forms
+!  +Dial/OE  ! oe forms ! We assume these are lexical, and do not tag.
+!  +Dial/A   ! a forms  ! We assume these are lexical, and do not tag.
+
   ! Different focus particles
   +Foc/ge
   +Foc/gan
@@ -4666,34 +4671,31 @@ LEXICON VSUF-V-EVEN-PRS
 
 
 LEXICON VSUF-EVEN-PRS-DUPL
- +Du1:X2n          FINAL1  ; !'e>oe
- +Du2+Use/NG:X4jidien            FINAL1  ; !Long form
- +Du2:d%^DISIMPen  FINAL1  ; !oe>o a>e ie>e
- +Du3:X3jægan   FINAL1  ; !'e>0i
- !+Du3+Use/Sub:b%^DISIMPen     FINAL1  ; ! !'e>0i
- +Pl1:b%^DISIMPe  FINAL1  ; !oe>o a>e ie>e
- +Pl1+Use/NG:X4jibie          FINAL1  ; ! Long form
- +Pl2+Use/NG:X4jidie          FINAL1  ; ! Long form
- +Pl2:d%^DISIMPe  FINAL1  ; !oe>o a>e ie>e
- +Pl3:X2h    FINAL1  ; !'e>oe
-
-
+ +Du1:X2n                 FINAL1 ; !'e>oe
+ +Du2+Dial/L:X4jidien     FINAL1 ; !Long form
+ +Du2+Dial/SH:d%^DISIMPen FINAL1 ; !oe>o a>e ie>e
+ +Du3:X3jægan             FINAL1 ; !'e>0i
+ +Pl1+Dial/L:X4jibie      FINAL1 ; ! Long form
+ +Pl1+Dial/SH:b%^DISIMPe  FINAL1 ; !oe>o a>e ie>e
+ +Pl2+Dial/L:X4jidie      FINAL1 ; ! Long form
+ +Pl2+Dial/SH:d%^DISIMPe  FINAL1 ; !oe>o a>e ie>e
+ +Pl3:X2h                 FINAL1 ; !'e>oe
+!+Du3+Use/Sub:b%^DISIMPen FINAL1 ; ! !'e>0i
 
 
 LEXICON VSUF-VI-EVEN-PRS
- :e           V-PRS-SG-1 ;
-            V-PRS-SG-2 ;
- +Sg3:ie        FINAL1 ;
-! :ie    VSUF-EVEN-PRS-DUPL ;
- +Du1:ien         FINAL1  ;
- +Du2:eden   FINAL1  ; !i>0
- +Du2+Use/NG:ijidien   FINAL1  ; !i>0
- +Du3:ijægan   FINAL1  ; !e>0
- +Pl1:ebe   FINAL1  ; !i>0
- +Pl1+Use/NG:ijibie   FINAL1  ; !i>0
- +Pl2+Use/NG:ijidie   FINAL1  ; !i>0
- +Pl2:ede   FINAL1  ; !i>0
- +Pl3:ieh         FINAL1  ;
+ :e                  V-PRS-SG-1 ;
+                     V-PRS-SG-2 ;
+ +Sg3:ie             FINAL1 ;
+ +Du1:ien            FINAL1 ;
+ +Du2+Dial/L:ijidien FINAL1 ; !i>0
+ +Du2+Dial/SH:eden   FINAL1 ; !i>0
+ +Du3:ijægan         FINAL1 ; !e>0
+ +Pl1+Dial/L:ijibie  FINAL1 ; !i>0
+ +Pl1+Dial/SH:ebe    FINAL1 ; !i>0
+ +Pl2+Dial/L:ijidie  FINAL1 ; !i>0
+ +Pl2+Dial/SH:ede    FINAL1 ; !i>0
+ +Pl3:ieh            FINAL1 ;
 
 
 ! Imperative
@@ -4703,41 +4705,41 @@ LEXICON VSUF-EVEN-IMP
  +Sg2:ieh FINAL1 ;
 ! +Du1:ien FINAL1 ;  
  +Du2:eden FINAL1 ;
-! +Pl1:ebe FINAL1 ; 
-! +Pl1+Use/NG:ijibie FINAL1 ; 
+! +Pl1+Dial/SH:ebe FINAL1 ; 
+! +Pl1+Dial/L:ijibie FINAL1 ; 
  +Pl2:ede FINAL1 ;
 
 
 LEXICON VSUF-II-EVEN-IMP
  +Sg2:oeh     FINAL1  ;
- +Du2:oden      FINAL1  ;
- +Pl2:ode       FINAL1  ;
+ +Du2:oden    FINAL1  ;
+ +Pl2:ode     FINAL1  ;
 
 LEXICON VSUF-III-EVEN-IMP
  +Sg2:ah     FINAL1  ;
- +Du2:eden      FINAL1  ;
- +Pl2:ede       FINAL1  ;
+ +Du2:eden   FINAL1  ;
+ +Pl2:ede    FINAL1  ;
 
 
 LEXICON V-IV-EVEN-PRS
- :e            V-PRS-SG-1 ;
-             V-PRS-SG-2 ;
+ :e                  V-PRS-SG-1 ;
+                     V-PRS-SG-2 ;
  +Sg3+Uml:%^3sUMLa   FINAL1 ;
- +Du1+Uml:%^3dUMLien  FINAL1  ;
- +Du2:eden    FINAL1  ;
- +Du2+Use/NG:ijidien    FINAL1  ;
- +Du3:ijægan   FINAL1  ;
- +Pl1:ebe    FINAL1  ;
- +Pl1+Use/NG:ijibie    FINAL1  ;
- +Pl2:ede    FINAL1  ;
- +Pl2+Use/NG:ijidie    FINAL1  ;
- +Pl3+Uml:%^3dUMLieh  FINAL1  ;
+ +Du1+Uml:%^3dUMLien FINAL1 ;
+ +Du2+Dial/L:ijidien FINAL1 ;
+ +Du2+Dial/SH:eden   FINAL1 ;
+ +Du3:ijægan         FINAL1 ;
+ +Pl1+Dial/L:ijibie  FINAL1 ;
+ +Pl1+Dial/SH:ebe    FINAL1 ;
+ +Pl2+Dial/L:ijidie  FINAL1 ;
+ +Pl2+Dial/SH:ede    FINAL1 ;
+ +Pl3+Uml:%^3dUMLieh FINAL1 ;
 
 
 LEXICON VSUF-IV-EVEN-IMP
  +Sg2:h      FINAL1  ;
- +Du2:eden      FINAL1  ;
- +Pl2:ede       FINAL1  ;
+ +Du2:eden   FINAL1  ;
+ +Pl2:ede    FINAL1  ;
 
 
 
@@ -4841,11 +4843,11 @@ LEXICON VSUF-PRT
 
 
 LEXICON VSUF-PRT-SG-12
-+Sg1:im FINAL1 ;
-+Sg2:ih FINAL1 ;
+ +Sg1:im FINAL1 ;
+ +Sg2:ih FINAL1 ;
 
 LEXICON VSUF-PRT-SG-3
-+Sg3:i  FINAL1  ;
+ +Sg3:i  FINAL1  ;
  +Sg3+Use/Sub:%^DISIMPi  FINAL1  ; !
 
 
