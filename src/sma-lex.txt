@@ -1927,6 +1927,7 @@ LEXICON LES ! Should contain only loanwords (?)
 LEXICON AALE
                 :al AALEFORMS ; ! vitaale = norm
  +Use/Sub+Use/NG:l  AALEFORMS ; ! vitale = descriptive
+ +N+SgNomCmp:l    R ;
 
 LEXICON AALEFORMS
 ! merging spinaale e_E_EVEN  and spinaales es_ES_EVEN 
@@ -2013,7 +2014,7 @@ LEXICON MAST
 ! type 2
 
 LEXICON JELLE
- :^ell e_ES_LOAN ;  ! begge norm?
+ +Use/Sub:^ell e_ES_LOAN ;
  :jell e_ES_LOAN ;
 
 LEXICON UELLE
@@ -2026,7 +2027,7 @@ LEXICON e_ES_LOAN  !LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bø
 +Use/Sub:e    PRED_0 ; ! forslag
 
 
-LEXICON ÆRE  !LOAN  norm: tertijæære or tertiæære ?
+LEXICON ÆRE  !LOAN
 :ær e_ES_EVEN  ;
 +Sub:r e_ES_EVEN  ;
 
@@ -2328,6 +2329,7 @@ LEXICON n_N_ODDNOCOMP  ! attr=n, pred= n
 LEXICON AABELE
         :aabel Ce_CES_ODD  ; ! akseptaabele
 +Use/Sub:abel Ce_CES_ODD  ; ! akseptabele
+
 
 LEXICON IJBELE
         :ijbel Ce_CES_ODD  ; ! fleksijbele
