@@ -2321,7 +2321,7 @@ LEXICON hts_HTS_ODDhtCOMP
 LEXICON n_N_ODDNOCOMP  ! attr=n, pred= n
  ATTR_N ;
  PRED_N ;
- ODDCASEOBL ;
+ ODDCASEOBL ;  ! hmm konsonant? nå gir den slahtjaem, sleagraem, feejjeem osv
 
 
 ! type 2
@@ -2448,8 +2448,9 @@ LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
 LEXICON Ces_Ce_CES_CE_ODDNOCOMP
  :%^DISIMPe ATTR_0 ;
  :%^DISIMPe PRED_0 ;
-            LES ;   !<===== gir Attr -s og Pred -s
-
+ :%^DISIMPe ATTR_S ;
+ :%^DISIMPe PRED_S ;
+ :%^DISIMP   ODDCASE ;
        
 
        
