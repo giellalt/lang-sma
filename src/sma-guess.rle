@@ -149,6 +149,7 @@ SUBSTITUTE ? (V Ind Prs Pl1 Guess) TARGET ("<.*[eo]be>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Pl2 Guess) TARGET ("<.*[eo]de>"r ?) ;
 SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*inie>"r ?) ;  
 SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*(ovne|ovse|uvre|ante|ente|ihke|isme)>"r ?) ;  
+SUBSTITUTE ? (A Sg Nom Guess) TARGET ("<.*elle>"r ?) ;  
 
 # 3
 SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*oeh>"r ?) ;
@@ -165,8 +166,8 @@ SUBSTITUTE ? (V Ind Prs Du1 Guess) TARGET ("<.*oen>"r ?) ;
 SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*ine>"r ?) ; # homonymi?
 SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*sne>"r ?) ;
 SUBSTITUTE ? (N Pl Acc Guess) TARGET ("<.*ide>"r ?) ;
-SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*(ije|åge|ade|afe|ore|öre)>"r ?) ;  
-SUBSTITUTE ? (A Sg Nom Guess) TARGET ("<.*ske>"r ?) ;  
+SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*(ije|åge|ade|afe|ore|[ö|ø]re)>"r ?) ;  
+SUBSTITUTE ? (A Sg Nom Guess) TARGET ("<.*(ske|kse|ale|ele|jle|ære|[ö|ø]se)>"r ?) ;  
 
 # 2
 SUBSTITUTE ? (V Ind Prt Pl3 Guess) TARGET ("<.*in>"r ?) ;
@@ -175,7 +176,7 @@ SUBSTITUTE ? (V Ind Prs Sg1 Guess) TARGET ("<.*em>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Sg1 Guess) TARGET ("<.*im>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Sg2 Guess) TARGET ("<.*ih>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Sg1 Guess) TARGET ("<.*am>"r ?) ; # em already ok
-SUBSTITUTE ? (N Sg Acc Guess) TARGET ("<.*[iouæøå]m>"r ?) ; # fix!
+SUBSTITUTE ? (N Sg Acc Guess) TARGET ("<.*[iouæøåö]m>"r ?) ; # fix!
 SUBSTITUTE ? (N Sg Gen Guess) TARGET ("<.*[ae]n>"r ?) ;
 SUBSTITUTE ? (N Pl Gen Guess) TARGET ("<.*[aei]j>"r ?) ;
 SUBSTITUTE ? (V Inf Guess) TARGET ("<.*dh>"r ?) ;
@@ -216,5 +217,8 @@ SUBSTITUTE (N Sg Com Guess Ess) (N Ess Guess) TARGET ("<.*inie>"r N Sg Com Guess
 
 COPY (N Pl Ill Guess)  (N Pl Acc Guess) ;
 SUBSTITUTE (N Pl Acc Guess Ill) (N Pl Ill Guess) TARGET ("<.*ide>"r N Pl Acc Guess Ill);
+
+COPY (A Attr Guess)  (A Sg Nom Guess) ;
+SUBSTITUTE (A Sg Nom Guess Attr) (A Attr Guess) TARGET (A Sg Nom Guess Attr);
 
 
