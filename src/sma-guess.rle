@@ -197,7 +197,13 @@ SUBSTITUTE ? (N SgNomCmp Cmpnd Guess) TARGET ("<[a-zæöå]*->"r ?) ;
 # Add cohorts for ambiguous tagstrings
 # ====================================
 
+# The SUBSTITUTE rules above replace "?" with a tagstring. This tagstring is
+# often not the only one possible. Therefore we make a new copy containing
+# both the old and the new tags (COPY…) and then we adjust the result to
+# whatever we want (SUBSTITUTE…)
 
+# COPY to-new-copy from-original-tagstring;
+# SUBSTITUTE (original-tagstring-plus-new-copy) (target-new-copy) TARGET (regex original-tagstring-plus-new-copy);
 
 COPY (V Inf Guess)  (V Ind Prt Pl2 Guess) ;
 SUBSTITUTE (V Ind Prt Pl2 Guess Inf) (V Inf Guess) TARGET ("<.*idh>"r V Ind Prt Pl2 Guess Inf);
@@ -215,8 +221,8 @@ COPY (N Sg Acc Guess)  (V Ind Prs Sg1 Guess) ;
 SUBSTITUTE (V Ind Prs Sg1 Guess N) (N Sg Acc Guess) TARGET (V Ind Prs Sg1 Guess N);
 
 COPY (N Pl Ine Guess)  (N Sg Com Guess) ;
-SUBSTITUTE (N Sg Com Guess Pl) (N Pl Ine Guess) TARGET ("<.*ine>"r N Sg Com Guess Pl);
-SUBSTITUTE (N Sg Com Guess Pl) (N Pl Ine Guess) TARGET ("<.*inie>"r N Sg Com Guess Pl);
+SUBSTITUTE (N Sg Com Guess Pl Ine) (N Pl Ine Guess) TARGET ("<.*ine>"r N Sg Com Guess Pl Ine);
+SUBSTITUTE (N Sg Com Guess Pl Ine) (N Pl Ine Guess) TARGET ("<.*inie>"r N Sg Com Guess Pl Ine);
 
 COPY (N Ess Guess)  (N Sg Com Guess) ;
 SUBSTITUTE (N Sg Com Guess Ess) (N Ess Guess) TARGET ("<.*ine>"r N Sg Com Guess Ess);
