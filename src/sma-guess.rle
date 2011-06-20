@@ -170,7 +170,7 @@ SUBSTITUTE ? (V Ind Prs Sg1 Guess) TARGET ("<.*em>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Sg1 Guess) TARGET ("<.*im>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Sg2 Guess) TARGET ("<.*ih>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Sg1 Guess) TARGET ("<.*am>"r ?) ; # em already ok
-SUBSTITUTE ? (N Sg Acc Guess) TARGET ("<.*[aeiouæøå]m>"r ?) ; # fix!
+SUBSTITUTE ? (N Sg Acc Guess) TARGET ("<.*[iouæøå]m>"r ?) ; # fix!
 SUBSTITUTE ? (N Sg Gen Guess) TARGET ("<.*[ae]n>"r ?) ;
 SUBSTITUTE ? (N Pl Gen Guess) TARGET ("<.*[aei]j>"r ?) ;
 SUBSTITUTE ? (V Inf Guess) TARGET ("<.*dh>"r ?) ;
@@ -181,6 +181,12 @@ SUBSTITUTE ? (V Ind Prs Sg3 Guess) TARGET ("<.*e>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Sg3 Guess) TARGET ("<.*a>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Sg3 Guess) TARGET ("<.*i>"r ?) ;
 SUBSTITUTE ? (A Attr Guess) TARGET ("<.*s>"r ?) ;
+
+
+# Add cohorts for ambiguous tagstrings
+# ====================================
+
+
 
 COPY (V Inf Guess)  (V Ind Prt Pl2 Guess) ;
 SUBSTITUTE (V Ind Prt Pl2 Guess Inf) (V Inf Guess) TARGET ("<.*idh>"r V Ind Prt Pl2 Guess Inf);
