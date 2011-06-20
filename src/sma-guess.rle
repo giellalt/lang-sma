@@ -124,9 +124,11 @@ SECTION
 # 6
 SUBSTITUTE ? (V Ger Guess) TARGET ("<.*[ea]minie>"r ?) ;
 SUBSTITUTE ? (N Pl Com Guess) TARGET ("<.*gujmie>"r ?) ;
+SUBSTITUTE ? (Adv Guess) TARGET ("<.*(laakan|ligkie)>"r ?) ;
 
 # 5
 SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*isnie>"r ?) ;
+SUBSTITUTE ? (A Comp Sg Guess) TARGET ("<.*åbpoe>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Du2 Guess) TARGET ("<.*idien>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Du1 Guess) TARGET ("<.*jimen>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Du2 Guess) TARGET ("<.*jiden>"r ?) ;
@@ -148,6 +150,7 @@ SUBSTITUTE ? (V Ind Prs Du2 Guess) TARGET ("<.*[eo]den>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Pl1 Guess) TARGET ("<.*[eo]be>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Pl2 Guess) TARGET ("<.*[eo]de>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*åvva>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl3 Guess) TARGET ("<.*ehti>"r ?) ;
 SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*inie>"r ?) ;  
 SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*(ovne|ovse|uvre|ante|ente|ihke|isme)>"r ?) ;  
 SUBSTITUTE ? (A Sg Nom Guess) TARGET ("<.*elle>"r ?) ;  
@@ -225,4 +228,9 @@ SUBSTITUTE (N Pl Acc Guess Ill) (N Pl Ill Guess) TARGET ("<.*ide>"r N Pl Acc Gue
 COPY (A Attr Guess)  (A Sg Nom Guess) ;
 SUBSTITUTE (A Sg Nom Guess Attr) (A Attr Guess) TARGET (A Sg Nom Guess Attr);
 
+COPY (A Comp Sg Nom Guess) (V Ind Prs Pl1 Guess) ;
+SUBSTITUTE (V Ind Prs Pl1 Guess A) (A Comp Sg Nom Guess) TARGET ("<.*[eo]be>"r V Ind Prs Pl1 Guess A) ;
+
+COPY (A Comp Attr Guess)  (V Ind Prs Pl1 Guess) ;
+SUBSTITUTE (V Ind Prs Pl1 Guess A) (A Comp Attr Guess) TARGET ("<.*[eo]be>"r V Ind Prs Pl1 Guess A) ;
 
