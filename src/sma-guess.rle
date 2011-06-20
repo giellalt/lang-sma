@@ -200,3 +200,10 @@ SUBSTITUTE (V Ind Prt Sg3 Guess N Pl Gen) (N Pl Gen Guess) TARGET ("<.*[ae]>"r V
 COPY (N Pl Nom Guess)  (V Ind Prs Sg2 Guess) ;
 SUBSTITUTE (V Ind Prs Sg2 Guess N Pl Nom) (N Pl Nom Guess) TARGET ("<.*h>"r V Ind Prs Sg2 Guess N Pl Nom);
 
+COPY (N Pl Ine Guess)  (N Sg Com Guess) ;
+SUBSTITUTE (N Sg Com Guess Pl) (N Pl Ine Guess) TARGET ("<.*ine>"r N Sg Com Guess Pl);
+
+COPY (N Ess Guess)  (N Sg Com Guess) ;
+SUBSTITUTE (N Sg Com Guess Ess) (N Ess Guess) TARGET ("<.*ine>"r N Sg Com Guess Ess);
+
+
