@@ -1,0 +1,194 @@
+
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>";
+
+LIST BOS = (>>>) (<s>); 
+LIST EOS = (<<<) (</s>); # vislcg and CG-2 together.
+
+LIST ? = ? ;
+
+
+LIST N = N ;
+LIST Sg = Sg ;
+LIST Pl = Pl ;
+LIST Nom = Nom ;
+LIST Acc = Acc ;
+LIST Gen = Gen ;
+LIST Ine = Ine ;
+LIST Ela = Ela ;
+LIST Ill = Ill ;
+LIST Com = Com ;
+LIST Ess = Ess ;
+
+LIST PxSg1 = PxSg1 ;
+LIST PxSg2 = PxSg2 ;
+LIST PxSg3 = PxSg3 ;
+
+LIST PxDu1 = PxDu1 ;
+LIST PxDu2 = PxDu2 ;
+LIST PxDu3 = PxDu3 ;
+
+LIST PxPl1 = PxPl1 ;
+LIST PxPl2 = PxPl2 ;
+LIST PxPl3 = PxPl3 ;
+
+LIST V = V ;
+LIST Prs = Prs ;
+LIST Prt = Prt ;
+
+LIST Sg1 = Sg1 ;
+LIST Sg2 = Sg2 ;
+LIST Sg3 = Sg3 ;
+
+LIST Du1 = Du1 ;
+LIST Du2 = Du2 ;
+LIST Du3 = Du3 ;
+
+LIST Pl1 = Pl1 ;
+LIST Pl2 = Pl2 ;
+LIST Pl3 = Pl3 ;
+
+LIST Inf = Inf ;
+LIST Neg = Neg ;
+LIST ConNeg = ConNeg ;
+LIST Foc/gan = Foc/gan ;
+
+LIST PrfPrc = PrfPrc ;
+LIST VGen = VGen ;
+LIST Ger = Ger ;
+
+LIST Ind = Ind ;
+
+LIST Imp = Imp ;
+LIST ImpII = ImpII ;
+
+LIST Pot = Pot ;
+LIST Cond = Cond ;
+LIST Imprt = Imprt ;
+
+LIST Opt = Opt ;
+
+LIST Actor = Actor ;
+LIST Clt = Clt ;
+LIST A = A ;
+LIST Ord = Ord ;
+LIST ABBR = ABBR ;
+LIST ACR = ACR ;
+
+LIST Comp = Comp ;
+LIST Superl = Superl ;
+
+LIST Attr = Attr ;
+
+LIST Pron = Pron ;
+LIST Pers = Pers ;
+LIST Dem = Dem ;
+LIST Interr = Interr ;
+LIST Rel = Rel ;
+#LIST Adp = Adp ;
+LIST Po = Po ;
+LIST Pr = Pr ;
+LIST Adv = Adv ;
+LIST Interj = Interj ;
+LIST Indef = Indef ;
+LIST Num = Num ;
+LIST Prop = Prop ;
+
+LIST Mal = Mal ;
+LIST Fem = Fem ;
+LIST Sur = Sur ;
+LIST Org = Org ;
+
+LIST CS = CS ;
+LIST CC = CC ;
+LIST Pcle = Pcle ;
+LIST CLB = CLB ;
+LIST PUNCT = PUNCT ;
+LIST LEFT = LEFT ;
+LIST RIGHT = RIGHT ;
+LIST COMMA = "," ;
+LIST Der1 = Der1 ;
+LIST Der2 = Der2 ;
+LIST Der3 = Der3 ;
+
+LIST REAL-TITLE = "prof" "cand.philol" ;
+LIST OFFICE = "gånka" ;
+SET TITLE = REAL-TITLE OR OFFICE ; 
+LIST Guess = Guess ;
+
+LIST XX = XX ; # for testing
+
+SECTION
+
+SUBSTITUTE ? (N Pl Com Guess) TARGET ("<.*gujmie>"r ?) ;
+
+
+SUBSTITUTE ? (N Sg Ill Guess) TARGET ("<.*(as|[eo])se>"r ?) ;
+SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*sne>"r ?) ;
+SUBSTITUTE ? (N Pl Nom Guess) TARGET ("<.*h>"r ?) ;
+SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*e>"r ?) ;
+
+SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*isnie>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du2 Guess) TARGET ("<.*idien>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du1 Guess) TARGET ("<.*jimen>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du2 Guess) TARGET ("<.*jiden>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du3 Guess) TARGET ("<.*jigan>"r ?) ;
+
+SUBSTITUTE ? (V Ind Prs Du3 Guess) TARGET ("<.*ægan>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl1 Guess) TARGET ("<.*ibie>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl2 Guess) TARGET ("<.*idie>"r ?) ;
+
+SUBSTITUTE ? (V Ind Prt Du1 Guess) TARGET ("<.*imen>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du2 Guess) TARGET ("<.*iden>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du3 Guess) TARGET ("<.*igan>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl1 Guess) TARGET ("<.*jimh>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl2 Guess) TARGET ("<.*jidh>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du2 Guess) TARGET ("<.*[eo]den>"r ?) ;
+
+SUBSTITUTE ? (V Ind Prt Pl1 Guess) TARGET ("<.*imh>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl2 Guess) TARGET ("<.*idh>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*ieh>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg1 Guess) TARGET ("<.*jim>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg2 Guess) TARGET ("<.*jih>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl3 Guess) TARGET ("<.*jin>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du1 Guess) TARGET ("<.*ien>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du1 Guess) TARGET ("<.*oen>"r ?) ;
+SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*ine>"r ?) ; # homonymi?
+SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*sne>"r ?) ;
+
+
+SUBSTITUTE ? (V Ind Prt Pl3 Guess) TARGET ("<.*in>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg3 Guess) TARGET ("<.*ji>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Sg1 Guess) TARGET ("<.*em>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg1 Guess) TARGET ("<.*im>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg2 Guess) TARGET ("<.*ih>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Sg1 Guess) TARGET ("<.*am>"r ?) ; # em already ok
+SUBSTITUTE ? (N Sg Acc Guess) TARGET ("<.*[aeiouæøå]m>"r ?) ; # fix!
+SUBSTITUTE ? (N Sg Gen Guess) TARGET ("<.*[ae]n>"r ?) ;
+SUBSTITUTE ? (N Pl Gen Guess) TARGET ("<.*[aei]j>"r ?) ;
+
+SUBSTITUTE ? (V Ind Prs Sg2 Guess) TARGET ("<.*h>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Sg3 Guess) TARGET ("<.*e>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Sg3 Guess) TARGET ("<.*a>"r ?) ;
+
+SUBSTITUTE ? (V Ind Prs Pl1 Guess) TARGET ("<.*[eo]be>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl2 Guess) TARGET ("<.*[eo]de>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*oeh>"r ?) ;
+
+SUBSTITUTE ? (V Ind Prt Sg3 Guess) TARGET ("<.*i>"r ?) ;
+SUBSTITUTE ? (N Pl Gen Guess) TARGET ("<.*i>"r ?) ;
+
+# Infinite forms
+SUBSTITUTE ? (V Inf Guess) TARGET ("<.*dh>"r ?) ;
+SUBSTITUTE ? (V PrfPrc Guess) TARGET ("<.*eme>"r ?) ;
+SUBSTITUTE ? (V PrfPrc Guess) TARGET ("<.*amme>"r ?) ;
+SUBSTITUTE ? (V Ger Guess) TARGET ("<.*[ea]minie>"r ?) ;
+SUBSTITUTE ? (V PrsPrc Guess) TARGET ("<.*æjja>"r ?) ;
+
+# Nouns
+
+# Adjectives
+SUBSTITUTE ? (A Attr Guess) TARGET ("<.*s>"r ?) ;
+
+COPY (V Inf Guess)  (V Ind Prt Pl2 Guess) ;
+SUBSTITUTE (V Ind Prt Pl2 Guess Inf) (V Inf Guess) TARGET ("<.*idh>"r V Ind Prt Pl2 Guess Inf);
+
