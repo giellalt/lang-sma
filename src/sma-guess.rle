@@ -203,7 +203,7 @@ COPY (N Sg Nom Guess)  (V Ind Prs Sg3 Guess) ;
 SUBSTITUTE (V Ind Prs Sg3 Guess N Sg Nom) (N Sg Nom Guess) TARGET ("<.*[ae]>"r V Ind Prs Sg3 Guess N Sg Nom);
 
 COPY (N Pl Gen Guess)  (V Ind Prt Sg3 Guess) ;
-SUBSTITUTE (V Ind Prt Sg3 Guess N Pl Gen) (N Pl Gen Guess) TARGET ("<.*[ae]>"r V Ind Prt Sg3 Guess N Pl Gen);
+SUBSTITUTE (V Ind Prt Sg3 Guess N Pl Gen) (N Pl Gen Guess) TARGET ("<.*i>"r V Ind Prt Sg3 Guess N Pl Gen);
 
 COPY (N Pl Nom Guess)  (V Ind Prs Sg2 Guess) ;
 SUBSTITUTE (V Ind Prs Sg2 Guess N Pl Nom) (N Pl Nom Guess) TARGET ("<.*h>"r V Ind Prs Sg2 Guess N Pl Nom);
