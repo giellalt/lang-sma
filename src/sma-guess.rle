@@ -147,6 +147,7 @@ SUBSTITUTE ? (V Ind Prt Pl2 Guess) TARGET ("<.*jidh>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Du2 Guess) TARGET ("<.*[eo]den>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Pl1 Guess) TARGET ("<.*[eo]be>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Pl2 Guess) TARGET ("<.*[eo]de>"r ?) ;
+SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*inie>"r ?) ;  
 
 # 3
 SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*oeh>"r ?) ;
@@ -202,8 +203,10 @@ SUBSTITUTE (V Ind Prs Sg2 Guess N Pl Nom) (N Pl Nom Guess) TARGET ("<.*h>"r V In
 
 COPY (N Pl Ine Guess)  (N Sg Com Guess) ;
 SUBSTITUTE (N Sg Com Guess Pl) (N Pl Ine Guess) TARGET ("<.*ine>"r N Sg Com Guess Pl);
+SUBSTITUTE (N Sg Com Guess Pl) (N Pl Ine Guess) TARGET ("<.*inie>"r N Sg Com Guess Pl);
 
 COPY (N Ess Guess)  (N Sg Com Guess) ;
 SUBSTITUTE (N Sg Com Guess Ess) (N Ess Guess) TARGET ("<.*ine>"r N Sg Com Guess Ess);
+SUBSTITUTE (N Sg Com Guess Ess) (N Ess Guess) TARGET ("<.*inie>"r N Sg Com Guess Ess);
 
 
