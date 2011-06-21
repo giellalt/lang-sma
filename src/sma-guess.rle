@@ -121,12 +121,19 @@ SECTION
 
 # Adding tags
 
+# 7
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*fjorden>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*fjellet>"r ?) ;
+
 # 6
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(tind|sund|skog|bäck|bekk|bank|mark|damm|port)en>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(sund)et>"r ?) ;
 SUBSTITUTE ? (Adv Guess) TARGET ("<.*(laakan|ligkie)>"r ?) ;
 SUBSTITUTE ? (N Pl Com Guess) TARGET ("<.*gujmie>"r ?) ;
 SUBSTITUTE ? (V Ger Guess) TARGET ("<.*[ea]minie>"r ?) ;
 
 # 5
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(hög|vik|dal|kil|elv|älv|sjø)en>"r ?) ;
 SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*isnie>"r ?) ;
 SUBSTITUTE ? (A Comp Sg Guess) TARGET ("<.*åbpoe>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Du3 Guess) TARGET ("<.*jigan>"r ?) ;
@@ -135,6 +142,8 @@ SUBSTITUTE ? (V Ind Prs Du2 Guess) TARGET ("<.*idien>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Du1 Guess) TARGET ("<.*jimen>"r ?) ;
 
 # 4
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(vatn|gård)>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(elv|vik)a>"r ?) ;
 SUBSTITUTE ? (V PrsPrc Guess) TARGET ("<.*æjja>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*åvva>"r ?) ;
 SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*(ovn|ovs|uvr|ant|ent|ihk|ism)e>"r ?) ;
@@ -154,6 +163,7 @@ SUBSTITUTE ? (V Ind Prt Du2 Guess) TARGET ("<.*iden>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Du1 Guess) TARGET ("<.*imen>"r ?) ;
 
 # 3
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(elv|dal|vik)>"r ?) ;
 SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*(ij|åg|ad|af|or|[ö|ø]r)e>"r ?) ;
 SUBSTITUTE ? (A Sg Nom Guess) TARGET ("<.*(sk|ks|al|el|jl|ær|[ö|ø]s)e>"r ?) ;
 SUBSTITUTE ? (V Ind Prs Pl1 Guess) TARGET ("<.*[eo]be>"r ?) ;
@@ -192,7 +202,7 @@ SUBSTITUTE ? (V Ind Prs Sg3 Guess) TARGET ("<.*a>"r ?) ;
 SUBSTITUTE ? (V Ind Prt Sg3 Guess) TARGET ("<.*i>"r ?) ;
 SUBSTITUTE ? (A Attr Guess) TARGET ("<.*s>"r ?) ;
 SUBSTITUTE ? (N SgNomCmp Cmpnd Guess) TARGET ("<[a-zæöå]*->"r ?) ;
-SUBSTITUTE ? (N Abbr Sg Nom Guess) TARGET ("<.*\.>"r ?) ;
+#SUBSTITUTE ? (N Abbr Sg Nom Guess) TARGET ("<.*\.>"r ?) ;
 
 # 0
 SUBSTITUTE ? (N Nom Sg XX Guess) TARGET ("<.*>"r ?) ;
@@ -227,7 +237,7 @@ COPY (N Sg Acc Guess)  (V Ind Prs Sg1 Guess) ;
 SUBSTITUTE (V Ind Prs Sg1 Guess N Sg Acc) (N Sg Acc Guess) TARGET (V Ind Prs Sg1 Guess N Sg Acc);
 
 COPY (V Ind Prs Sg1 Guess) (N Sg Acc Guess)   ;
-SUBSTITUTE (N Sg Acc Guess) (V Ind Prs Sg1 Guess N Sg Acc) TARGET (N Sg Acc Guess V Ind Prs Sg1);
+SUBSTITUTE (N Sg Acc Guess V Ind Prs Sg1) (V Ind Prs Sg1 Guess) TARGET (N Sg Acc Guess V Ind Prs Sg1);
 
 
 COPY (N Pl Nom Guess)  (V Ind Prs Pl3 Guess) ;
