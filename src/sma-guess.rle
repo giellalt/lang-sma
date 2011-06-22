@@ -115,7 +115,7 @@ LIST OFFICE = "gånka" ;
 SET TITLE = REAL-TITLE OR OFFICE ; 
 LIST Guess = Guess ;
 
-LIST XX = XX ; # for testing
+#LIST XX = XX ; # for testing
 
 SECTION
 
@@ -205,7 +205,7 @@ SUBSTITUTE ? (N SgNomCmp Cmpnd Guess) TARGET ("<[a-zæöå]*->"r ?) ;
 #SUBSTITUTE ? (N Abbr Sg Nom Guess) TARGET ("<.*\.>"r ?) ;
 
 # 0
-SUBSTITUTE ? (N Nom Sg XX Guess) TARGET ("<.*>"r ?) ;
+SUBSTITUTE ? (N Nom Sg Guess) TARGET ("<.*>"r ?) ;
 
 # Add cohorts for ambiguous tagstrings
 # ====================================
