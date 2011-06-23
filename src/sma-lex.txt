@@ -1211,8 +1211,9 @@ LEXICON OVNE_LOAN
   +N+SgNomCmp:on    R ;
 
 LEXICON UVRE_LOAN
- :vr   NIEJTE ;! vet ikke helt om denne skal ha les
-:vrel LES ;
+ :vr   NIEJTE ; ! A-duvre, kantovre
+ +Use/Sub:r NIEJTE ; ! A-dure, kantore 
+:vrel LES ; ! vet ikke helt om denne skal ha les
   +N+SgNomCmp:r    R ;
   
 LEXICON IJEENE_LOAN
@@ -1268,10 +1269,10 @@ LEXICON GRAAFE_LOAN
   +N+SgNomCmp:f    R ;
 
 LEXICON JUME
-+Sub:^umme NIEJTE ;
-+Sub:^ume NIEJTE ;
-+Use/NG:jumme NIEJTE ;
-    :jume NIEJTE ;
++Sub:^umm NIEJTE ;
++Sub:^um NIEJTE ;
++Use/NG:jumm NIEJTE ;
+    :jum NIEJTE ;
 +N+SgNomCmp:^um    R ;
 
 LEXICON JÖÖRE
@@ -1385,8 +1386,9 @@ LEXICON GRAMME_LOAN
   :m   NIEJTE ; ! ikke les
   +N+SgNomCmp:    R ;
   
-LEXICON  OVSE_LOAN 
-  :vs   NIEJTE ; ! ikke les
+LEXICON  OVSE_LOAN ! ikke les 
+  :vs   NIEJTE ; !sellulovse
+  +Use/Sub:s NIEJTE ; !sellulose
   +N+SgNomCmp:se    R ;
   
 
