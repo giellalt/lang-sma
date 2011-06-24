@@ -1861,9 +1861,9 @@ LEXICON SUVHTJIES
 
 LEXICON HUJNIES 
  :hujnies ATTR_0 ; 
- :hujnies PRED_0 ;
- :håjnan PRED_0 ;
- :hujnij ije_ODDCASE ;
+ :hujnies PRED_0 ; ! " men også…"
+ :håjnan PRED_0 ; ! i bruk!
+ :hujnij ije_ODDCASE ;  ! ??
  +A+SgNomCmp:hujnije R ;
  :hujnij ODDCOMP ;
 
@@ -1888,6 +1888,9 @@ LEXICON GIERIES
 
 LEXICON BAERIES 
  :båer ies_IES_EVENNOCOMP ;
+ :båeries ATTR_0 ;
+ :båeries PRED_0 ;
+! :båaras ODDCASE_OBL ; ! båarasam, fiks! (LK)
  :båaras ODDCOMP ;
  
 LEXICON GÆHTJOES 
@@ -2195,12 +2198,14 @@ LEXICON ø_Ø_ODD
 LEXICON h_H_ODD   !XXX mangler CASE - hva er riktig - kanskje EVEN?
      ATTR_H ;
      PRED_H ;
+     oeCASE_OBL ;
  :hk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  
+ 
 
 LEXICON h_H_ODDNOCOMP  
      ATTR_H ;
      PRED_H ;
-     ODDCASEOBL ; ! XXXX Denne gir f.eks. båajhtoeem - hva er riktig form? båajhtoem ? => EVEN
+     oeCASE_OBL ;
 
 LEXICON hth_HTH_ODD 
  :%^DISIMP    ATTR_H ;
@@ -2295,13 +2300,16 @@ LEXICON s_S_ODDEVENNOCOMP  !tjåenghkies:tjåenghkie Pred=substantiv, innesiv og
      PRED_S ;
 :s   ODDCOMP ;
 
-LEXICON Ces_CES_ODD  
+LEXICON Ces_CES_ODD
+ ODDCOMP ;
+ Ces_CES_ODDNOCOMP ;
+
+LEXICON Ces_CES_ODDNOCOMP  
 :%^DISIMPe     ATTR_S ;
 :%^DISIMPe     PRED_S ;
 :%^DISIMP   ODDCASEOBL ;
- :%^DISIMPe     PRED_0 ;
+:%^DISIMPe     PRED_0 ;
 +A+SgNomCmp:%^DISIMPe            R ;
-   ODDCOMP ;
    
 LEXICON les_LES_ODD  
 :%^DISIMPe     ATTR_S ;
@@ -2741,7 +2749,17 @@ LEXICON ieCASEOBL
   +A+PlGenCmp+NoUml:ie%>j           R ;
   +A+PlGenCmp+Uml:%>%^iUMLi R ;
 
+
+
+
 LEXICON oeCASE
+oeCASE_NOMSG ;
+oeCASE_OBL ;
+
+LEXICON oeCASE_NOMSG
+ +A+Nom:oe          FINAL1 ;
+
+LEXICON oeCASE_OBL
  +A+Sg: A_OE_SGILL_UML ; ! Causes Umlaut
          A_OE ;
 
@@ -2757,7 +2775,6 @@ LEXICON A_OE
   +A+PlGenCmp:oe%>j R ;
 
 LEXICON A_OE_SG
-  +Nom:oe          FINAL1 ;
   +Acc:oe%>m       FINAL1 ;
   +Gen:oe%>n       FINAL1 ;
   +Ill:o%>se       FINAL1 ;
