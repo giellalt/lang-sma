@@ -308,7 +308,7 @@ SECTION
 # Cycle 0
 
 REMOVE:R_Num Num (0 Neg);
-REMOVE:R_ACD ACR (0 CC);
+REMOVE:R_ACR ACR (0 CC);
 	## Im leah naan saemieskuvlesne vaadtseme.
 	## Jih daejtie gærjide edtjem aaj sjeakodh, – jijtje jeahta jih aalka sjeakodh.
 
@@ -612,7 +612,7 @@ SELECT:CCCS CC OR CS (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
 
 
 REMOVE:IllNotVfin VFIN (0 ILLADV)(1 VFIN) ;
-REMOVE:IlNotNom Nom (0 ILLADV)(1 VFIN) ;
+REMOVE:IllNotNom Nom (0 ILLADV)(1 VFIN) ;
 	## Dah aaj naan aejkien diekie båetieh, mohte eeremes tjidtjie dihte dahkoe vualka.
 	## Dahkoe lin aaj sijhteme edtjin naan noere saemieh aaj båetedh.
 
@@ -746,21 +746,21 @@ REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NOT *-1 Pron + Pl2 + Nom);
 
 # Substituting Prop tags 
 # -------------------------
-SUBSTITUTE (Plc) (Sur) TARGET Prop IF (-1 (Mal Attr) OR (Fem Attr))(NEGATE 0 Sur);
+SUBSTITUTE:Sur (Plc) (Sur) TARGET Prop IF (-1 (Mal Attr) OR (Fem Attr))(NEGATE 0 Sur);
   	## Linda England.
-SUBSTITUTE (Plc) (Sur) TARGET Prop IF (-2 (Mal Attr) OR (Fem Attr))(-1 ABBR);
+SUBSTITUTE:Sur (Plc) (Sur) TARGET Prop IF (-2 (Mal Attr) OR (Fem Attr))(-1 ABBR);
 	## Linda B. England.
 
 
 	# Prop or not
 	# ----------- 
 
-SELECT:r1885 Prop IF (NEGATE *-1 BOS OR (":") OR (PUNCT LEFT) OR (Num Nom) BARRIER REALWORD); 
+SELECT:Prop Prop IF (NEGATE *-1 BOS OR (":") OR (PUNCT LEFT) OR (Num Nom) BARRIER REALWORD); 
 	## Áirras Egil Olli nammaduvvui Sámedikki ovddasteaddjin.
 	## 1.1. Sámi doaibmaplána darbu ja ulbmilat.
  # Capitalised nouns in the middle of a sentence are names - (not always).
 
-REMOVE:r1886 (Prop Pl) IF (0 (Prop Sg))(NEGATE 0 ("Saemiedigkie"));  
+REMOVE:PropSg (Prop Pl) IF (0 (Prop Sg))(NEGATE 0 ("Saemiedigkie"));  
 	## Marit lea dál.
  # Marit N Sg, not Mari+t Pl Nom
 
@@ -770,12 +770,12 @@ LIST PROP-OR-NOT2 = "Bergene" "Jeesus" "Kristus";
 # But this one!
 LIST PROP-OR-NOT1 = "Bergen" "Jeesuse" "Kristuse" ;
 		
-SELECT:r1887 PROP-OR-NOT1 IF (0 PROP-OR-NOT2) ; #(NEGATE -1 BOS LINK 2 Prop);	
+SELECT:Prop PROP-OR-NOT1 IF (0 PROP-OR-NOT2) ; #(NEGATE -1 BOS LINK 2 Prop);	
 
-REMOVE:r1888 (Prop Pl Nom) IF (-1 BOS)(NEGATE *1 V + Pl3 BARRIER S-BOUNDARY);	    # SV-BOUNDARY
+REMOVE:Prop (Prop Pl Nom) IF (-1 BOS)(NEGATE *1 V + Pl3 BARRIER S-BOUNDARY);	    # SV-BOUNDARY
 	## Unnit nuppástusaiguin.	
 
-#SELECT:r1892 Prop IF (-1 BOS)(0 ("Saemie" Prop))(1 ORGANIZATION OR Org);
+#SELECT:Prop Prop IF (-1 BOS)(0 ("Saemie" Prop))(1 ORGANIZATION OR Org);
   	## Sámi allaskuvla láhčá diliid dulkoma joatkkaoahppofáldahkii, mii oaivvilduvvo olbmuide, geat dovdet dearvvašvuođa- ja sosiálasuorggi, ja maiddái MBD ovddasvástádussuorggi.
   
 
@@ -786,8 +786,8 @@ SELECT:r1894 ("Da") OR ("Dan") IF (NEGATE -1 BOS OR (":") OR PUNCT)(1 (Prop Sur)
 SELECT:r1895 ("Da") OR ("dan") IF (-1 BOS OR (":") OR PUNCT);
 
  
-REMOVE:r1900 ("Lea") IF (-1 BOS OR PUNCT)(NEGATE 1 V + Sg3); 
-REMOVE:r1901 ("Lea") IF (-1 BOS OR PUNCT OR (":"))(1 A); 
+REMOVE:Lea ("Lea") IF (-1 BOS OR PUNCT)(NEGATE 1 V + Sg3); 
+REMOVE:Lea ("Lea") IF (-1 BOS OR PUNCT OR (":"))(1 A); 
 	## Lea dušše okta Ipmil. Lea idja. 	## Lea buolaš. Son dajai: Leage gierdávaš.
  
 #REMOVE:r1902 ("Man") IF (-1 BOS OR PUNCT OR (":"))(0 (V Imprt));
