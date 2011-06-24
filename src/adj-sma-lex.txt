@@ -54,8 +54,8 @@ tjåalpa+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåalpa ø_N_ODD ; !LA: tjåalpah er også 
 gåvva:gåvv a_A_EVENNOCOMP ; !LA: ikke attr?
 evtebe:evt EVTEBE ; !LA
 uvtebe:uvt EVTEBE ; !LA
-övtebe:övt EVTEBE ; !LA
-övtebe+Use/Sub:öövt EVTEBE ; !LA corp
+evtebe+Use/Sub:övt EVTEBE ; !LA
+evtebe+Use/Sub:öövt EVTEBE ; !LA corp
 praade:praad e_ES_ODDEVEN ; ! e(1)-st. LA:ok
 stejkedes:stejkied Ces_CES_CE_ODD ; ! COMP:IE !stejkiedåbpoe -ie-st.
 bieljege+CmpN/SgG+CmpN/PlG:bieljieg Ce_CE_ODD ; ! COMP:IE
@@ -326,7 +326,8 @@ skovvehtje:skovvehtj Ce_CE_ODDNOCOMP ;
 plïehtje:plïehtj e_ES_EVEN ;
 gaajhtje+CmpN/SgN+CmpN/SgG+CmpN/PlG:gaajhtj e_E_EVEN ;
 samhtje ø_S_ODD ; ! Attr=samhtje, Pred=samhtjes: samhtjesåbpoe ! e(1)-st. ! LA -> e_ES_ODDEVEN  ?
-ohtje+CmpN/SgN+CmpN/SgG+CmpN/PlG:ohtj e_E_EVEN ; ! LAok
+ohtje+CmpN/SgN+CmpN/SgG+CmpN/PlG:ohtj e_E_EVEN ; ! LAok SUB?
+ohtje+CmpN/SgN+CmpN/SgG+CmpN/PlG:uhtj e_E_EVEN ; ! LAok
 leajhkohtje+CmpN/SgN+CmpN/SgG+CmpN/PlG:leajhkoehtj Ce_CE_ODDNOCOMP ; !
 njåamkohtje:njåamkoehtj Ce_CE_ODDNOCOMP ; !
 njåblohtje:njåbloehtj Ce_CE_ODDNOCOMP ; !
@@ -1578,7 +1579,7 @@ marngan:marnga n_N_ODDNOCOMP ;
 nuajjan+CmpN/SgN+CmpN/SgG+CmpN/PlG:nuajja n_N_ODDNOCOMP ; !nåajjakåbpoe
 nuajjan+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåajjak ODDCOMP ;
 suajjan+CmpN/SgN+CmpN/SgG+CmpN/PlG:suajja n_N_ODDNOCOMP ; !suajjakåbpoe
-njåajjan+CmpN/SgN+CmpN/SgG+CmpN/PlG:njåajja n_N_ODDNOCOMP ;
+!njåajjan+CmpN/SgN+CmpN/SgG+CmpN/PlG:njåajja n_N_ODDNOCOMP ;
 håvnjan:håvnja n_N_ODDNOCOMP ; !håvnjakåbpoe
 kambodsjan+CmpN/SgN+CmpN/SgG+CmpN/PlG:kambodsjan ATTR_0 ;
 gængsjan:gængsja n_N_ODDNOCOMP ; !gængsjakåbpoe
@@ -1656,8 +1657,8 @@ jugoslaavijen ATTR_0 ;
 skandinaavijen ATTR_0 ;
 maldijvijen ATTR_0 ;
 latvijen ATTR_0 ;
-feejjen+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:feejjen e_E_EVENNOCOMP ; ! i bruk?
-feejjen+CmpN/SgN+CmpN/SgG+CmpN/PlG:feejje n_N_ODDNOCOMP ;
+feejjen+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:feejjen e_E_EVENNOCOMP ; ! stammen er feil!
+feejjen+CmpN/SgN+CmpN/SgG+CmpN/PlG:feejje n_N_ODDNOCOMP ; ! acc: feejjenem
 sveerjen+CmpN/SgN+CmpN/SgG+CmpN/PlG:sveerjen ATTR_0 ;
 svïerjen+CmpN/SgN+CmpN/SgG+CmpN/PlG:svïerjen ATTR_0 ;
 nöörjen+CmpN/SgN+CmpN/SgG+CmpN/PlG:nöörjen ATTR_0 ;
@@ -1830,7 +1831,7 @@ lïebkeds:lïebked Cs_CS_CE_ODD ;
 tjaekeds+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjaekied Cs_CS_CE_ODD ; ! COMP:IE tjaekiedåbpoe
 smaekeds:smaekied Cs_CS_CE_ODD ; ! VED COMP:ie smaekiedåbpoe
 sjïekeds:sjïeked Cs_CS_ODD ;
-njalhkeds:njalhked Cs_CS_CE_ODD ;
+njalhkeds:njalhked Cs_CS_CE_ODD ; ! Lena K: ok contlex
 amhkeds:amhkad Cs_CS_CE_ODD ; ! VED COMP:A amhkadåbpoe
 åmhkeds:åmhkad Cs_CS_CE_ODD ; ! COMP:A åmhkadåbpoe 'amhkadahken!' -a-st.
 arhkeds ATTR_0 ;
@@ -2505,7 +2506,7 @@ oviemeles:ov^iemel Ces_CES_CE_ODD ;  ! LA corp
 iemeles:iemel Ces_CES_CE_ODD ;
 voemeles:voemel Ces_CES_CE_ODD ;
 gïepmeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïepmeles ATTR_0 ; !gïepedidh
-jupmeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:jupmiel Ces_CES_CE_ODD ; !jupmielasse = ie-st.
+jupmeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:jupmiel Ces_CES_ODDNOCOMP ; !jupmielasse = ie-st.
 aasmeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:aasmel Ces_CES_CE_ODD ;
 aesmeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:aesmiel Ces_CES_CE_ODD ;
 orgaaneles:orgaanel LES ;!organiske
