@@ -34,6 +34,7 @@ Multichar_Symbols
 @U.TIME.11@ 
 @U.TIME.12@ 
 
++Use/NG
 
 LEXICON Root
 
@@ -96,6 +97,9 @@ LEXICON BEF
  %:24:govhte%              TOHALF ;
  %:25:vïjhte%             TOHALF ;  
  %:26:njieljie%           TOHALF ;  
+ %:26+Use/NG:njielje%           TOHALF ;  
+ %:26+Use/NG:nieljie%           TOHALF ;  
+ %:26+Use/NG:nielje%           TOHALF ;  
  %:27:golme%             TOHALF ;
  %:28:göökte%             TOHALF ; 
  %:29:akte%               TOHALF ;
@@ -104,6 +108,9 @@ LEXICON BEF
  %:32:göökte%              OVERHALF ;
  %:33:golme%              OVERHALF ;
  %:34:njieljie%             OVERHALF ;
+ %:34+Use/NG:njielje%           OVERHALF ;  
+ %:34+Use/NG:nieljie%           OVERHALF ;  
+ %:34+Use/NG:nielje%           OVERHALF ;  
  %:35:vïjhte%             OVERHALF ;
  %:36:govhte%              OVERHALF ;
  %:37:tjïjhtje%              OVERHALF ;
@@ -116,6 +123,9 @@ LEXICON BEF
  %:44:luhkiegovhte%     TO ;
  %:45:njealjehts%            TO ;
  %:46:luhkienjieljie%  TO ;
+ %:46+Use/NG:luhkienjielje%  TO ;
+ %:46+Use/NG:luhkienieljie%  TO ;
+ %:46+Use/NG:luhkienielje%   TO ;
  %:47:luhkiegolme%    TO ;
  %:48:luhkiegöökte%    TO ;
  %:49:luhkieakte%      TO ;
@@ -126,6 +136,9 @@ LEXICON BEF
  %:54:govhte%              TO ;
  %:55:vïjhte%             TO ;  
  %:56:njieljie%           TO ;  
+ %:56+Use/NG:njielje%   TO ;
+ %:56+Use/NG:nieljie%   TO ;
+ %:56+Use/NG:nielje%    TO ;
  %:57:golme%             TO ;
  %:58:göökte%             TO ; 
  %:59:akte%               TO ;
@@ -136,6 +149,9 @@ LEXICON AFT
  %:%02:göökte%             OVER ;
  %:%03:golme%             OVER ;
  %:%04:njieljie%           OVER ;
+ %:%04+Use/NG:njielje%   OVER ;
+ %:%04+Use/NG:nieljie%   OVER ;
+ %:%04+Use/NG:nielje%    OVER ;
  %:%05:vïjhte%             OVER ;
  %:%06:govhte%              OVER ;
  %:%07:tjïjhtje%              OVER ;
@@ -146,6 +162,9 @@ LEXICON AFT
   %:12:luhkiegöökte%     OVER ;
   %:13:luhkiegolme%     OVER ;
   %:14:luhkienjieljie%   OVER ;
+  %:14+Use/NG:luhkienjielje%   OVER ;
+  %:14+Use/NG:luhkienieljie%   OVER ;
+  %:14+Use/NG:luhkienielje%    OVER ;
   %:15:njealjehts%             OVER ; 
   %:16:luhkiegovhte%      OVER ;
   %:17:luhkietjïjhtje%      OVER ;
@@ -154,12 +173,14 @@ LEXICON AFT
 
 LEXICON TOHALF
  :åvtelen% bielie%  HOUR ;
+ +Use/NG:avtelen% bielie%  HOUR ;
 
 LEXICON OVERHALF
  :bijjelen% bielie%     HOUR ;
 
 LEXICON TO
- :åvtelen%    HOUR ;
+        :åvtelen%    HOUR ;
+ +Use/NG:avtelen%    HOUR ; ! variant
 
 LEXICON OVER
  :bijjelen%   HOUR ;
@@ -169,6 +190,9 @@ LEXICON HOUR
 @U.TIME.2@:göökte@U.TIME.2@ # ;         
 @U.TIME.3@:golme@U.TIME.3@ # ;          
 @U.TIME.4@:njieljie@U.TIME.4@ # ;       
+@U.TIME.4@+Use/NG:njielje@U.TIME.4@ # ;       
+@U.TIME.4@+Use/NG:nieljie@U.TIME.4@ # ;       
+@U.TIME.4@+Use/NG:nielje@U.TIME.4@ # ;       
 @U.TIME.5@:vïjhte@U.TIME.5@ # ;         
 @U.TIME.6@:govhte@U.TIME.6@ # ;         
 @U.TIME.7@:tjïjhtje@U.TIME.7@ # ;       
