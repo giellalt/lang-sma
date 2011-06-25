@@ -2604,7 +2604,15 @@ LEXICON h_N_Ø_ODD  ! 3 adjektiver, alle har Majas kommentar om at -a formen er 
 +Use/NG: PRED_0 ;
 :k  ODDCOMP ; 
 
+LEXICON oeh_OEH_ODD ! tidl -oe h_H_ODD
+ :oehk ODDCOMP ; 
+       oeh_OEH_ODDNOCOMP ;
 
+LEXICON oeh_OEH_ODDNOCOMP
+ ATTR_H ;
+ PRED_H ;
+ oeCASE_OBL ;
+ 
 LEXICON oeh_AN_ODD 
 oeh_AN_ODDNOCOMP  ; ! Er det verkeleg rett at dette er utan comp??
 ! :ahk ODDCOMP ;
@@ -2700,6 +2708,30 @@ LAAKAN ;
 ! Predicative lexica
 ! ------------------
 
+ 
+LEXICON PRED_0
+ +A+Sg+Nom: FINAL1 ; ! Awaiting full adj analysis 
+
+
+LEXICON PRED_S
+ +A+Sg+Nom:%>s FINAL1 ; ! Awaiting full adj analysis 
+
+LEXICON PRED_H
+ +A+Sg+Nom:%>h FINAL1 ; ! Awaiting full adj analysis 
+
+
+LEXICON PRED_N
+ +A+Sg+Nom:%>n FINAL1 ; ! Awaiting full adj analysis 
+
+LEXICON PRED_AN
+ +A+Sg+Nom:%>an FINAL1 ; ! Awaiting full adj analysis 
+
+
+
+
+! Odd syllabic stems - adjectives
+! - - - - - - - - - - - - - - - -
+
 LEXICON ODDCASE
  ODDCASENOM ;
  ODDCASEOBL ;
@@ -2746,6 +2778,10 @@ LEXICON ije_ODDCASEOBL
 +A+SgGenCmp:e%>%^DISIMPn        R ;
 +A+PlGenCmp:%>%^DISIMPi R ;
 
+
+
+! Even syllabic stems - adjectives
+! - - - - - - - - - - - - - - - - 
 
 LEXICON eCASE
 eCASENOM ;
@@ -2828,24 +2864,6 @@ LEXICON A_OE_ESS
   +Ess:o%>jne         FINAL1 ;
 
 
-
- 
-LEXICON PRED_0
- +A+Sg+Nom: FINAL1 ; ! Awaiting full adj analysis 
-
-
-LEXICON PRED_S
- +A+Sg+Nom:%>s FINAL1 ; ! Awaiting full adj analysis 
-
-LEXICON PRED_H
- +A+Sg+Nom:%>h FINAL1 ; ! Awaiting full adj analysis 
-
-
-LEXICON PRED_N
- +A+Sg+Nom:%>n FINAL1 ; ! Awaiting full adj analysis 
-
-LEXICON PRED_AN
- +A+Sg+Nom:%>an FINAL1 ; ! Awaiting full adj analysis 
 
 
 
