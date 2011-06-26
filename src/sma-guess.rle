@@ -122,9 +122,14 @@ SECTION
 # Adding tags
 
 # Ord med - er ikke verb
-SUBSTITUTE ? (N Pl Nom Guess) TARGET ("<.*\-.*h>"r ?) ;
+SUBSTITUTE ? (N Pl Com Guess) TARGET ("<.*\-.*gujmie>"r ?) ;
+SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*\-.*sne>"r ?) ;
+SUBSTITUTE ? (N Sg Ela Guess) TARGET ("<.*\-.*ste>"r ?) ;
+SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*\-.*[ij]ne>"r ?) ;
 SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*\-.*[ea]>"r ?) ;
 SUBSTITUTE ? (N Sg Acc Guess) TARGET ("<.*\-.*[eai]m>"r ?) ;
+SUBSTITUTE ? (N Sg Ill Guess) TARGET ("<.*\-.*se>"r ?) ;
+SUBSTITUTE ? (N Pl Nom Guess) TARGET ("<.*\-.*h>"r ?) ;
 SUBSTITUTE ? (N Sg Gen Guess) TARGET ("<.*\-.*n>"r ?) ;
 SUBSTITUTE ? (N Pl Gen Guess) TARGET ("<.*\-.*i>"r ?) ;
 
@@ -262,7 +267,7 @@ SUBSTITUTE (V Ind Prs Pl3 Guess N Pl Nom) (N Pl Nom Guess) TARGET (V Ind Prs Pl3
 
 
 COPY (N Pl Ine Guess)  (N Sg Com Guess) ;
-SUBSTITUTE (N Sg Com Guess Pl Ine) (N Pl Ine Guess) TARGET ("<.*ine>"r N Sg Com Guess Pl Ine);
+SUBSTITUTE (N Sg Com Guess Pl Ine) (N Pl Ine Guess) TARGET ("<.*[ij]ne>"r N Sg Com Guess Pl Ine);
 SUBSTITUTE (N Sg Com Guess Pl Ine) (N Pl Ine Guess) TARGET ("<.*inie>"r N Sg Com Guess Pl Ine);
 
 COPY (N Ess Guess)  (N Sg Com Guess) ;
