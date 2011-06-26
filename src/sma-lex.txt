@@ -873,6 +873,9 @@ LEXICON ORE_LOAN
 
 
 
+! Even - syllabic case inflection
+! -------------------------------
+
 ! Inflection for nouns ending in '-ie'
 ! ------------------------------------
 
@@ -1719,6 +1722,13 @@ LEXICON LDAHKE
 !LEXICON DAHKE 
 
 
+
+
+
+
+
+
+
 ! ===========================================
 ! Adjectives: Adjectival inflection sublexica
 ! ===========================================
@@ -2231,14 +2241,14 @@ LEXICON ø_Ø_ODD
 LEXICON h_H_ODD   !XXX mangler CASE - hva er riktig - kanskje EVEN?
      ATTR_H ;
      PRED_H ;
-     oeCASE_OBL ;
+!     CASE_OBL ;
  :hk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  
  
 
 LEXICON h_H_ODDNOCOMP  
      ATTR_H ;
      PRED_H ;
-     oeCASE_OBL ;
+!     CASE_OBL ;
 
 LEXICON hth_HTH_ODD 
  :%^DISIMP    ATTR_H ;
@@ -2609,8 +2619,8 @@ LEXICON oeh_OEH_ODD ! tidl -oe h_H_ODD
        oeh_OEH_ODDNOCOMP ;
 
 LEXICON oeh_OEH_ODDNOCOMP
- ATTR_H ;
- PRED_H ;
+ :oe ATTR_H ;
+ :oe PRED_H ;
  oeCASE_OBL ;
  
 LEXICON oeh_AN_ODD 
