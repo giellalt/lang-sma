@@ -1764,10 +1764,12 @@ LEXICON SOOKES
  :suekie EVENCOMPONLY ;
  :sööke MES ;
  :suekie DIMCOMP ;  
+ :sååkehk HKE_ODD ;
  
 LEXICON SOOJMES
  :sööjm es_ES_EVEN  ;
  :suejme EVENCOMPONLY ;
+ :sååjmehk HKE_ODD ;
  
 
 LEXICON SMAAVE  ! both smaave and plaave
@@ -1860,18 +1862,22 @@ LEXICON VEELKES
  :vielkie EVENCOMPONLY ;
  :vielkie DIMCOMP ;
  :veelke MES ;
+ :vyölkehk HKE_ODD ;
+
  
 LEXICON ROOPSES
  :rööps es_ES_EVENNOCOMP  ;
  :ruepsie EVENCOMPONLY ;
  :ruepsie DIMCOMP ;
  :rööpse MES ;
+ :rååpsehk HKE_ODD ;
  
 LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
  :sneehp es_ES_EVEN  ; ! pga sneehpebe
  :sneehpe s_S_ODD  ; ! ikke dokumentert i corp eller LMM
  :snaebpie EVENCOMPONLY ;
  :snaebpie DIMCOMP ;
+ :snååhpehk HKE_ODD ;
 
 LEXICON GEEHPES
  :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
@@ -1879,6 +1885,7 @@ LEXICON GEEHPES
  :geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
  :geahpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
  :geehpe MES ;
+ :gyöhpehk HKE_ODD ;
 
 LEXICON GEERVE
  :geerv e_E_EVEN  ;
@@ -2171,6 +2178,18 @@ LEXICON ies_IE_EVEN  ! attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
 LEXICON ies_IE_EVENNOCOMP  ! attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne) 
  :ie    ATTR_S ;
         ieCASE ;
+
+LEXICON ies_(ehke)_IES_EHKE_ODDEVEN
++Use/Sub:ie   ATTR_0 ;  ! Finnes denne? 
+ :ie   ATTR_S ;
+ +Use/NG:ie PRED_S ;    
+            ieCASEOBL ;
+ :ie        EVENCOMP ;
++Use/Sub:%»%^PASSUMLehke ATTR_0 ;
+ :%»%^PASSUMLehke PRED_0 ;
+ :%»%^PASSUMLehk  ODDCASEOBL ;
+ :%»%^PASSUMLehk ODDCOMP ;
+
 
 LEXICON ies_IES_IE_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
  :ie   ATTR_S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
