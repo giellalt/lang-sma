@@ -1753,12 +1753,16 @@ LEXICON BUERIE
  :bööre MES ;
  :buerie DIMCOMP ;  
  
-LEXICON LOOVLES
+LEXICON LEEVLES
+ :leevl es_ES_EVEN  ;
+ :lyövl es_ES_EVEN  ;
+ :lïevl es_ES_EVEN  ;
  :löövl es_ES_EVEN  ;
  :lïevle EVENCOMPONLY ;
  :löövle MES ;
  :lïevle DIMCOMP ;  
- 
+ :lyövlehk HKE_ODD ;
+  
 LEXICON SOOKES
  :söök es_ES_EVENNOCOMP  ;
  :suekie EVENCOMPONLY ;
@@ -1768,6 +1772,7 @@ LEXICON SOOKES
  
 LEXICON SOOJMES
  :sööjm es_ES_EVEN  ;
+ :seejm es_ES_EVEN  ;
  :suejme EVENCOMPONLY ;
  :sååjmehk HKE_ODD ;
  
@@ -1866,6 +1871,7 @@ LEXICON VEELKES
 
  
 LEXICON ROOPSES
+ :reeps es_ES_EVENNOCOMP  ;
  :rööps es_ES_EVENNOCOMP  ;
  :ruepsie EVENCOMPONLY ;
  :ruepsie DIMCOMP ;
@@ -2189,6 +2195,17 @@ LEXICON ies_(ehke)_IES_EHKE_ODDEVEN
  :%»%^PASSUMLehke PRED_0 ;
  :%»%^PASSUMLehk  ODDCASEOBL ;
  :%»%^PASSUMLehk ODDCOMP ;
+
+
+!LEXICON es_(ehke)_ES_EHKE_ODDEVEN
+! :e   ATTR_S ;
+! +Use/NG:e PRED_S ;    
+! :es       ODDCASEOBL ;
+! :e        EVENCOMP ;
+!+Use/Sub:%»%^PASSUMLehke ATTR_0 ;
+! :%»%^PASSUMLehke PRED_0 ;
+! :%»%^PASSUMLehk  ODDCASEOBL ;
+! :%»%^PASSUMLehk ODDCOMP ;
 
 
 LEXICON ies_IES_IE_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
@@ -2706,6 +2723,7 @@ LEXICON ies_ESNE
 !
 
 LEXICON HKE_ODD
++Use/Sub:e     ATTR_0 ;
  :e     PRED_0 ;
  :%^DISIMP   ODDCASEOBL ;
     ODDCOMP ;
