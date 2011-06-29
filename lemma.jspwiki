@@ -1,1 +1,30 @@
+!!!Prinsipp for lemmatisering av sørsamisk
+
+
+!!-land vs. -laante
+
+Det er variasjon mellom Bergsland, Bergslaante, Småland, Smålaante i sørsamisk tekst. Her er politikken for leksikonet 
+
+# Forma i leksikon er ''Bergslaante:Bergs^ LAANTE-sur ;''
+# Lemma er ''Bergslaante, Smålaante''
+# Forma ''-land'' i __Nom Sg__ blir merka __+Use/NG__
+# Former på ''-land'' i oblike former blir merka __+Use/Sub__
+
+!!Lemma som ikkje skal inn i stavekontrollen
+
+Bakgrunnen for dette er ord i leksikon som ikkje er skal inn i stavekontrollen, men som likevel skal bli generert. Døme på slike ord er ''cubanske, juni''.
+
+Desse blir merka med ''+Use/LexSub'' i leksikon. Dei kjem med i genereringsfilene, men ikkje i den normative fila.
+
+!!Leksikalsk homonymi
+
+Dette er govledh 1 og 2.
+
+Desse får arbitrære taggar {{+id1, +id2, …}} (nummerert oppover ad lib).
+Taggane blir lagt inn i leksikon før POS, men flytta til etter POS 
+i kompileringa.
+
+!!Blanda paradigmer
+
 asdf
+
