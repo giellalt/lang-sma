@@ -1933,7 +1933,7 @@ LEXICON STAERIES
 LEXICON GIERIES 
  :gieries ATTR_0 ; 
  :gearehke PRED_0 ;
- :gearehk ODDCOMP ;
+ :gearahk ODDCOMP ;
 
 LEXICON BAERIES 
  :båer ies_IES_EVENNOCOMP ;
@@ -2064,7 +2064,7 @@ LEXICON es_ES_EVENNOCOMP
 
 LEXICON ies_IES_EVEN 
       ies_IES_EVENNOCOMP  ;
-  :ie EVENCOMP ; ! daerpies
+  :ie EVENCOMP ; !  
 
 LEXICON ies_IES_EVENNOCOMP 
   :ie   ATTR_S ;
@@ -2180,7 +2180,8 @@ LEXICON ies_IE_EVENNOCOMP  ! attr= s, pred. = Ø, comp jih case: even (ebe/emes/
  :ie    ATTR_S ;
         ieCASE ;
 
-LEXICON ies_(ehke)_IES_EHKE_ODDEVEN
+
+LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN
 +Use/Sub:ie   ATTR_0 ;  ! Finnes denne? 
  :ie   ATTR_S ;
  +Use/NG:ie PRED_S ;    
@@ -2191,16 +2192,6 @@ LEXICON ies_(ehke)_IES_EHKE_ODDEVEN
  :%»%^PASSUMLehk  ODDCASEOBL ;
  :%»%^PASSUMLehk ODDCOMP ;
 
-
-!LEXICON es_(ehke)_ES_EHKE_ODDEVEN
-! :e   ATTR_S ;
-! +Use/NG:e PRED_S ;    
-! :es       ODDCASEOBL ;
-! :e        EVENCOMP ;
-!+Use/Sub:%»%^PASSUMLehke ATTR_0 ;
-! :%»%^PASSUMLehke PRED_0 ;
-! :%»%^PASSUMLehk  ODDCASEOBL ;
-! :%»%^PASSUMLehk ODDCOMP ;
 
 
 LEXICON ies_IES_IE_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
@@ -2716,8 +2707,8 @@ LEXICON ies_ESNE
 !
 
 LEXICON HKE_ODD
-+Use/Sub:e     ATTR_0 ;
- :e     PRED_0 ;
++Use/Sub:%^DISIMPe     ATTR_0 ;
+ :%^DISIMPe     PRED_0 ;
  :%^DISIMP   ODDCASEOBL ;
     ODDCOMP ;
 
