@@ -2610,10 +2610,11 @@ LEXICON s_N_ODD
 !    h_N_Ø_ODD  ;
 !!:k  ODDCOMP ; 
 
-LEXICON h_N_ODD  ! LA: laga ny versjon, se kommentar over
- ATTR_H ;
- :hk  ODDCOMP ; 
- PRED_N ;
+LEXICON ah_AN_ODD  ! LA: laga ny versjon, se kommentar over
+ :a ATTR_H ;
+ :ahk  ODDCOMP ; 
+ :a PRED_N ;
+ aCASEOBL ;
 
 LEXICON h_N_ODDNOCOMP 
  ATTR_H ;
@@ -2634,6 +2635,14 @@ LEXICON oeh_OEH_ODDNOCOMP
  :oe ATTR_H ;
  :oe PRED_H ;
  oeCASE_OBL ;
+ 
+LEXICON oeh_OEN_ODD
+ :oe ATTR_H ;
+ :oe PRED_N ;
+ oeCASE_OBL ;
+  :oehk  ODDCOMP ; 
+
+ 
  
 LEXICON oeh_AN_ODD 
 oeh_AN_ODDNOCOMP  ; ! Er det verkeleg rett at dette er utan comp??
@@ -2846,8 +2855,6 @@ LEXICON ieCASEOBL
   +A+SgGenCmp:ie%>n           R ;
   +A+PlGenCmp+NoUml:ie%>j           R ;
   +A+PlGenCmp+Uml:%>%^iUMLi R ;
-
-
 
 
 LEXICON oeCASE
