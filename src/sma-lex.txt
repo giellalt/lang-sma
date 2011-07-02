@@ -1947,14 +1947,23 @@ LEXICON GÆHTJOES
  :gæhtjoe s_S_ODDNOCOMP ;
 
 LEXICON AAREH
+    ATTR_H ;
+    PRED_H ;
  :e    ATTR_H ;
  :e    PRED_H ;
      eCASEOBL ; ! check!
  :e    EVENCOMP ;
  :eg ODDCOMP ;  
- :e h_H_ODD ; ! aarehkåbpoe, aarehkommes 'hk', 'g' ,'ht' ? (Lohkede saemien s.116)"dagkoe gogkoe dle aaregommes" adv?
+ :ehk ODDCOMP ; ! aarehkåbpoe, aarehkommes 'hk', 'g' ,'ht' ? (Lohkede saemien s.116)"dagkoe gogkoe dle aaregommes" adv?
  ! aarebi - adv, finnes aarebe? aaremes?
   
+LEXICON MOOREH
+ :e    ATTR_H ;
+ :e    PRED_H ;
+     eCASEOBL ; ! check!
+ :ehk ODDCOMP ; 
+  
+
 LEXICON BURRIE
 +CmpN/SgN+CmpN/SgG+CmpN/PlG:#buer ie_IE_EVENNOCOMP  ; ! 
 +CmpN/SgN+CmpN/SgG+CmpN/PlG:#burr ie_IE_EVENNOCOMP  ;
@@ -2222,16 +2231,6 @@ LEXICON as_AS_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/e
 +A+Sg+Nom:as        FINAL1 ;
 +A+SgNomCmp:as            R ;
 
-!OK!
-! LA: fjerna dette leksikonet, ikke lenger ord som tilhører det
-!LEXICON oes_OES_OE_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
-! :oe   ATTR_S ;! (tsåekies, tsåekie/tsåekies) ved adverbial= substantiv/adjektiv
-!! +Use/NG:oes    ODDCASENOM ; ! *faavroese
-!        oeCASE ;
-! :oe  EVENCOMP_oe ;
-!       :oes ODDCASEOBL ;
-!+A+Sg+Nom:oes         FINAL1 ;
-!+A+SgNomCmp:oes            R ;
 
 LEXICON IJLE_LOAN
   :ijl e_ES_EVEN  ; !XXX check
@@ -2267,15 +2266,15 @@ LEXICON ø_Ø_ODD
      PRED_0 ;
  :%^DISIMP   ODDCASEOBL ;
 
-LEXICON h_H_ODD   !XXX mangler CASE - hva er riktig - kanskje EVEN?
-    h_H_ODDNOCOMP ;
-  :hk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  
+LEXICON ah_AH_ODD   !XXX mangler CASE - hva er riktig - kanskje EVEN?
+  ah_AH_ODDNOCOMP ;
+:ahk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  
  
 
-LEXICON h_H_ODDNOCOMP  
-     ATTR_H ;
-     PRED_H ;
-!     CASE_OBL ;
+LEXICON ah_AH_ODDNOCOMP  
+:a     ATTR_H ;
+:a     PRED_H ;
+     aCASEOBL ;
 
 LEXICON hth_HTH_ODD 
  :%^DISIMP    ATTR_H ;
@@ -2685,6 +2684,7 @@ LEXICON ah_AH_AN_ODD
     PRED_AN ; 
 :ahk  ODDCOMP ;
 :oehk ODDCOMP ; 
+ aCASEOBL ;
 
 
 LEXICON ø_N_ODD 
