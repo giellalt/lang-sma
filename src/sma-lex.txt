@@ -1920,6 +1920,7 @@ LEXICON SAEBRIES
  :såebries ATTR_0 ; 
  :såabran PRED_0 ;
  :såabrak ODDCOMP ; ! 4 såabrakåbpoe
+ :såebr ieCASEOBL ;
 
 LEXICON MUJVIES 
  :mujvies ATTR_0 ; ! Pred=Substantiv mujvine - måjvan
@@ -1927,13 +1928,14 @@ LEXICON MUJVIES
 
 
 LEXICON STAERIES 
- :staeries ATTR_0 ; 
+ :staerie ATTR_S ; 
  :staaran PRED_0 ;
 
 LEXICON GIERIES 
- :gieries ATTR_0 ; 
+ :gierie ATTR_S ; 
  :gearehke PRED_0 ;
  :gearahk ODDCOMP ;
+ :gier ieCASEOBL ;
 
 LEXICON BAERIES 
  :båerie ATTR_S ;
@@ -2326,6 +2328,15 @@ LEXICON s_E_ODD
  :%^DISIMP ODDCASE ; 
   ODDCOMP ;
 
+LEXICON as_AS_ODD 
+ as_AS_ODDNOCOMP ;
+  :as ODDCOMP ;
+
+LEXICON as_AS_ODDNOCOMP 
+ :a    ATTR_S ;
+ :a    PRED_S ;
+  aCASEOBL ;
+
 
 
 LEXICON s_S_ODD 
@@ -2594,6 +2605,8 @@ LEXICON as_AN_ODD
 :a  ATTR_S ;
 :a  PRED_N ;
 :ak  ODDCOMP ;
+  aCASEOBL ;
+
 
 LEXICON oes_AN_ODD 
 :oe   ATTR_S ;
@@ -2614,20 +2627,15 @@ LEXICON s_N_ODD
  :s ODDCOMP ; 
 
 
-!LEXICON h_N_ODD  ! LA: 106 adjektiver - ingen grunn til at hele leksikonet fører til h_N_Ø_ODD 
-!    h_N_Ø_ODD  ;
-!!:k  ODDCOMP ; 
-
 LEXICON ah_AN_ODD  ! LA: laga ny versjon, se kommentar over
- :a ATTR_H ;
+ ah_AN_ODDNOCOMP ;
  :ahk  ODDCOMP ; 
+
+LEXICON ah_AN_ODDNOCOMP 
+ :a ATTR_H ;
  :a PRED_N ;
  aCASEOBL ;
 
-LEXICON h_N_ODDNOCOMP 
- ATTR_H ;
- PRED_N ;
-! kasusparadigme ?
 
 LEXICON ah_AN_A_ODD  ! 3 adjektiver, alle har Majas kommentar om at -a formen er subst. Bare en av dem finnes i noun-sma-lex.
 :a ATTR_H ;
@@ -2638,7 +2646,7 @@ LEXICON ah_AN_A_ODD  ! 3 adjektiver, alle har Majas kommentar om at -a formen er
 
 LEXICON oeh_OEH_ODD ! tidl -oe h_H_ODD
  :oehk ODDCOMP ; 
-       oeh_OEH_ODDNOCOMP ;
+ oeh_OEH_ODDNOCOMP ;
 
 LEXICON oeh_OEH_ODDNOCOMP
  :oe ATTR_H ;
@@ -2669,6 +2677,7 @@ LEXICON oeh_OEH_AN_ODD  ! Attr=oeh, Pred=oeh og an
       oeh_OEH_AN_ODDNOCOMP  ;
 :ahk  ODDCOMP ;
 :oehk ODDCOMP ; 
+ oeCASE_OBL ;
 
 
 LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an 
@@ -2677,14 +2686,6 @@ LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an
     PRED_AN ; 
  oeCASE_OBL ;
 
-
-LEXICON ah_AH_AN_ODD    
-:a ATTR_H ;
-:a PRED_H ;
-    PRED_AN ; 
-:ahk  ODDCOMP ;
-:oehk ODDCOMP ; 
- aCASEOBL ;
 
 
 LEXICON ø_N_ODD 
