@@ -1773,15 +1773,17 @@ LEXICON SOOKES
 LEXICON SOOJMES
  :sööjm es_ES_EVEN  ;
  :seejm es_ES_EVEN  ;
- :suejme EVENCOMPONLY ;
+! :suejme EVENCOMPONLY ; ! finner ikke dok
  :sååjmehk HKE_ODD ;
  
 
 LEXICON SMAAVE  ! both smaave and plaave
  :aav e_E_EVENNOCOMP  ;
  :aav e_ES_EVENNOCOMP  ; ! LMM says so for plaave
- :aevie EVENCOMPONLY ;
- :aevie MES ;
+! :aevie EVENCOMPONLY ; ! finner ikke dok
+! :aevie MES ; !  finner ikke dok
+ :aavie EVENCOMPONLY ;
+ :aavie MES ;
  :aevie DIMCOMP ;  
  
 LEXICON SNAARE 
@@ -1840,13 +1842,11 @@ LEXICON GISSE
  :gïssege PRED_0 ;  ! eller er dette et annet lemma? jfr. -hke og gabtege 
  
 LEXICON GAMTE
- :gamt e_E_EVENNOCOMP  ;
- :gemtie EVENCOMP ;
- 
-LEXICON GABTE
- :gabt e_E_EVENNOCOMP  ;
- :gebtie EVENCOMP ;
- 
+ :te ATTR_0  ;
+ :tege PRED_0  ;
+ :t eCASE  ;
+ :%>%^DISIMPtie EVENCOMP ;
+  
 LEXICON GIEVTE
  :gïevt e_E_EVENNOCOMP  ;
  :geavte EVENCOMPONLY ;
@@ -1887,7 +1887,7 @@ LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_OD
 
 LEXICON GEEHPES
  :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
- :geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM
++Use/Sub:geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM
  :geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
  :geahpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
  :geehpe MES ;
@@ -2545,18 +2545,15 @@ LEXICON Cs_CE_ODDNOCOMP
 +A+SgNomCmp:%^DISIMPe            R ; !LA
 
 LEXICON Ces_CE_ODD 
-:%^DISIMPe     ATTR_S ;
-:%^DISIMPe     PRED_0 ;
- :%^DISIMP  ODDCASEOBL ;
-+A+SgNomCmp:%^DISIMPe            R ;
+ Ces_CE_ODDNOCOMP ; 
    ODDCOMP ;
 
 
-!LEXICON Ces_CE_ODDNOCOMP 
-!:%^DISIMPe     ATTR_S ;
-!:%^DISIMPe     PRED_0 ;
-!   ODDCASEOBL ;
-!+A+SgNomCmp:%^DISIMPe            R ;
+LEXICON Ces_CE_ODDNOCOMP 
+ :%^DISIMPe     ATTR_S ;
+ :%^DISIMPe     PRED_0 ;
+ :%^DISIMP  ODDCASEOBL ;
+ +A+SgNomCmp:%^DISIMPe            R ;
 
 
 LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
