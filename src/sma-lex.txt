@@ -1778,7 +1778,7 @@ LEXICON SOOJMES
  
 
 LEXICON SMAAVE  ! both smaave and plaave
- :aav e_E_EVENNOCOMP  ;
++Use/NG:aav e_E_EVENNOCOMP  ;
  :aav e_ES_EVENNOCOMP  ; ! LMM says so for plaave
 ! :aevie EVENCOMPONLY ; ! finner ikke dok
 ! :aevie MES ; !  finner ikke dok
@@ -1800,7 +1800,7 @@ LEXICON ORRE
 LEXICON STOERE
  :stoer e_E_EVENNOCOMP  ;
 ! :stoere ATTR_S  ; !finner ikke dok for denne
- :stoerr e_E_EVENNOCOMP  ;
++Use/NG:stoerr e_E_EVENNOCOMP  ;
 +Use/Sub:stuerre EVENCOMPONLY ;
 +Use/Sub:stoerre EVENCOMPONLY ;
  STOERE_COMP ;
@@ -1844,7 +1844,7 @@ LEXICON GISSE
 LEXICON GAMTE
  :te ATTR_0  ;
  :tege PRED_0  ;
- :t eCASE  ;
++Use/NG:t eCASE  ;
  :%>%^DISIMPtie EVENCOMP ;
   
 LEXICON GIEVTE
@@ -1895,7 +1895,7 @@ LEXICON GEEHPES
 
 LEXICON GEERVE
  :geerv e_E_EVEN  ;
- :giervie EVENCOMPONLY ;
++Use/NG:giervie EVENCOMPONLY ;
  :giervie MES ;
  :giervie DIMCOMP ;  
 
@@ -2167,7 +2167,7 @@ LEXICON e_ES_ODDEVEN
 +A+Sg+Nom:es FINAL1 ;
 +A+SgNomCmp:es R ;
  :e EVENCOMP ;
- :es ODDCOMP ; ! Both even and odd?
++Use/NG:es ODDCOMP ; ! Both even and odd?
  
 
 ! type 3 Theese three should be ok!
@@ -2203,13 +2203,13 @@ LEXICON ies_IE_EVENNOCOMP  ! attr= s, pred. = Ø, comp jih case: even (ebe/emes/
 LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN
 +Use/Sub:ie   ATTR_0 ;  ! Finnes denne? 
  :ie   ATTR_S ;
- +Use/NG:ie PRED_S ;    
-            ieCASEOBL ;
++Use/NG:ie PRED_S ;    
+   ieCASEOBL ;
  :ie        EVENCOMP ;
 +Use/Sub:%»%^PASSUMLehke ATTR_0 ;
  :%»%^PASSUMLehke PRED_0 ;
  :%»%^PASSUMLehk  ODDCASEOBL ;
- :%»%^PASSUMLehk ODDCOMP ;
++Use/NG:%»%^PASSUMLehk ODDCOMP ;
 
 
 
@@ -2497,9 +2497,9 @@ LEXICON ije_ODDNOCOMP ! BÅETIJE !bårreske
 
 
 LEXICON jes_js_JES_JS_ODD !to adj: bualijes, fååmijes
-  :%^DISIMP  ATTR_S ;
++Use/NG:%^DISIMP  ATTR_S ;
   :%^DISIMPe  ATTR_S ;
-  :%^DISIMP  PRED_S ;
++Use/NG:%^DISIMP  PRED_S ;
  :%^DISIMPe  PRED_S ;
   :%^DISIMP   ije_ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
@@ -2512,7 +2512,7 @@ ijes_ijs_IJE_ODDNOCOMP ; ! attr -es, -s, pred -e
 
 LEXICON ijes_ijs_IJE_ODDNOCOMP ! DÅAJMIJES
 :e   ATTR_S ;     ! LMM: dåajmijes
-     ATTR_S ;     ! LMM: dåajmijs, KB: gualijs 
++Use/NG:  ATTR_S ;     ! LMM: dåajmijs, KB: gualijs 
      ije_ODDCASE ;
 +A+SgNomCmp:%^DISIMPe            R ;
 
@@ -2722,7 +2722,7 @@ LEXICON HKE_ODD
 +Use/Sub:%^DISIMPe     ATTR_0 ;
  :%^DISIMPe     PRED_0 ;
  :%^DISIMP   ODDCASEOBL ;
-    ODDCOMP ;
++Use/NG:  ODDCOMP ;
 
 
 ! Attribute lexica
