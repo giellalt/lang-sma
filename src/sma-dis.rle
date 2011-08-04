@@ -366,6 +366,8 @@ SELECT:DemCom (Dem Com)(*1 (N Pl Com) BARRIER NPNHAI) ;
 	## Daaj baakoejgujmie edtjede jisrajelehkidie bueriesjugiehtidh.
 	## Akte mubpie lea slaameme jallh slaameminie, båeries povlijtigkerh jis vienhtieh edtja maehtedh gaajhkem dam orrestehtedh, jih dellie traakestieh, sinsitniem dej seamma baakoejgujmie diblieh mejtie leah daah minngemes tjijhtje-gaektsie- jallh uktsieluhkie jaepieh klajkehtamme barre ov goh dihte dle ihkuven saatna.
 
+SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR (A Attr)) ;
+
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
 	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
 
@@ -404,7 +406,7 @@ REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NPNH LINK NOT 0 TIME) 
 
 # Verbs
 
-IFF:IsItConNeg ConNeg (*-1 Neg BARRIER ConNeg); 
+IFF:IsItConNeg ConNeg (*-1 Neg BARRIER ConNeg)(NEGATE 0 N LINK *1 ConNeg BARRIER V); 
 	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
 
 REMOVE:PrtInNeg Prs IF (0 Neg)(*1C ConNeg + Prt BARRIER NOT-ADV);
@@ -522,7 +524,7 @@ SELECT:Ger Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY)
 
 # Nomen
 
-REMOVE:No_Px PX IF (0 N)(NOT 0 FAMILY);
+REMOVE:No_Px PX IF (0 N)(NOT 0 FAMILY OR Pron);
 	## Bïepmehtehteme jåarhka goh gïjrese vuertieminie.
 
 
@@ -559,7 +561,7 @@ REMOVE:gïele VGen (0 ("gïele") LINK NEGATE -1 MAINV) ;
 
 	
 # CC and CS or Adv
-IFF:GoNotCs Pcle (-1 Neg OR ConNeg OR ("sån"))(0 ("goh")); 
+IFF:GoNotCs ("goh" Pcle) (-1 Neg OR ConNeg OR ("sån")); 
 	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
 	## Dallah goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. # CS
 
@@ -587,9 +589,9 @@ REMOVE:AdvNotA A (0 Adv)(1C V) ;
 REMOVE:AdvNotA_Cop A (0 Adv)(-1C V LINK NOT 0 COPULAS)(NEGATE 1 A OR N) ;
 	## Maanah utnieh guhkiem nuekies vuarteme jih daelie mahte vissjehtovveminie.
 
-SELECT:AAttr (A Attr) ((*1C N BARRIER NPNH OR CC LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N)) ;
+SELECT:AAttr (A Attr) ((*1C N BARRIER NPNH OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv)))(NOT 0 N) ;
 	## Gïjre lea sjïdteme daelvien männgan goh lea nåake gåatome jïh jïjnjh juvrh orreme.
-REMOVE:NotAAttr (A Attr) ((NEGATE 1 N OR A) OR (NEGATE 1 CC LINK 1 Attr)) ;
+REMOVE:NotAAttr (A Attr) (NOT 1 N OR A LINK NEGATE 0 CC OR COMMA LINK 1 Attr) ;
 	## Laedtieh gietskiebasse saemielaantese båetieh bene Aslak tuhtjie dajve gujht stoerre gåabpatjahkide.
 	## Dam maam dorje lea gaerhtelesvoeten jïh riektesvoeten mietie, jïh altese stillemh leah stynkehke jïh ihkuvasse tjåadtjoeh.
 	## Datne edtjh dov elkiejgujmie, dov måarine jïh dov mænnjajgujmie vïnhtsese tjaangedh, jïh fïerhten jielijijstie, urries jïh minngels, edtjh akth paarrh vïnhtsese vaedtsiehtidh, båetieh datnine ektine jieledh.
@@ -824,7 +826,7 @@ LIST SAPMI-N-HEAD =  "gïele" "lidterature" "voestes" "sijjienomme" "tjaalaldahk
 # Removing non-lexicalised forms when lexicalised 
 
 
-REMOVE:PassS (Der/PassS) ;
+#REMOVE:PassS (Der/PassS) ; # ikke bra
 
 REMOVE:Vregex V-DER (0 V-DER-SUF) ;
 REMOVE:Nregex N-DER (0 N-DER-SUF) ;
