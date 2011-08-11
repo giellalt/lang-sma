@@ -680,10 +680,9 @@ REMOVE:PoGenb Po (NEGATE *-1 Gen BARRIER V OR S-BOUNDARY) ;
 
 
 # Adv or Po/Pr
-#SELECT:AdvNotPo Adv (0 Po)(NEGATE -1 Gen) ;
+SELECT:AdvNotPo Adv (0 Po)(NEGATE -1 Gen) ;
 	## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
-#REMOVE:PoNotAdv Adv (0 Po)(-1 Gen) ;
-IFF Adv (0 Po)(NEGATE -1 Gen) ;
+REMOVE:PoNotAdv Adv (0 Po)(-1 Gen) ;
 
 # Illative or genetive
 SELECT:IllNotGena Ill (0 Gen)(*1 ILLV BARRIER NOT-ADV);
