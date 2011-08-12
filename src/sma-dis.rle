@@ -697,8 +697,9 @@ SELECT:Ill Ill (*0 ILLV BARRIER S-BOUNDARY OR ILLADV) ;
 
 
 # Com
-SELECT:ektine (N Com)(*-1 ("ektine") BARRIER NPNH) ;	
+SELECT:ektine (N Com) OR (Pron Com) OR (A Com) (*-1 ("ektine") BARRIER NPNH) ;
 	## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
+SELECT:ektine (N Com) OR (Pron Com) OR (A Com) (*1 ("ektine") BARRIER S-BOUNDARY) ;	
 
 SELECT:ComIfComV Com (*0 COMV BARRIER S-BOUNDARY) ;
 
