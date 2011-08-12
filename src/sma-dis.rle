@@ -712,6 +712,7 @@ SELECT:AccNotIll (N Acc) (0 (N Ill) LINK *1 STV BARRIER NOT-ADV) ;
 
 SELECT:daelie Adv IF (0 ("daelie")); # meaning "dal (mest i stedsnavn)" discarded.
 
+
 SELECT:nomme N (0 ("nomme") LINK 1 Prop) ;
 	## Sara jaepien 1889 Röörosen dajvese bööti jih jaepien 1893 die pruvri aktine man nomme Anders Paulsen
 SELECT:giesie ("giesie" Gen)(1 Num);
@@ -719,8 +720,10 @@ SELECT:giesie ("giesie" Gen)(1 Num);
 REMOVE:almetje1 ("alma") IF (0 ("almetje"));
 REMOVE:almetje2 ("elmie") IF (0 ("almetje"));
 
-SELECT:Jupmele ("Jupmele") IF (0 ("jupmele"));
+REMOVE:gyhtjelasse ("gæhtjodh") IF (0 ("gyhtjelasse"));
 
+
+SELECT:Jupmele ("Jupmele") IF (0 ("jupmele"));
 
 # Adverb context prefers Adv
 SELECT:vihth Adv IF (-1 V)(0 ("vihte"))(1 NPNH OR N);
