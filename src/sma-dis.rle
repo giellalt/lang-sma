@@ -547,6 +547,8 @@ SELECT:AccIfSVOV (Acc Sg) IF (*-1C INFV BARRIER NPNH)(1C V); # consider VFIN for
 REMOVE:EssIfCom/Ine (N Ess) (0 (N Sg Com) OR (N Pl Ine)) (*-1 (Pron Sg Com) OR (Pron Pl Ine) BARRIER NPNH OR S-BOUNDARY) ;
 #dajnie barkoeplaanine
 
+
+
 # Verb or Noun
 
 SELECT:PlNomObj (N Pl Nom) IF (0 (V Pl3)) (NOT *0 VFIN BARRIER NPNH OR S-BOUNDARY) ;
@@ -728,7 +730,6 @@ REMOVE:almetje2 ("elmie") IF (0 ("almetje"));
 
 REMOVE:gyhtjelasse ("gæhtjodh") IF (0 ("gyhtjelasse"));
 
-SELECT:gellie ("gellie" Pron) (0 (Num Sg Nom)) ;
 
 SELECT:Jupmele ("Jupmele") IF (0 ("jupmele"));
 
