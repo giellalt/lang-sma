@@ -720,9 +720,9 @@ SELECT:AccNotIll (N Acc) (0 (N Ill) LINK *1 STV BARRIER NOT-ADV) ;
 	## Mov aaj aehtjie gie båanta. Dihte fievsesne fierhten biejjien, govside båhtja, jih gaajhkide juvride biepmedahta.
 
 # Indef or Adv
-SELECT:IndefNotAdv (Pron Indef) (0 Adv) ((*1C A OR N BARRIER NPNH OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv))) ;
+SELECT:IndefNotAdv (Pron Indef)  (0 Adv) ((*1C A OR N BARRIER NPNH OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv))) ;
     ## ..., gaajhkh dovnesh seamma vihkeles jih vihkeles ektesne barkedh abpevoetesne.
-SELECT:AdvNotIndef Adv IF (0 (Pron Indef) LINK NOT 0 ("fïerhte")) (1 S-BOUNDARY);
+SELECT:AdvNotIndef Adv IF (0 (Pron Indef)) (1 S-BOUNDARY);
 	## ..., reerenassen ulmie dajvesne seamma goh daaletje aalkoebarkoe jih proposisjovnh...
 
 # special lemmas
