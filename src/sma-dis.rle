@@ -369,7 +369,7 @@ SELECT:DemCom (Dem Com)(*1 (N Pl Com) BARRIER NPNHAI) ;
 
 SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR (A Attr)) ;
 
-SELECT:InterrAttr (Pron Interr Attr) (0 (Pron Interr Sg Nom)) ((*1C N BARRIER NPNH OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv)));
+SELECT:AttrNotNom (Pron Interr Attr) OR (A Attr) (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NPNH OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv)));
     ##...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
 
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
@@ -743,7 +743,8 @@ REMOVE:almetje2 ("elmie") IF (0 ("almetje"));
 
 REMOVE:gyhtjelasse ("gæhtjodh") IF (0 ("gyhtjelasse"));
 
-
+SELECT:nomme ("nomme" N) IF (0 ("nomme" Num)) ((*-1 (A Attr) OR (Pron Attr) BARRIER NPNH OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv)));
+     ## Die maa onterligksh nommh, ...
 SELECT:Jupmele ("Jupmele") IF (0 ("jupmele"));
 
 # Adverb context prefers Adv
