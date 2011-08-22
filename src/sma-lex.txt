@@ -2202,10 +2202,16 @@ LEXICON ies_IE_EVENNOCOMP  ! attr= s, pred. = Ø, comp jih case: even (ebe/emes/
         ieCASE ;
 
 
+LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN
+ :ie   PRED_0 ;   
+ ies_(ehke)_EHKE_ODDCOMPe_EVEN ;
+
 LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN
-+Use/Sub:ie   ATTR_0 ;  ! Finnes denne? 
- :ie   ATTR_S ;
 +Use/NG:ie PRED_S ;    
+ ies_(ehke)_EHKE_ODDCOMPe_EVEN ;
+
+LEXICON ies_(ehke)_EHKE_ODDCOMPe_EVEN
+ :ie   ATTR_S ;
    ieCASEOBL ;
  :ie        EVENCOMP ;
 +Use/Sub:%»%^PASSUMLehke ATTR_0 ;
