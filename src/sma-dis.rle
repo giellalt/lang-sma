@@ -411,7 +411,9 @@ REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 
 # Verbs
 
-IFF:IsItConNeg ConNeg (*-1 Neg BARRIER ConNeg)(NEGATE 0 N LINK *1 ConNeg BARRIER V); #the NEGATE-thing causes wrong reading here:jih gosse idtjigan åerieh XXX"åerie" N Pl Nom ;"åeredh" V IV ConNeg IFF:414:IsItConNeg 
+IFF:IsItConNeg ConNeg (*-1 Neg BARRIER ConNeg)(0 N LINK *1 ConNeg BARRIER V); 
+
+    ##NEGATE causes wrong reading here: jih gosse idtjigan åerieh XXX"åerie" N Pl Nom ;"åeredh" V IV ConNeg IFF:414:IsItConNeg. Rule before change:(NEGATE 0 N LINK *1 ConNeg BARRIER V)
 
 	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
 
