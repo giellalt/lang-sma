@@ -39,23 +39,22 @@ Multichar_Symbols
 
 LEXICON Root
 
- @U.MONTH.1@:tsïengelen@U.MONTH.1@   SPACE ;
- @U.MONTH.2@:goevten@U.MONTH.2@     SPACE ;
- @U.MONTH.3@:njoktjen@U.MONTH.3@     SPACE ;
- @U.MONTH.4@:voerhtjen@U.MONTH.4@      SPACE ;
- @U.MONTH.5@:suehpeden@U.MONTH.5@     SPACE ;
- @U.MONTH.6@:ruffien@U.MONTH.6@     SPACE ;
- @U.MONTH.7@:snjaltjen@U.MONTH.7@    SPACE ;
- @U.MONTH.8@:mïetsken@U.MONTH.8@      SPACE ;
-@U.MONTH.10@:skïereden@U.MONTH.10@     SPACE ;
- @U.MONTH.9@:golken@U.MONTH.9@    SPACE ;
-@U.MONTH.11@:rahkan@U.MONTH.11@    SPACE ;
-@U.MONTH.12@:goeven@U.MONTH.12@    SPACE ;
 
-LEXICON SPACE
-:%  DAY ;
 
-LEXICON DAY
+ @U.MONTH.1@:tsïengelen% @U.MONTH.1@   31DAYS ;
+ @U.MONTH.2@:goevten% @U.MONTH.2@     29DAYS ;
+ @U.MONTH.3@:njoktjen% @U.MONTH.3@     31DAYS ;
+ @U.MONTH.4@:voerhtjen% @U.MONTH.4@      30DAYS ;
+ @U.MONTH.5@:suehpeden% @U.MONTH.5@     31DAYS ;
+ @U.MONTH.6@:ruffien% @U.MONTH.6@     30DAYS ;
+ @U.MONTH.7@:snjaltjen% @U.MONTH.7@    31DAYS ;
+ @U.MONTH.8@:mïetsken% @U.MONTH.8@      31DAYS ;
+@U.MONTH.9@:skïereden% @U.MONTH.9@     30DAYS ;
+ @U.MONTH.10@:golken% @U.MONTH.10@    31DAYS ;
+@U.MONTH.11@:rahkan% @U.MONTH.11@    30DAYS ;
+@U.MONTH.12@:goeven% @U.MONTH.12@    31DAYS ;
+
+LEXICON 29DAYS
 1:voestes				    B ;
 2:mubpie				    B ;
 3:gåalmede				    B ;
@@ -85,8 +84,14 @@ LEXICON DAY
 27:göökteluhkietjïjhtjede   B ;
 28:göökteluhkiegaaktsede    B ;
 29:göökteluhkieåktsede	    B ;
+
+LEXICON 30DAYS
 3%0:golmelåhkede			    B ;
+29DAYS ;
+
+LEXICON 31DAYS
 31:golmeluhkievoestes	    B ;
+30DAYS ;
 
 LEXICON B
 %.:% biejjie  MONTH ;
