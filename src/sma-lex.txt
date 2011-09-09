@@ -1908,6 +1908,7 @@ LEXICON TJOEVKES
 LEXICON SAETNIES
  :saetnies ATTR_0 ;
  :saatnan PRED_0 ;
+ :saatna PRED_0 ;
  :saatn aCASEOBL ;
 
 LEXICON SUVHTJIES
@@ -2266,7 +2267,7 @@ LEXICON s_H_EVENNOCOMP  ! attr=s, pred= h
  ATTR_S ;
  PRED_H ;
     ! no case ?
- eCASE ; ! Sjekk dette !! 9.5.
++Use/Sub: eCASE ; ! Sjekk dette !! 9.5.
 
 
 ! ODD-stems (odd stem declension)
@@ -2333,14 +2334,14 @@ LEXICON s_S_Ø_ODD ! hamhpas
      ATTR_S ;
      PRED_S ;
      PRED_0 ;
-  :s ODDCASEOBL ;  ! LA la til -s
+  +Use/Sub:s ODDCASEOBL ;  ! LA la til -s
   :s ODDCOMP ;
 
 
 LEXICON s_Ø_ODD 
      ATTR_S ;
      PRED_0 ;
-  :s ODDCASEOBL ;  ! LA la til -s
+  +Use/Sub:s ODDCASEOBL ;  ! LA la til -s
   :s ODDCOMP ;
 
 LEXICON s_E_ODD 
@@ -2362,13 +2363,13 @@ LEXICON as_AS_ODDNOCOMP
 LEXICON s_S_ODD 
      ATTR_S ;
      PRED_S ;
-  :s  ODDCASEOBL ;  ! LA la til -s
+  +Use/Sub:s  ODDCASEOBL ;  ! LA la til -s
   :s ODDCOMP ;
 
 LEXICON s_S_ODDNOCOMP 
      ATTR_S ;
      PRED_S ;
-:s ODDCASEOBL ; !LA la til -s
++Use/Sub:s ODDCASEOBL ; !LA la til -s
 
 LEXICON es_ES_ODDhk 
  :e    ATTR_S ;
