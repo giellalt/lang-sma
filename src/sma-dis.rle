@@ -511,7 +511,7 @@ SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER S-BOUNDARY)(0 Ind) ;
 # Should be BARRIER V OR CS OR CC # It doesn´t work...
 	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
 
-SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") BARRIER V);
+SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") OR (",") OR CC BARRIER V);
 	## Gïjre lea sjïdteme daelvien männgan goh lea nåake gåatome jïh jïjnjh juvrh orreme.
 
 SELECT:PlIfPlSubj Pl3 IF (*-1 (Pl Nom) BARRIER NOT-ADV OR COMMA);
