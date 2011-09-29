@@ -1439,9 +1439,35 @@ LEXICON NIEJTE
 +N: NIEJTEREST ;
 
 LEXICON NIEJTEOBL ! This for reference from A sublexica
-+Sg: NIEJTESGOBL ;
++Sg: NIEJTESGadjOBL ;
 +Pl: NIEJTE_PL ;
-     NIEJTEREST ;
+        EVEN_ESS ;
+  +SgNomCmp:e    R ;
+  +SgGenCmp:e%>n R ;
+  +PlGenCmp:%>i  R ;
+!  +Der1+Der/Dim+N:e%»tj   GÅATETJE ;
+!  +Der1+Der/Dim+N+Use/Sub:etj   GÅATETJE ;
+
+LEXICON NIEJTESGadjOBL !adj continued...
+  +Nom+PxSg1+Use/Sub:%>eme FINAL1 ;
+  +Nom+PxSg2+Use/Sub:%>edh FINAL1 ;
+  +Nom+PxSg3+Use/Sub:e%>se FINAL1 ;
+  +Acc:e%>m       FINAL1 ;
+  +Acc+PxSg1+Use/Sub:%>eme FINAL1 ;
+  +Acc+PxSg1+Use/NG+Use/Sub:%>emem FINAL1 ;
+  +Acc+PxSg2+Use/Sub:%>emdh FINAL1 ;
+  +Acc+PxSg3+Use/Sub:e%>mse FINAL1 ;
+  +Gen:e%>n       FINAL1 ;
+  +Gen+PxSg1+Use/Sub:%>ene FINAL1 ;
+  +Ill:e%>se      FINAL1 ;
+  +Ill+PxSg1+Use/Sub:%>esanne FINAL1 ;
+  +Ill+PxSg2+Use/Sub:%>esadth FINAL1 ;
+  +Ine:e%>sne     FINAL1 ;
+  +Ela:e%>ste     FINAL1 ;
+  +Ela+PxSg1+Use/Sub:%>estanne FINAL1 ;
+  +Ela+PxSg1+Use/NG+Use/Sub:%>estadth FINAL1 ;
+  +Com:%>ine      FINAL1 ;
+  +Com+PxSg2+Use/Sub:%>enadth FINAL1 ;
 
 
 LEXICON NIEJTE_SG
@@ -2886,6 +2912,8 @@ LEXICON eCASENOM
 LEXICON eCASEOBL
 +A:           NIEJTEOBL  ;
 
+
+
 LEXICON aCASE
 aCASENOM ;
 aCASEOBL ;
@@ -2895,8 +2923,31 @@ LEXICON aCASENOM
 +A+Sg: MAANASGNOM ;
 
 LEXICON aCASEOBL
-+A:    MAANAOBL ;
-
++A: MAANA_PL ;
++A:     EVEN_ESS ;
+ +A+SgNomCmp:a    R ;
+ +A+SgGenCmp:a%>n R ;
+ +A+PlGenCmp:a%>j R ;
+! +A+Der1+Der/Dim+N:%^aLATUS%»tj GÅATETJE ;
+ +A+Nom+PxSg1+Use/Sub:%>eme FINAL1 ;
+ +A+Nom+PxSg2+Use/Sub:%>edh FINAL1 ;
+ +A+Nom+PxSg3+Use/Sub:e%>se FINAL1 ;
+ +A+Acc:a%>m       FINAL1 ;
+ +A+Acc+PxSg1+Use/Sub:%>eme FINAL1 ;
+ +A+Acc+PxSg1+Use/NG+Use/Sub:%>emem FINAL1 ;
+ +A+Acc+PxSg2+Use/Sub:%>emdh FINAL1 ;
+ +A+Acc+PxSg3+Use/Sub:e%>mse FINAL1 ;
+ +A+Gen:a%>n       FINAL1 ;
+ +A+Gen+PxSg1+Use/Sub:%>ene FINAL1 ;
+ +A+Ill:e%>se      FINAL1 ;
+ +A+Ill+PxSg1+Use/Sub:%>asanne FINAL1 ;
+ +A+Ill+PxSg2+Use/Sub:%>asadth FINAL1 ;
+ +A+Ine:e%>sne     FINAL1 ;
+ +A+Ela:e%>ste     FINAL1 ;
+ +A+Ela+PxSg1+Use/Sub:%>astanne FINAL1 ;
+ +A+Ela+PxSg1+Use/NG:%>astadth FINAL1 ;
+ +A+Com:%>ine      FINAL1 ;
+ +A+Com+PxSg2+Use/Sub:%>anadth FINAL1 ;
 
 LEXICON ieCASE
  +A+Sg: N_IE_SG_NOM ;
