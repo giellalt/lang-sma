@@ -253,6 +253,8 @@ LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ;
 LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" ;
 
+LIST COM-ADJ = "latjkes" ;
+
 LIST STV = Der/ehte ;
 
 LIST ILLADV = "bæjjese" "davvese" "daase" "dahkoe" "diekie" "doekoe" "dohkoe" "jallese" "mænngese" "noerhtese" "olkese" "vueliebasse" "våålese" "åarjese" "åvtese" ;
@@ -603,7 +605,7 @@ REMOVE:NotCsIfCc CS ((-1 CC OR ("mij" Nom)) OR (NEGATE -1 WORD))(0 Adv) ;
 #REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 
 # Adj or Adv
-REMOVE:AdvNotA A (0 Adv)(1C V) ;
+REMOVE:AdvNotA A (0 Adv)(1C V OR (A Sg Nom)) ;
 	## Minngemes aejkien goh dam heannedi lij 1988.
 REMOVE:AdvNotA_Cop A (0 Adv)(-1C V LINK NOT 0 COPULAS)(NEGATE 1 A OR N) ;
 	## Maanah utnieh guhkiem nuekies vuarteme jih daelie mahte vissjehtovveminie.
