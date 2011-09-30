@@ -922,6 +922,27 @@ LEXICON N_IE_SG_OBL
   +Com+Uml+Use/NG:%>%^iUMLine     FINAL1 ;
   +Com+Uml+PxSg2:%>%^1UMLanadth FINAL1 ;
 
+LEXICON N_IE_SG_OBLadj
+  +Nom+Uml+PxSg1+Use/Sub:%>%^1UMLeme FINAL1 ;
+  +Nom+Uml+PxSg2+Use/Sub:%>%^1UMLedh FINAL1 ;
+  +Nom+Uml+PxSg3+Use/Sub:e%>se FINAL1 ;
+  +Acc:ie%>m               FINAL1 ;
+  +Acc+Uml+PxSg1+Use/Sub:%>%^1UMLeme FINAL1 ;
+  +Acc+Uml+PxSg1+Use/NG+Use/Sub:%>%^1UMLemem FINAL1 ;
+  +Acc+Uml+PxSg2+Use/Sub:%>%^1UMLemdh FINAL1 ;
+  +Acc+PxSg3+Use/Sub:e%>mse FINAL1 ;
+  +Gen:ie%>n               FINAL1 ;
+  +Gen+Uml+PxSg1+Use/NG+Use/Sub:%>%^1UMLene FINAL1 ;
+  +Ill+Uml:%>%^1UMLan      FINAL1 ;
+  +Ill+Uml+PxSg1+Use/Sub:%>%^1UMLasanne FINAL1 ;
+  +Ill+Uml+PxSg2+Use/Sub:%>%^1UMLasadth FINAL1 ;
+  +Ine:e%>sne              FINAL1 ;
+  +Ela:e%>ste              FINAL1 ;
+  +Ela+PxSg1+Use/Sub:ie%>stanne FINAL1 ;
+  +Ela+PxSg1+Use/NG+Use/Sub:ie%>stadth FINAL1 ;
+  +Com:%>ine               FINAL1 ;
+  +Com+Uml+Use/NG:%>%^iUMLine     FINAL1 ;
+  +Com+Uml+PxSg2+Use/Sub:%>%^1UMLanadth FINAL1 ;
 
 LEXICON N_IE_PL
   +Nom:ie%>h               FINAL1 ;
@@ -1726,7 +1747,29 @@ LEXICON GÅATETJE
  +SgGenCmp:e%>n        R ;
  +PlGenCmp:%>%^DISIMPi R ;
  
-  
+LEXICON GÅATETJEadj
+  +Sg+Nom:e%^DISIMP         FINAL1 ;
+  +Sg+Nom+PxSg1+Use/Sub:%>amme FINAL1 ;
+  +Sg+Nom+PxSg2+Use/Sub:%>adth FINAL1 ;
+  +Sg+Acc:e%>%^DISIMPm      FINAL1 ;
+  +Sg+Acc+PxSg2+Use/Sub:%>amth FINAL1 ;
+  +Sg+Gen:e%>%^DISIMPn      FINAL1 ;
+  +Sg+Gen+PxSg1+Use/Sub:%>anne FINAL1 ;
+  +Sg+Gen+PxSg2+Use/Sub:%>anne FINAL1 ;
+  +Sg+Gen+PxSg3+Use/Sub:%>anne FINAL1 ;
+ +Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Sg+Ill+PxSg2+Use/Sub:%>assedh FINAL1 ;
+  +Sg+Ine:%>isnie           FINAL1 ;
+  +Sg+Ela:%>istie           FINAL1 ;
+  +Sg+Ela+Use/Sub:%>%^DISIMPistie FINAL1 ; !Miesie Mavve
+  +Sg+Com:%>inie            FINAL1 ;
+  +Sg+Com+PxSg2+Use/Sub:%>æjnedh FINAL1 ;
+ +Pl: N_ODD_PL ;
+      N_ODD_ESS ;
+ +SgNomCmp:e            R ;
+ +SgGenCmp:e%>n        R ;
+ +PlGenCmp:%>%^DISIMPi R ;
+
 LEXICON NomActOdd
  +N+Sg: N_ODD_SG ;
  +N+Pl: N_ODD_PL ;
@@ -2954,7 +2997,7 @@ LEXICON ieCASE
         ieCASEOBL ;
 
 LEXICON ieCASEOBL
-  +A+Sg: N_IE_SG_OBL ;
+  +A+Sg: N_IE_SG_OBLadj ;
   +A+Pl: N_IE_PL ;
   +A:    N_IE_ESS ;
   +A+SgNomCmp:ie              R ;
@@ -3046,9 +3089,9 @@ LEXICON ODDCOMP
 +A+Superl+Attr:%>ommes ATTRCONT ;
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dim+Attr:%>obpe%»tje ATTRCONT ;
-+A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJE ;
++A+Comp+Der1+Der/Dim:%>obpe%»tj  GÅATETJEadj ;
 +A+Comp+Der1+Der/Dim+Attr+Use/NG+Use/Sub:%>abpe%»tje ATTRCONT ;
-+A+Comp+Der1+Der/Dim+Use/NG+Use/Sub:%>abpa%»tj  GÅATETJE ;
++A+Comp+Der1+Der/Dim+Use/NG+Use/Sub:%>abpa%»tj  GÅATETJEadj ;
 
 
 LEXICON EVENCOMPCASE
