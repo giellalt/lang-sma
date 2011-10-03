@@ -364,7 +364,7 @@ REMOVE:prop_daate Prop IF (0 Pers); # too strong
 # Dem Sg Com + N Sg Com			Dem	Pl Com Attr + N Pl Com
 
 SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNHAI) ;
-SELECT:DemCom (Dem Com) ((*1 (N Pl Com) BARRIER NPNHAI) OR (0 Pers LINK *1 COM-ADJ BARRIER S-BOUNDARY)) ;
+SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NPNHAI)  ;
 	## Månnoeh aaj dijjem gijhtien guhth tjaalegh jih guvvieh daan learoegærjese vadteme.
 	## Daaj baakoejgujmie edtjede jisrajelehkidie bueriesjugiehtidh.
 	## Akte mubpie lea slaameme jallh slaameminie, båeries povlijtigkerh jis vienhtieh edtja maehtedh gaajhkem dam orrestehtedh, jih dellie traakestieh, sinsitniem dej seamma baakoejgujmie diblieh mejtie leah daah minngemes tjijhtje-gaektsie- jallh uktsieluhkie jaepieh klajkehtamme barre ov goh dihte dle ihkuven saatna.
@@ -723,6 +723,8 @@ SELECT:ektine (N Com) OR (Pron Com) OR (A Com) (*1 ("ektine") BARRIER S-BOUNDARY
     ## Giejnie leah skuvlesne ektine?
 
 SELECT:ComIfComV Com (*0 COMV BARRIER S-BOUNDARY) ;
+
+SELECT:ComNotIne Com (0 Ine LINK *1 COM-ADJ BARRIER S-BOUNDARY) ;
 
 # Accusative or illative
 SELECT:AccNotIll (N Acc) (0 (N Ill) LINK *1 STV BARRIER NOT-ADV) ;
