@@ -395,7 +395,6 @@ SELECT:NGen (N Gen)(-1C (Dem Gen)) ;
 SELECT:PronPers (Pron Pers Gen) (0 Pron LINK 1C Po) ;
 	## Johan jih aahkam joekoen gaskese dan åvteste satnem veelji.
 
-
 REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 N OR (Cmpnd))(*1 N BARRIER NPNHA) ;
 	## Mohte ohtsedibie amma treavkah jallh tjielhketjem jih minnibie doh deavabaahkoeh gierestallibie.
 REMOVE:jallh (A Pl) (0 ("jallh" CC) LINK 1 Neg LINK 1 S-BOUNDARY OR ConNeg LINK NOT 0 Pl3) ;
@@ -704,7 +703,8 @@ REMOVE:PoGenb Po (NEGATE *-1 Gen BARRIER V OR S-BOUNDARY) ;
 SELECT:AdvNotPo Adv (0 Po)(NEGATE -1 Gen) ;
 	## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
 REMOVE:PoNotAdv Adv (0 Po)(-1 Gen) ;
-
+SELECT:PcleNotPron ("dån" Pcle) (0 (Pron Gen) LINK 1 A OR V OR Pcle OR Adv) (NEGATE 0 Po) ;
+	## Mujhtedh vielle, gosse månnoeh dan jijnjh gåahtah jih karamellh biejjegi byøpmedien...
 REMOVE:"ektine" (Pr) (*1 Com BARRIER NPNH) ;
 
 
