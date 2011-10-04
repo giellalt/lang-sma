@@ -608,8 +608,9 @@ REMOVE:NotCsIfCc CS ((-1 CC OR ("mij" Nom)) OR (NEGATE -1 WORD))(0 Adv) ;
 #REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 
 # Adj or Adv
-REMOVE:AdvNotA A (0 Adv)(1C V OR (A Sg Nom)) ;
+REMOVE:AdvNotA A (0 Adv)((1C V OR (A Sg Nom)) OR (1 Ela LINK *1 V BARRIER NOT-ADV));
 	## Minngemes aejkien goh dam heannedi lij 1988.
+	## Manne båatam sagke buerebe datneste jieledh, Karijuse.
 REMOVE:AdvNotA_Cop A (0 Adv)(-1C V LINK NOT 0 COPULAS)(NEGATE 1 A OR N) ;
 	## Maanah utnieh guhkiem nuekies vuarteme jih daelie mahte vissjehtovveminie.
 
