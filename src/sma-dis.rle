@@ -510,9 +510,10 @@ SELECT:Sg3WhenRelSg (V Sg3) ((-1 (Rel Sg Nom)) OR (-1 CC LINK *-1C (V Sg3) BARRI
 #SELECT:Sg3WhenSg3toLeft (V Sg3) (-1 CC LINK *-1C (V Sg3) BARRIER S-BOUNDARY OR V);
 
 
-SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER S-BOUNDARY)(0 Ind) ; 
-# Should be BARRIER V OR CS OR CC # It doesn´t work...
+SELECT:InfIfInfv (V Inf) IF (*-1 INFV OR AUX BARRIER V) ; 
 	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
+	
+SELECT:AUXIfInf AUX IF (*1 Inf BARRIER V) ;
 
 SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") OR (",") OR CC BARRIER V);
 	## Gïjre lea sjïdteme daelvien männgan goh lea nåake gåatome jïh jïjnjh juvrh orreme.
