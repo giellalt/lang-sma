@@ -1914,7 +1914,7 @@ LEXICON GISSE
 +Use/Sub:gïssie EVENCOMPONLY ;
 +Use/Sub:gïssie MES ;
  :gissie DIMCOMP ; 
- :gïssege PRED_0 ;  ! eller er dette et annet lemma? jfr. -hke og gabtege 
++Use/NG:gïssege PRED_0 ;  ! eller er dette et annet lemma? jfr. -hke og gabtege 
  
 LEXICON GAMTE
  :te ATTR_0  ;
@@ -1954,19 +1954,24 @@ LEXICON ROOPSES
  :rååpsehk HKE_ODD ;
  
 LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
- :sneehp es_ES_EVEN  ; ! pga sneehpebe
- :sneehpe s_S_ODD  ; ! ikke dokumentert i corp eller LMM
+ :sneehpe ATTR_S  ; !  
++Use/NG:sneehpe PRED_S  ; !  
++Use/NG:sneehp es_ES_EVEN  ; ! pga sneehpebe
++Use/NG:sneehpe s_S_ODD  ; ! ikke dokumentert i corp eller LMM
  :snaebpie EVENCOMPONLY ;
  :snaebpie DIMCOMP ;
  :snååhpehk HKE_ODD ;
 
 LEXICON GEEHPES
- :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
+ :geehpes ODDCASEOBL ;
+ :geehpe ATTR_S ;
+! :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
 +Use/Sub:geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM
  :geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
  :geahpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
- :geehpe MES ;
++Use/NG:geehpe MES ;
  :gyöhpehk HKE_ODD ;
++Use/NG:geehpe PRED_S ;
 
 LEXICON GEERVE
  :geerv e_E_EVEN  ;
