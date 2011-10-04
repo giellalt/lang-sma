@@ -2190,7 +2190,9 @@ gaelhvies:gaelhv ies_IES_IE_EVEN ;
 smaejvies:smaejv ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN ; !smaejvebe, smaejvemes
 vaejvies:vaejv ies_IES_IE_EVEN ;
 mujvies: MUJVIES ; ! Pred=Substantiv mujvine - måjvan
-dulvies:dulvie s_S_ODD ; !Pred:dulvesne, pred=dulvies= permanent egenskap UMLAUT KASUS
+dulvies:dulvie ATTR_S ; !Pred:dulvesne, pred=dulvies= permanent egenskap UMLAUT KASUS
+dulvies+Use/NG:dulvie PRED_S ; !
+dulvies:dulvies ODDCOMP ; !
 dulvies:dolvehk HKE_ODD ; !LMM:dolvehke  LK: dulvehkem
 gaervies:gaerv ies_IES_EVENNOCOMP ; ! (ikke comp)
 vervies ATTR_0 ; 
@@ -3198,7 +3200,7 @@ sijngers:sijngier Cs_CS_ODD ; !Derivert av sæjngoeh = oe-st. =UMLAUTmun jáhkan
 mïevers:mïever Cs_CE_ODD ;
 hiejjehts:hiejjieht hts_HTS_ODD ; ! COMP:IE
 bieljehts+CmpN/SgN+CmpN/SgG+CmpN/PlG:bieljieht hts_HTS_ODD ; ! COMP:IE
-bieljehts+CmpN/SgN+CmpN/SgG+CmpN/PlG:bieljiehtadtj eCASE ; !  
+bieljehts+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:bieljiehtadtj eCASE ; !  
 nïrrehts:nïrreht hts_HTS_ODD ;
 viesjehts:viesjieht hts_HTS_ODD ; ! COMP:IE : viesjiehtåbpoe
 ovvïssjehts+CmpN/SgN+CmpN/SgG+CmpN/PlG:ovvïssjeht hts_HTS_ODD ;
@@ -3218,7 +3220,7 @@ byölehts:byölehtadtje eCASE ;
 skaamehts:skaameht hts_HTS_ODD ;
 skaemehts:skaemieht hts_HTS_ODD ; ! COMP:IE
 tjelmehts+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjelmieht hts_HTS_ODDhtCOMP ;
-tjelmehts+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjelmiehtadtj eCASE ;
+tjelmehts+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:tjelmiehtadtj eCASE ;
 jiermehts+CmpN/SgN+CmpN/SgG+CmpN/PlG:jiermieht hts_HTS_ODD ; !VOKALUTVODELSE COMP:IE
 maanehts+CmpN/SgN+CmpN/SgG+CmpN/PlG:maanaht hts_HTS_ODD ;
 baenehts:baenieht hts_HTS_ODDhtCOMP ; ! VED COMP:IE
@@ -3232,7 +3234,7 @@ kåvrehts:kåvreht Cs_CS_ODDNOCOMP ; !XXX check
 easehts:easaht hts_HTS_ODD ;
 miesehts:mieseht hts_HTS_ODD ;
 jissehts:jissieht hts_HTS_ODDhtCOMP ; ! VED COMP: IE
-jissehts:jissiehtadtj eCASE ; !LA
+jissehts+Use/NG:jissiehtadtj eCASE ; !LA
 lissehts ATTR_0 ; ! COMP:IE
 saelhtehts:saelhtieht hts_HTS_ODD ; ! VED COMP:IE
 sjaevehts+CmpN/SgN+CmpN/SgG+CmpN/PlG:sjaevieht hts_HTS_ODD ; ! VED COMP:IE
