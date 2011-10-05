@@ -1838,14 +1838,14 @@ LEXICON LEEVLES
 +Use/NG:lïevle EVENCOMPONLY ;
 +Use/NG:löövle MES ;
 +Use/NG:lïevle DIMCOMP ;  
- :lyövlehk HKE_ODD ;
+ :lyövlehk HKE_ODD_NGCOMP ;
   
 LEXICON SOOKES
  :söök es_ES_EVENNOCOMP  ;
  :suekie EVENCOMPONLY ;
  :sööke MES ;
  :suekie DIMCOMP ;  
- :sååkehk HKE_ODD ;
+ :sååkehk HKE_ODD_NGCOMP ;
  
 LEXICON SOOJMES
  :sööjme ATTR_S  ;
@@ -1853,7 +1853,7 @@ LEXICON SOOJMES
  :sööjme EVENCOMP  ;
 +Use/NG:seejm es_ES_EVEN  ;
 ! :suejme EVENCOMPONLY ; ! finner ikke dok
- :sååjmehk HKE_ODD ;
+ :sååjmehk HKE_ODD_NGCOMP ;
  
 
 LEXICON SMAAVE  ! both smaave and plaave
@@ -1948,7 +1948,7 @@ LEXICON VEELKES
  :vielkie EVENCOMPONLY ;
  :vielkie DIMCOMP ;
  :veelke MES ;
- :vyölkehk HKE_ODD ;
+ :vyölkehk HKE_ODD_NGCOMP ;
 
  
 LEXICON ROOPSES
@@ -1957,7 +1957,7 @@ LEXICON ROOPSES
  :ruepsie EVENCOMPONLY ;
  :ruepsie DIMCOMP ;
  :rööpse MES ;
-+Use/NG:rååpsehk HKE_ODD ;
++Use/NG:rååpsehk HKE_ODD_NGCOMP ;
  
 LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
  :sneehpe ATTR_S  ; !  
@@ -1966,7 +1966,7 @@ LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_OD
 +Use/NG:sneehpe s_S_ODD  ; ! ikke dokumentert i corp eller LMM
  :snaebpie EVENCOMPONLY ;
  :snaebpie DIMCOMP ;
- :snååhpehk HKE_ODD ;
+ :snååhpehk HKE_ODD_NGCOMP ;
 
 LEXICON GEEHPES
  :geehpes ODDCASEOBL ;
@@ -1976,7 +1976,7 @@ LEXICON GEEHPES
  :geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
  :geahpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
 +Use/NG:geehpe MES ;
- :gyöhpehk HKE_ODD ;
+ :gyöhpehk HKE_ODD_NGCOMP ;
 +Use/NG:geehpe PRED_S ;
 
 LEXICON GEERVE
@@ -2207,7 +2207,7 @@ LEXICON ihks_IHKS_EVENNOCOMP
 LEXICON RAARH  ! Attr= h, Comp =Even( Jïjtje-raarh) 
     ATTR_H ;
     PRED_H ;
- :ehk HKE_ODD ;
+ :ehk HKE_ODD_NGCOMP ;
 
 
 
@@ -2847,11 +2847,19 @@ LEXICON ies_EME
 !+LOAN: 
 !
 
-LEXICON HKE_ODD
+LEXICON HKE_ODD_NGCOMP
 +Use/Sub:%^DISIMPe     ATTR_0 ;
  :%^DISIMPe     PRED_0 ;
  :%^DISIMP   ODDCASEOBL ;
 +Use/NG:  ODDCOMP ;
+
+LEXICON HKE_ODD_COMP
++Use/Sub:%^DISIMPe     ATTR_0 ;
+ :%^DISIMPe     PRED_0 ;
+ :%^DISIMP   ODDCASEOBL ;
+  ODDCOMP ;
+
+
 
 LEXICON GEERUVE
  :uve ATTR_0 ;
