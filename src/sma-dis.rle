@@ -100,6 +100,8 @@ LIST ImpII = ImpII ;
 LIST Pot = Pot ;
 LIST Cond = Cond ;
 LIST Imprt = Imprt ;
+LIST IV = IV ; 
+LIST TV = TV ;
 
 LIST Opt = Opt ;
 
@@ -297,7 +299,13 @@ LIST VERB-FORMS = Inf Sg1 Sg2 Sg3 ;
 
 SET FORMS = VERB-FORMS OR WORD ;
 
-LIST TIME = "måanta" "dæjsta" "daelvie" "gïjre" "tjaktje" "giesie" ;
+LIST TIME = "biejjie" "b" "gïjre" "giesie" "tïjme" "dygne" "bodte" "bådte" "tjaktje" "tjaktje#giesie" tjaktje#daelvie" "daelvie" "tsåahka" "jaepie" "jïjje" "jahke" "jahke#tjuohte" "aske" "reakeds#biejjie" "våhkoe" "vahka" "måanta" "dæjsta" "aejkie" ;
+
+LIST CONCRETE-ROUTE = "baalka#raejkien" "byjje#raejkien" dielhtie#raejkieh" "geajnoe#raejkien" "njaelmie#raejkien" "okse#raejkien" "bïegke#raejkien" "johke#raejkien" "rosse#raejkien" "sjaedtie#raejkien" "vaeljie#raejkien" "voemesje#raejkien" "valte#raejkiem" "johke#raejkiem" "laath#raejkiem" "guhkies" ;
+
+LIST ABSTR-ROUTE = "mïjle" "lehkie#mïjletje" "tjijlo#meetere" ;
+
+SET ROUTE = CONCRETE-ROUTE OR ABSTR-ROUTE ; 
 
 # ============== #
 # Disambiguation #
@@ -458,6 +466,62 @@ LIST @+FMAINV = @+FMAINV ;
 LIST @-FAUXV = @-FAUXV ;
 LIST @-FMAINV = @-FMAINV ;
 SET MAINV = @-FMAINV OR @+FMAINV ;
+
+LIST @ADVL = @ADVL ;
+LIST @>ADVL = @>ADVL ;
+LIST @ADVL< = @ADVL< ;
+LIST @<ADVL = @<ADVL ;
+LIST @ADVL> = @ADVL> ;
+LIST @-FADVL = @-FADVL ;
+LIST @A< = @A< ;
+LIST @>A = @>A ;
+LIST @ActioN> = @ActioN> ; 
+LIST @APP = @APP ;
+LIST @APP-N< = @APP-N< ;
+LIST @APP-Pron< = @APP-Pron< ;
+LIST @APP>Pron = @APP>Pron ;
+LIST @APP-Num< = @APP-Num< ;
+LIST @APP-ADVL< = @APP-ADVL< ;
+LIST @CMPND = @CMPND ; 
+LIST @COMP-CS< = @COMP-CS< ;
+LIST @HAB = @HAB ;
+LIST @HNOUN = @HNOUN ; 
+LIST @INTERJ = @INTERJ ; 
+LIST @MEASURE = @MEASURE ;
+LIST @>N = @>N ;
+LIST @N< = @N< ;
+LIST @NNum> = @NNum>; 
+LIST @NumN< = @NumN<;
+LIST @>Num = @>Num;
+LIST @Num< = @Num< ;
+LIST @NPron< = @NPron< ;
+LIST @NQ< = @NQ< ; 
+LIST @NUM-PRON = @NUM-PRON ; 
+#LIST @NUMBER = @NUMBER ;
+LIST @OBJ = @OBJ ;
+LIST @<OBJ = @<OBJ ;
+LIST @OBJ> = @OBJ> ;
+LIST @OPRED = @OPRED ; 
+LIST @<OPRED = @<OPRED ;
+LIST @OPRED> = @OPRED> ;
+LIST @PCLE = @PCLE ; 
+LIST @PrcN> = @PrcN> ; 
+LIST @PronN< = @PronN< ; 
+LIST @PronN> = @PronN> ; 
+LIST @Pron< = @Pron< ;
+LIST @>Pron = @>Pron ;
+LIST @P< = @P< ;
+LIST @>P = @>P ;
+LIST @SPRED = @SPRED ; 
+LIST @<SPRED = @<SPRED ;
+LIST @SPRED> = @SPRED> ;
+LIST @SUBJ = @SUBJ ; 
+LIST @<SUBJ = @<SUBJ ;
+LIST @SUBJ> = @SUBJ> ;
+LIST @SUBJ-QH = @SUBJ-QH ;
+LIST @TITLE = @TITLE ; 
+LIST @VOC = @VOC ; 
+LIST @X = @X ;
 
 	# CC- and CS-Mapping
 	# -------------------
@@ -882,6 +946,12 @@ REMOVE:Aregex A-DER (0 A-DER-SUF) ;
 
 REMOVE:waitwithDis (2 V) (0 (1 V))
 
+
+MAP (@OBJ>) TARGET Acc (NOT 0 TIME OR ROUTE)(*1 MAINV + TV BARRIER S-BOUNDARY OR COMMA) ;
+MAP (@<OBJ) TARGET Acc (*-1 MAINV + TV BARRIER S-BOUNDARY OR COMMA)(NOT 0 TIME OR ROUTE) ;
+MAP (@OBJ>) TARGET Acc (NOT 1 EOS) ;  #"guhkies" A Sg Acc @OBJ> MAP:952 
+MAP (@<OBJ) TARGET Acc (NOT -1 BOS) ; #"guhkies" A Sg Acc @<OBJ MAP:954
+	##Baktuse guhkiem klaasen lihke tjåadtjoeji jih vuartesji bæjjese don veelkes skaavhte-baanan.
 
     
     
