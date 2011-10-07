@@ -2268,8 +2268,8 @@ LEXICON e_ES_ODDEVEN
  :es  ODDCASEOBL ; ! galmesem ??? XXX Check!
 +A+Sg+Nom:es FINAL1 ;
 +A+SgNomCmp:es R ;
- :e EVENCOMP ;
-+Use/NG:es ODDCOMP ; ! Both even and odd?
++Use/NG:e EVENCOMP ;
+:es ODDCOMP ; ! Both even and odd?
  
 
 ! type 3 Theese three should be ok!
@@ -2421,7 +2421,7 @@ LEXICON ege_EGE_ODDEVEN !rudtjege
 +A+SgGenCmp:e%>n R ; ! sjekk
 +A+PlGenCmp:%>i  R ; ! sjekk
  :eg  ODDCOMP ;
- :e   EVENCOMP ;
++Use/NG:e   EVENCOMP ;
  
 LEXICON Ce_CE_ODDNOCOMP 
  :%^DISIMPe     ATTR_0 ;
@@ -2588,7 +2588,7 @@ LEXICON ø_S_ODDEVEN  !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
   :es  ODDCASEOBL ;
 +A+SgNomCmp:es            R ;
 :es  ODDCOMP ;
-:e  EVENCOMP ;
++Use/NG:e  EVENCOMP ;
 
 LEXICON ø_S_ODD  !attr=e, Pred=s, Comp=even jih ODD, Case= ODD
   : ATTR_0 ;
