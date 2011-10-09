@@ -10,7 +10,7 @@ my $pos = 1;
 my $wordForm = "";
 my $xmlOutput = "<paradigm>\n";
 my $firstClosing = 1;
-#my $dashedLemma = 0;
+my $dashedLemma = 0;
 my $morph = "";
 
 while (<>) {
@@ -39,7 +39,7 @@ while (<>) {
       $xmlOutput = $xmlOutput."  <analysis ms=\"$morph\">\n";
       
       $hasLemma = 1;
-#      $dashedLemma = ($lemma  =~ m/[^\-]+[\-].+/);
+      $dashedLemma = ($lemma  =~ m/[^\-]+[\-].+/);
     } else {
       $xmlOutput = $xmlOutput."  </analysis>\n";
       $xmlOutput = $xmlOutput."  <analysis ms=\"$morph\">\n";
@@ -60,6 +60,9 @@ while (<>) {
 	  #print STDERR ">>> $wordForm\n";
 	  next; 
  	} else {
+	  if (!$dashedLemma) {
+	    $wordForm =~ s/\-//g;
+	  }
 	  $wordForm =~ s/\#//g;
 	  $xmlOutput = $xmlOutput."  <wordform>$wordForm</wordform>\n";
 	}
