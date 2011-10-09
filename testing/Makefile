@@ -25,7 +25,7 @@ XFST = xfst #-utf8
 # Where all the perl scripts are:
 BINDIR = ../../script/testing
 
-# Directory where all the compiled facitst's are:
+# Directory where all the compiled fst's are:
 FSTDIR = ../bin
 
 # Directory for the source files (which compile into fst's):
