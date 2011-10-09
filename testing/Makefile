@@ -250,10 +250,10 @@ n-paradigm: n-para.ptest savefile
 	@printf "load $(SAVEFILE) \n\
 	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD)_n.paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD)_n.paradigm
 
 
 # VERBS
@@ -305,10 +305,10 @@ v-paradigm: v-para.ptest savefile
 	@printf "load $(SAVEFILE) \n\
 	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD)_v.paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD)_v.paradigm
 
 
 # ADJECTIVES
@@ -360,10 +360,10 @@ a-paradigm: a-para.ptest savefile
 	@printf "load $(SAVEFILE) \n\
 	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+	@xfst < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD)_a.paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD)_a.paradigm
 
 
 # NUMERALS
@@ -416,10 +416,10 @@ num-paradigm: num-para.ptest savefile
 	@printf "load $(SAVEFILE) \n\
 	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD)_num.paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD)_num.paradigm
 
 
 # PROPER NOUNS sg
@@ -472,10 +472,10 @@ prop-paradigm: prop-para.ptest savefile
 	@printf "load $(SAVEFILE) \n\
 	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD)_prop.paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD)_prop.paradigm
 
 # PROPER NOUNS pl
 # ============
@@ -527,10 +527,10 @@ propPl-paradigm: propPl-para.ptest savefile
 	@printf "load $(SAVEFILE) \n\
 	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD)_propPl.paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD)_propPl.paradigm
 
 
 # pron indef
@@ -583,10 +583,10 @@ pron-paradigm: pron-para.ptest savefile
 	@printf "load $(SAVEFILE) \n\
 	apply up < $< \n\
 	quit \n" > $(TEMP)/$@-gtest-script
-	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+	$(XFST) < $(TEMP)/$@-gtest-script > $(GEN_TMP)/$(PARA_TMP)/$(WORD)_pron.paradigm
 	@rm -f $(TEMP)/$@-gtest-script
 	@rm -f $<
-#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD).paradigm
+#	@less $(GEN_TMP)/$(PARA_TMP)/$(WORD)_pron.paradigm
 
 # POS-independent parts:
 # ======================
