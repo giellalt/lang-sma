@@ -672,6 +672,9 @@ REMOVE:NotCsIfCc CS ((-1 CC OR ("mij" Nom)) OR (NEGATE -1 WORD))(0 Adv) ;
 
 #REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 
+IFF:JisPcle ("jis" Pcle) (-1 N OR Pron OR TIME) (NEGATE -1 ("buerie") OR ("luste") OR ("seamma") OR ("juktie") OR ("nuelie") OR ("gaevhtie") OR ("dovne")) ;
+	## Daah gärhkoeh hov seamma laaketje sijjine jis vuartasje guktie byjreske dej bïjre lea. Daate akte vihkeles dirrege jis edtja saemien kultuvrem, gielem jih ektievuekiejielemem nænnoestidh jih vååjnesisnie darjodh. Tjaaleme nännoestimmie nimhtems ierine saemiestimmie galka saemien gielesne årrodh ahte nännoestimmiem maehtien saemien gielese njaelmeste jarkoestidh reerenasseste jis dihte aajne daam säjhta. Tjilkeme dovne raereste akth vielie luhpiedimmiem buerie ektievuekie ståvroen jih pleenumen gaskoeh seamma goh tjelten laakesne nuepiem bååstide vaeltedh lihtsegijstie jis majoriteete jeatjhligkie pleenumisnie sjädta.(does NOT work here)
+	
 # Adj or Adv
 REMOVE:AdvNotA A (0 Adv)((1C V OR (A Sg Nom)) OR (1 Ela LINK *1 V BARRIER NOT-ADV));
 	## Minngemes aejkien goh dam heannedi lij 1988.
