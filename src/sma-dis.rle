@@ -246,7 +246,7 @@ LIST AUX-OR-MAIN = "aelkedh" "edtjedh" "maehtedh" "sïjhtedh" "sjïdtedh" "bået
 SET AUX = COPULAS OR Neg OR MOD-ASP OR AUX-OR-MAIN ;
 
 
-LIST VFIN = Ind OR Imprt ;
+SET VFIN = Ind OR Imprt ;
 
 
 LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ; 
@@ -426,7 +426,7 @@ REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 
 # Verbs
 
-IFF:IsItConNeg ConNeg (*-1 Neg BARRIER (ConNeg NEGATE -1 CC OR "," BARRIER ConNeg)) (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
+IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA LINK 1 ConNeg)  (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
 
 	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
 	## NEGATE: Laavloejigan jih tuhtjigan luste, jih gosse idtjigan ÅERIEH jallh BYØPMEDH, die heehkigan jih beenghkigan dam baeniem guktie dihte gåetie edtja stoerre jih tjeekeds SJIDTEDH.
