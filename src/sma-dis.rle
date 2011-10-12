@@ -265,10 +265,14 @@ LIST INEADV =  "daebpene" "debpene" "duebpene" "dubpene" "daagkoe" "dagkoe" "doe
 
 LIST ELAADV = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
 
+LIST MO = "gosse" "gåessie" "gogkoe" "gogka" "gusnie" "gustie" "gåabpelen" "gåabpoeh" "gåabpah" "gåabph" "gubpene" "gubpede" "gubpelde" "guktie" "gumhtie" "mannemes" "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" "mijladtje" "man dïete" "man dïehre" "mannasinie" "mejnie" "mennie" "mestie" (V Qst);
+
 
 # BOUNDARY SETS
 
-SET GUKTIE = ("guktie" Adv)  ;
+LIST GUKTIEGOSSE = ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
+
+SET GUKTIE = GUKTIEGOSSE ;
 
 SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIE OR BOS OR EOS ;
 
@@ -558,6 +562,35 @@ MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NOT *1 Inf OR PrfPrc BARRIER S-BOUNDAR
 MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf ;
 #
 
+# adverbial regler
+
+MAP (@ADVL>) TARGET (Ine OR Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN BARRIER S-BOUNDARY) ;
+	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
+	
+MAP (@<ADVL) TARGET (Ine OR Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN BARRIER S-BOUNDARY) ;
+	## Dan lin baenieh njaelmesne, jih dam hov gaajhkesh utnebe. - Dær var tenner i munnen eller habitiv @HAB
+	## Baktuse: «Manne ussjedem - ean goh månnoeh gåetiem maehtieh tseegkedh bijjene dunnie skaavhtebaenesne.
+	## Njolkedassh ålmine veadtaldahkesne mij edtja viehkine reaktisne utnedh oktegh jallh jeatjabinie.
+	## «Manne håhkesjem laejpesne syjrohpe,» Karijuse jeehti.
+	## Reektehts vuesehte guktie sveerjesne almetji reaktajgujmie.
+	## Mij dov voessesne?
+	
+#MAP (@<ADVL) TARGET (Ess) IF (0 )(*-1 VFIN) ;
+#MAP (@ADVL>) TARGET (Ess) IF (0 )(*-1 VFIN) ;
+	
+# Acc-Sjur, Gen, Ela-Berit M, Com-Tomi, Ess-Biret Anne, Ill-Linda, Ine-Duommá
+
+#MAP (@<ADVL) TARGET (Com) IF (0 N)(*-1 VFIN BARRIER S-BOUNDARY) ;
+	## Njolkedassh ålmine veadtaldahkesne utnedh mij edtja viehkine reaktisne oktegh jallh jeatjabinie. 
+#MAP (@ADVL>) TARGET (Com) IF (0 N)(*1 VFIN BARRIER S-BOUNDARY) ;
+	## Njolkedassh ålmine veadtaldahkesne mij edtja viehkine reaktisne utnedh oktegh jallh jeatjabinie.
+
+#MAP (@<ADVL) TARGET (Ill) IF (*-1 FMAINV BARRIER S-BOUNDARY) ;
+#MAP (@ADVL>) TARGET (Ill) IF (*1 FMAINV BARRIER S-BOUNDARY) ;
+	## Gellie våhkoeh nåhkeme dan mænngan. 
+
+MAP (@<ADVL) TARGET Gen IF (0 TIME OR ROUTE)(*-1 VFIN BARRIER S-BOUNDARY);
+MAP (@ADVL>) TARGET Gen IF (0 TIME OR ROUTE)(*1 VFIN BARRIER S-BOUNDARY);
 
 # PrfPrc
 #SELECT: PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
@@ -673,7 +706,7 @@ REMOVE:NotCsIfCc CS ((-1 CC OR ("mij" Nom)) OR (NEGATE -1 WORD))(0 Adv) ;
 #REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 
 SELECT:JisCS ("jis" CS) (-1 BOS) ;
-	## Jis manne båatam satne vualga gåatan.
+	## Jis manne båatam satne mænna gåatan.
 
 IFF:JisPcle ("jis" Pcle) (-1 N OR Pron OR TIME) (NEGATE -1 ("buerie") OR ("luste") OR ("seamma") OR ("juktie") OR ("nuelie") OR ("gaevhtie") OR ("dovne")) ;
 	## Daah gärhkoeh hov seamma laaketje sijjine jis vuartasje guktie byjreske dej bïjre lea. Daate akte vihkeles dirrege jis edtja saemien kultuvrem, gielem jih ektievuekiejielemem nænnoestidh jih vååjnesisnie darjodh. Tjaaleme nännoestimmie nimhtems ierine saemiestimmie galka saemien gielesne årrodh ahte nännoestimmiem maehtien saemien gielese njaelmeste jarkoestidh reerenasseste jis dihte aajne daam säjhta. Tjilkeme dovne raereste akth vielie luhpiedimmiem buerie ektievuekie ståvroen jih pleenumen gaskoeh seamma goh tjelten laakesne nuepiem bååstide vaeltedh lihtsegijstie jis majoriteete jeatjhligkie pleenumisnie sjädta.(does NOT work here)
