@@ -301,9 +301,9 @@ SET FORMS = VERB-FORMS OR WORD ;
 
 LIST TIME = "biejjie" "b" "gïjre" "giesie" "tïjme" "dygne" "bodte" "bådte" "tjaktje" "tjaktje#giesie" tjaktje#daelvie" "daelvie" "tsåahka" "jaepie" "jïjje" "jahke" "jahke#tjuohte" "aske" "reakeds#biejjie" "våhkoe" "vahka" "måanta" "dæjsta" "aejkie" ;
 
-LIST CONCRETE-ROUTE = "baalka#raejkien" "byjje#raejkien" dielhtie#raejkieh" "geajnoe#raejkien" "njaelmie#raejkien" "okse#raejkien" "bïegke#raejkien" "johke#raejkien" "rosse#raejkien" "sjaedtie#raejkien" "vaeljie#raejkien" "voemesje#raejkien" "valte#raejkiem" "johke#raejkiem" "laath#raejkiem" "guhkies" ;
+LIST CONCRETE-ROUTE = (".*#raejkien"r) (".*#raejkiem"r) "guhkies" ;
 
-LIST ABSTR-ROUTE = "mïjle" "lehkie#mïjletje" "tjijlo#meetere" ;
+LIST ABSTR-ROUTE = "mïjle" (".*#mïjle"r) "lehkie#mïjletje" (".*#meetere"r) ;
 
 SET ROUTE = CONCRETE-ROUTE OR ABSTR-ROUTE ; 
 
