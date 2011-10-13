@@ -567,7 +567,7 @@ MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf ;
 MAP (@ADVL>) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN BARRIER S-BOUNDARY) ;
 	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
 	
-#REMOVE:@ADVL>fromMod
+REMOVE:@ADVL>fromMod TARGET (Ine) (0 $$NP-HEAD LINK 1 $$NP-HEAD) ;
 	
 MAP (@<ADVL) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN BARRIER S-BOUNDARY) ;
 
