@@ -429,7 +429,7 @@ REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA LINK 1 ConNeg)  (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
 
 	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
-	## NEGATE: Laavloejigan jih tuhtjigan luste, jih gosse idtjigan ÅERIEH jallh BYØPMEDH, die heehkigan jih beenghkigan dam baeniem guktie dihte gåetie edtja stoerre jih tjeekeds SJIDTEDH.
+	## NEGATE: Laavloejigan jih tuhtjigan luste, jih gosse idtjigan åerieh jallh byøpmedh, die heehkigan jih beenghkigan dam baeniem guktie dihte gåetie edtja stoerre jih tjeekeds SJIDTEDH.
 
 REMOVE:PrtInNeg Prs IF (0 Neg)(*1C ConNeg + Prt BARRIER NOT-ADV);
 	## Ij lin gujht daarah altese vielie jienebh biejjieh daesnie.
@@ -566,6 +566,8 @@ MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf ;
 
 MAP (@ADVL>) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN BARRIER S-BOUNDARY) ;
 	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
+	
+#REMOVE:@ADVL>fromMod
 	
 MAP (@<ADVL) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN BARRIER S-BOUNDARY) ;
 
