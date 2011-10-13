@@ -564,10 +564,16 @@ MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf ;
 
 # adverbial regler
 
-MAP (@ADVL>) TARGET (Ine OR Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN BARRIER S-BOUNDARY) ;
+MAP (@ADVL>) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN BARRIER S-BOUNDARY) ;
 	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
 	
-MAP (@<ADVL) TARGET (Ine OR Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN BARRIER S-BOUNDARY) ;
+MAP (@<ADVL) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN BARRIER S-BOUNDARY) ;
+
+MAP (@ADVL>) TARGET (Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN BARRIER S-BOUNDARY) ;
+	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
+	
+MAP (@<ADVL) TARGET (Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN BARRIER S-BOUNDARY) ;
+
 	## Dan lin baenieh njaelmesne, jih dam hov gaajhkesh utnebe. - Dær var tenner i munnen eller habitiv @HAB
 	## Baktuse: «Manne ussjedem - ean goh månnoeh gåetiem maehtieh tseegkedh bijjene dunnie skaavhtebaenesne.
 	## Njolkedassh ålmine veadtaldahkesne mij edtja viehkine reaktisne utnedh oktegh jallh jeatjabinie.
