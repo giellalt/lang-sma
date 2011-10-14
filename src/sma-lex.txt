@@ -4145,6 +4145,12 @@ LEXICON GUARKEDH ! row B - Group III
 ! +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ; !not to a-verbs
 
 
+LEXICON SIJHTEDH_TV
+ +V+TV: TJOEHPEDH_NOT_VGEN ;
+ +V+TV+Der3+Der/PassL:e%»sovv SOVVEDH ;
+ +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+TV+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+ +V+TV+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
 
 
 
@@ -4155,6 +4161,12 @@ LEXICON TJOEHPEDH_TV
  +V+TV+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
  +V+TV+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
 
+LEXICON GALKEDH_IV
+ +V+IV: TJOEHPEDH_NOT_VGEN ;
+ +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
+ +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+
+
 
 LEXICON TJOEHPEDH_IV
  +V+IV: TJOEHPEDH ;
@@ -4163,6 +4175,11 @@ LEXICON TJOEHPEDH_IV
 
 
 LEXICON TJOEHPEDH ! row D - Group IV
+ +VGen:%>en      FINAL1 ;
+ +VGen+Use/Sub:ien      FINAL1 ;
+  TJOEHPEDH_NOT_VGEN ;
+
+LEXICON TJOEHPEDH_NOT_VGEN ! row D - Group IV
  +Ind+Prs:%>     V-IV-EVEN-PRS ;
  +Ind+Prt:%>     VSUF-PRT-SG-12 ;
  +Ind+Prt:%>     VSUF-PRT-DUPL ;
@@ -4171,8 +4188,6 @@ LEXICON TJOEHPEDH ! row D - Group IV
 ! Infinite forms
 ! --------------
  +Inf:%>edh      FINAL1 ;
- +VGen:%>en      FINAL1 ;
- +VGen+Use/Sub:ien      FINAL1 ;
 ! +Act:%>eme      FINAL1 ;
  +Ger:%>eminie   FINAL1 ;
  +PrsPrc:%>ije   FINAL1 ;
@@ -4198,6 +4213,7 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
  +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
  
+
 
 
 LEXICON BIEGKEDH ! row D - Group IV !impersonals
