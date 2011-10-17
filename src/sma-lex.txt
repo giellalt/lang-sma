@@ -3585,6 +3585,33 @@ LEXICON ED-IMP
 ! Thus, the form in -e is wrong, and we wil replace DÅERIEDIDH 
 ! WITH GOLTELIDH.
 
+LEXICON TJOEVERIDH_IV
+ +V+IV+Ind+Prs:%> VSUF-ODD-PRS ;
+ +V+IV+Ind+Prt:%> VSUF-ODD-PRT ;
+! +V+IV+Imprt:%>     VSUF-ODD-IMP ;
+
+! Infinite forms
+! --------------
+ +V+IV+Inf:%>idh             FINAL1 ;
+ +V+IV+ConNeg:%>%^DISIMPh    FINAL1 ;
+! +V+IV+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+!! +V+IV+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+ +V+IV+Ger:%>%^DISIMPeminie  FINAL1 ; ! = GH Gerundium
+! +V+IV+PrsPrc+Der/A+A+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+! +V+IV+Der1+Der/ihks+A+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+ +V+IV+PrfPrc:%>amme         FINAL1 ; ! = GH Ptz.Pt.
+                                   !   GH Ptz.Fut. b'ïssejässaa missing here
+ 
+!!+V+IV+VAbess:%>h            FINAL1 ; 
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen, äbreks der nicht regnet, baal'eks der nicht gräbt, b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
+! +V+IV+Der2+Der/ehte:%»eht ÅARAJEHTEDH_TV ;
+! +V+IV+Der3+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
+! +V+IV+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+! +V+IV+Der2+Der/adte+V:%»%^adteUMLadt GOEGKERDADTEDH ;
+
 LEXICON GOLTELIDH_TV
  +V+TV: GOLTELIDH ;
  
@@ -3699,10 +3726,10 @@ LEXICON COMMON-ODD
 
 LEXICON MAEHTEDH_TV
  +V+TV: BÅETEDH_NOTVGEN ;
- +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
- +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
- +V+TV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
- +V+TV+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
+! +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
+! +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+! +V+TV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
+! +V+TV+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
 
 
 LEXICON BÅETEDH_TV
@@ -3728,7 +3755,7 @@ LEXICON BÅETEDH_NOTVGEN ! row A - Group I
  +Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +Ind+Prt+Dial/L:%>iej        VSUF-ODD-PRT ;
  +Ind+Prt+Uml+Dial/SH:%>%^iUML    VSUF-PRT ;
- +Imprt:%>              VSUF-EVEN-IMP ;
+! +Imprt:%>              VSUF-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +Inf:%>edh           FINAL1 ;
@@ -3747,17 +3774,17 @@ LEXICON BÅETEDH_NOTVGEN ! row A - Group I
  +Der3+Der/NomAct:%»iem@C.NeedNoun@    NomActOdd ;
  +Der1+Der/les:%»%^1UMLa%^COMPDISIMPl LES ;
  +Der3+Der/gåete+V:%»iegået GÅETEDH ;
- +Der1+Der/stidh+V:%»iest DÅAJVOEHTIDH ;
- +Der1+Der/lidh+V:%»iel GOLTELIDH ;
- +Der1+Der/htjidh+V:%»%^htjidhUMLehtj GOLTELIDH ;
- +Der1+Der/htidh:%»ieht DÅAJVOEHTIDH_TV ;
-! +Der1+Der/dehte:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+! +Der1+Der/stidh+V:%»iest DÅAJVOEHTIDH ;
+! +Der1+Der/lidh+V:%»iel GOLTELIDH ;
+! +Der1+Der/htjidh+V:%»%^htjidhUMLehtj GOLTELIDH ;
+! +Der1+Der/htidh:%»ieht DÅAJVOEHTIDH_TV ;
+!! +Der1+Der/dehte:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
  +Der3+Der/ahtje+V:%»iejahtj AHTJE ;
- +Der1+Der/ldihkie:%»%^1UMLaldihkie ø_Ø_EVEN ;
- +Der1+Der/ldahke:%»%^1UMLaldahk LDAHKE ;
- +Der1+Der/ldh+N+SgNomCmp:%»%^1UMLeldh R ;
- +Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
- +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
+! +Der1+Der/ldihkie:%»%^1UMLaldihkie ø_Ø_EVEN ;
+! +Der1+Der/ldahke:%»%^1UMLaldahk LDAHKE ;
+! +Der1+Der/ldh+N+SgNomCmp:%»%^1UMLeldh R ;
+! +Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
+! +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
 
 
 LEXICON SEVTEDH ! row A - Group I  IMPERSONALS!
