@@ -4173,9 +4173,9 @@ LEXICON TJOEHPEDH_TV
  +V+TV+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
 
 LEXICON GALKEDH_IV
- +V+IV: TJOEHPEDH_NOTVGEN ;
- +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
- +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+ +V+IV: GALKEDH_CONT ;
+! +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
+! +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
 
@@ -4189,8 +4189,8 @@ LEXICON TJOEHPEDH ! row D - Group IV
  +VGen:%>en      FINAL1 ;
  +VGen+Use/Sub:ien      FINAL1 ;
   TJOEHPEDH_NOTVGEN ;
-
-LEXICON TJOEHPEDH_NOTVGEN ! row D - Group IV
+  
+LEXICON TJOEHPEDH_NOTVGEN
  +Ind+Prs:%>     V-IV-EVEN-PRS ;
  +Ind+Prt:%>     VSUF-PRT-SG-12 ;
  +Ind+Prt:%>     VSUF-PRT-DUPL ;
@@ -4223,6 +4223,41 @@ LEXICON TJOEHPEDH_NOTVGEN ! row D - Group IV
  +Der1+Der/ldh+N+SgNomCmp:%»eldh R ;
  +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
  +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
+
+
+LEXICON GALKEDH_CONT ! row D - Group IV
+ +Ind+Prs:%>     V-IV-EVEN-PRS ;
+ +Ind+Prt:%>     VSUF-PRT-SG-12 ;
+ +Ind+Prt:%>     VSUF-PRT-DUPL ;
+ +Ind+Prt+Sg3:%>i  FINAL1  ;
+! +Imprt:%>         VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+ +Inf:%>edh      FINAL1 ;
+! +Act:%>eme      FINAL1 ;
+ +Ger:%>eminie   FINAL1 ;
+! +PrsPrc:%>ije   FINAL1 ;
+! +PrsPrc:%>ijes  FINAL1 ;
+ +PrfPrc+NoUml:%>eme   FINAL1 ;          ! tjoehpeme, bïejeme
+ +PrfPrc+Uml:%>%^1UMLeme  FINAL1 ; ! tjuahpeme, beajeme
+ +ConNeg:%>0h    FINAL1 ;
+! Derivations
+! -----------
+! +Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +Der3+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
+! +Der1+Der/les:e%»l LES ;
+! +Der3+Der/gåete+V:%»egået GÅETEDH ;
+! +Der1+Der/stidh+V:%»est DÅAJVOEHTIDH ;
+! +Der1+Der/lidh+V:%»el GOLTELIDH ;
+! +Der1+Der/htidh:%»eht DÅAJVOEHTIDH_TV ;
+!! +Der1+Der/dehte:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehtedh
+! +Der3+Der/ahtje+V:%»ijahtj AHTJE ;
+! +Der1+Der/didh+V:%»ed GOLTELIDH ;
+! +Der1+Der/ldihkie:%»eldihkie ø_Ø_EVEN ;
+! +Der1+Der/ldahke:%»eldahk LDAHKE ;
+! +Der1+Der/ldh+N+SgNomCmp:%»eldh R ;
+! +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
+! +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
  
 
 
@@ -4334,9 +4369,9 @@ LEXICON BÅÅHKEDH_TV
  +V+TV+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
 
 LEXICON SÅÅJHTEDH_IV
- +V+IV: BÅÅHKEDH_NOTVGEN ;
- +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
- +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+ +V+IV: SÅÅJHTEDH_CONT ;
+! +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
+! +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
 
@@ -4345,17 +4380,15 @@ LEXICON BÅÅHKEDH_IV
  +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
-LEXICON BÅÅHKEDH ! row E - Group V    
- +VGen:%>en    FINAL1 ;
- BÅÅHKEDH_NOTVGEN ;
 
-LEXICON BÅÅHKEDH_NOTVGEN ! row E - Group V    
+LEXICON BÅÅHKEDH ! row E - Group V    
  +Ind+Prs:%>   VSUF-V-EVEN-PRS ;
  +Ind+Prt:%>   VSUF-PRT ;
  +Imprt:%>       VSUF-IV-EVEN-IMP ;
 ! Infinite forms
 ! --------------
  +Inf:%>edh    FINAL1 ;
+ +VGen:%>en    FINAL1 ;
 ! +Act:%>eme    FINAL1 ;
  +Ger:%>eminie FINAL1 ;
  +PrsPrc:%>ije FINAL1 ;
@@ -4380,6 +4413,37 @@ LEXICON BÅÅHKEDH_NOTVGEN ! row E - Group V
  +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
  +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
+LEXICON SÅÅJHTEDH_CONT ! row E - Group V    
+ +Ind+Prs:%>   VSUF-V-EVEN-PRS ;
+ +Ind+Prt:%>   VSUF-PRT ;
+! +Imprt:%>       VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+ +Inf:%>edh    FINAL1 ;
+! +VGen:%>en    FINAL1 ;
+! +Act:%>eme    FINAL1 ;
+ +Ger:%>eminie FINAL1 ;
+! +PrsPrc:%>ije FINAL1 ;
+! +PrsPrc:%>ijes  FINAL1 ;
+ +PrfPrc:%>eme FINAL1 ;
+ +ConNeg:%>h FINAL1 ;
+! Derivations
+! -----------
+! +Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
+ +Der3+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
+! +Der1+Der/les:e%»l LES ;
+! +Der3+Der/gåete+V:%»egået GÅETEDH ;
+! +Der1+Der/stidh+V:%»est DÅAJVOEHTIDH ;
+! +Der1+Der/lidh+V:%»el GOLTELIDH ;
+! +Der1+Der/htidh:%»eht DÅAJVOEHTIDH_TV ;
+!! +Der1+Der/dehte:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+! +Der3+Der/ahtje+V:%»ejahtj AHTJE ;
+! +Der1+Der/didh+V:%»ed GOLTELIDH ;
+! +Der1+Der/ldihkie:%»eldihkie ø_Ø_EVEN ;
+! +Der1+Der/ldahke:%»eldahk LDAHKE ;
+! +Der1+Der/ldh+N+SgNomCmp:%»eldh R ;
+! +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
+! +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
 LEXICON VÅÅJNEDH
  +V+IV+Ind+Prs:%>   VSUF-V-EVEN-PRS ;
