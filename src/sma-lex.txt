@@ -3747,8 +3747,41 @@ LEXICON BÅETEDH_IV
 
 
 LEXICON BÅETEDH ! row A - Group I
+ +Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
+ +Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
+ +Ind+Prt+Dial/L:%>iej        VSUF-ODD-PRT ;
+ +Ind+Prt+Uml+Dial/SH:%>%^iUML    VSUF-PRT ;
+ +Imprt:%>              VSUF-EVEN-IMP ;
+! Infinite forms
+! --------------
+ +Inf:%>edh           FINAL1 ;
  +VGen:%>ien          FINAL1 ;
- BÅETEDH_NOTVGEN ;
+ +ConNeg:%>ieh        FINAL1 ;
+! +Act:%>eme           FINAL1 ;
+ +Ger:%>ieminie       FINAL1 ;
+ +Ger+Use/Sub:%>eminie FINAL1 ;
+ +PrsPrc:%>ije        FINAL1 ;
+! +PrsPrc:%>ijes        FINAL1 ;
+ +PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
+ ! row F trigger for Umlaut Prt
+! Derivations
+! -----------
+ +Der3+Der/NomAg:%»iej@C.NeedNoun@     IJE_ODD ;
+ +Der3+Der/NomAg+Use/Sub:%»ij@C.NeedNoun@     IJE_ODD ;
+ +Der3+Der/NomAct:%»iem@C.NeedNoun@    NomActOdd ;
+ +Der1+Der/les:%»%^1UMLa%^COMPDISIMPl LES ;
+ +Der3+Der/gåete+V:%»iegået GÅETEDH ;
+ +Der1+Der/stidh+V:%»iest DÅAJVOEHTIDH ;
+ +Der1+Der/lidh+V:%»iel GOLTELIDH ;
+ +Der1+Der/htjidh+V:%»%^htjidhUMLehtj GOLTELIDH ;
+ +Der1+Der/htidh:%»ieht DÅAJVOEHTIDH_TV ;
+! +Der1+Der/dehte:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+ +Der3+Der/ahtje+V:%»iejahtj AHTJE ;
+ +Der1+Der/ldihkie:%»%^1UMLaldihkie ø_Ø_EVEN ;
+ +Der1+Der/ldahke:%»%^1UMLaldahk LDAHKE ;
+ +Der1+Der/ldh+N+SgNomCmp:%»%^1UMLeldh R ;
+ +Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
+ +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
 
 LEXICON BÅETEDH_NOTVGEN ! row A - Group I
  +Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
@@ -4215,8 +4248,9 @@ LEXICON TJOEHPEDH_IV
 LEXICON TJOEHPEDH ! row D - Group IV
  +VGen:%>en      FINAL1 ;
  +VGen+Use/Sub:ien      FINAL1 ;
-  TJOEHPEDH_NOTVGEN ;
-  
+TJOEHPEDH_NOTVGEN ;
+
+
 LEXICON TJOEHPEDH_NOTVGEN
  +Ind+Prs:%>     V-IV-EVEN-PRS ;
  +Ind+Prt:%>     VSUF-PRT-SG-12 ;
