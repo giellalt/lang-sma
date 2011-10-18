@@ -112,6 +112,9 @@ LIST Ord = Ord ;
 LIST ABBR = ABBR ;
 LIST ACR = ACR ;
 
+LIST QMARK = """ ; # ADD " FOR SYNTAX COLOURING.
+LIST PPUNCT = PUNCT ;
+
 LIST Comp = Comp ;
 LIST Superl = Superl ;
 
@@ -148,6 +151,7 @@ LIST Der1 = Der1 ;
 LIST Der2 = Der2 ;
 LIST Der3 = Der3 ;
 
+
 LIST REAL-TITLE = "prof" "cand.philol" ;
 LIST OFFICE = "gånka" ;
 SET TITLE = REAL-TITLE OR OFFICE ; 
@@ -164,13 +168,15 @@ LIST WORD = N A V Adv Pron Interj Num CS CC Pcle Pr Po ;
 SET REALWORD = WORD - Num - Ord ;
 SET REALWORD-NOTABBR = WORD - Num - Ord - ABBR ;
 
+SET NOT-QMARK = WORD OR CLB OR PUNCT - QMARK ;
+
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS ;
 
 SET NOT-ADV = WORD - Adv ;
 
 SET NP-HEAD = Num OR N OR Pron ;
 
-SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron Pers Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr OR ("gånka") ;
+SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron Pers Gen) OR (Pron Logo Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr OR ("gånka") ;
          # The strict version of items that can only be premodifiers, not parts of the predicate - copied from sme-dis.rle
 
 SET GUJMIE = (Pl Gen) OR (Pl1 Gen) OR (Pl2 Gen) OR (Pl3 Gen) ;
@@ -203,6 +209,7 @@ LIST ORGANIZATION = (Prop Org) "digkie" "digkiegåetie" "skuvlekontovre" ;
 
 LIST EDUCATION = "skuvle" ;
 
+LIST CURRENCY = "denaare" "kråvna" "kråvnoe" "kravna" "kr" "ru" "¢" "€" "$";
 
 # suits to LANGUAGE Gen
 LIST LESSON =  "kuvsje" ;
@@ -267,6 +274,18 @@ LIST ELAADV = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
 
 LIST GUKTIEGOSSE = ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
 
+LIST DAESNIE = ("daesnie" Adv) ("åvtesne" Adv) ("sjisjnjielisnie" Adv) ("dusnie" Adv) ("miehtjielisnie" Adv) ("dubpielisnie" Adv) ("jilliebisnie" Adv) ("luvlielisnie" Adv) ("ålkoelisnie" Adv) ("gusnie" Adv) ("luvliegisnie" Adv) ("åarjalisnie" Adv) ("minngielisnie" Adv) ("bijjielisnie" Adv) ("sisnjielisnie" Adv) ("åarjielisnie" Adv) ("åerjielisnie" Adv) ("vuelielisnie" Adv) ("debpielisnie" Adv) ("duebpielisnie" Adv) ("åarjelisnie" Adv) ("noerhtelisnie" Adv) ("jillielisnie" Adv) ("luvliebisnie" Adv) ("vueliebisnie" Adv);
+
+LIST DAESTIE = ("daestie" Adv) ("åvteste" Adv) ("sjisjnjielistie" Adv) ("dustie" Adv) ("miehtjielistie" Adv) ("dubpielistie" Adv) ("jilliebistie" Adv) ("luvlielistie" Adv) ("ålkoelistie" Adv) ("gustie" Adv) ("luvliegistie" Adv) ("åarjalistie" Adv) ("minngielistie" Adv) ("bijjielistie" Adv) ("sisnjielistie" Adv) ("åarjielistie" Adv) ("åerjielistie" Adv) ("vuelielistie" Adv) ("debpielistie" Adv) ("duebpielistie" Adv) ("åarjelistie" Adv) ("noerhtelistie" Adv) ("jillielistie" Adv) ("luvliebistie" Adv) ("vueliebistie" Adv);
+
+
+
+LIST ADV-MOD-ADV = "aaptsah" "aaptsh" "aave" "gaaje" "gaajh" "joekoen" "ååpsen" "fer" "for" "dan" ("mij" Sg Gen) "øøvre" ;
+
+LIST ADV-MOD-NP = "ållesth" "allesth" "aave" "aejvie" "dovne" "eevre" "öövre" "ov" "ovve" "rikti" "ajve" "barre" "gaaje" "gaajh" "joekoen" "hujht" "hujhtskabph" "lïgke" "lïjhke" "gujht" "læjhkan" "van" "darhkan" "eantan" "man" "mahte" "ovrehte" "raakte" "varke" "varki" "aaptsah" "aaptsh" "medtie" ;
+
+LIST GRADE-ADV =  "aaptsah" "aaptsh" "ållesth" "allesth" "ååpsen" "aave" "aejvie" "dovne" "eevre" "ajve" "barre" ("jienebe" Adv) ("jeenjebe" Adv) "ov" "ovve" "rikti" "gaaje" "gaajh" "joekoen" "åpmohts" "åpmehts" "aajmohts" "åpmoeh" ("man" Adv) "mahte" "ovrehte" "raakte" "varke" "varki" "seamma" "öövre" "uhtjienadtje" "sagke" ;
+
 
 # BOUNDARY SETS
 
@@ -274,6 +293,9 @@ LIST GUKTIEGOSSE = ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) 
 SET GUKTIE = GUKTIEGOSSE ;
 
 SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIE OR BOS OR EOS ;
+SET REALCLB = CLB - COMMA ;
+
+SET NP-BOUNDARY = BOS OR EOS OR REALCLB OR VFIN OR Inf OR (Actio Ess) OR ConNeg OR VGen OR Po OR Pr OR Pcle OR Interj OR CS ;
 
 # The following set contains the one-letter abbrs from abbr-sma-lex.txt
 LIST SOMESMALLABBR = "a" "r" "c" "d" "e" "f" "f" "g" "h" "i" "l" "m" "b" "j" "s" ;
@@ -561,43 +583,6 @@ MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NOT *1 Inf OR PrfPrc BARRIER S-BOUNDAR
 MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf ;
 #
 
-# adverbial regler
-
-MAP (@ADVL>) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN BARRIER S-BOUNDARY) ;
-	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
-	
-REMOVE:@ADVL>fromMod TARGET (Ine) (0 $$NP-HEAD LINK 1 $$NP-HEAD) ;
-	
-MAP (@<ADVL) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN BARRIER S-BOUNDARY) ;
-
-MAP (@ADVL>) TARGET (Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN BARRIER S-BOUNDARY) ;
-	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
-	
-MAP (@<ADVL) TARGET (Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN BARRIER S-BOUNDARY) ;
-
-	## Dan lin baenieh njaelmesne, jih dam hov gaajhkesh utnebe. - Dær var tenner i munnen eller habitiv @HAB
-	## Baktuse: «Manne ussjedem - ean goh månnoeh gåetiem maehtieh tseegkedh bijjene dunnie skaavhtebaenesne.
-	## Njolkedassh ålmine veadtaldahkesne mij edtja viehkine reaktisne utnedh oktegh jallh jeatjabinie.
-	## «Manne håhkesjem laejpesne syjrohpe,» Karijuse jeehti.
-	## Reektehts vuesehte guktie sveerjesne almetji reaktajgujmie.
-	## Mij dov voessesne?
-	
-#MAP (@<ADVL) TARGET (Ess) IF (0 )(*-1 VFIN) ;
-#MAP (@ADVL>) TARGET (Ess) IF (0 )(*-1 VFIN) ;
-	
-# Acc-Sjur, Gen, Ela-Berit M, Com-Tomi, Ess-Biret Anne, Ill-Linda, Ine-Duommá
-
-#MAP (@<ADVL) TARGET (Com) IF (0 N)(*-1 VFIN BARRIER S-BOUNDARY) ;
-	## Njolkedassh ålmine veadtaldahkesne utnedh mij edtja viehkine reaktisne oktegh jallh jeatjabinie. 
-#MAP (@ADVL>) TARGET (Com) IF (0 N)(*1 VFIN BARRIER S-BOUNDARY) ;
-	## Njolkedassh ålmine veadtaldahkesne mij edtja viehkine reaktisne utnedh oktegh jallh jeatjabinie.
-
-#MAP (@<ADVL) TARGET (Ill) IF (*-1 FMAINV BARRIER S-BOUNDARY) ;
-#MAP (@ADVL>) TARGET (Ill) IF (*1 FMAINV BARRIER S-BOUNDARY) ;
-	## Gellie våhkoeh nåhkeme dan mænngan. 
-
-MAP (@<ADVL) TARGET Gen IF (0 TIME OR ROUTE)(*-1 VFIN BARRIER S-BOUNDARY);
-MAP (@ADVL>) TARGET Gen IF (0 TIME OR ROUTE)(*1 VFIN BARRIER S-BOUNDARY);
 
 # PrfPrc
 #SELECT: PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
@@ -978,6 +963,96 @@ LIST SAPMI-N-HEAD =  "gïele" "lidterature" "voestes" "sijjienomme" "tjaalaldahk
 #REMOVE:r1911 Prop IF (0 ("Saemie"))(NEGATE *1 SAPMI-PROP-HEAD BARRIER NPNH);
 	# We remove the last Prop-analysis.
 
+# adverbial regler
+
+LIST OLLU = "gellie" ;
+
+# adverbs modifying another adverb
+MAP:adv-modif-adv (@>ADVL) TARGET Adv IF (0 ("seamma"))(*1 OLLU  BARRIER NOT-QMARK);
+	## seamma gellie skuvlh vaadtseme goh dah
+	
+MAP:adv-modif-adv (@>ADVL) TARGET ADV-MOD-ADV IF (1 Adv LINK NOT 0 A)(NEGATE *1 ("hov") OR ("aaj") OR ("guktie" Adv) OR ("gumhtie") BARRIER NOT-QMARK) (NEGATE 0 ("mij" Sg Gen) LINK *1 Po BARRIER NOT-QMARK)(NEGATE 0 ("jienebe") OR ("jeenjebe") LINK 1 ("unnebe") OR ("uhtjebe"));
+	## Man hijvenlaakan manne maahtam voejedidh
+
+MAP: (@ADVL>) TARGET DAESNIE OR DAESTIE IF (0 Adv) ;
+#MAP (@ADVL>) TARGET OLLU IF (*-1 ("seamma") OR ("seammá") BARRIER NOT-QMARK)(0 Adv)(NEGATE *1 Pl BARRIER NOT-QMARK)(*1 FMAINV BARRIER S-BOUNDARY2);
+#MAP (@<ADVL) TARGET OLLU IF (*-1 ("seamma") OR ("seammá") BARRIER NOT-QMARK)(0 Adv)(NEGATE *1 Pl BARRIER NOT-QMARK)(*-1 FMAINV BARRIER S-BOUNDARY2);
+#MAP (@>N) TARGET OLLU IF (*-1 ("seamma") OR ("seammá") BARRIER NOT-QMARK)(0 Pron);
+
+# Adv modifying a pronoun or noun
+MAP (@>Pron) TARGET Adv IF (0 ADV-MOD-NP)(1 Pron);
+	## 
+	
+MAP (@ADVL>CS) TARGET Adv (0 ("mænngan")) (1 CS LINK 0 ("goh"))  ;
+
+MAP (@>N) TARGET ADV-MOD-NP (0 Adv)(1 N) ;
+
+MAP (@>A @>ADVL @>N) TARGET GRADE-ADV IF (*1 A BARRIER NOT-QMARK LINK NOT 0 Po OR Inf OR PrfPrc) (NEGATE 0 ("jienebe") OR ("jeenjebe") LINK *1 ("unnebe") OR ("uhtjebe") BARRIER NOT-QMARK);
+        ## Dah ligan dan øøvre onne guktie idtjigan dejtie maehtieh vuejnedh barre stueriedehtije klaasen tjirrh.
+
+#MAP (@>N) TARGET ADV-MOD-NP IF (NEGATE 0 N)(*1 (N Acc) OR @MEASURE + Acc OR CURRENCY + Acc OR TIME + Gen BARRIER NP-BOUNDARY OR N OR Num OR VERB LINK NOT 1 (A Nom) OR ("minngelen") OR ("åvtesne") OR ("avtesne") OR ("bijjelen");
+
+MAP (@>Num) TARGET Adv IF (0 ADV-MOD-NP)(*1 Num BARRIER NOT-QMARK);
+
+MAP (@ADVL>) TARGET (Adv) (*1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY) ;
+
+
+MAP (@<ADVL) TARGET (Adv) (*-1 VFIN BARRIER S-BOUNDARY OR CLB) ;
+
+MAP (@>ADVL) TARGET Adv IF (0 ADV-MOD-NP OR ("rååktesth") OR ("ryöktesth") OR ("easkah"))(*1 @ADVL BARRIER NPNH);
+	## easkah dæjman 
+	
+LIST ADVL = Ine Ill Com Ela ;
+
+
+MAP:modif-advl (@>ADVL) TARGET (Ine) (0 Attr OR Pl LINK 0 $$ADVL LINK *1 $$ADVL BARRIER NPNH);
+MAP:modif-advl (@>ADVL) TARGET (Com) (0 Attr OR Pl LINK 0 $$ADVL LINK *1 $$ADVL BARRIER NPNH);
+MAP:modif-advl (@>ADVL) TARGET (Ela) (0 Attr OR Pl LINK 0 $$ADVL LINK *1 $$ADVL BARRIER NPNH);
+MAP:modif-advl (@>ADVL) TARGET (Ill) (0 Attr OR Pl LINK 0 $$ADVL LINK *1 $$ADVL BARRIER NPNH);
+
+MAP:(@>ADVL) TARGET (A Ord) (0 ($$ADVL+Attr) LINK *1 $$ADVL OR A BARRIER NPNH);
+
+MAP (@ADVL>) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY OR CLB) ;
+	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
+	
+MAP (@<ADVL) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY) ;
+
+MAP (@ADVL>) TARGET (Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY) ;
+
+MAP (@<ADVL) TARGET (Com) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY) ;
+
+MAP (@ADVL>) TARGET (Ela) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY) ;
+
+MAP (@<ADVL) TARGET (Ela) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY) ;
+
+MAP (@ADVL>) TARGET (Ill) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY) ;
+
+MAP (@<ADVL) TARGET (Ill) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY) ;
+
+	## Njolkedassh ålmine veadtaldahkesne utnedh mij edtja viehkine reaktisne oktegh jallh jeatjabinie. 
+	## Njolkedassh ålmine veadtaldahkesne mij edtja viehkine reaktisne utnedh oktegh jallh jeatjabinie.
+
+
+	
+
+	## Dan lin baenieh njaelmesne, jih dam hov gaajhkesh utnebe. - Dær var tenner i munnen eller habitiv @HAB
+	## Baktuse: «Manne ussjedem - ean goh månnoeh gåetiem maehtieh tseegkedh bijjene dunnie skaavhtebaenesne.
+	## Njolkedassh ålmine veadtaldahkesne mij edtja viehkine reaktisne utnedh oktegh jallh jeatjabinie.
+	## «Manne håhkesjem laejpesne syjrohpe,» Karijuse jeehti.
+	## Reektehts vuesehte guktie sveerjesne almetji reaktajgujmie.
+	## Mij dov voessesne?
+	
+#MAP (@<ADVL) TARGET (Ess) IF (0 )(*-1 VFIN) ;
+#MAP (@ADVL>) TARGET (Ess) IF (0 )(*-1 VFIN) ;
+	
+
+
+#MAP (@<ADVL) TARGET (Ill) IF (*-1 FMAINV BARRIER S-BOUNDARY) ;
+#MAP (@ADVL>) TARGET (Ill) IF (*1 FMAINV BARRIER S-BOUNDARY) ;
+	## Gellie våhkoeh nåhkeme dan mænngan. 
+
+MAP (@<ADVL) TARGET Gen IF (0 TIME OR ROUTE)(*-1 VFIN BARRIER S-BOUNDARY);
+MAP (@ADVL>) TARGET Gen IF (0 TIME OR ROUTE)(*1 VFIN BARRIER S-BOUNDARY);
 
 
 # Removing non-lexicalised forms when lexicalised 
