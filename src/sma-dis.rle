@@ -109,6 +109,7 @@ LIST Actor = Actor ;
 LIST Clt = Clt ;
 LIST A = A ;
 LIST Ord = Ord ;
+LIST Coll = Coll ;
 LIST ABBR = ABBR ;
 LIST ACR = ACR ;
 
@@ -804,7 +805,7 @@ REMOVE:PoGenb Po (NEGATE *-1 Gen BARRIER V OR S-BOUNDARY) ;
 SELECT:AdvNotPo Adv (0 Po)(NEGATE -1 Gen) ;
 	## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
 REMOVE:PoNotAdv Adv (0 Po)(-1 Gen) ;
-SELECT:PcleNotPron ("dån" Pcle) (0 (Pron Gen) LINK 1 A OR V OR Pcle OR Adv) (NEGATE 1 Po) ;
+SELECT:PcleNotPron ("dån" Pcle) (0 (Pron Gen) LINK 1 A OR V OR Pcle OR Coll OR Adv) (NEGATE 1 Po OR Ord) ;
 	## Mujhtedh vielle, gosse månnoeh dan jijnjh gåahtah jih karamellh biejjegi byøpmedien...
 REMOVE:"ektine" (Pr) (*1 Com BARRIER NPNH) ;
 
