@@ -397,7 +397,7 @@ REMOVE:prop_daate Prop IF (0 Pers); # too strong
 # Dem Sg Ela + N Sg Ela			Dem Pl Ela + N Pl Ela
 # Dem Sg Com + N Sg Com			Dem	Pl Com Attr + N Pl Com
 
-SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNHAI) ;
+SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNHAI) (NEGATE *1 Po BARRIER NPNHAI) ;
 SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NPNHAI)  ;
 	## Månnoeh aaj dijjem gijhtien guhth tjaalegh jih guvvieh daan learoegærjese vadteme.
 	## Daaj baakoejgujmie edtjede jisrajelehkidie bueriesjugiehtidh.
@@ -417,7 +417,7 @@ REMOVE:NotPersWhenDemPl Pers IF (0 Dem + Pl + $$CASES LINK *1 N + Pl + $$CASES B
 	## Dah minngemes jaepieh jïjtje jåhta.
 	## Dihte saemien nyjsenæjja, gie dihte dan baantese soptsesteminie, jijtse jih gaalleben bijre soptseste, sotnoeh såemies aejkien, gijredaelvien, edtjægan naan bijjies jaavratjisnie minnedh gøølestidh.
 
-REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES);
+REMOVE:NotDem Dem IF (0 Pers)(*1 NOMEN-NOT-PRON BARRIER NPNH)(NEGATE 0 $$CASES LINK *1 NOMEN-NOT-PRON LINK 0 $$CASES) (NEGATE *1 Po BARRIER NPNHAI);
 	## Dihte fievsesne jih mov govse. 
 
 REMOVE:NotDem2 Dem IF (0 Pers)(NEGATE *1 NOMEN-NOT-PRON BARRIER NPNH) (NEGATE *1 COM-ADJ BARRIER S-BOUNDARY) (NEGATE 0 (Pron Dem Sg Gen));
