@@ -152,6 +152,69 @@ LIST Der1 = Der1 ;
 LIST Der2 = Der2 ;
 LIST Der3 = Der3 ;
 
+LIST @CNP = @CNP ;
+LIST @CVP = @CVP ;
+LIST @+FAUXV = @+FAUXV ; 
+LIST @+FMAINV = @+FMAINV ; 
+LIST @-FAUXV = @-FAUXV ;
+LIST @-FMAINV = @-FMAINV ;
+SET MAINV = @-FMAINV OR @+FMAINV ;
+
+LIST @ADVL = @ADVL ;
+LIST @>ADVL = @>ADVL ;
+LIST @ADVL< = @ADVL< ;
+LIST @<ADVL = @<ADVL ;
+LIST @ADVL> = @ADVL> ;
+LIST @-FADVL = @-FADVL ;
+LIST @A< = @A< ;
+LIST @>A = @>A ;
+LIST @ActioN> = @ActioN> ; 
+LIST @APP = @APP ;
+LIST @APP-N< = @APP-N< ;
+LIST @APP-Pron< = @APP-Pron< ;
+LIST @APP>Pron = @APP>Pron ;
+LIST @APP-Num< = @APP-Num< ;
+LIST @APP-ADVL< = @APP-ADVL< ;
+LIST @CMPND = @CMPND ; 
+LIST @COMP-CS< = @COMP-CS< ;
+LIST @HAB = @HAB ;
+LIST @INTERJ = @INTERJ ; 
+LIST @MEASURE = @MEASURE ;
+LIST @>N = @>N ;
+LIST @N< = @N< ;
+LIST @NNum> = @NNum>; 
+LIST @NumN< = @NumN<;
+LIST @>Num = @>Num;
+LIST @Num< = @Num< ;
+LIST @NPron< = @NPron< ;
+LIST @NQ< = @NQ< ; 
+LIST @NUM-PRON = @NUM-PRON ; 
+#LIST @NUMBER = @NUMBER ;
+LIST @OBJ = @OBJ ;
+LIST @<OBJ = @<OBJ ;
+LIST @OBJ> = @OBJ> ;
+LIST @OPRED = @OPRED ; 
+LIST @<OPRED = @<OPRED ;
+LIST @OPRED> = @OPRED> ;
+LIST @PCLE = @PCLE ; 
+LIST @HNOUN = @HNOUN ;
+LIST @PrcN> = @PrcN> ; 
+LIST @PronN< = @PronN< ; 
+LIST @PronN> = @PronN> ; 
+LIST @Pron< = @Pron< ;
+LIST @>Pron = @>Pron ;
+LIST @P< = @P< ;
+LIST @>P = @>P ;
+LIST @SPRED = @SPRED ; 
+LIST @<SPRED = @<SPRED ;
+LIST @SPRED> = @SPRED> ;
+LIST @SUBJ = @SUBJ ; 
+LIST @<SUBJ = @<SUBJ ;
+LIST @SUBJ> = @SUBJ> ;
+LIST @SUBJ-QH = @SUBJ-QH ;
+LIST @TITLE = @TITLE ; 
+LIST @VOC = @VOC ; 
+LIST @X = @X ;
 
 LIST REAL-TITLE = "prof" "cand.philol" ;
 LIST OFFICE = "gånka" ;
@@ -162,6 +225,7 @@ LIST Guess = Guess ;
 
 
 LIST CASES = Nom Acc Gen Ill Ine Ela Com Ess ;
+LIST ADVLCASE = Ine Ill Com Ela ;
 LIST NUMBER = Sg Pl ;
 LIST NOMEN-NOT-PRON = N A Indef Num Ord ;  # they can have Dem as attr
 
@@ -273,12 +337,11 @@ LIST INEADV =  "daebpene" "debpene" "duebpene" "dubpene" "daagkoe" "dagkoe" "doe
 
 LIST ELAADV = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
 
-LIST GUKTIEGOSSE = ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
+LIST GUKTIEGOSSE = ("gusnie" Adv) ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
 
 LIST DAESNIE = ("daesnie" Adv) ("åvtesne" Adv) ("sjisjnjielisnie" Adv) ("dusnie" Adv) ("miehtjielisnie" Adv) ("dubpielisnie" Adv) ("jilliebisnie" Adv) ("luvlielisnie" Adv) ("ålkoelisnie" Adv) ("gusnie" Adv) ("luvliegisnie" Adv) ("åarjalisnie" Adv) ("minngielisnie" Adv) ("bijjielisnie" Adv) ("sisnjielisnie" Adv) ("åarjielisnie" Adv) ("åerjielisnie" Adv) ("vuelielisnie" Adv) ("debpielisnie" Adv) ("duebpielisnie" Adv) ("åarjelisnie" Adv) ("noerhtelisnie" Adv) ("jillielisnie" Adv) ("luvliebisnie" Adv) ("vueliebisnie" Adv);
 
 LIST DAESTIE = ("daestie" Adv) ("åvteste" Adv) ("sjisjnjielistie" Adv) ("dustie" Adv) ("miehtjielistie" Adv) ("dubpielistie" Adv) ("jilliebistie" Adv) ("luvlielistie" Adv) ("ålkoelistie" Adv) ("gustie" Adv) ("luvliegistie" Adv) ("åarjalistie" Adv) ("minngielistie" Adv) ("bijjielistie" Adv) ("sisnjielistie" Adv) ("åarjielistie" Adv) ("åerjielistie" Adv) ("vuelielistie" Adv) ("debpielistie" Adv) ("duebpielistie" Adv) ("åarjelistie" Adv) ("noerhtelistie" Adv) ("jillielistie" Adv) ("luvliebistie" Adv) ("vueliebistie" Adv);
-
 
 
 LIST ADV-MOD-ADV = "aaptsah" "aaptsh" "aave" "gaaje" "gaajh" "joekoen" "ååpsen" "fer" "for" "dan" ("mij" Sg Gen) "øøvre" ;
@@ -325,6 +388,18 @@ LIST VERB-FORMS = Inf Sg1 Sg2 Sg3 ;
 
 SET FORMS = VERB-FORMS OR WORD ;
 
+LIST BUILDING = "gåetie" ;
+
+#LIST ROOM = "ladnja" "oadem#ladnja" ;
+
+LIST GEOGRAPHICAL-PLACE = "dajve" "deava" "gaedtie" "gádde" "jaevrie" "vaerie" "miehtsie";  
+LIST POLITICAL-PLACE = "rïjhke"; 
+LIST GENERAL-PLACE = "sïjte";  
+#LIST SPEC-PLACE = "värro#áltár" ; # for Ill disamb
+
+LIST PLACE-P = "alkalisnie" "alkalistie" "avtelen" "avteli" "avtelisnie" "avtelistie" "avtem" "avtene" "baakta" "baaktoe" "baalte" "baaltelen" "baalteli" "baaltelisnie" "baaltelistie" "baaltes" "baaltese" "bealan" "bealese" "bealesne" "bealeste" "bielehth" "bielelen" "bieleli" "bielesne" "bieleste" "bielielisnie" "bielielistie" "bijjelen "bijjeli" "bijjielisnie" "bijjielistie" "boehten" "boehth" "bïjre" "daebpiebisnie" "daebpelen" "daebpeli" "daebpielisnie" "daebpielisnie" "daebpielistie" "debpeli" "debpielisnie" "debpielistie" "duakan" "dubpelen" "dubpeli" "dubpielisnie" "dubpielistie" "duebpelen" "duebpeli" "duebpielisnie" "duebpielistie" "duekelen" "duekesne" "duekeste" "duekiem" "jillelen" "jilleli" "jillielisnie" "jillielistie" "luvleli" "luvlielisnie" "luvlielistie" "miehtjelde" "miehtjelen" "miehtjeli" "miehtjielasse" "miehtjielisnie" "miehtjielistie" "nïlle" "noerhtelen" "noerhteli" "noerhtelisnie" "noerhtelistie" "nualan" "nueleste" "nuelesne" "nuelie" "nueliem" "raajan" "raejeste" "rastah" "sisnie" "sisnjeli" "sisnjielisnie" "sisnjielistie" "sistie" "sjisjnjeli" "sjisjnjielisnie" "sjisjnjielistie" "sïjse" "tjïddh" "tjïrrh" "uvte" "vuelelen" "vueleli" "vuelielisnie" "vuelielistie" "vuestelen" "vuestie" "vuestielisnie" "vuestielistie" "vööste" "åarjalisnie" "åarjalistie" "åarjelen" "åarjeli" "åarjielisnie" "åarjielistie" "åelesne" "åerjielisnie" "ålkoelisnie" "ålkoelistie" "ålkolen" "ålkoli" "åvtelen" "åvteli" "åvtelisnie" "åvtelistie" "åvtem" "åvtene" "åvtese" "åvtesne" "åvteste" "åvtetji" "åvtine" "lïhkebe" "vuelege" ;
+
+
 LIST TIME = "biejjie" "b" "gïjre" "giesie" "tïjme" "dygne" "bodte" "bådte" "tjaktje" "tjaktje#giesie" tjaktje#daelvie" "daelvie" "tsåahka" "jaepie" "jïjje" "jahke" "jahke#tjuohte" "aske" "reakeds#biejjie" "våhkoe" "vahka" "måanta" "dæjsta" "aejkie" ;
 
 LIST CONCRETE-ROUTE = (".*#raejkien"r) (".*#raejkiem"r) "guhkies" ;
@@ -332,6 +407,8 @@ LIST CONCRETE-ROUTE = (".*#raejkien"r) (".*#raejkiem"r) "guhkies" ;
 LIST ABSTR-ROUTE = "mïjle" (".*#mïjle"r) "lehkie#mïjletje" (".*#meetere"r) ;
 
 SET ROUTE = CONCRETE-ROUTE OR ABSTR-ROUTE ; 
+
+SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR BUILDING ;
 
 # ============== #
 # Disambiguation #
@@ -405,7 +482,7 @@ SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NPNHAI)  ;
 
 SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR (A Attr)) ;
 
-SELECT:AttrNotNom (Pron Interr Attr) OR (A Attr) (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NPNH OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv)));
+SELECT:AttrNotNom (Pron Interr Attr) OR (A Attr) (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NPNH OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv))) ;
     ##...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
 
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NPNH LINK 0 NOMEN-NOT-PRON) ;
@@ -485,69 +562,6 @@ SELECT:Imprte (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) 
 
 
 
-LIST @CNP = @CNP ;
-LIST @CVP = @CVP ;
-LIST @+FAUXV = @+FAUXV ; 
-LIST @+FMAINV = @+FMAINV ; 
-LIST @-FAUXV = @-FAUXV ;
-LIST @-FMAINV = @-FMAINV ;
-SET MAINV = @-FMAINV OR @+FMAINV ;
-
-LIST @ADVL = @ADVL ;
-LIST @>ADVL = @>ADVL ;
-LIST @ADVL< = @ADVL< ;
-LIST @<ADVL = @<ADVL ;
-LIST @ADVL> = @ADVL> ;
-LIST @-FADVL = @-FADVL ;
-LIST @A< = @A< ;
-LIST @>A = @>A ;
-LIST @ActioN> = @ActioN> ; 
-LIST @APP = @APP ;
-LIST @APP-N< = @APP-N< ;
-LIST @APP-Pron< = @APP-Pron< ;
-LIST @APP>Pron = @APP>Pron ;
-LIST @APP-Num< = @APP-Num< ;
-LIST @APP-ADVL< = @APP-ADVL< ;
-LIST @CMPND = @CMPND ; 
-LIST @COMP-CS< = @COMP-CS< ;
-LIST @HAB = @HAB ;
-LIST @HNOUN = @HNOUN ; 
-LIST @INTERJ = @INTERJ ; 
-LIST @MEASURE = @MEASURE ;
-LIST @>N = @>N ;
-LIST @N< = @N< ;
-LIST @NNum> = @NNum>; 
-LIST @NumN< = @NumN<;
-LIST @>Num = @>Num;
-LIST @Num< = @Num< ;
-LIST @NPron< = @NPron< ;
-LIST @NQ< = @NQ< ; 
-LIST @NUM-PRON = @NUM-PRON ; 
-#LIST @NUMBER = @NUMBER ;
-LIST @OBJ = @OBJ ;
-LIST @<OBJ = @<OBJ ;
-LIST @OBJ> = @OBJ> ;
-LIST @OPRED = @OPRED ; 
-LIST @<OPRED = @<OPRED ;
-LIST @OPRED> = @OPRED> ;
-LIST @PCLE = @PCLE ; 
-LIST @PrcN> = @PrcN> ; 
-LIST @PronN< = @PronN< ; 
-LIST @PronN> = @PronN> ; 
-LIST @Pron< = @Pron< ;
-LIST @>Pron = @>Pron ;
-LIST @P< = @P< ;
-LIST @>P = @>P ;
-LIST @SPRED = @SPRED ; 
-LIST @<SPRED = @<SPRED ;
-LIST @SPRED> = @SPRED> ;
-LIST @SUBJ = @SUBJ ; 
-LIST @<SUBJ = @<SUBJ ;
-LIST @SUBJ> = @SUBJ> ;
-LIST @SUBJ-QH = @SUBJ-QH ;
-LIST @TITLE = @TITLE ; 
-LIST @VOC = @VOC ; 
-LIST @X = @X ;
 
 	# CC- and CS-Mapping
 	# -------------------
@@ -579,10 +593,14 @@ MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg);
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR CC);
 
 MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) ;
+
 MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NOT *1 Inf OR PrfPrc BARRIER S-BOUNDARY) ;
 
-MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf ;
-#
+MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf IF (*1 VFIN LINK 0 AUX BARRIER S-BOUNDARY) ;
+MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf IF (*-1 VFIN LINK 0 AUX BARRIER S-BOUNDARY) ;
+	#$ Luste tjoejkedh.
+	# 
+
 
 
 # PrfPrc
@@ -963,8 +981,50 @@ LIST SAPMI-N-HEAD =  "gïele" "lidterature" "voestes" "sijjienomme" "tjaalaldahk
 	
 #REMOVE:r1911 Prop IF (0 ("Saemie"))(NEGATE *1 SAPMI-PROP-HEAD BARRIER NPNH);
 	# We remove the last Prop-analysis.
+	
+	
+	# SAFE RULES
+	# ----------
 
-# adverbial regler
+MAP (@SUBJ) TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV);    
+    ## Luste tjoejkedh.
+MAP (@SUBJ) TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr));
+	## Lustes aate tjoejkedh.
+MAP (@HNOUN) TARGET Nom IF (*-1 BOS BARRIER NPNH)(1 EOS);
+	## Tjåetskeme.
+MAP (@HNOUN) TARGET Po IF (*-1 BOS BARRIER NPNH)(1 EOS);
+	## Bijlen nuelesne.
+MAP (@HNOUN) TARGET ADVLCASE IF (*-1 BOS BARRIER NPNH)(1 EOS);
+	## Jaevresne.
+	
+	SECTION
+
+
+	# subject rules and spred rules
+	# -----------------------------
+
+MAP (@SUBJ>) TARGET Nom IF (*-1 BOS BARRIER NPNH)(*1 VFIN BARRIER S-BOUNDARY) (NEGATE *1 (@SUBJ));
+	## Dov orre gaamegh bijlen nuelesne.
+MAP (@SUBJ) TARGET Nom IF (-1 GUKTIEGOSSE)(NOT *1 VFIN BARRIER S-BOUNDARY);
+	## Gusnie @ADVL> gaamegh? @SUBJ
+MAP (@SUBJ) TARGET Nom IF (*-1 BOS BARRIER NPNH)(NOT 0 A LINK *1 (N Nom) OR ADVLCASE + PLACE OR DAESNIE OR PLACE-P BARRIER NPNH)(NOT *1 VFIN BARRIER S-BOUNDARY);
+	## Dov orre gaamegh @SUBJ seangkoen nuelesne <@ADVL.
+    # for ellipsis
+MAP (@<SUBJ) TARGET Nom IF (NOT *-1 Nom BARRIER S-BOUNDARY LINK *-1 VFIN BARRIER S-BOUNDARY);
+
+
+MAP (@SPRED) TARGET Nom IF (*1C (@SUBJ) BARRIER NPNH);
+	# this is if the finite verb is missing
+
+MAP (@<SPRED) TARGET Nom IF (*-1C (@SUBJ) BARRIER NPNH);
+	# this is if the finite verb is missing
+	## Tåamma voejije.
+MAP (@SPRED>) TARGET Nom IF (*-1 BOS BARRIER NPNH)(*1 @SUBJ LINK 0 Inf BARRIER NOT-ADV);   
+	## Luste tjoejkedh.
+	#$ Lustes aate tjoejkedh.
+
+	# adverbial regler
+	# ----------------
 
 LIST OLLU = "gellie" ;
 
@@ -1002,16 +1062,14 @@ MAP (@<ADVL) TARGET (Adv) (*-1 VFIN BARRIER S-BOUNDARY OR CLB) ;
 
 MAP (@>ADVL) TARGET Adv IF (0 ADV-MOD-NP OR ("rååktesth") OR ("ryöktesth") OR ("easkah"))(*1 @ADVL BARRIER NPNH);
 	## easkah dæjman 
-	
-LIST ADVL = Ine Ill Com Ela ;
 
 
-MAP:modif-advl (@>ADVL) TARGET (Ine) (0 Attr OR Pl LINK 0 $$ADVL LINK *1 $$ADVL BARRIER NPNH);
-MAP:modif-advl (@>ADVL) TARGET (Com) (0 Attr OR Pl LINK 0 $$ADVL LINK *1 $$ADVL BARRIER NPNH);
-MAP:modif-advl (@>ADVL) TARGET (Ela) (0 Attr OR Pl LINK 0 $$ADVL LINK *1 $$ADVL BARRIER NPNH);
-MAP:modif-advl (@>ADVL) TARGET (Ill) (0 Attr OR Pl LINK 0 $$ADVL LINK *1 $$ADVL BARRIER NPNH);
+MAP:modif-advl (@>ADVL) TARGET (Ine) (0 Attr OR Pl LINK 0 $$ADVLCASE LINK *1 $$ADVLCASE BARRIER NPNH);
+MAP:modif-advl (@>ADVL) TARGET (Com) (0 Attr OR Pl LINK 0 $$ADVLCASE LINK *1 $$ADVLCASE BARRIER NPNH);
+MAP:modif-advl (@>ADVL) TARGET (Ela) (0 Attr OR Pl LINK 0 $$ADVLCASE LINK *1 $$ADVLCASE BARRIER NPNH);
+MAP:modif-advl (@>ADVL) TARGET (Ill) (0 Attr OR Pl LINK 0 $$ADVLCASE LINK *1 $$ADVLCASE BARRIER NPNH);
 
-MAP:(@>ADVL) TARGET (A Ord) (0 ($$ADVL+Attr) LINK *1 $$ADVL OR A BARRIER NPNH);
+MAP:(@>ADVL) TARGET (A Ord) (0 ($$ADVLCASE+Attr) LINK *1 $$ADVLCASE OR A BARRIER NPNH);
 
 MAP (@ADVL>) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY OR CLB) ;
 	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
@@ -1055,6 +1113,12 @@ MAP (@<ADVL) TARGET (Ill) (0 NP-HEAD OR A) (NOT 0 Attr) (*-1 VFIN OR PrfPrc OR (
 MAP (@<ADVL) TARGET Gen IF (0 TIME OR ROUTE)(*-1 VFIN BARRIER S-BOUNDARY);
 MAP (@ADVL>) TARGET Gen IF (0 TIME OR ROUTE)(*1 VFIN BARRIER S-BOUNDARY);
 
+
+MAP (@<ADVL) TARGET ADVLCASE IF (*-1C @SUBJ BARRIER NPNH) ;
+	## Manne jaevresne.
+
+MAP (@ADVL>) TARGET ADVLCASE IF (*1C @SPRED BARRIER NPNH) ;
+	## Jaevresne tjåetskeme.
 
 # Removing non-lexicalised forms when lexicalised 
 
