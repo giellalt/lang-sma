@@ -16,15 +16,12 @@
 ! Phonological converter for South Sámi !
 ! ===================================== !
 
-! To eventual curious readers
 ! This file tries out conversion from Sámi orthography to a phonetic
 ! translation based upon IPA. There is a switch at the end to get 
-! different formats: SAMPA, Fenno-Ugric transcription or Finnish
-! orthography.
+! SAMPA instaead
 
-! Usage: Compile sme as usual:
+! Usage:
 ! make GTLANG=sma
-! Pipe text through the analyser:
 ! cat text | preprocess | lookup -flags mbTT bin/phon-sma.fst | ..
 
 
@@ -39,40 +36,35 @@
 
 echo <<defining Cns and Vow...>>
 
-
-echo <<defining Cns and Vow...>>
-
-
-
 define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö | 
                    A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö | 
                    é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | 
                    â | ê | ô | û | î | ã | ý |
                    É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | 
-                   Â | Ê | Ô | Û | Î | Ã | Ý ] ;
+                   Â | Ê | Ô | Û | Î | Ã | Ý |
+                   ʉ | ə ] ;
 
 define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | 
              B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ | 
              p | q | r | s | š | t | ŧ | v | w | x | z | ž |   
-             P | Q | R | S | Š | T | Ŧ | V | W | X | Z | Ž | ɟ | ʎ ] ; 
+             P | Q | R | S | Š | T | Ŧ | V | W | X | Z | Ž | 
+             ɟ | ʎ | ɲ | ʧ ] ; 
 
 define Sgm [ Vow | Cns ] ;
 
-define Stop [ p | t | k | c | č ] ;
+define Stop [ p | t | k | c | č | ʧ ] ;
 
 define Alv [ t | T | d | D | ŧ | Ŧ | đ | Đ | s | S | l | L | r | R | n | N ] ;
 
-define Son [ m | n | ŋ | l | r | j | v | đ ] ;
+define Son [ m | n | ŋ | ɲ | l | r | j | v | đ ] ;
 
-define Nas [ m | M | n | N | ŋ | Ŋ ] ;
+define Nas [ m | M | n | N | ŋ | Ŋ | ɲ ] ;
 
-define Dummy %^SL ;
+!define Dummy %^SL ;
 
-define Syll Cns* Vow+ Cns* (Dummy) Cns* (ə)  ;
+define Syll Cns* Vow+ Cns*  ;
 ! define Syll Cns* Vow+ Cns* (Dummy) Cns* (ə) %^ ;
 
-
-! SecondaryLenghtening
 
 echo << Rules>>
 
@@ -80,20 +72,13 @@ define down [ A -> a, Á -> á, B -> b, C -> c, Č -> č, D -> d, E -> e, F -> f
               G -> g, H -> h, I -> i, J -> j, K -> k, L -> l, M -> m, N -> n, 
               Ŋ -> ŋ, O -> o, P -> p, Q -> q, R -> r, S -> s, Š -> š, T -> t, 
               U -> u, V -> v, W -> w, X -> x, Y -> y, Z -> z, Ž -> ž, Æ -> æ, 
-              Ø -> ø, Å -> å, Ö -> ö, Ä -> ä  ] ;
+              Ø -> ø, Å -> å, Ö -> ö, Ä -> ä, Ï -> i  ] ;
 
-
-
-
-echo << Rules >>
-
-
-! Here comes the other rules
+! define LoanwordAssimilation n d -> ɲ ɲ ;
 
 define InitialAspiration p -> p ʰ , t -> t ʰ , k -> k ʰ || .#. _ Vow ;
 
-
-define Geminates b p -> p p , d t -> t t , g k -> k k , g n -> ŋ ŋ ;
+define Geminates b p -> p p , d t -> t t , g k -> k k , g n -> ŋ ŋ , n n g -> ŋ ŋ ;
 
 define eApocope e -> 0 || Syll [o|i] _ [.#.| m i n i e ] ; ! berkoe > berko
 
@@ -109,13 +94,11 @@ define ijRule j -> i || i _ [\j] ,,
               v -> ʉ || ʉ _ [\v] ,,
               j -> y || y _ [\j] ;
 
-define slRule s -> š || [.#.|%#|%-] _ l ;
+define slRule s l -> ʃ l̥ || [.#.|%#|%-] _ ;
 
-define snjRule s -> š || [.#.|%#|%-] _ n j ;
-
+define snjRule s -> ʃ || [.#.|%#|%-] _ n j ;
 
 define oRule o -> u ;
-
 
 define SyllShortening b b -> b , d d -> d , f f -> f , g g -> g , j j -> j , 
 	                  k k -> k , l l -> l , m m -> m , n n -> n , p p -> p ,
@@ -125,51 +108,39 @@ define SyllShortening b b -> b , d d -> d , f f -> f , g g -> g , j j -> j ,
 
 define åASo å -> o ;
 
-define schwa e -> ə || Syll Cns _  ;
+define schwa e -> ə || Syll Cns+ _  ;
 
-define Affricats t j -> c , s j -> š ; 
+define Affricates t j -> ʧ , s j -> š , sh -> š ; 
 
+define WeakPenultimate ə -> 0 || Syll Cns [Cns - l]  _ Cns+ ə .#. ,, 
+                       ə -> 0 || Alv _ n .#. ;
 
+define Auslaut d h -> t ʰ , g h -> k ʰ , m h -> m̥ || _ .#. ;
 
 
 echo << And now we go for some OUTPUTFORMAT or another >>
 
-! The rules above are somewhat oriented towards the orthography, and rearrange
-! based upon that. Now, we might want to have output in different formats for 
-! different reasons:
 ! SAMPA   = for the Helsinki tts engine
 ! IPA     = so that we may read it during development
-! FINNISH = to target the fallback Bitlips demo if we are not able to meet the
-!           October deadline with the generated Sámi voice.
-
-!The idea is to comment out two of the following three rules and keep the one intended.
+! The idea is to comment out one of the following tou rules and keep the other
 
 
-! ... here outputformat is SAMPA:              
+!! ... here outputformat is SAMPA:              
 !define OUTPUTFORMAT ə -> %@ , ä -> %{ , æ -> %{ , ö -> 2 , ø -> 2 , a -> A , 
 !                   n j -> J , ŋ -> N , š -> S , đ -> D ,  ŧ -> T , ɟ -> J \ , 
-!              L -> l %_ %0 , R -> r %_ %0 , M -> m %_ %0 , N -> n %_ %0 , 
-!              Ŋ -> N %_ %0 , V -> v %_ %0 ,
-!               %^ -> %. ;
-! note potential problems with J\.
+!                   L -> l %_ %0 , R -> r %_ %0 , M -> m %_ %0 , N -> n %_ %0 , 
+!                  Ŋ -> N %_ %0 , V -> v %_ %0 ,  %^ -> %. ;
+!! note potential problems with J\.
 
 ! ... here outputformat is IPA:              
- define OUTPUTFORMAT a -> ɑ , ä -> æ , ö -> ø , n j -> ɲ , š -> ʃ , đ -> ð , ŧ -> θ , w -> β , W -> ɸ ,
-                     L -> l̥ , R -> r̥ , M -> m̥ , N   -> n̥ , Ŋ -> ŋ̊ , V -> v̥ , J -> ç , 
-                     %^ -> %. ;
-define OUTPUTFORMAT2   h -> ʰ || [.#.|%-] [p|t|k] _ Vow ; ! for rules with context...
+define OUTPUTFORMAT a -> ɑ , ä -> æ , ö -> ø , n j -> ɲ , š -> ʃ , đ -> ð , ŧ -> θ , w -> β , W -> ɸ ,
+                    L -> l̥ , R -> r̥ , M -> m̥ , N   -> n̥ , Ŋ -> ŋ̊ , V -> v̥ , J -> ç , 
+                    %^ -> %. ;
 
-
-
-! ... here outputformat is FUPA:
-! define OUTPUTFORMAT a -> ɑ , n j -> ń , đ -> ð ,
-!                                          
-!                     %^ -> %. ;
-
-
+define OUTPUTFORMAT2   h -> ʰ || [.#.|%-] [p|t|k] _ Vow ;
 
 define COLONLENGTH   ɑ ɑ -> ɑ ː , e e -> e ː , i i -> i ː , o o -> o ː , u u -> u ː ,
-                     ø ø -> ø ː , æ æ -> æ ː , 
+                     y y -> y ː , ø ø -> ø ː , æ æ -> æ ː , 
                      b b -> b ː , β β -> β ː , ɸ ɸ -> ɸ ː , ɟ ɟ -> ɟ ː , c c -> c ː , 
                      d d -> d ː , ð ð -> ð ː , f f -> f ː , g g -> g ː , 
                      h h -> h ː , j j -> j ː , k k -> k ː , l l -> l ː , ʎ ʎ -> ʎ ː ,
@@ -178,15 +149,8 @@ define COLONLENGTH   ɑ ɑ -> ɑ ː , e e -> e ː , i i -> i ː , o o -> o ː , 
                      l̥ l̥  -> l̥ ː , r̥ r̥  -> r̥ ː , m̥ m̥ -> m̥ ː , n̥ n̥ -> n̥ ː , ŋ ŋ -> ŋ ː , 
                      ŋ̊ ŋ̊ -> ŋ̊ ː , v̥ v̥ -> v̥ ː ;
 
-
-! ... here outputformat is Finnish orthography:              
-! define OUTPUTFORMAT ŋ -> n g , ŧ -> s , đ -> r , š -> s ,
-!                       %^ -> %.  ;
-! This rule is incomplete!
-
 ! Cleaning up
-
-define DummyDeletion Dummy -> 0 ;
+! define DummyDeletion Dummy -> 0 ;
 
 
 echo <<Combining...>>
@@ -194,6 +158,7 @@ echo <<Combining...>>
 read regex [ 
 !    POSTAG .o. 
     down 
+!.o. LoanwordAssimilation    
 .o. InitialAspiration    
 .o. Geminates    
 .o. eApocope
@@ -208,11 +173,12 @@ read regex [
 .o. SyllShortening
 .o. åASo
 .o. schwa
-.o. Affricats
+.o. Affricates
+.o. WeakPenultimate
+.o. Auslaut
 .o. OUTPUTFORMAT
 .o. OUTPUTFORMAT2
 .o. COLONLENGTH
-.o. DummyDeletion
 
 ] ;
 
@@ -289,22 +255,22 @@ invert net ;
 
 ! More documentation
 
-!! retroflex plosive, voiceless		t`  ʈ	    0288, 648 (` = ASCII 096)
-!! retroflex plosive, voiced		d`	ɖ		0256, 598
-!! labiodental nasal				F 	ɱ		0271, 625
-!! retroflex nasal					n` 	ɳ		0273, 627
-!! palatal nasal					J 	ɲ		0272, 626
-!! velar nasal						N 	ŋ		014B, 331
-!! uvular nasal						N\	ɴ		0274, 628
-!! 
-!! bilabial trill					B\ 	ʙ		0299, 665
-!! uvular trill						R\ 	ʀ		0280, 640
-!! alveolar tap						4	ɾ		027E, 638
-!! retroflex flap					r` 	ɽ		027D, 637
-!! bilabial fricative, voiceless	p\ 	ɸ		0278, 632
-!! bilabial fricative, voiced		B 	β		03B2, 946
-!! dental fricative, voiceless		T 	θ		03B8, 952
-!! dental fricative, voiced			D 	ð		00F0, 240
+!! retroflex plosive, voiceless			t`  ʈ	    0288, 648 (` = ASCII 096)
+!! retroflex plosive, voiced			d`	ɖ		0256, 598
+!! labiodental nasal					F 	ɱ		0271, 625
+!! retroflex nasal						n` 	ɳ		0273, 627
+!! palatal nasal						J 	ɲ		0272, 626
+!! velar nasal							N 	ŋ		014B, 331
+!! uvular nasal							N\	ɴ		0274, 628
+!! 	
+!! bilabial trill						B\ 	ʙ		0299, 665
+!! uvular trill							R\ 	ʀ		0280, 640
+!! alveolar tap							4	ɾ		027E, 638
+!! retroflex flap						r` 	ɽ		027D, 637
+!! bilabial fricative, voiceless		p\ 	ɸ		0278, 632
+!! bilabial fricative, voiced			B 	β		03B2, 946
+!! dental fricative, voiceless			T 	θ		03B8, 952
+!! dental fricative, voiced				D 	ð		00F0, 240
 !! postalveolar fricative, voiceless	S	ʃ		0283, 643
 !! postalveolar fricative, voiced		Z 	ʒ		0292, 658
 !! retroflex fricative, voiceless		s` 	ʂ		0282, 642
@@ -406,38 +372,42 @@ invert net ;
 !! contour, low rising					_B_L 
 !! 
 !! contour, rising-falling				_R_F 
-!! (NB Instead of being written as diacritics with _, all prosodic marks can alternatively be placed in a separate tier, set off by < >, as recommended for the next two symbols.)
-!! global rise				<R> 
-!! global fall				<F>
-!! Diacritics
-!! 
-!! voiceless				_0	(0 = figure), e.g. n_0
-!! voiced					_v 
-!! aspirated				_h 
-!! more rounded				_O	(O = letter) 
-!! less rounded				_c 
-!! advanced					_+
-!! retracted				_-
-!! centralized				_" 
-!! syllabic					=	(or _=) e.g. n= (or n_=) 
-!! non-syllabic				_^ 
-!! rhoticity				`
-!! 
-!! breathy voiced			_t 
-!! creaky voiced			_k
-!! linguolabial				_N 
-!! labialized				_w 
-!! palatalized				'	(or _j) e.g. t' (or t_j) 
-!! velarized				_G 
-!! pharyngealized			_?\
-!! 
-!! dental					_d 
-!! apical					_a 
-!! laminal					_m
-!! nasalized				~	(or _~) e.g. A~ (or A_~) 
-!! nasal release			_n
-!! lateral release			_l 
-!! no audible release		_}
+!! (NB Instead of being written as diacritics with _, all prosodic 
+!! marks can alternatively be placed in a separate tier, set off 
+!! by < >, as recommended for the next two symbols.)
+!!
+!! global rise						<R> 
+!! global fall						<F>
+!!									
+!! Diacritics						
+!! 									
+!! voiceless						_0	(0 = figure), e.g. n_0
+!! voiced							_v 
+!! aspirated						_h 
+!! more rounded						_O	(O = letter) 
+!! less rounded						_c 
+!! advanced							_+
+!! retracted						_-
+!! centralized						_" 
+!! syllabic							=	(or _=) e.g. n= (or n_=) 
+!! non-syllabic						_^ 
+!! rhoticity						`
+!! 									
+!! breathy voiced					_t 
+!! creaky voiced					_k
+!! linguolabial						_N 
+!! labialized						_w 
+!! palatalized						'	(or _j) e.g. t' (or t_j) 
+!! velarized						_G 
+!! pharyngealized					_?\
+!! 									
+!! dental							_d 
+!! apical							_a 
+!! laminal							_m
+!! nasalized						~	(or _~) e.g. A~ (or A_~) 
+!! nasal release					_n
+!! lateral release					_l 
+!! no audible release				_}
 !! 
 !! velarized or pharyngealized		_e 
 !! velarized l, alternatively		5 
