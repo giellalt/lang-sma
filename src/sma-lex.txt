@@ -24,7 +24,8 @@ Multichar_Symbols
 
 ! Tags for POS
   +N +A +Adv +V
-  +Pron +CS +CC +Po +Pr +Interj +Pcle +Num +Ord +Logo
+  +Pron +CS +CC +Po +Pr +Interj +Pcle +Num
+  +Logo ! What is this?
 
 ! Tags for sub-POS
   +Prop +Pers +Dem +Interr +Refl +Recipr +Rel +Indef
@@ -51,14 +52,6 @@ Multichar_Symbols
 
 
 ! Normative/prescriptive compounding tags:
-! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
- +First +Last ! Spellertag: Can be first/last member of compound
- +None ! Spellertag: Can not participate in compounds
- +CmpOnly ! spellertag: can *only* participate in compounds
- +SgNomLeft +SgGenLeft +PlGenLeft +SgLeft ! Restriction on compound to the left
- +AllCmp ! Allow all compounding patterns
- +DefSgGenCmp +DefPlGenCmp +DefCmp ! Default values
-! to be renamed:  +§SgNomCmp +§SgGenCmp +§PlGenCmp
 
 ! The first part of the component may be ..
 +CmpN/Sg       ! Sg
@@ -66,22 +59,22 @@ Multichar_Symbols
 +CmpN/SgG      ! SgGenitive
 +CmpN/PlG      ! PlGenitive
 
-        ! This part of the component might be ..
+! This part of the component might be ..
 +CmpN/First     ! first
 +CmpN/Last      ! last
 +CmpN/None      ! Can not take part in compounds
-+CmpN/Only      ! 
++CmpN/Only      ! Can only be part of a compound
 +CmpN/Pref      ! prefix only
 
-        ! This part of the compound may take ..
+! This part of the compound may take ..
 +CmpN/SgLeft     ! Sg to the left
 +CmpN/SgNomLeft  ! etc.
 +CmpN/SgGenLeft  ! 
 +CmpN/PlGenLeft  ! 
 
-        ! This part of the compound may ... 
-+CmpN/All      ! all positions, _default_, this tag does not have to be written
-+CmpN/Def      ! works along with Left compound-tagging
+! This part of the compound may ... 
++CmpN/All        ! all positions, _default_, this tag does not have to be written
++CmpN/Def        ! works along with Left compound-tagging
 +CmpN/DefSgGen   ! works along with Left compound-tagging
 +CmpN/DefPlGen   ! works along with Left compound-tagging
 
@@ -117,6 +110,7 @@ Multichar_Symbols
   +Pred ! Obsolete tag! Predicative form, corresponds to +A+Nom+Sg in sme
   +Comp +Superl
   +Attr
+  +Ord
   
   +ABBR +ACR ! Abbreviation, acronym
   +TV +IV ! Transitivity tags
