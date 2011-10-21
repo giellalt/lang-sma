@@ -22,11 +22,81 @@
 
 Multichar_Symbols
 
-  +N +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Com +Ess
+! Tags for POS
+  +N +A +Adv +V
+  +Pron +CS +CC +Po +Pr +Interj +Pcle +Num +Ord +Logo
+
+! Tags for sub-POS
+  +Prop +Pers +Dem +Interr +Refl +Recipr +Rel +Indef
+  +Coll ! Collective numeral
+
+! Usage tags
+  +Use/Sub   ! Substandard
+  +Use/Marg  ! Marginal
+  +Use/-Spell !recognized but not suggested in speller
+  +Use/Circ  ! Circular path
+  +Use/CircN ! ???
+  +Use/Ped   ! Remove from pedagogical speller
+  +Use/NG    ! Do not generate, for isme-ped.fst and apertium
+
+! Dialect tags:
+  +Dial/-S   ! Not in the South
+  +Dial/-N   ! Not in the North
+  +Dial/-NOR ! Not in Norway
+  +Dial/-SW  ! Not in Sweden
+  +Dial/SH   ! Short forms
+  +Dial/L    ! Long forms
+!  +Dial/OE  ! oe forms ! We assume these are lexical, and do not tag.
+!  +Dial/A   ! a forms  ! We assume these are lexical, and do not tag.
+
+
+! Normative/prescriptive compounding tags:
+! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
+ +First +Last ! Spellertag: Can be first/last member of compound
+ +None ! Spellertag: Can not participate in compounds
+ +CmpOnly ! spellertag: can *only* participate in compounds
+ +SgNomLeft +SgGenLeft +PlGenLeft +SgLeft ! Restriction on compound to the left
+ +AllCmp ! Allow all compounding patterns
+ +DefSgGenCmp +DefPlGenCmp +DefCmp ! Default values
+! to be renamed:  +§SgNomCmp +§SgGenCmp +§PlGenCmp
+
+! The first part of the component may be ..
++CmpN/Sg       ! Sg
++CmpN/SgN      ! SgNominative
++CmpN/SgG      ! SgGenitive
++CmpN/PlG      ! PlGenitive
+
+        ! This part of the component might be ..
++CmpN/First     ! first
++CmpN/Last      ! last
++CmpN/None      ! Can not take part in compounds
++CmpN/Only      ! 
++CmpN/Pref      ! prefix only
+
+        ! This part of the compound may take ..
++CmpN/SgLeft     ! Sg to the left
++CmpN/SgNomLeft  ! etc.
++CmpN/SgGenLeft  ! 
++CmpN/PlGenLeft  ! 
+
+        ! This part of the compound may ... 
++CmpN/All      ! all positions, _default_, this tag does not have to be written
++CmpN/Def      ! works along with Left compound-tagging
++CmpN/DefSgGen   ! works along with Left compound-tagging
++CmpN/DefPlGen   ! works along with Left compound-tagging
+
+! Tags for compound analysis - this is what a compound is:
+  +SgCmp +SgNomCmp +SgGenCmp +PlGenCmp
+  +CmpOnly
+  +Cmpnd +Cmpnd+ +Guess
+  +ShCmp !testing ShCmp
+
+
+  +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Com +Ess
   +PxSg1 +PxSg2 +PxSg3
   +PxDu1 +PxDu2 +PxDu3
   +PxPl1 +PxPl2 +PxPl3
-  +V +Prs +Prt
+  +Prs +Prt
   +Sg1 +Sg2 +Sg3
   +Du1 +Du2 +Du3
   +Pl1 +Pl2 +Pl3
@@ -44,12 +114,10 @@ Multichar_Symbols
  ! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21)
   +Act ! -eme, could be chagned to +Actio
 
-  +A
   +Pred ! Obsolete tag! Predicative form, corresponds to +A+Nom+Sg in sme
   +Comp +Superl
   +Attr
   
-  +CS +CC +Pcle 
   +ABBR +ACR ! Abbreviation, acronym
   +TV +IV ! Transitivity tags
   +LOAN  ! ad hoc tag for development purposes.
@@ -65,73 +133,7 @@ Multichar_Symbols
   +Test/JK    ! form uses consonant cluster jk
 
 
-
-  +Pron +Pers +Refl +Recipr +Dem +Indef +Interr +Rel +Logo
-  +Po +Pr +Adv +Interj +Num +Ord
-  +Coll ! Collective numeral
-
-  +Prop +Ani +Mal +Fem +Sur +Plc +Org +Obj ! Semantic properties of names
-  
-  +CLB +PUNCT +LEFT +RIGHT
-  
-  +Cmpnd
-  +SgNomCmp +PlGenCmp +SgGenCmp
-  +CmpOnly
-  +SgCmp +SgNomCmp +SgGenCmp +PlGenCmp +Cmpnd +Cmpnd+ +Guess +ShCmp !testing ShCmp
-  +First +Last +None +CmpOnly +SgNomLeft +SgGenLeft +PlGenLeft +SgLeft +AllCmp
-  
-! Normative/prescriptive compounding tags:
-! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
- +First +Last ! Spellertag: Can be first/last member of compound
- +None ! Spellertag: Can not participate in compounds
- +CmpOnly ! spellertag: can *only* participate in compounds
- +SgNomLeft +SgGenLeft +PlGenLeft +SgLeft ! Restriction on compound to the left
- +AllCmp ! Allow all compounding patterns
- +DefSgGenCmp +DefPlGenCmp +DefCmp ! Default values
-! to be renamed:  +§SgNomCmp +§SgGenCmp +§PlGenCmp
-
-                 ! The first part of the component may be ..
-+CmpN/Sg      ! Sg
-+CmpN/SgN      ! SgN 
-+CmpN/SgG      ! etc.
-+CmpN/PlG      ! 
-
-        ! This part of the component might be ..
-+CmpN/First      ! first
-+CmpN/Last      ! last
-+CmpN/None      ! ...
-+CmpN/Only      ! 
-+CmpN/Pref      ! prefix only
-
-        ! This part of the compound may take ..
-+CmpN/SgLeft     ! Sg to the left
-+CmpN/SgNomLeft  ! etc.
-+CmpN/SgGenLeft  ! 
-+CmpN/PlGenLeft  ! 
-
-        ! This part of the compound may ... 
-+CmpN/All      ! all positions, _default_, this tag does not have to be written
-+CmpN/Def      ! works along with Left compound-tagging
-+CmpN/DefSgGen   ! works along with Left compound-tagging
-+CmpN/DefPlGen   ! works along with Left compound-tagging
-
-  
-  
-  +Use/Sub   ! Substandard
-  +Use/Marg  ! Marginal
-  +Use/-Spell !recognized but not suggested in speller
-  +Use/Circ  ! Circular path
-  +Use/CircN ! ???
-  +Use/Ped   ! Remove from pedagogical speller
-  +Use/NG    ! Do not generate, for isme-ped.fst and apertium
-  +Dial/-S   ! Not in the South
-  +Dial/-N   ! Not in the North
-  +Dial/-NOR ! Not in Norway
-  +Dial/-SW  ! Not in Sweden
-  +Dial/SH   ! Short forms
-  +Dial/L    ! Long forms
-!  +Dial/OE  ! oe forms ! We assume these are lexical, and do not tag.
-!  +Dial/A   ! a forms  ! We assume these are lexical, and do not tag.
+  +CLB +PUNCT +LEFT +RIGHT 
 
   ! Different focus particles
   +Foc/ge
@@ -140,36 +142,14 @@ Multichar_Symbols
   +Foc/gænnah
 
 
-  X2 X3 X4
-  E2 ! insert e ! Fjern denne.
-  »7 %>7
-  +1 +2 ! lexeme disambiguation tags
-  +v1 +v2 +v3 +v4 +v5  ! Versions 
+! Semantic tags to help disambiguation & synt. analysis:
+ +Mal +Fem +Sur ! Names
+ +Plc ! Place
+ +Org ! Organisation
+ +Obj ! Object
+ +Ani ! Animate
+ +Hum ! Human
 
-  !Umlaut and diphthong simplification triggers:
-  %^DISIMP
-  %^COMPDISIMP
-  %^COMPDISIMP2
-  %^NOMAGieDISIMP
-  %^1UML  ! a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
-  %^2UML  ! dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
-  %^3UML  ! not used
-  %^3sUML ! a-uml in 3sg prs of V-IV (roehtedh - ruahta)
-  %^3dUML ! ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
-  %^iæUML ! not used
-  %^iUML  ! i-uml in pret of V-I (båetedh - böötim)
-  %^PASSUML ! Short passive Umlaut Rx->R5
-  %^didhUML !Der/didh Umlaut for GUARKEDH-words
-  %^htjidhUML !Umlaut für der/htjidh derivations
-  %^adteUML !Umlaut für Der/adte and Der/alle derivations
-  %^aLATUS  ! Latus-Umlaut for -ie stems
-  %^uLATUS  ! Latus-Umlaut for -oe stems
-
-! Flag diacritics
- @P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@ ! (Dis)allowing compounds
- @U.Cap.Obl@  @U.Cap.Opt@   ! Allowing downcasing of
-                  ! derived names: deatnulasj.
-               ! Actually, downcasing should be obligatory
 
 ! Der#begin
 ! Derivation position in a derivation row:  Affix and:
@@ -214,6 +194,40 @@ Multichar_Symbols
 +Der/PassS                                                                  ! VV - short only
 +Der/A                                                                      ! NA - comparation of N's
 ! Der#end																	
+
+
+! Triggers for morphophonological rules
+  X2 X3 X4
+  E2 ! insert e ! Fjern denne.
+  »7 %>7
+  +1 +2 ! lexeme disambiguation tags
+  +v1 +v2 +v3 +v4 +v5  ! Versions 
+
+  !Umlaut and diphthong simplification triggers:
+  %^DISIMP
+  %^COMPDISIMP
+  %^COMPDISIMP2
+  %^NOMAGieDISIMP
+  %^1UML  ! a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
+  %^2UML  ! dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
+  %^3UML  ! not used
+  %^3sUML ! a-uml in 3sg prs of V-IV (roehtedh - ruahta)
+  %^3dUML ! ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
+  %^iæUML ! not used
+  %^iUML  ! i-uml in pret of V-I (båetedh - böötim)
+  %^PASSUML ! Short passive Umlaut Rx->R5
+  %^didhUML !Der/didh Umlaut for GUARKEDH-words
+  %^htjidhUML !Umlaut für der/htjidh derivations
+  %^adteUML !Umlaut für Der/adte and Der/alle derivations
+  %^aLATUS  ! Latus-Umlaut for -ie stems
+  %^uLATUS  ! Latus-Umlaut for -oe stems
+
+! Flag diacritics
+ @P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@ ! (Dis)allowing compounds
+ @U.Cap.Obl@  @U.Cap.Opt@   ! Allowing downcasing of
+                  ! derived names: deatnulasj.
+               ! Actually, downcasing should be obligatory
+
 
 ! ================
 ! The root lexicon
