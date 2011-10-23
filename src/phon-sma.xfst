@@ -74,9 +74,9 @@ define down [ A -> a, Á -> á, B -> b, C -> c, Č -> č, D -> d, E -> e, F -> f
               U -> u, V -> v, W -> w, X -> x, Y -> y, Z -> z, Ž -> ž, Æ -> æ, 
               Ø -> ø, Å -> å, Ö -> ö, Ä -> ä, Ï -> i  ] ;
 
-! define LoanwordAssimilation n d -> ɲ ɲ ;
+define LoanwordAssimilation c h -> ʧ  ; ! n d -> ɲ ɲ ;
 
-define InitialAspiration p -> p ʰ , t -> t ʰ , k -> k ʰ || .#. _ Vow ;
+define InitialAspiration p -> p ʰ , t -> t ʰ , k -> k ʰ || .#. _ [ l | r | v | n ] Vow ;
 
 define Geminates b p -> p p , d t -> t t , g k -> k k , g n -> ŋ ŋ , n n g -> ŋ ŋ ;
 
@@ -94,7 +94,7 @@ define ijRule j -> i || i _ [\j] ,,
               v -> ʉ || ʉ _ [\v] ,,
               j -> y || y _ [\j] ;
 
-define slRule s l -> ʃ l̥ || [.#.|%#|%-] _ ;
+define slRule s l -> ʃ l̥ , s k j -> ʃ || [.#.|%#|%-] _ ;
 
 define snjRule s -> ʃ || [.#.|%#|%-] _ n j ;
 
@@ -158,7 +158,7 @@ echo <<Combining...>>
 read regex [ 
 !    POSTAG .o. 
     down 
-!.o. LoanwordAssimilation    
+.o. LoanwordAssimilation    
 .o. InitialAspiration    
 .o. Geminates    
 .o. eApocope
