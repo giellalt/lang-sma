@@ -76,7 +76,7 @@ define down [ A -> a, Á -> á, B -> b, C -> c, Č -> č, D -> d, E -> e, F -> f
 
 define LoanwordAssimilation c h -> ʧ  ; ! n d -> ɲ ɲ ;
 
-define InitialAspiration p -> p ʰ , t -> t ʰ , k -> k ʰ || .#. _ [ l | r | v | n ] Vow ;
+define InitialAspiration p -> p ʰ , t -> t ʰ , k -> k ʰ || [.#.|%-] _ ( [ l | r | v | n ] ) Vow ;
 
 define Geminates b p -> p p , d t -> t t , g k -> k k , g n -> ŋ ŋ , n n g -> ŋ ŋ ;
 
@@ -120,24 +120,14 @@ define Auslaut d h -> t ʰ , g h -> k ʰ , m h -> m̥ || _ .#. ;
 
 echo << And now we go for some OUTPUTFORMAT or another >>
 
-! SAMPA   = for the Helsinki tts engine
-! IPA     = so that we may read it during development
-! The idea is to comment out one of the following tou rules and keep the other
-
-
 !! ... here outputformat is SAMPA:              
 !define OUTPUTFORMAT ə -> %@ , ä -> %{ , æ -> %{ , ö -> 2 , ø -> 2 , a -> A , 
-!                   n j -> J , ŋ -> N , š -> S , đ -> D ,  ŧ -> T , ɟ -> J \ , 
-!                   L -> l %_ %0 , R -> r %_ %0 , M -> m %_ %0 , N -> n %_ %0 , 
-!                  Ŋ -> N %_ %0 , V -> v %_ %0 ,  %^ -> %. ;
+!    n j -> J , ŋ -> N , š -> S , đ -> D ,  ŧ -> T , ɟ -> J \ , L -> l %_ %0 , 
+!    R -> r %_ %0 , M -> m %_ %0 , N -> n %_ %0 ,   Ŋ -> N %_ %0 , V -> v %_ %0 ,  %^ -> %. ;
 !! note potential problems with J\.
 
 ! ... here outputformat is IPA:              
-define OUTPUTFORMAT a -> ɑ , ä -> æ , ö -> ø , n j -> ɲ , š -> ʃ , đ -> ð , ŧ -> θ , w -> β , W -> ɸ ,
-                    L -> l̥ , R -> r̥ , M -> m̥ , N   -> n̥ , Ŋ -> ŋ̊ , V -> v̥ , J -> ç , 
-                    %^ -> %. ;
-
-define OUTPUTFORMAT2   h -> ʰ || [.#.|%-] [p|t|k] _ Vow ;
+define OUTPUTFORMAT a -> ɑ , ä -> æ , ö -> ø , n j -> ɲ , š -> ʃ , %^ -> %. ;
 
 define COLONLENGTH   ɑ ɑ -> ɑ ː , e e -> e ː , i i -> i ː , o o -> o ː , u u -> u ː ,
                      y y -> y ː , ø ø -> ø ː , æ æ -> æ ː , 
@@ -156,7 +146,6 @@ define COLONLENGTH   ɑ ɑ -> ɑ ː , e e -> e ː , i i -> i ː , o o -> o ː , 
 echo <<Combining...>>
 
 read regex [ 
-!    POSTAG .o. 
     down 
 .o. LoanwordAssimilation    
 .o. InitialAspiration    
@@ -177,7 +166,6 @@ read regex [
 .o. WeakPenultimate
 .o. Auslaut
 .o. OUTPUTFORMAT
-.o. OUTPUTFORMAT2
 .o. COLONLENGTH
 
 ] ;
