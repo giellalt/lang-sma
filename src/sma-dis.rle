@@ -237,12 +237,17 @@ SET NOT-QMARK = WORD OR CLB OR PUNCT - QMARK ;
 
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS ;
 
+SET NOT-NP = VFIN-NOT-NEG OR ConNeg OR Inf OR Pcle OR Interj OR CS ;
+ # The set NP-BOUNDARY is bigger. 
+
 SET NOT-ADV = WORD - Adv ;
 
 SET NP-HEAD = Num OR N OR Pron ;
 
 SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron Pers Gen) OR (Pron Logo Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr OR ("gånka") ;
          # The strict version of items that can only be premodifiers, not parts of the predicate - copied from sme-dis.rle
+         
+SET NP-MEMBER   = PRE-NP-HEAD OR N ;
 
 SET GUJMIE = (Pl Gen) OR (Pl1 Gen) OR (Pl2 Gen) OR (Pl3 Gen) ;
          
@@ -319,6 +324,9 @@ SET AUX = COPULAS OR Neg OR MOD-ASP OR AUX-OR-MAIN ;
 
 
 SET VFIN = Ind OR Imprt ;
+
+SET VFIN-NOT-NEG = VFIN - Neg ;
+  # this might be to strict, besides, "iige" can be written "ii ge"
 
 
 LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ; 
@@ -566,27 +574,35 @@ SELECT:Imprte (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) 
 	# CC- and CS-Mapping
 	# -------------------
 # CASES
+#MAP (@COMP-CS<) TARGET N (*-1 ("goh") BARRIER S-BOUNDARY );
+MAP (@COMP-CS<) TARGET NP-MEMBER IF (*-1 ("go" CS) BARRIER NOT-NP LINK NOT -1 VFIN OR CC)(0 Nom OR ADVLCASE)(NEGATE 0 Attr OR TITLE LINK 1 N OR A)(NEGATE *1 VFIN BARRIER SV-BOUNDARY);
+	## Ovdabarggut állanit seamma beallái go "láhkateavstta lunddolaš lohkan".
+	## Ovdabarggut állanit seamma beallái go "láhkateavstta lohkan".
+	## Sápmelaččat guđet orrot Norgga bealde Deanu, geavahit seammá gávtti go sápmelaččat Suoma bealde Deanu.
 
 MAP (@CNP) TARGET CC (0 ("gon")) ;
 MAP (@CNP) TARGET CS (0 ("goh") LINK *1 N OR Pers BARRIER NPNH LINK *1 S-BOUNDARY BARRIER V) ;
 MAP (@CNP) TARGET CS (0 ("goh") LINK *1 TITLE BARRIER NPNH LINK 1 N LINK *1 S-BOUNDARY BARRIER V) ;
+MAP (@CNP) TARGET CS (0 ("goh))(NEGATE -1 CC OR CS OR (":"))(NEGATE *-1 VFIN OR AUX BARRIER S-BOUNDARY)(*-1 V OR N OR Adv OR A OR Pron OR Num); 
+	## Ussjedh barre - gosse jijnjesh daagkoe sjidtebe, gosse gåetieh gaajhkine baenine sjidtieh - die Karijuse, die manne goh jeatjah gånka daennie mov gåetesne maahtam tjahkasjidh jih abpe staarem vuartasjidh
+	
+
 MAP (@>CC) TARGET CC (0 ("dovne")) ;
 
 MAP (@CNP) TARGET CC (-1 $$CASES LINK 2 $$CASES) ;
 MAP (@CNP) TARGET CC (-1C Inf LINK 2C Inf) ;
 MAP (@CNP) TARGET CC (*-1C (Pl Gen) BARRIER WORD)(1 (Pl Com)) ;
 
-MAP (@CVP) TARGET CS ;
+MAP (@CVP) TARGET CS (NEGATE -1 CC OR CS OR (":"))(NEGATE *-1 VFIN OR AUX BARRIER S-BOUNDARY)(*-1 V OR N OR Adv OR A OR Pron OR Num);
+
+	#$ Ussjedh barre - gosse jijnjesh daagkoe sjidtebe, gosse gåetieh gaajhkine baenine sjidtieh - die Karijuse, die manne goh jeatjah gånka daennie mov gåetesne maahtam tjahkasjidh jih abpe staarem vuartasjidh
+	
 MAP (@CVP) TARGET CC (0 ("mohte") OR ("men")) ;
 
 MAP (@CVP) TARGET CC (*-1 MAINV BARRIER S-BOUNDARY)(*1 MAINV BARRIER S-BOUNDARY);
 
 
-#	# CC- and CS-Mapping
-#	# -------------------
-# 
-#
-#MAP:r10 (@CNP @CVP) TARGET CS IF (0 ("go") OR ("vai") OR XGO OR DADE);
+#MAP:r10 (@CNP @CVP) TARGET CS IF (0 ("goh") OR ("juktie") OR XGO OR DADE);
 #    ##
 #
 #MAP:r11 (@CVP) TARGET CS IF (NEGATE 0 Indef) ;
