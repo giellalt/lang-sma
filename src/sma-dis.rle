@@ -237,9 +237,6 @@ SET NOT-QMARK = WORD OR CLB OR PUNCT - QMARK ;
 
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS ;
 
-SET NOT-NP = VFIN-NOT-NEG OR ConNeg OR Inf OR Pcle OR Interj OR CS ;
- # The set NP-BOUNDARY is bigger. 
-
 SET NOT-ADV = WORD - Adv ;
 
 SET NP-HEAD = Num OR N OR Pron ;
@@ -328,6 +325,8 @@ SET VFIN = Ind OR Imprt ;
 SET VFIN-NOT-NEG = VFIN - Neg ;
   # this might be to strict, besides, "iige" can be written "ii ge"
 
+SET NOT-NP = VFIN-NOT-NEG OR ConNeg OR Inf OR Pcle OR Interj OR CS ;
+ # The set NP-BOUNDARY is bigger. 
 
 LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ; 
 # These are often followed by an infitive.
