@@ -581,11 +581,11 @@ SELECT:Imprte (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) 
 	# -------------------
 # CASES
 
-MAP (@COMP-CS<) TARGET Adv IF (-1 ("goh" CS) LINK -1 A)(1 COMMA LINK 1 ("die")) ;
+MAP (@COMP-CS<) TARGET Adv OR A IF (-1 ("goh" CS) LINK -1 A OR Adv)(1 COMMA LINK 1 ("die")) ;
    ## Daelie goh beetnehbïjle buerebe goh åvtelen, die bïjlen jienebh gaeptieh.
-#MAP (@COMP-CS<) TARGET $$ADVLCASE IF (-1 ("goh" CS) LINK -1 $$ADVLCASE)(1 COMMA LINK 1 VFIN) ;
+MAP (@COMP-CS<) TARGET $$ADVLCASE IF (-1 ("goh" CS) LINK -1 $$ADVLCASE)(1 COMMA LINK 1 VFIN) ;
 #	## Juohkehaš guhte earrána áhkástis mange eará sivas go fuorrávuođas, dagaha su rihkkut náittosdili. 
-#   ## Kaarre, gie båata gujneste jeatjah sjïeken mietie goh vissjeste, edtja satnem vuartasjidh. 
+#   ## Kaarre, gie båata gujneste jeatjah bieleste goh vissjeste, edtja satnem vuartasjidh. 
 #
 #ADD:r423 (@COMP-CS<) TARGET Nom IF (*-2 ("nu") BARRIER NOT-NP LINK 1 A OR Adv OR PrsPrc OR CC OR CS)(-1 ("go" CS));
 #	## Nu guhkás go vejolaš galgá dat čuovvoluvvot.
