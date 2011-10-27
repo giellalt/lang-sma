@@ -900,14 +900,15 @@ Ap ACRO ;
 LEXICON ACRO              ! Here we add the POS tag
 +N+ACR: acroconnector ;
 
-LEXICON acroconnector     ! Here comes a set of possible symbols to
- +Use/Sub:%>   acrosuff ; ! put between the abbreviation and its suffix
+LEXICON acroconnector     ! Here comes a set of possible symbols to ...
+               acronull ; ! SgNom only in sma
+         :%>%: acrosuff ;
+ +Use/Sub:%>   acrosuff ; ! ... put between the abbreviation and its suffix
  +Use/Sub:%>'  acrosuff ; ! No POS tag here in order to avoid the POS
  +Use/Sub:%>%´ acrosuff ; ! tag for non-ACRO entries using the acroconnector
  +Use/Sub:%>%` acrosuff ; ! inflection lexicon. (cf. the punct-sme-lex.txt file)
- :%>%:         acrosuff ;
-               acronull ; ! SgNom only in sma
                RHyph    ; ! Acros compound with a hyphen
+ +Use/Sub:     R ;        ! Without hyphen, not normative:  NRK23
 
 LEXICON acronull
 +Sg+Nom: # ;
