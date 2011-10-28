@@ -52,6 +52,7 @@ Multichar_Symbols
 
 
 ! Normative/prescriptive compounding tags:
+! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
 ! The first part of the component may be ..
 +CmpN/Sg       ! Sg
@@ -66,7 +67,7 @@ Multichar_Symbols
 +CmpN/Only      ! Can only be part of a compound
 +CmpN/Pref      ! prefix only
 
-! This part of the compound may take ..
+! The second part of the compound may take ..
 +CmpN/SgLeft     ! Sg to the left
 +CmpN/SgNomLeft  ! etc.
 +CmpN/SgGenLeft  ! 
@@ -78,13 +79,19 @@ Multichar_Symbols
 +CmpN/DefSgGen   ! works along with Left compound-tagging
 +CmpN/DefPlGen   ! works along with Left compound-tagging
 
+! Descriptive compounding tags:
 ! Tags for compound analysis - this is what a compound is:
-  +SgCmp +SgNomCmp +SgGenCmp +PlGenCmp
-  +CmpOnly
-  +Cmpnd +Cmpnd+ +Guess
+  +SgCmp +SgNomCmp +SgGenCmp +PlGenCmp ! Different case + number combinations
+  +Cmp ! Dynamic compound - this tag should always be part of a dynamic compound.
+       ! It is important for Apertium, and useful in other cases as well.
+  +RCmpnd  ! This is a split compound with the other part to the right:
+           ! "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
+  +LCmpnd+ ! This is a split compound with the other part to the left
   +ShCmp !testing ShCmp
 
+!!!! === Tags for Inflection ===
 
+! Tags for Case and Number Inflection
   +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Com +Ess
   +PxSg1 +PxSg2 +PxSg3
   +PxDu1 +PxDu2 +PxDu3
@@ -112,8 +119,11 @@ Multichar_Symbols
   +Attr
   +Ord
   
+! Other tags
   +ABBR +ACR ! Abbreviation, acronym
   +TV +IV ! Transitivity tags
+  +Multi ! Multiword phrase tag
+  +Guess ! for the name guesser
   +LOAN  ! ad hoc tag for development purposes.
   +Uml   ! A tag to indicate realised or potential Umlaut
   +NoUml ! A tag to indicate the lack of realised or potential Umlaut
@@ -185,6 +195,12 @@ Multichar_Symbols
 ! Der#4
 ! So far +Der4 is not motivated for SMA.
 ! Der#other
+
+! All non-positional derivations should be preceded by this tag, to make it possible
+! to target regular expressions at all derivations in a language-independent way:
+! just specify [+Der|+Der1 .. +Der5] and you are set.
++Der
+
 +Der/PassS                                                                  ! VV - short only
 +Der/A                                                                      ! NA - comparation of N's
 ! Der#end																	
@@ -229,7 +245,7 @@ Multichar_Symbols
 
 LEXICON Root
  !   Prefixes ; 
-    NounRoot  ;
+     NounRoot  ;
      ProperNoun  ;
      Verb  ;
      Adjective  ;
@@ -241,50 +257,51 @@ LEXICON Root
      Adposition  ;
      Punctuation  ;
      Interjection  ;
-     Numeral ;
+     +Use/CircN: Numeral ;
      Abbreviation ;
      Acronym ;
 
 
-! =============================
-! Compounding - copied from SMJ
-! =============================
+! Prefixing and compounding
+! =========================
+
 !LEXICON Prefixes
 
 !ov Adjective ; this renders in ovovmessie
 
-! =============================
-! Compounding - copied from SMJ
-! =============================
+! This is for regular compounding. All entries NOT requiring a hyphen should point to this:
 LEXICON R
- #+Use/Circ:# Noun ;                                    ! This is the normal case.           
- #@P.NeedNoun.ON@+Use/Circ:#@P.NeedNoun.ON@ Verb ;      ! Flag diacr declares that the compound   
- #@P.NeedNoun.ON@+Use/Circ:#@P.NeedNoun.ON@ Adjective ; ! needs a N tag later in the derivation  
- +Hyph#+Use/Circ:%- Noun ;                        ! These 3 cases add a hyphen, so     
- +Hyph#@P.NeedNoun.ON@+Use/Circ:%-@P.NeedNoun.ON@  Verb ;        ! Sem-julggaštus and maana-gåetie       
- +Hyph#@P.NeedNoun.ON@+Use/Circ:%-@P.NeedNoun.ON@  Adjective ;   ! are allowed.                 
+                     +Use/Circ+Cmp#:# Noun ;                       ! This is the normal case.           
+      @P.NeedNoun.ON@+Use/Circ+Cmp#:@P.NeedNoun.ON@# Verb ;        ! Flag diacr declares that the compound   
+      @P.NeedNoun.ON@+Use/Circ+Cmp#:@P.NeedNoun.ON@# Adjective ;   ! needs a N tag later in the derivation  
+                +Hyph+Use/Circ+Cmp#:%- Noun ;                      ! These 3 cases add a hyphen, so     
+ @P.NeedNoun.ON@+Hyph+Use/Circ+Cmp#:@P.NeedNoun.ON@%-  Verb ;      ! Sem-julggaštus and maana-gåetie       
+ @P.NeedNoun.ON@+Hyph+Use/Circ+Cmp#:@P.NeedNoun.ON@%-  Adjective ; ! are allowed.                 
 
- %-#+Use/Circ:%-# Acronym ;    ! maana-tv, "lomme-cd-spelar"
- %-#+Use/Circ:%-# ProperNoun ; ! Proper nouns as the 2nd part of compounds for non-hyph.
-                               ! words. viessu-London goes through here.
+ +Use/Circ+Cmp%-#:%-# Acronym ;    ! maana-tv, "lomme-cd-spelar"
+ +Use/Circ+Cmp%-#:%-# Numeral ;    ! maana-tv, "lomme-cd-spelar"
+ +Use/Circ+Cmp%-#:%-# ProperNoun ; ! Proper nouns as the 2nd part of compounds for non-hyph.
+                                   ! words. viessu-London goes through here.
 
- +Cmpnd:%- ENDLEX ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
-%-#+Use/Circ:%-# HyphNouns ; ! Go to words requiring hyphens, like -tv- and -cd-
+         +RCmpnd:%- ENDLEX ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
++Use/Circ+Cmp%-#:%-# HyphNouns ; ! Go to words requiring hyphens, like -tv- and -cd-
 
+
+! This is for compounding with hyphen. All entries REQUIRING a hyphen should point to this:
 LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
               ! NBNBNB!!! The hyphen should be added here! NOT in the other lexicons!
 
- %-#+Use/Circ:%-# Noun ;                                     ! This is the normal case.
- %-#@P.NeedNoun.ON@+Use/Circ:%-#@P.NeedNoun.ON@ Verb ;       ! Flag diacr declares that the compound
- %-#@P.NeedNoun.ON@+Use/Circ:%-#@P.NeedNoun.ON@ Adjective ; ! needs a N tag later in the derivation
+                +Use/Circ+Cmp%-#:%-# Noun ;                                     ! This is the normal case.
+ @P.NeedNoun.ON@+Use/Circ+Cmp%-#:@P.NeedNoun.ON@%-# Verb ;       ! Flag diacr declares that the compound
+ @P.NeedNoun.ON@+Use/Circ+Cmp%-#:@P.NeedNoun.ON@%-# Adjective ; ! needs a N tag later in the derivation
 
- %-#+Use/Circ:%-# Acronym ;    ! maana-tv, "lomme-cd-spelar"
- %-#+Use/Circ:%-# ProperNoun ; ! Proper nouns as the 2nd part of compounds for hyph-words.
+ +Use/Circ+Cmp%-#:%-# Acronym ;    ! maana-tv, "lomme-cd-spelar"
+ +Use/Circ+Cmp%-#:%-# ProperNoun ; ! Proper nouns as the 2nd part of compounds for hyph-words.
                                ! London-Hull is covered here, whereas Hull-viessu
                                ! is covered by RHyph + Noun.
 
- +Cmpnd:%- ENDLEX ;      ! This to take care of Oahpo- ja dutkandept - want this in speller
-%-#+Use/Circ:%-# HyphNouns ; ! Go to words requiring hyphens, like -tv- and -cd-
+         +RCmpnd:%- ENDLEX ;      ! This to take care of Oahpo- ja dutkandept - want this in speller
++Use/Circ+Cmp%-#:%-# HyphNouns ; ! Go to words requiring hyphens, like -tv- and -cd-
 
 ! Proper noun compounds without hyphens are NOT presently covered - if they were
 ! to be added, they need to be marked +Use/Sub. Examples: LondonHull & viessuLondon.
