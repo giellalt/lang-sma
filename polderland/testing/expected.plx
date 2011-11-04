@@ -61,11 +61,11 @@ sij-ji--	NAIEX,NtPABIX,NePAEOX
 sij-ji	NAIE
 sij-ji	NABO
 sij-ji	GpBO
-s:n	NI,NePE
-s.	NI,NePE
-s--	NePABOX,NtPABI
-s	NePE
-s	NI,NePE
+s:n	NI
+s.	NI
+s--	NePABX
+s	NI
+s	NI
 ov-ten	VI
 ov-tedh	VI
 ov-te-mi-nie	VI
