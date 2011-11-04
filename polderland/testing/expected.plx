@@ -1,5 +1,5 @@
 åv-te-me	VI
-åv-te-me	NIBE
+åv-te-me	NIBE,NePABE
 år-roeh-sij-jien--	NAIEX,NtPABIX,NePAEOX
 år-roeh-sij-jien--	NABOIEX,NtPAB,NePAEOX
 år-roeh-sij-jien	NAIE,NePAE
