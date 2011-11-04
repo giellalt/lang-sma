@@ -85,22 +85,21 @@ eer-pi-je--	NABIX,NtPABIX,NePAEOX
 eer-pi-je	NtPA+,NePAE
 eer-pi-je	NAB
 eekh	NtPA+,NePAE
-ee-ki--	NtPABIX,NePAEOX
+ee-ki--	NePAEOX
 ee-ki	NtPA+,NePAE
-ee-ki	GpB,NePAE
-ee-ki	GpB
+ee-ki	NePAE
 ee-ken--	NtPABIX,NePAEOX
 ee-ken--	NtPAB,NePAEOX
 ee-ken--	NtPAB,NePAEOX
 ee-ken	NtPA+,NePAE
 ee-ken	NePAB
 ee-ken	GaB,NePAE
-ee-ken	GaB
+ee-ken	GaIB
 ee-keh	NtPA+,NePAE
 ee-ke--	NABX,NtPABIEX,NePAEOX
 ee-ke--	NABIX,NtPABIX,NePAEOX
 ee-ke	NtPA+,NePAE
-ee-ke	NAB
+ee-ke	NAIB
 Trond Trosterud	WI
 Tomi Pieski	WI
 Thomas Omma	WI
@@ -118,14 +117,14 @@ Ilona Kivinen		WI
 E6:n	NI,NePE
 E6:j	NI,NePE
 E6:h	NI,NePE
-E6--	NePABOX,NtPABI
+E6--	NePABO,NtPABIX
 E6	NePE
 E6	NI,NePE
 Divvun	WI
 CD:n	NI,NePE
 CD:j	NI,NePE
 CD:h	NI,NePE
-CD--	NePABOX,NtPABI
+CD--	NePABO,NtPABIX
 CD	NePE
 CD	NI,NePE
 Børre Gaup	WI
