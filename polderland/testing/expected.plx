@@ -24,8 +24,7 @@ vih-ke-li--	NAIEX,NtPABIX,NePAEOX
 vih-ke-li	NABO
 vih-ke-li	GpBO,NAIE,NePAE
 vih-ke-li	GpBO
-vih-ke-les--	NABOX,NtPABIX,NePAEOX
-vih-ke-les	NePABO
+vih-ke-les--	NABO,NtPABIX,NePAEOX
 vih-ke-les	NAIE,NePAE
 vih-ke-les	NAIBOE
 vih-ke-len--	NAIEX,NtPABIX,NePAEOX
