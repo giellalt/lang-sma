@@ -1619,12 +1619,8 @@ LEXICON NIEJTE
 LEXICON NIEJTEOBL ! This for reference from A sublexica
 +Sg: NIEJTESGadjOBL ;
 +Pl: NIEJTE_PL ;
-        EVEN_ESS ;
-  +SgNomCmp:e    R ;
-  +SgGenCmp:e%>n R ;
-  +PlGenCmp:%>i  R ;
-!  +Der1+Der/Dim+N:e%»tj   GÅATETJE ;
-!  +Der1+Der/Dim+N+Use/Sub:etj   GÅATETJE ;
+     EVEN_ESS ;
+     NIEJTE_CMPND ;
 
 LEXICON NIEJTESGadjOBL !adj continued...
   +Nom+PxSg1+Use/Sub:%>eme FINAL1 ;
@@ -1691,10 +1687,16 @@ LEXICON NIEJTE_PL
  +Com+Use/Sub:%>igyjmie  FINAL1 ; !
 
 LEXICON NIEJTEREST
-              EVEN_ESS ;
+        EVEN_ESS ;
+        NIEJTE_CMPND ;
+        NIEJTE_DER ;
+
+LEXICON NIEJTE_CMPND
   +SgNomCmp:e    R ;
   +SgGenCmp:e%>n R ;
   +PlGenCmp:%>i  R ;
+
+LEXICON NIEJTE_DER
   +Der1+Der/Dim+N:e%»tj   GÅATETJE ;
   +Der1+Der/Dim+N+Use/Sub:etj   GÅATETJE ;
 
