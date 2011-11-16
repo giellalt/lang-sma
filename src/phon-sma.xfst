@@ -62,7 +62,7 @@ define Nas [ m | M | n | N | ŋ | Ŋ | ɲ ] ;
 
 !define Dummy %^SL ;
 
-define Syll Cns* Vow+ Cns*  ;
+define Syll Cns* Vow+ (ː) Cns*  ;
 ! define Syll Cns* Vow+ Cns* (Dummy) Cns* (ə) %^ ;
 
 
@@ -74,25 +74,36 @@ define down [ A -> a, Á -> á, B -> b, C -> c, Č -> č, D -> d, E -> e, F -> f
               U -> u, V -> v, W -> w, X -> x, Y -> y, Z -> z, Ž -> ž, Æ -> æ, 
               Ø -> ø, Å -> å, Ö -> ö, Ä -> ä, Ï -> i  ] ;
 
+define LexicalRules j ï h   -> j e h || .#. _ .#. ;
+
 define LoanwordAssimilation c h -> ʧ  ; ! n d -> ɲ ɲ ;
 
 define InitialAspiration p -> p ʰ , t -> t ʰ , k -> k ʰ || [.#.|%-] _ ( [ l | r | v | n ] ) Vow ;
 
 define Geminates b p -> p p , d t -> t t , g k -> k k , g n -> ŋ ŋ , n n g -> ŋ ŋ ;
 
-define eApocope e -> 0 || Syll [o|i] _ [.#.| m i n i e ] ; ! berkoe > berko
+define ngRule n g -> ŋ ;
+
+!define eApocope e -> 0 || Syll [o|i] _ [.#.| m i n i e ] ; ! berkoe > berko
+
+define ueDiph u e -> ʉ ə ;
 
 define uRule u -> ʉ ;
 
-define uvLengthening o v -> u u v ;
+define oeDiph o e -> u ə ;
 
-define oeRule o -> ʉ ,  a -> æ || _ e Sgm ;
+!define uvLengthening o v -> u u v ;
+
+define aeRule  a e -> æ ː ;
 
 define Diphthong a -> æ || e _ ;
 
-define ijRule j -> i || i _ [\j] ,,
-              v -> ʉ || ʉ _ [\v] ,,
-              j -> y || y _ [\j] ;
+define ïeDiphthong ï e -> i ə ;
+
+define ijRule j -> i || .#. Cns+ i _ [\j] ,,
+              v -> ʉ || .#. Cns+ ʉ _ [\v] ,,
+              j -> y || .#. Cns+ y _ [\j] ;
+
 
 define slRule s l -> ʃ l̥ , s k j -> ʃ || [.#.|%#|%-] _ ;
 
@@ -100,44 +111,47 @@ define snjRule s -> ʃ || [.#.|%#|%-] _ n j ;
 
 define oRule o -> u ;
 
+define wRule v -> w || [ Vow - ʉ ] _ [ [ Cns - v ] Vow | .#. ] ;
+
+define wRule2 v -> ɥ || ʉ _ [ [ Cns - v] Vow | .#. ] ;
+
 define SyllShortening b b -> b , d d -> d , f f -> f , g g -> g , j j -> j , 
 	                  k k -> k , l l -> l , m m -> m , n n -> n , p p -> p ,
 	                  r r -> r , s s -> s , t t -> t , v v -> v || Vow Vow _ ;
 
 ! Late rules
 
-define åASo å -> o ;
+define åASo å -> ɔ ;
 
-define schwa e -> ə || Syll Cns+ _  ;
+define schwa e -> ə || Syll Cns _  ;
 
-define Affricates t j -> ʧ , s j -> š , sh -> š ; 
+define LongAffricates s s j -> š š ;
 
-define WeakPenultimate ə -> 0 || Syll Cns [Cns - l]  _ Cns+ ə .#. ,, 
+define Affricates t j -> ʧ , s j -> š ; 
+
+define WeakPenultimate ə -> 0 || Syll Cns [Cns - l]  _ [s|h] ə .#. ,, 
                        ə -> 0 || Alv _ n .#. ;
 
-define Auslaut d h -> t ʰ , g h -> k ʰ , m h -> m̥ || _ .#. ;
+define Auslaut d h -> t ʰ , g h -> k ʰ , r h -> r̥ , l h -> l̥ , m h -> m̥ , s h -> s ʰ || _ .#. ;
 
+!define SchwaBetweenCons [..] -> ə || v _ l ,
+!                                     l _ m ,
+!                                     m _ s ;
 
-echo << And now we go for some OUTPUTFORMAT or another >>
+echo << And now we go for IPA OUTPUTFORMAT >>
 
-!! ... here outputformat is SAMPA:              
-!define OUTPUTFORMAT ə -> %@ , ä -> %{ , æ -> %{ , ö -> 2 , ø -> 2 , a -> A , 
-!    n j -> J , ŋ -> N , š -> S , đ -> D ,  ŧ -> T , ɟ -> J \ , L -> l %_ %0 , 
-!    R -> r %_ %0 , M -> m %_ %0 , N -> n %_ %0 ,   Ŋ -> N %_ %0 , V -> v %_ %0 ,  %^ -> %. ;
-!! note potential problems with J\.
-
-! ... here outputformat is IPA:              
-define OUTPUTFORMAT a -> ɑ , ä -> æ , ö -> ø , n j -> ɲ , š -> ʃ , %^ -> %. ;
+define OUTPUTFORMAT a -> ɑ , ä -> æ , ö -> ø , n j -> ɲ , š -> ʃ , ï -> ɨ , %^ -> %. ;
 
 define COLONLENGTH   ɑ ɑ -> ɑ ː , e e -> e ː , i i -> i ː , o o -> o ː , u u -> u ː ,
-                     y y -> y ː , ø ø -> ø ː , æ æ -> æ ː , 
+                     y y -> y ː , ø ø -> ø ː , æ æ -> æ ː , ʉ ʉ -> ʉ ː , ɔ ɔ -> ɔ ː ,
                      b b -> b ː , β β -> β ː , ɸ ɸ -> ɸ ː , ɟ ɟ -> ɟ ː , c c -> c ː , 
                      d d -> d ː , ð ð -> ð ː , f f -> f ː , g g -> g ː , 
                      h h -> h ː , j j -> j ː , k k -> k ː , l l -> l ː , ʎ ʎ -> ʎ ː ,
                      m m -> m ː , n n -> n ː , ɲ ɲ -> ɲ ː , p p -> p ː , r r -> r ː , 
                      s s -> s ː , t t -> t ː , ʃ ʃ -> ʃ ː , v v -> v ː ,
-                     l̥ l̥  -> l̥ ː , r̥ r̥  -> r̥ ː , m̥ m̥ -> m̥ ː , n̥ n̥ -> n̥ ː , ŋ ŋ -> ŋ ː , 
-                     ŋ̊ ŋ̊ -> ŋ̊ ː , v̥ v̥ -> v̥ ː ;
+                    l̥ l̥  -> l̥ ː , r̥ r̥  -> r̥ ː , m̥ m̥ -> m̥ ː , n̥ n̥ -> n̥ ː , 
+                    ŋ̊ ŋ̊ -> ŋ̊ ː , v̥ v̥ -> v̥ ː ,
+                     ŋ ŋ -> ŋ ː ;
 
 ! Cleaning up
 ! define DummyDeletion Dummy -> 0 ;
@@ -147,21 +161,29 @@ echo <<Combining...>>
 
 read regex [ 
     down 
+.o. LexicalRules    
 .o. LoanwordAssimilation    
 .o. InitialAspiration    
 .o. Geminates    
-.o. eApocope
+.o. ngRule
+!.o. eApocope
+.o. ueDiph
 .o. uRule
-.o. uvLengthening
-.o. oeRule
+.o. oeDiph
+!.o. uvLengthening
+.o. aeRule
 .o. Diphthong
-.o. ijRule
+.o. ïeDiphthong
+!.o. ijRule
 .o. slRule
 .o. snjRule
 .o. oRule
-.o. SyllShortening
+.o. wRule
+.o. wRule2
+!.o. SyllShortening
 .o. åASo
 .o. schwa
+.o. LongAffricates
 .o. Affricates
 .o. WeakPenultimate
 .o. Auslaut
