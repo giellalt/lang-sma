@@ -145,7 +145,6 @@ LIST CS = CS ;
 LIST CC = CC ;
 LIST Pcle = Pcle ;
 LIST CLB = CLB ;
-LIST PUNCT = PUNCT ;
 LIST LEFT = LEFT ;
 LIST RIGHT = RIGHT ;
 LIST COMMA = "," ;
@@ -366,9 +365,7 @@ LIST GRADE-ADV =  "aaptsah" "aaptsh" "ållesth" "allesth" "ååpsen" "aave" "aej
 # BOUNDARY SETS
 
 
-SET GUKTIE = GUKTIEGOSSE ;
-
-SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIE OR BOS OR EOS ;
+SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIEGOSSE OR BOS OR EOS ;
 SET REALCLB = CLB - COMMA ;
 
 SET SV-BOUNDARY = S-BOUNDARY OR Inf OR V-MAIN - PrsPrc ;
