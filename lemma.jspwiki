@@ -16,19 +16,29 @@ Bakgrunnen for dette er ord i leksikon som ikkje er skal inn i stavekontrollen, 
 
 Desse blir merka med ''+Use/LexSub'' i leksikon. Dei kjem med i genereringsfilene, men ikkje i den normative fila.
 
-!!Leksikalsk homonymi
+!!Leksikalsk homonymi: identifisere riktig lemma
 
-Dette er govledh 1 og 2.
-
-Desse får arbitrære taggar {{+id1, +id2, …}} (nummerert oppover ad lib).
-Taggane blir lagt inn i leksikon før POS, men flytta til etter POS 
+Lemmaene er homonyme, men det er samantisk forskjell og forskjellige bøyningsparadigmer. I nordsamisk skiller vi de fleste med G3- og Actor-tagger, fordi det er systematikk for store grupper av lemmaer. Når det er snakk om enkelttilfeller, gir vi disse arbitrære taggar {{+1, +2, …}} (nummerert oppover ad lib).
+Taggane blir lagt inn i leksikon før POS, men burde flyttast til etter POS 
 i kompileringa.
 
-!!Blanda paradigmer
+* Eksempler:
+** govledh+1  - kl. IV å høre
+** govledh+2  - kl. V å høres
 
-Ord vi vil ha under same lemma, som har to ulike stammeformer gjennom (delar
-av) bøyingsparadigmet sitt, treng ein tag for å styre dette.
+
+!!Varianter under samme lemma: sortere bøyningsformer til riktig grunnform
+
+Ord med samme semantikk, men som har to ulike ortografiske former som grunnform og dermed gjennom (delar av) bøyingsparadigmet, vil vi under same lemma. Men vi treng en tag for å sortere bøyningsparadigmene til riktig grunnform.
 
 Vi brukar taggane {{+v1, +v2, …}} (nummerert oppover ad lib) for å skilje mellom
 dei ulike paradigmene.
+
+* Eksempler:
+** rektore+v1:rektore
+** rektore+v2:rektovre
+
+Hvis både grunnform og semantikk er den samme, men det er to mulige bøyningsparadigmer, bruker vi ikke denne merkinga.
+
+
 
