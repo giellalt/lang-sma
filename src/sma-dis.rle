@@ -116,7 +116,7 @@ LIST ACR = ACR ;
 
 LIST QMARK = """ ; # ADD " FOR SYNTAX COLOURING.
 LIST PPUNCT = PUNCT ;
-
+SET PUNCT = PPUNCT - QMARK ;
 LIST Comp = Comp ;
 LIST Superl = Superl ;
 
@@ -1138,7 +1138,7 @@ MAP:modif-advl (@>ADVL) TARGET (Com) (0 Attr OR Pl LINK 0 $$ADVLCASE LINK *1 $$A
 MAP:modif-advl (@>ADVL) TARGET (Ela) (0 Attr OR Pl LINK 0 $$ADVLCASE LINK *1 $$ADVLCASE BARRIER NPNH);
 MAP:modif-advl (@>ADVL) TARGET (Ill) (0 Attr OR Pl LINK 0 $$ADVLCASE LINK *1 $$ADVLCASE BARRIER NPNH);
 
-MAP:(@>ADVL) TARGET (A Ord) (0 ($$ADVLCASE+Attr) LINK *1 $$ADVLCASE OR A BARRIER NPNH);
+MAP (@>ADVL) TARGET (A Ord) (0 ($$ADVLCASE+Attr) LINK *1 $$ADVLCASE OR A BARRIER NPNH);
 
 MAP (@ADVL>) TARGET (Ine) (0 NP-HEAD OR A) (NOT 0 Attr) (*1 VFIN OR PrfPrc OR (Der/NomAct) BARRIER S-BOUNDARY OR CLB) ;
 	#$ Baenieh njaelmesne lij luste. @N< ? evtl. lage en ADD regel etter hvert
