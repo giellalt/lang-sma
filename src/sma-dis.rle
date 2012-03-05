@@ -1104,7 +1104,7 @@ MAP:adv-modif-adv (@>ADVL) TARGET Adv IF (0 ("seamma"))(*1 OLLU  BARRIER NOT-QMA
 MAP:adv-modif-adv (@>ADVL) TARGET ADV-MOD-ADV IF (1 Adv LINK NOT 0 A)(NEGATE *1 ("hov") OR ("aaj") OR ("guktie" Adv) OR ("gumhtie") BARRIER NOT-QMARK) (NEGATE 0 ("mij" Sg Gen) LINK *1 Po BARRIER NOT-QMARK)(NEGATE 0 ("jienebe") OR ("jeenjebe") LINK 1 ("unnebe") OR ("uhtjebe"));
 	## Man hijvenlaakan manne maahtam voejedidh
 
-MAP: (@ADVL>) TARGET DAESNIE OR DAESTIE IF (0 Adv) ;
+MAP (@ADVL>) TARGET DAESNIE OR DAESTIE IF (0 Adv) ;
 #MAP (@ADVL>) TARGET OLLU IF (*-1 ("seamma") OR ("seammá") BARRIER NOT-QMARK)(0 Adv)(NEGATE *1 Pl BARRIER NOT-QMARK)(*1 FMAINV BARRIER S-BOUNDARY2);
 #MAP (@<ADVL) TARGET OLLU IF (*-1 ("seamma") OR ("seammá") BARRIER NOT-QMARK)(0 Adv)(NEGATE *1 Pl BARRIER NOT-QMARK)(*-1 FMAINV BARRIER S-BOUNDARY2);
 #MAP (@>N) TARGET OLLU IF (*-1 ("seamma") OR ("seammá") BARRIER NOT-QMARK)(0 Pron);
