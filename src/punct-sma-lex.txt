@@ -23,7 +23,7 @@ LEXICON Punctuation
  %:+CLB:%:         # ;
  %;+CLB:%;         # ;
  ^excl+CLB:%!      # ;
- ^pipe+CLB:%|     # ;
+ ^pipe+CLB:%|      # ;
  %?+CLB:%?         # ;
  …+CLB:…           # ;
  ¿+CLB:¿           # ; ! Only seen as noise.
@@ -31,42 +31,41 @@ LEXICON Punctuation
 
 ! Inter-string / sentence-internal symbols:
 
- •+PUNCT:•         # ;
- -+PUNCT:-         # ; ! hyphen
+  •+PUNCT:•        # ;
+  -+PUNCT:-        # ; ! hyphen
  --+PUNCT:--       # ; ! double hyphen
- –+PUNCT:–         # ; ! endash
- —+PUNCT:—         # ; ! emdash
- =+PUNCT:=         # ;
+  –+PUNCT:–        # ; ! endash
+  —+PUNCT:—        # ; ! emdash
+  =+PUNCT:=        # ;
  %%+PUNCT:%%       # ;
- &+PUNCT:&         # ;
+  &+PUNCT:&        # ;
  %"+PUNCT:%"       # ;
- '+PUNCT:'         # ;
+  '+PUNCT:'        # ;
  %*+PUNCT:%*       # ;
- ++PUNCT:+         # ;
- `+PUNCT:`         # ;
- ´+PUNCT:´         # ;
- /+PUNCT:/         # ;
- +/-+PUNCT:+/-     # ;
+  ++PUNCT:+        # ;
+  `+PUNCT:`        # ;
+  ´+PUNCT:´        # ;
+  /+PUNCT:/        # ;
++/-+PUNCT:+/-      # ;
  %~+PUNCT:%~       # ;
 
 
 ! Paired punctuation marks
 
- »+PUNCT+RIGHT:»7  # ; ! XXX Does not work!
- «+PUNCT+LEFT:«    # ;
- %“+PUNCT+LEFT:%“  # ;
- %„+PUNCT+LEFT:%„  # ;
- %”+PUNCT+RIGHT:%” # ;
- %‘+PUNCT+LEFT:%‘  # ;
- %’+PUNCT+RIGHT:%’ # ;
- %‹+PUNCT+LEFT:%‹  # ;
- %›+PUNCT+RIGHT:%› # ;
- %(+PUNCT+LEFT:%(  # ;
- %)+PUNCT+RIGHT:%) # ;
- %[+PUNCT+LEFT:%[  # ;
- %]+PUNCT+RIGHT:%] # ;
- %{+PUNCT+LEFT:%{  # ;
- %}+PUNCT+RIGHT:%} # ;
- %<+PUNCT+LEFT:%<  # ;
- %>+PUNCT+LEFT:%>7 # ;
-
+ »+PUNCT+RIGHT:»7     # ; ! XXX Does not work!
+ «+PUNCT+LEFT:«7      # ;
+ %“+PUNCT+LEFT:%“     # ;
+ %„+PUNCT+LEFT:%„     # ;
+ %”+PUNCT+RIGHT:%”    # ;
+ %‘+PUNCT+LEFT:%‘     # ;
+ %’+PUNCT+RIGHT:%’    # ;
+ %‹+PUNCT+LEFT:%‹     # ;
+ %›+PUNCT+RIGHT:%›    # ;
+ %(+PUNCT+LEFT:%(     # ;
+ %)+PUNCT+RIGHT:%)    # ;
+ %[+PUNCT+LEFT:%[     # ;
+ %]+PUNCT+RIGHT:%]    # ;
+ %{+PUNCT+LEFT:%{     # ;
+ %}+PUNCT+RIGHT:%}    # ;
+ %<+PUNCT+LEFT:%[%<%] # ;
+ %>+PUNCT+LEFT:%[%>%] # ;
