@@ -42,12 +42,16 @@
 ! Vowel final names
 ! - - - - - - - - -
 LEXICON VNAME_ODD-plc
-+N+Prop+Plc: VNAME_ODD ;
++N+Prop+Plc: VNAME_ODD_PLC-ORG ;
 
-LEXICON VNAME_ODD-LOAN-plc
-VNAME_ODD-LOAN ;
+LEXICON VNAME_ODD-PL-plc
+VNAME_ODD-PL ;
 
-LEXICON VNAME_ODD-LOAN
+LEXICON VNAME_ODD-PL-org
+VNAME_ODD-PL ;
+
+
+LEXICON VNAME_ODD-PL
 +N+Prop+Plc+Sg+Nom:e%^DISIMP         FINAL1 ;
 +N+Prop+Plc:e%^DISIMP         RHyph ;
 +N+Prop+Plc: VNAME_ODD ;
@@ -60,7 +64,7 @@ LEXICON VNAME_ODD-sur
 +N+Prop+Sur: VNAME_ODD ;
 
 LEXICON VNAME_ODD-org
-+N+Prop+Org: VNAME_ODD ;
++N+Prop+Org: VNAME_ODD_PLC-ORG ;
 
 LEXICON VNAME_ODD-fem
 +N+Prop+Fem: VNAME_ODD ;
@@ -75,6 +79,14 @@ LEXICON VNAME_ODD ! Names ending in stressless vowel
    N_ODD_ESS ;
 +Attr:e%^DISIMP FINAL1 ;
 
+LEXICON VNAME_ODD_PLC-ORG ! Names ending in stressless vowel
++Sg: N_ODD_SG ;
+:e%^DISIMP         RHyph ;
+!+Pl: N_ODD_PL ;
+   N_ODD_ESS ;
++Attr:e%^DISIMP FINAL1 ;
+
+
 LEXICON VNAME_ODD_NO_DISIMPH-mal
 +N+Prop+Mal: VNAME_ODD_NO_DISIMPH ;
 
@@ -85,15 +97,15 @@ LEXICON VNAME_ODD_NO_DISIMPH-fem
 +N+Prop+Fem: VNAME_ODD_NO_DISIMPH ;
 
 LEXICON VNAME_ODD_NO_DISIMPH-plc
-+N+Prop+Plc: VNAME_ODD_NO_DISIMPH ;
++N+Prop+Plc: VNAME_ODD_NO_DISIMPH_PLC-ORG ;
 
 LEXICON VNAME_ODD_NO_DISIMPH-org
-+N+Prop+Org: VNAME_ODD_NO_DISIMPH ;
++N+Prop+Org: VNAME_ODD_NO_DISIMPH_PLC-ORG ;
 
-LEXICON VNAME_ODD_NO_DISIMPH-LOAN-plc
-VNAME_ODD_NO_DISIMPH-LOAN ;
+LEXICON VNAME_ODD_NO_DISIMPH-PL-plc
+VNAME_ODD_NO_DISIMPH-PL ;
 
-LEXICON VNAME_ODD_NO_DISIMPH-LOAN
+LEXICON VNAME_ODD_NO_DISIMPH-PL
 +N+Prop+Plc+Sg+Nom:e         FINAL1 ;
 +N+Prop+Plc: VNAME_ODD_NO_DISIMPH ;
 
@@ -103,6 +115,14 @@ LEXICON VNAME_ODD_NO_DISIMPH ! Names ending in stressless vowel
 +Pl: N_ODD_PL_NO_DISIMPH ;
     N_ODD_ESS ;
 +Attr:e FINAL1 ;
+
+LEXICON VNAME_ODD_NO_DISIMPH_PLC-ORG ! Names ending in stressless vowel
++Sg: N_ODD_SG_NO_DISIMPH ;
+:e         RHyph ;
+!+Pl: N_ODD_PL_NO_DISIMPH ;
+    N_ODD_ESS ;
++Attr:e FINAL1 ;
+
 
 LEXICON N_ODD_SG_NO_DISIMPH
   +Nom:e         FINAL1 ;
@@ -140,10 +160,10 @@ LEXICON N_ODD_PL_NO_DISIMPH
 !+N+Prop+Plc+Attr:e FINAL1 ;
 
 LEXICON VNAME-plc
-+N+Prop+Plc: VNAME ;
++N+Prop+Plc: VNAME_PLC-ORG ;
 
 LEXICON VNAME-org
-+N+Prop+Org: VNAME ;
++N+Prop+Org: VNAME_PLC-ORG ;
 
 LEXICON VNAME-sur
 +N+Prop+Sur: VNAME ;
@@ -182,11 +202,32 @@ LEXICON VNAME
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
 ! the appropriate even syllable lexicons.
 
+LEXICON VNAME_PLC-ORG
+ +Sg+Nom:          FINAL1 ;
+           RHyph ;
+ +Sg+Acc:%>m       FINAL1 ;
+ +Sg+Gen:%>n       FINAL1 ;
+ +Sg+Ill:%>se      FINAL1 ;
+ +Sg+Ine:%>sne     FINAL1 ;
+ +Sg+Ela:%>ste     FINAL1 ;
+ +Sg+Com:%>jne      FINAL1 ;
+! +Pl+Nom:%>h       FINAL1 ;
+! +Pl+Acc:%>jde      FINAL1 ;
+! +Pl+Gen:%>j       FINAL1 ;
+! +Pl+Ill:%>jde      FINAL1 ;
+! +Pl+Ine:%>jne      FINAL1 ;
+! +Pl+Ela:%>jste    FINAL1 ;
+! +Pl+Com:%>jgujmie  FINAL1 ;
+ +Ess:%>jne         FINAL1 ;
+ +Attr: FINAL1 ;
+!SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
+! the appropriate even syllable lexicons.
+
 LEXICON NYSTØ-plc
-+N+Prop+Plc: NYSTØ ;
++N+Prop+Plc: NYSTØ_PLC-ORG ;
 
 LEXICON NYSTØ-org
-+N+Prop+Org: NYSTØ ;
++N+Prop+Org: NYSTØ_PLC-ORG ;
 
 LEXICON NYSTØ-sur
 +N+Prop+Sur: NYSTØ ;
@@ -208,12 +249,19 @@ LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds
 +Sg: NIEJTESGOBL ;
 +Sg+Nom:          FINAL1 ;
 
+LEXICON NYSTØ_PLC-ORG ! Names ending in stressed vowel, typically scand. compounds 
++Attr: FINAL1 ;
+          RHyph ;
+!+Pl: NIEJTE_PL ;
+:    EVEN_ESS ;
++Sg: NIEJTESGOBL ;
++Sg+Nom:          FINAL1 ;
 
 LEXICON INAME-plc
-+N+Prop+Plc: INAME ;
++N+Prop+Plc: INAME_PLC-ORG ;
 
 LEXICON INAME-org
-+N+Prop+Org: INAME ;
++N+Prop+Org: INAME_PLC-ORG ;
 
 LEXICON INAME-sur
 +N+Prop+Sur: INAME ;
@@ -246,6 +294,24 @@ LEXICON INAME ! Names ending in stressless vowel
  +Ess:%>ine         FINAL1 ;
  +Attr:i FINAL1 ;
 
+LEXICON INAME_PLC-ORG ! Names ending in stressless vowel
+ +Sg+Nom:i          FINAL1 ;
+ :i          RHyph ;
+ +Sg+Acc:i%>m       FINAL1 ;
+ +Sg+Gen:i%>n       FINAL1 ;
+ +Sg+Ill:e%>se      FINAL1 ;
+ +Sg+Ine:e%>sne     FINAL1 ;
+ +Sg+Ela:e%>ste     FINAL1 ;
+ +Sg+Com:%>ine      FINAL1 ;
+! +Pl+Nom:i%>h       FINAL1 ;
+! +Pl+Acc:%>ide      FINAL1 ;
+! +Pl+Gen:%>ij       FINAL1 ;
+! +Pl+Ill:%>ide      FINAL1 ;
+! +Pl+Ine:%>ine      FINAL1 ;
+! +Pl+Ela:%>ijste    FINAL1 ;
+! +Pl+Com:%>igujmie  FINAL1 ;
+ +Ess:%>ine         FINAL1 ;
+ +Attr:i FINAL1 ;
 
 
 LEXICON OENAME-sur
@@ -262,10 +328,10 @@ LEXICON OENAME
 
 
 LEXICON ONAME-plc
-+N+Prop+Plc: ONAME ;
++N+Prop+Plc: ONAME_PLC-ORG ;
 
 LEXICON ONAME-org
-+N+Prop+Org: ONAME ;
++N+Prop+Org: ONAME_PLC-ORG ;
 
 LEXICON ONAME-sur
 +N+Prop+Sur: ONAME ;
@@ -295,10 +361,25 @@ LEXICON ONAME
 ! the sne / snie business remains to be sorted out.
 
 
+LEXICON ONAME_PLC-ORG
+  VNAME_PLC-ORG ; !until we get answer from SGM
+ +Sg+Nom+Use/Sub:           FINAL1 ; ! !until we get answer from SGM
+ +Use/Sub:           RHyph ; ! !until we get answer from SGM
+ +Sg+Acc+Use/Sub:e%>m       FINAL1 ; ! !until we get answer from SGM
+ +Sg+Gen+Use/Sub:e%>n       FINAL1 ; ! !until we get answer from SGM
+ +Sg+Acc+Use/Sub:%>m        FINAL1 ; ! !until we get answer from SGM
+ +Sg+Gen+Use/Sub:%>n        FINAL1 ; ! !until we get answer from SGM
+ +Sg+Ill+Use/Sub:%>se       FINAL1 ; ! !until we get answer from SGM
+ +Sg+Ine+Use/Sub:%>sne      FINAL1 ; ! !until we get answer from SGM
+ +Sg+Ela+Use/Sub:%>ste      FINAL1 ; ! !until we get answer from SGM
+ +Sg+Com+Use/Sub:%>jne      FINAL1 ; ! !until we get answer from SGM
+
+! the sne / snie business remains to be sorted out.
+
 
 
 LEXICON UENAME-plc
-+N+Prop+Plc: UENAME ;
++N+Prop+Plc: UENAME_PLC-ORG ;
 
 
 LEXICON UENAME-sur
@@ -312,14 +393,18 @@ LEXICON UENAME-mal
 LEXICON UENAME
 SNAME_NIEJTE ;
 
+LEXICON UENAME_PLC-ORG
+SNAME_NIEJTE_PLC-ORG ;
+
+
 LEXICON UNAME-plc
-+N+Prop+Plc: UNAME ;
++N+Prop+Plc: UNAME_PLC-ORG ;
 
 LEXICON UNAME-ani
 +N+Prop+Ani: UNAME ;
 
 LEXICON UNAME-org
-+N+Prop+Org: UNAME ;
++N+Prop+Org: UNAME_PLC-ORG ;
 
 LEXICON UNAME-sur
 +N+Prop+Sur: UNAME ;
@@ -337,6 +422,10 @@ LEXICON UNAME
  VNAME ; !until we get answer from SGM
  +Use/Sub: UNAME_EVEN ; ! !until we get answer from SGM
 
+LEXICON UNAME_PLC-ORG
+ VNAME_PLC-ORG ; !until we get answer from SGM
+ +Use/Sub: UNAME_EVEN ; ! !until we get answer from SGM
+
 LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
  +Sg+Nom+Use/Sub:          FINAL1 ;  ! !until we get answer from SGM
  +Use/Sub:          RHyph ;  ! !until we get answer from SGM
@@ -349,7 +438,7 @@ LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
 
 
 LEXICON ZEENAME-plc
-+N+Prop+Plc: ZEENAME ;
++N+Prop+Plc: ZEENAME_PLC_ORG ;
 
 LEXICON ZEENAME-sur
 +N+Prop+Sur: ZEENAME ;
@@ -376,9 +465,27 @@ LEXICON ZEENAME
  +Ess:e%>ine         FINAL1 ;
  +Attr:e FINAL1 ;
 
+LEXICON ZEENAME_PLC_ORG
+ +Sg+Nom:e          FINAL1 ;
+ :e          RHyph ;
+ +Sg+Acc:e%>m       FINAL1 ;
+ +Sg+Gen:e%>n       FINAL1 ;
+ +Sg+Ill:e%>se      FINAL1 ;
+ +Sg+Ine:e%>sne     FINAL1 ;
+ +Sg+Ela:e%>ste     FINAL1 ;
+ +Sg+Com:e%>ine      FINAL1 ;
+! +Pl+Nom:e%>h       FINAL1 ;
+! +Pl+Acc:e%>ide      FINAL1 ;
+! +Pl+Gen:e%>i       FINAL1 ;
+! +Pl+Ill:e%>ide      FINAL1 ;
+! +Pl+Ine:e%>ine      FINAL1 ;
+! +Pl+Ela:e%>iste    FINAL1 ;
+! +Pl+Com:e%>igujmie  FINAL1 ;
+ +Ess:e%>ine         FINAL1 ;
+ +Attr:e FINAL1 ;
 
 LEXICON INAME_ODD-plc
-+N+Prop+Plc: INAME_ODD ;
++N+Prop+Plc: INAME_ODD_PLC-ORG ;
 
 
 LEXICON INAME_ODD-sur
@@ -398,6 +505,15 @@ LEXICON INAME_ODD-fem
  +Pl: N_ODD_PL ;     ! normal noun
  :    N_ODD_ESS ;    ! normal noun
  +Attr:%>i FINAL1 ;     ! name special
+ 
+ LEXICON INAME_ODD_PLC-ORG ! Names ending in stressless vowel
+  +Sg+Nom:%>i         FINAL1 ;
+  :%>i         RHyph ;
+ +Sg: INAME_ODD_SG ; ! name special
+! +Pl: N_ODD_PL ;     ! normal noun
+ :    N_ODD_ESS ;    ! normal noun
+ +Attr:%>i FINAL1 ;     ! name special
+
   
   LEXICON INAME_ODD_SG
   +Acc:e%>%^DISIMPm      FINAL1 ;
@@ -423,11 +539,11 @@ LEXICON PERS_SNAME_ODD
 
 
 LEXICON SNAME_ODD-plc
-+N+Prop+Plc: SNAME_ODD ;
++N+Prop+Plc: SNAME_ODD_PLC-ORG ;
 
 
 LEXICON SNAME_ODD-org
-+N+Prop+Org: SNAME_ODD ;
++N+Prop+Org: SNAME_ODD_PLC-ORG ;
 
 LEXICON SNAME_ODD-ani
 +N+Prop+Ani: SNAME_ODD ;
@@ -442,6 +558,9 @@ LEXICON SNAME_ODD-mal
 LEXICON SNAME_ODD ! Southern Sami names
 VNAME_ODD ;
 
+LEXICON SNAME_ODD_PLC-ORG ! Southern Sami names
+VNAME_ODD_PLC-ORG ;
+
 LEXICON VAARATJE-plc
 VAARATJE ;
 
@@ -454,15 +573,15 @@ LEXICON VAARATJE !names vowel expansion in all cases
  +N+Prop+Plc+Sg+Ine:%>isnie           FINAL1 ;
  +N+Prop+Plc+Sg+Ela:%>istie           FINAL1 ;
  +N+Prop+Plc+Sg+Com:%>inie            FINAL1 ;
- +N+Prop+Plc+Pl+Nom:%>h       FINAL1 ;
- +N+Prop+Plc+Pl+Acc:%>idie            FINAL1 ;
- +N+Prop+Plc+Pl+Gen:%>i       FINAL1 ;
- +N+Prop+Plc+Pl+Ill:%>idie            FINAL1 ;
- +N+Prop+Plc+Pl+Ine:%>inie            FINAL1 ;
- +N+Prop+Plc+Pl+Ela:%>ijstie          FINAL1 ;
- +N+Prop+Plc+Pl+Com:%>igujmie FINAL1 ;
- +N+Prop+Plc+Ess:%>inie          FINAL1 ;
- +N+Prop+Plc+Attr:e FINAL1 ;
+! +N+Prop+Plc+Pl+Nom:%>h       FINAL1 ;
+! +N+Prop+Plc+Pl+Acc:%>idie            FINAL1 ;
+! +N+Prop+Plc+Pl+Gen:%>i       FINAL1 ;
+! +N+Prop+Plc+Pl+Ill:%>idie            FINAL1 ;
+! +N+Prop+Plc+Pl+Ine:%>inie            FINAL1 ;
+! +N+Prop+Plc+Pl+Ela:%>ijstie          FINAL1 ;
+! +N+Prop+Plc+Pl+Com:%>igujmie FINAL1 ;
+! +N+Prop+Plc+Ess:%>inie          FINAL1 ;
+! +N+Prop+Plc+Attr:e FINAL1 ;
 
 LEXICON JALKEDSEN ! Names ending in stressless vowel
  +N+Prop+Plc+Sg+Nom:e%^DISIMPn         FINAL1 ;
@@ -473,7 +592,7 @@ LEXICON JALKEDSEN ! Names ending in stressless vowel
  +N+Prop+Plc+Sg+Ine:%>isnie           FINAL1 ;
  +N+Prop+Plc+Sg+Ela:%>istie           FINAL1 ;
  +N+Prop+Plc+Sg+Com:%>inie            FINAL1 ;
-+N+Prop+Plc+Pl: N_ODD_PL ;
+!+N+Prop+Plc+Pl: N_ODD_PL ;
 +N+Prop+Plc:    N_ODD_ESS ;
 +N+Prop+Plc+Attr:e%^DISIMPn FINAL1 ;
 
@@ -502,7 +621,7 @@ LEXICON JAAVRETJEH
 
 
 LEXICON RITCHIE-plc
-+N+Prop+Plc: RITCHIE ;
++N+Prop+Plc: RITCHIE_PLC-ORG ;
 
 LEXICON RITCHIE-sur
 +N+Prop+Sur: RITCHIE ;
@@ -528,15 +647,28 @@ LEXICON RITCHIE ! Ritchie:Ritchijasse
 :j    N_ODD_ESS ;
 +Attr:e%^DISIMP FINAL1 ;
 
+LEXICON RITCHIE_PLC-ORG ! Ritchie:Ritchijasse
++Sg+Nom:e%^DISIMP          FINAL1 ;
+:e%^DISIMP          RHyph ;
++Sg+Acc:je%>%^DISIMPm      FINAL1 ;
++Sg+Gen:je%>%^DISIMPn      FINAL1 ;
+ +Sg+Ill:j%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++Sg+Ine:j%>isnie           FINAL1 ;
++Sg+Ela:j%>istie           FINAL1 ;
++Sg+Com:j%>inie            FINAL1 ;
+!+Pl:j N_ODD_PL ;
+:j    N_ODD_ESS ;
++Attr:e%^DISIMP FINAL1 ;
+
 
 LEXICON PN_IE-plc
-+N+Prop+Plc: PN_IE ;
++N+Prop+Plc: PN_IE_PLC-ORG ;
 
 LEXICON PN_IE-sur
 +N+Prop+Sur: PN_IE ;
 
 LEXICON PN_IE-org
-+N+Prop+Mal: PN_IE ;
++N+Prop+Org: PN_IE_PLC-ORG ;
 
 LEXICON PN_IE-ani
 +N+Prop+Ani: PN_IE ;
@@ -550,6 +682,14 @@ LEXICON PN_IE ! as N_IE, but with Prop tag
 :    N_IE_ESS ;
 +Attr:ie FINAL1 ;
 
+LEXICON PN_IE_PLC-ORG ! as N_IE, but with Prop tag
++Sg: N_IE_SG ;
+:ie                  RHyph ;
+!+Pl: N_IE_PL ;
+:    N_IE_ESS ;
++Attr:ie FINAL1 ;
+
+
 LEXICON MEHKIEN ! as N_IE, but with Prop tag
 +N+Prop+Plc+Sg+Nom:ie%>n               FINAL1 ;
 +N+Prop+Plc:ie%>n               RHyph ;
@@ -561,7 +701,7 @@ LEXICON MEHKIEN ! as N_IE, but with Prop tag
 +N+Prop+Plc+Sg+Ela:e%>ste              FINAL1 ;
 +N+Prop+Plc+Sg+Com:%>ine               FINAL1 ;
 +N+Prop+Plc+Sg+Com+Uml:%>%^iUMLine     FINAL1 ;
-+N+Prop+Plc+Pl: N_IE_PL ;
+!+N+Prop+Plc+Pl: N_IE_PL ;
 +N+Prop+Plc:    N_IE_ESS ;
 +N+Prop+Plc+Attr:ie%>n FINAL1 ;
 
@@ -576,11 +716,11 @@ LEXICON PN_IE_PLUR ! as N_IE, but with Prop tag
 
 
 ! LEXICON PN_OE_UML ! as N_OE_UML, but with Prop tag ! (still) not in use
-!  +N+Prop+Plc: N_OE_SGILL_UML ;
+!  +N+Prop+Plc: N_OE_SGILL_UML_PLC-ORG ;
 !           PN_OE ;
 
 LEXICON PN_OE-plc
-+N+Prop+Plc: PN_OE ;
++N+Prop+Plc: PN_OE_PLC-ORG ;
 
 LEXICON PN_OE-mal
 +N+Prop+Mal: PN_OE ;
@@ -592,6 +732,12 @@ LEXICON PN_OE ! as N_OE, but with Prop tag
  N_OE_ESS ;
 +Attr:oe FINAL1 ;
 
+LEXICON PN_OE_PLC-ORG ! as N_OE, but with Prop tag
++Sg: N_OE_SG ;
+:oe          RHyph ;
+!+Pl: N_OE_PL ;
+ N_OE_ESS ;
++Attr:oe FINAL1 ;
 
 LEXICON PERS_SNAME_MAANA-fem
 +N+Prop+Fem: PERS_SNAME_MAANA ;
@@ -620,10 +766,10 @@ LEXICON SNAME_MAANA-ani
 +N+Prop+Ani: SNAME_MAANA ;
 
 LEXICON SNAME_MAANA-plc
-+N+Prop+Plc: SNAME_MAANA ;
++N+Prop+Plc: SNAME_MAANA_PLC-ORG ;
 
 LEXICON SNAME_MAANA-org
-+N+Prop+Org: SNAME_MAANA ;
++N+Prop+Org: SNAME_MAANA_PLC-ORG ;
 
 LEXICON SNAME_MAANA-obj
 +N+Prop+Obj: SNAME_MAANA ;
@@ -638,6 +784,19 @@ LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
 +Sg+Com:%>ine      FINAL1 ;
 :a          RHyph ;
 +Pl: MAANA_PL ;
+ EVEN_ESS ;
++Attr:a FINAL1 ;
+
+LEXICON SNAME_MAANA_PLC-ORG ! as MAANA, but with Prop tag
++Sg: MAANASGNOM ;
++Sg+Acc:a%>m       FINAL1 ;
++Sg+Gen:a%>n       FINAL1 ;
++Sg+Ill:e%>se      FINAL1 ;
++Sg+Ine:e%>sne     FINAL1 ;
++Sg+Ela:e%>ste     FINAL1 ;
++Sg+Com:%>ine      FINAL1 ;
+:a          RHyph ;
+!+Pl: MAANA_PL ;
  EVEN_ESS ;
 +Attr:a FINAL1 ;
 
@@ -663,7 +822,7 @@ LEXICON SNAME_MAANA-LOAN ! as MAANA, but with Prop tag
  +N+Prop+Plc+Sg+Com:%>ine      FINAL1 ;
  +N+Prop+Plc+Sg+Com+PxSg2+Use/Sub:%>anadth FINAL1 ;
  +N+Prop+Plc:a          RHyph ;
- +N+Prop+Plc+Pl: MAANA_PL ;
+! +N+Prop+Plc+Pl: MAANA_PL ;
  +N+Prop+Plc: EVEN_ESS ;
  +N+Prop+Plc+Attr:a FINAL1 ;
 
@@ -683,7 +842,7 @@ LEXICON JÆLLAN ! as MAANA, but with Prop tag
 +N+Prop+Plc+Sg+Ine:e%>sne     FINAL1 ;
 +N+Prop+Plc+Sg+Ela:e%>ste     FINAL1 ;
 +N+Prop+Plc+Sg+Com:%>ine      FINAL1 ;
-+N+Prop+Plc+Pl: MAANA_PL ;
+!+N+Prop+Plc+Pl: MAANA_PL ;
 +N+Prop+Plc:    EVEN_ESS ;
 +N+Prop+Plc+Attr:a%>n FINAL1 ;
 
@@ -703,7 +862,7 @@ LEXICON PERS_SNAME_NIEJTE
 
 
 LEXICON SNAME_NIEJTE-plc
-+N+Prop+Plc: SNAME_NIEJTE ;
++N+Prop+Plc: SNAME_NIEJTE_PLC-ORG ;
 
 LEXICON SNAME_NIEJTE-ani
 +N+Prop+Ani: SNAME_NIEJTE ;
@@ -718,7 +877,7 @@ LEXICON SNAME_NIEJTE-sur
 +N+Prop+Sur: SNAME_NIEJTE ;
 
 LEXICON SNAME_NIEJTE-org
-+N+Prop+Org: SNAME_NIEJTE ;
++N+Prop+Org: SNAME_NIEJTE_PLC-ORG ;
 
 LEXICON SNAME_NIEJTE-obj
 +N+Prop+Obj: SNAME_NIEJTE ;
@@ -730,6 +889,14 @@ LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
         EVEN_ESS ;
 +Attr:e FINAL1 ;
         NIEJTE_CMPND ;
+        
+LEXICON SNAME_NIEJTE_PLC-ORG ! as NIEJTE, but with Prop tag
++Sg:    NIEJTE_SG ;
+!+Pl:    NIEJTE_PL ;
+        EVEN_ESS ;
++Attr:e FINAL1 ;
+        NIEJTE_CMPND ;
+
 
 LEXICON SNAME_NIEJTE-LOAN-plc
 SNAME_NIEJTE-LOAN ; ! To be fixed
@@ -756,7 +923,7 @@ LEXICON SNAME_NIEJTE-LOAN ! as NIEJTE, but with Prop tag
   +N+Prop+Plc+Sg+Com:%>ine      FINAL1 ;
   +N+Prop+Plc+Sg+Com+PxSg2+Use/Sub:%>enadth FINAL1 ;
   +N+Prop+Plc:e          RHyph ;
-  +N+Prop+Plc+Pl: NIEJTE_PL ;
+!  +N+Prop+Plc+Pl: NIEJTE_PL ;
   +N+Prop+Plc:    EVEN_ESS ;
   +N+Prop+Plc+Attr:e FINAL1 ;
 
@@ -770,14 +937,14 @@ LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
 +N+Prop+Plc+Sg+Ine:e%>sne     FINAL1 ;
 +N+Prop+Plc+Sg+Ela:e%>ste     FINAL1 ;
 +N+Prop+Plc+Sg+Com:%>ine      FINAL1 ;
-+N+Prop+Plc+Pl+Nom:i%>h        FINAL1 ;
-+N+Prop+Plc+Pl+Acc:%>ide      FINAL1 ;
-+N+Prop+Plc+Pl+Gen:%>i        FINAL1 ;
-+N+Prop+Plc+Pl+Ill:%>ide      FINAL1 ;
-+N+Prop+Plc+Pl+Ine:%>ine      FINAL1 ;
-+N+Prop+Plc+Pl+Ela:%>ijste    FINAL1 ;
-+N+Prop+Plc+Pl+Com:%>igujmie  FINAL1 ;
- +N+Prop+Plc+Pl+Com+Use/Sub:%>igyjmie  FINAL1 ; !
+!+N+Prop+Plc+Pl+Nom:i%>h        FINAL1 ;
+!+N+Prop+Plc+Pl+Acc:%>ide      FINAL1 ;
+!+N+Prop+Plc+Pl+Gen:%>i        FINAL1 ;
+!+N+Prop+Plc+Pl+Ill:%>ide      FINAL1 ;
+!+N+Prop+Plc+Pl+Ine:%>ine      FINAL1 ;
+!+N+Prop+Plc+Pl+Ela:%>ijste    FINAL1 ;
+!+N+Prop+Plc+Pl+Com:%>igujmie  FINAL1 ;
+! +N+Prop+Plc+Pl+Com+Use/Sub:%>igyjmie  FINAL1 ; !
 +N+Prop+Plc:    EVEN_ESS ;
 +N+Prop+Plc+Attr:i%>n FINAL1 ;
 
@@ -805,21 +972,23 @@ LEXICON STAABREH ! as NIEJTE, but with Prop tag
 LEXICON AEKTUVE
 +N+Prop+Plc+Sg: BÅERUVE_SG ;
 +N+Prop+Plc:uve%^DISIMP         RHyph ;
-+N+Prop+Plc+Pl: BÅERUVE_PL ;
+!+N+Prop+Plc+Pl: BÅERUVE_PL ;
 +N+Prop+Plc:    BÅERUVE_ESS ;
 +N+Prop+Plc+Attr:uve FINAL1 ;
 
 LEXICON LAANTE-plc
-land+N+Prop+Plc:land CNAME_EVENLEX ; ! Småland
-laante+N+Prop+Plc:laant SNAME_NIEJTE ; ! Smålaante
+land+N+Prop+Plc:land CNAME_EVENLEX_PLC-ORG ; ! Småland
+laante+N+Prop+Plc:laant SNAME_NIEJTE_PLC-ORG ; ! Smålaante
 
 LEXICON LAANTE-sur
 land+N+Prop+Sur:land CNAME_EVENLEX ; ! Småland
 laante+N+Prop+Sur:laant SNAME_NIEJTE ; ! Smålaante
 
 LEXICON NAME_KONTO
-+N+Prop+Org: KONTODECL ;
-
++N+Prop+Org+Sg: KONTO_SG ;
++N+Prop+Org: EVEN_ESS ;
+!+N+Prop+Org+Pl: KONTO_PL ;
++N+Prop+Org: RHyph ;
 
 LEXICON ELV-plc
 :^elv CNAME_EVEN-plc ;
@@ -831,7 +1000,7 @@ LEXICON ELV-plc
 
  LEXICON SAAMI_CNAME_ODD ! Names ending in stressless vowel
  +N+Prop+Plc: SAAMI_CNAME_ODD_SG ; ! name special
- +N+Prop+Plc+Pl: N_ODD_PL ;     ! normal noun
+! +N+Prop+Plc+Pl: N_ODD_PL ;     ! normal noun
  +N+Prop+Plc:    N_ODD_ESS ;    ! normal noun
  +N+Prop+Plc+Attr: FINAL1 ;     ! name special
   
@@ -852,7 +1021,7 @@ LEXICON CNAME_ODD-fem
 +N+Prop+Fem: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-plc
-+N+Prop+Plc: CNAME_ODD ;  
++N+Prop+Plc: CNAME_ODD_PLC-ORG ;  
 
 LEXICON CNAME_ODD-sur
 +N+Prop+Sur: CNAME_ODD ;  
@@ -864,14 +1033,20 @@ LEXICON CNAME_ODD-ani
 +N+Prop+Ani: CNAME_ODD ;  
 
 LEXICON CNAME_ODD-org
-+N+Prop+Org: CNAME_ODD ;  
++N+Prop+Org: CNAME_ODD_PLC-ORG ;  
 
  LEXICON CNAME_ODD ! Names ending in stressless vowel
   CNAME_ODD_SG ; ! name special
  +Pl: CNAME_ODD_PL ;     ! name special
      N_ODD_ESS ;    ! normal noun
  +Attr: FINAL1 ;     ! name special
-  
+ 
+ LEXICON CNAME_ODD_PLC-ORG ! Names ending in stressless vowel
+  CNAME_ODD_SG ; ! name special
+! +Pl: CNAME_ODD_PL ;     ! name special
+     N_ODD_ESS ;    ! normal noun
+ +Attr: FINAL1 ;     ! name special
+
   LEXICON CNAME_ODD_SG
   +Sg+Nom:         FINAL1 ;
            RHyph ;
@@ -903,7 +1078,7 @@ LEXICON CNAME_ODD-LOAN ! Names ending in stressless vowel
  +N+Prop+Plc+Sg+Ine:%>isnie           FINAL1 ;
  +N+Prop+Plc+Sg+Ela:%>istie           FINAL1 ;
  +N+Prop+Plc+Sg+Com:%>inie            FINAL1 ;
- +N+Prop+Plc+Pl: CNAME_ODD_PL ;     ! name special
+! +N+Prop+Plc+Pl: CNAME_ODD_PL ;     ! name special
  +N+Prop+Plc:    N_ODD_ESS ;    ! normal noun
  +N+Prop+Plc+Attr: FINAL1 ;     ! name special
 
@@ -918,10 +1093,10 @@ LEXICON CNAME_EVEN-fem ! generates
 +N+Prop+Fem: CNAME_EVENLEX ;
 
 LEXICON CNAME_EVEN-org
-+N+Prop+Org: CNAME_EVENLEX ;
++N+Prop+Org: CNAME_EVENLEX_PLC-ORG ;
 
 LEXICON CNAME_EVEN-plc
-+N+Prop+Plc: CNAME_EVENLEX ;
++N+Prop+Plc: CNAME_EVENLEX_PLC-ORG ;
 
 LEXICON CNAME_EVEN-obj
 +N+Prop+Obj: CNAME_EVENLEX ;
@@ -937,6 +1112,13 @@ LEXICON CNAME_EVENLEX
 +Pl: NIEJTE_PL ;
      EVEN_ESS ;
 +Attr: FINAL1 ;
+
+LEXICON CNAME_EVENLEX_PLC-ORG
+ CNAME_EVEN_SG ;
+!+Pl: NIEJTE_PL ;
+     EVEN_ESS ;
++Attr: FINAL1 ;
+
 
   LEXICON CNAME_EVEN_SG
   +Sg+Nom:          FINAL1 ;
@@ -958,7 +1140,7 @@ LEXICON CNAME_EVEN-LOAN
 +N+Prop+Plc+Sg+Ine:e%>sne     FINAL1 ;
 +N+Prop+Plc+Sg+Ela:e%>ste     FINAL1 ;
 +N+Prop+Plc+Sg+Com:%>ine      FINAL1 ;
-+N+Prop+Plc+Pl: NIEJTE_PL ;
+!+N+Prop+Plc+Pl: NIEJTE_PL ;
 +N+Prop+Plc:     EVEN_ESS ;
 +N+Prop+Plc+Attr: FINAL1 ;
 
@@ -990,13 +1172,13 @@ LEXICON DÅERIES
  +N+Prop+Plc+Sg+Ine:%^1UMLas%>isnie           FINAL1 ;
  +N+Prop+Plc+Sg+Ela:%^1UMLas%>istie           FINAL1 ;
  +N+Prop+Plc+Sg+Com:%^1UMLas%>inie            FINAL1 ;
- +N+Prop+Plc+Pl+Nom:%^1UMLas%>h       FINAL1 ;
- +N+Prop+Plc+Pl+Acc:%^1UMLas%>idie            FINAL1 ;
- +N+Prop+Plc+Pl+Gen:%^1UMLas%>i       FINAL1 ;
- +N+Prop+Plc+Pl+Ill:%^1UMLas%>idie            FINAL1 ;
- +N+Prop+Plc+Pl+Ine:%^1UMLas%>inie            FINAL1 ;
- +N+Prop+Plc+Pl+Ela:%^1UMLas%>ijstie          FINAL1 ;
- +N+Prop+Plc+Pl+Com:%^1UMLas%>igujmie FINAL1 ;
+! +N+Prop+Plc+Pl+Nom:%^1UMLas%>h       FINAL1 ;
+! +N+Prop+Plc+Pl+Acc:%^1UMLas%>idie            FINAL1 ;
+! +N+Prop+Plc+Pl+Gen:%^1UMLas%>i       FINAL1 ;
+! +N+Prop+Plc+Pl+Ill:%^1UMLas%>idie            FINAL1 ;
+! +N+Prop+Plc+Pl+Ine:%^1UMLas%>inie            FINAL1 ;
+! +N+Prop+Plc+Pl+Ela:%^1UMLas%>ijstie          FINAL1 ;
+! +N+Prop+Plc+Pl+Com:%^1UMLas%>igujmie FINAL1 ;
  +N+Prop+Plc:ies    N_ODD_ESS ;    ! normal noun
  +N+Prop+Plc+Attr:ies FINAL1 ;     ! name special
 
@@ -1009,7 +1191,7 @@ LEXICON TJIRREDS
 +A+Sg+Ine:d%>isnie           FINAL1 ;
 +A+Sg+Ela:d%>istie           FINAL1 ;
 +A+Sg+Com:d%>inie            FINAL1 ;
-+A+Pl:d N_ODD_PL ;
+!+A+Pl:d N_ODD_PL ;
 +A:d    N_ODD_ESS ;
  +N+Prop+Plc+Attr:d%>%^DISIMPs FINAL1 ;     ! name special
 
