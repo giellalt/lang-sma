@@ -1,6 +1,6 @@
 # Dette skriptet tester at nesten alle lemmaene i adj-sma-lex.txt kan genereres. De som ikke kan genereres, kopieres til missingadjLemmas.txt
 
-grep ";" adj-sma-lex.txt | grep -v "^\!" | egrep -v "(COMP|PRED|CASE| MES|EVTEBE)" | tr ":+" " " | cut -d " " -f1 | tr -d "#" | sort -u > adjs
+grep ";" adj-sma-lex.txt | grep -v "^\!" | egrep -v "(PRED|CASE| MES|EVTEBE)" | tr ":+" " " | cut -d " " -f1 | tr -d "#" | sort -u > adjs
 cat adjs | sed 's/$/+A+Attr/' | $LOOKUP $GTHOME/gt/sma/bin/isma.fst | cut -f2 | grep -v "A+" | grep -v "^$" | sort -u > analadjs 
 grep ";" adj-sma-lex.txt | grep -v "^\!" | egrep "(PRED|CASE)" | tr ":+" " " | cut -d " " -f1 | tr -d "#" | sort -u > predadjs
 cat predadjs | sed 's/$/+A+Sg+Nom/' | $LOOKUP $GTHOME/gt/sma/bin/isma.fst | cut -f2 | grep -v "A+" | grep -v "^$" | sort -u >> analadjs 
