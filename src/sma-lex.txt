@@ -2519,10 +2519,10 @@ LEXICON ATTR_es_s ! aajtijes
 
 
 
-LEXICON ø_Ø_ODD 
-:%^DISIMP     ATTR_0 ;
-:%^DISIMP     PRED_0 ;
- ODDCASEOBL ;
+!LEXICON ø_Ø_ODD 
+!:%^DISIMP     ATTR_0 ;
+!:%^DISIMP     PRED_0 ;
+! ODDCASEOBL ;
 
 LEXICON ah_AH_ODD   !XXX mangler CASE - hva er riktig - kanskje EVEN?
   ah_AH_ODDNOCOMP ;
@@ -2546,17 +2546,17 @@ LEXICON Ce_CE_ODD  !bårreske
  :%^DISIMPe     PRED_0 ;
  ODDCASEOBL ;
     ODDCOMP ;
- 
-!!! OUTCOMMENTED :     LEXICON ege_EGE_ODDEVEN !rudtjege 
-!!! OUTCOMMENTED :      :ege     ATTR_0 ;
-!!! OUTCOMMENTED :      :ege PRED_0          ;
-!!! OUTCOMMENTED :      :eg  ODDCASEOBL ;
-!!! OUTCOMMENTED :     +A+SgNomCmp:ege            R ;
-!!! OUTCOMMENTED :     ! +A+SgNomCmp:e    R ; ! sjekk
-!!! OUTCOMMENTED :     +A+SgGenCmp:e%>n R ; ! sjekk
-!!! OUTCOMMENTED :     +A+PlGenCmp:%>i  R ; ! sjekk
-!!! OUTCOMMENTED :      :eg  ODDCOMP ;
-!!! OUTCOMMENTED :     +Use/NG:e   EVENCOMP ;
+
+LEXICON ege_EGE_ODDEVEN !rudtjege 
+:ege     ATTR_0 ;
+:ege PRED_0          ;
+:eg  ODDCASEOBL ;
++A+SgNomCmp:ege            R ;
++A+SgNomCmp:e    R ; ! sjekk
++A+SgGenCmp:e%>n R ; ! sjekk
++A+PlGenCmp:%>i  R ; ! sjekk
+:eg  ODDCOMP ;
++Use/NG:e   EVENCOMP ;
  
 LEXICON Ce_CE_ODDNOCOMP 
  :%^DISIMPe     ATTR_0 ;
