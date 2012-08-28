@@ -1,0 +1,161 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
+
+! ========================= !
+! Hyphenator for South Sámi !
+! ========================= !
+
+echo <<defining Cns and Vow...>>
+
+define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö | 
+                   A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö | 
+é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý |
+É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
+
+define 2ndVow [ e | a | å | ö | ø | E | A | Å | Ö | Ø ] ;
+
+define VowNot2ndVow [ Vow - 2ndVow ] ;
+
+define vÅ [ å | Å ] ; define vO [ o | O ] ;         define vA [ a | A ] ;
+define vE [ e | E ] ; define vI [ i | I | ï | Ï ] ; define vU [ u | U ] ;
+define vY [ y | Y ] ;
+define vÆ [ æ | Æ | ä | Ä ] ;  define vØ [ ö | Ö | ø | Ø ] ;        
+
+define vAEUÅ [ vA | vE | vU | vÅ ] ;
+define vAEIOUÅ [ vA | vE | vI | vO | vU | vÅ ] ;
+define vYØ [ vY | vØ | vÖ ] ;
+
+
+define VowNotAEUÅ   [ Vow - vAEUÅ ] ;   ! xa
+define VowNotAEIOUÅ [ Vow - vAEIOUÅ ] ; ! xe
+define VowNotYØ     [ Vow - vYØ ] ;     ! xø, xö
+
+
+define AAdipht [ a a | A a | A A ] ; 
+define AEdipht [ a e | A e | A E ] ;
+define EAdipht [ e a | E a | E A ] ; 
+define EEdipht [ e e | E e | E E ] ;
+define IEdipht [ i e | I e | I E | ï e | Ï e | Ï E ] ; 
+define OEdipht [ o e | O e | O E ] ; 
+define UAdipht [ u a | U a | U A ] ; 
+define UEdipht [ u e | U e | U E ] ;
+define YØdipht [ y ø | Y ø | Y Ø | y ö | Y ö | Y Ö ] ;
+define ÅAdipht [ å a | Å a | Å A ] ; 
+define ÅEdipht [ å e | Å e | Å E ] ;
+define ÅÅdipht [ å å | Å å | Å Å ] ; 
+define ØØdipht [ ø ø | Ø ø | Ø Ø | ö ö | Ö ö | Ö Ö ] ; 
+
+define d [ d | D ] ;
+define g [ g | G ] ;
+define h [ h | H ] ;
+define j [ j | J ] ;
+define k [ k | K ] ;
+define l [ l | L ] ;
+define n [ n | N ] ;
+define p [ p | P ] ;
+define r [ r | R ] ;
+define s [ s | S ] ;
+define t [ t | T ] ;
+
+define dipht [ AAdipht | AEdipht | EAdipht | EEdipht | IEdipht | OEdipht |
+               UAdipht | UEdipht | YØdipht | ÅAdipht | ÅEdipht | 
+               ÅÅdipht | ØØdipht ] ;
+
+define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | 
+             B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ | 
+             p | r | s | š | t | ŧ | v | w | x | z | ž |   
+             P | R | S | Š | T | Ŧ | V | W | X | Z | Ž ] ; 
+
+define S [ S | s ] ; define Cnss [ Cns - S ] ;
+
+
+
+echo << Rules>>
+
+! problem word: åejvieaamhtesh
+
+define beforedipht [..] -> %^ || [Cns|.#.] Vow      _ dipht ;
+define nodipht     [..] -> %^ || Cns Vow            _ VowNot2ndVow , 
+                                 Cns VowNotAEUÅ     _ vA , 
+                                 Cns VowNotAEIOUÅ   _ vE , 
+                                 Cns VowNotYØ       _ vØ , 
+                                 Cns VowNotÅ        _ vÅ ;
+define sj           [..] -> %^ || Vow               _  s j Vow ;
+define tjts         [..] -> %^ || Vow               _  t [j|s] Vow ;
+define unvoiced     [..] -> %^ || Vow (Cns) h       _ [ n | m | l | j | r | v ] Vow ;
+define divdigraph   [..] -> %^ || Vow  Cns*         _ [n [g|j]|l j]  Vow ; ! !jar-ngas
+define preaspirated [..] -> %^ || Vow (Cns) h       _ [ p | t | k ] ([ s | j ]) Vow ;
+define palatal      [..] -> %^ || Vow (Cns) n       _ n [j|g] ,
+                                  Vow (Cns) l       _ l j ,
+                                  Vow (Cns) r       _ r j ,
+                                  Vow (Cns) t       _ t j ;                                  
+define konset       [..] -> %^ || Vow Cns*          _ k [r|l|v|j] Vow ; 
+define s2cns        [..] -> %^ || Vow [Cns - t]     _ s Cnss Vow ; ! máj-stet,
+
+define 4cns         [..] -> %^ || Vow  Cns Cns  Cns _  Cns Vow ;
+define 3cns         [..] -> %^ || Vow  Cns Cns      _  Cns Vow ;
+define s3cns        [..] -> %^ || Vow  Cns Cns      _  s j Vow ;
+define t2cns        [..] -> %^ || Vow  Cns          _  t [j|s] Vow ;
+define 2cns         [..] -> %^ || Vow  Cns          _  Cns Vow ; ! et-te
+define sjcns        [..] -> %^ || Vow  Cns          _  s j Vow ; ! et-sje
+define 1cns         [..] -> %^ || Vow               _  Cns Vow ; ! e-te
+
+! jijn-jebh Vow Cns _ n j Vow = 72 should be jij-nj     
+! Wrong: lokn-ge-sieh
+! Corr:  lok-nge-sieh
+! minn-ge-mes
+! min-nge-mes
+!Lutnjiest<BE>jja
+!Lut-njes-taj-ja
+!Lut-nje-staj-ja ???
+!lutnje^stajja
+!lut-nje^staj-ja
+!tjåanghkanidh
+
+! Lagre denne fila. 
+! i xfst: source < dennefila.txt
+! i xfst: save hy.fst
+!cat ~/Desktop/lpstekst/*txt | tr ' ' '\n' | tr -d ',.;\!\?' | ./lookup -utf8 hy.fst | cut -f2 | tr '\n' ' ' | less
+! VCCCV
+! Maksimere coda
+
+! Bruk
+! cat korpusfiler/*txt | tr ' ' '\n' | tr -d ',.;\!\?' | lookup hy.fst | cut -f2 | tr '\n' ' ' | less
+!chmod a+x lookup
+!cat ~/Desktop/lpstekst/*txt | less
+!./lookup -utf8 hy.fst
+
+echo <<Combining...>>
+
+read regex [
+beforedipht
+.o. nodipht
+.o. sj
+.o. tjts
+.o. konset
+.o. unvoiced
+.o. divdigraph
+!.o. preaspirated
+.o. palatal 
+.o. 4cns
+.o. s2cns
+.o. s3cns
+.o. t2cns
+.o. 3cns
+.o. sjcns
+.o. 2cns
+.o. 1cns ] ;
+
+invert net ;

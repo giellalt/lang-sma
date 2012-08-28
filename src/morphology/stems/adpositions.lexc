@@ -1,0 +1,279 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
+! Adposition lexicon
+! ===================
+
+! First come the 3 continuation lexica, the division is based on Nickel
+! and should probably be revised. Then comes the adpositions themselves.
+! The uninflecting ones are pointed to the 3 tag lexica, the Px ones to the
+! Px lexica in sme-lex.txt and closed-sme-lex.txt.
+
+! According to Bergsland, Southern Sami has two groups of adpositions, 
+! postpositions (such as 'sistie'), with a genitive complement, and combined 
+! pre- and postpositions, such as 'rastah'. Here, the former are marked 
+! +Po and the latter +Adp.
+
+! Tagging sublexica
+! -----------------
+
+LEXICON Ad ! Here, we do not know wehter they are +Pr or +Po
++Po:0 FINAL1 ;
++Pr:0 FINAL1 ;
+
+LEXICON Postp
++Po:0 FINAL1 ;
+
+LEXICON Prep
++Pr:0 FINAL1 ;
+
+
+! The adposition lexicon itself
+! -----------------------------
+
+LEXICON Adposition
+aalkest Postp ; !XXX check
+! aalkesth Postp ; ! adv, it seems
+daebpiebisnie Prep ;
+aalkoelisnie Postp ;
+aalkoelistie Postp ;
+aarebi Ad ;
+aatsolen Ad ;
+aatsoli Ad ;
+aerebi+Use/Sub:aerebi Ad; !
+aktene Ad ;
+alkalisnie Ad ;
+alkalistie Ad ;
+avtelen Ad ;
+avteli Ad ;
+avtelisnie Ad ;
+avtelistie Postp ;
+avtem Postp ;
+avtene Postp ;
+baakta Postp ;
+baaktoe Postp ;
+baalte Postp ;
+baalte+Use/Sub:balte Postp ;
+baaltelen Ad ;
+baalteli Ad ;
+baaltelisnie Postp ;
+baaltelistie Postp ;
+baaltes Postp ;
+baaltese Postp ;
+bealan Postp ;
+bealese Ad ;
+bealesne Ad ;
+bealeste Ad ;
+bielehth Postp ; !XXX check
+bielelen Ad ;
+bieleli Ad ;
+bielesne Postp ;
+bieleste Postp ;
+bielielisnie Postp ;
+bielielistie Postp ;
+bijjelen Ad ;
+bijjeli Ad ;
+bijjielisnie Postp ;
+bijjielistie Postp ;
+boehten Postp ;
+boehth Postp ;
+bååktjesne Postp ;
+bååktjeste Postp ;
+bïjre Postp ;
+bæjngoelasse Postp ; !XXX check
+bæjngoelisnie Ad ; 
+bæjngoelistie Postp ; !XXX check
+bæjngolde Postp ;
+bæjngolen Ad ;
+bæjngoli Ad ;
+daebpelen Ad ;
+daebpeli Ad ;
+daebpielisnie Ad ;
+daebpielistie Ad ;
+debpeli Postp ;
+debpielisnie Postp ;
+debpielistie Postp ;
+duakan Ad ;
+dubpelen Ad ;
+dubpeli Ad ;
+dubpielisnie Ad ;
+dubpielistie Ad ;
+duebpelen Ad ;
+duebpeli Ad ;
+duebpielisnie Ad ;
+duebpielistie Ad ;
+duekelen Postp ;
+duekesne Ad ;
+duekeste Ad ;
+duekiem Ad ;
+dåaresth Ad ;
+dïehre Ad ;
+dïere Ad ;
+dïereh Postp ;
+dïete Ad ;
+ektine Ad ;
+gaavhtan Ad ;
+gaavnefedtie Postp ;
+gaavnuhte Postp ;
+gaevhtieh Ad ;
+gallesh Ad ;
+gaskah Ad ; 
+gaskem Ad ;
+gaskemsh+Use/Sub:gaskems Ad ; !or gaskem as lemma?
+gaskemsh Ad ; 
+gaskese Postp ;
+gaskesne Ad ;
+gaskeste Ad ;
+gaskoeh Ad ;
+genhtsemen Postp ;
+genhtsemi Postp ;
+genhtsiemisnie Postp ;
+genhtsiemistie Postp ;
+gielhtie Ad ;
+gietskie Ad ;
+giske Ad ;
+goerese Postp ;
+guektelen Ad ;
+guektelisnie Ad ;
+guektielistie Ad ;
+gujmie Postp ;
+gåajka Postp ;
+gåajkoe Ad ;
+gïetske Ad ;
+gïetskese Ad ;
+gïetskesne Ad ;
+gïektjesne Ad ;
+jarke Postp ;
+jillelen Ad ;
+jilleli Ad ;
+jillielisnie Ad ;
+jillielistie Ad ;
+juassah Postp ;
+jåårke Postp ;
+laakan Postp ;
+luvhtie Ad ;
+luvleli Ad ;
+luvlielisnie Ad ;
+luvlielistie Ad ;
+luvnie Ad ;
+lïhke Postp ;
+lïhkebasse Postp ;
+maadtegasse Postp ;
+meatesth Ad ;
+miehtjelde Postp ;
+miehtjelen Ad ;
+miehtjeli Ad ;
+miehtjielasse Ad ;
+miehtjielisnie Ad ;
+miehtjielistie Ad ;
+mietelen Postp ;
+mieteli Postp ;
+mietie Postp ;
+mietielisnie Postp ;
+mietielistie Postp ;
+mihte Ad ;
+mihti Ad ;
+minngelde Postp ;
+minngelen Postp ;
+minngeli Postp ;
+minngielisnie Ad ;
+minngielistie Postp ;
+morte Ad ;
+muhteste Ad ; 
+mïnngesne Postp ; !XXX check
+mænngan Ad ;
+nallatjasse Postp ;
+namhta Postp ;
+namhtah Ad ;
+namhtegh Ad ;
+nelhtie Ad ;
+nelnie Ad ;
+nïlle:nille Ad ;
+njeajah Postp ;
+njoektjelen Prep ;
+noerhtelen Ad ;
+noerhteli Ad ;
+noerhtelisnie Ad ;
+noerhtelistie Ad ;
+nualan Ad ;
+nuelesne Postp ;
+nueleste Postp ;
+nuelie Postp ;
+!nuelieh Ad ;
+nueliem Postp ;
+nïlle Postp ; !XXX check
+raajan Postp ;
+raejeste Postp ;
+rastah Postp ;
+sakte Postp ;
+sisnie Ad ;
+sisnjeli Ad ;
+sisnjielisnie Ad ; 
+sisnjielistie Ad ;
+sistie Ad ;
+sjisjnjeli Ad ;
+sjisjnjielisnie Ad ;
+sjisjnjielistie Ad ;
+sjïeke Ad ;
+sjïeken Ad ;
+sjïekenasse Ad ;
+sjïekenisnie Ad ;
+sjïekenistie Ad ;
+sontere Postp ;
+sonterh Postp ;
+syjretjisnie Postp ;
+sïjse Ad ;
+sæsngatjisnie Postp ;
+tjïddh Postp ;
+tjïrrh Postp ;
+tsegkie Postp ;
+uvte Ad ;
+vieken Ad ; 
+vuelelen Ad ;
+vueleli Ad ;
+vuelielisnie Ad ;
+vuelielistie Ad ;
+vuestelen Postp ;
+vuestie Ad ;
+vuestielisnie Postp ;
+vuestielistie Postp ;
+vööste Ad ;
+åalan Ad ;
+åarjalisnie Ad ;
+åarjalistie Ad ;
+åarjelen Ad ;
+åarjeli Ad ;
+åarjielisnie Ad ;
+åarjielistie Ad ;
+åelesne Ad ;
+åerjielisnie Ad ;
+ålkoelisnie Ad ;
+ålkoelistie Ad ;
+ålkolen Ad ;
+ålkoli Ad ;
+åvtelen Ad ;
+åvteli Ad ;
+åvtelisnie Postp ; !XXX check
+åvtelistie Postp ; !XXX check
+åvtem Ad ;
+åvtene Postp ;
+åvtese Postp ;
+åvtesne Ad ;
+åvteste Ad ;
+åvtetji Postp ; !XXX check
+åvtine Postp ;
+lïhkebe Ad ;
+vuelege Postp ;
+
+

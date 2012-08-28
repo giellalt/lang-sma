@@ -1,0 +1,270 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software ; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
+! ========================================================================== !
+!                     South Sámi morphological analyser                      !
+! ========================================================================== !
+ 
+
+Multichar_Symbols
+
+! Tags for POS
+  +N +A +Adv +V
+  +Pron +CS +CC +Po +Pr +Interj +Pcle +Num
+  +Logo ! What is this?
+
+! Tags for sub-POS
+  +Prop +Pers +Dem +Interr +Refl +Recipr +Rel +Indef
+  +Coll ! Collective numeral
+
+! Usage tags
+  +Use/Sub   ! Substandard
+  +Use/Marg  ! Marginal
+  +Use/-Spell !Excluded from speller
+  +Use/SpellNoSugg !recognized but not suggested in speller
+  +Use/Circ  ! Circular path
+  +Use/CircN ! ???
+  +Use/Ped   ! Remove from pedagogical speller
+  +Use/NG    ! Do not generate, for isme-ped.fst and apertium
+  +Use/LexSub ! The lemma is not a South Sami word
+
+! Dialect tags:
+  +Dial/-S   ! Not in the South
+  +Dial/-N   ! Not in the North
+  +Dial/-NOR ! Not in Norway
+  +Dial/-SW  ! Not in Sweden
+  +Dial/SH   ! Short forms
+  +Dial/L    ! Long forms
+!  +Dial/OE  ! oe forms ! We assume these are lexical, and do not tag.
+!  +Dial/A   ! a forms  ! We assume these are lexical, and do not tag.
+
+
+! Normative/prescriptive compounding tags:
+! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
+
+! The first part of the component may be ..
++CmpN/Sg       ! Sg
++CmpN/SgN      ! SgNominative
++CmpN/SgG      ! SgGenitive
++CmpN/PlG      ! PlGenitive
+
+! This part of the component might be ..
++CmpN/First     ! first
++CmpN/Last      ! last
++CmpN/None      ! Can not take part in compounds
++CmpN/Only      ! Can only be part of a compound
++CmpN/Pref      ! prefix only
+
+! The second part of the compound may take ..
++CmpN/SgLeft     ! Sg to the left
++CmpN/SgNomLeft  ! etc.
++CmpN/SgGenLeft  ! 
++CmpN/PlGenLeft  ! 
+
+! This part of the compound may ... 
++CmpN/All        ! all positions, _default_, this tag does not have to be written
++CmpN/Def        ! works along with Left compound-tagging
++CmpN/DefSgGen   ! works along with Left compound-tagging
++CmpN/DefPlGen   ! works along with Left compound-tagging
+
+! Descriptive compounding tags:
+! Tags for compound analysis - this is what a compound is:
+  +SgCmp +SgNomCmp +SgGenCmp +PlGenCmp ! Different case + number combinations
+  +Cmp ! Dynamic compound - this tag should always be part of a dynamic compound.
+       ! It is important for Apertium, and useful in other cases as well.
+  +RCmpnd  ! This is a split compound with the other part to the right:
+           ! "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
+  +LCmpnd+ ! This is a split compound with the other part to the left
+  +ShCmp !testing ShCmp
+
+!!!! === Tags for Inflection ===
+
+! Tags for Case and Number Inflection
+  +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Com +Ess
+  +PxSg1 +PxSg2 +PxSg3
+  +PxDu1 +PxDu2 +PxDu3
+  +PxPl1 +PxPl2 +PxPl3
+  +Prs +Prt
+  +Sg1 +Sg2 +Sg3
+  +Du1 +Du2 +Du3
+  +Pl1 +Pl2 +Pl3
+  
+  +Neg    ! negation verb ij
+  +ConNeg ! main verb complement to Neg, form identical to Imp
+  +VAbess ! Verb Abessive
+
+  +Inf  +PrfPrc +PrsPrc
+  +Ger +VGen ! Gerund
+
+  +Ind
+  +Imprt 
+  +Cond ! for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
+ ! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21)
+  +Act ! -eme, could be chagned to +Actio
+
+  +Comp +Superl
+  +Attr
+  +Ord
+  
+! Other tags
+  +ABBR +ACR ! Abbreviation, acronym
+  +TV +IV ! Transitivity tags
+  +Multi ! Multiword phrase tag
+  +Guess ! for the name guesser
+  +LOAN  ! ad hoc tag for development purposes.
+  +Uml   ! A tag to indicate realised or potential Umlaut
+  +NoUml ! A tag to indicate the lack of realised or potential Umlaut
+  +Hyph  ! A tag to indicate that a hyphen was used when compounding
+
+  ! Tags for testing the frequency of loanwords in our corpora
+  +Test/LysI   ! form uses i
+  +Test/MørkI  ! form uses ï
+  +Test/HK    ! form uses consonant cluster hk
+  +Test/GK    ! form uses consonant cluster gk
+  +Test/JK    ! form uses consonant cluster jk
+
+
+  +CLB +PUNCT +LEFT +RIGHT 
+
+  ! Different focus particles
+  +Foc/ge
+  +Foc/gan
+  +Foc/gih
+  +Foc/gænnah
+
+
+! Semantic tags to help disambiguation & synt. analysis:
+ +Mal +Fem +Sur ! Names
+ +Plc ! Place
+ +Org ! Organisation
+ +Obj ! Object
+ +Ani ! Animate
+ +Hum ! Human
+
+
+! Der#begin
+! Derivation position in a derivation row:  Affix and:
+! 1              2               3                4                         POS type
++Der1           +Der2           +Der3            +Der4
+! Der#1
++Der/htalle                                                                 ! VV - Passive
++Der/lgidh                                                                  ! VV - Passive
++Der/ijes                                                                   ! NA
++Der/ihks                                                                   ! VA
++Der/les                                                                    ! VA
++Der/ldihkie                                                                ! VA
++Der/ldahke                                                                 ! VA
++Der/ldh                                                                    ! VA
++Der/htidh                                                                  ! VV - Causative
+!+Der/dehte                                                                 ! VV - Causative
++Der/lidh                                                                   ! VV - Subitive
++Der/stidh                                                                  ! VV - Diminutive
++Der/didh                                                                   ! VV - Continuative
++Der/htjidh                                                                 ! Dim-cont.
++Der/htovve                                                                 ! AV 
++Der/htoeve                                                                 ! AV 
++Der/htehte                                                                 ! AV
++Der/Dimin                                                                    ! NN - Diminutive
++Der/Rec                                                                    ! NN - Forholdsformer
++Der/laakan																	! AAdv
+! Der#2
+                +Der/voete                                                  ! AN
+                +Der/ehte                                                   ! VV - Causative
+                +Der/adte                                                   ! VV - Frequentative
+                +Der/alle                                                   ! VV - Frequentative
+                +Der/eds
+! Der#3
+                                +Der/PassL                                  ! VV - long only
+                                +Der/NomAg                                  ! VN
+                                +Der/NomAct                                 ! VN
+                                +Der/ahtje                                  ! VV - Inchoative
+                                +Der/gåete                                  ! VV - Inchoative
+! Der#4
+! So far +Der4 is not motivated for SMA.
+! Der#other
+
+! All non-positional derivations should be preceded by this tag, to make it possible
+! to target regular expressions at all derivations in a language-independent way:
+! just specify [+Der|+Der1 .. +Der5] and you are set.
++Der
+
++Der/PassS                                                                  ! VV - short only
++Der/A                                                                      ! NA - comparation of N's
+! Der#end																	
+
+
+! Triggers for morphophonological rules
+  X2 X3 X4
+  E2 ! insert e ! Fjern denne.
+
+! Symbols that need to be escaped on the lower side (towards twolc):
+ »7     ! »
+ «7     ! «
+ %[%>%] ! >
+ %[%<%] ! <
+
+  +1 +2 ! lexeme disambiguation tags
+  +v1 +v2 +v3 +v4 +v5  ! Versions 
+
+  !Umlaut and diphthong simplification triggers:
+  %^DISIMP
+  %^COMPDISIMP
+  %^COMPDISIMP2
+  %^NOMAGieDISIMP
+  %^1UML  ! a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
+  %^2UML  ! dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
+  %^3UML  ! not used
+  %^3sUML ! a-uml in 3sg prs of V-IV (roehtedh - ruahta)
+  %^3dUML ! ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
+  %^iæUML ! not used
+  %^iUML  ! i-uml in pret of V-I (båetedh - böötim)
+  %^PASSUML ! Short passive Umlaut Rx->R5
+  %^didhUML !Der/didh Umlaut for GUARKEDH-words
+  %^htjidhUML !Umlaut für der/htjidh derivations
+  %^adteUML !Umlaut für Der/adte and Der/alle derivations
+  %^aLATUS  ! Latus-Umlaut for -ie stems
+  %^uLATUS  ! Latus-Umlaut for -oe stems
+
+! Flag diacritics
+ @P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@ ! (Dis)allowing compounds
+ @U.Cap.Obl@  @U.Cap.Opt@   ! Allowing downcasing of
+                  ! derived names: deatnulasj.
+               ! Actually, downcasing should be obligatory
+
+
+! ================
+! The root lexicon
+! ================
+
+LEXICON Root
+ !   Prefixes ; 
+     NounRoot  ;
+     ProperNoun  ;
+     Verb  ;
+     Adjective  ;
+     Pronoun  ;
+     Adverb  ;
+     Subjunction  ;
+     Conjunction  ;
+     Particle  ;
+     Adposition  ;
+     Punctuation  ;
+     Interjection  ;
+     +Use/CircN: Numeral ;
+     Abbreviation ;
+     Acronym ;
+
+
+LEXICON ENDLEX
+   @D.NeedNoun.ON@ # ;
