@@ -16,20 +16,30 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # List any local additions here:
-GT_FILTER_SRCS=
+GT_FILTER_SRCS=focus-filter.regex \
+			   remove-test-tags.regex
 
 # The common filter targets (don't change locally):
 GT_FILTER_TARGETS=
 if WANT_HFST
-GT_FILTER_TARGETS+=remove-sub-forms.hfst remove-morph-borders.hfst
+GT_FILTER_TARGETS+=remove-sub-forms.hfst \
+				   remove-morph-borders.hfst \
+				   remove-norm-comp-tags.hfst \
+				   remove-dictionary-tags.hfst
 endif
 
 if WANT_XFST
-GT_FILTER_TARGETS+=remove-sub-forms.xfst remove-morph-borders.xfst
+GT_FILTER_TARGETS+=remove-sub-forms.xfst \
+				   remove-morph-borders.xfst \
+				   remove-norm-comp-tags.xfst \
+				   remove-dictionary-tags.xfst
 endif
 
 # Add the target of local additions here:
-GT_FILTER_TARGETS+=
+GT_FILTER_TARGETS+=focus-filter.hfst \
+				   focus-filter.xfst \
+				   remove-test-tags.hfst \
+				   remove-test-tags.xfst
 
 include $(top_srcdir)/am-shared/filters-include.am
 
