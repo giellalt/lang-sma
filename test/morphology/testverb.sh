@@ -6,4 +6,4 @@ cat verbs | sed 's/$/+V+Inf/' | $LOOKUP $GTHOME/gt/sma/bin/isma.fst | cut -f2 | 
 sort -u -o analverbs analverbs 
 comm -23 verbs analverbs > missingverbLemmas.txt
 rm *verbs
-open -a SubEthaEdit missingverbLemmas.txt
+open missingverbLemmas.txt

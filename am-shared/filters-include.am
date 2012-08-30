@@ -35,10 +35,7 @@ noinst_DATA=$(GT_FILTER_TARGETS)
 	-rm -f $@.script
 
 %.hfst: $(GTCORE)/gtshared/src/filters/%.regex
-	$(PRINTF) \
-		"read regex @re\"$<\";\nsave stack $@ \n" > $@.script
-	$(HFST_XFST) -f $@.script
-	-rm -f $@.script
+	$(HFST_REGEXP2FST) $(HFSTFLAGS) -i $< -o $@
 
 ####### Xerox build rules: #######
 

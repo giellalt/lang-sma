@@ -121,17 +121,9 @@ analyser.gt.xfst: raw.gt.xfst orthography/inituppercase.xfst \
 		 quit\n" | $(XFST)
 
 # This is the standard generating transducer.
-generator.gt.xfst: raw.gt.xfst \
-					filters/remove-morph-borders.xfst \
-					filters/remove-norm-comp-tags.xfst \
-					filters/remove-test-tags.xfst
+generator.gt.xfst: raw.gt.xfst filters/remove-morph-borders.xfst
 	$(PRINTF) \
-		"read regex \
-				@\"filters/remove-dictionary-tags.xfst\" \
-			.o. @\"filters/remove-norm-comp-tags.xfst\" \
-			.o. @\"filters/remove-test-tags.xfst\" \
-			.o. @\"$<\" \
-			.o. @\"filters/remove-morph-borders.xfst\" ;\n\
+		"read regex @\"$<\" .o. @\"filters/remove-morph-borders.xfst\" ;\n\
 		 invert net\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST)

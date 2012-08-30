@@ -13,4 +13,4 @@ sort -u -o adjs adjs
 sort -u -o analadjs analadjs 
 comm -23 adjs analadjs > missingadjLemmas.txt
 rm *adjs
-open -a SubEthaEdit missingadjLemmas.txt
+open missingadjLemmas.txt
