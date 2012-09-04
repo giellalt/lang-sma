@@ -4,8 +4,9 @@
 # som ikke kan genereres, kopieres til missingVerbLemmas.txt
 
 ###### Extraction: #######
-grep ";" verb-sma-lex.txt | grep -v "^\!" | egrep -v '(STRAYFORMS|ENDLEX|+V)' \
-	| tr ":+" " " | cut -d " " -f1 | tr -d "#" | sort -u > verbs
+grep ";" ${srcdir}/../../src/morphology/stems/verbs.lexc | grep -v "^\!" \
+	| egrep -v '(STRAYFORMS|ENDLEX|+V)' | tr ":+" " " | cut -d " " -f1 \
+	| tr -d "#" | sort -u > verbs
 
 ###### Start testing: #######
 
