@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Dette skriptet tester at nesten alle lemmaene i noun-sma-lex.txt kan genereres.
-# De som ikke kan genereres, kopieres til missingnounLemmas.txt
+# De som ikke kan genereres, kopieres til missingNounLemmas.txt
 
 ###### Extraction: #######
 # extract non-compounding lemmas:
@@ -55,15 +55,16 @@ for f in  .xfst .hfst; do
 			cut -f2 | grep "\-" | grep "\-.*\-" | cut -d "-" -f1,2 >> Ranalnouns.txt
 
 ###### Collect results: #######
-		# Sort and compare original input with resulting output - the diff is stored and opened in SEE:
+		# Sort and compare original input with resulting output - the diff is
+		# stored and opened in SEE:
 		sort -u -o analnouns.txt analnouns.txt 
 		sort -u -o Ranalnouns.txt Ranalnouns.txt 
-		comm -23 nouns.txt analnouns.txt > missingnounLemmas.txt
-		comm -23 Rnouns.txt Ranalnouns.txt >> missingnounLemmas.txt
-		open -a SubEthaEdit missingnounLemmas.txt
+		comm -23 nouns.txt analnouns.txt > missingNounLemmas.txt
+		comm -23 Rnouns.txt Ranalnouns.txt >> missingNounLemmas.txt
+		open -a SubEthaEdit missingNounLemmas.txt
 
 		# if at least one word is found, the test failed:
-		if [ `wc -w missingnounLemmas.txt | tr -s ' ' | cut -d' ' -f2` -gt 0 ]; then
+		if [ `wc -w missingNounLemmas.txt | tr -s ' ' | cut -d' ' -f2` -gt 0 ]; then
 		    exit 1
 		fi
 	fi
@@ -71,5 +72,5 @@ done
 
 if [ $transducer_found -eq 0 ]; then
     echo No transducer found
-    exit 1
+    exit 99
 fi
