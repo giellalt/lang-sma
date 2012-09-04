@@ -16,7 +16,9 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # List any local additions here:
-GT_FILTER_SRCS=
+GT_FILTER_SRCS=focus-filter.regex \
+			   remove-dialect-tags.regex \
+			   remove-test-tags.regex
 
 # The common filter targets (don't change locally):
 GT_FILTER_TARGETS=
@@ -29,7 +31,12 @@ GT_FILTER_TARGETS+=remove-sub-forms.xfst remove-morph-borders.xfst
 endif
 
 # Add the target of local additions here:
-GT_FILTER_TARGETS+=
+GT_FILTER_TARGETS+=focus-filter.hfst \
+				   focus-filter.xfst \
+				   remove-dialect-tags.hfst \
+				   remove-dialect-tags.xfst \
+				   remove-test-tags.hfst \
+				   remove-test-tags.xfst
 
 include $(top_srcdir)/am-shared/filters-include.am
 
