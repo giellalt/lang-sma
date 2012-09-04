@@ -16,18 +16,42 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # List any local additions here:
-GT_FILTER_SRCS=focus-filter.regex \
+GT_LOCALFILTER_SRCS=focus-filter.regex \
 			   remove-dialect-tags.regex \
 			   remove-test-tags.regex
+
+# The core filter sources (don't change locally):
+GT_COREFILTER_SRCS=\
+				   remove-derivation-position-tags.regex \
+				   remove-dictionary-tags.regex          \
+				   remove-morph-borders.regex            \
+				   remove-norm-comp-tags.regex           \
+				   remove-number-string-tags.regex       \
+				   remove-sub-forms.regex                \
+				   remove-usage-tags.regex
 
 # The common filter targets (don't change locally):
 GT_FILTER_TARGETS=
 if WANT_HFST
-GT_FILTER_TARGETS+=remove-sub-forms.hfst remove-morph-borders.hfst
+GT_FILTER_TARGETS+=\
+				   remove-derivation-position-tags.hfst \
+				   remove-dictionary-tags.hfst          \
+				   remove-morph-borders.hfst            \
+				   remove-norm-comp-tags.hfst           \
+				   remove-number-string-tags.hfst       \
+				   remove-sub-forms.hfst                \
+				   remove-usage-tags.hfst
 endif
 
 if WANT_XFST
-GT_FILTER_TARGETS+=remove-sub-forms.xfst remove-morph-borders.xfst
+GT_FILTER_TARGETS+=\
+				   remove-derivation-position-tags.xfst \
+				   remove-dictionary-tags.xfst          \
+				   remove-morph-borders.xfst            \
+				   remove-norm-comp-tags.xfst           \
+				   remove-number-string-tags.xfst       \
+				   remove-sub-forms.xfst                \
+				   remove-usage-tags.xfst
 endif
 
 # Add the target of local additions here:
