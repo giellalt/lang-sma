@@ -55,12 +55,21 @@ GT_FILTER_TARGETS+=\
 endif
 
 # Add the target of local additions here:
+# HFST targets here:
+if WANT_HFST
 GT_FILTER_TARGETS+=focus-filter.hfst \
-				   focus-filter.xfst \
 				   remove-dialect-tags.hfst \
+				   remove-test-tags.hfst
+
+endif
+
+# And Xerox targets here:
+if WANT_XFST
+GT_FILTER_TARGETS+=focus-filter.xfst \
 				   remove-dialect-tags.xfst \
-				   remove-test-tags.hfst \
 				   remove-test-tags.xfst
+
+endif
 
 include $(top_srcdir)/am-shared/filters-include.am
 
