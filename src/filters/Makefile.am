@@ -16,19 +16,9 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # List any local additions here:
-GT_LOCALFILTER_SRCS=focus-filter.regex \
+GT_FILTER_SRCS=focus-filter.regex \
 			   remove-dialect-tags.regex \
 			   remove-test-tags.regex
-
-# The core filter sources (don't change locally):
-GT_COREFILTER_SRCS=\
-				   remove-derivation-position-tags.regex \
-				   remove-dictionary-tags.regex          \
-				   remove-morph-borders.regex            \
-				   remove-norm-comp-tags.regex           \
-				   remove-number-string-tags.regex       \
-				   remove-sub-forms.regex                \
-				   remove-usage-tags.regex
 
 # The common filter targets (don't change locally):
 GT_FILTER_TARGETS=

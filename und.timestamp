@@ -1,4 +1,11 @@
-$Rev: 61965 $
+$Rev: 61971 $
+Reverting the copy source file step for $GTCORE/gtshare/src/filters/, replacing
+it with direct compilation. The main reason for copying was to have the source
+files available for distribution, but that is not required, since the
+distribution and installations of the languages depends on the presence of
+GTCORE. Instead we risk that people start to add the copied source files to svn.
+
+r61965:
 The GT_FILTER_TARGETS variable needs to be parametrised for HFST and Xerox also
 for the local modifications.
 

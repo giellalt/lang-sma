@@ -20,19 +20,21 @@
 # need to check way to list build targets like automake
 #! @param GT_COREFILTER_SRCS required, contains all core filter sources
 #! @param GT_LOCALFILTER_SRCS required, contains all local additions
-EXTRA_DIST=$(GT_COREFILTER_SRCS) $(GT_LOCALFILTER_SRCS)
+EXTRA_DIST=$(GT_FILTER_SRCS)
 
 ####### Automake targets: ########
 
 # @param GT_REGEX_TARGETS required
 noinst_DATA=$(GT_FILTER_TARGETS)
 
-####### Core filter sources are copied: ########
-%.regex: $(GTCORE)/gtshared/src/filters/%.regex
-	-cp -f $< $@
-
 ####### HFST build rules: ########
 .regex.hfst:
+	$(PRINTF) \
+		"read regex @re\"$<\";\nsave stack $@ \n" > $@.script
+	$(HFST_XFST) -f $@.script
+	-rm -f $@.script
+
+%.hfst: $(GTCORE)/gtshared/src/filters/%.regex
 	$(PRINTF) \
 		"read regex @re\"$<\";\nsave stack $@ \n" > $@.script
 	$(HFST_XFST) -f $@.script
@@ -43,8 +45,12 @@ noinst_DATA=$(GT_FILTER_TARGETS)
 	$(PRINTF) "read regex @re\"$<\";\nsave stack $@\nquit\n" |\
 		$(XFST) $(XFSTFLAGS)
 
+%.xfst: $(GTCORE)/gtshared/src/filters/%.regex
+	$(PRINTF) "read regex @re\"$<\";\nsave stack $@\nquit\n" |\
+		$(XFST) $(XFSTFLAGS)
+
 ####### Other targets: ###########
 clean-local:
-	-rm -f *.hfst *.ol
+	-rm -f *.hfst *.xfst
 
 # vim: set ft=automake:
