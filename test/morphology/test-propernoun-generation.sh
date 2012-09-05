@@ -3,10 +3,19 @@
 # Dette skriptet tester at alle lemmaene i propernoun-sma-lex.txt kan genereres.
 # De som ikke kan genereres, kopieres til missingProperLemmas.txt
 
-# Variables:
+###### Variables: #######
 sourcefile=${srcdir}/../../src/morphology/stems/propernouns.lexc
 generatorfile=${srcdir}/../../src/generator.gt
 resultfile=missingProperLemmas.txt
+
+# Check that the source file exists:
+if [ not -f "$sourcefile" ]; then
+	echo Source file not found: $sourcefile
+	exit 1
+fi
+
+# Remove old generated files:
+rm -f *props $resultfile
 
 ###### Extraction: #######
 grep ";" $sourcefile | grep -v "^\!" | egrep -v '(LAANTE|Attr)' \
@@ -56,13 +65,14 @@ for f in  .xfst .hfst; do
 		sort -u -o analprops analprops 
 		comm -23 props analprops >> $resultfile
 		comm -23 attrprops analattrprops >> $resultfile
-		rm -f *props
 		sort -u -o $resultfile $resultfile
-		open -a SubEthaEdit $resultfile
+		rm -f *props
 
-		# if at least one word is found, the test failed:
+		# if at least one word is found, the test failed, and the list of failed
+		# lemmas is opened in SubEthaEdit:
 		if [ `wc -w $resultfile | tr -s ' ' | cut -d' ' -f2` -gt 0 ]
 		then
+			open -a SubEthaEdit $resultfile
 		    exit 1
 		fi
 	fi
@@ -70,5 +80,5 @@ done
 
 if [ $transducer_found -eq 0 ]; then
     echo No transducer found
-    exit 99
+    exit 1
 fi
