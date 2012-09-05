@@ -50,7 +50,7 @@ raw.gt.hfst: morphology/$(GTLANG).lexc.hfst \
 		$(HFST_MINIMIZE) $(HFST_FLAGS) -o $@
 
 # This is the standard analyser:
-analyser.gt.hfst: raw.gt.hfst \
+analyser.gt.hfst.tmp: raw.gt.hfst \
 					orthography/inituppercase.hfst \
 					filters/remove-morph-borders.hfst
 	$(HFST_COMPOSE_INTERSECT) $(HFST_FLAGS) -1 $< \
@@ -61,7 +61,7 @@ analyser.gt.hfst: raw.gt.hfst \
 		$(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
 
 # This is the standard generating transducer.
-generator.gt.hfst: raw.gt.hfst filters/remove-morph-borders.hfst
+generator.gt.hfst.tmp: raw.gt.hfst filters/remove-morph-borders.hfst
 	$(HFST_COMPOSE_INTERSECT) $(HFST_FLAGS) -1 $< \
 			-2 filters/remove-morph-borders.hfst |\
 		$(HFST_INVERT)   $(HFST_FLAGS) |\
@@ -113,7 +113,7 @@ raw.gt.xfst: morphology/$(GTLANG).lexc.xfst \
 
 # This is the standard, descriptive analyser, giving only the basic
 # morphological analysis.
-analyser.gt.xfst: raw.gt.xfst \
+analyser.gt.xfst.tmp: raw.gt.xfst \
 					filters/remove-derivation-position-tags.xfst \
 					filters/remove-dialect-tags.xfst \
 					filters/remove-dictionary-tags.xfst \
@@ -139,7 +139,7 @@ analyser.gt.xfst: raw.gt.xfst \
 
 # This is the standard generating transducer. It should not require any tags
 # beyond the standard morphological analysis, thus all other tags are deleted.
-generator.gt.xfst: raw.gt.xfst \
+generator.gt.xfst.tmp: raw.gt.xfst \
 					filters/remove-derivation-position-tags.xfst \
 					filters/remove-dialect-tags.xfst \
 					filters/remove-dictionary-tags.xfst \
