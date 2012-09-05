@@ -40,7 +40,7 @@ for f in  .xfst .hfst; do
 		let "transducer_found += 1"
 
 # Remove old generated files - don't mix Xerox and HFST test results:
-		rm -f *props $resultfile*.txt
+		rm -f anal*props
 
 		sed 's/$/+N+Prop+Sg+Nom/'   props \
 			| $lookuptool $generatorfile$f | cut -f2 \

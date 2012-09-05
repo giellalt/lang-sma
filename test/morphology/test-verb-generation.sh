@@ -33,7 +33,7 @@ for f in  .xfst .hfst; do
 		let "transducer_found += 1"
 
 # Remove old generated files - don't mix Xerox and HFST test results:
-		rm -f *verbs $resultfile*.txt
+		rm -f analverbs
 
 #### First we try to generate the infinitives:
 		sed 's/$/+V+Inf/' verbs \

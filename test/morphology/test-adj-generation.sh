@@ -47,7 +47,7 @@ for f in  .xfst .hfst; do
 		let "transducer_found += 1"
 
 # Remove old generated files - don't mix Xerox and HFST test results:
-		rm -f *adjs $resultfile*.txt
+		rm -f analadjs
 
 #### First we try to generate the regular adjectives:
 		sed 's/$/+A+Attr/' adjs | $lookuptool $generatorfile$f \

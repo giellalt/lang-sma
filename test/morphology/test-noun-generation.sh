@@ -39,7 +39,7 @@ for f in  .xfst .hfst; do
 		let "transducer_found += 1"
 
 # Remove old generated files - don't mix Xerox and HFST test results:
-		rm -f *nouns.txt $resultfile*.txt
+		rm -f *analnouns.txt
 
 ###### Test non-comopunds: #######
 		# generate nouns in Singular, extract the resulting generated lemma,
