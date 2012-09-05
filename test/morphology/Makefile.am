@@ -7,7 +7,8 @@
 # List here (space separated) all test scripts that should be run:
 TESTS=generate-noun-lemmas.sh \
 	  test-noun-generation.sh \
-	  test-verb-generation.sh
+	  test-verb-generation.sh \
+	  test-adj-generation.sh
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
