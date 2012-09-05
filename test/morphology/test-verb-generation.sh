@@ -9,13 +9,10 @@ generatorfile=${srcdir}/../../src/generator.gt
 resultfile=missingVerbLemmas.txt
 
 # Check that the source file exists:
-if [ not -f "$sourcefile" ]; then
+if [ ! -f "$sourcefile" ]; then
 	echo Source file not found: $sourcefile
 	exit 1
 fi
-
-# Remove old generated files:
-rm -f *verbs $resultfile
 
 ###### Extraction: #######
 grep ";" $sourcefile | grep -v "^\!" \
@@ -23,7 +20,6 @@ grep ";" $sourcefile | grep -v "^\!" \
 	| tr -d "#" | sort -u > verbs
 
 ###### Start testing: #######
-
 transducer_found=0
 for f in  .xfst .hfst; do
 	if [ $f == ".xfst" ]; then
@@ -35,6 +31,9 @@ for f in  .xfst .hfst; do
 	fi
 	if [ -f "${srcdir}/../../src/generator.gt$f" ]; then
 		let "transducer_found += 1"
+
+# Remove old generated files - don't mix Xerox and HFST test results:
+		rm -f *verbs $resultfile*.txt
 
 #### First we try to generate the infinitives:
 		sed 's/$/+V+Inf/' verbs \
@@ -60,10 +59,17 @@ for f in  .xfst .hfst; do
 		if [ `wc -w $resultfile | tr -s ' ' | cut -d' ' -f2` -gt 0 ]
 		then
 			open -a SubEthaEdit $resultfile
-		    exit 1
+		    Fail=1
 		fi
+	else
+		echo Transducer not found: $generatorfile$f
 	fi
 done
+
+# At least one of the Xerox or HFST tests failed:
+if [ $Fail == 1 ]; then
+	exit 1
+fi
 
 if [ $transducer_found -eq 0 ]; then
     echo No transducer found

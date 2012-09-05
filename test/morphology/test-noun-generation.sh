@@ -6,23 +6,20 @@
 ###### Variables: #######
 sourcefile=${srcdir}/../../src/morphology/stems/nouns.lexc
 generatorfile=${srcdir}/../../src/generator.gt
-resultfile=missingNounLemmas.txt
+resultfile=missingNounLemmas
 
 # Check that the source file exists:
-if [ not -f "$sourcefile" ]; then
+if [ ! -f "$sourcefile" ]; then
 	echo Source file not found: $sourcefile
 	exit 1
 fi
-
-# Remove old generated files:
-rm -f *nouns.txt $resultfile
 
 ###### Extraction: #######
 # extract non-compounding lemmas:
 grep ";" $sourcefile | grep -v "^\!" \
 	| egrep -v '(CmpN/Only|+Gen+|+Der+| R )' | sed 's/% /€/g' | sed 's/%:/¢/g' \
 	| tr ":+" " " | cut -d " " -f1 | tr -d "#" | tr "€" " " | tr "¢" ":" \
-	| sort -u > nouns.txt
+	| sort -u | grep -v '^$' > nouns.txt
 # extract compounding lemmas:
 grep ";" $sourcefile | grep -v "^\!" \
 	| grep ' R '| tr ":+" " " | cut -d " " -f1 | tr -d "#" \
@@ -40,6 +37,9 @@ for f in  .xfst .hfst; do
 	fi
 	if [ -f "$generatorfile$f" ]; then
 		let "transducer_found += 1"
+
+# Remove old generated files - don't mix Xerox and HFST test results:
+		rm -f *nouns.txt $resultfile*.txt
 
 ###### Test non-comopunds: #######
 		# generate nouns in Singular, extract the resulting generated lemma,
@@ -75,18 +75,25 @@ for f in  .xfst .hfst; do
 		# stored and opened in SEE:
 		sort -u -o analnouns.txt analnouns.txt 
 		sort -u -o Ranalnouns.txt Ranalnouns.txt 
-		comm -23 nouns.txt analnouns.txt > $resultfile
-		comm -23 Rnouns.txt Ranalnouns.txt >> $resultfile
+		comm -23 nouns.txt analnouns.txt > $resultfile$f.txt
+		comm -23 Rnouns.txt Ranalnouns.txt >> $resultfile$f.txt
 		rm -f *nouns.txt
 
 		# if at least one word is found, the test failed, and the list of failed
 		# lemmas is opened in SubEthaEdit:
-		if [ `wc -w $resultfile | tr -s ' ' | cut -d' ' -f2` -gt 0 ]; then
-			open -a SubEthaEdit $resultfile
-		    exit 1
+		if [ `wc -w $resultfile$f.txt | tr -s ' ' | cut -d' ' -f2` -gt 0 ]; then
+			open -a SubEthaEdit $resultfile$f.txt
+		    Fail=1
 		fi
+	else
+		echo Transducer not found: $generatorfile$f
 	fi
 done
+
+# At least one of the Xerox or HFST tests failed:
+if [ $Fail == 1 ]; then
+	exit 1
+fi
 
 if [ $transducer_found -eq 0 ]; then
     echo No transducer found
