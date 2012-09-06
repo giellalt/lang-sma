@@ -341,7 +341,7 @@ daejkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:daejk ies_IES_IE_EVEN ;
 daemies+CmpN/SgN+CmpN/SgG+CmpN/PlG:daem ies_IES_EVENNOCOMP ; !
 daeptems:daeptem Cs_CE_ODDNOCOMP ; !SOUTH - DONT KNOW
 daerpies:daerp ies_IES_EVENNOCOMP ; ! LK: nocomp
-dakngas:dakng as_AN_ODD ; ! substantiv er dikngie 
+dakngas:dakng as_AN_ODDNOCOMP; ! substantiv er dikngie 
 dakteme+CmpN/SgN+CmpN/SgG+CmpN/PlG:dakteme PRED_0 ;
 dalhtjah+CmpN/SgN+CmpN/SgG+CmpN/PlG:dalhtj ah_AN_ODD ; !LA iflg. LMM
 dallamasten:dallamast MAST ;
@@ -411,7 +411,7 @@ dovres:dovr e_ES_EVENNOCOMP ;
 dovres:duvre EVENCOMP ; ! UMLAUT COMP = dovrebe-dovremes ! e(1)-st.
 drabloetjööse:drabloe#tjöös e_E_EVENNOCOMP ; !OBS!gradböyer ikke reinterm
 dramatihkeles:dramatihkel LES ;
-duasvas+CmpN/SgN+CmpN/SgG+CmpN/PlG:duasv as_AN_ODD ;
+duasvas+CmpN/SgN+CmpN/SgG+CmpN/PlG:duasv as_AN_ODDNOCOMP ;
 dubpebe:dubp EVTEBE ;
 dueptems:dueptem Cs_CE_ODDNOCOMP ;
 dujmies:dujmie s_S_ODD ; !LA lagt til, vet ikke komp
@@ -2246,11 +2246,13 @@ sahpoeh:sahp oeh_OEH_ODD ;
 sakraale:sakra AALE ;
 saksen:saksen ATTR_0 ;
 salvadovren:salvadovren ATTR_0 ;
-samhtjas:samhtj as_AN_ODD ; ! = verbform=sovhtjehtidh -
-samhtj e_ES_ODDEVEN ; ! Attr=samhtje, Pred=samhtjes: samhtjesåbpoe ! e(1)-st. ! LA -> e_ES_ODDEVEN  ?
-samhtje:samhtjes ATTR_0 ; ! samhtjesåbpoe LA
-samkas:samk as_AN_ODD ; !
-samskas:samsk as_AN_ODD ; !
+samhtjas ATTR_0 ;
+samhtjan PRED_0 ;  ! = verbform=sovhtjehtidh -
+samhtje:samhtj e_ES_ODDEVEN ; ! Attr=samhtje, Pred=samhtjes: samhtjesåbpoe ! e(1)-st. ! LA -> e_ES_ODDEVEN  ?
+!samhtje:samhtjes ATTR_0 ; ! samhtjesåbpoe LA
+samkas ATTR_0 ;
+samkan PRED_0 ;! Illativ av semkie 
+samskas:samsk as_AN_ODDNOCOMP ; !
 samskoes:samsk oes_AN_ODD ; !
 sapkes:sapke s_S_ODD ; ! sapkesåbpoe
 saptjah ATTR_0 ;
@@ -2526,7 +2528,7 @@ snaevkies:snaevk ies_IES_IE_EVEN ; !no 3-syll paradigm
 snajvah:snajv ah_AN_ODD ; !LAok
 snajvoeh:snajv oeh_AN_ODD ; !LA iflg. LMM !hovmodig
 snarroeh:snarr oeh_OEH_ODD ;
-snartjas:snartj as_AN_ODD ; !
+snartjas:snartj as_AN_ODDNOCOMP ; !
 snarvah:snarv ah_AN_ODD ; ! 
 snavrah:snavr ah_AN_ODD ; !avbrukket om bein
 sneehpes: SNEEHPES ; !LA
@@ -2798,7 +2800,8 @@ tjagkeres:tjagkar Ces_CES_CE_ODD ; !tjagkere= törrlende komp. tjagkaråbpoe
 tjakngah:tjakng ah_AN_ODD ; !
 tjalhvas:tjalhvas ATTR_0 ; !South?
 !tjalhve:tjalhv e_E_EVEN ; ! MLK: SUBSTANTIV!
-tjalhves:tjalhves ATTR_0 ; ! 
+!tjalhves:tjalhves ATTR_0 ; ! 
+tjalhve:tjalhv e_ES_ODDEVEN ;! from adj-file - komp. tjalhvebe, må også bli tjalhvesåbpoe
 tjallah:tjallah ATTR_0 ;
 tjalmerge+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjalmarg Ce_CE_ODD ;
 tjalmeske+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjalmask Ce_CE_ODD ;
@@ -3206,7 +3209,7 @@ zoofysihkeles:zoofysihkel LES ;
 ïskeres+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:iesker Ces_CES_ODD ;
 ïskeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:ysker Ces_CES_ODD ;
 ïskeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:ïsker Ces_CES_ODD ; !ïskerabpa/råbpoe
-ökolåågeles+Use/Sub:øøkologel LES ;
+ökolåågeles+Use/Sub:ökologel LES ;
 ökonomihkeles:ökonomihkel LES ;
 ökopolitihkeles:ökopolitihkel LES ;
 ökumenihkeles:ökumenihkel LES ;
@@ -3398,11 +3401,11 @@ råavtja:råavtj A_EVEN ;! Comes from the adj-file, råavtjebe, råavtjemes
 laabre:laabr E_EVEN ;! Comes from the adj-file ! også brukt som hundenavn :-)
 hamhpa:hamhp A_EVEN ;! ffrom adj-file, hamhpebe, hamhpemes
 hearhkoe:hearhk OE_EVEN ;! hearhkobe, hearkomes
-tjalhve:tjalhv E_EVEN ;! from adj-file - komp. tjalhvebe
+!tjalhve:tjalhv e_ES_ODDEVEN ;! from adj-file - komp. tjalhvebe
 malfa:malf A_EVEN ;!from adj-file- malfebe,malfemes
 fraska:frask A_EVEN ;!from adj-file, Komp: fraskebe, fraskemes
 fraskoe:frask OE_EVEN ;!from adj-file, KOmp: fraskobe, fraskomes
-smohke:smohk E_EVEN ;! from adj-file, komp: smohkebe, smohkemes
+smohke:smohk E_EVEN ;! from adj-file, komp: smohkebe, smohkemes?
 båarhtoe:båarht OE_EVEN ; !from adj-file, Komp: båarhtobe, båarhtomes
 leavhmoe:leavhm OE_EVEN ;! from adj-file, leavhmobe, leavhmomes
 leavhma:leavhm A_EVEN ;! from adj-file, KOMP: leavhmebe, leavhmemes
