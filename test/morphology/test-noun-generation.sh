@@ -82,7 +82,7 @@ for f in  .xfst .hfst; do
 		# if at least one word is found, the test failed, and the list of failed
 		# lemmas is opened in SubEthaEdit:
 		if [ `wc -w $resultfile$f.txt | tr -s ' ' | cut -d' ' -f2` -gt 0 ]; then
-			open -a SubEthaEdit $resultfile$f.txt
+			see $resultfile$f.txt
 		    Fail=1
 		fi
 	else

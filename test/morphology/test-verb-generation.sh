@@ -58,7 +58,7 @@ for f in  .xfst .hfst; do
 		# lemmas is opened in SubEthaEdit:
 		if [ `wc -w $resultfile | tr -s ' ' | cut -d' ' -f2` -gt 0 ]
 		then
-			open -a SubEthaEdit $resultfile
+			see $resultfile
 		    Fail=1
 		fi
 	else
