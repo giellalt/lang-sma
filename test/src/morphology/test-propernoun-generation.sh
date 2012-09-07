@@ -4,8 +4,8 @@
 # De som ikke kan genereres, kopieres til missingProperLemmas.txt
 
 ###### Variables: #######
-sourcefile=${srcdir}/../../src/morphology/stems/propernouns.lexc
-generatorfile=${srcdir}/../../src/generator.gt
+sourcefile=${srcdir}/../../../src/morphology/stems/propernouns.lexc
+generatorfile=${srcdir}/../../../src/generator.gt
 resultfile=missingProperLemmas.txt
 
 # Check that the source file exists:

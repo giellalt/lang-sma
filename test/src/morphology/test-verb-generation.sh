@@ -4,8 +4,8 @@
 # som ikke kan genereres, kopieres til missingVerbLemmas.txt
 
 ###### Variables: #######
-sourcefile=${srcdir}/../../src/morphology/stems/verbs.lexc
-generatorfile=${srcdir}/../../src/generator.gt
+sourcefile=${srcdir}/../../../src/morphology/stems/verbs.lexc
+generatorfile=${srcdir}/../../../src/generator.gt
 resultfile=missingVerbLemmas.txt
 
 # Check that the source file exists:

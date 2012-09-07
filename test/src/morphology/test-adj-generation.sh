@@ -5,8 +5,8 @@
 # De som ikke kan genereres, kopieres til missingAdjLemmas.txt
 
 ###### Variables: #######
-sourcefile=${srcdir}/../../src/morphology/stems/adjectives.lexc
-generatorfile=${srcdir}/../../src/generator.gt
+sourcefile=${srcdir}/../../../src/morphology/stems/adjectives.lexc
+generatorfile=${srcdir}/../../../src/generator.gt
 resultfile=missingAdjLemmas.txt
 
 # Check that the source file exists:

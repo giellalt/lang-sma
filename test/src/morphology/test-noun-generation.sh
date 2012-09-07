@@ -4,8 +4,8 @@
 # De som ikke kan genereres, kopieres til missingNounLemmas.txt
 
 ###### Variables: #######
-sourcefile=${srcdir}/../../src/morphology/stems/nouns.lexc
-generatorfile=${srcdir}/../../src/generator.gt
+sourcefile=${srcdir}/../../../src/morphology/stems/nouns.lexc
+generatorfile=${srcdir}/../../../src/generator.gt
 resultfile=missingNounLemmas
 
 # Check that the source file exists:
