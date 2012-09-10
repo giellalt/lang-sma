@@ -28,13 +28,15 @@ grep ";" $sourcefile | grep -v "^\!" | grep Attr | sed 's/% /€/g' \
 
 ###### Start testing: #######
 transducer_found=0
+Fail=0
+
 for f in  .xfst .hfst; do
 	if [ $f == ".xfst" ]; then
 		lookuptool="lookup -q -flags mbTT"
-		echo "Xerox test"
+#		echo "Xerox test"
 	else
 		lookuptool="hfst-lookup -q"
-		echo "Hfst test"
+#		echo "Hfst test"
 	fi
 	if [ -f "$generatorfile$f" ]; then
 		let "transducer_found += 1"
@@ -74,13 +76,13 @@ for f in  .xfst .hfst; do
 			see $resultfile
 		    Fail=1
 		fi
-	else
-		echo Transducer not found: $generatorfile$f
+#	else
+#		echo Transducer not found: $generatorfile$f
 	fi
 done
 
 # At least one of the Xerox or HFST tests failed:
-if [ $Fail == 1 ]; then
+if [ "$Fail" = "1" ]; then
 	exit 1
 fi
 
