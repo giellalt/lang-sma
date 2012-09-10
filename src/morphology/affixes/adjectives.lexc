@@ -135,11 +135,11 @@ LEXICON GISSE
 +Use/NG:gïssege PRED_0 ;  ! eller er dette et annet lemma? jfr. -hke og gabtege 
  
 LEXICON GAMTE
- :te ATTR_0  ;
- :tege PRED_0  ;
+:te ATTR_0  ;
+:tege PRED_0  ;
 +Use/NG:t eCASE  ;
-! :%>%^DISIMPtie EVENCOMP ;
- :t%^DISIMPie EVENCOMP ;
+:%>%^DISIMPtie EVENCOMP ;
+:t%^DISIMPie EVENCOMP ;
    
 LEXICON GIEVTE
  :gïevt e_E_EVENNOCOMP  ;
@@ -496,14 +496,16 @@ LEXICON es_E_EVEN
  !:e   EVENCOMP ;
 
 
-!!!!LEXICON as_A_EVEN  ! attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
-!!!! :a    ATTR_S ;
-!!!!       aCASE ;
-!!!! :a  EVENCOMP ; fraskas; malfas - SOUTH-southsámi- AAJEGE, do they have comp? I’M NOT SURE is it right to remove theese adjectives to ATTR_0-lexicon? 
+LEXICON as_A_EVEN  ! attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
+:a    ATTR_S ;
+       aCASE ;
+:a  EVENCOMP ; !fraskas; malfas - SOUTH-southsámi- AAJEGE, do they have comp? I’M NOT SURE is it right to remove theese adjectives to ATTR_0-lexicon? 
 
-!!LEXICON oes_OE_EVEN  !attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/substantiven hammoe= Even
-!!  oes_OE_EVENNOCOMP  ;
-!! :oe   EVENCOMP_oe ;
+LEXICON oes_OE_EVEN  !attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/  
+!      substantiven hammoe= Even
+:oe   ATTR_S ;
+      oeCASE ;
+:oe   EVENCOMP_oe ;
 
 !LEXICON oes_OE_EVENNOCOMP 
 ! :oe    ATTR_S ;
@@ -1316,14 +1318,14 @@ LEXICON EVENSUPONLY
 +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP FINAL1 ;
    MES ;
 
-!!LEXICON EVENCOMP_oe
-!!+A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
-!!+A+Comp+Attr+Use/NG:%>%^COMPDISIMP2be%^DISIMP ATTRCONT ;
-!! EVENCOMPCASE_oe ;
-!!+A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
-!!+A+Superl+Attr+Use/NG:%>%^COMPDISIMP2mes%^DISIMP ATTRCONT ;
-!!   MES_oe ;
-!! DIMCOMP ;
+LEXICON EVENCOMP_oe
++A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
++A+Comp+Attr+Use/NG:%>%^COMPDISIMP2be%^DISIMP ATTRCONT ;
+! EVENCOMPCASE_oe ;
++A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
++A+Superl+Attr+Use/NG:%>%^COMPDISIMP2mes%^DISIMP ATTRCONT ;
+ ! MES_oe ;
+ DIMCOMP ;
 
 
 LEXICON ODDCOMP
