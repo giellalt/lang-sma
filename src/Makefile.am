@@ -29,8 +29,7 @@ analyser.gt.xfst: analyser.gt.xfst.tmp \
 				@\"filters/remove-test-tags.xfst\" \
 			.o. @\"$<\" ;\n\
 		 save stack $@\n\
-		 quit\n" | $(XFST)
-	rm -f $<
+		 quit\n" | $(XFST) -q
 
 generator.gt.xfst: generator.gt.xfst.tmp \
 				filters/remove-test-tags.xfst
@@ -39,8 +38,7 @@ generator.gt.xfst: generator.gt.xfst.tmp \
 			.o. @\"filters/remove-test-tags.xfst\".i \
 			;\n\
 		 save stack $@\n\
-		 quit\n" | $(XFST)
-	rm -f $<
+		 quit\n" | $(XFST) -q
 
 include $(top_srcdir)/am-shared/topdir-include.am
 

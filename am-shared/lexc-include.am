@@ -68,7 +68,7 @@ $(GTLANG).lexc.hfst: $(GT_LEXC_ROOT) $(GT_LEXC_SRCS) $(GENERATED_LEXC_SRCS)
 
 $(GTLANG).lexc.xfst: $(GT_LEXC_ROOT) $(GT_LEXC_SRCS) $(GENERATED_LEXC_SRCS)
 	$(PRINTF) "compile-source $^\nsource-to-result\nsave-source $@\nquit\n" |\
-		$(LEXC)
+		$(LEXC) -q
 
 ####### Other targets: ###########
 clean-local:
