@@ -1,10 +1,10 @@
 Config:
   hfst:
-    Gen: sma/bin/isma.hfstol
-    Morph: sma/bin/sma.hfstol
+    Gen: ../../../src/generator.gt.hfst
+    Morph: ../../../src/analyser.gt.hfst
   xerox:
-    Gen: sma/bin/isma-norm.fst
-    Morph: sma/bin/sma-norm.fst
+    Gen: ../../../src/generator.gt.xfst
+    Morph: ../../../src/analyser.gt.xfst
     App: lookup
 
 
@@ -53,7 +53,7 @@ Tests:
 
   Adjective - aeblehts: # ?
     aeblehts+A+Attr: aeblehts 
-    aeblehts+A+Comp+Sg+Nom: [aebliehtsabpa, aebliehtsåbpoe]
+    aeblehts+A+Comp+Sg+Nom: [aebliehtsabpa, aebliehtsåbpoe] # denne er feil
     aeblehts+A+Sg+Nom: [aeblehte, aeblehts, aebliehtadtje]
     aeblehts+A+Superl+Sg+Nom: aebliehtsommes
 
@@ -207,28 +207,6 @@ Tests:
 
   Adjective - byölehts: # 
     byölehts+A+Attr: byölehts 
-
-  Adjective - båadtsah: # 
-    båadtsah+A+Attr: båadtsah 
-    båadtsah+A+Comp+Sg+Nom: [båadtsakabpa, båadtsakåbpoe, båadtsahkabpa]
-    båadtsah+A+Sg+Nom: [båadtsah, båadtsan, båadtsa]
-    båadtsah+A+Superl+Sg+Nom: [båadtsakommes, båadtsahkommes]
-
-  Adjective - båadtsoeh: # 
-    båadtsoeh+A+Attr: [båadtsoeh, båadtsoeh]
-    båadtsoeh+A+Comp+Sg+Nom: [båadtsoehkabpa, båadtsoehkåbpoe]
-    båadtsoeh+A+Sg+Nom: [båadtsoeh, båadtsan]
-    båadtsoeh+A+Superl+Sg+Nom: båadtsoehkommes
-
-  Adjective - båajhtoeh: # 
-    båajhtoeh+A+Attr: båajhtoeh 
-    båajhtoeh+A+Sg+Nom: båajhtoeh 
-
-  Adjective - båavjoeh: # 
-    båavjoeh+A+Attr: båavjoeh 
-    båavjoeh+A+Comp+Sg+Nom: [båavjoehkabpa, båavjoehkåbpoe]
-    båavjoeh+A+Sg+Nom: båavjoeh 
-    båavjoeh+A+Superl+Sg+Nom: båavjoehkommes
 
   Adjective - båeries: # c 
     båeries+A+Attr: båeries 
