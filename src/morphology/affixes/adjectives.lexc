@@ -88,11 +88,11 @@ LEXICON ORRE
 +Use/NG:urre EVENCOMPONLY ;
 +Use/NG:urre EVENCOMP ;
 +Use/NG:urre DIMCOMP ;  
-! :orr e_E_EVEN ; !comment from Aajege, MLK: denne er ikke riktig, kan i beste fall subbes.
++Use/Sub:orr e_E_EVEN ; !comment from Aajege, MLK: denne er ikke riktig, kan i beste fall subbes. +Use/Sub
  
 LEXICON STOERE
  :stoer e_E_EVENNOCOMP  ;
-! :stoere ATTR_S  ; !finner ikke dok for denne. MLK: kommer svar. Er for langt til å skrives inn her.
+ !:stoere ATTR_S  ; !finner ikke dok for denne. MLK: kommer svar. Er for langt til å skrives inn her.
 +Use/NG:stoerr e_E_EVENNOCOMP  ;
 +Use/Sub:stuerre EVENCOMPONLY ;
 +Use/Sub:stoerre EVENCOMPONLY ;
@@ -150,11 +150,8 @@ LEXICON GIEVTE
  :geavte DIMCOMP ;  
  
                     
-LEXICON KRUANA       
- :kruana ATTR_0 ;               ! <--a_A_EVENNOCOMP  ;
- :kruana PRED_0 ;
- !  LEXICON aCASE         aCASE  ;
- :kråane EVENCOMP ;
+LEXICON KRUANA  
+ :kruan a_A_EVEN ;
 +Use/NG:kruene EVENCOMPONLY ;
 +Use/NG:kroene EVENSUPONLY ;  
 +Use/Sub:kruane EVENCOMPONLY ;
@@ -190,7 +187,7 @@ LEXICON GEEHPES
  :geehpes ODDCASEOBL ;
  :geehpe ATTR_S ;
 ! :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
-+Use/Sub:geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM, MLK: Denne er riktig. geehpes-geehpesåbpoe-geehpesommes- giehpebe
++Use/Sub:geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM, MLK: Denne er riktig. geehpes-geehpesåbpoe-geehpesommes- giehpebe-geehpemes
 +Use/NG:geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
  :geahpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
 +Use/NG:geehpe MES ;
@@ -367,9 +364,6 @@ LEXICON e_E_EVENNOCOMP
   :e   ATTR_0 ;
        eCASE ;
 
-!LEXICON a_A_EVENNOCOMP 
-!  :a   ATTR_0 ;
- !      aCASE ;
 
 LEXICON a_A_EVEN
   :a   ATTR_0 ;
@@ -1203,7 +1197,6 @@ LEXICON eCASENOM
 
 LEXICON eCASEOBL
 +A:           NIEJTEOBL  ;
-
 
 
 LEXICON aCASE
