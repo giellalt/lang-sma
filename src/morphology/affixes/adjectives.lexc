@@ -88,11 +88,11 @@ LEXICON ORRE
 +Use/NG:urre EVENCOMPONLY ;
 +Use/NG:urre EVENCOMP ;
 +Use/NG:urre DIMCOMP ;  
- :orr e_E_EVEN ; !comment from Aajege, MLK: denne er ikke vanlig.
+! :orr e_E_EVEN ; !comment from Aajege, MLK: denne er ikke riktig, kan i beste fall subbes.
  
 LEXICON STOERE
  :stoer e_E_EVENNOCOMP  ;
-! :stoere ATTR_S  ; !finner ikke dok for denne
+! :stoere ATTR_S  ; !finner ikke dok for denne. MLK: kommer svar. Er for langt til å skrives inn her.
 +Use/NG:stoerr e_E_EVENNOCOMP  ;
 +Use/Sub:stuerre EVENCOMPONLY ;
 +Use/Sub:stoerre EVENCOMPONLY ;
@@ -149,8 +149,11 @@ LEXICON GIEVTE
  :gievte DIMCOMP ;  
  :geavte DIMCOMP ;  
  
-LEXICON KRUANA
- :kruan a_A_EVENNOCOMP  ;
+                    
+LEXICON KRUANA       
+ :kruana ATTR_0 ;               ! <--a_A_EVENNOCOMP  ;
+ :kruana PRED_0 ;
+ !  LEXICON aCASE         aCASE  ;
  :kråane EVENCOMP ;
 +Use/NG:kruene EVENCOMPONLY ;
 +Use/NG:kroene EVENSUPONLY ;  
@@ -364,9 +367,9 @@ LEXICON e_E_EVENNOCOMP
   :e   ATTR_0 ;
        eCASE ;
 
-LEXICON a_A_EVENNOCOMP 
-  :a   ATTR_0 ;
-       aCASE ;
+!LEXICON a_A_EVENNOCOMP 
+!  :a   ATTR_0 ;
+ !      aCASE ;
 
 LEXICON a_A_EVEN
   :a   ATTR_0 ;
