@@ -33,7 +33,8 @@ LEXICON NOERE
  :noer e_E_EVENNOCOMP  ;
  :nuerie EVENCOMPONLY ;
  :nööre MES ;
- :nuerie DIMCOMP ;  
+ :nuerie DIMCOMP ; 
+ +Use/Sub:noer e_E_EVEN  ; ! doc. in Bergsland 1946
  
 LEXICON BUERIE
  :buer ie_IE_EVENNOCOMP  ;
@@ -65,15 +66,15 @@ LEXICON SOOJMES
 +Use/NG:sööjme PRED_S  ;
 +Use/NG:sööjme EVENCOMP  ;
 +Use/NG:seejm es_ES_EVEN  ;
-! :suejme EVENCOMPONLY ; ! finner ikke dok. MLK; er dok.
++Use/Sub:suejme EVENCOMPONLY ; ! finner ikke dok. MLK; er dok.
  :sååjmehk HKE_ODD_COMP ;
  
 
 LEXICON SMAAVE  ! both smaave and plaave
 +Use/NG:aav e_E_EVENNOCOMP  ;
  :aav e_ES_EVENNOCOMP  ; ! LMM says so for plaave.MLK; Er ikke uenig med LMM, da jeg også har skrevet denne inn som e_ES, men denne er også dok. som e_E_.
-:aevie EVENCOMPONLY ; ! finner ikke dok. MLK: Er dok.
-! :aevie MES ; !  finner ikke dok. MLK: er dok.
++Use/Sub:aevie EVENCOMPONLY ; ! finner ikke dok. MLK: Er dok, men er ikke norm, derfor subber jeg den.
++Use/Sub:aevie MES ; !  finner ikke dok. MLK: er dok.
  :aavie EVENCOMPONLY ;
  :aavie MES ;
  :aevie DIMCOMP ;  
@@ -88,7 +89,7 @@ LEXICON ORRE
 +Use/NG:urre EVENCOMPONLY ;
 +Use/NG:urre EVENCOMP ;
 +Use/NG:urre DIMCOMP ;  
-!:orr e_E_EVEN ; !comment from Aajege, MLK: denne er ikke riktig, bør subbes. (+Use/Sub)
++Use/Sub:orr e_E_EVEN ; !comment from Aajege, MLK: bør subbes. (+Use/Sub)
  
 LEXICON STOERE
  :stoer e_E_EVENNOCOMP  ;
@@ -186,7 +187,7 @@ LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_OD
 LEXICON GEEHPES
  :geehpes ODDCASEOBL ;
  :geehpe ATTR_S ;
-! :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
+ :geehp es_ES_EVENNOCOMP  ; !  s_S_ODD  bort?
 +Use/Sub:geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM, MLK: Denne er riktig. geehpes-geehpesåbpoe-geehpesommes- giehpebe-geehpemes
 +Use/NG:geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
  :geahpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
