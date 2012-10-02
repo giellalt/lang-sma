@@ -29,7 +29,17 @@ SUBDIRS = phonology morphology filters phonetics hyphenation orthography syntax 
 
 #### Add local processing instructions below this line:
 
-analyser.gt.xfst: analyser.gt.xfst.tmp \
+# The SMA morphology has some extra tags used for testing that we want to
+# remove.
+analyser.gt.hfst: analyser.gt.tmp.hfst \
+				filters/remove-test-tags.hfst
+	$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
+			-1 filters/remove-test-tags.hfst \
+		| $(HFST_INVERT) \
+		| $(HFST_PREPROCESS_FOR_OPTIMIZED_LOOKUP_FORMAT) $(HFST_FLAGS) \
+		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+
+analyser.gt.xfst: analyser.gt.tmp.xfst \
 				filters/remove-test-tags.xfst
 	$(PRINTF) "read regex \
 				@\"filters/remove-test-tags.xfst\" \
@@ -37,7 +47,16 @@ analyser.gt.xfst: analyser.gt.xfst.tmp \
 		 save stack $@\n\
 		 quit\n" | $(XFST) -q
 
-generator.gt.xfst: generator.gt.xfst.tmp \
+# And also for the generator:
+generator.gt.hfst: generator.gt.tmp.hfst \
+				filters/remove-test-tags.hfst
+	$(HFST_INVERT) $< | $(HFST_COMPOSE) $(HFST_FLAGS) -F \
+			-1 filters/remove-test-tags.hfst \
+		| $(HFST_INVERT) \
+		| $(HFST_PREPROCESS_FOR_OPTIMIZED_LOOKUP_FORMAT) $(HFST_FLAGS) \
+		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+
+generator.gt.xfst: generator.gt.tmp.xfst \
 				filters/remove-test-tags.xfst
 	$(PRINTF) "read regex \
 				@\"$<\" \
