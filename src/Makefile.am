@@ -27,7 +27,7 @@ SUBDIRS = phonology morphology filters phonetics hyphenation orthography syntax 
 %.xfst: %.tmp.xfst
 	cp -f $< $@
 
-#### Add local processing instructions below this line:
+#### BEGIN: Add local processing instructions BELOW this line ####
 
 # The SMA morphology has some extra tags used for testing that we want to
 # remove.
@@ -64,5 +64,7 @@ generator.gt.xfst: generator.gt.tmp.xfst \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) -q
+
+#### END: Add local processing instructions ABOVE this line ######
 
 include $(top_srcdir)/am-shared/topdir-include.am
