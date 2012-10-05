@@ -64,7 +64,7 @@ for f in  .xfst .hfst; do
 			| $lookuptool $generatorfile$f | cut -f2 \
 			|  grep -v "N+" | grep -v "^$" | sort -u > analattrprops  
 		sort -u -o analprops analprops 
-		comm -23 props analprops >> $resultfile$f.txt
+		comm -23 props analprops > $resultfile$f.txt
 		comm -23 attrprops analattrprops >> $resultfile$f.txt
 		sort -u -o $resultfile$f.txt $resultfile$f.txt
 
