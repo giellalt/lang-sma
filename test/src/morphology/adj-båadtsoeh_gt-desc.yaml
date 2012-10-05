@@ -1,5 +1,15 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
 
-   Adjective - båadtsah: # 
+Tests:
+
+  Adjective - båadtsah: # 
     båadtsah+A+Attr: båadtsah 
     båadtsah+A+Comp+Sg+Nom: [båadtsahkåbpoe, båadtsahkabpa]
     båadtsah+A+Sg+Nom: båadtsan 
@@ -25,7 +35,7 @@
     rudtjege+A+Sg+Nom: rudtjege 
     rudtjege+A+Superl+Sg+Nom: [rudtjegommes]
 
-Adjective - rudtjeh: # 
+  Adjective - rudtjeh: # 
     rudtjeh+A+Attr: rudtjeh 
     rudtjeh+A+Comp+Sg+Nom: [rudtjebe]
     rudtjeh+A+Sg+Nom: rudtjege 
