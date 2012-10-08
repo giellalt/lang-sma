@@ -220,7 +220,6 @@ LEXICON SUVHTJIES
 !LEXICON SAEBRIES - Heller ikke her!
  !:såebries ATTR_0 ; 
  !:såabran PRED_0 ;
- !:såabrak ODDCOMP ; ! 4 såabrakåbpoe
  !:såebr ieCASEOBL ;
 
 LEXICON MUJVIES 
@@ -271,7 +270,9 @@ LEXICON MOOREH
 LEXICON BURRIE
 +CmpN/SgN+CmpN/SgG+CmpN/PlG:#buer ie_IE_EVENNOCOMP  ; ! 
 +CmpN/SgN+CmpN/SgG+CmpN/PlG:#burr ie_IE_EVENNOCOMP  ;
- 
+
+!LEXICON LADTJE   - Lag dette leksikonet! 
+!+CmpN/SgN+CmpN/SgG+CmpN/PlG:#ladtj e_E_EVENNOCOMP ; 
 
 ! Regular even stem types 
  
@@ -1034,11 +1035,11 @@ LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an
 !:k  ODDCOMP ; ! Outcommented because it is not in use anymore
 
 
-
-LEXICON ies_EME
- :ies ATTR_0 ;
- :eme PRED_0 ;
- :em ODDCASEOBL ;
+!Outcommented because I cant see we need this one. Maja Lisa
+!LEXICON ies_EME   
+! :ies ATTR_0 ;	   
+! :eme PRED_0 ;	   
+! :em ODDCASEOBL ; 
 
 
 
@@ -1315,8 +1316,6 @@ LEXICON EVENSUPONLY
 +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP FINAL1 ;
    MES ;  
    
-  
-   
 
 LEXICON EVENCOMP_oe
 +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
@@ -1334,6 +1333,7 @@ LEXICON ODDCOMP
 +A+Comp+Use/Sub:%>abp ABPA ;
 +A+Comp:%>åbp ÅBPOE ;
 +A+Superl+Attr:%>ommes ATTRCONT ;
++A+Superl+Attr:%>ammes ATTRCONT ;
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dimin+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
