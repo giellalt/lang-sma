@@ -217,16 +217,31 @@ LEXICON SUVHTJIES
  :såvhtjan PRED_0 ;
 ! Ikke komp!
 
-!LEXICON SAEBRIES - Heller ikke her!
- !:såebries ATTR_0 ; 
- !:såabran PRED_0 ;
- !:såebr ieCASEOBL ;
+LEXICON SAEBRIES 
+  :såebries ATTR_0 ; 
+  :såabran PRED_0 ;
+  :såebr ieCASEOBL ;
+  
+LEXICON VILNJIES
+  :vilnjies ATTR_0 ; 
+  :vælnjan PRED_0 ;
+  :vilnj ieCASEOBL ;
+  
+LEXICON NJERRIES
+  :njerries ATTR_0 ; 
+  :njarran PRED_0 ;
+  :njerr ieCASEOBL ;
+
+ 
+LEXICON SKIEMTJIES ! Denne går ikke opp.
+ :skiemtjies ATTR_0 ; 
+ :skiemtj ieCASEOBL ;
+ :skeamtjan PRED_0 ;
 
 LEXICON MUJVIES 
  :mujvies ATTR_0 ; ! Pred=Substantiv mujvine - måjvan
  :måjvas ODDCOMP ; 
  :mujv ieCASEOBL ;
-
 
 LEXICON STAERIES 
  :staerie ATTR_S ; 
@@ -506,6 +521,13 @@ LEXICON oes_OE_EVEN  !attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/
       oeCASE ;
 :oe   EVENCOMP_oe ;
 
+!MLK
+!LEXICON ies_AN_EVENNOCOMP 
+!:ie  ATTR_S ;
+!     ieCASEOBL ;
+!:a   PRED_N ;
+        
+
 !LEXICON oes_OE_EVENNOCOMP 
 ! :oe    ATTR_S ;
 !       oeCASE ;
@@ -590,7 +612,7 @@ LEXICON IJLE_LOAN
 
 LEXICON ATTR_es_s ! aajtijes
 :e ATTR_S ;
- ATTR_S ;
+   ATTR_S ;
 
 
 ! type 1
