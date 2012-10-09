@@ -22,7 +22,7 @@ GT_FILTER_SRCS=focus-filter.regex \
 
 # The common filter targets (don't change locally):
 GT_FILTER_TARGETS=
-if WANT_HFST
+if CAN_HFST
 GT_FILTER_TARGETS+=\
 				   make-optional-semantic-tags.hfst     \
 				   make-optional-transitivity-tags.hfst \
@@ -36,7 +36,7 @@ GT_FILTER_TARGETS+=\
 				   remove-usage-tags.hfst
 endif
 
-if WANT_XFST
+if CAN_XFST
 GT_FILTER_TARGETS+=\
 				   make-optional-semantic-tags.xfst     \
 				   make-optional-transitivity-tags.xfst \
@@ -52,7 +52,7 @@ endif
 
 # Add the target of local additions here:
 # HFST targets here:
-if WANT_HFST
+if CAN_HFST
 GT_FILTER_TARGETS+=focus-filter.hfst \
 				   remove-dialect-tags.hfst \
 				   remove-test-tags.hfst
@@ -60,7 +60,7 @@ GT_FILTER_TARGETS+=focus-filter.hfst \
 endif
 
 # And Xerox targets here:
-if WANT_XFST
+if CAN_XFST
 GT_FILTER_TARGETS+=focus-filter.xfst \
 				   remove-dialect-tags.xfst \
 				   remove-test-tags.xfst
