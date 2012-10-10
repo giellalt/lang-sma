@@ -23,7 +23,6 @@ analyser-%.hfst: analyser-%.tmp.hfst \
 	$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
 			-1 filters/remove-test-tags.hfst \
 		| $(HFST_INVERT) \
-		| $(HFST_PREPROCESS_FOR_OPTIMIZED_LOOKUP_FORMAT) $(HFST_FLAGS) \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
 
 analyser-%.xfst: analyser-%.tmp.xfst \
@@ -40,7 +39,6 @@ generator-%.hfst: generator-%.tmp.hfst \
 	$(HFST_INVERT) $< | $(HFST_COMPOSE) $(HFST_FLAGS) -F \
 			-1 filters/remove-test-tags.hfst \
 		| $(HFST_INVERT) \
-		| $(HFST_PREPROCESS_FOR_OPTIMIZED_LOOKUP_FORMAT) $(HFST_FLAGS) \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
 
 generator-%.xfst: generator-%.tmp.xfst \
@@ -59,7 +57,6 @@ generator-%.xfst: generator-%.tmp.xfst \
 #### Xerox, and the other commands makes the final transducer ready for use.
 %.hfst: %.tmp.hfst
 	$(HFST_INVERT) $< \
-		| $(HFST_PREPROCESS_FOR_OPTIMIZED_LOOKUP_FORMAT) $(HFST_FLAGS) \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
 
 #### Xerox transducer fallback target:
