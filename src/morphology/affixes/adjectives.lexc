@@ -77,7 +77,7 @@ LEXICON SMAAVE  ! both smaave and plaave
 +Use/Sub:aevie MES ; !  finner ikke dok. MLK: er dok.
  :aavie EVENCOMPONLY ;
  :aavie MES ;
- :aevie DIMCOMP ;  
++Use/Sub:aevie DIMCOMP ;  
  
 LEXICON SNAARE 
  :snaar e_ES_EVENNOCOMP  ;
@@ -239,7 +239,7 @@ LEXICON SKIEMTJIES ! Denne går ikke opp.
 
 LEXICON MUJVIES 
  :mujvies ATTR_0 ; ! Pred=Substantiv mujvine - måjvan
- :måjvas ODDCOMP ; 
+ !:måjvas ODDCOMP ; 
  :mujv ieCASEOBL ;
 
 LEXICON STAERIES 
@@ -1142,7 +1142,28 @@ LAAKAN ;
  
 LEXICON PRED_0
  +A+Sg+Nom: FINAL1 ; ! Awaiting full adj analysis 
-
+ 
+LEXICON ene_PRED 
++A+Sg+Nom:ene      FINAL1 ;  
++A+Sg+Nom:e        FINAL1 ;
++A+Sg+Acc:em       FINAL1 ;
++A+Sg+Gen:en       FINAL1 ;
++A+Sg+Ill:ese      FINAL1 ;
++A+Sg+Ine:esne     FINAL1 ;
++A+Sg+Ela:este     FINAL1 ;
++A+Sg+Com:ine      FINAL1 ;
++A+Pl+Nom:eh       FINAL1 ;
++A+Pl+Acc:ide      FINAL1 ;
++A+Pl+Gen:i        FINAL1 ;
++A+Pl+Ill:ide      FINAL1 ;
++A+Pl+Ine:ine      FINAL1 ;
++A+Pl+Ine:ene      FINAL1 ;
++A+Pl+Ela:ijste    FINAL1 ;
++A+Pl+Com:igujmie  FINAL1 ;
++A+SgNomCmp:e  R ;
++A+SgGenCmp:en R ;
++A+PlGenCmp:i  R ;
+  
 
 LEXICON PRED_S
  +A+Sg+Nom:%>s FINAL1 ; ! Awaiting full adj analysis 
@@ -1356,9 +1377,11 @@ LEXICON ODDCOMP
 +A+Comp+Attr+Use/Sub:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
 +A+Comp+Use/Sub:%>abp ABPA ;
 +A+Comp:%>åbp ÅBPOE ;
+
 +A+Superl+Attr:%>ommes ATTRCONT ;
-+A+Superl+Attr:%>ammes ATTRCONT ;
-:%>ommes OMMES ;
++A+Superl+Attr+Use/Sub:%>ammes ATTRCONT ;
++A+Superl+Use/Sub:%>ammes OMMES ;
++A+Superl:%>ommes OMMES ;
 +A+Comp+Der1+Der/Dimin+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
 +A+Comp+Der1+Der/Dimin+Attr+Use/NG+Use/Sub:%>abpe%»tje ATTRCONT ;
@@ -1558,29 +1581,6 @@ LEXICON MES
 +A+Superl+SgGenCmp:masse%>n R ;
 +A+Superl+PlGenCmp:mass%>i  R ;
 
-!!!LEXICON MES_oe MLK: not IN USE
-!!!+A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP          FINAL1 ;
-!!!+A+Superl+Sg+Nom:%>%^COMPDISIMP2mes%^DISIMP          FINAL1 ;
-!!!+A+Superl+Sg+Acc:masse%>m       FINAL1 ;
-!!!+A+Superl+Sg+Gen:masse%>n       FINAL1 ;
-!!!+A+Superl+Sg+Ill:masse%>se      FINAL1 ;
-!!!+A+Superl+Sg+Ine:masse%>sne     FINAL1 ;
-!!!+A+Superl+Sg+Ela:masse%>ste     FINAL1 ;
-!!!+A+Superl+Sg+Com:mass%>ine      FINAL1 ;
-!!!+A+Superl+Pl+Nom:%>%^COMPDISIMP%>mass%>%^DISIMPh        FINAL1 ;
-!!!+A+Superl+Pl+Nom:%>%^COMPDISIMP2%>mass%>%^DISIMPh        FINAL1 ;
-!!!+A+Superl+Pl+Acc:%>mass%>ide      FINAL1 ;
-!!!+A+Superl+Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMP IGENSUFF ;
-!!!+A+Superl+Pl+Gen:%>%^COMPDISIMP2%>mass%>%^DISIMP IGENSUFF ;
-!!!+A+Superl+Pl+Ill:%>mass%>ide      FINAL1 ;
-!!!+A+Superl+Pl+Ine:%>mass%>ine      FINAL1 ;
-!!!+A+Superl+Pl+Ela:%>mass%>ijste    FINAL1 ;
-!!!+A+Superl+Pl+Com:%>mass%>igujmie  FINAL1 ;
-!!!+A+Superl:mass            EVEN_ESS ;
-!!!+A+Superl+SgNomCmp:%>%^COMPDISIMPmes%^DISIMP    R ;
-!!!+A+Superl+SgNomCmp:%>%^COMPDISIMP2mes%^DISIMP    R ;
-!!!+A+Superl+SgGenCmp:masse%>n R ;
-!!!+A+Superl+PlGenCmp:mass%>i  R ;
 
 LEXICON OMMES
 +A+Superl+Sg+Nom:%^DISIMP         FINAL1 ;
@@ -1591,7 +1591,7 @@ LEXICON OMMES
 +A+Superl+Sg+Ela:%>istie           FINAL1 ;
 +A+Superl+Sg+Com:%>inie            FINAL1 ;
 +A+Superl+Pl: N_ODD_PL ;
-+A+Superl:      N_ODD_ESS ;
++A+Superl: N_ODD_ESS ;
 +A+Superl+SgNomCmp:            R ;
 +A+Superl+SgGenCmp:e%>n        R ;
 +A+Superl+PlGenCmp:%>%^DISIMPi R ;
