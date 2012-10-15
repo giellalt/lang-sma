@@ -89,12 +89,12 @@ LEXICON ORRE
 +Use/NG:urre EVENCOMPONLY ;
 +Use/NG:urre EVENCOMP ;
 +Use/NG:urre DIMCOMP ;  
-       +Use/Sub:orr e_ES_ODDEVEN ; !comment from Aajege, MLK: bør subbes. orresistie?  
+!+Use/Sub:orr e_ES_ODDEVEN ; !comment from Aajege, MLK: bør subbes. orresistie? - THIS IS HOPELESS,skulle subbe denne, men jeg forstår ikke hvorofr det ikke er mulig? 
 
  
-LEXICON STOERE
- :stoer e_E_EVENNOCOMP  ;
-+Use/NG:stoerr e_E_EVENNOCOMP  ;
+LEXICON STOERE  ! This is hopeless, stoerebe-stoeremes bør subbes, men hvorfpor går det ikke?
+        :stoerr e_E_EVENNOCOMP ;
++Use/Sub:stoer e_E_EVENNOCOMP ;
 +Use/Sub:stuerre EVENCOMPONLY ;
 +Use/Sub:stoerre EVENCOMPONLY ;
  STOERE_COMP ;
@@ -186,9 +186,9 @@ LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_OD
 LEXICON GEEHPES
  :geehpes ODDCASEOBL ;
  :geehpe ATTR_S ;
-+Use/Sub:geehpe s_S_ODD  ; ! ikke riktig iflg. Aajege, ikke dokumentert i corp eller LMM, MLK: Denne er riktig. geehpes-geehpesåbpoe-geehpesommes- giehpebe-geehpemes
-+Use/NG:geahpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
- :geahpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
++Use/Sub:geehpe s_S_ODD  ; 
++Use/NG:giehpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
+ :giehpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
 +Use/NG:geehpe MES ;
  :gyöhpehk HKE_ODD_COMP ;
 +Use/NG:geehpe PRED_S ;
