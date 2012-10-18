@@ -437,7 +437,8 @@ dåasvah:dåasv ah_AN_ODD ; ! !SOUTH
 dåedtjies:dåedtj ies_IES_EVEN ;
 dåeriedihks+CmpN/SgN+CmpN/SgG+CmpN/PlG:dåeriedihk ihks_IHKS_EVENNOCOMP ;
 dåermies ATTR_0 ; !Pred = innesiv, flertall: dåermine, eller gentiv entall: dåermien
-dålhtjoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:dålhtj oeh_AN_ODD ; !LA iflg. LMM
+dålhtjoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:dålhtj oeh_OEH_AN_ODDNOCOMP ; ! Dulhtjie 
+
 dåmpoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:dåmp oeh_OEH_ODD ;
 dånghkoeh:dånghk oeh_OEH_ODDNOCOMP ; !NORTH!SYSTEM1, ATTR OG PRED= DÅNGHKOEH
 dånghkoeh:dånghkahk ODDCOMP ; !dånghkahkåbpoe
@@ -694,7 +695,6 @@ gahkoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:gahk oes_OES_ODDas ; ! !-gahkasåbpoe
 gajhnoeh:gajhn oeh_AN_ODD ; !  
 gakngah:gakng ah_AN_ODD ; !
 galhpah:galhp ah_AH_ODD ; !SOUTH
-galhpoeh:galhp oeh_OEH_ODD ;
 galkije:galkije ije_ODDNOCOMP ; ! galkije tjaetsie pred.- verbform
 gallas+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:gallasadtj eCASE ; !LA
 gallas+CmpN/SgN+CmpN/SgG+CmpN/PlG:galla ATTR_S ;
@@ -831,7 +831,6 @@ guhkies:guhk ies_IES_IE_EVEN ; !  ! Klasse 3Comp: guhkebe, guhkemes
 guhkiesjuelkie+CmpN/SgN+CmpN/SgG+CmpN/PlG:guhkies#juelk ie_IE_EVENNOCOMP ;
 guhtseles+CmpN/SgN+CmpN/SgG+CmpN/PlG:guhtsiel Ces_CES_CE_ODD ; ! COMP:IE
 gujtege:gujteg Ce_CE_ODD ; !gojtehke
-gulhpies+CmpN/SgN+CmpN/SgG+CmpN/PlG:gulhp ies_IES_EVEN ;
 gulmientsagkeldh:gulmien#tsagkeldh PRED_0 "forsynt med trekløftstenger, suler" ;
 gumhtems:gumhtem Cs_CE_ODDNOCOMP ; !SOUTH - DONT KNOW
 gunkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:gunkies ATTR_0 ;
@@ -876,9 +875,16 @@ gåedtsies:gåedts ies_IES_IE_EVEN ;
 gåersies:gåers ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN ; ! 
 gåesties:gåest ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN ;
 gåetievielieh+CmpN/SgN+CmpN/SgG+CmpN/PlG:gåetievielieh ø_Ø_EVEN ;
-gåffoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:gåff oeh_OEH_ODD ;
+gåffoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:gåff oeh_OEH_ODD ;! susbtantiv 'guffe'
 gåhketje:gåhketj Ce_CE_ODD ;
-gålhpoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:gålhp oeh_OEH_ODD ;
+!
+gålhpoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:gålhp oeh_OEH_ODD ;!  Substantiv 'gulhpie’
+gålhpoeh:galhp oeh_OEH_ODD ;
+gålhpoeh:galhp ah_AN_ODD ;
+gulhpies+CmpN/SgN+CmpN/SgG+CmpN/PlG:gulhp ies_IE_EVEN ;
+gulhpies+Use/Sub:galhpas ATTR_0 ;
+gulhpies+Use/Sub:galhpa PRED_0 ;
+!
 gåpmoeh:gåpm oeh_AN_ODDNOCOMP ; ! !SYSTEM4 ! 
 gåpmoeh:gapm ah_AN_ODDNOCOMP ;
 gåptoeburrie:gåptoe BURRIE ; ! 
@@ -886,7 +892,8 @@ gårroeh:gårroeh ATTR_0 ;
 gåvhtoeh:gåvht oeh_AN_ODD ; !  
 gåvloes:gåvloe ATTR_S ;
 gåvnjoeh:gåvnj oeh_AN_ODD ;
-gåvsoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:gåvs oeh_AN_ODD ; !LA iflg. LMM
+gåvsoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:gåvs oeh_AN_ODD ; !Substantiv 'gevsie'
+gåvsoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:gåvs oeh_OEH_AN_ODDNOCOMP ; !’gevsie’
 gåvva PRED_0 ; 
 gååmhpedihks+CmpN/SgN+CmpN/SgG+CmpN/PlG:gååmhpedihk ihks_IHKS_EVENNOCOMP ; !gååmhpedidh
 gååre:gåår e_E_EVEN ;
@@ -1276,7 +1283,7 @@ kjemiteknihkeles:kjemi#teknihkel LES ;
 klaajpijes:klaajpij ijes_ijs_IJE_ODD ;
 klaeries:klaer ies_IE_EVEN ;  !  Klasse 3
 klassihkeles:klassihkel LES ;
-kleavvoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:kleavv oeh_AN_ODD ; !  
+kleavvoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:kleavv oeh_AN_ODD ; ! Substantiv 'klievvie'  
 klijmie:klijm ie_IE_EVEN ;
 klimateknihkeles:klima#teknihkel LES ;
 klinihkeles:klinihkel LES ;
@@ -1422,7 +1429,7 @@ laenjeds:laenjied Cs_CS_CE_ODD ; ! COMP:IE
 laktjeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:laktjar Ces_CES_CE_ODD ; ! VED COMP:A
 lapsoes:laps as_AS_ODD ;
 lapsoes:lapsoe s_S_ODD ;
-larhvah:larhv ah_AN_ODD ;
+
 laserfysihkeles:laser#fysihkel LES ;
 laserteknihkeles:laser#teknihkel LES ;
 laskes:laske s_S_ODD ;
@@ -1511,11 +1518,13 @@ låeblies:låebl ies_IES_IE_EVEN ; !  ! Klasse 3låeblebe
 låebties:låebt ies_IES_IE_EVEN ; !  ! Klasse 3låebtebe
 låedtjies:låedtj ies_IE_EVEN ;  !  Klasse 3 !no 3-syll paradigm
 låemties:låemt ies_IE_EVEN ;  !  Klasse 3
+haerhpies:haerhp ies_IE_EVEN ; ! Klasse 3
 låepies:låepie s_S_ODD ;
 låhkije:låhkije ije_ODDNOCOMP ;
 låhkijes:låhkij ijes_ijs_IJE_ODDNOCOMP ;
 låpsoes:låpsoe s_S_ODDNOCOMP ;
-lårhvoeh:lårhv oeh_AN_ODD ; ! 
+lårhvoeh:lårhv oeh_AN_ODD ; ! lurhvie = hundenavn
+lårhvoeh:larhv ah_AN_ODD ;! lurhvie
 låssas:låssas ATTR_0 ;
 låvletje:låvletj Ce_CE_ODD ;
 låvnoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:låvn oeh_AN_ODD ; !
@@ -2336,7 +2345,7 @@ serebraale+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:cerebra AALE ;
 serebraale+CmpN/SgN+CmpN/SgG+CmpN/PlG:serebraal AALEFORMS ;
 servijle+CmpN/SgN+CmpN/SgG+CmpN/PlG:serv IJLE_LOAN ;
 servoteknihkeles:servoteknihkel LES ;
-setnies:setnies ATTR_0 ;
+saetnies+Use/Sub:setnies ATTR_0 ;! 
 sfragistihkeles:sfragistihkel LES ;
 sibijren:sibijren ATTR_0 ;
 sibïrske:sibïrsk e_ES_LOAN ;
@@ -3195,13 +3204,16 @@ yöskeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:yösker Ces_CES_ODD ; !yöskerabpa/råbpoe
 zoofysihkeles:zoofysihkel LES ;
 åestemes:åestemes ATTR_0 ;
 åahpetje:åahpatj Ce_CE_ODD ; !LA
-åajvah+CmpN/SgN+CmpN/SgG+CmpN/PlG:åajv ah_AH_ODD ;
-åajvas+CmpN/SgN+CmpN/SgG+CmpN/PlG:åajv as_AS_ODD ;
+
 åajvijes:åajvij ATTR_es_s ;
+åajvoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:åajv ah_AH_ODD ;
+åajvoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:åajv as_AS_ODD ;
+åajvoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:åajvoe s_S_ODD ;
 åajvoeh:åajvoeh ø_Ø_EVEN ; !KB: komp. åajvebe, +corp
 åajvoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:åajvoehk ODDCOMP ; ! ikke LMM, ikke corp! MLK: Men, Helt vanlig komparasjon i s-samisk
 åajvoeh:åajvoe EVENCOMP ; !KB: komp. åajvebe, +corp
-åajvoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:åajvoe s_S_ODD ;
+
+
 åakserge:åaksarg Ce_CE_ODD ; ! COMP:A åaksargommes, av åaksargammes - av åeksie
 åavroes:åavr as_AS_ODD ;
 åavroes:åavr oes_OES_ODDas ; !"åavroes bijjjie-het dag"
