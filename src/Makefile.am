@@ -20,14 +20,14 @@ SUBDIRS = phonology morphology filters phonetics hyphenation orthography syntax 
 # remove.
 analyser-%.hfst: analyser-%.tmp.hfst \
 				filters/remove-test-tags.hfst
-	$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
+	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
 			-1 filters/remove-test-tags.hfst \
 		| $(HFST_INVERT) \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
 
 analyser-%.xfst: analyser-%.tmp.xfst \
 				filters/remove-test-tags.xfst
-	$(PRINTF) "read regex \
+	$(AM_V_GEN)$(PRINTF) "read regex \
 				@\"filters/remove-test-tags.xfst\" \
 			.o. @\"$<\" ;\n\
 		 save stack $@\n\
@@ -36,14 +36,14 @@ analyser-%.xfst: analyser-%.tmp.xfst \
 # And also for the generator:
 generator-%.hfst: generator-%.tmp.hfst \
 				filters/remove-test-tags.hfst
-	$(HFST_INVERT) $< | $(HFST_COMPOSE) $(HFST_FLAGS) -F \
+	$(AM_V_GEN)$(HFST_INVERT) $< | $(HFST_COMPOSE) $(HFST_FLAGS) -F \
 			-1 filters/remove-test-tags.hfst \
 		| $(HFST_INVERT) \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
 
 generator-%.xfst: generator-%.tmp.xfst \
 				filters/remove-test-tags.xfst
-	$(PRINTF) "read regex \
+	$(AM_V_GEN)$(PRINTF) "read regex \
 				@\"$<\" \
 			.o. @\"filters/remove-test-tags.xfst\".i \
 			;\n\
