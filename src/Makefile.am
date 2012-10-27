@@ -13,6 +13,14 @@ SUBDIRS = phonology morphology filters phonetics hyphenation orthography syntax 
 #### the processing to get the final target transducer.
 #### Remember to add the dependencies as well.
 #### Also make sure that HFST and Xerox processing are the same.
+####
+#### NB!!!! The HFST targets should get a hyphen after 'analyser'/'generator'
+#### respectively, to make the local targets minimally different from and
+#### slightly more specific than the fallback targets. This is to avoid warnings
+#### about duplicate targets. That is, the local targets should looke like:
+####
+#### analyser-%.hfst: analyser-%.tmp.hfst
+#### generator-%.hfst: generator-%.tmp.hfst
 
 #### BEGIN: Add local processing instructions BELOW this line ####
 
@@ -36,9 +44,8 @@ analyser-%.xfst: analyser-%.tmp.xfst \
 # And also for the generator:
 generator-%.hfst: generator-%.tmp.hfst \
 				filters/remove-test-tags.hfst
-	$(AM_V_GEN)$(HFST_INVERT) $< | $(HFST_COMPOSE) $(HFST_FLAGS) -F \
+	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F $< \
 			-1 filters/remove-test-tags.hfst \
-		| $(HFST_INVERT) \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
 
 generator-%.xfst: generator-%.tmp.xfst \
@@ -53,11 +60,15 @@ generator-%.xfst: generator-%.tmp.xfst \
 #### END: Add local processing instructions ABOVE this line ######
 
 #### HFST transducer fallback target:
-#### - inversion is needed because the hfst model is upside-down compared to
-#### Xerox, and the other commands makes the final transducer ready for use.
-%.hfst: %.tmp.hfst
+#### - inversion is needed FOR THE ANALYSER because the hfst model is upside
+#### down compared to Xerox AT APPLICATION TIME. The other command makes the
+#### final transducer ready for use.
+analyser%.hfst: analyser%.tmp.hfst
 	$(AM_V_GEN)$(HFST_INVERT) $< \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+
+generator%.hfst: generator%.tmp.hfst
+	$(AM_V_GEN)$(HFST_FST2FST) $(HFST_FLAGS) -f olw -i $< -o $@
 
 #### Xerox transducer fallback target:
 %.xfst: %.tmp.xfst
