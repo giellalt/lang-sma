@@ -132,8 +132,8 @@ baeskies:baesk ies_IES_IE_EVEN ; ! Klasse 3
 baetjkies:baetjk ies_IES_IE_EVEN ; ! Klasse 3 !  ! Klasse 3  baetjkebe, baetjkemes
 baetskies:baetsk ies_IE_EVEN ;  !  Klasse 3
 baetskies+Use/Sub:baetskiek ODDCOMP ; !ComP: baetskiekåbpoe, baetskiekommes, baetskebe, baetskemes
-bagkoeh:bagk ah_AN_ODD ; ! 
-bagkoeh:bagk oeh_AN_ODD ; !  
+bagkoeh:bagk ah_AN_ODDNOCOMP ; ! 
+bagkoeh:bagk oeh_AN_ODDNOCOMP ; !  Ikke vanlig å komp.
 bahhas+CmpN/SgN+CmpN/SgG+CmpN/PlG:bahhas ATTR_0 ; 
 ballistihkeles:ballistihkel LES ;
 balneske:balnesk Ce_CE_ODDNOCOMP ; !attr=pred:balneske
@@ -239,12 +239,16 @@ byölehts:byölehtadtj eCASE ;
 byölehts:byölehth PRED_0 ;
 byölehts:byölehts ATTR_0 ;
 byöpmijes:byöpmij ijes_ijs_IJE_ODDNOCOMP ; 
-båadtsoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:båadts oeh_AN_ODDNOCOMP ; ! komp?
-båadtsoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:båadts oes_OES_ODDahk ; 
+båadtsoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:båadts oeh_AN_ODD ; ! Egentlig ikke vanlig å komp. er man naken, så er man naken.
 båadtsoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:båadts ah_AN_ODDNOCOMP ; !
+båadtsoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:båadtsoes ATTR_0 ; 
+båadtsode PRED_0 ; ! tre adj. som har ode-som predikativform: båadtsode, skåalvode og båajhtode. 
+skåalvoeh ATTR_0 ;
+skåalvode PRED_0 ;
 båajoes:båaj as_AS_ODDNOCOMP ; !-båajasåbpoe
 båajhtoeh:båajhtah ATTR_0 ;
 båajhtoeh:båajhtoeh ATTR_0 ; ! dïhte båajhtode - pred i adv.fila 
+båajhtode PRED_0 ;
 båajoes:båajoe s_S_ODDNOCOMP ;
 båajpoeh:båajp oeh_OEH_ODD ; !båajpoehkåbpoe
 båantoes+CmpN/SgN+CmpN/SgG+CmpN/PlG:båant oeh_AN_ODD ; 
@@ -258,18 +262,19 @@ båatsoeburrie:båatsoe BURRIE ; !
 båavhlijes:båavhlij ijes_ijs_IJE_ODD ; 
 båavhroeh:båavhr ah_AN_ODD ; ! !SOUTH
 båavhroeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:båavhr oeh_AN_ODD ; ! ! 
-båavjoeh:båavj ah_AN_ODDNOCOMP ;  !  Slå sammen til et leksikon? oeh-ah -an -adjektivene 
-båavjoeh:båavj oeh_AN_ODDNOCOMP ; ! Slå sammen til et leksikon? oeh-ah -an -adjektivene.  
+båavjoeh:båavj ah_AH_AN_ODD ;  !  
+båavjoeh:båavj oeh_OEH_AN_ODD ; !   
 båeries: BAERIES ;
 båeriesisse+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpN/SgG+CmpN/PlG:båeriesiss e_E_EVENNOCOMP ;
 båerieslaaketje:båeries#laaketj Ce_CE_ODDNOCOMP ;
 båetije:båetije ije_ODDNOCOMP ;
-båevties:båavtas ODDCOMP ;
+!båevties:båavtas ODDCOMP ;
 båevties:båevt ies_IES_IE_EVEN ; ! Klasse 3
-bågkoeh:bågk oeh_AN_ODD ; ! !  
+bågkoeh:bågk oeh_AN_ODDNOCOMP ; ! Ikke vanlig å komp: 
 båljoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:balj ah_AH_ODD ;
 båljoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:bålj oeh_OEH_ODD ;
-båmhpoeh:båmhp oeh_AN_ODD ; !  
+båmhpoeh:båmhp oeh_AN_ODD ; ! tjåmhpoeh-
+ 
 bånhtoeh:bånht oeh_AN_ODD ; ! !  
 bårhveds:bårhvad Cs_CS_ODD ;
 bårhvijes:bårhvij ijes_ijs_IJE_ODD ; !attr:BÅRHVIJES/ pred: BÅRHVIJES/BÅRHVIJE : ikke iflg LMM
@@ -286,7 +291,7 @@ bårrehks:bårrehk Cs_CE_ODD ;!avl. av bårredh
 bårsije:bårsije ije_ODDNOCOMP ;
 bårsijes:bårsij ijes_ijs_IJE_ODDNOCOMP ; ! : endra fra bårijes
 båsjloeh:båsjl oeh_AN_ODD ; !  
-båtnjoeh:båtnj oeh_AN_ODD ; !LA iflg. LMM
+båtnjoeh:båtnj oeh_AN_ODDNOCOMP ; ! Ikke vanlig å komp. som 'nåajsan'. Ååpsen båtnjan
 båvsoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:båvs oeh_AN_ODD ; !  
 båvveles:båvvel Ces_CES_CE_ODD ; !buvvedh ie-st. -> a-st.
 bååhkesjæjja+CmpN/SgN+CmpN/SgG+CmpN/PlG:bååhkesjæjja ATTR_0 ; ! baker; bakende
@@ -1801,7 +1806,7 @@ njalhkedihks:njalhkedihks ihks_IHKS_EVENNOCOMP ;  !LMM
 njalhkeds:njalhked Cs_CS_CE_ODD ; ! Lena K: ok contlex
 njalke:njalk e_ES_ODDEVEN ; ! Klasse 2 ! e(2)-st. system2  
 njalkedihks:njalkedihk ihks_IHKS_EVENNOCOMP ;
-njamhkan:njamhk an_AN_ODDNOCOMP ; !
+njamhkan PRED_0 ; !
 njarhke+CmpN/SgN+CmpN/SgG+CmpN/PlG:njarhk e_ES_EVEN ; ! 
 njarhke:njarhkes ATTR_0 ; !LA
 njavleske:njavlesk Ce_CE_ODD ;
@@ -1875,8 +1880,8 @@ nuvvije:nuvvije ije_ODDNOCOMP ; ! avledet av nuvvedh - feller hår, røyte hår
 nyjsenæjja+CmpN/SgN+CmpN/SgG+CmpN/PlG:nyjsenæjja ATTR_0 ; !Kvinnelig
 nynnehke:nynnehk Ce_CE_ODD ; !'OE' eller 'A'  ! attr. nænnoes, nænnas, nannas, mannoes; pred. nynnehke, nonnehke, monnehke
 nåagkoeh:nåagk oeh_AN_ODD ; ! 
-nåajjoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåajj oeh_OEH_ODDNOCOMP ; !nåajjakåbpoe
-nåajsan+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåajs an_AN_ODDNOCOMP ;
+nåajjoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåajj oeh_AN_ODDNOCOMP ; !attr.form sjelden brukt
+nåajsoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåajs oeh_AN_ODDNOCOMP ;!Nåajsoeh nyjsenæjja tjaangi gåatan: attr.form sjelden brukt
 nåake: NAAKE ; !LA
 nåantah+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåant ah_AN_ODD ; !LA iflg. LMM
 nåavedeleejnes:nåavede LEEJNES ;
@@ -2433,8 +2438,8 @@ skreahpoeh:skreahp oeh_OEH_ODD ;
 skrovhpes:skrovhpe s_S_ODD ; !dröy eller udröy :-)
 skråadtjoeh:skråadtj oeh_AN_ODD ; ! 
 skråajhpa:skråajhp a_A_EVEN ;
-skråajhpoeh:skråajhp oeh_AN_ODD ; !skråajhpakåbpoe
-skråajhvan:skråajhv an_AN_ODDNOCOMP ; !skråajhvakåbpoe
+skråajhpoeh:skråajhp oeh_AN_ODD ; !skråajhpoekåbpoe
+skråajhvoeh:skråajhv oeh_AN_ODDNOCOMP ; !skråajhvoekåbpoe
 skråanhkoeh:skråanhk oeh_AN_ODD ; ! 
 skrådtjoeh:skrådtj oeh_AN_ODD ; ! 
 skråmhkoes:skråmhkoes ATTR_0 ; !som knaker når man går på den,is f.eks
@@ -2491,7 +2496,7 @@ slaatjijes:slaatjij ijes_ijs_IJE_ODDNOCOMP ; ! Sjekk opp!
 slaave:slaave ATTR_0 ;
 slaavvah:slaavv ah_AN_ODD ; ! 
 slabnjoeh:slabnj oeh_AN_ODD ; ! 
-slabrah:slabr ah_AN_ODD ; !slabrah-bieljie :nedhengende
+slabroeh:slabr ah_AN_ODD ; !slabrah-bieljie :nedhengende
 slabroeh:slabr oeh_OEH_AN_ODD ; ! !slabroeh-bieljie, slabre-bieljie
 slaetsies:slaets ies_IES_IE_EVEN ; ! Klasse 3
 slahtjan:slahtj an_AN_ODDNOCOMP ; !slahtjakåbpoe
@@ -2750,7 +2755,7 @@ sårhvoeh:sårhv oeh_OEH_AN_ODD ; !
 sårjoeh:sårj oeh_OEH_ODD ; !SYSTEM1, attr=pred
 sårkoes:sårkoe s_S_ODD ; !LA Saaran gærja
 såvsoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:såvs ah_AN_ODD ;
-såvsoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:såvs oeh_AN_ODD ; !  LMM
+såvsoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:såvs oeh_OEH_AN_ODD ; !  LMM
 sååkehke:sååkehk Ce_CE_ODD ; !SOUTH!- SEEKES/ SØØKES attr. söökes, *seekes
 sååkehtje:sååkehtj Ce_CE_ODDNOCOMP ; 
 såålhtehks:såålhtehk Cs_CE_ODD ;
@@ -2897,7 +2902,7 @@ tjåaloeh:tjåal oeh_AN_ODD ; !
 tjåaloehtjelmieh+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåaloeh#tjelmieh  ATTR_0 ; !Pred= substantiv, tjåaloeh-tjelmien genitiv.(gjör aktivt selv) !tjåaloeh-tjelmije almetje(permanent) dïhte almetje lea tjåaloeh-tjelmmije(er slik permanent).Men, burde ikke andre leddet være uten -h, med bare 'tjelmie'.?
 tjåalpah+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåalpa PRED_0 ;  !LA: tjåalpah er også lemma! MLK: I think this one 'tjåalpa’ is also a substantiv, i north-southsámi it would be tjåalpoeh/tjåalpan- which would be 'tjåalpe' as a substantiv. In south-southsámi they have an -a- instead of -oe-.
 tjåalpoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåalp ah_AN_ODD ; !
-tjåalpoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåalp oeh_AN_ODD ;!
+tjåalpoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåalp oeh_OEH_AN_ODD ;!
 tjåanghkeruktie:tjåanghkerukt ie_IE_EVENNOCOMP ;
 tjåankoeh:tjåank oeh_AN_ODD ;
 tjåankoeh:tjåank ah_AH_ODD ;
@@ -2969,13 +2974,12 @@ truvkes:truvk es_ES_EVEN ;
 truvkes:truvkehk HKE_ODD_COMP ;
 tryjjes:tryjj es_ES_EVEN ;
 tråjjes:tråjj es_ES_EVEN ;
-
 tråmstah+CmpN/SgN+CmpN/SgG+CmpN/PlG:tråmst ah_AN_ODD ; ! !SOUTH  
 tröjjes:tröjj es_ES_EVEN ;
 trööjjes:trööjj es_ES_EVEN ; 
 tsaajhtsehks+CmpN/SgN+CmpN/SgG+CmpN/PlG:tsaajhtsehk hks_hke_HKS_HKE_ODD ;
 tseagkah:tseagk ah_AN_ODD ; !
-tseagkoeh:tseagk oeh_AN_ODD ; !
+tseagkoeh:tseagk oeh_AN_ODD ; !tseagkoehkåbpoe. pred-an er mindre vanlig, veldig vanlig i comp.
 tseaktseburrie:tseaktse BURRIE ; ! 
 tsuejhkeles:tsuejhkiel Ces_CES_CE_ODD ; ! COMP:IE
 tsåakeles:tsåakel Ces_CES_CE_ODD ; !'tsåakele' =grundt parti ved en elv.
