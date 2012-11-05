@@ -1,0 +1,109 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+ Adj - noere: # adj. on -e
+    noere+A+Attr: noere
+    noere+A+Sg+Nom: noere
+    noere+A+Sg+Gen: noeren
+    noere+A+Sg+Acc: noerem
+    noere+A+Sg+Ill: noerese
+    noere+A+Sg+Ine: noeresne
+    noere+A+Sg+Ela: noereste
+    noere+A+Sg+Com: noerine
+    noere+A+Pl+Nom: [noereh, noerh]
+    noere+A+Pl+Gen: noeri
+    noere+A+Pl+Acc: noeride
+    noere+A+Pl+Ill: noeride
+    noere+A+Pl+Ine: noerine
+    noere+A+Pl+Ela: noerijste
+    noere+A+Pl+Com: noerigujmie
+    noere+A+Ess: noerine
+    noere+A+Comp+Attr: nuerebe
+    noere+A+Comp+Sg+Nom: nuerebe
+    noere+A+Comp+Sg+Gen: nuereben
+    noere+A+Comp+Sg+Acc: nuerebem
+    noere+A+Comp+Sg+Ill: nueriebasse
+    noere+A+Comp+Sg+Ine: nueriebisnie
+    noere+A+Comp+Sg+Ela: nueriebistie
+    noere+A+Comp+Sg+Com: nueriebinie
+    noere+A+Comp+Pl+Nom: nuerebh
+    noere+A+Comp+Pl+Acc: nueriebidie
+    noere+A+Comp+Pl+Gen: [nuerebi, nuerebij]
+    noere+A+Comp+Pl+Ill: nueriebidie
+    noere+A+Comp+Pl+Ine: nueriebinie
+    noere+A+Comp+Pl+Ela: nueriebijstie
+    noere+A+Comp+Pl+Com: nuerebigujmie
+    noere+A+Comp+Ess: nueriebinie
+    noere+A+Superl+Attr: nööremes
+    noere+A+Superl+Sg+Nom: nööremes
+    noere+A+Superl+Sg+Gen: nööremassen
+    noere+A+Superl+Sg+Acc: nööremassem
+    noere+A+Superl+Sg+Ill: nööremassese
+    noere+A+Superl+Sg+Ine: nööremassesne
+    noere+A+Superl+Sg+Ela: nööremasseste
+    noere+A+Superl+Sg+Com: nööremassine
+    noere+A+Superl+Pl+Nom: nööremesh
+    noere+A+Superl+Pl+Acc: nööremasside
+    noere+A+Superl+Pl+Gen: [nööremessi, nööremessij]
+    noere+A+Superl+Pl+Ill: nööremasside
+    noere+A+Superl+Pl+Ine: nööremassine
+    noere+A+Superl+Pl+Ela: nööremassijste
+    noere+A+Superl+Pl+Com: nööremassigujmie
+    noere+A+Superl+Ess: nööremassine
+    
+  Adj - noere: # adj. on -e  # Sørlig- Røros, sjekk opp disse, er ikke sikre
+    noere+A+Attr: noere
+    noere+A+Sg+Nom: noere
+    noere+A+Sg+Gen: noeren
+    noere+A+Sg+Acc: noerem
+    noere+A+Sg+Ill: noerese
+    noere+A+Sg+Ine: noeresne
+    noere+A+Sg+Ela: noereste
+    noere+A+Sg+Com: noerine
+    noere+A+Pl+Nom: [noereh, noerh]
+    noere+A+Pl+Gen: noeri
+    noere+A+Pl+Acc: noeride
+    noere+A+Pl+Ill: noeride
+    noere+A+Pl+Ine: noerine
+    noere+A+Pl+Ela: noerijste
+    noere+A+Pl+Com: noerigujmie
+    noere+A+Ess: noerine
+    noere+A+Comp+Attr: noerebe
+    noere+A+Comp+Sg+Nom: noerebe
+    noere+A+Comp+Sg+Gen: noereben
+    noere+A+Comp+Sg+Acc: noerebem
+    noere+A+Comp+Sg+Ill: noerebasse
+    noere+A+Comp+Sg+Ine: noerebisnie
+    noere+A+Comp+Sg+Ela: noerebistie
+    noere+A+Comp+Sg+Com: noerebinie
+    noere+A+Comp+Pl+Nom: noerebh
+    noere+A+Comp+Pl+Acc: noerebidie
+    noere+A+Comp+Pl+Gen: [noerebi, noerebij]
+    noere+A+Comp+Pl+Ill: noerebidie
+    noere+A+Comp+Pl+Ine: noerebinie
+    noere+A+Comp+Pl+Ela: noerebijstie
+    noere+A+Comp+Pl+Com: noerebigujmie
+    noere+A+Comp+Ess: noerebinie
+    noere+A+Superl+Attr: noeremes
+    noere+A+Superl+Sg+Nom: [nööremes, nööremos, noeremos]
+    noere+A+Superl+Sg+Gen: [noeremassen, nööremossen, noeremossen]
+    noere+A+Superl+Sg+Acc: [noeremassem, nööremossem, noeremossem]
+    noere+A+Superl+Sg+Ill: [noeremassese, nööremossese, noeremossese]
+    noere+A+Superl+Sg+Ine: [noeremassesne, nööremossesne, noeremossesne]
+    noere+A+Superl+Sg+Ela: [noeremasseste, nööremosseste, noeremosseste]
+    noere+A+Superl+Sg+Com: [noeremassine, nööremossine, noeremossine]
+    noere+A+Superl+Pl+Nom: [noeremesh, nööremosh, noeremosh]
+    noere+A+Superl+Pl+Acc: [noeremasside,nööremosside, noeremosside]
+    noere+A+Superl+Pl+Gen: [noeremassi, nööremossi, noeremossi]
+    noere+A+Superl+Pl+Ill: [noeremasside, nööremosside, noeremosside]
+    noere+A+Superl+Pl+Ine: [noeremossine, nööremossine,noeremossine]
+    noere+A+Superl+Pl+Ela: [noeremassijste,nööremossijste, noeremossijste]
+    noere+A+Superl+Pl+Com: noeremassigujmie, nööremossigujmie, noeremossigujmie]
+    noere+A+Superl+Ess: [noeremassine, nööremossine, noeremossine]
