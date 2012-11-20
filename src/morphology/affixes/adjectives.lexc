@@ -337,9 +337,9 @@ LEXICON ATTR_EVEN
 :ies ATTR_0 ;
 :e EVENCOMP ;
 
-LEXICON ATTR_ODD  
- ATTR_0 ;
- ODDCOMP ;
+!LEXICON ATTR_ODD  
+! ATTR_0 ;
+! ODDCOMP ;
 
 
 LEXICON ø_Ø_EVEN 
@@ -661,8 +661,8 @@ LEXICON ATTR_es_s ! aajtijes
 
 LEXICON ah_AH_ODD   !XXX mangler CASE - hva er riktig - kanskje EVEN?
   ah_AH_ODDNOCOMP ;
-:ahk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  
- 
+:ahk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  ah 
+      aCASE ;
 
 LEXICON ah_AH_ODDNOCOMP  
 :a     ATTR_H ;          ! Fjerna DISIMP
@@ -1651,17 +1651,17 @@ LEXICON LEEJNES
  +Use/Sub:-leejns ATTR_0 ;
 
 !__Foreløpig 
-LEXICON A_EVEN
-+N+Sg: MAANASGNOM ;
-+N:    MAANAOBL ;
-+N  :e  EVENCOMP ;
+!LEXICON A_EVEN
+!+N+Sg: MAANASGNOM ;
+!+N:    MAANAOBL ;
+!+N  :e  EVENCOMP ;
 
-LEXICON E_EVEN
-+N+Sg: NIEJTESGNOM ;
-+N+Sg: NIEJTESGOBL ;
-+N+Pl: NIEJTE_PL ;
-     :e  EVENCOMP ;
-+N: NIEJTEREST ;
+!LEXICON E_EVEN
+!+N+Sg: NIEJTESGNOM ;
+!+N+Sg: NIEJTESGOBL ;
+!+N+Pl: NIEJTE_PL ;
+!     :e  EVENCOMP ;
+!+N: NIEJTEREST ;
 
 LEXICON OE_EVEN
  +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
