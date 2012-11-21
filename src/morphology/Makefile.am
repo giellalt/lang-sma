@@ -15,6 +15,23 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# Temporary solution to let sma-oahpa have stable adjectives and nouns while
+# Maja is working her way through them.
+
+NOMINALS=
+
+if WANT_OAHPA
+NOMINALS+=\
+			affixes/adjectives-oahpa.lexc  \
+			stems/adjectives-oahpa.lexc    \
+			stems/nouns-oahpa.lexc
+else
+NOMINALS+=\
+			affixes/adjectives.lexc  \
+			stems/adjectives.lexc    \
+			stems/nouns.lexc
+endif # WANT_OAHPA
+
 # Set this to name of lexc file containing Multichar_Symbols and LEXICON Root
 GT_LEXC_ROOT=root.lexc
 
@@ -22,25 +39,23 @@ GT_LEXC_ROOT=root.lexc
 GT_LEXC_SRCS=\
 			clitics.lexc             \
 			compounding.lexc         \
-			affixes/adjectives.lexc  \
 			affixes/nouns.lexc       \
 			affixes/propernouns.lexc \
 			affixes/verbs.lexc       \
 			stems/abbreviations.lexc \
 			stems/acronyms.lexc      \
-			stems/adjectives.lexc    \
 			stems/adpositions.lexc   \
 			stems/adverbs.lexc       \
 			stems/conjunctions.lexc  \
 			stems/interjections.lexc \
-			stems/nouns.lexc         \
 			stems/numerals.lexc      \
 			stems/particles.lexc     \
 			stems/pronouns.lexc      \
 			stems/propernouns.lexc   \
 			stems/punctuation.lexc   \
 			stems/subjunctions.lexc  \
-			stems/verbs.lexc
+			stems/verbs.lexc         \
+			$(NOMINALS)
 
 # Set this to the names of all generated lexc files, if any
 GENERATED_LEXC_SRCS=
