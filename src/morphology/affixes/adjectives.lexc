@@ -266,7 +266,6 @@ LEXICON SKIEMTJIES !
 
 LEXICON MUJVIES 
  :mujvies ATTR_0 ; ! Pred=Substantiv mujvine - måjvan
- !:måjvas ODDCOMP ; 
  :mujv ieCASEOBL ;
  
 LEXICON s_AN_4 
@@ -1414,21 +1413,36 @@ LEXICON EVENCOMP_oe
  ! MES_oe ;
  DIMCOMP ;
 
-
 LEXICON ODDCOMP
 +A+Comp+Attr:%>åbpoe ATTRCONT ; ! båajoesåbpoe, *båajasåbpoe
 +A+Comp+Attr+Use/Sub:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
 +A+Comp+Use/Sub:%>abp ABPA ;
 +A+Comp:%>åbp ÅBPOE ;
-
-+A+Superl+Attr:%>ommes ATTRCONT ;
-+A+Superl+Attr+Use/Sub:%>ammes ATTRCONT ;
 :%>ammes OMMES ;
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dimin+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
 +A+Comp+Der1+Der/Dimin+Attr+Use/NG+Use/Sub:%>abpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dimin+Use/NG+Use/Sub:%>abpa%»tj  GÅATETJEadj ;
+
+
+LEXICON OMMES
++A+Superl+Sg+Nom:%^DISIMP         FINAL1 ;
++A+Superl+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
++A+Superl+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
+ +A+Superl+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++A+Superl+Sg+Ine:%>isnie           FINAL1 ;
++A+Superl+Sg+Ela:%>istie           FINAL1 ;
++A+Superl+Sg+Com:%>inie            FINAL1 ;
++A+Superl+Pl: N_ODD_PL ;
++A+Superl: N_ODD_ESS ;
++A+Superl+SgNomCmp:            R ;
++A+Superl+SgGenCmp:e%>n        R ;
++A+Superl+PlGenCmp:%>%^DISIMPi R ;
++A+Superl+Attr:%^DISIMP ATTRCONT ;
++A+Superl+Attr+Use/Sub:%^DISIMP ATTRCONT ;
+
+
 
 
 LEXICON EVENCOMPCASE
@@ -1625,19 +1639,6 @@ LEXICON MES
 +A+Superl+PlGenCmp:mass%>i  R ;
 
 
-LEXICON OMMES
-+A+Superl+Sg+Nom:%^DISIMP         FINAL1 ;
-+A+Superl+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
-+A+Superl+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
- +A+Superl+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-+A+Superl+Sg+Ine:%>isnie           FINAL1 ;
-+A+Superl+Sg+Ela:%>istie           FINAL1 ;
-+A+Superl+Sg+Com:%>inie            FINAL1 ;
-+A+Superl+Pl: N_ODD_PL ;
-+A+Superl: N_ODD_ESS ;
-+A+Superl+SgNomCmp:            R ;
-+A+Superl+SgGenCmp:e%>n        R ;
-+A+Superl+PlGenCmp:%>%^DISIMPi R ;
 
 
 LEXICON LAAKAN
@@ -1665,7 +1666,7 @@ LEXICON LEEJNES
 
 LEXICON OE_EVEN
  +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
-         N_OE ;
+        N_OE ;
  +N  :o  EVENCOMP ;
          
 
