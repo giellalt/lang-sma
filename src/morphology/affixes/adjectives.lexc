@@ -791,6 +791,12 @@ LEXICON oes_OES_ODDNOCOMP
 +A+Sg+Nom:oes         FINAL1 ;
 +A+SgNomCmp:oes            R ;
 
+LEXICON oes_OES_OE_ODD 
+:oes ATTR_0  ;
+:oes PRED_0  ;
+:o EVENCOMP ;
+: oeCASE ;
+
 LEXICON oes_OES_ODDahk 
    :oe  ATTR_S ;
    :oe  PRED_S ;
@@ -1081,8 +1087,8 @@ LEXICON ah_AN_ODDNOCOMP
 LEXICON AH_&_OEH_ODD
 :oeh ATTR_0 ;
 :ah ATTR_0 ;
-:oehk ODDCOMP ;
-:ahk ODDCOMP ;
+:oehk ODD_ÅBPOE ;
+:ahk ODD_ABPA ;
 :oeh PRED_0 ;
 :ah PRED_0 ;
 
@@ -1448,14 +1454,20 @@ LEXICON EVENCOMP_oe
  DIMCOMP ;
 
 LEXICON ODDCOMP
+ODD_ÅBPOE ;
+ODD_ABPA ;
+
+LEXICON ODD_ÅBPOE
 +A+Comp+Attr:%>åbpoe ATTRCONT ; ! båajoesåbpoe, *båajasåbpoe
-+A+Comp+Attr+Use/Sub:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
-+A+Comp+Use/Sub:%>abp ABPA ;
 +A+Comp:%>åbp ÅBPOE ;
-:%>ammes OMMES ;
 :%>ommes OMMES ;
 +A+Comp+Der1+Der/Dimin+Attr:%>obpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
+
+LEXICON ODD_ABPA
++A+Comp+Attr+Use/Sub:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
++A+Comp+Use/Sub:%>abp ABPA ;
++Use/Sub:%>ammes OMMES ;
 +A+Comp+Der1+Der/Dimin+Attr+Use/NG+Use/Sub:%>abpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dimin+Use/NG+Use/Sub:%>abpa%»tj  GÅATETJEadj ;
 
