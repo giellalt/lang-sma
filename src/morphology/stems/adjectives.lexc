@@ -61,9 +61,9 @@ aejlegs:aejlieg Cs_CE_ODD ;
 aejlies+CmpN/SgN+CmpN/SgG+CmpN/PlG:aejl ies_IES_IE_EVENNOCOMP ;
 aelhkies:aelhk ies_IE_EVEN ;  !  Klasse 3
 aelies:ael ies_IES_EVEN ; !SOUTH  ! Klasse 3
-aelmies:aelm ies_IES_EVENNOCOMP ;
+aelmies:aelm ies_IES_IE_EVENNOCOMP ;
 aelpieluktie:aelpielukt ie_IE_EVENNOCOMP ;
-aelpies:aelp ies_IE_EVEN ;  !  Klasse 3  ! 
+aelpies:aelp ies_IES_IE_EVEN ;  !  Klasse 3  ! 
 aelpies+Use/Sub:aelp ies_IES_EVEN ; ! 
 aerkies+CmpN/SgN+CmpN/SgG+CmpN/PlG:aerk ies_IES_IE_EVEN ; ! Klasse 3
 aerodynamihkeles:aerodynamihkel LES ;
@@ -404,24 +404,25 @@ dovhtehke:dovhtehk Ce_CE_ODD ;
 dovhtehks:dovhtehk Cs_CE_ODD ; ! uattestert, TT, aajege listtus
 dovkes:dovke s_S_ODD ;
 dovletje:dovletj Ce_CE_ODDNOCOMP ;
-dovres+Use/NG:dovre s_S_ODDNOCOMP ; ! 
-dovres+Use/NG:dovrehk HKE_ODD_COMP ; 
-dovres:dovr e_ES_EVENNOCOMP ; 
-dovres:duvre EVENCOMP ; ! UMLAUT COMP = dovrebe-dovremes ! e(1)-st.
+!dovres+Use/NG:dovre s_S_ODDNOCOMP ; ! 
+dovrehke:dovrehk HKE_ODD_COMP ; 
+dovres:dovr e_ES_ODDEVEN ; 
+dovres ATTR_0 ;
+dovre+Use/Sub:duvre EVENCOMP ; ! UMLAUT COMP = dovrebe-dovremes ! e(1)-st.
 drabloetjööse:drabloe#tjöös e_E_EVENNOCOMP ; !OBS!gradböyer ikke reinterm
 dramatihkeles:dramatihkel LES ;
 duasvas+CmpN/SgN+CmpN/SgG+CmpN/PlG:duasv as_AN_ODDNOCOMP ;
 dubpebe:dubp EVTEBE ;
 dueptems:dueptem Cs_CE_ODDNOCOMP ;
 dujmies:dujmie s_S_ODD ; !LA lagt til, vet ikke komp
-dulvies+Use/NG:dulvie PRED_S ; !
-dulvies+Use/NG:dulvies ODDCOMP ; !
+dulvies:dulv ies_IES_IE_EVEN ; !Pred:dulvesne, pred=dulvies= permanent egenskap UMLAUT KASUS
 dulvies:dulvehk HKE_ODD_COMP ; !LMM:dolvehke  LK: dulvehkem
-dulvies:dulvie ATTR_S ; !Pred:dulvesne, pred=dulvies= permanent egenskap UMLAUT KASUS
 dumhtems:dumhtem Cs_CE_ODDNOCOMP ; !SOUTH - DONT KNOW
 duplihkeles:du^plihkel LES ;
 duraabele:dur AABELE ;
-duvhties:duvht ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN ; 
+!duvhties:duvht ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN ; 
+duvhtehke:duvhtehk HKE_ODD_COMP ; 
+duvhties:duvht ies_IES_EVEN ; !ies_IES_IE_EVEN 
 dynamihkeles:dynamihkel LES ;
 dyvhtehke:dyvhtehk Ce_CE_ODD ;
 dåajmetje+CmpN/SgN+CmpN/SgG+CmpN/PlG:dåajmatj Ce_CE_ODD ; !dåajmetje- dåajmatjåbpoe-dåajmatjommes/ Vokalutvidelse
@@ -497,7 +498,7 @@ elektrooptihkeles:elektro^optihkel LES ;
 elektrostatihkeles:elektro^statihkel LES ;
 elektroteknihkeles:elektroteknihkel LES ;
 ellies:ellies ATTR_0 ;
-elmies:elm ies_IE_EVENNOCOMP ; !-elmiesåbpoe
+elmies:elm ies_IES_IE_EVENNOCOMP ; !-elmiesåbpoe
 elyjsijumen+Use/Sub:elysijumen ATTR_0 ;
 elyjsijumen:elyjsijumen ATTR_0 ;
 elyjsion+Use/Sub:elysion ATTR_0 ;
@@ -540,11 +541,11 @@ faamohth+CmpN/SgN+CmpN/SgG+CmpN/PlG:faamoeht hth_HTH_ODD ;! sjekk
 faamohts+CmpN/SgN+CmpN/SgG+CmpN/PlG:faamoeht hts_HTS_ODDhtCOMP ;! sjekk
 faamoje:faamoj JEASIEGOELKIJE ;
 faarhkoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:faarhk oeh_OEH_ODD ;
-faatoes ATTR_0 ; ! verbform: 'dïhte fååtese', no comp.
-faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:faavroe EVENCOMP ; !LA corp også EVEN-comp
-faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:faavroe s_S_ODD ; !LA LMM smanob, corp ODD-comp   faavrobe/faavroehkåbpoe/faavroesåbpoe
-faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:faavroehk ODDCOMP ;
-faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG:faavr e_ES_EVEN ;
+faatoes PRED_0 ; ! verbform: 'dïhte fååtese', no comp.
+faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG+Use/Sub:faavroe s_S_ODD ; !LA LMM smanob, corp ODD-comp   faavrobe/faavroehkåbpoe/faavroesåbpoe
+faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG:faavroehk ODDCOMP ;
+faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/Sub:faavr e_ES_ODDEVEN ; 
+faavroes+CmpN/SgN+CmpN/SgG+CmpN/PlG:faavr oes_OES_OE_ODD ;
 plïejhke:plïejhk e_ES_EVEN ; ! plïejhke/plïejhkes - plïejhkebe-plïejhkemes 
 pliejhkies:pleajhkan PRED_0 ; ! pliejhkies/pleajhkan gradbøying via e_ES_EVEN : plïejhkebe-plïejhkemes
 plijhkies ATTR_0 ;
@@ -685,7 +686,7 @@ gaerhteles:gaerhtel LES ;
 gaerhteneburrie:gaerhtene BURRIE ; ! 
 gaerteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:gaerteles ø_Ø_EVEN ;
 gaerteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:gaertiel ODDCOMP ;
-gaertjies:gaertj ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN ;
+gaertjies:gaertj ies_IES_IE_EVEN ;
 gaervies:gaerv ies_IES_EVENNOCOMP ; ! (ikke comp)
 gaevnjieruktie:gaevnjierukt ie_IE_EVENNOCOMP ; !NOT GRADUATION
 gahkestæjja+CmpN/SgN+CmpN/SgG+CmpN/PlG:gahkestæjja ATTR_0 ;!en som er stam ;stammende
@@ -775,7 +776,7 @@ germanistihkeles:germanistihkel LES ;
 gerperes:gerperes ATTR_0 ; !SOUTH
 ghanan:ghanan ATTR_0 ;
 giedtsies+Use/NG:gyödtsehk HKE_ODD_COMP ; 
-giedtsies:giedts ies_IE_EVEN ;  !  Klasse 3 !no 3-syll paradigm -giedtsebe, giedtsemes
+giedtsies:giedts ies_IES_IE_EVEN ;  !  Klasse 3 !no 3-syll paradigm -giedtsebe, giedtsemes
 giefies+CmpN/SgN+CmpN/SgG+CmpN/PlG:gief ies_IE_EVEN ;  !  Klasse 3
 giehpies:giehp ies_IE_EVEN ;  !  Klasse 3!krysshenvisning: dïhte mubpie giehpebe buhtjedh, daate lievlebe (Bergsland)
 giejmies:giejmie s_S_ODD ; !gæjma=substantiv
@@ -826,7 +827,7 @@ guektiengïerts:guektien#gïerts ATTR_0 ; !
 guelehks:guelehk Cs_CS_ODD ;
 guelehte+CmpN/SgN+CmpN/SgG+CmpN/PlG:gueleht Ce_CE_ODD ;
 guelehts:guelieht hts_HTS_ODDhtCOMP ;
-guelhties:guelht ies_IE_EVEN ;  !  Klasse 3 !Comp:guelhtebe, guelhtemes
+guelhties:guelht ies_IES_IE_EVEN ;  !  Klasse 3 !Comp:guelhtebe, guelhtemes
 guelmiengïele+CmpN/SgN+CmpN/SgG+CmpN/PlG:guelmien#gïel e_ES_EVENNOCOMP ;
 guerehtje+CmpN/SgN+CmpN/SgG+CmpN/PlG:guerehtj Ce_CE_ODD ; !attr=pred=guerehtje
 guersies:guers ies_IES_IE_EVEN ; ! Klasse 3
@@ -1442,7 +1443,6 @@ laenjeds:laenjied Cs_CS_CE_ODD ; ! COMP:IE
 laktjeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:laktjar Ces_CES_CE_ODD ; ! VED COMP:A
 lapsoes:laps as_AS_ODD ;
 lapsoes:lapsoe s_S_ODD ;
-
 laserfysihkeles:laser#fysihkel LES ;
 laserteknihkeles:laser#teknihkel LES ;
 laskes:laske s_S_ODD ;
