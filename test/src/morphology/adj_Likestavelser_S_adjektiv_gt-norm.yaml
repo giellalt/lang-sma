@@ -163,10 +163,11 @@ Tests:
     gåaroes+A+Sg+Nom: gåaroes
 
   Adjective - hearskoes: #
-    hearskoes+A+Attr: hearskoes
-    hearskoes+A+Sg+Nom: [hearskoe, hearskoes]
-    hearskoes+A+Comp+Sg+Nom: [hearskobe, hearskebe]
-    hearskoes+A+Superl+Sg+Nom: [hearskomes, hearskemes]
+    hearskoes+A+Attr: [hearskoes, hearskas]
+    hearskoes+A+Sg+Nom: [hearskoe, hearskoes, hearska, hearskas]
+    hearskoes+A+Comp+Sg+Nom: [hearskobe, hearskebe, hearskoesåbpoe, hearskasabpa]
+    hearskoes+A+Superl+Sg+Nom: [hearskomes, hearskemes, hearskoesommes, hearskasommes]
+
 
   Adjective - hujnies: #
     hujnies+A+Attr: hujnies
@@ -207,8 +208,8 @@ Tests:
   Adjective - jïlle: #
     jïlle+A+Attr: jïlle
     jïlle+A+Sg+Nom: jïlle
-    jïlle+A+Comp+Sg+Nom: jïllebe
-    jïlle+A+Superl+Sg+Nom: jïllemes
+    jïlle+A+Comp+Sg+Nom: [jillebe, jallatjåbpoe]
+    jïlle+A+Superl+Sg+Nom: [jillemes, jallatjommes]
 
   Adjective - klaeries: #
     klaeries+A+Attr: klaeries
@@ -285,10 +286,10 @@ Tests:
     lïhkes+A+Superl+Sg+Nom: lïhkemes
 
   Adjective - löövles: # SNM: duplicate forms in Comp and Superl
-    löövles+A+Attr: löövles
-    löövles+A+Sg+Nom: löövles
-    löövles+A+Comp+Sg+Nom: [löövlebe, lïevlebe, lïevlebe]
-    löövles+A+Superl+Sg+Nom: [löövlemes, löövlemes, löövlemes]
+    löövles+A+Attr: [löövles lïevles lyövles leevles]
+    löövles+A+Sg+Nom: [löövles lïevles lyövles leevles]
+    löövles+A+Comp+Sg+Nom: [löövlebe, lïevlebe, lyövlebe, leevlebe]
+    löövles+A+Superl+Sg+Nom: [löövlemes, lïevlemes, lyövlemes, leevlemes]
 
   Adjective - miehtjies: #
     miehtjies+A+Attr: miehtjies
@@ -296,6 +297,8 @@ Tests:
   Adjective - måasas: #
     måasas+A+Attr: måasas
     måasas+A+Sg+Nom: måasa
+    måasas+A+Comp+Sg+Nom: måasebe
+    måasas+A+Superl+Sg+Nom: måasemes
 
   Adjective - måaskes: #
     måaskes+A+Attr: måaskes
@@ -458,16 +461,21 @@ Tests:
 
   Adjective - smaave: #
     smaave+A+Attr: smaave
-    smaave+A+Sg+Nom: smaave
-    smaave+A+Comp+Sg+Nom: [smaevebe, smaevebe]
-    smaave+A+Superl+Sg+Nom: [smaevemes, smaevemes]
+    smaave+A+Sg+Nom: [smaave, smaaves]
+    smaave+A+Comp+Sg+Nom: smaavebe
+    smaave+A+Superl+Sg+Nom: smaavemes
 
   Adjective - sneehpes: # c
-    sneehpes+A+Attr: [sneehpes, sneehpes]
-    sneehpes+A+Sg+Nom: [sneehpes]
-    sneehpes+A+Comp+Sg+Nom: [sneehpebe, sneehpesåbpoe, snaebpebe]
+    sneehpes+A+Attr: sneehpes
+    sneehpes+A+Sg+Nom: sneehpes
+    sneehpes+A+Comp+Sg+Nom: [sneehpebe, sneehpesåbpoe] 
     sneehpes+A+Superl+Sg+Nom: [sneehpemes, sneehpesommes ]
-
+    
+  Adjective - snaehpies: # c
+    snaehpies+A+Attr: snaehpies
+    snaehpies+A+Sg+Nom: [snaehpies, snaehpie]
+    snaehpies+A+Comp+Sg+Nom: snaehpebe # snaebpebe
+    snaehpies+A+Superl+Sg+Nom: snaehpemes   
 
   Adjective - spaajhte: #
     spaajhte+A+Attr: spaajhte
@@ -494,24 +502,18 @@ Tests:
   Adjective - noere: # c
     noere+A+Attr: noere
     noere+A+Sg+Nom: noere
-    noere+A+Comp+Sg+Nom: [nuerebe, nuerebe]
+    noere+A+Comp+Sg+Nom: nuerebe
     noere+A+Superl+Sg+Nom: nööremes
 
   Adjective - stoere: # c
-    stoere+A+Attr: stoere
-    stoere+A+Sg+Nom: stoere
+    stoere+A+Attr: [stoere, stoerre]
+    stoere+A+Sg+Nom: [stoere, stoerre]
     stoere+A+Comp+Sg+Nom: stuerebe
     stoere+A+Superl+Sg+Nom: stööremes
 
-  Adjective - stoerre: #
-    stoerre+A+Attr: stoerre
-    stoerre+A+Sg+Nom: stoerre
-    stoerre+A+Comp+Sg+Nom: stuerebe
-    stoerre+A+Superl+Sg+Nom: stööremes
-
   Adjective - stonkes: #
-    stonkes+A+Attr: [stonkes]
-    stonkes+A+Sg+Nom: [stonkes, stonkes]
+    stonkes+A+Attr: stonkes
+    stonkes+A+Sg+Nom: stonkes
     stonkes+A+Comp+Sg+Nom: [stonkebe, stonkesåbpoe]
     stonkes+A+Superl+Sg+Nom: [stonkemes, stonkesommes ]
 
@@ -550,14 +552,10 @@ Tests:
     tjamke+A+Superl+Sg+Nom: tjamkemes
 
   Adjective - tjarke: # c
-    tjarke+A+Attr: tjarke
-    tjarke+A+Sg+Nom: tjarke
+    tjarke+A+Attr: [tjarke, tjarki]
+    tjarke+A+Sg+Nom: [tjarke, tjarki]
     tjarke+A+Comp+Sg+Nom: tjarkebe
     tjarke+A+Superl+Sg+Nom: tjarkemes
-
-  Adjective - tjarki: #
-    tjarki+A+Attr: tjarki
-    tjarki+A+Sg+Nom: tjarki
 
   Adjective - tjeehpes: # c
     tjeehpes+A+Attr: [tjeehpes, tjeehpes]
@@ -599,8 +597,12 @@ Tests:
     tryjjes+A+Attr: tryjjes
     tryjjes+A+Sg+Nom: tryjjes
 
-  Adjective - tsåatskes: #
-    tsåatskes+A+Attr: tsåatskes
+  Adjective - tsåatske: #
+    tsåatske+A+Attr: [tsåatskes, tsåatske]
+    tsåatske+A+Sg+Nom: tsåatskes
+    tsåatske+A+Comp+Sg+Nom: [tsåatskebe, tsåatskesåbpoe]
+    tsåatske+A+Superl+Sg+Nom: [tsåatskemes, tsåatskesommes]
+
 
   Adjective - vaejvies: #
     vaejvies+A+Attr: vaejvies
