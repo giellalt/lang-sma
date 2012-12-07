@@ -38,7 +38,7 @@ LEXICON BUERIE
  
 LEXICON LEEVLES
  :leevle ATTR_S  ;
-+Use/NG:leevl PRED_S  ;
++Use/NG:leevle PRED_S  ;
 +Use/NG:leevle EVENCOMP  ;
 +Use/NG:lyövl es_ES_EVEN  ;
 +Use/NG:lïevl es_ES_EVEN  ;
@@ -86,12 +86,12 @@ LEXICON ORRE
        :urre MES ;
 !+Use/Sub:orr e_ES_ODDEVEN ; !comment from Aajege, MLK: bør subbes. orresistie? - THIS IS HOPELESS,skulle subbe denne, men jeg forstår ikke hvorofr det ikke er mulig? 
 
+
 LEXICON NOERE_STOERE
  :oer e_E_EVENNOCOMP  ;! stoere-noere-ebe/emes
- :erie EVENCOMPONLY ;
+ :uerie EVENCOMPONLY ;
  :ööre MES ;
- :erie DIMCOMP ; 
- :oer e_E_EVEN  ; ! oere-oerebe-oeremes
+ +Use/Sub:oer e_E_EVEN  ; ! oere-oerebe-oeremes
 
 
 !LEXICON STOERE  ! This is hopeless, stoerebe-stoeremes bør subbes, men hvorfpor går det ikke?
@@ -158,11 +158,12 @@ LEXICON REAKTOE
   :rïekt e_ES_ODDEVEN ;! bein, rakt
                     
 LEXICON KRUANA  
- :kruan a_A_EVEN ;
+ :kruan a_A_EVEN_NOCOMP ;
 +Use/NG:kruene EVENCOMPONLY ;
 +Use/NG:kroene EVENSUPONLY ;  
 +Use/Sub:kruane EVENCOMPONLY ;
- 
+:kråane EVENCOMP ;
+
 LEXICON VEELKES
  :veelke ATTR_S  ;
 +Use/NG:veelke PRED_S  ;
@@ -185,9 +186,10 @@ LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_OD
 +Use/NG:sneehpe PRED_S  ; !  
 +Use/NG:sneehp es_ES_EVENNOCOMP  ; ! pga sneehpebe
 +Use/NG:sneehpe EVENCOMP  ; ! pga sneehpebe
-+Use/NG:snaehpie EVENCOMPONLY ;
- :snaehpie DIMCOMP ;
- :snååhpehk HKE_ODD_COMP ;
++Use/NG+Use/Sub:snaehpie EVENCOMPONLY ;
+ +Use/Sub:snaehpie DIMCOMP ;
+ +Use/Sub:snååhpehk HKE_ODD_COMP ;
+:sneehpes ODDCOMP ;
 
 LEXICON GEEHPES
  :geehpes ODDCASEOBL ;
@@ -196,7 +198,7 @@ LEXICON GEEHPES
 +Use/NG:giehpie EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
  :giehpie DIMCOMP ;  ! -ie- i paradigmet for  giehpies
 +Use/NG:geehpe MES ;
- :gyöhpehk HKE_ODD_COMP ;
+ +Use/Sub:gyöhpehk HKE_ODD_COMP ;
 +Use/NG:geehpe PRED_S ;
 
 LEXICON GEERVE
@@ -460,6 +462,9 @@ LEXICON a_A_EVEN
        aCASE ;
  :a  EVENCOMP ;
 
+LEXICON a_A_EVEN_NOCOMP
+  :a   ATTR_0 ;
+       aCASE ;
 
 LEXICON ie_IE_EVEN 
   :ie   ATTR_0 ;
@@ -601,9 +606,9 @@ LEXICON oes_OE_EVEN  !attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/
 !:a   PRED_N ;
         
 
-!LEXICON oes_OE_EVENNOCOMP 
-! :oe    ATTR_S ;
-!       oeCASE ;
+LEXICON oes_OE_EVENNOCOMP 
+ :oe    ATTR_S ;
+       oeCASE ;
 
 !OK
 LEXICON ies_IE_EVEN  ! attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne) 
@@ -766,7 +771,7 @@ LEXICON as_AS_ODD
 LEXICON as_AS_ODDNOCOMP 
  :a    ATTR_S ;
  :a    PRED_S ;
-  aCASEOBL ;
+  aCASE ;
 
 
 
@@ -775,6 +780,13 @@ LEXICON s_S_ODD
      PRED_S ;
   +Use/Sub:s  ODDCASEOBL ;  ! LA la til -s
   :s ODDCOMP ;
+
+LEXICON s_S_ODDEVEN 
+     ATTR_S ;
+     PRED_S ;
+  +Use/Sub:s  ODDCASEOBL ;  ! LA la til -s
+  :s ODDCOMP ;
+  EVENCOMP ;
 
 LEXICON s_S_ODDNOCOMP 
      ATTR_S ;
