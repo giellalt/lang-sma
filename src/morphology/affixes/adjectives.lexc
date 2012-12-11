@@ -217,7 +217,7 @@ LEXICON TRAEPTSIE
 :traeptsies ATTR_0 ;
 :traaptsan PRED_0 ;
 :traepts ieCASEOBL ;
-:treaptj oeh_AN_ODD ; !treaptjoehkåbpoe, treaptjoehkommes 
+:treaptj oeh_AN_ODDNOCOMP ; !treaptjoehkåbpoe, treaptjoehkommes 
 
 
 LEXICON SAETNIES
@@ -254,29 +254,29 @@ LEXICON ÅEHPIES
 LEXICON SAEBRIES 
   :såebries ATTR_0 ; 
   :såabran PRED_0 ;
-  :såebr ieCASEOBL ;
+  :såebr ieCASEOBL ;! NOCOMP
   
 LEXICON VILNJIES
   :vilnjies ATTR_0 ; 
   :vælnjan PRED_0 ;
-  :vilnj ieCASEOBL ;
+  :vilnj ieCASEOBL ;!NOCOMP
   
 LEXICON NJERRIES
   :njerries ATTR_0 ; 
   :njarran PRED_0 ;
-  :njerr ieCASEOBL ;
+  :njerr ieCASEOBL ;!NOCOMP
 
 LEXICON SKIEMTJIES ! 
  :skiemtjies ATTR_0 ; 
  :skiemtj ieCASEOBL ;
- :skeamtjan PRED_0 ;
- :skïemtj e_ES_ODDEVEN ;
+ :skeamtjan PRED_0 ;! NOCOMP
+ :skïemtj e_ES_ODDEVEN ;!COMP
 
 LEXICON MUJVIES 
  :mujvies ATTR_0 ; ! Pred=Substantiv mujvine - måjvan
  :mujv ieCASEOBL ;
  
-LEXICON s_AN_4 
+LEXICON s_AN_4 ! NOCOMP
  :ujnies ATTR_0 ;
  :åjnoes ATTR_0 ;
  :ajnas ATTR_0 ;
@@ -287,7 +287,7 @@ LEXICON s_AN_4
 
 LEXICON STAERIES 
  :staerie ATTR_S ; 
- :staaran PRED_0 ;
+ :staaran PRED_0 ;!NOCOMP
 
 LEXICON GIERIES 
  :gierie ATTR_S ; 
@@ -631,9 +631,9 @@ LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN
 +Use/NG:%»%^PASSUMLehk  ODDCASEOBL ;
 +Use/NG:%»%^PASSUMLehk ODDCOMP ;
 
-LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN
-+Use/NG:ie PRED_S ;    
- ies_(ehke)_EHKE_ODDCOMPe_EVEN ;
+!LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN
+!+Use/NG:ie PRED_S ;    
+! ies_(ehke)_EHKE_ODDCOMPe_EVEN ;
 
 LEXICON ies_(ehke)_EHKE_ODDCOMPe_EVEN
  :ie   ATTR_S ;
@@ -1130,12 +1130,13 @@ LEXICON oeh_OEN_AN_ODDNOCOMP
  :oe PRED_N ;
   :a PRED_N ;
 
-LEXICON oeh_AN_ODD 
-oeh_AN_ODDNOCOMP  ; ! Er det verkeleg rett at dette er utan comp??
+LEXICON oeh_AN_ODD !DEL DENNE OPP I CASE
+oeh_AN_ODDNOCOMP  ; ! Er det verkeleg rett at dette er utan comp?? MLK: Ja,skal prøve på en forklaring senere.
 ! :ahk ODDCOMP ;!Checking.
 ! :oehk ODDCOMP ; !XXX check this o. MLK: Checking.
-+Use/Sub: oeCASE ; !
-         :aCASE ; !
++Use/Sub: oeCASE ; ! Dele
+ !        :aCASE ; !
+ !        :ieCASE ;
 
 LEXICON oeh_AN_ODDNOCOMP 
 :oe   ATTR_H ;
