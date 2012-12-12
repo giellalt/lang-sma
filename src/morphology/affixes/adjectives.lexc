@@ -91,7 +91,7 @@ LEXICON NOERE_STOERE
  :oer e_E_EVENNOCOMP  ;! stoere-noere-ebe/emes
  :uerie EVENCOMPONLY ;
  :ööre MES ;
- +Use/Sub:oer e_E_EVEN  ; ! oere-oerebe-oeremes
+ :oer e_E_EVEN  ; ! oere-oerebe-oeremes
 
 
 !LEXICON STOERE  ! This is hopeless, stoerebe-stoeremes bør subbes, men hvorfpor går det ikke?
@@ -639,15 +639,15 @@ LEXICON ies_IE_EVENNOCOMP  ! attr= s, pred. = Ø, comp jih case: even (ebe/emes/
         ieCASE ;
 
 
-LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN
- :ie   PRED_0 ;   
- :ie   ATTR_S ;
-   ieCASEOBL ;
- :ie        EVENCOMP ;
-+Use/Sub:%»%^PASSUMLehke ATTR_0 ;
-+Use/NG:%»%^PASSUMLehke PRED_0 ;
-+Use/NG:%»%^PASSUMLehk  ODDCASEOBL ;
-+Use/NG:%»%^PASSUMLehk ODDCOMP ;
+!LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN
+ !:ie   PRED_0 ;   
+ !:ie   ATTR_S ;
+!   ieCASEOBL ;
+! :ie        EVENCOMP ;
+!+Use/Sub:%»%^PASSUMLehke ATTR_0 ;
+!+Use/NG:%»%^PASSUMLehke PRED_0 ;
+!+Use/NG:%»%^PASSUMLehk  ODDCASEOBL ;
+!+Use/NG:%»%^PASSUMLehk ODDCOMP ;
 
 !LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN
 !+Use/NG:ie PRED_S ;    
@@ -739,6 +739,14 @@ LEXICON hth_HTH_ODD
  ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPh            R ;
     ODDCOMP ;
+    
+LEXICON hth_HTH_ODDNOCOMP 
+ :%^DISIMP    ATTR_H ;
+ :%^DISIMP    PRED_H ;
+ ODDCASEOBL ;
++A+SgNomCmp:%^DISIMPh            R ;
+
+
 
 LEXICON Ce_CE_ODD  !bårreske
  :%^DISIMPe     ATTR_0 ;
