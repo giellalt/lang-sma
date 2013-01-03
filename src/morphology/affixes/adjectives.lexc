@@ -81,6 +81,7 @@ LEXICON SNAARE
 
 LEXICON ORRE
        :orr e_E_EVEN  ;
+       :urr e_E_EVEN  ;
        :urre EVENCOMPONLY ;
        :urre DIMCOMP ;
        :urre MES ;
@@ -142,7 +143,7 @@ LEXICON GAMTE
 :tege PRED_0  ;
 +Use/NG:t eCASE  ;
 :%>%^DISIMPtie EVENCOMP ;
-:t%^DISIMPie EVENCOMP ;
+:te EVENCOMP ;
    
 LEXICON GIEVTE
  :gïevt e_E_EVENNOCOMP  ;
@@ -160,7 +161,7 @@ LEXICON REAKTOE
 LEXICON KRUANA  
  :kruan a_A_EVEN_NOCOMP ;
 +Use/NG:kruene EVENCOMPONLY ;
-+Use/NG:kroene EVENSUPONLY ;  
++Use/NG+Use/Sub:kroene EVENSUPONLY ;  
 +Use/Sub:kruane EVENCOMPONLY ;
 :kråane EVENCOMP ;
 
@@ -170,6 +171,7 @@ LEXICON VEELKES
 +Use/NG:vielkie EVENCOMPONLY ;
  :vielkie DIMCOMP ;
 +Use/NG:veelke MES ;
+ODDCASE ;
 ! :vyölkehk HKE_ODD_COMP ;
 
  
@@ -221,23 +223,19 @@ LEXICON TRAEPTSIE
 
 
 LEXICON SAETNIES
- :saetnies ATTR_0 ;
- :saatnan PRED_0 ;
-!+Use/NG:saatna PRED_0 ;
- :saetn ieCASEOBL ;
+ :ies ATTR_0 ;
+ :%^1UMLan PRED_0 ;
+!+Use/NG:a PRED_0 ;
+ : ieCASE ;
 
-LEXICON SUVHTJIES
- :suvhtjies ATTR_0 ;
- :såvhtjan PRED_0 ;
-! Ikke komp!
 
 LEXICON HAERRIES
   :haerries ATTR_0 ;
   :haarran PRED_0 ;
   :haerr ieCASEOBL ;
   :haarr oeh_OEH_ODD ;
-  :haarroe s_S_ODDNOCOMP ;
-  :haerriehtj Ce_CE_ODD ;
+  :haarroe s_S_ODD ;
+  :haerrietj Ce_CE_ODD ;
 
 LEXICON HAELTJIES
   :haeltjies ATTR_0 ; 
@@ -295,14 +293,13 @@ LEXICON MUJVIES
  :mujv ieCASEOBL ;
  
 LEXICON s_AN_4 ! NOCOMP
- :ujnie ATTR_S ;
- :åjnoe ATTR_S ;
- :ajna ATTR_S ;
+ :ujnies ATTR_0 ;
+ :åjnoes ATTR_0 ;
+ :ajnas ATTR_0 ;
  :ujn ieCASEOBL ;
  :åjn oeCASE_OBL ;
  :ajn aCASEOBL ; 
  :åjnan PRED_0 ;
- :åjnoen PRED_0 ;
 
 LEXICON STAERIES 
  :staerie ATTR_S ; 
@@ -740,7 +737,14 @@ LEXICON hth_HTH_ODD
  ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPh            R ;
     ODDCOMP ;
-    
+
+LEXICON oehth_OEHTH_ODD 
+ :%^DISIMP    ATTR_H ;
+ :%^DISIMP    PRED_H ;
+ ODDCASEOBL ;
++A+SgNomCmp:%^DISIMPh            R ;
+    ODD_ÅBPOE ;
+
 LEXICON hth_HTH_ODDNOCOMP 
  :%^DISIMP    ATTR_H ;
  :%^DISIMP    PRED_H ;
@@ -754,6 +758,13 @@ LEXICON Ce_CE_ODD  !bårreske
  :%^DISIMPe     PRED_0 ;
  ODDCASEOBL ;
     ODDCOMP ;
+    
+LEXICON oeCe_OECE_ODD  !bårreske
+ :%^DISIMPe     ATTR_0 ;
+ :%^DISIMPe     PRED_0 ;
+ ODDCASEOBL ;
+    ODD_ÅBPOE ;
+
 
 LEXICON ege_EGE_ODDEVEN !rudtjege 
 :ege     ATTR_0 ;
@@ -807,12 +818,20 @@ LEXICON s_S_ODD
      PRED_S ;
   +Use/Sub:s  ODDCASEOBL ;  ! LA la til -s
   :s ODDCOMP ;
+  
 
 LEXICON s_S_ODDEVEN 
      ATTR_S ;
      PRED_S ;
   +Use/Sub:s  ODDCASEOBL ;  ! LA la til -s
   :s ODDCOMP ;
+  EVENCOMP ;
+
+LEXICON oes_OES_ODDEVEN 
+     ATTR_S ;
+     PRED_S ;
+  +Use/Sub:s  ODDCASEOBL ;  ! LA la til -s
+  :s ODD_ÅBPOE ;
   EVENCOMP ;
 
 LEXICON s_S_ODDNOCOMP 
@@ -828,7 +847,7 @@ LEXICON es_ES_ODDhk
  
 LEXICON oes_OES_ODD 
 oes_OES_ODDNOCOMP  ;
-   :oes ODDCOMP ;
+   :oes ODD_ÅBPOE ;
 
 LEXICON oes_OES_ODDNOCOMP 
    :oe  ATTR_S ;
@@ -870,9 +889,19 @@ LEXICON les_LES_ODD
  ODDCASEOBL ;
    ODDCOMP ;
 
+LEXICON oeles_OELES_ODD  
+:%^DISIMPe     ATTR_S ;
+:%^DISIMPe     PRED_S ;
+ ODDCASEOBL ;
+   ODD_ÅBPOE ;
+
 LEXICON Cs_CS_CE_ODD 
  Cs_CS_CE_ODDNOCOMP  ;
  ODDCOMP ;
+
+LEXICON oeCs_OECS_OECE_ODD  
+ Cs_CS_CE_ODDNOCOMP  ;
+ ODD_ÅBPOE ;
 
 LEXICON Cs_CS_CE_ODDNOCOMP 
 +Use/Sub:%^DISIMPe   ATTR_S ; ! corp: sjuevnjedes
@@ -889,7 +918,14 @@ LEXICON Cs_CS_ODD
   ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPe            R ;
      ODDCOMP ;
-     
+
+LEXICON  oeCs_OECS_ODD  
+  :%^DISIMP   ATTR_S ;
+  :%^DISIMP   PRED_S ;
+  ODDCASEOBL ;
++A+SgNomCmp:%^DISIMPe            R ;
+     ODD_ÅBPOE ;
+ 
 LEXICON Cs_CS_ODDNOCOMP 
   :%^DISIMP   ATTR_S ;
   :%^DISIMP   PRED_S ;
@@ -899,6 +935,10 @@ LEXICON Cs_CS_ODDNOCOMP
 LEXICON hts_HTS_ODD 
 hts_HTS_ODDNOCOMP  ;
   :s  ODDCOMP ;
+
+LEXICON oehts_OEHTS_ODD 
+hts_HTS_ODDNOCOMP  ;
+  :s  ODD_ÅBPOE ;
 
 LEXICON hts_HTS_ODDNOCOMP 
 ! This lexicon is in reality hts_HTS_HTE
@@ -914,6 +954,10 @@ LEXICON hts_HTS_ODDhtCOMP
  hts_HTS_ODDNOCOMP  ;
  ODDCOMP ; ! joekehtåbpoe
  
+LEXICON oehts_OEHTS_ODDhtCOMP 
+ hts_HTS_ODDNOCOMP  ;
+ ODD_ÅBPOE ; ! joekehtåbpoe
+
 
 LEXICON an_AN_ODDNOCOMP  ! attr=n, pred= n
 :a ATTR_N ;
@@ -1015,6 +1059,13 @@ LEXICON Cs_CE_ODD
 +A+SgNomCmp:%^DISIMPe            R ;
        ODDCOMP ;
 
+LEXICON oeCs_OECE_ODD 
+  :%^DISIMP    ATTR_S ;
+  :%^DISIMPe   PRED_0 ;
+ ODDCASEOBL ;
++A+SgNomCmp:%^DISIMPe            R ;
+       ODDCOMP ;
+
 LEXICON Cs_CE_ODDNOCOMP 
 :%^DISIMP     ATTR_S ;
 :%^DISIMPe   PRED_0 ;
@@ -1083,6 +1134,16 @@ LEXICON hks_hke_HKS_HKE_ODD
 +A+SgNomCmp:%^DISIMPe            R ;
    ODDCOMP ;
 
+LEXICON oehks_oehke_OEHKS_OEHKE_ODD 
+:%^DISIMP     ATTR_S ;
++Use/NG:%^DISIMPe    ATTR_0 ;
+:%^DISIMP     PRED_S ;
++Use/NG:%^DISIMPe    PRED_0 ;
+   ODDCASEOBL ;
+! :%^DISIMPe     PRED_0 ;
++A+SgNomCmp:%^DISIMPe            R ;
+   ODD_ÅBPOE ;
+
 
 ! type 4
 
@@ -1097,7 +1158,7 @@ LEXICON oes_AN_ODD
 :oe   ATTR_S ;
 :a    PRED_N ;
 +Use/Sub:	  oeCASE ;
-:oes  ODDCOMP ; ! LA endra fra k til s
+:oes  ODD_ÅBPOE ; ! LA endra fra k til s
 !+Use/NG:ak  ODDCOMP ;
 
 
@@ -1138,7 +1199,7 @@ LEXICON AH_&_OEH_ODD
 :ah PRED_0 ;
 
 LEXICON oeh_OEH_ODD ! tidl -oe h_H_ODD
- :oehk ODDCOMP ; 
+ :oehk ODD_ÅBPOE ; 
  oeh_OEH_ODDNOCOMP ;
 
 LEXICON oeh_OEH_ODDNOCOMP
@@ -1150,7 +1211,7 @@ LEXICON oeh_OEN_ODD
  :oe ATTR_H ;
  :oe PRED_N ;
 +Use/Sub: oeCASE_OBL ;
-  :oehk  ODDCOMP ; 
+  :oehk  ODD_ÅBPOE ; 
   
 LEXICON oeh_OEN_AN_ODDNOCOMP 
  :oe ATTR_H ;
@@ -1160,7 +1221,7 @@ LEXICON oeh_OEN_AN_ODDNOCOMP
 LEXICON oeh_AN_ODD !DEL DENNE OPP I CASE; ie, oe og a
 oeh_AN_ODDNOCOMP  ; ! Er det verkeleg rett at dette er utan comp?? MLK: Ja,skal prøve på en forklaring senere.
 ! :ahk ODDCOMP ;!Checking.
-! :oehk ODDCOMP ; !XXX check this o. MLK: Checking.
+! :oehk ODD_ÅBPOE ; !XXX check this o. MLK: Checking.
 +Use/Sub: oeCASE ; ! Dele
  !        :aCASE ; !
  !        :ieCASE ;
@@ -1174,7 +1235,7 @@ LEXICON oeh_AN_ODDNOCOMP
 LEXICON oeh_OEH_AN_ODD  ! Attr=oeh, Pred=oeh og an 
       oeh_OEH_AN_ODDNOCOMP  ;
 :ahk  ODDCOMP ;
-:oehk ODDCOMP ; 
+:oehk ODD_ÅBPOE ; 
 +Use/Sub: oeCASE_OBL ;
 
 
@@ -1227,7 +1288,6 @@ LEXICON HKE_ODD_COMP
   ODDCOMP ;
 
 
-
 LEXICON GEERUVE
  :uve ATTR_0 ;
  +A+Sg: BÅERUVE_SG ;
@@ -1236,7 +1296,7 @@ LEXICON GEERUVE
   +A+SgNomCmp:uve%^DISIMP            R ;
   +A+SgGenCmp:uve%>%^DISIMPn        R ;
   +A+PlGenCmp:uv%>%^DISIMPi R ;
-  :uv ODDCOMP ;
+  :uv ODD_ÅBPOE ;
 
 LEXICON JAEDTUVES
  :uves ATTR_0 ;
@@ -1515,9 +1575,9 @@ LEXICON ODD_ÅBPOE
 +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
 
 LEXICON ODD_ABPA
-+A+Comp+Attr:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
++A+Comp+Attr+Use/Sub:%>abpa ATTRCONT ;  ! båajasabpa,   *båajoesabpa
 +A+Comp+Use/Sub:%>abp ABPA ;
-:%>ammes OMMES ;
++Use/Sub:%>ammes OMMES ;
 +A+Comp+Der1+Der/Dimin+Attr+Use/NG+Use/Sub:%>abpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dimin+Use/NG+Use/Sub:%>abpa%»tj  GÅATETJEadj ;
 
