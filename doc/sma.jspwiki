@@ -1,15 +1,10 @@
 !!!Free and Open source Finnish analyser gtsvn-fi
 
-#;Authors
-##: Divvun and Giellatekno teams, Aajege, community members
-#;Software version
-##: 2012
-#;Documentation license
-##: GNU GFDL
-#;SVN Revision
-##: $Revision: 68217 $
-#;SVN Date
-##: $Date: 2013-01-16 11:31:33 +0200 (Wed, 16 Jan 2013) $
+;Authors: Divvun and Giellatekno teams, Aajege, community members
+;Software version: 2012
+;Documentation license: GNU GFDL
+;SVN Revision: $Revision: 68217 $
+;SVN Date: $Date: 2013-01-16 11:31:33 +0200 (Wed, 16 Jan 2013) $
 
 !!!GTSVN-sma
 
@@ -22,21 +17,15 @@ This is free and open source South Sámi morphology.
 
 !!Tags for POS
 
-#; {{+N}}, {{+A}}, {{+Adv}}, {{+V}}
-##: Open POS's
-#; {{+Pron}}, {{+CS}}, {{+CC}}, {{+Po}}, {{+Pr}}, {{+Interj}}, {{+Pcle}}, {{+Num}}
-##: Closed POS's
-#; {{+Logo}}
-##: What is this?
+; {{+N}}, {{+A}}, {{+Adv}}, {{+V}}: Open POS's
+; {{+Pron}}, {{+CS}}, {{+CC}}, {{+Po}}, {{+Pr}}, {{+Interj}}, {{+Pcle}}, {{+Num}}: Closed POS's
+; {{+Logo}}: What is this?
 
 !Tags for sub-POS
 
-#; {{+Prop}}
-##: Proper nouns
-#; {{+Pers}}, {{+Dem}}, {{+Interr}}, {{+Refl}}, {{+Recipr}}, {{+Rel}}, {{+Indef}}
-##: Pronoun subtypes
-#; {{+Coll}}
-##: Collective numeral
+; {{+Prop}}: Proper nouns
+; {{+Pers}}, {{+Dem}}, {{+Interr}}, {{+Refl}}, {{+Recipr}}, {{+Rel}}, {{+Indef}}: Pronoun subtypes
+; {{+Coll}}: Collective numeral
 
 !!Usage tags
 | {{+Use/Sub}} | Substandard
@@ -94,21 +83,16 @@ This is free and open source South Sámi morphology.
 | {{+CmpN/DefPlGen}} | works along with Left compound-tagging
 
 
-!!Descriptive compounding tags:
+!!Descriptive compounding tags
 Tags for compound analysis - this is what a compound actually is:
 
-#; {{+SgCmp}}, {{+SgNomCmp}}, {{+SgGenCmp}}, {{+PlGenCmp}}
-##: Different case + number combinations
-#; {{+Cmp}}
-##: Dynamic compound - this tag should always be part of a dynamic compound.
-  It is important for Apertium, and useful in other cases as well.
-#; {{+RCmpnd}}
-##: This is a split compound with the other part to the right:
-  "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
-#; {{+LCmpnd+}}
-##: This is a split compound with the other part to the left
-#; {{+ShCmp}}
-##: Testing ShCmp
+; {{+SgCmp}}, {{+SgNomCmp}}, {{+SgGenCmp}}, {{+PlGenCmp}}: Different case + number combinations
+; {{+Cmp}}: Dynamic compound - this tag should always be part of a dynamic compound.
+; : It is important for Apertium, and useful in other cases as well.
+; {{+RCmpnd}}: This is a split compound with the other part to the right:
+; : "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
+; {{+LCmpnd+}}: This is a split compound with the other part to the left
+; {{+ShCmp}}: Testing ShCmp
 
 !!Tags for Inflection
 
@@ -127,76 +111,49 @@ Tags for compound analysis - this is what a compound actually is:
 | {{+VAbess}} | Verb Abessive
 
 
-#; {{+Inf}}, {{+PrfPrc}}, {{+PrsPrc}}
-##: Infinitive and participles
-#; {{+Ger}}, {{+VGen}}
-##: Gerund
+; {{+Inf}}, {{+PrfPrc}}, {{+PrsPrc}}: Infinitive and participles
+; {{+Ger}}, {{+VGen}}: Gerund
 
-#; {{+Ind}}
-##: Indicative
-#; {{+Imprt}}
-##: Imperative
-#; {{+Cond}}
-##: for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
-#; {{+Act}}
-##: -eme, could be chagned to +Actio
+; {{+Ind}}: Indicative
+; {{+Imprt}}: Imperative
+; {{+Cond}}: for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
+; {{+Act}}: -eme, could be chagned to +Actio
 
 !Tags for adjectives
 
-#; {{+Comp}}, {{+Superl}}
-##: Comparation
-#; {{+Attr}}
-##: Attribute form
-#; {{+Ord}}
-##: Ordinal number
+; {{+Comp}}, {{+Superl}}: Comparation
+; {{+Attr}}: Attribute form
+; {{+Ord}}: Ordinal number
 
 !!Other tags
 
-#; {{+ABBR}}, {{+ACR}}
-##: Abbreviation, acronym
-#; {{+TV}}, {{+IV}}
-##: Transitivity tags
-#; {{+Multi}}
-##: Multiword phrase tag
-#; {{+Guess}}
-##: for the name guesser
-#; {{+LOAN}}
-##: ad hoc tag for development purposes.
-#; {{+Hyph}}
-##: A tag to indicate that a hyphen was used when compounding
+; {{+ABBR}}, {{+ACR}}: Abbreviation, acronym
+; {{+TV}}, {{+IV}}: Transitivity tags
+; {{+Multi}}: Multiword phrase tag
+; {{+Guess}}: for the name guesser
+; {{+LOAN}}: ad hoc tag for development purposes.
+; {{+Hyph}}: A tag to indicate that a hyphen was used when compounding
 
 !Tags for testing the frequency of certain phenomenas in our corpora
 
-#; {{+Test/LysI}}
-##: form uses i
-#; {{+Test/MørkI}}
-##: form uses ï
-#; {{+Test/HK}}
-##: form uses consonant cluster hk
-#; {{+Test/GK}}
-##: form uses consonant cluster gk
-#; {{+Test/JK}}
-##: form uses consonant cluster jk
-#; {{+Uml}}
-##: A tag to indicate realised or potential Umlaut
-#; {{+NoUml}}
-##: A tag to indicate the lack of realised or potential Umlaut
+; {{+Test/LysI}}: form uses i
+; {{+Test/MørkI}}: form uses ï
+; {{+Test/HK}}: form uses consonant cluster hk
+; {{+Test/GK}}: form uses consonant cluster gk
+; {{+Test/JK}}: form uses consonant cluster jk
+; {{+Uml}}: A tag to indicate realised or potential Umlaut
+; {{+NoUml}}: A tag to indicate the lack of realised or potential Umlaut
 
 !Tags for punctuation
 
-#; {{+CLB}}, {{+PUNCT}}, {{+LEFT}}, {{+RIGHT}}
-
+; {{+CLB}}, {{+PUNCT}}, {{+LEFT}}, {{+RIGHT}}: XXX These should be documented better
 
 !Different focus particles
 
-#; {{+Foc/ge}}
-
-#; {{+Foc/gan}}
-
-#; {{+Foc/gih}}
-
-#; {{+Foc/gænnah}}
-
+; {{+Foc/ge}}: XXX Document better
+; {{+Foc/gan}}: XXX Document better
+; {{+Foc/gih}}: XXX Document better
+; {{+Foc/gænnah}}: XXX Document better
 
 
 !!Semantic tags to help disambiguation & synt. analysis:
@@ -254,8 +211,7 @@ to make it possible to target regular expressions in all derivations in a
 language-independent way:
 just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
 
-#; {{+Der}}
-##: Tag to precede any non-positional derivation
+; {{+Der}}: Tag to precede any non-positional derivation
 | {{+Der/PassS}} | VV - short passive only
 | {{+Der/A}} | NA - comparation of N's
 
@@ -263,33 +219,24 @@ just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
 
 !!Triggers for morphophonological rules
 
-#; {{X2}}
-##: Trigger for ???
-#; {{X3}}
-##: Trigger for ???
-#; {{X4}}
-##: Trigger for ???
-#; {{E2}}
-##: insert e ! Fjern denne.
+; {{X2}}: Trigger for ???
+; {{X3}}: Trigger for ???
+; {{X4}}: Trigger for ???
+; {{E2}}: insert e ! Fjern denne.
 
 !!Symbols that need to be escaped on the lower side (towards twolc):
 
-#; {{»7}}
-##: Literal »
-#; {{«7}}
-##: Literal «
+; {{»7}}: Literal »
+; {{«7}}: Literal «
+; : {{{
+; {{%[%>%]}}: Literal >
+; {{%[%<%]}}: Literal <}}}
 
-{{{
-%[%>%] - Literal >
-%[%<%] - Literal <
-}}}
 
 !!Lexeme disambiguation tags
 
-#; {{+1}}, {{+2}}
-##: Homonymy (?)
-#; {{+v1}}, {{+v2}}, {{+v3}}, {{+v4}}, {{+v5}}
-##: Versions 
+; {{+1}}, {{+2}}: Homonymy (?)
+; {{+v1}}, {{+v2}}, {{+v3}}, {{+v4}}, {{+v5}}: Versions 
 
 !!Umlaut and diphthong simplification triggers
 | {{%^DISIMP}} | ???
@@ -313,18 +260,19 @@ just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
 
 !!Flag diacritics
 
-#; {{@P.NeedNoun.ON@}}, {{@D.NeedNoun.ON@}}, {{@C.NeedNoun@}}
-##: (Dis)allowing compounds
-#; {{@U.Cap.Obl@}}, {{@U.Cap.Opt@}}
-##: Allowing downcasing of derived names: deatnulasj.
+; {{@P.NeedNoun.ON@}}, {{@D.NeedNoun.ON@}}, {{@C.NeedNoun@}}: (Dis)allowing compounds
+; {{@U.Cap.Obl@}}, {{@U.Cap.Opt@}}: Allowing downcasing of derived names: deatnulasj.
 
 
 
 !!!Lexicon Root
-This is the beginning of everything.
+This is the beginning of everything. The __Root__ lexicon is reserved in the
+LexC language, and must be the first lexicon defined.
 
 
 
 
 !!!Lexicon ENDLEX
-And this is the END of everything.
+And this is the END of everything:
+{{{
+}}}
