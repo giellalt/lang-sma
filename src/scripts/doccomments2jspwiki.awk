@@ -36,7 +36,7 @@ BEGIN {
         else
         {
             # definition list
-            printf("\n#; ");
+            printf("\n; ");
         }
         for (i = 1; i <= NF; i++)
         {
@@ -74,7 +74,7 @@ BEGIN {
 /^!! !/ {print(gensub("@LEXNAME@", LEXNAME, "g", gensub("!! ", "\n", ""))); }
 /^!! [^$€!]/ {print(gensub("!! ", "", "")); }
 /..*!! \|/ {print(gensub(".*!! ", " ", "")); }
-/..*!! [^|]/ {printf(gensub(".*!! ", "\n##: ", "")); }
+/..*!! [^|]/ {printf(gensub(".*!! ", ": ", "")); }
 /^LEXICON / {
     LEXNAME=$2;
 }
