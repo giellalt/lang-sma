@@ -212,40 +212,43 @@ Multichar_Symbols
   X4 !! Trigger for ???
   E2 !! insert e ! Fjern denne.
 
-!! !!Symbols that need to be escaped on the lower side (towards twolc):
- »7     !! Literal »
- «7     !! Literal «
- !! {{{
- %[%>%] !! Literal >
- %[%<%] !! Literal <
-!! }}}
+        !! !!Symbols that need to be escaped on the lower side (towards twolc):
+ »7     !!≈ ; @CODE@ : Literal »
+ «7     !!≈ ; @CODE@ : Literal «
+        !! {{{
+ %[%>%] !!= @CODE@ - Literal >
+ %[%<%] !!= @CODE@ - Literal <
+        !! }}}
 
-!! !!Lexeme disambiguation tags
-  +1 +2               !! Homonymy (?)
-  +v1 +v2 +v3 +v4 +v5 !! Versions 
+                      !! !!Lexeme disambiguation tags
+  +1 +2               !! ; @CODE@ : Homonymy (?)
+  +v1 +v2 +v3 +v4 +v5 !! ; @CODE@ : Versions 
 
-!! !!Umlaut and diphthong simplification triggers
-  %^DISIMP        !! | ???
-  %^COMPDISIMP    !! | ???
-  %^COMPDISIMP2   !! | ???
-  %^NOMAGieDISIMP !! | ???
-  %^1UML          !! | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
-  %^2UML          !! | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
-  %^3UML          !! | not used
-  %^3sUML         !! | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
-  %^3dUML         !! | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
-  %^iæUML         !! | not used
-  %^iUML          !! | i-uml in pret of V-I (båetedh - böötim)
-  %^PASSUML       !! | Short passive Umlaut Rx->R5
-  %^didhUML       !! | Der/didh Umlaut for GUARKEDH-words
-  %^htjidhUML     !! | Umlaut für der/htjidh derivations
-  %^adteUML       !! | Umlaut für Der/adte and Der/alle derivations
-  %^aLATUS        !! | Latus-Umlaut for -ie stems
-  %^uLATUS        !! | Latus-Umlaut for -oe stems
+                  !! !!Umlaut and diphthong simplification triggers
+  %^DISIMP        !! | @CODE@ | ???
+  %^COMPDISIMP    !! | @CODE@ | ???
+  %^COMPDISIMP2   !! | @CODE@ | ???
+  %^NOMAGieDISIMP !! | @CODE@ | ???
+  %^1UML          !! | @CODE@ | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
+  %^2UML          !! | @CODE@ | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
+  %^3UML          !! | @CODE@ | not used
+  %^3sUML         !! | @CODE@ | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
+  %^3dUML         !! | @CODE@ | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
+  %^iæUML         !! | @CODE@ | not used
+  %^iUML          !! | @CODE@ | i-uml in pret of V-I (båetedh - böötim)
+  %^PASSUML       !! | @CODE@ | Short passive Umlaut Rx->R5
+  %^didhUML       !! | @CODE@ | Der/didh Umlaut for GUARKEDH-words
+  %^htjidhUML     !! | @CODE@ | Umlaut für der/htjidh derivations
+  %^adteUML       !! | @CODE@ | Umlaut für Der/adte and Der/alle derivations
+  %^aLATUS        !! | @CODE@ | Latus-Umlaut for -ie stems
+  %^uLATUS        !! | @CODE@ | Latus-Umlaut for -oe stems
 
-!! !!Flag diacritics
- @P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@ !! (Dis)allowing compounds
- @U.Cap.Obl@  @U.Cap.Opt@   !! Allowing downcasing of derived names: deatnulasj.
+                  !! !!Flag diacritics
+ @P.NeedNoun.ON@  !! | @CODE@ | (Dis)allowing compounds
+ @D.NeedNoun.ON@  !! | @CODE@ | (Dis)allowing compounds
+ @C.NeedNoun@     !! | @CODE@ | (Dis)allowing compounds
+ @U.Cap.Obl@      !! | @CODE@ | Allowing downcasing of derived names: deatnulasj.
+ @U.Cap.Opt@      !! | @CODE@ | Allowing downcasing of derived names: deatnulasj.
 !               ! Actually, downcasing should be obligatory
 
 
@@ -255,7 +258,7 @@ Multichar_Symbols
 
 LEXICON Root
 !! !!!Lexicon @LEXNAME@
-!! This is the beginning of everything. The __Root__ lexicon is reserved in the
+!! This is the beginning of everything. The __@LEXNAME@__ lexicon is reserved in the
 !! LexC language, and must be the first lexicon defined.
 
 !    Prefixes ; 
@@ -278,7 +281,7 @@ LEXICON Root
 
 LEXICON ENDLEX
 !! !!!Lexicon @LEXNAME@
-!! And this is the END of everything:
+!! And this is the @LEXNAME@ of everything:
 !! {{{
-   @D.NeedNoun.ON@ # ; !!=
+   @D.NeedNoun.ON@ # ; !!= @CODE@
 !! }}}
