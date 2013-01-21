@@ -17,36 +17,36 @@
 ! ========================================================================== !
  
 
-Multichar_Symbols
+Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
-!! !!Tags for POS
-  +N +A +Adv +V                            !! Open POS's
-  +Pron +CS +CC +Po +Pr +Interj +Pcle +Num !! Closed POS's
-  +Logo                                    !! What is this?
+                                           !!  !!Tags for POS
+  +N +A +Adv +V                            !!≈ ; @CODE@ : Open POS's
+  +Pron +CS +CC +Po +Pr +Interj +Pcle +Num !!≈ ; @CODE@ : Closed POS's
+  +Logo                                    !!≈ ; @CODE@ : What is this?
 
-!! !Tags for sub-POS
-  +Prop                                        !! Proper nouns
-  +Pers +Dem +Interr +Refl +Recipr +Rel +Indef !! Pronoun subtypes
-  +Coll                                        !! Collective numeral
+                                               !!  !Tags for sub-POS
+  +Prop                                        !!≈ ; @CODE@ :  Proper nouns
+  +Pers +Dem +Interr +Refl +Recipr +Rel +Indef !!≈ ; @CODE@ :  Pronoun subtypes
+  +Coll                                        !!≈ ; @CODE@ :  Collective numeral
 
-!! !!Usage tags
-  +Use/Sub         !! | Substandard
-  +Use/Marg        !! | Marginal
-  +Use/-Spell      !! | Excluded from speller
-  +Use/SpellNoSugg !! | recognized but not suggested in speller
-  +Use/Circ        !! | Circular path
-  +Use/CircN       !! | Circular number path
-  +Use/Ped         !! | Remove from pedagogical speller
-  +Use/NG          !! | Do not generate, for isme-ped.fst and apertium
-  +Use/LexSub      !! | The lemma is not a South Sami word
+                   !!  !!Usage tags
+  +Use/Sub         !!≈ | @CODE@ | Substandard
+  +Use/Marg        !!≈ | @CODE@ | Marginal
+  +Use/-Spell      !!≈ | @CODE@ | Excluded from speller
+  +Use/SpellNoSugg !!≈ | @CODE@ | recognized but not suggested in speller
+  +Use/Circ        !!≈ | @CODE@ | Circular path
+  +Use/CircN       !!≈ | @CODE@ | Circular number path
+  +Use/Ped         !!≈ | @CODE@ | Remove from pedagogical speller
+  +Use/NG          !!≈ | @CODE@ | Do not generate, for isme-ped.fst and apertium
+  +Use/LexSub      !!≈ | @CODE@ | The lemma is not a South Sami word
 
-!! !!Dialect tags:
-  +Dial/-S   !! | Not in the South
-  +Dial/-N   !! | Not in the North
-  +Dial/-NOR !! | Not in Norway
-  +Dial/-SW  !! | Not in Sweden
-  +Dial/SH   !! | Short forms
-  +Dial/L    !! | Long forms
+             !!  !!Dialect tags:
+  +Dial/-S   !!≈ | @CODE@ | Not in the South
+  +Dial/-N   !!≈ | @CODE@ | Not in the North
+  +Dial/-NOR !!≈ | @CODE@ | Not in Norway
+  +Dial/-SW  !!≈ | @CODE@ | Not in Sweden
+  +Dial/SH   !!≈ | @CODE@ | Short forms
+  +Dial/L    !!≈ | @CODE@ | Long forms
 
 !  +Dial/OE  ! oe forms ! We assume these are lexical, and do not tag.
 !  +Dial/A   ! a forms  ! We assume these are lexical, and do not tag.
@@ -55,144 +55,147 @@ Multichar_Symbols
 !! !!Normative/prescriptive compounding tags
 !! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
-!! !The first part of the component may be ..
-+CmpN/Sg       !! | Sg
-+CmpN/SgN      !! | SgNominative
-+CmpN/SgG      !! | SgGenitive
-+CmpN/PlG      !! | PlGenitive
+               !! !The first part of the component may be ..
++CmpN/Sg       !!≈ | @CODE@ | Sg
++CmpN/SgN      !!≈ | @CODE@ | SgNominative
++CmpN/SgG      !!≈ | @CODE@ | SgGenitive
++CmpN/PlG      !!≈ | @CODE@ | PlGenitive
 
-!! !This part of the component might be ..
-+CmpN/First     !! | first
-+CmpN/Last      !! | last
-+CmpN/None      !! | Can not take part in compounds
-+CmpN/Only      !! | Can only be part of a compound
-+CmpN/Pref      !! | prefix only
+                !! !This part of the component might be ..
++CmpN/First     !!≈ | @CODE@ | first
++CmpN/Last      !!≈ | @CODE@ | last
++CmpN/None      !!≈ | @CODE@ | Can not take part in compounds
++CmpN/Only      !!≈ | @CODE@ | Can only be part of a compound
++CmpN/Pref      !!≈ | @CODE@ | prefix only
 
-!! !The second part of the compound may take ..
-+CmpN/SgLeft     !! | Sg to the left
-+CmpN/SgNomLeft  !! | etc.
-+CmpN/SgGenLeft  !! | "
-+CmpN/PlGenLeft  !! | "
+                 !! !The second part of the compound may take ..
++CmpN/SgLeft     !!≈ | @CODE@ | Sg to the left
++CmpN/SgNomLeft  !!≈ | @CODE@ | etc.
++CmpN/SgGenLeft  !!≈ | @CODE@ | "
++CmpN/PlGenLeft  !!≈ | @CODE@ | "
 
-!! !This part of the compound may ... 
-+CmpN/All        !! | all positions, __default__, this tag does not have to be written
-+CmpN/Def        !! | works along with Left compound-tagging
-+CmpN/DefSgGen   !! | works along with Left compound-tagging
-+CmpN/DefPlGen   !! | works along with Left compound-tagging
+                 !! !This part of the compound may ... 
++CmpN/All        !!≈ | @CODE@ | all positions, __default__, this tag does not have to be written
++CmpN/Def        !!≈ | @CODE@ | works along with Left compound-tagging
++CmpN/DefSgGen   !!≈ | @CODE@ | works along with Left compound-tagging
++CmpN/DefPlGen   !!≈ | @CODE@ | works along with Left compound-tagging
 
 !! !!Descriptive compounding tags
 !! Tags for compound analysis - this is what a compound actually is:
-  +SgCmp +SgNomCmp +SgGenCmp +PlGenCmp !! Different case + number combinations
-  +Cmp     !! Dynamic compound - this tag should always be part of a dynamic compound.
-           !! It is important for Apertium, and useful in other cases as well.
-  +RCmpnd  !! This is a split compound with the other part to the right:
-           !! "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
-  +LCmpnd+ !! This is a split compound with the other part to the left
-  +ShCmp   !! Testing ShCmp
+
+  +SgCmp +SgNomCmp +SgGenCmp +PlGenCmp !!≈ ; @CODE@ : Different case + number combinations
+  +Cmp     !!≈ ; @CODE@ : Dynamic compound - this tag should ''always'' be part of a dynamic compound.
+           !!  It is important for Apertium, and useful in other cases as well.
+  +RCmpnd  !!≈ ; @CODE@ : This is a split compound with the other part to the right: \\
+           !!  "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
+  +LCmpnd+ !!≈ ; @CODE@ : This is a split compound with the other part to the left
+  +ShCmp   !!≈ ; @CODE@ : Testing ShCmp
 
 !! !!Tags for Inflection
 
-!! !Tags for Case and Number Inflection
-  +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Com +Ess !! | Cases
-  +PxSg1 +PxSg2 +PxSg3                            !! | Possessives Singular
-  +PxDu1 +PxDu2 +PxDu3                            !! | Possessives Dual
-  +PxPl1 +PxPl2 +PxPl3                            !! | Possessives Plural
-  +Prs +Prt                                       !! | Tense
-  +Sg1 +Sg2 +Sg3                                  !! | Singular
-  +Du1 +Du2 +Du3                                  !! | Dual
-  +Pl1 +Pl2 +Pl3                                  !! | Plural
-  +Neg    !! | negation verb ij
-  +ConNeg !! | main verb complement to Neg, form identical to Imp
-  +VAbess !! | Verb Abessive
+                                                  !! !Tags for Case and Number Inflection
+  +Sg +Pl +Nom +Acc +Gen +Ine +Ela +Ill +Com +Ess !!≈ | @CODE@ | Cases
+  +PxSg1 +PxSg2 +PxSg3                            !!≈ | @CODE@ | Possessives Singular
+  +PxDu1 +PxDu2 +PxDu3                            !!≈ | @CODE@ | Possessives Dual
+  +PxPl1 +PxPl2 +PxPl3                            !!≈ | @CODE@ | Possessives Plural
+  +Prs +Prt                                       !!≈ | @CODE@ | Tense
+  +Sg1 +Sg2 +Sg3                                  !!≈ | @CODE@ | Singular
+  +Du1 +Du2 +Du3                                  !!≈ | @CODE@ | Dual
+  +Pl1 +Pl2 +Pl3                                  !!≈ | @CODE@ | Plural
+  +Neg    !!≈ | @CODE@ | negation verb ij
+  +ConNeg !!≈ | @CODE@ | main verb complement to Neg, form identical to Imp
+  +VAbess !!≈ | @CODE@ | Verb Abessive
 
-  +Inf +PrfPrc +PrsPrc !! Infinitive and participles
-  +Ger +VGen           !! Gerund
+  +Inf +PrfPrc +PrsPrc !!≈ ; @CODE@ : Infinitive and participles
+  +Ger +VGen           !!≈ ; @CODE@ : Gerund
 
-  +Ind   !! Indicative
-  +Imprt !! Imperative
-  +Cond  !! for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
+  +Ind   !!≈ ; @CODE@ : Indicative
+  +Imprt !!≈ ; @CODE@ : Imperative
+  +Cond  !!≈ ; @CODE@ : for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
 ! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21)
-  +Act   !! -eme, could be chagned to +Actio
+  +Act   !!≈ ; @CODE@ : -eme, could be chagned to +Actio
 
-!! !Tags for adjectives
-  +Comp +Superl !! Comparation
-  +Attr         !! Attribute form
-  +Ord          !! Ordinal number
+                !! !Tags for adjectives
+  +Comp +Superl !!≈ ; @CODE@ : Comparation
+  +Attr         !!≈ ; @CODE@ : Attribute form
+  +Ord          !!≈ ; @CODE@ : Ordinal number
 
-!! !!Other tags
-  +ABBR +ACR !! Abbreviation, acronym
-  +TV +IV    !! Transitivity tags
-  +Multi     !! Multiword phrase tag
-  +Guess     !! for the name guesser
-  +LOAN      !! ad hoc tag for development purposes.
-  +Hyph      !! A tag to indicate that a hyphen was used when compounding
+             !! !!Other tags
+  +ABBR +ACR !!≈ ; @CODE@ : Abbreviation, acronym
+  +TV +IV    !!≈ ; @CODE@ : Transitivity tags
+  +Multi     !!≈ ; @CODE@ : Multiword phrase tag
+  +Guess     !!≈ ; @CODE@ : for the name guesser
+  +LOAN      !!≈ ; @CODE@ : ad hoc tag for development purposes.
+  +Hyph      !!≈ ; @CODE@ : A tag to indicate that a hyphen was used when compounding
 
-!! !Tags for testing the frequency of certain phenomenas in our corpora
-  +Test/LysI  !! form uses i
-  +Test/MørkI !! form uses ï
-  +Test/HK    !! form uses consonant cluster hk
-  +Test/GK    !! form uses consonant cluster gk
-  +Test/JK    !! form uses consonant cluster jk
-  +Uml        !! A tag to indicate realised or potential Umlaut
-  +NoUml      !! A tag to indicate the lack of realised or potential Umlaut
+              !! !Tags for testing the frequency of certain phenomenas in our corpora
+  +Test/LysI  !!≈ ; @CODE@ : form uses i
+  +Test/MørkI !!≈ ; @CODE@ : form uses ï
+  +Test/HK    !!≈ ; @CODE@ : form uses consonant cluster hk
+  +Test/GK    !!≈ ; @CODE@ : form uses consonant cluster gk
+  +Test/JK    !!≈ ; @CODE@ : form uses consonant cluster jk
+  +Uml        !!≈ ; @CODE@ : A tag to indicate realised or potential Umlaut
+  +NoUml      !!≈ ; @CODE@ : A tag to indicate the lack of realised or potential Umlaut
 
-!! !Tags for punctuation
-  +CLB +PUNCT +LEFT +RIGHT !! XXX These should be documented better
+                           !! !Tags for punctuation
+  +CLB +PUNCT +LEFT +RIGHT !!≈ ; @CODE@ : XXX These should be documented better
 
-!! !Different focus particles
-  +Foc/ge     !! XXX Document better
-  +Foc/gan    !! XXX Document better
-  +Foc/gih    !! XXX Document better
-  +Foc/gænnah !! XXX Document better
+              !! !Different focus particles
+  +Foc/ge     !!≈ ; @CODE@ : XXX Document better
+  +Foc/gan    !!≈ ; @CODE@ : XXX Document better
+  +Foc/gih    !!≈ ; @CODE@ : XXX Document better
+  +Foc/gænnah !!≈ ; @CODE@ : XXX Document better
 
 
-!! !!Semantic tags to help disambiguation & synt. analysis:
- +Mal +Fem +Sur !! | Names
- +Plc           !! | Place
- +Org           !! | Organisation
- +Obj           !! | Object
- +Ani           !! | Animate
- +Hum           !! | Human
+                !! !!Semantic tags to help disambiguation & synt. analysis:
+ +Mal +Fem +Sur !!≈ | @CODE@ | Names
+ +Plc           !!≈ | @CODE@ | Place
+ +Org           !!≈ | @CODE@ | Organisation
+ +Obj           !!≈ | @CODE@ | Object
+ +Ani           !!≈ | @CODE@ | Animate
+ +Hum           !!≈ | @CODE@ | Human
 
 
 !! !!Derivation position in a derivation row
 !! Affix and:
+
+!! || Tag                                                                   || FromPOS-ToPOS, explanation
 ! 1              2               3                4                         POS type
-+Der1           +Der2           +Der3            +Der4                      !! | Position
++Der1           +Der2           +Der3            +Der4                      !!≈ | @CODE@ | Position
 !! | Der#1
-+Der/htalle                                                                 !! | VV - Passive
-+Der/lgidh                                                                  !! | VV - Passive
-+Der/ijes                                                                   !! | NA
-+Der/ihks                                                                   !! | VA
-+Der/les                                                                    !! | VA
-+Der/ldihkie                                                                !! | VA
-+Der/ldahke                                                                 !! | VA
-+Der/ldh                                                                    !! | VA
-+Der/htidh                                                                  !! | VV - Causative
-! +Der/dehte                                                                !  | VV - Causative
-+Der/lidh                                                                   !! | VV - Subitive
-+Der/stidh                                                                  !! | VV - Diminutive
-+Der/didh                                                                   !! | VV - Continuative
-+Der/htjidh                                                                 !! | Dim-cont.
-+Der/htovve                                                                 !! | AV 
-+Der/htoeve                                                                 !! | AV 
-+Der/htehte                                                                 !! | AV
-+Der/Dimin                                                                  !! | NN - Diminutive
-+Der/Rec                                                                    !! | NN - Forholdsformer
-+Der/laakan																	!! | AAdv
++Der/htalle                                                                 !!≈ | @CODE@ | VV - Passive
++Der/lgidh                                                                  !!≈ | @CODE@ | VV - Passive
++Der/ijes                                                                   !!≈ | @CODE@ | NA
++Der/ihks                                                                   !!≈ | @CODE@ | VA
++Der/les                                                                    !!≈ | @CODE@ | VA
++Der/ldihkie                                                                !!≈ | @CODE@ | VA
++Der/ldahke                                                                 !!≈ | @CODE@ | VA
++Der/ldh                                                                    !!≈ | @CODE@ | VA
++Der/htidh                                                                  !!≈ | @CODE@ | VV - Causative
+! +Der/dehte                                                                ! ≈ | @CODE@ | VV - Causative
++Der/lidh                                                                   !!≈ | @CODE@ | VV - Subitive
++Der/stidh                                                                  !!≈ | @CODE@ | VV - Diminutive
++Der/didh                                                                   !!≈ | @CODE@ | VV - Continuative
++Der/htjidh                                                                 !!≈ | @CODE@ | Dim-cont.
++Der/htovve                                                                 !!≈ | @CODE@ | AV 
++Der/htoeve                                                                 !!≈ | @CODE@ | AV 
++Der/htehte                                                                 !!≈ | @CODE@ | AV
++Der/Dimin                                                                  !!≈ | @CODE@ | NN - Diminutive
++Der/Rec                                                                    !!≈ | @CODE@ | NN - Forholdsformer
++Der/laakan																	!!≈ | @CODE@ | AAdv
 !! | Der#2
-                +Der/voete                                                  !! | AN
-                +Der/ehte                                                   !! | VV - Causative
-                +Der/adte                                                   !! | VV - Frequentative
-                +Der/alle                                                   !! | VV - Frequentative
-                +Der/eds                                                    !! | ??
+                +Der/voete                                                  !!≈ | @CODE@ | AN
+                +Der/ehte                                                   !!≈ | @CODE@ | VV - Causative
+                +Der/adte                                                   !!≈ | @CODE@ | VV - Frequentative
+                +Der/alle                                                   !!≈ | @CODE@ | VV - Frequentative
+                +Der/eds                                                    !!≈ | @CODE@ | ??
 !! | Der#3
-                                +Der/PassL                                  !! | VV - long only
-                                +Der/NomAg                                  !! | VN
-                                +Der/NomAct                                 !! | VN
-                                +Der/ahtje                                  !! | VV - Inchoative
-                                +Der/gåete                                  !! | VV - Inchoative
-!! | Der#4   | So far +Der4 is not motivated for SMA.
+                                +Der/PassL                                  !!≈ | @CODE@ | VV - long only
+                                +Der/NomAg                                  !!≈ | @CODE@ | VN
+                                +Der/NomAct                                 !!≈ | @CODE@ | VN
+                                +Der/ahtje                                  !!≈ | @CODE@ | VV - Inchoative
+                                +Der/gåete                                  !!≈ | @CODE@ | VV - Inchoative
+!! | Der#4   | ''So far +Der4 is not motivated for SMA.''
 
 !! !Other, non-positional derivations
 
@@ -200,17 +203,17 @@ Multichar_Symbols
 !! to make it possible to target regular expressions in all derivations in a
 !! language-independent way:
 !! just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
-+Der !! Tag to precede any non-positional derivation
++Der !!≈ ; @CODE@ : Tag to precede any non-positional derivation
 
-+Der/PassS                                                                  !! | VV - short passive only
-+Der/A                                                                      !! | NA - comparation of N's
++Der/PassS                                                                  !!≈ | @CODE@ | VV - short passive only
++Der/A                                                                      !!≈ | @CODE@ | NA - comparation of N's
 
 
-!! !!Triggers for morphophonological rules
-  X2 !! Trigger for ???
-  X3 !! Trigger for ???
-  X4 !! Trigger for ???
-  E2 !! insert e ! Fjern denne.
+     !! !!Triggers for morphophonological rules
+  X2 !!≈ ; @CODE@ : Trigger for ???
+  X3 !!≈ ; @CODE@ : Trigger for ???
+  X4 !!≈ ; @CODE@ : Trigger for ???
+  E2 !!≈ ; @CODE@ : insert e ! Fjern denne.
 
         !! !!Symbols that need to be escaped on the lower side (towards twolc):
  »7     !!≈ ; @CODE@ : Literal »
@@ -220,35 +223,35 @@ Multichar_Symbols
  %[%<%] !!= @CODE@ - Literal <
         !! }}}
 
-                      !! !!Lexeme disambiguation tags
-  +1 +2               !! ; @CODE@ : Homonymy (?)
-  +v1 +v2 +v3 +v4 +v5 !! ; @CODE@ : Versions 
+                      !!  !!Lexeme disambiguation tags
+  +1 +2               !!≈ ; @CODE@ : Homonymy (?)
+  +v1 +v2 +v3 +v4 +v5 !!≈ ; @CODE@ : Versions 
 
-                  !! !!Umlaut and diphthong simplification triggers
-  %^DISIMP        !! | @CODE@ | ???
-  %^COMPDISIMP    !! | @CODE@ | ???
-  %^COMPDISIMP2   !! | @CODE@ | ???
-  %^NOMAGieDISIMP !! | @CODE@ | ???
-  %^1UML          !! | @CODE@ | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
-  %^2UML          !! | @CODE@ | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
-  %^3UML          !! | @CODE@ | not used
-  %^3sUML         !! | @CODE@ | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
-  %^3dUML         !! | @CODE@ | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
-  %^iæUML         !! | @CODE@ | not used
-  %^iUML          !! | @CODE@ | i-uml in pret of V-I (båetedh - böötim)
-  %^PASSUML       !! | @CODE@ | Short passive Umlaut Rx->R5
-  %^didhUML       !! | @CODE@ | Der/didh Umlaut for GUARKEDH-words
-  %^htjidhUML     !! | @CODE@ | Umlaut für der/htjidh derivations
-  %^adteUML       !! | @CODE@ | Umlaut für Der/adte and Der/alle derivations
-  %^aLATUS        !! | @CODE@ | Latus-Umlaut for -ie stems
-  %^uLATUS        !! | @CODE@ | Latus-Umlaut for -oe stems
+                  !!  !!Umlaut and diphthong simplification triggers
+  %^DISIMP        !!≈ | @CODE@ | ???
+  %^COMPDISIMP    !!≈ | @CODE@ | ???
+  %^COMPDISIMP2   !!≈ | @CODE@ | ???
+  %^NOMAGieDISIMP !!≈ | @CODE@ | ???
+  %^1UML          !!≈ | @CODE@ | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
+  %^2UML          !!≈ | @CODE@ | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
+  %^3UML          !!≈ | @CODE@ | not used
+  %^3sUML         !!≈ | @CODE@ | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
+  %^3dUML         !!≈ | @CODE@ | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
+  %^iæUML         !!≈ | @CODE@ | not used
+  %^iUML          !!≈ | @CODE@ | i-uml in pret of V-I (båetedh - böötim)
+  %^PASSUML       !!≈ | @CODE@ | Short passive Umlaut Rx->R5
+  %^didhUML       !!≈ | @CODE@ | Der/didh Umlaut for GUARKEDH-words
+  %^htjidhUML     !!≈ | @CODE@ | Umlaut für der/htjidh derivations
+  %^adteUML       !!≈ | @CODE@ | Umlaut für Der/adte and Der/alle derivations
+  %^aLATUS        !!≈ | @CODE@ | Latus-Umlaut for -ie stems
+  %^uLATUS        !!≈ | @CODE@ | Latus-Umlaut for -oe stems
 
-                  !! !!Flag diacritics
- @P.NeedNoun.ON@  !! | @CODE@ | (Dis)allowing compounds
- @D.NeedNoun.ON@  !! | @CODE@ | (Dis)allowing compounds
- @C.NeedNoun@     !! | @CODE@ | (Dis)allowing compounds
- @U.Cap.Obl@      !! | @CODE@ | Allowing downcasing of derived names: deatnulasj.
- @U.Cap.Opt@      !! | @CODE@ | Allowing downcasing of derived names: deatnulasj.
+                  !!  !!Flag diacritics
+ @P.NeedNoun.ON@  !!≈ | @CODE@ | (Dis)allowing compounds
+ @D.NeedNoun.ON@  !!≈ | @CODE@ | (Dis)allowing compounds
+ @C.NeedNoun@     !!≈ | @CODE@ | (Dis)allowing compounds
+ @U.Cap.Obl@      !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
+ @U.Cap.Opt@      !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
 !               ! Actually, downcasing should be obligatory
 
 
