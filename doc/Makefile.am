@@ -5,7 +5,37 @@
 if CAN_DOCC
 
 # INSTALL these files:
-doc_DATA=sma.rst sma.html sma.tex sma.jspwiki
+JSP_PAGES=root-all.jspwiki
+
+# clitics-all.jspwiki
+# compounding-all.jspwiki
+# 
+# abbreviations-stems.jspwiki
+# acronyms-stems.jspwiki
+# adjectives-oahpa-stems.jspwiki
+# adjectives-stems.jspwiki
+# adpositions-stems.jspwiki
+# adverbs-stems.jspwiki
+# conjunctions-stems.jspwiki
+# interjections-stems.jspwiki
+# nouns-oahpa-stems.jspwiki
+# nouns-stems.jspwiki
+# numerals-stems.jspwiki
+# particles-stems.jspwiki
+# pronouns-stems.jspwiki
+# propernouns-stems.jspwiki
+# punctuation-stems.jspwiki
+# smi-propernouns-stems.jspwiki
+# subjunctions-stems.jspwiki
+# verbs-stems.jspwiki
+# 
+# adjectives-oahpa-affixes.jspwiki
+# adjectives-affixes.jspwiki
+# nouns-affixes.jspwiki
+# propernouns-affixes.jspwiki
+# verbs-affixes.jspwiki
+
+doc_DATA=$(JSP_PAGES) sma.jspwiki
 
 DOCC2RST=$(top_srcdir)/src/scripts/doccomments2rst.awk
 DOCC2TEX=$(top_srcdir)/src/scripts/doccomments2tex.awk
@@ -14,21 +44,27 @@ DOCC2JSPWIKI=$(top_srcdir)/src/scripts/doccomments2jspwiki.awk
 RST2HTML=rst2html
 LATEX=xelatex
 
-sma.jspwiki: preamble.jspwiki doc-comments.conf
+%-all.jspwiki: $(top_srcdir)/src/morphology/%.lexc
+	$(AWK) -f $(DOCC2JSPWIKI) < $< > $@
+
+%-stems.jspwiki: $(top_srcdir)/src/morphology/stems/%.lexc
+	$(AWK) -f $(DOCC2JSPWIKI) < $< > $@
+
+%-affixes.jspwiki: $(top_srcdir)/src/morphology/affixes/%.lexc
+	$(AWK) -f $(DOCC2JSPWIKI) < $< > $@
+
+sma.jspwiki: preamble.jspwiki $(JSP_PAGES)
 	-rm -f $@
-	cat $(srcdir)/preamble.jspwiki > $@
-	cat `grep -v '^#' doc-comments.conf | sed -e 's:^:$(top_srcdir)/src/:'` | $(AWK) -f $(DOCC2JSPWIKI) >> $@
+	cat $(srcdir)/preamble.jspwiki $(JSP_PAGES) > $@
 
 sma.tex: preamble.tex doc-comments.conf
 	-rm -f $@
 	cat $(srcdir)/preamble.tex > $@
-	cat `grep -v '^#'  doc-comments.conf | sed -e 's:^:$(top_srcdir)/src/:'` | $(AWK) -f $(DOCC2TEX) >> $@
 
 
 sma.rst: preamble.rst doc-comments.conf
 	-rm -f $@
 	cat $(srcdir)/preamble.rst > $@
-	cat `grep -v '^#' doc-comments.conf | sed -e 's:^:$(top_srcdir)/src/:'` | $(AWK) -f $(DOCC2RST) >> $@
 
 %.html: %.rst
 	$(RST2HTML) < $< > $@
