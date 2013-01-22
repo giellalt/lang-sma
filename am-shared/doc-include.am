@@ -11,7 +11,7 @@ DOCC2JSPWIKI=$(GTCORE)/scripts/doccomments2jspwiki.awk
 RST2HTML=rst2html
 LATEX=xelatex
 
-%-all.jspwiki: $(top_srcdir)/src/morphology/%.lexc
+%-morphology.jspwiki: $(top_srcdir)/src/morphology/%.lexc
 	$(AWK) -f $(DOCC2JSPWIKI) < $< > $@
 
 %-stems.jspwiki: $(top_srcdir)/src/morphology/stems/%.lexc
