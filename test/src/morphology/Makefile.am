@@ -12,6 +12,33 @@ TESTS=test-noun-generation.sh \
 
 # Add your shell scripts for running python-based tests here:
 if CAN_YAML_TEST
+DOCC2YAML=$(GTCORE)/scripts/doccomments2yaml.awk
+YAML_COMMENTS=nouns-affixes_gt-norm.yaml
+			  
+#			  roots_gt-norm.yaml \
+#			  noun-stems_gt-norm.yaml \
+#			  adj-stems_gt-norm.yaml \
+#			  adjectives-affixes_gt-norm.yaml
+
+check_DATA=$(YAML_COMMENTS)
+
+roots_gt-norm.yaml: $(top_srcdir)/src/morphology/root.lexc
+	$(AWK) -f $(DOCC2YAML) < $< > $@
+
+roots_gt-desc.yaml: $(top_srcdir)/src/morphology/root.lexc
+	$(AWK) -f $(DOCC2YAML) --assign=TYPE=gt-desc < $< > $@
+
+%-stems_gt-norm.yaml: $(top_srcdir)/src/morphology/stems/%.lexc
+	$(AWK) -f $(DOCC2YAML) < $< > $@
+
+%-stems_gt-desc.yaml: $(top_srcdir)/src/morphology/stems/%.lexc
+	$(AWK) -f $(DOCC2YAML) --assign=TYPE=gt-desc < $< > $@
+ 
+%-affixes_gt-norm.yaml: $(top_srcdir)/src/morphology/affixes/%.lexc
+	$(AWK) -f $(DOCC2YAML) < $< > $@
+
+%-affixes_gt-desc.yaml: $(top_srcdir)/src/morphology/affixes/%.lexc
+	$(AWK) -f $(DOCC2YAML) --assign=TYPE=gt-desc < $< > $@
 TESTS+=run-gt-norm-yaml-testcases.sh run-gt-desc-yaml-testcases.sh
 endif
 
