@@ -5,7 +5,7 @@
 # List all jspwiki files that should be created from source files in the
 # JSP_PAGES variable. The filename pattern is as follows:
 #
-# dir/filename.lex => filename-dir.jspwiki
+# dir/filename.lexc => filename-dir.jspwiki
 
 if CAN_DOCC
 
