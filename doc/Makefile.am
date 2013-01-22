@@ -35,43 +35,8 @@ JSP_PAGES=root-all.jspwiki
 # propernouns-affixes.jspwiki
 # verbs-affixes.jspwiki
 
-doc_DATA=$(JSP_PAGES) sma.jspwiki
-
-DOCC2RST=$(GTCORE)/scripts/doccomments2rst.awk
-DOCC2TEX=$(GTCORE)/scripts/doccomments2tex.awk
-DOCC2JSPWIKI=$(GTCORE)/scripts/doccomments2jspwiki.awk
-
-RST2HTML=rst2html
-LATEX=xelatex
-
-%-all.jspwiki: $(top_srcdir)/src/morphology/%.lexc
-	$(AWK) -f $(DOCC2JSPWIKI) < $< > $@
-
-%-stems.jspwiki: $(top_srcdir)/src/morphology/stems/%.lexc
-	$(AWK) -f $(DOCC2JSPWIKI) < $< > $@
-
-%-affixes.jspwiki: $(top_srcdir)/src/morphology/affixes/%.lexc
-	$(AWK) -f $(DOCC2JSPWIKI) < $< > $@
-
-sma.jspwiki: preamble.jspwiki $(JSP_PAGES)
-	-rm -f $@
-	cat $(srcdir)/preamble.jspwiki $(JSP_PAGES) > $@
-
-sma.tex: preamble.tex doc-comments.conf
-	-rm -f $@
-	cat $(srcdir)/preamble.tex > $@
-
-
-sma.rst: preamble.rst doc-comments.conf
-	-rm -f $@
-	cat $(srcdir)/preamble.rst > $@
-
-%.html: %.rst
-	$(RST2HTML) < $< > $@
-
-%.pdf: %.tex
-	$(LATEX) $<
-	$(LATEX) $<
-	$(LATEX) $<
+ALLINONE_JSP_PAGE=$(GTLANG).jspwiki
 
 endif # CAN_DOCC
+
+include $(top_srcdir)/am-shared/doc-include.am
