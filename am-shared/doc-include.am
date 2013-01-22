@@ -20,23 +20,23 @@ LATEX=xelatex
 %-affixes.jspwiki: $(top_srcdir)/src/morphology/affixes/%.lexc
 	$(AWK) -f $(DOCC2JSPWIKI) < $< > $@
 
-$(GTLANG).jspwiki: preamble.jspwiki $(JSP_PAGES)
+$(GTLANG).jspwiki: $(srcdir)/preamble.jspwiki $(JSP_PAGES)
 	-rm -f $@
 	cat $(srcdir)/preamble.jspwiki $(JSP_PAGES) > $@
 
-$(GTLANG).tex: preamble.tex doc-comments.conf
-	-rm -f $@
-	cat $(srcdir)/preamble.tex > $@
-
-
-$(GTLANG).rst: preamble.rst doc-comments.conf
-	-rm -f $@
-	cat $(srcdir)/preamble.rst > $@
-
-%.html: %.rst
-	$(RST2HTML) < $< > $@
-
-%.pdf: %.tex
-	$(LATEX) $<
-	$(LATEX) $<
-	$(LATEX) $<
+#$(GTLANG).tex: $(srcdir)/preamble.tex $(srcdir)/doc-comments.conf
+#	-rm -f $@
+#	cat $(srcdir)/preamble.tex > $@
+#
+#
+#$(GTLANG).rst: $(srcdir)/preamble.rst $(srcdir)/doc-comments.conf
+#	-rm -f $@
+#	cat $(srcdir)/preamble.rst > $@
+#
+#%.html: %.rst
+#	$(RST2HTML) < $< > $@
+#
+#%.pdf: %.tex
+#	$(LATEX) $<
+#	$(LATEX) $<
+#	$(LATEX) $<
