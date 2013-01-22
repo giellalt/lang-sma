@@ -17,13 +17,16 @@
 ! ========================================================================== !
  
 
-! ============================
-! Nominal inflection sublexica
-! ============================
+! ================================
+!! !!!Nominal inflection sublexica
+! ================================
 
-! Inflection for odd-syllable nouns
-! ---------------------------------
 LEXICON N_ODD
+!! !!Inflection for odd-syllable nouns: lexicon @LEXNAME@
+! -------------------------------------------------------
+!
+!! Short descrioption of this lexicon, and its purpose.
+!
  +N+Sg: N_ODD_SG ;
  +N+Pl: N_ODD_PL ;
  +N:    N_ODD_ESS ;
@@ -31,6 +34,24 @@ LEXICON N_ODD
   +N+SgGenCmp:e%>%^DISIMPn R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
   +N+Der1+Der/Dimin+N:%»adtj GIERIEHTSADTJE ;
+! Test data:
+!!€fst-norm: gierehtse # Odd-syllable test
+!!€ gierehtse           gierehtse+N+Sg+Nom
+!!€ gierehtsem          gierehtse+N+Sg+Acc
+!!$ gieriehtsem         gierehtse+N+Sg+Acc # negative test - don't accept this!
+!!€ gierehtsen          gierehtse+N+Sg+Gen
+!!€ gieriehtsasse       gierehtse+N+Sg+Ill
+!!€ gieriehtsisnie      gierehtse+N+Sg+Ine
+!!€ gieriehtsistie      gierehtse+N+Sg+Ela
+!!€ gieriehtsinie       gierehtse+N+Sg+Com
+!!€ gierehtsh           gierehtse+N+Pl+Nom
+!!€ gieriehtsidie       gierehtse+N+Pl+Acc
+!!€ gierehtsi           gierehtse+N+Pl+Gen
+!!€ gieriehtsidie       gierehtse+N+Pl+Ill
+!!€ gieriehtsinie       gierehtse+N+Pl+Ine
+!!€ gieriehtsijstie     gierehtse+N+Pl+Ela
+!!€ gierehtsigujmie     gierehtse+N+Pl+Com
+!!€ gieriehtsinie       gierehtse+N+Ess
 
 LEXICON N_ODD_LOAN
   +N+Sg+Nom: FINAL1 ;  ! romer
