@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en">
+  <header>
+    <title>Bugs</title>
+  </header>
+  <body>
+    <section>
+      <title>Bug reports, errors</title>
+      <p>This file is no longer in use. It was abandoned with the introduction of the bug report system <a href="http://giellatekno.uit.no/bugzilla/">Bugzilla</a>. This file is kept since the bugs reported have not been migrated to Bugzilla.</p>
+      <section>
+        <title>Umlaut errors</title>
+        <p>jaevrie pl Acc</p>
+        <p>claims jeevride should be jaevride</p>
+        <p>The same error is recorded for gaerie. Look into this.</p>
+        <section>
+          <title>Trouble recognising ie...ie nouns</title>
+          <p>It seems it does not recognise ..ie..ie nouns. bielkie, biehkie, etc. Others work, e.g. jiekie !!??</p>
+          <p>The error could lie in the different encoding in the lexicon, cf. below. Perhaps we should have had &quot;bE1hkI2&quot;, patterning with &quot;jiekie&quot;.</p>
+          <source>jiekie:jE1kI2 N_IE;
+biehkie:bI1hkI2 N_IE;
+biejjie:bI1jjI2 N_IE;
+bielie:bI1lI2 N_IE;
+</source>
+        </section>
+      </section>
+      <section>
+        <title>Morphological errors</title>
+        <section>
+          <title>Generating the illative</title>
+          <p>The generator gives us two illative suffixes for both bi- and trisyllables, in stead of the intended distribution. Thus, it generates both 'daktarasse' and '*daktarase', both 'maanese' and '*maanasse' (sic! note the errouneous -a- as well), both 'nï¿½jtese' and '*nï¿½jtasse'.</p>
+        </section>
+        <section>
+          <title>Final -e missing in inessive</title>
+          <p>The system gives inessives without the final -e. The maana nouns also lose their a/e alternation in the stem vowel.</p>
+        </section>
+        <section>
+          <title>Errors in the 2nd person personal pronoun</title>
+          <p>Have a look at the -nn- vs, -tn- alternation, it seems to be not ok.</p>
+        </section>
+      </section>
+      <p>Last modified: $Date$, by $Author$</p>
+    </section>
+  </body>
+</document>
