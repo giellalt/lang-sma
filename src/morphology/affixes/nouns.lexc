@@ -37,8 +37,6 @@ LEXICON N_ODD
 ! Test data:
 !!€gt-norm: gierehtse # Odd-syllable test
 !!€ gierehtse           gierehtse+N+Sg+Nom
-!!€ gierehtsem          gierehtse+N+Sg+Acc
-!!$ gieriehtsem         gierehtse+N+Sg+Acc # negative test - don't accept this!
 !!€ gierehtsen          gierehtse+N+Sg+Gen
 !!€ gieriehtsasse       gierehtse+N+Sg+Ill
 !!€ gieriehtsisnie      gierehtse+N+Sg+Ine
@@ -52,6 +50,7 @@ LEXICON N_ODD
 !!€ gieriehtsijstie     gierehtse+N+Pl+Ela
 !!€ gierehtsigujmie     gierehtse+N+Pl+Com
 !!€ gieriehtsinie       gierehtse+N+Ess
+!!¥ gierehtse+N+Sg+Acc: [gierehtsem, ~gieriehtsem]
 
 LEXICON N_ODD_LOAN
   +N+Sg+Nom: FINAL1 ;  ! romer
