@@ -314,7 +314,7 @@ LEXICON s_AN_4 ! NOCOMP
 
 LEXICON GIERIES 
 !! !!!GEAREHKE LEXICON @LEXNAME@
-!! Umlaut from attr--> pred, no comparation.
+!! Umlaut from attr--> pred. Comporation uneven syllable.
 !! Presentlly only used for "gieries-gearehke" adjective.
 !! This lexicon covers the ies - ehke + umlaut change.
  !! {{{
@@ -325,11 +325,17 @@ LEXICON GIERIES
  !! }}}
  
 
-LEXICON BAERIES 
- :båerie ATTR_S ;
- :båerie PRED_S ;
- :båaras aCASEOBL ; ! båarasam (LK),? egentl. 'voeres’
- :båaras ODDCOMP ;
+LEXICON BAERIES
+!! !!!BÅERIES LEXICON @LEXNAME@
+!! UNEVEN adjective, attr = pred. Comporation uneven syllable.
+!! Presentlly only used for "båeries" adjective.
+!! {{{ 
+ :båerie ATTR_S ; !!= @CODE@
+ :båerie PRED_S ; !!= @CODE@
+ :båaras aCASEOBL ; !!= @CODE@
+ ! båarasam (LK),? egentl. 'voeres’
+ :båaras ODDCOMP ; !!= @CODE@
+ !! }}}
  
 LEXICON GÆHTJOES 
  !:gyhtje PRED_0 ; ! bort? ikke dokumentert, se Majas kommmentar her 
