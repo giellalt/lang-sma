@@ -313,10 +313,17 @@ LEXICON s_AN_4 ! NOCOMP
 ! :staaran PRED_0 ;!NOCOMP
 
 LEXICON GIERIES 
- :gierie ATTR_S ; 
- :gearehke PRED_0 ;
- :gearahk ODDCOMP ;
- :gearahk ODDCASEOBL ;
+!! !!!GEAREHKE LEXICON @LEXNAME@
+!! Umlaut from attr--> pred, no comparation.
+!! Presentlly only used for "gieries-gearehke" adjective.
+!! This lexicon covers the ies - ehke + umlaut change.
+ !! {{{
+ :gierie ATTR_S ;      !!= @CODE@
+ :gearehke PRED_0 ;    !!= @CODE@
+ :gearahk ODDCOMP ;    !!= @CODE@
+ :gearahk ODDCASEOBL ; !!= @CODE@
+ !! }}}
+ 
 
 LEXICON BAERIES 
  :båerie ATTR_S ;
