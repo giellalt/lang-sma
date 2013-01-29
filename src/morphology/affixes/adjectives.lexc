@@ -224,12 +224,17 @@ LEXICON TJOEVKES
 
 LEXICON SAETNIES
 !! !!!UMLAUT LEXICON @LEXNAME@
-!! Umlaut from attr--> pred, no comparation
- :ies ATTR_0 ;
- :%^1UMLan PRED_0 ;
+!! Umlaut from attr--> pred, no comparation.
+!! Presentlly only used for ''saetnies'', but should be
+!! generalised to cover a larger group.
+!! 
+!! This group covers the ies - an + umlaut change.
+!! {{{
+ :ies ATTR_0 ;      !!= @CODE@
+ :%^1UMLan PRED_0 ; !!= @CODE@
 !+Use/NG:a PRED_0 ;
- : ieCASE ;
-
+ : ieCASE ;		    !!= @CODE@
+!! }}}
 
 LEXICON HAERRIES
   :haerries ATTR_0 ;
