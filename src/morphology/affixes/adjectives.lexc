@@ -383,9 +383,9 @@ LEXICON EVTEBE
 +A+Comp+Attr:emes FINAL1 ;
 
 LEXICON ATTR_EVEN  
-!! !!!BIJJJIES LEXICON @LEXNAME@
+!! !!!BIJJIES LEXICON @LEXNAME@
 !! EVEN adjective, just attr. EVEN Comporation.
-!! Used for "bijjies" adjective. 
+!! Used for "bijjies" adjective. This one is wrong.
 !! {{{ 
 :ies ATTR_0 ;!!= @CODE@ 
 :e EVENCOMP ;!!= @CODE@ 
@@ -402,9 +402,14 @@ PRED_0 ;
     ! no case and comparation ?
 
 LEXICON IJVEadj
-:ijv e_E_EVEN  ; 
-:ïjv e_E_EVEN  ;
-+Use/Sub:iv e_E_EVEN  ;
+!! !!!IJVE_LOAN_ADJ LEXICON @LEXNAME@
+!! EVEN adjective EVEN Comporation.
+!! Used for all loan-adjectives "ijve".
+!! {{{ 
+:ijv e_E_EVEN  ;        !!= @CODE@ 
+:ïjv e_E_EVEN  ;        !!= @CODE@ 
++Use/Sub:iv e_E_EVEN  ; !!= @CODE@ 
+!! }}}
 
 LEXICON LES ! Should contain only loanwords (?)
 :%>%^DISIMPes ATTR_0 ; ! should redirect to case paradigm
