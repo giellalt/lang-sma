@@ -1208,11 +1208,40 @@ LEXICON ah_AN_ODD  ! LA: laga ny versjon, se kommentar over
  ah_AN_ODDNOCOMP ;
  :ahk  ODDCOMP ; 
 
-LEXICON ah_AN_ODDNOCOMP 
+
+LEXICON ah_AN_ODDNOCOMP
+!! The @LEXNAME@ lexicon is used for adjectives on ah and an.
+!! yes.
  :a ATTR_H ;
  :a PRED_N ;
  +Use/Sub: aCASEOBL ;
 
+
+LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP
+!! The @LEXNAME@ lexicon is used for adjectives on {{-ah}} and {{-an}} with an
+!! exceptional predicative on {{-ode/-ede}}. This lexicon is only used for
+!! three adjectives: ''båadtsoeh, båajhtoeh, skåalvoeh''. ''båadtsoeh'' is also
+!! used with the stem ''båadtj-'', although that stem is probably southern.
+!! It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
+!! This must be checked further, possibly with informants.
+
+!!€gt-norm: adjectives on ah/oeh an/oen/ode - båadtsah
+!!¥ båadtsoeh+A+Attr:   [båadtsah, båadtsoeh, båadtsas, båadtsoes, båadtjah, båadtjoeh, båadtjas, båadtjoes]
+!!¥ båadtsoeh+A+Sg+Nom: [båadtsan, båadtsoen, båadtsode, båadtsede, båadtjan, båadtjoen, båadtjode, båadtjede]
+
+!!€gt-desc: adjectives on ah/oeh an/oen/ode - båadtsah
+!!¥ båadtsoeh+A+Attr:   [båadtsah, båadtsoeh, båadtsas, båadtsoes, båadtjah, båadtjoeh, båadtjas, båadtjoes]
+!!¥ båadtsoeh+A+Sg+Nom: [båadtsan, båadtsoen, båadtsode, båadtsede, båadtjan, båadtjoen, båadtjode, båadtjede]
+         :a   ATTR_H     ;
+         :oe  ATTR_H     ;
+         :a   ATTR_S     ;
+         :oe  ATTR_S     ;
+         :a   PRED_N     ;
+         :oe  PRED_N     ;
+         :ode PRED_0     ;
+         :ede PRED_0     ;
+              aCASEOBL   ;
+              oeCASE_OBL ;
 
 !LEXICON ah_AN_A_ODD  ! 3 adjektiver, alle har Majas kommentar om at -a formen er subst. Bare en av dem finnes i noun-sma-lex. MLK: Det er riktig, nå skal alle stå der.
 !:a ATTR_H ;
