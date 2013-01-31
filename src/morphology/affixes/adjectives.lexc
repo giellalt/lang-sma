@@ -385,7 +385,7 @@ LEXICON EVTEBE
 LEXICON ATTR_EVEN  
 !! !!!BIJJIES LEXICON @LEXNAME@
 !! EVEN adjective, just attr. EVEN Comporation.
-!! Used for "bijjies" adjective. This one is wrong.
+!! Used for "bijjies" adjective. Gjør om denne: This one is wrong.
 !! {{{ 
 :ies ATTR_0 ;!!= @CODE@ 
 :e EVENCOMP ;!!= @CODE@ 
@@ -555,10 +555,23 @@ LEXICON Cs_CS_EVEN
  :e  EVENCOMP ; ! check this! -igs is the same as ihks - ebe/emes 
 
 
-LEXICON ihks_IHKS_EVENNOCOMP
-          ATTR_S ;
-          PRED_S ;
-    eCASEOBL ;   ! Passer denne?
+LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
+!! The __@LEXNAME@__ lexicon is used for adjectives on {{–igs/ihks}} and {{–igs/ihk}} with an
+!! used with the stem ''igs–''
+
+!!€gt-norm: adjectives 
+!!¥ isvelihks+A+Attr:   [isvelihks, isveligs]
+!!¥ isvelihks+A+Sg+Nom: [isvelihks, isveligs,isvelihke, isveligke, isveligie]
+
+        :ihk  ATTR_S ;
+        :ig   ATTR_S ;
+        :ihk  PRED_S ;
+        :ihk  PRED_S ;
+        :ihke PRED_0 ;
+        :igke PRED_0 ;
+        :igie PRED_0 ; ! egtl. ligkie og lihkie
+             eCASEOBL ;   ! 
+            ieCASEOBL ;   ! isveligie
 
 
 LEXICON RAARH  ! Attr= h, Comp =Even( Jïjtje-raarh) 
@@ -569,12 +582,14 @@ LEXICON RAARH  ! Attr= h, Comp =Even( Jïjtje-raarh)
 
 
 LEXICON MAST
+!! The __@LEXNAME@__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
+!! used with the stem ''igs–''
+
      ATTR_S ;
   +Use/NG:e ATTR_S ;
   +Use/NG:  ATTR_H ;
   +Use/NG:e ATTR_N ;
   :e PRED_N ;
-  ! comp?
   ! case?
   
 ! type 2
