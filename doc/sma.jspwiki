@@ -487,6 +487,8 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
+!!Inflection for NIEJTE_SG nouns: lexicon NIEJTE_SG
+Short descrioption of this lexicon, and its purpose.
 
 
 
@@ -679,20 +681,56 @@ Used for all loan-adjectives "ijve".
 
 
 
-The __ihks_IHKS_igs_IGS_EVENNOCOMP__ lexicon is used for adjectives on {{–igs/ihks}} and {{–igs/ihk}} with an
-used with the stem ''igs–''
+!!!LEXICONihks_IHKS_igs_IGS_EVENNOCOMP
+Adjective with no comp. 
 
 (subsequent examples are *adjectives *)
 ; {{isvelihks+A+Attr}}: __isvelihks,__ __isveligs__ 
 ; {{isvelihks+A+Sg+Nom}}: __isvelihks,__ __isveligs,isvelihke,__ __isveligke,__ __isveligie__ 
+{{{
+         :ihk  ATTR_S ;    
+         :ig   ATTR_S ;    
+         :ihk  PRED_S ;    
+         :ihk  PRED_S ;    
+         :ihke PRED_0 ;    
+         :igke PRED_0 ;    
+         :igie PRED_0 ;    
+               eCASEOBL ;      
+               ieCASEOBL ;   
+}}}
 
 
 
 
 
 
+!!!LEXICONMAST
 The __MAST__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
-used with the stem ''igs–''
+used with the stem ''masten''
+{{{
+             ATTR_S ;   
+   +Use/NG:e ATTR_S ;   
+   +Use/NG:  ATTR_H ;   
+   +Use/NG:e ATTR_N ;   
+          :e PRED_N ;   
+}}} 
+
+!!!LEXICONJELLE
+The __JELLE__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
+used with the stem ''jelle'' This one should be 'jeelle'? SGM?
+
+(subsequent examples are *adjectives *)
+; {{potensijelle+A+Attr}}: __potensijelle__ 
+; {{potensijelles+A+Sg+Nom}}: __potensijelles__ 
+{{{
+  +Use/Sub:^ell e_ES_LOAN ; 
+          :jell e_ES_LOAN ; 
+}}} 
+!!!LEXICONUELLE
+{{{
+         :^ell e_ES_LOAN ;   
+ +Use/Sub:vell e_ES_LOAN ; 
+}}} 
 
 
 
@@ -701,13 +739,30 @@ used with the stem ''igs–''
 
 
 
+!!!LEXICONe_ES_EVEN
+EVEN/ODD adjective with EVEN and ODD Comporation.
 
 
+!!!LEXICONe_ES_EVENNOCOMP
+EVEN/ODD adjective with EVEN and ODD Comporation.
 
 
+!!!LEXICONe_ES_ODDEVEN
+EVEN/ODD adjective with EVEN and ODD Comporation.
 
+(subsequent examples are *adjectives *)
+; {{galme+A+Attr}}: __galme__ 
+; {{galme+A+Sg+Nom}}: __galmes__ 
 
-
+{{{ 
+            :e   ATTR_0 ;        
+                 eCASEOBL ;     
+            :es  ODDCASEOBL ;   
+   +A+Sg+Nom:es FINAL1 ;        
+ +A+SgNomCmp:es R ;             
+     +Use/NG:e EVENCOMP ;       
+            :es ODDCOMP ;       ! 
+}}}
 
 
 
