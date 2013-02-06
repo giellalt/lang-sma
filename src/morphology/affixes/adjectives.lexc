@@ -555,7 +555,8 @@ LEXICON Cs_CS_EVEN
  :e  EVENCOMP ; ! check this! -igs is the same as ihks - ebe/emes 
 
 
-!! !!!LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP LEXICON@LEXNAME@
+LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP 
+!! !!!LEXICON@LEXNAME@
 !! Adjective with no comp. 
 
 !!€gt-norm: adjectives 
@@ -573,6 +574,8 @@ LEXICON Cs_CS_EVEN
               ieCASEOBL ; !!= @CODE@  
 !! }}}
 
+
+
 LEXICON RAARH  ! Attr= h, Comp =Even( Jïjtje-raarh) 
     ATTR_H ;
     PRED_H ;
@@ -581,34 +584,37 @@ LEXICON RAARH  ! Attr= h, Comp =Even( Jïjtje-raarh)
 
 
 LEXICON MAST
+!! !!!LEXICON@LEXNAME@
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
 !! used with the stem ''masten''
-     ATTR_S ;
-  +Use/NG:e ATTR_S ;
-  +Use/NG:  ATTR_H ;
-  +Use/NG:e ATTR_N ;
-  :e PRED_N ;
+!! {{{
+            ATTR_S ;   !!= @CODE@
+  +Use/NG:e ATTR_S ;   !!= @CODE@
+  +Use/NG:  ATTR_H ;   !!= @CODE@
+  +Use/NG:e ATTR_N ;   !!= @CODE@
+         :e PRED_N ;   !!= @CODE@
   ! case?
-  
+!! }}} 
 ! type 2
 
 LEXICON JELLE
-
+!! !!!LEXICON@LEXNAME@
 !! The __@LEXNAME@__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
 !! used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 !!€gt-norm: adjectives 
 !!¥ potensijelle+A+Attr:   [potensijelle]
 !!¥ potensijelles+A+Sg+Nom: [potensijelles]
-
- +Use/Sub:^ell e_ES_LOAN ;
- :jell e_ES_LOAN ;
-
+!! {{{
+ +Use/Sub:^ell e_ES_LOAN ; !!= @CODE@
+         :jell e_ES_LOAN ; !!= @CODE@
+!! }}} 
 LEXICON UELLE
-
- :^ell e_ES_LOAN ;  ! begge norm?
-+Use/Sub:vell e_ES_LOAN ;
-
+!! !!!LEXICON@LEXNAME@
+!! {{{
+        :^ell e_ES_LOAN ; !!= @CODE@  
++Use/Sub:vell e_ES_LOAN ; !!= @CODE@
+!! }}} 
 
 LEXICON e_ES_LOAN  !LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.  
  :    e_ES_EVENNOCOMP  ;
@@ -630,17 +636,24 @@ LEXICON ENTE  !LOAN
 
 
 LEXICON e_ES_EVEN 
+!! !!!LEXICON@LEXNAME@
+!! EVEN/ODD adjective with EVEN and ODD Comporation.
+
  :e    ATTR_0 ;
  :e    PRED_S ;
        eCASEOBL ;
  :e  EVENCOMP ;
 
 LEXICON e_ES_EVENNOCOMP 
+!! !!!LEXICON@LEXNAME@
+!! EVEN/ODD adjective with EVEN and ODD Comporation.
+
  :e    ATTR_0 ;
  :e    PRED_S ;
        eCASEOBL ;
 
-!! !!!LEXICON e_ES_ODDEVEN LEXICON@LEXNAME@
+LEXICON e_ES_ODDEVEN 
+!! !!!LEXICON@LEXNAME@
 !! EVEN/ODD adjective with EVEN and ODD Comporation.
 
 !!€gt-norm: adjectives 
