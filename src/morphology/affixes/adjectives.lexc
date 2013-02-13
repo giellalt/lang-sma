@@ -249,7 +249,7 @@ LEXICON HAELTJIES
   :haaltjan PRED_0 ;
 !  :haeltj ieCASEOBL ;
 !  :haaltj aCASE ;
-  :haaltj e_ES_ODDEVEN ; ! pred: haaltja, haaltjan
+ ! :haaltj e_ES_ODDEVEN ; ! pred: haaltja, haaltjan
   
 LEXICON ÅEHPIES 
 :åehpies ATTR_0 ; 
@@ -689,24 +689,38 @@ LEXICON ENTE  !LOAN
 !+Use/Sub:aansk e_ES_EVEN  ;
 
 
-LEXICON e_ES_EVEN 
+LEXICON e_ES_EVENODDNOCOMP2 
 !! !!!LEXICON@LEXNAME@
-!! EVEN/ODD adjective with EVEN and ODD Comporation.
+!! EVEN/ODD adjective with Comporation.
 
- :e    ATTR_0 ;
- :e    PRED_S ;
-!       eCASEOBL ;
- :e  EVENCOMP ;
+!!€gt-norm: adjectives 
+!!¥ guektiengïele+A+Attr:   [guektiengïele, guektiengïeles]
+!!¥ guektiengïele+A+Sg+Nom: [guektiengïeles] 
 
-LEXICON e_ES_EVENNOCOMP 
+!! {{{
+ :e      ATTR_0  ;
+ :e      PRED_S  ;
+ :es     ATTR_0  ;  ! Avlednings-s 
+!:es   ODDCOMP ;   ! Komparasjon til avlednings-s
+        eCASEOBL ;
+ :es  ODDCASEOBL ;  
+!! }}}
+
+LEXICON e_ES_EVENNOCOMP2 
 !! !!!LEXICON@LEXNAME@
-!! EVEN/ODD adjective with EVEN and ODD Comporation.
+!! This is for the adjective "jaame" 
 
- :e    ATTR_0 ;
- :e    PRED_S ;
-!       eCASEOBL ;
+!!€gt-norm: adjectives 
+!!¥ jaame+A+Attr:   [jaame]
+!!¥ jaame+A+Sg+Nom: [jaames] 
 
-LEXICON e_ES_ODDEVEN 
+!! {{{ 
+         :e    ATTR_0  ;    !!= @CODE@ 
+         :e    PRED_S  ;    !!= @CODE@ 
+        !     eCASEOBL ;    !!= @CODE@ 
+!! }}}
+
+LEXICON e_ES_ODDEVEN2 
 !! !!!LEXICON@LEXNAME@
 !! EVEN/ODD adjective with EVEN and ODD Comporation.
 
@@ -715,13 +729,14 @@ LEXICON e_ES_ODDEVEN
 !!¥ galme+A+Sg+Nom: [galmes]
 
 !! {{{ 
-           :e   ATTR_0 ;       !!= @CODE@ 
-!                eCASEOBL ;     !!= @CODE@
-!           :es  ODDCASEOBL ;   !!= @CODE@
+           :e   ATTR_0 ;       !!= @CODE@           
+                eCASEOBL ;    !!= @CODE@
+           :es  ODDCASEOBL ;  !!= @CODE@
   +A+Sg+Nom:es FINAL1 ;        !!= @CODE@
 +A+SgNomCmp:es R ;             !!= @CODE@
     +Use/NG:e EVENCOMP ;       !!= @CODE@
-           :es ODDCOMP ;       !!= @CODE@! 
+           :es ODDCOMP ;       ! Komparasjon til avlednings -s 
+           :es  ATTR_0 ;       ! Avlednings -s 
 !! }}}
 
 
