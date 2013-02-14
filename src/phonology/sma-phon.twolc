@@ -64,6 +64,7 @@ Alphabet
   %^didhUML:0
   %^adteUML:0
   %^htjidhUML:0
+  %^ConsDel:0
   %^aLATUS:a
   %^uLATUS:e ;
 
@@ -100,7 +101,8 @@ Definitions
     %^adteUML:
     %^htjidhUML:
     %^aLATUS:
-    %^uLATUS: ;
+    %^uLATUS:
+    %^ConsDel: ;
 
 Rules
  
@@ -958,6 +960,14 @@ Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
 
 "Double h deletion in end of word"
 h:0 <=> _ %> h #: ;
+
+"Stemfinal Cons Deletion w Der/PassL 1"
+Vx:0 <=> (s:) _ %^ConsDel: %» s: o: v: v: ;
+ 	where Vx in (d t) ;
+
+"Stemfinal Cons Deletion w Der/PassL 2"
+s:0 <=> _ t: %^ConsDel: %» s: o: v: v: ;
+
 
 !"No word boundary as hyphen in the beginning of a string"
 !#:% /<= .#. _ ;
