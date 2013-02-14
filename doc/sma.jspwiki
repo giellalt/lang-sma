@@ -579,7 +579,7 @@ This group covers the ies - an + umlaut change.
 {{{
   :ies ATTR_0 ;      
   :%^1UMLan PRED_0 ; 
-  : ieCASE ;		    
+ ! : ieCASE ;		    
 }}}
 
 
@@ -590,7 +590,9 @@ This group covers the ies - an + umlaut change.
 
 
 
+:skiemtj ieCASEOBL ;
 
+:mujv ieCASEOBL ;
 
 
 
@@ -602,7 +604,7 @@ This lexicon covers the ies - ehke + umlaut change.
   :gierie ATTR_S ;      
   :gearehke PRED_0 ;    
   :gearahk ODDCOMP ;    
-  :gearahk ODDCASEOBL ; 
+ ! :gearahk ODDCASEOBL ; 
 }}}
 
 
@@ -612,7 +614,7 @@ Presentlly only used for "båeries" adjective.
 {{{ 
   :båerie ATTR_S ; 
   :båerie PRED_S ; 
-  :båaras aCASEOBL ; 
+ ! :båaras aCASEOBL ; 
   :båaras ODDCOMP ; 
 }}}
 
@@ -665,17 +667,92 @@ Used for all loan-adjectives "ijve".
 
 
 
+    oeCASE ;
+
+ !!!LEXICON e_E_EVEN
+The __e_E_EVEN!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP.
 
 
+{{{
+        :e     ATTR_0 ;   
+ !              eCASE ;   
+        :e   EVENCOMP ;   
+}}}
+
+ !!!LEXICON e_E_EVENNOCOMP 
+The __e_E_EVENNOCOMP!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP.
+
+{{{
+        :e     ATTR_0 ; 
+ !               eCASE ; 
+}}}
 
 
+ !!!LEXICON a_A_EVEN 
+The __a_A_EVEN!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-COMP.
+{{{
+        :a       ATTR_0 ; 
+ !                 aCASE ; 
+        :a     EVENCOMP ;  
+}}}
 
 
+ !!!LEXICON a_A_EVEN_NOCOMP 
+The __a_A_EVEN_NOCOMP!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-NOCOMP.
+{{{
+        :a       ATTR_0 ; 
+ !                 aCASE ; 
+}}}
 
 
+ !!!LEXICON ie_IE_EVEN 
+The __ie_IE_EVEN!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP. 
+{{{
+        :ie      ATTR_0 ; 
+ !                ieCASE ; 
+        :ie    EVENCOMP ; 
+}}} 
 
 
+ !!!LEXICON ie_IE_EVENNOCOMP 
+The __ie_IE_EVENNOCOMP!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
+{{{ 
+        :ie      ATTR_0 ; 
+ !               ieCASE ; 
+}}} 
 
+ !!!LEXICON es_ES_EVEN 
+The __es_ES_EVEN!!≈__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-COMP.
+{{{ 
+        :e       ATTR_S ; 
+        :e       PRED_S ; 
+    !  :es   ODDCASEOBL ; 
+        :e     EVENCOMP ; 
+}}}
+
+
+The __es_ES_EVENNOCOMP__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-NOCOMP.
+
+{{{ 
+        :e  ATTR_S ;      
+        :e  PRED_S ;      
+ !      :es ODDCASEOBL ;  
+}}}
+
+
+The __ies_IES_EVEN__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-COMP.
+{{{
+            ies_IES_EVENNOCOMP  ; 
+        :ie EVENCOMP ;             
+}}}
+
+
+The __ies_IES_EVENNOCOMP__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-NOCOMP.
+{{{ 
+        :ie   ATTR_S ;  
+        :ie   PRED_S ;  
+ !        ieCASEOBL ;   
+}}}
 
 
 
@@ -695,8 +772,8 @@ Adjective with no comp.
          :ihke PRED_0 ;    
          :igke PRED_0 ;    
          :igie PRED_0 ;    
-               eCASEOBL ;      
-               ieCASEOBL ;   
+ !              eCASEOBL ;      
+ !              ieCASEOBL ;   
 }}}
 
 
@@ -739,15 +816,30 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 
 
-!!!LEXICONe_ES_EVEN
-EVEN/ODD adjective with EVEN and ODD Comporation.
+!!!LEXICONe_ES_EVENODDNOCOMP2
+EVEN/ODD adjective with Comporation.
 
+(subsequent examples are *adjectives *)
+; {{guektiengïele+A+Attr}}: __guektiengïele,__ __guektiengïeles__ 
+; {{guektiengïele+A+Sg+Nom}}: __guektiengïeles__ 
 
-!!!LEXICONe_ES_EVENNOCOMP
-EVEN/ODD adjective with EVEN and ODD Comporation.
+{{{
+}}}
 
+!!!LEXICONe_ES_EVENNOCOMP2
+This is for the adjective "jaame" 
 
-!!!LEXICONe_ES_ODDEVEN
+(subsequent examples are *adjectives *)
+; {{jaame+A+Attr}}: __jaame__ 
+; {{jaame+A+Sg+Nom}}: __jaames__ 
+
+{{{ 
+          :e    ATTR_0  ;     
+          :e    PRED_S  ;     
+         !     eCASEOBL ;     
+}}}
+
+!!!LEXICONe_ES_ODDEVEN2
 EVEN/ODD adjective with EVEN and ODD Comporation.
 
 (subsequent examples are *adjectives *)
@@ -755,26 +847,28 @@ EVEN/ODD adjective with EVEN and ODD Comporation.
 ; {{galme+A+Sg+Nom}}: __galmes__ 
 
 {{{ 
-            :e   ATTR_0 ;        
-                 eCASEOBL ;     
-            :es  ODDCASEOBL ;   
+            :e   ATTR_0 ;                  
+                 eCASEOBL ;    
+            :es  ODDCASEOBL ;  
    +A+Sg+Nom:es FINAL1 ;        
  +A+SgNomCmp:es R ;             
      +Use/NG:e EVENCOMP ;       
-            :es ODDCOMP ;       ! 
 }}}
 
 
 
+     eCASE ;
 
 
 
 
+    ieCASEOBL ;
 
 
 
 
 
+  ieCASEOBL ;
 
 
 
@@ -786,6 +880,7 @@ EVEN/ODD adjective with EVEN and ODD Comporation.
 
 
 
+OUTCOMMENTED   +Use/Sub: eCASE ; ! Sjekk dette ! 9.5.
 
 
 
@@ -795,6 +890,7 @@ EVEN/ODD adjective with EVEN and ODD Comporation.
 
 
 
+ODDCASEOBL ;
 
 
 
@@ -808,8 +904,10 @@ EVEN/ODD adjective with EVEN and ODD Comporation.
 
 
 
+ +Use/Sub:s ODDCASEOBL ;  ! LA la til -s
 
 
++Use/Sub:s ODDCASEOBL ;  ! LA la til -s
 
 
 
@@ -852,7 +950,9 @@ EVEN/ODD adjective with EVEN and ODD Comporation.
 
 
 
+ :es  ODDCASEOBL ;
 
+ :s  ODDCASEOBL ;
 
 
 
@@ -867,6 +967,7 @@ EVEN/ODD adjective with EVEN and ODD Comporation.
 
 
 
+    ije_ODDCASEOBL ;
 
 
 
@@ -923,6 +1024,7 @@ This must be checked further, possibly with informants.
 ; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
 ; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__ 
 
+aCASEOBL ;
 
 
 
@@ -939,6 +1041,7 @@ This must be checked further, possibly with informants.
 
 
 
+:em ODDCASEOBL ; 
 
 
 
@@ -973,6 +1076,8 @@ This must be checked further, possibly with informants.
 
 
 
++A+Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
+TT: Added +Sg to the Px entries here, cf. MAANASGOBL.
 
 
 
@@ -989,26 +1094,7 @@ This must be checked further, possibly with informants.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+EVENCOMPCASE_oe ;
 
 
 
@@ -1194,8 +1280,10 @@ Remove Num, ACR, ...
 
 
 
+Possessive suffix
 
 
+Short Pronouns
 
 
 Proper nouns
@@ -1218,6 +1306,7 @@ Trivialia
 
 
 
+Verbs
 
 
 
@@ -1226,6 +1315,7 @@ Trivialia
 
 
 
+Imperative
 
 
 
