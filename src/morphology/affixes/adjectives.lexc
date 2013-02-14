@@ -31,7 +31,7 @@
 
 
 LEXICON BUERIE
- :buer ie_IE_EVENNOCOMP  ;
+ :buer ie_IE_EVENNOCOMP1    ;
  :buerie EVENCOMPONLY ;
  :bööre MES ;
  :buerie DIMCOMP ;  
@@ -49,7 +49,7 @@ LEXICON LEEVLES
 ! :lyövlehk HKE_ODD_COMP ;! annet lemma
   
 LEXICON SOOKES
- :söök es_ES_EVENNOCOMP  ;
+ :söök es_ES_EVENNOCOMP1  ;
  :suekie EVENCOMPONLY ;
  :sööke MES ;
  :suekie DIMCOMP ;  
@@ -65,8 +65,8 @@ LEXICON SOOJMES
  
 
 LEXICON SMAAVE  ! both smaave and plaave
-+Use/NG:aav e_E_EVENNOCOMP  ;
- :aav e_ES_EVENNOCOMP  ; ! LMM says so for plaave.MLK; Er ikke uenig med LMM, da jeg også har skrevet denne inn som e_ES, men denne er også dok. som e_E_.
++Use/NG:aav e_E_EVENNOCOMP1   ;
+ :aav e_ES_EVENNOCOMP2  ; ! LMM says so for plaave.MLK; Er ikke uenig med LMM, da jeg også har skrevet denne inn som e_ES, men denne er også dok. som e_E_.
 +Use/Sub:aevie EVENCOMPONLY ; ! finner ikke dok. MLK: Er dok, men er ikke norm, derfor subber jeg den.
 +Use/Sub:aevie MES ; !  finner ikke dok. MLK: er dok.
  :aavie EVENCOMPONLY ;
@@ -74,7 +74,7 @@ LEXICON SMAAVE  ! both smaave and plaave
 +Use/Sub:aevie DIMCOMP ;  
  
 LEXICON SNAARE 
- :snaar e_ES_EVENNOCOMP  ;
+ :snaar e_ES_EVENNOCOMP2  ;
  :snaerie EVENCOMPONLY ;
  :sneere MES ;
  :snaerie DIMCOMP ;  
@@ -89,14 +89,14 @@ LEXICON ORRE
 
 
 LEXICON NOERE_STOERE
- :oer e_E_EVENNOCOMP  ;! stoere-noere-ebe/emes
+ :oer e_E_EVENNOCOMP1   ;! stoere-noere-ebe/emes
  :uerie EVENCOMPONLY ;
  :ööre MES ;
  :oer e_E_EVEN  ; ! oere-oerebe-oeremes
 
 
 !LEXICON STOERE  ! This is hopeless, stoerebe-stoeremes bør subbes, men hvorfpor går det ikke?
-!        :stoerr e_E_EVENNOCOMP ;
+!        :stoerr e_E_EVENNOCOMP1  ;
 !+Use/Sub:stoer e_E_EVEN ;
 !+Use/Sub:stuerre EVENCOMPONLY ;
 !+Use/Sub:stoerre EVENCOMPONLY ;
@@ -109,12 +109,12 @@ LEXICON NOERE_STOERE
 ! :stuerie DIMCOMP ;  
 
 !LEXICON STOERE
-! :stoer e_E_EVENNOCOMP  ;
+! :stoer e_E_EVENNOCOMP1   ;
 ! :stoere ATTR_S  ;
 ! STOERE_COMP ;
 !
 !LEXICON STOERRE
-! :stoerr e_E_EVENNOCOMP  ;
+! :stoerr e_E_EVENNOCOMP1   ;
 !+Use/Sub:stuerre EVENCOMPONLY ;
 !+Use/Sub:stoerre EVENCOMPONLY ;
 ! STOERE_COMP ;
@@ -130,7 +130,7 @@ LEXICON NAAKE
  :vearra DIMCOMP ;  
 
 LEXICON GISSE
- :gïss e_E_EVENNOCOMP  ;
+ :gïss e_E_EVENNOCOMP1   ;
  :gissie EVENCOMPONLY ;
  :gissie MES ;
 +Use/Sub:gïssie EVENCOMPONLY ;
@@ -146,7 +146,7 @@ LEXICON GAMTE
 :te EVENCOMP ;
    
 LEXICON GIEVTE
- :gïevt e_E_EVENNOCOMP  ;
+ :gïevt e_E_EVENNOCOMP1   ;
  :geavte EVENCOMPONLY ;
  :gievte EVENCOMPONLY ;
  :gïevte MES ;
@@ -156,7 +156,7 @@ LEXICON GIEVTE
 LEXICON REAKTOE
   :rïektes ATTR_0 ;! rett, riktig
 !  :reakt   oeCASE ;
-  :rïekt e_ES_ODDEVEN ;! bein, rakt
+  :rïekt e_ES_ODDEVEN2 ;! bein, rakt
                     
 LEXICON KRUANA  
  :kruan a_A_EVEN_NOCOMP ;
@@ -176,8 +176,8 @@ LEXICON VEELKES
 
  
 LEXICON ROOPSES
-+Use/NG:reeps es_ES_EVENNOCOMP  ;
- :rööps es_ES_EVENNOCOMP  ;
++Use/NG:reeps es_ES_EVENNOCOMP1  ;
+ :rööps es_ES_EVENNOCOMP1  ;
  :ruepsie EVENCOMPONLY ;
  :ruepsie DIMCOMP ;
  :rööpse MES ;
@@ -186,7 +186,7 @@ LEXICON ROOPSES
 LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
  :sneehpe ATTR_S  ; !  
 +Use/NG:sneehpe PRED_S  ; !  
-+Use/NG:sneehp es_ES_EVENNOCOMP  ; ! pga sneehpebe
++Use/NG:sneehp es_ES_EVENNOCOMP1 ; ! pga sneehpebe
 +Use/NG:sneehpe EVENCOMP  ; ! pga sneehpebe
 +Use/NG+Use/Sub:snaehpie EVENCOMPONLY ;
  +Use/Sub:snaehpie DIMCOMP ;
@@ -362,18 +362,8 @@ LEXICON MOOREH
  :ehk ODDCOMP ; 
   
 
-LEXICON BURRIE
-!! !!!BURRIE LEXICON @LEXNAME@
-!! EVEN adjective, attr = pred. No Comporation.
-!! Presentlly used for "burrie" adjectives which are derivations.
-!! {{{ 
-+CmpN/SgN+CmpN/SgG+CmpN/PlG:#buer ie_IE_EVENNOCOMP  ;!!= @CODE@  
-+CmpN/SgN+CmpN/SgG+CmpN/PlG:#burr ie_IE_EVENNOCOMP  ;!!= @CODE@
-!! }}}
-
-
 !LEXICON LADTJE   - Lag dette leksikonet! 
-!+CmpN/SgN+CmpN/SgG+CmpN/PlG:#ladtj e_E_EVENNOCOMP ; 
+!+CmpN/SgN+CmpN/SgG+CmpN/PlG:#ladtj e_E_EVENNOCOMP1  ; 
 
 ! Regular even stem types 
  
@@ -512,9 +502,9 @@ LEXICON e_E_EVEN!!≈ !!!@CODE@
        :e   EVENCOMP ;   !!= @CODE@
 !! }}}
 
-!D:1
-LEXICON e_E_EVENNOCOMP!!≈ !!!@CODE@ 
-!! The __@LEXNAME@__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP.
+!D:1 E_stamme
+LEXICON e_E_EVENNOCOMP1!!≈ !!!@CODE@ 
+!! The __@LEXNAME@__ lexicon is used for adjectives on {{–e}} and {{–e}} stem. In attributes and predicatives.With EVEN-NOCOMP.
 
 !! {{{
        :e     ATTR_0 ; !!= @CODE@
@@ -522,8 +512,8 @@ LEXICON e_E_EVENNOCOMP!!≈ !!!@CODE@
 !! }}}
 
 
-!D:1
-LEXICON a_A_EVEN!!≈ !!!@CODE@ 
+!D:1  A_stamme
+LEXICON a_A_EVEN1!!≈ !!!@CODE@ 
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-COMP.
 !! {{{
        :a       ATTR_0 ; !!= @CODE@
@@ -552,7 +542,7 @@ LEXICON ie_IE_EVEN!!≈ !!!@CODE@
 
 
 !D:1
-LEXICON ie_IE_EVENNOCOMP!!≈ !!!@CODE@ 
+LEXICON ie_IE_EVENNOCOMP1!!≈ !!!@CODE@ 
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
 !! {{{ 
        :ie      ATTR_0 ; !!= @CODE@
@@ -571,27 +561,27 @@ LEXICON es_ES_EVEN!!≈ !!!@CODE@
 
 
 !D:1
-LEXICON es_ES_EVENNOCOMP 
+LEXICON es_ES_EVENNOCOMP1 
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-NOCOMP.
 
 !! {{{ 
        :e  ATTR_S ;      !!= @CODE@
        :e  PRED_S ;      !!= @CODE@
-!      :es ODDCASEOBL ;  !!= @CODE@
+       :es ODDCASEOBL ;  !!= @CODE@
 !! }}}
 
 !D:1
 
-LEXICON ies_IES_EVEN 
+LEXICON ies_IES_EVEN1 
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-COMP.
 !! {{{
-           ies_IES_EVENNOCOMP  ; !!= @CODE@
+           ies_IES_EVENNOCOMP1  ; !!= @CODE@
        :ie EVENCOMP ;            !!= @CODE@ 
 !! }}}
 
 !D:1
 
-LEXICON ies_IES_EVENNOCOMP
+LEXICON ies_IES_EVENNOCOMP1
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-NOCOMP.
 !! {{{ 
        :ie   ATTR_S ;  !!= @CODE@
@@ -671,17 +661,17 @@ LEXICON UELLE
 !! }}} 
 
 LEXICON e_ES_LOAN  !LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.  
- :    e_ES_EVENNOCOMP  ;
+ :    e_ES_EVENNOCOMP2  ;
 +Use/Sub:e    PRED_0 ; ! forslag
 
 
 LEXICON ÆRE  !LOAN
-:ær e_ES_EVEN  ;
-+Use/Sub:r e_ES_EVEN  ;
+:ær e_E_EVEN  ;
++Use/Sub:r e_E_EVEN  ;
 
 LEXICON ENTE  !LOAN  
-:ent e_E_EVENNOCOMP  ; ! eller skal det være -e-es ?
-+Use/Sub:eent e_E_EVENNOCOMP  ;
+:ent e_E_EVENNOCOMP1   ; ! eller skal det være -e-es ?
++Use/Sub:eent e_E_EVENNOCOMP1   ;
 
 
 !LEXICON ANSKE  !LOAN 
@@ -833,10 +823,10 @@ LEXICON as_AS_EVEN  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/e
 
 
 LEXICON IJLE_LOAN
-  :ijl e_ES_EVEN  ; !XXX check
- +Use/NG:ïjl e_ES_EVEN  ;
- +Use/Sub:il e_ES_EVEN ;
- +Use/Sub:ïl e_ES_EVEN ;
+  :ijl e_ES_ODDEVEN2  ; !XXX check
+ +Use/NG:ïjl e_ES_ODDEVEN2  ;
+ +Use/Sub:il e_ES_ODDEVEN2 ;
+ +Use/Sub:ïl e_ES_ODDEVEN2 ;
 
 
 ! OUTCOMMENTED   LEXICON s_H_EVENNOCOMP  ! attr=s, pred= h
@@ -1560,23 +1550,23 @@ LEXICON PRED_AN
 !
 !LEXICON ODDCASENOM
 !+A+Sg+Nom:e%>%^DISIMP       FINAL1 ;
-!
-!LEXICON ODDCASEOBL
-!+A+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
-!+A+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
-! +A+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-!+A+Sg+Ine:%>isnie           FINAL1 ;
-!+A+Sg+Ela:%>istie           FINAL1 ;
-!+A+Sg+Com:%>inie            FINAL1 ;
-!+A+Pl: N_ODD_PL ;
-!+A:    N_ODD_ESS ;
-!+A+SgGenCmp:e%>%^DISIMPn        R ;
-!+A+PlGenCmp:%>%^DISIMPi R ;
-!
+
+LEXICON ODDCASEOBL
++A+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
++A+Sg+Gen:e%>%^DISIMPn      FINAL1 ;
++A+Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++A+Sg+Ine:%>isnie           FINAL1 ;
++A+Sg+Ela:%>istie           FINAL1 ;
++A+Sg+Com:%>inie            FINAL1 ;
++A+Pl: N_ODD_PL ;
++A:    N_ODD_ESS ;
++A+SgGenCmp:e%>%^DISIMPn        R ;
++A+PlGenCmp:%>%^DISIMPi R ;
+
 !LEXICON ije_ODDCASE
-! ije_ODDCASENOM ;
-! ije_ODDCASEOBL ;
-!
+!ije_ODDCASENOM ;
+!ije_ODDCASEOBL ;
+
 !LEXICON ije_ODDCASENOM
 !+A+Sg+Nom:e%>%^DISIMP       FINAL1 ;
 !
@@ -1615,20 +1605,20 @@ LEXICON PRED_AN
 !LEXICON eCASENOM
 !+A+Sg:           NIEJTESGNOM  ;
 !
-!LEXICON eCASEOBL
-!+A:           NIEJTEOBL  ;
-!
-!
-!
-!LEXICON aCASENOM
-!+A+Sg: MAANASGNOM ;
-!
-!LEXICON aCASEOBL
-!+A+Pl: MAANA_PL ;
-!+A:     EVEN_ESS ;
-! +A+SgNomCmp:a    R ;
-! +A+SgGenCmp:a%>n R ;
-! +A+PlGenCmp:a%>j R ;
+LEXICON eCASEOBL
++A:           NIEJTEOBL  ;
+
+
+
+LEXICON aCASENOM
++A+Sg: MAANASGNOM ;
+
+LEXICON aCASEOBL
++A+Pl: MAANA_PL ;
++A:     EVEN_ESS ;
++A+SgNomCmp:a    R ;
++A+SgGenCmp:a%>n R ;
++A+PlGenCmp:a%>j R ;
 !!! +A+Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
 !! TT: Added +Sg to the Px entries here, cf. MAANASGOBL.
 ! +A+Sg+Nom+PxSg1+Use/Sub:%>eme FINAL1 ;
