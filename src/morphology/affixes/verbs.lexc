@@ -250,7 +250,11 @@ LEXICON TJOEVERIDH_IV
 
 LEXICON GOLTELIDH_TV
  +V+TV: GOLTELIDH ;
- 
+
+LEXICON AALHTEDIDH_TV
+ +V+TV: GOLTELIDH ;
+ +V+TV+Der3+Der/PassL:%^ConsDel%»sovv SOVVEDH ;
+
 LEXICON GOLTELIDH_IV
  +V+IV: GOLTELIDH ;
 
@@ -306,7 +310,9 @@ LEXICON RIHPESIDH !-nidh and -sidh
  +V+IV: COMMON-ODD ;
  +V+IV+Der2+Der/alle+V:%»%^adteUMLall GOEGKERDADTEDH ;
 
-
+LEXICON AAJVESTIDH_TV   !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
+ +V+TV: DÅAJVOEHTIDH ;
+ +V+TV+Der3+Der/PassL:%^ConsDel%»sovv SOVVEDH ;
 
 LEXICON DÅAJVOEHTIDH_TV
  +V+TV: DÅAJVOEHTIDH ;
@@ -352,7 +358,6 @@ LEXICON COMMON-ODD
 ! Derivations
 ! -----------
  +Der3+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
-! +Der3+Der/PassL:e%»sovv SOVVEDH ; ! XXX - the stem is quite varying for passives of this class
  +Der3+Der/ahtje+V:%»ahtj AHTJE ;
 
 
