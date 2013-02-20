@@ -41,7 +41,7 @@ LEXICON BUERIE_UMLAUT_IE_STAMME
  :buerie DIMCOMP ;            !!= @CODE@ 
 !! }}}
 
-!       ***UMLAUT FOR e(2)-stammen, System 1-klassen
+!       ***UMLAUT FOR e(2)-stammen, System 2-klassen 
 
 ! UMLAUT 2 = e(2)-stamme
 LEXICON SMAAVE  ! both smaave and plaave
@@ -52,14 +52,12 @@ LEXICON SMAAVE  ! both smaave and plaave
  :aavie EVENCOMPONLY ;
  :aavie MES ;
 +Use/Sub:aevie DIMCOMP ;  
-
 ! UMLAUT 2 = e(2)-stamme
 LEXICON SNAARE 
  :snaar e_ES_EVENNOCOMP2  ;
  :snaerie EVENCOMPONLY ;
  :sneere MES ;
  :snaerie DIMCOMP ;  
-
 ! UMLAUT 2 = e(2)-stamme
 LEXICON ORRE
        :orr e_E_EVEN  ;
@@ -68,14 +66,12 @@ LEXICON ORRE
        :urre DIMCOMP ;
        :urre MES ;
 !+Use/Sub:orr e_ES_ODDEVEN ; !comment from Aajege, MLK: bør subbes. orresistie? - THIS IS HOPELESS,skulle subbe denne, men jeg forstår ikke hvorofr det ikke er mulig? 
-
 ! UMLAUT 2 = e(2)-stamme
 LEXICON NOERE_STOERE
  :oer e_E_EVENNOCOMP1   ;! stoere-noere-ebe/emes
  :uerie EVENCOMPONLY ;
  :ööre MES ;
  :oer e_E_EVEN  ; ! oere-oerebe-oeremes
-
 ! UMLAUT 2 = e(2)-stamme
 LEXICON GISSE
  :gïss e_E_EVENNOCOMP1   ;
@@ -85,15 +81,13 @@ LEXICON GISSE
 +Use/Sub:gïssie MES ;
  :gissie DIMCOMP ; 
 +Use/NG:gïssege PRED_0 ;  ! eller er dette et annet lemma? jfr. -hke og gabtege ,MLK: Iflg. bergsland 1994, s 116 pkt. 5 er dette en 'særtilfelle (Predikatformen for det meste foreldet)'
-
 ! UMLAUT 2 = e(2)-stamme 
 LEXICON GAMTE
 :te ATTR_0  ;
 :tege PRED_0  ;
 !+Use/NG:t eCASE  ;
 :%>%^DISIMPtie EVENCOMP ;
-:te EVENCOMP ;
- 
+:te EVENCOMP ; 
 ! UMLAUT 2 = e(2)-stamme  
 LEXICON GIEVTE
  :gïevt e_E_EVENNOCOMP1   ;
@@ -102,9 +96,24 @@ LEXICON GIEVTE
  :gïevte MES ;
  :gievte DIMCOMP ;  
  :geavte DIMCOMP ;  
+ ! UMLAUT 2 = e(1)-stamme
+LEXICON TJOEVKES
+ :tjoevke s_S_ODD  ; ! ODD ikke i LMM, ikke i corp. 
+ :tjuevkie EVENCOMPONLY ; 
+ :tjuevkie DIMCOMP ; 
+ :tjoevke MES ;
+
+! UMLAUT 2 = e(2)-stamme                   
+LEXICON KRUANA  
+ :kruan a_A_EVEN_NOCOMP ;
++Use/NG:kruene EVENCOMPONLY ;
++Use/NG+Use/Sub:kroene EVENSUPONLY ;  
++Use/Sub:kruane EVENCOMPONLY ;
+:kråane EVENCOMP ; 
+ 
 
 
-!    ***UMLAUT FOR e(3)-stammen
+         !    ***UMLAUT FOR e(3)-stammen
 
 !UMLAUT 3 = e(3)-stamme
 LEXICON LEEVLES
@@ -117,14 +126,12 @@ LEXICON LEEVLES
 +Use/NG:lïevle EVENCOMPONLY ;
 +Use/NG:löövle MES ;
 +Use/NG:lïevle DIMCOMP ;  
-
 ! UMLAUT 3 = e(3)-stamme
 LEXICON SOOKES
  :söök es_ES_EVENNOCOMP1  ;
  :suekie EVENCOMPONLY ;
  :sööke MES ;
  :suekie DIMCOMP ;  
-
 ! UMLAUT 3 = e(3)-stamme 
 LEXICON SOOJMES
  :sööjme ATTR_S  ;
@@ -160,7 +167,7 @@ LEXICON SOOJMES
 !+Use/Sub:stoerre EVENCOMPONLY ;
 ! STOERE_COMP ;
 
-
+!NULL UMLAUT, men 
 LEXICON NAAKE
  :nåak e_E_EVEN  ;  
  :vïerre EVENCOMPONLY ;
@@ -177,15 +184,9 @@ LEXICON REAKTOE
 !  :reakt   oeCASE ;
   :rïekt e_ES_ODDEVEN2 ;! bein, rakt
 
-! UMLAUT 2 = e(2)-stamme                   
-LEXICON KRUANA  
- :kruan a_A_EVEN_NOCOMP ;
-+Use/NG:kruene EVENCOMPONLY ;
-+Use/NG+Use/Sub:kroene EVENSUPONLY ;  
-+Use/Sub:kruane EVENCOMPONLY ;
-:kråane EVENCOMP ;
 
-! UMLAUT 3 = e(3)-stamme
+
+! UMLAUT 3 = e(3)-stamme, som får EVEN-Komparasjon
 LEXICON VEELKES
  :veelke ATTR_S  ;
 +Use/NG:veelke PRED_S  ;
@@ -193,8 +194,6 @@ LEXICON VEELKES
  :vielkie DIMCOMP ;
 +Use/NG:veelke MES ;
 !ODDCASE ;
-
-
 ! UMLAUT 3 = e(3)-stamme 
 LEXICON ROOPSES
 +Use/NG:reeps es_ES_EVENNOCOMP1  ;
@@ -203,9 +202,7 @@ LEXICON ROOPSES
  :ruepsie DIMCOMP ;
  :rööpse MES ;
 +Use/NG:rååpsehk HKE_ODD_NGCOMP ;
-
 ! UMLAUT 3 = e(3)-stamme
-
 LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
  :sneehpe ATTR_S  ; !  
 +Use/NG:sneehpe PRED_S  ; !  
@@ -215,7 +212,6 @@ LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_OD
  +Use/Sub:snaehpie DIMCOMP ;
  +Use/Sub:snååhpehk HKE_ODD_COMP ;
 :sneehpes ODDCOMP ;
-
 ! UMLAUT 3 = e(3)-stamme
 LEXICON GEEHPES
 ! :geehpes ODDCASEOBL ;
@@ -226,7 +222,6 @@ LEXICON GEEHPES
 +Use/NG:geehpe MES ;
  +Use/Sub:gyöhpehk HKE_ODD_COMP ;
 +Use/NG:geehpe PRED_S ;
-
 ! UMLAUT 3 = e(3)-stamme
 LEXICON GEERVE
  :geerv e_E_EVEN  ;
@@ -234,74 +229,34 @@ LEXICON GEERVE
 +Use/NG:giervie MES ;
  :giervie DIMCOMP ;  
 
-! UMLAUT 2 = e(1)-stamme
-LEXICON TJOEVKES
- :tjoevke s_S_ODD  ; ! ODD ikke i LMM, ikke i corp. 
- :tjuevkie EVENCOMPONLY ; 
- :tjuevkie DIMCOMP ; 
- :tjoevke MES ; 
  
-!LEXICON TRAEPTSIE
-!:traeptsies ATTR_0 ;
-!:traaptsan PRED_0 ;
-!!:traepts ieCASEOBL ;
-!:treaptj oeh_AN_ODDNOCOMP ; !treaptjoehkåbpoe, treaptjoehkommes 
-
-! UMLAUT 3 = e(3)-stamme
+! UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred.
 LEXICON SAETNIES
 !! !!!UMLAUT LEXICON @LEXNAME@
-!! Umlaut from attr--> pred, no comparation.
-!! Presentlly only used for ''saetnies'', but should be
-!! generalised to cover a larger group.
-!! 
-!! This group covers the ies - an + umlaut change.
+!! 19 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
+!! Theese adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
+!! umlaut-adjectives. 
+!! This group which covers the ies - an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
+
 !! {{{
  :ies ATTR_0 ;      !!= @CODE@
  :%^1UMLan PRED_0 ; !!= @CODE@
 !+Use/NG:a PRED_0 ;
-! : ieCASE ;		    !!= @CODE@
+ : ieCASE ;		    !!= @CODE@
 !! }}}
 
-! UMLAUT 3 = e(3)-stamme
+         !**Slå sammen s_AN_4 + GIJMIES**!
 
-LEXICON HAERRIES
-  :haerries ATTR_0 ;
-  :haarran PRED_0 ;
-!  :haerr ieCASEOBL ;
-  :haarr oeh_OEH_ODD ;
-  :haarroe s_S_ODD ;
-  :haerrietj Ce_CE_ODD ;
-
-! UMLAUT 3 = e(3)-stamme
-LEXICON HAELTJIES
-  :haeltjies ATTR_0 ; 
-  :haaltjan PRED_0 ;
-!  :haeltj ieCASEOBL ;
-!  :haaltj aCASE ;
- ! :haaltj e_ES_ODDEVEN ; ! pred: haaltja, haaltjan
-
-! UMLAUT 3 = e(3)-stamme 
-LEXICON ÅEHPIES 
-:åehpies ATTR_0 ; 
-!:åehp ieCASE ;
-:åahpetje PRED_0 ;
-:åahpatj ODDCOMP ;! mere kjent om personer, mindre vanlig
-:åahpag ODDCOMP ;! mere kjent om ting, saker, tema etc.
-:åahpahk ODDCOMP ; !mere kjent om ting, saker, tema etc.
-
-! UMLAUT 3 = e(3)-stamme
-LEXICON SAEBRIES 
-  :såebries ATTR_0 ; 
-  :såabran PRED_0 ;
-!  :såebr ieCASEOBL ;! NOCOMP
-
-! UMLAUT 3 = e(3)-stamme  
-LEXICON PLIEJHKIES 
-  :pliejhkies ATTR_0 ; 
-  :pleajhkan PRED_0 ;
-!  :pliejhk ieCASEOBL ;! NOCOMP
-
-! UMLAUT 3 = e(3)-stamme
+! UMLAUT 3 = ie/oe-a-stamme
+LEXICON s_AN_4 ! NOCOMP
+ :ujnies ATTR_0 ;
+ :åjnoes ATTR_0 ;
+ :ajnas ATTR_0 ;
+! :ujn ieCASEOBL ;
+! :åjn oeCASE_OBL ;
+! :ajn aCASEOBL ; 
+ :åjnan PRED_0 ;
+! UMLAUT 3 = ie/oe-a -stamme
 LEXICON GIJMIES 
   :gijmies ATTR_0 ;
   :gæjmah ATTR_0 ;
@@ -314,41 +269,9 @@ LEXICON GIJMIES
 !  :gæjm aCASE ;
 !  :gæjm oeCASE ;! NOCOMP!
 
-! UMLAUT 3 = e(3)-stamme 
-LEXICON VILNJIES
-  :vilnjies ATTR_0 ; 
-  :vælnjan PRED_0 ;
-!  :vilnj ieCASEOBL ;!NOCOMP
+!Undergruppe 3 av umlautgruppen 4 er oeh-an-adjectivene
 
-! UMLAUT 3 = e(3)-stamme  
-LEXICON NJERRIES
-  :njerries ATTR_0 ; 
-  :njarran PRED_0 ;
-!  :njerr ieCASEOBL ;!NOCOMP
-
-!LEXICON SKIEMTJIES ! 
-! :skiemtjies ATTR_0 ; 
-!! :skiemtj ieCASEOBL ;
-! :skeamtjan PRED_0 ;! NOCOMP
-! :skïemtj e_ES_ODDEVEN ;!COMP
-
-!LEXICON MUJVIES 
-! :mujvies ATTR_0 ; ! Pred=Substantiv mujvine - måjvan
-!! :mujv ieCASEOBL ;
-
-! UMLAUT 3 = e(3)-stamme
-LEXICON s_AN_4 ! NOCOMP
- :ujnies ATTR_0 ;
- :åjnoes ATTR_0 ;
- :ajnas ATTR_0 ;
-! :ujn ieCASEOBL ;
-! :åjn oeCASE_OBL ;
-! :ajn aCASEOBL ; 
- :åjnan PRED_0 ;
-
-!LEXICON STAERIES 
-! :staerie ATTR_S ; 
-! :staaran PRED_0 ;!NOCOMP
+                       !****!
 
 ! VOKALUTVIDELSE på 2-stavelsesadjektiv
 LEXICON GIERIES 
@@ -361,8 +284,7 @@ LEXICON GIERIES
  :gearehke PRED_0 ;    !!= @CODE@
  :gearahk ODDCOMP ;    !!= @CODE@
 ! :gearahk ODDCASEOBL ; !!= @CODE@
- !! }}}
- 
+ !! }}} 
 ! VOKALUTVIDELSE på 2-stavelsesadjektiv
 LEXICON BAERIES
 !! !!!BÅERIES LEXICON @LEXNAME@
@@ -375,13 +297,18 @@ LEXICON BAERIES
  ! båarasam (LK),? egentl. 'voeres’
  :båaras ODDCOMP ; !!= @CODE@
  !! }}}
-
+LEXICON ÅEHPIES 
+:åehpies ATTR_0 ; 
+!:åehp ieCASE ;
+:åahpetje PRED_0 ;
+:åahpatj ODDCOMP ;! mere kjent om personer, mindre vanlig
+:åahpag ODDCOMP ;! mere kjent om ting, saker, tema etc.
+:åahpahk ODDCOMP ; !mere kjent om ting, saker, tema etc.
 ! VOKALUTVIDELSE i 2.stavelse på 2-stavelsesadjektiv
 LEXICON GÆHTJOES 
  !:gyhtje PRED_0 ; ! bort? ikke dokumentert, se Majas kommmentar her 
  :gyhtjek ODDCOMP ; !-gyhtjekåbpoe-gyhtjekommes - (substantiv=gyhtje) UMLAUT IN COMP
  :gæhtjoe s_S_ODDNOCOMP ;
-
 ! VOKALUTVIDELSE i 2.stavelse på 2-stavelsesadjektiv
 LEXICON AAREH
     ATTR_H ;
@@ -393,20 +320,15 @@ LEXICON AAREH
  :eg ODDCOMP ;  
  :ehk ODDCOMP ; ! aarehkåbpoe, aarehkommes 'hk', 'g' ,'ht' ? (Lohkede saemien s.116)"dagkoe gogkoe dle aaregommes" adv?
  ! aarebi - adv, finnes aarebe? aaremes? MLK: jada! skrevet som 'aerebi' i korpus!"Tjoeveribie maanide gaarvoehtidh aerebi goh olkese"
-
 ! VOKALUTVIDELSE i 2.stavelse på 2-stavelsesadjektiv  
 LEXICON MOOREH
  :e    ATTR_H ;
  :e    PRED_H ;
 !    eCASEOBL ; ! check! this is not right
  :ehk ODDCOMP ; 
-  
 
-!LEXICON LADTJE   - Lag dette leksikonet! 
-!+CmpN/SgN+CmpN/SgG+CmpN/PlG:#ladtj e_E_EVENNOCOMP1  ; 
+!   ****slutt Vokalutvidelse i 2.stavelse av 2-stems-adjectives *****  
 
-! Regular even stem types 
- 
 
 LEXICON EVTEBE  
 :ie EVENSUPONLY ;
