@@ -544,56 +544,15 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-!!!UMLAUT LEXICON SAETNIES
-Umlaut from attr--> pred, no comparation.
-Presentlly only used for ''saetnies'', but should be
-generalised to cover a larger group.
-
-This group covers the ies - an + umlaut change.
+!!!BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
+EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 {{{
-  :ies ATTR_0 ;      
-  :%^1UMLan PRED_0 ; 
- ! : ieCASE ;		    
+  :buer ie_IE_EVENNOCOMP1    ;  
+  :buerie EVENCOMPONLY ;        
+  :bööre MES ;                  
+  :buerie DIMCOMP ;             
 }}}
 
-
-
-
-
-
-
-
-
-:skiemtj ieCASEOBL ;
-
-:mujv ieCASEOBL ;
 
 
 
@@ -606,23 +565,7 @@ This lexicon covers the ies - ehke + umlaut change.
   :gearehke PRED_0 ;    
   :gearahk ODDCOMP ;    
  ! :gearahk ODDCASEOBL ; 
-}}}
-
-
-!!!BÅERIES LEXICON BAERIES
-UNEVEN adjective, attr = pred. Comporation uneven syllable.
-Presentlly only used for "båeries" adjective.
-{{{ 
-  :båerie ATTR_S ; 
-  :båerie PRED_S ; 
- ! :båaras aCASEOBL ; 
-  :båaras ODDCOMP ; 
-}}}
-
-
-
-
-
+}}} 
 
 
 
@@ -638,14 +581,6 @@ Used for "bijjies" adjective. Gjør om denne: This one is wrong.
 
 
 
-!!!IJVE_LOAN_ADJ LEXICON IJVEadj
-EVEN adjective EVEN Comporation.
-Used for all loan-adjectives "ijve".
-{{{ 
- :ijv e_E_EVEN  ;         
- :ïjv e_E_EVEN  ;         
- +Use/Sub:iv e_E_EVEN  ;  
-}}}
 
 
 
@@ -659,7 +594,18 @@ Used for all loan-adjectives "ijve".
 
 
 
-    oeCASE ;
+
+
+
+
+
+
+
+
+
+
+
+
 
  !!!LEXICON e_E_EVEN
 The __e_E_EVEN!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP.
@@ -676,7 +622,7 @@ The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–e}} and {{�
 
 {{{
         :e     ATTR_0 ; 
- !               eCASE ; 
+                eCASE ; 
 }}}
 
 
@@ -688,21 +634,30 @@ The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  
         :a     EVENCOMP ;  
 }}}
 
+ !!!LEXICON as_AS_EVEN1
+The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP. 
+{{{   
+             :a     ATTR_S ;    
+                  aCASEOBL ;    
+             :a   EVENCOMP ;    
+   +A+Sg+Nom:as     FINAL1 ;    
+ +A+SgNomCmp:as          R ;    
+}}}
 
- !!!LEXICON a_A_EVEN_NOCOMP 
-The __a_A_EVEN_NOCOMP!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-NOCOMP.
+ !!!LEXICON a_A_EVEN1_NOCOMP 
+The __a_A_EVEN1_NOCOMP!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-NOCOMP.
 {{{
         :a       ATTR_0 ; 
- !                 aCASE ; 
+                  aCASE ; 
 }}}
 
 
- !!!LEXICON ie_IE_EVEN 
-The __ie_IE_EVEN!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP. 
+ !!!LEXICON ie_IE_EVEN1 
+The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP. 
 {{{
-        :ie      ATTR_0 ; 
- !                ieCASE ; 
-        :ie    EVENCOMP ; 
+        :ie      ATTR_0 ;  
+                 ieCASE ; 
+        :ie    EVENCOMP ;  
 }}} 
 
 
@@ -750,6 +705,35 @@ The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{�
 
 
 
+
+
+
+
+
+!!!BÅERIES LEXICON BAERIES
+UNEVEN adjective, attr = pred. Comporation uneven syllable.
+Presentlly only used for "båeries" adjective.
+{{{ 
+  :båerie ATTR_S ; 
+  :båerie PRED_S ; 
+ ! :båaras aCASEOBL ; 
+  :båaras ODDCOMP ; 
+}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 !!!LEXICONihks_IHKS_igs_IGS_EVENNOCOMP
 Adjective with no comp. 
 
@@ -767,41 +751,6 @@ Adjective with no comp.
  !              eCASEOBL ;      
  !              ieCASEOBL ;   
 }}}
-
-
-
-
-
-
-!!!LEXICONMAST
-The __MAST__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
-used with the stem ''masten''
-{{{
-             ATTR_S ;   
-   +Use/NG:e ATTR_S ;   
-   +Use/NG:  ATTR_H ;   
-   +Use/NG:e ATTR_N ;   
-          :e PRED_N ;   
-}}} 
-
-!!!LEXICONJELLE
-The __JELLE__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
-used with the stem ''jelle'' This one should be 'jeelle'? SGM?
-
-(subsequent examples are *adjectives *)
-; {{potensijelle+A+Attr}}: __potensijelle__ 
-; {{potensijelles+A+Sg+Nom}}: __potensijelles__ 
-{{{
-  +Use/Sub:^ell e_ES_LOAN ; 
-          :jell e_ES_LOAN ; 
-}}} 
-!!!LEXICONUELLE
-{{{
-         :^ell e_ES_LOAN ;   
- +Use/Sub:vell e_ES_LOAN ; 
-}}} 
-
-
 
 
 
@@ -834,7 +783,6 @@ This is for the adjective "jaame"
 !!!LEXICONe_ES_ODDEVEN2
 This one gives EVEN and ODD  Comporation.
 
-
 (subsequent examples are *adjectives *)
 ; {{galme+A+Attr}}: __galme,__ __galmes__ 
 ; {{galme+A+Sg+Nom}}: __galmes__ 
@@ -848,23 +796,41 @@ This one gives EVEN and ODD  Comporation.
             :es  ODDCASEOBL ;  
    +A+Sg+Nom:es FINAL1 ;        
  +A+SgNomCmp:es R ;             
-     +Use/NG:e EVENCOMP ;       
+            :e EVENCOMP ;       
 }}}
 
 
 
-     eCASE ;
 
 
 
 
-    ieCASEOBL ;
+
+         
 
 
 
 
 
   ieCASEOBL ;
+:%»%^PASSUMLehk  ODDCASEOBL ;
+
+
+
+** KLASSE 4, -s og -h  i attributt, UMLAUT til -an predikativ** !!!
+
+
+!!!UMLAUT LEXICON SAETNIES4
+19 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
+Theese adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
+umlaut-adjectives. 
+This group which covers the ies - an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
+
+{{{
+  :ies ATTR_0 ;      
+  :%^1UMLan PRED_0 ; 
+  : ieCASE ;		    
+}}}
 
 
 
@@ -876,17 +842,6 @@ This one gives EVEN and ODD  Comporation.
 
 
 
-OUTCOMMENTED   +Use/Sub: eCASE ; ! Sjekk dette ! 9.5.
-
-
-
-
-
-
-
-
-
-ODDCASEOBL ;
 
 
 
@@ -900,10 +855,68 @@ ODDCASEOBL ;
 
 
 
- +Use/Sub:s ODDCASEOBL ;  ! LA la til -s
 
 
-+Use/Sub:s ODDCASEOBL ;  ! LA la til -s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!!!LEXICONMAST
+The __MAST__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
+used with the stem ''masten''
+{{{
+             ATTR_S ;   
+   +Use/NG:e ATTR_S ;   
+   +Use/NG:  ATTR_H ;   
+   +Use/NG:e ATTR_N ;   
+          :e PRED_N ;   
+}}} 
+
+
+
+
+
+
+
+!!!IJVE_LOAN_ADJ LEXICON IJVEadj
+EVEN adjective EVEN Comporation.
+Used for all loan-adjectives "ijve".
+{{{ 
+ :ijv e_E_EVEN  ;         
+ :ïjv e_E_EVEN  ;         
+ +Use/Sub:iv e_E_EVEN  ;  
+}}}
+
+
+
+
+
+!!!LEXICONJELLE
+The __JELLE__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
+used with the stem ''jelle'' This one should be 'jeelle'? SGM?
+
+(subsequent examples are *adjectives *)
+; {{potensijelle+A+Attr}}: __potensijelle__ 
+; {{potensijelles+A+Sg+Nom}}: __potensijelles__ 
+{{{
+  +Use/Sub:^ell e_ES_LOAN ; 
+          :jell e_ES_LOAN ; 
+}}} 
+!!!LEXICONUELLE
+{{{
+         :^ell e_ES_LOAN ;   
+ +Use/Sub:vell e_ES_LOAN ; 
+}}} 
 
 
 
@@ -1025,33 +1038,7 @@ aCASEOBL ;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 :em ODDCASEOBL ; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1081,8 +1068,6 @@ aCASEOBL ;
 
 +A+Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
 TT: Added +Sg to the Px entries here, cf. MAANASGOBL.
-
-
 
 
 
