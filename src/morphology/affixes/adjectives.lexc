@@ -56,31 +56,22 @@ LEXICON NAAKE
     
 LEXICON REAKTOE
   :rïektes ATTR_0 ;! rett, riktig
-!  :reakt   oeCASE ;
+  :reakt   oeCASE ;
   :rïekt e_ES_ODDEVEN2 ;! bein, rakt
 
      !**SLUTT**Spesielle Adjektiver som skiller seg ut fra systemet**SLUTT**! 
 
 ! VOKALUTVIDELSE på 2-stavelsesadjektiv, Fortsatt KLASSE1
 
-LEXICON GIERIES 
-!! !!!GEAREHKE LEXICON @LEXNAME@
-!! Umlaut from attr--> pred. Comporation uneven syllable.
-!! Presentlly only used for "gieries-gearehke" adjective.
-!! This lexicon covers the ies - ehke + umlaut change.
- !! {{{
- :gierie ATTR_S ;      !!= @CODE@
- :gearehke PRED_0 ;    !!= @CODE@
- :gearahk ODDCOMP ;    !!= @CODE@
-! :gearahk ODDCASEOBL ; !!= @CODE@
- !! }}} 
 
 
-LEXICON EVTEBE  
-:ie EVENSUPONLY ;
+
+
+!LEXICON EVTEBE  
+!:ie EVENSUPONLY ;
 !:ie EVENCOMPCASE ;
-+A+Comp+Attr:ebe FINAL1 ;
-+A+Comp+Attr:emes FINAL1 ;
+!+A+Comp+Attr:ebe FINAL1 ;
+!+A+Comp+Attr:emes FINAL1 ;
 
 ! *** BARE ATTRIBUTTER  *** !
 
@@ -219,7 +210,7 @@ LEXICON as_AS_EVEN1!!≈ !!!@CODE@
 !! {{{   
             :a     ATTR_S ;    !!= @CODE@
                  aCASEOBL ;    !!= @CODE@
-            :a   EVENCOMP ;    !!= @CODE@
+            :a   EVENCOMP ;    ! Tidligere klasse-3
   +A+Sg+Nom:as     FINAL1 ;    !!= @CODE@
 +A+SgNomCmp:as          R ;    !!= @CODE@
 !! }}}
@@ -262,7 +253,7 @@ LEXICON es_ES_EVEN!!≈ !!!@CODE@
 !! }}}
 
 
-!D:1
+!D:1 Denne er en avledning fra klasse 2: e_ES
 LEXICON es_ES_EVENNOCOMP1 
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-NOCOMP.
 
@@ -291,7 +282,7 @@ LEXICON ies_IES_EVENNOCOMP1
 !        ieCASEOBL ;   !!= @CODE@
 !! }}}
 
-
+! Denne er en avledning fra klase 3, as-a-adjektivene
 LEXICON as_AS_ODD1 ! del opp denne i -oes og -as-stamme
  as_AS_ODD1NOCOMP ;
   :as ODDCOMP ;
@@ -306,18 +297,28 @@ oes_OES_ODD1NOCOMP  ;
    :oes ODD_ÅBPOE ;
    
    
-LEXICON ah_AH_ODD   !XXX mangler CASE - hva er riktig - kanskje EVEN?  NB!
-  ah_AH_ODDNOCOMP ;
+LEXICON ah_AH_ODD1   !XXX mangler CASE - hva er riktig - kanskje EVEN?  NB!
+:a    ATTR_H  ;
+:a    PRED_H  ;
 :ahk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  ah 
-!      aCASE ;
+ !     aCASE ;
 
-LEXICON ah_AH_ODDNOCOMP  !NB!
-:a     ATTR_H ;          ! Fjerna DISIMP
-:a     PRED_H ;
-!:%^DISIMPa     ATTR_H ; ! Bug 1463: Eg hadde lagt til DISIMP. No ser eg
-!:%^DISIMPa     PRED_H ; ! at det gjev feil resultat for alle 43 ah_AH_ODD,
-                         ! bortsett frå tråmpoeh:tramp. Sjå på den. TT.
-!     aCASEOBL ;
+LEXICON AH_&_OEH_ODD1
+:oeh ATTR_0 ;
+:ah ATTR_0 ;
+:oehk ODD_ÅBPOE ;
+:ahk ODD_ABPA ;
+:oeh PRED_0 ;
+:ah PRED_0 ;
+
+LEXICON oeh_OEH_ODD ! tidl -oe h_H_ODD
+ :oehk ODD_ÅBPOE ; 
+ oeh_OEH_ODDNOCOMP1 ;
+
+LEXICON oeh_OEH_ODDNOCOMP1
+ :oe ATTR_H ;
+ :oe PRED_H ;
+!+Use/Sub: oeCASE_OBL ;
 
 
 
@@ -363,6 +364,17 @@ LEXICON MOOREH
  :e    PRED_H ;
 !    eCASEOBL ; ! check! this is not right
  :ehk ODDCOMP ; 
+LEXICON GIERIES 
+!! !!!GEAREHKE LEXICON @LEXNAME@
+!! Umlaut from attr--> pred. Comporation uneven syllable.
+!! Presentlly only used for "gieries-gearehke" adjective.
+!! This lexicon covers the ies - ehke + umlaut change.
+ !! {{{
+ :gierie ATTR_S ;      !!= @CODE@
+ :gearehke PRED_0 ;    !!= @CODE@
+ :gearahk ODDCOMP ;    !!= @CODE@
+! :gearahk ODDCASEOBL ; !!= @CODE@
+ !! }}} 
 
 !   ****slutt Vokalutvidelse i 2.stavelse av 2-stems-adjectives *****  
 
@@ -699,10 +711,10 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
 
 LEXICON SAETNIES4
 !! !!!UMLAUT LEXICON @LEXNAME@
-!! 19 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
+!! 20 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
 !! Theese adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
 !! umlaut-adjectives. 
-!! This group which covers the ies - an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
+!! This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
 
 !! {{{
  :ies ATTR_0 ;      !!= @CODE@
@@ -710,48 +722,27 @@ LEXICON SAETNIES4
 !+Use/NG:a PRED_0 ;
  : ieCASE ;		    !!= @CODE@
 !! }}}
+LEXICON as_AN_ODDNOCOMP4
+!! !!!UMLAUT LEXICON @LEXNAME@
+!! Theese 6 adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
+!! umlaut-adjectives. Theese adjectives whivh have -as  as attributeform and an as predicativeform, is south-southsámi adjectives, and they dont have any comparation.
+!! This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group 
+!! {{{
+:a  ATTR_S ; !!= @CODE@
+:a  PRED_N ; !!= @CODE@
+!! }}}
 
-     !**Slå sammen s_AN_4 + GIJMIES**!***Interesant! SE nærmere på denne gruppen, hvorfor er den slik?
-! UMLAUT 3 = ie/oe-a-stamme
-LEXICON s_AN_4 ! NOCOMP
- :ujnies ATTR_0 ;
- :åjnoes ATTR_0 ;
- :ajnas ATTR_0 ;
-! :ujn ieCASEOBL ;
-! :åjn oeCASE_OBL ;
-! :ajn aCASEOBL ; 
- :åjnan PRED_0 ;
-! UMLAUT 3 = ie/oe-a -stamme
-LEXICON GIJMIES4 
-  :gijmies ATTR_0 ;
-  :gæjmah ATTR_0 ;
-  :gæjma ATTR_S ;
-  :gæjmoeh ATTR_0 ;
-  :gæjmoe ATTR_S ; 
-  :gæjman PRED_0 ;
-  :gæjmoen PRED_0 ;
-!  :gijm ieCASEOBL ;! NOCOMP
-!  :gæjm aCASE ;
-!  :gæjm oeCASE ;! NOCOMP!
-
+LEXICON oes_AN_ODDNOCOMP4
+!! !!!UMLAUT LEXICON @LEXNAME@
+!! Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
+!! umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
+!! This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group 
+!! {{{ 
+:oe   ATTR_S ;!!= @CODE@
+:a    PRED_N ;!!= @CODE@
+!! }}}
 !Undergruppe 3 av umlautgruppen 4 er oeh-an-adjectivene - SETT INN denne gruppen hit
 
-LEXICON AH_&_OEH_ODD
-:oeh ATTR_0 ;
-:ah ATTR_0 ;
-:oehk ODD_ÅBPOE ;
-:ahk ODD_ABPA ;
-:oeh PRED_0 ;
-:ah PRED_0 ;
-
-LEXICON oeh_OEH_ODD ! tidl -oe h_H_ODD
- :oehk ODD_ÅBPOE ; 
- oeh_OEH_ODDNOCOMP ;
-
-LEXICON oeh_OEH_ODDNOCOMP
- :oe ATTR_H ;
- :oe PRED_H ;
-!+Use/Sub: oeCASE_OBL ;
  
 LEXICON oeh_OEN_ODD
  :oe ATTR_H ;
@@ -759,10 +750,6 @@ LEXICON oeh_OEN_ODD
 !+Use/Sub: oeCASE_OBL ;
   :oehk  ODD_ÅBPOE ; 
   
-LEXICON oeh_OEN_AN_ODDNOCOMP 
- :oe ATTR_H ;
- :oe PRED_N ;
-  :a PRED_N ;
 
 LEXICON oeh_AN_ODD !DEL DENNE OPP I CASE; ie, oe og a
 oeh_AN_ODDNOCOMP  ; 
@@ -771,26 +758,61 @@ oeh_AN_ODDNOCOMP  ;
 !+Use/Sub: oeCASE ; ! Dele
 ! !        :aCASE ; !
 ! !        :ieCASE ;
-
 LEXICON oeh_AN_ODDNOCOMP 
 :oe   ATTR_H ;
       PRED_AN ;
 !+Use/Sub: oeCASE_OBL ;!
       
-
+!oeh_OEH_AN_ODD_NOCOMP
 LEXICON oeh_OEH_AN_ODD  ! Attr=oeh, Pred=oeh og an 
       oeh_OEH_AN_ODDNOCOMP  ;
 :ahk  ODDCOMP ;
 :oehk ODD_ÅBPOE ; 
 !+Use/Sub: oeCASE_OBL ;
-
-
 LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an 
 :oe ATTR_H ;
 :oe PRED_H ;
     PRED_AN ; 
 !+Use/Sub: oeCASE_OBL ;
 
+
+! ah_AN_ODD  og NOCOMP
+LEXICON ah_AN_ODD  ! LA: laga ny versjon, se kommentar over
+ ah_AN_ODDNOCOMP ;
+ :ahk  ODDCOMP ; 
+LEXICON ah_AN_ODDNOCOMP !!≈ !!!@CODE@
+!! The __@LEXNAME@__ lexicon is used for adjectives on {{–ah}} and {{–an}} that
+!! does not take comparative and superlative inflection.
+ :a ATTR_H ;
+ :a PRED_N ;
+! +Use/Sub: aCASEOBL ;
+
+
+LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
+!! The __@LEXNAME@__ lexicon is used for adjectives on {{–ah}} and {{–an}} with an
+!! exceptional predicative on {{–ode/–ede}}. This lexicon is only used for
+!! three adjectives: ''båadtsoeh, båajhtoeh, skåalvoeh''. ''båadtsoeh'' is also
+!! used with the stem ''båadtj–'', although that stem is probably southern.
+!! It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
+!! This must be checked further, possibly with informants.
+
+!!€gt-norm: adjectives ony ah/oeh an/oen/ode - båadtsah
+!!¥ båadtsoeh+A+Attr:   [båadtsah, båadtsoeh, båadtsas, båadtsoes, båadtjah, båadtjoeh, båadtjas, båadtjoes]
+!!¥ båadtsoeh+A+Sg+Nom: [båadtsan, båadtsoen, båadtsode, båadtsede, båadtjan, båadtjoen, båadtjode, båadtjede]
+
+!!€gt-desc: adjectives on ah/oeh an/oen/ode - båadtsah
+!!¥ båadtsoeh+A+Attr:   [båadtsah, båadtsoeh, båadtsas, båadtsoes, båadtjah, båadtjoeh, båadtjas, båadtjoes]
+!!¥ båadtsoeh+A+Sg+Nom: [båadtsan, båadtsoen, båadtsode, båadtsede, båadtjan, båadtjoen, båadtjode, båadtjede]
+         :a   ATTR_H     ;
+         :oe  ATTR_H     ;
+         :a   ATTR_S     ;
+         :oe  ATTR_S     ;
+         :a   PRED_N     ;
+         :oe  PRED_N     ;
+         :ode PRED_0     ;
+         :ede PRED_0     ;
+!              aCASEOBL   ;
+!              oeCASE_OBL ;
 
 
 
@@ -800,9 +822,9 @@ LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an
 
 
 
-!  **** ODD-stavelses-adjektiv   ****   !
-! ODD-stems (odd stem declension)
-! ===============================
+                          !  **** ODD-stavelses-adjektiv   ****   !
+                            ! ODD-stems (odd stem declension)
+                              ! ===============================
 
 LEXICON Ce_CE_ODD  !bårreske
  :%^DISIMPe     ATTR_0 ;
@@ -1313,21 +1335,6 @@ LEXICON oehks_oehke_OEHKS_OEHKE_ODD
    ODD_ÅBPOE ;
 
 
-! type 4
-
-LEXICON as_AN_ODDNOCOMP 
-:a  ATTR_S ;
-:a  PRED_N ;
-!:ak  ODDNOCOMP ;
-!+Use/Sub: aCASEOBL ;
-
-
-LEXICON oes_AN_ODD 
-:oe   ATTR_S ;
-:a    PRED_N ;
-!+Use/Sub:	  oeCASE ;
-:oes  ODD_ÅBPOE ; ! LA endra fra k til s
-!+Use/NG:ak  ODDCOMP ;
 
 
 !LEXICON s_N_ODDNOCOMP 
@@ -1341,44 +1348,6 @@ LEXICON oes_AN_ODD
 ! :s ODDCOMP ; 
 
 
-LEXICON ah_AN_ODD  ! LA: laga ny versjon, se kommentar over
- ah_AN_ODDNOCOMP ;
- :ahk  ODDCOMP ; 
-
-
-LEXICON ah_AN_ODDNOCOMP !!≈ !!!@CODE@
-!! The __@LEXNAME@__ lexicon is used for adjectives on {{–ah}} and {{–an}} that
-!! does not take comparative and superlative inflection.
- :a ATTR_H ;
- :a PRED_N ;
-! +Use/Sub: aCASEOBL ;
-
-
-LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
-!! The __@LEXNAME@__ lexicon is used for adjectives on {{–ah}} and {{–an}} with an
-!! exceptional predicative on {{–ode/–ede}}. This lexicon is only used for
-!! three adjectives: ''båadtsoeh, båajhtoeh, skåalvoeh''. ''båadtsoeh'' is also
-!! used with the stem ''båadtj–'', although that stem is probably southern.
-!! It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
-!! This must be checked further, possibly with informants.
-
-!!€gt-norm: adjectives ony ah/oeh an/oen/ode - båadtsah
-!!¥ båadtsoeh+A+Attr:   [båadtsah, båadtsoeh, båadtsas, båadtsoes, båadtjah, båadtjoeh, båadtjas, båadtjoes]
-!!¥ båadtsoeh+A+Sg+Nom: [båadtsan, båadtsoen, båadtsode, båadtsede, båadtjan, båadtjoen, båadtjode, båadtjede]
-
-!!€gt-desc: adjectives on ah/oeh an/oen/ode - båadtsah
-!!¥ båadtsoeh+A+Attr:   [båadtsah, båadtsoeh, båadtsas, båadtsoes, båadtjah, båadtjoeh, båadtjas, båadtjoes]
-!!¥ båadtsoeh+A+Sg+Nom: [båadtsan, båadtsoen, båadtsode, båadtsede, båadtjan, båadtjoen, båadtjode, båadtjede]
-         :a   ATTR_H     ;
-         :oe  ATTR_H     ;
-         :a   ATTR_S     ;
-         :oe  ATTR_S     ;
-         :a   PRED_N     ;
-         :oe  PRED_N     ;
-         :ode PRED_0     ;
-         :ede PRED_0     ;
-!              aCASEOBL   ;
-!              oeCASE_OBL ;
 
 !LEXICON ah_AN_A_ODD  ! 3 adjektiver, alle har Majas kommentar om at -a formen er subst. Bare en av dem finnes i noun-sma-lex. MLK: Det er riktig, nå skal alle stå der.
 !:a ATTR_H ;
@@ -1518,8 +1487,6 @@ LEXICON eCASENOM
 LEXICON eCASEOBL
 +A:           NIEJTEOBL  ;
 
-
-
 LEXICON aCASENOM
 +A+Sg: MAANASGNOM ;
 
@@ -1567,47 +1534,48 @@ LEXICON ieCASEOBL
 
 
 
-!LEXICON oeCASE
-!oeCASE_NOMSG ;
-!oeCASE_OBL ;
-!
-!LEXICON oeCASE_NOMSG
-!+A+Sg+Nom:oe          FINAL1 ;
-!
-!LEXICON oeCASE_OBL
-! +A+Sg: A_OE_SGILL_UML ; ! Causes Umlaut
-!         A_OE ;
+LEXICON oeCASE
+oeCASE_NOMSG ;
+oeCASE_OBL ;
 
-!LEXICON A_OE_SGILL_UML
-! +Ill+Uml:e%>%^2UMLse FINAL1      ; ! Causes Umlaut
-!
-!LEXICON A_OE
-!  +A+Sg: A_OE_SG  ;
-!  +A+Pl: A_OE_PL  ;
-!  +A: A_OE_ESS ;
-!  +A+SgNomCmp:oe    R ;
-!  +A+SgGenCmp:oe%>n R ;
-!  +A+PlGenCmp:oe%>j R ;
-!
-!LEXICON A_OE_SG
-!  +Acc:oe%>m       FINAL1 ;
-!  +Gen:oe%>n       FINAL1 ;
-!  +Ill:o%>se       FINAL1 ;
-!  +Ine:o%>sne      FINAL1 ;
-!  +Ela:o%>ste      FINAL1 ;
-!  +Com:o%>jne      FINAL1 ;
-!
-!LEXICON A_OE_PL
-!  +Nom:oe%>h       FINAL1 ;
-!  +Acc:o%>jde      FINAL1 ;
-!  +Gen:oe%>j       FINAL1 ;
-!  +Ill:o%>jde      FINAL1 ;
-!  +Ine:o%>jne      FINAL1 ;
-!  +Ela:o%>jste     FINAL1 ;
-!  +Com:oe%>jgujmie FINAL1 ;
-!
-!LEXICON A_OE_ESS
-!  +Ess:o%>jne         FINAL1 ;
+LEXICON oeCASE_NOMSG
++A+Sg+Nom:oe          FINAL1 ;
+
+LEXICON oeCASE_OBL
+ +A+Sg: A_OE_SGILL_UML ; ! Causes Umlaut
+        A_OE ;
+
+LEXICON A_OE_SGILL_UML
+ +Ill+Uml:e%>%^2UMLse FINAL1      ; ! Causes Umlaut
+
+LEXICON A_OE
+  +A+Sg: A_OE_SG  ;
+  +A+Pl: A_OE_PL  ;
+  +A: A_OE_ESS ;
+  +A+SgNomCmp:oe    R ;
+  +A+SgGenCmp:oe%>n R ;
+  +A+PlGenCmp:oe%>j R ;
+
+LEXICON A_OE_SG
+  +Acc:oe%>m       FINAL1 ;
+  +Gen:oe%>n       FINAL1 ;
+  +Ill:o%>se       FINAL1 ;
+  +Ine:o%>sne      FINAL1 ;
+  +Ela:o%>ste      FINAL1 ;
+  +Com:o%>jne      FINAL1 ;
+
+LEXICON A_OE_PL
+  +Nom:oe%>h       FINAL1 ;
+  +Acc:o%>jde      FINAL1 ;
+  +Gen:oe%>j       FINAL1 ;
+  +Ill:o%>jde      FINAL1 ;
+  +Ine:o%>jne      FINAL1 ;
+  +Ela:o%>jste     FINAL1 ;
+  +Com:oe%>jgujmie FINAL1 ;
+
+LEXICON A_OE_ESS
+  +Ess:o%>jne         FINAL1 ;
+
 
 
 ! Comparative forms
@@ -1672,8 +1640,6 @@ LEXICON OMMES
 +A+Superl+Attr:%^DISIMP ATTRCONT ;
 
 
-
-
 !LEXICON EVENCOMPCASE
 !+A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP         FINAL1 ;
 !+A+Comp+Sg+Acc:%>%^COMPDISIMPbe%>%^DISIMPm      FINAL1 ;
@@ -1722,8 +1688,7 @@ LEXICON OMMES
 !!+A+Comp+SgGenCmp:%>%^COMPDISIMP2be%>%^DISIMPn R ;
 !!+A+Comp+PlGenCmp:%>%^COMPDISIMP2b%>%^DISIMPi R ;
 
-
-  
+ 
 LEXICON DIMCOMP
 +A+Comp+Der1+Der/Dimin+Attr:%>b%»adtje          FINAL1 ;
 +A+Comp+Der1+Der/Dimin+Attr:%>b%»odtje       FINAL1 ;
@@ -1868,8 +1833,7 @@ LEXICON MES
 +A+Superl+PlGenCmp:mass%>i  R ;
 
 
-
-
+! Burde ikke disse leksikonene "laakan" og "leejnes" være i adverb-fila
 LEXICON LAAKAN
 +Der1+Der/laakan:#laakan adv ;
 +Der1+Der/laakan+Use/Sub:-laakan adv ;
@@ -1880,6 +1844,7 @@ LEXICON LEEJNES
  +Use/Sub:-leejnes ATTR_0 ;
  +Use/Sub:-leejns ATTR_0 ;
 
+! Klasse -3
 !__Foreløpig 
 !LEXICON A_EVEN
 !+N+Sg: MAANASGNOM ;
