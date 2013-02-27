@@ -556,16 +556,8 @@ EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 
 
 
-!!!GEAREHKE LEXICON GIERIES
-Umlaut from attr--> pred. Comporation uneven syllable.
-Presentlly only used for "gieries-gearehke" adjective.
-This lexicon covers the ies - ehke + umlaut change.
-{{{
-  :gierie ATTR_S ;      
-  :gearehke PRED_0 ;    
-  :gearahk ODDCOMP ;    
- ! :gearahk ODDCASEOBL ; 
-}}} 
+
+
 
 
 
@@ -639,7 +631,6 @@ The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as
 {{{   
              :a     ATTR_S ;    
                   aCASEOBL ;    
-             :a   EVENCOMP ;    
    +A+Sg+Nom:as     FINAL1 ;    
  +A+SgNomCmp:as          R ;    
 }}}
@@ -710,6 +701,7 @@ The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{�
 
 
 
+
 !!!BÅERIES LEXICON BAERIES
 UNEVEN adjective, attr = pred. Comporation uneven syllable.
 Presentlly only used for "båeries" adjective.
@@ -719,6 +711,16 @@ Presentlly only used for "båeries" adjective.
  ! :båaras aCASEOBL ; 
   :båaras ODDCOMP ; 
 }}}
+!!!GEAREHKE LEXICON GIERIES
+Umlaut from attr--> pred. Comporation uneven syllable.
+Presentlly only used for "gieries-gearehke" adjective.
+This lexicon covers the ies - ehke + umlaut change.
+{{{
+  :gierie ATTR_S ;      
+  :gearehke PRED_0 ;    
+  :gearahk ODDCOMP ;    
+ ! :gearahk ODDCASEOBL ; 
+}}} 
 
 
 
@@ -821,15 +823,32 @@ This one gives EVEN and ODD  Comporation.
 
 
 !!!UMLAUT LEXICON SAETNIES4
-19 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
+20 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
 Theese adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
 umlaut-adjectives. 
-This group which covers the ies - an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
+This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
 
 {{{
   :ies ATTR_0 ;      
   :%^1UMLan PRED_0 ; 
   : ieCASE ;		    
+}}}
+!!!UMLAUT LEXICON as_AN_ODDNOCOMP4
+Theese 6 adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
+umlaut-adjectives. Theese adjectives whivh have -as  as attributeform and an as predicativeform, is south-southsámi adjectives, and they dont have any comparation.
+This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group 
+{{{
+ :a  ATTR_S ; 
+ :a  PRED_N ; 
+}}}
+
+!!!UMLAUT LEXICON oes_AN_ODDNOCOMP4
+Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
+umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
+This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group 
+{{{ 
+ :oe   ATTR_S ;
+ :a    PRED_N ;
 }}}
 
 
@@ -838,13 +857,26 @@ This group which covers the ies - an + umlaut change, is a small undergruppe of 
 
 
 
+ !!!LEXICON ah_AN_ODDNOCOMP
+The __ah_AN_ODDNOCOMP__ lexicon is used for adjectives on {{–ah}} and {{–an}} that
+does not take comparative and superlative inflection.
 
 
+ !!!LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP
+The __ah_oeh_OEN_AN_ODE_ODDNOCOMP__ lexicon is used for adjectives on {{–ah}} and {{–an}} with an
+exceptional predicative on {{–ode/–ede}}. This lexicon is only used for
+three adjectives: ''båadtsoeh, båajhtoeh, skåalvoeh''. ''båadtsoeh'' is also
+used with the stem ''båadtj–'', although that stem is probably southern.
+It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
+This must be checked further, possibly with informants.
 
+(subsequent examples are *adjectives ony ah/oeh an/oen/ode - båadtsah*)
+; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
+; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__ 
 
-
-
-
+(subsequent examples are *adjectives on ah/oeh an/oen/ode - båadtsah*)
+; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
+; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__ 
 
 
 
@@ -1008,39 +1040,12 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 
 
-
-
-
-
- !!!LEXICON ah_AN_ODDNOCOMP
-The __ah_AN_ODDNOCOMP__ lexicon is used for adjectives on {{–ah}} and {{–an}} that
-does not take comparative and superlative inflection.
-
-
- !!!LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP
-The __ah_oeh_OEN_AN_ODE_ODDNOCOMP__ lexicon is used for adjectives on {{–ah}} and {{–an}} with an
-exceptional predicative on {{–ode/–ede}}. This lexicon is only used for
-three adjectives: ''båadtsoeh, båajhtoeh, skåalvoeh''. ''båadtsoeh'' is also
-used with the stem ''båadtj–'', although that stem is probably southern.
-It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
-This must be checked further, possibly with informants.
-
-(subsequent examples are *adjectives ony ah/oeh an/oen/ode - båadtsah*)
-; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
-; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__ 
-
-(subsequent examples are *adjectives on ah/oeh an/oen/ode - båadtsah*)
-; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
-; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__ 
-
 aCASEOBL ;
 
 
 
 
 :em ODDCASEOBL ; 
-
-
 
 
 
@@ -1082,12 +1087,14 @@ TT: Added +Sg to the Px entries here, cf. MAANASGOBL.
 
 
 
+
+
+
+
+
+
+
 EVENCOMPCASE_oe ;
-
-
-
-
-
 
 
 
