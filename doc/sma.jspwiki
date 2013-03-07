@@ -544,33 +544,6 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-!!!BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
-EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
-{{{
-  :buer ie_IE_EVENNOCOMP1    ;  
-  :buerie EVENCOMPONLY ;        
-  :bööre MES ;                  
-  :buerie DIMCOMP ;             
-}}}
-
-
-
-
-
-
-
-
-
-
-!!!BIJJIES LEXICON ATTR_EVEN
-EVEN adjective, just attr. EVEN Comporation.
-Used for "bijjies" adjective. Gjør om denne: This one is wrong.
-{{{ 
- :ies ATTR_0 ; 
- :e EVENCOMP ; 
-}}}
-
-
 
 
 
@@ -626,7 +599,7 @@ The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  
         :a     EVENCOMP ;  
 }}}
 
- !!!LEXICON as_AS_EVEN1
+ !!!LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
 The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP. 
 {{{   
              :a     ATTR_S ;    
@@ -711,6 +684,8 @@ Presentlly only used for "båeries" adjective.
  ! :båaras aCASEOBL ; 
   :båaras ODDCOMP ; 
 }}}
+
+
 !!!GEAREHKE LEXICON GIERIES
 Umlaut from attr--> pred. Comporation uneven syllable.
 Presentlly only used for "gieries-gearehke" adjective.
@@ -719,11 +694,25 @@ This lexicon covers the ies - ehke + umlaut change.
   :gierie ATTR_S ;      
   :gearehke PRED_0 ;    
   :gearahk ODDCOMP ;    
+  :gearahtj ODDCOMP ;    
+  :gearahg ODDCOMP ;    
+
  ! :gearahk ODDCASEOBL ; 
 }}} 
 
 
 
+
+
+
+!!!BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
+EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
+{{{
+  :buer ie_IE_EVENNOCOMP1    ;  
+  :buerie EVENCOMPONLY ;        
+  :bööre MES ;                  
+  :buerie DIMCOMP ;             
+}}}
 
 
 
@@ -759,6 +748,10 @@ Adjective with no comp.
 
 
 
+
+
+
+
 !!!LEXICONe_ES_EVENODDNOCOMP2
 EVEN/ODD adjective with Comporation.
 
@@ -767,6 +760,7 @@ EVEN/ODD adjective with Comporation.
 ; {{guektiengïele+A+Sg+Nom}}: __guektiengïeles__ 
 
 {{{
+
 }}}
 
 !!!LEXICONe_ES_EVENNOCOMP2
@@ -779,7 +773,7 @@ This is for the adjective "jaame"
 {{{ 
           :e    ATTR_0  ;     
           :e    PRED_S  ;     
-         !     eCASEOBL ;     
+               eCASEOBL ;     
 }}}
 
 !!!LEXICONe_ES_ODDEVEN2
@@ -793,16 +787,11 @@ This one gives EVEN and ODD  Comporation.
 
 
 {{{ 
-            :e   ATTR_0 ;                  
-                 eCASEOBL ;    
-            :es  ODDCASEOBL ;  
-   +A+Sg+Nom:es FINAL1 ;        
- +A+SgNomCmp:es R ;             
-            :e EVENCOMP ;       
+            :e     ATTR_0 ;                  
+                 eCASEOBL ;       
+            :e   EVENCOMP ;       
+               es_ES_ODD1 ;       
 }}}
-
-
-
 
 
 
@@ -814,9 +803,6 @@ This one gives EVEN and ODD  Comporation.
 
 
 
-  ieCASEOBL ;
-:%»%^PASSUMLehk  ODDCASEOBL ;
-
 
 
 ** KLASSE 4, -s og -h  i attributt, UMLAUT til -an predikativ** !!!
@@ -824,8 +810,6 @@ This one gives EVEN and ODD  Comporation.
 
 !!!UMLAUT LEXICON SAETNIES4
 20 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
-Theese adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
-umlaut-adjectives. 
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
 
 {{{
@@ -839,7 +823,7 @@ umlaut-adjectives. Theese adjectives whivh have -as  as attributeform and an as 
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group 
 {{{
  :a  ATTR_S ; 
- :a  PRED_N ; 
+ :a  PRED_AN ; 
 }}}
 
 !!!UMLAUT LEXICON oes_AN_ODDNOCOMP4
@@ -848,7 +832,7 @@ umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an a
 This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group 
 {{{ 
  :oe   ATTR_S ;
- :a    PRED_N ;
+ :%^3UML    PRED_AN ;
 }}}
 
 
@@ -856,10 +840,6 @@ This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is 
 
 
 
-
- !!!LEXICON ah_AN_ODDNOCOMP
-The __ah_AN_ODDNOCOMP__ lexicon is used for adjectives on {{–ah}} and {{–an}} that
-does not take comparative and superlative inflection.
 
 
  !!!LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP
@@ -895,14 +875,6 @@ This must be checked further, possibly with informants.
 
 
 
-
-
-
-
-
-
-
-
 !!!LEXICONMAST
 The __MAST__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
 used with the stem ''masten''
@@ -913,9 +885,6 @@ used with the stem ''masten''
    +Use/NG:e ATTR_N ;   
           :e PRED_N ;   
 }}} 
-
-
-
 
 
 
@@ -985,12 +954,6 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 
 
-
-
-
-
-
-
  :es  ODDCASEOBL ;
 
  :s  ODDCASEOBL ;
@@ -1008,7 +971,6 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 
 
-    ije_ODDCASEOBL ;
 
 
 
@@ -1028,24 +990,6 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-aCASEOBL ;
-
-
-
-
-:em ODDCASEOBL ; 
 
 
 
@@ -1093,17 +1037,7 @@ TT: Added +Sg to the Px entries here, cf. MAANASGOBL.
 
 
 
-
 EVENCOMPCASE_oe ;
-
-
-
-
-
-
-
-
-
 
 
 
