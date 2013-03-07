@@ -35,7 +35,8 @@ GT_FILTER_TARGETS+=\
 				   remove-sub-forms.hfst                \
 				   remove-usage-tags.hfst               \
 				   remove-NA-strings.hfst               \
-				   remove-NG-strings.hfst
+				   remove-NG-strings.hfst               \
+				   remove-NGminip-strings.hfst
 endif
 
 if CAN_XFST
@@ -51,7 +52,8 @@ GT_FILTER_TARGETS+=\
 				   remove-sub-forms.xfst                \
 				   remove-usage-tags.xfst               \
 				   remove-NA-strings.xfst               \
-				   remove-NG-strings.xfst
+				   remove-NG-strings.xfst               \
+				   remove-NGminip-strings.xfst
 endif
 
 # Add the target of local additions here:
