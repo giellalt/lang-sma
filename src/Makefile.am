@@ -61,8 +61,8 @@ endif # WANT_OAHPA
 # Add language-specific transducer targets here:
 # Xerox transducers:
 if CAN_XFST
-GT_ANALYSERS_XFST+=analyser-dict-gt-desc.xfst
-GT_GENERATORS_XFST+=generator-dict-gt-norm.xfst
+GT_ANALYSERS_XFST+=analyser-dict-gt-desc.xfst analyser-dict-gt-norm.xfst
+GT_GENERATORS_XFST+=generator-dict-gt-norm.xfst generator-dict-gt-desc.xfst
 endif
 # HFST transducers
 if CAN_HFST
@@ -104,7 +104,9 @@ generator-%.xfst: generator-%.tmp.xfst \
 		 quit\n" | $(XFST) -q
 
 # First attempt at building dictionary fsts. The analyser differs from the
-# regular analyser by NOT removing variant and homonym tags.
+# regular analyser by NOT removing variant and homonym tags, so that we can
+# generate proper (mini)paradigms for the given lemmas and variants (the
+# analysis string is used as input to the generator).
 analyser-dict-gt-desc.xfst: analyser-raw-gt-desc.xfst \
 					filters/remove-derivation-position-tags.xfst \
 					filters/remove-dialect-tags.xfst \
@@ -123,6 +125,30 @@ analyser-dict-gt-desc.xfst: analyser-raw-gt-desc.xfst \
 			.o. @\"orthography/inituppercase.xfst\" \
 			.o. @\"orthography/spellrelax.xfst\" \
 			;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) -q
+
+# We also want the corresponding generator, so that we can easily add yaml tests
+# to the lexc files (yaml tests always go in symmetric analyser-generator pairs)
+generator-dict-gt-desc.xfst: analyser-raw-gt-desc.xfst \
+					filters/remove-derivation-position-tags.xfst \
+					filters/remove-dialect-tags.xfst \
+					filters/remove-norm-comp-tags.xfst \
+					filters/remove-usage-tags.xfst \
+					filters/remove-morph-borders.xfst \
+					orthography/inituppercase.xfst \
+					orthography/spellrelax.xfst
+	$(AM_V_GEN)$(PRINTF) "read regex \
+				@\"filters/remove-derivation-position-tags.xfst\" \
+			.o. @\"filters/remove-dialect-tags.xfst\" \
+			.o. @\"filters/remove-norm-comp-tags.xfst\" \
+			.o. @\"filters/remove-usage-tags.xfst\" \
+			.o. @\"$<\" \
+			.o. @\"filters/remove-morph-borders.xfst\" \
+			.o. @\"orthography/inituppercase.xfst\" \
+			.o. @\"orthography/spellrelax.xfst\" \
+			;\n\
+		 invert net\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) -q
 
@@ -157,6 +183,32 @@ generator-dict-gt-norm.xfst: analyser-raw-gt-desc.xfst \
 		 save stack $@\n\
 		 quit\n" | $(XFST)
 
+# Even in this case we want the "other" transducer, to be able to test them.
+analyser-dict-gt-norm.xfst: analyser-raw-gt-desc.xfst \
+					filters/make-optional-semantic-tags.xfst \
+					filters/make-optional-transitivity-tags.xfst \
+					filters/remove-derivation-position-tags.xfst \
+					filters/remove-dialect-tags.xfst \
+					filters/remove-morph-borders.xfst \
+					filters/remove-norm-comp-tags.xfst \
+					filters/remove-usage-tags.xfst \
+					filters/remove-NGminip-strings.xfst \
+					filters/remove-NG-strings.xfst \
+					filters/remove-sub-forms.xfst
+	$(AM_V_GEN)$(PRINTF) "read regex \
+				@\"filters/make-optional-semantic-tags.xfst\" \
+			.o. @\"filters/make-optional-transitivity-tags.xfst\" \
+			.o. @\"filters/remove-derivation-position-tags.xfst\" \
+			.o. @\"filters/remove-dialect-tags.xfst\" \
+			.o. @\"filters/remove-norm-comp-tags.xfst\" \
+			.o. @\"filters/remove-usage-tags.xfst\" \
+			.o. @\"filters/remove-NG-strings.xfst\" \
+			.o. @\"filters/remove-NGminip-strings.xfst\" \
+			.o. @\"filters/remove-sub-forms.xfst\" \
+			.o. @\"$<\" \
+			.o. @\"filters/remove-morph-borders.xfst\" ;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST)
 
 #### END: Add local processing instructions ABOVE this line ######
 
