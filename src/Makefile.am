@@ -56,30 +56,6 @@ endif # WANT_OAHPA
 #### analyser-%.hfst: analyser-%.tmp.hfst
 #### generator-%.hfst: generator-%.tmp.hfst
 
-####### Automake targets: ########
-
-if CAN_HFST
-GT_ANALYSERS_HFST=analyser-gt-desc.hfst analyser-gt-norm.hfst
-GT_GENERATORS_HFST=generator-gt-desc.hfst generator-gt-norm.hfst
-GT_TRANSFORMERS_HFST=transcriptor-clock2text-desc.hfst \
-					 transcriptor-date2text-desc.hfst \
-					 transcriptor-numbers2text-desc.hfst
-endif
-
-if CAN_XFST
-GT_ANALYSERS_XFST=analyser-gt-desc.xfst analyser-gt-norm.xfst
-GT_GENERATORS_XFST=generator-gt-desc.xfst generator-gt-norm.xfst
-GT_TRANSFORMERS_XFST=transcriptor-clock2text-desc.xfst \
-					 transcriptor-date2text-desc.xfst \
-					 transcriptor-numbers2text-desc.xfst
-endif
-
-if WANT_OAHPA
-if CAN_XFST
-GT_GENERATORS_XFST+=generator-oahpa-gt-norm.xfst
-endif # CAN_XFST
-endif # WANT_OAHPA
-
 #### BEGIN: Add local processing instructions BELOW this line ####
 
 # Add language-specific transducer targets here:
