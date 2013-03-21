@@ -77,35 +77,11 @@ LEXICON YÖLELH
 LEXICON ATTR_S
 +A+Attr:%>s ATTRCONT ;
 
-!Skal jeg legge til nouncase for alle stamme-attributtene? se nedenunder forslag til leksikon: 
-!LEXI ATTR_IES_EVEN
-!+A+Attr:ies ATTRCONT ; 
-!N_IE ; 
-!
-!LEXI ATTR_OES_EVEN
-!+A+Attr:oes ATTRCONT ;
-!N_OE_UML ;
-!
-!LEXI ATTR_OES_EVEN_UML
-!+A+Attr:oes ATTRCONT ;
-!N_OE ;
-!
-!LEXI ATTR_AS_EVEN
-!+A+Attr:as ATTRCONT ;
-!MAANA ;
-!
-!LEXI ATTR_ES_EVEN
-!+A+Attr:es ATTRCONT ;
-!NIEJTE ;
-
 LEXICON ATTR_H
 +A+Attr:%>h   ATTRCONT ;
 
 LEXICON ATTR_N
 +A+Attr:%>n ATTRCONT ;
-
-!LEX ije_ODDNOCOMP ! BÅETIJE, da dette er handlernomen, nomen agentis
-! ATTR_0 ;
 
 LEXICON ATTRCONT
  FINAL1 ;
@@ -117,36 +93,49 @@ LAAKAN ;
              ! *Slutt* BARE ATTRIBUTTER  *Slutt* !
    
                      ! Predicative lexica
+                                        
 ! ------------------
- 
-LEXICON PRED_0
- +A+Sg+Nom: FINAL1 ; !    
 
-LEXICON PRED_S
- +A+Sg+Nom:%>s FINAL1 ; ! Delle denne opp i EVEN og ODD -adjektiver 
+LEXICON PRED_S !!≈ !!!@CODE@
+!! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
+!! {{{
+ +A+Sg+Nom:%>s FINAL1 ;!!= @CODE@
+!! }}}   
 
-LEXICON PRED_H
- +A+Sg+Nom:%>h FINAL1 ; ! Del OPP! 
+LEXICON PRED_0 !!≈ !!!@CODE@
+!! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
+!! {{{
+ +A+Sg+Nom: FINAL1 ;!!= @CODE@
+!! }}}   
 
-
-LEXICON PRED_NE_ODD
- +A+Sg+Nom:%>ne FINAL1 ; !
- n: ODDCASEOBL ;
- n: ODDCOMP ;
-
-LEXICON PRED_N
- +A+Sg+Nom:%>n FINAL1 ; !
-
-LEXICON PRED_AN
- +A+Sg+Nom:%>an FINAL1 ; ! DEL OPP!
+LEXICON PRED_H!!≈ !!!@CODE@
+!! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
+!! {{{
+ +A+Sg+Nom:%>h FINAL1 ; !!= @CODE@
+!! }}}
+LEXICON PRED_NE_ODD!!≈ !!!@CODE@
+!! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
+!! {{{
+ +A+Sg+Nom:%>ne FINAL1 ; !!= @CODE@
+ n: ODDCASEOBL ;         !!= @CODE@
+ n: ODDCOMP ;            !!= @CODE@
+!! }}}
+LEXICON PRED_N!!≈ !!!@CODE@
+!! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
+!! {{{
+ +A+Sg+Nom:%>n FINAL1 ; !!= @CODE@
+!! }}}
+LEXICON PRED_AN!!≈ !!!@CODE@
+!! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
+!! {{{
+ +A+Sg+Nom:%>an FINAL1 ; !!= @CODE@
+!! }}}
  
 
                 ! *SLUTT* BARE PRED-former  *SLUTT*   !
 
  
-  
-
-
+ 
 
 !   *** KLASSE 1, ie,oe,e og a-stammer med 1) attribut og prediaktiv -s, 2) uten attr/pred-s     ***   !
  
