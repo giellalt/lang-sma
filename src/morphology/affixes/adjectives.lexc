@@ -165,7 +165,7 @@ LEXICON a_A_EVEN1!!≈ !!!@CODE@
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-COMP.
 !! {{{
        :a       ATTR_0 ; !!= @CODE@
-!               MAANA ; !!= @CODE@
+                 MAANA ; !!= @CODE@
        :a     EVENCOMP ; !!= @CODE@ 
 !! }}}
 
@@ -193,7 +193,7 @@ LEXICON ie_IE_EVEN1!!≈ !!!@CODE@
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP. 
 !! {{{
        :ie      ATTR_0 ;  !!= @CODE@
-                ieCASE ; !!= @CODE@
+                  N_IE ; !!= @CODE@
        :ie    EVENCOMP ;  !!= @CODE@
 !! }}} 
 
@@ -203,7 +203,7 @@ LEXICON ie_IE_EVENNOCOMP1!!≈ !!!@CODE@
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
 !! {{{ 
        :ie      ATTR_0 ; !!= @CODE@
-!               ieCASE ; !!= @CODE@
+                  N_IE ; !!= @CODE@
 !! }}} 
 
 !D:1      
@@ -247,13 +247,13 @@ LEXICON ies_IES_EVENNOCOMP1
 !! }}}
 
 LEXICON as_AS_ODD1 ! del opp denne i -oes og -as-stamme
- as_AS_ODD1NOCOMP ;
+as_AS_ODD1NOCOMP ;
   :as ODDCOMP ;
 
 LEXICON as_AS_ODD1NOCOMP ! del opp denne i -oes og -as-stamme
  :a    ATTR_S ;
  :a    PRED_S ;
-!  MAANA ;
+     !  MAANA ;  ODDCASE
 
 LEXICON oes_OES_ODD1 
 oes_OES_ODD1NOCOMP  ;
@@ -264,19 +264,20 @@ LEXICON ah_AH_ODD1   !XXX mangler CASE - hva er riktig - kanskje EVEN?  NB!
 :a    ATTR_H  ;
 :a    PRED_H  ;
 :ahk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  ah 
- !     MAANA ;
+      MAANA_PL; 
 
 LEXICON AH_&_OEH_ODD1
 :oeh ATTR_0 ;
 :ah ATTR_0 ;
 :oehk ODD_ÅBPOE ;
 :ahk ODD_ABPA ;
-:oeh PRED_0 ;
-:ah PRED_0 ;
+:  N_OE_PL ;
+:  MAANA_PL ;
 
-LEXICON oeh_OEH_ODD ! tidl -oe h_H_ODD
- :oehk ODD_ÅBPOE ; 
+LEXICON oeh_OEH_ODD1 ! tidl -oe h_H_ODD
+    :oehk ODD_ÅBPOE ; 
  oeh_OEH_ODDNOCOMP1 ;
+    :       N_OE_PL ;! Case
 
 LEXICON oeh_OEH_ODDNOCOMP1
  :oe ATTR_H ;
@@ -299,9 +300,8 @@ LEXICON BAERIES
  !! }}}
 LEXICON ÅEHPIES 
 :åehpies ATTR_0 ;
-:åehpie PRED_0 ; 
-!:åehp ieCASE ;
-:åahpetje PRED_0 ;
+:åehp      N_IE ;
+:åahpetje PRED_0 ;! LAG EN ODD_PRED
 :åahpatj ODDCOMP ;! mere kjent om personer, mindre vanlig
 :åahpag ODDCOMP ;! mere kjent om ting, saker, tema etc.
 :åahpahk ODDCOMP ; !mere kjent om ting, saker, tema etc.
@@ -312,7 +312,7 @@ LEXICON AAREH
     PRED_H ;
  :e    ATTR_H ;
  :e    PRED_H ;
-!     eCASEOBL ; ! check! this is not right
+       NIEJTE_PL ; 
  :e    EVENCOMP ;
  :eg  ODDCOMP ;  
  :ehk ODDCOMP ;    
@@ -437,13 +437,6 @@ LEXICON s_S_ODD ! HUFF, del opp adjektivene i dette leksikonet i jamn, odde- og 
 !  +Use/Sub:s  ODDCASEOBL ;
   :s ODDCOMP ;
  
-LEXICON s_S_ODDEVEN ! Dette er klasse 3-adjektiv, del opp adjektivene i dette leksikonet i jamn, odde- og loan-adjektiver!!
-     ATTR_S ;
-     PRED_S ;
-!  +Use/Sub:s  ODDCASEOBL ;  ! LA la til -s
-  :s ODDCOMP ;
-  EVENCOMP ;
-
 LEXICON oes_OES_ODD1EVEN !Dette er klasse 3-adjektiv,  del opp adjektivene i dette leksikonet i jamn, odde- og loan-adjektiver!!
      ATTR_S ;
      PRED_S ;
@@ -662,12 +655,12 @@ LEXICON oeh_ah_OE_A_EVEN3
         
 LEXICON ies_IE_EVEN3   
  :ie    ATTR_S ;
-        ieCASE ;
+          N_IE ;
  :ie    PRED_0 ;
  :ie  EVENCOMP ;
 LEXICON ies_IE_EVEN3NOCOMP  
  :ie    ATTR_S ;
-        ieCASE ;
+          N_IE ;
 
 !AVLEDNINGSLEKSIKONET -s i prediaktiv
 ! Avlednigsleksikon til ies-stammevokalgruppen - s  ---->   går til klasse 1 som har ies-ies i attr/pred.
@@ -675,7 +668,7 @@ LEXICON ies_IES_IE_EVEN3  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/
  :ie    ATTR_S ;! 
  :ie    PRED_S ;! Avlednings-s eller språkutvikling
  :ie    PRED_0 ;
-        ieCASE ;
+          N_IE ;
  :ie  EVENCOMP ;
 ! Avlednigsleksikon til ies-stammevokalgruppen - s  ---->   går til klasse 1 som har ies-ies i attr/pred.
 LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
@@ -697,7 +690,7 @@ LEXICON SAETNIES4
  :ies ATTR_0 ;      !!= @CODE@
  :%^1UMLan PRED_0 ; !!= @CODE@
 !+Use/NG:a PRED_0 ;
- : ieCASE ;		    !!= @CODE@
+ : N_IE ;		    !!= @CODE@
 !! }}}
 LEXICON as_AN_ODDNOCOMP4
 !! !!!UMLAUT LEXICON @LEXNAME@
@@ -1331,18 +1324,18 @@ LEXICON ije_ODDCASEOBL
 ! +A+Sg+Com:%>ine      FINAL1 ;
 ! +A+Sg+Com+PxSg2+Use/Sub:%>anadth FINAL1 ;
 
-LEXICON ieCASE
-+A+Sg: N_IE_SG_NOM ;
-         ieCASEOBL ;
+!LEXICON ieCASE
+!+A+Sg: N_IE_SG_NOM ;
+!       ieCASEOBL ;
 
-LEXICON ieCASEOBL
-  +A+Sg: N_IE_SG_OBLadj ;
-  +A+Pl: N_IE_PL ;
-  +A:    N_IE_ESS ;
-  +A+SgNomCmp:ie              R ;
-  +A+SgGenCmp:ie%>n           R ;
-  +A+PlGenCmp+NoUml:ie%>j           R ;
-  +A+PlGenCmp+Uml:%>%^iUMLi R ;
+!LEXICON ieCASEOBL
+!  +A+Sg: N_IE_SG_OBLadj ;
+! +A+Pl: N_IE_PL ;
+! +A:    N_IE_ESS ;
+! +A+SgNomCmp:ie              R ;
+! +A+SgGenCmp:ie%>n           R ;
+! +A+PlGenCmp+NoUml:ie%>j     R ;
+! +A+PlGenCmp+Uml:%>%^iUMLi   R ;
 
 
 
