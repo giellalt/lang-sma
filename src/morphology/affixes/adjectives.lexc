@@ -74,6 +74,12 @@ LEXICON YÖLELH
 +A+Attr:h ATTRCONT ;
 : ODDCOMP ;
 
+LEXICON ATTR_COMP
++A+Attr:e ATTRCONT ;
+:e EVENCOMP ;
+:e NIEJTE ;
+
+
 LEXICON ATTR_S
 +A+Attr:%>s ATTRCONT ;
 
@@ -477,7 +483,7 @@ LEXICON oes_OES_ODD1as
 
 !  4-stavelser 
 LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP 
-!! !!!LEXICON@LEXNAME@
+!! !!!LEXICON @LEXNAME@
 !! Adjective with no comp. 
 
 !!€gt-norm: adjectives 
@@ -511,7 +517,7 @@ LEXICON n_N_ODDNOCOMP1  ! attr=n, pred= n
                                 
 
 LEXICON e_ES_EVENODDNOCOMP2 
-!! !!!LEXICON@LEXNAME@
+!! !!!LEXICON @LEXNAME@
 !! EVEN/ODD adjective with Comporation.
 
 !!€gt-norm: adjectives 
@@ -528,35 +534,37 @@ LEXICON e_ES_EVENODDNOCOMP2
 !! }}}
 
 LEXICON e_ES_EVENNOCOMP2 
-!! !!!LEXICON@LEXNAME@
+!! !!!LEXICON @LEXNAME@
 !! This is for the adjective "jaame" 
 
 !!€gt-norm: adjectives 
-!!¥ jaame+A+Attr:   [jaame]
-!!¥ jaame+A+Sg+Nom: [jaames] 
+!!€ jaame    jaame+A+Attr
+!!€ jaames   jaame+A+Sg+Nom
 
-!! {{{ 
-         :e    ATTR_0  ;    !!= @CODE@ 
-         :e    PRED_S  ;    !!= @CODE@ 
-              eCASEOBL ;    !!= @CODE@ 
+!! {{{
+   :e    ATTR_0 ; !!= @CODE@ 
+   :e    PRED_S ; !!= @CODE@ 
+        eCASEOB ; !!= @CODE@ 
 !! }}}
 
 LEXICON e_ES_ODDEVEN2 
-!! !!!LEXICON@LEXNAME@
+!! !!!LEXICON @LEXNAME@
 !! This one gives EVEN and ODD  Comporation.
 
 !!€gt-norm: adjectives 
-!!¥ galme+A+Attr:   [galme, galmes]
-!!¥ galme+A+Sg+Nom: [galmes]
-!!¥ galme+A+Comp+Sg+Nom: [galmebe, galmesåbpoe]
-!!¥ galme+A+Superl+Sg+Nom: [galmemes,galmesommes]
-
+!!€ galme		galme+A+Attr
+!!€ galmes		galme+A+Attr
+!!€ galmes		galme+A+Sg+Nom
+!!€ galmebe     galme+A+Comp+Sg+Nom
+!!€ galmesåbpoe galme+A+Comp+Sg+Nom
+!!€ galmemes    galme+A+Superl+Sg+Nom
+!!€ galmesommes galme+A+Superl+Sg+Nom 
 
 !! {{{ 
-           :e     ATTR_0 ;       !!= @CODE@                               
-           :es  ODDCASEOBL ;
-           :e   EVENCOMP ;       !!= @CODE@
-              es_ES_ODD1 ;       !!= @CODE@
+      :e       ATTR_0 ; !!= @CODE@
+      :es  ODDCASEOBL ; !!= @CODE@
+           EVENCOMP   ; !!= @CODE@
+           es_ES_ODD1 ; !!= @CODE@
 !! }}}
 
    !***UMLAUT FOR e(2)-stammen, Klasse-2 
@@ -686,14 +694,18 @@ LEXICON SAETNIES4
 !+Use/NG:a PRED_0 ;
  : N_IE ;		    !!= @CODE@
 !! }}}
+
 LEXICON as_AN_ODDNOCOMP4
 !! !!!UMLAUT LEXICON @LEXNAME@
-!! Theese 6 adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
-!! umlaut-adjectives. Theese adjectives whivh have -as  as attributeform and an as predicativeform, is south-southsámi adjectives, and they dont have any comparation.
-!! This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group 
+!! These 6 adjectives is in the 4. group of the southsámi adjectives, the group
+!! which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
+!! attributeform and an as predicativeform, is south-southsámi adjectives, and
+!! they dont have any comparation.
+!! This group which covers the ies - an/ as-an and oes-an + umlaut change, is a
+!! small undergruppe of the 4.group 
 !! {{{
-:a  ATTR_S ; !!= @CODE@
-:a  PRED_AN ; !!= @CODE@
+:a    ATTR_S  ; !!= @CODE@
+:a    PRED_AN ; !!= @CODE@
 :a    MAANA ;
 !! }}}
 
@@ -823,14 +835,14 @@ LEXICON hth_HTH_ODDNOCOMP   ! NB!
 ! ODDCASEOBL ;
 +A+SgNomCmp:%^DISIMPh            R ;
 
-LEXICON hts_HTS_ODD 
+LEXICON hts_HTS_ODD        ! NB!
 hts_HTS_ODDNOCOMP  ;
   :s  ODDCOMP ;
-LEXICON oehts_OEHTS_ODD 
+LEXICON oehts_OEHTS_ODD     ! NB!
 hts_HTS_ODDNOCOMP  ;
   :s  ODD_ÅBPOE ;
 
-LEXICON hts_HTS_ODDNOCOMP 
+LEXICON hts_HTS_ODDNOCOMP     ! NB!
 ! This lexicon is in reality hts_HTS_HTE
 ! We have info on pred -e for two adjs:
 ! heijjehts (corpus) and bieljehts (marit) - LA: fjerner -e, jeg kan ikke se at vi har slik dokumentasjon
@@ -840,22 +852,22 @@ LEXICON hts_HTS_ODDNOCOMP
 !  ODDCASEOBL ; !LA tok vekk -s
 +A+SgNomCmp:%^DISIMPs            R ;
 
-LEXICON hts_HTS_ODDhtCOMP 
+LEXICON hts_HTS_ODDhtCOMP     !NB!
  hts_HTS_ODDNOCOMP  ;
  ODDCOMP ; ! joekehtåbpoe
- 
-LEXICON oehts_OEHTS_ODDhtCOMP 
+ ODDCASEOBL ;
+LEXICON oehts_OEHTS_ODDhtCOMP    ! NB!  
  hts_HTS_ODDNOCOMP  ;
  ODD_ÅBPOE ; ! joekehtåbpoe
-
-
+ ODDCASEOBL ;
 ! SE på denne gruppen over
 
 
 LEXICON Ces_CES_ODD
- ODDCOMP ;
  Ces_CES_ODDNOCOMP ;
-
+ ODDCASEOBL ;
+ ODDCOMP ;
+ 
 LEXICON Ces_CES_ODDNOCOMP  
 :%^DISIMPe     ATTR_S ;
 :%^DISIMPe     PRED_S ;
@@ -914,7 +926,7 @@ LEXICON Cs_CS_ODDNOCOMP
 
 
 LEXICON MAST 
-!! !!!LEXICON@LEXNAME@
+!! !!!LEXICON @LEXNAME@
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
 !! used with the stem ''masten''
 !! {{{
@@ -965,7 +977,7 @@ LEXICON AALEFORMS
 
 
 LEXICON JELLE
-!! !!!LEXICON@LEXNAME@
+!! !!!LEXICON @LEXNAME@
 !! The __@LEXNAME@__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
 !! used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
@@ -977,7 +989,7 @@ LEXICON JELLE
          :jell e_ES_LOAN ; !!= @CODE@
 !! }}} 
 LEXICON UELLE
-!! !!!LEXICON@LEXNAME@
+!! !!!LEXICON @LEXNAME@
 !! {{{
         :^ell e_ES_LOAN ; !!= @CODE@  
 +Use/Sub:vell e_ES_LOAN ; !!= @CODE@
@@ -1386,7 +1398,8 @@ EVENSUPONLY ;
 
 LEXICON EVENCOMPONLY
 +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
-! EVENCOMPCASE ;
++A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
+ EVENCOMPCASE ;
  DIMCOMP ;
 LEXICON EVENSUPONLY
 +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
