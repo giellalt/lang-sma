@@ -24,6 +24,8 @@
 
 
 
+
+
  !!!LEXICON PRED_S
 The __PRED_S__ lexicon is used for adjectives Predicatives.
 {{{
@@ -87,7 +89,7 @@ The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–e}} and {{�
 The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-COMP.
 {{{
         :a       ATTR_0 ; 
- !               aCASE ; 
+                  MAANA ; 
         :a     EVENCOMP ;  
 }}}
 
@@ -95,7 +97,7 @@ The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  
 The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP. 
 {{{   
              :a     ATTR_S ;    
-                  aCASEOBL ;    
+                  MAANAOBL ;    
    +A+Sg+Nom:as     FINAL1 ;    
  +A+SgNomCmp:as          R ;    
 }}}
@@ -104,7 +106,7 @@ The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as
 The __a_A_EVEN1_NOCOMP!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-NOCOMP.
 {{{
         :a       ATTR_0 ; 
-                  aCASE ; 
+                  MAANA ; 
 }}}
 
 
@@ -112,7 +114,7 @@ The __a_A_EVEN1_NOCOMP!!≈__ lexicon is used for adjectives on {{–a}} and {{�
 The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP. 
 {{{
         :ie      ATTR_0 ;  
-                 ieCASE ; 
+                   N_IE ; 
         :ie    EVENCOMP ;  
 }}} 
 
@@ -121,7 +123,7 @@ The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie
 The __ie_IE_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
 {{{ 
         :ie      ATTR_0 ; 
- !               ieCASE ; 
+                   N_IE ; 
 }}} 
 
  !!!LEXICON es_ES_EVEN 
@@ -173,7 +175,7 @@ Presentlly only used for "båeries" adjective.
 {{{ 
   :båerie ATTR_S ; 
   :båerie PRED_S ; 
- ! :båaras aCASEOBL ; 
+ ! :båaras MAANAOBL ; 
   :båaras ODDCOMP ; 
 }}}
 
@@ -220,8 +222,7 @@ EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 
 
 
-
-!!!LEXICONihks_IHKS_igs_IGS_EVENNOCOMP
+!!!LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 Adjective with no comp. 
 
 (subsequent examples are *adjectives *)
@@ -232,11 +233,11 @@ Adjective with no comp.
          :ig   ATTR_S ;    
          :ihk  PRED_S ;    
          :ihk  PRED_S ;    
-         :ihke PRED_0 ;    
-         :igke PRED_0 ;    
-         :igie PRED_0 ;    
- !              eCASEOBL ;      
- !              ieCASEOBL ;   
+         :ihk  NIEJTE ;    
+         :igk  NIEJTE ;    
+         :ig   N_IE ;    
+
+
 }}}
 
 
@@ -248,7 +249,7 @@ Adjective with no comp.
 
 
 
-!!!LEXICONe_ES_EVENODDNOCOMP2
+!!!LEXICON e_ES_EVENODDNOCOMP2
 EVEN/ODD adjective with Comporation.
 
 (subsequent examples are *adjectives *)
@@ -256,37 +257,38 @@ EVEN/ODD adjective with Comporation.
 ; {{guektiengïele+A+Sg+Nom}}: __guektiengïeles__ 
 
 {{{
-
 }}}
 
-!!!LEXICONe_ES_EVENNOCOMP2
+!!!LEXICON e_ES_EVENNOCOMP2
 This is for the adjective "jaame" 
 
 (subsequent examples are *adjectives *)
-; {{jaame+A+Attr}}: __jaame__ 
-; {{jaame+A+Sg+Nom}}: __jaames__ 
+* __jaame__: {{jaame+A+Attr}}
+* __jaames__: {{jaame+A+Sg+Nom}}
 
-{{{ 
-          :e    ATTR_0  ;     
-          :e    PRED_S  ;     
-               eCASEOBL ;     
+{{{
+    :e    ATTR_0 ;  
+    :e    PRED_S ;  
+         eCASEOB ;  
 }}}
 
-!!!LEXICONe_ES_ODDEVEN2
+!!!LEXICON e_ES_ODDEVEN2
 This one gives EVEN and ODD  Comporation.
 
 (subsequent examples are *adjectives *)
-; {{galme+A+Attr}}: __galme,__ __galmes__ 
-; {{galme+A+Sg+Nom}}: __galmes__ 
-; {{galme+A+Comp+Sg+Nom}}: __galmebe,__ __galmesåbpoe__ 
-; {{galme+A+Superl+Sg+Nom}}: __galmemes,galmesommes__ 
-
+* __galme__: {{galme+A+Attr}}
+* __galmes__: {{galme+A+Attr}}
+* __galmes__: {{galme+A+Sg+Nom}}
+* __galmebe__: {{galme+A+Comp+Sg+Nom}}
+* __galmesåbpoe__: {{galme+A+Comp+Sg+Nom}}
+* __galmemes__: {{galme+A+Superl+Sg+Nom}}
+* __galmesommes__: {{galme+A+Superl+Sg+Nom}}
 
 {{{ 
-            :e     ATTR_0 ;                  
-                 eCASEOBL ;       
-            :e   EVENCOMP ;       
-               es_ES_ODD1 ;       
+       :e       ATTR_0 ; 
+       :es  ODDCASEOBL ; 
+            EVENCOMP   ; 
+            es_ES_ODD1 ; 
 }}}
 
 
@@ -311,15 +313,19 @@ This group which covers the ies - an/ as-an and oes-an + umlaut change, is a sma
 {{{
   :ies ATTR_0 ;      
   :%^1UMLan PRED_0 ; 
-  : ieCASE ;		    
+  : N_IE ;		    
 }}}
+
 !!!UMLAUT LEXICON as_AN_ODDNOCOMP4
-Theese 6 adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
-umlaut-adjectives. Theese adjectives whivh have -as  as attributeform and an as predicativeform, is south-southsámi adjectives, and they dont have any comparation.
-This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group 
+These 6 adjectives is in the 4. group of the southsámi adjectives, the group
+which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
+attributeform and an as predicativeform, is south-southsámi adjectives, and
+they dont have any comparation.
+This group which covers the ies - an/ as-an and oes-an + umlaut change, is a
+small undergruppe of the 4.group 
 {{{
- :a  ATTR_S ; 
- :a  PRED_AN ; 
+ :a    ATTR_S  ; 
+ :a    PRED_AN ; 
 }}}
 
 !!!UMLAUT LEXICON oes_AN_ODDNOCOMP4
@@ -334,7 +340,7 @@ This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is 
 {{{ 
   :oe ATTR_H ;      
   :oe PRED_N ;      
-  :oehk  ODD_ÅBPOE ;   
+  :oehk  ODD_ÅBPOE ; 
 }}}
 
 {{{  
@@ -390,7 +396,13 @@ This must be checked further, possibly with informants.
 
 
 
-!!!LEXICONMAST
+
+
+
+
+
+
+!!!LEXICON MAST
 The __MAST__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
 used with the stem ''masten''
 {{{
@@ -416,7 +428,7 @@ Used for all loan-adjectives "ijve".
 
 
 
-!!!LEXICONJELLE
+!!!LEXICON JELLE
 The __JELLE__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
 used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
@@ -427,24 +439,11 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
   +Use/Sub:^ell e_ES_LOAN ; 
           :jell e_ES_LOAN ; 
 }}} 
-!!!LEXICONUELLE
+!!!LEXICON UELLE
 {{{
          :^ell e_ES_LOAN ;   
  +Use/Sub:vell e_ES_LOAN ; 
 }}} 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -528,6 +527,10 @@ TT: Added +Sg to the Px entries here, cf. MAANASGOBL.
 
 
 EVENCOMPCASE_oe ;
+
+
+
+
 
 
 
