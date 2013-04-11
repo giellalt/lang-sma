@@ -39,7 +39,8 @@ GT_FILTER_TARGETS+=\
 				   remove-usage-tags.hfst               \
 				   remove-NA-strings.hfst               \
 				   remove-NG-strings.hfst               \
-				   remove-NGminip-strings.hfst
+				   remove-NGminip-strings.hfst          \
+				   remove-MinusSpell-strings.hfst
 endif
 
 if CAN_XFST
@@ -59,7 +60,8 @@ GT_FILTER_TARGETS+=\
 				   remove-usage-tags.xfst               \
 				   remove-NA-strings.xfst               \
 				   remove-NG-strings.xfst               \
-				   remove-NGminip-strings.xfst
+				   remove-NGminip-strings.xfst          \
+				   remove-MinusSpell-strings.xfst
 endif
 
 # Add the target of local additions here:
