@@ -786,9 +786,9 @@ LEXICON N_IE_ESS
   +Ess+Uml+Use/NG:%>%^iUMLine        FINAL1 ;
 
 
-LEXICON N_IE_COMP
-N_IE ;
-+N+Der/A:ie EVENCOMP ;
+!LEXICON N_IE_COMP ! a reference from the Adj.affix-file
+!N_IE ;
+!+N+Der/A:ie EVENCOMP ;
 
 LEXICON TJULHPIE ! adverb
 :tjulhp N_IE ;
@@ -1083,22 +1083,22 @@ LEXICON SJOVNE3_LOAN
 
 LEXICON IJOVNE_LOAN
 +Use/Sub:^ovn NIEJTE ;
-    :jovn NIEJTE ;
+        :jovn NIEJTE ;
 +N+SgNomCmp:^on    R ;
 
 LEXICON IJOVTE_LOAN
 +Use/Sub:^ovt NIEJTE ;
-    :jovt NIEJTE ;
+        :jovt NIEJTE ;
 +N+SgNomCmp:^ot    R ;
 
 LEXICON IJOVRE_LOAN
 +Use/Sub:^ovr NIEJTE ;
-    :jovr NIEJTE ;
+        :jovr NIEJTE ;
 +N+SgNomCmp:^or    R ;
 
 LEXICON IJOVSE_LOAN
 +Use/Sub:^ovs NIEJTE ;
-    :jovs NIEJTE ;
+        :jovs NIEJTE ;
 +N+SgNomCmp+Dial/-NOR:^os    R ;
   +N+SgNomCmp+Dial/-SW:^ose    R ;
 
@@ -1152,8 +1152,6 @@ LEXICON JASME_LOAN
 LEXICON ISTE_LOAN
      NIEJTE ; ! ikke les
   +N+SgNomCmp:    R ;
-
-
   
 LEXICON ALJE_LOAN
 :alj NIEJTE ; ! ikke les
@@ -1372,10 +1370,18 @@ LEXICON IJLE_LOAN_N
   :ijl   NIEJTE ; ! 
   :ïjl   NIEJTE ; ! 
   
-LEXICON EETE_LOAN 
+LEXICON EETE_LOAN   !!= @CODE@ loanwords with -eete -
   +Use/Sub+Use/NG:t   NIEJTE ; ! identitete
   :et   NIEJTE ; ! ikke les identiteete
   +N+SgNomCmp:t    R ;
+
+!!€gt-norm: universiteete # Even-syllable test
+!!€ universiteete           universiteete+N+Sg+Nom
+!!€ universiteetem          universiteete+N+Sg+Acc
+!!€ universiteetesne	    universiteete+N+Sg+Ine
+!!€ universiteetetje	    universiteete+N+Der/Dimin+N+Sg+Nom
+!!€ universiteetetjem	    universiteete+N+Der/Dimin+N+Sg+Acc
+!!€ universiteetetjisnie	universiteete+N+Der/Dimin+N+Sg+Ine
 
 LEXICON IJAANE_LOAN
   +Use/Sub+Use/NG:an NIEJTE ;
@@ -1420,11 +1426,11 @@ LEXICON NIEJTE
 
 
 
-LEXICON NIEJTEOBL ! This for reference from A sublexica
-+Sg: NIEJTESGadjOBL ;
-+Pl: NIEJTE_PL ;
-     EVEN_ESS ;
-     NIEJTE_CMPND ;
+!LEXICON NIEJTEOBL ! This for reference from A sublexica
+!+Sg: NIEJTESGadjOBL ;
+!+Pl: NIEJTE_PL ;
+!     EVEN_ESS ;
+!    NIEJTE_CMPND ;
 
 LEXICON NIEJTESGadjOBL !adj continued...
   +Nom+PxSg1+Use/Sub:%>eme FINAL1 ;
@@ -1519,15 +1525,28 @@ LEXICON AARJEL_COMP
 +N+Sg+Nom:l FINAL1 ;
 
   
-LEXICON MAAKE
-  +N+Der1+Der/Rec+N:e LAAHKOEH_EVEN ;
-  +N+Sg:           NIEJTE_SG  ;
-  +N+Pl:           NIEJTE_PL  ;
-  +N:              EVEN_ESS ;
-  +N+SgNomCmp:e    R ;
-  +N+SgGenCmp:e%>n R ;
-  +N+PlGenCmp:%>i  R ;
-  +N+Der1+Der/Dimin+N:e%»tj   GÅATETJE ;
+LEXICON MAAKE !!= @CODE@ Only for "relatives"
+!! The __@LEXNAME@__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
+!! {{{
+  +N+Der1+Der/Rec+N:e LAAHKOEH_EVEN ;    !!= @CODE@
+  +N+Sg:           NIEJTE_SG  ;          !!= @CODE@
+  +N+Pl:           NIEJTE_PL  ;          !!= @CODE@
+  +N:              EVEN_ESS ;            !!= @CODE@
+  +N+SgNomCmp:e    R ;                   !!= @CODE@
+  +N+SgGenCmp:e%>n R ;                   !!= @CODE@
+  +N+PlGenCmp:%>i  R ;                   !!= @CODE@
+  +N+Der1+Der/Dimin+N:e%»tj   GÅATETJE ; !!= @CODE@
+!! }}} 
+
+!!€gt-norm: vïelle # Even-syllable test
+!!€ vïelle               vïelle+N+Sg+Nom
+!!€ vïellese	         vïelle+N+Sg+Ill
+!!€ vïelline             vïelle+N+Sg+Com
+!!€ vïelletje	         vïelle+N+Der/Dimin+N+Sg+Nom
+!!€ vïelletjasse	     vïelle+N+Der/Dimin+N+Sg+Ill
+!!€ vïellemem	         vïelle+N+Sg+Acc+PxSg
+!!€ vïellemdh	         vïelle+N+Sg+Acc+PxSg2
+!!€ vïellese	         vïelle+N+Sg+Nom+PxSg3
 
 LEXICON ÅERPIENADTJH ! - plural noun
   +N+SgNomCmp:e    R ;
@@ -1580,20 +1599,20 @@ LEXICON JOVKEMES
 +N+Sg+Ela+PxSg1+Use/NG:ass%>estadth FINAL1 ;
 +N+Sg+Com+PxSg2:ass%>enadth FINAL1 ;
 
-
-! lexicon for vowel-final words with invariant stems
-LEXICON KONTO
-+N: KONTODECL ;
-
-
-LEXICON KONTODECL
- +Sg: KONTO_SG  ;
- +Pl: KONTO_PL  ;
-      EVEN_ESS ;
- +SgNomCmp:    R ;
- +SgGenCmp:%>n R ;
- +PlGenCmp:%>j R ;
- +Der1+Der/Dimin+N:%»tj GÅATETJE ;
+LEXICON KONTO  !!= @CODE@ Lexicon for vowel-final words with invariant stems"
+!! {{{
++N: KONTODECL ;  !!= @CODE@
+!! }}}
+LEXICON KONTODECL !!= @CODE@ Lexicon for vowel-final words with invariant stems"
+!! {{{
+ +Sg: KONTO_SG  ;   !!= @CODE@
+ +Pl: KONTO_PL  ;   !!= @CODE@
+      EVEN_ESS  ;   !!= @CODE@
+ +SgNomCmp:    R ;  !!= @CODE@
+ +SgGenCmp:%>n R ;  !!= @CODE@
+ +PlGenCmp:%>j R ;  !!= @CODE@
+ +Der1+Der/Dimin+N:%»tj GÅATETJE ; !!= @CODE@
+!! }}}
 
 LEXICON KONTO_SG
   +Nom:          FINAL1 ;
