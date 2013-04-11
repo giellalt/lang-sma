@@ -193,8 +193,6 @@ LEEJJEGE ;
 !!€ beetnegigujmie      beetnege+N+Pl+Com
 !!€ beetneginie         beetnege+N+Ess
 
-
-
   
 LEXICON AAREGE        !Sg+Nom=Aarege/Aareh  Sg+Cmp=Aarege-/Aareh-
 AAJEGE ; 
@@ -514,7 +512,14 @@ LEXICON IJE_ODD
   +N+SgGenCmp:e%>%^NOMAGieDISIMPn        R ;
   +N+PlGenCmp:%>%^NOMAGieDISIMPi R ;
   +N+Der1+Der/Dimin+N:%»adtj GIERIEHTSADTJE ;
-
+  
+!!€gt-norm: seerije # ODD-syllable test
+!!€ seerije                 seerije+N+Sg+Nom
+!!€ seerijem                seerije+N+Sg+Acc
+!!€ seerijen	            seerije+N+Sg+Gen
+!!€ seerijasse	            seerije+N+Sg+Ill
+!!€ seerijisnie             seerije+N+Sg+Ine
+!!€ seerijistie	            seerije+N+Sg+Ela
 
 LEXICON IJE_ODD_SG
   +Nom:e%^NOMAGieDISIMP         FINAL1 ;
@@ -526,7 +531,7 @@ LEXICON IJE_ODD_SG
   +Gen+PxSg1:%>anne FINAL1 ;
   +Gen+PxSg2:%>anne FINAL1 ;
   +Gen+PxSg3:%>anne FINAL1 ;
- +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+  +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse >Jesusasse
   +Ill+PxSg2:%>assedh FINAL1 ;
   +Ine:%>isnie           FINAL1 ;
   +Ela:%>istie           FINAL1 ;
@@ -555,8 +560,7 @@ LEXICON DAKTERE
   +N+SgNomCmp:e%^DISIMP            R ;
   +N+SgGenCmp:e%>%^DISIMPn        R ;
   +N+PlGenCmp:%>%^DISIMPi R ;
-  +N+Der1+Der/Dimin+N:%»adtj GIERIEHTSADTJE ;  
-  
+  +N+Der1+Der/Dimin+N:%»adtj GIERIEHTSADTJE ;   
   ! Test data:
 !!€gt-norm: daktere # Odd-syllable test
 !!€ daktere             daktere+N+Sg+Nom
@@ -592,13 +596,18 @@ LEXICON DAKTERE
 !!€ daktaradtjine       daktere+N+Der/Dimin+N+Pl+Ess
 
 
-
 LEXICON IJEENERE_LOAN
 +Use/Sub:^eenar N_ODD ;
 +Use/Sub:^enar N_ODD ;
 +Use/Sub:jenar N_ODD ;
     :jeenar N_ODD ;
 +N+SgNomCmp+Dial/-SW:^ener    R ;
+
+!!€gt-norm: australijeenere # Even-syllable test
+!!€ australijeenere                 australijeenere+N+Sg+Nom
+!!€ australijeenerem                australijeenere+N+Sg+Acc
+!!€ australijeeneren	            australijeenere+N+Sg+Gen
+!!€ australijeeneristie             australijeenere+N+Sg+Ela
 
 LEXICON IJAANERE_LOAN
 +Use/Sub:^aanar N_ODD ;
@@ -607,12 +616,27 @@ LEXICON IJAANERE_LOAN
     :jaanar N_ODD ;
 +N+SgNomCmp+Dial/-SW:^aner    R ;
 
+!!€gt-norm: sisilijaanere # Even-syllable test
+!!€ sisilijaanere                 sisilijaanere+N+Sg+Nom
+!!€ sisilijaanerem                sisilijaanere+N+Sg+Acc
+!!€ sisilijaaneren	              sisilijaanere+N+Sg+Gen
+!!€ sisilijaaneristie             sisilijaanere+N+Sg+Ela
+!! check +N+Sg+Ine!
+
 LEXICON IJAATORE_LOAN
 +Use/Sub:^aator N_ODD ;
 +Use/Sub:^ator N_ODD ;
 +Use/Sub:jator N_ODD ;
     :jaator N_ODD ;
 +N+SgNomCmp:^ator    R ;
+
+!!€gt-norm: radijaatore # Even-syllable test
+!!€ radijaatore                   radijaatore+N+Sg+Nom
+!!€ radijaatorem                  radijaatore+N+Sg+Acc
+!!€ radijaatoren	              radijaatore+N+Sg+Gen
+!!€ radijaatorisnie	              radijaatore+N+Sg+Ine
+!!€ radijaatoristie	              radijaatore+N+Sg+Ela
+!!€ radijaatorinie	              radijaatore+N+Sg+Com
 
 LEXICON IJAANOVE_LOAN
 +Use/Sub:^aanov N_ODD ;
@@ -621,15 +645,41 @@ LEXICON IJAANOVE_LOAN
     :jaanov N_ODD ;
 +N+SgNomCmp:^ano    R ;
 
+!!€gt-norm: pijaanove # ODD-syllable test
+!!€ pijaanove                   pijaanove+N+Sg+Nom
+!!€ pijaanovem                  pijaanove+N+Sg+Acc
+!!€ pijaanoven	                pijaanove+N+Sg+Gen
+!!€ pijaanovisnie	            pijaanove+N+Sg+Ine
+!!€ pijaanovistie	            pijaanove+N+Sg+Ela
+!!€ pijaanovinie	            pijaanove+N+Sg+Com
+! add some more iano-words?
+
 LEXICON AATORE_LOAN
 :ator N_ODD ;
 +Use/NG:to UVRE_LOAN ;
 +Use/Sub:tor N_ODD_LOAN ;
 
+!!€gt-norm: administraatore# ODD-syllable test
+!!€ administraatore                   administraatore+N+Sg+Nom
+!!€ administraatorem                  administraatore+N+Sg+Acc
+!!€ administraatoren	              administraatore+N+Sg+Gen
+!!€ administraatorisnie	              administraatore+N+Sg+Ine
+!!€ administraatoristie	              administraatore+N+Sg+Ela
+!!€ administraatorinie	              administraatore+N+Sg+Com
+
 LEXICON AKTORE_LOAN
 +v1:aktor N_ODD_LOAN ;
 +v2+Use/NG:akto UVRE_LOAN ;
 +Use/Sub:aaktor N_ODD ;
+
+!!€gt-norm: faktore# Even-syllable test
+!!€ faktore                   faktore+N+Sg+Nom
+!!€ faktorem                  faktore+N+Sg+Acc
+!!€ faktoren	              faktore+N+Sg+Gen
+!!€ faktoresne	              faktore+N+Sg+Ine
+!!€ faktoreste	              faktore+N+Sg+Ela
+!!€ faktorine	              faktore+N+Sg+Com
+
 
 LEXICON EKTORE_LOAN
 +v1:ektor N_ODD_LOAN ;
