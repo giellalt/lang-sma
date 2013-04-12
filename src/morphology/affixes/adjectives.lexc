@@ -63,7 +63,7 @@ LEXICON ATTR_0
 
 LEXICON ATTR_0_ODD
 +A+Attr:e ATTRCONT ;
- ODDCASEOBL ;
+ !ODDCASEOBL ;  - predikativ: 'nahkeren' 'geeruvisnie' - i adv.og noun-fila  
  ODDCOMP ;
 
 LEXICON EENSI
@@ -266,7 +266,7 @@ LEXICON ah_AH_ODD1 !
 :a    ATTR_H  ;
 :a    PRED_H  ;
 :ahk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  ah 
-      MAANA_PL; ! kan denne attr-h og pred.-h egentlig være en plural?
+      ODDCASE; ! kan denne attr-h og pred.-h egentlig være en plural?
       
 
 LEXICON AH_&_OEH_ODD1
@@ -274,13 +274,13 @@ LEXICON AH_&_OEH_ODD1
 :ah ATTR_0 ;
 :oehk ODD_ÅBPOE ;
 :ahk ODD_ABPA ;
-:  N_OE_PL ;
-:  MAANA_PL ;
+!:   ODDCASE;
+!:   oeCASE_OBL;
 
 LEXICON oeh_OEH_ODD1 ! tidl -oe h_H_ODD
     :oehk ODD_ÅBPOE ; 
  oeh_OEH_ODDNOCOMP1 ;
-    :       N_OE_PL ;! Case
+!   :       ODDCASE ;! Case
 
 LEXICON oeh_OEH_ODDNOCOMP1
  :oe ATTR_H ;
@@ -738,7 +738,7 @@ LEXICON oeh_OEN_ODD
  :oe ATTR_H ;      !!= @CODE@
  :oe PRED_N ;      !!= @CODE@
  :oehk  ODD_ÅBPOE ;!!= @CODE@ 
- :oe N_OE_PL ;  
+! :oe GAHPIR_ODD ;  ! selvfølgelig! 
 !! }}}
 
 LEXICON oeh_AN_ODD4 !
@@ -746,6 +746,7 @@ LEXICON oeh_AN_ODD4 !
 :oe         ATTR_H ;   !!= @CODE@
 :%^3UMLa    PRED_N ;   !!= @CODE@
 :%^3UMLahk  ODD_ÅBPOE ;!!= @CODE@
+! : GAFHPIR_ODD ;
 !! }}}
 
 LEXICON ah_AN_ODD 
