@@ -148,7 +148,7 @@ LEXICON e_E_EVEN!!≈ !!!@CODE@
  
 !! {{{
        :e     ATTR_0 ;   !!= @CODE@
-!             NIEJTE ;   !!= @CODE@
+              NIEJTE ;   !!= @CODE@
        :e   EVENCOMP ;   !!= @CODE@
 !! }}}
 
@@ -175,18 +175,18 @@ LEXICON as_AS_EVEN1!!≈ !!!@CODE@ ! Disse har opprinnelig vært as_a_EVEN_adjek
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP. 
 !! {{{   
             :a     ATTR_S ;    !!= @CODE@
-                 MAANAOBL ;    !!= @CODE@
-            :a   EVENCOMP ;    ! Tidligere klasse-3
+ !                MAANAOBL ;    !!= @CODE@
+ !           :a   EVENCOMP ;    ! Tidligere klasse-3
   +A+Sg+Nom:as     FINAL1 ;    !!= @CODE@
 +A+SgNomCmp:as          R ;    !!= @CODE@
 !! }}}
 
 !!D:1
-LEXICON a_A_EVEN1_NOCOMP!!≈ !!!@CODE@ 
+!LEXICON a_A_EVEN1_NOCOMP!!≈ !!!@CODE@ 
 !!! The __@LEXNAME@__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-NOCOMP.
 !!! {{{
-       :a       ATTR_0 ; !!= @CODE@
-                 MAANA ; !!= @CODE@
+!       :a       ATTR_0 ; !!= @CODE@
+!                MAANA ; !!= @CODE@
 !!! }}}
 
 
@@ -266,28 +266,29 @@ LEXICON ah_AH_ODD1 !
 :a    ATTR_H  ;
 :a    PRED_H  ;
 :ahk  ODDCOMP ; ! Wait: gaastoe - oe-NOUN  ah 
-      ODDCASE; ! kan denne attr-h og pred.-h egentlig være en plural?
+:ehk  ODDCASE; ! språkhist.
       
+LEXICON eh_EH_ODDNOCOMP1 ! gïeleh - språklig,"guektiengïeleh maanah"
 
+!!€gt-norm: adjectives 
+!!€ guektiengïeleh+A+Attr:   [guektiengïeleh]
+!!€ guektiengïeleh+A+Sg+Nom: [guektiengïeleh]
+:e    ATTR_H  ;
+:e    PRED_H  ;
+:eg   ODDCASE ; ! språkhist.
+      
 LEXICON AH_&_OEH_ODD1
-:oeh ATTR_0 ;
-:ah ATTR_0 ;
+:oe      ATTR_H ;
+:a       ATTR_H ;
 :oehk ODD_ÅBPOE ;
-:ahk ODD_ABPA ;
-!:   ODDCASE;
-!:   oeCASE_OBL;
+:ahk   ODD_ABPA ;
+:ehk    ODDCASE ;! språkhist. 
+:ohk    ODDCASE ;! språkhist.
 
-LEXICON oeh_OEH_ODD1 ! tidl -oe h_H_ODD
-    :oehk ODD_ÅBPOE ; 
- oeh_OEH_ODDNOCOMP1 ;
-!   :       ODDCASE ;! Case
-
-LEXICON oeh_OEH_ODDNOCOMP1
+LEXICON oeh_OEH_ODD1
  :oe ATTR_H ;
  :oe PRED_H ;
-!+Use/Sub: oeCASE_OBL ;
-
-
+ :ohk ODDCASE ; ! språkhist.
  
 ! VOKALUTVIDELSE på 2-stavelsesadjektiv
 LEXICON BAERIES
@@ -302,23 +303,26 @@ LEXICON BAERIES
  :båaras ODDCOMP ; !!= @CODE@
  !! }}}
 LEXICON ÅEHPIES 
-:åehpies ATTR_0 ;
-:åehp      N_IE ;
-:åahpetje PRED_0 ;! LAG EN ODD_PRED
+!! !!!ÅEHPIES LEXICON @LEXNAME@
+!! ODD adjective, attr = pred. Comporation uneven syllable.
+!! {{{ 
+:åehpies ATTR_0  ;
+:åehp      N_IE  ;
+:åahpetj ODDCASE ;! LAG EN ODD_PRED
+:åahpehk ODDCASE ;
 :åahpatj ODDCOMP ;! mere kjent om personer, mindre vanlig
-:åahpag ODDCOMP ;! mere kjent om ting, saker, tema etc.
+:åahpag  ODDCOMP ;! mere kjent om ting, saker, tema etc.
 :åahpahk ODDCOMP ; !mere kjent om ting, saker, tema etc.
 ! VOKALUTVIDELSE i 2.stavelse på 2-stavelsesadjektiv
-
+ !! }}}
 LEXICON AAREH
-    ATTR_H ;
-    PRED_H ;
- :e    ATTR_H ;
- :e    PRED_H ;
-       NIEJTE_PL ; 
+ :e     ATTR_H ;
+ :e     PRED_H ;
+ :ehk   ODDCASE ;
+ :eg    ODDCASE ;
  :e    EVENCOMP ;
- :eg  ODDCOMP ;  
- :ehk ODDCOMP ;    
+ :eg    ODDCOMP ;  
+ :ehk   ODDCOMP ;    
 
 LEXICON GIERIES !    åehpies- skal også hit- UMLAUT!
 !! !!!GEAREHKE LEXICON @LEXNAME@
@@ -326,13 +330,11 @@ LEXICON GIERIES !    åehpies- skal også hit- UMLAUT!
 !! Presentlly only used for "gieries-gearehke" adjective.
 !! This lexicon covers the ies - ehke + umlaut change.
  !! {{{
- :gierie ATTR_S ;      !!= @CODE@
- :gearehke PRED_0 ;    !!= @CODE@
- :gearahk ODDCOMP ;    !!= @CODE@
- :gearahtj ODDCOMP ;    !!= @CODE@
- :gearahg ODDCOMP ;    !!= @CODE@
-
-! :gearahk ODDCASEOBL ; !!= @CODE@
+ :gierie    ATTR_S ;   !!= @CODE@
+ :gearahk  ODDCASE ;   !!= @CODE@
+ :gearahk  ODDCOMP ;   !!= @CODE@
+ :gearahtj ODDCOMP ;   !!= @CODE@
+ :gearahg  ODDCOMP ;   !!= @CODE@
  !! }}} 
 
 !   ****slutt Vokalutvidelse i 2.stavelse av 2-stems-adjectives *****  
@@ -470,7 +472,7 @@ LEXICON oes_OES_ODD1NOCOMP
 LEXICON oes_OES_ODD1ahk 
    :oe  ATTR_S ;
    :oe  PRED_S ;
-   :ahk ODDCOMP ;
+!  :ahk ODDCOMP ;
     
 LEXICON oes_OES_ODD1as 
    :oe  ATTR_S ;
@@ -516,10 +518,6 @@ LEXICON n_N_ODDNOCOMP1  ! attr=n, pred= n
 LEXICON e_ES_EVENODDNOCOMP2 
 !! !!!LEXICON @LEXNAME@
 !! EVEN/ODD adjective with Comporation.
-
-!!€gt-norm: adjectives 
-!!¥ guektiengïele+A+Attr:   [guektiengïele, guektiengïeles]
-!!¥ guektiengïele+A+Sg+Nom: [guektiengïeles] 
 
 !! {{{
  :e      ATTR_0  ;
@@ -652,7 +650,8 @@ LEXICON as_oes_A_OE_EVEN3
 :oe   EVENCOMP_oe ; !!= @CODE@
 :a    EVENCOMP ;    !!= @CODE@
 !! }}}
-LEXICON oeh_ah_OE_A_EVEN3 
+LEXICON oeh_ah_OE_A_EVEN3 ! Bergsland tar feil her! -attributt -h, må ha en ODDCASE! denne klassen er ikke mulig! Lar den likevel stå slik foreløpig, da den er dokumentert slik i Bergsland/Magga ordbok.
+!mårroeh eller laabjoeh - laabja/laabjoe/mårroe går ikke, men derimot mårroes -mårroe EVEN, og mårroeh -mårroeh ODDCASE
 !! !!!LEXICON @LEXNAME@
 !! This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 !! {{{ 
@@ -696,6 +695,7 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
 
     !**** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. ****!
 
+
 LEXICON SAETNIES4
 !! !!!UMLAUT LEXICON @LEXNAME@
 !! 20 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
@@ -730,49 +730,50 @@ LEXICON oes_AN_ODDNOCOMP4
 !! {{{ 
     :oe        ATTR_S  ; !!= @CODE@
     :%^3UML    PRED_AN ; !!= @CODE@
-    :oe N_OE ;
+    :oe N_OE ;           !!= @CODE@
 !! }}}
+
  
-LEXICON oeh_OEN_ODD 
+LEXICON oeh_OEN_ODD4 
 !! {{{ 
  :oe ATTR_H ;      !!= @CODE@
  :oe PRED_N ;      !!= @CODE@
- :oehk  ODD_ÅBPOE ;!!= @CODE@ 
-! :oe GAHPIR_ODD ;  ! selvfølgelig! 
+ :ohk  ODDCASE ;   
 !! }}}
 
 LEXICON oeh_AN_ODD4 !
 !! {{{  
 :oe         ATTR_H ;   !!= @CODE@
 :%^3UMLa    PRED_N ;   !!= @CODE@
-:%^3UMLahk  ODD_ÅBPOE ;!!= @CODE@
-! : GAFHPIR_ODD ;
+!:%^3UMLahk  ODD_ÅBPOE ;!!= @CODE@
+:ohk  ODDCASE ;
 !! }}}
 
 LEXICON ah_AN_ODD 
 :a    ATTR_H ;
 :a    PRED_N ;
-:ahk  ODDCOMP ;
+!:ahk  ODDCOMP ;
+:ehk  ODDCASE ;
 
  
 LEXICON oeh_ah_AN_ODD_NOCOMP4 
  :%^3UMLa    ATTR_H ;
  :oe   ATTR_H ;      
  :%^3UML PRED_AN ; 
-!+Use/NG:a PRED_0 ;
-! : oeCASE ;		    
-! +Use/Sub: MAANAOBL ;  
+:ohk  ODDCASE ;
+:ehk  ODDCASE ;		    
+  
      
-LEXICON oeh_OEH_AN_ODD  ! Attr=oeh, Pred=oeh og an 
+LEXICON oeh_OEH_AN_ODD4  ! Attr=oeh, Pred=oeh og an 
       oeh_OEH_AN_ODDNOCOMP  ;
 :ahk  ODDCOMP ;
 :oehk ODD_ÅBPOE ; 
-!Mange stammer
+:ohk  ODDCASE ;
 LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an 
 :oe ATTR_H ;
 :oe PRED_H ;
     PRED_AN ; 
-!+Use/Sub: oeCASE_OBL ;
+:ohk  ODDCASE ;
 
 
 LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
@@ -798,6 +799,8 @@ LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
          :oe  PRED_N     ;
          :ode PRED_0     ;
          :ede PRED_0     ;
+         :ohk ODDCASE ;
+         :ehk ODDCASE ;
 
 
  !**SLUTT ** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. **SLUTT **!
@@ -1254,12 +1257,12 @@ LEXICON HKE_ODD_COMP
 ! Odd syllabic stems - adjectives
 ! - - - - - - - - - - - - - - - -
 
-!LEX ODDCASE
-! ODDCASENOM ;
-! ODDCASEOBL ;
-!
-!LEX ODDCASENOM
-!+A+Sg+Nom:e%>%^DISIMP       FINAL1 ;
+LEXICON ODDCASE
+ ODDCASENOM ;
+ ODDCASEOBL ;
+
+LEXICON ODDCASENOM
++A+Sg+Nom:e%>%^DISIMP       FINAL1 ;
 
 LEXICON ODDCASEOBL
 +A+Sg+Acc:e%>%^DISIMPm      FINAL1 ;
