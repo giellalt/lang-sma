@@ -1,36 +1,29 @@
 
 Her er eit oversyn over fst-ane som skal bli kompilert og eigenskapane deira
 
-!!!generator-dict-gt-desc.xfst
-
-!!!generator-dict-gt-norm.xfst
-
-* Skal ha: +Allegro, +Use/NVD 
-** (fordi vi ikkje vil ha dei i miniparadigmet)
-
-!!!generator-gt-desc.xfst
-!!!generator-gt-norm.xfst
-
-!!!analyser-dict-gt-desc.xfst
-
-Skal ha: +Hom1 +Hom2
-
-!!!analyser-dict-gt-norm.xfst
-!!!analyser-gt-desc.xfst
-!!!analyser-gt-norm.xfst
-!!!analyser-raw-gt-desc.xfst
 
 
+||       FST            || obligatoriske                                           ||  valgfrie
+| analyser-dict-gt-norm  | Hom1, Hom2, v1, v2, v3, v4, v5, Use/NGminip            | IV, TV
+| analyser-gt-norm       |                        -                              | Hom1, Hom2,  IV, TV, v1, v2, v3, v4, v5,Use/NGminip    
+| analyser-oahpa-gt-norm | Hom1, Hom2                                             |  IV, TV, v1, v2, v3, v4, v5, Use/NGminip
+| generator-SH.restr-gt-norm | samme som analyser-oahpa-gt-norm,  men \\ Use/NG og Dial/-SH skal ikke være med i kompileringa |   
+| generator-L.restr-gt-norm  | samme som analyser-oahpa-gt-norm,  men \\ Use/NG og Dial/-L skal ikke være med  i kompileringa |   
 
 
-ja, for sma er det vel ikke noe ekstra oahpa vs dict
-for sme er det
-men det er jo ikke aktuelt for øyeblikket
-når det gjelder SH vs L, er det:
-Use/NG skal ikke være med, og så ikke er det NOT-L og NOT-SH
-…
+Dagens fst-ar i src:
+
+* generator-dict-gt-desc.xfst
+* generator-dict-gt-norm.xfst
+* generator-gt-desc.xfst
+* generator-gt-norm.xfst
+* analyser-dict-gt-desc.xfst
+* analyser-dict-gt-norm.xfst
+* analyser-gt-desc.xfst
+* analyser-gt-norm.xfst
+* analyser-raw-gt-desc.xfst
 
 
-forskjellen på sme-dict og sme-oahpa er at dict har noen Use/NVD som er obligatoriske for dict, men som ikke skal være obl i Oahpa
+
 
 
