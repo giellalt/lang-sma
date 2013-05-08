@@ -223,22 +223,22 @@ LEXICON VNAME_PLC-ORG
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
 ! the appropriate even syllable lexicons.
 
-LEXICON NYSTØ-plc
+LEXICON NYSTØ-plc ! placename
 +N+Prop+Plc: NYSTØ_PLC-ORG ;
 
-LEXICON NYSTØ-org
+LEXICON NYSTØ-org ! organisasjon
 +N+Prop+Org: NYSTØ_PLC-ORG ;
 
-LEXICON NYSTØ-sur
+LEXICON NYSTØ-sur ! etternavn
 +N+Prop+Sur: NYSTØ ;
 
-LEXICON NYSTØ-obj
+LEXICON NYSTØ-obj ! objekt, pluto, jupiter
 +N+Prop+Obj: NYSTØ ;
 
-LEXICON NYSTØ-mal
+LEXICON NYSTØ-mal ! John
 +N+Prop+Mal: NYSTØ ;
 
-LEXICON NYSTØ-fem
+LEXICON NYSTØ-fem ! kvinnenavn
 +N+Prop+Fem: NYSTØ ;
 
 LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
@@ -275,25 +275,6 @@ LEXICON INAME-mal
 LEXICON INAME-fem
 +N+Prop+Fem: INAME ;
 
-LEXICON SIRI ! i_ODD
- +Sg+Nom:i           FINAL1 ;
-  :i                 RHyph ;
-  +Sg+Acc:i%>m       FINAL1 ;
-  +Sg+Gen:i%>n       FINAL1 ;
-  +Sg+Ill:i%>jasse   FINAL1 ;
-  +Sg+Ine:%>isnie    FINAL1 ;
-  +Sg+Ela:%>istie    FINAL1 ;
-  +Sg+Com:%>inie     FINAL1 ;
-  +Pl+Nom:i%>h       FINAL1 ;
-  +Pl+Acc:%>ide      FINAL1 ;
-  +Pl+Gen:%>ij       FINAL1 ;
-  +Pl+Ill:%>ide      FINAL1 ;
-  +Pl+Ine:%>ine      FINAL1 ;
-  +Pl+Ela:%>ijste    FINAL1 ;
-  +Pl+Com:%>igujmie  FINAL1 ;
-  +Ess:%>ine         FINAL1 ;
-  +Attr:i FINAL1 ;
-
 
 LEXICON INAME ! Names ending in stressless vowel
  +Sg+Nom:i          FINAL1 ;
@@ -314,6 +295,9 @@ LEXICON INAME ! Names ending in stressless vowel
  +Ess:%>ine         FINAL1 ;
  +Attr:i FINAL1 ;
  
+
+!LEXICON MAKI
+
 
 LEXICON INAME_PLC-ORG ! Names ending in stressless vowel
  +Sg+Nom:i          FINAL1 ;
@@ -786,10 +770,10 @@ LEXICON SNAME_MAANA-mal
 LEXICON SNAME_MAANA-ani
 +N+Prop+Ani: SNAME_MAANA ;
 
-LEXICON SNAME_MAANA-plc
+LEXICON SNAME_MAANA-plc 
 +N+Prop+Plc: SNAME_MAANA_PLC-ORG ;
 
-LEXICON SNAME_MAANA-org
+LEXICON SNAME_MAANA-org 
 +N+Prop+Org: SNAME_MAANA_PLC-ORG ;
 
 LEXICON SNAME_MAANA-obj
