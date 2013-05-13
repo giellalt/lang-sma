@@ -229,6 +229,13 @@ LEXICON NYSTØ-plc ! placename
 LEXICON NYSTØ-org ! organisasjon
 +N+Prop+Org: NYSTØ_PLC-ORG ;
 
+LEXICON NYSTØ-femsur
++N+Prop+Sur: NYSTØ ;
++N+Prop+Fem: NYSTØ ;
+
+LEXICON K
+FINAL1 ;
+
 LEXICON NYSTØ-sur ! etternavn
 +N+Prop+Sur: NYSTØ ;
 
@@ -240,6 +247,15 @@ LEXICON NYSTØ-mal ! John
 
 LEXICON NYSTØ-fem ! kvinnenavn
 +N+Prop+Fem: NYSTØ ;
+
+LEXICON NYSTØ-LOAN-org ! kvinnenavn
++N+Prop+Org:          RHyph ;
++N+Prop+Org+Sg+Nom:          FINAL1 ;
+
+LEXICON NYSTØ-LOAN-plc ! kvinnenavn
++N+Plc+Org:          RHyph ;
++N+Plc+Org+Sg+Nom:          FINAL1 ;
+
 
 LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
 +Attr: FINAL1 ;
@@ -295,6 +311,241 @@ LEXICON INAME ! Names ending in stressless vowel
  +Ess:%>ine         FINAL1 ;
  +Attr:i FINAL1 ;
  
+ 
+LEXICON LONDON-atr
++N+Prop+Attr: FINAL1 ;
++N+Prop:          RHyph ;
+
+LEXICON LONDON-obj
++N+Prop+Obj: CNAME_ODD ;
+
+LEXICON LONDON-org
++N+Prop+Org: CNAME_ODD_PLC-ORG ;
+
+LEXICON LONDON-orgsur
++N+Prop+Org: CNAME_ODD_PLC-ORG ;
++N+Prop+Sur: CNAME_ODD ;
+
+LEXICON LONDON-malplc
++N+Prop+Mal: CNAME_ODD ;  
++N+Prop+Plc: CNAME_ODD_PLC-ORG ; 
+
+
+LEXICON LONDON-mal
++N+Prop+Mal: CNAME_ODD ;  
+
+LEXICON LONDON-malfem
++N+Prop+Mal: CNAME_ODD ;  
++N+Prop+Fem: CNAME_ODD ;  
+
+LEXICON LONDON-plc
++N+Prop+Plc: CNAME_ODD_PLC-ORG ; 
+
+LEXICON LONDON-fem
++N+Prop+Fem: CNAME_ODD ;  
+
+
+LEXICON LONDON-malsur
++N+Prop+Mal: CNAME_ODD ;  
++N+Prop+Sur: CNAME_ODD ;
+ 
+LEXICON LONDON-sur
++N+Prop+Sur: CNAME_ODD ;
+
+LEXICON LONDON-ani
++N+Prop+Ani: CNAME_ODD ;
+
+LEXICON DUORTNUS-plc
++N+Prop+Plc: CNAME_ODD_PLC-ORG ; 
+
+LEXICON LONDON-LOAN-obj
++N+Prop+Obj+Sg+Nom:         FINAL1 ;
++N+Prop+Obj:           RHyph ;
+
+LEXICON LONDON-LOAN-org
++N+Prop+Org+Sg+Nom:         FINAL1 ;
++N+Prop+Org:           RHyph ;
+
+LEXICON LONDON-LOAN-plc
++N+Prop+Plc+Sg+Nom:         FINAL1 ;
++N+Prop+Plc:           RHyph ;
+
+
+LEXICON BETFAGE-fem
+PERS_SNAME_NIEJTE-fem ;
+
+LEXICON BETFAGE-mal
+PERS_SNAME_NIEJTE-mal ;
+
+LEXICON BETFAGE-plc
+SNAME_NIEJTE-plc ;
+
+LEXICON BERN-ani
+CNAME_EVEN-ani ;
+
+LEXICON BERN-surmal
++N+Prop+Sur: CNAME_EVENLEX ;
++N+Prop+Mal: CNAME_EVENLEX ;
+
+LEXICON BERN-sur
++N+Prop+Sur: CNAME_EVENLEX ;
+
+LEXICON BERN
++N+Prop: CNAME_EVENLEX ;
+
+
+LEXICON BERN-mal
++N+Prop+Mal: CNAME_EVENLEX ;
+
+
+LEXICON BERN-objsur
++N+Prop+Sur: CNAME_EVENLEX ;
++N+Prop+Obj: CNAME_EVENLEX ;
+
+LEXICON BERN-obj
++N+Prop+Obj: CNAME_EVENLEX ;
+
+LEXICON BERN-fem
++N+Prop+Fem: CNAME_EVENLEX ;
+
+
+LEXICON BERN-LOAN-org
++N+Prop+Org+Sg+Nom:         FINAL1 ;
++N+Prop+Org:           RHyph ;
+
+LEXICON BERN-LOAN-plc
++N+Prop+Plc+Sg+Nom:         FINAL1 ;
++N+Prop+Plc:           RHyph ;
+
+LEXICON BERN-LOAN-obj
++N+Prop+Obj+Sg+Nom:         FINAL1 ;
++N+Prop+Obj:           RHyph ;
+
+
+LEXICON BERN-femplc
++N+Prop+Fem: CNAME_EVENLEX ;
++N+Prop+Plc: CNAME_EVENLEX_PLC-ORG ;
+
+LEXICON BERN-org
++N+Prop+Org: CNAME_EVENLEX_PLC-ORG ;
+
+LEXICON BERN-orgsur
++N+Prop+Org: CNAME_EVENLEX_PLC-ORG ;
++N+Prop+Sur: CNAME_EVENLEX ;
+
+LEXICON BERN-plc
++N+Prop+Plc: CNAME_EVENLEX_PLC-ORG ;
+
+
+LEXICON RONDANE-LOAN
++N+Prop+Plc+Sg+Nom:e FINAL1 ;
++N+Prop+Plc:e           RHyph ;
+
+LEXICON RONDANE-sur
+VNAME_ODD-sur ;
+
+LEXICON RONDANE-org
+VNAME_ODD-org ;
+
+LEXICON RONDANE-SG-LOAN
++N+Prop+Plc+Sg+Nom:e%^DISIMP FINAL1 ;
++N+Prop+Plc:e%^DISIMP         RHyph ;
+
+LEXICON RONDANE-mal
+VNAME_ODD-mal ;
+
+LEXICON RONDANE-mal
+VNAME_ODD-obj ;
+
+LEXICON RONDANE-fem
+VNAME_ODD-fem ;
+
+LEXICON RONDANE-SG-plc
+VNAME_ODD-plc ;
+
+LEXICON RONDANE-plc
+VNAME_ODD-plc ;
+
+LEXICON JOKULL-plc
+CNAME_EVEN-plc ;
+
+
+LEXICON DUBAI-plc
++N+Prop+Plc:i DUBAILEX_PLC-ORG ;
+
+LEXICON DUBAI-org
++N+Prop+Org:i DUBAILEX_PLC-ORG ;
+
+LEXICON DUBAI-fem
++N+Prop+Fem:i DUBAILEX ;
+
+LEXICON DUBAI-mal
++N+Prop+Mal:i DUBAILEX ;
+
+LEXICON DUBAI-sur
++N+Prop+Sur:i DUBAILEX ;
+
+
+LEXICON DUBAI-obj
++N+Prop+Obj:i DUBAILEX ;
+
+
+  LEXICON DUBAILEX_PLC-ORG
+  +Attr: FINAL1 ;
+  +Sg+Nom:          FINAL1 ;
+            RHyph ;
+  +Sg+Acc:je%>m       FINAL1 ;
+  +Sg+Gen:je%>n       FINAL1 ;
+  +Sg+Ill:je%>se      FINAL1 ;
+  +Sg+Ine:je%>sne     FINAL1 ;
+  +Sg+Ela:je%>ste     FINAL1 ;
+  +Sg+Com:j%>ine      FINAL1 ;
+  +Ess:j%>ine         FINAL1 ;
+
+  LEXICON DUBAILEX
+    +Attr: FINAL1 ;
+  +Sg+Nom:          FINAL1 ;
+            RHyph ;
+  +Sg+Acc:je%>m       FINAL1 ;
+  +Sg+Gen:je%>n       FINAL1 ;
+  +Sg+Ill:je%>se      FINAL1 ;
+  +Sg+Ine:je%>sne     FINAL1 ;
+  +Sg+Ela:je%>ste     FINAL1 ;
+  +Sg+Com:j%>ine      FINAL1 ;
+  +Ess:j%>ine         FINAL1 ;
++Pl:j NIEJTE_PL ;
+
+
+LEXICON PIPPI-org
++N+Prop+Org: INAME-org ;
+
+LEXICON PIPPI-mal
++N+Prop+Mal: INAME-mal ;
+
+LEXICON PIPPI-fem
++N+Prop+Fem: INAME-fem ;
+
+LEXICON PIPPI-malfem
++N+Prop+Mal: INAME-mal ;
++N+Prop+Fem: INAME-fem ;
+
+
+LEXICON PIPPI-femsur
++N+Prop+Fem: INAME-fem ;
++N+Prop+Sur: INAME-sur ;
+
+LEXICON PIPPI-sur
++N+Prop+Sur: INAME-sur ;
+
+LEXICON PIPPI-obj
++N+Prop+Obj: INAME-obj ;
+
+LEXICON PIPPI-ani
++N+Prop+Ani: INAME-ani ;
+
+LEXICON PIPPI-plc
++N+Prop+Plc: INAME-plc ;
+
 
 !LEXICON MAKI
 
@@ -332,23 +583,23 @@ LEXICON OENAME
  SNAME_NIEJTE ;
 
 
-LEXICON ONAME-plc
-+N+Prop+Plc: ONAME_PLC-ORG ;
+!LEXICON ONAME-plc
+!+N+Prop+Plc: ONAME_PLC-ORG ;
 
-LEXICON ONAME-org
-+N+Prop+Org: ONAME_PLC-ORG ;
+!LEXICON ONAME-org
+!+N+Prop+Org: ONAME_PLC-ORG ;
 
-LEXICON ONAME-sur
-+N+Prop+Sur: ONAME ;
+!LEXICON ONAME-sur
+!+N+Prop+Sur: ONAME ;
 
-LEXICON ONAME-obj
-+N+Prop+Obj: ONAME ;
+!LEXICON ONAME-obj
+!+N+Prop+Obj: ONAME ;
+!
+!LEXICON ONAME-mal
+!+N+Prop+Mal: ONAME ;
 
-LEXICON ONAME-mal
-+N+Prop+Mal: ONAME ;
-
-LEXICON ONAME-fem
-+N+Prop+Fem: ONAME ;
+!LEXICON ONAME-fem
+!+N+Prop+Fem: ONAME ;
 
 LEXICON ONAME
   VNAME ; !until we get answer from SGM
@@ -1090,6 +1341,9 @@ LEXICON CNAME_ODD-LOAN ! Names ending in stressless vowel
 
 LEXICON CNAME_EVEN-sur ! generates
 +N+Prop+Sur: CNAME_EVENLEX ;
+
+LEXICON CNAME_EVEN-ani ! generates
++N+Prop+Ani: CNAME_EVENLEX ;
 
 LEXICON CNAME_EVEN-mal ! generates
 +N+Prop+Mal: CNAME_EVENLEX ;
