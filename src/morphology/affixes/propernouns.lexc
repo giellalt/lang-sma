@@ -41,45 +41,45 @@
 
 ! Vowel final names
 ! - - - - - - - - -
-LEXICON VNAME_ODD-plc
-+N+Prop+Plc: VNAME_ODD_PLC-ORG ;
+LEXICON ERVASTI-plc
++N+Prop+Plc: ERVASTI_PLC-ORG ;
 
-LEXICON VNAME_ODD-PL-plc
-VNAME_ODD-PL ;
+LEXICON ERVASTI-PL-plc
+ERVASTI-PL ;
 
-LEXICON VNAME_ODD-PL-org
-VNAME_ODD-PL ;
+LEXICON ERVASTI-PL-org
+ERVASTI-PL ;
 
 
-LEXICON VNAME_ODD-PL
+LEXICON ERVASTI-PL
 +N+Prop+Plc+Sg+Nom:e%^DISIMP         FINAL1 ;
 +N+Prop+Plc:e%^DISIMP         RHyph ;
-+N+Prop+Plc: VNAME_ODD ;
++N+Prop+Plc: ERVASTI ;
 
 
-LEXICON VNAME_ODD-mal
-+N+Prop+Mal: VNAME_ODD ;
+LEXICON ERVASTI-mal
++N+Prop+Mal: ERVASTI ;
 
-LEXICON VNAME_ODD-sur
-+N+Prop+Sur: VNAME_ODD ;
+LEXICON ERVASTI-sur
++N+Prop+Sur: ERVASTI ;
 
-LEXICON VNAME_ODD-org
-+N+Prop+Org: VNAME_ODD_PLC-ORG ;
+LEXICON ERVASTI-org
++N+Prop+Org: ERVASTI_PLC-ORG ;
 
-LEXICON VNAME_ODD-fem
-+N+Prop+Fem: VNAME_ODD ;
+LEXICON ERVASTI-fem
++N+Prop+Fem: ERVASTI ;
 
-LEXICON VNAME_ODD-obj
-+N+Prop+Obj: VNAME_ODD ;
+LEXICON ERVASTI-obj
++N+Prop+Obj: ERVASTI ;
 
-LEXICON VNAME_ODD ! Names ending in stressless vowel
+LEXICON ERVASTI ! Names ending in stressless vowel
 +Sg: N_ODD_SG ;
 :e%^DISIMP         RHyph ;
 +Pl: N_ODD_PL ;
    N_ODD_ESS ;
 +Attr:e%^DISIMP FINAL1 ;
 
-LEXICON VNAME_ODD_PLC-ORG ! Names ending in stressless vowel
+LEXICON ERVASTI_PLC-ORG ! Names ending in stressless vowel
 +Sg: N_ODD_SG ;
 :e%^DISIMP         RHyph ;
 !+Pl: N_ODD_PL ;
@@ -87,36 +87,36 @@ LEXICON VNAME_ODD_PLC-ORG ! Names ending in stressless vowel
 +Attr:e%^DISIMP FINAL1 ;
 
 
-LEXICON VNAME_ODD_NO_DISIMPH-mal
-+N+Prop+Mal: VNAME_ODD_NO_DISIMPH ;
+LEXICON ERVASTI_NO_DISIMPH-mal
++N+Prop+Mal: ERVASTI_NO_DISIMPH ;
 
-LEXICON VNAME_ODD_NO_DISIMPH-ani
-+N+Prop+Ani: VNAME_ODD_NO_DISIMPH ;
+LEXICON ERVASTI_NO_DISIMPH-ani
++N+Prop+Ani: ERVASTI_NO_DISIMPH ;
 
-LEXICON VNAME_ODD_NO_DISIMPH-fem
-+N+Prop+Fem: VNAME_ODD_NO_DISIMPH ;
+LEXICON ERVASTI_NO_DISIMPH-fem
++N+Prop+Fem: ERVASTI_NO_DISIMPH ;
 
-LEXICON VNAME_ODD_NO_DISIMPH-plc
-+N+Prop+Plc: VNAME_ODD_NO_DISIMPH_PLC-ORG ;
+LEXICON ERVASTI_NO_DISIMPH-plc
++N+Prop+Plc: ERVASTI_NO_DISIMPH_PLC-ORG ;
 
-LEXICON VNAME_ODD_NO_DISIMPH-org
-+N+Prop+Org: VNAME_ODD_NO_DISIMPH_PLC-ORG ;
+LEXICON ERVASTI_NO_DISIMPH-org
++N+Prop+Org: ERVASTI_NO_DISIMPH_PLC-ORG ;
 
-LEXICON VNAME_ODD_NO_DISIMPH-PL-plc
-VNAME_ODD_NO_DISIMPH-PL ;
+LEXICON ERVASTI_NO_DISIMPH-PL-plc
+ERVASTI_NO_DISIMPH-PL ;
 
-LEXICON VNAME_ODD_NO_DISIMPH-PL
+LEXICON ERVASTI_NO_DISIMPH-PL
 +N+Prop+Plc+Sg+Nom:e         FINAL1 ;
-+N+Prop+Plc: VNAME_ODD_NO_DISIMPH ;
++N+Prop+Plc: ERVASTI_NO_DISIMPH ;
 
-LEXICON VNAME_ODD_NO_DISIMPH ! Names ending in stressless vowel
+LEXICON ERVASTI_NO_DISIMPH ! Names ending in stressless vowel
 +Sg: N_ODD_SG_NO_DISIMPH ;
 :e         RHyph ;
 +Pl: N_ODD_PL_NO_DISIMPH ;
     N_ODD_ESS ;
 +Attr:e FINAL1 ;
 
-LEXICON VNAME_ODD_NO_DISIMPH_PLC-ORG ! Names ending in stressless vowel
+LEXICON ERVASTI_NO_DISIMPH_PLC-ORG ! Names ending in stressless vowel
 +Sg: N_ODD_SG_NO_DISIMPH ;
 :e         RHyph ;
 !+Pl: N_ODD_PL_NO_DISIMPH ;
@@ -199,7 +199,7 @@ LEXICON VNAME
  +Pl+Com:%>jgujmie  FINAL1 ;
  +Ess:%>jne         FINAL1 ;
  +Attr: FINAL1 ;
-!SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
+!SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
 ! the appropriate even syllable lexicons.
 
 LEXICON VNAME_PLC-ORG
@@ -220,7 +220,7 @@ LEXICON VNAME_PLC-ORG
 ! +Pl+Com:%>jgujmie  FINAL1 ;
  +Ess:%>jne         FINAL1 ;
  +Attr: FINAL1 ;
-!SNAME_NIEJTE ; ! Even syllable as default - rename using either VNAME_ODD, or
+!SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
 ! the appropriate even syllable lexicons.
 
 LEXICON NYSTØ-plc ! placename
@@ -445,33 +445,33 @@ LEXICON RONDANE-LOAN
 +N+Prop+Plc:e           RHyph ;
 
 LEXICON RONDANE-sur
-VNAME_ODD-sur ;
+ERVASTI-sur ;
 
 LEXICON RONDANE-obj
-VNAME_ODD-obj ;
+ERVASTI-obj ;
 
 
 LEXICON RONDANE-org
-VNAME_ODD-org ;
+ERVASTI-org ;
 
 LEXICON RONDANE-SG-LOAN
 +N+Prop+Plc+Sg+Nom:e%^DISIMP FINAL1 ;
 +N+Prop+Plc:e%^DISIMP         RHyph ;
 
 LEXICON RONDANE-mal
-VNAME_ODD-mal ;
+ERVASTI-mal ;
 
 LEXICON RONDANE-mal
-VNAME_ODD-obj ;
+ERVASTI-obj ;
 
 LEXICON RONDANE-fem
-VNAME_ODD-fem ;
+ERVASTI-fem ;
 
 LEXICON RONDANE-SG-plc
-VNAME_ODD-plc ;
+ERVASTI-plc ;
 
 LEXICON RONDANE-plc
-VNAME_ODD-plc ;
+ERVASTI-plc ;
 
 LEXICON JOKULL-plc
 CNAME_EVEN-plc ;
@@ -860,7 +860,7 @@ LEXICON PERS_SNAME_ODD-ani
 +N+Prop+Ani: PERS_SNAME_ODD ;
 
 LEXICON PERS_SNAME_ODD
- VNAME_ODD ;
+ ERVASTI ;
 +Der1+Der/Dimin+N:e%»tj   GÅATETJE ; !Åvletje
 
 
@@ -882,10 +882,10 @@ LEXICON SNAME_ODD-mal
 !+N+Prop+Fem: SNAME_ODD ;
 
 LEXICON SNAME_ODD ! Southern Sami names
-VNAME_ODD ;
+ERVASTI ;
 
 LEXICON SNAME_ODD_PLC-ORG ! Southern Sami names
-VNAME_ODD_PLC-ORG ;
+ERVASTI_PLC-ORG ;
 
 LEXICON VAARATJE-plc
 VAARATJE ;
