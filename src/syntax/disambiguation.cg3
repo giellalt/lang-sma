@@ -304,7 +304,7 @@ LIST NORGA = "Dánmárku-#Norga" "davvi#Norga" "Davvi-Norga" "gaska-#Norga" "Nor
 LIST REALCOPULAS = "lea" ;
 
 # The set COPULAS is for predicative constructions
-LIST COPULAS = "lea" ;
+LIST COPULAS = REALCOPULAS ;
 
 SET V-NOT-COP = V - COPULAS ;
 
@@ -555,8 +555,7 @@ REMOVE:NegPrt (Neg Prt)(NEGATE 1 ("lea" ConNeg Prt)) ;
 ## this is for removing the 'ij' etc. 
 	## Ij lin gujht daarah altese vielie jienebh biejjieh daesnie.
 
-SELECT:Du1NotVGen Du1 (0 VGen LINK -*1 ("månnoeh") BARRIER S-BOUNDARY)
-
+SELECT:Du1NotVGen Du1 (0 VGen LINK -*1 ("månnoeh") BARRIER S-BOUNDARY) ;
 #!! Imperative
 #REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
 #REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
@@ -573,8 +572,9 @@ REMOVE:Imprtd Imprt (*-1 WORD BARRIER CC OR COMMA OR BOS)(NOT 0 Neg)(NEGATE -1 C
 	## Aejkie sjïdteme åarjese Voernesen vuestie jarredh.
 SELECT:Imprte (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) ;
 
-
-
+# Select the finite verb reading if this is the only finite verb reading within the clause
+SELECT:sjur VFIN IF ( NOT *0C VFIN BARRIER S-BOUNDARY OR CLB ) ;
+	## Saemieh leah akte åålmege jalhts joekehts laantine orre, gïele dïhte åålmegidie raasti dåaresth ektede.
 
 	#!! !!CC- and CS-Mapping
 	# -------------------
@@ -719,7 +719,7 @@ SELECT:PlIfPlSubj Pl3 IF (*-1 (Pl Nom) BARRIER NOT-ADV OR COMMA);
 	## Jijnjesh leah sijhteminie edtjibie gieline barkedh, maehtibie tjåahkoeh, seeminarh øørnedh gusnie åadtjoejibie gaavnedidh jih rååresjadtedh.
 
 REMOVE:FocGan Foc/gan (0 (V Du3)) ;
-SELECT:Ger Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY)
+SELECT:Ger Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY) ;
 	## Maam leah datne darjoeminie?
 
 # Contract or not -- removed, we have removed the sma contract verb analysis
@@ -1223,7 +1223,7 @@ REMOVE:Nregex N-DER (0 N-DER-SUF) ;
 REMOVE:Aregex A-DER (0 A-DER-SUF) ;
 
 
-REMOVE:waitwithDis (2 V) (0 (1 V))
+REMOVE:waitwithDis (2 V) (0 (1 V)) ;
 
 
 MAP (@OBJ>) TARGET Acc (NOT 0 TIME OR ROUTE)(*1 MAINV + TV BARRIER S-BOUNDARY OR COMMA) ;
