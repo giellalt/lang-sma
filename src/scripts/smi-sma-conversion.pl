@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 #
-# smi-smj-conversion.pl
-# Convert names in the SMI propernoun lexicon to smj.
+# smi-sma-conversion.pl
+# Convert names in the SMI propernoun lexicon to sma.
 # $Id$
 
 use strict;
