@@ -249,17 +249,25 @@ LEXICON NYSTØ-fem ! kvinnenavn
 +N+Prop+Fem: NYSTØ ;
 
 LEXICON NYSTØ-LOAN-org ! kvinnenavn
-+N+Prop+Org:          RHyph ;
++N+Prop+Org:                  RHyph ;
 +N+Prop+Org+Sg+Nom:          FINAL1 ;
 
 LEXICON NYSTØ-LOAN-plc ! kvinnenavn
-+N+Plc+Org:          RHyph ;
++N+Plc+Org:                  RHyph ;
 +N+Plc+Org+Sg+Nom:          FINAL1 ;
+
+LEXICON NYSTØ-ani
++N+Prop+Ani: NYSTØ ;
+
+LEXICON NYSTØ-LOAN
++N+Prop+Use/Sub: NYSTØ ;
++Sg+Nom:          FINAL1 ;
+
 
 
 LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
 +Attr: FINAL1 ;
-          RHyph ;
+        RHyph ;
 +Pl: NIEJTE_PL ;
 :    EVEN_ESS ;
 +Sg: NIEJTESGOBL ;
@@ -297,7 +305,7 @@ LEXICON INAME-fem
 
 LEXICON INAME ! Names ending in stressless vowel
  +Sg+Nom:i          FINAL1 ;
- :i          RHyph ;
+ :i                  RHyph ;
  +Sg+Acc:i%>m       FINAL1 ;
  +Sg+Gen:i%>n       FINAL1 ;
  +Sg+Ill:e%>se      FINAL1 ;
@@ -521,38 +529,82 @@ LEXICON DUBAI-obj
 
 
 LEXICON PIPPI-org
-+N+Prop+Org: INAME-org ;
++N+Prop+Org: RITCHIE-plc ;
 
 LEXICON PIPPI-mal
-+N+Prop+Mal: INAME-mal ;
++N+Prop+Mal: RITCHIE-mal ;
 
 LEXICON PIPPI-fem
-+N+Prop+Fem: INAME-fem ;
++N+Prop+Fem: RITCHIE-fem ;
 
 LEXICON PIPPI-malfem
-+N+Prop+Mal: INAME-mal ;
-+N+Prop+Fem: INAME-fem ;
-
++N+Prop+Mal: RITCHIE-malfem ;
++N+Prop+Fem: RITCHIE-malfem ;
 
 LEXICON PIPPI-femsur
-+N+Prop+Fem: INAME-fem ;
-+N+Prop+Sur: INAME-sur ;
++N+Prop+Fem: RITCHIE-femsur ;
++N+Prop+Sur: RITCHIE-femsur ;
 
 LEXICON PIPPI-sur
-+N+Prop+Sur: INAME-sur ;
++N+Prop+Sur: RITCHIE-sur ;
 
 LEXICON PIPPI-obj
-+N+Prop+Obj: INAME-obj ;
++N+Prop+Obj: RITCHIE-obj ;
 
 LEXICON PIPPI-ani
-+N+Prop+Ani: INAME-ani ;
++N+Prop+Ani: RITCHIE-ani ;
 
 LEXICON PIPPI-plc
-+N+Prop+Plc: INAME-plc ;
++N+Prop+Plc: RITCHIE-plc ;
 
 LEXICON PIPPI-LOAN-plc
 +N+Prop+Plc+Sg+Nom: FINAL1 ;
 +N+Prop+Plc:           RHyph ;
+
+LEXICON MAKI-org
++N+Prop+Org: RITCHIE_plc ;
++N+Prop+Org: PN_I_FINSK ;
+
+LEXICON MAKI-mal
++N+Prop+Mal: RITCHIE-mal ;
++N+Prop+Mal: PN_I_FINSK ;
+
+LEXICON MAKI-fem
++N+Prop+Fem: RITCHIE-fem ;
++N+Prop+Fem: PN_I_FINSK ;
+
+LEXICON MAKI-malfem
++N+Prop+Mal: RITCHIE-malfem ;
++N+Prop+Fem: RITCHIE-malfem ;
++N+Prop+Mal: PN_I_FINSK ;
++N+Prop+Fem: PN_I_FINSK ;
+
+LEXICON MAKI-femsur
++N+Prop+Sur: RITCHIE-femsur ;
++N+Prop+Fem: RITCHIE-femsur ;
++N+Prop+Sur: PN_I_FINSK ;
++N+Prop+Fem: PN_I_FINSK ;
+
+LEXICON MAKI-sur
++N+Prop+Sur: RITCHIE-sur ;
++N+Prop+Sur: PN_I_FINSK ;
+
+LEXICON MAKI-obj
++N+Prop+Obj: RITCHIE-obj ;
++N+Prop+Obj: PN_I_FINSK ; 
+
+LEXICON MAKI-ani
++N+Prop+Ani: RITCHIE-ani ;
++N+Prop+Ani: PN_I_FINSK ;
+
+LEXICON MAKI-plc
++N+Prop+Plc: PN_IE_plc-org ;
++N+Prop+Plc: RITCHIE-plc ;
+
+LEXICON MAKI-LOAN-plc
++N+Prop+Plc+Sg+Nom: FINAL1 ;
++N+Prop+Plc:        RHyph ;
++N+Prop+Plc+Sg+Nom: PN_I_FINSK ;
 
 
 LEXICON GATA-plc
@@ -581,7 +633,6 @@ LEXICON ACCRA-LOAN-org
 LEXICON ACCRA-objplc
 :%^PLCDISIMP VNAME-obj ;
 :%^PLCDISIMP VNAME-plc ;
-
 
 LEXICON ACCRA-org
 :%^PLCDISIMP VNAME-org ;
@@ -614,7 +665,7 @@ LEXICON ACCRA-malfem
 :%^PLCDISIMP VNAME-mal ;
 :%^PLCDISIMP VNAME-fem ;
 
-!LEXICON MAKI
+
 
 
 LEXICON INAME_PLC-ORG ! Names ending in stressless vowel
@@ -941,45 +992,60 @@ LEXICON JAAVRETJEH
 !+N+Prop+Plc+Attr:e%>%^DISIMPh FINAL1 ;
 
 
-!LEXICON RITCHIE-plc
-!+N+Prop+Plc: RITCHIE_PLC-ORG ;
-!
-!LEXICON RITCHIE-sur
-!+N+Prop+Sur: RITCHIE ;
-!
-!
-!LEXICON RITCHIE-mal
-!+N+Prop+Mal: RITCHIE ;
-!
-!LEXICON RITCHIE-fem
-!+N+Prop+Fem: RITCHIE ;
-!
+LEXICON RITCHIE-plc
+RITCHIE ;
 
-!LEXICON RITCHIE ! Ritchie:Ritchijasse
-!+Sg+Nom:e%^DISIMP          FINAL1 ;
-!:e%^DISIMP          RHyph ;
-!+Sg+Acc:je%>%^DISIMPm      FINAL1 ;
-!+Sg+Gen:je%>%^DISIMPn      FINAL1 ;
-! +Sg+Ill:j%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-!+Sg+Ine:j%>isnie           FINAL1 ;
-!+Sg+Ela:j%>istie           FINAL1 ;
-!+Sg+Com:j%>inie            FINAL1 ;
-!+Pl:j N_ODD_PL ;
-!:j    N_ODD_ESS ;
-!+Attr:e%^DISIMP FINAL1 ;
+LEXICON RITCHIE-sur
+RITCHIE ;
 
-!LEXICON RITCHIE_PLC-ORG ! Ritchie:Ritchijasse
-!+Sg+Nom:e%^DISIMP          FINAL1 ;
-!:e%^DISIMP          RHyph ;
-!+Sg+Acc:je%>%^DISIMPm      FINAL1 ;
-!+Sg+Gen:je%>%^DISIMPn      FINAL1 ;
-! +Sg+Ill:j%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-!+Sg+Ine:j%>isnie           FINAL1 ;
-!+Sg+Ela:j%>istie           FINAL1 ;
-!+Sg+Com:j%>inie            FINAL1 ;
-!!+Pl:j N_ODD_PL ;
-!:j    N_ODD_ESS ;
-!+Attr:e%^DISIMP FINAL1 ;
+LEXICON RITCHIE-mal
+RITCHIE ;
+
+LEXICON RITCHIE-fem
+RITCHIE ;
+
+LEXICON RITCHIE-ani
+RITCHIE ;
+
+LEXICON RITCHIE-obj
+RITCHIE ;
+
+LEXICON RITCHIE-femsur
++N+Prop+Sur: RITCHIE ;
++N+Prop+Fem: RITCHIE ;
+
+
+
+LEXICON RITCHIE-malfem
++N+Prop+Mal: RITCHIE ;
++N+Prop+Fem: RITCHIE ;
+
+LEXICON RITCHIE ! Ritchie:Ritchijasse
++Sg+Nom:ije%^DISIMP          FINAL1 ;
+:ije%^DISIMP          RHyph ;
++Sg+Acc:je%>%^DISIMPm      FINAL1 ;
++Sg+Gen:je%>%^DISIMPn      FINAL1 ;
++Sg+Ill:j%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++Sg+Ine:j%>isnie           FINAL1 ;
++Sg+Ela:j%>istie           FINAL1 ;
++Sg+Com:j%>inie            FINAL1 ;
++Pl:j N_ODD_PL ;
+:j    N_ODD_ESS ;
++Attr:e%^DISIMP FINAL1 ;
+
+
+LEXICON RITCHIE_PLC_ORG ! Ritchie:Ritchijasse
++Sg+Nom:ije%^DISIMP           FINAL1 ;
+:ije%^DISIMP                   RHyph ;
++Sg+Acc:je%>%^DISIMPm         FINAL1 ;
++Sg+Gen:je%>%^DISIMPn         FINAL1 ;
++Sg+Ill:j%>asse           FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++Sg+Ine:j%>isnie              FINAL1 ;
++Sg+Ela:j%>istie              FINAL1 ;
++Sg+Com:j%>inie               FINAL1 ;
++Pl:j N_ODD_PL_ ;
+:j    N_ODD_ESS_ ;
++Attr:e%^DISIMP_ FINAL1 ;
 
 
 LEXICON PN_IE-plc
@@ -1003,6 +1069,23 @@ LEXICON PN_IE ! as N_IE, but with Prop tag
 :    N_IE_ESS ;
 +Attr:ie FINAL1 ;
 
+LEXICON PN_I_FINSK
++N+Prop+Plc+Sg+Nom:i               FINAL1 ;
++N+Prop+Plc:i%>n                      RHyph ;
++N+Prop+Plc+Sg+Acc:e%>m               FINAL1 ;
++N+Prop+Plc+Sg+Gen:e%>n               FINAL1 ;
+!+N+Prop+Plc+Sg+Ill:%>an             FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
++N+Prop+Plc+Sg+Ill+Uml:an      FINAL1 ;
++N+Prop+Plc+Sg+Ine:e%>sne              FINAL1 ;
++N+Prop+Plc+Sg+Ela:e%>ste              FINAL1 ;
++N+Prop+Plc+Sg+Com:%>ine               FINAL1 ;
++N+Prop+Plc+Sg+Com+Uml:ine     FINAL1 ;
+!+N+Prop+Plc+Pl: N_IE_PL ;
+!+N+Prop+Plc:    N_IE_ESS ;
+!+N+Prop+Plc+Attr:ie%>n FINAL1 ;
+
+
+
 LEXICON PN_IE_PLC-ORG ! as N_IE, but with Prop tag
 +Sg: N_IE_SG ;
 :ie                  RHyph ;
@@ -1010,21 +1093,29 @@ LEXICON PN_IE_PLC-ORG ! as N_IE, but with Prop tag
 :    N_IE_ESS ;
 +Attr:ie FINAL1 ;
 
+LEXICON PN_IE_PLC-ORG ! as N_IE, but with Prop tag
++Sg: PN_I_FINSK ;
++N+Prop+Plc:i%>n                      RHyph ;
+!+Pl: N_IE_PL ;
+!:    N_IE_ESS ;
++Attr:i FINAL1 ;
 
-LEXICON MEHKIEN ! as N_IE, but with Prop tag
-+N+Prop+Plc+Sg+Nom:ie%>n               FINAL1 ;
-+N+Prop+Plc:ie%>n               RHyph ;
-+N+Prop+Plc+Sg+Acc:ie%>m               FINAL1 ;
-+N+Prop+Plc+Sg+Gen:ie%>n               FINAL1 ;
-! +N+Prop+Plc+Sg+Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
-+N+Prop+Plc+Sg+Ill+Uml:%>%^1UMLan      FINAL1 ;
-+N+Prop+Plc+Sg+Ine:e%>sne              FINAL1 ;
-+N+Prop+Plc+Sg+Ela:e%>ste              FINAL1 ;
-+N+Prop+Plc+Sg+Com:%>ine               FINAL1 ;
-+N+Prop+Plc+Sg+Com+Uml:%>%^iUMLine     FINAL1 ;
-!+N+Prop+Plc+Pl: N_IE_PL ;
-+N+Prop+Plc:    N_IE_ESS ;
-+N+Prop+Plc+Attr:ie%>n FINAL1 ;
+
+
+!LEXICON MEHKIE ! as N_IE, but with Prop tag
+!+N+Prop+Plc+Sg+Nom:ie%>               FINAL1 ;
+!+N+Prop+Plc:ie%>n                      RHyph ;
+!+N+Prop+Plc+Sg+Acc:ie%>m               FINAL1 ;
+!+N+Prop+Plc+Sg+Gen:ie%>n               FINAL1 ;
+!! +N+Prop+Plc+Sg+Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
+!+N+Prop+Plc+Sg+Ill+Uml:%>%^1UMLan      FINAL1 ;
+!+N+Prop+Plc+Sg+Ine:e%>sne              FINAL1 ;
+!+N+Prop+Plc+Sg+Ela:e%>ste              FINAL1 ;
+!+N+Prop+Plc+Sg+Com:%>ine               FINAL1 ;
+!+N+Prop+Plc+Sg+Com+Uml:%>%^iUMLine     FINAL1 ;
+!!+N+Prop+Plc+Pl: N_IE_PL ;
+!+N+Prop+Plc:    N_IE_ESS ;
+!+N+Prop+Plc+Attr:ie%>n FINAL1 ;
 
 
 ! Even syllable Sámi names:
