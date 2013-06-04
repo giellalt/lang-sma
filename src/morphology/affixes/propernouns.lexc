@@ -563,42 +563,42 @@ LEXICON PIPPI-LOAN-plc
 
 LEXICON MAKI-org
 +N+Prop+Org: RITCHIE-plc ;
-+N+Prop+Org: PN_I_FINSK ;
++N+Prop+Org: PN_I_FINSK-plc ;
 
-LEXICON MAKI-mal
-+N+Prop+Mal: RITCHIE-mal ;
-+N+Prop+Mal: PN_I_FINSK ;
+!LEXICON MAKI-mal
+!+N+Prop+Mal: RITCHIE-mal ;
+!+N+Prop+Mal: PN_I_FINSK-mal ;
 
-LEXICON MAKI-fem
-+N+Prop+Fem: RITCHIE-fem ;
-+N+Prop+Fem: PN_I_FINSK ;
+!LEXICON MAKI-fem
+!+N+Prop+Fem: RITCHIE-fem ;
+!+N+Prop+Fem: PN_I_FINSK-fem ;
 
-LEXICON MAKI-malfem
-+N+Prop+Mal: RITCHIE-malfem ;
-+N+Prop+Fem: RITCHIE-malfem ;
-+N+Prop+Mal: PN_I_FINSK ;
-+N+Prop+Fem: PN_I_FINSK ;
+!LEXICON MAKI-malfem
+!+N+Prop+Mal: RITCHIE-malfem ;
+!+N+Prop+Fem: RITCHIE-malfem ;
+!+N+Prop+Mal: PN_I_FINSK-malfem ;
+!+N+Prop+Fem: PN_I_FINSK-malfem ;
 
-LEXICON MAKI-femsur
-+N+Prop+Sur: RITCHIE-femsur ;
-+N+Prop+Fem: RITCHIE-femsur ;
-+N+Prop+Sur: PN_I_FINSK ;
-+N+Prop+Fem: PN_I_FINSK ;
+!LEXICON MAKI-femsur
+!+N+Prop+Sur: RITCHIE-femsur ;
+!+N+Prop+Fem: RITCHIE-femsur ;
+!+N+Prop+Sur: PN_I_FINSK-femsur ;
+!+N+Prop+Fem: PN_I_FINSK-femsur ;
 
 LEXICON MAKI-sur
 +N+Prop+Sur: RITCHIE-sur ;
-+N+Prop+Sur: PN_I_FINSK ;
++N+Prop+Sur: PN_I_FINSK-sur ;
 
 LEXICON MAKI-obj
 +N+Prop+Obj: RITCHIE-obj ;
-+N+Prop+Obj: PN_I_FINSK ; 
++N+Prop+Obj: PN_I_FINSK-obj ; 
 
 LEXICON MAKI-ani
 +N+Prop+Ani: RITCHIE-ani ;
-+N+Prop+Ani: PN_I_FINSK ;
++N+Prop+Ani: PN_I_FINSK-ani ;
 
 LEXICON MAKI-plc
-+N+Prop+Plc: PN_IE-plc-org ;
++N+Prop+Plc: PN_I_FINSK-plc ;
 +N+Prop+Plc: RITCHIE-plc ;
 
 LEXICON MAKI-LOAN-plc
@@ -1047,20 +1047,20 @@ LEXICON RITCHIE_PLC_ORG ! Ritchie:Ritchijasse
 
 
 LEXICON PN_IE-plc
-+N+Prop+Plc: PN_IE_PLC-ORG ;
++N+Prop+Plc: PN_IE_plcorg ;
 
 LEXICON PN_IE-sur
 +N+Prop+Sur: PN_IE ;
 
 LEXICON PN_IE-org
-+N+Prop+Org: PN_IE_PLC-ORG ;
++N+Prop+Org: PN_IE_plcorg ;
 
 LEXICON PN_IE-ani
 +N+Prop+Ani: PN_IE ;
 
 LEXICON PN_IE-plc-org
-+N+Prop+Plc: PN_IE_PLC-ORG ;
-+N+Prop+Org: PN_IE_PLC-ORG ;
++N+Prop+Plc: PN_IE_plcorg ;
++N+Prop+Org: PN_IE_plcorg ;
 
 
 ! Even syllable Sámi names:
@@ -1087,20 +1087,53 @@ LEXICON PN_I_FINSK
 !+N+Prop+Plc+Attr:ie%>n FINAL1 ;
 
 
-LEXICON PN_IE_PLC-ORG ! as N_IE, but with Prop tag
+LEXICON PN_I_FINSK-sur
++N+Prop+Sur: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-mal
++N+Prop+Sur: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-fem
++N+Prop+Sur: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-org
++N+Prop+Org: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-plc
++N+Prop+Org: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-ani
++N+Prop+Ani: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-obj
++N+Prop+Obj: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-plcorg
++N+Prop+Plc: PN_I_FINSK ;
++N+Prop+Org: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-malfem
++N+Prop+Mal: PN_I_FINSK ;
++N+Prop+Fem: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-femsur
++N+Prop+Sur: PN_I_FINSK ;
++N+Prop+Fem: PN_I_FINSK ;
+
+
+LEXICON PN_IE_plcorg ! as N_IE, but with Prop tag
 +Sg: N_IE_SG ;
 :ie                  RHyph ;
 !+Pl: N_IE_PL ;
 :    N_IE_ESS ;
 +Attr:ie FINAL1 ;
 
-LEXICON PN_I_FINSK_PLC-ORG ! as N_IE, but with Prop tag
-+Sg: PN_I_FINSK ;
-+N+Prop+Plc:i%>n                      RHyph ;
-!+Pl: N_IE_PL ;
-!:    N_IE_ESS ;
-+Attr:i FINAL1 ;
-
+!LEXICON PN_I_FINSK_PLC-ORG ! as N_IE, but with Prop tag
+!+Sg: PN_I_FINSK ;
+!+N+Prop+Plc:i%>n                      RHyph ;
+!!+Pl: N_IE_PL ;
+!!:    N_IE_ESS ;
+!+Attr:i FINAL1 ;
 
 
 !LEXICON MEHKIE ! as N_IE, but with Prop tag
