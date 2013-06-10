@@ -20,7 +20,20 @@
 # Regular processing of the speller transducer will procede after the
 # local processing.
 $(GT_SPELLER_HFST): ../$(GT_SPELLER_HFST)
-	$(AM_V_GEN)cp -f $< $@
+	$(AM_V_GEN)cat $< \
+		| $(HFST_REWEIGHT) -a 0.1 -S +Cmp   \
+		| $(HFST_REWEIGHT) -a 0.1 -S +Der   \
+		| $(HFST_REWEIGHT) -a 0.1 -S +Der1  \
+		| $(HFST_REWEIGHT) -a 0.1 -S +Der2  \
+		| $(HFST_REWEIGHT) -a 0.1 -S +Der3  \
+		| $(HFST_REWEIGHT) -a 0.1 -S +Der4  \
+		| $(HFST_REWEIGHT) -a 0.2 -S +PxSg1 \
+		| $(HFST_REWEIGHT) -a 0.2 -S +PxSg2 \
+		| $(HFST_REWEIGHT) -a 0.2 -S +PxSg3 \
+		| $(HFST_REWEIGHT) -a 0.2 -S +PxPl1 \
+		| $(HFST_REWEIGHT) -a 0.2 -S +PxPl2 \
+		| $(HFST_REWEIGHT) -a 0.2 -S +PxPl3 \
+		-o $@
 
 include $(top_srcdir)/am-shared/hfst-spellchecker-include.am
 
