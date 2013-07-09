@@ -12,9 +12,9 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
-! ========================================================================== !
-!                   South Sámi morphophonological rule set                   !
-! ========================================================================== !
+! ========================================================================== 
+!!                   !!!South Sámi morphophonological rule set                   
+! ========================================================================== 
 
 ! twol-sma.txt
 ! The file contains the rule set for the non-segmental
@@ -107,9 +107,12 @@ Definitions
     %^uLATUS:
     %^ConsDel: ;
 
+!! !!!Rules
+
 Rules
  
   "e deletion before i-initial suffix"
+!! __@RULENAME@__  
    e:0 <=> _ X2:0 i: ;
 
 !€# manneX2ine
@@ -119,6 +122,7 @@ Rules
 ! Odd-syllabic verbs and nouns: 
 
   "Diphthong simplification ie:e"
+!! __@RULENAME@__  
    i:0 <=>       _ e  Cns+ (e) (%>:) %^DISIMP: ;
                  _ e           (%>:) %^DISIMP:      Cns+   ;
                  _ e           (%>:) %^COMPDISIMP: [b:|m:] ;
@@ -147,6 +151,7 @@ Rules
 
 
   "Diphthong simplification oe:o"
+!! __@RULENAME@__  
    e:0 <=> o _  Cns+ (e) (%>:) %^DISIMP: ;
            o _           (%>:) %^COMPDISIMP2: [b:|m:] ;!%> =morfemgrense
           
@@ -178,6 +183,7 @@ Rules
 
 
   "a/e alternation"
+!! __@RULENAME@__  
    a:e <=>            _ [ Cns - j | %»: t j | h [ t | k ] ] (Cns) (e) (%>:) %^DISIMP: ; ! original
 !   a:e <=> Vow Cns+  _ [ Cns - j | %»: t j | h [ t | k ] ] (Cns) (e) (%>:) %^DISIMP: ; ! 3syll
 !   a:e <=>           _  Cns+ (e) (%>:) %^DISIMP: ; ! Denne gjev overgenerering, men ser rett ut, lingv. sett.
@@ -208,6 +214,7 @@ Rules
 
 
   "a/i alternation"
+!! __@RULENAME@__  
    a:i <=> _ j (e) (%>:) %^DISIMP: ;
 
 ! No nouns following this pattern, see last part of §103 in Bergsland - ???
@@ -220,22 +227,27 @@ Rules
 
 
   "Even syllabic verbs Du1Pl3 e/oe V"
+!! __@RULENAME@__  
   ':o <=> _ e: X2: Cns ;
   
   "Even syllabic verbs Du3 e/i alternation V"
+!! __@RULENAME@__  
 !  e:0 <=>      ': _             X3:               ; !this must be e:i, subrule moved to next rule
   e:0 <=>  (%»:) i _ j (e) (%>:) %^NOMAGieDISIMP:     ([h|m|n|i|i g u j m i e]) ;
   
   "Even syllabic verbs Du2Pl12 e/i V"
+!! __@RULENAME@__  
   e:i <=> ': _ X4: j i [d|b] i e (n) ;
           ': _             X3: j æ g a n ;
   
           
   "Even syllabic verbs Du2Pl12 e/i V part2"
+!! __@RULENAME@__  
   ':0 <=>  _ e:i X4: j i [d|b] i e (n) ;
            _ e:i           X3: j æ g a n ;
            
   "Even syllabic verbs Du2Pl12 ':0 V"
+!! __@RULENAME@__  
   ':0 <=>  _ e [d|b] %^DISIMP: e (n) ;
 
 
