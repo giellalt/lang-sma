@@ -10,8 +10,8 @@
 if CAN_DOCC
 
 JSP_PAGES=root-morphology.jspwiki \
-		  nouns-affixes.jspwiki \
 		  adjectives-affixes.jspwiki \
+		  nouns-affixes.jspwiki \
 		  disambiguation-syntax.jspwiki \
 		  sma-phon-phonology.jspwiki
 # clitics-morphology.jspwiki       \
