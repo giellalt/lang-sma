@@ -834,11 +834,17 @@ LEXICON TJÅENIEH !ie plural lexicon
   +N+Der1+Der/Dimin+N:%^aLATUS%»tj N_ODD_ESS ;
 
 
-! Inflection for nouns ending in oe
-! ---------------------------------
+!! !!Inflection for nouns ending in oe
+!    ---------------------------------
+
+
+!! The oe with umlaut generate the uml-ones
+!! and have the non-uml ones as +Use/NG.
+
 LEXICON N_OE_UML
- +N+Sg: N_OE_SGILL_UML ; ! Causes Umlaut
-         N_OE ;
+ +N+Sg:        N_OE_SGILL_UML ; ! Causes Umlaut
+ +N+Sg+Use/NG: N_OE_SGILL_NOUML ; ! Does not cause Umlaut, do not generate
+               N_OE_NO_ILL ; ! gives the other cases
          
  
 LEXICON N_OE_SGILL_UML
@@ -846,8 +852,21 @@ LEXICON N_OE_SGILL_UML
   +Ill+Uml+PxSg1:e%>%^2UMLsanne FINAL1 ;
   +Ill+Uml+PxSg2:e%>%^2UMLsadth FINAL1 ;
 
+LEXICON N_OE_SGILL_NOUML
+  +Ill:o%>se       FINAL1 ;
+
+
+!! The oe without umlaut generate the non-uml-ones
+!! only, naturally without +Use/NG.
 
 LEXICON N_OE
+!! Lexicon @LEXNAME@ is for the -oe nouns without umlaut
+!! Illative is lifted out in order to allow for Use/NG for the
+!! umlauted ones.
+  +N+Sg: N_OE_SGILL_NOUML ;
+         N_OE_NO_ILL ;
+
+LEXICON N_OE_NO_ILL
   +N+Sg: N_OE_SG  ;
   +N+Pl: N_OE_PL  ;
   +N: N_OE_ESS ;
@@ -868,7 +887,6 @@ LEXICON N_OE_SG
   +Acc+PxSg3:e%>mse FINAL1 ;
   +Gen:oe%>n       FINAL1 ;
   +Gen+PxSg1:%>ene FINAL1 ;
-  +Ill:o%>se       FINAL1 ;
   +Ine:o%>sne      FINAL1 ;
   +Ela:o%>ste      FINAL1 ;
   +Ela+PxSg1:oe%>stanne FINAL1 ;
