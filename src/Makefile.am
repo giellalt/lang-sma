@@ -83,6 +83,7 @@ endif
 
 analyser-apertium-norm.att: generator-raw-gt-desc.hfst \
 					filters/remove-derivation-position-tags.hfst \
+					filters/remove-Dial_L-strings.hfst \
 					filters/remove-dialect-tags.hfst \
                                         filters/make-optional-semantic-tags.hfst \
 					filters/remove-homonymy-tags.hfst \
@@ -129,6 +130,9 @@ analyser-apertium-norm.att: generator-raw-gt-desc.hfst \
 		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
 		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
 			-1 filters/remove-variant-tags.hfst \
+		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
+		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
+			-1 filters/remove-Dial_L-strings.hfst \
 		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
 		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
 			-1 filters/remove-dialect-tags.hfst \
