@@ -30,6 +30,7 @@ GT_FILTER_TARGETS+=\
 				   make-optional-variant-tags.hfst        \
 				   remove-derivation-position-tags.hfst   \
 				   remove-dialect-tags.hfst               \
+				   remove-Dial_L-strings.hfst               \
 				   remove-homonymy-tags.hfst              \
 				   remove-variant-tags.hfst               \
 				   remove-norm-comp-tags.hfst             \
