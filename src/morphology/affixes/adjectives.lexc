@@ -454,7 +454,7 @@ LEXICON oes_OES_ODD1EVEN !Dette er klasse 3-adjektiv,  del opp adjektivene i det
   EVENCOMP ;
  
 LEXICON es_ES_ODD1 ! Kommer fra e(1)-stamme og er derivasjon av e_ES_ODDEVEN2
- :es    ATTR_S ;
+ :e    ATTR_S ;
  +A+SgNomCmp:es R ;
  :e    PRED_S ;
  :es    ODDCASEOBL ;
@@ -560,10 +560,14 @@ LEXICON e_ES_ODDEVEN2
 !!€ galmesommes galme+A+Superl+Sg+Nom 
 
 !! {{{ 
-      :e       ATTR_0 ; !!= @CODE@
-      :es  ODDCASEOBL ; !!= @CODE@
-           EVENCOMP   ; !!= @CODE@
-           es_ES_ODD1 ; !!= @CODE@
+            :e       ATTR_0 ; !!= @CODE@
+            :es  ODDCASEOBL ; !!= @CODE@
+                 EVENCOMP   ; !!= @CODE@
+     +Use/NG:e    ATTR_S ;	  !!= @CODE@
+ +A+SgNomCmp:es R ;  !!= @CODE@
+            :e    PRED_S ;	  !!= @CODE@
+            :es    ODDCASEOBL ; !!= @CODE@
+            :es    ODDCOMP ;	  !!= @CODE@
 !! }}}
 
    !***UMLAUT FOR e(2)-stammen, Klasse-2 
