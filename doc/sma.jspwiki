@@ -405,11 +405,13 @@ The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
   n: ODDCASEOBL ;         
   n: ODDCOMP ;            
 }}}
+
  !!!LEXICON PRED_N
 The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
 {{{
   +A+Sg+Nom:%>n FINAL1 ; 
 }}}
+
  !!!LEXICON PRED_AN
 The __PRED_AN!!≈__ lexicon is used for adjectives Predicatives.
 {{{
@@ -422,13 +424,15 @@ The __PRED_AN!!≈__ lexicon is used for adjectives Predicatives.
 
 
 
+
  !!!LEXICON e_E_EVEN
-The __e_E_EVEN!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP.
-
-
+The __e_E_EVEN!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP. 
 {{{
         :e     ATTR_0 ;   
-               NIEJTE ;   
+    +A+Sg:      NIEJTESGNOM ; 
+    +A+Sg: NIEJTESGOBL ;      
+    +A+Pl: NIEJTE_PL ;        
+    +A: NIEJTEREST ;	         
         :e   EVENCOMP ;   
 }}}
 
@@ -437,16 +441,20 @@ The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–e}} and {{�
 
 {{{
         :e     ATTR_0 ; 
-               NIEJTE ; 
+    +A+Sg:      NIEJTESGNOM ; 
+    +A+Sg: NIEJTESGOBL ;      
+    +A+Pl: NIEJTE_PL ;        
+    +A: NIEJTEREST ;	         
 }}}
 
 
  !!!LEXICON a_A_EVEN1 
 The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-COMP.
 {{{
-        :a       ATTR_0 ; 
-                  MAANA ; 
-        :a     EVENCOMP ;  
+         :a       ATTR_0 ; 
+    +A+Sg:        MAANASGNOM ; 
+    +A:           MAANAOBL ; 
+         :a     EVENCOMP ;  
 }}}
 
  !!!LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
@@ -463,7 +471,7 @@ The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as
 The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP. 
 {{{
         :ie      ATTR_0 ;  
-                   N_IE ; 
+      +A:    N_IE_FORMS ; 
         :ie    EVENCOMP ;  
 }}} 
 
@@ -472,13 +480,12 @@ The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie
 The __ie_IE_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
 {{{ 
         :ie      ATTR_0 ; 
-                   N_IE ; 
+      +A:    N_IE_FORMS ; 
 }}} 
 
 The __a_A_EVEN1_NOCOMP__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
 {{{ 
         :a      ATTR_0 ; 
-                 MAANA ; 
 }}} 
 
  !!!LEXICON es_ES_EVEN 
@@ -540,16 +547,17 @@ ODD adjective, attr = pred. Comporation uneven syllable.
 {{{ 
 }}}
 
+
 !!!GEAREHKE LEXICON GIERIES
 Umlaut from attr--> pred. Comporation uneven syllable.
 Presentlly only used for "gieries-gearehke" adjective.
 This lexicon covers the ies - ehke + umlaut change.
 {{{
-  :gierie    ATTR_S ;   
-  :gearahk  ODDCASE ;   
-  :gearahk  ODDCOMP ;   
-  :gearahtj ODDCOMP ;   
-  :gearahg  ODDCOMP ;   
+         :gierie    ATTR_S ;   
+         :gearahk  ODDCASE ;   
+         :gearahk  ODDCOMP ;   
+  +Use/NG:gearahtj ODDCOMP ;   
+  +Use/NG:gearahg  ODDCOMP ;   
 }}} 
 
 
@@ -580,6 +588,15 @@ EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 
 
 
+
+
+
+
+
+
+
+
+
 !!!LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 Adjective with no comp. 
 
@@ -587,13 +604,13 @@ Adjective with no comp.
 ; {{isvelihks+A+Attr}}: __isvelihks,__ __isveligs__ 
 ; {{isvelihks+A+Sg+Nom}}: __isvelihks,__ __isveligs,isvelihke,__ __isveligke,__ __isveligie__ 
 {{{
-         :ihk  ATTR_S ;    
-         :ig   ATTR_S ;    
-         :ihk  PRED_S ;    
-         :ihk  PRED_S ;    
-         :ihk  NIEJTE ;    
-         :igk  NIEJTE ;    
-         :ig   N_IE ;    
+         +Use/NG:ihk  ATTR_S ;    
+                :ig   ATTR_S ;    
+         +Use/NG:ihk  PRED_S ;    
+         +Use/NG:ihk  PRED_S ;    
+                :ihk  NIEJTE ;    
+         +Use/NG:igk  NIEJTE ;    
+       +A+Use/NG:ig   N_IE_FORMS ;    
 
 
 }}}
@@ -639,11 +656,19 @@ This one gives EVEN and ODD  Comporation.
 * __galmesommes__: {{galme+A+Superl+Sg+Nom}}
 
 {{{ 
-       :e       ATTR_0 ; 
-       :es  ODDCASEOBL ; 
-            EVENCOMP   ; 
-            es_ES_ODD1 ; 
+             :e       ATTR_0 ; 
+             :es  ODDCASEOBL ; 
+             :e    EVENCOMP   ; 
+      +Use/NG:e    ATTR_S ;	  
+  +A+SgNomCmp:es R ;  
+             :e    PRED_S ;	  
+      +Use/NG:es    ODDCOMP ;	  
 }}}
+
+
+
+
+
 
 
 
@@ -656,44 +681,45 @@ This one gives EVEN and ODD  Comporation.
 !!!LEXICON es_E_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{   
-  :e     ATTR_S ;  
-         NIEJTE ;  
-  :e   EVENCOMP ; 
+         :e ATTR_S ;  
+         :e EVENCOMP ; 
 }}}
 
 !!!LEXICON as_oes_A_OE_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{ 
- :a    ATTR_S ; 
- :oe   ATTR_S ; 
- :      MAANA ; 
- :      N_OE ;  
- :oe   EVENCOMP_oe ; 
- :a    EVENCOMP ;    
+ +Use/NG:a  ATTR_S ; 
+        :oe ATTR_S ; 
+        :oe EVENCOMP_oe ; 
+ +Use/NG:a  EVENCOMP ;    
 }}}
+
 !!!LEXICON oeh_ah_OE_A_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{ 
- :oe   ATTR_H ; 
- :a    ATTR_H ; 
- :       N_OE ; 
- :      MAANA ; 
- :oe   EVENCOMP_oe ; 
- :e    EVENCOMP ;    
-}}}       
+        :oe   ATTR_H ; 
+ +Use/NG:a    ATTR_H ; 
+              N_OE ; 
+ +Use/NG:     MAANA ; 
+        :oe   EVENCOMP_oe ; 
+ +Use/NG:e    EVENCOMP ;    
+}}}   
+
 !!!LEXICON ies_IE_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{    
   :ie    ATTR_S ;  
-  :        N_IE ;  
+   +A:   N_IE_FORMS ; 
   :ie  EVENCOMP ;  
 }}}
 !!!LEXICON ies_IE_EVEN3NOCOMP
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
 {{{ 
   :ie    ATTR_S ; 
-           N_IE ; 
+   +A:   N_IE_FORMS ; 
 }}}
+
+
 
 ** KLASSE 4, -s og -h  i attributt, UMLAUT til -an predikativ** !!!
 
@@ -704,9 +730,9 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
 
 {{{
-  :ies ATTR_0 ;      
-  :%^1UMLan PRED_0 ; 
-  : N_IE ;		    
+         :ies ATTR_0 ;      
+  +Use/NG:%^1UMLan PRED_0 ; 
+       +A:   N_IE_FORMS ;		    
 }}}
 
 !!!UMLAUT LEXICON as_AN_ODDNOCOMP4
@@ -717,8 +743,8 @@ they dont have any comparation.
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a
 small undergruppe of the 4.group 
 {{{
- :a    ATTR_S  ; 
- :a    PRED_AN ; 
+  :a    ATTR_S  ; 
+  :a    PRED_AN ; 
 }}}
 
 !!!UMLAUT LEXICON oes_AN_ODDNOCOMP4
@@ -726,22 +752,23 @@ Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group w
 umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
 This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group 
 {{{ 
-     :oe        ATTR_S  ; 
-     :%^3UML    PRED_AN ; 
-     :oe N_OE ;           
+        :oe        ATTR_S  ; 
+        :%^3UML    PRED_AN ; 
+      +A: N_OE_OBL ;       
 }}}
 
 
 {{{ 
-  :oe ATTR_H ;      
-  :oe PRED_N ;      
+         :oe ATTR_H ;      
+         :oe PRED_N ;      
 }}}
 
 {{{  
  :oe         ATTR_H ;   
- :%^3UMLa    PRED_N ;   
+ +Use/NG:%^3UMLa    PRED_N ;   
  !:%^3UMLahk  ODD_ÅBPOE ;
 }}}
+
 
 
 
@@ -794,16 +821,17 @@ This must be checked further, possibly with informants.
 
 
 
+
+
 !!!LEXICON MAST
 The __MAST__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
 used with the stem ''masten''
 {{{
-             ATTR_S ;   
-   +Use/NG:e ATTR_S ;   
-   +Use/NG:  ATTR_H ;   
-   +Use/NG:e ATTR_N ;   
-          :e PRED_N ;   
-             NIEJTE ;     
+                ATTR_S ;   
+      +Use/NG:e ATTR_S ;   
+      +Use/NG:  ATTR_H ;   
+      +Use/NG:e ATTR_N ;   
+             :e PRED_N ;   
 }}} 
 
 
@@ -831,6 +859,7 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
   +Use/Sub:^ell e_ES_LOAN ; 
           :jell e_ES_LOAN ; 
 }}} 
+
 !!!LEXICON UELLE
 {{{
          :^ell e_ES_LOAN ;   
@@ -919,7 +948,15 @@ TT: Added +Sg to the Px entries here, cf. MAANASGOBL.
 
 
 
+
 EVENCOMPCASE_oe ;
+
+
+
+
+
+
+
 
 
 
@@ -1185,6 +1222,7 @@ check +N+Sg+Ine!
 
 
 
+
 !!Inflection for nouns ending in oe
 
 
@@ -1199,7 +1237,8 @@ and have the non-uml ones as +Use/NG.
 The oe without umlaut generate the non-uml-ones
 only, naturally without +Use/NG.
 
-Lexicon N_OE is for the -oe nouns without umlaut
+
+Lexicon N_OE_OBL is for the -oe nouns without umlaut
 Illative is lifted out in order to allow for Use/NG for the
 umlauted ones.
 
