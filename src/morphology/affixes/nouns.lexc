@@ -699,17 +699,20 @@ LEXICON ORE_LOAN
 ! ------------------------------------
 
 LEXICON N_IE
-  +N+Sg: N_IE_SG ;
-  +N+Pl: N_IE_PL ;
-  +N:    N_IE_ESS ;
-  +N+SgNomCmp:ie              R ;
-  +N+SgGenCmp:ie%>n           R ;
-  +N+PlGenCmp+NoUml:ie%>j           R ;
-  +N+PlGenCmp+Uml:%>%^iUMLi R ;
-  +N+Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
-  +N+Der1+Der/ijes+A+Sg+Nom:%»%^1UMLijes FINAL1 ;
-  +N+Der1+Der/ijes:%»%^1UMLijes        ATTR_0 ;
-  +N+Der1+Der/ijes:%»%^1UMLij          ODDCOMP ;
+ +N: N_IE_FORMS ;
+
+LEXICON N_IE_FORMS
+  +Sg: N_IE_SG ;
+  +Pl: N_IE_PL ;
+       N_IE_ESS ;
+  +SgNomCmp:ie              R ;
+  +SgGenCmp:ie%>n           R ;
+  +PlGenCmp+NoUml:ie%>j           R ;
+  +PlGenCmp+Uml:%>%^iUMLi R ;
+  +Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
+  +Der1+Der/ijes+A+Sg+Nom:%»%^1UMLijes FINAL1 ;
+  +Der1+Der/ijes:%»%^1UMLijes        ATTR_0 ;
+  +Der1+Der/ijes:%»%^1UMLij          ODDCOMP ;
   
 LEXICON N_IE_SG
 N_IE_SG_NOM ;
@@ -860,23 +863,26 @@ LEXICON N_OE_SGILL_NOUML
 !! only, naturally without +Use/NG.
 
 LEXICON N_OE
+ +N+Sg+Nom:oe FINAL1 ;
+ +N:           N_OE_OBL ;
+ 
+LEXICON N_OE_OBL 
 !! Lexicon @LEXNAME@ is for the -oe nouns without umlaut
 !! Illative is lifted out in order to allow for Use/NG for the
 !! umlauted ones.
-  +N+Sg: N_OE_SGILL_NOUML ;
+   +Sg: N_OE_SGILL_NOUML ;
          N_OE_NO_ILL ;
 
 LEXICON N_OE_NO_ILL
-  +N+Sg: N_OE_SG  ;
-  +N+Pl: N_OE_PL  ;
-  +N: N_OE_ESS ;
-  +N+SgNomCmp:oe    R ;
-  +N+SgGenCmp:oe%>n R ;
-  +N+PlGenCmp:oe%>j R ;
-  +N+Der1+Der/Dimin+N:e%»%^2UMLtj GÅATETJE ;
+  +Sg: N_OE_SG  ;
+  +Pl: N_OE_PL  ;
+       N_OE_ESS ;
+  +SgNomCmp:oe    R ;
+  +SgGenCmp:oe%>n R ;
+  +PlGenCmp:oe%>j R ;
+  +Der1+Der/Dimin+N:e%»%^2UMLtj GÅATETJE ;
 
 LEXICON N_OE_SG
-  +Nom:oe          FINAL1 ;
   +Nom+PxSg1:%>eme FINAL1 ;
   +Nom+PxSg2:%>edh FINAL1 ;
   +Nom+PxSg3:e%>se FINAL1 ;
