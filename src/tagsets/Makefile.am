@@ -59,6 +59,7 @@ gttags.hfst.txt: ../morphology/$(GTLANG).lexc.hfst
 # Convert GT-tags to Apertium-tags:
 apertiumtags.hfst.txt: gttags.hfst.txt
 	$(AM_V_GEN)tr -d '+' < $< \
+		| tr '#' '+' \
 		| tr '/[:upper:]' '_[:lower:]' \
 		| awk '{print "%<"$$0"%>"}' > $@
 
