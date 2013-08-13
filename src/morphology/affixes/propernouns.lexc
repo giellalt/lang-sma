@@ -160,25 +160,86 @@ LEXICON N_ODD_PL_NO_DISIMPH
 !+N+Prop+Plc+Attr:e FINAL1 ;
 
 LEXICON VNAME-plc
-+N+Prop+Plc: VNAME_PLC-ORG ;
+ +N+Prop+Plc: ACCRA_PLC-ORG ;
 
 LEXICON VNAME-org
-+N+Prop+Org: VNAME_PLC-ORG ;
+ +N+Prop+Org: ACCRA_PLC-ORG ;
 
 LEXICON VNAME-sur
-+N+Prop+Sur: VNAME ;
+ +N+Prop+Sur: ACCRA ;
 
 LEXICON VNAME-mal
-+N+Prop+Mal: VNAME ;
+ +N+Prop+Mal: ACCRA ;
 
 LEXICON VNAME-fem
-+N+Prop+Fem: VNAME ;
+ +N+Prop+Fem: ACCRA ;
 
 LEXICON VNAME-obj
-+N+Prop+Obj: VNAME ;
+ +N+Prop+Obj: ACCRA ;
 
-!LEXICON VNAME-ani
-!+N+Prop+Ani: VNAME ;
+LEXICON ACCRA-plc
+ +N+Prop+Plc: ACCRA_PLC-ORG ;
+
+LEXICON ACCRA-org
+ +N+Prop+Org: ACCRA_PLC-ORG ;
+
+LEXICON ACCRA-sur
+ +N+Prop+Sur: ACCRA ;
+
+LEXICON ACCRA-mal
+ +N+Prop+Mal: ACCRA ;
+
+LEXICON ACCRA-fem
+ +N+Prop+Fem: ACCRA ;
+
+LEXICON ACCRA-obj
+ +N+Prop+Obj: ACCRA ;
+
+LEXICON ACCRA-ani
+ +N+Prop+Ani: ACCRA ;
+
+
+LEXICON ACCRA
+ +Sg+Nom:          FINAL1 ;
+           RHyph ;
+ +Sg+Acc:%>m       FINAL1 ;
+ +Sg+Gen:%>n       FINAL1 ;
+ +Sg+Ill:%^PLCDISIMP%>se      FINAL1 ;
+ +Sg+Ine:%^PLCDISIMP%>sne     FINAL1 ;
+ +Sg+Ela:%^PLCDISIMP%>ste     FINAL1 ;
+ +Sg+Com:%>ine      FINAL1 ; !OBS ai:i
+ +Pl+Nom:%>h       FINAL1 ;
+ +Pl+Acc:%>ide      FINAL1 ; !OBS ai:i
+ +Pl+Gen:%>j       FINAL1 ;
+ +Pl+Ill:%>ide      FINAL1 ; !OBS ai:i
+ +Pl+Ine:%>ine      FINAL1 ; !OBS ai:i
+ +Pl+Ela:%>jste    FINAL1 ; !OBS ai:i
+ +Pl+Com:%>jgujmie  FINAL1 ;
+ +Ess:%>jne         FINAL1 ; !OBS ai:i
+ +Attr: FINAL1 ;
+!SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
+! the appropriate even syllable lexicons.
+
+LEXICON ACCRA_PLC-ORG
+ +Sg+Nom:          FINAL1 ;
+           RHyph ;
+ +Sg+Acc:%>m       FINAL1 ;
+ +Sg+Gen:%>n       FINAL1 ;
+ +Sg+Ill:%^PLCDISIMP%>se      FINAL1 ;
+ +Sg+Ine:%^PLCDISIMP%>sne     FINAL1 ;
+ +Sg+Ela:%^PLCDISIMP%>ste     FINAL1 ;
+ +Sg+Com:%>jne      FINAL1 ;
+! +Pl+Nom:%>h       FINAL1 ;
+! +Pl+Acc:%>jde      FINAL1 ;
+! +Pl+Gen:%>j       FINAL1 ;
+! +Pl+Ill:%>jde      FINAL1 ;
+! +Pl+Ine:%>jne      FINAL1 ;
+! +Pl+Ela:%>jste    FINAL1 ;
+! +Pl+Com:%>jgujmie  FINAL1 ;
+ +Ess:%>jne         FINAL1 ; !OBS ai:i
+ +Attr: FINAL1 ;
+!SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
+! the appropriate even syllable lexicons.
 
 
 LEXICON VNAME
@@ -611,11 +672,11 @@ LEXICON GATA-plc
 :gat SNAME_NIEJTE-plc ;
 
 
-LEXICON ACCRA-plc
-:%^PLCDISIMP VNAME-plc ;
-
-LEXICON ACCRA-obj
-:%^PLCDISIMP VNAME-obj ;
+!LEXICON ACCRA-plc
+!:%^PLCDISIMP VNAME-plc ;
+!
+!LEXICON ACCRA-obj
+!:%^PLCDISIMP VNAME-obj ;
 
 LEXICON ACCRA-LOAN-obj
 +N+Prop+Obj+Sg+Nom:%^PLCDISIMP FINAL1 ;
@@ -631,39 +692,39 @@ LEXICON ACCRA-LOAN-org
 
 
 LEXICON ACCRA-objplc
-:%^PLCDISIMP VNAME-obj ;
-:%^PLCDISIMP VNAME-plc ;
+ ACCRA-obj ;
+ ACCRA-plc ;
 
-LEXICON ACCRA-org
-:%^PLCDISIMP VNAME-org ;
-
-LEXICON ACCRA-sur
-:%^PLCDISIMP VNAME-sur ;
-
-LEXICON ACCRA-mal
-:%^PLCDISIMP VNAME-mal ;
-
-LEXICON ACCRA-fem
-:%^PLCDISIMP VNAME-fem ;
-
-LEXICON ACCRA-ani
-:%^PLCDISIMP VNAME-fem ;
+!LEXICON ACCRA-org
+!:%^PLCDISIMP VNAME-org ;
+!
+!LEXICON ACCRA-sur
+!:%^PLCDISIMP VNAME-sur ;
+!
+!LEXICON ACCRA-mal
+!:%^PLCDISIMP VNAME-mal ;
+!
+!LEXICON ACCRA-fem
+!:%^PLCDISIMP VNAME-fem ;
+!
+!LEXICON ACCRA-ani
+!:%^PLCDISIMP VNAME-fem ;
 
 LEXICON ACCRA-femsur
-:%^PLCDISIMP VNAME-fem ;
-:%^PLCDISIMP VNAME-sur ;
+ ACCRA-fem ;
+ ACCRA-sur ;
 
 LEXICON ACCRA-malsur
-:%^PLCDISIMP VNAME-mal ;
-:%^PLCDISIMP VNAME-sur ;
+ ACCRA-mal ;
+ ACCRA-sur ;
 
 LEXICON ACCRA-femplc
-:%^PLCDISIMP VNAME-fem ;
-:%^PLCDISIMP VNAME-plc ;
+ ACCRA-fem ;
+ ACCRA-plc ;
 
 LEXICON ACCRA-malfem
-:%^PLCDISIMP VNAME-mal ;
-:%^PLCDISIMP VNAME-fem ;
+ ACCRA-mal ;
+ ACCRA-fem ;
 
 
 
@@ -792,11 +853,11 @@ LEXICON UNAME-obj
 !+N+Prop+Fem: UNAME ;
 !
 LEXICON UNAME
- VNAME ; !until we get answer from SGM
+ ACCRA ; !until we get answer from SGM
  +Use/Sub: UNAME_EVEN ; ! !until we get answer from SGM
 
 LEXICON UNAME_PLC-ORG
- VNAME_PLC-ORG ; !until we get answer from SGM
+ ACCRA_PLC-ORG ; !until we get answer from SGM
  +Use/Sub: UNAME_EVEN ; ! !until we get answer from SGM
 
 LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
