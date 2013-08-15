@@ -53,7 +53,7 @@ LEXICON N_ODD
 !!¥ gierehtse+N+Sg+Acc: [gierehtsem, ~gieriehtsem]
 
 LEXICON N_ODD_LOAN
-  +N+Sg+Nom: FINAL1 ;  ! romer
+  +N+Sg+Nom+Use/NG: FINAL1 ;  ! romer
   +N+Sg: N_ODD_SG ; ! romere etc.
   +N+Pl: N_ODD_PL ;
   +N:    N_ODD_ESS ;
@@ -97,7 +97,8 @@ LEXICON N_ODD_NODISIMP
 
 
 LEXICON N_ODD_SG
-  +Nom:e%^DISIMP         FINAL1 ;
+  +Nom:e         FINAL1 ; ! sjekk
+!  +Nom:e%^DISIMP         FINAL1 ;
   +Nom+PxSg1:%>amme FINAL1 ;
   +Nom+PxSg2:%>adth FINAL1 ;
   +Acc:e%>%^DISIMPm      FINAL1 ;
@@ -196,7 +197,7 @@ LEEJJEGE ;
   
 LEXICON AAREGE        !Sg+Nom=Aarege/Aareh  Sg+Cmp=Aarege-/Aareh-
 AAJEGE ; 
-  +N+SgNomCmp:ge%^DISIMP            R ;
+  +N+SgNomCmp:ege%^DISIMP            R ;
 
 
 LEXICON BAARTEGE        !Sg+Nom=baartege/baarth  Sg+Cmp=baartege-/baarth-
@@ -247,7 +248,7 @@ LEXICON LEEJJEGE        !Sg+Nom=leejjege  Sg+Cmp=leejjeh-
  +N+Com+PxSg2:eg%>æjnedh FINAL1 ;
  +N+Pl:eg N_ODD_PL ;
  +N:eg    N_ODD_ESS ;
-  +N+SgNomCmp:h%^DISIMP            R ;
+  +N+SgNomCmp+Use/NG:eh%^DISIMP            R ;
   +N+SgGenCmp:ege%>%^DISIMPn        R ;
   +N+PlGenCmp:eg%>%^DISIMPi R ;
   +N+Der1+Der/Dimin+N:eg%»adtj GIERIEHTSADTJE ;
