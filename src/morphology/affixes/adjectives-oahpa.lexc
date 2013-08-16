@@ -1116,21 +1116,26 @@ LEXICON ATTR_0_PRED_0
 
 LEXICON ATTR_0
 +A+Attr: ATTRCONT ;
++A: LAAKAN ;
+
 
 LEXICON ATTR_S
 +A+Attr:%>s ATTRCONT ;
++A:%>s LAAKAN ;
 
 LEXICON ATTR_H
 +A+Attr:%>h   ATTRCONT ;
++A:%>h LAAKAN ;
 
 LEXICON ATTR_N
 +A+Attr:%>n ATTRCONT ;
++A:%>n LAAKAN ;
 
 LEXICON ATTRCONT
  FINAL1 ;
  R ;
 +Der2+Der/voete+Use/Sub:%»voet GIERIEHTSADTJE ;
-LAAKAN ;
+!LAAKAN ; !Lene: moved it to each contlex, to avoid +Attr
 
 ! Predicative lexica
 ! ------------------
@@ -1330,11 +1335,14 @@ LEXICON EVENCOMPONLY
 +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
  EVENCOMPCASE ;
  DIMCOMP ;
++A+Comp:%>%^COMPDISIMPbe%^DISIMP LAAKAN ;
+
 
 LEXICON EVENSUPONLY
 +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
 +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP FINAL1 ;
    MES ;
++A+Superl:%>%^COMPDISIMPmes%^DISIMP LAAKAN ;
 
 LEXICON EVENCOMP_oe
 +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT ;
@@ -1344,7 +1352,7 @@ LEXICON EVENCOMP_oe
 +A+Superl+Attr+Use/NG:%>%^COMPDISIMP2mes%^DISIMP ATTRCONT ;
    MES_oe ;
  DIMCOMP ;
-
++A+Comp:%>%^COMPDISIMPbe%^DISIMP LAAKAN ;
 
 LEXICON ODDCOMP
 +A+Comp+Attr:%>åbpoe ATTRCONT ; ! båajoesåbpoe, *båajasåbpoe
@@ -1357,6 +1365,7 @@ LEXICON ODDCOMP
 +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
 +A+Comp+Der1+Der/Dimin+Attr+Use/NG+Use/Sub:%>abpe%»tje ATTRCONT ;
 +A+Comp+Der1+Der/Dimin+Use/NG+Use/Sub:%>abpa%»tj  GÅATETJEadj ;
++A+Comp:%>åbpoe LAAKAN ; 
 
 
 LEXICON EVENCOMPCASE
@@ -1551,6 +1560,7 @@ LEXICON MES
 +A+Superl+SgNomCmp:%>%^COMPDISIMPmes%^DISIMP    R ;
 +A+Superl+SgGenCmp:masse%>n R ;
 +A+Superl+PlGenCmp:mass%>i  R ;
++A+Superl:%>%^COMPDISIMPmes%^DISIMP          LAAKAN ;
 
 LEXICON MES_oe
 +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP          FINAL1 ;
