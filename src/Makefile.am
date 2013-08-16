@@ -76,16 +76,18 @@ if CAN_HFST
 GT_ANALYSERS_HFST+=
 GT_GENERATORS_HFST+=
 if WANT_APERTIUM
-APERTIUM_ANALYSERS_HFST+=analyser-apertium-norm.att
+APERTIUM_ANALYSERS_HFST+=generator-mt-apertium-norm.hfst \
+						generator-mt-apertium-norm.att
+
 endif
 endif
 
 
-analyser-apertium-norm.att: generator-raw-gt-desc.hfst \
+generator-apertium-norm.hfst: generator-raw-gt-desc.hfst \
 					filters/remove-derivation-position-tags.hfst \
 					filters/remove-Dial_L-strings.hfst \
 					filters/remove-dialect-tags.hfst \
-                                        filters/make-optional-semantic-tags.hfst \
+					filters/make-optional-semantic-tags.hfst \
 					filters/remove-homonymy-tags.hfst \
 					filters/remove-variant-tags.hfst \
 					filters/remove-norm-comp-tags.hfst \
@@ -96,8 +98,7 @@ analyser-apertium-norm.att: generator-raw-gt-desc.hfst \
 					filters/remove-test-tags.hfst \
 					filters/remove-hyphenation-marks.hfst        \
 					filters/remove-infl_deriv-borders.hfst       \
-					filters/remove-word-boundary.hfst \
-					$(srcdir)/tagsets/apertium.relabel
+					filters/remove-word-boundary.hfst
 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -1 $< \
 			-2 filters/remove-hyphenation-marks.hfst \
 		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
@@ -144,11 +145,18 @@ analyser-apertium-norm.att: generator-raw-gt-desc.hfst \
 			-1 filters/remove-test-tags.hfst \
 		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
 		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
-		| $(HFST_SUBSTITUTE) $(HFSTFLAGS) -F $(srcdir)/tagsets/apertium.relabel \
-		| $(HFST_INVERT) \
-		| $(HFST_FST2FST) $(HFSTFLAGS) -w \
-		| hfst-fst2txt \
 		-o $@
+
+generator-mt-apertium-norm.hfst: \
+			generator-apertium-norm.hfst \
+			$(srcdir)/tagsets/apertium.relabel
+	$(HFST_SUBSTITUTE) $(HFSTFLAGS) -i $< \
+		-F $(srcdir)/tagsets/apertium.relabel 
+		-o $@
+
+generator-mt-apertium-norm.att: generator-apertium-apertium-norm.hfst
+	$(HFST_FST2FST) $(HFSTFLAGS) -w -i $< \
+		| hfst-fst2txt -o $@
 
 
 
