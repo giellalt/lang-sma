@@ -14,12 +14,15 @@ GT_TRANSFORMERS_HFST=transcriptor-clock2text-desc.hfst \
 					 transcriptor-date2text-desc.hfst \
 					 transcriptor-numbers2text-desc.hfst
 
+if WANT_APERTIUM
+
 # This is just a generic analyser. You need to add pair-specific analysers to
 # the language-specific part further down.
 APERTIUM_ANALYSERS_HFST=analyser-mt-gt-desc.hfst
 APERTIUM_GENERATORS_HFST=generator-mt-gt-norm.hfst \
 						generator-mt-apertium-norm.hfst \
 						generator-mt-apertium-norm.att
+
 endif # WANT_APERTIUM
 endif # CAN_HFST
 
