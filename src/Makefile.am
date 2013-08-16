@@ -151,10 +151,10 @@ generator-mt-apertium-norm.hfst: \
 			generator-apertium-norm.hfst \
 			$(srcdir)/tagsets/apertium.relabel
 	$(HFST_SUBSTITUTE) $(HFSTFLAGS) -i $< \
-		-F $(srcdir)/tagsets/apertium.relabel 
+		-F $(srcdir)/tagsets/apertium.relabel \
 		-o $@
 
-generator-mt-apertium-norm.att: generator-apertium-apertium-norm.hfst
+generator-mt-apertium-norm.att: generator-mt-apertium-norm.hfst
 	$(HFST_FST2FST) $(HFSTFLAGS) -w -i $< \
 		| hfst-fst2txt -o $@
 
