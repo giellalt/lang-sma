@@ -12,25 +12,27 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
-! Pronoun
-! =======
+!! !!!Pronoun
+!     =======
 
 
-!Pointing to all the subgrops, presented in this order below.
+
 LEXICON Pronoun
+!! The __@LEXNAME@__ lexicon points to all the subgrops, presented in this order below:
 
-Reciprocal ;
-Personal ;
-Demonstrative ;
-Interrogative ;
-Indefinite ;
-Reflexive ;
+Reciprocal ;    !!= * @CODE@
+Personal ;	    !!= * @CODE@
+Demonstrative ; !!= * @CODE@
+Interrogative ; !!= * @CODE@
+Indefinite ;    !!= * @CODE@
+Reflexive ;	    !!= * @CODE@
 
-! The Reciprocal pronoun
+!! !!The Reciprocal pronoun
+
 
 LEXICON Reciprocal
-sinsitniem+Pron+Recipr+Sg+Acc:sinsitniem FINAL1 ;
-sinsitniem+Pron+Recipr+Sg+Acc+Use/Sub:sinsitnem FINAL1 ;
+sinsitniem+Pron+Recipr+Sg+Acc:sinsitniem FINAL1 ;          !!= * @CODE@
+sinsitniem+Pron+Recipr+Sg+Acc+Use/Sub:sinsitnem FINAL1 ;   !! * ...
 sinsitniem+Pron+Recipr+Sg+Gen:sinsitnien FINAL1 ;
 sinsitniem+Pron+Recipr+Sg+Ill:sinsætnan FINAL1 ;
 sinsitniem+Pron+Recipr+Sg+Ela:sinsitneste FINAL1 ;
@@ -39,14 +41,16 @@ sinsitniem+Pron+Recipr+Sg+Com:sinsitnine FINAL1 ;
 sinsitniem+Pron+Recipr+Pl+Acc:sinsitnide FINAL1 ; ! Not in MMM
 
 
-! Personal pronouns
+!! !!Personal pronouns
 ! -----------------
 
-! Personal pronouns, splitting in 1st, 2nd, 3rd
+!! Personal pronouns, splitting in 1st, 2nd, 3rd
 ! - - - - - - - - - - - - - - - - - - - - - - - 
 
 LEXICON Personal
-! New lemma form, now number as baseform, due to Oahpa
+
+!! New lemma form, now number as baseform, due to Oahpa
+
 manne+Pron+Pers+Sg1+Gen:mov # ; ! Added to fill the gap, remove this or previous
 manne+Pron+Pers+Sg1:m firstperspronsg ;
 månnoeh+Pron+Pers+Du1:m firstpersprondu ;
@@ -60,32 +64,34 @@ sijjieh+Pron+Logo+Pl3:s perspronpl ;
 DIHTE ; ! this is for personal pronoun use of dïhte
 
 
-! Lexica for sg
+!! !Lexica for sg
 ! - - - - - - - 
 
-LEXICON firstperspronsg ! First pers has special consonantism
+LEXICON firstperspronsg 
+!! the __@LEXNAME@__ for first pers has special consonantism
 :anne longproncase ;
 +Ill:unnjien FINAL1 ;
 +Ill+Use/NG:unnjan FINAL1 ;
 
-LEXICON nonfirstperspronsg ! 2nd and 3rd are identical
+LEXICON nonfirstperspronsg 
+!! for __@LEXNAME@__ the 2nd and 3rd are identical
 :atne longproncase ;
 +Gen:ov FINAL1 ;
 +Ill:utnjien FINAL1 ;
 +Ill+Use/NG:utnjan FINAL1 ;
 
 
-! Lexica for du
+!! !Lexica for du
 ! - - - - - - - 
 
-LEXICON firstpersprondu
+LEXICON firstpersprondu  !!= * @CODE@
 +Nom:ånnoeh FINAL1 ;
 +Nom+Use/NG+Use/Sub:onnoej FINAL1 ;
 +Gen:onnen FINAL1 ;
 +Ill:onnese FINAL1 ;
 +Use/Sub:onne longproncase ;
 
-LEXICON nonfirstpersprondu
+LEXICON nonfirstpersprondu  !!= * @CODE@
 +Nom:åtnoeh FINAL1 ;
 +Nom+Use/NG+Use/Sub:otnoej FINAL1 ;
 +Gen:otnen FINAL1 ;
@@ -94,10 +100,10 @@ LEXICON nonfirstpersprondu
 
 
 
-! Lexica for pl
+!! !Lexica for pl
 ! - - - - - - - 
 
-LEXICON perspronpl
+LEXICON perspronpl  !!= * @CODE@
 +Nom:ijjieh FINAL1 ;
 +Nom+Use/NG:ijje FINAL1 ;
 +Acc:ijjem FINAL1 ;
@@ -109,11 +115,11 @@ LEXICON perspronpl
 +Com:ijjeX2ine FINAL1 ;
 
 
-! Common case lexica
+!! !Common case lexica
 ! - - - - - - - - - 
 
 
-LEXICON longproncase
+LEXICON longproncase  !!= * @CODE@
 +Nom: FINAL1 ;
 +Acc:m FINAL1 ;
 +Ine:sne FINAL1 ;
@@ -121,10 +127,10 @@ LEXICON longproncase
 +Com:X2ine FINAL1 ;
 
 
-
+!! !dïhte
 LEXICON DIHTE
-! this is a personal pronoun
-! demonstrative dïhte is treated below.
+!! __@LEXNAME@__  is a personal pronoun, 
+!! demonstrative dïhte is treated below.
 dïhte+Pron+Pers+Sg3+Nom:dïhte FINAL1 ; 
 dïhte+Pron+Pers+Sg3+Acc:dam FINAL1 ; 
 dïhte+Pron+Pers+Sg3+Acc+Use/NG:altemse FINAL1 ; 
@@ -159,20 +165,21 @@ dah+Pron+Pers+Pl3+Com+Use/NG:dajgujmie FINAL1 ;
 dah% guaktah+Pron+Pers+Du3+Gen:altesigan FINAL1 ; ! XXX check this
 
 
-! Demonstrative pronouns
+!! !!Demonstrative pronouns
 ! ----------------------
 
-! This is for:
-! the attributive forms of dïhte
-! all forms of the other pronouns
+!! This is for:
+!! the attributive forms of dïhte
+!! all forms of the other pronouns
 
-! The initial demonstrative lexica
+!! !The initial demonstrative lexica
 ! - - - - - - - - - - - - - - - - 
 
-LEXICON Demonstrative
-! Same as above, with exceptions in 
-! Sg Ill, Sg Ine, Sg Ela, Pl Com
-! Still open: analyse morphologically or not...
+LEXICON Demonstrative   !!= * @CODE@
+!! Same as above, with exceptions in 
+!! Sg Ill, Sg Ine, Sg Ela, Pl Com
+!! Still open: analyse morphologically or not...
+
 dïhte+Pron+Dem+Sg+Nom:dïhte FINAL1 ; 
 dïhte+Pron+Dem+Sg+Acc:dam FINAL1 ; 
 dïhte+Pron+Dem+Sg+Gen:dan FINAL1 ; 
@@ -282,7 +289,7 @@ doegkeres+Pron+Dem:doegk DAGKERES ;
 dogkeres+Pron+Dem:dogk DAGKERES ;
 
 
-LEXICON DAGKERES
+LEXICON DAGKERES    !!= * @CODE@
 +Attr:eres # ; ! Sjekk dette paradigmet, det er bygd på m-
 +Sg+Nom+Use/NG:eres FINAL1 ; ! Sub?
 +Sg+Nom:ere FINAL1 ;
@@ -303,7 +310,7 @@ LEXICON DAGKERES
 
 
 
-! Interrogative and relative pronouns
+!! !!Interrogative and relative pronouns
 ! - - - - - - - - - - - - - - - - - - 
 
 LEXICON Interrogative
@@ -377,9 +384,9 @@ gåabpetje+Pron+Interr+Sg+Ela:gåabpatjistie FINAL1 "hvilken (av to)" ;
 gåabpetje+Pron+Interr+Sg+Com:gåabpatjinie FINAL1 "hvilken (av to)" ; !?
 
 
-! This second half of the lexicon Interrogative
-! shall be identical to the first, save the tag
-! +Interr, which shall be +Rel in this second part.
+!! The second half of the lexicon Interrogative
+!! shall be identical to the first, save the tag
+!! +Interr, which shall be +Rel in this second part.
 
 gie+Pron+Rel+Sg+Nom:gie  		 FINAL1 ;
 gie+Pron+Rel+Sg+Acc:gïem 		 FINAL1 ;
@@ -484,10 +491,10 @@ LEXICON INTERR
 +Pl+Com:jgujmie     FINAL1 ;
 
 
-! Indefinite pronouns
+!! !!Indefinite pronouns
 ! -------------------
 
-LEXICON Indefinite
+LEXICON Indefinite   !!= * @CODE@
 
 abpe ind_noninfl "hele" ; !probably does not have inflection, so it was removed
 dovnesh:dovnes indcoll "alle" ; ! check this
@@ -678,7 +685,7 @@ måedtie:måedt muvhtiecase "mange" ;
 gellie:gell muvhtiecase "mange" ;
 
 naakede ind_noninfl ; ! no inflection?
-naakene:naaken naakenlex "noen, noe" ; !this most be pointed towards another lexicon due to it being three-syllabic
+naakene:naaken naakenlex "noen, noe" ; !this must be pointed towards another lexicon due to it being three-syllabic
 naakene+Use/Sub:naagen naakenlex ;
 naan ind_noninfl "noen, noe" ;
 
@@ -690,37 +697,94 @@ såemies ind_noninfl "noen, noe" ;
 
 åbpe ind_noninfl "hele" ; !probably does not have inflection, so it was removed
 
-LEXICON indeven-e
+LEXICON indeven-e !!= * @CODE@
 +Pron+Indef+Sg: indsg-e ;
 +Pron+Indef+Pl: indpl-e ;
 +Pron+Indef: indess ;
 
-LEXICON indeven-a
+LEXICON indeven-a !!= * @CODE@
 +Pron+Indef+Sg: indsg-a ;
 +Pron+Indef+Pl: indpl-a ;
 +Pron+Indef: indess ;
 
 
-!kongruensContlex
-LEXICON muvhtiecase
+!! !!kongruensContlex
+
+!! !muvhtiecase
+
+LEXICON muvhtiecase !!= * @CODE@
 +Pron+Indef+Sg: muvhtiesg ;
 +Pron+Indef+Pl: muvhtiepl ;
 
-LEXICON naakenlex
-+Pron+Indef+Sg+Nom: FINAL1 ;
+LEXICON muvhtiesg !!= * @CODE@
++Nom:ie FINAL1 ;
++Acc:ie%>m FINAL1 ;
++Gen:ie%>n FINAL1 ;
++Ela:%>este FINAL1 ; !Magga&Magga
++Ill+Attr:ie%>n # ; !utan attr også?
++Ine+Attr:%>ine # ; 
++Ine+Attr:%>ene # ; ! gellene lehkesne - på många ställen. Example in Åarjelsaemien 6 (2000:6).
++Ela+Attr:%>ide # ;
++Com:%>ine FINAL1 ;
+
+LEXICON muvhtiepl !!= * @CODE@
++Nom:ieh FINAL1 ;
++Acc:ide FINAL1 ;
++Gen:ie%>j FINAL1 ;
++Ill+Attr:ide # ;
++Ill:ide FINAL1 ;	   ! mt
++Ine:ine FINAL1 ;	   ! mt
++Ela:ijste FINAL1 ;	   ! mt
++Com:ijgujmie FINAL1 ; ! mt
+
+
+!! !naaken
+
+LEXICON naakenlex !!= * @CODE@
++Pron+Indef+Sg+Nom+Use/NG: FINAL1 ;
++Pron+Indef+Attr:e FINAL1 ; ! mt
 indodd ;
+! XXX Sjekk desse tre formene. Er det rett?
+! Ei spesiell attributtform heller enn td. 2x gujmie
++Pron+Indef+Pl+Ill+Attr:%>%^DISIMPi FINAL1 ; ! mt
++Pron+Indef+Pl+Ine+Attr:%>%^DISIMPi FINAL1 ; ! mt
++Pron+Indef+Pl+Ela+Attr:%>%^DISIMPi FINAL1 ; ! mt
 
 
-LEXICON indodd ! This lexicon cannot be removed before lexica pointing here
-! get another contlex!
+LEXICON indodd   !!= * @CODE@
+               ! This lexicon cannot be removed 
+               ! before lexica pointing here
+               ! get another contlex!
 +Pron+Indef+Sg: indsg_odd ;
 +Pron+Indef+Pl: indpl_odd ;
 +Pron+Indef: indess_odd ;
 
-LEXICON ind_noninfl
+LEXICON indsg_odd  !!= * @CODE@
++Nom:e%^DISIMP FINAL1 ;
++Acc:e%>%^DISIMPm FINAL1 ;
++Gen:e%>%^DISIMPn FINAL1 ;
++Ill:%>asse FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
++Ine:%>isnie FINAL1 ;
++Ela:%>istie FINAL1 ;
++Com:%>inie FINAL1 ;
+
+LEXICON indpl_odd  !!= * @CODE@
++Nom:%>%^DISIMPh FINAL1 ;
++Acc:%>idie FINAL1 ;
++Gen:%>%^DISIMPi FINAL1 ;
++Ill:%>idie FINAL1 ;
++Ine:%>inie FINAL1 ;
++Ela:%>ijstie FINAL1 ;
++Com:%>%^DISIMPigujmie FINAL1 ;
+
+LEXICON indess_odd  !!= * @CODE@
++Ess:%>inie FINAL1 ;
+
+
+LEXICON ind_noninfl  !!= * @CODE@
 +Pron+Indef: FINAL1 ;
 
-LEXICON indsg-e
+LEXICON indsg-e  !!= * @CODE@
 +Nom:e FINAL1 ;
 +Acc:e%>m FINAL1 ;
 +Gen:e%>n FINAL1 ;
@@ -732,7 +796,7 @@ LEXICON indsg-e
 +Ela+Attr:e%>de # ;
 +Com:%>ine FINAL1 ;
 
-LEXICON indsg-a
+LEXICON indsg-a  !!= * @CODE@
 +Nom:a FINAL1 ;
 +Acc:a%>m FINAL1 ;
 +Gen:a%>n FINAL1 ;
@@ -744,7 +808,7 @@ LEXICON indsg-a
 
 
 
-LEXICON indpl-e
+LEXICON indpl-e  !!= * @CODE@
 +Nom:%>h FINAL1 ;
 +Acc:%>ide FINAL1 ;
 +Gen:%>i FINAL1 ;
@@ -753,7 +817,7 @@ LEXICON indpl-e
 +Ela:%>ijste FINAL1 ;
 +Com:%>igujmie FINAL1 ;
 
-LEXICON indpl-a
+LEXICON indpl-a  !!= * @CODE@
 +Nom:a%>h FINAL1 ;
 !+Nom:a%>ah FINAL1 ; !XXX check 
 +Acc:%>ide FINAL1 ;
@@ -764,62 +828,22 @@ LEXICON indpl-a
 +Com:a%>jgujmie FINAL1 ;
 
 
-LEXICON indess
+LEXICON indess  !!= * @CODE@
 +Ess:%>ine FINAL1 ;
 
 
-!KongruensContLex
-LEXICON muvhtiesg
-+Nom:ie FINAL1 ;
-+Acc:ie%>m FINAL1 ;
-+Gen:ie%>n FINAL1 ;
-+Ela:%>este FINAL1 ; !Magga&Magga
-+Ill+Attr:ie%>n # ;
-+Ine+Attr:%>ine # ;
-+Ine+Attr:%>ene # ; ! gellene lehkesne - på många ställen. Example in Åarjelsaemien 6 (2000:6).
-+Ela+Attr:%>ide # ;
-+Com:%>ine FINAL1 ;
-
-LEXICON muvhtiepl
-+Nom:ieh FINAL1 ;
-+Acc:ide FINAL1 ;
-+Gen:ie%>j FINAL1 ;
-+Ill+Attr:ide # ;
-
-
-LEXICON indsg_odd
-+Nom:e%^DISIMP FINAL1 ;
-+Acc:e%>%^DISIMPm FINAL1 ;
-+Gen:e%>%^DISIMPn FINAL1 ;
-+Ill:%>asse FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-+Ine:%>isnie FINAL1 ;
-+Ela:%>istie FINAL1 ;
-+Com:%>inie FINAL1 ;
 
 
 
-
-LEXICON indpl_odd
-+Nom:%>%^DISIMPh FINAL1 ;
-+Acc:%>idie FINAL1 ;
-+Gen:%>%^DISIMPi FINAL1 ;
-+Ill:%>idie FINAL1 ;
-+Ine:%>inie FINAL1 ;
-+Ela:%>ijstie FINAL1 ;
-+Com:%>%^DISIMPigujmie FINAL1 ;
-
-LEXICON indess_odd
-+Ess:%>inie FINAL1 ;
-
-LEXICON indcoll
+LEXICON indcoll   !!= * @CODE@
 +Pron+Coll+Pl: indpl_odd ;
 
 
 
-! Reflexive pronouns
+!! !!Reflexive pronouns
 ! ------------------
 
-LEXICON Reflexive
+LEXICON Reflexive !!= * @CODE@
 
 jïjtje+Pron+Refl+Sg+Nom:jïjtje FINAL1 ;
 jïjtje+Pron+Refl+Sg+Nom+Use/NG:jeetje FINAL1 ;
@@ -837,7 +861,7 @@ jïjtje+Pron+Refl+Use/NG:jïjt OBLREFL-NONPAL2 ; !LA også denne finnes i korp
 jïjtje+Pron+Refl+Pl+Nom:jïjtjh FINAL1 ;
 jïjtje+Pron+Refl+Du+Nom:jïjtjh FINAL1 ;
 
-LEXICON OBLREFL
+LEXICON OBLREFL !!= * @CODE@
  +Acc+PxSg1:eme FINAL1 ;
  +Acc+PxSg1+Use/NG:emem FINAL1 ;
  +Acc+PxDu1:emem FINAL1 ;
@@ -927,7 +951,7 @@ LEXICON OBLREFL
 
 
 
-LEXICON OBLREFL-NONPAL
+LEXICON OBLREFL-NONPAL  !!= * @CODE@
 +Gen+PxSg3:se FINAL1 ;
 +Gen+PxPl3:sh FINAL1 ; 
 +Gen+PxPl3+Use/Sub:si FINAL1 ; 
@@ -960,5 +984,5 @@ LEXICON OBLREFL-NONPAL
 +Com+PxPl3:semissine FINAL1 ; !ÅW and HB and MMM
 +Com+PxPl3+Use/Sub:sinie FINAL1 ; !KB, ÅW and HB!! Not !
 
-LEXICON OBLREFL-NONPAL2
+LEXICON OBLREFL-NONPAL2 !!= * @CODE@
 +Ill+PxSg3:sissie FINAL1 ; !KB
