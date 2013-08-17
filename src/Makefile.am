@@ -15,14 +15,12 @@ GT_TRANSFORMERS_HFST=transcriptor-clock2text-desc.hfst \
 					 transcriptor-numbers2text-desc.hfst
 
 if WANT_APERTIUM
-
 # This is just a generic analyser. You need to add pair-specific analysers to
 # the language-specific part further down.
 APERTIUM_ANALYSERS_HFST=analyser-mt-gt-desc.hfst
 APERTIUM_GENERATORS_HFST=generator-mt-gt-norm.hfst \
 						generator-mt-apertium-norm.hfst \
 						generator-mt-apertium-norm.att
-
 endif # WANT_APERTIUM
 endif # CAN_HFST
 
@@ -67,38 +65,53 @@ endif # WANT_OAHPA
 #### analyser-%.hfst: analyser-%.tmp.hfst
 #### generator-%.hfst: generator-%.tmp.hfst
 
+##################################################################
 #### BEGIN: Add local processing instructions BELOW this line ####
+##################################################################
 
-# Add language-specific transducer targets here:
-# Xerox transducers:
+########################################################
+#### Add language-specific transducer targets here: ####
+
+#### Xerox transducers:
 if CAN_XFST
 GT_ANALYSERS_XFST+=analyser-dict-gt-desc.xfst analyser-dict-gt-norm.xfst
 GT_GENERATORS_XFST+=generator-dict-gt-norm.xfst generator-dict-gt-desc.xfst
 endif
-# HFST transducers
+
+#### HFST transducers
 if CAN_HFST
 GT_ANALYSERS_HFST+=
 GT_GENERATORS_HFST+=
 if WANT_APERTIUM
-APERTIUM_ANALYSERS_HFST+=analyser-mt-gt-desc.sma.hfst \
-						generator-mt-apertium-desc.und.att
+APERTIUM_ANALYSERS_HFST+=analyser-mt-apertium-desc.und.hfst
+APERTIUM_GENERATORS_HFST+=
 
 endif
 endif
 
+#################################################
+#### Add language-specific build rules here: ####
 
-generator-apertium-norm.sma.hfst: generator-apertium-norm.tmp.hfst \
+# Apertium-related language-specific targets:
+analyser-mt-gt-desc.und.hfst: analyser-mt-gt-desc.tmp.hfst \
 					filters/remove-Dial_L-strings.hfst \
 					filters/remove-dialect-tags.hfst
-	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -1 $< \
+	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
 			-1 filters/remove-Dial_L-strings.hfst \
 		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
 		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
 			-1 filters/remove-dialect-tags.hfst \
 		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
-		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
+		| $(HFST_INVERT) \
 		-o $@
 
+# And also for the generator:
+generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
+				filters/remove-test-tags.hfst
+	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F $< \
+			-1 filters/remove-test-tags.hfst \
+			| $(HFST_FST2FST) $(HFSTFLAGS) -t \
+			-o $@
 
 # The SMA morphology has some extra tags used for testing that we want to
 # remove.
@@ -133,7 +146,9 @@ generator-%.xfst: generator-%.tmp.xfst \
 		 save stack $@\n\
 		 quit\n" | $(XFST) -q
 
+##################################################################
 #### END: Add local processing instructions ABOVE this line ######
+##################################################################
 
 #### HFST transducer fallback target:
 #### - inversion is needed FOR THE ANALYSER because the hfst model is upside
