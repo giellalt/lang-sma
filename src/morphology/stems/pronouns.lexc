@@ -490,17 +490,18 @@ LEXICON INTERR
 LEXICON Indefinite
 
 abpe ind_noninfl "hele" ; !probably does not have inflection, so it was removed
-
-!dovne:dovn indeven-e "helt, alt" ; ! gaajhke dovne alt sammen, 
 dovnesh:dovnes indcoll "alle" ; ! check this
-
 eatjah:eatj indeven-a "annen, de andre" ;
 eatjah:eatj indeven-e "annen, de andre" ; 
 
 fïereguhte:fïereguht indeven-e "hver og en" ;
+fïereguhte+Use/NG:fïere-guht indeven-e "hver og en" ; ! MMM
+feareguhte:feareguht indeven-e "hver og en" ; ! MMM
+feareguhte+Use/NG:feare-guht indeven-e "hver og en" ; ! MMM
 
 fïerhte:fïerht indeven-e "hver, hverthver" ;
 
+gaajhke+Pron+Indef+Attr:gaajhke # ; ! for MT, like sme. 
 gaajhke:gaajhk indeven-e "alle" ;
 gaajhke+Pron+Indef+Sg+Ela+Attr:gaajhkede # "alle" ;
 gaajhke+Pron+Indef+Sg+Ine+Attr:gaajhkene # "alle" ;
@@ -517,28 +518,92 @@ giege+Pron+Indef+Sg+Acc:gïemge # ;
 giege+Pron+Indef+Sg+Acc+Use/NG:geamge # ;
 giege+Pron+Indef+Sg+Gen:gïenge # ;
 giege+Pron+Indef+Sg+Gen+Use/NG:geange # ;
-giege+Pron+Indef+Sg+Ill:gïese FINAL1 ;
-giege+Pron+Indef+Sg+Ill+Use/NG:gease FINAL1 ;
+giege+Pron+Indef+Sg+Ill:gïesege FINAL1 ;
+giege+Pron+Indef+Sg+Ill+Use/NG:geasege FINAL1 ;
 giege+Pron+Indef+Sg+Ine:giesniege 		FINAL1 ;
 giege+Pron+Indef+Sg+Ine+Attr:gienniege FINAL1 ;
 giege+Pron+Indef+Sg+Ela:giestiege        FINAL1 ;
 giege+Pron+Indef+Sg+Ela+Attr:giehtiege        FINAL1 ;
 giege+Pron+Indef+Sg+Com:giejniege        FINAL1 ;
 
-giege+Pron+Indef+Pl+Nom:gïeh FINAL1 ;
-giege+Pron+Indef+Pl+Nom+Use/NG:geah FINAL1 ;
+giege+Pron+Indef+Pl+Nom:gïehge FINAL1 ;
+giege+Pron+Indef+Pl+Nom+Use/NG:geahge FINAL1 ;
 giege+Pron+Indef+Pl+Gen:giejge           FINAL1 ;
 giege+Pron+Indef+Pl+Gen+Use/NG:geajge FINAL1 ;
 giege+Pron+Indef+Pl+Acc:giejtiege        FINAL1 ;
 giege+Pron+Indef+Pl+Ill:giejtiege        FINAL1 ;
 giege+Pron+Indef+Pl+Ine:giejniege        FINAL1 ;
 giege+Pron+Indef+Pl+Ela:giejstiege       FINAL1 ;
-giege+Pron+Indef+Pl+Com:geajgujmie FINAL1 ;
+giege+Pron+Indef+Pl+Com:geajgujmiege FINAL1 ;
+
+
+! The following paradigm is for mt use, but perhaps needed elsewhere?
+gïehk+Pron+Indef+Sg+Nom:gïehk # ;   
+gïehk+Pron+Indef+Sg+Acc:gïemhk # ;
+gïehk+Pron+Indef+Sg+Acc+Use/NG:geamhk # ;
+gïehk+Pron+Indef+Sg+Gen:gïenhk # ;
+gïehk+Pron+Indef+Sg+Gen+Use/NG:geanhk # ;
+gïehk+Pron+Indef+Sg+Ill:gïesehk FINAL1 ;
+gïehk+Pron+Indef+Sg+Ill+Use/NG:geasehk FINAL1 ;
+gïehk+Pron+Indef+Sg+Ine:giesniehk 		FINAL1 ;
+gïehk+Pron+Indef+Sg+Ine+Attr:gienniehk FINAL1 ;
+gïehk+Pron+Indef+Sg+Ela:giestiehk        FINAL1 ;
+gïehk+Pron+Indef+Sg+Ela+Attr:giehtiehk        FINAL1 ;
+gïehk+Pron+Indef+Sg+Com:giejniehk        FINAL1 ;
+
+gïehk+Pron+Indef+Pl+Nom:gïehk FINAL1 ;
+gïehk+Pron+Indef+Pl+Nom+Use/NG:geahk FINAL1 ;
+gïehk+Pron+Indef+Pl+Gen:giejhk           FINAL1 ;
+gïehk+Pron+Indef+Pl+Gen+Use/NG:geajhk FINAL1 ;
+gïehk+Pron+Indef+Pl+Acc:giejtiehk        FINAL1 ;
+gïehk+Pron+Indef+Pl+Ill:giejtiehk        FINAL1 ;
+gïehk+Pron+Indef+Pl+Ine:giejniehk        FINAL1 ;
+gïehk+Pron+Indef+Pl+Ela:giejstiehk       FINAL1 ;
+gïehk+Pron+Indef+Pl+Com:geajgujmiehk FINAL1 ;
+
+
+! maamkh -- the lemma 'mijkh' is unattested, but maamkh is Acc
+! The whole paradigm should be looked into
+mijkh+Pron+Rel+Sg+Nom:mijkh FINAL1 ;
+mijkh+Pron+Rel+Sg+Acc:maamkh FINAL1 ;
+mijkh+Pron+Rel+Sg+Gen:mankh FINAL1 ;
+mijkh+Pron+Rel+Sg+Ill:mïssekh FINAL1 ;
+mijkh+Pron+Rel+Sg+Ine:mesniekh FINAL1 ;
+mijkh+Pron+Rel+Sg+Ela:mestiekh FINAL1 ;
+mijkh+Pron+Rel+Sg+Com:mejniekh FINAL1 ;
+mijkh+Pron+Rel+Ess:mannasiniekh FINAL1 ;
+mijkh+Pron+Rel+Pl+Nom:mahkh FINAL1 ;
+mijkh+Pron+Rel+Pl+Acc:mejtiekh FINAL1 ;
+mijkh+Pron+Rel+Pl+Gen:majkh FINAL1 ;
+mijkh+Pron+Rel+Pl+Ill:mejtiekh FINAL1 ;
+mijkh+Pron+Rel+Pl+Ine:mejniekh FINAL1 ;
+mijkh+Pron+Rel+Pl+Ela:mejstiekh FINAL1 ;
+mijkh+Pron+Rel+Pl+Com:mejgujmiekh FINAL1 ;
 
 
 gille:gill indeven-e "noen få" ;
 gillesh:gilles indcoll "noen få sammen" ;
-guhtegh+Pron+Indef+Pl+Nom:guhtegh FINAL1 ;
+
+
+!Guhtegh-Sg
+guhtegh+Pron+Rel+Sg+Nom:guhtegh FINAL1 ;
+guhtegh+Pron+Rel+Sg+Acc:guhtemgh FINAL1 ;
+guhtegh+Pron+Rel+Sg+Gen:guhtengh FINAL1 ;
+guhtegh+Pron+Rel+Sg+Ill:guhtesegh FINAL1 ;
+guhtegh+Pron+Rel+Sg+Ine:guhtesnegh FINAL1 ;
+guhtegh+Pron+Rel+Sg+Ine+Attr:guhtene # ;
+guhtegh+Pron+Rel+Sg+Ela:guhtestegh FINAL1 ;
+guhtegh+Pron+Rel+Sg+Ela+Attr:guhtedegh # ;
+!Guhtegh-Pl
+guhtegh+Pron+Rel+Pl+Nom:guhthgh FINAL1 ;
+guhtegh+Pron+Rel+Pl+Acc:guhtidegh FINAL1 ;
+guhtegh+Pron+Rel+Pl+Gen:guhtigh FINAL1 ;
+guhtegh+Pron+Rel+Pl+Ill:guhtidegh FINAL1 ;
+guhtegh+Pron+Rel+Pl+Ine:guhtinegh FINAL1 ;
+guhtegh+Pron+Rel+Pl+Ela:guhtijstegh FINAL1 ;
+guhtegh+Pron+Rel+Pl+Com:guhtigujmiegh FINAL1 ; !? !
+
+
 
 gåabpatjahkh+Pron+Indef+Sg+Ela+Attr:gåabpatjahke%>de # "både" ;
 gåabpatjahkh:gåabpatjahk indeven-e "både" ;
