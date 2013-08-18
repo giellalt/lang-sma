@@ -121,7 +121,7 @@ analyser-%.hfst: analyser-%.tmp.hfst \
 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
 			-1 filters/remove-test-tags.hfst \
 		| $(HFST_INVERT) \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+		| $(HFST_FST2FST) $(HFST_FLAGS) -t -o $@
 
 analyser-%.xfst: analyser-%.tmp.xfst \
 				filters/remove-test-tags.xfst
