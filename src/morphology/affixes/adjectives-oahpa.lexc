@@ -476,6 +476,36 @@ LEXICON ENTE  !LOAN
 !+Use/Sub:aansk e_ES_EVEN  ;
 
 
+LEXICON LES_LASSE_ie !derivasjon av verb
+LES_LASSE_NOM_ie ;
+LES_LASSE_OBL_ie ;
+
+LEXICON LES_LASSE_NOM_ie
+         :eles ATTR_0 ; ! should redirect to case paradigm
++A+Sg+Nom:eles          FINAL1 ;
++A+Pl+Nom:elass%>h        FINAL1 ;
++A+Pl+Gen:elass%> IGENSUFF ;
++A+SgNomCmp:eles    R ;
+
+
+LEXICON LES_LASSE_OBL_ie
++A+Sg+Nom:alasse       FINAL1 ;
++A+Sg+Acc:alasse%>m       FINAL1 ;
++A+Sg+Gen:alasse%>n       FINAL1 ;
++A+Sg+Ill:alasse%>se      FINAL1 ;
++A+Sg+Ine:alasse%>sne     FINAL1 ;
++A+Sg+Ela:alasse%>ste     FINAL1 ;
++A+Sg+Com:alass%>ine      FINAL1 ;
++A+Pl+Acc:al%>ass%>ide      FINAL1 ;
++A+Pl+Ill:al%>ass%>ide      FINAL1 ;
++A+Pl+Ine:al%>ass%>ine      FINAL1 ;
++A+Pl+Ela:al%>ass%>ijste    FINAL1 ;
++A+Pl+Com:al%>ass%>igujmie  FINAL1 ;
++A:alass            EVEN_ESS ;
++A+SgGenCmp:alasse%>n R ;
++A+PlGenCmp:alass%>i  R ;
+
+
 LEXICON e_ES_EVEN 
  :e    ATTR_0 ;
  :e    PRED_S ;
