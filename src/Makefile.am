@@ -96,12 +96,16 @@ endif
 # Apertium-related language-specific targets:
 analyser-mt-gt-desc.und.hfst: analyser-mt-gt-desc.tmp.hfst \
 					filters/remove-Dial_L-strings.hfst \
-					filters/remove-dialect-tags.hfst
+					filters/remove-dialect-tags.hfst \
+					filters/remove-test-tags.hfst
 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
 			-1 filters/remove-Dial_L-strings.hfst \
 		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
 		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
 			-1 filters/remove-dialect-tags.hfst \
+		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
+		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
+			-1 filters/remove-test-tags.hfst \
 		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
 		| $(HFST_INVERT) \
 		-o $@
