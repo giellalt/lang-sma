@@ -308,8 +308,10 @@ LEXICON IJVEadj
 :ïjv e_E_EVEN  ;
 +Use/Sub:iv e_E_EVEN  ;
 
+
+
 LEXICON LES ! Should contain only loanwords (?)
-:%>%^DISIMPes ATTR_0 ; ! should redirect to case paradigm
++A+Attr:es ATTR_0 ; ! should redirect to case paradigm
 +A+Sg+Nom:%>%^DISIMPes          FINAL1 ;
 +A+Sg+Acc:asse%>m       FINAL1 ;
 +A+Sg+Gen:asse%>n       FINAL1 ;
@@ -325,9 +327,9 @@ LEXICON LES ! Should contain only loanwords (?)
 +A+Pl+Ela:%>ass%>ijste    FINAL1 ;
 +A+Pl+Com:%>ass%>igujmie  FINAL1 ;
 +A:ass            EVEN_ESS ;
-+A+SgNomCmp:%>%^DISIMPes    R ;
-+A+SgGenCmp:asse%>n R ;
-+A+PlGenCmp:ass%>i  R ;
+!+A+SgNomCmp:%>%^DISIMPes    R ; !! trond
+!+A+SgGenCmp:asse%>n R ;		 !! trond
+!+A+PlGenCmp:ass%>i  R ;		 !! trond
 
 
 LEXICON IJAALE_A_LOAN
