@@ -304,8 +304,8 @@ PRED_0 ;
     ! no case and comparation ?
 
 LEXICON IJVEadj
-:ijv e_E_EVEN  ; 
-:ïjv e_E_EVEN  ;
+ +Use/NG:ijv e_E_EVEN  ; 
+        :ïjv e_E_EVEN  ;
 +Use/Sub:iv e_E_EVEN  ;
 
 
@@ -358,11 +358,11 @@ LEXICON AALEFORMS
 ! The new solution analyses the same wordforms as before,
 ! but operates with a single lemma spinaale etc.
 ! Todo: look into eCASE / ODDCASE -variation (double case paradigm?)
-  :e   ATTR_0 ; ! vitaale
-  :e   ATTR_S ;
-       eCASE ;
-  :e   PRED_S ; 
-  :e   EVENCOMP ; 
+       :e ATTR_0 ; ! vitaale
++Use/NG:e ATTR_S ;
+          eCASE ;
+       :e PRED_S ; 
+      :e  EVENCOMP ; 
   
 LEXICON oe_OE_EVEN 
   :oe   ATTR_0 ;
@@ -1638,8 +1638,8 @@ LEXICON LAAKAN
 +Der1+Der/laakan+Use/Sub:-laakan adv ;
 
 LEXICON LEEJNES
- :#leejnes ATTR_0 ;
- :#leejns ATTR_0 ;
+         :#leejnes ATTR_0 ;
+  +Use/NG:#leejns ATTR_0 ;
  +Use/Sub:-leejnes ATTR_0 ;
  +Use/Sub:-leejns ATTR_0 ;
  
