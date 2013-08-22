@@ -23,11 +23,11 @@ ADJECTIVES=
 if WANT_OAHPA
 ADJECTIVES+=\
 			affixes/adjectives-oahpa.lexc  \
-			stems/adjectives-oahpa.lexc    \
+			stems/adjectives-oahpa.lexc   
 else
 ADJECTIVES+=\
 			affixes/adjectives.lexc  \
-			stems/adjectives.lexc    \
+			stems/adjectives.lexc   
 endif # WANT_OAHPA
 
 # Set this to name of lexc file containing Multichar_Symbols and LEXICON Root
