@@ -18,18 +18,16 @@
 # Temporary solution to let sma-oahpa have stable adjectives and nouns while
 # Maja is working her way through them.
 
-NOMINALS=
+ADJECTIVES=
 
 if WANT_OAHPA
-NOMINALS+=\
+ADJECTIVES+=\
 			affixes/adjectives-oahpa.lexc  \
 			stems/adjectives-oahpa.lexc    \
-			stems/nouns-oahpa.lexc
 else
-NOMINALS+=\
+ADJECTIVES+=\
 			affixes/adjectives.lexc  \
 			stems/adjectives.lexc    \
-			stems/nouns.lexc
 endif # WANT_OAHPA
 
 # Set this to name of lexc file containing Multichar_Symbols and LEXICON Root
@@ -48,13 +46,14 @@ GT_LEXC_SRCS=\
 			stems/adverbs.lexc       \
 			stems/conjunctions.lexc  \
 			stems/interjections.lexc \
+			stems/nouns.lexc
 			stems/numerals.lexc      \
 			stems/particles.lexc     \
 			stems/pronouns.lexc      \
 			stems/punctuation.lexc   \
 			stems/subjunctions.lexc  \
 			stems/verbs.lexc         \
-			$(NOMINALS)
+			$(ADJECTIVES)
 
 # Set this to the names of all generated lexc files, if any
 GENERATED_LEXC_SRCS=$(srcdir)/stems/smi-$(GTLANG)-propernouns.lexc
