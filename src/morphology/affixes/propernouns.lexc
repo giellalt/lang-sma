@@ -12,17 +12,17 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
-! Proper nouns morphology
+!! !!!Proper nouns morphology
 ! =======================
 
-! Table of content
-! ----------------
-! Continuation lexica
-! Personal names
-!  First names
-!  Surnames
-! Place names
-! ----------------
+!! !!Table of content
+!  ----------------
+!! * Continuation lexica
+!! * Personal names
+!! ** First names
+!! ** Surnames
+!! * Place names
+!  ----------------
 
 
 ! Continuation lexica
@@ -229,13 +229,6 @@ LEXICON ACCRA_PLC-ORG
  +Sg+Ine:%^PLCDISIMP%>sne     FINAL1 ;
  +Sg+Ela:%^PLCDISIMP%>ste     FINAL1 ;
  +Sg+Com:%>jne      FINAL1 ;
-! +Pl+Nom:%>h       FINAL1 ;
-! +Pl+Acc:%>jde      FINAL1 ;
-! +Pl+Gen:%>j       FINAL1 ;
-! +Pl+Ill:%>jde      FINAL1 ;
-! +Pl+Ine:%>jne      FINAL1 ;
-! +Pl+Ela:%>jste    FINAL1 ;
-! +Pl+Com:%>jgujmie  FINAL1 ;
  +Ess:%>jne         FINAL1 ; !OBS ai:i
  +Attr: FINAL1 ;
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
@@ -272,13 +265,6 @@ LEXICON VNAME_PLC-ORG
  +Sg+Ine:%>sne     FINAL1 ;
  +Sg+Ela:%>ste     FINAL1 ;
  +Sg+Com:%>jne      FINAL1 ;
-! +Pl+Nom:%>h       FINAL1 ;
-! +Pl+Acc:%>jde      FINAL1 ;
-! +Pl+Gen:%>j       FINAL1 ;
-! +Pl+Ill:%>jde      FINAL1 ;
-! +Pl+Ine:%>jne      FINAL1 ;
-! +Pl+Ela:%>jste    FINAL1 ;
-! +Pl+Com:%>jgujmie  FINAL1 ;
  +Ess:%>jne         FINAL1 ;
  +Attr: FINAL1 ;
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
@@ -291,23 +277,23 @@ LEXICON NYSTØ-org ! organisasjon
 +N+Prop+Org: NYSTØ_PLC-ORG ;
 
 LEXICON NYSTØ-femsur
-+N+Prop+Sur: NYSTØ ;
-+N+Prop+Fem: NYSTØ ;
++N+Prop+Sur: NYSTØDECL ;
++N+Prop+Fem: NYSTØDECL ;
 
 LEXICON K
 FINAL1 ;
 
 LEXICON NYSTØ-sur ! etternavn
-+N+Prop+Sur: NYSTØ ;
++N+Prop+Sur: NYSTØDECL ;
 
 LEXICON NYSTØ-obj ! objekt, pluto, jupiter
-+N+Prop+Obj: NYSTØ ;
++N+Prop+Obj: NYSTØDECL ;
 
 LEXICON NYSTØ-mal ! John
-+N+Prop+Mal: NYSTØ ;
++N+Prop+Mal: NYSTØDECL ;
 
 LEXICON NYSTØ-fem ! kvinnenavn
-+N+Prop+Fem: NYSTØ ;
++N+Prop+Fem: NYSTØDECL ;
 
 LEXICON NYSTØ-LOAN-org ! kvinnenavn
 +N+Prop+Org: NYSTØ-LOAN ;
@@ -315,17 +301,21 @@ LEXICON NYSTØ-LOAN-org ! kvinnenavn
 LEXICON NYSTØ-LOAN-plc ! kvinnenavn
 +N+Prop+Plc: NYSTØ-LOAN ;
 
+LEXICON NYSTØ ! Utan semantisk tag
++N+Prop: NYSTØDECL ;
+
+
 !LEXICON NYSTØ-ani
-!+N+Prop+Ani: NYSTØ ;
+!+N+Prop+Ani: NYSTØDECL ;
 
 LEXICON NYSTØ-LOAN
-!+Use/Sub: NYSTØ ; ! must evt. be +Use/NotSpeller etc.
+!+Use/Sub: NYSTØDECL ; ! must evt. be +Use/NotSpeller etc.
 !+Sg+Nom:          FINAL1 ; ! must evt. be +Use/NotSpeller etc.
- NYSTØ ;
+ NYSTØDECL ;
 
 
 
-LEXICON NYSTØ ! Names ending in stressed vowel, typically scand. compounds 
+LEXICON NYSTØDECL ! Names ending in stressed vowel, typically scand. compounds 
 +Attr: FINAL1 ;
         RHyph ;
 +Pl: NIEJTE_PL ;
@@ -344,44 +334,6 @@ LEXICON NYSTØ_PLC-ORG ! Names ending in stressed vowel, typically scand. compou
 LEXICON INAME-plc
 +N+Prop+Plc: INAME_PLC-ORG ;
 
-!LEXICON INAME-org
-!+N+Prop+Org: INAME_PLC-ORG ;
-!
-!LEXICON INAME-sur
-!+N+Prop+Sur: INAME ;
-
-!LEXICON INAME-ani
-!+N+Prop+Ani: INAME ;
-
-!LEXICON INAME-obj
-!+N+Prop+Obj: INAME ;
-
-!LEXICON INAME-mal
-!+N+Prop+Mal: INAME ;
-
-!LEXICON INAME-fem
-!+N+Prop+Fem: INAME ;
-
-
-!LEXICON INAME ! Names ending in stressless vowel
-! +Sg+Nom:i          FINAL1 ;
-! :i                  RHyph ;
-! +Sg+Acc:i%>m       FINAL1 ;
-! +Sg+Gen:i%>n       FINAL1 ;
-! +Sg+Ill:e%>se      FINAL1 ;
-! +Sg+Ine:e%>sne     FINAL1 ;
-! +Sg+Ela:e%>ste     FINAL1 ;
-! +Sg+Com:%>ine      FINAL1 ;
-! +Pl+Nom:i%>h       FINAL1 ;
-! +Pl+Acc:%>ide      FINAL1 ;
-! +Pl+Gen:%>ij       FINAL1 ;
-! +Pl+Ill:%>ide      FINAL1 ;
-! +Pl+Ine:%>ine      FINAL1 ;
-! +Pl+Ela:%>ijste    FINAL1 ;
-! +Pl+Com:%>igujmie  FINAL1 ;
-! +Ess:%>ine         FINAL1 ;
-! +Attr:i FINAL1 ;
- 
  
 LEXICON LONDON-atr
 +N+Prop+Attr: FINAL1 ;
@@ -589,61 +541,38 @@ LEXICON DUBAI-obj
 
 
 LEXICON PIPPI-org
-+N+Prop+Org: RITCHIE-plc ;
++N+Prop+Org: ACCRA ;
 
 LEXICON PIPPI-mal
-+N+Prop+Mal: RITCHIE-mal ;
++N+Prop+Mal: ACCRA ;
 
 LEXICON PIPPI-fem
-+N+Prop+Fem: RITCHIE-fem ;
++N+Prop+Fem: ACCRA ;
 
 LEXICON PIPPI-malfem
-+N+Prop+Mal: RITCHIE-malfem ;
-+N+Prop+Fem: RITCHIE-malfem ;
++N+Prop+Mal: ACCRA ;
++N+Prop+Fem: ACCRA ;
 
 LEXICON PIPPI-femsur
-+N+Prop+Fem: RITCHIE-femsur ;
-+N+Prop+Sur: RITCHIE-femsur ;
++N+Prop+Fem: ACCRA ;
++N+Prop+Sur: ACCRA ;
 
 LEXICON PIPPI-sur
-+N+Prop+Sur: RITCHIE-sur ;
++N+Prop+Sur: ACCRA ;
 
 LEXICON PIPPI-obj
-+N+Prop+Obj: RITCHIE-obj ;
++N+Prop+Obj: ACCRA ;
 
 LEXICON PIPPI-ani
-+N+Prop+Ani: RITCHIE-ani ;
++N+Prop+Ani: ACCRA ;
 
 LEXICON PIPPI-plc
-+N+Prop+Plc: RITCHIE-plc ;
++N+Prop+Plc: ACCRA ;
 
 LEXICON PIPPI-LOAN-plc
 +N+Prop+Plc+Sg+Nom: FINAL1 ;
 +N+Prop+Plc:           RHyph ;
 
-!LEXICON MAKI-org
-!+N+Prop+Org: RITCHIE-plc ;
-!+N+Prop+Org: PN_I_FINSK-plc ;
-
-!LEXICON MAKI-mal
-!+N+Prop+Mal: RITCHIE-mal ;
-!+N+Prop+Mal: PN_I_FINSK-mal ;
-
-!LEXICON MAKI-fem
-!+N+Prop+Fem: RITCHIE-fem ;
-!+N+Prop+Fem: PN_I_FINSK-fem ;
-
-!LEXICON MAKI-malfem
-!+N+Prop+Mal: RITCHIE-malfem ;
-!+N+Prop+Fem: RITCHIE-malfem ;
-!+N+Prop+Mal: PN_I_FINSK-malfem ;
-!+N+Prop+Fem: PN_I_FINSK-malfem ;
-
-!LEXICON MAKI-femsur
-!+N+Prop+Sur: RITCHIE-femsur ;
-!+N+Prop+Fem: RITCHIE-femsur ;
-!+N+Prop+Sur: PN_I_FINSK-femsur ;
-!+N+Prop+Fem: PN_I_FINSK-femsur ;
 
 LEXICON MAKI-sur
 +N+Prop+Sur: RITCHIE-sur ;
@@ -671,12 +600,6 @@ LEXICON GATA-plc
 :gat SNAME_NIEJTE-plc ;
 
 
-!LEXICON ACCRA-plc
-!:%^PLCDISIMP VNAME-plc ;
-!
-!LEXICON ACCRA-obj
-!:%^PLCDISIMP VNAME-obj ;
-
 LEXICON ACCRA-LOAN-obj
 +N+Prop+Obj+Sg+Nom:%^PLCDISIMP FINAL1 ;
 +N+Prop+Obj:%^PLCDISIMP           RHyph ;
@@ -694,20 +617,6 @@ LEXICON ACCRA-objplc
  ACCRA-obj ;
  ACCRA-plc ;
 
-!LEXICON ACCRA-org
-!:%^PLCDISIMP VNAME-org ;
-!
-!LEXICON ACCRA-sur
-!:%^PLCDISIMP VNAME-sur ;
-!
-!LEXICON ACCRA-mal
-!:%^PLCDISIMP VNAME-mal ;
-!
-!LEXICON ACCRA-fem
-!:%^PLCDISIMP VNAME-fem ;
-!
-!LEXICON ACCRA-ani
-!:%^PLCDISIMP VNAME-fem ;
 
 LEXICON ACCRA-femsur
  ACCRA-fem ;
@@ -737,13 +646,6 @@ LEXICON INAME_PLC-ORG ! Names ending in stressless vowel
  +Sg+Ine:e%>sne     FINAL1 ;
  +Sg+Ela:e%>ste     FINAL1 ;
  +Sg+Com:%>ine      FINAL1 ;
-! +Pl+Nom:i%>h       FINAL1 ;
-! +Pl+Acc:%>ide      FINAL1 ;
-! +Pl+Gen:%>ij       FINAL1 ;
-! +Pl+Ill:%>ide      FINAL1 ;
-! +Pl+Ine:%>ine      FINAL1 ;
-! +Pl+Ela:%>ijste    FINAL1 ;
-! +Pl+Com:%>igujmie  FINAL1 ;
  +Ess:%>ine         FINAL1 ;
  +Attr:i FINAL1 ;
 
@@ -1089,6 +991,7 @@ LEXICON RITCHIE ! Ritchie:Ritchijasse
 +Sg+Com:ij%>inie            FINAL1 ;
 +Pl:ij N_ODD_PL ;
 :ij    N_ODD_ESS ;
+
 !+Attr:ije%^DISIMP FINAL1 ;
 
 
