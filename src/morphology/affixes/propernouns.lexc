@@ -81,10 +81,10 @@ LEXICON ERVASTI ! Names ending in stressless vowel
 
 LEXICON ERVASTI_PLC-ORG ! Names ending in stressless vowel
 +Sg: N_ODD_SG ;
-:e%^DISIMP         RHyph ;
+         RHyph ;
 !+Pl: N_ODD_PL ;
    N_ODD_ESS ;
-+Attr:e%^DISIMP FINAL1 ;
++Attr: FINAL1 ;
 
 
 LEXICON ERVASTI_NO_DISIMPH-mal
@@ -118,10 +118,10 @@ LEXICON ERVASTI_NO_DISIMPH ! Names ending in stressless vowel
 
 LEXICON ERVASTI_NO_DISIMPH_PLC-ORG ! Names ending in stressless vowel
 +Sg: N_ODD_SG_NO_DISIMPH ;
-:e         RHyph ;
+        RHyph ;
 !+Pl: N_ODD_PL_NO_DISIMPH ;
     N_ODD_ESS ;
-+Attr:e FINAL1 ;
++Attr: FINAL1 ;
 
 
 LEXICON N_ODD_SG_NO_DISIMPH
@@ -461,8 +461,8 @@ LEXICON BERN-plc
 
 
 LEXICON RONDANE-LOAN
-+N+Prop+Plc+Sg+Nom:e FINAL1 ;
-+N+Prop+Plc:e           RHyph ;
++N+Prop+Plc+Sg+Nom: FINAL1 ;
++N+Prop+Plc:           RHyph ;
 
 LEXICON RONDANE-sur
 ERVASTI-sur ;
@@ -475,8 +475,8 @@ LEXICON RONDANE-org
 ERVASTI-org ;
 
 LEXICON RONDANE-SG-LOAN
-+N+Prop+Plc+Sg+Nom:e%^DISIMP FINAL1 ;
-+N+Prop+Plc:e%^DISIMP         RHyph ;
++N+Prop+Plc+Sg+Nom: FINAL1 ;
++N+Prop+Plc:         RHyph ;
 
 LEXICON RONDANE-mal
 ERVASTI-mal ;
@@ -575,7 +575,7 @@ LEXICON PIPPI-LOAN-plc
 
 
 LEXICON MAKI-sur
-+N+Prop+Sur: RITCHIE-sur ;
++N+Prop+Sur+Use/NG: RITCHIE-sur ;
 +N+Prop+Sur: PN_I_FINSK-sur ;
 
 !LEXICON MAKI-obj
@@ -588,7 +588,7 @@ LEXICON MAKI-sur
 
 LEXICON MAKI-plc
 +N+Prop+Plc: PN_I_FINSK-plc ;
-+N+Prop+Plc: RITCHIE-plc ;
++N+Prop+Plc+Use/NG: RITCHIE-plc ;
 
 LEXICON MAKI-LOAN-plc
 +N+Prop+Plc+Sg+Nom: FINAL1 ;
@@ -601,15 +601,15 @@ LEXICON GATA-plc
 
 
 LEXICON ACCRA-LOAN-obj
-+N+Prop+Obj+Sg+Nom:%^PLCDISIMP FINAL1 ;
++N+Prop+Obj+Sg+Nom: FINAL1 ;
 +N+Prop+Obj:%^PLCDISIMP           RHyph ;
 
 LEXICON ACCRA-LOAN-plc
-+N+Prop+Plc+Sg+Nom:%^PLCDISIMP FINAL1 ;
++N+Prop+Plc+Sg+Nom: FINAL1 ;
 +N+Prop+Plc:%^PLCDISIMP           RHyph ;
 
 LEXICON ACCRA-LOAN-org
-+N+Prop+Org+Sg+Nom:%^PLCDISIMP FINAL1 ;
++N+Prop+Org+Sg+Nom: FINAL1 ;
 +N+Prop+Org:%^PLCDISIMP           RHyph ;
 
 
@@ -1010,20 +1010,20 @@ LEXICON RITCHIE ! Ritchie:Ritchijasse
 
 
 LEXICON PN_IE-plc
-+N+Prop+Plc: PN_IE_plcorg ;
++N+Prop+Plc: PN_IE ;
 
 LEXICON PN_IE-sur
 +N+Prop+Sur: PN_IE ;
 
 LEXICON PN_IE-org
-+N+Prop+Org: PN_IE_plcorg ;
++N+Prop+Org: PN_IE ;
 
 LEXICON PN_IE-ani
 +N+Prop+Ani: PN_IE ;
 
-!LEXICON PN_IE-plcorg
-!+N+Prop+Plc: PN_IE_plcorg ;
-!+N+Prop+Org: PN_IE_plcorg ;
+LEXICON PN_IE-plcorg
++N+Prop+Plc: PN_IE ;
++N+Prop+Org: PN_IE ;
 
 
 ! Even syllable Sámi names:
@@ -1053,35 +1053,35 @@ LEXICON PN_I_FINSK
 LEXICON PN_I_FINSK-sur
 +N+Prop+Sur: PN_I_FINSK ;
 
-!LEXICON PN_I_FINSK-mal
-!+N+Prop+Sur: PN_I_FINSK ;
-!
-!LEXICON PN_I_FINSK-fem
-!+N+Prop+Sur: PN_I_FINSK ;
+LEXICON PN_I_FINSK-mal
++N+Prop+Mal: PN_I_FINSK ;
 
-!LEXICON PN_I_FINSK-org
-!+N+Prop+Org: PN_I_FINSK ;
+LEXICON PN_I_FINSK-fem
++N+Prop+Fem: PN_I_FINSK ;
 
-LEXICON PN_I_FINSK-plc
+LEXICON PN_I_FINSK-org
 +N+Prop+Org: PN_I_FINSK ;
 
-!LEXICON PN_I_FINSK-ani
-!+N+Prop+Ani: PN_I_FINSK ;
-!
-!LEXICON PN_I_FINSK-obj
-!+N+Prop+Obj: PN_I_FINSK ;
+LEXICON PN_I_FINSK-plc
++N+Prop+Plc: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-ani
++N+Prop+Ani: PN_I_FINSK ;
+
+LEXICON PN_I_FINSK-obj
++N+Prop+Obj: PN_I_FINSK ;
 
 LEXICON PN_I_FINSK-plcorg
 +N+Prop+Plc: PN_I_FINSK ;
 +N+Prop+Org: PN_I_FINSK ;
 
-!LEXICON PN_I_FINSK-malfem
-!+N+Prop+Mal: PN_I_FINSK ;
-!+N+Prop+Fem: PN_I_FINSK ;
+LEXICON PN_I_FINSK-malfem
++N+Prop+Mal: PN_I_FINSK ;
++N+Prop+Fem: PN_I_FINSK ;
 
-!LEXICON PN_I_FINSK-femsur
-!+N+Prop+Sur: PN_I_FINSK ;
-!+N+Prop+Fem: PN_I_FINSK ;
+LEXICON PN_I_FINSK-femsur
++N+Prop+Sur: PN_I_FINSK ;
++N+Prop+Fem: PN_I_FINSK ;
 
 
 LEXICON PN_IE_plcorg ! as N_IE, but with Prop tag
