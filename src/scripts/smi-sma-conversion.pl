@@ -18,15 +18,25 @@ while(<>) {
 	s/HAWAII/ACCRA/g ;
 	s/SKANIK/SULLOT/g ;
 
-	# SME escape char deletion:
+	s/h9/h/g ;
+	s/b9/b/g ;
+	s/d9/d/g ;
+	s/g9/g/g ;
 	s/j9/j/g ;
+	s/k9/k/g ;
+	s/m9/m/g ;
+	s/n9/n/g ;
+	s/p9/p/g ;
+	s/z9/z/g ;
+	s/s9/s/g ;
+	s/æ9/æ/g ;
 	s/7 / /g ;
 	s/8 / /g ;
 	s/9 / /g ;
 
 	# SMJ escape char insertion:
-	s/ss /ss9 /g ;
-	s/st /st9 /g ;
+#	s/ss /ss9 /g ;
+#	s/st /st9 /g ;
 
 	# Substitutions due to orthographic differences between SMJ and SME:
 	s/t:(.*)h /t:$1d9 /g ;
@@ -47,27 +57,27 @@ while(<>) {
 
 	my $line = $_;
 
-	# Special treatment of æ in SMJ:
-	if ($line =~ /æ/) {
-			# Replace space in multipart names temporarily with $.
-		$line =~ s/% /\$/g;
-		
-		$line =~ s/^\s+//;
-		
-		my ($word, $rest) = split (/\s+/, $line, 2);
-		$word =~ s/\$/% /g;
-		if ($line !~ /\:/) {
-			( my $int_word = $word )     =~ s/æ/æ9/g;
-			$int_word =~ s/ä/ä9/g;
-			$line = $word . ":" . $int_word . " " . $rest;
-		}
-		else {
-			my ($upper, $lower) = split(/\:/, $word);
-			( my $int_word = $lower )     =~ s/æ/æ9/g;
-			$int_word =~ s/ä/ä9/g;
-			$line = $upper . ":" . $int_word . " " . $rest;
-		}
-	}
+#	# Special treatment of æ in SMJ:
+#	if ($line =~ /æ/) {
+#			# Replace space in multipart names temporarily with $.
+#		$line =~ s/% /\$/g;
+#		
+#		$line =~ s/^\s+//;
+#		
+#		my ($word, $rest) = split (/\s+/, $line, 2);
+#		$word =~ s/\$/% /g;
+#		if ($line !~ /\:/) {
+#			( my $int_word = $word )     =~ s/æ/æ9/g;
+#			$int_word =~ s/ä/ä9/g;
+#			$line = $word . ":" . $int_word . " " . $rest;
+#		}
+#		else {
+#			my ($upper, $lower) = split(/\:/, $word);
+#			( my $int_word = $lower )     =~ s/æ/æ9/g;
+#			$int_word =~ s/ä/ä9/g;
+#			$line = $upper . ":" . $int_word . " " . $rest;
+#		}
+#	}
 	print $line;
 }
 
