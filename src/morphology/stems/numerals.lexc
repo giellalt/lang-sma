@@ -53,9 +53,9 @@ LEXICON Numeral
 
 LEXICON MILLIJOVNE
 millijovne:millijovn NUMTAGe_NOTakte ;
-millijovnede+A+Ord:millijovned ORDTAGODD ;
+millijovnede+A+Ord:millijovned ORDTAGODD-ord ;
 millijarde:millijard NUMTAGe_NOTakte ;! Num or N?
-millijardede+A+Ord:millijarded ORDTAGODD ;
+millijardede+A+Ord:millijarded ORDTAGODD-ord ;
 
 nulle:null NUMTAGe_NOTakte ;
 
@@ -232,10 +232,10 @@ uktsie:uktsie# O-TJUETIE2 ;
 LEXICON JUSTTOVSENE
 tåvsene:tåvsene# UNDERTÅVSENE ;
 tåvsene+Num:tåvsan ORDTAGODD ; ! Case infl of tåvsene
-tåvsanede+A+Ord:tåvsaned ORDTAGEVEN ;
+tåvsanede+A+Ord:tåvsaned ORDTAGEVEN-ord ;
 tovsene:tovsene# UNDERTÅVSENE ;
 tovsene+Num:tovsen ORDTAGODD ; ! Case infl of tovsene
-tovsenede+A+Ord:tovsened ORDTAGEVEN ;
+tovsenede+A+Ord:tovsened ORDTAGEVEN-ord ;
 stoeretjuetie:stoere#tjuetie# UNDERTÅVSENE ;
 !stoere#tjuetie+Num+Sg+Nom:stoere#tjuetie FINAL1 ;
 stoeretjuetie:stoere#tjuet NUMTAGie ; ! Case infl of tåvsene
@@ -261,10 +261,10 @@ stoerenomme:stoere#nomm NUMTAGe_NOTakte ; ! Case infl of tåvsene
 LEXICON JUSTTÅVSENE
 tåvsene:tåvsene# UNDERTÅVSENE ; ! Thousand-and-something
 tåvsene+Num:tåvsan ORDTAGODD ; ! Case infl of tåvsene
-tåvsanede+A+Ord:tåvsaned ORDTAGEVEN ;
+tåvsanede+A+Ord:tåvsaned ORDTAGEVEN-ord ;
 tovsene:tovsene# UNDERTÅVSENE ; ! Thousand-and-something
 tovsene+Num:tovsen ORDTAGODD ; ! Case infl of tovsene
-tovsenede+A+Ord:tovsened ORDTAGEVEN ;
+tovsenede+A+Ord:tovsened ORDTAGEVEN-ord ;
 stoeretjuetie:stoere#tjuetie# UNDERTÅVSENE ;
 !stoere#tjuetie+Num+Sg+Nom:stoere#tjuetie FINAL1 ;
 stoeretjuetie:stoere#tjuet NUMTAGie ; ! Case infl of tåvsene
@@ -320,8 +320,7 @@ LEXICON AKTEF
 akte:akt NUMTAGe ; 
 akte+Num+Sg+Acc:aktem FINAL1 ;
 voestes+A+Ord+Sg+Nom:voestes FINAL1 ; !XXX check this
-voestes+A+Ord+Sg+Nom:voestes- FINAL1 ; !XXX check this
-
+voestes+A+Attr:voestes FINAL1 ;
 
 LEXICON 2TO9F
 göökte+Use/NG:guekt NUMTAGie ;
@@ -346,16 +345,16 @@ gaektsie:gaekts NUMTAGie ;
 uktsie:ukts NUMTAGie ;
 mubpie+A+Ord:mubp MUBPIE ;
 nubpie+A+Ord:nubp MUBPIE ;
-gåalmede+A+Ord:gåalmad ORDTAGODD ;
-njieljede+A+Ord:njieljied ORDTAGODD ;
-njealjede+A+Ord:njealjad ORDTAGODD ;
-nealjede+A+Ord:nealjad ORDTAGODD ;
-nieljede+A+Ord:nieljied ORDTAGODD ;
-vïjhtede+A+Ord:vïjhted ORDTAGODD ;
-govhtede+A+Ord:govhted ORDTAGODD ;
-tjïjhtjede+A+Ord:tjïjhtjed ORDTAGODD ;
-gaaktsede+A+Ord:gaaktsad ORDTAGODD ;
-åktsede+A+Ord:åktsad ORDTAGODD ;
+gåalmede+A+Ord:gåalmad ORDTAGODD-ord ;
+njieljede+A+Ord:njieljied ORDTAGODD-ord ;
+njealjede+A+Ord:njealjad ORDTAGODD-ord ;
+nealjede+A+Ord:nealjad ORDTAGODD-ord ;
+nieljede+A+Ord:nieljied ORDTAGODD-ord ;
+vïjhtede+A+Ord:vïjhted ORDTAGODD-ord ;
+govhtede+A+Ord:govhted ORDTAGODD-ord ;
+tjïjhtjede+A+Ord:tjïjhtjed ORDTAGODD-ord ;
+gaaktsede+A+Ord:gaaktsad ORDTAGODD-ord ;
+åktsede+A+Ord:åktsad ORDTAGODD-ord ;
 gööktesh:gööktes COLLTAG ;
 golmesh:golmes COLLTAG ;
 njealjesh:njealjas COLLTAG ;
@@ -413,7 +412,7 @@ LEXICON NUMTAGie !njieljie:njielj
 LEXICON LUHKIE-
 luhkie:luhkie# AKTEF ;
 luhkie:luhkie# 2TO9F ;
-låhkede+A+Ord:låhkad ORDTAGODD ;
+låhkede+A+Ord:låhkad ORDTAGODD-ord ;
 låhkesh:låhkas COLLTAG ;
 !luhkie+Num+Sg+Nom:luhkie FINAL1 ;
 !luhkie+Num+Sg+Nom+Use/Sub:-luhkie FINAL1 ;
@@ -424,7 +423,7 @@ LEXICON LUHKIEF
 luhkie:luhk NUMTAGie ;
 luhkie:luhkie# AKTEF ;
 luhkie:luhkie# 2TO9F ;
-låhkede+A+Ord:låhkad ORDTAGODD ;
+låhkede+A+Ord:låhkad ORDTAGODD-ord ;
 låhkesh:låhkas COLLTAG ;
 
 
@@ -467,6 +466,9 @@ LEXICON MUBPIE
 +Ess:%>ine FINAL1 ;
 +Ess+Uml+Use/NG:%>%^iUMLine FINAL1 ;
 
+LEXICON ORDTAGODD-ord
++Attr:e%^DISIMP FINAL1 ;
+ ORDTAGODD ;
 
 LEXICON ORDTAGODD
 +Sg+Nom:e%^DISIMP FINAL1 ;
@@ -487,6 +489,11 @@ LEXICON ORDTAGODD
 +Pl+Com:%>%^DISIMPigujmie FINAL1 ;
 +Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
 +Ess:%>inie FINAL1 ;
+
+LEXICON ORDTAGEVEN-ord
++Attr:e FINAL1 ;
+ ORDTAGEVEN ;
+
 
 LEXICON ORDTAGEVEN
 +Sg+Nom:e FINAL1 ;
