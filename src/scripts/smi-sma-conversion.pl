@@ -18,17 +18,17 @@ while(<>) {
 	s/HAWAII/ACCRA/g ;
 	s/SKANIK/SULLOT/g ;
 
-	s/h9/h/g ;
 	s/b9/b/g ;
 	s/d9/d/g ;
 	s/g9/g/g ;
+	s/h9/h/g ;
 	s/j9/j/g ;
 	s/k9/k/g ;
 	s/m9/m/g ;
 	s/n9/n/g ;
 	s/p9/p/g ;
-	s/z9/z/g ;
 	s/s9/s/g ;
+	s/z9/z/g ;
 	s/æ9/æ/g ;
 	s/7 / /g ;
 	s/8 / /g ;
