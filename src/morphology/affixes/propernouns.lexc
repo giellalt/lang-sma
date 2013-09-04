@@ -174,8 +174,8 @@ LEXICON VNAME-mal
 LEXICON VNAME-fem
  +N+Prop+Fem: ACCRA ;
 
-LEXICON VNAME-obj
- +N+Prop+Obj: ACCRA ;
+!LEXICON VNAME-obj ! not in use, add if needed
+! +N+Prop+Obj: ACCRA ;
 
 LEXICON ACCRA-plc
  +N+Prop+Plc: ACCRA_PLC-ORG ;
@@ -256,17 +256,21 @@ LEXICON VNAME
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
 ! the appropriate even syllable lexicons.
 
-LEXICON VNAME_PLC-ORG
- +Sg+Nom:          FINAL1 ;
-           RHyph ;
- +Sg+Acc:%>m       FINAL1 ;
- +Sg+Gen:%>n       FINAL1 ;
- +Sg+Ill:%>se      FINAL1 ;
- +Sg+Ine:%>sne     FINAL1 ;
- +Sg+Ela:%>ste     FINAL1 ;
- +Sg+Com:%>jne      FINAL1 ;
- +Ess:%>jne         FINAL1 ;
- +Attr: FINAL1 ;
+
+! This lexicon not in use until we get an
+! answer from SGM
+! LEXICON VNAME_PLC-ORG
+!  +Sg+Nom:          FINAL1 ;
+!            RHyph ;
+!  +Sg+Acc:%>m       FINAL1 ;
+!  +Sg+Gen:%>n       FINAL1 ;
+!  +Sg+Ill:%>se      FINAL1 ;
+!  +Sg+Ine:%>sne     FINAL1 ;
+!  +Sg+Ela:%>ste     FINAL1 ;
+!  +Sg+Com:%>jne      FINAL1 ;
+!  +Ess:%>jne         FINAL1 ;
+!  +Attr: FINAL1 ;
+
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
 ! the appropriate even syllable lexicons.
 
@@ -960,25 +964,27 @@ RITCHIE ;
 LEXICON RITCHIE-sur
 RITCHIE ;
 
-LEXICON RITCHIE-mal
-RITCHIE ;
+! Not in use, awaiting i-final fix:
+! LEXICON RITCHIE-mal
+! RITCHIE ;
+! 
+! LEXICON RITCHIE-fem
+! RITCHIE ;
+! 
+! LEXICON RITCHIE-ani
+! RITCHIE ;
+! 
+! LEXICON RITCHIE-obj
+! RITCHIE ;
 
-LEXICON RITCHIE-fem
-RITCHIE ;
-
-LEXICON RITCHIE-ani
-RITCHIE ;
-
-LEXICON RITCHIE-obj
-RITCHIE ;
-
-LEXICON RITCHIE-femsur
-+N+Prop+Sur: RITCHIE ;
-+N+Prop+Fem: RITCHIE ;
-
-LEXICON RITCHIE-malfem
-+N+Prop+Mal: RITCHIE ;
-+N+Prop+Fem: RITCHIE ;
+! Not in use, awaiting i-final fix.
+! LEXICON RITCHIE-femsur
+! +N+Prop+Sur: RITCHIE ;
+! +N+Prop+Fem: RITCHIE ;
+! 
+! LEXICON RITCHIE-malfem
+! +N+Prop+Mal: RITCHIE ;
+! +N+Prop+Fem: RITCHIE ;
 
 LEXICON RITCHIE ! Ritchie:Ritchijasse
 +Sg+Nom:ije%^DISIMP         FINAL1 ;
@@ -1053,43 +1059,44 @@ LEXICON PN_I_FINSK
 LEXICON PN_I_FINSK-sur
 +N+Prop+Sur: PN_I_FINSK ;
 
-LEXICON PN_I_FINSK-mal
-+N+Prop+Mal: PN_I_FINSK ;
-
-LEXICON PN_I_FINSK-fem
-+N+Prop+Fem: PN_I_FINSK ;
-
-LEXICON PN_I_FINSK-org
-+N+Prop+Org: PN_I_FINSK ;
+! LEXICON PN_I_FINSK-mal
+! +N+Prop+Mal: PN_I_FINSK ;
+! 
+! LEXICON PN_I_FINSK-fem
+! +N+Prop+Fem: PN_I_FINSK ;
+! 
+! LEXICON PN_I_FINSK-org
+! +N+Prop+Org: PN_I_FINSK ;
 
 LEXICON PN_I_FINSK-plc
 +N+Prop+Plc: PN_I_FINSK ;
 
-LEXICON PN_I_FINSK-ani
-+N+Prop+Ani: PN_I_FINSK ;
-
-LEXICON PN_I_FINSK-obj
-+N+Prop+Obj: PN_I_FINSK ;
+! LEXICON PN_I_FINSK-ani
+! +N+Prop+Ani: PN_I_FINSK ;
+! 
+! LEXICON PN_I_FINSK-obj
+! +N+Prop+Obj: PN_I_FINSK ;
 
 LEXICON PN_I_FINSK-plcorg
 +N+Prop+Plc: PN_I_FINSK ;
 +N+Prop+Org: PN_I_FINSK ;
 
-LEXICON PN_I_FINSK-malfem
-+N+Prop+Mal: PN_I_FINSK ;
-+N+Prop+Fem: PN_I_FINSK ;
+! LEXICON PN_I_FINSK-malfem
+! +N+Prop+Mal: PN_I_FINSK ;
+! +N+Prop+Fem: PN_I_FINSK ;
+! 
+! LEXICON PN_I_FINSK-femsur
+! +N+Prop+Sur: PN_I_FINSK ;
+! +N+Prop+Fem: PN_I_FINSK ;
 
-LEXICON PN_I_FINSK-femsur
-+N+Prop+Sur: PN_I_FINSK ;
-+N+Prop+Fem: PN_I_FINSK ;
 
-
-LEXICON PN_IE_plcorg ! as N_IE, but with Prop tag
-+Sg: N_IE_SG ;
-:ie                  RHyph ;
-!+Pl: N_IE_PL ;
-:    N_IE_ESS ;
-+Attr:ie FINAL1 ;
+! not in use
+! LEXICON PN_IE_plcorg ! as N_IE, but with Prop tag
+! +Sg: N_IE_SG ;
+! :ie                  RHyph ;
+! !+Pl: N_IE_PL ;
+! :    N_IE_ESS ;
+! +Attr:ie FINAL1 ;
 
 !LEXICON PN_I_FINSK_PLC-ORG ! as N_IE, but with Prop tag
 !+Sg: PN_I_FINSK ;
