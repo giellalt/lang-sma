@@ -623,7 +623,7 @@ LEXICON ARABICLOOPCOLL
 +N+Coll: ARABICDELIMITERCOLL ;
 
 LEXICON ARABICDELIMITER
-+Num:           ARABICCASE0 ;   ! This is the 1984 case (ie nominative).
++Num:           ARABICCASE0 ;   ! This is the 1984 case (ie nominative and accusative).
 +Num:%:         ARABICCASE ;    ! This is the 1984:s case.
 +Num+Use/Sub:%> ARABICCASE ;    ! This is the 1984s case.
 +Num+Use/Sub:%' ARABICCASE ;    ! This is the 1984's case.
@@ -644,6 +644,7 @@ LEXICON ARABICDELIMITERCOLL
                      
 LEXICON ARABICCASE0
 +Sg+Nom: # ;
++Sg+Acc: # ;
 
 LEXICON ARABICCASE
 f+Sg+Nom+Use/Sub:f  # ; ! s. 123f.
@@ -653,7 +654,7 @@ c+Sg+Nom+Use/Sub:c  # ; ! § 123c
 d+Sg+Nom+Use/Sub:d  # ; ! § 123d
 e+Sg+Nom+Use/Sub:e  # ; ! § 123e
 +Sg+Gen:n          # ;
-+Sg+Acc:         # ;
++Sg+Acc+Use/Sub:m         # ;
 +Sg+Ill:se         # ;
 +Sg+Ine:sne        # ; ! NRK:sne
 +Sg+Ela:ste        # ; ! NRK:ste
