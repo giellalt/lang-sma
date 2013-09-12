@@ -96,6 +96,7 @@ endif
 if CAN_HFST
 GT_FILTER_TARGETS+=focus-filter.hfst \
 				   remove-dialect-tags.hfst \
+				   remove-semantic-tags.hfst \
 				   remove-test-tags.hfst
 
 endif
@@ -104,6 +105,7 @@ endif
 if CAN_XFST
 GT_FILTER_TARGETS+=focus-filter.xfst \
 				   remove-dialect-tags.xfst \
+				   remove-semantic-tags.xfst \
 				   remove-test-tags.xfst
 
 endif
