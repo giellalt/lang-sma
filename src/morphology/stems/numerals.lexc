@@ -610,8 +610,8 @@ LEXICON ARABICLOOP
 ,%-+Num:,%- # ;   ! 10,-
 ,%–+Num:,%– # ;   ! 10,–
 ,%—+Num:,%— # ;   ! 10,—
-%%+Num+Nom:%% # ;  ! 50%. It is wrong, but 75 % of us write "75%".
-% %%+Num+Nom:% %% # ; ! We must analyse the correct ones as well... 50 % etc.
+%%+Num+Sg+Nom:%% # ;  ! 50%. It is wrong, but 75 % of us write "75%".
+% %%+Num+Sg+Nom:% %% # ; ! We must analyse the correct ones as well... 50 % etc.
 ARABICDELIMITER ; ! list of number-case delimiters
 +Num: RHyph  ;          ! Hyphen and +Use/Circ added appropriately in RHyph
 
@@ -849,7 +849,7 @@ LEXICON 2ROM-ONE-TAG
 +Use/Circ: ROMNUMTAG ;
 
 LEXICON ROMNUMTAG !
-+Num+Nom: # ;
++Num+Sg+Nom: # ;
 +A+Ord:%. # ; ! !III. as ordinal.
 +A+Ord:   # ;! !Looking for trouble...
 +Num:%:         ROMNUMTAGOBL ; ! IV:se
