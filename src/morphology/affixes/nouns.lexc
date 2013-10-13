@@ -21,9 +21,14 @@
 !! !!!Nominal inflection sublexica
 ! ================================
 
+!! !!Inflection for odd-syllable nouns
+
+
 LEXICON N_ODD
-!! !!Inflection for odd-syllable nouns: lexicon @LEXNAME@
-! -------------------------------------------------------
+!! The basic odd-syll lexicon is: @LEXNAME@
+
+!! !Inflection for odd-syllable nouns: lexicon @LEXNAME@
+!  -----------------------------------------------------
 !
 !! Short descrioption of this lexicon, and its purpose.
 !
@@ -53,6 +58,7 @@ LEXICON N_ODD
 !!¥ gierehtse+N+Sg+Acc: [gierehtsem, ~gieriehtsem]
 
 LEXICON N_ODD_LOAN
+!! * Odd-syll loanwords: lexicon @LEXNAME@
   +N+Sg+Nom:e         FINAL1 ;
   +N+Sg+Nom+PxSg1:%>amme FINAL1 ;
   +N+Sg+Nom+PxSg2:%>adth FINAL1 ;
@@ -86,6 +92,7 @@ LEXICON N_ODD_LOAN
 
 
 LEXICON N_ODD_SG
+!! ** Odd-syll sg: lexicon @LEXNAME@
 !  +Nom:e         FINAL1 ; ! sjekk
   +Nom:e%^DISIMP         FINAL1 ;
   +Nom+PxSg1:%>amme FINAL1 ;
@@ -105,6 +112,7 @@ LEXICON N_ODD_SG
   +Com+PxSg2:%>æjnedh FINAL1 ;
 
 LEXICON N_ODD_PL
+!! ** Odd-syll pl: lexicon @LEXNAME@
   +Nom:%>%^DISIMPh       FINAL1 ;
   +Acc:%>idie            FINAL1 ;
   +Acc+Use/Sub:%>%^DISIMPidie FINAL1 ;  !Miesie Mavve
@@ -117,9 +125,11 @@ LEXICON N_ODD_PL
  +Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
 
 LEXICON N_ODD_ESS
+!! ** Odd-syll loanwords: lexicon @LEXNAME@
   +Ess:%>inie          FINAL1 ;
   
-LEXICON ÅABPETJH !default N_ODD plural lexicon
+LEXICON ÅABPETJH 
+!! ** Default N_ODD plural lexicon: lexicon @LEXNAME@
   +N+Pl+Nom:%>%^DISIMPh       FINAL1 ;
   +N+Pl+Acc:%>idie            FINAL1 ;
   +N+Pl+Gen:%>%^DISIMP IGENSUFF ;
@@ -308,6 +318,7 @@ LEXICON ÅERUVE
   +N+SgGenCmp:uve%>%^DISIMPn        R ;
   +N+PlGenCmp:uv%>%^DISIMPi R ;
   +N+Der1+Der/Dimin+N:%»ievadtj GIERIEHTSADTJE ;
+  
 ! Test data:
 !!€gt-norm: åeruve # Odd-syllable test
 !!€ åeruve              åeruve+N+Sg+Nom

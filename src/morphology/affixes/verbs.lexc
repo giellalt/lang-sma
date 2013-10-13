@@ -17,15 +17,43 @@
 ! ========================================================================== !
 
 
+
+!! This is the file for the South Saami verb inflection and derivation.
+
 ! ===========================
-! Verbal inflection sublexica
+!! !!!Verbal inflection sublexica
 ! ===========================
 
+!! Table of content for this file:
 
-! The auxiliaries
+!! * The auxiliaries
+!! ** The negative verb
+!! ** Other auxiliaries
+!! * Odd-syllable verbs
+!! ** Inflection common to all odd verbs
+!! * Even-syllable verbs
+!! ** Nominal derivation sublexica 
+!! * Verbal affixes
+!! ** Finite forms
+!! ** Even
+!! *** Present
+!! *** Imperative
+!! *** Present
+!! ** Odd
+!! *** Present
+!! *** Past
+!! *** Imperative
+!! ** Common even-odd
+!! *** Present
+!! *** Past
+
+
+!! !!!The auxiliaries
 ! ===============
 
-LEXICON LEA
+!! First we just list the auxiliaries and their inflection.
+
+LEXICON LEA  !!= * __@CODE@__ the copula
 
 !+Inf:lea   FINAL1 ; ! Uses årrodh
 +Ind+Prs:l    LEA-PRES  ;
@@ -35,7 +63,7 @@ LEXICON LEA
 +ConNeg:leah  FINAL1 ;
 +Cond+Prs+Sg3:lidtjie FINAL1 ; ! Magkeres lidtjie deere orreme? 
 
-LEXICON LEA-PRES
+LEXICON LEA-PRES  !!= ** __@CODE@__
 +Sg1:eam    FINAL1  ;
 +Sg2:eah    FINAL1  ;
 +Sg3:ea     FINAL1  ;
@@ -47,7 +75,7 @@ LEXICON LEA-PRES
 +Pl2:idie   FINAL1  ;
 +Pl3:eah    FINAL1  ;
 
-LEXICON LEA-PRET
+LEXICON LEA-PRET !!= ** __@CODE@__
 +Sg1:im     FINAL1  ;
 +Sg2:ih     FINAL1  ;
 +Sg3:ij     FINAL1  ;
@@ -58,16 +86,16 @@ LEXICON LEA-PRET
 +Pl2:idh    FINAL1  ;
 +Pl3:in     FINAL1  ;
 
-LEXICON LEA-IMP
+LEXICON LEA-IMP !!= ** __@CODE@__
 +Sg2:eah    FINAL1 ;
 +Du2:idien  FINAL1 ;
 +Pl2:idie   FINAL1 ;
 
 
-! The negative verb
+!! !!The negative verb
 ! =================
 
-LEXICON NEG
+LEXICON NEG  !!= * __@CODE@__
 +Ind+Prs:      IJ-PRES ;
 +Ind+Prt:idtj  VSUF-PRT ;
 +Imprt:aell      NEGIMP ;
@@ -113,7 +141,7 @@ LEXICON NEG
 !Dah ij lin gåetesne gænnah
 
 
-LEXICON OLLE
+LEXICON OLLE  !!= ** __@CODE@__
 +Sg1:em     FINAL1 ;
 +Sg2:h      FINAL1 ;
 +Sg3:es     FINAL1 ;
@@ -128,7 +156,7 @@ LEXICON OLLE
 +Pl3:es     FINAL1 ;
 
 
-LEXICON NEGIMP
+LEXICON NEGIMP  !!= ** __@CODE@__
 +Sg1:iem    FINAL1 ;
 +Sg2:ieh    FINAL1 ;
 +Sg3:ies    FINAL1 ;
@@ -141,7 +169,7 @@ LEXICON NEGIMP
 !+Pl2:iejidie    FINAL1 ;
 +Pl3:ies    FINAL1 ;
 
-LEXICON IJ-PRES
+LEXICON IJ-PRES  !!= ** __@CODE@__
 +Sg1:im     FINAL1  ;
 +Sg2:ih     FINAL1  ;
 +Sg3:ij     FINAL1  ;
@@ -154,7 +182,7 @@ LEXICON IJ-PRES
 +Pl2:idie   FINAL1  ;
 +Pl3:eah    FINAL1  ;
 
-LEXICON IJ-COPULA
+LEXICON IJ-COPULA  !!= ** __@CODE@__
 +Sg1+Use/NG:im     FINAL1  ;
 +Sg2+Use/NG:ih     FINAL1  ;
 +Sg3+Use/NG:ij     FINAL1  ;
@@ -167,7 +195,9 @@ LEXICON IJ-COPULA
 
 
 
-LEXICON EDTJEDH
+!! !!Other auxiliaries
+
+LEXICON EDTJEDH  !!= * __@CODE@__
 +Ind+Prs:       ED-PRES ;
 +Ind+Prt:       ED-PRET ;
 +Imprt:           ED-IMP  ;
@@ -177,7 +207,7 @@ LEXICON EDTJEDH
 +ConNeg:h       FINAL1  ;
 +PrfPrc:eme     FINAL1  ;
 
-LEXICON ED-PRES
+LEXICON ED-PRES  !!= ** __@CODE@__
 +Sg1:em         FINAL1  ;
 +Sg2:h          FINAL1  ;
 +Sg3:a          FINAL1  ;
@@ -191,7 +221,7 @@ LEXICON ED-PRES
 +Pl2:ede        FINAL1  ;
 +Pl3:ieh        FINAL1  ;
 
-LEXICON ED-PRET
+LEXICON ED-PRET !!= ** __@CODE@__
 +Sg1:im     FINAL1  ;
 +Sg2:ih     FINAL1  ;
 +Sg3:i      FINAL1  ;
@@ -202,7 +232,7 @@ LEXICON ED-PRET
 +Pl2:idh    FINAL1  ;
 +Pl3:in     FINAL1  ;
 
-LEXICON ED-IMP
+LEXICON ED-IMP !!= ** __@CODE@__
  +Sg2:h      FINAL1  ;
  +Du2:eden   FINAL1  ;
  +Pl2:ede    FINAL1  ;
@@ -210,18 +240,18 @@ LEXICON ED-IMP
 
 
 
-! Odd-syllable verbs
+!! !!!Odd-syllable verbs
 ! ==================
 
-! Odd syllable verbs differ in Prt Sg3.
-! This form is treated separately, and
-! the rest of the paradigm is conflated.
+!! Odd syllable verbs differ in Prt Sg3.
+!! This form is treated separately, and
+!! the rest of the paradigm is conflated.
 
 ! According to Errata för Verbh this is not the case.
 ! Thus, the form in -e is wrong, and we wil replace DÅERIEDIDH 
 ! WITH GOLTELIDH.
 
-LEXICON TJOEVERIDH_IV
+LEXICON TJOEVERIDH_IV  !!= * __@CODE@__
  +V+IV+Ind+Prs:%> VSUF-ODD-PRS ;
  +V+IV+Ind+Prt:%> VSUF-ODD-PRT ;
 ! +V+IV+Imprt:%>     VSUF-ODD-IMP ;
@@ -248,25 +278,25 @@ LEXICON TJOEVERIDH_IV
 ! +V+IV+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
 ! +V+IV+Der2+Der/adte+V:%»%^adteUMLadt GOEGKERDADTEDH ;
 
-LEXICON GOLTELIDH_TV
+LEXICON GOLTELIDH_TV  !!= * __@CODE@__
  +V+TV: GOLTELIDH ;
 
-LEXICON AALHTEDIDH_TV
+LEXICON AALHTEDIDH_TV  !!= * __@CODE@__
  +V+TV: GOLTELIDH ;
  +V+TV+Der3+Der/PassL:%^ConsDel%»sovv SOVVEDH ;
 
-LEXICON GOLTELIDH_IV
+LEXICON GOLTELIDH_IV  !!= * __@CODE@__
  +V+IV: GOLTELIDH ;
 
 
-LEXICON GOLTELIDH !odd-syll with -adte- as Der2
+LEXICON GOLTELIDH   !!= * __@CODE@__, odd-syll with -adte- as Der2
  COMMON-ODD ;
  +Der2+Der/ehte:%»eht ÅARAJEHTEDH_TV ;
  +Der3+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
  +PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +Der2+Der/adte+V:%»%^adteUMLadt GOEGKERDADTEDH ;
 
-LEXICON BALVEDIDH
+LEXICON BALVEDIDH  !!= * __@CODE@__
  +V+IV+Ind+Prs+Sg3:%>%^DISIMPe FINAL1 ;
  +V+IV+Ind+Prt+Sg3:%>i FINAL1 ;
  +V+IV+Ind+Prt+Sg3+Use/Sub:%>%^DISIMPi FINAL1 ;
@@ -306,37 +336,38 @@ LEXICON BALVEDIDH
  +V+IV+Der3+Der/ahtje+V+Sg3:%»ahtj%>i  FINAL1 ;
  +V+IV+Der3+Der/ahtje+V+Sg3+Use/Sub:%»ahtj%>%^DISIMPi  FINAL1 ;
 
-LEXICON RIHPESIDH !-nidh and -sidh
+LEXICON RIHPESIDH   !!= * __@CODE@__,  -nidh and -sidh
  +V+IV: COMMON-ODD ;
  +V+IV+Der2+Der/alle+V:%»%^adteUMLall GOEGKERDADTEDH ;
 
-LEXICON AAJVESTIDH_TV   !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
+LEXICON AAJVESTIDH_TV     !!= * __@CODE@__, for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
  +V+TV: DÅAJVOEHTIDH ;
  +V+TV+Der3+Der/PassL:%^ConsDel%»sovv SOVVEDH ;
 
-LEXICON DÅAJVOEHTIDH_TV
+LEXICON DÅAJVOEHTIDH_TV  !!= * __@CODE@__
  +V+TV: DÅAJVOEHTIDH ;
  
-LEXICON DÅAJVOEHTIDH_IV
+LEXICON DÅAJVOEHTIDH_IV  !!= * __@CODE@__
  +V+IV: DÅAJVOEHTIDH ;
 
-LEXICON DÅAJVOEHTIDH  !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
+LEXICON DÅAJVOEHTIDH    !!= * __@CODE@__ for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
  COMMON-ODD ;
  +Der2+Der/ehte:%»eht ÅARAJEHTEDH_TV ;
  +Der3+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
  +PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +Der2+Der/alle+V:%»%^adteUMLall GOEGKERDADTEDH ;
 
+!! !!Inflection common to all odd verbs
 
-LEXICON COMMON-ODD
+LEXICON COMMON-ODD   !!= * __@CODE@__
 
-! Finite forms
+!! * Finite forms
 ! ------------
  +Ind+Prs:%> VSUF-ODD-PRS ;
  +Ind+Prt:%> VSUF-ODD-PRT ;
  +Imprt:%>     VSUF-ODD-IMP ;
 
-! Infinite forms
+!! * Infinite forms
 ! --------------
  +Inf:%>idh             FINAL1 ;
  +ConNeg:%>%^DISIMPh    FINAL1 ;
@@ -355,17 +386,17 @@ LEXICON COMMON-ODD
 ! vädd'ekh ungegeben, ohne zu geben
 
 
-! Derivations
+!! * Derivations
 ! -----------
  +Der3+Der/NomAct:%»imm@C.NeedNoun@    NomActEven ;
  +Der3+Der/ahtje+V:%»ahtj AHTJE ;
 
 
 
-! Even-syllable verbs
+!! !!!Even-syllable verbs
 ! ===================
 
-LEXICON MAEHTEDH_TV
+LEXICON MAEHTEDH_TV  !!= * __@CODE@__
  +V+TV: BÅETEDH_NOTVGEN ;
 ! +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
 ! +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
@@ -373,7 +404,7 @@ LEXICON MAEHTEDH_TV
 ! +V+TV+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
 
 
-LEXICON BÅETEDH_TV
+LEXICON BÅETEDH_TV  !!= * __@CODE@__
  +V+TV: BÅETEDH ;
  +V+TV+Ind+Prt+Uml+Dial/SH:%>%^iUML    VSUF-PRT ;
  +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
@@ -381,7 +412,7 @@ LEXICON BÅETEDH_TV
  +V+TV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
  +V+TV+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
  
-LEXICON BÅETEDH_TV_ePRET
+LEXICON BÅETEDH_TV_ePRET  !!= * __@CODE@__
  +V+TV: BÅETEDH ;
  +V+TV+Ind+Prt+Uml+Dial/SH:%>    VSUF-PRT ;
  +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
@@ -389,20 +420,20 @@ LEXICON BÅETEDH_TV_ePRET
  +V+TV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
  +V+TV+Der1+Der/lgidh:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
 
-LEXICON BÅETEDH_IV
+LEXICON BÅETEDH_IV  !!= * __@CODE@__
  +V+IV: BÅETEDH ;
  +V+IV+Ind+Prt+Uml+Dial/SH:%>%^iUML    VSUF-PRT ;
  +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
-LEXICON BÅETEDH_IV_ePRET
+LEXICON BÅETEDH_IV_ePRET  !!= * __@CODE@__
  +V+IV: BÅETEDH ;
  +V+IV+Ind+Prt+Uml+Dial/SH:%>    VSUF-PRT ;
  +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
-LEXICON BÅETEDH ! row A - Group I
+LEXICON BÅETEDH   !!= * __@CODE@__ row A - Group I
  +Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +Ind+Prt+Dial/L:%>iej        VSUF-ODD-PRT ;
@@ -438,7 +469,7 @@ LEXICON BÅETEDH ! row A - Group I
  +Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
  +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
 
-LEXICON BÅETEDH_NOTVGEN ! row A - Group I
+LEXICON BÅETEDH_NOTVGEN   !!= * __@CODE@__ row A - Group I
  +Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +Ind+Prt+Dial/L:%>iej        VSUF-ODD-PRT ;
@@ -475,7 +506,7 @@ LEXICON BÅETEDH_NOTVGEN ! row A - Group I
 ! +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
 
 
-LEXICON SEVTEDH ! row A - Group I  IMPERSONALS!
+LEXICON SEVTEDH   !!= * __@CODE@__ row A - Group I  IMPERSONALS!
  +V+IV+Ind+Prs+Uml+Sg3:%>%^1UMLa   FINAL1 ; ! class I special
  +V+IV+Ind+Prt+Sg3+Use/Sub:%>ieji        FINAL1 ;
  +V+IV+Ind+Prt+Sg3+Use/Sub:%>iej%^DISIMPi        FINAL1 ;
@@ -583,7 +614,7 @@ LEXICON SEVTEDH ! row A - Group I  IMPERSONALS!
 
 
  
-LEXICON ÅEREDH ! row A - Group I   NO -øø-UMLAUT!!!!
+LEXICON ÅEREDH   !!= * __@CODE@__ row A - Group I   NO -øø-UMLAUT!!!!
  +V+IV+Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +V+IV+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +V+IV+Ind+Prt:%>iej        VSUF-ODD-PRT ;
@@ -624,7 +655,7 @@ LEXICON ÅEREDH ! row A - Group I   NO -øø-UMLAUT!!!!
  +V+IV+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^1UMLeld FINAL1 ; !
  
   
-LEXICON ÅEREDH_TV ! row A - Group I   NO -øø-UMLAUT!!!!
+LEXICON ÅEREDH_TV   !!= * __@CODE@__ row A - Group I   NO -øø-UMLAUT!!!!
  +V+TV+Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +V+TV+Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +V+TV+Ind+Prt:%>iej        VSUF-ODD-PRT ;
@@ -666,7 +697,7 @@ LEXICON ÅEREDH_TV ! row A - Group I   NO -øø-UMLAUT!!!!
  
  
 
-LEXICON TJEARODH_TV
+LEXICON TJEARODH_TV  !!= * __@CODE@__
  +V+TV: TJEARODH ;
  +V+TV+Der3+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
  +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
@@ -674,13 +705,13 @@ LEXICON TJEARODH_TV
  +V+TV+Der1+Der/lgidh:%»%^PASSUMLelg LGIDH ; !Passive, only from transitive verbs
 
 
-LEXICON TJEARODH_IV
+LEXICON TJEARODH_IV  !!= * __@CODE@__
  +V+IV: TJEARODH ;
  +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
-LEXICON TJEARODH ! row C - Group II
+LEXICON TJEARODH   !!= * __@CODE@__ row C - Group II
  +Ind+Prs:%>          V-II-PRS-SG ; ! class II special
  +Ind+Prs:%>oe        VSUF-EVEN-PRS-DUPL ;
  +Ind+Prt:%>oej       VSUF-PRT ;
@@ -718,7 +749,7 @@ LEXICON TJEARODH ! row C - Group II
  
 
 
-LEXICON ABRODH ! row C - Group II
+LEXICON ABRODH   !!= * __@CODE@__ row C - Group II
  +V+IV+Ind+Prs+Uml+Sg3:%>%^2UMLe          FINAL1 ; ! class II special
  +V+IV+Ind+Prt+Sg3:%>oeji  FINAL1 ;
  +V+IV+Ind+Prt+Sg3+Use/Sub:%>oej%^DISIMPi  FINAL1 ;
@@ -819,20 +850,20 @@ LEXICON ABRODH ! row C - Group II
 ! +V+IV+Der1+Der/ldh+N+Sg+Nom:%»%^PASSUMLeldh FINAL1 ;
 ! +V+IV+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»%^PASSUMLeld FINAL1 ; !
 
-LEXICON TSEAHKODH_TV
+LEXICON TSEAHKODH_TV  !!= * __@CODE@__
  +V+TV:  TSEAHKODH ;
  +V+TV+Der3+Der/PassL+Uml:%»%^2UMLesovv SOVVEDH ;
  +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+TV+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
  +V+TV+Der1+Der/lgidh:%»alg LGIDH ; !Passive, only from transitive verbs
 
-LEXICON TSEAHKODH_IV
+LEXICON TSEAHKODH_IV  !!= * __@CODE@__
  +V+IV:  TSEAHKODH ;
  +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
-LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on -estit, and passives on -algidh
+LEXICON TSEAHKODH   !!= * __@CODE@__ row C - Group II    these have (lexicalized) diminutives on -estit, and passives on -algidh
  +Ind+Prs:%>          V-II-PRS-SG ; ! class II special
  +Ind+Prs:%>oe        VSUF-EVEN-PRS-DUPL ;
  +Ind+Prt:%>oej       VSUF-PRT ;
@@ -866,20 +897,20 @@ LEXICON TSEAHKODH ! row C - Group II    these have (lexicalized) diminutives on 
 ! +Der1+Der/ldh+N+SgNomCmp:%»aldh R ;
 ! +Der1+Der/ldh+N+Sg+Nom:%»aldh FINAL1 ;
 
-LEXICON GUARKEDH_TV
+LEXICON GUARKEDH_TV  !!= * __@CODE@__
  +V+TV:  GUARKEDH ;
  +V+TV+Der3+Der/PassL:a%»sovv SOVVEDH ;
  +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+TV+Der1+Der/htalle:%»ahtall SOVVEDH ; !Passive, only from transitive verbs
  +V+TV+Der1+Der/lgidh:%»alg LGIDH ; !Passive, only from transitive verbs
 
-LEXICON GUARKEDH_IV
+LEXICON GUARKEDH_IV  !!= * __@CODE@__
  +V+IV:  GUARKEDH ;
  +V+IV+Der3+Der/PassL:a%»sovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
-LEXICON GUARKEDH ! row B - Group III
+LEXICON GUARKEDH   !!= * __@CODE@__ row B - Group III
  +Ind+Prs:%>    V-III-PRS-SG ; ! class III special
  +Ind+Prs:%>a   VSUF-EVEN-PRS-DUPL ;
  +Ind+Prs+Pl3+Use/NG:%>oeh FINAL1 ; ! arbitrarily +Use/NG, cf. VSUF-EVEN-PRS-DUPL
@@ -914,7 +945,7 @@ LEXICON GUARKEDH ! row B - Group III
 ! +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ; !not to a-verbs
 
 
-LEXICON SIJHTEDH_TV
+LEXICON SIJHTEDH_TV   !!= * __@CODE@__
  +V+TV: TJOEHPEDH_NOTVGEN ;
  +V+TV+Der3+Der/PassL:e%»sovv SOVVEDH ;
  +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
@@ -923,33 +954,33 @@ LEXICON SIJHTEDH_TV
 
 
 
-LEXICON TJOEHPEDH_TV
+LEXICON TJOEHPEDH_TV  !!= * __@CODE@__
  +V+TV: TJOEHPEDH ;
  +V+TV+Der3+Der/PassL:e%»sovv SOVVEDH ;
  +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+TV+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
  +V+TV+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
 
-LEXICON GALKEDH_IV
+LEXICON GALKEDH_IV  !!= * __@CODE@__
  +V+IV: GALKEDH_CONT ;
 ! +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
 ! +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
 
-LEXICON TJOEHPEDH_IV
+LEXICON TJOEHPEDH_IV  !!= * __@CODE@__
  +V+IV: TJOEHPEDH ;
  +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
-LEXICON TJOEHPEDH ! row D - Group IV
+LEXICON TJOEHPEDH   !!= * __@CODE@__ row D - Group IV
  +VGen:%>en      FINAL1 ;
  +VGen+Use/Sub:ien      FINAL1 ;
 TJOEHPEDH_NOTVGEN ;
 
 
-LEXICON TJOEHPEDH_NOTVGEN
+LEXICON TJOEHPEDH_NOTVGEN  !!= * __@CODE@__
  +Ind+Prs:%>     V-IV-EVEN-PRS ;
  +Ind+Prt:%>     VSUF-PRT-SG-12 ;
  +Ind+Prt:%>     VSUF-PRT-DUPL ;
@@ -984,7 +1015,7 @@ LEXICON TJOEHPEDH_NOTVGEN
  +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
 
-LEXICON GALKEDH_CONT ! row D - Group IV
+LEXICON GALKEDH_CONT   !!= * __@CODE@__ row D - Group IV
  +Ind+Prs:%>     V-IV-EVEN-PRS ;
  +Ind+Prt:%>     VSUF-PRT-SG-12 ;
  +Ind+Prt:%>     VSUF-PRT-DUPL ;
@@ -1021,7 +1052,7 @@ LEXICON GALKEDH_CONT ! row D - Group IV
 
 
 
-LEXICON BIEGKEDH ! row D - Group IV !impersonals
+LEXICON BIEGKEDH   !!= * __@CODE@__ row D - Group IV !impersonals
  +V+IV+Ind+Prs+Sg3+Uml:%>%^3sUMLa     FINAL1 ;
  +V+IV+Ind+Prt+Sg3:%>i  FINAL1  ;
 ! +V+IV+Imprt:%>         VSUF-IV-EVEN-IMP ;
@@ -1120,27 +1151,27 @@ LEXICON BIEGKEDH ! row D - Group IV !impersonals
 ! +V+IV+Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
 ! +V+IV+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
-LEXICON BÅÅHKEDH_TV
+LEXICON BÅÅHKEDH_TV  !!= * __@CODE@__
  +V+TV: BÅÅHKEDH ;
  +V+TV+Der3+Der/PassL:e%»sovv SOVVEDH ;
  +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
  +V+TV+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
  +V+TV+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
 
-LEXICON SÅÅJHTEDH_IV
+LEXICON SÅÅJHTEDH_IV  !!= * __@CODE@__
  +V+IV: SÅÅJHTEDH_CONT ;
 ! +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
 ! +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
 
-LEXICON BÅÅHKEDH_IV
+LEXICON BÅÅHKEDH_IV  !!= * __@CODE@__
  +V+IV: BÅÅHKEDH ;
  +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
-LEXICON BÅÅHKEDH ! row E - Group V    
+LEXICON BÅÅHKEDH   !!= * __@CODE@__ row E - Group V    
  +Ind+Prs:%>   VSUF-V-EVEN-PRS ;
  +Ind+Prt:%>   VSUF-PRT ;
  +Imprt:%>       VSUF-IV-EVEN-IMP ;
@@ -1172,7 +1203,7 @@ LEXICON BÅÅHKEDH ! row E - Group V
  +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
  +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
-LEXICON SÅÅJHTEDH_CONT ! row E - Group V    
+LEXICON SÅÅJHTEDH_CONT   !!= * __@CODE@__ row E - Group V    
  +Ind+Prs:%>   VSUF-V-EVEN-PRS ;
  +Ind+Prt:%>   VSUF-PRT ;
 ! +Imprt:%>       VSUF-IV-EVEN-IMP ;
@@ -1204,7 +1235,7 @@ LEXICON SÅÅJHTEDH_CONT ! row E - Group V
 ! +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
 ! +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
-LEXICON VÅÅJNEDH
+LEXICON VÅÅJNEDH  !!= * __@CODE@__
  +V+IV+Ind+Prs:%>   VSUF-V-EVEN-PRS ;
  +V+IV+Ind+Prt:%>   VSUF-PRT ;
  +V+IV+Imprt:%>       VSUF-IV-EVEN-IMP ;
@@ -1239,7 +1270,7 @@ LEXICON VÅÅJNEDH
 ! +V+IV+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
 
-LEXICON GÖÖLEDH_TV
+LEXICON GÖÖLEDH_TV  !!= * __@CODE@__
  +V+TV: GÖÖLEDH ;
  +V+TV+Der3+Der/PassL:e%»sovv SOVVEDH ;
 ! +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
@@ -1247,13 +1278,13 @@ LEXICON GÖÖLEDH_TV
  +V+TV+Der1+Der/lgidh:%»elg LGIDH ; !Passive, only from transitive verbs
 
 
-LEXICON GÖÖLEDH_IV
+LEXICON GÖÖLEDH_IV  !!= * __@CODE@__
  +V+IV: GÖÖLEDH ;
  +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
 ! +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ; ! No short passives in Group VI
 
 
-LEXICON GÖÖLEDH ! row F - Group VI
+LEXICON GÖÖLEDH   !!= * __@CODE@__ row F - Group VI
  +Ind+Prs:%>   VSUF-VI-EVEN-PRS ;
  +Ind+Prt:%>   VSUF-PRT ;
  +Imprt:%>       VSUF-IV-EVEN-IMP ;
@@ -1286,7 +1317,7 @@ LEXICON GÖÖLEDH ! row F - Group VI
  +Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
 
-LEXICON BÖÖVTEDH ! row F - Group VI
+LEXICON BÖÖVTEDH   !!= * __@CODE@__ row F - Group VI
  +V+IV+Ind+Prs+Sg3:%>ie        FINAL1 ;
  +V+IV+Ind+Prt+Sg3:%>i  FINAL1 ;
  +V+IV+Ind+Prt+Sg3+Use/Sub:%>%^DISIMPi  FINAL1 ;
@@ -1385,13 +1416,13 @@ LEXICON BÖÖVTEDH ! row F - Group VI
 ! +V+IV+Der1+Der/ldh+N+Sg+Nom+Use/Sub:%»eld FINAL1 ; !
 
 
-LEXICON EEREDH_TV
+LEXICON EEREDH_TV  !!= * __@CODE@__
 +v1:er GÖÖLEDH_TV ;
 +Use/Sub:r GÖÖLEDH_TV ;
 +v2+Use/NG:rad GOLTELIDH_TV ;
 +Use/Sub:erad GOLTELIDH_TV ;
 
-LEXICON EEREDH_IV
+LEXICON EEREDH_IV  !!= * __@CODE@__
 :er GÖÖLEDH_IV ;
 +Use/Sub:r GÖÖLEDH_IV ;
 +Use/NG:rad GOLTELIDH_IV ;
@@ -1399,19 +1430,19 @@ LEXICON EEREDH_IV
 
 
 ! ---- Verbal derivation sublexica ----
-LEXICON ÅARAJEHTEDH_TV
+LEXICON ÅARAJEHTEDH_TV  !!= * __@CODE@__
  +V+TV: ÅARAJEHTEDH ;
  +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
  +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
 
 
-LEXICON ÅARAJEHTEDH_IV
+LEXICON ÅARAJEHTEDH_IV  !!= * __@CODE@__
  +V+IV: ÅARAJEHTEDH ;
  +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
 
 
-LEXICON ÅARAJEHTEDH ! row A - Group I
+LEXICON ÅARAJEHTEDH   !!= * __@CODE@__ row A - Group I
  +Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
@@ -1436,7 +1467,7 @@ LEXICON ÅARAJEHTEDH ! row A - Group I
  +Der3+Der/gåete+V:%»iegået GÅETEDH ;
  +Der3+Der/ahtje+V:%»iejahtj AHTJE ;
  
-LEXICON BUARADEHTEDH
+LEXICON BUARADEHTEDH  !!= * __@CODE@__
  +V+IV+Ind+Prs+Uml+Sg3:%>%^1UMLa   FINAL1 ; ! class I special
  +V+IV+Ind+Prt+Uml+Sg3:%>%^iUMLi    FINAL1 ;
  +V+IV+Ind+Prt+Uml+Sg3+Use/Sub:%>%^iUML%^DISIMPi    FINAL1 ;
@@ -1475,18 +1506,18 @@ LEXICON BUARADEHTEDH
  +V+IV+Der3+Der/ahtje+V+ConNeg:%»iejahtj%>0h    FINAL1 ;
 
 
-LEXICON GOEGKERDADTEDH_TV
+LEXICON GOEGKERDADTEDH_TV  !!= * __@CODE@__
  +V+TV: GOEGKERDADTEDH ;
  +V+TV+Der3+Der/PassL:e%»sovv SOVVEDH ;
  +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
 
-LEXICON GOEGKERDADTEDH_IV
+LEXICON GOEGKERDADTEDH_IV  !!= * __@CODE@__
  +V+IV: GOEGKERDADTEDH ;
  +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
  
 
-LEXICON GOEGKERDADTEDH ! row D - Group IV
+LEXICON GOEGKERDADTEDH   !!= * __@CODE@__ row D - Group IV
  +Ind+Prs:%>     V-IV-EVEN-PRS ;
  +Ind+Prt:%>     VSUF-PRT ;
  +Imprt:%>         VSUF-IV-EVEN-IMP ;
@@ -1508,7 +1539,7 @@ LEXICON GOEGKERDADTEDH ! row D - Group IV
  +Der3+Der/gåete+V:%»egået GÅETEDH ;
  +Der3+Der/ahtje+V:%»ijahtj AHTJE ;
 
-LEXICON OBREDADTEDH
+LEXICON OBREDADTEDH  !!= * __@CODE@__
  +V+IV+Ind+Prs+Sg3+Uml:%>%^3sUMLa   FINAL1 ;
  +V+IV+Ind+Prt+Sg3:%>i  FINAL1 ;
  +V+IV+Ind+Prt+Sg3+Use/Sub:%>%^DISIMPi  FINAL1 ;
@@ -1545,14 +1576,14 @@ LEXICON OBREDADTEDH
  +V+IV+Der3+Der/ahtje+V+PrfPrc:%»ijahtj%>eme   FINAL1 ;
  +V+IV+Der3+Der/ahtje+V+ConNeg:%»ijahtj%>0h    FINAL1 ;
 
-LEXICON GÅETEDH_TV
+LEXICON GÅETEDH_TV  !!= * __@CODE@__
 +V+TV: GÅETEDH ;
 
-LEXICON GÅETEDH_IV
+LEXICON GÅETEDH_IV  !!= * __@CODE@__
 +V+IV: GÅETEDH ;
 
 
-LEXICON GÅETEDH ! from Der/gåete
+LEXICON GÅETEDH   !!= * __@CODE@__ from Der/gåete
  +Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG ; ! class I special
  +Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
  +Ind+Prt+Uml:%>%^iUML    VSUF-PRT ;
@@ -1567,7 +1598,7 @@ LEXICON GÅETEDH ! from Der/gåete
  +PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
  ! row F trigger for Umlaut Prt
 
-LEXICON STIEHPEGÅETEDH
+LEXICON STIEHPEGÅETEDH  !!= * __@CODE@__
  +V+IV+Ind+Prs+Uml+Sg3:%>%^1UMLa   FINAL1 ; ! class I special
  +V+IV+Ind+Prt+Uml+Sg3:%>%^iUMLi    FINAL1 ;
  +V+IV+Ind+Prt+Uml+Sg3+Use/Sub:%>%^iUMLi    FINAL1 ;
@@ -1582,13 +1613,13 @@ LEXICON STIEHPEGÅETEDH
  +V+IV+PrfPrc+Uml:%>%^1UMLeme  FINAL1 ;
 
 
-LEXICON AHTJE_TV
+LEXICON AHTJE_TV  !!= * __@CODE@__
 +V+TV: AHTJE ;
 
-LEXICON AHTJE_IV
+LEXICON AHTJE_IV  !!= * __@CODE@__
 +V+IV: AHTJE ;
 
-LEXICON OBRIJAHTJEDH
+LEXICON OBRIJAHTJEDH  !!= * __@CODE@__
  +V+IV+Ind+Prs+Sg3+Uml:%>%^3sUMLa   FINAL1 ;
  +V+IV+Ind+Prt+Sg3:%>i     FINAL1 ;
  +V+IV+Ind+Prt+Sg3+Use/Sub:%>%^DISIMPi     FINAL1 ;
@@ -1602,7 +1633,7 @@ LEXICON OBRIJAHTJEDH
  +V+IV+ConNeg:%>0h    FINAL1 ;
 
 
-LEXICON AHTJE ! row D - Group IV
+LEXICON AHTJE   !!= * __@CODE@__ row D - Group IV
  +Ind+Prs:%>     V-IV-EVEN-PRS ;
  +Ind+Prt:%>     VSUF-PRT ;
  +Imprt:%>         VSUF-IV-EVEN-IMP ;
@@ -1615,7 +1646,7 @@ LEXICON AHTJE ! row D - Group IV
  +PrfPrc:%>eme   FINAL1 ;
  +ConNeg:%>0h    FINAL1 ;
 
-LEXICON SOVVEDH ! row D - Group IV
+LEXICON SOVVEDH !!= * __@CODE@__row D - Group IV
  +V+IV+Ind+Prs:%>     V-IV-EVEN-PRS ;
  +V+IV+Ind+Prt:%>     VSUF-PRT ;
 ! +V+IV+Imprt:%>         VSUF-IV-EVEN-IMP ;
@@ -1636,7 +1667,7 @@ LEXICON SOVVEDH ! row D - Group IV
  +V+IV+Der3+Der/gåete+V:%»egået GÅETEDH ;
  +V+IV+Der3+Der/ahtje+V:%»ijahtj AHTJE ;
  
-LEXICON IV_PASSIVE_L
+LEXICON IV_PASSIVE_L  !!= * __@CODE@__
  +V+Ind+Prs+Sg3+Uml:%>%^3sUMLa   FINAL1 ;
  +V+Ind+Prs+Pl3+Uml:%^3dUMLieh  FINAL1  ;
  +V+Ind+Prt+Sg3:%>i     FINAL1  ;
@@ -1678,7 +1709,7 @@ LEXICON IV_PASSIVE_L
 
 
 
-LEXICON IV_PASSIVE_S ! row E - Group V  NB! FOR already derivated PASSIVES!!!
+LEXICON IV_PASSIVE_S   !!= * __@CODE@__ row E - Group V  NB! FOR already derivated PASSIVES!!!
  +V+Ind+Prs+Sg3:%>oe   FINAL1 ;
  +V+Ind+Prs+Pl3:%>X2h   FINAL1 ;
  +V+Ind+Prt+Sg3:%>i   FINAL1 ;
@@ -1699,7 +1730,7 @@ LEXICON IV_PASSIVE_S ! row E - Group V  NB! FOR already derivated PASSIVES!!!
  +V+Der3+Der/NomAct:%»em@C.NeedNoun@    NomActOdd ;
 
 
-LEXICON LGIDH
+LEXICON LGIDH  !!= * __@CODE@__
 
 ! Finite forms
 ! ------------
@@ -1737,13 +1768,13 @@ LEXICON LGIDH
 
 
 
-! ---- Nominal derivation sublexica ----
+!! !!! Nominal derivation sublexica 
 
-LEXICON LAAHKOEH_EVEN
+LEXICON LAAHKOEH_EVEN   !!= * __@CODE@__
 LAAHKOEH_BE ;
 LAAHKOEH_MES ;
 
-LEXICON LAAHKOEH_BE
+LEXICON LAAHKOEH_BE  !!= ** __@CODE@__
  +Sg+Nom:%>%^COMPDISIMPbe%^DISIMP         FINAL1 ;
  +Sg+Acc:%>%^COMPDISIMPbe%>%^DISIMPm      FINAL1 ;
  +Sg+Gen:%>%^COMPDISIMPbe%>%^DISIMPn      FINAL1 ;
@@ -1765,7 +1796,7 @@ LEXICON LAAHKOEH_BE
  +Pl+Com:b%>%^DISIMPigujmie FINAL1 ;
   +Ess:b%>inie          FINAL1 ;
 
-LEXICON LAAHKOEH_MES
+LEXICON LAAHKOEH_MES  !!= ** __@CODE@__
 +Sg+Nom:%>%^COMPDISIMPmes%^DISIMP          FINAL1 ;
 +Sg+Nom:%>%^COMPDISIMP2mes%^DISIMP          FINAL1 ;
 +Sg+Acc:masse%>m       FINAL1 ;
@@ -1786,11 +1817,11 @@ LEXICON LAAHKOEH_MES
   +Ess:mass%>ine         FINAL1 ;
 
 
-LEXICON LAAHKOEH_ODD
+LEXICON LAAHKOEH_ODD  !!= * __@CODE@__
 LAAHKOEH_ÅBPOE ;
 LAAHKOEH_OMMES ;
 
-LEXICON LAAHKOEH_ÅBPOE
+LEXICON LAAHKOEH_ÅBPOE  !!= ** __@CODE@__
  +Sg+Nom:%>åbpoe          FINAL1 ;
  +Sg+Acc:%>åbpoe%>m       FINAL1 ;
  +Sg+Gen:%>åbpoe%>n       FINAL1 ;
@@ -1824,7 +1855,7 @@ LEXICON LAAHKOEH_ÅBPOE
   +Pl+Ela+Use/NG+Use/Sub:%>abp%>ijste    FINAL1 ;
   +Pl+Com+Use/NG+Use/Sub:%>abpa%>jgujmie FINAL1 ;
 
-LEXICON LAAHKOEH_OMMES
+LEXICON LAAHKOEH_OMMES   !!= ** __@CODE@__
   +Sg+Nom:%>ommes%^DISIMP         FINAL1 ;
 +Sg+Acc:%>ommese%>%^DISIMPm      FINAL1 ;
 +Sg+Gen:%>ommese%>%^DISIMPn      FINAL1 ;
@@ -1844,46 +1875,46 @@ LEXICON LAAHKOEH_OMMES
 
 
 
-LEXICON IGENSUFF
+LEXICON IGENSUFF   !!= * __@CODE@__
        :i ENDLEX ; ! The normative -i +Gen+Pl suffix
 +Use/NG:ij ENDLEX ; ! A fairly common non-normative -ij suffix
 !+Use/Sub:ij ENDLEX ; ! A fairly common non-normative -ij suffix
 
 
-! Verbal affixes
+!! !!!Verbal affixes
 ! ==============
 
-! Finite forms
+!! !!Finite forms
 ! ------------
 
-! Even
+!! !Even
 ! ----
 
-! Present
+!! !Present
 
-LEXICON V-I-PRS-SG ! Merge with V-EVEN-PRS if nothing special here.
+LEXICON V-I-PRS-SG   !!= * __@CODE@__ Merge with V-EVEN-PRS if nothing special here.
  V-PRS-SG-12 ;
  V-PRS-SG-3 ;
 
-LEXICON V-II-PRS-SG
+LEXICON V-II-PRS-SG   !!= * __@CODE@__
  :oe       V-PRS-SG-12 ;
  +Uml:%^2UMLe  V-PRS-SG-3 ; ! ?? parallels the byörkesne case
 
-LEXICON V-III-PRS-SG
+LEXICON V-III-PRS-SG   !!= * __@CODE@__
  :a V-PRS-SG-12 ; ! This should give guarka
  :oe V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
 ! perhaps use A2 as 0 rule, triggers deletion in front of aff border
 ! but then oe aff must come afterwards
 ! :oe FINAL1 ;  !This gave no tag! !archi-looking ?
 
-LEXICON VSUF-V-EVEN-PRS
+LEXICON VSUF-V-EVEN-PRS   !!= * __@CODE@__
  :e V-PRS-SG-1 ;
  V-PRS-SG-2 ;
  :oe V-PRS-SG-3 ;
  :'e   VSUF-EVEN-PRS-DUPL ;
 
 
-LEXICON VSUF-EVEN-PRS-DUPL
+LEXICON VSUF-EVEN-PRS-DUPL   !!= * __@CODE@__
  +Du1:X2n                 FINAL1 ; !'e>oe
  +Du2+Dial/L:X4jidien     FINAL1 ; !Long form
  +Du2+Dial/SH:d%^DISIMPen FINAL1 ; !oe>o a>e ie>e
@@ -1896,7 +1927,7 @@ LEXICON VSUF-EVEN-PRS-DUPL
 !+Du3+Use/Sub:b%^DISIMPen FINAL1 ; ! !'e>0i
 
 
-LEXICON VSUF-VI-EVEN-PRS
+LEXICON VSUF-VI-EVEN-PRS   !!= * __@CODE@__
  :e                  V-PRS-SG-1 ;
                      V-PRS-SG-2 ;
  +Sg3:ie             FINAL1 ;
@@ -1911,9 +1942,9 @@ LEXICON VSUF-VI-EVEN-PRS
  +Pl3:ieh            FINAL1 ;
 
 
-! Imperative
+!! !Imperative
 
-LEXICON VSUF-EVEN-IMP
+LEXICON VSUF-EVEN-IMP   !!= * __@CODE@__
 ! +Sg1+Uml:%^1UMLam FINAL1 ;
  +Sg2:ieh FINAL1 ;
 ! +Du1:ien FINAL1 ;  
@@ -1923,18 +1954,19 @@ LEXICON VSUF-EVEN-IMP
  +Pl2:ede FINAL1 ;
 
 
-LEXICON VSUF-II-EVEN-IMP
+LEXICON VSUF-II-EVEN-IMP  !!= * __@CODE@__
  +Sg2:oeh     FINAL1  ;
  +Du2:oden    FINAL1  ;
  +Pl2:ode     FINAL1  ;
 
-LEXICON VSUF-III-EVEN-IMP
+LEXICON VSUF-III-EVEN-IMP  !!= * __@CODE@__
  +Sg2:ah     FINAL1  ;
  +Du2:eden   FINAL1  ;
  +Pl2:ede    FINAL1  ;
 
+!! !Present
 
-LEXICON V-IV-EVEN-PRS
+LEXICON V-IV-EVEN-PRS  !!= * __@CODE@__
  :e                  V-PRS-SG-1 ;
                      V-PRS-SG-2 ;
  +Sg3+Uml:%^3sUMLa   FINAL1 ;
@@ -1956,45 +1988,45 @@ LEXICON VSUF-IV-EVEN-IMP
 
 
 
-! Odd
+!! !!Odd
 
-! Present
+!! !Present
 
-LEXICON VSUF-ODD-PRS
+LEXICON VSUF-ODD-PRS  !!= * __@CODE@__
     V-ODD-PRS-SG ;
     V-ODD-PRS-DUPL ;
 
-LEXICON V-ODD-PRS-SG
+LEXICON V-ODD-PRS-SG  !!= ** __@CODE@__
  :%^DISIMPe V-PRS-SG-1 ;
  :%^DISIMP V-PRS-SG-2 ;
  :%^DISIMPe V-PRS-SG-3 ;
 
-LEXICON V-ODD-PRS-DUPL
+LEXICON V-ODD-PRS-DUPL  !!= ** __@CODE@__
  ODD_PRS_NON_DU3 ;
  ODD_PRS_DU3 ;
 
-LEXICON ODD_PRS_NON_DU3
+LEXICON ODD_PRS_NON_DU3  !!= ** __@CODE@__
  +Du1:ien  FINAL1  ;
  +Du2:idien  FINAL1  ;
  +Pl1:ibie  FINAL1  ;
  +Pl2:idie  FINAL1  ;
  +Pl3:ieh  FINAL1  ;
 
-LEXICON ODD_PRS_DU3
+LEXICON ODD_PRS_DU3  !!= ** __@CODE@__
  +Du3:ægan  FINAL1  ;
 ! +Du3:æban  FINAL1  ; !SUB
 
 
-! Past
+!! !Past
 
-LEXICON VSUF-ODD-PRT
+LEXICON VSUF-ODD-PRT  !!= * __@CODE@__
 VSUF-PRT-SG-12 ;
 VSUF-PRT-SG-3 ;
 VSUF-PRT-DUPL ;
 
-! Imperative
+!! !Imperative
 
-LEXICON VSUF-ODD-IMP
+LEXICON VSUF-ODD-IMP   !!= * __@CODE@__
  +Sg2:%^DISIMPh FINAL1 ;
  +Du2:idien FINAL1 ;
  +Pl2:idie FINAL1 ;
@@ -2026,45 +2058,45 @@ LEXICON VSUF-ODD-IMP
 !  +Pl2:ede  FINAL1  ;
 
 
-! Common even-odd
+!! !!Common even-odd
 ! ---------------
 
 
-! Present
+!! !Present
 
-LEXICON V-PRS-SG-12 ! Kutt denne viss ikkje ref til
+LEXICON V-PRS-SG-12   !!= * __@CODE@__ Kutt denne viss ikkje ref til
  V-PRS-SG-1 ;
  V-PRS-SG-2 ;
 
-LEXICON V-PRS-SG-1
+LEXICON V-PRS-SG-1  !!= * __@CODE@__
  +Sg1:m FINAL1 ; ! Border in prev lex
 
-LEXICON V-PRS-SG-2
+LEXICON V-PRS-SG-2  !!= * __@CODE@__
  +Sg2:h FINAL1 ;
 
-LEXICON V-PRS-SG-3
+LEXICON V-PRS-SG-3  !!= * __@CODE@__
  +Sg3: FINAL1 ;
 
 
-! Past
+!! !Past
 
-LEXICON VSUF-PRT
+LEXICON VSUF-PRT  !!= * __@CODE@__
  VSUF-PRT-SG-12 ;
  VSUF-PRT-SG-3 ;
  VSUF-PRT-DUPL ;
  
 
 
-LEXICON VSUF-PRT-SG-12
+LEXICON VSUF-PRT-SG-12  !!= * __@CODE@__
  +Sg1:im FINAL1 ;
  +Sg2:ih FINAL1 ;
 
-LEXICON VSUF-PRT-SG-3
+LEXICON VSUF-PRT-SG-3  !!= * __@CODE@__
  +Sg3:i  FINAL1  ;
  +Sg3+Use/Sub+Use/NG:%^DISIMPi  FINAL1  ; !
 
 
-LEXICON VSUF-PRT-DUPL
+LEXICON VSUF-PRT-DUPL  !!= * __@CODE@__
 +Du1:imen FINAL1 ;
 +Du2:iden FINAL1 ;
 +Du3:igan FINAL1 ;
