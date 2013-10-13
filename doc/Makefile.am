@@ -11,6 +11,9 @@ if CAN_DOCC
 
 JSP_PAGES=root-morphology.jspwiki \
 		  adjectives-affixes.jspwiki \
+		  adjectives-stems.jspwiki \
+		  adjectives-oahpa-affixes.jspwiki \
+		  adjectives-oahpa-stems.jspwiki   \
 		  nouns-affixes.jspwiki \
 		  verbs-affixes.jspwiki \
 		  disambiguation-syntax.jspwiki \
@@ -19,13 +22,10 @@ JSP_PAGES=root-morphology.jspwiki \
 # compounding-morphology.jspwiki   \
 # abbreviations-stems.jspwiki      \
 # acronyms-stems.jspwiki           \
-# adjectives-oahpa-stems.jspwiki   \
-# adjectives-stems.jspwiki         \
 # adpositions-stems.jspwiki        \
 # adverbs-stems.jspwiki            \
 # conjunctions-stems.jspwiki       \
 # interjections-stems.jspwiki      \
-# nouns-oahpa-stems.jspwiki        \
 # nouns-stems.jspwiki              \
 # numerals-stems.jspwiki           \
 # particles-stems.jspwiki          \
