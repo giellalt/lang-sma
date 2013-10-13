@@ -392,6 +392,18 @@ And this is the ENDLEX of everything:
 
 
 
+!!!Adjective affixes
+
+This is one of two parallel files containing adjective affixes.
+The files represent two alternative interpretation of the same data
+(South Saami adjectives).
+This file is used for spellchecking, the alternative file
+''adjectives-oahpa.lexc'' is used for dictionary and icall applications.
+This file is compiled by default, the other one is compiled by in 
+langs/sma giving the command ''.configure --with-oahpa''
+before compiling.
+
+
 
 
 
@@ -1023,6 +1035,639 @@ EVENCOMPCASE_oe ;
 
 
 
+!!!Adjective affixes
+
+This is one of two parallel files containing adjective affixes.
+The files represent two alternative interpretation of the same data
+(South Saami adjectives).
+This file is used for dictionary and icall applications, the alternative file
+''adjectives.lexc'' is used for spellchecking.
+This file is compiled by in 
+langs/sma giving the command ''.configure --with-oahpa''
+before compiling. The other file (adjectives.lexc) is compiled by default.
+
+!!!Adjectives: Adjectival inflection sublexica
+
+!!Basic adjectival lexica, infl types
+
+!even stems
+
+Lexical exceptions
+
+
+ * __LEXICON A_LDH __
+
+
+ * __LEXICON NOERE __
+
+ * __LEXICON BUERIE __
+
+ * __LEXICON LEEVLES __
+
+ * __LEXICON SOOKES __
+
+ * __LEXICON SOOJMES __
+
+
+ * __LEXICON SMAAVE   __, both smaave and plaave
+
+ * __LEXICON SNAARE  __
+
+ * __LEXICON ORRE __
+
+ * __LEXICON STOERE __
+
+
+ * __LEXICON STOERE_COMP __
+
+ * __LEXICON NAAKE __
+
+ * __LEXICON GISSE __
+
+ * __LEXICON GAMTE __
+
+ * __LEXICON GIEVTE __
+
+ * __LEXICON KRUANA __
+
+ * __LEXICON VEELKES __
+
+
+ * __LEXICON ROOPSES __
+
+ * __LEXICON SNEEHPES  __ burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
+
+ * __LEXICON GEEHPES __
+
+ * __LEXICON GEERVE __
+
+ * __LEXICON TJOEVKES __
+
+ * __LEXICON SAETNIES __
+
+ * __LEXICON SUVHTJIES __
+
+
+ * __LEXICON SAEBRIES  __
+
+ * __LEXICON MUJVIES  __
+
+
+ * __LEXICON STAERIES  __
+
+ * __LEXICON GIERIES  __
+
+ * __LEXICON BAERIES  __
+
+ * __LEXICON GÆHTJOES  __
+
+ * __LEXICON AAREH __
+
+ * __LEXICON MOOREH __
+
+
+ * __LEXICON BURRIE __
+
+
+!!Regular even stem types 
+
+
+ * __LEXICON EVTEBE   __
+
+ * __LEXICON ATTR_EVEN   __
+
+ * __LEXICON ATTR_ODD   __
+
+
+ * __LEXICON ø_Ø_EVEN  __
+
+ * __LEXICON IJVEadj __
+
+
+ * __LEXICON LES  __ Should contain only loanwords (?)
+
+
+ * __LEXICON IJAALE_A_LOAN __
+
+
+ * __LEXICON AATE_adj_LOAN  __
+
+
+ * __LEXICON AALE __
+
+ * __LEXICON AALEFORMS __
+
+ * __LEXICON oe_OE_EVEN  __
+
+
+ * __LEXICON e_E_EVEN  __
+
+ ** __LEXICON e_E_EVENNOCOMP  __
+
+ ** __LEXICON a_A_EVENNOCOMP  __
+
+ * __LEXICON a_A_EVEN __
+
+
+ * __LEXICON ie_IE_EVEN  __
+
+ ** __LEXICON ie_IE_EVENNOCOMP  __
+
+ * __LEXICON es_ES_EVEN  __
+
+ ** __LEXICON es_ES_EVENNOCOMP  __
+
+ * __LEXICON ies_IES_EVEN  __
+
+ ** __LEXICON ies_IES_EVENNOCOMP  __
+
+
+ * __LEXICON Cs_CS_EVEN  __
+
+
+ * __LEXICON ihks_IHKS_EVENNOCOMP __
+
+
+ * __LEXICON RAARH   __ Attr= h, Comp =Even( Jïjtje-raarh) 
+
+
+
+ * __LEXICON MAST __
+
+!type 2
+
+ * __LEXICON JELLE __
+
+ * __LEXICON UELLE __
+
+
+ * __LEXICON e_ES_LOAN   __ LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.  
+
+
+ * __LEXICON ÆRE   __ LOAN
+
+ * __LEXICON ENTE   __ LOAN  
+
+
+
+
+ * __LEXICON LES_LASSE_ie  __ derivasjon av verb
+
+ * __LEXICON LES_LASSE_NOM_ie  __
+
+
+ * __LEXICON LES_LASSE_OBL_ie  __
+
+
+ * __LEXICON e_ES_EVEN  __
+
+ ** __LEXICON e_ES_EVENNOCOMP  __
+
+ * __LEXICON e_ES_ODDEVEN  __
+
+
+ * __LEXICON es_E_EVEN   __
+
+ * __LEXICON en_E_EVEN   __
+
+
+ * __LEXICON as_A_EVEN   __ attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
+
+ * __LEXICON oes_OE_EVEN   __ attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/substantiven hammoe= Even
+
+ ** __LEXICON oes_OE_EVENNOCOMP  __
+
+ * __LEXICON ies_IE_EVEN   __ attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne) 
+ * __LEXICON ies_IE_EVENNOCOMP   __ attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne) 
+
+
+ * __LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN  __
+
+ * __LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN  __
+
+ * __LEXICON ies_(ehke)_EHKE_ODDCOMPe_EVEN __
+
+
+
+ * __LEXICON ies_IES_IE_EVEN   __ Comp & case = even (ebe/emes/esne) 
+
+ * __LEXICON ies_IES_IE_EVENNOCOMP   __ Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
+
+ * __LEXICON as_AS_EVEN   __ Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
+
+
+ * __LEXICON IJLE_LOAN __
+
+
+ * __LEXICON s_H_EVENNOCOMP   __
+
+
+!!!ODD-stems (odd stem declension)
+
+
+!!type 0 (attr only)
+
+ * __LEXICON ATTR_es_s  __ aajtijes
+
+
+!!type 1
+
+
+
+ * __LEXICON ø_Ø_ODD  __
+
+ * __LEXICON ah_AH_ODD    __ XXX mangler CASE - hva er riktig - kanskje EVEN?
+
+
+ * __LEXICON ah_AH_ODDNOCOMP   __
+
+ * __LEXICON hth_HTH_ODD  __
+
+ * __LEXICON Ce_CE_ODD   __ bårreske
+
+ * __LEXICON ege_EGE_ODDEVEN  __ rudtjege 
+
+
+ * __LEXICON s_S_Ø_ODD  __ hamhpas
+
+
+
+ * __LEXICON s_E_ODD  __
+
+ * __LEXICON as_AS_ODD  __
+
+ ** __LEXICON as_AS_ODDNOCOMP  __
+
+
+
+ * __LEXICON s_S_ODD  __
+
+ ** __LEXICON s_S_ODDNOCOMP  __
+
+ * __LEXICON es_ES_ODDhk  __
+
+ * __LEXICON oes_OES_ODD  __
+
+ ** __LEXICON oes_OES_ODDNOCOMP  __
+
+ * __LEXICON oes_OES_ODDahk  __
+
+ * __LEXICON oes_OES_ODDas  __
+
+
+ * __LEXICON Ces_CES_ODDNOCOMP   __
+
+ * __LEXICON les_LES_ODD   __
+
+ * __LEXICON Cs_CS_CE_ODD  __
+
+ ** __LEXICON Cs_CS_CE_ODDNOCOMP  __
+
+
+ * __LEXICON Cs_CS_ODD  __
+
+ ** __LEXICON Cs_CS_ODDNOCOMP  __
+
+ * __LEXICON hts_HTS_ODD  __
+
+ ** __LEXICON hts_HTS_ODDNOCOMP  __
+
+
+
+ * __LEXICON an_AN_ODDNOCOMP __
+
+
+!!type 2
+
+ * __LEXICON AABELE __
+
+
+ * __LEXICON IJBELE __
+
+ * __LEXICON Ce_CES_ODD  __
+
+ * __LEXICON ø_S_ODDEVEN   __ , Comp=even jih ODD, Case= ODD
+
+ * __LEXICON ø_S_ODD   __ , Comp=even jih ODD, Case= ODD
+
+
+
+!!type 3
+
+
+ * __LEXICON JEASIEGOELKIJE __
+
+
+
+ * __LEXICON BÅETIJE !   __ bårreske
+
+ * __LEXICON jes_js_JES_JS_ODD  __ to adj: bualijes, fååmijes
+
+
+ * __LEXICON ijes_ijs_IJE_ODD  __ GUALIJES
+
+ * __LEXICON ijes_ijs_IJE_ODDNOCOMP  __ DÅAJMIJES
+
+
+
+
+
+
+!!type 3
+
+
+
+ * __LEXICON Cs_CE_ODD  __
+
+ ** __LEXICON Cs_CE_ODDNOCOMP  __
+
+ * __LEXICON Ces_CE_ODD  __
+
+
+ ** __LEXICON Ces_CE_ODDNOCOMP  __
+
+
+ * __LEXICON Ces_Ce_CES_CE_ODD    __ as Ces_CES_CE_ODD, but with ATTR_0
+
+ ** __LEXICON Ces_Ce_CES_CE_ODDNOCOMP __
+
+ * __LEXICON Ce_Ces_CES_CE_ODD   __
+
+ ** __LEXICON Ce_Ces_CES_CE_ODDNOCOMP __
+
+
+ * __LEXICON Ces_CES_CE_ODD  __
+
+
+ ** __LEXICON Ces_CES_CE_ODDNOCOMP  __
+
+ * __LEXICON hks_hke_HKS_HKE_ODD   __
+
+
+!!type 4
+
+ * __LEXICON as_AN_ODD  __
+
+
+ * __LEXICON oes_AN_ODD  __
+
+
+ * __LEXICON s_N_ODD  __
+
+ ** __LEXICON s_N_ODDNOCOMP  __
+
+
+
+
+ * __LEXICON ah_AN_ODDNOCOMP  __
+
+
+
+
+ * __LEXICON oeh_OEH_ODDNOCOMP __
+
+ * __LEXICON oeh_OEN_ODD __
+
+
+
+ * __LEXICON oeh_AN_ODD  __
+
+ ** __LEXICON oeh_AN_ODDNOCOMP  __
+
+
+ * __LEXICON oeh_OEH_AN_ODD   __ 
+
+
+ ** __LEXICON oeh_OEH_AN_ODDNOCOMP  __
+
+
+
+ * __LEXICON ø_N_ODD  __
+
+
+
+ * __LEXICON e_AN_ODD  __
+
+
+ * __LEXICON ies_EME __
+
+
+
+
+
+
+ * __LEXICON HKE_ODD_NGCOMP __
+
+ * __LEXICON HKE_ODD_COMP  __
+
+
+
+ * __LEXICON GEERUVE __
+
+ * __LEXICON JAEDTUVES __
+
+!!Attribute lexica
+
+ * __LEXICON ATTR_0_PRED_0 __
+
+ * __LEXICON ATTR_0 __
+
+
+ * __LEXICON ATTR_S __
+
+ * __LEXICON ATTR_H __
+
+ * __LEXICON ATTR_N __
+
+ * __LEXICON ATTRCONT __
+
+!!Predicative lexica
+
+
+ * __LEXICON PRED_0 __
+
+
+ * __LEXICON PRED_S __
+
+ * __LEXICON PRED_H __
+
+
+ * __LEXICON PRED_N __
+
+ * __LEXICON PRED_AN __
+
+
+
+
+!!!Odd syllabic stems - adjectives
+
+ * __LEXICON ODDCASE __
+
+ ** __LEXICON ODDCASENOM __
+
+ ** __LEXICON ODDCASEOBL __
+
+ * __LEXICON ije_ODDCASE __
+
+ ** __LEXICON ije_ODDCASENOM __
+
+ ** __LEXICON ije_ODDCASEOBL __
+
+
+
+
+!!!Even syllabic stems - adjectives
+
+ * __LEXICON eCASE __
+
+ ** __LEXICON eCASENOM __
+
+ ** __LEXICON eCASEOBL __
+
+
+
+ * __LEXICON aCASE __
+
+
+ ** __LEXICON aCASENOM __
+
+ ** __LEXICON aCASEOBL __
+
+ * __LEXICON ieCASE __
+
+ ** __LEXICON ieCASEOBL __
+
+
+ * __LEXICON oeCASE __
+
+ ** __LEXICON oeCASE_NOMSG __
+
+ ** __LEXICON oeCASE_OBL __
+
+ ** __LEXICON A_OE_SGILL_UML __
+
+ ** __LEXICON A_OE __
+
+ ** __LEXICON A_OE_SG __
+
+ ** __LEXICON A_OE_PL __
+
+ ** __LEXICON A_OE_ESS __
+
+
+
+
+
+
+
+!!!Comparative forms
+
+ * __LEXICON EVENCOMP __
+
+ ** __LEXICON EVENCOMPONLY __
+
+
+ ** __LEXICON EVENSUPONLY __
+
+ * __LEXICON EVENCOMP_oe __
+
+ * __LEXICON ODDCOMP __
+
+
+ * __LEXICON EVENCOMPCASE __
+
+ * __LEXICON EVENCOMPCASE_oe __
+
+
+
+ * __LEXICON DIMCOMP __
+
+
+ * __LEXICON ÅBPOE __
+
+ ** __LEXICON ÅBPOE_SGILL_UML __
+
+ * __LEXICON ÅBPOE_N_OE __
+
+ ** __LEXICON ÅBPOE_N_OE_SG __
+
+ ** __LEXICON ÅBPOE_N_OE_PL __
+
+ ** __LEXICON ÅBPOE_N_OE_ESS __
+
+ * __LEXICON ABPA __
+
+
+ ** __LEXICON ABPA_SG __
+
+ ** __LEXICON ABPA_PL __
+
+ * __LEXICON MES __
+
+ * __LEXICON MES_oe __
+
+ * __LEXICON OMMES __
+
+
+ * __LEXICON LAAKAN __
+
+ * __LEXICON LEEJNES __
+
+
+!!!Adjective stems
+
+This is one of two parallel files containing adjective stems.
+The files represent two alternative interpretation of the same data
+(South Saami adjectives).
+This file is used for dictionary and icall applications, the alternative file
+''adjectives.lexc'' is used for spellchecking.
+This file is compiled by in 
+langs/sma giving the command ''.configure --with-oahpa''
+before compiling. The other file (adjectives.lexc) is compiled by default.
+
+
+
+
+
+EVENCOMP???!SgNomCmp
+
+
+
+!!!Adjective stems
+
+This is one of two parallel files containing adjective stems.
+The files represent two alternative interpretation of the same data
+(South Saami adjectives).
+This file is used for spellchecking, the alternative file
+''adjectives-oahpa.lexc'' is used for dictionary and icall applications.
+This file is compiled by default, the other one is compiled by in 
+langs/sma giving the command ''.configure --with-oahpa''
+before compiling.
+
+
+
+
+
+
+
+
+
+* __gijmie__: {{gijmies+Hom1+A+Sg+Nom}}
+* __gijmiem__: {{gijmies+Hom1+A+Sg+Acc}}
+* __gijmies__: {{gijmies+Hom1+A+Attr}}
+* __gæjman__: {{gijmies+Hom1+A+Sg+Nom}}
+(subsequent examples are *gijmies*)
+
+EVENCOMP???!SgNomCmp  -MLK:  This one is substantiv- typical -oeh-suffiks as adjectiv --> goes to -e-suffix or ie-suffix as substantiv!
+eds VS emes/immes!
+
+skåapmoeh - skuapman!
+tidligere oeh_OE
+
+
+
+
+
 !!!Nominal inflection sublexica
 
 !!Inflection for odd-syllable nouns
@@ -1508,6 +2153,8 @@ The __MAAKE__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
 This is the file for the South Saami verb inflection and derivation.
 
 !!!Verbal inflection sublexica
+
+Table of content for this file:
 
 * The auxiliaries
 ** The negative verb
