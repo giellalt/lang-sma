@@ -146,6 +146,7 @@ AC_CONFIG_FILES([Makefile \
                  test/tools/spellcheckers/Makefile \
                  tools/Makefile \
                  tools/grammarcheckers/Makefile \
+                 tools/shellscripts/Makefile \
                  tools/spellcheckers/Makefile \
                  tools/spellcheckers/fstbased/Makefile \
                  tools/spellcheckers/fstbased/hfst/Makefile \
@@ -157,6 +158,9 @@ AC_CONFIG_FILES([test/src/morphology/run-morph-tester.sh], \
       [chmod a+x test/src/morphology/run-morph-tester.sh])
 AC_CONFIG_FILES([test/src/morphology/generate-noun-lemmas.sh], \
       [chmod a+x test/src/morphology/generate-noun-lemmas.sh])
+AC_CONFIG_FILES([tools/shellscripts/usma-gt.sh], \
+      [chmod a+x tools/shellscripts/usma-gt.sh])
+
 AC_CONFIG_FILES([test/src/morphology/test-adj-generation.sh], \
       [chmod a+x test/src/morphology/test-adj-generation.sh])
 AC_CONFIG_FILES([test/src/morphology/test-noun-generation.sh], \
