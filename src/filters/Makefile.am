@@ -46,6 +46,7 @@ GT_FILTER_TARGETS+=\
 				   remove-ABBR-strings.hfst               \
 				   remove-ACR-strings.hfst                \
 				   remove-CLB-strings.hfst                \
+				   remove-derivation-strings.hfst         \
 				   remove-lexsub-strings.hfst             \
 				   remove-MinusSpell-strings.hfst         \
 				   remove-NA-strings.hfst                 \
@@ -81,6 +82,7 @@ GT_FILTER_TARGETS+=\
 				   remove-ABBR-strings.xfst               \
 				   remove-ACR-strings.xfst                \
 				   remove-CLB-strings.xfst                \
+				   remove-derivation-strings.xfst         \
 				   remove-lexsub-strings.xfst             \
 				   remove-MinusSpell-strings.xfst         \
 				   remove-NA-strings.xfst                 \
