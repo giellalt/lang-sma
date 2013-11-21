@@ -761,17 +761,17 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
     !**** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. ****!
 
 
-LEXICON SAETNIES4
-!! !!!UMLAUT LEXICON @LEXNAME@
-!! 20 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
-!! Theese adjectives is in the 4. group of the southsámi adjectives!! This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
-
-!! {{{
-        :ies ATTR_0 ;      !!= @CODE@
- +Use/NG:%^1UMLan PRED_0 ; !!= @CODE@
-!+Use/NG:a PRED_0 ;
-      +A:   N_IE_FORMS ;		    !!= @CODE@
-!! }}}
+!LEXI SAETNIES4 - accordign to Bergsland(1994), -an in pred is _NOT_ predicative.
+!! !!LAUT LEXICON @LEXNAME@
+!! 20-stem adjectives has umlaut from attr--> pred, and have no comparation.
+!! The adjectives is in the 4. group of the southsámi adjectives!! This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
+!
+!! {{
+!    :ies ATTR_0 ;      !!= @CODE@
+!+Use:%^1UMLan PRED_0 ; !!= @CODE@
+!+Use:a PRED_0 ;
+!    :   N_IE_FORMS ;		    !!= @CODE@
+!! }}
 
 LEXICON as_AN_ODDNOCOMP4
 !! !!!UMLAUT LEXICON @LEXNAME@
@@ -1754,6 +1754,11 @@ LEXICON MES
 +A+Superl+SgGenCmp:masse%>n R ;
 +A+Superl+PlGenCmp:mass%>i  R ;
 +A+Superl:%>%^COMPDISIMPmes%^DISIMP          LAAKAN ;
+
+LEXICON A_LDH !!= * __@CODE@__
+ +A+Attr: ATTRCONT ;
+ +A+Sg+Nom: FINAL1 ;
+ +A+Sg+Pl: FINAL1 ;
 
 !AdverbLexicons
 LEXICON LAAKAN
