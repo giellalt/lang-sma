@@ -16,35 +16,35 @@ This is free and open source South Sámi morphology.
  !!!Multichar_Symbols definitions
 
  !!Tags for POS
- * +N
- * +A
- * +Adv
- * +V
+ * +N	     
+ * +A	     
+ * +Adv     
+ * +V	     
 
- * +Pron
- * +CS
- * +CC
- * +Po
- * +Pr
- * +Interj
- * +Pcle
- * +Num
+ * +Pron    
+ * +CS	     
+ * +CC	     
+ * +Po	     
+ * +Pr	     
+ * +Interj  
+ * +Pcle    
+ * +Num     
 
- * +Logo
+ * +Logo    
 
 
  !Tags for sub-POS
 !!Proper nouns
- * +Prop
+ * +Prop     
 
 !!Pronoun subtypes
- * +Pers
- * +Dem
- * +Interr
- * +Refl
- * +Recipr
- * +Rel
- * +Indef
+ * +Pers    
+ * +Dem     
+ * +Interr  
+ * +Refl    
+ * +Recipr  
+ * +Rel     
+ * +Indef   
  * +Coll     :  Collective numeral
 
  || Usage tags || Explanation
@@ -103,10 +103,10 @@ Tags for compound analysis - this is what a compound actually is:
 
  ;  : Different case + number combinations
 
- * +SgCmp
- * +SgNomCmp
- * +SgGenCmp
- * +PlGenCmp
+ * +SgCmp	       
+ * +SgNomCmp      
+ * +SgGenCmp      
+ * +PlGenCmp      
 
 
  ; +Cmp : Dynamic compound - this tag should ''always'' be part of a dynamic compound.
@@ -120,17 +120,17 @@ Tags for compound analysis - this is what a compound actually is:
 
 !Tags for Case and Number Inflection
 !!Case and number
- * +Sg
- * +Pl
+ * +Sg	   
+ * +Pl	   
 
- * +Nom
- * +Acc
- * +Gen
- * +Ine
- * +Ela
- * +Ill
- * +Com
- * +Ess
+ * +Nom   
+ * +Acc   
+ * +Gen   
+ * +Ine   
+ * +Ela   
+ * +Ill   
+ * +Com   
+ * +Ess   
 
 
 !!Px
@@ -272,7 +272,6 @@ just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
  | +Der/PassS | VV - short passive only
  | +Der/A | NA - comparation of N's
 
-
 !!Tags for originating language
 The following tags are used to guide conversion to IPA: loan words
 and foreign names are usually pronounced (approximately) as in the
@@ -282,7 +281,6 @@ we tag all words that can't be correctly transcribed using the SME
 transcriber with source language codes. Once tagged, it is possible
 to split the lexical transducer in smaller ones according to langu-
 age, and apply different IPA conversion to each of them.
-
 The principle of tagging is that we only tag to the extent needed,
 and following a priority:
 # any untagged word is pronounced with SME orthographic conventions
@@ -293,13 +291,11 @@ and following a priority:
 # Occasionally even SME (the default) may be tagged, to block other
   languages from being specified, mainly during semi-automatic
   language tagging sessions
-
 All in all, we want to get as much correctly transcribed to IPA
 with as little work as possible. On the other hand, if more words
 are tagged than strictly needed, this should pose no problem as
 long as the IPA conversion is correct - at least some words will
 get the same pronounciation whether read as SME or NOB/NNO/SWE.
-
  * +OLang/SME - North Sámi
  * +OLang/FIN - Finnish
  * +OLang/SWE - Swedish
@@ -307,13 +303,11 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  * +OLang/NNO - Norw. nynorsk
  * +OLang/ENG - English
  * +OLang/UND - Undefined
-
 !!Triggers for morphophonological rules
  ; X2 : Trigger for ???
  ; X3 : Trigger for ???
  ; X4 : Trigger for ???
  ; E2 : insert e ! Fjern denne.
-
 !!Symbols that need to be escaped on the lower side (towards twolc):
  ; »7 : Literal »
  ; «7 : Literal «
@@ -321,7 +315,6 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
   %[%>%]  - Literal >
   %[%<%]  - Literal <
 }}}
-
 !!Lexeme disambiguation tags
  ; +Hom1 : Homonymy
  ; +Hom2 : Homonymy
@@ -330,7 +323,6 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  ; +v3 : Lemma variants
  ; +v4 : Lemma variants
  ; +v5 : Lemma variants
-
 !!Umlaut and diphthong simplification triggers
  | %^DISIMP | diphthong simplification
  | %^COMPDISIMP | diphthong simplification in comparatives
@@ -368,27 +360,27 @@ LexC language, and must be the first lexicon defined.
 
 Here is the list of lexica in the sma analyser
 
- *      NounRoot  ;
- *      ProperNoun  ;
- *      Verb  ;
- *      Adjective  ;
- *      Pronoun  ;
- *      Adverb  ;
- *      Subjunction  ;
- *      Conjunction  ;
- *      Particle  ;
- *      Adposition  ;
- *      Punctuation  ;
- *      Interjection  ;
- *     +Use/CircN: Numeral ;
- *      Abbreviation ;
- *      Acronym ;
+ *      NounRoot  ;		  
+ *      ProperNoun  ;		  
+ *      Verb  ;			  
+ *      Adjective  ;		  
+ *      Pronoun  ;			  
+ *      Adverb  ;			  
+ *      Subjunction  ;		  
+ *      Conjunction  ;		  
+ *      Particle  ;		  
+ *      Adposition  ;		  
+ *      Punctuation  ;		  
+ *      Interjection  ;	  
+ *     +Use/CircN: Numeral ; 
+ *      Abbreviation ;		  
+ *      Acronym ;			  
 
 
 !!!Lexicon ENDLEX
 And this is the ENDLEX of everything:
 {{{
-    @D.NeedNoun.ON@ # ;
+    @D.NeedNoun.ON@ # ; 
 }}}
 
 
@@ -446,27 +438,27 @@ The __PRED_0__ lexicon is used for adjectives Predicatives.
  !!!LEXICON PRED_H
 The __PRED_H!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>h FINAL1 ;
+  +A+Sg+Nom:%>h FINAL1 ; 
 }}}
 
  !!!LEXICON PRED_NE_ODD
 The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>ne FINAL1 ;
-  n: ODDCASEOBL ;
-  n: ODDCOMP ;
+  +A+Sg+Nom:%>ne FINAL1 ; 
+  n: ODDCASEOBL ;         
+  n: ODDCOMP ;            
 }}}
 
  !!!LEXICON PRED_N
 The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>n FINAL1 ;
+  +A+Sg+Nom:%>n FINAL1 ; 
 }}}
 
  !!!LEXICON PRED_AN
 The __PRED_AN!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>an FINAL1 ;
+  +A+Sg+Nom:%>an FINAL1 ; 
 }}}
 
 
@@ -479,97 +471,97 @@ The __PRED_AN!!≈__ lexicon is used for adjectives Predicatives.
  !!!LEXICON e_E_EVEN
 The __e_E_EVEN!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP.
 {{{
-        :e     ATTR_0 ;
-    +A+Sg:      NIEJTESGNOM ;
-    +A+Sg: NIEJTESGOBL ;
-    +A+Pl: NIEJTE_PL ;
-    +A: NIEJTEREST ;
-        :e   EVENCOMP ;
+        :e     ATTR_0 ;   
+    +A+Sg:      NIEJTESGNOM ; 
+    +A+Sg: NIEJTESGOBL ;      
+    +A+Pl: NIEJTE_PL ;        
+    +A: NIEJTEREST ;	         
+        :e   EVENCOMP ;   
 }}}
 
  !!!LEXICON e_E_EVENNOCOMP1
 The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}} stem. In attributes and predicatives.With EVEN-NOCOMP.
 
 {{{
-        :e     ATTR_0 ;
-    +A+Sg:      NIEJTESGNOM ;
-    +A+Sg: NIEJTESGOBL ;
-    +A+Pl: NIEJTE_PL ;
-    +A: NIEJTEREST ;
+        :e     ATTR_0 ; 
+    +A+Sg:      NIEJTESGNOM ; 
+    +A+Sg: NIEJTESGOBL ;      
+    +A+Pl: NIEJTE_PL ;        
+    +A: NIEJTEREST ;	         
 }}}
 
 
  !!!LEXICON a_A_EVEN1
 The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-COMP.
 {{{
-         :a       ATTR_0 ;
-    +A+Sg:        MAANASGNOM ;
-    +A:           MAANAOBL ;
-         :a     EVENCOMP ;
+         :a       ATTR_0 ; 
+    +A+Sg:        MAANASGNOM ; 
+    +A:           MAANAOBL ; 
+         :a     EVENCOMP ; 
 }}}
 
  !!!LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
 The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP.
 {{{
-             :a     ATTR_S ;
-  !                MAANAOBL ;
-   +A+Sg+Nom:as     FINAL1 ;
- +A+SgNomCmp:as          R ;
+             :a     ATTR_S ;    
+  !                MAANAOBL ;    
+   +A+Sg+Nom:as     FINAL1 ;    
+ +A+SgNomCmp:as          R ;    
 }}}
 
 
  !!!LEXICON ie_IE_EVEN1
 The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP.
 {{{
-        :ie      ATTR_0 ;
-      +A:    N_IE_FORMS ;
-        :ie    EVENCOMP ;
+        :ie      ATTR_0 ;  
+      +A:    N_IE_FORMS ; 
+        :ie    EVENCOMP ;  
 }}}
 
 
  !!!LEXICON ie_IE_EVENNOCOMP1
 The __ie_IE_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
 {{{
-        :ie      ATTR_0 ;
-      +A:    N_IE_FORMS ;
+        :ie      ATTR_0 ; 
+      +A:    N_IE_FORMS ; 
 }}}
 
 The __a_A_EVEN1_NOCOMP__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
 {{{
-        :a      ATTR_0 ;
+        :a      ATTR_0 ; 
 }}}
 
  !!!LEXICON es_ES_EVEN
 The __es_ES_EVEN!!≈__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-COMP.
 {{{
-        :e       ATTR_S ;
-        :e       PRED_S ;
-    !  :es   ODDCASEOBL ;
-        :e     EVENCOMP ;
+        :e       ATTR_S ; 
+        :e       PRED_S ; 
+    !  :es   ODDCASEOBL ; 
+        :e     EVENCOMP ; 
 }}}
 
 
 The __es_ES_EVENNOCOMP1__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-NOCOMP.
 
 {{{
-        :e  ATTR_S ;
-        :e  PRED_S ;
-        :es ODDCASEOBL ;
+        :e  ATTR_S ;      
+        :e  PRED_S ;      
+        :es ODDCASEOBL ;  
 }}}
 
 
 The __ies_IES_EVEN1__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-COMP.
 {{{
-            ies_IES_EVENNOCOMP1  ;
-        :ie EVENCOMP ;
+            ies_IES_EVENNOCOMP1  ; 
+        :ie EVENCOMP ;            
 }}}
 
 
 The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-NOCOMP.
 {{{
-        :ie   ATTR_S ;
-        :ie   PRED_S ;
- !        ieCASEOBL ;
+        :ie   ATTR_S ;  
+        :ie   PRED_S ;  
+ !        ieCASEOBL ;   
 }}}
 
 
@@ -588,10 +580,10 @@ The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{�
 UNEVEN adjective, attr = pred. Comporation uneven syllable.
 Presentlly only used for "båeries" adjective.
 {{{
-  :båerie ATTR_S ;
-  :båerie PRED_S ;
- ! :båaras MAANAOBL ;
-  :båaras ODDCOMP ;
+  :båerie ATTR_S ; 
+  :båerie PRED_S ; 
+ ! :båaras MAANAOBL ; 
+  :båaras ODDCOMP ; 
 }}}
 !!!ÅEHPIES LEXICON ÅEHPIES
 ODD adjective, attr = pred. Comporation uneven syllable.
@@ -604,11 +596,11 @@ Umlaut from attr--> pred. Comporation uneven syllable.
 Presentlly only used for "gieries-gearehke" adjective.
 This lexicon covers the ies - ehke + umlaut change.
 {{{
-         :gierie    ATTR_S ;
-         :gearahk  ODDCASE ;
-         :gearahk  ODDCOMP ;
-  +Use/NG:gearahtj ODDCOMP ;
-  +Use/NG:gearahg  ODDCOMP ;
+         :gierie    ATTR_S ;   
+         :gearahk  ODDCASE ;   
+         :gearahk  ODDCOMP ;   
+  +Use/NG:gearahtj ODDCOMP ;   
+  +Use/NG:gearahg  ODDCOMP ;   
 }}}
 
 
@@ -619,10 +611,10 @@ This lexicon covers the ies - ehke + umlaut change.
 !!!BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
 EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 {{{
-  :buer ie_IE_EVENNOCOMP1    ;
-  :buerie EVENCOMPONLY ;
-  :bööre MES ;
-  :buerie DIMCOMP ;
+  :buer ie_IE_EVENNOCOMP1    ; 
+  :buerie EVENCOMPONLY ;       
+  :bööre MES ;                 
+  :buerie DIMCOMP ;            
 }}}
 
 
@@ -652,16 +644,16 @@ EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 Adjective with no comp.
 
 (subsequent examples are *adjectives*)
-; {{isvelihks+A+Attr}}: __isvelihks,__ __isveligs__
-; {{isvelihks+A+Sg+Nom}}: __isvelihks,__ __isveligs,isvelihke,__ __isveligke,__ __isveligie__
+; {{isvelihks+A+Attr}}: __isvelihks,__ __isveligs__ 
+; {{isvelihks+A+Sg+Nom}}: __isvelihks,__ __isveligs,isvelihke,__ __isveligke,__ __isveligie__ 
 {{{
-         +Use/NG:ihk  ATTR_S ;
-                :ig   ATTR_S ;
-         +Use/NG:ihk  PRED_S ;
-         +Use/NG:ihk  PRED_S ;
-                :ihk  NIEJTE ;
-         +Use/NG:igk  NIEJTE ;
-       +A+Use/NG:ig   N_IE_FORMS ;
+         +Use/NG:ihk  ATTR_S ;    
+                :ig   ATTR_S ;    
+         +Use/NG:ihk  PRED_S ;    
+         +Use/NG:ihk  PRED_S ;    
+                :ihk  NIEJTE ;    
+         +Use/NG:igk  NIEJTE ;    
+       +A+Use/NG:ig   N_IE_FORMS ;    
 
 
 }}}
@@ -689,9 +681,9 @@ This is for the adjective "jaame"
 * __jaames__: {{jaame+A+Sg+Nom}}
 
 {{{
-    :e    ATTR_0 ;
-    :e    PRED_S ;
-         eCASEOBL ;
+    :e    ATTR_0 ; 
+    :e    PRED_S ; 
+         eCASEOBL ; 
 }}}
 
 !!!LEXICON e_ES_ODDEVEN2
@@ -707,13 +699,13 @@ This one gives EVEN and ODD  Comporation.
 * __galmesommes__: {{galme+A+Superl+Sg+Nom}}
 
 {{{
-             :e       ATTR_0 ;
-             :es  ODDCASEOBL ;
-             :e    EVENCOMP   ;
-      +Use/NG:e    ATTR_S ;
-  +A+SgNomCmp:es R ;
-             :e    PRED_S ;
-      +Use/NG:es    ODDCOMP ;
+             :e       ATTR_0 ; 
+             :es  ODDCASEOBL ; 
+             :e    EVENCOMP   ; 
+      +Use/NG:e    ATTR_S ;	  
+  +A+SgNomCmp:es R ;  
+             :e    PRED_S ;	  
+      +Use/NG:es    ODDCOMP ;	  
 }}}
 
 
@@ -733,42 +725,42 @@ This one gives EVEN and ODD  Comporation.
 !!!LEXICON es_E_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{
-         :e ATTR_S ;
-         :e EVENCOMP ;
+         :e ATTR_S ;  
+         :e EVENCOMP ; 
 }}}
 
 !!!LEXICON as_oes_A_OE_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{
- +Use/NG:a  ATTR_S ;
-        :oe ATTR_S ;
-        :oe EVENCOMP_oe ;
- +Use/NG:a  EVENCOMP ;
+ +Use/NG:a  ATTR_S ; 
+        :oe ATTR_S ; 
+        :oe EVENCOMP_oe ; 
+ +Use/NG:a  EVENCOMP ;    
 }}}
 
 !!!LEXICON oeh_ah_OE_A_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{
-        :oe   ATTR_H ;
- +Use/NG:a    ATTR_H ;
-              N_OE ;
- +Use/NG:     MAANA ;
-        :oe   EVENCOMP_oe ;
- +Use/NG:e    EVENCOMP ;
+        :oe   ATTR_H ; 
+ +Use/NG:a    ATTR_H ; 
+              N_OE ; 
+ +Use/NG:     MAANA ; 
+        :oe   EVENCOMP_oe ; 
+ +Use/NG:e    EVENCOMP ;    
 }}}
 
 !!!LEXICON ies_IE_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{
-  :ie    ATTR_S ;
-   +A:   N_IE_FORMS ;
-  :ie  EVENCOMP ;
+  :ie    ATTR_S ;  
+   +A:   N_IE_FORMS ; 
+  :ie  EVENCOMP ;  
 }}}
 !!!LEXICON ies_IE_EVEN3NOCOMP
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
 {{{
-  :ie    ATTR_S ;
-   +A:   N_IE_FORMS ;
+  :ie    ATTR_S ; 
+   +A:   N_IE_FORMS ; 
 }}}
 
 
@@ -784,9 +776,9 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
 20-stem adjectives has umlaut from attr--> pred, and have no comparation.
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
 {{
- !    :ies ATTR_0 ;
- !+Use:%^1UMLan PRED_0 ;
- !    :   N_IE_FORMS ;
+ !    :ies ATTR_0 ;      
+ !+Use:%^1UMLan PRED_0 ; 
+ !    :   N_IE_FORMS ;		    
 }}
 
 !!!UMLAUT LEXICON as_AN_ODDNOCOMP4
@@ -797,8 +789,8 @@ they dont have any comparation.
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a
 small undergruppe of the 4.group
 {{{
-  :a    ATTR_S  ;
-  :a    PRED_AN ;
+  :a    ATTR_S  ; 
+  :a    PRED_AN ; 
 }}}
 
 !!!UMLAUT LEXICON oes_AN_ODDNOCOMP4
@@ -806,20 +798,20 @@ Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group w
 umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
 This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group
 {{{
-        :oe        ATTR_S  ;
-        :%^3UML    PRED_AN ;
-      +A: N_OE_OBL ;
+        :oe        ATTR_S  ; 
+        :%^3UML    PRED_AN ; 
+      +A: N_OE_OBL ;       
 }}}
 
 
 {{{
-         :oe ATTR_H ;
-         :oe PRED_N ;
+         :oe ATTR_H ;      
+         :oe PRED_N ;      
 }}}
 
 {{{
- :oe         ATTR_H ;
- +Use/NG:%^3UMLa    PRED_N ;
+ :oe         ATTR_H ;   
+ +Use/NG:%^3UMLa    PRED_N ;   
  !:%^3UMLahk  ODD_ÅBPOE ;
 }}}
 
@@ -840,12 +832,12 @@ It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
 This must be checked further, possibly with informants.
 
 (subsequent examples are *adjectives ony ah/oeh an/oen/ode - båadtsah*)
-; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__
-; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__
+; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
+; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__ 
 
 (subsequent examples are *adjectives on ah/oeh an/oen/ode - båadtsah*)
-; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__
-; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__
+; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
+; {{båadtsoeh+A+Sg+Nom}}: __båadtsan,__ __båadtsoen,__ __båadtsode,__ __båadtsede,__ __båadtjan,__ __båadtjoen,__ __båadtjode,__ __båadtjede__ 
 
 
 
@@ -881,11 +873,11 @@ This must be checked further, possibly with informants.
 The __MAST__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
 used with the stem ''masten''
 {{{
-                ATTR_S ;
-      +Use/NG:e ATTR_S ;
-      +Use/NG:  ATTR_H ;
-      +Use/NG:e ATTR_N ;
-             :e PRED_N ;
+                ATTR_S ;   
+      +Use/NG:e ATTR_S ;   
+      +Use/NG:  ATTR_H ;   
+      +Use/NG:e ATTR_N ;   
+             :e PRED_N ;   
 }}}
 
 
@@ -893,9 +885,9 @@ used with the stem ''masten''
 EVEN adjective EVEN Comporation.
 Used for all loan-adjectives "ijve".
 {{{
- :ijv e_E_EVEN  ;
- :ïjv e_E_EVEN  ;
- +Use/Sub:iv e_E_EVEN  ;
+ :ijv e_E_EVEN  ;        
+ :ïjv e_E_EVEN  ;        
+ +Use/Sub:iv e_E_EVEN  ; 
 }}}
 
 
@@ -907,17 +899,17 @@ The __JELLE__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} w
 used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 (subsequent examples are *adjectives*)
-; {{potensijelle+A+Attr}}: __potensijelle__
-; {{potensijelles+A+Sg+Nom}}: __potensijelles__
+; {{potensijelle+A+Attr}}: __potensijelle__ 
+; {{potensijelles+A+Sg+Nom}}: __potensijelles__ 
 {{{
-  +Use/Sub:^ell e_ES_LOAN ;
-          :jell e_ES_LOAN ;
+  +Use/Sub:^ell e_ES_LOAN ; 
+          :jell e_ES_LOAN ; 
 }}}
 
 !!!LEXICON UELLE
 {{{
-         :^ell e_ES_LOAN ;
- +Use/Sub:vell e_ES_LOAN ;
+         :^ell e_ES_LOAN ; 
+ +Use/Sub:vell e_ES_LOAN ; 
 }}}
 
 
@@ -1703,7 +1695,7 @@ Short descrioption of this lexicon, and its purpose.
 * __gieriehtsijstie__: {{gierehtse+N+Pl+Ela}}
 * __gierehtsigujmie__: {{gierehtse+N+Pl+Com}}
 * __gieriehtsinie__: {{gierehtse+N+Ess}}
-; {{gierehtse+N+Sg+Acc}}: __gierehtsem,__ __*gieriehtsem__
+; {{gierehtse+N+Sg+Acc}}: __gierehtsem,__ __*gieriehtsem__ 
 
 * Odd-syll loanwords: lexicon N_ODD_LOAN
 
@@ -2054,6 +2046,7 @@ umlauted ones.
 
 
 
+
  LEXICON EETE_LOAN    loanwords with -eete -
 
 (subsequent examples are *universiteete # Even-syllable test*)
@@ -2097,14 +2090,14 @@ Short descrioption of this lexicon, and its purpose.
  LEXICON MAAKE  Only for "relatives"
 The __MAAKE__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
 {{{
-   +N+Der1+Der/Rec+N:e LAAHKOEH_EVEN ;
-   +N+Sg:           NIEJTE_SG  ;
-   +N+Pl:           NIEJTE_PL  ;
-   +N:              EVEN_ESS ;
-   +N+SgNomCmp:e    R ;
-   +N+SgGenCmp:e%>n R ;
-   +N+PlGenCmp:%>i  R ;
-   +N+Der1+Der/Dimin+N:e%»tj   GÅATETJE ;
+   +N+Der1+Der/Rec+N:e LAAHKOEH_EVEN ;    
+   +N+Sg:           NIEJTE_SG  ;          
+   +N+Pl:           NIEJTE_PL  ;          
+   +N:              EVEN_ESS ;            
+   +N+SgNomCmp:e    R ;                   
+   +N+SgGenCmp:e%>n R ;                   
+   +N+PlGenCmp:%>i  R ;                   
+   +N+Der1+Der/Dimin+N:e%»tj   GÅATETJE ; 
 }}}
 
 (subsequent examples are *vïelle # Even-syllable test*)
@@ -2121,17 +2114,17 @@ The __MAAKE__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
 
  LEXICON KONTO   Lexicon for vowel-final words with invariant stems"
 {{{
- +N: KONTODECL ;
+ +N: KONTODECL ;  
 }}}
  LEXICON KONTODECL  Lexicon for vowel-final words with invariant stems"
 {{{
-  +Sg: KONTO_SG  ;
-  +Pl: KONTO_PL  ;
-       EVEN_ESS  ;
-  +SgNomCmp:    R ;
-  +SgGenCmp:%>n R ;
-  +PlGenCmp:%>j R ;
-  +Der1+Der/Dimin+N:%»tj GÅATETJE ;
+  +Sg: KONTO_SG  ;   
+  +Pl: KONTO_PL  ;   
+       EVEN_ESS  ;   
+  +SgNomCmp:    R ;  
+  +SgGenCmp:%>n R ;  
+  +PlGenCmp:%>j R ;  
+  +Der1+Der/Dimin+N:%»tj GÅATETJE ; 
 }}}
 
 
@@ -2620,7 +2613,7 @@ S O U T H   S Á M I   D I S A M B I G U A T O R          #
 BOS/EOS
 
 
-Tags declared as single-membered LISTs
+Tags declared as single-membered LISTs 
 
 
 
@@ -2848,7 +2841,7 @@ Select Inf If Infv
 REmove Px if not family
 
 
-Remove Prop Attr if not 1 Prop
+Remove Prop Attr if not 1 Prop 
 
 
 
@@ -2966,7 +2959,7 @@ Rule set taken from sme
 
 
 
-Substituting Prop tags
+Substituting Prop tags 
 
 
 
@@ -3043,7 +3036,7 @@ Adv modifying a pronoun or noun
 
 
 
-Removing non-lexicalised forms when lexicalised
+Removing non-lexicalised forms when lexicalised 
 
 
 
@@ -3059,7 +3052,7 @@ Removing non-lexicalised forms when lexicalised
 
 
 
-                  !!!South Sámi morphophonological rule set
+                  !!!South Sámi morphophonological rule set                   
 
 
 
@@ -3076,22 +3069,11 @@ Removing non-lexicalised forms when lexicalised
 !!!Rules
 
 
-__@OUTSIDE RULES@__
+__@OUTSIDE RULES@__  
 
 
 
-__@OUTSIDE RULES@__
-
-
-
-
-
-
-
-
-
-
-__@OUTSIDE RULES@__
+__@OUTSIDE RULES@__  
 
 
 
@@ -3102,11 +3084,7 @@ __@OUTSIDE RULES@__
 
 
 
-
-
-
-__@OUTSIDE RULES@__
-
+__@OUTSIDE RULES@__  
 
 
 
@@ -3115,22 +3093,37 @@ __@OUTSIDE RULES@__
 
 
 
-__@OUTSIDE RULES@__
 
 
 
 
 
-__@OUTSIDE RULES@__
-
-__@OUTSIDE RULES@__
-
-__@OUTSIDE RULES@__
+__@OUTSIDE RULES@__  
 
 
-__@OUTSIDE RULES@__
 
-__@OUTSIDE RULES@__
+
+
+
+
+
+
+__@OUTSIDE RULES@__  
+
+
+
+
+
+__@OUTSIDE RULES@__  
+
+__@OUTSIDE RULES@__  
+
+__@OUTSIDE RULES@__  
+
+
+__@OUTSIDE RULES@__  
+
+__@OUTSIDE RULES@__  
 
 
 
