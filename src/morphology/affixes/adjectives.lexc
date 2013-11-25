@@ -749,12 +749,16 @@ LEXICON ies_IES_IE_EVEN3  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/
       +A:    N_IE_FORMS ;
         :ie  EVENCOMP ;
 
-! Avlednigsleksikon til ies-stammevokalgruppen - s  ---->   går til klasse 1 som har ies-ies i attr/pred.
+! Avlednigsleksikon til ies-stammevokalgruppen - s  ---->   går til klasse 1 som har ies-ies i attr/pred.    
 LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne) 
                 :ie  ATTR_S ;! 
               +A:     N_IE_FORMS  ;
 +A+Sg+Nom+Use/NG:ies FINAL1 ;
      +A+SgNomCmp:ies R ;
+
+
+!         HELE KLASSE 4 SKAL UT AV ADJEKTIVFILA ETTERHVERT! Har markert dem med ==> UT! 
+
 
      !!! ** KLASSE 4, -s og -h  i attributt, UMLAUT til -an predikativ** !!!
 
@@ -773,7 +777,7 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
 !    :   N_IE_FORMS ;		    !!= @CODE@
 !! }}
 
-LEXICON as_AN_ODDNOCOMP4
+LEXICON as_AN_ODDNOCOMP4       ==>
 !! !!!UMLAUT LEXICON @LEXNAME@
 !! These 6 adjectives is in the 4. group of the southsámi adjectives, the group
 !! which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
@@ -787,7 +791,7 @@ LEXICON as_AN_ODDNOCOMP4
  :a    MAANAOBL ;
 !! }}}
 
-LEXICON oes_AN_ODDNOCOMP4
+LEXICON oes_AN_ODDNOCOMP4        ==> UT!
 !! !!!UMLAUT LEXICON @LEXNAME@
 !! Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
 !! umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
@@ -799,14 +803,14 @@ LEXICON oes_AN_ODDNOCOMP4
 !! }}}
 
  
-LEXICON oeh_OEN_ODD4 
+LEXICON oeh_OEN_ODD4   !  ==> UT!
 !! {{{ 
         :oe ATTR_H ;      !!= @CODE@
         :oe PRED_N ;      !!= @CODE@
         :ohk ODDCASEOBL ;   
 !! }}}
 
-LEXICON oeh_AN_ODD4 ! an- is adverb
+LEXICON oeh_AN_ODD4 ! an- is adverb    ==> UT!
 !! {{{  
 :oe         ATTR_H ;   !!= @CODE@
 +Use/NG:%^3UMLa    PRED_N ;   !!= @CODE@
@@ -814,14 +818,14 @@ LEXICON oeh_AN_ODD4 ! an- is adverb
 :ohk  ODDCASE ;
 !! }}}
 
-LEXICON ah_AN_ODD 
+LEXICON ah_AN_ODD !   ==> UT!
 :a    ATTR_H ;
 :a    PRED_N ;
 !:ahk ODDCOMP ;
 :ehk  ODDCASEOBL ;
 
  
-LEXICON oeh_ah_AN_ODD_NOCOMP4 
+LEXICON oeh_ah_AN_ODD_NOCOMP4 !   ==> UT!
 +Use/NG:%^3UMLa    ATTR_H ;
        :oe   ATTR_H ;      
        :%^3UML PRED_AN ; 
@@ -829,17 +833,18 @@ LEXICON oeh_ah_AN_ODD_NOCOMP4
 +Use/NG:ehk  ODDCASEOBL ;		    
   
      
-LEXICON oeh_OEH_AN_ODD4  ! Attr=oeh, Pred=oeh og an 
+LEXICON oeh_OEH_AN_ODD4  ! Attr=oeh, Pred=oeh og an   ==> UT!
       oeh_OEH_AN_ODDNOCOMP  ;
 :ahk  ODDCOMP ;
 :oehk ODD_ÅBPOE ; 
 :ohk  ODDCASE ;
 
-LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an 
+LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an   ==> UT!
        :oe ATTR_H ;
 +Use/NG:oe PRED_H ;
        :    PRED_AN ; 
        :ohk  ODDCASEOBL ;
+
 
 
 LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
@@ -870,7 +875,7 @@ LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
 
 
  !**SLUTT ** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. **SLUTT **!
-
+! Hele 4-gruppen skal ut. bare attrbutter som skal stå igjen.
                                             !****!
 
                           !  **** ODD-stavelses-adjektiv   ****   !
