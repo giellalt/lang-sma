@@ -15,7 +15,7 @@
 ! ========================================================================== !
 ! !!               !!!South Sámi morphological analyser
 ! ========================================================================== !
- 
+
 
 Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
@@ -39,7 +39,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
                                                !!  !Tags for sub-POS
 !! !!Proper nouns
-+Prop     !!= * @CODE@                                
++Prop     !!= * @CODE@
 
 !! !!Pronoun subtypes
 +Pers    !!= * @CODE@
@@ -64,7 +64,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Use/LexSub      !!≈ | @CODE@ | The lemma is not a South Sami word
 
            !!  !!Dialect tags:
-           
+
 +Dial/-S   !!≈ | @CODE@ | Not in the South
 +Dial/-N   !!≈ | @CODE@ | Not in the North
 +Dial/-NOR !!≈ | @CODE@ | Not in Norway
@@ -98,7 +98,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +CmpN/SgGenLeft !!≈ | @CODE@ | "
 +CmpN/PlGenLeft !!≈ | @CODE@ | "
 
-                !! !This part of the compound may ... 
+                !! !This part of the compound may ...
 +CmpN/All       !!≈ | @CODE@ | all positions, __default__, this tag does not have to be written
 +CmpN/Def       !!≈ | @CODE@ | works along with Left compound-tagging
 +CmpN/DefSgGen  !!≈ | @CODE@ | works along with Left compound-tagging
@@ -152,7 +152,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
   +Prs                                       !!≈ | @CODE@ | Tense
   +Prt                                       !!≈ | @CODE@ | Tense
-  
+
   +Sg1                                  !!≈ | @CODE@ | Singular
   +Sg2                                  !!≈ | @CODE@ | Singular
   +Sg3                                  !!≈ | @CODE@ | Singular
@@ -250,8 +250,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Der/stidh                                     !!≈ | @CODE@ | VV - Diminutive
 +Der/didh                                      !!≈ | @CODE@ | VV - Continuative
 +Der/htjidh                                    !!≈ | @CODE@ | Dim-cont.
-+Der/htovve                                    !!≈ | @CODE@ | AV 
-+Der/htoeve                                    !!≈ | @CODE@ | AV 
++Der/htovve                                    !!≈ | @CODE@ | AV
++Der/htoeve                                    !!≈ | @CODE@ | AV
 +Der/htehte                                    !!≈ | @CODE@ | AV
 +Der/Dimin                                     !!≈ | @CODE@ | NN - Diminutive
 +Der/Rec                                       !!≈ | @CODE@ | NN - Forholdsformer
@@ -281,7 +281,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Der/PassS                                                                  !!≈ | @CODE@ | VV - short passive only
 +Der/A                                                                      !!≈ | @CODE@ | NA - comparation of N's
 
-!! 
+!!
 !! !!Tags for originating language
 !!
 !! The following tags are used to guide conversion to IPA: loan words
@@ -292,7 +292,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! transcriber with source language codes. Once tagged, it is possible
 !! to split the lexical transducer in smaller ones according to langu-
 !! age, and apply different IPA conversion to each of them.
-!! 
+!!
 !! The principle of tagging is that we only tag to the extent needed,
 !! and following a priority:
 !! # any untagged word is pronounced with SME orthographic conventions
@@ -303,13 +303,13 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! # Occasionally even SME (the default) may be tagged, to block other
 !!   languages from being specified, mainly during semi-automatic
 !!   language tagging sessions
-!! 
+!!
 !! All in all, we want to get as much correctly transcribed to IPA
 !! with as little work as possible. On the other hand, if more words
 !! are tagged than strictly needed, this should pose no problem as
 !! long as the IPA conversion is correct - at least some words will
 !! get the same pronounciation whether read as SME or NOB/NNO/SWE.
-!! 
+!!
 +OLang/SME !!≈ * @CODE@ - North Sámi
 +OLang/FIN !!≈ * @CODE@ - Finnish
 +OLang/SWE !!≈ * @CODE@ - Swedish
@@ -317,13 +317,13 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +OLang/NNO !!≈ * @CODE@ - Norw. nynorsk
 +OLang/ENG !!≈ * @CODE@ - English
 +OLang/UND !!≈ * @CODE@ - Undefined
-!! 
+!!
 !! !!Triggers for morphophonological rules
   X2 !!≈ ; @CODE@ : Trigger for ???
   X3 !!≈ ; @CODE@ : Trigger for ???
   X4 !!≈ ; @CODE@ : Trigger for ???
   E2 !!≈ ; @CODE@ : insert e ! Fjern denne.
-!! 
+!!
         !! !!Symbols that need to be escaped on the lower side (towards twolc):
  »7     !!≈ ; @CODE@ : Literal »
  «7     !!≈ ; @CODE@ : Literal «
@@ -331,7 +331,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  %[%>%] !!= @CODE@ - Literal >
  %[%<%] !!= @CODE@ - Literal <
         !! }}}
-!! 
+!!
 !! !!Lexeme disambiguation tags
   +Hom1          !!≈ ; @CODE@ : Homonymy
   +Hom2          !!≈ ; @CODE@ : Homonymy
@@ -340,7 +340,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
   +v3 !!≈ ; @CODE@ : Lemma variants
   +v4 !!≈ ; @CODE@ : Lemma variants
   +v5 !!≈ ; @CODE@ : Lemma variants
-!! 
+!!
 !! !!Umlaut and diphthong simplification triggers
   %^DISIMP        !!≈ | @CODE@ | diphthong simplification
   %^COMPDISIMP    !!≈ | @CODE@ | diphthong simplification in comparatives
@@ -370,7 +370,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  @U.Cap.Opt@      !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
 !               ! Actually, downcasing should be obligatory
 
- %  
+ %
 
 
 ! ================
@@ -384,7 +384,7 @@ LEXICON Root
 
 !! Here is the list of lexica in the sma analyser
 
-!    Prefixes ; 
+!    Prefixes ;
      NounRoot  ;		  !!= * @CODE@
      ProperNoun  ;		  !!= * @CODE@
      Verb  ;			  !!= * @CODE@
