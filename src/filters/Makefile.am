@@ -18,7 +18,8 @@
 # List any local additions here:
 GT_FILTER_SRCS=focus-filter.regex \
 			   remove-dialect-tags.regex \
-			   remove-test-tags.regex
+			   remove-test-tags.regex \
+			   remove-Dial_L-strings.regex
 
 # The common filter targets (don't change locally):
 GT_FILTER_TARGETS=
@@ -29,7 +30,6 @@ GT_FILTER_TARGETS+=\
 				   make-optional-variant-tags.hfst        \
 				   remove-derivation-position-tags.hfst   \
 				   remove-dialect-tags.hfst               \
-				   remove-Dial_L-strings.hfst               \
 				   remove-homonymy-tags.hfst              \
 				   remove-norm-comp-tags.hfst             \
 				   remove-number-string-tags.hfst         \
@@ -95,9 +95,10 @@ endif
 # HFST targets here:
 if CAN_HFST
 GT_FILTER_TARGETS+=focus-filter.hfst \
+				   make-optional-semantic-tags.hfst       \
 				   remove-illegal-derivation-strings.hfst \
-				   remove-dialect-tags.hfst \
-				   remove-semantic-tags.hfst \
+				   remove-Dial_L-strings.hfst             \
+				   remove-semantic-tags.hfst              \
 				   remove-test-tags.hfst
 
 endif
@@ -105,9 +106,10 @@ endif
 # And Xerox targets here:
 if CAN_XFST
 GT_FILTER_TARGETS+=focus-filter.xfst \
+				   make-optional-semantic-tags.xfst       \
 				   remove-illegal-derivation-strings.xfst \
-				   remove-dialect-tags.xfst \
-				   remove-semantic-tags.xfst \
+				   remove-Dial_L-strings.xfst             \
+				   remove-semantic-tags.xfst              \
 				   remove-test-tags.xfst
 
 endif
