@@ -138,6 +138,48 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 			| $(HFST_FST2FST) $(HFSTFLAGS) -t \
 			-o $@
 
+# Oahpa-related local modifications and language-specific changes:
+# HFST:
+generator-oahpa-gt-norm.hfst: generator-oahpa-gt-norm.tmp.hfst \
+					filters/make-optional-semantic-tags.hfst
+	$(AM_V_GEN)$(PRINTF) \
+			   "@bin\"filters/make-optional-semantic-tags.hfst\" \
+			.o. @bin\"$<\" \
+			;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		> $@
+
+# Xerox:
+generator-oahpa-gt-norm.xfst: generator-oahpa-gt-norm.tmp.xfst \
+					filters/make-optional-semantic-tags.xfst
+	$(AM_V_GEN)$(PRINTF) "read regex                          \
+				@\"filters/make-optional-semantic-tags.xfst\" \
+			.o. @\"$<\".i                                     \
+			;\n\
+		 invert net\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST)
+
+# Dict-fst local modifications and language-specific changes:
+generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \
+					filters/make-optional-semantic-tags.xfst
+	$(AM_V_GEN)$(PRINTF) "read regex                          \
+				@\"filters/make-optional-semantic-tags.xfst\" \
+			.o. @\"$<\".i                                     \
+			;\n\
+		 invert net\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST)
+
+analyser-dict-gt-norm.xfst: analyser-dict-gt-norm.tmp.xfst \
+					filters/make-optional-semantic-tags.xfst
+	$(AM_V_GEN)$(PRINTF) "read regex                          \
+				@\"filters/make-optional-semantic-tags.xfst\" \
+			.o. @\"$<\"                                       \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST)
+
 # The SMA morphology has some extra tags used for testing that we want to
 # remove.
 analyser-%.hfst: analyser-%.tmp.hfst \
