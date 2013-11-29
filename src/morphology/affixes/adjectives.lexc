@@ -36,21 +36,21 @@
 ! Basic adjectival lexica, infl types
 ! -----------------------------------
 
-        !***** Adjektiver som skiller seg ut fra systemet****!
+!***** Adjektiver som skiller seg ut fra systemet****!
 
 LEXICON REAKTOE
- :rïektes ATTR_0 ;! rett, riktig
+ :rïektes ATTR_0 ; ! rett, riktig
  :reakt   oeCASE ;
 
 LEXICON JAEDTUVES
-            :uves           ATTR_0 ;
-       +A+Sg:               ÅERUVE_SG ;
-       +A+Pl:               ÅERUVE_PL ;
+            :uves           ATTR_0     ;
+       +A+Sg:               ÅERUVE_SG  ;
+       +A+Pl:               ÅERUVE_PL  ;
           +A:               ÅERUVE_ESS ;
- +A+SgNomCmp:uve%^DISIMP    R ;
- +A+SgGenCmp:uve%>%^DISIMPn R ;
- +A+PlGenCmp:uv%>%^DISIMPi  R ;
-            :iev            ODDCOMP ;
+ +A+SgNomCmp:uve%^DISIMP    R          ;
+ +A+SgGenCmp:uve%>%^DISIMPn R          ;
+ +A+PlGenCmp:uv%>%^DISIMPi  R          ;
+            :iev            ODDCOMP    ;
 
 LEXICON VIELIEH
  :lieh ATTR_0 ;
@@ -63,37 +63,37 @@ LEXICON h_H_EVENNOCOMP
 
 !Denne skal kanskje ikke plasseres under spesielle lexicons.
 
-     !**SLUTT**Spesielle Adjektiver som skiller seg ut fra systemet**SLUTT**!
+!**SLUTT**Spesielle Adjektiver som skiller seg ut fra systemet**SLUTT**!
 
 ! VOKALUTVIDELSE på 2-stavelsesadjektiv, Fortsatt KLASSE1
 
 
-   ! Attribute lexica
+! Attribute lexica
 ! ----------------
 
 LEXICON ATTR_0_PRED_0
- ATTR_0 ;
- PRED_0 ;
+   ATTR_0 ;
+   PRED_0 ;
 
 LEXICON ATTR_0
  +A+Attr: ATTRCONT ;
- +A: LAAKAN ;
+      +A: LAAKAN   ;
 
 
 LEXICON ATTR_0_ODD
- +A+Attr:e ATTRCONT   ;
- +A:e      LAAKAN     ;
-           ODDCOMP    ;
+ +A+Attr:e ATTRCONT ;
+      +A:e LAAKAN   ;
+           ODDCOMP  ;
 !          ODDCASEOBL ;  - predikativ: 'nahkeren' 'geeruvisnie' - i adv.og noun-fila
 
 LEXICON EENSI
- +A+Attr:i ATTRCONT ;
-       :ig ODDCOMP  ;
-     +A:i  LAAKAN   ;
+ +A+Attr:i  ATTRCONT ;
+        :ig ODDCOMP  ;
+      +A:i  LAAKAN   ;
 
 LEXICON YÖLELH
  +A+Attr:h ATTRCONT ;
-        :  ODDCOMP  ;
+           ODDCOMP  ;
       +A:h LAAKAN   ;
 
 LEXICON ATTR_S
@@ -113,13 +113,13 @@ LEXICON ATTRCONT
                                   FINAL1         ;
                                   R              ;
  +Der2+Der/voete+N+Use/Sub:%»voet GIERIEHTSADTJE ;
- +Der2+Der/voete+N+Use/MT:%»voet  GIERIEHTSADTJE ;
+  +Der2+Der/voete+N+Use/MT:%»voet GIERIEHTSADTJE ;
 !                                 LAAKAN         ; !Lene: moved it to each contlex, to avoid +Attr
 
 
-             ! *Slutt* BARE ATTRIBUTTER  *Slutt* !
+! *Slutt* BARE ATTRIBUTTER  *Slutt* !
 
-                     ! Predicative lexica
+! Predicative lexica
 
 ! ------------------
 
@@ -163,7 +163,7 @@ LEXICON PRED_AN!!≈ !!!@CODE@
 !! }}}
 
 
-                ! *SLUTT* BARE PRED-former  *SLUTT*   !
+! *SLUTT* BARE PRED-former  *SLUTT*   !
 
 
 
@@ -209,11 +209,11 @@ LEXICON a_A_EVEN1!!≈ !!!@CODE@
 LEXICON as_AS_EVEN1!!≈ !!!@CODE@ ! Disse har opprinnelig vært as_a_EVEN_adjektiv
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP.
 !! {{{
-            :a  ATTR_S   ; !!= @CODE@
+            :a  ATTR_S ; !!= @CODE@
 !               MAANAOBL ;
 !           :a  EVENCOMP ;    ! Tidligere klasse-3
-   +A+Sg+Nom:as FINAL1   ; !!= @CODE@
- +A+SgNomCmp:as R        ; !!= @CODE@
+   +A+Sg+Nom:as FINAL1 ; !!= @CODE@
+ +A+SgNomCmp:as R      ; !!= @CODE@
 !! }}}
 
 
@@ -247,10 +247,10 @@ LEXICON a_A_EVEN1_NOCOMP
 LEXICON es_ES_EVEN!!≈ !!!@CODE@
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-COMP.
 !! {{{
- :e  ATTR_S     ; !!= @CODE@
- :e  PRED_S     ; !!= @CODE@
+ :e ATTR_S   ; !!= @CODE@
+ :e PRED_S   ; !!= @CODE@
 !:es ODDCASEOBL ;
- :e  EVENCOMP   ; !!= @CODE@
+ :e EVENCOMP ; !!= @CODE@
 !! }}}
 
 
@@ -278,8 +278,8 @@ LEXICON ies_IES_EVEN1
 LEXICON ies_IES_EVENNOCOMP1
 !! The __@LEXNAME@__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-NOCOMP.
 !! {{{
- :ie   ATTR_S    ; !!= @CODE@
- :ie   PRED_S    ; !!= @CODE@
+ :ie ATTR_S ; !!= @CODE@
+ :ie PRED_S ; !!= @CODE@
 !      ieCASEOBL ; !!= @CODE@
 !! }}}
 
@@ -317,8 +317,8 @@ LEXICON AH_&_OEH_ODD1
  +Use/NG:a    ATTR_H    ;
         :oehk ODD_ÅBPOE ;
  +Use/NG:ahk  ODD_ABPA  ;
-        :ehk  ODDCASE   ;! språkhist.
- +Use/NG:ohk  ODDCASE   ;! språkhist.
+        :ehk  ODDCASE   ; ! språkhist.
+ +Use/NG:ohk  ODDCASE   ; ! språkhist.
 
 LEXICON oeh_OEH_ODD1
         :oe   ATTR_H    ;
@@ -332,12 +332,12 @@ LEXICON BAERIES
 !! UNEVEN adjective, attr = pred. Comporation uneven syllable.
 !! Presentlly only used for "båeries" adjective.
 !! {{{
- :båerie   ATTR_S   ; !!= @CODE@
- :båerie   PRED_S   ; !!= @CODE@
+ :båerie ATTR_S  ; !!= @CODE@
+ :båerie PRED_S  ; !!= @CODE@
 !:båaras   MAANAOBL ; !!= @CODE@
 ! båarasam (LK),? egentl. 'voeres’
- :båaras   ODDCOMP  ; !!= @CODE@
- !! }}}
+ :båaras ODDCOMP ; !!= @CODE@
+!! }}}
 
 LEXICON ÅEHPIES
 !! !!!ÅEHPIES LEXICON @LEXNAME@
@@ -345,22 +345,22 @@ LEXICON ÅEHPIES
 !! {{{
         :åehpies ATTR_0     ;
       +A:åehp    N_IE_FORMS ;
- +Use/NG:åahpetj ODDCASE    ;! LAG EN ODD_PRED
+ +Use/NG:åahpetj ODDCASE    ; ! LAG EN ODD_PRED
  +Use/NG:åahpehk ODDCASE    ;
-        :åahpatj ODDCOMP    ;! mere kjent om personer, mindre vanlig
- +Use/NG:åahpag  ODDCOMP    ;! mere kjent om ting, saker, tema etc.
+        :åahpatj ODDCOMP    ; ! mere kjent om personer, mindre vanlig
+ +Use/NG:åahpag  ODDCOMP    ; ! mere kjent om ting, saker, tema etc.
  +Use/NG:åahpahk ODDCOMP    ; !mere kjent om ting, saker, tema etc.
 ! VOKALUTVIDELSE i 2.stavelse på 2-stavelsesadjektiv
 !! }}}
 
 LEXICON AAREH
-        :e     ATTR_H   ;
-        :e     PRED_H   ;
-        :ehk   ODDCASE  ;
- +Use/NG:eg    ODDCASE  ;
-        :e     EVENCOMP ;
- +Use/NG:eg    ODDCOMP  ;
- +Use/NG:ehk   ODDCOMP  ;
+        :e   ATTR_H   ;
+        :e   PRED_H   ;
+        :ehk ODDCASE  ;
+ +Use/NG:eg  ODDCASE  ;
+        :e   EVENCOMP ;
+ +Use/NG:eg  ODDCOMP  ;
+ +Use/NG:ehk ODDCOMP  ;
 
 LEXICON GIERIES !    åehpies- skal også hit- UMLAUT!
 !! !!!GEAREHKE LEXICON @LEXNAME@
@@ -380,7 +380,7 @@ LEXICON GIERIES !    åehpies- skal også hit- UMLAUT!
 
 !   !***UMLAUT FOR e(3)-stammen, KLASSE-1- ADJEKTIVENE
 
-              !    ***UMLAUT FOR e(3)-stammen
+!    ***UMLAUT FOR e(3)-stammen
 
 !UMLAUT 3 = e(3)-stamme
 
@@ -388,10 +388,10 @@ LEXICON BUERIE_UMLAUT_IE_STAMME
 !! !!!BUERIE LEXICON @LEXNAME@
 !! EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 !! {{{
- :buer ie_IE_EVENNOCOMP1    ; !!= @CODE@
- :buerie EVENCOMPONLY ; !!= @CODE@
- :bööre MES ; !!= @CODE@
- :buerie DIMCOMP ; !!= @CODE@
+ :buer   ie_IE_EVENNOCOMP1 ; !!= @CODE@
+ :buerie EVENCOMPONLY      ; !!= @CODE@
+ :bööre  MES               ; !!= @CODE@
+ :buerie DIMCOMP           ; !!= @CODE@
 !! }}}
 !Suppletivisme
 LEXICON NAAKE
@@ -425,10 +425,10 @@ LEXICON SOOKES
 ! UMLAUT 3 = e(3)-stamme
 
 LEXICON SOOJMES
-        :sööjme  ATTR_S       ;
-        :sööjme  PRED_S       ;
-        :sööjme  EVENCOMP     ;
- +Use/NG:seejm   es_ES_EVEN   ;
+         :sööjme ATTR_S       ;
+         :sööjme PRED_S       ;
+         :sööjme EVENCOMP     ;
+  +Use/NG:seejm  es_ES_EVEN   ;
  +Use/Sub:suejme EVENCOMPONLY ;
 
 ! UMLAUT 3 = e(3)-stamme, som får EVEN-Komparasjon
@@ -466,7 +466,7 @@ LEXICON GEEHPES
          :geehpe   ATTR_S       ;
  +Use/Sub:geehpe   s_S_ODD      ;
   +Use/NG:giehpie  EVENCOMPONLY ; ! -ie- i paradigmet for giehpies
-         :giehpie  DIMCOMP      ;  ! -ie- i paradigmet for  giehpies
+         :giehpie  DIMCOMP      ; ! -ie- i paradigmet for  giehpies
   +Use/NG:geehpe   MES          ;
  +Use/Sub:gyöhpehk HKE_ODD_COMP ;
          :geehpe   PRED_S       ;
@@ -479,22 +479,22 @@ LEXICON GEERVE
         :giervie DIMCOMP      ;
 
 
-               !    **SLUTT**UMLAUT FOR e(3)-stammen     **SLUTT**!
+!    **SLUTT**UMLAUT FOR e(3)-stammen     **SLUTT**!
 
 
 
 LEXICON s_S_ODD ! HUFF, del opp adjektivene i dette leksikonet i odde- og loan-adjektiver
-            ATTR_S     ;
-            PRED_S     ;
+    ATTR_S  ;
+    PRED_S  ;
 !+Use/Sub:s ODDCASEOBL ;
-         :s ODDCOMP    ;
+ :s ODDCOMP ;
 
 LEXICON oes_OES_ODD1EVEN !Dette er klasse 3-adjektiv,  del opp adjektivene i dette leksikonet i jamn, odde- og loan-adjektiver
-         :oe  ATTR_S     ;
-         :oe  PRED_S     ;
+        :oe  ATTR_S    ;
+        :oe  PRED_S    ;
 !+Use/Sub:s   ODDCASEOBL ; ! LA la til -s
-         :oes ODD_ÅBPOE  ;
-  +Use/NG:oe  EVENCOMP   ;
+        :oes ODD_ÅBPOE ;
+ +Use/NG:oe  EVENCOMP  ;
 
 LEXICON es_ES_ODD1 ! Kommer fra e(1)-stamme og er derivasjon av e_ES_ODDEVEN2
             :e  ATTR_S     ;
@@ -505,8 +505,8 @@ LEXICON es_ES_ODD1 ! Kommer fra e(1)-stamme og er derivasjon av e_ES_ODDEVEN2
 
 
 LEXICON s_S_ODDNOCOMP ! HUFF, del opp adjektivene i dette leksikonet i jamn, odde- og loan-adjektiver
-            ATTR_S     ;
-            PRED_S     ;
+   ATTR_S ;
+   PRED_S ;
 !+Use/Sub:s ODDCASEOBL ; !LA la til -s
 
 
@@ -514,11 +514,11 @@ LEXICON oes_OES_ODD1NOCOMP
             :oe  ATTR_S ;
 !           :oes ODDCASEOBL ; ! låapsoesem XXX check
    +A+Sg+Nom:oes FINAL1 ;
- +A+SgNomCmp:oes R ;
+ +A+SgNomCmp:oes R      ;
 
 LEXICON oes_OES_ODD1ahk
- :oe  ATTR_S  ;
- :oe  PRED_S  ;
+ :oe ATTR_S ;
+ :oe PRED_S ;
 !:ahk ODDCOMP ;
 
 LEXICON oes_OES_ODD1as
@@ -547,9 +547,9 @@ LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 
 
 LEXICON n_N_ODDNOCOMP1  ! attr=n, pred= n
- : ATTR_N ;
- : PRED_N ;
- !  sliegrie;sleegre, slehtjie/-m,-n-an,-esne,-este, dette er adverbs
+   ATTR_N ;
+   PRED_N ;
+!  sliegrie;sleegre, slehtjie/-m,-n-an,-esne,-este, dette er adverbs
 
 
 
@@ -557,7 +557,7 @@ LEXICON n_N_ODDNOCOMP1  ! attr=n, pred= n
 
 
 
-                !***  KLASSE 2, e(1) attribut og prediaktiv -es   ****!
+!***  KLASSE 2, e(1) attribut og prediaktiv -es   ****!
 
 
 !LEXICON e_ES_EVENODDNOCOMP2
@@ -610,7 +610,7 @@ LEXICON e_ES_ODDEVEN2
      +Use/NG:es ODDCOMP    ; !!= @CODE@
 !! }}}
 
-   !***UMLAUT FOR e(2)-stammen, Klasse-2
+!***UMLAUT FOR e(2)-stammen, Klasse-2
 
 ! UMLAUT 2 = e(1)-stamme
 LEXICON SNAARE2
@@ -621,15 +621,15 @@ LEXICON SNAARE2
 
 ! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
 LEXICON ORRE2
-        :orr  e_E_EVEN  ;
- +Use/NG:urr  e_E_EVEN  ;
+        :orr  e_E_EVEN     ;
+ +Use/NG:urr  e_E_EVEN     ;
  +Use/NG:urre EVENCOMPONLY ;
- +Use/NG:urre MES ;
+ +Use/NG:urre MES          ;
 !+Use/Sub:orr e_ES_ODDEVEN ; !comment from Aajege, MLK: bør subbes. orresistie? - THIS IS HOPELESS,skulle subbe denne, men jeg forstår ikke hvorofr det ikke er mulig?
 
 ! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
 LEXICON NOERE_STOERE2
-        :oer   e_E_EVENNOCOMP1 ;! stoere-noere-ebe/emes ?? covered by below
+        :oer   e_E_EVENNOCOMP1 ; ! stoere-noere-ebe/emes ?? covered by below
  +Use/NG:oerie EVENCOMPONLY    ;
         :uerie EVENCOMPONLY    ;
  +Use/NG:ööre  MES             ;
@@ -637,20 +637,20 @@ LEXICON NOERE_STOERE2
 
 ! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
 LEXICON GISSE2
-         :gïss e_E_EVENNOCOMP1 ;
-         :gissie EVENCOMPONLY  ;
-         :gissie MES           ;
- +Use/Sub:gïssie EVENCOMPONLY  ;
- +Use/Sub:gïssie MES           ;
-         :gïssie DIMCOMP       ;
-  +Use/NG:gïssege PRED_0       ;  ! eller er dette et annet lemma? jfr. -hke og gabtege ,MLK: Iflg. bergsland 1994, s 116 pkt. 5 er dette en 'særtilfelle (Predikatformen for det meste foreldet)'
+         :gïss    e_E_EVENNOCOMP1 ;
+         :gissie  EVENCOMPONLY    ;
+         :gissie  MES             ;
+ +Use/Sub:gïssie  EVENCOMPONLY    ;
+ +Use/Sub:gïssie  MES             ;
+         :gïssie  DIMCOMP         ;
+  +Use/NG:gïssege PRED_0          ; ! eller er dette et annet lemma? jfr. -hke og gabtege ,MLK: Iflg. bergsland 1994, s 116 pkt. 5 er dette en 'særtilfelle (Predikatformen for det meste foreldet)'
 
 ! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
 LEXICON GAMTE2
-        :te            ATTR_0   ;
-        :tege          PRED_0   ;
-        :%>%^DISIMPtie EVENCOMP ;
-        :te            EVENCOMP ;
+ :te            ATTR_0   ;
+ :tege          PRED_0   ;
+ :%>%^DISIMPtie EVENCOMP ;
+ :te            EVENCOMP ;
 !+Use/NG:t             NIEJTE   ;
 
 ! UMLAUT 2 = e(2)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
@@ -681,10 +681,10 @@ LEXICON KRUANA2
 LEXICON ø_Ø_EVEN ! Dette leksikonet er egentlig outcommented, men den finnes i oahpa_adj. denne er splittet opp og delt ut itl andre lexicon. men den står slik for at det skal kompilere.
  +Use/Sub: # ;
 
-                     ! *SLUTT* KLASSE 2  *SLUTT*   !
+! *SLUTT* KLASSE 2  *SLUTT*   !
 
 
-             !!! ** KLASSE 3, -s i attributt, vokal i predikativ** !!!
+!!! ** KLASSE 3, -s i attributt, vokal i predikativ** !!!
 
 LEXICON es_E_EVEN3
 !! !!!LEXICON @LEXNAME@
@@ -762,9 +762,9 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
 !         HELE KLASSE 4 SKAL UT AV ADJEKTIVFILA ETTERHVERT! Har markert dem med ==> UT!
 
 
-     !!! ** KLASSE 4, -s og -h  i attributt, UMLAUT til -an predikativ** !!!
+!!! ** KLASSE 4, -s og -h  i attributt, UMLAUT til -an predikativ** !!!
 
-    !**** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. ****!
+!**** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. ****!
 
 
 LEXICON as_AN_ODDNOCOMP4       !==>
@@ -802,10 +802,10 @@ LEXICON oeh_OEN_ODD4   !  ==> UT!
 
 LEXICON oeh_AN_ODD4 ! an- is adverb    ==> UT!
 !! {{{
-        :oe        ATTR_H    ; !!= @CODE@
- +Use/NG:%^3UMLa   PRED_N    ; !!= @CODE@
+        :oe      ATTR_H  ; !!= @CODE@
+ +Use/NG:%^3UMLa PRED_N  ; !!= @CODE@
 !       :%^3UMLahk ODD_ÅBPOE ; !!= @CODE@
-        :ohk       ODDCASE   ;
+        :ohk     ODDCASE ;
 !! }}}
 
 LEXICON ah_AN_ODD !   ==> UT!
@@ -816,9 +816,9 @@ LEXICON ah_AN_ODD !   ==> UT!
 
 
 LEXICON oeh_ah_AN_ODD_NOCOMP4 !   ==> UT!
- +Use/NG:%^3UMLa ATTR_H ;
-        :oe      ATTR_H ;
-        :%^3UML  PRED_AN ;
+ +Use/NG:%^3UMLa ATTR_H     ;
+        :oe      ATTR_H     ;
+        :%^3UML  PRED_AN    ;
  +Use/NG:ohk     ODDCASEOBL ;
  +Use/NG:ehk     ODDCASEOBL ;
 
@@ -832,7 +832,7 @@ LEXICON oeh_OEH_AN_ODD4  ! Attr=oeh, Pred=oeh og an   ==> UT!
 LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an   ==> UT!
         :oe  ATTR_H     ;
  +Use/NG:oe  PRED_H     ;
-        :    PRED_AN    ;
+             PRED_AN    ;
         :ohk ODDCASEOBL ;
 
 
@@ -864,13 +864,13 @@ LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
  +Use/NG:ehk ODDCASEOBL ;
 
 
- !**SLUTT ** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. **SLUTT **!
+!**SLUTT ** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. **SLUTT **!
 ! Hele 4-gruppen skal ut. bare attrbutter som skal stå igjen.
-                                            !****!
+!****!
 
-                          !  **** ODD-stavelses-adjektiv   ****   !
-                            ! ODD-stems (odd stem declension)
-                              ! ===============================
+!  **** ODD-stavelses-adjektiv   ****   !
+! ODD-stems (odd stem declension)
+! ===============================
 
 
 
@@ -919,34 +919,34 @@ LEXICON hts_HTS_ODD        ! NB!
  :s ODDCOMP           ;
 
 LEXICON oehts_OEHTS_ODD     ! NB!
-     hts_HTS_ODDNOCOMP ;
-  :s ODD_ÅBPOE         ;
+    hts_HTS_ODDNOCOMP ;
+ :s ODD_ÅBPOE         ;
 
 LEXICON hts_HTS_ODDNOCOMP     ! NB!
 ! This lexicon is in reality hts_HTS_HTE
 ! We have info on pred -e for two adjs:
 ! heijjehts (corpus) and bieljehts (marit) - LA: fjerner -e, jeg kan ikke se at vi har slik dokumentasjon
-            :%^DISIMP  ATTR_S     ;
-            :%^DISIMP  PRED_S     ;
+            :%^DISIMP  ATTR_S ;
+            :%^DISIMP  PRED_S ;
 !           :%^DISIMPe PRED_0     ;
 !                      ODDCASEOBL ; !LA tok vekk -s
- +A+SgNomCmp:%^DISIMPs R          ;
+ +A+SgNomCmp:%^DISIMPs R      ;
 
 LEXICON hts_HTS_ODDhtCOMP     !NB!
- hts_HTS_ODDNOCOMP ;
- ODDCOMP           ; ! joekehtåbpoe
- ODDCASEOBL        ;
+   hts_HTS_ODDNOCOMP ;
+   ODDCOMP           ; ! joekehtåbpoe
+   ODDCASEOBL        ;
 
 LEXICON oehts_OEHTS_ODDhtCOMP    ! NB!
- hts_HTS_ODDNOCOMP ;
- ODD_ÅBPOE         ; ! joekehtåbpoe
- ODDCASEOBL        ;
+   hts_HTS_ODDNOCOMP ;
+   ODD_ÅBPOE         ; ! joekehtåbpoe
+   ODDCASEOBL        ;
 ! SE på denne gruppen over
 
 LEXICON Ces_CES_ODD
- Ces_CES_ODDNOCOMP ;
- ODDCASEOBL        ;
- ODDCOMP           ;
+   Ces_CES_ODDNOCOMP ;
+   ODDCASEOBL        ;
+   ODDCOMP           ;
 
 LEXICON Ces_CES_ODDNOCOMP
             :%^DISIMPe ATTR_S     ;
@@ -967,28 +967,28 @@ LEXICON oeles_OELES_ODD
             ODD_ÅBPOE  ;
 
 LEXICON Cs_CS_CE_ODD
- Cs_CS_CE_ODDNOCOMP ;
- ODDCOMP            ;
+   Cs_CS_CE_ODDNOCOMP ;
+   ODDCOMP            ;
 
 LEXICON oeCs_OECS_OECE_ODD
- Cs_CS_CE_ODDNOCOMP ;
- ODD_ÅBPOE          ;
+   Cs_CS_CE_ODDNOCOMP ;
+   ODD_ÅBPOE          ;
 
 LEXICON Cs_CS_CE_ODDNOCOMP
-    +Use/Sub:%^DISIMPe ATTR_S ;
-            :%^DISIMP  ATTR_S ;
-     +Use/NG:%^DISIMP  PRED_S ;
-            :%^DISIMPe PRED_0 ;
+    +Use/Sub:%^DISIMPe ATTR_S     ;
+            :%^DISIMP  ATTR_S     ;
+     +Use/NG:%^DISIMP  PRED_S     ;
+            :%^DISIMPe PRED_0     ;
                        ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R ;
+ +A+SgNomCmp:%^DISIMPe R          ;
 
 
 LEXICON Cs_CS_ODD
-            :%^DISIMP  ATTR_S ;
-            :%^DISIMP  PRED_S ;
+            :%^DISIMP  ATTR_S     ;
+            :%^DISIMP  PRED_S     ;
                        ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R ;
-                       ODDCOMP ;
+ +A+SgNomCmp:%^DISIMPe R          ;
+                       ODDCOMP    ;
 
 LEXICON  oeCs_OECS_ODD
             :%^DISIMP  ATTR_S     ;
@@ -998,10 +998,10 @@ LEXICON  oeCs_OECS_ODD
                        ODD_ÅBPOE  ;
 
 LEXICON Cs_CS_ODDNOCOMP
-            :%^DISIMP  ATTR_S ;
-            :%^DISIMP  PRED_S ;
+            :%^DISIMP  ATTR_S     ;
+            :%^DISIMP  PRED_S     ;
                        ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R ;
+ +A+SgNomCmp:%^DISIMPe R          ;
 
 
 
@@ -1028,9 +1028,9 @@ LEXICON IJVEadj
 !! EVEN adjective EVEN Comporation.
 !! Used for all loan-adjectives "ijve".
 !! {{{
-          :ijv e_E_EVEN ; !!= @CODE@
-          :ïjv e_E_EVEN ; !!= @CODE@
- +Use/Sub:iv   e_E_EVEN ; !!= @CODE@
+         :ijv e_E_EVEN ; !!= @CODE@
+         :ïjv e_E_EVEN ; !!= @CODE@
+ +Use/Sub:iv  e_E_EVEN ; !!= @CODE@
 !! }}}
 
 LEXICON IJAALE_A_LOAN
@@ -1052,14 +1052,14 @@ LEXICON AALEFORMS
 ! The new solution analyses the same wordforms as before,
 ! but operates with a single lemma spinaale etc.
 ! Todo: look into NIEJTE / ODDCASE -variation (double case paradigm?)
-            :e   ATTR_0 ; ! vitaale
-     +Use/NG:e   ATTR_S ;
- +A+Sg+Use/NG: NIEJTESGNOM ;
-       +A+Sg: NIEJTESGOBL ;
-       +A+Pl: NIEJTE_PL ;
-          +A: NIEJTEREST ;
-  :e   PRED_S ;
-  :e   EVENCOMP ;
+             :e ATTR_0      ; ! vitaale
+      +Use/NG:e ATTR_S      ;
+ +A+Sg+Use/NG:  NIEJTESGNOM ;
+        +A+Sg:  NIEJTESGOBL ;
+        +A+Pl:  NIEJTE_PL   ;
+           +A:  NIEJTEREST  ;
+             :e PRED_S      ;
+             :e EVENCOMP    ;
 
 
 LEXICON JELLE
@@ -1083,8 +1083,8 @@ LEXICON UELLE
 !! }}}
 
 LEXICON e_ES_LOAN  !LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.
-         :  e_ES_EVENNOCOMP2  ;
- +Use/Sub:e PRED_0 ; ! forslag. OK! hvorfor det? interesant forslag, men må drøftes.For; hvis vi skal dette, betyr det at vi "godtar" at adj-systemet går fra 4-system til 2-system. Sørsamisk adj-system er i full fart fra 5 og 4-system til 2-system, men dette er ikke divvuns bord til å bestemme.
+            e_ES_EVENNOCOMP2 ;
+ +Use/Sub:e PRED_0           ; ! forslag. OK! hvorfor det? interesant forslag, men må drøftes.For; hvis vi skal dette, betyr det at vi "godtar" at adj-systemet går fra 4-system til 2-system. Sørsamisk adj-system er i full fart fra 5 og 4-system til 2-system, men dette er ikke divvuns bord til å bestemme.
 
 LEXICON ÆRE  !LOAN
          :ær e_E_EVEN ;
@@ -1122,8 +1122,8 @@ LEXICON AABELE
 
 
 LEXICON IJBELE
-        :ijbel Ce_CES_ODD  ; ! fleksijbele
- +Use/Sub:ibel Ce_CES_ODD  ; ! fleksibele
+         :ijbel Ce_CES_ODD ; ! fleksijbele
+ +Use/Sub:ibel  Ce_CES_ODD ; ! fleksibele
 
 LEXICON AATE_adj_LOAN
          :ate ATTR_0 ;
@@ -1139,8 +1139,8 @@ LEXICON LES_LASSE_ie_Comp
      LES_LASSE_ie ;
 
 LEXICON LES_LASSE_ie
- LES_LASSE_NOM_ie ;
- LES_LASSE_OBL_ie ;
+   LES_LASSE_NOM_ie ;
+   LES_LASSE_OBL_ie ;
 
 LEXICON LES_LASSE_NOM_ie
             :eles     ATTR_0   ; ! should redirect to case paradigm
@@ -1176,18 +1176,18 @@ LEXICON Ce_CES_ODD
 !                      ODDCOMP    ;
 
 LEXICON jes_js_JES_JS_ODD !to adj: bualijes, fååmijes
-     +Use/NG:%^DISIMP  ATTR_S         ;
-            :%^DISIMPe ATTR_S         ;
-     +Use/NG:%^DISIMP  PRED_S         ;
-            :%^DISIMPe PRED_S         ;
+     +Use/NG:%^DISIMP  ATTR_S  ;
+            :%^DISIMPe ATTR_S  ;
+     +Use/NG:%^DISIMP  PRED_S  ;
+            :%^DISIMPe PRED_S  ;
 !                      ije_ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R              ;
-                       ODDCOMP        ;
+ +A+SgNomCmp:%^DISIMPe R       ;
+                       ODDCOMP ;
 
 
 LEXICON ijes_ijs_IJE_ODD ! GUALIJES
- ijes_ijs_IJE_ODDNOCOMP ; ! attr -es, -s, pred -e
- ODDCOMP                ;
+   ijes_ijs_IJE_ODDNOCOMP ; ! attr -es, -s, pred -e
+   ODDCOMP                ;
 
 LEXICON ijes_ijs_IJE_ODDNOCOMP ! DÅAJMIJES
             :e         ATTR_S      ; ! LMM: dåajmijes
@@ -1200,7 +1200,7 @@ LEXICON ijes_ijs_IJE_ODDNOCOMP ! DÅAJMIJES
 LEXICON Cs_CE_ODD !          OK!
             :%^DISIMP  ATTR_S     ;
             :%^DISIMPe PRED_0     ;
-                       ODDCASEOBL ;    ! CASE-OK!
+                       ODDCASEOBL ; ! CASE-OK!
  +A+SgNomCmp:%^DISIMPe R          ;
                        ODDCOMP    ;
 
@@ -1212,21 +1212,21 @@ LEXICON oeCs_OECE_ODD
                        ODDCOMP    ;
 
 LEXICON Cs_CE_ODDNOCOMP
-            :%^DISIMP  ATTR_S ;
-            :%^DISIMPe PRED_0 ;
+            :%^DISIMP  ATTR_S     ;
+            :%^DISIMPe PRED_0     ;
                        ODDCASEOBL ; !LA
- +A+SgNomCmp:%^DISIMPe R ; !LA
+ +A+SgNomCmp:%^DISIMPe R          ; !LA
 
 LEXICON Ces_CE_ODD
- Ces_CE_ODDNOCOMP ;
- ODDCOMP          ;
+   Ces_CE_ODDNOCOMP ;
+   ODDCOMP          ;
 
 
 LEXICON Ces_CE_ODDNOCOMP
             :%^DISIMPe ATTR_S ;
             :%^DISIMPe PRED_0 ;
 !                      ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R ;
+ +A+SgNomCmp:%^DISIMPe R      ;
 
 
 LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
@@ -1235,9 +1235,9 @@ LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
  +Use/Sub:%^DISIMP ODDCOMP                 ;
 
 LEXICON Ces_Ce_CES_CE_ODDNOCOMP
- +Use/NG:%^DISIMPe ATTR_0  ;
-        :%^DISIMPe ATTR_S  ;
- +Use/NG:%^DISIMPe PRED_S  ;
+ +Use/NG:%^DISIMPe ATTR_0 ;
+        :%^DISIMPe ATTR_S ;
+ +Use/NG:%^DISIMPe PRED_S ;
 !                  ODDCASE ;
 
 LEXICON Ce_Ces_CES_CE_ODD
@@ -1246,14 +1246,14 @@ LEXICON Ce_Ces_CES_CE_ODD
  +Use/Sub:%^DISIMP ODDCOMP                 ;
 
 LEXICON Ce_Ces_CES_CE_ODDNOCOMP
-        :%^DISIMPe ATTR_0     ;
- +Use/NG:%^DISIMPe ATTR_S     ;
-        :%^DISIMPe PRED_S     ;
+        :%^DISIMPe ATTR_0 ;
+ +Use/NG:%^DISIMPe ATTR_S ;
+        :%^DISIMPe PRED_S ;
 !                  ODDCASEOBL ;
 
 
 LEXICON Ces_CES_CE_ODD
-            :%^DISIMPe ATTR_S  ;   !<=====  gir Attr -s
+            :%^DISIMPe ATTR_S  ; !<=====  gir Attr -s
      +Use/NG:%^DISIMPe PRED_S  ;
                        ODDCASE ; ! tt kommentert inn
                        ODDCOMP ;
@@ -1307,8 +1307,8 @@ LEXICON HKE_ODD_COMP
 ! - - - - - - - - - - - - - - - -
 
 LEXICON ODDCASE
- ODDCASENOM ;
- ODDCASEOBL ;
+   ODDCASENOM ;
+   ODDCASEOBL ;
 
 LEXICON ODDCASENOM
  +A+Sg+Nom:e%>%^DISIMP FINAL1 ;
@@ -1326,8 +1326,8 @@ LEXICON ODDCASEOBL
  +A+PlGenCmp:%>%^DISIMPi  R         ;
 
 LEXICON ije_ODDCASE
- ije_ODDCASENOM ;
- ije_ODDCASEOBL ;
+   ije_ODDCASENOM ;
+   ije_ODDCASEOBL ;
 
 LEXICON ije_ODDCASENOM
  +A+Sg+Nom:e%>%^DISIMP FINAL1 ;
@@ -1356,8 +1356,8 @@ LEXICON eCASEOBL
 
 
 LEXICON oeCASE
- oeCASE_NOMSG ;
- oeCASE_OBL ;
+   oeCASE_NOMSG ;
+   oeCASE_OBL   ;
 
 LEXICON oeCASE_NOMSG
  +A+Sg+Nom:oe FINAL1 ;
@@ -1395,7 +1395,7 @@ LEXICON A_OE_PL
  +Com:oe%>jgujmie FINAL1 ;
 
 LEXICON A_OE_ESS
- +Ess:o%>jne         FINAL1 ;
+ +Ess:o%>jne FINAL1 ;
 
 
 
@@ -1403,8 +1403,8 @@ LEXICON A_OE_ESS
 ! -----------------
 
 LEXICON EVENCOMP
- EVENCOMPONLY ;
- EVENSUPONLY ;
+   EVENCOMPONLY ;
+   EVENSUPONLY  ;
 
 LEXICON EVENCOMPONLY
    +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT         ;
@@ -1422,36 +1422,36 @@ LEXICON EVENSUPONLY
 
 
 LEXICON EVENCOMP_oe
-          +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP   ATTRCONT        ;
-   +A+Comp+Attr+Use/NG:%>%^COMPDISIMP2be%^DISIMP  ATTRCONT        ;
+          +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP   ATTRCONT ;
+   +A+Comp+Attr+Use/NG:%>%^COMPDISIMP2be%^DISIMP  ATTRCONT ;
 !                                                 EVENCOMPCASE_oe ;
-        +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP  ATTRCONT        ;
- +A+Superl+Attr+Use/NG:%>%^COMPDISIMP2mes%^DISIMP ATTRCONT        ;
+        +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP  ATTRCONT ;
+ +A+Superl+Attr+Use/NG:%>%^COMPDISIMP2mes%^DISIMP ATTRCONT ;
 !                                                 MES_oe          ;
-                                                  DIMCOMP         ;
-               +A+Comp:%>%^COMPDISIMPbe%^DISIMP   LAAKAN          ;
+                                                  DIMCOMP  ;
+               +A+Comp:%>%^COMPDISIMPbe%^DISIMP   LAAKAN   ;
 
 LEXICON ODDCOMP
           ODD_ÅBPOE ; ! Arbitrary "yes"
- +Use/NG: ODD_ABPA  ;  ! Arbitrary "no", tt.
+ +Use/NG: ODD_ABPA  ; ! Arbitrary "no", tt.
 
 LEXICON ODD_ÅBPOE
-                +A+Comp+Attr:%>åbpoe     ATTRCONT ; ! båajoesåbpoe, *båajasåbpoe
-                     +A+Comp:%>åbp       ÅBPOE ;
-                            :%>ommes     OMMES ;
- +A+Comp+Der1+Der/Dimin+Attr:%>obpe%»tje ATTRCONT ;
+                +A+Comp+Attr:%>åbpoe     ATTRCONT    ; ! båajoesåbpoe, *båajasåbpoe
+                     +A+Comp:%>åbp       ÅBPOE       ;
+                            :%>ommes     OMMES       ;
+ +A+Comp+Der1+Der/Dimin+Attr:%>obpe%»tje ATTRCONT    ;
       +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
-                     +A+Comp:%>åbpoe     LAAKAN ;
-      +A+Comp+Der1+Der/Dimin:%>obpe%»tje LAAKAN ;
+                     +A+Comp:%>åbpoe     LAAKAN      ;
+      +A+Comp+Der1+Der/Dimin:%>obpe%»tje LAAKAN      ;
 
 
 LEXICON ODD_ABPA
-                       +A+Comp+Attr:%>abpa      ATTRCONT    ;  ! båajasabpa,   *båajoesabpa
+                       +A+Comp+Attr:%>abpa      ATTRCONT    ; ! båajasabpa,   *båajoesabpa
                             +A+Comp:%>abp       ABPA        ;
                                    :%>ammes     OMMES       ;
  +A+Comp+Der1+Der/Dimin+Attr+Use/NG:%>abpe%»tje ATTRCONT    ;
       +A+Comp+Der1+Der/Dimin+Use/NG:%>abpa%»tj  GÅATETJEadj ;
-                            +A+Comp:%>abpa      LAAKAN      ;  ! båajasabpa,   *båajoesabpa
+                            +A+Comp:%>abpa      LAAKAN      ; ! båajasabpa,   *båajoesabpa
       +A+Comp+Der1+Der/Dimin+Use/NG:%>abpe%»tje LAAKAN      ;
 
 LEXICON OMMES
@@ -1472,8 +1472,8 @@ LEXICON OMMES
 
 
 LEXICON EVENCOMPCASE
- EVENCOMPCASE_NOM ;
- EVENCOMPCASE_OBL ;
+   EVENCOMPCASE_NOM ;
+   EVENCOMPCASE_OBL ;
 
 LEXICON EVENCOMPCASE_NOM
  +A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP FINAL1 ;
@@ -1499,64 +1499,64 @@ LEXICON EVENCOMPCASE_OBL
 
 
 LEXICON DIMCOMP
-     +A+Comp+Der1+Der/Dimin+Attr:%>b%»adtje                    FINAL1 ;
-     +A+Comp+Der1+Der/Dimin+Attr:%>b%»odtje                    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Nom:%>b%»adtje                    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Acc:%>b%»adtje%>m                 FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Gen:%>b%»adtje%>n                 FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ill:%>%^COMPDISIMPb%»adtje%>se    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ine:%>%^COMPDISIMPb%»adtje%>sne   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ela:%>%^COMPDISIMPb%»adtje%>ste   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Com:%>%^COMPDISIMPb%»adtj%>ine    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ill:%>%^COMPDISIMP2b%»adtje%>se   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ine:%>%^COMPDISIMP2b%»adtje%>sne  FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ela:%>%^COMPDISIMP2b%»adtje%>ste  FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Com:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Nom:%>b%»adtj%>h                  FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Nom:%>b%»adtj%>eh                 FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Acc:%>%^COMPDISIMPb%»adtj%>ide    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Acc:%>%^COMPDISIMP2b%»adtj%>ide   FINAL1 ;
+     +A+Comp+Der1+Der/Dimin+Attr:%>b%»adtje                    FINAL1   ;
+     +A+Comp+Der1+Der/Dimin+Attr:%>b%»odtje                    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Nom:%>b%»adtje                    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Acc:%>b%»adtje%>m                 FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Gen:%>b%»adtje%>n                 FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ill:%>%^COMPDISIMPb%»adtje%>se    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ine:%>%^COMPDISIMPb%»adtje%>sne   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ela:%>%^COMPDISIMPb%»adtje%>ste   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Com:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ill:%>%^COMPDISIMP2b%»adtje%>se   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ine:%>%^COMPDISIMP2b%»adtje%>sne  FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ela:%>%^COMPDISIMP2b%»adtje%>ste  FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Com:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Nom:%>b%»adtj%>h                  FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Nom:%>b%»adtj%>eh                 FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Acc:%>%^COMPDISIMPb%»adtj%>ide    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Acc:%>%^COMPDISIMP2b%»adtj%>ide   FINAL1   ;
    +A+Comp+Der1+Der/Dimin+Pl+Gen:%>b%»adtj%>                   IGENSUFF ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ill:%>%^COMPDISIMPb%»adtj%>ide    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ine:%>%^COMPDISIMPb%»adtj%>ine    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ela:%>%^COMPDISIMPb%»adtj%>ijste  FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ill:%>%^COMPDISIMP2b%»adtj%>ide   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ine:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ela:%>%^COMPDISIMP2b%»adtj%>ijste FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Com:%>b%»adtj%>igujmie            FINAL1 ;
-      +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMPb%»adtj%>ine    FINAL1 ;
-      +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1 ;
- +A+Comp+Der1+Der/Dimin+SgNomCmp:%>b%»adtje                    R ;
- +A+Comp+Der1+Der/Dimin+SgGenCmp:%>b%»adtje%>n                 R ;
- +A+Comp+Der1+Der/Dimin+PlGenCmp:%>b%»adtj%>i                  R ;
-   +A+Comp+Der1+Der/Dimin+Sg+Nom:%>b%»odtje                    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Acc:%>b%»odtje%>m                 FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Gen:%>b%»odtje%>n                 FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ill:%>%^COMPDISIMPb%»odtje%>se    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ine:%>%^COMPDISIMPb%»odtje%>sne   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ela:%>%^COMPDISIMPb%»odtje%>ste   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Com:%>%^COMPDISIMPb%»odtj%>ine    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ill:%>%^COMPDISIMP2b%»odtje%>se   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ine:%>%^COMPDISIMP2b%»odtje%>sne  FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Ela:%>%^COMPDISIMP2b%»odtje%>ste  FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Sg+Com:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Nom:%>b%»odtj%>h                  FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Nom:%>b%»odtj%>eh                 FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Acc:%>%^COMPDISIMPb%»odtj%>ide    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Acc:%>%^COMPDISIMP2b%»odtj%>ide   FINAL1 ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ill:%>%^COMPDISIMPb%»adtj%>ide    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ine:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ela:%>%^COMPDISIMPb%»adtj%>ijste  FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ill:%>%^COMPDISIMP2b%»adtj%>ide   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ine:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ela:%>%^COMPDISIMP2b%»adtj%>ijste FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Com:%>b%»adtj%>igujmie            FINAL1   ;
+      +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
+      +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
+ +A+Comp+Der1+Der/Dimin+SgNomCmp:%>b%»adtje                    R        ;
+ +A+Comp+Der1+Der/Dimin+SgGenCmp:%>b%»adtje%>n                 R        ;
+ +A+Comp+Der1+Der/Dimin+PlGenCmp:%>b%»adtj%>i                  R        ;
+   +A+Comp+Der1+Der/Dimin+Sg+Nom:%>b%»odtje                    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Acc:%>b%»odtje%>m                 FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Gen:%>b%»odtje%>n                 FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ill:%>%^COMPDISIMPb%»odtje%>se    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ine:%>%^COMPDISIMPb%»odtje%>sne   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ela:%>%^COMPDISIMPb%»odtje%>ste   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Com:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ill:%>%^COMPDISIMP2b%»odtje%>se   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ine:%>%^COMPDISIMP2b%»odtje%>sne  FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Ela:%>%^COMPDISIMP2b%»odtje%>ste  FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Sg+Com:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Nom:%>b%»odtj%>h                  FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Nom:%>b%»odtj%>eh                 FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Acc:%>%^COMPDISIMPb%»odtj%>ide    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Acc:%>%^COMPDISIMP2b%»odtj%>ide   FINAL1   ;
    +A+Comp+Der1+Der/Dimin+Pl+Gen:%>b%»odtj%>                   IGENSUFF ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ill:%>%^COMPDISIMPb%»odtj%>ide    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ine:%>%^COMPDISIMPb%»odtj%>ine    FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ela:%>%^COMPDISIMPb%»odtj%>ijste  FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ill:%>%^COMPDISIMP2b%»odtj%>ide   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ine:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Ela:%>%^COMPDISIMP2b%»odtj%>ijste FINAL1 ;
-   +A+Comp+Der1+Der/Dimin+Pl+Com:%>b%»odtj%>igujmie            FINAL1 ;
-      +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMPb%»odtj%>ine    FINAL1 ;
-      +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1 ;
- +A+Comp+Der1+Der/Dimin+SgNomCmp:%>b%»odtje                    R ;
- +A+Comp+Der1+Der/Dimin+SgGenCmp:%>b%»odtje%>n                 R ;
- +A+Comp+Der1+Der/Dimin+PlGenCmp:%>b%»odtj%>i                  R ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ill:%>%^COMPDISIMPb%»odtj%>ide    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ine:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ela:%>%^COMPDISIMPb%»odtj%>ijste  FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ill:%>%^COMPDISIMP2b%»odtj%>ide   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ine:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Ela:%>%^COMPDISIMP2b%»odtj%>ijste FINAL1   ;
+   +A+Comp+Der1+Der/Dimin+Pl+Com:%>b%»odtj%>igujmie            FINAL1   ;
+      +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
+      +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
+ +A+Comp+Der1+Der/Dimin+SgNomCmp:%>b%»odtje                    R        ;
+ +A+Comp+Der1+Der/Dimin+SgGenCmp:%>b%»odtje%>n                 R        ;
+ +A+Comp+Der1+Der/Dimin+PlGenCmp:%>b%»odtj%>i                  R        ;
 
 ! doublet fix stops here so far Trond.
 
@@ -1565,15 +1565,15 @@ LEXICON ÅBPOE
       ÅBPOE_N_OE      ;
 
 LEXICON ÅBPOE_SGILL_UML
- +Ill+Uml:e%>%^2UMLse FINAL1      ; ! Causes Umlaut
+ +Ill+Uml:e%>%^2UMLse FINAL1 ; ! Causes Umlaut
 
 LEXICON ÅBPOE_N_OE
-       +Sg:      ÅBPOE_N_OE_SG  ;
-       +Pl:      ÅBPOE_N_OE_PL  ;
+       +Sg:      ÅBPOE_N_OE_SG ;
+       +Pl:      ÅBPOE_N_OE_PL ;
 !         :      ÅBPOE_N_OE_ESS ;
- +SgNomCmp:oe    R              ;
- +SgGenCmp:oe%>n R              ;
- +PlGenCmp:oe%>j R              ;
+ +SgNomCmp:oe    R             ;
+ +SgGenCmp:oe%>n R             ;
+ +PlGenCmp:oe%>j R             ;
 
 LEXICON ÅBPOE_N_OE_SG
  +Nom:oe     FINAL1 ;
@@ -1621,25 +1621,25 @@ LEXICON ABPA_PL
 
 LEXICON MES
      +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP       ATTRCONT ;
-   +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP       FINAL1 ;
-   +A+Superl+Sg+Acc:masse%>m                        FINAL1 ;
-   +A+Superl+Sg+Gen:masse%>n                        FINAL1 ;
-   +A+Superl+Sg+Ill:masse%>se                       FINAL1 ;
-   +A+Superl+Sg+Ine:masse%>sne                      FINAL1 ;
-   +A+Superl+Sg+Ela:masse%>ste                      FINAL1 ;
-   +A+Superl+Sg+Com:mass%>ine                       FINAL1 ;
-   +A+Superl+Pl+Nom:%>%^COMPDISIMP%>mass%>%^DISIMPh FINAL1 ;
-   +A+Superl+Pl+Acc:%>mass%>ide                     FINAL1 ;
+   +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP       FINAL1   ;
+   +A+Superl+Sg+Acc:masse%>m                        FINAL1   ;
+   +A+Superl+Sg+Gen:masse%>n                        FINAL1   ;
+   +A+Superl+Sg+Ill:masse%>se                       FINAL1   ;
+   +A+Superl+Sg+Ine:masse%>sne                      FINAL1   ;
+   +A+Superl+Sg+Ela:masse%>ste                      FINAL1   ;
+   +A+Superl+Sg+Com:mass%>ine                       FINAL1   ;
+   +A+Superl+Pl+Nom:%>%^COMPDISIMP%>mass%>%^DISIMPh FINAL1   ;
+   +A+Superl+Pl+Acc:%>mass%>ide                     FINAL1   ;
    +A+Superl+Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMP  IGENSUFF ;
-   +A+Superl+Pl+Ill:%>mass%>ide                     FINAL1 ;
-   +A+Superl+Pl+Ine:%>mass%>ine                     FINAL1 ;
-   +A+Superl+Pl+Ela:%>mass%>ijste                   FINAL1 ;
-   +A+Superl+Pl+Com:%>mass%>igujmie                 FINAL1 ;
+   +A+Superl+Pl+Ill:%>mass%>ide                     FINAL1   ;
+   +A+Superl+Pl+Ine:%>mass%>ine                     FINAL1   ;
+   +A+Superl+Pl+Ela:%>mass%>ijste                   FINAL1   ;
+   +A+Superl+Pl+Com:%>mass%>igujmie                 FINAL1   ;
           +A+Superl:mass                            EVEN_ESS ;
- +A+Superl+SgNomCmp:%>%^COMPDISIMPmes%^DISIMP       R ;
- +A+Superl+SgGenCmp:masse%>n                        R ;
- +A+Superl+PlGenCmp:mass%>i                         R ;
-          +A+Superl:%>%^COMPDISIMPmes%^DISIMP       LAAKAN ;
+ +A+Superl+SgNomCmp:%>%^COMPDISIMPmes%^DISIMP       R        ;
+ +A+Superl+SgGenCmp:masse%>n                        R        ;
+ +A+Superl+PlGenCmp:mass%>i                         R        ;
+          +A+Superl:%>%^COMPDISIMPmes%^DISIMP       LAAKAN   ;
 
 LEXICON A_LDH
    +A+Attr: ATTRCONT ;
