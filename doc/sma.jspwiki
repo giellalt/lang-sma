@@ -504,9 +504,9 @@ The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  
  !!!LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
 The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP.
 {{{
-             :a  ATTR_S   ; 
-    +A+Sg+Nom:as FINAL1   ; 
-  +A+SgNomCmp:as R        ; 
+             :a  ATTR_S ; 
+    +A+Sg+Nom:as FINAL1 ; 
+  +A+SgNomCmp:as R      ; 
 }}}
 
 
@@ -534,9 +534,9 @@ The __a_A_EVEN1_NOCOMP__ lexicon is used for adjectives on {{–ie}} and {{–ie
  !!!LEXICON es_ES_EVEN
 The __es_ES_EVEN!!≈__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-COMP.
 {{{
-  :e  ATTR_S     ; 
-  :e  PRED_S     ; 
-  :e  EVENCOMP   ; 
+  :e ATTR_S   ; 
+  :e PRED_S   ; 
+  :e EVENCOMP ; 
 }}}
 
 
@@ -558,8 +558,8 @@ The __ies_IES_EVEN1__ lexicon is used for adjectives on {{–ies}} and {{–ies}
 
 The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-NOCOMP.
 {{{
-  :ie   ATTR_S    ; 
-  :ie   PRED_S    ; 
+  :ie ATTR_S ; 
+  :ie PRED_S ; 
  !      ieCASEOBL ; 
 }}}
 
@@ -579,10 +579,10 @@ The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{�
 UNEVEN adjective, attr = pred. Comporation uneven syllable.
 Presentlly only used for "båeries" adjective.
 {{{
-  :båerie   ATTR_S   ; 
-  :båerie   PRED_S   ; 
+  :båerie ATTR_S  ; 
+  :båerie PRED_S  ; 
  !:båaras   MAANAOBL ; 
-  :båaras   ODDCOMP  ; 
+  :båaras ODDCOMP ; 
 }}}
 
 !!!ÅEHPIES LEXICON ÅEHPIES
@@ -611,10 +611,10 @@ This lexicon covers the ies - ehke + umlaut change.
 !!!BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
 EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 {{{
-  :buer ie_IE_EVENNOCOMP1    ; 
-  :buerie EVENCOMPONLY ; 
-  :bööre MES ; 
-  :buerie DIMCOMP ; 
+  :buer   ie_IE_EVENNOCOMP1 ; 
+  :buerie EVENCOMPONLY      ; 
+  :bööre  MES               ; 
+  :buerie DIMCOMP           ; 
 }}}
 
 
@@ -801,8 +801,8 @@ This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is 
 }}}
 
 {{{
-         :oe        ATTR_H    ; 
-  +Use/NG:%^3UMLa   PRED_N    ; 
+         :oe      ATTR_H  ; 
+  +Use/NG:%^3UMLa PRED_N  ; 
  !       :%^3UMLahk ODD_ÅBPOE ; 
 }}}
 
@@ -876,9 +876,9 @@ used with the stem ''masten''
 EVEN adjective EVEN Comporation.
 Used for all loan-adjectives "ijve".
 {{{
-           :ijv e_E_EVEN ; 
-           :ïjv e_E_EVEN ; 
-  +Use/Sub:iv   e_E_EVEN ; 
+          :ijv e_E_EVEN ; 
+          :ïjv e_E_EVEN ; 
+  +Use/Sub:iv  e_E_EVEN ; 
 }}}
 
 
@@ -2061,14 +2061,14 @@ Short descrioption of this lexicon, and its purpose.
  LEXICON MAAKE  Only for "relatives"
 The __MAAKE__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
 {{{
-   +N+Der1+Der/Rec+N:e LAAHKOEH_EVEN ;    
-   +N+Sg:           NIEJTE_SG  ;          
-   +N+Pl:           NIEJTE_PL  ;          
-   +N:              EVEN_ESS ;            
-   +N+SgNomCmp:e    R ;                   
-   +N+SgGenCmp:e%>n R ;                   
-   +N+PlGenCmp:%>i  R ;                   
-   +N+Der1+Der/Dimin+N:e%»tj   GÅATETJE ; 
+    +N+Der1+Der/Rec+N:e     LAAHKOEH_EVEN ; 
+                +N+Sg:      NIEJTE_SG     ; 
+                +N+Pl:      NIEJTE_PL     ; 
+                   +N:      EVEN_ESS      ; 
+          +N+SgNomCmp:e     R             ; 
+          +N+SgGenCmp:e%>n  R             ; 
+          +N+PlGenCmp:%>i   R             ; 
+  +N+Der1+Der/Dimin+N:e%»tj GÅATETJE      ; 
 }}}
 
 (subsequent examples are *vïelle # Even-syllable test*)
@@ -2085,16 +2085,16 @@ The __MAAKE__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
 
  LEXICON KONTO   Lexicon for vowel-final words with invariant stems"
 {{{
- +N: KONTODECL ;  
+  +N: KONTODECL ; 
 }}}
  LEXICON KONTODECL  Lexicon for vowel-final words with invariant stems"
 {{{
-  +Sg: KONTO_SG  ;   
-  +Pl: KONTO_PL  ;   
-       EVEN_ESS  ;   
-  +SgNomCmp:    R ;  
-  +SgGenCmp:%>n R ;  
-  +PlGenCmp:%>j R ;  
+                +Sg:     KONTO_SG ; 
+                +Pl:     KONTO_PL ; 
+                         EVEN_ESS ; 
+          +SgNomCmp:     R        ; 
+          +SgGenCmp:%>n  R        ; 
+          +PlGenCmp:%>j  R        ; 
   +Der1+Der/Dimin+N:%»tj GÅATETJE ; 
 }}}
 
