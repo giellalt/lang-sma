@@ -20,7 +20,7 @@ fsttype=
 @CAN_XFST_TRUE@fsttype="$fsttype xfst"
 
 # Exit if both hfst and xerox have been shut off:
-if [ -z $fsttype ]; then
+if test -z "$fsttype"; then
     echo "All transducer types have been shut off at configure time."
     echo "Nothing to test. Skipping."
     exit 77
@@ -32,8 +32,9 @@ EXTEDITOR=@SEE@
 ###### Extraction: #######
 # extract non-compounding lemmas:
 grep ";" $sourcefile | grep -v "^\!" \
-	| egrep -v '(CmpN/Only|+Gen+|+Der+| R )' | sed 's/% /€/g' | sed 's/%:/¢/g' \
-	| tr ":+" " " | cut -d " " -f1 | tr -d "#" | tr "€" " " | tr "¢" ":" \
+	| egrep -v '(CmpN/Only|\+Gen\+|\+Der\+| R )' | sed 's/% /€/g' \
+	| sed 's/%:/¢/g' | tr ":+" " " \
+	| cut -d " " -f1 | tr -d "#" | tr "€" " " | tr "¢" ":" \
 	| sort -u | grep -v '^$' > nouns.txt
 
 # extract compounding lemmas:
