@@ -63,6 +63,7 @@ GT_FILTER_TARGETS+=\
 				   make-optional-transitivity-tags.xfst   \
 				   make-optional-variant-tags.xfst        \
 				   remove-derivation-position-tags.xfst   \
+				   remove-semantic-tags-except-prop.xfst  \
 				   remove-dialect-tags.xfst               \
 				   remove-homonymy-tags.xfst              \
 				   remove-norm-comp-tags.xfst             \
