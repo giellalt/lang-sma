@@ -32,19 +32,19 @@ EXTEDITOR=@SEE@
 
 ###### Extraction: #######
 ### Regular adjectives:
-grep ";" $sourcefile | grep -v "^\!" \
+grep ";" $sourcefile | grep -v "^\!" | sed 's/\([^%]\)!.*/\1/' \
 	| egrep -v "(PRED|CASE| MES|EVTEBE)" | tr ":+" " " | cut -d " " -f1 \
-	| tr -d "#" | sort -u > adjs.txt
+	| tr -d "#" | sort -u | grep -v '^$' > adjs.tmp.txt
 ### Adjectives with no attr form, ie only pred form:
-grep ";" $sourcefile | grep -v "^\!" \
+grep ";" $sourcefile | grep -v "^\!" | sed 's/\([^%]\)!.*/\1/' \
 	| egrep "(PRED|CASE)" | tr ":+" " " | cut -d " " -f1 | tr -d "#" \
 	| sort -u > predadjs.txt
 ### Adjectives with only comparative forms:
-grep ";" $sourcefile | grep -v "^\!" \
+grep ";" $sourcefile | grep -v "^\!" | sed 's/\([^%]\)!.*/\1/' \
 	| grep "EVTEBE" | tr ":+" " " | cut -d " " -f1 | tr -d "#" \
 	| sort -u > compladjs.txt
 ### Adjectives with only superlative forms:
-grep ";" $sourcefile | grep -v "^\!" \
+grep ";" $sourcefile | grep -v "^\!" | sed 's/\([^%]\)!.*/\1/' \
 	| grep " MES" | tr ":+" " " | cut -d " " -f1 | tr -d "#" \
 	| sort -u > superladjs.txt
 
@@ -67,7 +67,7 @@ for f in $fsttype; do
 		let "transducer_found += 1"
 
 #### First we try to generate the regular adjectives:
-		sed 's/$/+A+Attr/' adjs.txt | $lookuptool $generatorfile.$f \
+		sed 's/$/+A+Attr/' adjs.tmp.txt | $lookuptool $generatorfile.$f \
 			| cut -f2 | grep -v "A+" | grep -v "^$" | sort -u > analadjs.$f.txt 
 
 #### Then we try to generate the predicate-only adjectives:
@@ -85,8 +85,8 @@ for f in $fsttype; do
 			| $lookuptool $generatorfile.$f | cut -f2 \
 			| grep -v "A+" | grep -v "^$" | sort -u >> analadjs.$f.txt 
 
-		cat predadjs.txt superladjs.txt compladjs.txt >> adjs.txt
-		sort -u -o adjs.txt adjs.txt 
+		cat predadjs.txt superladjs.txt compladjs.txt >> adjs.tmp.txt
+		sort -u adjs.tmp.txt | grep -v '^$' > adjs.txt
 		sort -u -o analadjs.$f.txt analadjs.$f.txt 
 		comm -23 adjs.txt analadjs.$f.txt > $resultfile.$f.txt
 
