@@ -496,8 +496,8 @@ REMOVE:prop_daate Prop IF (0 Pers); # too strong
 # Dem Sg Acc + N Sg Acc			Dem Pl Acc + N Pl Acc
 # Dem Sg Gen + N Sg Gen			Dem Pl Gen + N Pl Gen
 # Dem Sg Ill Attr + N Sg Ill	Dem Pl Ill + N Pl Ill
-# Dem Sg Ine + N Sg Ine			Dem	Pl Ine + N Pl Ine
-# Dem Sg Ela + N Sg Ela			Dem Pl Ela + N Pl Ela
+# Dem Sg Ine Attr + N Sg Ine	Dem	Pl Ine + N Pl Ine
+# Dem Sg Ela Attr + N Sg Ela	Dem Pl Ela + N Pl Ela
 # Dem Sg Com + N Sg Com			Dem	Pl Com Attr + N Pl Com
 
 SELECT:DemIll (Dem Ill Attr)(*1 (N Sg Ill) BARRIER NPNHAI) (NEGATE *1 Po BARRIER NPNHAI) ;
@@ -1250,19 +1250,20 @@ MAP (@SUBJ) TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV);
 
 AFTER-SECTIONS              #
 # ======================================== #
-   
-SUBSTITUTE (A) (A <sma>) WORD ;
-SUBSTITUTE (N) (N <sma>) WORD ;
-SUBSTITUTE (Adv) (Adv <sma>) WORD ;
-SUBSTITUTE (V) (V <sma>) WORD ;
-SUBSTITUTE (Num) (Num <sma>) WORD ;
-SUBSTITUTE (Interj) (Interj <sma>) WORD ;
-SUBSTITUTE (Po) (Po <sma>) WORD ;
-SUBSTITUTE (Pr) (Pr <sma>) WORD ;
-SUBSTITUTE (Pron) (Pron <sma>) WORD ;
-SUBSTITUTE (CC) (CC <sma>) WORD ;
-SUBSTITUTE (CS) (CS <sma>) WORD ;
-SUBSTITUTE (Pcle) (Pcle <sma>) WORD ;
+
+#Disse kommenteres inn når analysen skal brukes i functions.cg3   
+#SUBSTITUTE (A) (A <sma>) WORD ;
+#SUBSTITUTE (N) (N <sma>) WORD ;
+#SUBSTITUTE (Adv) (Adv <sma>) WORD ;
+#SUBSTITUTE (V) (V <sma>) WORD ;
+#SUBSTITUTE (Num) (Num <sma>) WORD ;
+#SUBSTITUTE (Interj) (Interj <sma>) WORD ;
+#SUBSTITUTE (Po) (Po <sma>) WORD ;
+#SUBSTITUTE (Pr) (Pr <sma>) WORD ;
+#SUBSTITUTE (Pron) (Pron <sma>) WORD ;
+#SUBSTITUTE (CC) (CC <sma>) WORD ;
+#SUBSTITUTE (CS) (CS <sma>) WORD ;
+#SUBSTITUTE (Pcle) (Pcle <sma>) WORD ;
 
 
 # Not in use:
