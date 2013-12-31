@@ -14,6 +14,7 @@ JSP_PAGES=root-morphology.jspwiki \
 		  adjectives-stems.jspwiki \
 		  adjectives-oahpa-affixes.jspwiki \
 		  adjectives-oahpa-stems.jspwiki   \
+		  smi-propernouns-stems.jspwiki    \
 		  nouns-affixes.jspwiki \
 		  verbs-affixes.jspwiki \
 		  disambiguation-syntax.jspwiki \
@@ -32,7 +33,6 @@ JSP_PAGES=root-morphology.jspwiki \
 # pronouns-stems.jspwiki           \
 # propernouns-stems.jspwiki        \
 # punctuation-stems.jspwiki        \
-# smi-propernouns-stems.jspwiki    \
 # subjunctions-stems.jspwiki       \
 # verbs-stems.jspwiki              \
 # adjectives-oahpa-affixes.jspwiki \
