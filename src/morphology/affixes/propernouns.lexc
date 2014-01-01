@@ -386,16 +386,19 @@ LEXICON DUORTNUS-plc
  +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG ;
 
 LEXICON LONDON-LOAN-obj
- +N+Prop+Sem/Obj+Sg+Nom: FINAL1 ;
-        +N+Prop+Sem/Obj: RHyph  ;
+ +N+Prop+Sem/Obj: CNAME_ODD ;
+! +N+Prop+Sem/Obj+Sg+Nom: FINAL1 ;
+!        +N+Prop+Sem/Obj: RHyph  ;
 
 LEXICON LONDON-LOAN-org
- +N+Prop+Sem/Org+Sg+Nom: FINAL1 ;
-        +N+Prop+Sem/Org: RHyph  ;
+ +N+Prop+Sem/Org: CNAME_ODD ;
+! +N+Prop+Sem/Org+Sg+Nom: FINAL1 ;
+!        +N+Prop+Sem/Org: RHyph  ;
 
 LEXICON LONDON-LOAN-plc
- +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ;
-        +N+Prop+Sem/Plc: RHyph  ;
+ +N+Prop+Sem/Plc: CNAME_ODD ;
+! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ;
+!        +N+Prop+Sem/Plc: RHyph  ;
 
 
 LEXICON BETFAGE-fem
@@ -436,17 +439,10 @@ LEXICON BERN-fem
  +N+Prop+Sem/Fem: CNAME_EVENLEX ;
 
 
-LEXICON BERN-LOAN-org
- +N+Prop+Sem/Org+Sg+Nom: FINAL1 ;
-        +N+Prop+Sem/Org: RHyph  ;
-
-LEXICON BERN-LOAN-plc
- +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ;
-        +N+Prop+Sem/Plc: RHyph  ;
-
 LEXICON BERN-LOAN-obj
- +N+Prop+Sem/Obj+Sg+Nom: FINAL1 ;
-        +N+Prop+Sem/Obj: RHyph  ;
+ +N+Prop+Sem/Obj: CNAME_EVENLEX ;
+! +N+Prop+Sem/Obj+Sg+Nom: FINAL1 ;
+!        +N+Prop+Sem/Obj: RHyph  ;
 
 
 LEXICON BERN-femplc
@@ -456,6 +452,11 @@ LEXICON BERN-femplc
 LEXICON BERN-org
  +N+Prop+Sem/Org: CNAME_EVENLEX_PLC-ORG ;
 
+LEXICON BERN-LOAN-org
+ +N+Prop+Sem/Org: CNAME_EVENLEX_PLC-ORG ;
+! +N+Prop+Sem/Org+Sg+Nom: FINAL1 ; ! reverting the special LOAN lexicon,
+!        +N+Prop+Sem/Org: RHyph  ; ! it only gives nominative.
+
 LEXICON BERN-orgsur
  +N+Prop+Sem/Org: CNAME_EVENLEX_PLC-ORG ;
  +N+Prop+Sem/Sur: CNAME_EVENLEX         ;
@@ -463,10 +464,15 @@ LEXICON BERN-orgsur
 LEXICON BERN-plc
  +N+Prop+Sem/Plc: CNAME_EVENLEX_PLC-ORG ;
 
+LEXICON BERN-LOAN-plc
+ +N+Prop+Sem/Org: CNAME_EVENLEX_PLC-ORG ;
+! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ; ! reverting the special LOAN lexicon,
+!        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-LOAN
- +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ;
-        +N+Prop+Sem/Plc: RHyph  ;
+   ERVASTI ;
+! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ; ! reverting the special LOAN lexicon,
+!        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-sur
    ERVASTI-sur ;
@@ -479,8 +485,9 @@ LEXICON RONDANE-org
    ERVASTI-org ;
 
 LEXICON RONDANE-SG-LOAN
- +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ;
-        +N+Prop+Sem/Plc: RHyph  ;
+   ERVASTI ;
+! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ; ! reverting the special LOAN lexicon,
+!        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-mal
    ERVASTI-mal ;
