@@ -3,7 +3,7 @@
 
 # =================================================================== #
 # =================================================================== #
-#!!      !!! S O U T H   S Á M I   D I S A M B I G U A T O R          #
+#!!      !!! S O U T H   S Á M I   D I S A M B I G U A T O R          
 # =================================================================== #
 # =================================================================== #
 
@@ -24,7 +24,7 @@
 
 
 # ========== #
-#!! !!!Delimiters #
+#!! !!!Delimiters 
 # ========== #
 
 
@@ -32,15 +32,15 @@ DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>"; #!!
 
 
 # ============= #
-#!! !!!Tags and sets #
+#!! !!Tags and sets 
 # ============= #
 
-#!! BOS/EOS
+#!! * BOS/EOS
 
 LIST BOS = (>>>) (<s>); 
 LIST EOS = (<<<) (</s>); # vislcg and CG-2 together.
 
-#!! Tags declared as single-membered LISTs 
+#!! * Tags declared as single-membered LISTs 
 # ======================================
 
 LIST N = N ;
@@ -152,7 +152,7 @@ LIST Der1 = Der1 ;
 LIST Der2 = Der2 ;
 LIST Der3 = Der3 ;
 
-#!! !Semantic tags
+#!! * Semantic tags
 
 LIST Sem/Ani = Sem/Ani ;	 #!! Sem/Ani
 LIST Sem/Fem = Sem/Fem ;	 #!! Sem/Fem
@@ -172,14 +172,15 @@ LIST Sem/Place = Sem/Place ; #!! Sem/Place
 LIST Sem/Food = Sem/Food ;	 #!! Sem/Food
 SET FIRSTNAME = (Prop Sem/Fem) OR (Prop Sem/Mal) ;
 
+#!! * Syntactic tags
 
-LIST @CNP = @CNP ;
-LIST @CVP = @CVP ;
-LIST @+FAUXV = @+FAUXV ; 
-LIST @+FMAINV = @+FMAINV ; 
-LIST @-FAUXV = @-FAUXV ;
-LIST @-FMAINV = @-FMAINV ;
-SET MAINV = @-FMAINV OR @+FMAINV ;
+LIST @CNP = @CNP ;				   #!! @CNP
+LIST @CVP = @CVP ;				   #!! @CVP
+LIST @+FAUXV = @+FAUXV ; 		   #!! @+FAUXV
+LIST @+FMAINV = @+FMAINV ; 		   #!! @+FMAINV
+LIST @-FAUXV = @-FAUXV ;		   #!! @-FAUXV
+LIST @-FMAINV = @-FMAINV ;		   #!! @-FMAINV
+SET MAINV = @-FMAINV OR @+FMAINV ; #!! MAINV
 
 LIST @ADVL = @ADVL ;
 LIST @>ADVL = @>ADVL ;
@@ -237,6 +238,10 @@ LIST @TITLE = @TITLE ;
 LIST @VOC = @VOC ; 
 LIST @X = @X ;
 
+
+#!! * More sets
+
+
 LIST REAL-TITLE = "prof" "cand.philol" ;
 LIST OFFICE = "gånka" ;
 SET TITLE = REAL-TITLE OR OFFICE ; 
@@ -273,7 +278,7 @@ SET NPNH = WORD - PRE-NP-HEAD OR (ABBR) ;       # NPNH  = "NOT-PRE-NP-HEAD"
 SET NPNHA = WORD - PRE-NP-HEAD OR (ABBR) OR Adv ;   
 SET NPNHAI   = WORD - PRE-NP-HEAD - Adv - Indef ;              
 
-# Noun sets
+#!! * Noun sets
 
 SET PX = PxSg1 OR PxSg2 OR PxSg3 OR PxDu1 OR PxDu2 OR PxDu3 OR PxPl1 OR PxPl2 OR PxPl3 ;
 
@@ -318,7 +323,7 @@ SET INDUSTRY = POLITICAL-INDUSTRY OR OTHER-INDUSTRY ;
 LIST NORGA = "Dánmárku-#Norga" "davvi#Norga" "Davvi-Norga" "gaska-#Norga" "Norga" "norga" "norgga#bealli" "Norgga-#ruoŧŧa" ;
 
 
-# Verb sets
+#!! * Verb sets
 
 
  # The set REALCOPULAS is smaller than COPULAS, made for verbs with PrfPrc complements: Seammás REALCOPULAS son dovdan iežas...
@@ -383,7 +388,7 @@ LIST ADV-MOD-NP = "ållesth" "allesth" "aave" "aejvie" "dovne" "eevre" "öövre"
 LIST GRADE-ADV =  "aaptsah" "aaptsh" "ållesth" "allesth" "ååpsen" "aave" "aejvie" "dovne" "eevre" "ajve" "barre" ("jienebe" Adv) ("jeenjebe" Adv) "ov" "ovve" "rikti" "gaaje" "gaajh" "joekoen" "åpmohts" "åpmehts" "aajmohts" "åpmoeh" ("man" Adv) "mahte" "ovrehte" "raakte" "varke" "varki" "seamma" "öövre" "uhtjienadtje" "sagke" ;
 
 
-# BOUNDARY SETS
+#!! * BOUNDARY SETS
 
 
 SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIEGOSSE OR BOS OR EOS ;
@@ -447,16 +452,16 @@ SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR B
 # ============== #
 
 
-BEFORE-SECTIONS
+BEFORE-SECTIONS  #!! !!@CODE@
 
-#!! !!Rule for adding Sem/Date as a tag to readings which looks like dates
+#!! Rule for adding Sem/Date as a tag to readings which looks like dates
 SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][1-2][0-9][0-9][0-9]>"r Num) ;
 SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-9][.][0-9][.][1-2][0-9][0-9][0-9]>"r Num) ;
 SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][0-9][0-9]>"r Num) ;
 SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Year) TARGET ("<[1-2][0-9][0-9][0-9]>"r Num) ;
 
 
-SECTION
+SECTION  #!! !!@CODE@
 
 #!! !!Cycle 0
 
