@@ -46,21 +46,6 @@
 $(GT_SPELLER_HFST): ../$(GT_SPELLER_HFST)
 	$(AM_V_GEN)cp -f $< $@
 
-# Easter egg suggestions:
-easteregg.txt: $(srcdir)/version.txt
-	$(AM_V_GEN)$(GTCORE)/scripts/make-hfstspeller-version-easter-egg.sh \
-		$(GTLANG2) $(top_srcdir) $< > $@
-
-easteregg.suggs.hfst: easteregg.txt
-	$(AM_V_GEN)sed -e 's/^/nuvviDspeller:/' < $< \
-		| sed 's/$$/\t/' | sed = | sed 'N;s/\n/	/' \
-		| perl -pe 's/(.)\t(.+)/\2\t\1/' \
-		| $(HFST_STRINGS2FST) $(HFST_FLAGS) -j > $@
-
-easteregg.hfst: easteregg.txt
-	$(AM_V_GEN)$(HFST_STRINGS2FST) $(HFST_FLAGS) -j < $< \
-		| $(HFST_PROJECT) $(HFST_FLAGS) --project=lower > $@
-
 include $(top_srcdir)/am-shared/tools-spellcheckers-fstbased-hfst-include.am
 
 # vim: set ft=automake:
