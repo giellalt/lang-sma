@@ -143,8 +143,8 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 generator-oahpa-gt-norm.hfst: generator-oahpa-gt-norm.tmp.hfst \
 					filters/make-optional-semantic-tags.hfst
 	$(AM_V_GEN)$(PRINTF) \
-			   "@bin\"filters/make-optional-semantic-tags.hfst\" \
-			.o. @bin\"$<\" \
+			   "@\"filters/make-optional-semantic-tags.hfst\" \
+			.o. @\"$<\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
 		> $@
@@ -160,39 +160,14 @@ generator-oahpa-gt-norm.xfst: generator-oahpa-gt-norm.tmp.xfst \
 		 save stack $@\n\
 		 quit\n" | $(XFST)
 
-# Ryan: for some reason this only works with .tmp., yet I thought I have
-# to compile to the actual target if it's a local override?
-#
 # Dict-fst local modifications and language-specific changes:
-generator-dict-gt-norm.tmp.xfst: analyser-raw-gt-desc.xfst      \
-					filters/make-optional-transitivity-tags.xfst \
-					filters/make-optional-variant-tags.xfst      \
-					filters/remove-derivation-position-tags.xfst \
-					filters/remove-dialect-tags.xfst             \
-					filters/remove-hyphenation-marks.xfst        \
-					filters/remove-infl_deriv-borders.xfst       \
-					filters/remove-word-boundary.xfst            \
-					filters/remove-norm-comp-tags.xfst           \
-					filters/remove-number-string-tags.xfst       \
-					filters/remove-usage-tags.xfst               \
-					filters/remove-orthography-tags.xfst         \
-					filters/remove-Orth_IPA-strings.xfst         \
-					filters/remove-sub-forms.xfst
-	$(AM_V_GEN)$(PRINTF) "read regex                              \
-				@\"filters/make-optional-transitivity-tags.xfst\" \
-			.o. @\"filters/make-optional-variant-tags.xfst\"      \
-			.o. @\"filters/remove-derivation-position-tags.xfst\" \
-			.o. @\"filters/remove-dialect-tags.xfst\"             \
-			.o. @\"filters/remove-norm-comp-tags.xfst\"           \
-			.o. @\"filters/remove-number-string-tags.xfst\"       \
-			.o. @\"filters/remove-usage-tags.xfst\"               \
-			.o. @\"filters/remove-sub-forms.xfst\"                \
-			.o. @\"filters/remove-orthography-tags.xfst\"         \
-			.o. @\"filters/remove-Orth_IPA-strings.xfst\"         \
-			.o. @\"$<\"                                           \
-			.o. @\"filters/remove-hyphenation-marks.xfst\"        \
-			.o. @\"filters/remove-infl_deriv-borders.xfst\"       \
-			.o. @\"filters/remove-word-boundary.xfst\"            \
+generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \
+					filters/make-optional-variant-tags.xfst  \
+					filters/remove-number-string-tags.xfst
+	$(AM_V_GEN)$(PRINTF) "read regex                         \
+				@\"filters/make-optional-variant-tags.xfst\" \
+			.o. @\"filters/remove-number-string-tags.xfst\"  \
+			.o. @\"$<\"                                      \
 			;\n\
 		 invert net\n\
 		 save stack $@\n\
