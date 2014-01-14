@@ -489,7 +489,6 @@ REMOVE:R_ACR ACR (0 CC);
 IFF:S_Interj Interj (-1 BOS)(1 EOS OR CLB) ; 
 
 #REMOVE:testA A-DER (0 LEX-A);
-REMOVE:APx A + PX ; #Foreløpig revel, vi gjør unntak etterhvert
 
 #REMOVE:testV1 Der1 IF (0 Der3 OR Der2);
 #REMOVE:testV2 Der2 IF (0 Der3);
@@ -501,9 +500,13 @@ REMOVE:APx A + PX ; #Foreløpig revel, vi gjør unntak etterhvert
 
 #!! Possessive suffix
 # Probably exists only for Refl and for kinship terms
+REMOVE:APx A + PX ; #Foreløpig revel, vi gjør unntak etterhvert
 
 REMOVE:PrfPrc_Not_PxSg1 PxSg1 IF (0 PrfPrc);
 	## Mijjieh saemieh daarah aaj aalkeme gærjah lohkedh.
+REMOVE:PxWhenAcc PxSg1 IF (0 Acc LINK *1 TV BARRIER WORD - ADVLCASE)(NEGATE *-1 Sg1) ; 
+
+REMOVE:notFAMILY PX (0 N - FAMILY) ;
 	
 #!! Short Pronouns
 
