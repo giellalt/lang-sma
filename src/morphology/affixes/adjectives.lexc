@@ -142,6 +142,8 @@ LEXICON PRED_H!!≈ !!!@CODE@
  +A+Sg+Nom:%>h FINAL1 ; !!= @CODE@
 !! }}}
 
+
+!! denne skal også ut 
 LEXICON PRED_NE_ODD!!≈ !!!@CODE@
 !! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
 !! {{{
@@ -150,7 +152,7 @@ LEXICON PRED_NE_ODD!!≈ !!!@CODE@
          n:     ODDCOMP    ; !!= @CODE@
 !! }}}
 
-LEXICON PRED_N!!≈ !!!@CODE@
+LEXICON PRED_N!!≈ !!!@CODE@    -  GENITIV
 !! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
 !! {{{
  +A+Sg+Nom:%>n FINAL1 ; !!= @CODE@
@@ -159,9 +161,9 @@ LEXICON PRED_N!!≈ !!!@CODE@
 LEXICON PRED_AN!!≈ !!!@CODE@
 !! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
 !! {{{
- +A+Sg+Nom:%>an FINAL1 ; !!= @CODE@
+   +A+Sg+Nom:%>an FINAL1 ; !!= @CODE@
 !! }}}
-
+  
 
 ! *SLUTT* BARE PRED-former  *SLUTT*   !
 
@@ -406,7 +408,7 @@ LEXICON NAAKE
  +Use/NG:vearra DIMCOMP      ;
 
 
-LEXICON LEEVLES
+LEXICON LEEVLES  ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
         :leevle ATTR_S       ;
  +Use/NG:leevle PRED_S       ;
  +Use/NG:leevle EVENCOMP     ;
@@ -418,14 +420,14 @@ LEXICON LEEVLES
  +Use/NG:lïevle DIMCOMP      ;
 
 ! UMLAUT 3 = e(3)-stamme
-LEXICON SOOKES
+LEXICON SOOKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
  :söök   es_ES_EVENNOCOMP1 ;
  :suekie EVENCOMPONLY      ;
  :sööke  MES               ;
  :suekie DIMCOMP           ;
 ! UMLAUT 3 = e(3)-stamme
 
-LEXICON SOOJMES
+LEXICON SOOJMES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
          :sööjme ATTR_S       ;
          :sööjme PRED_S       ;
          :sööjme EVENCOMP     ;
@@ -433,7 +435,7 @@ LEXICON SOOJMES
  +Use/Sub:suejme EVENCOMPONLY ;
 
 ! UMLAUT 3 = e(3)-stamme, som får EVEN-Komparasjon
-LEXICON VEELKES
+LEXICON VEELKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
         :veelke  ATTR_S       ;
         :veelke  PRED_S       ;
  +Use/NG:vielkie EVENCOMPONLY ;
@@ -442,7 +444,7 @@ LEXICON VEELKES
 !ODDCASE ;
 
 ! UMLAUT 3 = e(3)-stamme
-LEXICON ROOPSES
+LEXICON ROOPSES! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
         :rööps    es_ES_EVENNOCOMP1 ;
  +Use/NG:reeps    es_ES_EVENNOCOMP1 ;
         :ruepsie  EVENCOMPONLY      ;
@@ -462,7 +464,7 @@ LEXICON SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_OD
                 :sneehpes  ODDCOMP           ;
 
 ! UMLAUT 3 = e(3)-stamme
-LEXICON GEEHPES
+LEXICON GEEHPES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
 !        :geehpes  ODDCASEOBL   ;
          :geehpe   ATTR_S       ;
  +Use/Sub:geehpe   s_S_ODD      ;
@@ -473,7 +475,7 @@ LEXICON GEEHPES
          :geehpe   PRED_S       ;
 
 ! UMLAUT 3 = e(3)-stamme
-LEXICON GEERVE
+LEXICON GEERVE ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
         :geerv   e_E_EVEN     ;
  +Use/NG:giervie EVENCOMPONLY ;
  +Use/NG:giervie MES          ;
@@ -546,7 +548,7 @@ LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
    +Use/NG:ihk ATTR_S     ; !!= @CODE@
           :ig  ATTR_S     ; !!= @CODE@
    +Use/NG:ihk PRED_S     ; !!= @CODE@
-   +Use/NG:ihk PRED_S     ; !!= @CODE@
+   +Use/NG:ig  PRED_S     ; !!= @CODE@
           :ihk NIEJTE     ; !!= @CODE@
    +Use/NG:igk NIEJTE     ; !!= @CODE@
  +A+Use/NG:ig  N_IE_FORMS ; !!= @CODE@
@@ -855,22 +857,13 @@ LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
 !!€gt-norm: adjectives ony ah/oeh an/oen/ode - båadtsah
 !!€ båadtsah     båadtsoeh+A+Attr
 !!€ båadtsoeh    båadtsoeh+A+Attr
-!!€ båadtsas     båadtsoeh+A+Attr
-!!€ båadtsoes    båadtsoeh+A+Attr
-!!€ båadtjah     båadtsoeh+A+Attr
-!!€ båadtjoeh    båadtsoeh+A+Attr
-!!€ båadtjas     båadtsoeh+A+Attr
-!!€ båadtjoes    båadtsoeh+A+Attr
+!!€ båadtsas     båadtsoes+A+Attr
+!!€ båadtsoes    båadtsoes+A+Attr
 
-!!€gt-desc: adjectives on ah/oeh an/oen/ode - båadtsah
-!!€ båadtsah     båadtsoeh+A+Attr
-!!€ båadtsoeh    båadtsoeh+A+Attr
-!!€ båadtsas     båadtsoeh+A+Attr
-!!€ båadtsoes    båadtsoeh+A+Attr
+!!€ båadtjas     båadtsoes+A+Attr
 !!€ båadtjah     båadtsoeh+A+Attr
-!!€ båadtjoeh    båadtsoeh+A+Attr
-!!€ båadtjas     båadtsoeh+A+Attr
-!!€ båadtjoes    båadtsoeh+A+Attr
+
+
 
  +Use/NG:a   ATTR_H     ;
         :oe  ATTR_H     ;
@@ -1086,10 +1079,6 @@ LEXICON JELLE
 !! !!!LEXICON @LEXNAME@
 !! The __@LEXNAME@__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
 !! used with the stem ''jelle'' This one should be 'jeelle'? SGM?
-
-!!€gt-norm: adjectives
-!!€ potensijelle     potensijelle+A+Attr
-!!€ potensijelles    potensijelles+A+Sg+Nom
 
 !! {{{
  +Use/Sub:^ell e_ES_LOAN ; !!= @CODE@
