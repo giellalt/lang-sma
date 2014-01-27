@@ -442,6 +442,8 @@ The __PRED_H!!≈__ lexicon is used for adjectives Predicatives.
   +A+Sg+Nom:%>h FINAL1 ; 
 }}}
 
+
+denne skal også ut 
  !!!LEXICON PRED_NE_ODD
 The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
 {{{
@@ -450,7 +452,7 @@ The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
           n:     ODDCOMP    ; 
 }}}
 
- !!!LEXICON PRED_N
+ !!!LEXICON PRED_N    -  GENITIV
 The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
 {{{
   +A+Sg+Nom:%>n FINAL1 ; 
@@ -459,7 +461,7 @@ The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
  !!!LEXICON PRED_AN
 The __PRED_AN!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>an FINAL1 ; 
+    +A+Sg+Nom:%>an FINAL1 ; 
 }}}
 
 
@@ -568,10 +570,11 @@ The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{�
 
 
 
-(subsequent examples are *adjectives*)
-; {{gööktengïeleh+A+Attr}}: __gööktengïeleh__ 
-; {{gööktengïeleh+A+Sg+Nom}}: __gööktengïeleh__ 
 
+
+__adjectives examples:__
+* __gööktengïeleh__: {{gööktengïeleh+A+Attr}}
+* __gööktengïeleh__: {{gööktengïeleh+A+Sg+Nom}}
 
 
 
@@ -644,14 +647,26 @@ EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 !!!LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 Adjective with no comp.
 
-(subsequent examples are *adjectives*)
-; {{isvelihks+A+Attr}}: __isvelihks,__ __isveligs__ 
-; {{isvelihks+A+Sg+Nom}}: __isvelihks,__ __isveligs,isvelihke,__ __isveligke,__ __isveligie__ 
+
+__adjectives examples:__
+* __isvelihks__: {{isvelihks+A+Attr}}
+* __isveligs__: {{isvelihks+A+Attr}}
+* __isvelihks__: {{isvelihks+A+Sg+Nom}}
+* __isveligs__: {{isvelihks+A+Sg+Nom}}
+
+* __isvelihke__: {{isvelihks+A+Sg+Nom}}
+* __isveligke__: {{isvelihks+A+Sg+Nom}}
+* __isveligie__: {{isvelihks+A+Sg+Nom}}
+* __isveligke__: {{isvelihks+N+Sg+Nom}}
+* __isvelihke__: {{isvelihks+N+Sg+Nom}}
+* __isveligke__: {{isveligke+Adv}}
+* __isvelihke__: {{isvelihke+Adv}}
+
 {{{
     +Use/NG:ihk ATTR_S     ; 
            :ig  ATTR_S     ; 
     +Use/NG:ihk PRED_S     ; 
-    +Use/NG:ihk PRED_S     ; 
+    +Use/NG:ig  PRED_S     ;    
            :ihk NIEJTE     ; 
     +Use/NG:igk NIEJTE     ; 
   +A+Use/NG:ig  N_IE_FORMS ; 
@@ -675,7 +690,8 @@ EVEN/ODD adjective with Comporation.
 !!!LEXICON e_ES_EVENNOCOMP2
 This is for the adjective "jaame"
 
-(subsequent examples are *adjectives*)
+
+__adjectives examples:__
 * __jaame__: {{jaame+A+Attr}}
 * __jaames__: {{jaame+A+Sg+Nom}}
 
@@ -688,7 +704,8 @@ This is for the adjective "jaame"
 !!!LEXICON e_ES_ODDEVEN2
 This one gives EVEN and ODD  Comporation.
 
-(subsequent examples are *adjectives*)
+
+__adjectives examples:__
 * __galme__: {{galme+A+Attr}}
 * __galmes__: {{galme+A+Attr}}
 * __galmes__: {{galme+A+Sg+Nom}}
@@ -823,12 +840,17 @@ used with the stem ''båadtj–'', although that stem is probably southern.
 It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
 This must be checked further, possibly with informants.
 
-(subsequent examples are *adjectives ony ah/oeh an/oen/ode - båadtsah*)
-; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
+
+__adjectives ony ah/oeh an/oen/ode - båadtsah examples:__
+* __båadtsah__: {{båadtsoeh+A+Attr}}
+* __båadtsoeh__: {{båadtsoeh+A+Attr}}
+* __båadtsas__: {{båadtsoes+A+Attr}}
+* __båadtsoes__: {{båadtsoes+A+Attr}}
+
+* __båadtjas__: {{båadtsoes+A+Attr}}
+* __båadtjah__: {{båadtsoeh+A+Attr}}
 
 
-(subsequent examples are *adjectives on ah/oeh an/oen/ode - båadtsah*)
-; {{båadtsoeh+A+Attr}}: __båadtsah,__ __båadtsoeh,__ __båadtsas,__ __båadtsoes,__ __båadtjah,__ __båadtjoeh,__ __båadtjas,__ __båadtjoes__ 
 
 
 
@@ -891,9 +913,6 @@ Used for all loan-adjectives "ijve".
 The __JELLE__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
 used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
-(subsequent examples are *adjectives*)
-; {{potensijelle+A+Attr}}: __potensijelle__ 
-; {{potensijelles+A+Sg+Nom}}: __potensijelles__ 
 {{{
   +Use/Sub:^ell e_ES_LOAN ; 
           :jell e_ES_LOAN ; 
@@ -1023,9 +1042,9 @@ before compiling.
 
 
 
-EVENCOMP???!SgNomCmp  -MLK:  This one is substantiv- typical -oeh-suffiks as adjectiv --> goes to -e-suffix or ie-suffix as substantiv!
-eds VS emes/immes!
 
+EVENCOMP???!SgNomCmp  
+eds VS emes/immes!
 
 skåapmoeh - skuapman!
 tidligere oeh_OE
@@ -1692,7 +1711,8 @@ The basic odd-syll lexicon is: N_ODD
 
 !Inflection for odd-syllable nouns: lexicon N_ODD
 Short descrioption of this lexicon, and its purpose.
-(subsequent examples are *gierehtse # Odd-syllable test*)
+
+__gierehtse # Odd-syllable test examples:__
 * __gierehtse__: {{gierehtse+N+Sg+Nom}}
 * __gierehtsen__: {{gierehtse+N+Sg+Gen}}
 * __gieriehtsasse__: {{gierehtse+N+Sg+Ill}}
@@ -1707,7 +1727,8 @@ Short descrioption of this lexicon, and its purpose.
 * __gieriehtsijstie__: {{gierehtse+N+Pl+Ela}}
 * __gierehtsigujmie__: {{gierehtse+N+Pl+Com}}
 * __gieriehtsinie__: {{gierehtse+N+Ess}}
-; {{gierehtse+N+Sg+Acc}}: __gierehtsem,__ __*gieriehtsem__ 
+* __gierehtsem__: {{gierehtse+N+Sg+Acc}}
+* __*gieriehtsem__: {{gierehtse+N+Sg+Acc}} (is not standard language)
 
 * Odd-syll loanwords: lexicon N_ODD_LOAN
 
@@ -1725,7 +1746,8 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-(subsequent examples are *beetnege # Odd-syllable test*)
+
+__beetnege # Odd-syllable test examples:__
 * __beetnege__: {{beetnege+N+Sg+Nom}}
 * __beetnegen__: {{beetnege+N+Sg+Gen}}
 * __beetnegasse__: {{beetnege+N+Sg+Ill}}
@@ -1758,7 +1780,8 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-(subsequent examples are *åeruve # Odd-syllable test*)
+
+__åeruve # Odd-syllable test examples:__
 * __åeruve__: {{åeruve+N+Sg+Nom}}
 * __åeruven__: {{åeruve+N+Sg+Gen}}
 * __åeruvem__: {{åeruve+N+Sg+Acc}}
@@ -1812,7 +1835,8 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-(subsequent examples are *seerije # ODD-syllable test*)
+
+__seerije # ODD-syllable test examples:__
 * __seerije__: {{seerije+N+Sg+Nom}}
 * __seerijem__: {{seerije+N+Sg+Acc}}
 * __seerijen__: {{seerije+N+Sg+Gen}}
@@ -1824,7 +1848,8 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-(subsequent examples are *daktere # Odd-syllable test*)
+
+__daktere # Odd-syllable test examples:__
 * __daktere__: {{daktere+N+Sg+Nom}}
 * __dakteren__: {{daktere+N+Sg+Gen}}
 * __dakterem__: {{daktere+N+Sg+Acc}}
@@ -1859,7 +1884,8 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-(subsequent examples are *australijeenere # Even-syllable test*)
+
+__australijeenere # Even-syllable test examples:__
 * __australijeenere__: {{australijeenere+N+Sg+Nom}}
 * __australijeenerem__: {{australijeenere+N+Sg+Acc}}
 * __australijeeneren__: {{australijeenere+N+Sg+Gen}}
@@ -1867,7 +1893,8 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-(subsequent examples are *sisilijaanere # Even-syllable test*)
+
+__sisilijaanere # Even-syllable test examples:__
 * __sisilijaanere__: {{sisilijaanere+N+Sg+Nom}}
 * __sisilijaanerem__: {{sisilijaanere+N+Sg+Acc}}
 * __sisilijaaneren__: {{sisilijaanere+N+Sg+Gen}}
@@ -1876,7 +1903,8 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
-(subsequent examples are *radijaatore # Even-syllable test*)
+
+__radijaatore # Even-syllable test examples:__
 * __radijaatore__: {{radijaatore+N+Sg+Nom}}
 * __radijaatorem__: {{radijaatore+N+Sg+Acc}}
 * __radijaatoren__: {{radijaatore+N+Sg+Gen}}
@@ -1885,7 +1913,8 @@ Short descrioption of this lexicon, and its purpose.
 * __radijaatorinie__: {{radijaatore+N+Sg+Com}}
 
 
-(subsequent examples are *pijaanove # ODD-syllable test*)
+
+__pijaanove # ODD-syllable test examples:__
 * __pijaanove__: {{pijaanove+N+Sg+Nom}}
 * __pijaanovem__: {{pijaanove+N+Sg+Acc}}
 * __pijaanoven__: {{pijaanove+N+Sg+Gen}}
@@ -1894,7 +1923,8 @@ Short descrioption of this lexicon, and its purpose.
 * __pijaanovinie__: {{pijaanove+N+Sg+Com}}
 
 
-(subsequent examples are *administraatore# ODD-syllable test*)
+
+__administraatore# ODD-syllable test examples:__
 * __administraatore__: {{administraatore+N+Sg+Nom}}
 * __administraatorem__: {{administraatore+N+Sg+Acc}}
 * __administraatoren__: {{administraatore+N+Sg+Gen}}
@@ -1903,7 +1933,8 @@ Short descrioption of this lexicon, and its purpose.
 * __administraatorinie__: {{administraatore+N+Sg+Com}}
 
 
-(subsequent examples are *faktore# Even-syllable test*)
+
+__faktore# Even-syllable test examples:__
 * __faktore__: {{faktore+N+Sg+Nom}}
 * __faktorem__: {{faktore+N+Sg+Acc}}
 * __faktoren__: {{faktore+N+Sg+Gen}}
@@ -2065,7 +2096,8 @@ umlauted ones.
 
  LEXICON EETE_LOAN    loanwords with -eete -
 
-(subsequent examples are *universiteete # Even-syllable test*)
+
+__universiteete # Even-syllable test examples:__
 * __universiteete__: {{universiteete+N+Sg+Nom}}
 * __universiteetem__: {{universiteete+N+Sg+Acc}}
 * __universiteetesne__: {{universiteete+N+Sg+Ine}}
@@ -2116,7 +2148,8 @@ The __MAAKE__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
   +N+Der1+Der/Dimin+N:e%»tj GÅATETJE      ; 
 }}}
 
-(subsequent examples are *vïelle # Even-syllable test*)
+
+__vïelle # Even-syllable test examples:__
 * __vïelle__: {{vïelle+N+Sg+Nom}}
 * __vïellese__: {{vïelle+N+Sg+Ill}}
 * __vïelline__: {{vïelle+N+Sg+Com}}
