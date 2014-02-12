@@ -26,5 +26,3 @@ XFAIL_TESTS=
 ####### Other targets: ###########
 clean-local:
 	-rm -f *.txt
-
-include $(top_srcdir)/am-shared/test-src-morph-include.am
