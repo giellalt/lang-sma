@@ -35,7 +35,7 @@ This is free and open source South Sámi morphology.
 
  !Tags for sub-POS
 !!Proper nouns
- * +Prop     
+ * +Prop                                     
 
 !!Pronoun subtypes
  * +Pers    
@@ -92,7 +92,7 @@ This is free and open source South Sámi morphology.
  | +CmpN/SgGenLeft | "
  | +CmpN/PlGenLeft | "
 
-!This part of the compound may ...
+!This part of the compound may ... 
  | +CmpN/All | all positions, __default__, this tag does not have to be written
  | +CmpN/Def | works along with Left compound-tagging
  | +CmpN/DefSgGen | works along with Left compound-tagging
@@ -241,8 +241,8 @@ Affix and tag, frompos - topos
  | +Der/stidh | VV - Diminutive
  | +Der/didh | VV - Continuative
  | +Der/htjidh | Dim-cont.
- | +Der/htovve | AV
- | +Der/htoeve | AV
+ | +Der/htovve | AV 
+ | +Der/htoeve | AV 
  | +Der/htehte | AV
  | +Der/Dimin | NN - Diminutive
  | +Der/Rec | NN - Forholdsformer
@@ -272,42 +272,13 @@ just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
  | +Der/PassS | VV - short passive only
  | +Der/A | NA - comparation of N's
 
-!!Tags for originating language
-The following tags are used to guide conversion to IPA: loan words
-and foreign names are usually pronounced (approximately) as in the
-originating (majority) language. Instead of trying to identify the
-correct pronounciation based on fonotactics (orthotactics actually),
-we tag all words that can't be correctly transcribed using the SME
-transcriber with source language codes. Once tagged, it is possible
-to split the lexical transducer in smaller ones according to langu-
-age, and apply different IPA conversion to each of them.
-The principle of tagging is that we only tag to the extent needed,
-and following a priority:
-# any untagged word is pronounced with SME orthographic conventions
-# NNO and NOB have identical pronounciation, NNO is only used if
-  different in spelling from NOB
-# SWE has mostly the same pronounciation as NOB, and is only used
-  if different in spelling from NOB
-# Occasionally even SME (the default) may be tagged, to block other
-  languages from being specified, mainly during semi-automatic
-  language tagging sessions
-All in all, we want to get as much correctly transcribed to IPA
-with as little work as possible. On the other hand, if more words
-are tagged than strictly needed, this should pose no problem as
-long as the IPA conversion is correct - at least some words will
-get the same pronounciation whether read as SME or NOB/NNO/SWE.
- * +OLang/SME - North Sámi
- * +OLang/FIN - Finnish
- * +OLang/SWE - Swedish
- * +OLang/NOB - Norw. bokmål
- * +OLang/NNO - Norw. nynorsk
- * +OLang/ENG - English
- * +OLang/UND - Undefined
+
 !!Triggers for morphophonological rules
  ; X2 : Trigger for ???
  ; X3 : Trigger for ???
  ; X4 : Trigger for ???
  ; E2 : insert e ! Fjern denne.
+
 !!Symbols that need to be escaped on the lower side (towards twolc):
  ; »7 : Literal »
  ; «7 : Literal «
@@ -315,7 +286,8 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
   %[%>%]  - Literal >
   %[%<%]  - Literal <
 }}}
-!!Lexeme disambiguation tags
+
+ !!Lexeme disambiguation tags
  ; +Hom1 : Homonymy
  ; +Hom2 : Homonymy
  ; +v1 : Lemma variants
@@ -323,7 +295,8 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  ; +v3 : Lemma variants
  ; +v4 : Lemma variants
  ; +v5 : Lemma variants
-!!Umlaut and diphthong simplification triggers
+
+ !!Umlaut and diphthong simplification triggers
  | %^DISIMP | diphthong simplification
  | %^COMPDISIMP | diphthong simplification in comparatives
  | %^COMPDISIMP2 | diphthong simplification in comparatives, type 2
@@ -350,6 +323,7 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  | @C.NeedNoun@ | (Dis)allowing compounds
  | @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  | @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
+
 
 
 
@@ -384,19 +358,6 @@ And this is the ENDLEX of everything:
 
 
 
-!!!Adjective affixes
-
-This is one of two parallel files containing adjective affixes.
-The files represent two alternative interpretation of the same data
-(South Saami adjectives).
-This file is used for spellchecking, the alternative file
-''adjectives-oahpa.lexc'' is used for dictionary and icall applications.
-This file is compiled by default, the other one is compiled by in
-langs/sma giving the command ''.configure --with-oahpa''
-before compiling.
-
-
-
 
 
 
@@ -426,14 +387,14 @@ before compiling.
  !!!LEXICON PRED_S
 The __PRED_S__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>s FINAL1 ; 
-}}}
+  +A+Sg+Nom:%>s FINAL1 ;
+}}}   
 
  !!!LEXICON PRED_0
 The __PRED_0__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom: FINAL1 ; 
-}}}
+  +A+Sg+Nom: FINAL1 ;
+}}}  
 
  !!!LEXICON PRED_H
 The __PRED_H!!≈__ lexicon is used for adjectives Predicatives.
@@ -441,17 +402,15 @@ The __PRED_H!!≈__ lexicon is used for adjectives Predicatives.
   +A+Sg+Nom:%>h FINAL1 ; 
 }}}
 
-
-denne skal også ut 
  !!!LEXICON PRED_NE_ODD
 The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>ne FINAL1     ; 
-          n:     ODDCASEOBL ; 
-          n:     ODDCOMP    ; 
+  +A+Sg+Nom:%>ne FINAL1 ; 
+  n: ODDCASEOBL ;         
+  n: ODDCOMP ;            
 }}}
 
- !!!LEXICON PRED_N    -  GENITIV
+ !!!LEXICON PRED_N
 The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
 {{{
   +A+Sg+Nom:%>n FINAL1 ; 
@@ -460,7 +419,7 @@ The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
  !!!LEXICON PRED_AN
 The __PRED_AN!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-    +A+Sg+Nom:%>an FINAL1 ; 
+  +A+Sg+Nom:%>an FINAL1 ; 
 }}}
 
 
@@ -471,97 +430,99 @@ The __PRED_AN!!≈__ lexicon is used for adjectives Predicatives.
 
 
  !!!LEXICON e_E_EVEN
-The __e_E_EVEN!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP.
+The __e_E_EVEN!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  In attributes and predicatives.With EVEN-NOCOMP. 
 {{{
-       :e ATTR_0      ; 
-  +A+Sg:  NIEJTESGNOM ; 
-  +A+Sg:  NIEJTESGOBL ; 
-  +A+Pl:  NIEJTE_PL   ; 
-     +A:  NIEJTEREST  ; 
-       :e EVENCOMP    ; 
+        :e     ATTR_0 ;   
+    +A+Sg:      NIEJTESGNOM ; 
+    +A+Sg: NIEJTESGOBL ;      
+    +A+Pl: NIEJTE_PL ;        
+    +A: NIEJTEREST ;	         
+        :e   EVENCOMP ;   
 }}}
 
- !!!LEXICON e_E_EVENNOCOMP1
+ !!!LEXICON e_E_EVENNOCOMP1 
 The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}} stem. In attributes and predicatives.With EVEN-NOCOMP.
 
 {{{
-       :e ATTR_0      ; 
-  +A+Sg:  NIEJTESGNOM ; 
-  +A+Sg:  NIEJTESGOBL ; 
-  +A+Pl:  NIEJTE_PL   ; 
-     +A:  NIEJTEREST  ; 
+        :e     ATTR_0 ; 
+    +A+Sg:      NIEJTESGNOM ; 
+    +A+Sg: NIEJTESGOBL ;      
+    +A+Pl: NIEJTE_PL ;        
+    +A: NIEJTEREST ;	         
 }}}
 
 
- !!!LEXICON a_A_EVEN1
+ !!!LEXICON a_A_EVEN1 
 The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-COMP.
 {{{
-       :a ATTR_0     ; 
-  +A+Sg:  MAANASGNOM ; 
-     +A:  MAANAOBL   ; 
-       :a EVENCOMP   ; 
+         :a       ATTR_0 ; 
+    +A+Sg:        MAANASGNOM ; 
+    +A:           MAANAOBL ; 
+         :a     EVENCOMP ;  
 }}}
 
  !!!LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
-The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP.
-{{{
-             :a  ATTR_S ; 
-    +A+Sg+Nom:as FINAL1 ; 
-  +A+SgNomCmp:as R      ; 
+The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP. 
+{{{   
+             :a     ATTR_S ;    
+  !                MAANAOBL ;    
+   +A+Sg+Nom:as     FINAL1 ;    
+ +A+SgNomCmp:as          R ;    
 }}}
 
 
- !!!LEXICON ie_IE_EVEN1
-The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP.
+ !!!LEXICON ie_IE_EVEN1 
+The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP. 
 {{{
-    :ie ATTR_0     ; 
-  +A:   N_IE_FORMS ; 
-    :ie EVENCOMP   ; 
-}}}
+        :ie      ATTR_0 ;  
+      +A:    N_IE_FORMS ; 
+        :ie    EVENCOMP ;  
+}}} 
 
 
- !!!LEXICON ie_IE_EVENNOCOMP1
+ !!!LEXICON ie_IE_EVENNOCOMP1 
 The __ie_IE_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
-{{{
-    :ie ATTR_0     ; 
-  +A:   N_IE_FORMS ; 
-}}}
+{{{ 
+        :ie      ATTR_0 ; 
+      +A:    N_IE_FORMS ; 
+}}} 
 
 The __a_A_EVEN1_NOCOMP__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
-{{{
-       :a ATTR_0     ; 
-}}}
+{{{ 
+        :a      ATTR_0 ; 
+}}} 
 
- !!!LEXICON es_ES_EVEN
+ !!!LEXICON es_ES_EVEN 
 The __es_ES_EVEN!!≈__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-COMP.
-{{{
-  :e ATTR_S   ; 
-  :e PRED_S   ; 
-  :e EVENCOMP ; 
+{{{ 
+        :e       ATTR_S ; 
+        :e       PRED_S ; 
+    !  :es   ODDCASEOBL ; 
+        :e     EVENCOMP ; 
 }}}
 
 
 The __es_ES_EVENNOCOMP1__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-NOCOMP.
 
-{{{
-  :e  ATTR_S     ; 
-  :e  PRED_S     ; 
-  :es ODDCASEOBL ; 
+{{{ 
+        :e  ATTR_S ;      
+        :e  PRED_S ;      
+        :es ODDCASEOBL ;  
 }}}
 
 
 The __ies_IES_EVEN1__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-COMP.
 {{{
-      ies_IES_EVENNOCOMP1 ; 
-  :ie EVENCOMP            ; 
+            ies_IES_EVENNOCOMP1  ; 
+        :ie EVENCOMP ;             
 }}}
 
 
 The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-NOCOMP.
-{{{
-  :ie ATTR_S ; 
-  :ie PRED_S ; 
- !      ieCASEOBL ; 
+{{{ 
+        :ie   ATTR_S ;  
+        :ie   PRED_S ;  
+ !        ieCASEOBL ;   
 }}}
 
 
@@ -571,26 +532,24 @@ The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{�
 
 
 
-__adjectives examples:__
-* __gööktengïeleh__: {{gööktengïeleh+A+Attr}}
-* __gööktengïeleh__: {{gööktengïeleh+A+Sg+Nom}}
-
+__adjectives  examples:__
+* __guektiengïeleh+A+Attr:__: {{guektiengïeleh}}
+* __guektiengïeleh+A+Sg+Nom:__: {{guektiengïeleh}}
 
 
 
 !!!BÅERIES LEXICON BAERIES
 UNEVEN adjective, attr = pred. Comporation uneven syllable.
 Presentlly only used for "båeries" adjective.
-{{{
-  :båerie ATTR_S  ; 
-  :båerie PRED_S  ; 
- !:båaras   MAANAOBL ; 
+{{{ 
+  :båerie ATTR_S ; 
+  :båerie PRED_S ; 
+ ! :båaras MAANAOBL ; 
   :båaras ODDCOMP ; 
 }}}
-
 !!!ÅEHPIES LEXICON ÅEHPIES
 ODD adjective, attr = pred. Comporation uneven syllable.
-{{{
+{{{ 
 }}}
 
 
@@ -599,12 +558,12 @@ Umlaut from attr--> pred. Comporation uneven syllable.
 Presentlly only used for "gieries-gearehke" adjective.
 This lexicon covers the ies - ehke + umlaut change.
 {{{
-         :gierie   ATTR_S  ; 
-         :gearahk  ODDCASE ; 
-         :gearahk  ODDCOMP ; 
-  +Use/NG:gearahtj ODDCOMP ; 
-  +Use/NG:gearahg  ODDCOMP ; 
-}}}
+         :gierie    ATTR_S ;   
+         :gearahk  ODDCASE ;   
+         :gearahk  ODDCOMP ;   
+  +Use/NG:gearahtj ODDCOMP ;   
+  +Use/NG:gearahg  ODDCOMP ;   
+}}} 
 
 
 
@@ -614,10 +573,10 @@ This lexicon covers the ies - ehke + umlaut change.
 !!!BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
 EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 {{{
-  :buer   ie_IE_EVENNOCOMP1 ; 
-  :buerie EVENCOMPONLY      ; 
-  :bööre  MES               ; 
-  :buerie DIMCOMP           ; 
+  :buer ie_IE_EVENNOCOMP1    ;  
+  :buerie EVENCOMPONLY ;        
+  :bööre MES ;                  
+  :buerie DIMCOMP ;             
 }}}
 
 
@@ -644,31 +603,22 @@ EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 
 
 !!!LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
-Adjective with no comp.
+Adjective with no comp. 
 
 
-__adjectives examples:__
-* __isvelihks__: {{isvelihks+A+Attr}}
-* __isveligs__: {{isvelihks+A+Attr}}
-* __isvelihks__: {{isvelihks+A+Sg+Nom}}
-* __isveligs__: {{isvelihks+A+Sg+Nom}}
+__adjectives  examples:__
+This construct is not supported anymore:
+ {{{!!¥ isvelihks+A+Attr:   [isvelihks, isveligs]}}} This construct is not supported anymore:
+ {{{!!¥ isvelihks+A+Sg+Nom: [isvelihks, isveligs,isvelihke, isveligke, isveligie]}}} {{{
+         +Use/NG:ihk  ATTR_S ;    
+                :ig   ATTR_S ;    
+         +Use/NG:ihk  PRED_S ;    
+         +Use/NG:ihk  PRED_S ;    
+                :ihk  NIEJTE ;    
+         +Use/NG:igk  NIEJTE ;    
+       +A+Use/NG:ig   N_IE_FORMS ;    
 
-* __isvelihke__: {{isvelihks+A+Sg+Nom}}
-* __isveligke__: {{isvelihks+A+Sg+Nom}}
-* __isveligie__: {{isvelihks+A+Sg+Nom}}
-* __isveligke__: {{isvelihks+N+Sg+Nom}}
-* __isvelihke__: {{isvelihks+N+Sg+Nom}}
-* __isveligke__: {{isveligke+Adv}}
-* __isvelihke__: {{isvelihke+Adv}}
 
-{{{
-    +Use/NG:ihk ATTR_S     ; 
-           :ig  ATTR_S     ; 
-    +Use/NG:ihk PRED_S     ; 
-    +Use/NG:ig  PRED_S     ;    
-           :ihk NIEJTE     ; 
-    +Use/NG:igk NIEJTE     ; 
-  +A+Use/NG:ig  N_IE_FORMS ; 
 }}}
 
 
@@ -687,24 +637,24 @@ EVEN/ODD adjective with Comporation.
 }}}
 
 !!!LEXICON e_ES_EVENNOCOMP2
-This is for the adjective "jaame"
+This is for the adjective "jaame" 
 
 
-__adjectives examples:__
+__adjectives  examples:__
 * __jaame__: {{jaame+A+Attr}}
 * __jaames__: {{jaame+A+Sg+Nom}}
 
 {{{
-  :e ATTR_0   ; 
-  :e PRED_S   ; 
-     eCASEOBL ; 
+    :e    ATTR_0 ;  
+    :e    PRED_S ;  
+         eCASEOBL ;  
 }}}
 
 !!!LEXICON e_ES_ODDEVEN2
 This one gives EVEN and ODD  Comporation.
 
 
-__adjectives examples:__
+__adjectives  examples:__
 * __galme__: {{galme+A+Attr}}
 * __galmes__: {{galme+A+Attr}}
 * __galmes__: {{galme+A+Sg+Nom}}
@@ -713,14 +663,14 @@ __adjectives examples:__
 * __galmemes__: {{galme+A+Superl+Sg+Nom}}
 * __galmesommes__: {{galme+A+Superl+Sg+Nom}}
 
-{{{
-             :e  ATTR_0     ; 
-             :es ODDCASEOBL ; 
-             :e  EVENCOMP   ; 
-      +Use/NG:e  ATTR_S     ; 
-  +A+SgNomCmp:es R          ; 
-             :e  PRED_S     ; 
-      +Use/NG:es ODDCOMP    ; 
+{{{ 
+             :e       ATTR_0 ; 
+             :es  ODDCASEOBL ; 
+             :e    EVENCOMP   ; 
+      +Use/NG:e    ATTR_S ;	  
+  +A+SgNomCmp:es R ;  
+             :e    PRED_S ;	  
+      +Use/NG:es    ODDCOMP ;	  
 }}}
 
 
@@ -735,53 +685,48 @@ __adjectives examples:__
 
 
 
-
-** KLASSE 3, -s i attributt, vokal i predikativ** !!!
+         
 
 !!!LEXICON es_E_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
-{{{
-         :e ATTR_S      ; 
-         :e EVENCOMP    ; 
+{{{   
+         :e ATTR_S ;  
+         :e EVENCOMP ; 
 }}}
 
 !!!LEXICON as_oes_A_OE_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
-{{{
-       +Use/NG:a  ATTR_S      ; 
-              :oe ATTR_S      ; 
-              :oe EVENCOMP_oe ; 
-       +Use/NG:a  EVENCOMP    ; 
+{{{ 
+ +Use/NG:a  ATTR_S ; 
+        :oe ATTR_S ; 
+        :oe EVENCOMP_oe ; 
+ +Use/NG:a  EVENCOMP ;    
 }}}
 
 !!!LEXICON oeh_ah_OE_A_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
-{{{
-         :oe ATTR_H      ; 
-  +Use/NG:a  ATTR_H      ; 
-             N_OE        ; 
-  +Use/NG:   MAANA       ; 
-         :oe EVENCOMP_oe ; 
-  +Use/NG:e  EVENCOMP    ; 
-}}}
+{{{ 
+        :oe   ATTR_H ; 
+ +Use/NG:a    ATTR_H ; 
+              N_OE ; 
+ +Use/NG:     MAANA ; 
+        :oe   EVENCOMP_oe ; 
+ +Use/NG:e    EVENCOMP ;    
+}}}   
 
 !!!LEXICON ies_IE_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
-{{{
-    :ie ATTR_S     ; 
-  +A:   N_IE_FORMS ; 
-    :ie EVENCOMP   ; 
+{{{    
+  :ie    ATTR_S ;  
+   +A:   N_IE_FORMS ; 
+  :ie  EVENCOMP ;  
 }}}
-
 !!!LEXICON ies_IE_EVEN3NOCOMP
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
-{{{
-    :ie ATTR_S     ; 
-  +A:   N_IE_FORMS ; 
+{{{ 
+  :ie    ATTR_S ; 
+   +A:   N_IE_FORMS ; 
 }}}
-
-
-
 
 
 
@@ -789,40 +734,49 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
 
 
 
+!!!UMLAUT LEXICON SAETNIES4
+20 ie-stem adjectives has umlaut from attr--> pred, and have no comparation.
+This group which covers the ies - an/ as-an and oes-an + umlaut change, is a small undergruppe of the 4.group, where the second oeh-an umlautadjectivesgroup are.
+
+{{{
+         :ies ATTR_0 ;      
+  +Use/NG:%^1UMLan PRED_0 ; 
+       +A:   N_IE_FORMS ;		    
+}}}
+
 !!!UMLAUT LEXICON as_AN_ODDNOCOMP4
 These 6 adjectives is in the 4. group of the southsámi adjectives, the group
 which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
 attributeform and an as predicativeform, is south-southsámi adjectives, and
 they dont have any comparation.
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a
-small undergruppe of the 4.group
+small undergruppe of the 4.group 
 {{{
-  :a ATTR_S   ; 
-  :a PRED_AN  ; 
+  :a    ATTR_S  ; 
+  :a    PRED_AN ; 
 }}}
 
 !!!UMLAUT LEXICON oes_AN_ODDNOCOMP4
-Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all
+Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all 
 umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
-This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group
-{{{
-    :oe     ATTR_S   ; 
-    :%^3UML PRED_AN  ; 
-  +A:       N_OE_OBL ; 
+This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group 
+{{{ 
+        :oe        ATTR_S  ; 
+        :%^3UML    PRED_AN ; 
+      +A: N_OE_OBL ;       
 }}}
 
 
-{{{
-  :oe  ATTR_H     ; 
-  :oe  PRED_N     ; 
+{{{ 
+         :oe ATTR_H ;      
+         :oe PRED_N ;      
 }}}
 
-{{{
-         :oe      ATTR_H  ; 
-  +Use/NG:%^3UMLa PRED_N  ; 
- !       :%^3UMLahk ODD_ÅBPOE ; 
+{{{  
+ :oe         ATTR_H ;   
+ +Use/NG:%^3UMLa    PRED_N ;   
+ !:%^3UMLahk  ODD_ÅBPOE ;
 }}}
-
 
 
 
@@ -841,17 +795,14 @@ This must be checked further, possibly with informants.
 
 
 __adjectives ony ah/oeh an/oen/ode - båadtsah examples:__
-* __båadtsah__: {{båadtsoeh+A+Attr}}
-* __båadtsoeh__: {{båadtsoeh+A+Attr}}
-* __båadtsas__: {{båadtsoes+A+Attr}}
-* __båadtsoes__: {{båadtsoes+A+Attr}}
+This construct is not supported anymore:
+ {{{!!¥ båadtsoeh+A+Attr:   [båadtsah, båadtsoeh, båadtsas, båadtsoes, båadtjah, båadtjoeh, båadtjas, båadtjoes]}}} This construct is not supported anymore:
+ {{{!!¥ båadtsoeh+A+Sg+Nom: [båadtsan, båadtsoen, båadtsode, båadtsede, båadtjan, båadtjoen, båadtjode, båadtjede]}}} 
 
-* __båadtjas__: {{båadtsoes+A+Attr}}
-* __båadtjah__: {{båadtsoeh+A+Attr}}
-
-
-
-
+__adjectives on ah/oeh an/oen/ode - båadtsah examples:__
+This construct is not supported anymore:
+ {{{!!¥ båadtsoeh+A+Attr:   [båadtsah, båadtsoeh, båadtsas, båadtsoes, båadtjah, båadtjoeh, båadtjas, båadtjoes]}}} This construct is not supported anymore:
+ {{{!!¥ båadtsoeh+A+Sg+Nom: [båadtsan, båadtsoen, båadtsode, båadtsede, båadtjan, båadtjoen, båadtjode, båadtjede]}}} 
 
 
 
@@ -887,21 +838,21 @@ __adjectives ony ah/oeh an/oen/ode - båadtsah examples:__
 The __MAST__ lexicon is used for adjectives on {{–masten}} and {{masth}} with an
 used with the stem ''masten''
 {{{
-                 ATTR_S      ; 
-       +Use/NG:e ATTR_S      ; 
-       +Use/NG:  ATTR_H      ; 
-       +Use/NG:e ATTR_N      ; 
-              :e PRED_N      ; 
-}}}
+                ATTR_S ;   
+      +Use/NG:e ATTR_S ;   
+      +Use/NG:  ATTR_H ;   
+      +Use/NG:e ATTR_N ;   
+             :e PRED_N ;   
+}}} 
 
 
 !!!IJVE_LOAN_ADJ LEXICON IJVEadj
 EVEN adjective EVEN Comporation.
 Used for all loan-adjectives "ijve".
-{{{
-          :ijv e_E_EVEN ; 
-          :ïjv e_E_EVEN ; 
-  +Use/Sub:iv  e_E_EVEN ; 
+{{{ 
+ :ijv e_E_EVEN  ;         
+ :ïjv e_E_EVEN  ;         
+ +Use/Sub:iv e_E_EVEN  ;  
 }}}
 
 
@@ -912,16 +863,20 @@ Used for all loan-adjectives "ijve".
 The __JELLE__ lexicon is used for loanadjectives on {{jelle}} and {{–jelle}} with an
 used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
-{{{
+
+__adjectives  examples:__
+This construct is not supported anymore:
+ {{{!!¥ potensijelle+A+Attr:   [potensijelle]}}} This construct is not supported anymore:
+ {{{!!¥ potensijelles+A+Sg+Nom: [potensijelles]}}} {{{
   +Use/Sub:^ell e_ES_LOAN ; 
           :jell e_ES_LOAN ; 
-}}}
+}}} 
 
 !!!LEXICON UELLE
 {{{
-          :^ell e_ES_LOAN ; 
-  +Use/Sub:vell e_ES_LOAN ; 
-}}}
+         :^ell e_ES_LOAN ;   
+ +Use/Sub:vell e_ES_LOAN ; 
+}}} 
 
 
 
@@ -983,6 +938,8 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 
 
++A+Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
+TT: Added +Sg to the Px entries here, cf. MAANASGOBL.
 
 
 
@@ -1005,6 +962,7 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 
 
+EVENCOMPCASE_oe ;
 
 
 
@@ -1016,22 +974,12 @@ used with the stem ''jelle'' This one should be 'jeelle'? SGM?
 
 
 
- :ijl e_E_EVEN ;
 
 
 
 
 
-!!!Adjective stems
 
-This is one of two parallel files containing adjective stems.
-The files represent two alternative interpretation of the same data
-(South Saami adjectives).
-This file is used for spellchecking, the alternative file
-''adjectives-oahpa.lexc'' is used for dictionary and icall applications.
-This file is compiled by default, the other one is compiled by in
-langs/sma giving the command ''.configure --with-oahpa''
-before compiling.
 
 
 
@@ -1044,7 +992,24 @@ before compiling.
 
 
 
-EVENCOMP???!SgNomCmp  
+
+
+
+
+
+
+
+
+
+
+* __gijmie__: {{gijmies+Hom1+A+Sg+Nom}}
+* __gijmiem__: {{gijmies+Hom1+A+Sg+Acc}}
+* __gijmies__: {{gijmies+Hom1+A+Attr}}
+* __gæjman__: {{gijmies+Hom1+A+Sg+Nom}}
+
+__gijmies examples:__
+
+EVENCOMP???!SgNomCmp  -MLK:  This one is substantiv- typical -oeh-suffiks as adjectiv --> goes to -e-suffix or ie-suffix as substantiv!
 eds VS emes/immes!
 
 skåapmoeh - skuapman!
@@ -1052,524 +1017,320 @@ tidligere oeh_OE
 
 
 
-!!!Adjective affixes
 
-This is one of two parallel files containing adjective affixes.
-The files represent two alternative interpretation of the same data
-(South Saami adjectives).
-This file is used for dictionary and icall applications, the alternative file
-''adjectives.lexc'' is used for spellchecking.
-This file is compiled by in
-langs/sma giving the command ''.configure --with-oahpa''
-before compiling. The other file (adjectives.lexc) is compiled by default.
 
-!!!Adjectives: Adjectival inflection sublexica
 
-!!Basic adjectival lexica, infl types
 
-!even stems
 
-Lexical exceptions
 
 
- * __LEXICON A_LDH __
 
 
- * __LEXICON NOERE __
 
- * __LEXICON BUERIE __
 
- * __LEXICON LEEVLES __
 
- * __LEXICON SOOKES __
 
- * __LEXICON SOOJMES __
 
 
- * __LEXICON SMAAVE   __, both smaave and plaave
 
- * __LEXICON SNAARE  __
 
- * __LEXICON ORRE __
 
- * __LEXICON STOERE __
 
 
- * __LEXICON STOERE_COMP __
 
- * __LEXICON NAAKE __
 
- * __LEXICON GISSE __
 
- * __LEXICON GAMTE __
 
- * __LEXICON GIEVTE __
 
- * __LEXICON KRUANA __
 
- * __LEXICON VEELKES __
 
 
- * __LEXICON ROOPSES __
 
- * __LEXICON SNEEHPES  __ burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
 
- * __LEXICON GEEHPES __
 
- * __LEXICON GEERVE __
 
- * __LEXICON TJOEVKES __
 
- * __LEXICON SAETNIES __
 
- * __LEXICON SUVHTJIES __
 
 
- * __LEXICON SAEBRIES  __
 
- * __LEXICON MUJVIES  __
 
 
- * __LEXICON STAERIES  __
 
- * __LEXICON GIERIES  __
 
- * __LEXICON BAERIES  __
 
- * __LEXICON GÆHTJOES  __
 
- * __LEXICON AAREH __
 
- * __LEXICON MOOREH __
 
 
- * __LEXICON BURRIE __
 
 
-!!Regular even stem types
 
 
- * __LEXICON EVTEBE   __
 
- * __LEXICON ATTR_EVEN   __
 
- * __LEXICON ATTR_ODD   __
 
 
- * __LEXICON ø_Ø_EVEN  __
 
- * __LEXICON IJVEadj __
 
 
- * __LEXICON LES  __ Should contain only loanwords (?)
 
+trond
+trond
+trond
 
- * __LEXICON IJAALE_A_LOAN __
 
 
- * __LEXICON AATE_adj_LOAN  __
 
 
- * __LEXICON AALE __
 
- * __LEXICON AALEFORMS __
 
- * __LEXICON oe_OE_EVEN  __
 
 
- * __LEXICON e_E_EVEN  __
 
- ** __LEXICON e_E_EVENNOCOMP  __
 
- ** __LEXICON a_A_EVENNOCOMP  __
 
- * __LEXICON a_A_EVEN __
 
 
- * __LEXICON ie_IE_EVEN  __
 
- ** __LEXICON ie_IE_EVENNOCOMP  __
 
- * __LEXICON es_ES_EVEN  __
 
- ** __LEXICON es_ES_EVENNOCOMP  __
 
- * __LEXICON ies_IES_EVEN  __
 
- ** __LEXICON ies_IES_EVENNOCOMP  __
 
 
- * __LEXICON Cs_CS_EVEN  __
 
 
- * __LEXICON ihks_IHKS_EVENNOCOMP __
 
 
- * __LEXICON RAARH   __ Attr= h, Comp =Even( Jïjtje-raarh)
 
 
 
- * __LEXICON MAST __
 
-!type 2
 
- * __LEXICON JELLE __
 
- * __LEXICON UELLE __
 
 
- * __LEXICON e_ES_LOAN   __ LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.
 
 
- * __LEXICON ÆRE   __ LOAN
 
- * __LEXICON ENTE   __ LOAN
 
 
 
 
- * __LEXICON LES_LASSE_ie  __ derivasjon av verb
 
- * __LEXICON LES_LASSE_NOM_ie  __
 
 
- * __LEXICON LES_LASSE_OBL_ie  __
 
 
- * __LEXICON e_ES_EVEN  __
 
- ** __LEXICON e_ES_EVENNOCOMP  __
 
- * __LEXICON e_ES_ODDEVEN  __
 
 
- * __LEXICON es_E_EVEN   __
 
- * __LEXICON en_E_EVEN   __
 
 
- * __LEXICON as_A_EVEN   __ attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
 
- * __LEXICON oes_OE_EVEN   __ attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/substantiven hammoe= Even
 
- ** __LEXICON oes_OE_EVENNOCOMP  __
 
- * __LEXICON ies_IE_EVEN   __ attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
- * __LEXICON ies_IE_EVENNOCOMP   __ attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
 
 
- * __LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN  __
 
- * __LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN  __
 
- * __LEXICON ies_(ehke)_EHKE_ODDCOMPe_EVEN __
 
 
 
- * __LEXICON ies_IES_IE_EVEN   __ Comp & case = even (ebe/emes/esne)
 
- * __LEXICON ies_IES_IE_EVENNOCOMP   __ Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
 
- * __LEXICON as_AS_EVEN   __ Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
 
 
- * __LEXICON IJLE_LOAN_A __
 
 
- * __LEXICON s_H_EVENNOCOMP   __
 
+9.5.
 
-!!!ODD-stems (odd stem declension)
 
 
-!!type 0 (attr only)
 
- * __LEXICON ATTR_es_s  __ aajtijes
 
 
-!!type 1
 
 
 
- * __LEXICON ø_Ø_ODD  __
 
- * __LEXICON ah_AH_ODD    __ XXX mangler CASE - hva er riktig - kanskje EVEN?
 
 
- * __LEXICON ah_AH_ODDNOCOMP   __
 
- * __LEXICON hth_HTH_ODD  __
 
- * __LEXICON Ce_CE_ODD   __ bårreske
 
- * __LEXICON ege_EGE_ODDEVEN  __ rudtjege
 
 
- * __LEXICON s_S_Ø_ODD  __ hamhpas
 
 
 
- * __LEXICON s_E_ODD  __
 
- * __LEXICON as_AS_ODD  __
 
- ** __LEXICON as_AS_ODDNOCOMP  __
 
 
 
- * __LEXICON s_S_ODD  __
 
- ** __LEXICON s_S_ODDNOCOMP  __
 
- * __LEXICON es_ES_ODDhk  __
 
- * __LEXICON oes_OES_ODD  __
 
- ** __LEXICON oes_OES_ODDNOCOMP  __
 
- * __LEXICON oes_OES_ODDahk  __
 
- * __LEXICON oes_OES_ODDas  __
 
 
- * __LEXICON Ces_CES_ODDNOCOMP   __
 
- * __LEXICON les_LES_ODD   __
 
- * __LEXICON Cs_CS_CE_ODD  __
 
- ** __LEXICON Cs_CS_CE_ODDNOCOMP  __
 
 
- * __LEXICON Cs_CS_ODD  __
 
- ** __LEXICON Cs_CS_ODDNOCOMP  __
 
- * __LEXICON hts_HTS_ODD  __
 
- ** __LEXICON hts_HTS_ODDNOCOMP  __
 
 
 
- * __LEXICON an_AN_ODDNOCOMP __
 
 
-!!type 2
 
- * __LEXICON AABELE __
 
 
- * __LEXICON IJBELE __
 
- * __LEXICON Ce_CES_ODD  __
 
- * __LEXICON ø_S_ODDEVEN   __ , Comp=even jih ODD, Case= ODD
 
- * __LEXICON ø_S_ODD   __ , Comp=even jih ODD, Case= ODD
 
 
 
-!!type 3
 
 
- * __LEXICON JEASIEGOELKIJE __
 
 
 
- * __LEXICON BÅETIJE !   __ bårreske
+pred = lohkije.
 
- * __LEXICON jes_js_JES_JS_ODD  __ to adj: bualijes, fååmijes
 
 
- * __LEXICON ijes_ijs_IJE_ODD  __ GUALIJES
 
- * __LEXICON ijes_ijs_IJE_ODDNOCOMP  __ DÅAJMIJES
 
 
 
 
 
 
-!!type 3
 
 
 
- * __LEXICON Cs_CE_ODD  __
 
- ** __LEXICON Cs_CE_ODDNOCOMP  __
 
- * __LEXICON Ces_CE_ODD  __
 
 
- ** __LEXICON Ces_CE_ODDNOCOMP  __
 
 
- * __LEXICON Ces_Ce_CES_CE_ODD    __ as Ces_CES_CE_ODD, but with ATTR_0
 
- ** __LEXICON Ces_Ce_CES_CE_ODDNOCOMP __
 
- * __LEXICON Ce_Ces_CES_CE_ODD   __
 
- ** __LEXICON Ce_Ces_CES_CE_ODDNOCOMP __
 
 
- * __LEXICON Ces_CES_CE_ODD  __
 
 
- ** __LEXICON Ces_CES_CE_ODDNOCOMP  __
 
- * __LEXICON hks_hke_HKS_HKE_ODD   __
 
 
-!!type 4
 
- * __LEXICON as_AN_ODD  __
 
 
- * __LEXICON oes_AN_ODD  __
 
 
- * __LEXICON s_N_ODD  __
 
- ** __LEXICON s_N_ODDNOCOMP  __
 
 
 
 
- * __LEXICON ah_AN_ODDNOCOMP  __
 
 
 
 
- * __LEXICON oeh_OEH_ODDNOCOMP __
 
- * __LEXICON oeh_OEN_ODD __
 
 
 
- * __LEXICON oeh_AN_ODD  __
 
- ** __LEXICON oeh_AN_ODDNOCOMP  __
 
 
- * __LEXICON oeh_OEH_AN_ODD   __
 
 
- ** __LEXICON oeh_OEH_AN_ODDNOCOMP  __
 
 
 
- * __LEXICON ø_N_ODD  __
 
 
 
- * __LEXICON e_AN_ODD  __
 
 
- * __LEXICON ies_EME __
 
 
 
 
 
 
- * __LEXICON HKE_ODD_NGCOMP __
 
- * __LEXICON HKE_ODD_COMP  __
 
 
 
- * __LEXICON GEERUVE __
 
- * __LEXICON JAEDTUVES __
 
-!!Attribute lexica
 
- * __LEXICON ATTR_0_PRED_0 __
 
- * __LEXICON ATTR_0 __
 
 
- * __LEXICON ATTR_S __
 
- * __LEXICON ATTR_H __
 
- * __LEXICON ATTR_N __
 
- * __LEXICON ATTRCONT __
 
-!!Predicative lexica
 
 
- * __LEXICON PRED_0 __
 
 
- * __LEXICON PRED_S __
 
- * __LEXICON PRED_H __
 
 
- * __LEXICON PRED_N __
 
- * __LEXICON PRED_AN __
 
 
 
 
-!!!Odd syllabic stems - adjectives
 
- * __LEXICON ODDCASE __
 
- ** __LEXICON ODDCASENOM __
 
- ** __LEXICON ODDCASEOBL __
 
- * __LEXICON ije_ODDCASE __
 
- ** __LEXICON ije_ODDCASENOM __
 
- ** __LEXICON ije_ODDCASEOBL __
 
 
 
 
-!!!Even syllabic stems - adjectives
 
- * __LEXICON eCASE __
 
- ** __LEXICON eCASENOM __
 
- ** __LEXICON eCASEOBL __
 
 
 
- * __LEXICON aCASE __
 
 
- ** __LEXICON aCASENOM __
 
- ** __LEXICON aCASEOBL __
 
- * __LEXICON ieCASE __
 
- ** __LEXICON ieCASEOBL __
 
 
- * __LEXICON oeCASE __
 
- ** __LEXICON oeCASE_NOMSG __
 
- ** __LEXICON oeCASE_OBL __
 
- ** __LEXICON A_OE_SGILL_UML __
 
- ** __LEXICON A_OE __
 
- ** __LEXICON A_OE_SG __
 
- ** __LEXICON A_OE_PL __
 
- ** __LEXICON A_OE_ESS __
 
 
 
@@ -1577,81 +1338,41 @@ Lexical exceptions
 
 
 
-!!!Comparative forms
 
- * __LEXICON EVENCOMP __
 
- ** __LEXICON EVENCOMPONLY __
 
 
- ** __LEXICON EVENSUPONLY __
 
- * __LEXICON EVENCOMP_oe __
 
- * __LEXICON ODDCOMP __
 
 
- * __LEXICON EVENCOMPCASE __
 
- * __LEXICON EVENCOMPCASE_oe __
 
 
 
- * __LEXICON DIMCOMP __
 
 
- * __LEXICON ÅBPOE __
 
- ** __LEXICON ÅBPOE_SGILL_UML __
 
- * __LEXICON ÅBPOE_N_OE __
 
- ** __LEXICON ÅBPOE_N_OE_SG __
 
- ** __LEXICON ÅBPOE_N_OE_PL __
 
- ** __LEXICON ÅBPOE_N_OE_ESS __
 
- * __LEXICON ABPA __
 
 
- ** __LEXICON ABPA_SG __
 
- ** __LEXICON ABPA_PL __
 
- * __LEXICON MES __
 
- * __LEXICON MES_oe __
 
- * __LEXICON OMMES __
 
 
- * __LEXICON LAAKAN __
 
- * __LEXICON LEEJNES __
 
 
-!!!Adjective stems
 
-This is one of two parallel files containing adjective stems.
-The files represent two alternative interpretation of the same data
-(South Saami adjectives).
-This file is used for dictionary and icall applications, the alternative file
-''adjectives.lexc'' is used for spellchecking.
-This file is compiled by in
-langs/sma giving the command ''.configure --with-oahpa''
-before compiling. The other file (adjectives.lexc) is compiled by default.
 
 
-----
-
-The file starts as follows:
-
- !!LEXICON Adjective  
-
- TG-grammatihkeles:TG-grammatihkel LES ;   \\
- aajmoes:aajmoe s_S_ODD ;			      \\
- aajne:aajne ATTR_0 ;				      \\ ... \\
+EVENCOMP???!SgNomCmp
 
 
 
@@ -1703,14 +1424,10 @@ The beginning of this file (''smi-propernouns.lexc'') looks as follows
 
 
 
+
 !!!Nominal inflection sublexica
 
-!!Inflection for odd-syllable nouns
-
-
-The basic odd-syll lexicon is: N_ODD
-
-!Inflection for odd-syllable nouns: lexicon N_ODD
+!!Inflection for odd-syllable nouns: lexicon N_ODD
 Short descrioption of this lexicon, and its purpose.
 
 __gierehtse # Odd-syllable test examples:__
@@ -1728,19 +1445,13 @@ __gierehtse # Odd-syllable test examples:__
 * __gieriehtsijstie__: {{gierehtse+N+Pl+Ela}}
 * __gierehtsigujmie__: {{gierehtse+N+Pl+Com}}
 * __gieriehtsinie__: {{gierehtse+N+Ess}}
-* __gierehtsem__: {{gierehtse+N+Sg+Acc}}
-* __*gieriehtsem__: {{gierehtse+N+Sg+Acc}} (is not standard language)
-
-* Odd-syll loanwords: lexicon N_ODD_LOAN
+This construct is not supported anymore:
+ {{{!!¥ gierehtse+N+Sg+Acc: [gierehtsem, ~gieriehtsem]}}} 
 
 
-** Odd-syll sg: lexicon N_ODD_SG
 
-** Odd-syll pl: lexicon N_ODD_PL
 
-** Odd-syll loanwords: lexicon N_ODD_ESS
 
-** Default N_ODD plural lexicon: lexicon ÅABPETJH
 
 
 
@@ -1781,7 +1492,6 @@ __beetnege # Odd-syllable test examples:__
 
 
 
-
 __åeruve # Odd-syllable test examples:__
 * __åeruve__: {{åeruve+N+Sg+Nom}}
 * __åeruven__: {{åeruve+N+Sg+Gen}}
@@ -1799,21 +1509,21 @@ __åeruve # Odd-syllable test examples:__
 * __åeruvigujmie__: {{åeruve+N+Pl+Com}}
 * __åerievinie__: {{åeruve+N+Ess}}
 * __åerievadtje__: {{åeruve+N+Der/Dimin+N+Sg+Nom}}
-* __åerievadtjen__: {{åeruve+N+Der/Dimin+N+Sg+Gen}}
+* __åerievadtjem__: {{åeruve+N+Der/Dimin+N+Sg+Gen}}
 * __åerievadtjem__: {{åeruve+N+Der/Dimin+N+Sg+Acc}}
 * __åerievadtjese__: {{åeruve+N+Der/Dimin+N+Sg+Ill}}
 * __åerievadtjesne__: {{åeruve+N+Der/Dimin+N+Sg+Ine}}
 * __åerievadtjeste__: {{åeruve+N+Der/Dimin+N+Sg+Ela}}
 * __åerievadtjine__: {{åeruve+N+Der/Dimin+N+Sg+Com}}
-* __åerievadtjine__: {{åeruve+N+Der/Dimin+N+Ess}}
+* __åerievadtjine__: {{åeruve+N+Der/Dimin+N+Sg+Ess}}
 * __åerievadtjh__: {{åeruve+N+Der/Dimin+N+Pl+Nom}}
-* __åerievadtji__: {{åeruve+N+Der/Dimin+N+Pl+Gen}}
-* __åerievadtjide__: {{åeruve+N+Der/Dimin+N+Pl+Acc}}
+* __åerievadtjide__: {{åeruve+N+Der/Dimin+N+Pl+Gen}}
+* __åerievadtji__: {{åeruve+N+Der/Dimin+N+Pl+Acc}}
 * __åerievadtjide__: {{åeruve+N+Der/Dimin+N+Pl+Ill}}
 * __åerievadtjine__: {{åeruve+N+Der/Dimin+N+Pl+Ine}}
 * __åerievadtjijste__: {{åeruve+N+Der/Dimin+N+Pl+Ela}}
 * __åerievadtjigujmie__: {{åeruve+N+Der/Dimin+N+Pl+Com}}
-* __åerievadtjine__: {{åeruve+N+Der/Dimin+N+Ess}}
+* __åerievadtjine__: {{åeruve+N+Der/Dimin+N+Pl+Ess}}
 
 
 
@@ -1865,7 +1575,7 @@ __daktere # Odd-syllable test examples:__
 * __daktarinie__: {{daktere+N+Pl+Ine}}
 * __daktarijstie__: {{daktere+N+Pl+Ela}}
 * __dakterigujmie__: {{daktere+N+Pl+Com}}
-* __daktarinie__: {{daktere+N+Ess}}
+* __daktarine__: {{daktere+N+Ess}}
 * __daktaradtje__: {{daktere+N+Der/Dimin+N+Sg+Nom}}
 * __daktaradtjen__: {{daktere+N+Der/Dimin+N+Sg+Gen}}
 * __daktaradtjem__: {{daktere+N+Der/Dimin+N+Sg+Acc}}
@@ -1873,7 +1583,7 @@ __daktere # Odd-syllable test examples:__
 * __daktaradtjesne__: {{daktere+N+Der/Dimin+N+Sg+Ine}}
 * __daktaradtjeste__: {{daktere+N+Der/Dimin+N+Sg+Ela}}
 * __daktaradtjine__: {{daktere+N+Der/Dimin+N+Sg+Com}}
-* __daktaradtjine__: {{daktere+N+Der/Dimin+N+Ess}}
+* __daktaradtjine__: {{daktere+N+Der/Dimin+N+Sg+Ess}}
 * __daktaradtjh__: {{daktere+N+Der/Dimin+N+Pl+Nom}}
 * __daktaradtji__: {{daktere+N+Der/Dimin+N+Pl+Gen}}
 * __daktaradtjide__: {{daktere+N+Der/Dimin+N+Pl+Acc}}
@@ -1881,7 +1591,7 @@ __daktere # Odd-syllable test examples:__
 * __daktaradtjine__: {{daktere+N+Der/Dimin+N+Pl+Ine}}
 * __daktaradtjijste__: {{daktere+N+Der/Dimin+N+Pl+Ela}}
 * __daktaradtjigujmie__: {{daktere+N+Der/Dimin+N+Pl+Com}}
-* __daktaradtjine__: {{daktere+N+Der/Dimin+N+Ess}}
+* __daktaradtjine__: {{daktere+N+Der/Dimin+N+Pl+Ess}}
 
 
 
@@ -1890,8 +1600,7 @@ __australijeenere # Even-syllable test examples:__
 * __australijeenere__: {{australijeenere+N+Sg+Nom}}
 * __australijeenerem__: {{australijeenere+N+Sg+Acc}}
 * __australijeeneren__: {{australijeenere+N+Sg+Gen}}
-* __australijeenaristie__: {{australijeenere+N+Sg+Ela}}
-
+* __australijeeneristie__: {{australijeenere+N+Sg+Ela}}
 
 
 
@@ -1899,9 +1608,8 @@ __sisilijaanere # Even-syllable test examples:__
 * __sisilijaanere__: {{sisilijaanere+N+Sg+Nom}}
 * __sisilijaanerem__: {{sisilijaanere+N+Sg+Acc}}
 * __sisilijaaneren__: {{sisilijaanere+N+Sg+Gen}}
-* __sisilijaanaristie__: {{sisilijaanere+N+Sg+Ela}}
-
-
+* __sisilijaaneristie__: {{sisilijaanere+N+Sg+Ela}}
+check +N+Sg+Ine!
 
 
 
@@ -1939,12 +1647,10 @@ __faktore# Even-syllable test examples:__
 * __faktore__: {{faktore+N+Sg+Nom}}
 * __faktorem__: {{faktore+N+Sg+Acc}}
 * __faktoren__: {{faktore+N+Sg+Gen}}
-* __faktovresne__: {{faktore+N+Sg+Ine}}
-* __faktorisnie__: {{faktore+N+Sg+Ine}}
-* __faktovreste__: {{faktore+N+Sg+Ela}}
-* __faktoristie__: {{faktore+N+Sg+Ela}}
-* __faktovrine__: {{faktore+N+Sg+Com}}
-* __faktorinie__: {{faktore+N+Sg+Com}}
+* __faktoresne__: {{faktore+N+Sg+Ine}}
+* __faktoreste__: {{faktore+N+Sg+Ela}}
+* __faktorine__: {{faktore+N+Sg+Com}}
+
 
 
 
@@ -1985,11 +1691,6 @@ only, naturally without +Use/NG.
 Lexicon N_OE_OBL is for the -oe nouns without umlaut
 Illative is lifted out in order to allow for Use/NG for the
 umlauted ones.
-
-
-
-
-
 
 
 
@@ -2139,15 +1840,15 @@ Short descrioption of this lexicon, and its purpose.
  LEXICON MAAKE  Only for "relatives"
 The __MAAKE__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
 {{{
-    +N+Der1+Der/Rec+N:e     LAAHKOEH_EVEN ; 
-                +N+Sg:      NIEJTE_SG     ; 
-                +N+Pl:      NIEJTE_PL     ; 
-                   +N:      EVEN_ESS      ; 
-          +N+SgNomCmp:e     R             ; 
-          +N+SgGenCmp:e%>n  R             ; 
-          +N+PlGenCmp:%>i   R             ; 
-  +N+Der1+Der/Dimin+N:e%»tj GÅATETJE      ; 
-}}}
+   +N+Der1+Der/Rec+N:e LAAHKOEH_EVEN ;    
+   +N+Sg:           NIEJTE_SG  ;          
+   +N+Pl:           NIEJTE_PL  ;          
+   +N:              EVEN_ESS ;            
+   +N+SgNomCmp:e    R ;                   
+   +N+SgGenCmp:e%>n R ;                   
+   +N+PlGenCmp:%>i  R ;                   
+   +N+Der1+Der/Dimin+N:e%»tj   GÅATETJE ; 
+}}} 
 
 
 __vïelle # Even-syllable test examples:__
@@ -2156,30 +1857,24 @@ __vïelle # Even-syllable test examples:__
 * __vïelline__: {{vïelle+N+Sg+Com}}
 * __vïelletje__: {{vïelle+N+Der/Dimin+N+Sg+Nom}}
 * __vïelletjasse__: {{vïelle+N+Der/Dimin+N+Sg+Ill}}
-* __vïellemem__: {{vïelle+N+Sg+Acc+PxSg1}}
+* __vïellemem__: {{vïelle+N+Sg+Acc+PxSg}}
 * __vïellemdh__: {{vïelle+N+Sg+Acc+PxSg2}}
 * __vïellese__: {{vïelle+N+Sg+Nom+PxSg3}}
 
 
 
-
-
-
-
-
-
  LEXICON KONTO   Lexicon for vowel-final words with invariant stems"
 {{{
-  +N: KONTODECL ; 
+ +N: KONTODECL ;  
 }}}
  LEXICON KONTODECL  Lexicon for vowel-final words with invariant stems"
 {{{
-                +Sg:     KONTO_SG ; 
-                +Pl:     KONTO_PL ; 
-                         EVEN_ESS ; 
-          +SgNomCmp:     R        ; 
-          +SgGenCmp:%>n  R        ; 
-          +PlGenCmp:%>j  R        ; 
+  +Sg: KONTO_SG  ;   
+  +Pl: KONTO_PL  ;   
+       EVEN_ESS  ;   
+  +SgNomCmp:    R ;  
+  +SgGenCmp:%>n R ;  
+  +PlGenCmp:%>j R ;  
   +Der1+Der/Dimin+N:%»tj GÅATETJE ; 
 }}}
 
@@ -2214,51 +1909,20 @@ __vïelle # Even-syllable test examples:__
 
 
 
-This is the file for the South Saami verb inflection and derivation.
 
-!!!Verbal inflection sublexica
 
-Table of content for this file:
 
-* The auxiliaries
-** The negative verb
-** Other auxiliaries
-* Odd-syllable verbs
-** Inflection common to all odd verbs
-* Even-syllable verbs
-** Nominal derivation sublexica
-* Verbal affixes
-** Finite forms
-** Even
-*** Present
-*** Imperative
-*** Present
-** Odd
-*** Present
-*** Past
-*** Imperative
-** Common even-odd
-*** Present
-*** Past
 
 
-!!!The auxiliaries
 
-First we just list the auxiliaries and their inflection.
 
- * __LEXICON LEA  __ the copula
 
 
- ** __LEXICON LEA-PRES  __
 
- ** __LEXICON LEA-PRET __
 
- ** __LEXICON LEA-IMP __
 
 
-!!The negative verb
 
- * __LEXICON NEG  __
 
 
 
@@ -2269,251 +1933,165 @@ First we just list the auxiliaries and their inflection.
 
 
 
- ** __LEXICON OLLE  __
 
 
- ** __LEXICON NEGIMP  __
 
- ** __LEXICON IJ-PRES  __
 
 
- ** __LEXICON IJ-COPULA  __
 
 
 
-!!Other auxiliaries
 
- * __LEXICON EDTJEDH  __
 
- ** __LEXICON ED-PRES  __
 
- ** __LEXICON ED-PRET __
 
- ** __LEXICON ED-IMP __
 
 
++V+IV+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
 
 
-!!!Odd-syllable verbs
 
-Odd syllable verbs differ in Prt Sg3.
-This form is treated separately, and
-the rest of the paradigm is conflated.
 
 
- * __LEXICON TJOEVERIDH_IV  __
 
 
 
- * __LEXICON GOLTELIDH_TV  __
 
- * __LEXICON AALHTEDIDH_TV  __
 
- * __LEXICON GOLTELIDH_IV  __
 
 
- * __LEXICON GOLTELIDH   __, odd-syll with -adte- as Der2
 
- * __LEXICON BALVEDIDH  __
 
 
 
 
 
- * __LEXICON RIHPESIDH   __,  -nidh and -sidh
 
- * __LEXICON AAJVESTIDH_TV     __, for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
 
- * __LEXICON DÅAJVOEHTIDH_TV  __
 
- * __LEXICON DÅAJVOEHTIDH_IV  __
 
 
- * __LEXICON DÅAJVOEHTIDH    __ for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
 
-!!Inflection common to all odd verbs
 
- * __LEXICON COMMON-ODD   __
 
-* Finite forms
 
-* Infinite forms
 
 
 
-* Derivations
 
 
 
-!!!Even-syllable verbs
 
- * __LEXICON MAEHTEDH_TV  __
 
++Der1+Der/dehte:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
 
- * __LEXICON BÅETEDH_TV  __
 
- * __LEXICON BÅETEDH_TV_ePRET  __
 
- * __LEXICON BÅETEDH_IV  __
 
- * __LEXICON BÅETEDH_IV_ePRET  __
 
 
- * __LEXICON BÅETEDH   __ row A - Group I
 
- * __LEXICON BÅETEDH_NOTVGEN   __ row A - Group I
 
 
- * __LEXICON SEVTEDH   __ row A - Group I  IMPERSONALS!
 
 
 
- * __LEXICON ÅEREDH   __ row A - Group I   NO -øø-UMLAUT!!!!
 
 
- * __LEXICON ÅEREDH_TV   __ row A - Group I   NO -øø-UMLAUT!!!!
 
 
 
- * __LEXICON TJEARODH_TV  __
 
 
- * __LEXICON TJEARODH_IV  __
 
 
- * __LEXICON TJEARODH   __ row C - Group II
 
 
 
 
- * __LEXICON ABRODH   __ row C - Group II
 
 
- * __LEXICON TSEAHKODH_TV  __
 
- * __LEXICON TSEAHKODH_IV  __
 
 
- * __LEXICON TSEAHKODH   __ row C - Group II    these have (lexicalized) diminutives on -estit, and passives on -algidh
 
 
- * __LEXICON GUARKEDH_TV  __
 
- * __LEXICON GUARKEDH_IV  __
 
 
- * __LEXICON GUARKEDH   __ row B - Group III
 
 
- * __LEXICON SIJHTEDH_TV   __
 
 
 
- * __LEXICON TJOEHPEDH_TV  __
 
- * __LEXICON GALKEDH_IV  __
 
 
++Der1+Der/dehte:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehtedh
 
- * __LEXICON TJOEHPEDH_IV  __
 
 
- * __LEXICON TJOEHPEDH   __ row D - Group IV
 
 
- * __LEXICON TJOEHPEDH_NOTVGEN  __
 
 
- * __LEXICON GALKEDH_CONT   __ row D - Group IV
 
 
 
 
- * __LEXICON BIEGKEDH   __ row D - Group IV !impersonals
 
- * __LEXICON BÅÅHKEDH_TV  __
++Der1+Der/dehte:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
 
- * __LEXICON SÅÅJHTEDH_IV  __
 
 
 
- * __LEXICON BÅÅHKEDH_IV  __
 
 
- * __LEXICON BÅÅHKEDH   __ row E - Group V
 
- * __LEXICON SÅÅJHTEDH_CONT   __ row E - Group V
 
- * __LEXICON VÅÅJNEDH  __
 
 
 
- * __LEXICON GÖÖLEDH_TV  __
 
 
- * __LEXICON GÖÖLEDH_IV  __
 
 
- * __LEXICON GÖÖLEDH   __ row F - Group VI
 
 
- * __LEXICON BÖÖVTEDH   __ row F - Group VI
 
 
- * __LEXICON EEREDH_TV  __
 
- * __LEXICON EEREDH_IV  __
 
 
- * __LEXICON ÅARAJEHTEDH_TV  __
 
 
- * __LEXICON ÅARAJEHTEDH_IV  __
 
 
- * __LEXICON ÅARAJEHTEDH   __ row A - Group I
 
- * __LEXICON BUARADEHTEDH  __
 
 
- * __LEXICON GOEGKERDADTEDH_TV  __
 
- * __LEXICON GOEGKERDADTEDH_IV  __
 
 
- * __LEXICON GOEGKERDADTEDH   __ row D - Group IV
 
- * __LEXICON OBREDADTEDH  __
 
- * __LEXICON GÅETEDH_TV  __
 
- * __LEXICON GÅETEDH_IV  __
 
 
- * __LEXICON GÅETEDH   __ from Der/gåete
 
- * __LEXICON STIEHPEGÅETEDH  __
 
 
- * __LEXICON AHTJE_TV  __
 
- * __LEXICON AHTJE_IV  __
 
- * __LEXICON OBRIJAHTJEDH  __
 
 
- * __LEXICON AHTJE   __ row D - Group IV
 
- * __LEXICON SOVVEDH __row D - Group IV
 
- * __LEXICON IV_PASSIVE_L  __
 
 
 
- * __LEXICON IV_PASSIVE_S   __ row E - Group V  NB! FOR already derivated PASSIVES!!!
 
 
- * __LEXICON LGIDH  __
 
 
 
@@ -2523,119 +2101,65 @@ the rest of the paradigm is conflated.
 
 
 
-Nominal derivation sublexica
 
- * __LEXICON LAAHKOEH_EVEN   __
 
- ** __LEXICON LAAHKOEH_BE  __
 
- ** __LEXICON LAAHKOEH_MES  __
 
 
- * __LEXICON LAAHKOEH_ODD  __
 
- ** __LEXICON LAAHKOEH_ÅBPOE  __
 
 
- ** __LEXICON LAAHKOEH_OMMES   __
 
 
 
- * __LEXICON IGENSUFF   __
 
 
-!!!Verbal affixes
 
-!!Finite forms
 
-!Even
 
-!Present
 
- * __LEXICON V-I-PRS-SG   __ Merge with V-EVEN-PRS if nothing special here.
 
- * __LEXICON V-II-PRS-SG   __
 
- * __LEXICON V-III-PRS-SG   __
 
- * __LEXICON VSUF-V-EVEN-PRS   __
 
 
- * __LEXICON VSUF-EVEN-PRS-DUPL   __
 
 
- * __LEXICON VSUF-VI-EVEN-PRS   __
 
 
-!Imperative
 
- * __LEXICON VSUF-EVEN-IMP   __
 
 
- * __LEXICON VSUF-II-EVEN-IMP  __
 
- * __LEXICON VSUF-III-EVEN-IMP  __
 
-!Present
 
- * __LEXICON V-IV-EVEN-PRS  __
 
 
 
 
 
-!!Odd
 
-!Present
 
- * __LEXICON VSUF-ODD-PRS  __
 
- ** __LEXICON V-ODD-PRS-SG  __
 
- ** __LEXICON V-ODD-PRS-DUPL  __
 
- ** __LEXICON ODD_PRS_NON_DU3  __
 
- ** __LEXICON ODD_PRS_DU3  __
 
 
-!Past
 
- * __LEXICON VSUF-ODD-PRT  __
 
-!Imperative
 
- * __LEXICON VSUF-ODD-IMP   __
 
 
 
 
-!!Common even-odd
 
 
-!Present
 
- * __LEXICON V-PRS-SG-12   __ Kutt denne viss ikkje ref til
 
- * __LEXICON V-PRS-SG-1  __
 
- * __LEXICON V-PRS-SG-2  __
 
- * __LEXICON V-PRS-SG-3  __
 
-
-!Past
-
- * __LEXICON VSUF-PRT  __
-
-
-
- * __LEXICON VSUF-PRT-SG-12  __
-
- * __LEXICON VSUF-PRT-SG-3  __
-
-
- * __LEXICON VSUF-PRT-DUPL  __
 
 
 

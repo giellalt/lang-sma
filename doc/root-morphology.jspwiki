@@ -24,7 +24,7 @@
 
  !Tags for sub-POS
 !!Proper nouns
- * +Prop     
+ * +Prop                                     
 
 !!Pronoun subtypes
  * +Pers    
@@ -81,7 +81,7 @@
  | +CmpN/SgGenLeft | "
  | +CmpN/PlGenLeft | "
 
-!This part of the compound may ...
+!This part of the compound may ... 
  | +CmpN/All | all positions, __default__, this tag does not have to be written
  | +CmpN/Def | works along with Left compound-tagging
  | +CmpN/DefSgGen | works along with Left compound-tagging
@@ -230,8 +230,8 @@ Affix and tag, frompos - topos
  | +Der/stidh | VV - Diminutive
  | +Der/didh | VV - Continuative
  | +Der/htjidh | Dim-cont.
- | +Der/htovve | AV
- | +Der/htoeve | AV
+ | +Der/htovve | AV 
+ | +Der/htoeve | AV 
  | +Der/htehte | AV
  | +Der/Dimin | NN - Diminutive
  | +Der/Rec | NN - Forholdsformer
@@ -261,42 +261,13 @@ just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
  | +Der/PassS | VV - short passive only
  | +Der/A | NA - comparation of N's
 
-!!Tags for originating language
-The following tags are used to guide conversion to IPA: loan words
-and foreign names are usually pronounced (approximately) as in the
-originating (majority) language. Instead of trying to identify the
-correct pronounciation based on fonotactics (orthotactics actually),
-we tag all words that can't be correctly transcribed using the SME
-transcriber with source language codes. Once tagged, it is possible
-to split the lexical transducer in smaller ones according to langu-
-age, and apply different IPA conversion to each of them.
-The principle of tagging is that we only tag to the extent needed,
-and following a priority:
-# any untagged word is pronounced with SME orthographic conventions
-# NNO and NOB have identical pronounciation, NNO is only used if
-  different in spelling from NOB
-# SWE has mostly the same pronounciation as NOB, and is only used
-  if different in spelling from NOB
-# Occasionally even SME (the default) may be tagged, to block other
-  languages from being specified, mainly during semi-automatic
-  language tagging sessions
-All in all, we want to get as much correctly transcribed to IPA
-with as little work as possible. On the other hand, if more words
-are tagged than strictly needed, this should pose no problem as
-long as the IPA conversion is correct - at least some words will
-get the same pronounciation whether read as SME or NOB/NNO/SWE.
- * +OLang/SME - North Sámi
- * +OLang/FIN - Finnish
- * +OLang/SWE - Swedish
- * +OLang/NOB - Norw. bokmål
- * +OLang/NNO - Norw. nynorsk
- * +OLang/ENG - English
- * +OLang/UND - Undefined
+
 !!Triggers for morphophonological rules
  ; X2 : Trigger for ???
  ; X3 : Trigger for ???
  ; X4 : Trigger for ???
  ; E2 : insert e ! Fjern denne.
+
 !!Symbols that need to be escaped on the lower side (towards twolc):
  ; »7 : Literal »
  ; «7 : Literal «
@@ -304,7 +275,8 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
   %[%>%]  - Literal >
   %[%<%]  - Literal <
 }}}
-!!Lexeme disambiguation tags
+
+ !!Lexeme disambiguation tags
  ; +Hom1 : Homonymy
  ; +Hom2 : Homonymy
  ; +v1 : Lemma variants
@@ -312,7 +284,8 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  ; +v3 : Lemma variants
  ; +v4 : Lemma variants
  ; +v5 : Lemma variants
-!!Umlaut and diphthong simplification triggers
+
+ !!Umlaut and diphthong simplification triggers
  | %^DISIMP | diphthong simplification
  | %^COMPDISIMP | diphthong simplification in comparatives
  | %^COMPDISIMP2 | diphthong simplification in comparatives, type 2
@@ -339,6 +312,7 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  | @C.NeedNoun@ | (Dis)allowing compounds
  | @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  | @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
+
 
 
 
