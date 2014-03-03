@@ -75,7 +75,6 @@ Harvard-professore+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpN/First+OLang/NOB:Harvard-profe
 Hydro-fabrihke+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpN/First+OLang/NOB:Hydro-fabr IHKE_LOAN ;
 ILO-konferaanse+OLang/NOB:ILO-konfera ANSE_LOAN ;
 ILO-konvensjovne+OLang/NOB:ILO-konven SJOVNE_LOAN ;
-
 AWG-organisasjovne+OLang/NOB:AWG-organisa SJOVNE_LOAN ;
 MOT-organisasjovne+OLang/NOB:MOT-organisa SJOVNE_LOAN ;
 OG-organisasjovne+OLang/NOB:OG-organisa SJOVNE_LOAN ;
@@ -139,6 +138,7 @@ Securitate-ageente+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpN/First+OLang/NOB:Securitate-ag
 Stalin-monumeente+CmpN/First+OLang/NOB:Stalin-monume ENTE_LOAN ;
 TG-grammatihke+OLang/NOB:TG-grammat IHKE_LOAN ;
 TV-kommentaatore+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:TV-kommenta AATORE_LOAN ;
+monitovre+OLang/NOB:monito UVRE_LOAN ;
 TV-monitovre+OLang/NOB:TV-monito UVRE_LOAN ;
 TV-produseente+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:TV-produse ENTE_LOAN ;
 TV-programme+OLang/NOB:TV-pro^gram GRAMME_LOAN ;
@@ -285,6 +285,7 @@ croissant+N+CmpN/Pref+CmpN/SgN:cro^issant R ;
 cyanos+N+CmpN/Pref+CmpN/SgN:cy^anos R ;
 cykel+N+CmpN/Pref+CmpN/SgN:cykel R ;
 cytolog+N+CmpN/Pref+CmpN/SgN:cytolog R ;
+daata+N+CmpN/Pref+CmpN/SgN:daata R ;
 dator+N+CmpN/Pref+CmpN/SgN:dator R ;
 debitor+N+CmpN/Pref+CmpN/SgN:debitor R ;
 descendent+N+CmpN/Pref+CmpN/SgN:de^scendent R ;
@@ -810,6 +811,7 @@ viskos+N+CmpN/Pref+CmpN/SgN+Dial/-NOR:viskos R ;
 voessedh+N+CmpN/Pref+CmpN/SgN:voessedh R ;
 volontör+N+CmpN/Pref+CmpN/SgN+Dial/-SW:volontör R ;
 vuahtedh+N+CmpN/Pref+CmpN/SgN:vuahtedh R ;
+vaarjoe+N+CmpN/Pref+CmpN/SgN:vaarjoe R ; 
 vualedh+N+CmpN/Pref+CmpN/SgN:vualedh R ;
 væhtjedh+N+CmpN/Pref+CmpN/SgN:væhtjedh R ;
 xeenia+N+CmpN/Pref+CmpN/SgN:xeenia R ;
@@ -1474,6 +1476,7 @@ baabele+OLang/NOB:baabel N_ODD ; !XXX proper?
 baadtehtahke:baadtehtahk NIEJTE ;
 baahka+CmpN/SgN+CmpN/SgG+CmpN/PlG:baahk MAANA ;
 baahke+CmpN/SgN+CmpN/SgG+CmpN/PlG:baahk NIEJTE "värme, varmt väder" ;
+tjaalehsïeve:tjaalehsïev NIEJTE ;!Gïelegaaltije dåhkasjamme 
 baahkese:baahkes N_ODD ;
 baahkestjaetsie+CmpN/SgN+CmpN/SgG+CmpN/PlG:baahkes#tjaets N_IE ;
 baahketjaetsie+CmpN/SgN+CmpN/SgG+CmpN/PlG:baahke#tjaets N_IE ;
@@ -1494,6 +1497,7 @@ baakoenuhtjeme:baakoe#nuhtjem N_ODD ;
 baakoeraajroe:baakoe#raajr N_OE_UML ;
 baakoetjïerte:baakoe#tjïert NIEJTE ;
 baakoeveeljeme:baakoe#veeljem N_ODD ;
+baahtseme:baahtsem N_ODD ;!datovrebaakoe, Giellagáldu
 baahtsemebaakoe:baahtseme#baak N_OE_UML ;!passord
 baaktege+CmpN/SgN+CmpN/SgG+CmpN/PlG:baakteg N_ODD ;
 baaktetje+CmpN/SgN+CmpN/SgG+CmpN/PlG:baaktatj N_ODD ;
@@ -1595,6 +1599,7 @@ baissespekulaante+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:baisse#spekula ANTE_LOAN 
 bajhke+Use/Sub:bejhk NIEJTE ;
 bajhke:bajhk NIEJTE ;
 bajjesimmie:bajjesimm N_IE ;
+seedteme:seedtem N_ODD ;
 bajsjeme:bajsjem N_ODD ;
 bakteriekultuvre+OLang/NOB:bakterie#kultu UVRE_LOAN ;
 bakteriologije+OLang/NOB:bakteriolog IJE_LOAN ;
@@ -1757,7 +1762,7 @@ beelhte+OLang/NOB:beelht NIEJTE ;
 lïenghke+OLang/NOB:lïenghk NIEJTE ;
 leanghke+OLang/NOB:leanghk NIEJTE ;
 beeljese:beeljes N_ODD ;
-bealjese:bealjes N_ODD ;
+bealjese:bealjes N_ODD ;!GïeleGaaltije
 beellege+CmpN/SgN+CmpN/SgG+CmpN/PlG:beell AAREGE ;
 beere+CmpN/SgN+CmpN/SgG+CmpN/PlG:beer NIEJTE ;
 beeretje+CmpN/SgN+CmpN/SgG+CmpN/PlG:beeretj N_ODD ;
@@ -1799,6 +1804,8 @@ bensinstasjovne+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:bensin#sta SJOVNE_LOAN ;
 berkiestimmie:berkiestimm N_IE ;
 berteme:bertem N_ODD ;
 bertie:bert N_IE ;
+tjirkeskopije:tjirkeskopij IJE_ODD ;
+viermielohkije:viermielohkij IJE_ODD ;! Gïelegaaltije 
 bertije:bertij IJE_ODD ;
 berylle+OLang/NOB:beryll NIEJTE ;
 betaversjovne+OLang/NOB:beta#ver SJOVNE3_LOAN ;
@@ -2232,7 +2239,7 @@ bægkah+CmpN/SgN+CmpN/PlG:bægk MÅVHKAH ;
 bægkoe:bægk N_OE_UML ;
 bæhta:bæht MAANA ;
 bæhtjoe+CmpN/SgN+CmpN/SgG+CmpN/PlG:bæhtj N_OE_UML ;
-bæhtoe:bæht N_OE_UML ;
+bæhtoe:bæht N_OE_UML ;!GïeleGaaltije
 bæjhkoehtimmie:bæjhkoehtimm N_IE ;
 bæjhpa:bæjhp MAANA ;
 bæjhpoe:bæjhp N_OE_UML ;
@@ -3919,7 +3926,7 @@ gaskesadtemevuekie:gaskesadteme#vuek N_IE ;
 gaskese:gaskes N_ODD ;
 gaskestalleme:gaskestallem N_ODD ;
 gaskevahka+CmpN/SgN+CmpN/SgG+CmpN/PlG:gaske#vahk MAANA ;
-gaskeviermie:gaske#vierm N_IE "Internett" ;
+gaskeviermie:gaske#vierm N_IE "Internett" ;!Gïelegaaltje dåhkasjamme
 gaskevåhka+CmpN/SgN+CmpN/SgG+CmpN/PlG:gaske#våhk MAANA ; ! OE-MAANA
 gaskevåhkoe+CmpN/SgN+CmpN/SgG+CmpN/PlG:gaske#våhk N_OE ;
 gasnege:gasneg N_ODD ;
@@ -12300,7 +12307,7 @@ vierhtiejarnge+CmpN/SgN+CmpN/SgG+CmpN/PlG:vierhtie#jarng NIEJTE ;
 vierhtse+CmpN/SgN+CmpN/SgG+CmpN/PlG:vierhts NIEJTE ;
 viermehke:viermiehk N_ODD ;
 viermie:vierm N_IE "nät, fiskenät" ;
-vearmadahke:vearmadahk NIEJTE ;!nettverk
+vearmadahke:vearmadahk NIEJTE ;!nettverk: GïeleGaaltije
 viermietjelmieleahta:viermie#tjelmie#leaht MAANA ;
 vietjere:vietjier N_ODD ;
 vigkie:vigk N_IE ;
@@ -12939,7 +12946,7 @@ faagebyjrese:faage#byjres NIEJTE ;
 gïelelïerehtimmie:gïele#lïerehtimm N_IE ;
 aalkoevierhtie:aalkoe#vierht N_IE ;
 ööhpehtimmiepolitihke:ööhpehtimmie#politihk NIEJTE ;
-tjaelijesijjie:tjaelije#sijj N_IE ;
+tjaelijesijjie+Use/Sub:tjaaleh#sijj N_IE ;
 lïerehtimmiepolitihke:lïerehtimmie#politihk NIEJTE ;
 dotkemegïele:dotkeme#gïel NIEJTE ;
 tjoejefijle+OLang/NOB:tjoeje#f IJLE_LOAN_N ;
