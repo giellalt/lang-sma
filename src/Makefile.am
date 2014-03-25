@@ -47,10 +47,10 @@ endif # CAN_XFST
 
 if WANT_OAHPA
 if CAN_HFST
-GT_GENERATORS_HFST+=generator-oahpa-gt-norm.hfst
+GT_GENERATORS_HFST+=generator-oahpa-gt-norm.hfst $(DIALECT_TARGETS_HFST)
 endif # CAN_HFST
 if CAN_XFST
-GT_GENERATORS_XFST+=generator-oahpa-gt-norm.xfst
+GT_GENERATORS_XFST+=generator-oahpa-gt-norm.xfst $(DIALECT_TARGETS_XFST)
 endif # CAN_XFST
 endif # WANT_OAHPA
 
@@ -152,7 +152,7 @@ generator-oahpa-gt-norm.hfst: generator-oahpa-gt-norm.tmp.hfst \
 # Xerox:
 generator-oahpa-gt-norm.xfst: generator-oahpa-gt-norm.tmp.xfst \
 					filters/make-optional-semantic-tags.xfst
-	$(AM_V_GEN)$(PRINTF) "read regex                          \
+	$(XFST_verbose)$(PRINTF) "read regex                          \
 				@\"filters/make-optional-semantic-tags.xfst\" \
 			.o. @\"$<\".i                                     \
 			;\n\
@@ -164,7 +164,7 @@ generator-oahpa-gt-norm.xfst: generator-oahpa-gt-norm.tmp.xfst \
 generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \
 					filters/make-optional-variant-tags.xfst  \
 					filters/remove-number-string-tags.xfst
-	$(AM_V_GEN)$(PRINTF) "read regex                         \
+	$(XFST_verbose)$(PRINTF) "read regex                         \
 				@\"filters/make-optional-variant-tags.xfst\" \
 			.o. @\"filters/remove-number-string-tags.xfst\"  \
 			.o. @\"$<\"                                      \
@@ -175,7 +175,7 @@ generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \
 
 analyser-dict-gt-norm.xfst: analyser-dict-gt-norm.tmp.xfst \
 					filters/make-optional-semantic-tags.xfst
-	$(AM_V_GEN)$(PRINTF) "read regex                          \
+	$(XFST_verbose)$(PRINTF) "read regex                          \
 				@\"filters/make-optional-semantic-tags.xfst\" \
 			.o. @\"$<\"                                       \
 			;\n\
@@ -193,7 +193,7 @@ analyser-%.hfst: analyser-%.tmp.hfst \
 
 analyser-%.xfst: analyser-%.tmp.xfst \
 				filters/remove-test-tags.xfst
-	$(AM_V_GEN)$(PRINTF) "read regex \
+	$(XFST_verbose)$(PRINTF) "read regex \
 				@\"filters/remove-test-tags.xfst\" \
 			.o. @\"$<\" ;\n\
 		 save stack $@\n\
@@ -208,7 +208,7 @@ generator-%.hfst: generator-%.tmp.hfst \
 
 generator-%.xfst: generator-%.tmp.xfst \
 				filters/remove-test-tags.xfst
-	$(AM_V_GEN)$(PRINTF) "read regex \
+	$(XFST_verbose)$(PRINTF) "read regex \
 				@\"$<\" \
 			.o. @\"filters/remove-test-tags.xfst\".i \
 			;\n\
