@@ -17,14 +17,6 @@ GT_TRANSFORMERS_HFST=transcriptor-clock2text-desc.hfst \
 					 transcriptor-text2date-desc.hfst \
 					 transcriptor-text2numbers-desc.hfst
 
-if WANT_APERTIUM
-# This is just a generic analyser. You need to add pair-specific analysers to
-# the language-specific part further down.
-APERTIUM_ANALYSERS_HFST=analyser-mt-gt-desc.hfst
-APERTIUM_GENERATORS_HFST=generator-mt-gt-norm.hfst \
-						generator-mt-apertium-norm.hfst \
-						generator-mt-apertium-norm.att.gz
-endif # WANT_APERTIUM
 endif # CAN_HFST
 
 if CAN_XFST
@@ -93,50 +85,10 @@ endif
 if CAN_HFST
 GT_ANALYSERS_HFST+=
 GT_GENERATORS_HFST+=
-if WANT_APERTIUM
-APERTIUM_ANALYSERS_HFST+=analyser-mt-apertium-desc.und.hfst \
-						 analyser-mt-apertium-desc.und.att.gz
-APERTIUM_GENERATORS_HFST+=
-
-endif
 endif
 
 #################################################
 #### Add language-specific build rules here: ####
-
-# Apertium-related language-specific targets:
-analyser-mt-gt-desc.und.hfst: analyser-mt-gt-desc.tmp.hfst \
-					filters/remove-Dial_L-strings.hfst \
-					filters/remove-dialect-tags.hfst \
-					filters/remove-test-tags.hfst
-	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
-			-1 filters/remove-Dial_L-strings.hfst \
-		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
-		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
-			-1 filters/remove-dialect-tags.hfst \
-		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
-		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
-			-1 filters/remove-test-tags.hfst \
-		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
-		| $(HFST_INVERT) \
-		-o $@
-
-# And also for the generator:
-generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
-				filters/remove-test-tags.hfst \
-				filters/remove-Dial_L-strings.hfst \
-				filters/remove-dialect-tags.hfst 
-	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
-			-1 filters/remove-test-tags.hfst \
-		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
-		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
-			-1 filters/remove-Dial_L-strings.hfst \
-		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
-		| $(HFST_COMPOSE) $(HFST_FLAGS) -F \
-			-1 filters/remove-dialect-tags.hfst \
-		| $(HFST_MINIMIZE) $(HFST_FLAGS) \
-			| $(HFST_FST2FST) $(HFSTFLAGS) -t \
-			-o $@
 
 # Oahpa-related local modifications and language-specific changes:
 # HFST:
