@@ -105,10 +105,8 @@ GENERATED_REGEXES=remove-semantic-tags.regex \
 # HFST targets here:
 if CAN_HFST
 GT_FILTER_TARGETS+=focus-filter.hfst \
-				   make-optional-semantic-tags.hfst       \
 				   remove-illegal-derivation-strings.hfst \
 				   remove-Dial_L-strings.hfst             \
-				   remove-semantic-tags.hfst              \
 				   remove-test-tags.hfst
 
 endif
@@ -116,10 +114,8 @@ endif
 # And Xerox targets here:
 if CAN_XFST
 GT_FILTER_TARGETS+=focus-filter.xfst \
-				   make-optional-semantic-tags.xfst       \
 				   remove-illegal-derivation-strings.xfst \
 				   remove-Dial_L-strings.xfst             \
-				   remove-semantic-tags.xfst              \
 				   remove-test-tags.xfst
 
 endif
