@@ -21,6 +21,9 @@ GT_FILTER_SRCS=focus-filter.regex \
 			   remove-test-tags.regex \
 			   remove-Dial_L-strings.regex
 
+# DIALECT_TARGETS_HFST is constructed dynamically based on the dialects
+# specified in configure.ac.
+
 # The common filter targets (don't change locally):
 GT_FILTER_TARGETS=
 if CAN_HFST
@@ -98,6 +101,7 @@ GT_FILTER_TARGETS+=\
 endif
 
 GENERATED_REGEXES=remove-semantic-tags.regex \
+                  remove-dialect-tags.regex \
                   make-optional-semantic-tags.regex \
                   $(DIALECT_REGEXES)
 
