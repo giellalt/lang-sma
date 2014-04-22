@@ -1,0 +1,38 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Verb - rekreeredh: # verbs on -eeredh, no tripple -eee-
+    rekreeredh+V+TV+Ind+Prs+Pl2: [rekreerede, ~rekreeerede]
+    rekreeredh+V+TV+Ind+Prs+Du2: [rekreereden, ~rekreeereden]
+    rekreeredh+V+TV+Inf: [rekreeredh, ~rekreeeredh]
+    rekreeredh+V+TV+Der/gåete+V+PrfPrc: [rekreeregåateme, ~rekreeeregåateme]
+    rekreeredh+V+TV+Der/gåete+V+Ind+Prs+Pl3: [rekreeregåetieh, ~rekreeeregåetieh]
+    rekreeredh+V+TV+Der/gåete+V+Ger: [rekreeregåetieminie, ~rekreeeregåetieminie]
+    rekreeredh+V+TV+Der/les+A+Sg+Ill: [rekreerelassese, ~rekreeerelassese]
+    rekreeredh+V+TV+Der/les+A+Sg+Com: [rekreerelassine, ~rekreeerelassine]
+    rekreeredh+V+TV+Der/ldahke+N+Sg+Com: [rekreereldahkine, ~rekreeereldahkine]
+    rekreeredh+V+TV+Der/les+A+Sg+Nom: [rekreereles, ~rekreeereles]
+    rekreeredh+V+TV+Der/les+A+SgNomCmp+RCmpnd: [rekreereles-, ~rekreeereles-]
+    rekreeredh+V+TV+Der/lgidh+V+IV+Ind+Prs+Pl2: [rekreerelgidie, ~rekreeerelgidie]
+    rekreeredh+V+TV+PrfPrc: [rekreereme, ~rekreeereme]
+    rekreeredh+V+TV+Ger: [rekreereminie, ~rekreeereminie]
+    rekreeredh+V+TV+Der/PassL+V+IV+Ind+Prs+Du2: [rekreeresovveden, ~rekreeeresovveden]
+    rekreeredh+V+TV+Der/PassL+V+IV+Inf: [rekreeresovvedh, ~rekreeeresovvedh]
+    rekreeredh+V+TV+Der/PassL+V+IV+PrfPrc: [rekreeresovveme, ~rekreeeresovveme]
+    rekreeredh+V+TV+Der/PassL+V+IV+ConNeg: [rekreeresovvh, ~rekreeeresovvh]
+    rekreeredh+V+TV+Der/PassL+V+IV+Ind+Prs+Du1: [rekreeresuvvien, ~rekreeeresuvvien]
+    rekreeredh+V+TV+Der/PassL+V+IV+Ind+Prs+Sg3: [rekreeresåvva, ~rekreeeresåvva]
+    rekreeredh+V+TV+ConNeg: [rekreerh, ~rekreeerh]
+    rekreeredh+V+TV+Der/ahtje+V+PrfPrc: [rekreerijahtjeme, ~rekreeerijahtjeme]
+    rekreeredh+V+TV+Ind+Prs+Pl2: [rekreerijidie, ~rekreeerijidie]
+    rekreeredh+V+TV+Der/NomAg+N+Sg+Ela: [rekreerijistie, ~rekreeerijistie]
+    rekreeredh+V+TV+Ind+Prt+Pl1: [rekreerimh, ~rekreeerimh]
+    rekreeredh+V+TV+Ind+Prt+Pl3: [rekreerin, ~rekreeerin]
