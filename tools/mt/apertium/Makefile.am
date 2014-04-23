@@ -13,13 +13,13 @@ SUBDIRS = filters tagsets .
 analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 			$(top_builddir)/src/filters/remove-dialect-tags.hfst \
 			$(top_builddir)/src/filters/remove-test-tags.hfst
-	$(AM_V_GEN)$(PRINTF) "\
+	$(AM_V_RGX2FST)$(PRINTF) "\
 		@\"$(top_builddir)/src/filters/remove-dialect-tags.hfst\" \
 	.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\"    \
    	.o. @\"$<\" \
     	;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
-		| $(HFST_INVERT)
+		| $(HFST_INVERT) \
 		> $@
 
 # And also for the generator:
@@ -27,7 +27,7 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 			$(top_builddir)/src/filters/remove-Dial_L-strings.hfst \
 			$(top_builddir)/src/filters/remove-dialect-tags.hfst   \
 			$(top_builddir)/src/filters/remove-test-tags.hfst
-	$(AM_V_GEN)$(PRINTF) "\
+	$(AM_V_RGX2FST)$(PRINTF) "\
 		@\"$(top_builddir)/src/filters/remove-dialect-tags.hfst\"   \
 	.o. @\"$(top_builddir)/src/filters/remove-Dial_L-strings.hfst\" \
 	.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\"      \
