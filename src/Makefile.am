@@ -144,86 +144,47 @@ endif # CAN_HFST
 #################################################
 #### Add language-specific build rules here: ####
 
-# Oahpa-related local modifications and language-specific changes:
-# HFST:
-generator-oahpa-gt-norm.hfst: generator-oahpa-gt-norm.tmp.hfst \
-					filters/make-optional-semantic-tags.hfst
+# The SMA morphology has some extra tags used for testing that we want to
+# remove:
+generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
+				filters/remove-test-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
-				@\"filters/make-optional-semantic-tags.hfst\" \
+				@\"filters/remove-test-tags.hfst\" \
 			.o. @\"$<\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
 		> $@
 
-# Xerox:
-generator-oahpa-gt-norm.xfst: generator-oahpa-gt-norm.tmp.xfst \
-					filters/make-optional-semantic-tags.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex                          \
-				@\"filters/make-optional-semantic-tags.xfst\" \
-			.o. @\"$<\".i                                     \
+analyser-raw-gt-desc.xfst: analyser-raw-gt-desc.tmp.xfst \
+				filters/remove-test-tags.xfst
+	$(AM_V_XFST)$(PRINTF) "read regex \
+				@\"filters/remove-test-tags.xfst\" \
+			.o. @\"$<\" \
 			;\n\
-		 invert net\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)
 
 # Dict-fst local modifications and language-specific changes:
+generator-dict-gt-norm.hfst: generator-dict-gt-norm.tmp.hfst \
+					filters/make-optional-variant-tags.hfst  \
+					filters/remove-number-string-tags.hfst
+	$(AM_V_RGX2FST)$(PRINTF)                                "\
+				@\"filters/make-optional-variant-tags.hfst\" \
+			.o. @\"filters/remove-number-string-tags.hfst\"  \
+			.o. @\"$<\"                                      \
+			;" \
+		| $(HFST_REGEXP2FST) $(VERBOSITY) $(HFST_FLAGS) -S --harmonize-flags \
+		> $@
+
 generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \
 					filters/make-optional-variant-tags.xfst  \
 					filters/remove-number-string-tags.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex                         \
+	$(AM_V_XFST)$(PRINTF)                        "read regex \
 				@\"filters/make-optional-variant-tags.xfst\" \
 			.o. @\"filters/remove-number-string-tags.xfst\"  \
-			.o. @\"$<\"                                      \
+			.o. @\"$<\".i                                    \
 			;\n\
 		 invert net\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
-
-analyser-dict-gt-norm.xfst: analyser-dict-gt-norm.tmp.xfst \
-					filters/make-optional-semantic-tags.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex                          \
-				@\"filters/make-optional-semantic-tags.xfst\" \
-			.o. @\"$<\"                                       \
-			;\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
-
-# The SMA morphology has some extra tags used for testing that we want to
-# remove.
-analyser-%.hfst: analyser-%.tmp.hfst \
-				filters/remove-test-tags.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "\
-				@\"filters/remove-test-tags.hfst\" \
-			.o. @\"$<\" \
-			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
-		| $(HFST_INVERT) \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -t -o $@
-
-analyser-%.xfst: analyser-%.tmp.xfst \
-				filters/remove-test-tags.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex \
-				@\"filters/remove-test-tags.xfst\" \
-			.o. @\"$<\" ;\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
-
-# And also for the generator:
-generator-%.hfst: generator-%.tmp.hfst \
-				filters/remove-test-tags.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "\
-				@\"filters/remove-test-tags.hfst\" \
-			.o. @\"$<\" \
-			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
-
-generator-%.xfst: generator-%.tmp.xfst \
-				filters/remove-test-tags.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex \
-				@\"$<\" \
-			.o. @\"filters/remove-test-tags.xfst\".i \
-			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)
 
