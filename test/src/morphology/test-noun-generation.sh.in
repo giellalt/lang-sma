@@ -60,7 +60,7 @@ for f in $fsttype; do
 	if [ -f "$generatorfile.$f" ]; then
 		let "transducer_found += 1"
 
-###### Test non-comopunds: #######
+###### Test non-compounds: #######
 		# generate nouns in Singular, extract the resulting generated lemma,
 		# store it:
 		sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
@@ -73,7 +73,7 @@ for f in $fsttype; do
 			| $lookuptool $generatorfile.$f | cut -f2 \
 			| grep -v "^$" >> analnouns.$f.txt 
 
-###### Test comopunds: #######
+###### Test compounds: #######
 		# Test nouns that only can generate as compounds:
 		sed 's/$/+N+Cmp#gåetie+N+Sg+Nom/' Rnouns.txt \
 			| $lookuptool $generatorfile.$f | cut -f2 | sed 's/gåetie$//' \
