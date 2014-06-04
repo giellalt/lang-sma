@@ -419,7 +419,7 @@ luhkie:luhkie# 2TO9F ;
 låhkede+A+Ord:låhkad ORDTAGODD-ord ;
 låhkesh:låhkas COLLTAG ;
 !luhkie+Num+Sg+Nom:luhkie FINAL1 ;
-!luhkie+Num+Sg+Nom+Use/Sub:-luhkie FINAL1 ;
+!luhkie+Num+Sg+Nom+Err/Sub:-luhkie FINAL1 ;
 luhkie:luhk NUMTAGie ;
 
 LEXICON LUHKIEF
@@ -495,7 +495,7 @@ LEXICON ORDTAGODD
 +Pl+Ine:%>inie FINAL1 ;
 +Pl+Ela:%>ijstie FINAL1 ;
 +Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ; !
++Pl+Com+Err/Sub:%>%^DISIMPigyjmie FINAL1 ; !
 +Ess:%>inie FINAL1 ;
 
 LEXICON ORDTAGEVEN-ord
@@ -521,7 +521,7 @@ LEXICON ORDTAGEVEN
 +Pl+Ine:%>ine FINAL1 ;
 +Pl+Ela:%>ijste FINAL1 ;
 +Pl+Com:%>ijgujmie FINAL1 ;
-+Pl+Com+Use/Sub:%>igyjmie FINAL1 ;
++Pl+Com+Err/Sub:%>igyjmie FINAL1 ;
 
 
 
@@ -538,7 +538,7 @@ LEXICON COLLTAG
 +N+Coll+Pl+Ine:%>inie FINAL1 ;
 +N+Coll+Pl+Ela:%>ijstie FINAL1 ;
 +N+Coll+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-+N+Coll+Pl+Com+Use/Sub:%>%^DISIMPigyjmie FINAL1 ;
++N+Coll+Pl+Com+Err/Sub:%>%^DISIMPigyjmie FINAL1 ;
 +N+Coll+Ess:%>inie FINAL1 ;
 
 ! Arabic numerals
@@ -625,21 +625,21 @@ LEXICON ARABICLOOPCOLL
 LEXICON ARABICDELIMITER
 +Num:           ARABICCASE0 ;   ! This is the 1984 case (ie nominative and accusative).
 +Num:%:         ARABICCASE ;    ! This is the 1984:s case.
-+Num+Use/Sub:%> ARABICCASE ;    ! This is the 1984s case.
-+Num+Use/Sub:%' ARABICCASE ;    ! This is the 1984's case.
-+Num+Use/Sub:%- ARABICCASE ;    ! This is the 1984-s case.
++Num+Err/Sub:%> ARABICCASE ;    ! This is the 1984s case.
++Num+Err/Sub:%' ARABICCASE ;    ! This is the 1984's case.
++Num+Err/Sub:%- ARABICCASE ;    ! This is the 1984-s case.
 
 LEXICON ARABICDELIMITERORD
 :%:         ARABICCASEORD ; ! This is the 1984:s case.
-+Use/Sub:%> ARABICCASEORD ; ! This is the 1984s case.
-+Use/Sub:%' ARABICCASEORD ; ! This is the 1984's case.
-+Use/Sub:%- ARABICCASEORD ; ! This is the 1984-s case.
++Err/Sub:%> ARABICCASEORD ; ! This is the 1984s case.
++Err/Sub:%' ARABICCASEORD ; ! This is the 1984's case.
++Err/Sub:%- ARABICCASEORD ; ! This is the 1984-s case.
 
 LEXICON ARABICDELIMITERCOLL
 :%:         ARABICCASECOLL ; ! This is the 1984:s case.
-+Use/Sub:%> ARABICCASECOLL ; ! This is the 1984s case.
-+Use/Sub:%' ARABICCASECOLL ; ! This is the 1984's case.
-+Use/Sub:%- ARABICCASECOLL ; ! This is the 1984-s case.
++Err/Sub:%> ARABICCASECOLL ; ! This is the 1984s case.
++Err/Sub:%' ARABICCASECOLL ; ! This is the 1984's case.
++Err/Sub:%- ARABICCASECOLL ; ! This is the 1984-s case.
 
 
 LEXICON ARABICCASE0
@@ -647,12 +647,12 @@ LEXICON ARABICCASE0
 +Sg+Acc: # ;
 
 LEXICON ARABICCASE
-f+Sg+Nom+Use/Sub:f  # ; ! s. 123f.
-ff+Sg+Nom+Use/Sub:ff # ; ! s. 123ff.
-b+Sg+Nom+Use/Sub:b  # ; ! § 123b
-c+Sg+Nom+Use/Sub:c  # ; ! § 123c
-d+Sg+Nom+Use/Sub:d  # ; ! § 123d
-e+Sg+Nom+Use/Sub:e  # ; ! § 123e
+f+Sg+Nom+Err/Sub:f  # ; ! s. 123f.
+ff+Sg+Nom+Err/Sub:ff # ; ! s. 123ff.
+b+Sg+Nom+Err/Sub:b  # ; ! § 123b
+c+Sg+Nom+Err/Sub:c  # ; ! § 123c
+d+Sg+Nom+Err/Sub:d  # ; ! § 123d
+e+Sg+Nom+Err/Sub:e  # ; ! § 123e
 +Sg+Gen:n          # ;
 +Sg+Acc:m          # ;
 +Sg+Ill:se         # ;
@@ -853,10 +853,10 @@ LEXICON ROMNUMTAG !
 +A+Ord:%. # ; ! !III. as ordinal.
 +A+Ord:   # ;! !Looking for trouble...
 +Num:%:         ROMNUMTAGOBL ; ! IV:se
-+Num+Use/Sub:'7 ROMNUMTAGOBL ; ! IV'se
-+Num+Use/Sub:%- ROMNUMTAGOBL ; ! IV-se
-+Num+Use/Sub:%´ ROMNUMTAGOBL ; ! IV´se
-+Num+Use/Sub:%> ROMNUMTAGOBL ; ! IVse
++Num+Err/Sub:'7 ROMNUMTAGOBL ; ! IV'se
++Num+Err/Sub:%- ROMNUMTAGOBL ; ! IV-se
++Num+Err/Sub:%´ ROMNUMTAGOBL ; ! IV´se
++Num+Err/Sub:%> ROMNUMTAGOBL ; ! IVse
 
 LEXICON ROMNUMTAGOBL !
 +Gen:n # ; ! But here 123a 123
