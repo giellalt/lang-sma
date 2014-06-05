@@ -620,6 +620,8 @@ reejne:reejn e_ES_ODDEVEN2 ;
 gåajpe:gåajp e_ES_ODDEVEN2 ;
 saajke:saajk e_ES_ODDEVEN2 ;
 majke:majk e_ES_ODDEVEN2 ;
+stïerke:stïerk e_ES_ODDEVEN2 ;
+stïerke+Err/Sub:stierk e_ES_ODDEVEN2 ;
 dïeve:dïev e_ES_ODDEVEN2 ; ! Klasse 2 !dïevebe, dïevemes ! e(2)-st. system2 !
 dïhperihks:dïhper ihks_IHKS_igs_IGS_EVENNOCOMP ;
 dæhkijes:dæhkij ijes_ijs_IJE_ODD ;  !  opprinnelig bare attr
@@ -1073,6 +1075,10 @@ gïehtelimmes:gïehtelimme ATTR_S ; !
 gïehtjedimmes:gïehtjedimme ATTR_S ; !
 gïelemaehteles+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïele#maehtiel Ces_CE_ODD ; !Ces_Ce_CES_CE_ODD ;
 gïemhpe+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïemhp e_ES_ODDEVEN2 ; ! attr=gïemhpe (durativ-s) og pred=gïemhpes ! e(2)-st. system2
+
+gïemhpe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Sub:giemp es_ES_EVENNOCOMP1;
+
+
 gïemhpe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:gïemhpe ATTR_S ;
 gïemtjeles+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïemtjel Ces_CES_CE_ODD ; !e(2)-st.
 gïengeles:gïengel Ces_CE_ODD ; ! COMP:IE
@@ -2120,6 +2126,7 @@ nynnehke:nynnehk Ce_CE_ODD ; !'OE' eller 'A'  ! attr. nænnoes, nænnas, nannas,
 nåagkoeh:nåagk oeh_AN_ODD4 ; !
 nåajjoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåajj oeh_ah_AN_ODD_NOCOMP4  ; !UMLAUT!!!!
 nåake: NAAKE ; !LA
+nåake+Err/Sub:nåek e_E_EVENNOCOMP1 ; 
 nåarvoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåarv oeh_ah_AN_ODD_NOCOMP4  ; ! UMLAUT : nåarvoeh - nuarvan
 nåavedeleejnes:nåavede LEEJNES ;
 nåejties+CmpN/SgN+CmpN/SgG+CmpN/PlG:nåejt ies_IE_EVEN3NOCOMP ;
@@ -2200,6 +2207,9 @@ ovluhpehts:ov^luhpieht hts_HTS_ODDNOCOMP ;
 ovluvregs+CmpN/SgN+CmpN/SgG+CmpN/PlG:ovluvreg Cs_CE_ODDNOCOMP ;
 ovmese:ovmese ATTR_0 ;
 ovmessie+Err/Sub:ov-mess ie_IE_EVENNOCOMP ; !  corp
+ovmessie+Err/Sub:ovmess ie_IE_EVENNOCOMP ;! ovmessi - har vi ingen leksikon til enda! 
+
+
 ovmessie:ovmess ie_IE_EVENNOCOMP ; ! this is set as typo in the typos doc, but common in text. This should really be written without hyphen (TO)
 ovmissie:ovmiss ie_IE_EVENNOCOMP ;
 ovmurreds+CmpN/SgN+CmpN/SgG+CmpN/PlG:ovmurried Cs_CS_CE_ODD ; ! COMP:IE
@@ -2442,6 +2452,9 @@ ruaptah:ruapt ah_AN_ODD ; ! åa--> ua?
 ruarhvah:ruarhv ah_AN_ODD ; ! åa--> ua?
 rubrihkeles+OLang/NOB:rubrihkel LES ;
 rudtjege+CmpN/SgN+CmpN/SgG+CmpN/PlG:rudtjeg Ce_CE_ODD ; !EGE= EVEN OD ODD COMP : rudtjebe, rudtjegåbpoe MAJA LISA KAPPFJELL: I think this one goes as 'radtjehke' -a-	arbeidsom, flittig, ivrig' | 'ege' and 'ehke’ are often mixed  pronunciation in south-sámi (ex. vuelegs,vuelehks) I think this one "rudtjege" has the same process of pronunciation as the mentioned examples; this one 'rudtjege' should be splitted and goes as aareh and aarehke, and the comp. is therefor 'rudtjeh-rudtjebe-rudtjemes' and 'rudtjehke-rudtjehkåbpoe-rudtjehkommes'.
+
+rudtjege+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Sub:ruhtjehk HKE_ODD_COMP ; 
+
 rudtjeh:rudtj AAREH ;
 rupmies+CmpN/SgN+CmpN/SgG+CmpN/PlG:rupm ies_IES_IE_EVEN3 ; ! Klasse 3
 russlaanten:russlaante ATTR_N ; !XXX
