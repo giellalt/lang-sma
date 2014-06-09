@@ -20,19 +20,26 @@
 ! translation based upon IPA. There is a switch at the end to get 
 ! SAMPA instaead
 
-! Usage:
-! make GTLANG=sma
-! cat text | preprocess | lookup -flags mbTT bin/phon-sma.fst | ..
+! Usage, in langs/sma
+! ./configure --enable-phonetics
+! make
+! cat text | preprocess | lookup -q src/phonetics/text2ipa-sma.xfst
+
+! You may also add syllable boundaries. Here the simple version
+! (provided you have compiled the hyphenator, with the option
+! ./configure  --enable-fst-hyphenator
+! before you write "make"):
+
+!cat text | preprocess | lookup src/hyphenation/hyphenation.xfst | cut -f2 |lookup -q src/phonetics/text2ipa-sma.xfst | cut -f2 | tr '\n' ' '  | see
+
+! echo "dïhte lea 123" | preprocess | \
+! lookup -q transcriptor-text2numbers-desc.xfst | cut -f2 | \
+! lookup -q lookup src/hyphenation/hyphenation.xfst | cut -f2 | \ 
+! lookup -q src/phonetics/text2ipa-sma.xfst | cut -f2 | tr '\n' ' '
 
 
-! We might also add syllable boundaries. Here the simple version:
-!cat text | preprocess | lookup -flags mbTT -utf8 bin/hyphrules-sma.fst | cut -f2 | lookup -flags mbTT -utf8 bin/phon-sma.fst | cut -f2 | tr '\n' ' '  | see
-
-! echo "dïhte lea 123" | preprocess | 
-! lookup -flags mbTT -utf8 bin/sma-num.fst | cut -f2 |
-! lookup -flags mbTT -utf8 bin/hyphrules-sma.fst | cut -f2 | 
-! lookup -flags mbTT -utf8 bin/phon-sma.fst | cut -f2 | tr '\n' ' ' | l
-
+! Definitions
+! ===========
 
 echo <<defining Cns and Vow...>>
 
@@ -66,6 +73,10 @@ define Syll Cns* Vow+ (ː) Cns*  ;
 ! define Syll Cns* Vow+ Cns* (Dummy) Cns* (ə) %^ ;
 
 
+
+! Rules
+! =====
+
 echo << Rules>>
 
 define down [ A -> a, Á -> á, B -> b, C -> c, Č -> č, D -> d, E -> e, F -> f, 
@@ -95,6 +106,10 @@ define oeDiph o e -> u ə ;
 !define uvLengthening o v -> u u v ;
 
 define aeRule  a e -> æ ː ;
+
+! Missing: Rule for lengthening second syllable a, like in maana -> maanaa
+! define a2syllLengthening a -> a a || .#. Cns* Vow+ Cns+ _ [ Cns | .#. ] ;
+
 
 define Diphthong a -> æ || e _ ;
 
