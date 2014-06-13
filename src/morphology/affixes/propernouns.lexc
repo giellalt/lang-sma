@@ -588,7 +588,7 @@ LEXICON PIPPI-LOAN-plc
 
 LEXICON MAKI-sur
  +N+Prop+Sem/Sur+Use/NG: RITCHIE-sur    ;
-        +N+Prop+Sem/Sur: PN_I_FINSK-sur ;
+ PN_I_FINSK-sur ;
 
 !LEXICON MAKI-obj
 !+N+Prop+Sem/Obj: RITCHIE-obj ;
@@ -599,8 +599,8 @@ LEXICON MAKI-sur
 !+N+Prop+Sem/Ani: PN_I_FINSK-ani ;
 
 LEXICON MAKI-plc
-        +N+Prop+Sem/Plc: PN_I_FINSK-plc ;
- +N+Prop+Sem/Plc+Use/NG: RITCHIE-plc    ;
+    PN_I_FINSK-plc ;
+    RITCHIE-plc    ;
 
 LEXICON MAKI-LOAN-plc
  MAKI-plc ;
@@ -610,7 +610,8 @@ LEXICON MAKI-LOAN-plc
 
 
 LEXICON GATA-plc
- :gat SNAME_NIEJTE-plc ;
+  :gata SNAME_NIEJTE-plc ;
+
 
 
 LEXICON ACCRA-LOAN-obj
@@ -1053,16 +1054,16 @@ LEXICON PN_IE ! as N_IE, but with Prop tag
  +Attr:ie FINAL1   ;
 
 LEXICON PN_I_FINSK
-     +N+Prop+Sem/Plc+Sg+Nom:i      FINAL1 ;
+                    +Sg+Nom:i      FINAL1 ;
             +N+Prop+Sem/Plc:i%>n   RHyph  ;
-     +N+Prop+Sem/Plc+Sg+Acc:e%>m   FINAL1 ;
-     +N+Prop+Sem/Plc+Sg+Gen:e%>n   FINAL1 ;
+                     +Sg+Acc:e%>m   FINAL1 ;
+                     +Sg+Gen:e%>n   FINAL1 ;
 !+N+Prop+Sem/Plc+Sg+Ill:%>an             FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
- +N+Prop+Sem/Plc+Sg+Ill+Uml:an     FINAL1 ;
-     +N+Prop+Sem/Plc+Sg+Ine:e%>sne FINAL1 ;
-     +N+Prop+Sem/Plc+Sg+Ela:e%>ste FINAL1 ;
-     +N+Prop+Sem/Plc+Sg+Com:%>ine  FINAL1 ;
- +N+Prop+Sem/Plc+Sg+Com+Uml:ine    FINAL1 ;
+                    +Sg+Ill+Uml:an     FINAL1 ;
+                    +Sg+Ine:e%>sne FINAL1 ;
+                    +Sg+Ela:e%>ste FINAL1 ;
+                    +Sg+Com:%>ine  FINAL1 ;
+                    +Com+Uml:ine    FINAL1 ;
 !+N+Prop+Sem/Plc+Pl: N_IE_PL ;
 !+N+Prop+Sem/Plc:    N_IE_ESS ;
 !+N+Prop+Sem/Plc+Attr:ie%>n FINAL1 ;
