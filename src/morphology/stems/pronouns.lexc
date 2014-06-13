@@ -68,6 +68,7 @@ LEXICON Personal
 !! New lemma form, now number as baseform, due to Oahpa
 
 manne+Pron+Pers+Sg1+Gen:mov # ; ! Added to fill the gap, remove this or previous
+manne+Pron+Pers+Sg1+Gen+Err/Sub:muv # ; 
 manne+Pron+Pers+Sg1:m firstperspronsg ;
 månnoeh+Pron+Pers+Du1:m firstpersprondu ;
 mijjieh+Pron+Pers+Pl1:m perspronpl ;
@@ -93,6 +94,7 @@ LEXICON nonfirstperspronsg
 !! for __@LEXNAME@__ the 2nd and 3rd are identical
 :atne longproncase ;
 +Gen:ov FINAL1 ;
++Gen+Err/Sub:uv FINAL1 ;
 +Ill:utnjien FINAL1 ;
 +Ill+Use/NG:utnjan FINAL1 ;
 
@@ -102,19 +104,21 @@ LEXICON nonfirstperspronsg
 
 LEXICON firstpersprondu  !!= * @CODE@
 +Nom:ånnoeh FINAL1 ;
-+Nom+Use/NG+Err/Sub:onnoej FINAL1 ;
++Nom+Use/NG+Err/Sub:onnoeh firstpersprondu ;
 +Gen:onnen FINAL1 ;
++Gen+Use/NG+Err/Sub:onnoej FINAL1 ;
 +Ill:onnese FINAL1 ;
 +Err/Sub:onne longproncase ;
 
 LEXICON nonfirstpersprondu  !!= * @CODE@
 +Nom:åtnoeh FINAL1 ;
-+Nom+Use/NG+Err/Sub:otnoej FINAL1 ;
++Nom+Use/NG+Err/Sub:otnoeh FINAL1 ;
++Gen+Use/NG+Err/Sub:otnoej FINAL1 ;
 +Gen:otnen FINAL1 ;
 +Ill:otnese FINAL1 ;
 +Err/Sub:otne longproncase ;
 
-
+!  sotnoeh+Pron+Logo+Du3+Err/Sub:s nonfirstpersprondu ;
 
 !! !Lexica for pl
 ! - - - - - - -
@@ -123,7 +127,9 @@ LEXICON perspronpl  !!= * @CODE@
 +Nom:ijjieh FINAL1 ;
 +Nom+Use/NG:ijje FINAL1 ;
 +Acc:ijjem FINAL1 ;
++Acc+Err/Sub:ijjiem FINAL1 ;
 +Gen:ijjen FINAL1 ;
++Gen+Err/Sub:ijjien FINAL1 ;
 +Ill:ijjese FINAL1 ;
 +Ill+Use/NG:ijjide FINAL1 ;
 +Ine:ijjesne FINAL1 ;
