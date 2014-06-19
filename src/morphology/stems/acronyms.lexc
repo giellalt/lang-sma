@@ -910,6 +910,7 @@ LEXICON ACRO              ! Here we add the POS tag
 LEXICON acroconnector     ! Here comes a set of possible symbols to ...
                acronull ; ! SgNom only in sma
          :%>%: acrosuff ;
+ +Err/Sub:%>%- acrosuff ; 
  +Err/Sub:%>   acrosuff ; ! ... put between the abbreviation and its suffix
  +Err/Sub:%>'  acrosuff ; ! No POS tag here in order to avoid the POS
  +Err/Sub:%>%´ acrosuff ; ! tag for non-ACRO entries using the acroconnector
@@ -929,6 +930,7 @@ LEXICON acrosuff
 +Sg+Acc:m       # ;
 +Sg+Ill:se      # ;
 +Sg+Ine:sne     # ;   ! NRK:sne
++Sg+Ine+Err/Sub:esne     # ;   ! NRK:esne
 +Sg+Ela:ste     # ;   ! NRK:ste
 +Sg+Com:ine     # ;
 +Pl+Nom:h       # ;
