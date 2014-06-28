@@ -70,7 +70,7 @@ LEXICON ERVASTI-fem
   ERVASTI ;
 
 LEXICON ERVASTI-obj
- ERVASTI ;
+ +N+Prop+Sem/Obj: ERVASTI ;
 
 LEXICON ERVASTI ! Names ending in stressless vowel
    +Sg:          N_ODD_SG  ;
@@ -150,6 +150,7 @@ LEXICON N_ODD_PL_NO_DISIMPH
          +Ela:%>ijstie  FINAL1 ;
          +Com:%>igujmie FINAL1 ;
  +Com+Err/Sub:%>igyjmie FINAL1 ; !
+ +Com+Err/Sub:%>igojmie FINAL1 ; !
 
 
 !LEXICON VNAME_EVEN ! Names ending in stressless vowel
@@ -158,6 +159,10 @@ LEXICON N_ODD_PL_NO_DISIMPH
 !+N+Prop+Sem/Plc+Pl: NIEJTE_PL ;
 !+N+Prop+Sem/Plc:    EVEN_ESS ;
 !+N+Prop+Sem/Plc+Attr:e FINAL1 ;
+
+
+
+
 
 LEXICON VNAME-plc
  +N+Prop+Sem/Plc: ACCRA_PLC-ORG ;
@@ -184,11 +189,11 @@ LEXICON ACCRA-org
 ACCRA_PLC-ORG ;
 
 LEXICON ACCRA-sur
- +N+Prop+Sur: ACCRA ;
++N+Prop+Sur: ACCRA ;
 
 LEXICON ACCRA-mal       
- +N+Prop+Sem/Mal: ACCRA ;
- +Der1+Der/Dimin+N:%»tj GÅATETJE    ; ! Arve->Arvetje, Andy->Andytje, 
++N+Prop+Sem/Mal: ACCRA ;
++Der1+Der/Dimin+N:%»tj GÅATETJE    ; ! Arve->Arvetje, Andy->Andytje, 
 
 LEXICON ACCRA-fem         
  +N+Prop+Sem/Fem: ACCRA ;
@@ -196,7 +201,7 @@ LEXICON ACCRA-fem
 
 LEXICON ACCRA-obj
  +N+Prop+Sem/Obj: ACCRA ;
-
+ 
 LEXICON ACCRA-ani
  +N+Prop+Sem/Ani: ACCRA ;
 
@@ -216,9 +221,14 @@ LEXICON ACCRA
  +Pl+Ill:%>ide            FINAL1 ; !OBS ai:i
  +Pl+Ine:%>ine            FINAL1 ; !OBS ai:i
  +Pl+Ela:%>jste           FINAL1 ; !OBS ai:i
+ +Pl+Ela+Err/Sub:%>jstie  FINAL1 ; !OBS ai:i
  +Pl+Com:%>jgujmie        FINAL1 ;
+ +Pl+Com+Err/Sub:%>jgyjmie        FINAL1 ;
     +Ess:%>jne            FINAL1 ; !OBS ai:i
    +Attr:                 FINAL1 ;
+   
+   
+   
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
 ! the appropriate even syllable lexicons.
 
@@ -253,6 +263,7 @@ LEXICON VNAME
  +Pl+Ine:%>jne     FINAL1 ;
  +Pl+Ela:%>jste    FINAL1 ;
  +Pl+Com:%>jgujmie FINAL1 ;
+ +Pl+Com+Err/Sub:%>jgyjmie FINAL1 ;
     +Ess:%>jne     FINAL1 ;
    +Attr:          FINAL1 ;
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
@@ -345,8 +356,15 @@ LEXICON LONDON-atr
  +N+Prop+Attr: FINAL1 ;
       +N+Prop: RHyph  ;
 
-LEXICON LONDON-obj
+LEXICON LONDON-obj  !!= @CODE@  Objects. ODD-syllable
  +N+Prop+Sem/Obj: CNAME_ODD ;
+ 
+!!€gt-norm: Windows # Odd-syllable test
+!!€ Windows                Windows	Windows+N+Prop+Sem/Obj+Attr
+!!€ Windows	               Windows+N+Prop+Sem/Obj+Sg+Nom
+!!€ Windowsasse            Windows+N+Prop+Sem/Obj+Sg+Ill
+!!€ Windowsistie	       Windows+N+Prop+Sem/Obj+Sg+Ela
+
 
 LEXICON LONDON-org
  +N+Prop+Sem/Org: CNAME_ODD_PLC-ORG ;
@@ -1061,6 +1079,9 @@ LEXICON PN_IE ! as N_IE, but with Prop tag
    +Pl:   N_IE_PL  ;
           N_IE_ESS ;
  +Attr:ie FINAL1   ;
+ 
+ 
+ 
 
 LEXICON PN_I_FINSK
                     +Sg+Nom:i      FINAL1 ;
@@ -1225,6 +1246,8 @@ LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
                 EVEN_ESS   ;
    +Attr:a      FINAL1     ;
 
+
+
 LEXICON SNAME_MAANA_PLC-ORG ! as MAANA, but with Prop tag
      +Sg:       MAANASGNOM ;
  +Sg+Acc:a%>m   FINAL1     ;
@@ -1237,6 +1260,8 @@ LEXICON SNAME_MAANA_PLC-ORG ! as MAANA, but with Prop tag
 !+Pl: MAANA_PL ;
                 EVEN_ESS   ;
    +Attr:a      FINAL1     ;
+   
+   
 
 LEXICON SNAME_MAANA-LOAN ! as MAANA, but with Prop tag
                       +N+Prop+Sem/Plc+Sg+Nom:a         FINAL1   ;
@@ -1270,6 +1295,8 @@ LEXICON SNAME_MAANA_PLUR ! as MAANA, but with Prop tag
     +N+Prop+Sem/Plc:a%>j RHyph    ;
     +N+Prop+Sem/Plc:     EVEN_ESS ;
 !+N+Prop+Sem/Plc+Attr:a%>h FINAL1 ;
+
+
 
 LEXICON JÆLLAN ! as MAANA, but with Prop tag
  +N+Prop+Sem/Plc+Sg+Nom:a%>n   FINAL1   ;
@@ -1391,20 +1418,53 @@ LEXICON SNAME_NIEJTE_PLUR ! as NIEJTE, but with Prop tag
  +N+Prop+Sem/Plc+Pl:    NIEJTE_PL ;
     +N+Prop+Sem/Plc:%>i RHyph     ;
     +N+Prop+Sem/Plc:    EVEN_ESS  ;
-!+N+Prop+Sem/Plc+Attr:%>h FINAL1 ;
+
+
+
+
+
 
 LEXICON STAABREH ! as NIEJTE, but with Prop tag
-        +N+Prop+Sem/Plc:e%>       RHyph    ;
- +N+Prop+Sem/Plc+Pl+Nom:e%>h      FINAL1   ;
- +N+Prop+Sem/Plc+Pl+Acc:%>ide     FINAL1   ;
- +N+Prop+Sem/Plc+Pl+Gen:%>i       FINAL1   ;
-        +N+Prop+Sem/Plc:%>i       RHyph    ;
- +N+Prop+Sem/Plc+Pl+Ill:%>ide     FINAL1   ;
- +N+Prop+Sem/Plc+Pl+Ine:%>ine     FINAL1   ;
- +N+Prop+Sem/Plc+Pl+Ela:%>ijste   FINAL1   ;
- +N+Prop+Sem/Plc+Pl+Com:%>igujmie FINAL1   ;
-        +N+Prop+Sem/Plc:          EVEN_ESS ;
-!+N+Prop+Sem/Plc+Attr:e%>h FINAL1 ;
+        :e%>       RHyph    ;
+ +Pl+Nom:e%>h      FINAL1   ;
+ +Pl+Nom:h         FINAL1   ;
+ +Pl+Acc:%>ide     FINAL1   ;
+ +Pl+Gen:%>i       FINAL1   ;
+        :%>i       RHyph    ;
+ +Pl+Ill:%>ide     FINAL1   ;
+ +Pl+Ine:%>ine     FINAL1   ;
+ +Pl+Ela:%>ijste   FINAL1   ;
+ +Pl+Com:%>igujmie FINAL1   ;
+ +Pl+Com+Err/Sub:%>igyjmie FINAL1   ;
+        :          EVEN_ESS ;
+
+
+LEXICON STAABREH-Sem/Plc
+ +N+Prop+Sem/Plc: STAABREH ;
+
+
+LEXICON STAABREH-org
+ +N+Prop+Sem/Org: STAABREH ;
+
+
+!LEXICON STAABREH-ani
+! +N+Prop+Sem/Ani: STAABREH ;
+!
+!LEXICON STAABREH-mal
+! +N+Prop+Sem/Mal: STAABREH ;
+!
+!LEXICON STAABREH-fem
+! +N+Prop+Sem/Fem: STAABREH ;
+!
+!LEXICON STAABREH-sur
+! +N+Prop+Sem/Sur: STAABREH ;
+!
+!
+!LEXICON STAABREH-obj
+! +N+Prop+Sem/Obj: STAABREH ;
+
+
+
 
 
 LEXICON AEKTUVE
