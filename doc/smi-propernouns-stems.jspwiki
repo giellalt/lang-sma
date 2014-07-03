@@ -5,13 +5,9 @@ This file is copied from the common __gtcore__ directory
 and ''shall not'' be edited in the __langs__ directory.
 
 
-!!!General notes
 
-The entries are tagged for language, to satisfy the needs of the 
-synthetic speech project.
 
-!!!Language-specific notes
-!!This file (smi-propernouns.lexc) when applied to sme
+!!!This file (smi-propernouns.lexc) applied to sme
 
 
 This file was originally written for sme, and is copied directly to
@@ -27,29 +23,25 @@ Documenting (parts of) the lexicon structure for sme:
 
 
 
-!!This file (smi-propernouns.lexc) when applied to sma, smj and smn.
+!!!This file (smi-propernouns.lexc) applied to sma and smj
 
-For sma, smj and smn, there is a script, {{src/scripts/smi-sma-conversion.pl}}
-changing the lexicon names from sme-style to sma/smj/smn-style. The resulting
+For sma and smj, there is a script, {{src/scripts/smi-sma-conversion.pl}}
+changing the lexicon names from sme-style to sma/smj-style. The resulting
 file is {{src/morphology/stems/smi-sma-propernouns.lexc}}, with the content
 of this file following the text ''Dump from SMI''. This is governed in 
 ''src/morphology/Makefile.am''
 
-
-!!Modifications for sma
-__MAKI__ er for finske i-finale navn hvor sørsamisk og lulesamisk følger ulike
-mønster. PIPPi i smj, ACCRA i sme og sma.
-
-!!Modifications for sma
 __BETFAGE__ er spesifikk for lulesamisk, og er identisk med ACCRA for dei andre
 samiske språka. BETFAGE skal brukast ved e-finale ACCRA-ord.
 
-!!Modifications for smn
+__MAKI__ er for finske i-finale navn hvor sørsamisk og lulesamisk følger ulike
+mønster. PIPPi i smj, ACCRA i sme og sma.
 
 ----
 
 The beginning of this file (''smi-propernouns.lexc'') looks as follows 
 (and thereafter 31000 similar lines follow):
+
 
 
  A-ha+OLang/NOB:A-ha ACCRA-org ;			     \\
