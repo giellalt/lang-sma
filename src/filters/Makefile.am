@@ -19,7 +19,7 @@
 ############## BEGIN: Local modifications ###############
 # List any local filter regex files here:
 GIELLA_FILTER_LOCAL_REGEX_SRCS=\
-			   focus-filter.regex \
+			   remove-rel_focus-strings.regex \
 			   remove-test-tags.regex \
 			   remove-Dial_L-strings.regex \
 			   remove-illegal-derivation-strings.regex
