@@ -55,34 +55,36 @@ Fail=0
 for f in $fsttype; do
 	if [ $f == "xfst" ]; then
 		lookuptool="@LOOKUP@ -q -flags mbTT"
+		suffix="xfst"
 	elif [ $f == "hfst" ]; then
 		lookuptool="@HFST_LOOKUP@ -q"
+		suffix="hfstol"
 	else
 	    Fail=1
 		echo "Unknown fst type!"
 	    echo "$f - FAIL"
 	    continue
 	fi
-	if [ -f "$generatorfile.$f" ]; then
+	if [ -f "$generatorfile.$suffix" ]; then
 		let "transducer_found += 1"
 
 #### First we try to generate the regular adjectives:
-		sed 's/$/+A+Attr/' adjs.tmp.txt | $lookuptool $generatorfile.$f \
+		sed 's/$/+A+Attr/' adjs.tmp.txt | $lookuptool $generatorfile.$suffix \
 			| cut -f2 | grep -v "A+" | grep -v "^$" | sort -u > analadjs.$f.txt 
 
 #### Then we try to generate the predicate-only adjectives:
 		sed 's/$/+A+Sg+Nom/' predadjs.txt \
-			| $lookuptool $generatorfile.$f | cut -f2 \
+			| $lookuptool $generatorfile.$suffix | cut -f2 \
 			| grep -v "A+" | grep -v "^$" | sort -u >> analadjs.$f.txt 
 
 #### Then we try to generate the predicate-only adjectives:
 		sed 's/$/+A+Superl+Sg+Nom/' superladjs.txt \
-			| $lookuptool $generatorfile.$f | cut -f2 \
+			| $lookuptool $generatorfile.$suffix | cut -f2 \
 			| grep -v "A+" | grep -v "^$" | sort -u >> analadjs.$f.txt 
 
 #### Then we try to generate the predicate-only adjectives:
 		sed 's/$/+A+Comp+Sg+Nom/' compladjs.txt \
-			| $lookuptool $generatorfile.$f | cut -f2 \
+			| $lookuptool $generatorfile.$suffix | cut -f2 \
 			| grep -v "A+" | grep -v "^$" | sort -u >> analadjs.$f.txt 
 
 		cat predadjs.txt superladjs.txt compladjs.txt >> adjs.tmp.txt
