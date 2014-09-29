@@ -49,34 +49,36 @@ Fail=0
 for f in $fsttype; do
 	if [ $f == "xfst" ]; then
 		lookuptool="@LOOKUP@ -q -flags mbTT"
+		suffix="xfst"
 	elif [ $f == "hfst" ]; then
 		lookuptool="@HFST_LOOKUP@ -q"
+		suffix="hfstol"
 	else
 	    Fail=1
 		echo "Unknown fst type!"
 	    echo "$f - FAIL"
 	    continue
 	fi
-	if [ -f "$generatorfile.$f" ]; then
+	if [ -f "$generatorfile.$suffix" ]; then
 		let "transducer_found += 1"
 
 ###### Test non-compounds: #######
 		# generate nouns in Singular, extract the resulting generated lemma,
 		# store it:
-		sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
+		sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$suffix \
 			| cut -f2 | fgrep -v "+N+Sg" | grep -v "^$" | sort -u \
 			> analnouns.$f.txt 
 		# Generate nouns, extract those that do not generate in singular,
 		# generate the rest in plural:
-		sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
+		sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$suffix \
 			| cut -f2 | grep "N+" | cut -d "+" -f1 | sed 's/$/+N+Pl+Nom/' \
-			| $lookuptool $generatorfile.$f | cut -f2 \
+			| $lookuptool $generatorfile.$suffix | cut -f2 \
 			| grep -v "^$" >> analnouns.$f.txt 
 
 ###### Test compounds: #######
 		# Test nouns that only can generate as compounds:
 		sed 's/$/+N+Cmp#gåetie+N+Sg+Nom/' Rnouns.txt \
-			| $lookuptool $generatorfile.$f | cut -f2 | sed 's/gåetie$//' \
+			| $lookuptool $generatorfile.$suffix | cut -f2 | sed 's/gåetie$//' \
 			| grep -v '^$' > Ranalnouns.$f.txt
 
 ###### Collect results: #######
