@@ -67,7 +67,7 @@ generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 				@\"filters/remove-test-tags.hfst\" \
 			.o. @\"$<\" \
 			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		> $@
 
 analyser-raw-gt-desc.xfst: analyser-raw-gt-desc.tmp.xfst \
@@ -88,7 +88,7 @@ generator-dict-gt-norm.hfst: generator-dict-gt-norm.tmp.hfst \
 			.o. @\"filters/remove-number-string-tags.hfst\"  \
 			.o. @\"$<\"                                      \
 			;" \
-		| $(HFST_REGEXP2FST) $(VERBOSITY) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(VERBOSITY) $(HFST_FLAGS) -S --xerox-composition=ON \
 		> $@
 
 generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \

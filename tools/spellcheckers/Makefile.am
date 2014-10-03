@@ -28,7 +28,7 @@ generator-speller-gt-norm.hfst: generator-speller-gt-norm.tmp.hfst \
 		.o. @\"$(top_builddir)/src/filters/remove-homonymy-tags.hfst\" \
 		.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\" \
 			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		> $@
 
 analyser-speller-gt-norm.xfst: analyser-speller-gt-norm.tmp.xfst \
