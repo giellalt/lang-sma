@@ -27,7 +27,7 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 	.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\"    \
    	.o. @\"$<\" \
     	;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_INVERT) \
 		> $@
 
@@ -42,7 +42,7 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 	.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\"      \
    	.o. @\"$<\" \
     	;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		> $@
 
 ##################################################################
