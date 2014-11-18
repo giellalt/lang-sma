@@ -1,3 +1,5 @@
+
+
 ! Divvun & Giellatekno - open source grammars for Sámi and other languages
 ! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
 ! http://giellatekno.uit.no & http://divvun.no
@@ -19,40 +21,40 @@
 
 Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
-!!  !!Tags for POS
-+N	     !!= * @CODE@
-+A	     !!= * @CODE@
-+Adv     !!= * @CODE@
-+V	     !!= * @CODE@
+!!  !!Tags for POS (Part-Of-Speech, Word class)
++N	     !!= * __@CODE@__ = Noun
++A	     !!= * __@CODE@__ = Adjective
++Adv     !!= * __@CODE@__ = Adverb
++V	     !!= * __@CODE@__ = Verb
 
-+Pron    !!= * @CODE@
-+CS	     !!= * @CODE@
-+CC	     !!= * @CODE@
-+Po	     !!= * @CODE@
-+Pr	     !!= * @CODE@
-+Interj  !!= * @CODE@
-+Pcle    !!= * @CODE@
-+Num     !!= * @CODE@
++Pron    !!= * __@CODE@__ = Pronomen
++CS	     !!= * __@CODE@__ = Subjunction
++CC	     !!= * __@CODE@__ = Conjunction
++Po	     !!= * __@CODE@__ = Postposition
++Pr	     !!= * __@CODE@__ = Preposition
++Interj  !!= * __@CODE@__ = Interjection
++Pcle    !!= * __@CODE@__ = Participle?
++Num     !!= * __@CODE@__ = Numerals
 
 +Logo    !!= * @CODE@
 
 
                                                !!  !Tags for sub-POS
 !! !!Proper nouns
-+Prop     !!= * @CODE@
++Prop     !!= * @CODE@__ =
 
 !! !!Pronoun subtypes
-+Pers    !!= * @CODE@
-+Dem     !!= * @CODE@
-+Interr  !!= * @CODE@
-+Refl    !!= * @CODE@
-+Recipr  !!= * @CODE@
-+Rel     !!= * @CODE@
-+Indef   !!= * @CODE@
-+Coll    !!= * @CODE@ :  Collective numeral
++Pers    !!= * @CODE@__ = Personal
++Dem     !!= * @CODE@__ = Demonstrative
++Interr  !!= * @CODE@__ = Interrogative
++Refl    !!= * @CODE@__ = Reflexive
++Recipr  !!= * @CODE@__ = Reciprocal
++Rel     !!= * @CODE@__ = Relative
++Indef   !!= * @CODE@__ = Indefinite
++Coll    !!= * @CODE@__ = Collective numeral
 
                    !!  || Usage tags || Explanation
-+Err/Sub         !!≈ | @CODE@ | Substandard
++Err/Sub         !!≈ | @CODE@__ = Substandard, (word is misspelt according to norm)
 +Use/Marg        !!≈ | @CODE@ | Marginal
 +Use/-Spell      !!≈ | @CODE@ | Excluded from speller
 +Use/SpellNoSugg !!≈ | @CODE@ | recognized but not suggested in speller
@@ -67,8 +69,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 +Dial/-S   !!≈ | @CODE@ | Not in the South
 +Dial/-N   !!≈ | @CODE@ | Not in the North
-+Dial/-NOR !!≈ | @CODE@ | Not in Norway
-+Dial/-SW  !!≈ | @CODE@ | Not in Sweden
++Dial/-NOR !!≈ | @CODE@ | Words not in Norway
++Dial/-SW  !!≈ | @CODE@ | Words not in Sweden
 +Dial/SH   !!≈ | @CODE@ | Short forms
 +Dial/L    !!≈ | @CODE@ | Long forms
 
