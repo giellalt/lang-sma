@@ -55,15 +55,15 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
                    !!  || Usage tags || Explanation
 +Err/Sub         !!≈ | @CODE@__ = Substandard, (word is misspelt according to norm)
-+Use/Marg        !!≈ | @CODE@ | Marginal
-+Use/-Spell      !!≈ | @CODE@ | Excluded from speller
-+Use/SpellNoSugg !!≈ | @CODE@ | recognized but not suggested in speller
-+Use/Circ        !!≈ | @CODE@ | Circular path
-+Use/CircN       !!≈ | @CODE@ | Circular number path
-+Use/Ped         !!≈ | @CODE@ | Remove from pedagogical speller
-+Use/NG          !!≈ | @CODE@ | Do not generate \\ for isme-ped.fst and apertium
-+Use/MT          !!≈ | @CODE@ | Generate for apertium only
-+Use/LexSub      !!≈ | @CODE@ | The lemma is not a South Sami word
++Use/Marg        !!≈ | @CODE@__ = Marginal?
++Use/-Spell      !!≈ | @CODE@__ = Excluded from speller
++Use/SpellNoSugg !!≈ | @CODE@__ = Recognized but not suggested in speller
++Use/Circ        !!≈ | @CODE@__ = Circular path?
++Use/CircN       !!≈ | @CODE@__ = Circular number path?
++Use/Ped         !!≈ | @CODE@__ = Remove from pedagogical speller
++Use/NG          !!≈ | @CODE@__ = Do not generate \\ for isme-ped.fst and apertium
++Use/MT          !!≈ | @CODE@__ = Generate for apertium only
++Use/LexSub      !!≈ | @CODE@__ = The lemma is not a South Sami word
 
            !!  !!Dialect tags:
 
@@ -128,42 +128,42 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
                                                   !! !Tags for Case and Number Inflection
 !! !!Case and number
-+Sg	   !!= * @CODE@
-+Pl	   !!= * @CODE@
++Sg	   !!= * @CODE@__ = Singular
++Pl	   !!= * @CODE@__ = Plural
 
-+Nom   !!= * @CODE@
-+Acc   !!= * @CODE@
-+Gen   !!= * @CODE@
-+Ine   !!= * @CODE@
-+Ela   !!= * @CODE@
-+Ill   !!= * @CODE@
-+Com   !!= * @CODE@
-+Ess   !!= * @CODE@
++Nom   !!= * @CODE@__ = Nominative
++Acc   !!= * @CODE@__ = Ackusative
++Gen   !!= * @CODE@__ = Genitive
++Ine   !!= * @CODE@__ = Inesive
++Ela   !!= * @CODE@__ = Elative
++Ill   !!= * @CODE@__= Illative
++Com   !!= * @CODE@__= Comitative
++Ess   !!= * @CODE@__ = Essive
 
 
 !! !!Px
-  +PxSg1                            !!= * @CODE@  Possessives Singular
-  +PxSg2                            !!= * @CODE@  Possessives Singular
-  +PxSg3                            !!= * @CODE@  Possessives Singular
-  +PxDu1                            !!= * @CODE@  Possessives Dual
-  +PxDu2                            !!= * @CODE@  Possessives Dual
-  +PxDu3                            !!= * @CODE@  Possessives Dual
-  +PxPl1                            !!= * @CODE@  Possessives Plural
-  +PxPl2                            !!= * @CODE@  Possessives Plural
-  +PxPl3                            !!= * @CODE@  Possessives Plural
+  +PxSg1                            !!= * @CODE@__ =  Possessives Singular
+  +PxSg2                            !!= * @CODE@__ =  Possessives Singular
+  +PxSg3                            !!= * @CODE@__ =  Possessives Singular
+  +PxDu1                            !!= * @CODE@__ =  Possessives Dual
+  +PxDu2                            !!= * @CODE@__ =  Possessives Dual
+  +PxDu3                            !!= * @CODE@__ =  Possessives Dual
+  +PxPl1                            !!= * @CODE@__ =  Possessives Plural
+  +PxPl2                            !!= * @CODE@__ =  Possessives Plural
+  +PxPl3                            !!= * @CODE@__ =  Possessives Plural
 
-  +Prs                                       !!≈ | @CODE@ | Tense
-  +Prt                                       !!≈ | @CODE@ | Tense
+  +Prs                                       !!≈ | @CODE@__ = Presens
+  +Prt                                       !!≈ | @CODE@__ = Preteritum
 
-  +Sg1                                  !!≈ | @CODE@ | Singular
-  +Sg2                                  !!≈ | @CODE@ | Singular
-  +Sg3                                  !!≈ | @CODE@ | Singular
-  +Du1                                  !!≈ | @CODE@ | Dual
-  +Du2                                  !!≈ | @CODE@ | Dual
-  +Du3                                  !!≈ | @CODE@ | Dual
-  +Pl1                                  !!≈ | @CODE@ | Plural
-  +Pl2                                  !!≈ | @CODE@ | Plural
-  +Pl3                                  !!≈ | @CODE@ | Plural
+  +Sg1                                  !!≈ | @CODE@__ = Singular, 1.person 
+  +Sg2                                  !!≈ | @CODE@__ = Singular, 2.person
+  +Sg3                                  !!≈ | @CODE@__ = Singular, 3.person
+  +Du1                                  !!≈ | @CODE@__ = Dual    , 1.person
+  +Du2                                  !!≈ | @CODE@__ = Dual    , 2.person
+  +Du3                                  !!≈ | @CODE@__ = Dual    , 3.person
+  +Pl1                                  !!≈ | @CODE@__ = Plural  , 1.person
+  +Pl2                                  !!≈ | @CODE@__ = Plural  , 2.person
+  +Pl3                                  !!≈ | @CODE@__ = Plural  , 3.person
 
   +Neg    !!≈ | @CODE@ | negation verb ij
   +ConNeg !!≈ | @CODE@ | main verb complement to Neg, form identical to Imp
@@ -172,16 +172,17 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
   +Inf    !!≈ ; @CODE@ : Infinitive and participles
   +PrfPrc !!≈ ; @CODE@ : Infinitive and participles
   +PrsPrc !!≈ ; @CODE@ : Infinitive and participles
-  +Ger            !!≈ ; @CODE@ : Gerund
-  +VGen           !!≈ ; @CODE@ : Gerund
+  +Ger            !!≈ ; @CODE@ : Gerundium 
+  +VGen           !!≈ ; @CODE@ : Verbgenitive
 
   +Ind   !!≈ ; @CODE@ : Indicative
   +Imprt !!≈ ; @CODE@ : Imperative
-  +Cond  !!≈ ; @CODE@ : for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
-! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21)
+  +Cond  !!≈ ; @CODE@ : Kondisjonalis, for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
+! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21, Bergsland; )
   +Act   !!≈ ; @CODE@ : -eme, could be chagned to +Actio
 
                 !! !Tags for adjectives
+                
   +Comp +Superl !!≈ ; @CODE@ : Comparation
   +Attr         !!≈ ; @CODE@ : Attribute form
   +Ord          !!≈ ; @CODE@ : Ordinal number
@@ -189,12 +190,13 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
              !! !!Other tags
   +ABBR +ACR !!≈ ; @CODE@ : Abbreviation, acronym
   +TV +IV    !!≈ ; @CODE@ : Transitivity tags
-  +Multi     !!≈ ; @CODE@ : Multiword phrase tag
-  +Guess     !!≈ ; @CODE@ : for the name guesser
-  +LOAN      !!≈ ; @CODE@ : ad hoc tag for development purposes.
-  +Hyph      !!≈ ; @CODE@ : A tag to indicate that a hyphen was used when compounding
+  +Multi     !!≈ ; @CODE@ : Multiword phrase tag ?
+  +Guess     !!≈ ; @CODE@ : for the name guesser ?
+  +LOAN      !!≈ ; @CODE@ : ad hoc tag for development purposes ?
+  +Hyph      !!≈ ; @CODE@ : A tag to indicate that a hyphen was used when compounding?
 
               !! !Tags for testing the frequency of certain phenomenas in our corpora
+              
   +Test/LysI  !!≈ ; @CODE@ : form uses i
   +Test/MørkI !!≈ ; @CODE@ : form uses ï
   +Test/HK    !!≈ ; @CODE@ : form uses consonant cluster hk
@@ -204,22 +206,26 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
   +NoUml      !!≈ ; @CODE@ : A tag to indicate the lack of realised or potential Umlaut
 
                            !! !Tags for punctuation
+                           
   +CLB   !!≈ ; @CODE@ : XXX These should be documented better
   +PUNCT !!≈ ; @CODE@ : XXX These should be documented better
   +LEFT  !!≈ ; @CODE@ : XXX These should be documented better
   +RIGHT !!≈ ; @CODE@ : XXX These should be documented better
+  
 
               !! !Different focus particles
-  +Foc        !!≈ ; @CODE@ : XXX Document better
-  +Foc/ge     !!≈ ; @CODE@ : XXX Document better
-  +Foc/gan    !!≈ ; @CODE@ : XXX Document better
-  +Foc/gih    !!≈ ; @CODE@ : XXX Document better
-  +Foc/gænnah !!≈ ; @CODE@ : XXX Document better
-
-
-                !! !!Semantic tags to help disambiguation & synt. analysis:
- +Sem/Mal !!≈ | @CODE@ | Names
- +Sem/Fem !!≈ | @CODE@ | Names
+              
+  +Foc        !!≈ ; @CODE@ : XXX Document better = Forsterkende particle?
+  +Foc/ge     !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
+  +Foc/gan    !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
+  +Foc/gih    !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
+  +Foc/gænnah !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
+                                               
+                                                 
+!! !!Semantic tags to help disambiguation & synt. analysis:
+                
+ +Sem/Mal !!≈ | @CODE@ | Names - Males
+ +Sem/Fem !!≈ | @CODE@ | Names - Female
  +Sem/Sur !!≈ | @CODE@ | Names
  +Sem/Plc           !!≈ | @CODE@ | Place
  +Sem/Org           !!≈ | @CODE@ | Organisation
@@ -238,36 +244,36 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
                 +Der2                          !!≈ | @CODE@ | Position
                                 +Der3          !!≈ | @CODE@ | Position
 !! | Der#1
-+Der/htalle                                    !!≈ | @CODE@ | VV - Passive
++Der/htalle                                    !!≈ | @CODE@ | VV - Passive, frekeventative 
 +Der/lgidh                                     !!≈ | @CODE@ | VV - Passive
-+Der/ijes                                      !!≈ | @CODE@ | NA
-+Der/ihks                                      !!≈ | @CODE@ | VA
-+Der/les                                       !!≈ | @CODE@ | VA
-+Der/ldihkie                                   !!≈ | @CODE@ | VA
-+Der/ldahke                                    !!≈ | @CODE@ | VA
-+Der/ldh                                       !!≈ | @CODE@ | VA
++Der/ijes                                      !!≈ | @CODE@ | NA - Nomen agentis
++Der/ihks                                      !!≈ | @CODE@ | VA - (Handlernomen- tilbøyelig til å utføre den handlingen som grunnordet angir)
++Der/les                                       !!≈ | @CODE@ | VA - Intensive
++Der/ldihkie                                   !!≈ | @CODE@ | VA - 
++Der/ldahke                                    !!≈ | @CODE@ | VA - Resultatnomen (?)
++Der/ldh                                       !!≈ | @CODE@ | VA - 
 +Der/htidh                                     !!≈ | @CODE@ | VV - Causative
 ! +Der/dehte                                   ! ≈ | @CODE@ | VV - Causative
 +Der/lidh                                      !!≈ | @CODE@ | VV - Subitive
-+Der/stidh                                     !!≈ | @CODE@ | VV - Diminutive
-+Der/didh                                      !!≈ | @CODE@ | VV - Continuative
-+Der/htjidh                                    !!≈ | @CODE@ | Dim-cont.
-+Der/htovve                                    !!≈ | @CODE@ | AV
-+Der/htoeve                                    !!≈ | @CODE@ | AV
-+Der/htehte                                    !!≈ | @CODE@ | AV
++Der/stidh                                     !!≈ | @CODE@ | VV - Diminutive, Subitive
++Der/didh                                      !!≈ | @CODE@ | VV - Continuative, Konative, Frequentative, Refleksive
++Der/htjidh                                    !!≈ | @CODE@ | Dim-cont, Frequentative
++Der/htovve                                    !!≈ | @CODE@ | AV - Passive
++Der/htoeve                                    !!≈ | @CODE@ | AV - Passive
++Der/htehte                                    !!≈ | @CODE@ | AV - Passsive
 +Der/Dimin                                     !!≈ | @CODE@ | NN - Diminutive
 +Der/Rec                                       !!≈ | @CODE@ | NN - Forholdsformer
-+Der/laakan									   !!≈ | @CODE@ | AAdv
++Der/laakan									   !!≈ | @CODE@ | AAdv - adverb
 !! | Der#2
-                +Der/voete                     !!≈ | @CODE@ | AN
+                +Der/voete                     !!≈ | @CODE@ | AN - 
                 +Der/ehte                      !!≈ | @CODE@ | VV - Causative
-                +Der/adte                      !!≈ | @CODE@ | VV - Frequentative
+                +Der/adte                      !!≈ | @CODE@ | VV - Frequentative, Kontinuativ
                 +Der/alle                      !!≈ | @CODE@ | VV - Frequentative
-                +Der/eds                       !!≈ | @CODE@ | ??
+                +Der/eds                       !!≈ | @CODE@ | NA__ = Attributt
 !! | Der#3
                                 +Der/PassL     !!≈ | @CODE@ | VV - long only
-                                +Der/NomAg     !!≈ | @CODE@ | VN
-                                +Der/NomAct    !!≈ | @CODE@ | VN
+                                +Der/NomAg     !!≈ | @CODE@ | VN - Nomen Agentis
+                                +Der/NomAct    !!≈ | @CODE@ | VN - Nomen Actionis
                                 +Der/ahtje     !!≈ | @CODE@ | VV - Inchoative
                                 +Der/gåete     !!≈ | @CODE@ | VV - Inchoative
 !! | Der#4   | ''So far +Der4 is not motivated for SMA.''
@@ -337,13 +343,16 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! !!Lexeme disambiguation tags
   +Hom1          !!≈ ; @CODE@ : Homonymy
   +Hom2          !!≈ ; @CODE@ : Homonymy
-  +v1 !!≈ ; @CODE@ : Lemma variants
-  +v2 !!≈ ; @CODE@ : Lemma variants
-  +v3 !!≈ ; @CODE@ : Lemma variants
-  +v4 !!≈ ; @CODE@ : Lemma variants
-  +v5 !!≈ ; @CODE@ : Lemma variants
+  +v1 !!≈ ; @CODE@ : Lemma variants ?
+  +v2 !!≈ ; @CODE@ : Lemma variants ?
+  +v3 !!≈ ; @CODE@ : Lemma variants ?
+  +v4 !!≈ ; @CODE@ : Lemma variants ?
+  +v5 !!≈ ; @CODE@ : Lemma variants ?
 !!
+
+
 !! !!Umlaut and diphthong simplification triggers
+
   %^DISIMP        !!≈ | @CODE@ | diphthong simplification
   %^COMPDISIMP    !!≈ | @CODE@ | diphthong simplification in comparatives
   %^COMPDISIMP2   !!≈ | @CODE@ | diphthong simplification in comparatives, type 2
