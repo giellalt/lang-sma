@@ -10,61 +10,63 @@
 
 This is free and open source South Sámi morphology.
 
+
+
               !!!South Sámi morphological analyser
 
 
  !!!Multichar_Symbols definitions
 
- !!Tags for POS
- * +N	     
- * +A	     
- * +Adv     
- * +V	     
+ !!Tags for POS (Part-Of-Speech, Word class)
+ * __+N	     __ = Noun
+ * __+A	     __ = Adjective
+ * __+Adv     __ = Adverb
+ * __+V	     __ = Verb
 
- * +Pron    
- * +CS	     
- * +CC	     
- * +Po	     
- * +Pr	     
- * +Interj  
- * +Pcle    
- * +Num     
+ * __+Pron    __ = Pronomen
+ * __+CS	     __ = Subjunction
+ * __+CC	     __ = Conjunction
+ * __+Po	     __ = Postposition
+ * __+Pr	     __ = Preposition
+ * __+Interj  __ = Interjection
+ * __+Pcle    __ = Participle?
+ * __+Num     __ = Numerals
 
  * +Logo    
 
 
  !Tags for sub-POS
 !!Proper nouns
- * +Prop     
+ * __+Prop     __ =
 
 !!Pronoun subtypes
- * +Pers    
- * +Dem     
- * +Interr  
- * +Refl    
- * +Recipr  
- * +Rel     
- * +Indef   
- * +Coll     :  Collective numeral
+ * __+Pers    __ = Personal
+ * __+Dem     __ = Demonstrative
+ * __+Interr  __ = Interrogative
+ * __+Refl    __ = Reflexive
+ * __+Recipr  __ = Reciprocal
+ * __+Rel     __ = Relative
+ * __+Indef   __ = Indefinite
+ * __+Coll    __ = Collective numeral
 
  || Usage tags || Explanation
- | +Err/Sub | Substandard
- | +Use/Marg | Marginal
- | +Use/-Spell | Excluded from speller
- | +Use/SpellNoSugg | recognized but not suggested in speller
- | +Use/Circ | Circular path
- | +Use/CircN | Circular number path
- | +Use/Ped | Remove from pedagogical speller
- | +Use/NG | Do not generate \\ for isme-ped.fst and apertium
- | +Use/MT | Generate for apertium only
- | +Use/LexSub | The lemma is not a South Sami word
+ | __+Err/Sub__ = Substandard, (word is misspelt according to norm)
+ | __+Use/Marg__ = Marginal?
+ | __+Use/-Spell__ = Excluded from speller
+ | __+Use/SpellNoSugg__ = Recognized but not suggested in speller
+ | __+Use/Circ__ = Circular path?
+ | __+Use/CircN__ = Circular number path?
+ | __+Use/Ped__ = Remove from pedagogical speller
+ | __+Use/NG__ = Do not generate \\ for isme-ped.fst and apertium
+ | __+Use/MT__ = Generate for apertium only
+ | __+Use/LexSub__ = The lemma is not a South Sami word
 
  !!Dialect tags:
 
  | +Dial/-S | Not in the South
  | +Dial/-N | Not in the North
- | +Dial/-NOR | Not in Norway
- | +Dial/-SW | Not in Sweden
+ | +Dial/-NOR | Words not in Norway
+ | +Dial/-SW | Words not in Sweden
  | +Dial/SH | Short forms
  | +Dial/L | Long forms
 
@@ -120,42 +122,42 @@ Tags for compound analysis - this is what a compound actually is:
 
 !Tags for Case and Number Inflection
 !!Case and number
- * +Sg	   
- * +Pl	   
+ * __+Sg	   __ = Singular
+ * __+Pl	   __ = Plural
 
- * +Nom   
- * +Acc   
- * +Gen   
- * +Ine   
- * +Ela   
- * +Ill   
- * +Com   
- * +Ess   
+ * __+Nom   __ = Nominative
+ * __+Acc   __ = Ackusative
+ * __+Gen   __ = Genitive
+ * __+Ine   __ = Inesive
+ * __+Ela   __ = Elative
+ * __+Ill   __= Illative
+ * __+Com   __= Comitative
+ * __+Ess   __ = Essive
 
 
 !!Px
- *   +PxSg1                              Possessives Singular
- *   +PxSg2                              Possessives Singular
- *   +PxSg3                              Possessives Singular
- *   +PxDu1                              Possessives Dual
- *   +PxDu2                              Possessives Dual
- *   +PxDu3                              Possessives Dual
- *   +PxPl1                              Possessives Plural
- *   +PxPl2                              Possessives Plural
- *   +PxPl3                              Possessives Plural
+ * __  +PxSg1                            __ =  Possessives Singular
+ * __  +PxSg2                            __ =  Possessives Singular
+ * __  +PxSg3                            __ =  Possessives Singular
+ * __  +PxDu1                            __ =  Possessives Dual
+ * __  +PxDu2                            __ =  Possessives Dual
+ * __  +PxDu3                            __ =  Possessives Dual
+ * __  +PxPl1                            __ =  Possessives Plural
+ * __  +PxPl2                            __ =  Possessives Plural
+ * __  +PxPl3                            __ =  Possessives Plural
 
- | +Prs | Tense
- | +Prt | Tense
+ | __+Prs__ = Presens
+ | __+Prt__ = Preteritum
 
- | +Sg1 | Singular
- | +Sg2 | Singular
- | +Sg3 | Singular
- | +Du1 | Dual
- | +Du2 | Dual
- | +Du3 | Dual
- | +Pl1 | Plural
- | +Pl2 | Plural
- | +Pl3 | Plural
+ | __+Sg1__ = Singular, 1.person 
+ | __+Sg2__ = Singular, 2.person
+ | __+Sg3__ = Singular, 3.person
+ | __+Du1__ = Dual    , 1.person
+ | __+Du2__ = Dual    , 2.person
+ | __+Du3__ = Dual    , 3.person
+ | __+Pl1__ = Plural  , 1.person
+ | __+Pl2__ = Plural  , 2.person
+ | __+Pl3__ = Plural  , 3.person
 
  | +Neg | negation verb ij
  | +ConNeg | main verb complement to Neg, form identical to Imp
@@ -164,15 +166,16 @@ Tags for compound analysis - this is what a compound actually is:
  ; +Inf : Infinitive and participles
  ; +PrfPrc : Infinitive and participles
  ; +PrsPrc : Infinitive and participles
- ; +Ger : Gerund
- ; +VGen : Gerund
+ ; +Ger : Gerundium 
+ ; +VGen : Verbgenitive
 
  ; +Ind : Indicative
  ; +Imprt : Imperative
- ; +Cond : for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
+ ; +Cond : Kondisjonalis, for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
  ; +Act : -eme, could be chagned to +Actio
 
 !Tags for adjectives
+
  ; +Comp +Superl : Comparation
  ; +Attr : Attribute form
  ; +Ord : Ordinal number
@@ -180,12 +183,13 @@ Tags for compound analysis - this is what a compound actually is:
 !!Other tags
  ; +ABBR +ACR : Abbreviation, acronym
  ; +TV +IV : Transitivity tags
- ; +Multi : Multiword phrase tag
- ; +Guess : for the name guesser
- ; +LOAN : ad hoc tag for development purposes.
- ; +Hyph : A tag to indicate that a hyphen was used when compounding
+ ; +Multi : Multiword phrase tag ?
+ ; +Guess : for the name guesser ?
+ ; +LOAN : ad hoc tag for development purposes ?
+ ; +Hyph : A tag to indicate that a hyphen was used when compounding?
 
 !Tags for testing the frequency of certain phenomenas in our corpora
+
  ; +Test/LysI : form uses i
  ; +Test/MørkI : form uses ï
  ; +Test/HK : form uses consonant cluster hk
@@ -195,22 +199,26 @@ Tags for compound analysis - this is what a compound actually is:
  ; +NoUml : A tag to indicate the lack of realised or potential Umlaut
 
 !Tags for punctuation
+
  ; +CLB : XXX These should be documented better
  ; +PUNCT : XXX These should be documented better
  ; +LEFT : XXX These should be documented better
  ; +RIGHT : XXX These should be documented better
 
+
 !Different focus particles
- ; +Foc : XXX Document better
- ; +Foc/ge : XXX Document better
- ; +Foc/gan : XXX Document better
- ; +Foc/gih : XXX Document better
- ; +Foc/gænnah : XXX Document better
+
+ ; +Foc : XXX Document better = Forsterkende particle?
+ ; +Foc/ge : XXX Document better = Forsterkende particle
+ ; +Foc/gan : XXX Document better = Forsterkende particle
+ ; +Foc/gih : XXX Document better = Forsterkende particle
+ ; +Foc/gænnah : XXX Document better = Forsterkende particle
 
 
 !!Semantic tags to help disambiguation & synt. analysis:
- | +Sem/Mal | Names
- | +Sem/Fem | Names
+
+ | +Sem/Mal | Names - Males
+ | +Sem/Fem | Names - Female
  | +Sem/Sur | Names
  | +Sem/Plc | Place
  | +Sem/Org | Organisation
@@ -228,35 +236,35 @@ Affix and tag, frompos - topos
  | +Der2 | Position
  | +Der3 | Position
 | Der#1
- | +Der/htalle | VV - Passive
+ | +Der/htalle | VV - Passive, frekeventative 
  | +Der/lgidh | VV - Passive
- | +Der/ijes | NA
- | +Der/ihks | VA
- | +Der/les | VA
- | +Der/ldihkie | VA
- | +Der/ldahke | VA
- | +Der/ldh | VA
+ | +Der/ijes | NA - Nomen agentis
+ | +Der/ihks | VA - (Handlernomen- tilbøyelig til å utføre den handlingen som grunnordet angir)
+ | +Der/les | VA - Intensive
+ | +Der/ldihkie | VA - 
+ | +Der/ldahke | VA - Resultatnomen (?)
+ | +Der/ldh | VA - 
  | +Der/htidh | VV - Causative
  | +Der/lidh | VV - Subitive
- | +Der/stidh | VV - Diminutive
- | +Der/didh | VV - Continuative
- | +Der/htjidh | Dim-cont.
- | +Der/htovve | AV
- | +Der/htoeve | AV
- | +Der/htehte | AV
+ | +Der/stidh | VV - Diminutive, Subitive
+ | +Der/didh | VV - Continuative, Konative, Frequentative, Refleksive
+ | +Der/htjidh | Dim-cont, Frequentative
+ | +Der/htovve | AV - Passive
+ | +Der/htoeve | AV - Passive
+ | +Der/htehte | AV - Passsive
  | +Der/Dimin | NN - Diminutive
  | +Der/Rec | NN - Forholdsformer
- | +Der/laakan									 | AAdv
+ | +Der/laakan									 | AAdv - adverb
 | Der#2
- | +Der/voete | AN
+ | +Der/voete | AN - 
  | +Der/ehte | VV - Causative
- | +Der/adte | VV - Frequentative
+ | +Der/adte | VV - Frequentative, Kontinuativ
  | +Der/alle | VV - Frequentative
- | +Der/eds | ??
+ | +Der/eds | NA__ = Attributt
 | Der#3
  | +Der/PassL | VV - long only
- | +Der/NomAg | VN
- | +Der/NomAct | VN
+ | +Der/NomAg | VN - Nomen Agentis
+ | +Der/NomAct | VN - Nomen Actionis
  | +Der/ahtje | VV - Inchoative
  | +Der/gåete | VV - Inchoative
 | Der#4   | ''So far +Der4 is not motivated for SMA.''
@@ -318,12 +326,15 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
 !!Lexeme disambiguation tags
  ; +Hom1 : Homonymy
  ; +Hom2 : Homonymy
- ; +v1 : Lemma variants
- ; +v2 : Lemma variants
- ; +v3 : Lemma variants
- ; +v4 : Lemma variants
- ; +v5 : Lemma variants
+ ; +v1 : Lemma variants ?
+ ; +v2 : Lemma variants ?
+ ; +v3 : Lemma variants ?
+ ; +v4 : Lemma variants ?
+ ; +v5 : Lemma variants ?
+
+
 !!Umlaut and diphthong simplification triggers
+
  | %^DISIMP | diphthong simplification
  | %^COMPDISIMP | diphthong simplification in comparatives
  | %^COMPDISIMP2 | diphthong simplification in comparatives, type 2

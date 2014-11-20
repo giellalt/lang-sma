@@ -1,372 +1,61 @@
 
+
+
               !!!South Sámi morphological analyser
 
 
  !!!Multichar_Symbols definitions
 
- !!Tags for POS
- * +N	     
- * +A	     
- * +Adv     
- * +V	     
+ !!Tags for POS (Part-Of-Speech, Word class)
+ * __+N	     __ = Noun
+ * __+A	     __ = Adjective
+ * __+Adv     __ = Adverb
+ * __+V	     __ = Verb
 
- * +Pron    
- * +CS	     
- * +CC	     
- * +Po	     
- * +Pr	     
- * +Interj  
- * +Pcle    
- * +Num     
+ * __+Pron    __ = Pronomen
+ * __+CS	     __ = Subjunction
+ * __+CC	     __ = Conjunction
+ * __+Po	     __ = Postposition
+ * __+Pr	     __ = Preposition
+ * __+Interj  __ = Interjection
+ * __+Pcle    __ = Participle?
+ * __+Num     __ = Numerals
 
  * +Logo    
 
 
  !Tags for sub-POS
 !!Proper nouns
- * +Prop     
+ * __+Prop     __ =
 
 !!Pronoun subtypes
- * +Pers    
- * +Dem     
- * +Interr  
- * +Refl    
- * +Recipr  
- * +Rel     
- * +Indef   
- * +Coll     :  Collective numeral
+ * __+Pers    __ = Personal
+ * __+Dem     __ = Demonstrative
+ * __+Interr  __ = Interrogative
+ * __+Refl    __ = Reflexive
+ * __+Recipr  __ = Reciprocal
+ * __+Rel     __ = Relative
+ * __+Indef   __ = Indefinite
+ * __+Coll    __ = Collective numeral
 
  || Usage tags || Explanation
- | +Err/Sub | Substandard
- | +Use/Marg | Marginal
- | +Use/-Spell | Excluded from speller
- | +Use/SpellNoSugg | recognized but not suggested in speller
- | +Use/Circ | Circular path
- | +Use/CircN | Circular number path
- | +Use/Ped | Remove from pedagogical speller
- | +Use/NG | Do not generate \\ for isme-ped.fst and apertium
- | +Use/MT | Generate for apertium only
- | +Use/LexSub | The lemma is not a South Sami word
+ | __+Err/Sub__ = Substandard, (word is misspelt according to norm)
+ | __+Use/Marg__ = Marginal?
+ | __+Use/-Spell__ = Excluded from speller
+ | __+Use/SpellNoSugg__ = Recognized but not suggested in speller
+ | __+Use/Circ__ = Circular path?
+ | __+Use/CircN__ = Circular number path?
+ | __+Use/Ped__ = Remove from pedagogical speller
+ | __+Use/NG__ = Do not generate \\ for isme-ped.fst and apertium
+ | __+Use/MT__ = Generate for apertium only
+ | __+Use/LexSub__ = The lemma is not a South Sami word
 
  !!Dialect tags:
 
  | +Dial/-S | Not in the South
  | +Dial/-N | Not in the North
- | +Dial/-NOR | Not in Norway
- | +Dial/-SW | Not in Sweden
+ | +Dial/-NOR | Words not in Norway
+ | +Dial/-SW | Words not in Sweden
  | +Dial/SH | Short forms
  | +Dial/L | Long forms
 
-
-
-!!Normative/prescriptive compounding tags
-(to govern compound behaviour for the speller, ie what a compound SHOULD BE)
-
-!The first part of the component may be ...
- | +CmpN/Sg | Sg
- | +CmpN/SgN | SgNominative
- | +CmpN/SgG | SgGenitive
- | +CmpN/PlG | PlGenitive
-
-!This part of the component might be ...
- | +CmpN/First | first
- | +CmpN/Last | last
- | +CmpN/None | Can not take part in compounds
- | +CmpN/Only | Can only be part of a compound
- | +CmpN/Pref | prefix only
-
-!The second part of the compound may take ...
- | +CmpN/SgLeft | Sg to the left
- | +CmpN/SgNomLeft | etc.
- | +CmpN/SgGenLeft | "
- | +CmpN/PlGenLeft | "
-
-!This part of the compound may ...
- | +CmpN/All | all positions, __default__, this tag does not have to be written
- | +CmpN/Def | works along with Left compound-tagging
- | +CmpN/DefSgGen | works along with Left compound-tagging
- | +CmpN/DefPlGen | works along with Left compound-tagging
-
-!!Descriptive compounding tags
-Tags for compound analysis - this is what a compound actually is:
-
- ;  : Different case + number combinations
-
- * +SgCmp	       
- * +SgNomCmp      
- * +SgGenCmp      
- * +PlGenCmp      
-
-
- ; +Cmp : Dynamic compound - this tag should ''always'' be part of a dynamic compound.
- It is important for Apertium, and useful in other cases as well.
- ; +RCmpnd : This is a split compound with the other part to the right: \\
- "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
- ; +LCmpnd+ : This is a split compound with the other part to the left
- ; +ShCmp : Testing ShCmp
-
-!!Tags for Inflection
-
-!Tags for Case and Number Inflection
-!!Case and number
- * +Sg	   
- * +Pl	   
-
- * +Nom   
- * +Acc   
- * +Gen   
- * +Ine   
- * +Ela   
- * +Ill   
- * +Com   
- * +Ess   
-
-
-!!Px
- *   +PxSg1                              Possessives Singular
- *   +PxSg2                              Possessives Singular
- *   +PxSg3                              Possessives Singular
- *   +PxDu1                              Possessives Dual
- *   +PxDu2                              Possessives Dual
- *   +PxDu3                              Possessives Dual
- *   +PxPl1                              Possessives Plural
- *   +PxPl2                              Possessives Plural
- *   +PxPl3                              Possessives Plural
-
- | +Prs | Tense
- | +Prt | Tense
-
- | +Sg1 | Singular
- | +Sg2 | Singular
- | +Sg3 | Singular
- | +Du1 | Dual
- | +Du2 | Dual
- | +Du3 | Dual
- | +Pl1 | Plural
- | +Pl2 | Plural
- | +Pl3 | Plural
-
- | +Neg | negation verb ij
- | +ConNeg | main verb complement to Neg, form identical to Imp
- | +VAbess | Verb Abessive
-
- ; +Inf : Infinitive and participles
- ; +PrfPrc : Infinitive and participles
- ; +PrsPrc : Infinitive and participles
- ; +Ger : Gerund
- ; +VGen : Gerund
-
- ; +Ind : Indicative
- ; +Imprt : Imperative
- ; +Cond : for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
- ; +Act : -eme, could be chagned to +Actio
-
-!Tags for adjectives
- ; +Comp +Superl : Comparation
- ; +Attr : Attribute form
- ; +Ord : Ordinal number
-
-!!Other tags
- ; +ABBR +ACR : Abbreviation, acronym
- ; +TV +IV : Transitivity tags
- ; +Multi : Multiword phrase tag
- ; +Guess : for the name guesser
- ; +LOAN : ad hoc tag for development purposes.
- ; +Hyph : A tag to indicate that a hyphen was used when compounding
-
-!Tags for testing the frequency of certain phenomenas in our corpora
- ; +Test/LysI : form uses i
- ; +Test/MørkI : form uses ï
- ; +Test/HK : form uses consonant cluster hk
- ; +Test/GK : form uses consonant cluster gk
- ; +Test/JK : form uses consonant cluster jk
- ; +Uml : A tag to indicate realised or potential Umlaut
- ; +NoUml : A tag to indicate the lack of realised or potential Umlaut
-
-!Tags for punctuation
- ; +CLB : XXX These should be documented better
- ; +PUNCT : XXX These should be documented better
- ; +LEFT : XXX These should be documented better
- ; +RIGHT : XXX These should be documented better
-
-!Different focus particles
- ; +Foc : XXX Document better
- ; +Foc/ge : XXX Document better
- ; +Foc/gan : XXX Document better
- ; +Foc/gih : XXX Document better
- ; +Foc/gænnah : XXX Document better
-
-
-!!Semantic tags to help disambiguation & synt. analysis:
- | +Sem/Mal | Names
- | +Sem/Fem | Names
- | +Sem/Sur | Names
- | +Sem/Plc | Place
- | +Sem/Org | Organisation
- | +Sem/Obj | Object
- | +Sem/Ani | Animate
- | +Sem/Hum | Human
- | +MWE |  multi word expressions, goes to abbr
-
-
-!!Derivation position in a derivation row
-Affix and tag, frompos - topos
-
-
- | +Der1 | Position
- | +Der2 | Position
- | +Der3 | Position
-| Der#1
- | +Der/htalle | VV - Passive
- | +Der/lgidh | VV - Passive
- | +Der/ijes | NA
- | +Der/ihks | VA
- | +Der/les | VA
- | +Der/ldihkie | VA
- | +Der/ldahke | VA
- | +Der/ldh | VA
- | +Der/htidh | VV - Causative
- | +Der/lidh | VV - Subitive
- | +Der/stidh | VV - Diminutive
- | +Der/didh | VV - Continuative
- | +Der/htjidh | Dim-cont.
- | +Der/htovve | AV
- | +Der/htoeve | AV
- | +Der/htehte | AV
- | +Der/Dimin | NN - Diminutive
- | +Der/Rec | NN - Forholdsformer
- | +Der/laakan									 | AAdv
-| Der#2
- | +Der/voete | AN
- | +Der/ehte | VV - Causative
- | +Der/adte | VV - Frequentative
- | +Der/alle | VV - Frequentative
- | +Der/eds | ??
-| Der#3
- | +Der/PassL | VV - long only
- | +Der/NomAg | VN
- | +Der/NomAct | VN
- | +Der/ahtje | VV - Inchoative
- | +Der/gåete | VV - Inchoative
-| Der#4   | ''So far +Der4 is not motivated for SMA.''
-
-!Other, non-positional derivations
-
-All non-positional derivations should be preceded by the following tag,
-to make it possible to target regular expressions in all derivations in a
-language-independent way:
-just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
- ; +Der : Tag to precede any non-positional derivation
-
- | +Der/PassS | VV - short passive only
- | +Der/A | NA - comparation of N's
-
-!!Tags for originating language
-The following tags are used to guide conversion to IPA: loan words
-and foreign names are usually pronounced (approximately) as in the
-originating (majority) language. Instead of trying to identify the
-correct pronounciation based on fonotactics (orthotactics actually),
-we tag all words that can't be correctly transcribed using the SME
-transcriber with source language codes. Once tagged, it is possible
-to split the lexical transducer in smaller ones according to langu-
-age, and apply different IPA conversion to each of them.
-The principle of tagging is that we only tag to the extent needed,
-and following a priority:
-# any untagged word is pronounced with SME orthographic conventions
-# NNO and NOB have identical pronounciation, NNO is only used if
-  different in spelling from NOB
-# SWE has mostly the same pronounciation as NOB, and is only used
-  if different in spelling from NOB
-# Occasionally even SME (the default) may be tagged, to block other
-  languages from being specified, mainly during semi-automatic
-  language tagging sessions
-All in all, we want to get as much correctly transcribed to IPA
-with as little work as possible. On the other hand, if more words
-are tagged than strictly needed, this should pose no problem as
-long as the IPA conversion is correct - at least some words will
-get the same pronounciation whether read as SME or NOB/NNO/SWE.
- * +OLang/SME - North Sámi
- * +OLang/FIN - Finnish
- * +OLang/SWE - Swedish
- * +OLang/NOB - Norw. bokmål
- * +OLang/NNO - Norw. nynorsk
- * +OLang/ENG - English
- * +OLang/UND - Undefined
-!!Triggers for morphophonological rules
- ; X2 : Trigger for ???
- ; X3 : Trigger for ???
- ; X4 : Trigger for ???
- ; E2 : insert e ! Fjern denne.
-!!Symbols that need to be escaped on the lower side (towards twolc):
- ; »7 : Literal »
- ; «7 : Literal «
-{{{
-  %[%>%]  - Literal >
-  %[%<%]  - Literal <
-}}}
-!!Lexeme disambiguation tags
- ; +Hom1 : Homonymy
- ; +Hom2 : Homonymy
- ; +v1 : Lemma variants
- ; +v2 : Lemma variants
- ; +v3 : Lemma variants
- ; +v4 : Lemma variants
- ; +v5 : Lemma variants
-!!Umlaut and diphthong simplification triggers
- | %^DISIMP | diphthong simplification
- | %^COMPDISIMP | diphthong simplification in comparatives
- | %^COMPDISIMP2 | diphthong simplification in comparatives, type 2
- | %^PLCDISIMP | diphthong simplification in ACCRA-names
- | %^NOMAGieDISIMP | diphthong simplification for NomAg ie stems
- | %^1UML | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
- | %^2UML | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
- | %^3UML | adj Umlaut oeh:an
- | %^3sUML | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
- | %^3dUML | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
- | %^iæUML | not used
- | %^iUML | i-uml in pret of V-I (båetedh - böötim)
- | %^PASSUML | Short passive Umlaut Rx->R5
- | %^didhUML | Der/didh Umlaut for GUARKEDH-words
- | %^htjidhUML | Umlaut für der/htjidh derivations
- | %^adteUML | Umlaut für Der/adte and Der/alle derivations
- | %^aLATUS | Latus-Umlaut for -ie stems
- | %^uLATUS | Latus-Umlaut for -oe stems
- | %^ConsDel | Stem consonant deletion in front of Der/PassL
-
- !!Flag diacritics
- | @P.NeedNoun.ON@ | (Dis)allowing compounds
- | @D.NeedNoun.ON@ | (Dis)allowing compounds
- | @C.NeedNoun@ | (Dis)allowing compounds
- | @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
- | @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
-
-
-
-!!!Lexicon Root
-This is the beginning of everything. The __Root__ lexicon is reserved in the
-LexC language, and must be the first lexicon defined.
-
-Here is the list of lexica in the sma analyser
-
- *      NounRoot  ;		  
- *      ProperNoun  ;		  
- *      Verb  ;			  
- *      Adjective  ;		  
- *      Pronoun  ;			  
- *      Adverb  ;			  
- *      Subjunction  ;		  
- *      Conjunction  ;		  
- *      Particle  ;		  
- *      Adposition  ;		  
- *      Punctuation  ;		  
- *      Interjection  ;	  
- *     +Use/CircN: Numeral ; 
- *      Abbreviation ;		  
- *      Acronym ;			  
-
-
-!!!Lexicon ENDLEX
-And this is the ENDLEX of everything:
-{{{
-    @D.NeedNoun.ON@ # ; 
-}}}
