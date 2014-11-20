@@ -36,12 +36,12 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Pcle    !!= * __@CODE@__ = Participle?
 +Num     !!= * __@CODE@__ = Numerals
 
-+Logo    !!= * @CODE@
++Logo    !!= * __@CODE@__ = ???
 
 
                                                !!  !Tags for sub-POS
 !! !!Proper nouns
-+Prop     !!= * __@CODE@__ =
++Prop     !!= * __@CODE@__ = Proprium, proper nouns
 
 !! !!Pronoun subtypes
 +Pers    !!= * __@CODE@__ = Personal
@@ -53,27 +53,29 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Indef   !!= * __@CODE@__ = Indefinite
 +Coll    !!= * __@CODE@__ = Collective numeral
 
-                   !!  || Usage tags || Explanation
-+Err/Sub         !!≈ | __@CODE@__ = Substandard, (word is misspelt according to norm)
-+Use/Marg        !!≈ | __@CODE@__ = Marginal?
-+Use/-Spell      !!≈ | __@CODE@__ = Excluded from speller
-+Use/SpellNoSugg !!≈ | __@CODE@__ = Recognized but not suggested in speller
-+Use/Circ        !!≈ | __@CODE@__ = Circular path?
-+Use/CircN       !!≈ | __@CODE@__ = Circular number path?
-+Use/Ped         !!≈ | __@CODE@__ = Remove from pedagogical speller
-+Use/NG          !!≈ | __@CODE@__ = Do not generate \\ for isme-ped.fst and apertium
-+Use/MT          !!≈ | __@CODE@__ = Generate for apertium only
-+Use/LexSub      !!≈ | __@CODE@__ = The lemma is not a South Sami word
+                 !!  || Usage tags || Explanation
++Err/Sub         !!≈ | __@CODE@__  | Substandard, (word is misspelt according to norm)
++Use/Marg        !!≈ | __@CODE@__  | Marginal?
++Use/-Spell      !!≈ | __@CODE@__  | Excluded from speller
++Use/SpellNoSugg !!≈ | __@CODE@__  | Recognized but not suggested in speller
++Use/Circ        !!≈ | __@CODE@__  | Circular path?
++Use/CircN       !!≈ | __@CODE@__  | Circular number path?
++Use/Ped         !!≈ | __@CODE@__  | Remove from pedagogical speller
++Use/NG          !!≈ | __@CODE@__  | Do not generate \\ for isme-ped.fst and apertium
++Use/MT          !!≈ | __@CODE@__  | Generate for apertium only
++Use/LexSub      !!≈ | __@CODE@__  | The lemma is not a South Sami word
 
            !!  !!Dialect tags:
 
-+Dial/-S   !!≈ | @CODE@ | Not in the South
-+Dial/-N   !!≈ | @CODE@ | Not in the North
-+Dial/-NOR !!≈ | @CODE@ | Words not in Norway
-+Dial/-SW  !!≈ | @CODE@ | Words not in Sweden
-+Dial/SH   !!≈ | @CODE@ | Short forms
-+Dial/L    !!≈ | @CODE@ | Long forms
+           !!  || Tag       || Meaning
++Dial/-S   !!≈ | __@CODE@__ | Not in the South
++Dial/-N   !!≈ | __@CODE@__ | Not in the North
++Dial/-NOR !!≈ | __@CODE@__ | Not in Norway
++Dial/-SW  !!≈ | __@CODE@__ | Not in Sweden
++Dial/SH   !!≈ | __@CODE@__ | Short forms
++Dial/L    !!≈ | __@CODE@__ | Long forms
 
+! Old, obsolete tags
 !  +Dial/OE  ! oe forms ! We assume these are lexical, and do not tag.
 !  +Dial/A   ! a forms  ! We assume these are lexical, and do not tag.
 
@@ -82,39 +84,43 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
                 !! !The first part of the component may be ...
-+CmpN/Sg        !!≈ | @CODE@ | Sg
-+CmpN/SgN       !!≈ | @CODE@ | SgNominative
-+CmpN/SgG       !!≈ | @CODE@ | SgGenitive
-+CmpN/PlG       !!≈ | @CODE@ | PlGenitive
+                !!  || Tag       || Meaning
++CmpN/Sg        !!≈ | __@CODE@__ | Singular, any case
++CmpN/SgN       !!≈ | __@CODE@__ | Singular nominative
++CmpN/SgG       !!≈ | __@CODE@__ | Singular genitive
++CmpN/PlG       !!≈ | __@CODE@__ | Plural genitive
 
-                !! !This part of the component might be ...
-+CmpN/First     !!≈ | @CODE@ | first
-+CmpN/Last      !!≈ | @CODE@ | last
-+CmpN/None      !!≈ | @CODE@ | Can not take part in compounds
-+CmpN/Only      !!≈ | @CODE@ | Can only be part of a compound
-+CmpN/Pref      !!≈ | @CODE@ | prefix only
+                !! !This part of the compound must be ...
+                !!  || Tag       || Meaning
++CmpN/First     !!≈ | __@CODE@__ | first
++CmpN/Last      !!≈ | __@CODE@__ | last
++CmpN/None      !!≈ | __@CODE@__ | Can not take part in compounds
++CmpN/Only      !!≈ | __@CODE@__ | Can only be part of a compound
++CmpN/Pref      !!≈ | __@CODE@__ | prefix only
 
-                !! !The second part of the compound may take ...
-+CmpN/SgLeft    !!≈ | @CODE@ | Sg to the left
-+CmpN/SgNomLeft !!≈ | @CODE@ | etc.
-+CmpN/SgGenLeft !!≈ | @CODE@ | "
-+CmpN/PlGenLeft !!≈ | @CODE@ | "
+                !! !The second part of the compound requires to the left ...
+                !!  || Tag       || Meaning
++CmpN/SgLeft    !!≈ | __@CODE@__ | Sg to the left
++CmpN/SgNomLeft !!≈ | __@CODE@__ | etc.
++CmpN/SgGenLeft !!≈ | __@CODE@__ | "
++CmpN/PlGenLeft !!≈ | __@CODE@__ | "
 
                 !! !This part of the compound may ...
-+CmpN/All       !!≈ | @CODE@ | all positions, __default__, this tag does not have to be written
-+CmpN/Def       !!≈ | @CODE@ | works along with Left compound-tagging
-+CmpN/DefSgGen  !!≈ | @CODE@ | works along with Left compound-tagging
-+CmpN/DefPlGen  !!≈ | @CODE@ | works along with Left compound-tagging
+                !!  || Tag       || Meaning
++CmpN/All       !!≈ | __@CODE@__ | all positions, __default__, this tag does not have to be written
++CmpN/Def       !!≈ | __@CODE@__ | works along with Left compound-tagging
++CmpN/DefSgGen  !!≈ | __@CODE@__ | works along with Left compound-tagging
++CmpN/DefPlGen  !!≈ | __@CODE@__ | works along with Left compound-tagging
 
 !! !!Descriptive compounding tags
 !! Tags for compound analysis - this is what a compound actually is:
 
 !!≈ ; @CODE@ : Different case + number combinations
 
-+SgCmp	       !!= * @CODE@
-+SgNomCmp      !!= * @CODE@
-+SgGenCmp      !!= * @CODE@
-+PlGenCmp      !!= * @CODE@
++SgCmp	  !!≈ ; @CODE@ : This part compounds in singular, any case
++SgNomCmp !!≈ ; @CODE@ : This part compounds in singular nominative
++SgGenCmp !!≈ ; @CODE@ : This part compounds in singular genitive
++PlGenCmp !!≈ ; @CODE@ : This part compounds in plural genitive
 
 
 +Cmp     !!≈ ; @CODE@ : Dynamic compound - this tag should ''always'' be part of a dynamic compound.
@@ -122,80 +128,83 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +RCmpnd  !!≈ ; @CODE@ : This is a split compound with the other part to the right: \\
            !!  "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
 +LCmpnd+ !!≈ ; @CODE@ : This is a split compound with the other part to the left
-+ShCmp   !!≈ ; @CODE@ : Testing ShCmp
++ShCmp   !!≈ ; @CODE@ : Testing ShCmp / short compound forms
 
 !! !!Tags for Inflection
 
-                                                  !! !Tags for Case and Number Inflection
-!! !!Case and number
+!! !Tags for Case and Number Inflection
+
 +Sg	   !!= * __@CODE@__ = Singular
 +Pl	   !!= * __@CODE@__ = Plural
-
 +Nom   !!= * __@CODE@__ = Nominative
 +Acc   !!= * __@CODE@__ = Ackusative
 +Gen   !!= * __@CODE@__ = Genitive
 +Ine   !!= * __@CODE@__ = Inesive
 +Ela   !!= * __@CODE@__ = Elative
-+Ill   !!= * __@CODE@__= Illative
-+Com   !!= * __@CODE@__= Comitative
++Ill   !!= * __@CODE@__ = Illative
++Com   !!= * __@CODE@__ = Comitative
 +Ess   !!= * __@CODE@__ = Essive
 
 
-!! !!Px
-  +PxSg1                            !!= * __@CODE@__ =  Possessives Singular
-  +PxSg2                            !!= * __@CODE@__ =  Possessives Singular
-  +PxSg3                            !!= * __@CODE@__ =  Possessives Singular
-  +PxDu1                            !!= * __@CODE@__ =  Possessives Dual
-  +PxDu2                            !!= * __@CODE@__ =  Possessives Dual
-  +PxDu3                            !!= * __@CODE@__ =  Possessives Dual
-  +PxPl1                            !!= * __@CODE@__ =  Possessives Plural
-  +PxPl2                            !!= * __@CODE@__ =  Possessives Plural
-  +PxPl3                            !!= * __@CODE@__ =  Possessives Plural
+!! !Tags for possessive inflection
 
-  +Prs                                       !!≈ | __@CODE@__ = Presens
-  +Prt                                       !!≈ | __@CODE@__ = Preteritum
+  +PxSg1  !!≈ * __@CODE@__ =  Possessive Singular, first person
+  +PxSg2  !!≈ * __@CODE@__ =  Possessive Singular, second person
+  +PxSg3  !!≈ * __@CODE@__ =  Possessive Singular, third person
+  +PxDu1  !!≈ * __@CODE@__ =  Possessive Dual, first person
+  +PxDu2  !!≈ * __@CODE@__ =  Possessive Dual, second person
+  +PxDu3  !!≈ * __@CODE@__ =  Possessive Dual, third person
+  +PxPl1  !!≈ * __@CODE@__ =  Possessive Plural, first person
+  +PxPl2  !!≈ * __@CODE@__ =  Possessive Plural, second person
+  +PxPl3  !!≈ * __@CODE@__ =  Possessive Plural, third person
 
-  +Sg1                                  !!≈ | __@CODE@__ = Singular, 1.person 
-  +Sg2                                  !!≈ | __@CODE@__ = Singular, 2.person
-  +Sg3                                  !!≈ | __@CODE@__ = Singular, 3.person
-  +Du1                                  !!≈ | __@CODE@__ = Dual    , 1.person
-  +Du2                                  !!≈ | __@CODE@__ = Dual    , 2.person
-  +Du3                                  !!≈ | __@CODE@__ = Dual    , 3.person
-  +Pl1                                  !!≈ | __@CODE@__ = Plural  , 1.person
-  +Pl2                                  !!≈ | __@CODE@__ = Plural  , 2.person
-  +Pl3                                  !!≈ | __@CODE@__ = Plural  , 3.person
+!! !Tags for verb tenses
+  +Prs  !!≈ | __@CODE@__ = Presens
+  +Prt  !!≈ | __@CODE@__ = Preteritum
 
+!! !Tags for verb person + number
+  +Sg1  !!≈ | __@CODE@__ = Singular, 1.person 
+  +Sg2  !!≈ | __@CODE@__ = Singular, 2.person
+  +Sg3  !!≈ | __@CODE@__ = Singular, 3.person
+  +Du1  !!≈ | __@CODE@__ = Dual    , 1.person
+  +Du2  !!≈ | __@CODE@__ = Dual    , 2.person
+  +Du3  !!≈ | __@CODE@__ = Dual    , 3.person
+  +Pl1  !!≈ | __@CODE@__ = Plural  , 1.person
+  +Pl2  !!≈ | __@CODE@__ = Plural  , 2.person
+  +Pl3  !!≈ | __@CODE@__ = Plural  , 3.person
+
+!! !Other verb tags
   +Neg    !!≈ | @CODE@ | negation verb ij
   +ConNeg !!≈ | @CODE@ | main verb complement to Neg, form identical to Imp
   +VAbess !!≈ | @CODE@ | Verb Abessive
 
-  +Inf    !!≈ ; @CODE@ : Infinitive and participles
-  +PrfPrc !!≈ ; @CODE@ : Infinitive and participles
-  +PrsPrc !!≈ ; @CODE@ : Infinitive and participles
-  +Ger            !!≈ ; @CODE@ : Gerundium 
-  +VGen           !!≈ ; @CODE@ : Verbgenitive
+  +Inf    !!≈ ; @CODE@ : Infinitive
+  +PrfPrc !!≈ ; @CODE@ : Perfect participle
+  +PrsPrc !!≈ ; @CODE@ : Present tense participle
+  +Ger    !!≈ ; @CODE@ : Gerundium 
+  +VGen   !!≈ ; @CODE@ : Verbgenitive
 
-  +Ind   !!≈ ; @CODE@ : Indicative
-  +Imprt !!≈ ; @CODE@ : Imperative
-  +Cond  !!≈ ; @CODE@ : Kondisjonalis, for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
+  +Ind    !!≈ ; @CODE@ : Indicative
+  +Imprt  !!≈ ; @CODE@ : Imperative
+  +Cond   !!≈ ; @CODE@ : Kondisjonalis, for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
 ! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21, Bergsland; )
-  +Act   !!≈ ; @CODE@ : -eme, could be chagned to +Actio
+  +Act    !!≈ ; @CODE@ : -eme, could be chagned to +Actio
 
-                !! !Tags for adjectives
+!! !Tags for adjectives
                 
   +Comp +Superl !!≈ ; @CODE@ : Comparation
   +Attr         !!≈ ; @CODE@ : Attribute form
   +Ord          !!≈ ; @CODE@ : Ordinal number
 
-             !! !!Other tags
+!! !!Other tags
   +ABBR +ACR !!≈ ; @CODE@ : Abbreviation, acronym
   +TV +IV    !!≈ ; @CODE@ : Transitivity tags
   +Multi     !!≈ ; @CODE@ : Multiword phrase tag ?
   +Guess     !!≈ ; @CODE@ : for the name guesser ?
-  +LOAN      !!≈ ; @CODE@ : ad hoc tag for development purposes ?
-  +Hyph      !!≈ ; @CODE@ : A tag to indicate that a hyphen was used when compounding?
+  +LOAN      !!≈ ; @CODE@ : ad hoc tag for development purposes ? Loan words?
+  +Hyph      !!≈ ; @CODE@ : A tag to indicate that a hyphen was used when compounding, when it should not have been
 
-              !! !Tags for testing the frequency of certain phenomenas in our corpora
+!! !Tags for testing the frequency of certain phenomenas in our corpora
               
   +Test/LysI  !!≈ ; @CODE@ : form uses i
   +Test/MørkI !!≈ ; @CODE@ : form uses ï
@@ -205,15 +214,15 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
   +Uml        !!≈ ; @CODE@ : A tag to indicate realised or potential Umlaut
   +NoUml      !!≈ ; @CODE@ : A tag to indicate the lack of realised or potential Umlaut
 
-                           !! !Tags for punctuation
+!! !Tags for punctuation
                            
-  +CLB   !!≈ ; @CODE@ : XXX These should be documented better
-  +PUNCT !!≈ ; @CODE@ : XXX These should be documented better
-  +LEFT  !!≈ ; @CODE@ : XXX These should be documented better
-  +RIGHT !!≈ ; @CODE@ : XXX These should be documented better
+  +CLB   !!≈ ; @CODE@ : Clause boundary
+  +PUNCT !!≈ ; @CODE@ : Punctuation
+  +LEFT  !!≈ ; @CODE@ : Left part of a pair punctuation symbol, parenthesis, etc
+  +RIGHT !!≈ ; @CODE@ : Right part of a pair punctuation symbol, parenthesis, etc
   
 
-              !! !Different focus particles
+!! !Different focus enclitics
               
   +Foc        !!≈ ; @CODE@ : XXX Document better = Forsterkende particle?
   +Foc/ge     !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
@@ -240,10 +249,10 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 
 ! 1              2               3                POS type
-+Der1                                          !!≈ | @CODE@ | Position
-                +Der2                          !!≈ | @CODE@ | Position
-                                +Der3          !!≈ | @CODE@ | Position
-!! | Der#1
++Der1                                          !!≈ | @CODE@ | Position 1
+                +Der2                          !!≈ | @CODE@ | Position 2
+                                +Der3          !!≈ | @CODE@ | Position 3
+!! | __Position Der#1__
 +Der/htalle                                    !!≈ | @CODE@ | VV - Passive, frekeventative 
 +Der/lgidh                                     !!≈ | @CODE@ | VV - Passive
 +Der/ijes                                      !!≈ | @CODE@ | NA - Nomen agentis
@@ -264,19 +273,19 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Der/Dimin                                     !!≈ | @CODE@ | NN - Diminutive
 +Der/Rec                                       !!≈ | @CODE@ | NN - Forholdsformer
 +Der/laakan									   !!≈ | @CODE@ | AAdv - adverb
-!! | Der#2
+!! | __Position Der#2__
                 +Der/voete                     !!≈ | @CODE@ | AN - 
                 +Der/ehte                      !!≈ | @CODE@ | VV - Causative
                 +Der/adte                      !!≈ | @CODE@ | VV - Frequentative, Kontinuativ
                 +Der/alle                      !!≈ | @CODE@ | VV - Frequentative
-                +Der/eds                       !!≈ | @CODE@ | NA__ = Attributt
-!! | Der#3
+                +Der/eds                       !!≈ | @CODE@ | NA - Attributt
+!! | __Position Der#3__
                                 +Der/PassL     !!≈ | @CODE@ | VV - long only
                                 +Der/NomAg     !!≈ | @CODE@ | VN - Nomen Agentis
                                 +Der/NomAct    !!≈ | @CODE@ | VN - Nomen Actionis
                                 +Der/ahtje     !!≈ | @CODE@ | VV - Inchoative
                                 +Der/gåete     !!≈ | @CODE@ | VV - Inchoative
-!! | Der#4   | ''So far +Der4 is not motivated for SMA.''
+!! | __Position Der#4__   | ''So far +Der4 is not motivated for SMA.''
 
 !! !Other, non-positional derivations
 
@@ -289,9 +298,9 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Der/PassS                                                                  !!≈ | @CODE@ | VV - short passive only
 +Der/A                                                                      !!≈ | @CODE@ | NA - comparation of N's
 
-!!
+!! 
 !! !!Tags for originating language
-!!
+!! 
 !! The following tags are used to guide conversion to IPA: loan words
 !! and foreign names are usually pronounced (approximately) as in the
 !! originating (majority) language. Instead of trying to identify the
@@ -300,15 +309,15 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! transcriber with source language codes. Once tagged, it is possible
 !! to split the lexical transducer in smaller ones according to langu-
 !! age, and apply different IPA conversion to each of them.
-!!
+!! 
 !! The principle of tagging is that we only tag to the extent needed,
 !! and following a priority:
-!! # any untagged word is pronounced with SME orthographic conventions
+!! # any untagged word is pronounced with SMA orthographic conventions
 !! # NNO and NOB have identical pronounciation, NNO is only used if
 !!   different in spelling from NOB
 !! # SWE has mostly the same pronounciation as NOB, and is only used
 !!   if different in spelling from NOB
-!! # Occasionally even SME (the default) may be tagged, to block other
+!! # Occasionally even SMA (the default) may be tagged, to block other
 !!   languages from being specified, mainly during semi-automatic
 !!   language tagging sessions
 !!
@@ -316,38 +325,46 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! with as little work as possible. On the other hand, if more words
 !! are tagged than strictly needed, this should pose no problem as
 !! long as the IPA conversion is correct - at least some words will
-!! get the same pronounciation whether read as SME or NOB/NNO/SWE.
+!! get the same pronounciation whether read as SMA or NOB/NNO/SWE.
 !!
++OLang/SMA !!≈ * @CODE@ - South Sámi
 +OLang/SME !!≈ * @CODE@ - North Sámi
++OLang/SMJ !!≈ * @CODE@ - Julev Sámi
 +OLang/FIN !!≈ * @CODE@ - Finnish
 +OLang/SWE !!≈ * @CODE@ - Swedish
 +OLang/NOB !!≈ * @CODE@ - Norw. bokmål
 +OLang/NNO !!≈ * @CODE@ - Norw. nynorsk
 +OLang/ENG !!≈ * @CODE@ - English
-+OLang/UND !!≈ * @CODE@ - Undefined
-!!
++OLang/UND !!≈ * @CODE@ - Undefined/unknown/we don't care (except that it is not SMA)
+
+!! 
 !! !!Triggers for morphophonological rules
   X2 !!≈ ; @CODE@ : Trigger for ???
   X3 !!≈ ; @CODE@ : Trigger for ???
   X4 !!≈ ; @CODE@ : Trigger for ???
   E2 !!≈ ; @CODE@ : insert e ! Fjern denne.
-!!
+
+!! 
         !! !!Symbols that need to be escaped on the lower side (towards twolc):
  »7     !!≈ ; @CODE@ : Literal »
  «7     !!≈ ; @CODE@ : Literal «
         !! {{{
- %[%>%] !!= @CODE@ - Literal >
- %[%<%] !!= @CODE@ - Literal <
+ %[%>%] !!≈ @CODE@ = Literal >
+ %[%<%] !!≈ @CODE@ = Literal <
         !! }}}
-!!
-!! !!Lexeme disambiguation tags
-  +Hom1          !!≈ ; @CODE@ : Homonymy
-  +Hom2          !!≈ ; @CODE@ : Homonymy
-  +v1 !!≈ ; @CODE@ : Lemma variants ?
-  +v2 !!≈ ; @CODE@ : Lemma variants ?
-  +v3 !!≈ ; @CODE@ : Lemma variants ?
-  +v4 !!≈ ; @CODE@ : Lemma variants ?
-  +v5 !!≈ ; @CODE@ : Lemma variants ?
+
+! Jspwiki note to the above: the only way to escape the interpretation of [ and ]
+! as links seems to be to wrap them inside {{{ }}}.
+
+!! 
+!! !!Homonymy and variant tags
+  +Hom1  !!≈ ; @CODE@ : Homonymy 1
+  +Hom2  !!≈ ; @CODE@ : Homonymy 2
+  +v1    !!≈ ; @CODE@ : Stem variant 1
+  +v2    !!≈ ; @CODE@ : Stem variant 2
+  +v3    !!≈ ; @CODE@ : Stem variant 3
+  +v4    !!≈ ; @CODE@ : Stem variant 4
+  +v5    !!≈ ; @CODE@ : Stem variant 5
 !!
 
 
