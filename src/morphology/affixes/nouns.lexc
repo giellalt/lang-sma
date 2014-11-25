@@ -183,6 +183,7 @@ LEXICON AAJEGE        !Sg+Nom=Aajege/Aajeh  Sg+Cmp=Aajeh-
 ! Test data:
 !!€gt-norm: beetnege # Odd-syllable test
 !!€ beetnege            beetnege+N+Sg+Nom
+!!€ beetneh             beetnege+N+Sg+Nom
 !!€ beetnegen           beetnege+N+Sg+Gen
 !!€ beetnegasse         beetnege+N+Sg+Ill
 !!€ beetnegisnie        beetnege+N+Sg+Ine
@@ -665,7 +666,7 @@ LEXICON IJAANOVE_LOAN
 
 LEXICON AATORE_LOAN
          :ator N_ODD      ;
-  +Use/NG:to   UVRE_LOAN  ;
+  +Use/NG+Err/Sub:to   UVRE_LOAN  ;
  +Err/Sub:tor  N_ODD_LOAN ;
 
 !!€gt-norm: administraatore# ODD-syllable test
@@ -678,18 +679,15 @@ LEXICON AATORE_LOAN
 
 LEXICON AKTORE_LOAN
         +v1:aktor  N_ODD_LOAN ;
- +v2+Use/NG:akto   UVRE_LOAN  ;
+ +v2+Use/NG+Err/Sub:akto   UVRE_LOAN  ;
    +Err/Sub:aaktor N_ODD      ;
 
 !!€gt-norm: faktore# Even-syllable test
 !!€ faktore                   faktore+N+Sg+Nom
 !!€ faktorem                  faktore+N+Sg+Acc
 !!€ faktoren	              faktore+N+Sg+Gen
-!!€ faktovresne	              faktore+N+Sg+Ine
 !!€ faktorisnie	              faktore+N+Sg+Ine
-!!€ faktovreste	              faktore+N+Sg+Ela
 !!€ faktoristie	              faktore+N+Sg+Ela
-!!€ faktovrine	              faktore+N+Sg+Com
 !!€ faktorinie	              faktore+N+Sg+Com
 
 LEXICON EKTORE_LOAN
@@ -1576,7 +1574,7 @@ LEXICON NIEJTESGOBL
 
 LEXICON NIEJTE_PL
          +Nom:%>h        FINAL1 ;
-  +Nom+Use/NG:%>eh       FINAL1 ; ! do not generate doubleform
+  +Nom+Use/NG+Err/Sub:%>eh       FINAL1 ; ! do not generate doubleform
          +Acc:%>ide      FINAL1 ;
          +Gen:%>i        FINAL1 ;
  +Gen+Err/Sub:%>ij       FINAL1 ;
@@ -1631,6 +1629,7 @@ LEXICON MAAKE !!= @CODE@ Only for "relatives"
 !!€ vïelletje	         vïelle+N+Der/Dimin+N+Sg+Nom
 !!€ vïelletjasse	     vïelle+N+Der/Dimin+N+Sg+Ill
 !!€ vïellemem	         vïelle+N+Sg+Acc+PxSg1
+!!€ vïelleme	         vïelle+N+Sg+Acc+PxSg1
 !!€ vïellemdh	         vïelle+N+Sg+Acc+PxSg2
 !!€ vïellese	         vïelle+N+Sg+Nom+PxSg3
 
@@ -1744,6 +1743,7 @@ LEXICON KONTO_SG
  +Ine:%>sne FINAL1 ;
  +Ela:%>ste FINAL1 ;
  +Com:%>ine FINAL1 ;
+ 
 ! waiting with the Px forms for these (?) loanwords
 !  +Nom+PxSg1:%>me FINAL1 ;
 !  +Nom+PxSg2:%>dh FINAL1 ;
