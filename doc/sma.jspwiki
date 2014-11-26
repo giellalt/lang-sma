@@ -32,12 +32,12 @@ This is free and open source South Sámi morphology.
  * __+Pcle    __ = Participle?
  * __+Num     __ = Numerals
 
- * __+Logo    __ = ???
+ * +Logo    
 
 
  !Tags for sub-POS
 !!Proper nouns
- * __+Prop     __ = Proprium, proper nouns
+ * __+Prop     __ =
 
 !!Pronoun subtypes
  * __+Pers    __ = Personal
@@ -50,26 +50,25 @@ This is free and open source South Sámi morphology.
  * __+Coll    __ = Collective numeral
 
  || Usage tags || Explanation
- | __+Err/Sub__  | Substandard, (word is misspelt according to norm)
- | __+Use/Marg__  | Marginal?
- | __+Use/-Spell__  | Excluded from speller
- | __+Use/SpellNoSugg__  | Recognized but not suggested in speller
- | __+Use/Circ__  | Circular path?
- | __+Use/CircN__  | Circular number path?
- | __+Use/Ped__  | Remove from pedagogical speller
- | __+Use/NG__  | Do not generate \\ for isme-ped.fst and apertium
- | __+Use/MT__  | Generate for apertium only
- | __+Use/LexSub__  | The lemma is not a South Sami word
+ | __+Err/Sub__ = Substandard, (word is misspelt according to norm)
+ | __+Use/Marg__ = Marginal?
+ | __+Use/-Spell__ = Excluded from speller
+ | __+Use/SpellNoSugg__ = Recognized but not suggested in speller
+ | __+Use/Circ__ = Circular path?
+ | __+Use/CircN__ = Circular number path?
+ | __+Use/Ped__ = Remove from pedagogical speller
+ | __+Use/NG__ = Do not generate \\ for isme-ped.fst and apertium
+ | __+Use/MT__ = Generate for apertium only
+ | __+Use/LexSub__ = The lemma is not a South Sami word
 
  !!Dialect tags:
 
- || Tag       || Meaning
- | __+Dial/-S__ | Not in the South
- | __+Dial/-N__ | Not in the North
- | __+Dial/-NOR__ | Not in Norway
- | __+Dial/-SW__ | Not in Sweden
- | __+Dial/SH__ | Short forms
- | __+Dial/L__ | Long forms
+ | +Dial/-S | Not in the South
+ | +Dial/-N | Not in the North
+ | +Dial/-NOR | Words not in Norway
+ | +Dial/-SW | Words not in Sweden
+ | +Dial/SH | Short forms
+ | +Dial/L | Long forms
 
 
 
@@ -77,43 +76,39 @@ This is free and open source South Sámi morphology.
 (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
 !The first part of the component may be ...
- || Tag       || Meaning
- | __+CmpN/Sg__ | Singular, any case
- | __+CmpN/SgN__ | Singular nominative
- | __+CmpN/SgG__ | Singular genitive
- | __+CmpN/PlG__ | Plural genitive
+ | +CmpN/Sg | Sg
+ | +CmpN/SgN | SgNominative
+ | +CmpN/SgG | SgGenitive
+ | +CmpN/PlG | PlGenitive
 
-!This part of the compound must be ...
- || Tag       || Meaning
- | __+CmpN/First__ | first
- | __+CmpN/Last__ | last
- | __+CmpN/None__ | Can not take part in compounds
- | __+CmpN/Only__ | Can only be part of a compound
- | __+CmpN/Pref__ | prefix only
+!This part of the component might be ...
+ | +CmpN/First | first
+ | +CmpN/Last | last
+ | +CmpN/None | Can not take part in compounds
+ | +CmpN/Only | Can only be part of a compound
+ | +CmpN/Pref | prefix only
 
-!The second part of the compound requires to the left ...
- || Tag       || Meaning
- | __+CmpN/SgLeft__ | Sg to the left
- | __+CmpN/SgNomLeft__ | etc.
- | __+CmpN/SgGenLeft__ | "
- | __+CmpN/PlGenLeft__ | "
+!The second part of the compound may take ...
+ | +CmpN/SgLeft | Sg to the left
+ | +CmpN/SgNomLeft | etc.
+ | +CmpN/SgGenLeft | "
+ | +CmpN/PlGenLeft | "
 
 !This part of the compound may ...
- || Tag       || Meaning
- | __+CmpN/All__ | all positions, __default__, this tag does not have to be written
- | __+CmpN/Def__ | works along with Left compound-tagging
- | __+CmpN/DefSgGen__ | works along with Left compound-tagging
- | __+CmpN/DefPlGen__ | works along with Left compound-tagging
+ | +CmpN/All | all positions, __default__, this tag does not have to be written
+ | +CmpN/Def | works along with Left compound-tagging
+ | +CmpN/DefSgGen | works along with Left compound-tagging
+ | +CmpN/DefPlGen | works along with Left compound-tagging
 
 !!Descriptive compounding tags
 Tags for compound analysis - this is what a compound actually is:
 
  ;  : Different case + number combinations
 
- ; +SgCmp	 : This part compounds in singular, any case
- ; +SgNomCmp : This part compounds in singular nominative
- ; +SgGenCmp : This part compounds in singular genitive
- ; +PlGenCmp : This part compounds in plural genitive
+ * +SgCmp	       
+ * +SgNomCmp      
+ * +SgGenCmp      
+ * +PlGenCmp      
 
 
  ; +Cmp : Dynamic compound - this tag should ''always'' be part of a dynamic compound.
@@ -121,41 +116,39 @@ Tags for compound analysis - this is what a compound actually is:
  ; +RCmpnd : This is a split compound with the other part to the right: \\
  "Arbeids- og inkluderingsdepartementet" => Arbeids- = +RCmpnd
  ; +LCmpnd+ : This is a split compound with the other part to the left
- ; +ShCmp : Testing ShCmp / short compound forms
+ ; +ShCmp : Testing ShCmp
 
 !!Tags for Inflection
 
 !Tags for Case and Number Inflection
-
+!!Case and number
  * __+Sg	   __ = Singular
  * __+Pl	   __ = Plural
+
  * __+Nom   __ = Nominative
  * __+Acc   __ = Ackusative
  * __+Gen   __ = Genitive
  * __+Ine   __ = Inesive
  * __+Ela   __ = Elative
- * __+Ill   __ = Illative
- * __+Com   __ = Comitative
+ * __+Ill   __= Illative
+ * __+Com   __= Comitative
  * __+Ess   __ = Essive
 
 
-!Tags for possessive inflection
+!!Px
+ * __  +PxSg1                            __ =  Possessives Singular
+ * __  +PxSg2                            __ =  Possessives Singular
+ * __  +PxSg3                            __ =  Possessives Singular
+ * __  +PxDu1                            __ =  Possessives Dual
+ * __  +PxDu2                            __ =  Possessives Dual
+ * __  +PxDu3                            __ =  Possessives Dual
+ * __  +PxPl1                            __ =  Possessives Plural
+ * __  +PxPl2                            __ =  Possessives Plural
+ * __  +PxPl3                            __ =  Possessives Plural
 
- * __+PxSg1__ =  Possessive Singular, first person
- * __+PxSg2__ =  Possessive Singular, second person
- * __+PxSg3__ =  Possessive Singular, third person
- * __+PxDu1__ =  Possessive Dual, first person
- * __+PxDu2__ =  Possessive Dual, second person
- * __+PxDu3__ =  Possessive Dual, third person
- * __+PxPl1__ =  Possessive Plural, first person
- * __+PxPl2__ =  Possessive Plural, second person
- * __+PxPl3__ =  Possessive Plural, third person
-
-!Tags for verb tenses
  | __+Prs__ = Presens
  | __+Prt__ = Preteritum
 
-!Tags for verb person + number
  | __+Sg1__ = Singular, 1.person 
  | __+Sg2__ = Singular, 2.person
  | __+Sg3__ = Singular, 3.person
@@ -166,14 +159,13 @@ Tags for compound analysis - this is what a compound actually is:
  | __+Pl2__ = Plural  , 2.person
  | __+Pl3__ = Plural  , 3.person
 
-!Other verb tags
  | +Neg | negation verb ij
  | +ConNeg | main verb complement to Neg, form identical to Imp
  | +VAbess | Verb Abessive
 
- ; +Inf : Infinitive
- ; +PrfPrc : Perfect participle
- ; +PrsPrc : Present tense participle
+ ; +Inf : Infinitive and participles
+ ; +PrfPrc :  Infinitive and participles
+ ; +PrsPrc : Infinitive and participles
  ; +Ger : Gerundium 
  ; +VGen : Verbgenitive
 
@@ -193,8 +185,8 @@ Tags for compound analysis - this is what a compound actually is:
  ; +TV +IV : Transitivity tags
  ; +Multi : Multiword phrase tag ?
  ; +Guess : for the name guesser ?
- ; +LOAN : ad hoc tag for development purposes ? Loan words?
- ; +Hyph : A tag to indicate that a hyphen was used when compounding, when it should not have been
+ ; +LOAN : ad hoc tag for development purposes ?
+ ; +Hyph : A tag to indicate that a hyphen was used when compounding?
 
 !Tags for testing the frequency of certain phenomenas in our corpora
 
@@ -208,13 +200,13 @@ Tags for compound analysis - this is what a compound actually is:
 
 !Tags for punctuation
 
- ; +CLB : Clause boundary
- ; +PUNCT : Punctuation
- ; +LEFT : Left part of a pair punctuation symbol, parenthesis, etc
- ; +RIGHT : Right part of a pair punctuation symbol, parenthesis, etc
+ ; +CLB : XXX These should be documented better
+ ; +PUNCT : XXX These should be documented better
+ ; +LEFT : XXX These should be documented better
+ ; +RIGHT : XXX These should be documented better
 
 
-!Different focus enclitics
+!Different focus particles
 
  ; +Foc : XXX Document better = Forsterkende particle?
  ; +Foc/ge : XXX Document better = Forsterkende particle
@@ -240,10 +232,10 @@ Tags for compound analysis - this is what a compound actually is:
 Affix and tag, frompos - topos
 
 
- | +Der1 | Position 1
- | +Der2 | Position 2
- | +Der3 | Position 3
-| __Position Der#1__
+ | +Der1 | Position
+ | +Der2 | Position
+ | +Der3 | Position
+| Der#1
  | +Der/htalle | VV - Passive, frekeventative 
  | +Der/lgidh | VV - Passive
  | +Der/ijes | NA - Nomen agentis
@@ -251,11 +243,19 @@ Affix and tag, frompos - topos
  | +Der/les | VA - Intensive
  | +Der/ldihkie | VA - 
  | +Der/ldahke | VA - Resultatnomen (?)
- | +Der/ldh | VA - 
+ | +Der/ldh | VA - Attributt
  | +Der/htidh | VV - Causative
  | +Der/lidh | VV - Subitive
  | +Der/stidh | VV - Diminutive, Subitive
- | +Der/didh | VV - Continuative, Konative, Frequentative, Refleksive
+ | +Der/didh | VV - Continuative, Konative, Frequentative, Refleksive, Momentan
+
++Der/didhMOM  ?
++Der/didhKON  ?
++Der/didhREFL ?
++Der/didhCONT ?
++Der/didhCONTFREC ?
++Der/didhFREC ?
+
  | +Der/htjidh | Dim-cont, Frequentative
  | +Der/htovve | AV - Passive
  | +Der/htoeve | AV - Passive
@@ -263,19 +263,19 @@ Affix and tag, frompos - topos
  | +Der/Dimin | NN - Diminutive
  | +Der/Rec | NN - Forholdsformer
  | +Der/laakan									 | AAdv - adverb
-| __Position Der#2__
- | +Der/voete | AN - 
+| Der#2
+ | +Der/voete | AN - Noun
  | +Der/ehte | VV - Causative
  | +Der/adte | VV - Frequentative, Kontinuativ
  | +Der/alle | VV - Frequentative
- | +Der/eds | NA - Attributt
-| __Position Der#3__
+ | +Der/eds | NA = Attributt
+| Der#3
  | +Der/PassL | VV - long only
  | +Der/NomAg | VN - Nomen Agentis
  | +Der/NomAct | VN - Nomen Actionis
  | +Der/ahtje | VV - Inchoative
  | +Der/gåete | VV - Inchoative
-| __Position Der#4__   | ''So far +Der4 is not motivated for SMA.''
+| Der#4   | ''So far +Der4 is not motivated for SMA.''
 
 !Other, non-positional derivations
 
@@ -288,9 +288,7 @@ just specify {{{[+Der|+Der1 .. +Der5]}}} and you are set.
  | +Der/PassS | VV - short passive only
  | +Der/A | NA - comparation of N's
 
-
 !!Tags for originating language
-
 The following tags are used to guide conversion to IPA: loan words
 and foreign names are usually pronounced (approximately) as in the
 originating (majority) language. Instead of trying to identify the
@@ -299,58 +297,49 @@ we tag all words that can't be correctly transcribed using the SME
 transcriber with source language codes. Once tagged, it is possible
 to split the lexical transducer in smaller ones according to langu-
 age, and apply different IPA conversion to each of them.
-
 The principle of tagging is that we only tag to the extent needed,
 and following a priority:
-# any untagged word is pronounced with SMA orthographic conventions
+# any untagged word is pronounced with SME orthographic conventions
 # NNO and NOB have identical pronounciation, NNO is only used if
   different in spelling from NOB
 # SWE has mostly the same pronounciation as NOB, and is only used
   if different in spelling from NOB
-# Occasionally even SMA (the default) may be tagged, to block other
+# Occasionally even SME (the default) may be tagged, to block other
   languages from being specified, mainly during semi-automatic
   language tagging sessions
 All in all, we want to get as much correctly transcribed to IPA
 with as little work as possible. On the other hand, if more words
 are tagged than strictly needed, this should pose no problem as
 long as the IPA conversion is correct - at least some words will
-get the same pronounciation whether read as SMA or NOB/NNO/SWE.
- * +OLang/SMA - South Sámi
+get the same pronounciation whether read as SME or NOB/NNO/SWE.
  * +OLang/SME - North Sámi
- * +OLang/SMJ - Julev Sámi
  * +OLang/FIN - Finnish
  * +OLang/SWE - Swedish
  * +OLang/NOB - Norw. bokmål
  * +OLang/NNO - Norw. nynorsk
  * +OLang/ENG - English
- * +OLang/UND - Undefined/unknown/we don't care (except that it is not SMA)
-
+ * +OLang/UND - Undefined
 
 !!Triggers for morphophonological rules
  ; X2 : Trigger for ???
  ; X3 : Trigger for ???
  ; X4 : Trigger for ???
  ; E2 : insert e ! Fjern denne.
-
-
 !!Symbols that need to be escaped on the lower side (towards twolc):
  ; »7 : Literal »
  ; «7 : Literal «
 {{{
- %[%>%] = Literal >
- %[%<%] = Literal <
+  %[%>%]  - Literal >
+  %[%<%]  - Literal <
 }}}
-
-
-
-!!Homonymy and variant tags
- ; +Hom1 : Homonymy 1
- ; +Hom2 : Homonymy 2
- ; +v1 : Stem variant 1
- ; +v2 : Stem variant 2
- ; +v3 : Stem variant 3
- ; +v4 : Stem variant 4
- ; +v5 : Stem variant 5
+!!Lexeme disambiguation tags
+ ; +Hom1 : Homonymy
+ ; +Hom2 : Homonymy
+ ; +v1 : Lemma variants ?
+ ; +v2 : Lemma variants ?
+ ; +v3 : Lemma variants ?
+ ; +v4 : Lemma variants ?
+ ; +v5 : Lemma variants ?
 
 
 !!Umlaut and diphthong simplification triggers
@@ -1835,6 +1824,7 @@ __gierehtse # Odd-syllable test examples:__
 
 __beetnege # Odd-syllable test examples:__
 * __beetnege__: {{beetnege+N+Sg+Nom}}
+* __beetneh__: {{beetnege+N+Sg+Nom}}
 * __beetnegen__: {{beetnege+N+Sg+Gen}}
 * __beetnegasse__: {{beetnege+N+Sg+Ill}}
 * __beetnegisnie__: {{beetnege+N+Sg+Ine}}
@@ -2024,11 +2014,8 @@ __faktore# Even-syllable test examples:__
 * __faktore__: {{faktore+N+Sg+Nom}}
 * __faktorem__: {{faktore+N+Sg+Acc}}
 * __faktoren__: {{faktore+N+Sg+Gen}}
-* __faktovresne__: {{faktore+N+Sg+Ine}}
 * __faktorisnie__: {{faktore+N+Sg+Ine}}
-* __faktovreste__: {{faktore+N+Sg+Ela}}
 * __faktoristie__: {{faktore+N+Sg+Ela}}
-* __faktovrine__: {{faktore+N+Sg+Com}}
 * __faktorinie__: {{faktore+N+Sg+Com}}
 
 
@@ -2242,6 +2229,7 @@ __vïelle # Even-syllable test examples:__
 * __vïelletje__: {{vïelle+N+Der/Dimin+N+Sg+Nom}}
 * __vïelletjasse__: {{vïelle+N+Der/Dimin+N+Sg+Ill}}
 * __vïellemem__: {{vïelle+N+Sg+Acc+PxSg1}}
+* __vïelleme__: {{vïelle+N+Sg+Acc+PxSg1}}
 * __vïellemdh__: {{vïelle+N+Sg+Acc+PxSg2}}
 * __vïellese__: {{vïelle+N+Sg+Nom+PxSg3}}
 
@@ -2265,6 +2253,7 @@ __vïelle # Even-syllable test examples:__
           +PlGenCmp:%>j  R        ; 
   +Der1+Der/Dimin+N:%»tj GÅATETJE ; 
 }}}
+
 
 
 
