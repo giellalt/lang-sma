@@ -10,8 +10,7 @@ TESTS=
 
 if WANT_GENERATION
 # Add your shell scripts for running tests requiring only a generator:
-TESTS+=test-noun-generation.sh \
-	   test-verb-generation.sh \
+TESTS+=test-verb-generation.sh \
 	   test-adj-generation.sh \
 	   test-propernoun-generation.sh
 
