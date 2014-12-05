@@ -492,36 +492,55 @@ LEXICON BERN-LOAN-plc
 !        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-LOAN
-   ERVASTI ;
+   RONDANE ;
 ! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ; ! reverting the special LOAN lexicon,
 !        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-sur
-   ERVASTI-sur ;
++N+Prop+Sem/Sur:   RONDANE ;
 
 LEXICON RONDANE-obj
-   ERVASTI-obj ;
++N+Prop+Sem/Obj:   RONDANE ;
 
 
 LEXICON RONDANE-org
-   ERVASTI-org ;
++N+Prop+Sem/Org:   RONDANE ;
 
 LEXICON RONDANE-SG-LOAN
-   ERVASTI ;
+   RONDANE ;
 ! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ; ! reverting the special LOAN lexicon,
 !        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-mal
-   ERVASTI-mal ;
++N+Prop+Sem/Mal:   RONDANE ;
 
 LEXICON RONDANE-fem
-   ERVASTI-fem ;
++N+Prop+Sem/Fem:   RONDANE ;
 
 LEXICON RONDANE-SG-plc
-   ERVASTI-plc ;
++N+Prop+Sem/Plc:   RONDANE ;
 
 LEXICON RONDANE-plc
-   ERVASTI-plc ;
++N+Prop+Sem/Plc:   RONDANE ;
+  
+LEXICON RONDANE
+         +Sg+Nom:       FINAL1 ;
+   +Sg+Nom+PxSg1:%>X2amme          FINAL1 ;
+   +Sg+Nom+PxSg2:%>X2adth          FINAL1 ;
+         +Sg+Acc:%>m    FINAL1 ;
+   +Sg+Acc+PxSg2:%>X2amth          FINAL1 ;
+         +Sg+Gen:%>n    FINAL1 ;
+   +Sg+Gen+PxSg1:%>X2anne          FINAL1 ;
+   +Sg+Gen+PxSg2:%>X2anne          FINAL1 ;
+   +Sg+Gen+PxSg3:%>X2anne          FINAL1 ;
+         +Sg+Ill:%>X2asse          FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+   +Sg+Ill+PxSg2:%>X2assedh        FINAL1 ;
+         +Sg+Ine:%>X2isnie         FINAL1 ;
+         +Sg+Ela:%>X2istie         FINAL1 ;
+ +Sg+Ela+Err/Sub:%>X2istie FINAL1 ; !Miesie Mavve
+         +Sg+Com:%>X2inie          FINAL1 ;
+   +Sg+Com+PxSg2:%>X2æjnedh        FINAL1 ;
+
 
 LEXICON JOKULL-plc
    CNAME_EVEN-plc ;
