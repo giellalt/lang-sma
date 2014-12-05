@@ -422,13 +422,13 @@ LEXICON LONDON-LOAN-plc
 
 
 LEXICON BETFAGE-fem
-   PERS_SNAME_NIEJTE-fem ;
+  :X2 PERS_SNAME_NIEJTE-fem ;
 
 LEXICON BETFAGE-mal
-   PERS_SNAME_NIEJTE-mal ;
+  :X2 PERS_SNAME_NIEJTE-mal ;
 
 LEXICON BETFAGE-plc
-   SNAME_NIEJTE-plc ;
+  :X2 SNAME_NIEJTE-plc ;
 
 LEXICON BERN-ani
    CNAME_EVEN-ani ;
@@ -460,12 +460,10 @@ LEXICON BERN-fem
  +N+Prop+Sem/Fem: CNAME_EVENLEX ;
  +Der1+Der/Dimin+N:e%»tj GÅATETJE ;
 
-
 LEXICON BERN-LOAN-obj
  +N+Prop+Sem/Obj: CNAME_EVENLEX ;
 ! +N+Prop+Sem/Obj+Sg+Nom: FINAL1 ;
 !        +N+Prop+Sem/Obj: RHyph  ;
-
 
 LEXICON BERN-femplc
  +N+Prop+Sem/Fem: CNAME_EVENLEX         ;
@@ -501,7 +499,6 @@ LEXICON RONDANE-sur
 
 LEXICON RONDANE-obj
 +N+Prop+Sem/Obj:   RONDANE ;
-
 
 LEXICON RONDANE-org
 +N+Prop+Sem/Org:   RONDANE ;
@@ -547,48 +544,49 @@ LEXICON JOKULL-plc
 
 
 LEXICON DUBAI-plc
- +N+Prop+Sem/Plc:i DUBAILEX_PLC-ORG ;
+ +N+Prop+Sem/Plc: DUBAILEX_PLC-ORG ;
 
 LEXICON DUBAI-org
- +N+Prop+Sem/Org:i DUBAILEX_PLC-ORG ;
+ +N+Prop+Sem/Org: DUBAILEX_PLC-ORG ;
 
 LEXICON DUBAI-fem
- +N+Prop+Sem/Fem:i DUBAILEX ;
+ +N+Prop+Sem/Fem: DUBAILEX ;
 
 LEXICON DUBAI-mal
- +N+Prop+Sem/Mal:i DUBAILEX ;
+ +N+Prop+Sem/Mal: DUBAILEX ;
 
 LEXICON DUBAI-sur
- +N+Prop+Sem/Sur:i DUBAILEX ;
+ +N+Prop+Sem/Sur: DUBAILEX ;
 
 
 LEXICON DUBAI-obj
- +N+Prop+Sem/Obj:i       DUBAILEX  ;
+ +N+Prop+Sem/Obj:       DUBAILEX  ;
 
+!This is a standardization issues - 
 
   LEXICON DUBAILEX_PLC-ORG
-           +Attr:        FINAL1    ;
-         +Sg+Nom:        FINAL1    ;
+           +Attr:i        FINAL1    ;! Dubai
+         +Sg+Nom:i        FINAL1    ;! Dubai
                          RHyph     ;
-         +Sg+Acc:je%>m   FINAL1    ;
-         +Sg+Gen:je%>n   FINAL1    ;
-         +Sg+Ill:je%>se  FINAL1    ;
-         +Sg+Ine:je%>sne FINAL1    ;
-         +Sg+Ela:je%>ste FINAL1    ;
-         +Sg+Com:j%>ine  FINAL1    ;
-            +Ess:j%>ine  FINAL1    ;
+         +Sg+Acc:jje%>m   FINAL1    ;!ref. borrowing pattern from Lorentz -i -> ijje , ex . fobijje -> fobijje.
+         +Sg+Gen:jje%>n   FINAL1    ;! Dubai - 'Dubajjem' -  Question is whether it should be 'Dubaijjem'.-This is a standardization issues
+         +Sg+Ill:jje%>se  FINAL1    ;
+         +Sg+Ine:jje%>sne FINAL1    ;
+         +Sg+Ela:jje%>ste FINAL1    ;
+         +Sg+Com:jj%>ine  FINAL1    ;
+            +Ess:jj%>ine  FINAL1    ;
 
   LEXICON DUBAILEX
-           +Attr:        FINAL1    ;
-         +Sg+Nom:        FINAL1    ;
+           +Attr:i        FINAL1    ;
+         +Sg+Nom:i        FINAL1    ;
                          RHyph     ;
-         +Sg+Acc:je%>m   FINAL1    ;
-         +Sg+Gen:je%>n   FINAL1    ;
-         +Sg+Ill:je%>se  FINAL1    ;
-         +Sg+Ine:je%>sne FINAL1    ;
-         +Sg+Ela:je%>ste FINAL1    ;
-         +Sg+Com:j%>ine  FINAL1    ;
-            +Ess:j%>ine  FINAL1    ;
+         +Sg+Acc:jje%>m   FINAL1    ;!ref. borrowing pattern from Lorentz -i -> ijje , ex . fobijje -> fobijje
+         +Sg+Gen:jje%>n   FINAL1    ;
+         +Sg+Ill:jje%>se  FINAL1    ;
+         +Sg+Ine:jje%>sne FINAL1    ;
+         +Sg+Ela:jje%>ste FINAL1    ;
+         +Sg+Com:jj%>ine  FINAL1    ;
+            +Ess:jj%>ine  FINAL1    ;
              +Pl:j       NIEJTE_PL ;
 
 
@@ -626,7 +624,7 @@ LEXICON PIPPI-LOAN-plc
 ! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ;
 !        +N+Prop+Sem/Plc: RHyph  ;
 
-
+!This is a standardization issues 
 LEXICON MAKI-sur
  +N+Prop+Sem/Sur+Use/NG: RITCHIE-sur    ;
  PN_I_FINSK-sur ;
@@ -649,7 +647,7 @@ LEXICON MAKI-LOAN-plc
 !        +N+Prop+Sem/Plc: RHyph      ;
 ! +N+Prop+Sem/Plc+Sg+Nom: PN_I_FINSK ;
 
-
+!This is a standardization issues 
 LEXICON GATA-plc
  :gat SNAME_MAANA-plc ;
  
@@ -824,6 +822,7 @@ LEXICON UNAME_PLC-ORG
            ACCRA_PLC-ORG ; !until we get answer from SGM
  +Err/Sub: UNAME_EVEN    ; ! !until we get answer from SGM
 
+!This is a standardization issues 
 LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
  +Sg+Nom+Err/Sub:        FINAL1 ; ! !until we get answer from SGM
         +Err/Sub:        RHyph  ; ! !until we get answer from SGM
