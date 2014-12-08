@@ -422,13 +422,13 @@ LEXICON LONDON-LOAN-plc
 
 
 LEXICON BETFAGE-fem
-  :X2 PERS_SNAME_NIEJTE-fem ;
+  PERS_SNAME_NIEJTE-fem ;
 
 LEXICON BETFAGE-mal
-  :X2 PERS_SNAME_NIEJTE-mal ;
+  PERS_SNAME_NIEJTE-mal ;
 
 LEXICON BETFAGE-plc
-  :X2 SNAME_NIEJTE-plc ;
+  SNAME_NIEJTE-plc ;
 
 LEXICON BERN-ani
    CNAME_EVEN-ani ;
@@ -490,53 +490,36 @@ LEXICON BERN-LOAN-plc
 !        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-LOAN
-   RONDANE ;
++N+Prop:   ERVASTI_NO_DISIMPH ;
 ! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ; ! reverting the special LOAN lexicon,
 !        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-sur
-+N+Prop+Sem/Sur:   RONDANE ;
++N+Prop+Sem/Sur:   ERVASTI_NO_DISIMPH ;
 
 LEXICON RONDANE-obj
-+N+Prop+Sem/Obj:   RONDANE ;
++N+Prop+Sem/Obj:   ERVASTI_NO_DISIMPH ;
 
 LEXICON RONDANE-org
-+N+Prop+Sem/Org:   RONDANE ;
++N+Prop+Sem/Org:   ERVASTI_NO_DISIMPH_PLC-ORG ;
 
 LEXICON RONDANE-SG-LOAN
-   RONDANE ;
++N+Prop:   ERVASTI_NO_DISIMPH ;
 ! +N+Prop+Sem/Plc+Sg+Nom: FINAL1 ; ! reverting the special LOAN lexicon,
 !        +N+Prop+Sem/Plc: RHyph  ; ! it only gives nominative.
 
 LEXICON RONDANE-mal
-+N+Prop+Sem/Mal:   RONDANE ;
++N+Prop+Sem/Mal:   ERVASTI_NO_DISIMPH ;
 
 LEXICON RONDANE-fem
-+N+Prop+Sem/Fem:   RONDANE ;
++N+Prop+Sem/Fem:   ERVASTI_NO_DISIMPH ;
 
 LEXICON RONDANE-SG-plc
-+N+Prop+Sem/Plc:   RONDANE ;
++N+Prop+Sem/Plc:   ERVASTI_NO_DISIMPH ;
 
 LEXICON RONDANE-plc
-+N+Prop+Sem/Plc:   RONDANE ;
++N+Prop+Sem/Plc:   ERVASTI_NO_DISIMPH_PLC-ORG ;
   
-LEXICON RONDANE
-         +Sg+Nom:       FINAL1 ;
-   +Sg+Nom+PxSg1:%>X2amme          FINAL1 ;
-   +Sg+Nom+PxSg2:%>X2adth          FINAL1 ;
-         +Sg+Acc:%>m    FINAL1 ;
-   +Sg+Acc+PxSg2:%>X2amth          FINAL1 ;
-         +Sg+Gen:%>n    FINAL1 ;
-   +Sg+Gen+PxSg1:%>X2anne          FINAL1 ;
-   +Sg+Gen+PxSg2:%>X2anne          FINAL1 ;
-   +Sg+Gen+PxSg3:%>X2anne          FINAL1 ;
-         +Sg+Ill:%>X2asse          FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-   +Sg+Ill+PxSg2:%>X2assedh        FINAL1 ;
-         +Sg+Ine:%>X2isnie         FINAL1 ;
-         +Sg+Ela:%>X2istie         FINAL1 ;
- +Sg+Ela+Err/Sub:%>X2istie FINAL1 ; !Miesie Mavve
-         +Sg+Com:%>X2inie          FINAL1 ;
-   +Sg+Com+PxSg2:%>X2æjnedh        FINAL1 ;
 
 
 LEXICON JOKULL-plc
