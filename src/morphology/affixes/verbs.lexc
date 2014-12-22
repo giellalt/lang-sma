@@ -451,9 +451,10 @@ LEXICON BÅETEDH   !!= * __@CODE@__ row A - Group I
                           +VGen:%>ien             FINAL1             ;
                         +ConNeg:%>ieh             FINAL1             ;
 ! +Act:%>eme           FINAL1 ;
-                           +Ger:%>ieminie         FINAL1             ;
-                   +Ger+Err/Sub:%>eminie          FINAL1             ;
-                        +PrsPrc:%>ije             FINAL1             ;
+                           +Ger:%>ieminie            FINAL1             ;
+                   +Ger+Err/Sub:%>eminie             FINAL1             ;
+                        +PrsPrc:%>ije                FINAL1             ;
+                   +PrsPrc+Err/Sub:%>eje             FINAL1             ;
 ! +PrsPrc:%>ijes        FINAL1 ;
                     +PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
 ! row F trigger for Umlaut Prt
@@ -918,9 +919,12 @@ LEXICON GUARKEDH_IV  !!= * __@CODE@__
 
 
 LEXICON GUARKEDH   !!= * __@CODE@__ row B - Group III
+            +Ind+Prs:%>a              V-PRS-SG-12        ; ! Class III 
             +Ind+Prs:%>               V-III-PRS-SG       ; ! class III special
             +Ind+Prs:%>a              VSUF-EVEN-PRS-DUPL ;
- +Ind+Prs+Pl3+Use/NG:%>oeh            FINAL1             ; ! arbitrarily +Use/NG, cf. VSUF-EVEN-PRS-DUPL
+            
+ +Ind+Prs+Pl3+Use/NG:%>oeh            FINAL1             ; ! arbitrarily +Use/
+ +Ind+Prs+Du1+Use/NG:%>oen            FINAL1             ; 
             +Ind+Prt:%>aj             VSUF-PRT           ;
               +Imprt:%>               VSUF-III-EVEN-IMP  ;
         +Ind+Prt+Sg3:%>aj             FINAL1             ;
@@ -1925,6 +1929,7 @@ LEXICON VSUF-V-EVEN-PRS   !!= * __@CODE@__
 
 LEXICON VSUF-EVEN-PRS-DUPL   !!= * __@CODE@__
          +Du1:X2n         FINAL1 ; !'e>oe
+ !        +Du1:oen         FINAL1 ;
   +Du2+Dial/L:X4jidien    FINAL1 ; !Long form
  +Du2+Dial/SH:d%^DISIMPen FINAL1 ; !oe>o a>e ie>e
          +Du3:X3jægan     FINAL1 ; !'e>0i
@@ -1967,13 +1972,16 @@ LEXICON VSUF-EVEN-IMP   !!= * __@CODE@__
 LEXICON VSUF-II-EVEN-IMP  !!= * __@CODE@__
  +Sg2:oeh  FINAL1 ;
  +Du2:oden FINAL1 ;
+ +Du2:oejidien FINAL1 ;
  +Pl2:ode  FINAL1 ;
-
+ +Pl2:oejidie  FINAL1 ;
+ 
 LEXICON VSUF-III-EVEN-IMP  !!= * __@CODE@__
  +Sg2:ah   FINAL1 ;
  +Du2:eden FINAL1 ;
+ +Du2:ajidien FINAL1 ;
  +Pl2:ede  FINAL1 ;
-
+ +Pl2:ajidie  FINAL1 ;
 !! !Present
 
 LEXICON V-IV-EVEN-PRS  !!= * __@CODE@__
@@ -1996,8 +2004,9 @@ LEXICON V-IV-EVEN-PRS  !!= * __@CODE@__
 LEXICON VSUF-IV-EVEN-IMP
  +Sg2:h    FINAL1 ;
  +Du2:eden FINAL1 ;
+ +Du2:ijidien FINAL1 ;
  +Pl2:ede  FINAL1 ;
-
+ +Pl2:ijidie  FINAL1 ;
 
 
 !! !!Odd
