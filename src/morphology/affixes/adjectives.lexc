@@ -637,7 +637,7 @@ LEXICON ORRE2
  +Use/NG:urr  e_E_EVEN     ;
  +Use/NG:urre EVENCOMPONLY ;
  +Use/NG:urre MES          ;
-!+Err/Sub:orr e_ES_ODDEVEN ; !comment from Aajege, MLK: bør subbes. orresistie? - THIS IS HOPELESS,skulle subbe denne, men jeg forstår ikke hvorofr det ikke er mulig?
+!+Err/Sub:orr e_ES_ODDEVEN ; !comment from Aajege, MLK: bør subbes. orresistie? - 
 
 ! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
 LEXICON NOERE_STOERE2
@@ -1501,7 +1501,9 @@ LEXICON EVENCOMPCASE_OBL
    +A+Comp+Sg+Com:b%>inie                     FINAL1    ;
    +A+Comp+Pl+Nom:%>%^COMPDISIMPb%>%^DISIMPh  FINAL1    ;
    +A+Comp+Pl+Acc:b%>idie                     FINAL1    ;
-   +A+Comp+Pl+Gen:%>%^COMPDISIMPb%>%^DISIMP   IGENSUFF  ;
+  ! +A+Comp+Pl+Gen:%>%^COMPDISIMPb%>%^DISIMP   IGENSUFF  ;
+   +A+Comp+Pl+Gen:%>%^COMPDISIMPb%>%^DISIMPi  FINAL1    ;
+ !  +A+Comp+Pl+Gen:b%<                         IGENSUFF  ;
    +A+Comp+Pl+Ill:b%>idie                     FINAL1    ;
    +A+Comp+Pl+Ine:b%>inie                     FINAL1    ;
    +A+Comp+Pl+Ela:b%>ijstie                   FINAL1    ;
