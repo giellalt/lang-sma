@@ -271,7 +271,7 @@ aviatihkeles+OLang/NOB:aviatihkel LES ;
 baahke+CmpN/SgN+CmpN/SgG+CmpN/PlG:baahk e_ES_ODDEVEN2 ; ! Klasse 2 ! e(2)-st. system2
 baahke+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:baahke ATTR_S ;
 baajhteles:baajhtal Ces_CES_ODD ;
-baajkoes:baajk oes_OES_ODD1 ;
+baajkoes:baajk oes_OES_ODD1 ;! baajkoes biejjie
 baajneles:baajnel Ces_CES_CE_ODD ; !baajnedh
 baakteske:baaktesk Ce_CE_ODDNOCOMP ;
 baaktjes+CmpN/SgN+CmpN/SgG+CmpN/PlG:bååktjehk HKE_ODD_COMP ; ! CHECK OPP!
@@ -915,10 +915,16 @@ gebties:gebt ies_IE_EVEN3 ;  !  Klasse 3
 geehpedihks+CmpN/SgN+CmpN/SgG+CmpN/PlG:geehped ihks_IHKS_igs_IGS_EVENNOCOMP ; !geehpedidh
 geehpes:geehpe s_S_ODD ;
 geekteleejnes:geekte LEEJNES ;
-geeles:geele s_S_ODD ; !-geelesåbpoe
+
+!
+geeles:geele s_S_ODDNOCOMP ; !-geelesåbpoe - Look at this.
 gåålehke:gåålehk Ce_CE_ODD ; 
 geeles+Use/NG:geeles ATTR_S ;
 geeles+Use/NG:gåålehk HKE_ODD_COMP ;
+
+
+
+
 geerhpmes:geerhpme s_S_ODDNOCOMP ; !ikke gradböy
 geeruve:geeruv ATTR_0_ODD ; !/ geeruve - geeruvisnie
 geerve: GEERVE ; !LA
@@ -1169,7 +1175,7 @@ hearhkoes:hearhk as_oes_A_OE_EVEN3 ;
 hearloes:hearl oes_OES_ODD1 ;
 hearlohke:hearlohk oeCe_OECE_ODD ; ! attr.es
 hearskoes+v2:hearsk as_oes_A_OE_EVEN3 ;
-hearskoes+v1:hearsk oes_OES_ODD1EVEN ; !HEARSKOESÅBPOE, HEARSKOBE
+!   hearskoes+v1:hearsk oes_OES_ODD1EVEN ; !HEARSKOESÅBPOE, HEARSKOBE
 hearskoes+Use/NG:hearsko EVENCOMP ;
 hebraen+OLang/NOB:hebrae ATTR_N ;
 heehkesth+CmpN/SgN+CmpN/SgG+CmpN/PlG:heehkest hth_HTH_ODD ;
@@ -1643,8 +1649,11 @@ laelijes:laelij ijes_ijs_IJE_ODDNOCOMP ;
 laemies+CmpN/SgN+CmpN/SgG+CmpN/PlG:laem ies_IES_IE_EVEN3NOCOMP ;
 laenjeds:laenjied Cs_CS_CE_ODD ; ! COMP:IE
 laktjeres+CmpN/SgN+CmpN/SgG+CmpN/PlG:laktjar Ces_CES_CE_ODD ; ! VED COMP:A
+
 lapsoes:laps as_AS_ODD1 ;
 lapsoes:laps oes_OES_ODD1 ;
+låpsoes:låpsoe s_S_ODDNOCOMP ;
+
 laserfysihkeles+OLang/NOB:laser#fysihkel LES ;
 laserteknihkeles+OLang/NOB:laser#teknihkel LES ;
 laskes:laske s_S_ODD ;
@@ -1742,7 +1751,9 @@ låemties:låemt ies_IES_IE_EVEN3 ;  !  Klasse 3
 låepiehtimmes:låepiehtimme ATTR_S ;
 låepies:låepie s_S_ODD ;
 låhkijes:låhkij ijes_ijs_IJE_ODDNOCOMP ;
-låpsoes:låpsoe s_S_ODDNOCOMP ;
+
+
+
 lårhvoeh:lårhv oeh_ah_AN_ODD_NOCOMP4  ; ! lurhvie = hundenavn
 låssas:låssas ATTR_0 ;
 låvletje:låvletj Ce_CE_ODD ;
@@ -2478,7 +2489,7 @@ rustihkeles:rustihkel LES ;
 
 rutjkes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:rutjke EVENCOMP ;
 !rutjkes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:rutjke s_S_ODD ;
-rutjkes+CmpN/SgN+CmpN/SgG+CmpN/PlG:rutjke ATTR_S ;
+rutjkes+CmpN/SgN+CmpN/SgG+CmpN/PlG:rutjke s_S_ODDNOCOMP ;
 rutjkes+CmpN/SgN+CmpN/SgG+CmpN/PlG:rutjkehk HKE_ODD_COMP ;
 
 
@@ -2520,9 +2531,12 @@ rååpehke+CmpN/SgN+CmpN/SgG+CmpN/PlG:rååpehk Ce_CE_ODD ;
 rååpsehke+CmpN/SgN+CmpN/SgG+CmpN/PlG:reepsehk Ce_CE_ODD ; ! attr. rööpses, *reepses
 rååpsehke+CmpN/SgN+CmpN/SgG+CmpN/PlG:rååpsehk Ce_CE_ODD ; ! attr. rööpses, *reepses
 rïejhpegidtes:rïejhpe#gidtes ATTR_0 ; ! SOUTH
+
+
 rïekte:rååktehk HKE_ODD_COMP ;! CHECK OPP OM DISSE SKAL HA DENNE TYPE OPPFØRING?
 rïekte:rïekt e_ES_ODDEVEN2 ; ! Klasse 2 !rïektebe, rïektemes ! e(2)-st. system2 = BEINT
 rïektes: REAKTOE ; ! e(2)-st.  jfr KOMM Pred: reaktoe = RIKTIG
+
 rïhpes:rïhpe s_S_ODD ; !COMP:rïhpesåbpoe
 rööpses: ROOPSES ; ! e(3)-st. !LA
 rööpsesisse:rööpsesiss e_E_EVENNOCOMP1 ; !NOT GRADUATION
