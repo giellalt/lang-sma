@@ -56,13 +56,6 @@ LEXICON VIELIEH
  :lieh ATTR_0 ;
  :lieh PRED_0 ;
 
-LEXICON h_H_EVENNOCOMP
-             ATTR_H ;
-             PRED_H ;
- +Use/NG:ege PRED_0 ;
-
-!Denne skal kanskje ikke plasseres under spesielle lexicons.
-
 !**SLUTT**Spesielle Adjektiver som skiller seg ut fra systemet**SLUTT**!
 
 ! VOKALUTVIDELSE på 2-stavelsesadjektiv, Fortsatt KLASSE1
@@ -172,6 +165,14 @@ LEXICON PRED_AN!!≈ !!!@CODE@
 
 !   *** KLASSE 1, ie,oe,e og a-stammer med 1) attribut og prediaktiv -s, 2) uten attr/pred-s     ***   !
 
+LEXICON h_H_EVENNOCOMP
+             ATTR_H ;
+             PRED_H ;
+ +Use/NG:ege PRED_0 ;
+
+!Denne skal kanskje ikke plasseres under spesielle lexicons.
+
+
 !D:1
 
 LEXICON e_E_EVEN!!≈ !!!@CODE@
@@ -254,6 +255,26 @@ LEXICON es_ES_EVEN!!≈ !!!@CODE@
 !:es ODDCASEOBL ;
  :e EVENCOMP ; !!= @CODE@
 !! }}}
+
+
+      !LEX LEEVLES  ! utcommented this one because it is undøvendig dobbelt-leksikon. lemmaene er lagt tilbake i es_ES_EVEN
+      !        :leevle ATTR_S       ;
+      ! +Use/NG:leevle PRED_S       ;
+      ! +Use/NG:leevle EVENCOMP     ;
+      ! +Use/NG:lyövl  es_ES_EVEN   ;
+      ! +Use/NG:lïevl  es_ES_EVEN   ;
+      ! +Use/NG:löövl  es_ES_EVEN   ;
+      ! +Use/NG:lïevl  es_ES_EVEN   ;
+      ! +Use/NG:löövle MES          ;
+      ! +Use/NG:lïevle DIMCOMP      ;    
+      
+      ! LEX SOOJMES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. lemmaene er lagt tilbake i es_ES_EVEN
+      !         :sööjme ATTR_S       ;
+      !         :sööjme PRED_S       ;
+      !         :sööjme EVENCOMP     ;
+      !  +Use/NG:seejm  es_ES_EVEN   ;
+      ! +Err/Sub:suejme EVENCOMPONLY ;
+      !     
 
 
 !D:1 Denne er en avledning fra klasse 2: e_ES
@@ -401,6 +422,7 @@ LEXICON BUERIE_UMLAUT_IE_STAMME
  :bööre  MES               ; !!= @CODE@
  :buerie DIMCOMP           ; !!= @CODE@
 !! }}}
+
 !Suppletivisme
 LEXICON NAAKE
         :nåak   e_E_EVEN     ;
@@ -413,17 +435,6 @@ LEXICON NAAKE
  +Use/NG:vearra DIMCOMP      ;
 
 
-LEXICON LEEVLES  ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
-        :leevle ATTR_S       ;
- +Use/NG:leevle PRED_S       ;
- +Use/NG:leevle EVENCOMP     ;
- +Use/NG:lyövl  es_ES_EVEN   ;
- +Use/NG:lïevl  es_ES_EVEN   ;
- +Use/NG:löövl  es_ES_EVEN   ;
- +Use/NG:lïevle EVENCOMPONLY ;
- +Use/NG:löövle MES          ;
- +Use/NG:lïevle DIMCOMP      ;
-
 ! UMLAUT 3 = e(3)-stamme
 LEXICON SOOKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
  :söök   es_ES_EVENNOCOMP1 ;
@@ -432,12 +443,6 @@ LEXICON SOOKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.
  :suekie DIMCOMP           ;
 ! UMLAUT 3 = e(3)-stamme
 
-LEXICON SOOJMES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
-         :sööjme ATTR_S       ;
-         :sööjme PRED_S       ;
-         :sööjme EVENCOMP     ;
-  +Use/NG:seejm  es_ES_EVEN   ;
- +Err/Sub:suejme EVENCOMPONLY ;
 
 ! UMLAUT 3 = e(3)-stamme, som får EVEN-Komparasjon
 LEXICON VEELKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
@@ -668,7 +673,7 @@ LEXICON GAMTE2
  :te            EVENCOMP ;
 !+Use/NG:t             NIEJTE   ;
 
-! UMLAUT 2 = e(2)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
+! UMLAUT 2
 LEXICON GIEVTE2
         :gïevt  e_E_EVENNOCOMP1 ;
         :geavte EVENCOMPONLY    ;
