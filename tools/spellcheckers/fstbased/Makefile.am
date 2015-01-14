@@ -5,4 +5,28 @@
 # The current dir must be built first.
 SUBDIRS = . hfst foma
 
+
+generator-%.hfst: generator-%.tmp.hfst
+	$(AM_V_HXFST)$(PRINTF) "read regex \
+			[ \"@R.CmpFirst.TRUE@\" <- \"+CmpN/First\", \
+			  \"@P.CmpLast.TRUE@\"  <- \"+CmpN/Last\", \
+			  \"@R.CmpFirst.FALSE@\" \"@P.CmpOnly.TRUE@\" <- \"+CmpN/Only\", \
+			  \"@D.CmpNone.FALSE@\" <- \"+CmpN/None\" ] \
+			.o. @\"$<\" \
+			; \n\
+		 twosided flag-diacritics\n\
+		 save stack $@\n\
+		 quit\n" | $(HFST_XFST) -p $(VERBOSITY)
+
+analyser-%.xfst: analyser-%.tmp.xfst
+	$(AM_V_XFST)$(PRINTF) "read regex \
+			[ \"@R.CmpFirst.TRUE@\" <- \"+CmpN/First\", \
+			  \"@P.CmpLast.TRUE@\"  <- \"+CmpN/Last\", \
+			  \"@R.CmpFirst.FALSE@\" \"@P.CmpOnly.TRUE@\" <- \"+CmpN/Only\", \
+			  \"@D.CmpNone.FALSE@\" <- \"+CmpN/None\" ] \
+			.o. @\"$<\" \
+			; \n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
+
 include $(top_srcdir)/am-shared/tools-spellcheckers-fstbased-dir-include.am
