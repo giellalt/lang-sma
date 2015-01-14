@@ -353,9 +353,12 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  | %^ConsDel | Stem consonant deletion in front of Der/PassL
 
  !!Flag diacritics
- | @P.NeedNoun.ON@ | (Dis)allowing compounds
- | @D.NeedNoun.ON@ | (Dis)allowing compounds
- | @C.NeedNoun@ | (Dis)allowing compounds
+ | @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+ | @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+ | @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
+ | @U.CmpFirst.TRUE@ | Require that words tagged as such only appear first
+ | @P.CmpFirst.FALSE@ | Require that words tagged as such only appear first
+ | @D.CmpOnly.TRUE@ | Only allow compounds with these stems as middle part
  | @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  | @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
 
@@ -367,25 +370,27 @@ LexC language, and must be the first lexicon defined.
 
 Here is the list of lexica in the sma analyser
 
- *      NounRoot  ;		  
- *      ProperNoun  ;		  
- *      Verb  ;			  
- *      Adjective  ;		  
- *      Pronoun  ;			  
- *      Adverb  ;			  
- *      Subjunction  ;		  
- *      Conjunction  ;		  
- *      Particle  ;		  
- *      Adposition  ;		  
- *      Punctuation  ;		  
- *      Interjection  ;	  
- *     +Use/CircN: Numeral ; 
- *      Abbreviation ;		  
- *      Acronym ;			  
+ *                    NounRoot     ; 
+ *                    ProperNoun   ; 
+ *                    Verb         ; 
+ *                    Adjective    ; 
+ *                    Pronoun      ; 
+ *                    Adverb       ; 
+ *                    Subjunction  ; 
+ *                    Conjunction  ; 
+ *                    Particle     ; 
+ *                    Adposition   ; 
+ *                    Punctuation  ; 
+ *                    Interjection ; 
+ *     +Use/CircN:    Numeral      ; 
+ *                    Abbreviation ; 
+ *                    Acronym      ; 
 
 
 !!!Lexicon ENDLEX
 And this is the ENDLEX of everything:
 {{{
-    @D.NeedNoun.ON@ # ; 
+ @D.CmpOnly.TRUE@@D.NeedNoun.ON@ # ;
 }}}
+Disallow words tagged with +CmpN/Only to end here, and make sure compounds
+requiring a noun derivation actually gets it.
