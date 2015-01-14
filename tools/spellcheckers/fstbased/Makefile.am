@@ -9,8 +9,9 @@ SUBDIRS = . hfst foma
 generator-%.hfst: generator-%.tmp.hfst
 	$(AM_V_HXFST)$(PRINTF) "read regex \
 			[ \"@U.CmpFirst.TRUE@\" <- \"+CmpN/First\", \
+			  \"@P.CmpFirst.TRUE@\" <- \"+CmpN/Pref\", \
 			  \"@P.CmpLast.TRUE@\"  <- \"+CmpN/Last\", \
-			  \"@U.CmpFirst.FALSE@\" \"@P.CmpOnly.TRUE@\" <- \"+CmpN/Only\", \
+			  \"@U.CmpOnly.TRUE@\"  <- \"+CmpN/Only\", \
 			  \"@D.CmpNone.FALSE@\" <- \"+CmpN/None\" ] \
 			.o. @\"$<\" \
 			; \n\
@@ -21,8 +22,9 @@ generator-%.hfst: generator-%.tmp.hfst
 analyser-%.xfst: analyser-%.tmp.xfst
 	$(AM_V_XFST)$(PRINTF) "read regex \
 			[ \"@U.CmpFirst.TRUE@\" <- \"+CmpN/First\", \
+			  \"@P.CmpFirst.TRUE@\" <- \"+CmpN/Pref\", \
 			  \"@P.CmpLast.TRUE@\"  <- \"+CmpN/Last\", \
-			  \"@U.CmpFirst.FALSE@\" \"@P.CmpOnly.TRUE@\" <- \"+CmpN/Only\", \
+			  \"@U.CmpOnly.TRUE@\"  <- \"+CmpN/Only\", \
 			  \"@D.CmpNone.FALSE@\" <- \"+CmpN/None\" ] \
 			.o. @\"$<\" \
 			; \n\
