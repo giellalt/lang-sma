@@ -387,6 +387,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  @C.NeedNoun@       !!≈ | @CODE@ | (Dis)allow compounds with verbs unless nominalised
  @U.CmpFirst.TRUE@  !!≈ | @CODE@ | Require that words tagged as such only appear first
  @P.CmpFirst.FALSE@ !!≈ | @CODE@ | Require that words tagged as such only appear first
+ @D.CmpLast.TRUE@   !!≈ | @CODE@ | Block such words from entering R
+ @C.CmpOnly@        !!≈ | @CODE@ | Only allow compounds with these stems as middle part
  @D.CmpOnly.TRUE@   !!≈ | @CODE@ | Only allow compounds with these stems as middle part
  @U.Cap.Obl@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
  @U.Cap.Opt@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
@@ -426,7 +428,8 @@ LEXICON ENDLEX
 !! !!!Lexicon @LEXNAME@
 !! And this is the @LEXNAME@ of everything:
 !! {{{
-   @D.CmpOnly.TRUE@@D.NeedNoun.ON@ # ; !!≈ @CODE@
+!   @D.CmpOnly.TRUE@@D.NeedNoun.ON@ # ; !!≈ @CODE@
+   @D.NeedNoun.ON@ # ; !!≈ @CODE@
 !! }}}
 !! Disallow words tagged with +CmpN/Only to end here, and make sure compounds
 !! requiring a noun derivation actually gets it.
