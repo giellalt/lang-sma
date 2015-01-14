@@ -381,13 +381,16 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
   %^uLATUS        !!≈ | @CODE@ | Latus-Umlaut for -oe stems
   %^ConsDel       !!≈ | @CODE@ | Stem consonant deletion in front of Der/PassL
 
-                  !!  !!Flag diacritics
- @P.NeedNoun.ON@  !!≈ | @CODE@ | (Dis)allowing compounds
- @D.NeedNoun.ON@  !!≈ | @CODE@ | (Dis)allowing compounds
- @C.NeedNoun@     !!≈ | @CODE@ | (Dis)allowing compounds
- @U.Cap.Obl@      !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
- @U.Cap.Opt@      !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
-!                              ! Actually, downcasing should be obligatory
+                    !!  !!Flag diacritics
+ @P.NeedNoun.ON@    !!≈ | @CODE@ | (Dis)allow compounds with verbs unless nominalised
+ @D.NeedNoun.ON@    !!≈ | @CODE@ | (Dis)allow compounds with verbs unless nominalised
+ @C.NeedNoun@       !!≈ | @CODE@ | (Dis)allow compounds with verbs unless nominalised
+ @U.CmpFirst.TRUE@  !!≈ | @CODE@ | Require that words tagged as such only appear first
+ @P.CmpFirst.FALSE@ !!≈ | @CODE@ | Require that words tagged as such only appear first
+ @D.CmpOnly.TRUE@   !!≈ | @CODE@ | Only allow compounds with these stems as middle part
+ @U.Cap.Obl@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
+ @U.Cap.Opt@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
+!                                ! Actually, downcasing should be obligatory
 
 
 ! ================
@@ -401,27 +404,29 @@ LEXICON Root
 
 !! Here is the list of lexica in the sma analyser
 
-!    Prefixes ;
-     NounRoot  ;		  !!= * @CODE@
-     ProperNoun  ;		  !!= * @CODE@
-     Verb  ;			  !!= * @CODE@
-     Adjective  ;		  !!= * @CODE@
-     Pronoun  ;			  !!= * @CODE@
-     Adverb  ;			  !!= * @CODE@
-     Subjunction  ;		  !!= * @CODE@
-     Conjunction  ;		  !!= * @CODE@
-     Particle  ;		  !!= * @CODE@
-     Adposition  ;		  !!= * @CODE@
-     Punctuation  ;		  !!= * @CODE@
-     Interjection  ;	  !!= * @CODE@
-    +Use/CircN: Numeral ; !!= * @CODE@
-     Abbreviation ;		  !!= * @CODE@
-     Acronym ;			  !!= * @CODE@
+!            Prefixes     ;
+             NounRoot     ; !!= * @CODE@
+             ProperNoun   ; !!= * @CODE@
+             Verb         ; !!= * @CODE@
+             Adjective    ; !!= * @CODE@
+             Pronoun      ; !!= * @CODE@
+             Adverb       ; !!= * @CODE@
+             Subjunction  ; !!= * @CODE@
+             Conjunction  ; !!= * @CODE@
+             Particle     ; !!= * @CODE@
+             Adposition   ; !!= * @CODE@
+             Punctuation  ; !!= * @CODE@
+             Interjection ; !!= * @CODE@
+ +Use/CircN: Numeral      ; !!= * @CODE@
+             Abbreviation ; !!= * @CODE@
+             Acronym      ; !!= * @CODE@
 
 
 LEXICON ENDLEX
 !! !!!Lexicon @LEXNAME@
 !! And this is the @LEXNAME@ of everything:
 !! {{{
-   @D.NeedNoun.ON@ # ; !!= @CODE@
+   @D.CmpOnly.TRUE@@D.NeedNoun.ON@ # ; !!≈ @CODE@
 !! }}}
+!! Disallow words tagged with +CmpN/Only to end here, and make sure compounds
+!! requiring a noun derivation actually gets it.
