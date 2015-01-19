@@ -367,11 +367,12 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  | @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
  | @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
  | @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
- | @U.CmpFirst.TRUE@ | Require that words tagged as such only appear first
- | @P.CmpFirst.FALSE@ | Require that words tagged as such only appear first
+
+ | @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
  | @D.CmpLast.TRUE@ | Block such words from entering R
- | @C.CmpOnly@ | Only allow compounds with these stems as middle part
- | @D.CmpOnly.TRUE@ | Only allow compounds with these stems as middle part
+ | @D.CmpNone.TRUE@ | Combines with the next tag to prohibit compounding
+ | @U.CmpNone.FALSE@ | Combines with the prev tag to prohibit compounding
+
  | @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  | @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
 
