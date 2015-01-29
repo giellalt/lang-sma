@@ -407,7 +407,7 @@ Here is the list of lexica in the sma analyser
 And this is the ENDLEX of everything:
 {{{
  @D.CmpOnly.FALSE@@D.NeedNoun.ON@ # ;
- ! @D.NeedNoun.ON@ # ;
 }}}
-Disallow words tagged with +CmpN/Only to end here, and make sure compounds
-requiring a noun derivation actually gets it.
+The {{@D.CmpOnly.FALSE@}} flag diacritic is ued to disallow words tagged
+with +CmpN/Only to end here.
+The {{@D.NeedNoun.ON@}} flag diacritic is used to block illegal compounds.
