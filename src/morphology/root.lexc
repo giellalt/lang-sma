@@ -442,8 +442,8 @@ LEXICON ENDLEX
 !! !!!Lexicon @LEXNAME@
 !! And this is the @LEXNAME@ of everything:
 !! {{{
-!   @D.CmpOnly.TRUE@@D.NeedNoun.ON@ # ; !!≈ @CODE@
-   @D.NeedNoun.ON@ # ; !!≈ @CODE@
+   @D.CmpOnly.FALSE@@D.NeedNoun.ON@ # ; !!≈ @CODE@
 !! }}}
-!! Disallow words tagged with +CmpN/Only to end here, and make sure compounds
-!! requiring a noun derivation actually gets it.
+!! The {{@D.CmpOnly.FALSE@}} flag diacritic is ued to disallow words tagged
+!! with +CmpN/Only to end here.
+!! The {{@D.NeedNoun.ON@}} flag diacritic is used to block illegal compounds.
