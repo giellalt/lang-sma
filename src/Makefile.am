@@ -81,11 +81,9 @@ analyser-raw-gt-desc.xfst: analyser-raw-gt-desc.tmp.xfst \
 
 # Dict-fst local modifications and language-specific changes:
 generator-dict-gt-norm.hfst: generator-dict-gt-norm.tmp.hfst \
-					filters/make-optional-variant-tags.hfst  \
 					filters/remove-number-string-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF)                                "\
-				@\"filters/make-optional-variant-tags.hfst\" \
-			.o. @\"filters/remove-number-string-tags.hfst\"  \
+				@\"filters/remove-number-string-tags.xfst\"  \
 			.o. @\"$<\"                                      \
 			;" \
 		| $(HFST_REGEXP2FST) $(VERBOSITY) $(HFST_FLAGS) -S --xerox-composition=ON \
@@ -95,8 +93,7 @@ generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \
 					filters/make-optional-variant-tags.xfst  \
 					filters/remove-number-string-tags.xfst
 	$(AM_V_XFST)$(PRINTF)                        "read regex \
-				@\"filters/make-optional-variant-tags.xfst\" \
-			.o. @\"filters/remove-number-string-tags.xfst\"  \
+				@\"filters/remove-number-string-tags.xfst\"  \
 			.o. @\"$<\"                                      \
 			;\n\
 		 invert net\n\
