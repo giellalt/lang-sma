@@ -97,7 +97,7 @@ generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \
 	$(AM_V_XFST)$(PRINTF)                        "read regex \
 				@\"filters/make-optional-variant-tags.xfst\" \
 			.o. @\"filters/remove-number-string-tags.xfst\"  \
-			.o. @\"$<\".i                                    \
+			.o. @\"$<\"                                      \
 			;\n\
 		 invert net\n\
 		 save stack $@\n\
