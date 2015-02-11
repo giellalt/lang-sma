@@ -83,7 +83,7 @@ analyser-raw-gt-desc.xfst: analyser-raw-gt-desc.tmp.xfst \
 generator-dict-gt-norm.hfst: generator-dict-gt-norm.tmp.hfst \
 					filters/remove-number-string-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF)                                "\
-				@\"filters/remove-number-string-tags.xfst\"  \
+				@\"filters/remove-number-string-tags.hfst\"  \
 			.o. @\"$<\"                                      \
 			;" \
 		| $(HFST_REGEXP2FST) $(VERBOSITY) $(HFST_FLAGS) -S --xerox-composition=ON \
