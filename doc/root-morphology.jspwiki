@@ -305,7 +305,15 @@ Tags for compound analysis - this is what a compound actually is:
 
  | +MWE | multi word expressions, goes to abbr
 
+Use the following flag diacritics to control downcasing of derived proper
+nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
+these flags. There exists a ready-made regex that will do the actual down-casing
+given the proper use of these flags.
 
+ | @P.Px.add@	 | Giving possibility for Px-suffixes (all except from Nom 3.p)
+ | @R.Px.add@	 | Requiring P.Px.add-flag for Px-suffixes (all except from Nom 3.p)
+ | @P.Nom3Px.add@ |  Giving possibility for Px-suffixes Nom 3.p
+ | @R.Nom3Px.add@ | Requiring P.Nom3Px.add flag for Px-suffixes Nom 3.p
 
 
 !!Derivation position in a derivation row
