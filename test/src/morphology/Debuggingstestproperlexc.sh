@@ -1,7 +1,7 @@
 # Dette skriptet tester at alle lemmaene i propernoun-sma-lex.txt kan genereres. De som ikke kan genereres, kopieres til missingProperLemmas og blir så analysert for å hjelpe med debugging.
 
 # Hent alle lemmaer, bortsett fra hardkoda +Attr
-grep ";" ../../../src/morphology/generated_files/smi-sma-propernouns.lexc | egrep -v "(^\!|LexSub|Err\/Sub)" | egrep -v Attr | sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 | tr "€" " " | sort -u > props
+grep ";" ../../../src/morphology/generated_files/smi-sma-propernouns.lexc | egrep -v "(^\!|LexSub)" | egrep -v Attr | sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 | tr "€" " " | sort -u > props
 
 # Generer alle lemmaer med Sg+Nom
 cat props | sed 's/$/+N+Prop+Sg+Nom/' | $LOOKUP ../../../src/generator-gt-norm.xfst | cut -f2 | grep -v "N+" | grep -v "^$" | sort -u > analprops 
@@ -14,7 +14,7 @@ sort -u -o analprops analprops
 comm -23 props analprops > missingProperLemmas
 
 # Hent alle lemmaer med hardkoda +Attr
-grep ";" ../../../src/morphology/generated_files/smi-sma-propernouns.lexc | egrep -v "(^\!|LexSub|Err\/Sub)" | grep Attr | sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 | tr "€" " " |  sort -u > attrprops
+grep ";" ../../../src/morphology/generated_files/smi-sma-propernouns.lexc | egrep -v "(^\!|LexSub)" | grep Attr | sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 | tr "€" " " |  sort -u > attrprops
 
 # Generer lemmaene med +Attr
 cat attrprops | sed 's/$/+N+Prop+Attr/' | $LOOKUP $GTHOME/langs/sma/src/generator-gt-norm.xfst | grep -v "\?" | cut -f2  | grep -v "^$" | sort -u > analattrprops  
