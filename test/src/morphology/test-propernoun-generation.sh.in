@@ -5,13 +5,22 @@
 # De som ikke kan genereres, kopieres til missingProperLemmas.txt
 
 ###### Variables: #######
-sourcefile=./../../../src/morphology/generated_files/smi-sma-propernouns.lexc
-generatorfile=./../../../src/generator-gt-norm
-resultfile=missingProperLemmas
+### in ###
+source_file=./../../../src/morphology/generated_files/smi-sma-propernouns.lexc
+generator_file=./../../../src/generator-gt-norm
+analyser_file=./../../../src/analyser-gt-norm
+
+### out ###
+lemmas=./filtered-props.txt
+attr_lemmas=./filtered-attr_props.txt
+generated_lemmas=./generated-proper
+generated_attr_lemmas=./generated-attr-proper
+missing_file=missing_proper_lemmas
+anal_missing_file=Analysed_missing_proper_lemmas
 
 # Check that the source file exists:
-if [ ! -f "$sourcefile" ]; then
-	echo Source file not found: $sourcefile
+if [ ! -f "$source_file" ]; then
+	echo Source file not found: $source_file
 	exit 1
 fi
 
@@ -31,17 +40,15 @@ fi
 EXTEDITOR=@SEE@
 
 ###### Extraction: #######
-grep ";" $sourcefile | grep -v "^\!" | egrep -v '(LAANTE|Attr)' \
+# Extract all lemmas except hardcoded Attr:
+grep ";" $source_file | egrep -v "(^\!|LexSub)" | egrep -v 'Attr' \
 	| sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 \
-	| tr -d "#" | tr "€" " " > props.tmp.txt
-grep ";" $sourcefile | grep -v "^\!" | grep LAANTE | sed 's/% /€/g' \
+	| tr -d "#" | tr "€" " " | sort -u > $lemmas
+
+# Extract all hardcoded Attr:
+grep ";" $source_file | grep -v "(^\!|LexSub)" | grep Attr | sed 's/% /€/g' \
 	|  tr ":+" " " | cut -d " " -f1 | tr -d "#" \
-	| tr "€" " " | sed 's/$/laante/' >> props.tmp.txt
-sort -u props.tmp.txt > props.txt
-rm -f props.tmp.txt
-grep ";" $sourcefile | grep -v "^\!" | grep Attr | sed 's/% /€/g' \
-	|  tr ":+" " " | cut -d " " -f1 | tr -d "#" \
-	| tr "€" " " |  sort -u > attrprops.txt
+	| tr "€" " " |  sort -u > $attr_lemmas
 
 ###### Start testing: #######
 transducer_found=0
@@ -60,39 +67,47 @@ for f in $fsttype; do
 	    echo "$f - FAIL"
 	    continue
 	fi
-	if [ -f "$generatorfile.$suffix" ]; then
+	if [ -f "$generator_file.$suffix" ]; then
 		let "transducer_found += 1"
 
-		sed 's/$/+N+Prop+Sg+Nom/'   props.txt \
-			| $lookuptool $generatorfile.$suffix | cut -f2 \
-			| grep -v "N+" | grep -v "^$" | sort -u > analprops.$f.txt
-		sed 's/$/+N+Prop+Sg+Nom/'   props.txt \
-			| $lookuptool $generatorfile.$suffix | cut -f2 \
+# Generer alle lemmaer med Sg+Nom
+		sed 's/$/+N+Prop+Sg+Nom/'   $lemmas \
+			| $lookuptool $generator_file.$suffix | cut -f2 \
+			| grep -v "N+" | grep -v "^$" | sort -u > $generated_lemmas.$f.txt
+
+# Generer lemmaer med Pl+Nom, de som ikke lar seg generere med Sg+Nom
+		sed 's/$/+N+Prop+Sg+Nom/'   $lemmas \
+			| $lookuptool $generator_file.$suffix | cut -f2 \
 			| grep "N+" | cut -d "+" -f1 | sed 's/$/+N+Prop+Pl+Nom/' \
-			| $lookuptool $generatorfile.$suffix | cut -f2 \
-			| grep -v "^$" | cut -d "+" -f1 >> analprops.$f.txt
-		sed 's/$/+N+Prop+Sg+Nom/'   props.txt \
-			| $lookuptool $generatorfile.$suffix | cut -f2 \
-			| grep "N+" | cut -d "+" -f1 | sed 's/$/+N+Prop+Pl+Nom/' \
-			| $lookuptool $generatorfile.$suffix | cut -f2 \
-			| grep "N+" | cut -d "+" -f1 > $resultfile.$f.txt
-		sed 's/$/+N+Prop+Attr/' attrprops.txt \
-			| $lookuptool $generatorfile.$suffix | cut -f2 \
-			| grep "N+" >> $resultfile.$f.txt
-		sed 's/$/+N+Prop+Attr/' attrprops.txt \
-			| $lookuptool $generatorfile.$suffix | cut -f2 \
-			|  grep -v "N+" | grep -v "^$" | sort -u > analattrprops.$f.txt  
-		sort -u -o analprops.$f.txt analprops.$f.txt 
-		comm -23 props.txt analprops.$f.txt > $resultfile.$f.txt
-		comm -23 attrprops.txt analattrprops.$f.txt >> $resultfile.$f.txt
-		sort -u -o $resultfile.$f.txt $resultfile.$f.txt
+			| $lookuptool $generator_file.$suffix | grep -v '\?' \
+			| cut -f2 | grep -v "^$" >> $generated_lemmas.$f.txt
+# Sorter og gjer unike alle genererte lemma:
+		sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+
+# Generer lemmaene med +Attr
+		sed 's/$/+N+Prop+Attr/' $attr_lemmas \
+			| $lookuptool $generator_file.$suffix | grep -v "\?" | cut -f2 \
+			| grep -v "^$" | sort -u > $generated_attr_lemmas.$f.txt  
+
+
+# Sammenlikne lemmaer med genereringa
+		comm -23 $lemmas $generated_lemmas.$f.txt > $missing_file.$f.txt
+		comm -23 $attr_lemmas $generated_attr_lemmas.$f.txt \
+		      >> $missing_file.$f.txt
+		sort -u -o $missing_file.$f.txt $missing_file.$f.txt
 
 		# if at least one word is found, the test failed, and the list of failed
 		# lemmas is opened in SubEthaEdit:
-		if [ -s $resultfile.$f.txt ]; then
+		if [ -s $missing_file.$f.txt ]; then
+
+# Analyser lemmaer som ikke lar seg generere, for debugging
+            $lookuptool $analyser_file.$suffix < $missing_file.$f.txt \
+                > $anal_missing_file.$f.txt
+
 			# Only open the failed lemmas in see if @SEE@ is defined:
 			if [ "$EXTEDITOR" ]; then
-				$EXTEDITOR $resultfile.$f.txt
+				$EXTEDITOR $missing_file.$f.txt
+				$EXTEDITOR $anal_missing_file.$f.txt
 			fi
 		    Fail=1
 		    echo "$f - FAIL"
@@ -103,7 +118,7 @@ for f in $fsttype; do
 done
 
 # Delete temporary files:
-rm -f *props.txt
+rm -f *$lemmas
 
 # At least one of the Xerox or HFST tests failed:
 if [ "$Fail" = "1" ]; then
