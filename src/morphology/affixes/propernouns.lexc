@@ -1287,14 +1287,14 @@ LEXICON PN_OE-mal
 +N+Prop+Sem/Mal: PN_OE ;
 
 LEXICON PN_OE ! as N_OE, but with Prop tag
-     +N+Sg+Nom:oe FINAL1           ;
-        +N+Sg:   N_OE_SGILL_UML   ; ! Causes Umlaut
- +N+Sg+Use/NG:   N_OE_SGILL_NOUML ; ! Does not cause Umlaut, do not generate
-           +N:   N_OE_NO_ILL      ; ! gives the other cases
-             :oe RHyph    ; ! RHyph = Cmp-lexicon
-   +Pl:   N_OE_PL  ;
-          N_OE_ESS ;
- +Attr:oe FINAL1   ;
+    +Sg+Nom:oe FINAL1           ;
+        +Sg:   N_OE_SGILL_UML   ; ! Causes Umlaut
+ +Sg+Use/NG:   N_OE_SGILL_NOUML ; ! Does not cause Umlaut, do not generate
+           :   N_OE_NO_ILL      ; ! gives the other cases
+           :oe RHyph    ; ! RHyph = Cmp-lexicon
+        +Pl:   N_OE_PL  ;
+               N_OE_ESS ;
+      +Attr:oe FINAL1   ;
 
 LEXICON PN_OE_PLC-ORG ! as N_OE, but with Prop tag
    +Sg:   N_OE_SG  ;
