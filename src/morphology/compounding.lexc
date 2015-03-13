@@ -26,7 +26,7 @@
 
 ! This is for regular compounding. All entries NOT requiring a hyphen should point to this:
 LEXICON R
- @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@@D.CmpSuff.TRUE@@P.CmpSuff.TRUE@ Rreal ; ! Flags to control compounding
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ Rreal ; ! Flags to control compounding
 
 LEXICON Rreal
                      +Use/Circ+Cmp#:# Noun ;                       ! This is the normal case.
@@ -49,7 +49,7 @@ LEXICON Rreal
 LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
               ! NBNBNB!!! The hyphen should be added here! NOT in the other lexicons!
 
- @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@@D.CmpSuff.TRUE@@P.CmpSuff.TRUE@ RHyphReal ; ! Block certain types of compounds in spellers.
+ @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RHyphReal ; ! Block certain types of compounds in spellers.
 
 LEXICON RHyphReal
                 +Use/Circ+Cmp%-#:%-# Noun ;                     ! This is the normal case.
