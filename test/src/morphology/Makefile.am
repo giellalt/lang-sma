@@ -12,7 +12,8 @@ TESTS=
 GENERATION_TESTS_IN=test-verb-generation.sh.in \
 					test-adj-generation.sh.in \
 					test-noun-generation.sh.in \
-					test-propernoun-generation.sh.in
+					test-propernoun-generation.sh.in \
+					generate-noun-lemmas.sh.in
 
 GENERATION_TESTS=$(basename $(GENERATION_TESTS_IN))
 
