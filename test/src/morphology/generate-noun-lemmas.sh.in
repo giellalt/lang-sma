@@ -20,17 +20,21 @@
 # 3. adapt the tag addition and lemma generation instructions (lines 79 ff)
 
 ###### Variables: #######
-sourcefile=${srcdir}/../../../src/morphology/stems/nouns.lexc
+### in ###
+source_file=${srcdir}/../../../src/morphology/stems/nouns.lexc
+generator_file=./../../../src/generator-gt-norm
+
+### out ###
 lemmas=./nouns.txt
-generatedlemmas=./gen-nouns
-failedlemmas=./fail-lemmas
-generatorfile=./../../../src/generator-gt-norm
-resultfile=lemma-gen-diff
+comp_lemmas=./comp-nouns.txt
+generated_lemmas=./gen-nouns
+generated_comp_lemmas=./gen-comp-nouns
+result_file=noun-lemma-gen-diff
 
 # FAIL if source file does not exist:
-if [ ! -f $sourcefile ]; then
+if [ ! -f $source_file ]; then
     echo
-    echo "*** Warning: Source file $sourcefile not found."
+    echo "*** Warning: Source file $source_file not found."
     echo
     exit 77
 fi
@@ -50,10 +54,16 @@ fi
 # Get external Mac editor for viewing failed results from configure:
 EXTEDITOR=@SEE@
 
-##### Extract lemmas - extend the egrep exclude pattern in the #####
-##### parenthesis as needed to exclude unwanted lexc lines:    #####
+##### Extract lemmas - add additional egrep pattern as parameters: #####
+##### --include "(pattern1|pattern2|...)"                          #####
+##### --exclude "(pattern1|pattern2|...)"                          #####
 @GTCORE@/scripts/extract-lemmas.sh \
-	$sourcefile "(CmpN/Last)" > $lemmas
+	--exclude "(CmpN/Only| R | Rreal |\+Gen\+|\+Der\+|\+CmpN\/Suff)" \
+	$source_file > $lemmas
+
+@GTCORE@/scripts/extract-lemmas.sh \
+	--include "(CmpN/Only| R | Rreal )" \
+	$source_file > $comp_lemmas
 
 ###### Start testing: #######
 transducer_found=0
@@ -65,7 +75,7 @@ for f in $fsttype; do
 		lookuptool="@LOOKUP@ -q -flags mbTT"
 		suffix="xfst"
 	elif [ $f == "hfst" ]; then
-		lookuptool="@HFST_LOOKUP@ -q"
+		lookuptool="@HFST_OPTIMIZED_LOOKUP@ -q"
 		suffix="hfstol"
 	else
 	    Fail=1
@@ -73,33 +83,46 @@ for f in $fsttype; do
 	    echo "$f - FAIL"
 	    continue
 	fi
-	if [ -f "$generatorfile.$suffix" ]; then
+	if [ -f "$generator_file.$suffix" ]; then
 		let "transducer_found += 1"
 
 ###### Test non-comopunds: #######
 		# generate nouns in Singular, extract the resulting generated lemma,
 		# store it:
-		sed 's/$/+N+Sg+Nom/' $lemmas | $lookuptool $generatorfile.$suffix \
+		sed 's/$/+N+Sg+Nom/' $lemmas | $lookuptool $generator_file.$suffix \
 			| cut -f2 | fgrep -v "+N+Sg" | grep -v "^$" | sort -u \
-			> $generatedlemmas.$f.txt 
+			> $generated_lemmas.$f.txt 
 		# Generate nouns, extract those that do not generate in singular,
 		# generate the rest in plural:
-		sed 's/$/+N+Sg+Nom/' $lemmas | $lookuptool $generatorfile.$suffix \
+		sed 's/$/+N+Sg+Nom/' $lemmas | $lookuptool $generator_file.$suffix \
 			| cut -f2 | grep "N+" | cut -d "+" -f1 | sed 's/$/+N+Pl+Nom/' \
-			| $lookuptool $generatorfile.$suffix | cut -f2 \
-			| grep -v "^$" >> $generatedlemmas.$f.txt 
+			| $lookuptool $generator_file.$suffix | cut -f2 \
+			| grep -v "^$" >> $generated_lemmas.$f.txt 
+
+###### Test compounds: #######
+		# Test nouns that only can generate as compounds:
+		sed 's/$/+N+Cmp#gåetie+N+Sg+Nom/' $comp_lemmas \
+			| $lookuptool $generator_file.$suffix \
+			| cut -f2 | sed 's/gåetie$//' \
+			| grep -v '^$' > $generated_comp_lemmas.$f.txt
 
 ###### Collect results: #######
 		# Sort and compare original input with resulting output - the diff is
-		# stored and opened in SEE:
-		sort -u -o $generatedlemmas.$f.txt $generatedlemmas.$f.txt 
-		comm -23 $lemmas $generatedlemmas.$f.txt > $resultfile.$f.txt
+		# used for generation, and the generated word forms opened in SEE:
+		sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+        comm -23 $lemmas $generated_lemmas.$f.txt \
+          | grep -v '^$' | sed 's/$/+N+Sg+Nom/' \
+          | $lookuptool $generator_file.$suffix > $result_file.$f.txt
+		sort -u -o $generated_comp_lemmas.$f.txt $generated_comp_lemmas.$f.txt 
+        comm -23 $comp_lemmas $generated_comp_lemmas.$f.txt \
+          | grep -v '^$' | sed 's/$/+N+Sg+Nom/' \
+          | $lookuptool $generator_file.$suffix >> $result_file.$f.txt
 
-		# Open the diff file in SubEthaEdit (if there is a diff):
-		if [ -s $resultfile.$f.txt ]; then
+		# If there is a diff, open the diff file in SubEthaEdit:
+		if [ -s $result_file.$f.txt ]; then
 			# Only open the failed lemmas in see if @SEE@ is defined:
 			if [ "$EXTEDITOR" ]; then
-				$EXTEDITOR $resultfile.$f.txt
+				$EXTEDITOR $result_file.$f.txt
 			fi
 		    Fail=1
 		    echo "$f - FAIL"
@@ -110,7 +133,7 @@ for f in $fsttype; do
 done
 
 # When done, remove the generated data file:
-rm -f $lemmas
+rm -f $lemmas $comp_lemmas $generated_lemmas* $generated_comp_lemmas*
 
 # At least one of the Xerox or HFST tests failed:
 if [ "$Fail" = "1" ]; then
