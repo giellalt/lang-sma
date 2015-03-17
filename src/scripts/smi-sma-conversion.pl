@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 #
 # smi-sma-conversion.pl
-# Convert names in the SMI propernoun lexicon to sma.
+# Convert names in the SMI propernoun lexicon to SMA.
 # $Id$
 
 use strict;
@@ -12,11 +12,8 @@ while(<>) {
 	s/ C-FI-NEN/nen LONDON/g ;
 	s/SUND/BERN/g ;
 	s/HEIM/BERN/g ;
-	s/NIKOSIIJA/ACCRA/g ;
 	s/SIJTE/ACCRA/g ;
-	s/BALAK/ANAR/g ;
 	s/HAWAII/ACCRA/g ;
-	s/SKANIK/SULLOT/g ;
 
 	s/b9/b/g ;
 	s/d9/d/g ;
@@ -32,17 +29,13 @@ while(<>) {
 	s/t9/t/g ;
 	s/z9/z/g ;
 	s/æ9/æ/g ;
+	s/'7/'/g ;
 	s/7 / /g ;
 	s/8 / /g ;
 	s/9 / /g ;
 	s/7#/#/g ;
 	s/8#/#/g ;
 	s/9#/#/g ;
-	s/'/0/g ;
-
-	# SMJ escape char insertion:
-#	s/ss /ss9 /g ;
-#	s/st /st9 /g ;
 
 	# Substitutions due to orthographic differences between SMJ and SME:
 	s/t:(.*)h /t:$1d9 /g ;
@@ -64,27 +57,6 @@ while(<>) {
     
 	my $line = $_;
 
-#	# Special treatment of æ in SMJ:
-#	if ($line =~ /æ/) {
-#			# Replace space in multipart names temporarily with $.
-#		$line =~ s/% /\$/g;
-#		
-#		$line =~ s/^\s+//;
-#		
-#		my ($word, $rest) = split (/\s+/, $line, 2);
-#		$word =~ s/\$/% /g;
-#		if ($line !~ /\:/) {
-#			( my $int_word = $word )     =~ s/æ/æ9/g;
-#			$int_word =~ s/ä/ä9/g;
-#			$line = $word . ":" . $int_word . " " . $rest;
-#		}
-#		else {
-#			my ($upper, $lower) = split(/\:/, $word);
-#			( my $int_word = $lower )     =~ s/æ/æ9/g;
-#			$int_word =~ s/ä/ä9/g;
-#			$line = $upper . ":" . $int_word . " " . $rest;
-#		}
-#	}
 	print $line;
 }
 
