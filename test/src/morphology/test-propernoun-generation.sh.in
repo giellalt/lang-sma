@@ -41,14 +41,14 @@ EXTEDITOR=@SEE@
 
 ###### Extraction: #######
 # Extract all lemmas except hardcoded Attr:
-grep ";" $source_file | egrep -v "(^\!|LexSub)" | egrep -v 'Attr' \
-	| sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 \
-	| tr -d "#" | tr "€" " " | sort -u > $lemmas
+@GTCORE@/scripts/extract-lemmas.sh \
+	--exclude "(Attr)" \
+	$source_file > $lemmas
 
 # Extract all hardcoded Attr:
-grep ";" $source_file | grep -v "(^\!|LexSub)" | grep Attr | sed 's/% /€/g' \
-	|  tr ":+" " " | cut -d " " -f1 | tr -d "#" \
-	| tr "€" " " |  sort -u > $attr_lemmas
+@GTCORE@/scripts/extract-lemmas.sh \
+	--include "(Attr)" \
+	$source_file > $attr_lemmas
 
 ###### Start testing: #######
 transducer_found=0
