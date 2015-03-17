@@ -71,13 +71,14 @@
  | +CmpN/SgG | SgGenitive
  | +CmpN/PlG | PlGenitive
 
-!This part of the component might be ...
- * +CmpN/First - ... can only be first part in a compound or alone
- * +CmpN/Pref - ... only __first__ part in a compound, NEVER alone
- * +CmpN/Last - ... can only be last part in a compound or alone
- * +CmpN/Suff - ... only __last__ part in a compound, NEVER alone
- * +CmpN/None - ... can not take part in compounds
- * +CmpN/Only - ... can only be part of a compound, i.e. can never
+!This part of the component can ...
+ * +CmpNP/All - ... be in all positions, __default__, this tag does not have to be written
+ * +CmpNP/First - ... only be first part in a compound or alone
+ * +CmpNP/Pref - ... only __first__ part in a compound, NEVER alone
+ * +CmpNP/Last - ... only be last part in a compound or alone
+ * +CmpNP/Suff - ... only __last__ part in a compound, NEVER alone
+ * +CmpNP/None - ... not take part in compounds
+ * +CmpNP/Only - ... only be part of a compound, i.e. can never
                 be used alone, but can appear in any position
 
 !The second part of the compound may take ...
@@ -87,7 +88,6 @@
  | +CmpN/PlGenLeft | "
 
 !This part of the compound may ...
- | +CmpN/All | all positions, __default__, this tag does not have to be written
  | +CmpN/Def | works along with Left compound-tagging
  | +CmpN/DefSgGen | works along with Left compound-tagging
  | +CmpN/DefPlGen | works along with Left compound-tagging
@@ -519,5 +519,5 @@ And this is the ENDLEX of everything:
  @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ # ;
 }}}
 The {{@D.CmpOnly.FALSE@}} flag diacritic is ued to disallow words tagged
-with +CmpN/Only to end here.
+with +CmpNP/Only to end here.
 The {{@D.NeedNoun.ON@}} flag diacritic is used to block illegal compounds.
