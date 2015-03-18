@@ -28,6 +28,7 @@ generated_lemmas=./generated-proper
 generated_attr_lemmas=./generated-attr-proper
 missing_file=missing_proper_lemmas
 anal_missing_file=Analysed_missing_proper_lemmas
+gene_missing_file=Generated_missing_proper_lemmas
 
 # SKIP if source file does not exist:
 if [ ! -f "$source_file" ]; then
@@ -119,11 +120,15 @@ for f in $fsttype; do
 # Analyser lemmaer som ikke lar seg generere, for debugging
             $lookuptool $analyser_file.$suffix < $missing_file.$f.txt \
                 > $anal_missing_file.$f.txt
+            sed 's/$/+N+Prop+Sg+Nom/' < $missing_file.$f.txt \
+                | $lookuptool $generator_file.$suffix \
+                > $gene_missing_file.$f.txt
 
 			# Only open the failed lemmas in see if @SEE@ is defined:
 			if [ "$EXTEDITOR" ]; then
 				$EXTEDITOR $missing_file.$f.txt
 				$EXTEDITOR $anal_missing_file.$f.txt
+				$EXTEDITOR $gene_missing_file.$f.txt
 			fi
 		    Fail=1
 		    echo "$f - FAIL"
