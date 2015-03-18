@@ -29,7 +29,9 @@ while(<>) {
 	s/t9/t/g ;
 	s/z9/z/g ;
 	s/æ9/æ/g ;
-	s/'7/'/g ;
+	s/'7/€€€/g ;    # Save this
+	s/(:.+)'/$1/g ; # Remove this from the stem side
+	s/€€€/'/g ;     # reinstate the saved apostrophe
 	s/7 / /g ;
 	s/8 / /g ;
 	s/9 / /g ;
