@@ -31,7 +31,7 @@ generated_lemmas=./gen-nouns
 generated_comp_lemmas=./gen-comp-nouns
 result_file=noun-lemma-gen-diff
 
-# FAIL if source file does not exist:
+# SKIP if source file does not exist:
 if [ ! -f $source_file ]; then
     echo
     echo "*** Warning: Source file $source_file not found."
