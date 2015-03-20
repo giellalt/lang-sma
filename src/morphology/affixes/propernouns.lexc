@@ -59,20 +59,16 @@ LEXICON ERVASTI-plc
 
 
 LEXICON ERVASTI-mal
-! +N+Prop+Sem/Mal: ERVASTI ;
-        PIPPI-mal ;
++N+Prop+Sem/Mal: ERVASTI ;
 
 LEXICON ERVASTI-sur
-! +N+Prop+Sem/Sur: ERVASTI ;
-        PIPPI-sur ;
++N+Prop+Sem/Sur: ERVASTI ;
 
 LEXICON ERVASTI-org
-! +N+Prop+Sem/Org: ERVASTI_PLC-ORG ;
-        PIPPI-org ;
+ +N+Prop+Sem/Org: ERVASTI_PLC-ORG ;
 
 LEXICON ERVASTI-fem
-! +N+Prop+Sem/Fem: ERVASTI ;
-        PIPPI-fem ;
+ +N+Prop+Sem/Fem:  ERVASTI ;
 
 LEXICON ERVASTI-obj
  +N+Prop+Sem/Obj: ERVASTI ;
@@ -84,6 +80,8 @@ LEXICON ERVASTI ! Names ending in stressless vowel
    +Pl:          N_ODD_PL  ;
                  N_ODD_ESS ;
  +Attr:e%^DISIMP FINAL1    ;
+ 
+
 
 LEXICON ERVASTI_PLC-ORG ! Names ending in stressless vowel
    +Sg: N_ODD_SG  ;
@@ -214,30 +212,56 @@ LEXICON ACCRA-obj
 LEXICON ACCRA-ani
  +N+Prop+Sem/Ani: ACCRA ;
 
+! ACCCRA- må tilpasses mer vokalstammene , a-e og oe.
 
-
-
-
-LEXICON ACCRA
- +Sg+Nom:                 FINAL1 ;
-                          RHyph  ;
- +Sg+Acc:%>m              FINAL1 ;
- +Sg+Gen:%>n              FINAL1 ;
- +Sg+Ill:%^PLCDISIMP%>se  FINAL1 ;
- +Sg+Ine:%^PLCDISIMP%>sne FINAL1 ;
- +Sg+Ela:%^PLCDISIMP%>ste FINAL1 ;
- +Sg+Com:%>ine            FINAL1 ; !OBS ai:i
- +Pl+Nom:%>h              FINAL1 ;
- +Pl+Acc:%>ide            FINAL1 ; !OBS ai:i
- +Pl+Gen:%>j              FINAL1 ;
- +Pl+Ill:%>ide            FINAL1 ; !OBS ai:i
- +Pl+Ine:%>ine            FINAL1 ; !OBS ai:i
- +Pl+Ela:%>jste           FINAL1 ; !OBS ai:i
- +Pl+Ela+Err/Sub:%>jstie  FINAL1 ; !OBS ai:i
- +Pl+Com:%>jgujmie        FINAL1 ;
- +Pl+Com+Err/Sub:%>jgyjmie        FINAL1 ;
-    +Ess:%>jne            FINAL1 ; !OBS ai:i
-   +Attr:                 FINAL1 ;
+LEXICON ACCRA  ! SKAL GÅ SOM LEKSIKON MAANA!!!
+ +Sg+Nom:                   FINAL1 ; ! Eira   = maana, ASVO, Anu, Ane, Bao, Aakenus, Aargau, Pulco, NIEJTE,GALLOE
+                            RHyph  ; ! Eira   = maana, ASVO
+ +Sg+Acc:%>m               FINAL1 ; ! Eiram = maanam, Anum
+ +Sg+Gen:%>n               FINAL1 ; ! Eiran = maanan, Anun
+ +Sg+Ill:%>se              FINAL1 ; ! Eirese = maanese, Anuse
+ +Sg+Ine:%>sne             FINAL1 ; ! Eiresne = maanesne, Anusne
+ +Sg+Ela:%>ste             FINAL1 ; ! Eireste = maaneste, Anuste
+ +Sg+Com:%>ine             FINAL1 ; ! Eirine = maanine, Anujne
+ +Pl+Nom:%>h               FINAL1 ; ! Eirah = maanah, Anuh 
+ +Pl+Acc:%>ide             FINAL1 ; ! Eiride = maanide, Anujde
+ +Pl+Gen:%>j               FINAL1 ; ! Eiraj  = maanaj, Anuj 
+ +Pl+Ill:%>ide             FINAL1 ; ! Eiride = maanide, Anujde
+ +Pl+Ine:%>ine             FINAL1 ; ! Eirine = maanine, Anujne
+ +Pl+Ela:%>ijste           FINAL1 ; ! Eirijste = maanijste, Anujste
+ +Pl+Ela+Err/Sub:%>jstie   FINAL1 ; ! 
+ +Pl+Com:%>jgujmie         FINAL1 ; ! Eirajgujmie, Anujgujmie
+ +Pl+Com+Err/Sub:%>jgyjmie FINAL1 ;
+    +Ess:%>ine              FINAL1 ; ! Eirine, Anujne 
+    +Attr:                  FINAL1 ;
+      
+!!€gt-norm: Eira # Even-syllable                  !   Går som MAANA  ! 
+!!€ Eira             Eira+N+Prop+Sem/Sur+Attr     !   Går som MAANA  ! 
+!!€ Eiram	         Eira+N+Prop+Sem/Sur+Sg+Acc   !   Går som MAANA  ! 
+!!€ Eirese	         Eira+N+Prop+Sem/Sur+Sg+Ill   !   Går som MAANA  ! 
+!!€ Eiresne          Eira+N+Prop+Sem/Sur+Sg+Ine   !   Går som MAANA  ! 
+!!€ Eireste          Eira+N+Prop+Sem/Sur+Sg+Ela   !   Går som MAANA  ! 
+!!€ Eirine           Eira+N+Prop+Sem/Sur+Sg+Com   !   Går som MAANA  ! 
+!!€ Eirine           Eira+N+Prop+Sem/Sur+Sg+Ess   !   Går som MAANA  ! 
+                                                  !    
+!!€ Anu               Anu+N+Prop+Sem/Sur+Attr     !   Går som gaalloe ! 
+!!€ Anum	          Anu+N+Prop+Sem/Sur+Sg+Acc   !   Går som gaalloe ! 
+!!€ Anuse	          Anu+N+Prop+Sem/Sur+Sg+Ill   !   Går som gaalloe ! 
+!!€ Anusne            Anu+N+Prop+Sem/Sur+Sg+Ine   !   Går som gaalloe ! 
+!!€ Anuste            Anu+N+Prop+Sem/Sur+Sg+Ela   !   Går som gaalloe ! 
+!!€ Anujne            Anu+N+Prop+Sem/Sur+Sg+Com   !   Går som gaalloe ! 
+!!€ Anujne            Anu+N+Prop+Sem/Sur+Sg+Ess   !   Går som gaalloe ! 
+                                                  !    
+!!€ Ane               Ane+N+Prop+Sem/Sur+Attr     !   Går som nïejte !  
+!!€ Anem	          Anu+N+Prop+Sem/Sur+Sg+Acc   !   Går som nïejte !  
+!!€ Anese	          Anu+N+Prop+Sem/Sur+Sg+Ill   !   Går som nïejte !  
+!!€ Anesne            Anu+N+Prop+Sem/Sur+Sg+Ine   !   Går som nïejte !  
+!!€ Aneste            Anu+N+Prop+Sem/Sur+Sg+Ela   !   Går som nïejte !  
+!!€ Anine             Anu+N+Prop+Sem/Sur+Sg+Com   !   Går som nïejte !  
+!!€ Anine             Anu+N+Prop+Sem/Sur+Sg+Ess   !   Går som nïejte !  
+                                                  !    
+                                                  !    
+   
    
 ! Gïelem nastedh - lexicon - det samme som væhtjedh, væhtjadahke
    ! amhkedh+N+Sg+Nom:amhkedh FINAL1 ;
@@ -617,43 +641,72 @@ LEXICON DUBAI-obj
 
 
 LEXICON PIPPI-org
- +N+Prop+Sem/Org: ACCRA ;
+ +N+Prop+Sem/Org: POLITI ;  ! Skal gå til LEXICON POLITI
 
 LEXICON PIPPI-mal
- +N+Prop+Sem/Mal: ACCRA ;
+ +N+Prop+Sem/Mal: POLITI ; ! Skal gå til  LEXICON POLITI
 
 LEXICON PIPPI-fem
- +N+Prop+Sem/Fem: ACCRA ;
+ +N+Prop+Sem/Fem: POLITI ; ! Skal gå til POLITI
 
 LEXICON PIPPI-malfem
- +N+Prop+Sem/Mal: ACCRA ;
- +N+Prop+Sem/Fem: ACCRA ;
+ +N+Prop+Sem/Mal: POLITI ; ! Skal gå til POLITI
+ +N+Prop+Sem/Fem: POLITI ; ! Skal gå til POLITI
 
 LEXICON PIPPI-femsur
- +N+Prop+Sem/Fem: ACCRA ;
- +N+Prop+Sem/Sur: ACCRA ;
+ +N+Prop+Sem/Fem: POLITI ; ! Skal gå til POLITI
+ +N+Prop+Sem/Sur: POLITI ; ! Skal gå til POLITI
 
 LEXICON PIPPI-sur
- +N+Prop+Sem/Sur: ACCRA ;
+ +N+Prop+Sem/Sur: POLITI ; ! Skal gå til POLITI
 
 LEXICON PIPPI-obj
- +N+Prop+Sem/Obj: ACCRA ;
+ +N+Prop+Sem/Obj: POLITI ; ! Skal gå til POLITI
 
 LEXICON PIPPI-ani
- +N+Prop+Sem/Ani: ACCRA ;
+ +N+Prop+Sem/Ani: POLITI ; ! Skal gå til POLITI
 
 LEXICON PIPPI-plc
- +N+Prop+Sem/Plc: ACCRA ; ! H
+ +N+Prop+Sem/Plc: POLITI ;  ! Skal gå til POLITI 
+
  
-!!€gt-norm: Haukilahti # Even-syllable   ACCRA
+!!€gt-norm: Haukilahti # Even-syllable   POLITI 
 !!€ Haukilahti            Haukilahti+N+Prop+Sem/Plc+Attr
-!!€ Haukilahtijjem        Haukilahti+N+Prop+Sem/Plc+Sg+Acc   
-!!€ Haukilahtijasse       Haukilahti+N+Prop+Sem/Plc+Sg+Ill
-!!€ Haukilæhtan           Haukilahti+N+Prop+Sem/Plc+Sg+Ill
-!!€ Haukilahtijisnie      Haukilahti+N+Prop+Sem/Plc+Sg+Ine 
-!!€ Haukilahtijistie      Haukilahti+N+Prop+Sem/Plc+Sg+Ela 
-!!€ Haukilahtijinie       Haukilahti+N+Prop+Sem/Plc+Sg+Com 
-!!€ Haukilahtijinie       Haukilahti+N+Prop+Sem/Plc+Sg+Ess  
+!!€ Haukilahtijem         Haukilahti+N+Prop+Sem/Plc+Sg+Acc   
+!!€ Haukilahtijese        Haukilahti+N+Prop+Sem/Plc+Sg+Ill
+!!€ Haukilæhtan           Haukilahti+N+Prop+Sem/Plc+Sg+Ill  !! ???
+!!€ Haukilahtijesne       Haukilahti+N+Prop+Sem/Plc+Sg+Ine 
+!!€ Haukilahtijeste       Haukilahti+N+Prop+Sem/Plc+Sg+Ela 
+!!€ Haukilahtijine        Haukilahti+N+Prop+Sem/Plc+Sg+Com 
+!!€ Haukilahtijine        Haukilahti+N+Prop+Sem/Plc+Sg+Ess  
+
+
+LEXICON POLITI    
+ +Sg+Nom:                   FINAL1 ; 
+                            RHyph  ;                             
+ +Sg+Acc:jem        FINAL1 ;
+ +Sg+Gen:jen        FINAL1 ;
+ +Sg+Ill:jese       FINAL1 ;
+ ! +Ill:æn     FINAL1 ;
+ +Sg+Ine:jesne      FINAL1 ;
+ +Sg+Ela:jeste      FINAL1 ;
+ +Sg+Com:jine       FINAL1 ; 
+ +Pl+Nom:jh         FINAL1 ;
+ +Pl+Acc:jide       FINAL1 ;
+ +Pl+Gen:ji         FINAL1 ;
+         +Pl+Ill:jide      FINAL1 ;
+         +Pl+Ine:jine      FINAL1 ;
+         +Pl+Ela:jijste    FINAL1 ;
+         +Pl+Com:jigujmie  FINAL1 ;
+ +Pl+Com+Err/Sub:jigyjmie  FINAL1 ; !
+            +Ess:jine FINAL1 ;
+ 
+
+
+
+
+
+
  
  !  Mener denne må gå som RICHIE
 
@@ -675,6 +728,10 @@ LEXICON MAKI-sur
 !+N+Prop+Sem/Ani: RITCHIE-ani ;
 !+N+Prop+Sem/Ani: PN_I_FINSK-ani ;
 
+
+!!   OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
+
+
 LEXICON MAKI-plc
     PN_I_FINSK-plc ;
     RITCHIE-plc    ;
@@ -689,7 +746,7 @@ LEXICON MAKI-plc
 !!€ Hautajärvine       Hautajärvi+N+Prop+Sem/Plc+Sg+Com 
 !!€ Hautajärvine       Hautajärvi+N+Prop+Sem/Plc+Sg+Ess 
 
-! järviem - järvem? Jeg tror järviem (sørsamifisere), men trenger avklaringer.    
+! järviem - järvem i ack? Jeg tror järviem (sørsamifisere), men trenger avklaringer.  Nei, citatlån helt ut, så da blir det "Järvim"  
     
 
 LEXICON MAKI-LOAN-plc
@@ -754,8 +811,8 @@ LEXICON ACCRA-femplc
 !!€ Abiese     Abia+N+Prop+Sem/Plc+Sg+Ill
 !!€ Abiesene   Abia+N+Prop+Sem/Plc+Sg+Ine 
 !!€ Abieste    Abia+N+Prop+Sem/Plc+Sg+Ela 
-!!€ Abiajne    Abia+N+Prop+Sem/Plc+Sg+Com 
-!!€ Abiajne    Abia+N+Prop+Sem/Plc+Sg+Ess 
+!!€ Abijne    Abia+N+Prop+Sem/Plc+Sg+Com 
+!!€ Abijne    Abia+N+Prop+Sem/Plc+Sg+Ess 
 
 
 
