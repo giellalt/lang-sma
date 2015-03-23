@@ -1512,24 +1512,25 @@ LEXICON SNAME_NIEJTE-plc
  +N+Prop+Sem/Plc: SNAME_NIEJTE_PLC-ORG ;
 
 LEXICON SNAME_NIEJTE-ani
- +N+Prop+Sem/Ani: SNAME_NIEJTE ;
+ +N+Prop+Sem/Ani: SNAME_NIEJTE_FLAG ;
 
 LEXICON SNAME_NIEJTE-mal
- +N+Prop+Sem/Mal: SNAME_NIEJTE ;
+ +N+Prop+Sem/Mal: SNAME_NIEJTE_FLAG ;
 
 LEXICON SNAME_NIEJTE-fem
- +N+Prop+Sem/Fem: SNAME_NIEJTE ;
+ +N+Prop+Sem/Fem: SNAME_NIEJTE_FLAG ;
 
 LEXICON SNAME_NIEJTE-sur
- +N+Prop+Sem/Sur: SNAME_NIEJTE ;
+ +N+Prop+Sem/Sur: SNAME_NIEJTE_FLAG ;
 
 LEXICON SNAME_NIEJTE-org
- +N+Prop+Sem/Org: SNAME_NIEJTE_PLC-ORG ;
+ +N+Prop+Sem/Org: SNAME_NIEJTE_PLC-ORG_FLAG ;
 
 LEXICON SNAME_NIEJTE-obj
- +N+Prop+Sem/Obj: SNAME_NIEJTE ;
+ +N+Prop+Sem/Obj: SNAME_NIEJTE_FLAG ;
 
 
+LEXICON SNAME_NIEJTE_FLAG @U.Cap.Obl@ SNAME_NIEJTE ;
 LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
    +Sg:  NIEJTE_SG    ;
    +Pl:  NIEJTE_PL    ;
@@ -1537,6 +1538,7 @@ LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
  +Attr:e FINAL1       ;
          NIEJTE_CMPND ;
 
+LEXICON SNAME_NIEJTE_PLC-ORG_FLAG @U.Cap.Obl@ SNAME_NIEJTE_PLC-ORG ;
 LEXICON SNAME_NIEJTE_PLC-ORG ! as NIEJTE, but with Prop tag
    +Sg:  NIEJTE_SG    ;
 !+Pl:    NIEJTE_PL ;
@@ -1546,8 +1548,9 @@ LEXICON SNAME_NIEJTE_PLC-ORG ! as NIEJTE, but with Prop tag
 
 
 LEXICON SNAME_NIEJTE-LOAN-plc
-   SNAME_NIEJTE-LOAN ; ! To be fixed
+   SNAME_NIEJTE-LOAN_FLAG ; ! To be fixed
 
+LEXICON SNAME_NIEJTE-LOAN_FLAG @U.Cap.Obl@ SNAME_NIEJTE-LOAN ;
 LEXICON SNAME_NIEJTE-LOAN ! as NIEJTE, but with Prop tag
                       +N+Prop+Sem/Plc+Sg+Nom:e         FINAL1   ;
         +N+Prop+Sem/Plc+Sg+Nom+PxSg1+Err/Sub:%>eme     FINAL1   ;
