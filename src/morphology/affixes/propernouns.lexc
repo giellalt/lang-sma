@@ -1059,14 +1059,15 @@ LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
 
 
 LEXICON PERS_SNAME_ODD-mal
- +N+Prop+Sem/Mal: PERS_SNAME_ODD ;
+ +N+Prop+Sem/Mal: PERS_SNAME_ODD_FLAG ;
 
 LEXICON PERS_SNAME_ODD-fem
- +N+Prop+Sem/Fem: PERS_SNAME_ODD ;
+ +N+Prop+Sem/Fem: PERS_SNAME_ODD_FLAG ;
 
 LEXICON PERS_SNAME_ODD-ani
- +N+Prop+Sem/Ani: PERS_SNAME_ODD ;
+ +N+Prop+Sem/Ani: PERS_SNAME_ODD_FLAG ;
 
+LEXICON PERS_SNAME_ODD_FLAG @U.Cap.Obl@ PERS_SNAME_ODD ;
 LEXICON PERS_SNAME_ODD
                          ERVASTI  ;
  +Der1+Der/Dimin+N:e%»tj GÅATETJE ; !Åvletje
@@ -1080,15 +1081,16 @@ LEXICON SNAME_ODD-org
  +N+Prop+Sem/Org: SNAME_ODD_PLC-ORG ;
 
 LEXICON SNAME_ODD-ani
- +N+Prop+Sem/Ani: SNAME_ODD ;
+ +N+Prop+Sem/Ani: SNAME_ODD_FLAG ;
 
 
 LEXICON SNAME_ODD-mal
- +N+Prop+Sem/Mal: SNAME_ODD ;
+ +N+Prop+Sem/Mal: SNAME_ODD_FLAG ;
 
 !LEXICON SNAME_ODD-fem
-!+N+Prop+Sem/Fem: SNAME_ODD ;
+!+N+Prop+Sem/Fem: SNAME_ODD_FLAG ;
 
+LEXICON SNAME_ODD_FLAG @U.Cap.Obl@ SNAME_ODD ;
 LEXICON SNAME_ODD ! Southern Sami names
    ERVASTI ;
 
@@ -1096,8 +1098,9 @@ LEXICON SNAME_ODD_PLC-ORG ! Southern Sami names
    ERVASTI_PLC-ORG ;
 
 LEXICON VAARATJE-plc
-   VAARATJE ;
+   VAARATJE_FLAG ;
 
+LEXICON VAARATJE_FLAG @U.Cap.Obl@ VAARATJE ;
 LEXICON VAARATJE !names vowel expansion in all cases
  +N+Prop+Sem/Plc+Sg+Nom:e       FINAL1 ;
         +N+Prop+Sem/Plc:e       RHyph  ;
@@ -1605,7 +1608,7 @@ LEXICON SNAME_NIEJTE_PLUR ! as NIEJTE, but with Prop tag
 
 
 
-
+LEXICON STAABREH_FLAG @U.Cap.Obl@ STAABREH ;
 LEXICON STAABREH ! as NIEJTE, but with Prop tag
         :e%>       RHyph    ;
  +Pl+Nom:e%>h      FINAL1   ;
@@ -1622,28 +1625,28 @@ LEXICON STAABREH ! as NIEJTE, but with Prop tag
 
 
 LEXICON STAABREH-plc
- +N+Prop+Sem/Plc: STAABREH ;
+ +N+Prop+Sem/Plc: STAABREH_FLAG ;
 
 
 LEXICON STAABREH-org
- +N+Prop+Sem/Org: STAABREH ;
+ +N+Prop+Sem/Org: STAABREH_FLAG ;
 
 
 !LEXICON STAABREH-ani
-! +N+Prop+Sem/Ani: STAABREH ;
+! +N+Prop+Sem/Ani: STAABREH_FLAG ;
 !
 !LEXICON STAABREH-mal
-! +N+Prop+Sem/Mal: STAABREH ;
+! +N+Prop+Sem/Mal: STAABREH_FLAG ;
 !
 !LEXICON STAABREH-fem
-! +N+Prop+Sem/Fem: STAABREH ;
+! +N+Prop+Sem/Fem: STAABREH_FLAG ;
 !
 !LEXICON STAABREH-sur
-! +N+Prop+Sem/Sur: STAABREH ;
+! +N+Prop+Sem/Sur: STAABREH_FLAG ;
 !
 !
 !LEXICON STAABREH-obj
-! +N+Prop+Sem/Obj: STAABREH ;
+! +N+Prop+Sem/Obj: STAABREH_FLAG ;
 
 
 
