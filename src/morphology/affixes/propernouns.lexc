@@ -199,29 +199,32 @@ LEXICON VNAME-fem
 
 
 LEXICON ACCRA-plc
-+N+Prop+Sem/Plc: ACCRA ;
++N+Prop+Sem/Plc: ACCRA_FLAG ;
 
 LEXICON ACCRA-org
-+N+Prop+Sem/Org: ACCRA ;
++N+Prop+Sem/Org: ACCRA_FLAG ;
 
 LEXICON ACCRA-sur
-+N+Prop+Sem/Sur: ACCRA ;
++N+Prop+Sem/Sur: ACCRA_FLAG ;
 
 LEXICON ACCRA-mal       
-+N+Prop+Sem/Mal: ACCRA ;
-+Der1+Der/Dimin+N:%»tj GÅATETJE    ; ! Arve->Arvetje, Andy->Andytje, 
++N+Prop+Sem/Mal: ACCRA_FLAG ;
++Der1+Der/Dimin+N:%»tj ACCRATJE    ; ! Arve->Arvetje, Andy->Andytje, 
 
 LEXICON ACCRA-fem         
- +N+Prop+Sem/Fem: ACCRA ;
- +Der1+Der/Dimin+N:%»tj GÅATETJE    ; !Tone-> Tonetje, 
+ +N+Prop+Sem/Fem: ACCRA_FLAG ;
+ +Der1+Der/Dimin+N:%»tj ACCRATJE    ; !Tone-> Tonetje, 
 
 LEXICON ACCRA-obj
- +N+Prop+Sem/Obj: ACCRA ;
+ +N+Prop+Sem/Obj: ACCRA_FLAG ;
  
 LEXICON ACCRA-ani
- +N+Prop+Sem/Ani: ACCRA ;
+ +N+Prop+Sem/Ani: ACCRA_FLAG ;
 
 ! ACCCRA- må tilpasses mer vokalstammene , a-e og oe.
+
+LEXICON ACCRATJE   @U.Cap.Obl@ GÅATETJE ;
+LEXICON ACCRA_FLAG @U.Cap.Obl@ ACCRA    ;
 
 LEXICON ACCRA  ! SKAL GÅ SOM LEKSIKON MAANA!!!
  +Sg+Nom:                   FINAL1 ; ! Eira   = maana, ASVO, Anu, Ane, Bao, Aakenus, Aargau, Pulco, NIEJTE,GALLOE
