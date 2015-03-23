@@ -178,22 +178,22 @@ LEXICON N_ODD_PL_NO_DISIMPH
 
 
 LEXICON VNAME-plc
- +N+Prop+Sem/Plc: ACCRA_PLC-ORG ;
+ +N+Prop+Sem/Plc: ACCRA_PLC-ORG_FLAG ;
 
 LEXICON VNAME-org
- +N+Prop+Sem/Org: ACCRA_PLC-ORG ;
+ +N+Prop+Sem/Org: ACCRA_PLC-ORG_FLAG ;
 
 LEXICON VNAME-sur
- +N+Prop+Sem/Sur: ACCRA ;
+ +N+Prop+Sem/Sur: ACCRA_FLAG ;
 
 LEXICON VNAME-mal
- +N+Prop+Sem/Mal: ACCRA ;
+ +N+Prop+Sem/Mal: ACCRA_FLAG ;
 
 LEXICON VNAME-fem
- +N+Prop+Sem/Fem: ACCRA ;
+ +N+Prop+Sem/Fem: ACCRA_FLAG ;
 
 !LEXICON VNAME-obj ! not in use, add if needed
-! +N+Prop+Sem/Obj: ACCRA ;
+! +N+Prop+Sem/Obj: ACCRA_FLAG ;
 
 
 
@@ -225,7 +225,6 @@ LEXICON ACCRA-ani
 
 LEXICON ACCRATJE   @U.Cap.Obl@ GÅATETJE ;
 LEXICON ACCRA_FLAG @U.Cap.Obl@ ACCRA    ;
-
 LEXICON ACCRA  ! SKAL GÅ SOM LEKSIKON MAANA!!!
  +Sg+Nom:                   FINAL1 ; ! Eira   = maana, ASVO, Anu, Ane, Bao, Aakenus, Aargau, Pulco, NIEJTE,GALLOE
                             RHyph  ; ! Eira   = maana, ASVO
@@ -290,6 +289,7 @@ LEXICON ACCRA  ! SKAL GÅ SOM LEKSIKON MAANA!!!
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
 ! the appropriate even syllable lexicons.
 
+LEXICON ACCRA_PLC-ORG_FLAG @U.Cap.Obl@ ACCRA_PLC-ORG ;
 LEXICON ACCRA_PLC-ORG
  +Sg+Nom:                 FINAL1 ;
                           RHyph  ;
@@ -346,10 +346,10 @@ LEXICON VNAME
 ! the appropriate even syllable lexicons.
 
 LEXICON NYSTØ-plc ! placename
- +N+Prop+Sem/Plc: NYSTØ_PLC-ORG ;
+ +N+Prop+Sem/Plc: NYSTØ_PLC-ORG_FLAG ;
 
 LEXICON NYSTØ-org ! organisasjon
- +N+Prop+Sem/Org: NYSTØ_PLC-ORG ;
+ +N+Prop+Sem/Org: NYSTØ_PLC-ORG_FLAG ;
 
 LEXICON NYSTØ-femsur
  +N+Prop+Sem/Sur: NYSTØDECL ;
@@ -359,37 +359,37 @@ LEXICON K
    FINAL1 ;
 
 LEXICON NYSTØ-sur ! etternavn
- +N+Prop+Sem/Sur: NYSTØDECL ;
+ +N+Prop+Sem/Sur: NYSTØDECL_FLAG ;
 
 LEXICON NYSTØ-obj ! objekt, pluto, jupiter
- +N+Prop+Sem/Obj: NYSTØDECL ;
+ +N+Prop+Sem/Obj: NYSTØDECL_FLAG ;
 
 LEXICON NYSTØ-mal ! John
- +N+Prop+Sem/Mal: NYSTØDECL ;
+ +N+Prop+Sem/Mal: NYSTØDECL_FLAG ;
 
 LEXICON NYSTØ-fem ! kvinnenavn
- +N+Prop+Sem/Fem: NYSTØDECL ;
+ +N+Prop+Sem/Fem: NYSTØDECL_FLAG ;
 
-LEXICON NYSTØ-LOAN-org ! kvinnenavn
+LEXICON NYSTØ-LOAN-org ! organisasjon
  +N+Prop+Sem/Org: NYSTØ-LOAN ;
 
-LEXICON NYSTØ-LOAN-plc ! kvinnenavn
+LEXICON NYSTØ-LOAN-plc ! stedsnavn
  +N+Prop+Sem/Plc: NYSTØ-LOAN ;
 
 !LEXICON NYSTØ ! Utan semantisk tag
-! +N+Prop: NYSTØDECL ;
+! +N+Prop: NYSTØDECL_FLAG ;
 
 
 !LEXICON NYSTØ-ani
-!+N+Prop+Sem/Ani: NYSTØDECL ;
+!+N+Prop+Sem/Ani: NYSTØDECL_FLAG ;
 
 LEXICON NYSTØ-LOAN
-!+Err/Sub: NYSTØDECL ; ! must evt. be +Use/NotSpeller etc.
+!+Err/Sub: NYSTØDECL_FLAG ; ! must evt. be +Use/NotSpeller etc.
 !+Sg+Nom:          FINAL1 ; ! must evt. be +Use/NotSpeller etc.
-   NYSTØDECL ;
+   NYSTØDECL_FLAG ;
 
 
-
+LEXICON NYSTØDECL_FLAG @U.Cap.Obl@ NYSTØDECL ;
 LEXICON NYSTØDECL ! Names ending in stressed vowel, typically scand. compounds
    +Attr: FINAL1      ;
           RHyph       ;
@@ -398,6 +398,7 @@ LEXICON NYSTØDECL ! Names ending in stressed vowel, typically scand. compounds
      +Sg: NIEJTESGOBL ;
  +Sg+Nom: FINAL1      ;
 
+LEXICON NYSTØ_PLC-ORG_FLAG @U.Cap.Obl@ NYSTØ_PLC-ORG ;
 LEXICON NYSTØ_PLC-ORG ! Names ending in stressed vowel, typically scand. compounds
    +Attr: FINAL1      ;
           RHyph       ;
@@ -595,7 +596,7 @@ LEXICON JOKULL-plc
 
 
 LEXICON DUBAI-plc
- +N+Prop+Sem/Plc: DUBAILEX_PLC-ORG ;
+ +N+Prop+Sem/Plc: DUBAILEX_PLC-ORG_FLAG ;
  
 !!€gt-norm: Courtrai # Even-syllable
 !!€ Courtrai         Courtrai+N+Prop+Sem/Plc+Attr
@@ -609,39 +610,41 @@ LEXICON DUBAI-plc
  
 
 LEXICON DUBAI-org
- +N+Prop+Sem/Org: DUBAILEX_PLC-ORG ;
+ +N+Prop+Sem/Org: DUBAILEX_PLC-ORG_FLAG ;
 
 LEXICON DUBAI-fem
- +N+Prop+Sem/Fem: DUBAILEX ;
+ +N+Prop+Sem/Fem: DUBAILEX_FLAG ;
 
 LEXICON DUBAI-mal
- +N+Prop+Sem/Mal: DUBAILEX ;
+ +N+Prop+Sem/Mal: DUBAILEX_FLAG ;
 
 LEXICON DUBAI-sur
- +N+Prop+Sem/Sur: DUBAILEX ;
+ +N+Prop+Sem/Sur: DUBAILEX_FLAG ;
 
 
 LEXICON DUBAI-obj
- +N+Prop+Sem/Obj:       DUBAILEX  ;
+ +N+Prop+Sem/Obj: DUBAILEX_FLAG ;
 
 !This is a standardization issues - 
 
-  LEXICON DUBAILEX_PLC-ORG
-           +Attr:i        FINAL1    ;! Dubai
-         +Sg+Nom:i        FINAL1    ;! Dubai
-                         RHyph     ;
-         +Sg+Acc:jje%>m   FINAL1    ;!ref. borrowing pattern from Lorentz -i -> ijje , ex . fobijje -> fobijje.
-         +Sg+Gen:jje%>n   FINAL1    ;! Dubai - 'Dubajjem' -  Question is whether it should be 'Dubaijjem'.-This is a standardization issues
-         +Sg+Ill:jje%>se  FINAL1    ;
-         +Sg+Ine:jje%>sne FINAL1    ;
-         +Sg+Ela:jje%>ste FINAL1    ;
-         +Sg+Com:jj%>ine  FINAL1    ;
-            +Ess:jj%>ine  FINAL1    ;
+LEXICON DUBAILEX_PLC-ORG_FLAG @U.Cap.Obl@ DUBAILEX_PLC-ORG ;
+LEXICON DUBAILEX_PLC-ORG
+           +Attr:i        FINAL1 ; ! Dubai
+         +Sg+Nom:i        FINAL1 ; ! Dubai
+                          RHyph  ;
+         +Sg+Acc:jje%>m   FINAL1 ; ! ref. borrowing pattern from Lorentz -i -> ijje , ex . fobijje -> fobijje.
+         +Sg+Gen:jje%>n   FINAL1 ; ! Dubai - 'Dubajjem' -  Question is whether it should be 'Dubaijjem'.-This is a standardization issues
+         +Sg+Ill:jje%>se  FINAL1 ;
+         +Sg+Ine:jje%>sne FINAL1 ;
+         +Sg+Ela:jje%>ste FINAL1 ;
+         +Sg+Com:jj%>ine  FINAL1 ;
+            +Ess:jj%>ine  FINAL1 ;
 
-  LEXICON DUBAILEX
+LEXICON DUBAILEX_FLAG @U.Cap.Obl@ DUBAILEX ;
+LEXICON DUBAILEX
            +Attr:i        FINAL1    ;
          +Sg+Nom:i        FINAL1    ;
-                         RHyph     ;
+                          RHyph     ;
          +Sg+Acc:jje%>m   FINAL1    ;!ref. borrowing pattern from Lorentz -i -> ijje , ex . fobijje -> fobijje
          +Sg+Gen:jje%>n   FINAL1    ;
          +Sg+Ill:jje%>se  FINAL1    ;
@@ -649,37 +652,37 @@ LEXICON DUBAI-obj
          +Sg+Ela:jje%>ste FINAL1    ;
          +Sg+Com:jj%>ine  FINAL1    ;
             +Ess:jj%>ine  FINAL1    ;
-             +Pl:j       NIEJTE_PL ;
+             +Pl:j        NIEJTE_PL ;
 
 
 LEXICON PIPPI-org
- +N+Prop+Sem/Org: POLITI ;  ! Skal gå til LEXICON POLITI
+ +N+Prop+Sem/Org: POLITI_FLAG ;  ! Skal gå til LEXICON POLITI
 
 LEXICON PIPPI-mal
- +N+Prop+Sem/Mal: POLITI ; ! Skal gå til  LEXICON POLITI
+ +N+Prop+Sem/Mal: POLITI_FLAG ; ! Skal gå til  LEXICON POLITI
 
 LEXICON PIPPI-fem
- +N+Prop+Sem/Fem: POLITI ; ! Skal gå til POLITI
+ +N+Prop+Sem/Fem: POLITI_FLAG ; ! Skal gå til POLITI
 
 LEXICON PIPPI-malfem
- +N+Prop+Sem/Mal: POLITI ; ! Skal gå til POLITI
- +N+Prop+Sem/Fem: POLITI ; ! Skal gå til POLITI
+ +N+Prop+Sem/Mal: POLITI_FLAG ; ! Skal gå til POLITI
+ +N+Prop+Sem/Fem: POLITI_FLAG ; ! Skal gå til POLITI
 
 LEXICON PIPPI-femsur
- +N+Prop+Sem/Fem: POLITI ; ! Skal gå til POLITI
- +N+Prop+Sem/Sur: POLITI ; ! Skal gå til POLITI
+ +N+Prop+Sem/Fem: POLITI_FLAG ; ! Skal gå til POLITI
+ +N+Prop+Sem/Sur: POLITI_FLAG ; ! Skal gå til POLITI
 
 LEXICON PIPPI-sur
- +N+Prop+Sem/Sur: POLITI ; ! Skal gå til POLITI
+ +N+Prop+Sem/Sur: POLITI_FLAG ; ! Skal gå til POLITI
 
 LEXICON PIPPI-obj
- +N+Prop+Sem/Obj: POLITI ; ! Skal gå til POLITI
+ +N+Prop+Sem/Obj: POLITI_FLAG ; ! Skal gå til POLITI
 
 LEXICON PIPPI-ani
- +N+Prop+Sem/Ani: POLITI ; ! Skal gå til POLITI
+ +N+Prop+Sem/Ani: POLITI_FLAG ; ! Skal gå til POLITI
 
 LEXICON PIPPI-plc
- +N+Prop+Sem/Plc: POLITI ;  ! Skal gå til POLITI 
+ +N+Prop+Sem/Plc: POLITI_FLAG ;  ! Skal gå til POLITI 
 
  
 !!€gt-norm: Haukilahti # Even-syllable   POLITI 
@@ -693,31 +696,27 @@ LEXICON PIPPI-plc
 !!€ Haukilahtijine        Haukilahti+N+Prop+Sem/Plc+Sg+Ess  
 
 
+LEXICON POLITI_FLAG @U.Cap.Obl@ POLITI ;
 LEXICON POLITI    
- +Sg+Nom:                   FINAL1 ; 
-                            RHyph  ;                             
- +Sg+Acc:jem        FINAL1 ;
- +Sg+Gen:jen        FINAL1 ;
- +Sg+Ill:jese       FINAL1 ;
- ! +Ill:æn     FINAL1 ;
- +Sg+Ine:jesne      FINAL1 ;
- +Sg+Ela:jeste      FINAL1 ;
- +Sg+Com:jine       FINAL1 ; 
- +Pl+Nom:jh         FINAL1 ;
- +Pl+Acc:jide       FINAL1 ;
- +Pl+Gen:ji         FINAL1 ;
+         +Sg+Nom:          FINAL1 ; 
+                           RHyph  ;                             
+         +Sg+Acc:jem       FINAL1 ;
+         +Sg+Gen:jen       FINAL1 ;
+         +Sg+Ill:jese      FINAL1 ;
+!        +Sg+Ill:æn        FINAL1 ;
+         +Sg+Ine:jesne     FINAL1 ;
+         +Sg+Ela:jeste     FINAL1 ;
+         +Sg+Com:jine      FINAL1 ; 
+         +Pl+Nom:jh        FINAL1 ;
+         +Pl+Acc:jide      FINAL1 ;
+         +Pl+Gen:ji        FINAL1 ;
          +Pl+Ill:jide      FINAL1 ;
          +Pl+Ine:jine      FINAL1 ;
          +Pl+Ela:jijste    FINAL1 ;
          +Pl+Com:jigujmie  FINAL1 ;
- +Pl+Com+Err/Sub:jigyjmie  FINAL1 ; !
-            +Ess:jine FINAL1 ;
+ +Err/Sub+Pl+Com:jigyjmie  FINAL1 ;
+            +Ess:jine      FINAL1 ;
  
-
-
-
-
-
 
  
  !  Mener denne må gå som RICHIE
