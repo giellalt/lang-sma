@@ -42,8 +42,7 @@
 ! Vowel final names
 ! - - - - - - - - -
 LEXICON ERVASTI-plc
-! +N+Prop+Sem/Plc: ERVASTI_PLC-ORG ;
-        PIPPI-plc ;
++N+Prop+Sem/Plc:  ERVASTI ;
 
 !LEXICON ERVASTI-PL-plc
 !ERVASTI-PL ;
@@ -84,14 +83,13 @@ LEXICON ERVASTI-obj
  
 
 LEXICON ERVASTI ! Names ending in stressless vowel
-   +Sg:          N_ODD_SG  ;
-      :e%^DISIMP RHyph     ;
-   +Pl:          N_ODD_PL  ;
-                 N_ODD_ESS ;
- +Attr:e%^DISIMP FINAL1    ;
- 
-
-
+    +Sg:        INAME_ODD_SG   ;
+    +Sg+Nom:%>i FINAL1 ;
+                  :%>i RHyph ; ! ERVASTI-muorra, Ervasti-dállu etc. RHyph er Cmp.
+    +Pl:          N_ODD_PL  ;
+                  N_ODD_ESS ;
+          +Attr:%>i FINAL1    ;
+          
 LEXICON ERVASTI_PLC-ORG ! Names ending in stressless vowel
    +Sg: N_ODD_SG  ;
         RHyph     ;
@@ -1049,13 +1047,13 @@ LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
 ! +Attr:%>i FINAL1 ;     ! name special
 !
 
-! LEXICON INAME_ODD_SG
-! +Acc:e%>%^DISIMPm      FINAL1 ;
-! +Gen:e%>%^DISIMPn      FINAL1 ;
-!+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-! +Ine:%>isnie           FINAL1 ;
-! +Ela:%>istie           FINAL1 ;
-! +Com:%>inie            FINAL1 ;
+LEXICON INAME_ODD_SG
+      +Acc:%>im      FINAL1 ;
+      +Gen:%>in      FINAL1 ;
+      +Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+      +Ine:%>isnie           FINAL1 ;
+      +Ela:%>istie           FINAL1 ;
+      +Com:%>inie            FINAL1 ;
 
 
 LEXICON PERS_SNAME_ODD-mal
@@ -1188,7 +1186,7 @@ LEXICON RITCHIE-sur
 ! +N+Prop+Sem/Fem: RITCHIE ;
 
 LEXICON RITCHIE ! Ritchie:Ritchijasse
- +Sg+Nom:ije%^DISIMP    FINAL1    ;
+ +Sg+Nom:ije%^DISIMP    FINAL1    ;  ! DiphtongSimplification = gaaloe=> gallosne
         :ije%^DISIMP    RHyph     ;
  +Sg+Acc:ije%>%^DISIMPm FINAL1    ;
  +Sg+Gen:ije%>%^DISIMPn FINAL1    ;
