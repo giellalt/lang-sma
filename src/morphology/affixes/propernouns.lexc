@@ -1653,11 +1653,15 @@ LEXICON STAABREH-org
 
 
 LEXICON AEKTUVE
-   +N+Prop+Sem/Plc+Sg:             BÅERUVE_SG         ;
-      +N+Prop+Sem/Plc:uve%^DISIMP  RHyph              ;
-!+N+Prop+Sem/Plc+Pl: BÅERUVE_PL ;
-      +N+Prop+Sem/Plc:             BÅERUVE_ESS        ;
- +N+Prop+Sem/Plc+Attr:uve          FINAL1             ;
+ +N+Prop+Sem/Plc: 
+
+LEXICON AEKTUVE_FLAG @U.Cap.Obl@ AEKTUVE_DECL ;
+LEXICON AEKTUVE_DECL
+   +Sg:             BÅERUVE_SG         ;
+      :uve%^DISIMP  RHyph              ;
+!  +Pl:             BÅERUVE_PL         ;
+                    BÅERUVE_ESS        ;
+ +Attr:uve          FINAL1             ;
 
 !LEXICON LAANTE-plc
 !land+N+Prop+Sem/Plc:land CNAME_EVENLEX_PLC-ORG ; ! Småland
