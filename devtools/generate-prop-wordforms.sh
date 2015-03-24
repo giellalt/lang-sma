@@ -17,7 +17,7 @@ morf_codes="+N+Prop+Sg+Nom \
 source_file=src/morphology/generated_files/smi-sma-propernouns.lexc
 
 # Lexicons that should NOT be used to extract lemmas (egrep expression):
-exception_lexicons="flagK"
+exception_lexicons=""
 
 # FST used for generation, MINUS suffix:
 generator_file=src/generator-gt-norm
