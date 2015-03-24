@@ -465,10 +465,6 @@ LEXICON NYSTØ_PLC-ORG ! Names ending in stressed vowel, typically scand. compou
      +Sg: NIEJTESGOBL ;
  +Sg+Nom: FINAL1      ;
 
-LEXICON INAME-plc
- +N+Prop+Sem/Plc: INAME_PLC-ORG ;
-
-
 LEXICON LONDON-atr
  +N+Prop+Attr: FINAL1 ;
       +N+Prop: RHyph  ;
@@ -484,15 +480,15 @@ LEXICON LONDON-obj  !!= @CODE@  Objects. ODD-syllable
 
 
 LEXICON LONDON-org
- +N+Prop+Sem/Org: CNAME_ODD_PLC-ORG ;
+ +N+Prop+Sem/Org: CNAME_ODD_PLC-ORG_FLAG ;
 
 LEXICON LONDON-orgsur
- +N+Prop+Sem/Org: CNAME_ODD_PLC-ORG ;
- +N+Prop+Sem/Sur: CNAME_ODD         ;
+ +N+Prop+Sem/Org: CNAME_ODD_PLC-ORG_FLAG ;
+ +N+Prop+Sem/Sur: CNAME_ODD_PLC-ORG_FLAG ;
 
 LEXICON LONDON-malplc
- +N+Prop+Sem/Mal: CNAME_ODD         ;
- +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG ;
+ +N+Prop+Sem/Mal: CNAME_ODD_PLC-ORG_FLAG ;
+ +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG_FLAG ;
 
 
 LEXICON LONDON-mal
@@ -503,7 +499,7 @@ LEXICON LONDON-malfem
  +N+Prop+Sem/Fem: CNAME_ODD_FLAG ;
 
 LEXICON LONDON-plc
- +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG ;
+ +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG_FLAG ;
 
 LEXICON LONDON-fem
  +N+Prop+Sem/Fem: CNAME_ODD_FLAG ;
@@ -520,7 +516,7 @@ LEXICON LONDON-ani
  +N+Prop+Sem/Ani: CNAME_ODD_FLAG ;
 
 LEXICON DUORTNUS-plc
- +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG ;
+ +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG_FLAG ;
 
 LEXICON LONDON-LOAN-obj
  +N+Prop+Sem/Obj: CNAME_ODD_FLAG ;
@@ -889,7 +885,10 @@ LEXICON ACCRA-malfem
 
 
 
+LEXICON INAME-plc
+ +N+Prop+Sem/Plc: INAME_PLC-ORG_FLAG ;
 
+LEXICON INAME_PLC-ORG_FLAG @U.Cap.Obl@ INAME_PLC-ORG ;
 LEXICON INAME_PLC-ORG ! Names ending in stressless vowel
  +Sg+Nom:i      FINAL1 ;
         :i      RHyph  ;
@@ -1176,6 +1175,8 @@ LEXICON VAARATJE !names vowel expansion in all cases
 ! +N+Prop+Sem/Plc+Attr:e FINAL1 ;
 
 LEXICON JALKEDSEN ! Names ending in stressless vowel
+ @U.Cap.Obl@ JALKEDSEN_INFL ;
+LEXICON JALKEDSEN_INFL ! Names ending in stressless vowel
  +N+Prop+Sem/Plc+Sg+Nom:e%^DISIMPn   FINAL1    ;
         +N+Prop+Sem/Plc:e%^DISIMPn   RHyph     ;
  +N+Prop+Sem/Plc+Sg+Acc:e%>%^DISIMPm FINAL1    ;
@@ -1198,6 +1199,8 @@ LEXICON SNAME_ODD_PLUR ! Southern Sami names
 
 
 LEXICON JAAVRETJEH
+ @U.Cap.Obl@ JAAVRETJEH_INFL ;
+LEXICON JAAVRETJEH_INFL
                 +N+Prop+Sem/Plc:%>%^DISIMPe       RHyph     ;
          +N+Prop+Sem/Plc+Pl+Nom:%>%^DISIMPeh      FINAL1    ;
          +N+Prop+Sem/Plc+Pl+Acc:%>idie            FINAL1    ;
@@ -1243,6 +1246,8 @@ LEXICON RITCHIE-sur
 ! +N+Prop+Sem/Fem: RITCHIE ;
 
 LEXICON RITCHIE ! Ritchie:Ritchijasse
+@U.Cap.Obl@ RITCHIE_INFL ;
+LEXICON RITCHIE_INFL
  +Sg+Nom:ije%^DISIMP    FINAL1    ;  ! DiphtongSimplification = gaaloe=> gallosne
         :ije%^DISIMP    RHyph     ;
  +Sg+Acc:ije%>%^DISIMPm FINAL1    ;
@@ -1424,6 +1429,8 @@ LEXICON PN_OE-mal
 +N+Prop+Sem/Mal: PN_OE ;
 
 LEXICON PN_OE ! as N_OE, but with Prop tag
+ @U.Cap.Obl@ PN_OE_INFL ;
+LEXICON PN_OE_INFL
     +Sg+Nom:oe FINAL1           ;
         +Sg:   N_OE_SGILL_UML   ; ! Causes Umlaut
  +Sg+Use/NG:   N_OE_SGILL_NOUML ; ! Does not cause Umlaut, do not generate
@@ -1542,17 +1549,21 @@ LEXICON SNAME_MAANA_PLUR ! as MAANA, but with Prop tag
 
 
 LEXICON JÆLLAN ! as MAANA, but with Prop tag
- +N+Prop+Sem/Plc+Sg+Nom:a%>n   FINAL1   ;
-        +N+Prop+Sem/Plc:a%>n   RHyph    ;
- +N+Prop+Sem/Plc+Sg+Acc:a%>m   FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Gen:a%>n   FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Ill:e%>se  FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Ine:e%>sne FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Ela:e%>ste FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Com:%>ine  FINAL1   ;
-!+N+Prop+Sem/Plc+Pl: MAANA_PL ;
-        +N+Prop+Sem/Plc:       EVEN_ESS ;
-   +N+Prop+Sem/Plc+Attr:a%>n   FINAL1   ;
+ +N+Prop+Sem/Plc: JÆLLAN_FLAG ;
+LEXICON JÆLLAN_FLAG
+@U.Cap.Obl@ JÆLLAN_INFL ;
+LEXICON JÆLLAN_INFL
+ +Sg+Nom:a%>n   FINAL1   ;
+ +Sg+Acc:a%>m   FINAL1   ;
+ +Sg+Gen:a%>n   FINAL1   ;
+ +Sg+Ill:e%>se  FINAL1   ;
+ +Sg+Ine:e%>sne FINAL1   ;
+ +Sg+Ela:e%>ste FINAL1   ;
+ +Sg+Com:%>ine  FINAL1   ;
+!    +Pl:       MAANA_PL ;
+                EVEN_ESS ;
+   +Attr:a%>n   FINAL1   ;
+        :a%>n   RHyph    ;
 
 LEXICON PERS_SNAME_NIEJTE-mal
  +N+Prop+Sem/Mal: PERS_SNAME_NIEJTE_FLAG ;
@@ -1566,7 +1577,7 @@ LEXICON PERS_SNAME_NIEJTE-ani
 LEXICON PERS_SNAME_NIEJTE_FLAG @U.Cap.Obl@ PERS_SNAME_NIEJTE ;
 LEXICON PERS_SNAME_NIEJTE
                         SNAME_NIEJTE ;
-@U.Cap.Obl@+Der1+Der/Dimin+N:@U.Cap.Obl@e%»tj GÅATETJE ; !Åvletje
++Der1+Der/Dimin+N:e%»tj GÅATETJE ; !Åvletje
 
 LEXICON SNAME_NIEJTE-plc
  +N+Prop+Sem/Plc: SNAME_NIEJTE_PLC-ORG_FLAG ;
@@ -1745,13 +1756,16 @@ LEXICON AEKTUVE_DECL
 ! Consonant final names
 ! - - - - - - - - -
 
- LEXICON SAAMI_CNAME_ODD ! Names ending in stressless vowel
+LEXICON SAAMI_CNAME_ODD ! Names ending in stressless vowel
+@U.Cap.Obl@ SAAMI_CNAME_ODD_INFL ;
+LEXICON SAAMI_CNAME_ODD_INFL
       +N+Prop+Sem/Plc:             SAAMI_CNAME_ODD_SG ; ! name special
 ! +N+Prop+Sem/Plc+Pl: N_ODD_PL ;     ! normal noun
       +N+Prop+Sem/Plc:             N_ODD_ESS          ; ! normal noun
  +N+Prop+Sem/Plc+Attr:             FINAL1             ; ! name special
 
-  LEXICON SAAMI_CNAME_ODD_SG
+
+LEXICON SAAMI_CNAME_ODD_SG
               +Sg+Nom:             FINAL1             ; ! Herodes, Aasen
                                    RHyph              ;
               +Sg+Acc:e%>%^DISIMPm FINAL1             ;
@@ -1768,7 +1782,7 @@ LEXICON CNAME_ODD-fem
  +N+Prop+Sem/Fem: CNAME_ODD_FLAG ;
 
 LEXICON CNAME_ODD-plc
- +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG ;
+ +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG_FLAG ;
 
 LEXICON CNAME_ODD-sur
  +N+Prop+Sem/Sur: CNAME_ODD_FLAG ;
@@ -1780,7 +1794,7 @@ LEXICON CNAME_ODD-ani
  +N+Prop+Sem/Ani: CNAME_ODD_FLAG ;
 
 LEXICON CNAME_ODD-org
- +N+Prop+Sem/Org:        CNAME_ODD_PLC-ORG ;
+ +N+Prop+Sem/Org:        CNAME_ODD_PLC-ORG_FLAG ;
 
 LEXICON CNAME_ODD_FLAG @U.Cap.Obl@ CNAME_ODD ;
 LEXICON CNAME_ODD ! Names ending in stressless vowel
@@ -1789,7 +1803,8 @@ LEXICON CNAME_ODD ! Names ending in stressless vowel
                          N_ODD_ESS         ; ! normal noun
            +Attr:        FINAL1            ; ! name special
 
- LEXICON CNAME_ODD_PLC-ORG ! Names ending in stressless vowel
+LEXICON CNAME_ODD_PLC-ORG_FLAG @U.Cap.Obl@ CNAME_ODD_PLC-ORG ;
+LEXICON CNAME_ODD_PLC-ORG ! Names ending in stressless vowel
                          CNAME_ODD_SG      ; ! name special
 ! +Pl: CNAME_ODD_PL ;     ! name special
                          N_ODD_ESS         ; ! normal noun
@@ -1892,6 +1907,8 @@ LEXICON CNAME_EVENLEX_PLC-ORG
 !+N+Prop+Sem/Plc+Attr: FINAL1 ;
 
 LEXICON SAAMI_CNAME_EVEN ! Names ending in stressless vowel
+@U.Cap.Obl@ SAAMI_CNAME_EVEN_INFL ;
+LEXICON SAAMI_CNAME_EVEN_INFL
       +N+Prop+Sem/Sur:       SAAMI_CNAME_EVEN_SG ;
    +N+Prop+Sem/Sur+Pl:       NIEJTE_PL           ;
       +N+Prop+Sem/Sur:       EVEN_ESS            ;
@@ -1911,6 +1928,8 @@ LEXICON SAAMI_CNAME_EVEN ! Names ending in stressless vowel
 
 
 LEXICON DÅERIES
+@U.Cap.Obl@ DÅERIES_INFL ;
+LEXICON DÅERIES_INFL
  +N+Prop+Sem/Plc+Sg+Nom:ies             FINAL1    ;
         +N+Prop+Sem/Plc:ies             RHyph     ;
  +N+Prop+Sem/Plc+Sg+Acc:%^1UMLas%>am    FINAL1    ;
@@ -1930,6 +1949,8 @@ LEXICON DÅERIES
    +N+Prop+Sem/Plc+Attr:ies             FINAL1    ; ! name special
 
 LEXICON TJIRREDS
+@U.Cap.Obl@ TJIRREDS_INFL ;
+LEXICON TJIRREDS_INFL
  +N+Prop+Sem/Plc+Sg+Nom:d%>%^DISIMPs  FINAL1    ;
         +N+Prop+Sem/Plc:d%>%^DISIMPs  RHyph     ;
               +A+Sg+Acc:de%>%^DISIMPm FINAL1    ;
