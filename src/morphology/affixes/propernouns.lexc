@@ -951,23 +951,23 @@ LEXICON UNAME-obj
 !+N+Prop+Sem/Fem: UNAME ;
 !
 LEXICON UNAME
-           ACCRA      ; !until we get answer from SGM
- +Err/Sub: UNAME_EVEN ; ! !until we get answer from SGM
+ @U.Cap.Obl@ ACCRA      ; !until we get answer from SGM
+ +Err/Sub@U.Cap.Obl@:0@U.Cap.Obl@ UNAME_EVEN ; ! !until we get answer from SGM
 
 LEXICON UNAME_PLC-ORG
-           ACCRA_PLC-ORG ; !until we get answer from SGM
- +Err/Sub: UNAME_EVEN    ; ! !until we get answer from SGM
+ @U.Cap.Obl@ ACCRA_PLC-ORG ; !until we get answer from SGM
+ +Err/Sub@U.Cap.Obl@:0@U.Cap.Obl@ UNAME_EVEN ; ! !until we get answer from SGM
 
 !This is a standardization issues 
-LEXICON UNAME_EVEN !SUB (sub lexicon names as well, or the code breaks)
- +Sg+Nom+Err/Sub:        FINAL1 ; ! !until we get answer from SGM
-        +Err/Sub:        RHyph  ; ! !until we get answer from SGM
- +Sg+Acc+Err/Sub:ve%>m   FINAL1 ; ! !until we get answer from SGM
- +Sg+Gen+Err/Sub:ve%>n   FINAL1 ; ! !until we get answer from SGM
- +Sg+Ill+Err/Sub:ve%>se  FINAL1 ; ! !until we get answer from SGM
- +Sg+Ine+Err/Sub:ve%>sne FINAL1 ; ! !until we get answer from SGM
- +Sg+Ela+Err/Sub:ve%>ste FINAL1 ; ! !until we get answer from SGM
- +Sg+Com+Err/Sub:ve%>jne FINAL1 ; ! !until we get answer from SGM
+LEXICON UNAME_EVEN
+ +Sg+Nom:        FINAL1 ; ! Forms are subbed above until we get answer from SGM
+                 RHyph  ; ! Forms are subbed above until we get answer from SGM
+ +Sg+Acc:ve%>m   FINAL1 ; ! Forms are subbed above until we get answer from SGM
+ +Sg+Gen:ve%>n   FINAL1 ; ! Forms are subbed above until we get answer from SGM
+ +Sg+Ill:ve%>se  FINAL1 ; ! Forms are subbed above until we get answer from SGM
+ +Sg+Ine:ve%>sne FINAL1 ; ! Forms are subbed above until we get answer from SGM
+ +Sg+Ela:ve%>ste FINAL1 ; ! Forms are subbed above until we get answer from SGM
+ +Sg+Com:ve%>jne FINAL1 ; ! Forms are subbed above until we get answer from SGM
 
 
 !LEXICON ZEENAME-plc
