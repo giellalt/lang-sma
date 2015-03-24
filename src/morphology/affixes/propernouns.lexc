@@ -1383,40 +1383,41 @@ LEXICON PN_OE_PLC-ORG ! as N_OE, but with Prop tag
  +Attr:oe FINAL1   ;
 
 LEXICON PERS_SNAME_MAANA-fem
- +N+Prop+Sem/Fem: PERS_SNAME_MAANA ;
+ +N+Prop+Sem/Fem: PERS_SNAME_MAANA_FLAG ;
 
 LEXICON PERS_SNAME_MAANA-mal
- +N+Prop+Sem/Mal: PERS_SNAME_MAANA ;
+ +N+Prop+Sem/Mal: PERS_SNAME_MAANA_FLAG ;
 
 !LEXICON PERS_SNAME_MAANA-ani
-!+N+Prop+Sem/Ani: PERS_SNAME_MAANA ;
+!+N+Prop+Sem/Ani: PERS_SNAME_MAANA_FLAG ;
 
 
 LEXICON PERS_SNAME_MAANA
-                         SNAME_MAANA ;
+                         SNAME_MAANA_FLAG ;
  +Der1+Der/Dimin+N:e%»tj GÅATETJE    ; !Åvletje
 
 LEXICON SNAME_MAANA-fem
- +N+Prop+Sem/Fem: SNAME_MAANA ;
+ +N+Prop+Sem/Fem: SNAME_MAANA_FLAG ;
 
 LEXICON SNAME_MAANA-sur
- +N+Prop+Sem/Sur: SNAME_MAANA ;
+ +N+Prop+Sem/Sur: SNAME_MAANA_FLAG ;
 
 LEXICON SNAME_MAANA-mal
- +N+Prop+Sem/Mal: SNAME_MAANA ;
+ +N+Prop+Sem/Mal: SNAME_MAANA_FLAG ;
 
 !LEXICON SNAME_MAANA-ani
-!+N+Prop+Sem/Ani: SNAME_MAANA ;
+!+N+Prop+Sem/Ani: SNAME_MAANA_FLAG ;
 
 LEXICON SNAME_MAANA-plc
- +N+Prop+Sem/Plc: SNAME_MAANA_PLC-ORG ;
+ +N+Prop+Sem/Plc: SNAME_MAANA_PLC-ORG_FLAG ;
 
 LEXICON SNAME_MAANA-org
- +N+Prop+Sem/Org: SNAME_MAANA_PLC-ORG ;
+ +N+Prop+Sem/Org: SNAME_MAANA_PLC-ORG_FLAG ;
 
 LEXICON SNAME_MAANA-obj
- +N+Prop+Sem/Obj: SNAME_MAANA ;
+ +N+Prop+Sem/Obj: SNAME_MAANA_FLAG ;
 
+LEXICON SNAME_MAANA_FLAG @U.Cap.Obl@ SNAME_MAANA ;
 LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
      +Sg:       MAANASGNOM ;
  +Sg+Acc:a%>m   FINAL1     ;
@@ -1431,7 +1432,7 @@ LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
    +Attr:a      FINAL1     ;
 
 
-
+LEXICON SNAME_MAANA_PLC-ORG_FLAG @U.Cap.Obl@ SNAME_MAANA_PLC-ORG ;
 LEXICON SNAME_MAANA_PLC-ORG ! as MAANA, but with Prop tag
      +Sg:       MAANASGNOM ;
  +Sg+Acc:a%>m   FINAL1     ;
