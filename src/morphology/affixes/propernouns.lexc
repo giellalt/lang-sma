@@ -410,11 +410,8 @@ LEXICON NYSTØ-org ! organisasjon
  +N+Prop+Sem/Org: NYSTØ_PLC-ORG_FLAG ;
 
 LEXICON NYSTØ-femsur
- +N+Prop+Sem/Sur: NYSTØDECL ;
- +N+Prop+Sem/Fem: NYSTØDECL ;
-
-LEXICON K
-   FINAL1 ;
+ +N+Prop+Sem/Sur: NYSTØDECL_FLAG ;
+ +N+Prop+Sem/Fem: NYSTØDECL_FLAG ;
 
 LEXICON NYSTØ-sur ! etternavn
  +N+Prop+Sem/Sur: NYSTØDECL_FLAG ;
@@ -1192,9 +1189,11 @@ LEXICON JALKEDSEN_INFL ! Names ending in stressless vowel
 
 
 LEXICON SNAME_ODD_PLUR ! Southern Sami names
- +N+Prop+Sem/Plc+Pl:            N_ODD_PL  ;
-    +N+Prop+Sem/Plc:%>%^DISIMPi RHyph     ;
-    +N+Prop+Sem/Plc:            N_ODD_ESS ;
+ @U.Cap.Obl@ SNAME_ODD_PLUR_INFL ;
+LEXICON SNAME_ODD_PLUR_INFL ! Southern Sami names
+   +N+Prop+Sem/Plc+Pl:            N_ODD_PL  ;
+      +N+Prop+Sem/Plc:%>%^DISIMPi RHyph     ;
+      +N+Prop+Sem/Plc:            N_ODD_ESS ;
 !+N+Prop+Sem/Plc+Attr:%>%^DISIMPh FINAL1 ;
 
 
@@ -1410,6 +1409,8 @@ LEXICON PN_I_FINSK-plcorg
 
 ! Even syllable Sámi names:
 LEXICON PN_IE_PLUR ! as N_IE, but with Prop tag
+ @U.Cap.Obl@ PN_IE_PLUR_INFL;
+LEXICON PN_IE_PLUR_INFL ! as N_IE, but with Prop tag
          +N+Prop+Sem/Plc+Pl:          N_IE_PL  ;
             +N+Prop+Sem/Plc:ie%>j     RHyph    ;
  +N+Prop+Sem/Plc+Uml+Use/NG:%>%^iUMLi RHyph    ;
@@ -1541,6 +1542,8 @@ LEXICON SNAME_MAANA-LOAN ! as MAANA, but with Prop tag
 
 
 LEXICON SNAME_MAANA_PLUR ! as MAANA, but with Prop tag
+@U.Cap.Obl@ SNAME_MAANA_PLUR_INFL ;
+LEXICON SNAME_MAANA_PLUR_INFL ! as MAANA, but with Prop tag
  +N+Prop+Sem/Plc+Pl:     MAANA_PL ;
     +N+Prop+Sem/Plc:a%>j RHyph    ;
     +N+Prop+Sem/Plc:     EVEN_ESS ;
@@ -1650,6 +1653,8 @@ LEXICON SNAME_NIEJTE-LOAN ! as NIEJTE, but with Prop tag
 
 
 LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
+@U.Cap.Obl@ TJØNNIN_INFL ;
+LEXICON TJØNNIN_INFL ! as NIEJTE, but with Prop tag
  +N+Prop+Sem/Plc+Sg+Nom:i%>n   FINAL1   ;
         +N+Prop+Sem/Plc:i%>n   RHyph    ;
  +N+Prop+Sem/Plc+Sg+Acc:i%>m   FINAL1   ;
@@ -1671,6 +1676,8 @@ LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
 
 
 LEXICON SNAME_NIEJTE_PLUR ! as NIEJTE, but with Prop tag
+@U.Cap.Obl@ SNAME_NIEJTE_PLUR_INFL ;
+LEXICON SNAME_NIEJTE_PLUR_INFL ! as NIEJTE, but with Prop tag
  +N+Prop+Sem/Plc+Pl:    NIEJTE_PL ;
     +N+Prop+Sem/Plc:%>i RHyph     ;
     +N+Prop+Sem/Plc:    EVEN_ESS  ;
@@ -1681,18 +1688,18 @@ LEXICON SNAME_NIEJTE_PLUR ! as NIEJTE, but with Prop tag
 
 LEXICON STAABREH_FLAG @U.Cap.Obl@ STAABREH ;
 LEXICON STAABREH ! as NIEJTE, but with Prop tag
-        :e%>       RHyph    ;
- +Pl+Nom:e%>h      FINAL1   ;
- +Pl+Nom:h         FINAL1   ;
- +Pl+Acc:%>ide     FINAL1   ;
- +Pl+Gen:%>i       FINAL1   ;
-        :%>i       RHyph    ;
- +Pl+Ill:%>ide     FINAL1   ;
- +Pl+Ine:%>ine     FINAL1   ;
- +Pl+Ela:%>ijste   FINAL1   ;
- +Pl+Com:%>igujmie FINAL1   ;
+                :e%>       RHyph    ;
+         +Pl+Nom:e%>h      FINAL1   ;
+         +Pl+Nom:h         FINAL1   ;
+         +Pl+Acc:%>ide     FINAL1   ;
+         +Pl+Gen:%>i       FINAL1   ;
+         +Pl+Ill:%>ide     FINAL1   ;
+         +Pl+Ine:%>ine     FINAL1   ;
+         +Pl+Ela:%>ijste   FINAL1   ;
+         +Pl+Com:%>igujmie FINAL1   ;
  +Pl+Com+Err/Sub:%>igyjmie FINAL1   ;
-        :          EVEN_ESS ;
+                           EVEN_ESS ;
+                :%>i       RHyph    ;
 
 
 LEXICON STAABREH-plc
@@ -1967,3 +1974,6 @@ LEXICON TJIRREDS_INFL
 
 LEXICON flagK
 @U.Cap.Obl@ K ;
+
+LEXICON K
+   FINAL1 ;
