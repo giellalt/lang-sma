@@ -67,9 +67,12 @@ Alphabet
   %^didhUML:0
   %^adteUML:0
   %^htjidhUML:0
-  %^ConsDel:0
   %^aLATUS:a
-  %^uLATUS:e ;
+  %^uLATUS:e    !
+  %^ConsDel:0
+  %^ILLELA:0    ! stammevokal endrer seg i Illativ og Elativ
+  %^COMESS:0    ! stammevokal endrer seg i Comitativ og Essiv
+  ;
 
 Sets
   Letter = a b c d e f g h i ï j k l m n o o9 p q r s t u v w x y z æ ä ø ö å '
@@ -93,7 +96,7 @@ Definitions
     %^COMPDISIMP:
     %^COMPDISIMP2:
     %^PLCDISIMP:
-    %^NOMAGieDISIMP:0
+    %^NOMAGieDISIMP:
     %^1UML:
     %^2UML:
     %^3UML:
@@ -106,13 +109,16 @@ Definitions
     %^htjidhUML:
     %^aLATUS:
     %^uLATUS:
-    %^ConsDel: ;
+    %^ConsDel:
+    %^ILLELA:    ! stammevokal endrer seg i Illativ og Elativ
+    %^COMESS:    ! stammevokal endrer seg i Comitativ og Essiv
+    ;
 
 !! !!!Rules
 
 Rules
  
-  "e deletion before i-initial suffix"
+"e deletion before i-initial suffix"
 !! __@RULENAME@__  
    e:0 <=> _ X2:0 i: ;
    
@@ -123,7 +129,7 @@ Rules
 !
 ! Odd-syllabic verbs and nouns: 
 
-  "Diphthong simplification ie:e"
+"Diphthong simplification ie:e"
 !! __@RULENAME@__  
    i:0 <=>       _ e  Cns+ (e) (%>:) %^DISIMP: ;
                  _ e           (%>:) %^DISIMP:      Cns+   ;
@@ -152,7 +158,7 @@ Rules
 ! oe-ie
 
 
-  "Diphthong simplification oe:o"
+"Diphthong simplification oe:o"
 !! __@RULENAME@__  
    e:0 <=> o _  Cns+ (e) (%>:) %^DISIMP: ;
            o _           (%>:) %^COMPDISIMP2: [b:|m:] ;!%> =morfemgrense
@@ -172,7 +178,7 @@ Rules
 !$0 gaaloehke00m
 
 
-  "Diphthong simplification oe:e" !in comparatives
+"Diphthong simplification oe:e" !in comparatives
    o:0 <=>       _ e     (%>:) %^COMPDISIMP: [b:|m:] ;
            (%»:) _ e Cns+ %»:  %^adteUML: ;
 
@@ -184,14 +190,16 @@ Rules
 !$0 jearkoe00be
 
 
-  "a/e alternation"
+"a/e alternation"
 !! __@RULENAME@__  
    a:e <=>            _ [ Cns - j | %»: t j | h [ t | k ] ] (Cns) (e) (%>:) %^DISIMP: ; ! original
 !   a:e <=> Vow Cns+  _ [ Cns - j | %»: t j | h [ t | k ] ] (Cns) (e) (%>:) %^DISIMP: ; ! 3syll
 !   a:e <=>           _  Cns+ (e) (%>:) %^DISIMP: ; ! Denne gjev overgenerering, men ser rett ut, lingv. sett.
                       _                                   (%>:)     %^COMPDISIMP: [b:|m:|l:] ;
               [e:|u:] _   Cns+      %»:                             %^didhUML: e [d|l] ;
-                      _ %^PLCDISIMP: ;
+                      _ %^PLCDISIMP:   ;
+                      _ %>: %^ILLELA:  ;
+
            !Last context above: Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe
            ! and Column 7 ua:oe part 2
 
@@ -215,9 +223,10 @@ Rules
 !$0 gæhtja00be
 
 
-  "a/i alternation"
+"a/i alternation"
 !! __@RULENAME@__  
-   a:i <=> _ j (e) (%>:) %^DISIMP: ;
+a:i <=>   _ j (e) (%>:) %^DISIMP: ; ! Diftongforenkling
+       \i _ %>: %^COMESS:         ; ! a -> i, når det ikke er -i- i stammevokal
 
 ! No nouns following this pattern, see last part of §103 in Bergsland - ???
 
@@ -227,6 +236,16 @@ Rules
 !$# jåhtaj%^DISIMP%>em
 !$0 jåhtaj00em
 
+"a/0 alternation"
+!! __@RULENAME@__  
+a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Moria --> Morine 
+        
+
+
+
+"COMESS trigger as j"
+!! __@RULENAME@__  
+%^COMESS:j <=> [u | o] %>: _ ; ! etter en bakre, runda stammevokal skal det være en -j-
 
   "Even syllabic verbs Du1Pl3 e/oe V"
 !! __@RULENAME@__  
@@ -236,11 +255,13 @@ Rules
 !! __@RULENAME@__  
 !  e:0 <=>      ': _             X3:               ; !this must be e:i, subrule moved to next rule
   e:0 <=>  (%»:) i _ j (e) (%>:) %^NOMAGieDISIMP:     ([h|m|n|i|i g u j m i e]) ;
+         i : _ %>: %^COMESS: ; ! e --> 0 , når -i i f.eks Morie i Comitativ. -> Morine
   
   "Even syllabic verbs Du2Pl12 e/i V"
 !! __@RULENAME@__  
   e:i <=> ': _ X4: j i [d|b] i e (n) ;
           ': _             X3: j æ g a n ;
+        \i : _ %>: %^COMESS: ; ! e --> i veksling i Com og Ess
   
           
   "Even syllabic verbs Du2Pl12 e/i V part2"
