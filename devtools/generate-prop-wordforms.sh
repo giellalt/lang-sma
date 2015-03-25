@@ -6,12 +6,11 @@
 ######### USER Variables - change these to your liking: #########
 # Codes for the word forms to be generated - list as many or few as needed:
 morf_codes="+N+Prop+Sg+Nom \
-            +N+Prop+Sg+Gen \
             +N+Prop+Sg+Ill \
             +N+Prop+Sg+Com \
-            +N+Prop+Pl+Nom \
-            +N+Prop+Pl+Com \
-            +N+Prop+Ess"
+            +N+Prop+Pl+Gen \
+            +N+Prop+Pl+Ela \
+            +N+Prop+Pl+Ill"
 
 # Lexicon source file for lexicons and lemmas:
 source_file=src/morphology/generated_files/smi-sma-propernouns.lexc
