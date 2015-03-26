@@ -11,7 +11,6 @@ TESTS=
 # Add your shell scripts for running tests requiring only a generator:
 GENERATION_TESTS_IN=test-verb-generation.sh.in \
 					test-adj-generation.sh.in \
-					test-noun-generation.sh.in \
 					generate-propernoun-lemmas.sh.in \
 					generate-noun-lemmas.sh.in
 

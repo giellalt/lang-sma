@@ -209,8 +209,6 @@ AC_CONFIG_FILES([tools/shellscripts/usma-gt.sh], \
 #### BEGIN: Add language-specific scripts below here: ####
 AC_CONFIG_FILES([test/src/morphology/test-adj-generation.sh], \
       [chmod a+x test/src/morphology/test-adj-generation.sh])
-AC_CONFIG_FILES([test/src/morphology/test-noun-generation.sh], \
-      [chmod a+x test/src/morphology/test-noun-generation.sh])
 AC_CONFIG_FILES([test/src/morphology/generate-propernoun-lemmas.sh], \
       [chmod a+x test/src/morphology/generate-propernoun-lemmas.sh])
 AC_CONFIG_FILES([test/src/morphology/test-verb-generation.sh], \
