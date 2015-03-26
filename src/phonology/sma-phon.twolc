@@ -72,6 +72,7 @@ Alphabet
   %^ConsDel:0
   %^ILLELA:0    ! stammevokal endrer seg i Illativ og Elativ
   %^COMESS:0    ! stammevokal endrer seg i Comitativ og Essiv
+  %^PLGENPLCOM:0 ! e --> e --> i i Pl+Gen og i Pl+Com
   ;
 
 Sets
@@ -262,12 +263,17 @@ a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Mor
   e:0 <=>  (%»:) i _ j (e) (%>:) %^NOMAGieDISIMP:     ([h|m|n|i|i g u j m i e]) ;
          i : _ %>: %^COMESS: ; ! e --> 0 , når -i i f.eks Morie i Comitativ. -> Morine
   
+  "Proper PlGen, PlCom"
+!! __@RULENAME@__  
+  j:0 <=> e:i %>: %^PLGENPLCOM: _ ; ! -j- blir til 0, når -e- blir til -i-. da slår (%>) denne triggeren inn (%^PLGENPLCOM) : (NB!) i posisjonen etter -e- !! 
+
   "Even syllabic verbs Du2Pl12 e/i V"
 !! __@RULENAME@__  
   e:i <=> ': _ X4: j i [d|b] i e (n) ;
           ': _             X3: j æ g a n ;
         \i : _ %>: %^COMESS: ; ! e --> i veksling i Com og Ess
-  
+        \i : _ %>: %^PLGENPLCOM: ; ! e --> i i Pl+Gen og i Pl+Com
+
           
   "Even syllabic verbs Du2Pl12 e/i V part2"
 !! __@RULENAME@__  
