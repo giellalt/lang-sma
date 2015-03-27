@@ -364,7 +364,8 @@ LEXICON ACCRA_PLC-ORG
 ! the appropriate even syllable lexicons.
 
 
-LEXICON VNAME
+LEXICON VNAME @U.Cap.Obl@ VNAME_INFL ;
+LEXICON VNAME_INFL
  +Sg+Nom:          FINAL1 ;
                    RHyph  ;
  +Sg+Acc:%>m       FINAL1 ;
@@ -885,6 +886,10 @@ LEXICON ACCRA-malfem
 
 LEXICON INAME-plc
  +N+Prop+Sem/Plc: INAME_PLC-ORG_FLAG ;
+
+LEXICON INAME-plcorg
+ +N+Prop+Sem/Plc: INAME_PLC-ORG_FLAG ;
+ +N+Prop+Sem/Org: INAME_PLC-ORG_FLAG ;
 
 LEXICON INAME_PLC-ORG_FLAG @U.Cap.Obl@ INAME_PLC-ORG ;
 LEXICON INAME_PLC-ORG ! Names ending in stressless vowel
