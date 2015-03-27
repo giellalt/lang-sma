@@ -1119,9 +1119,23 @@ LEXICON PERS_SNAME_ODD-fem
 LEXICON PERS_SNAME_ODD-ani
  +N+Prop+Sem/Ani: PERS_SNAME_ODD_FLAG ;
 
+LEXICON PERS_SNAME_ODD-plc
+ +N+Prop+Sem/Plc: PERS_SNAME_ODD_FLAG ;
+
 LEXICON PERS_SNAME_ODD_FLAG @U.Cap.Obl@ PERS_SNAME_ODD ;
 LEXICON PERS_SNAME_ODD
-                         ERVASTI  ;
+    +Sg+Acc:%>em      FINAL1 ;
+    +Sg+Gen:%>en      FINAL1 ;
+    +Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+    +Sg+Ine:%>isnie           FINAL1 ;
+    +Sg+Ela:%>istie           FINAL1 ;
+    +Sg+Com:%>inie            FINAL1 ;
++Sg+Nom:%>e FINAL1 ;
+                  :%>e RHyph ; ! ERVASTI-muorra, Ervasti-dállu etc. RHyph er Cmp.
+    +Pl+Nom:%>eh      FINAL1 ;
+    +Pl:          N_ODD_PL  ;
+                  N_ODD_ESS ;
+          +Attr:%>e FINAL1    ;
  @U.Cap.Obl@+Der1+Der/Dimin+N:@U.Cap.Obl@e%»tj GÅATETJE ; !Åvletje
 
 
