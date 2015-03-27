@@ -336,14 +336,11 @@ LEXICON ACCRA  !
 ! Gïelem nastedh - lexicon - det samme som væhtjedh, væhtjadahke
    ! amhkedh+N+Sg+Nom:amhkedh FINAL1 ;
 
-!   LEXICON EDH_DAHKE
-!        +N+Sg+Nom:edh FINAL1 ;
-!        +N+SgNomCmp:edh     R      ;
-!               +N+Sg:adahk      NIEJTE_SG ;
-!               +N+Pl:adahk      NIEJTE_PL ;
-!               +N:adahk       EVEN_ESS  ;             
-!               +N+Der1+Der/Dimin+N:e%»tj GÅATETJE  ;
+LEXICON EDH_DAHKE_NAME-org
++N+Prop+Sem/Org: EDH_DAHKE_NAME ;
 
+LEXICON EDH_DAHKE_NAME
+@U.Cap.Obl@ EDH_DAHKE_INFL ; ! -> affixes/nouns.lex
    
 !SNAME_NIEJTE ; ! Even syllable as default - rename using either ERVASTI, or
 ! the appropriate even syllable lexicons.
@@ -1163,7 +1160,7 @@ LEXICON SNAME_ODD-mal
 
 LEXICON SNAME_ODD_FLAG @U.Cap.Obl@ SNAME_ODD ;
 LEXICON SNAME_ODD ! Southern Sami names
-   ERVASTI ;
+   N_ODD_INFL ;
 
 LEXICON SNAME_ODD_PLC-ORG ! Southern Sami names
    ERVASTI_PLC-ORG_FLAG ;

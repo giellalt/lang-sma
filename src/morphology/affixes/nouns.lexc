@@ -25,6 +25,9 @@
 
 
 LEXICON N_ODD
+ +N: N_ODD_INFL ;
+
+LEXICON N_ODD_INFL
 !! The basic odd-syll lexicon is: @LEXNAME@
 
 !! !Inflection for odd-syllable nouns: lexicon @LEXNAME@
@@ -32,13 +35,13 @@ LEXICON N_ODD
 !
 !! Short descrioption of this lexicon, and its purpose.
 !
-               +N+Sg:             N_ODD_SG       ;
-               +N+Pl:             N_ODD_PL       ;
-                  +N:             N_ODD_ESS      ;
-         +N+SgNomCmp:e%^DISIMP    R              ;
-         +N+SgGenCmp:e%>%^DISIMPn R              ;
-         +N+PlGenCmp:%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
+               +Sg:             N_ODD_SG       ;
+               +Pl:             N_ODD_PL       ;
+                                N_ODD_ESS      ;
+         +SgNomCmp:e%^DISIMP    R              ;
+         +SgGenCmp:e%>%^DISIMPn R              ;
+         +PlGenCmp:%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
 ! Test data:
 !!€gt-norm: gierehtse # Odd-syllable test
 !!€ gierehtse           gierehtse+N+Sg+Nom
@@ -1946,12 +1949,15 @@ LEXICON LDAHKE
  
  
 LEXICON EDH_DAHKE
-        +N+Sg+Nom:edh FINAL1 ;
-        +N+SgNomCmp:edh     R      ;
-               +N+Sg:adahk      NIEJTE_SG ;
-               +N+Pl:adahk      NIEJTE_PL ;
-               +N:adahk         EVEN_ESS  ;             
-!            +N+Der1+Der/Dimin+N:e%»tj GÅATETJE  ;
+     +N: EDH_DAHKE_INFL ;
+
+LEXICON EDH_DAHKE_INFL
+           +Sg+Nom:edh   FINAL1    ;
+         +SgNomCmp:edh   R         ;
+               +Sg:adahk NIEJTE_SG ;
+               +Pl:adahk NIEJTE_PL ;
+                  :adahk EVEN_ESS  ;             
+!+Der1+Der/Dimin+N:e%»tj GÅATETJE  ;
  
 
 LEXICON VUELIE ! adverbleksikon
