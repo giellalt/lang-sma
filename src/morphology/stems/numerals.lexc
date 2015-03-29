@@ -322,8 +322,8 @@ akte+Num+Sg+Acc:aktem FINAL1 ;
 voestes+A+Ord+Sg+Nom:voestes FINAL1 ; !XXX check this: MLK:Sg+Nom:voestege
 voestes+A+Attr:voestes FINAL1 ;
 voess+A+Attr:voess FINAL1 ;
-voestes+A+Attr+Err/Sub:voestemes FINAL1 ;
-voestes+A+Attr+Err/Sub:voesteges FINAL1 ;
+voestes+A+Attr+Err/Orth:voestemes FINAL1 ;
+voestes+A+Attr+Err/Orth:voesteges FINAL1 ;
 
 LEXICON 2TO9F
 göökte+Use/NG:guekt NUMTAGie ;
@@ -423,7 +423,7 @@ luhkie:luhkie# 2TO9F ;
 låhkede+A+Ord:låhkad ORDTAGODD-ord ;
 låhkesh:låhkas COLLTAG ;
 !luhkie+Num+Sg+Nom:luhkie FINAL1 ;
-!luhkie+Num+Sg+Nom+Err/Sub:-luhkie FINAL1 ;
+!luhkie+Num+Sg+Nom+Err/Orth:-luhkie FINAL1 ;
 luhkie:luhk NUMTAGie ;
 
 LEXICON LUHKIEF
@@ -454,7 +454,7 @@ LEXICON MUBPIE
 +Sg+Ine:e%>sne FINAL1 ;
 +Sg+Ine+Attr:e%>ne # ;
 +Sg+Ela+Attr:e%>de # ;
-+Sg+Ela+Attr+Err/Sub:e%>hte # ;
++Sg+Ela+Attr+Err/Orth:e%>hte # ;
 +Sg+Ela:e%>ste FINAL1 ;
 +Sg+Com:%>ine FINAL1 ;
 +Sg+Com+Uml:%>%^iUMLine FINAL1 ;
@@ -498,7 +498,7 @@ LEXICON ORDTAGODD
 +Pl+Ine:%>inie FINAL1 ;
 +Pl+Ela:%>ijstie FINAL1 ;
 +Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-+Pl+Com+Err/Sub:%>%^DISIMPigyjmie FINAL1 ; !
++Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1 ; !
 +Ess:%>inie FINAL1 ;
 
 LEXICON ORDTAGEVEN-ord
@@ -524,7 +524,7 @@ LEXICON ORDTAGEVEN
 +Pl+Ine:%>ine FINAL1 ;
 +Pl+Ela:%>ijste FINAL1 ;
 +Pl+Com:%>ijgujmie FINAL1 ;
-+Pl+Com+Err/Sub:%>igyjmie FINAL1 ;
++Pl+Com+Err/Orth:%>igyjmie FINAL1 ;
 
 
 
@@ -541,7 +541,7 @@ LEXICON COLLTAG
 +N+Coll+Pl+Ine:%>inie FINAL1 ;
 +N+Coll+Pl+Ela:%>ijstie FINAL1 ;
 +N+Coll+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-+N+Coll+Pl+Com+Err/Sub:%>%^DISIMPigyjmie FINAL1 ;
++N+Coll+Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1 ;
 +N+Coll+Ess:%>inie FINAL1 ;
 
 ! Arabic numerals
@@ -628,21 +628,21 @@ LEXICON ARABICLOOPCOLL
 LEXICON ARABICDELIMITER
 +Num:           ARABICCASE0 ;   ! This is the 1984 case (ie nominative and accusative).
 +Num:%:         ARABICCASE ;    ! This is the 1984:s case.
-+Num+Err/Sub:%> ARABICCASE ;    ! This is the 1984s case.
-+Num+Err/Sub:%' ARABICCASE ;    ! This is the 1984's case.
-+Num+Err/Sub:%- ARABICCASE ;    ! This is the 1984-s case.
++Num+Err/Orth:%> ARABICCASE ;    ! This is the 1984s case.
++Num+Err/Orth:%' ARABICCASE ;    ! This is the 1984's case.
++Num+Err/Orth:%- ARABICCASE ;    ! This is the 1984-s case.
 
 LEXICON ARABICDELIMITERORD
 :%:         ARABICCASEORD ; ! This is the 1984:s case.
-+Err/Sub:%> ARABICCASEORD ; ! This is the 1984s case.
-+Err/Sub:%' ARABICCASEORD ; ! This is the 1984's case.
-+Err/Sub:%- ARABICCASEORD ; ! This is the 1984-s case.
++Err/Orth:%> ARABICCASEORD ; ! This is the 1984s case.
++Err/Orth:%' ARABICCASEORD ; ! This is the 1984's case.
++Err/Orth:%- ARABICCASEORD ; ! This is the 1984-s case.
 
 LEXICON ARABICDELIMITERCOLL
 :%:         ARABICCASECOLL ; ! This is the 1984:s case.
-+Err/Sub:%> ARABICCASECOLL ; ! This is the 1984s case.
-+Err/Sub:%' ARABICCASECOLL ; ! This is the 1984's case.
-+Err/Sub:%- ARABICCASECOLL ; ! This is the 1984-s case.
++Err/Orth:%> ARABICCASECOLL ; ! This is the 1984s case.
++Err/Orth:%' ARABICCASECOLL ; ! This is the 1984's case.
++Err/Orth:%- ARABICCASECOLL ; ! This is the 1984-s case.
 
 
 LEXICON ARABICCASE0
@@ -650,12 +650,12 @@ LEXICON ARABICCASE0
 !+Sg+Acc: # ; Outcommented this one, because numerals Nom got Acc- analyse without case ending, and thats wrong.(Maja)
 
 LEXICON ARABICCASE
-f+Sg+Nom+Err/Sub:f  # ; ! s. 123f.
-ff+Sg+Nom+Err/Sub:ff # ; ! s. 123ff.
-b+Sg+Nom+Err/Sub:b  # ; ! § 123b
-c+Sg+Nom+Err/Sub:c  # ; ! § 123c
-d+Sg+Nom+Err/Sub:d  # ; ! § 123d
-e+Sg+Nom+Err/Sub:e  # ; ! § 123e
+f+Sg+Nom+Err/Orth:f  # ; ! s. 123f.
+ff+Sg+Nom+Err/Orth:ff # ; ! s. 123ff.
+b+Sg+Nom+Err/Orth:b  # ; ! § 123b
+c+Sg+Nom+Err/Orth:c  # ; ! § 123c
+d+Sg+Nom+Err/Orth:d  # ; ! § 123d
+e+Sg+Nom+Err/Orth:e  # ; ! § 123e
 !+Sg+Gen:           # ;
 +Sg+Gen:n          # ;
 +Sg+Acc:m          # ;
@@ -857,10 +857,10 @@ LEXICON ROMNUMTAG !
 +A+Ord:%. # ; ! !III. as ordinal.
 +A+Ord:   # ;! !Looking for trouble...
 +Num:%:         ROMNUMTAGOBL ; ! IV:se
-+Num+Err/Sub:'7 ROMNUMTAGOBL ; ! IV'se
-+Num+Err/Sub:%- ROMNUMTAGOBL ; ! IV-se
-+Num+Err/Sub:%´ ROMNUMTAGOBL ; ! IV´se
-+Num+Err/Sub:%> ROMNUMTAGOBL ; ! IVse
++Num+Err/Orth:'7 ROMNUMTAGOBL ; ! IV'se
++Num+Err/Orth:%- ROMNUMTAGOBL ; ! IV-se
++Num+Err/Orth:%´ ROMNUMTAGOBL ; ! IV´se
++Num+Err/Orth:%> ROMNUMTAGOBL ; ! IVse
 
 LEXICON ROMNUMTAGOBL !
 +Gen:n # ; ! But here 123a 123
