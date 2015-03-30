@@ -5,7 +5,7 @@ analyser=../../../src/analyser-gt-norm.xfst
 soourcefile=../../../src/morphology/generated_files/smi-sma-propernouns.lexc
 
 # Hent alle lemmaer, bortsett fra hardkoda +Attr
-grep ";" $soourcefile | egrep -v "(^\!|LexSub)" | egrep -v Attr | sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 | tr "€" " " | sort -u > props
+grep ";" $soourcefile | egrep -v "(^\!|\+Err\/Lex)" | egrep -v Attr | sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 | tr "€" " " | sort -u > props
 
 # Generer alle lemmaer med Sg+Nom
 cat props | sed 's/$/+N+Prop+Sg+Nom/' | $LOOKUP $generator | cut -f2 | grep -v "N+" | grep -v "^$" | sort -u > analprops 
@@ -18,7 +18,7 @@ sort -u -o analprops analprops
 comm -23 props analprops > missingProperLemmas
 
 # Hent alle lemmaer med hardkoda +Attr
-grep ";" $soourcefile | egrep -v "(^\!|LexSub)" | grep Attr | sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 | tr "€" " " |  sort -u > attrprops
+grep ";" $soourcefile | egrep -v "(^\!|\+Err\/Lex)" | grep Attr | sed 's/% /€/g' |  tr ":+" " " | cut -d " " -f1 | tr "€" " " |  sort -u > attrprops
 
 # Generer lemmaene med +Attr
 cat attrprops | sed 's/$/+N+Prop+Attr/' | $LOOKUP $generator | grep -v "\?" | cut -f2  | grep -v "^$" | sort -u > analattrprops  

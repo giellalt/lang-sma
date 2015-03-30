@@ -1,7 +1,7 @@
 # Dette skriptet tester at nesten alle lemmaene i verbs.lexc kan genereres. De som ikke kan genereres, kopieres til missingadjLemmas.txt og blir så analysert for å hjelpe med debugging.
 
-# Hent ut lemmaer, bortsett fra LexSub (som blir filtrert bort fra normgenerator). Lemmaene lagres som adverbs
-grep ";" ../../../src/morphology/stems/adverbs.lexc | egrep -v "(^\!|LexSub)" | sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 |  tr "€" " " | tr "¢" ":" | tr -d '%' | sort -u > adverbs
+# Hent ut lemmaer, bortsett fra Err/Lex (som blir filtrert bort fra normgenerator). Lemmaene lagres som adverbs
+grep ";" ../../../src/morphology/stems/adverbs.lexc | egrep -v "(^\!|\+Err\/Lex)" | sed 's/% /€/g' | sed 's/%:/¢/g' |  tr ":+" " " | cut -d " " -f1 |  tr "€" " " | tr "¢" ":" | tr -d '%' | sort -u > adverbs
 
 # Generer adverbformen av lemmaene i adverbs
 cat adverbs | sed 's/$/+Adv/' | $LOOKUP ../../../src/generator-gt-norm.xfst | grep -v '\?' | cut -f2 | grep -v "^$" | sort -u > analadverbs 
