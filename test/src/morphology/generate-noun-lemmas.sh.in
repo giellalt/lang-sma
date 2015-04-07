@@ -28,7 +28,9 @@ analyser_file=./../../../src/analyser-gt-norm
 
 ### out ###
 lemmas=./filtered-${POS}
+comp_lemmas=./filtered-comp-${POS}
 generated_lemmas=./generated-${POS}
+generated_comp_lemmas=./generated-comp-${POS}
 result_file=missing_${POS}_lemmas
 gen_result_file=generated_missing_${POS}_lemmas
 ana_result_file=analysed_missing_${POS}_lemmas
@@ -115,7 +117,10 @@ for f in $fsttype; do
         # Sort and compare original input with resulting output - the diff is
         # used to generate lemmas which are opened in SEE:
         sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+        sort -u -o $generated_comp_lemmas.$f.txt $generated_comp_lemmas.$f.txt 
         comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
+        comm -23 $comp_lemmas $generated_comp_lemmas.$f.txt \
+                >> $result_file.$f.txt
 
         # Open the diff file in SubEthaEdit (if there is a diff):
         if [ -s $result_file.$f.txt ]; then
