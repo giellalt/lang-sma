@@ -16,19 +16,20 @@
 # genereres. De som ikke kan genereres, kopieres til missingProperLemmas.txt
 
 ###### Variables: #######
+POS=propernouns
 ### in ###
-source_file=./../../../src/morphology/generated_files/smi-sma-propernouns.lexc
+source_file=./../../../src/morphology/generated_files/smi-sma-${POS}.lexc
 generator_file=./../../../src/generator-gt-norm
 analyser_file=./../../../src/analyser-gt-norm
 
 ### out ###
-lemmas=./filtered-props.txt
-attr_lemmas=./filtered-attr_props.txt
-generated_lemmas=./generated-proper
-generated_attr_lemmas=./generated-attr-proper
-missing_file=missing_proper_lemmas
-anal_missing_file=Analysed_missing_proper_lemmas
-gene_missing_file=Generated_missing_proper_lemmas
+lemmas=./filtered-${POS}
+attr_lemmas=./filtered-attr-${POS}
+generated_lemmas=./generated-${POS}
+generated_attr_lemmas=./generated-attr-${POS}
+missing_file=missing_${POS}_lemmas
+ana_missing_file=generated_missing_${POS}_lemmas
+gen_missing_file=analysed_missing_${POS}_lemmas
 
 # SKIP if source file does not exist:
 if [ ! -f "$source_file" ]; then
@@ -73,10 +74,10 @@ Fail=0
 # The script tests both Xerox and Hfst transducers if available:
 for f in $fsttype; do
 	if [ $f == "xfst" ]; then
-		lookuptool="@LOOKUP@ -q -flags mbTT"
+		lookup_tool="@LOOKUP@ -q -flags mbTT"
 		suffix="xfst"
 	elif [ $f == "hfst" ]; then
-		lookuptool="@HFST_OPTIMIZED_LOOKUP@ -q"
+		lookup_tool="@HFST_OPTIMIZED_LOOKUP@ -q"
 		suffix="hfstol"
 	else
 	    Fail=1
@@ -87,18 +88,22 @@ for f in $fsttype; do
 	if [ -f "$generator_file.$suffix" ]; then
 		let "transducer_found += 1"
 
-# Generer alle lemmaer med Sg+Nom
+###### Test non-comopunds: #######
+        # generate propers in singular, extract the resulting generated lemma,
+        # store it:
 		sed 's/$/+N+Prop+Sg+Nom/'   $lemmas \
-			| $lookuptool $generator_file.$suffix \
+			| $lookup_tool $generator_file.$suffix \
 			| fgrep -v "+?" | grep -v "^$" | cut -f2 \
-			| sort -u > $generated_lemmas.$f.txt
+            > $generated_lemmas.$f.txt
 
-# Generer lemmaer med Pl+Nom, de som ikke lar seg generere med Sg+Nom
-		sed 's/$/+N+Prop+Sg+Nom/' $lemmas \
-			| $lookuptool $generator_file.$suffix \
-			| fgrep "+?" | cut -d "+" -f1 | sed 's/$/+N+Prop+Pl+Nom/' \
-			| $lookuptool $generator_file.$suffix \
-			| cut -f2 | grep -v "^$" \
+        # Generate nouns, extract those that do not generate in singular,
+        # and try to generate them in plural:
+        sed 's/$/+N+Prop+Sg+Nom/' $lemmas \
+			| $lookup_tool $generator_file.$suffix \
+			| fgrep "+?" | cut -d "+" -f1 \
+			| sed 's/$/+N+Prop+Pl+Nom/' \
+			| $lookup_tool $generator_file.$suffix \
+			| fgrep -v "+?" | grep -v "^$" | cut -f2 \
 			>> $generated_lemmas.$f.txt
 
 # Sorter og gjer unike alle genererte lemma:
@@ -106,7 +111,7 @@ for f in $fsttype; do
 
 # Generer lemmaene med +Attr
 		sed 's/$/+N+Prop+Attr/' $attr_lemmas \
-			| $lookuptool $generator_file.$suffix | grep -v "\?" | cut -f2 \
+			| $lookup_tool $generator_file.$suffix | grep -v "\?" | cut -f2 \
 			| grep -v "^$" | sort -u > $generated_attr_lemmas.$f.txt  
 
 
@@ -121,17 +126,22 @@ for f in $fsttype; do
 		if [ -s $missing_file.$f.txt ]; then
 
 # Analyser lemmaer som ikke lar seg generere, for debugging
-            $lookuptool $analyser_file.$suffix < $missing_file.$f.txt \
-                > $anal_missing_file.$f.txt
+            $lookup_tool $analyser_file.$suffix < $missing_file.$f.txt \
+                > $ana_missing_file.$f.txt
             sed 's/$/+N+Prop+Sg+Nom/' < $missing_file.$f.txt \
-                | $lookuptool $generator_file.$suffix \
-                > $gene_missing_file.$f.txt
+                | $lookup_tool $generator_file.$suffix \
+                > $gen_missing_file.$f.txt
 
 			# Only open the failed lemmas in see if @SEE@ is defined:
 			if [ "$EXTEDITOR" ]; then
 				$EXTEDITOR $missing_file.$f.txt
-				$EXTEDITOR $anal_missing_file.$f.txt
-				$EXTEDITOR $gene_missing_file.$f.txt
+				$EXTEDITOR $ana_missing_file.$f.txt
+				$EXTEDITOR $gen_missing_file.$f.txt
+            else
+                echo "There where problem lemmas. Details in:"
+                echo "* $result_file.$f.txt    "
+                echo "* $gen_result_file.$f.txt"
+                echo "* $ana_result_file.$f.txt"
 			fi
 		    Fail=1
 		    echo "$f - FAIL"
