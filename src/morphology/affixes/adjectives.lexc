@@ -137,7 +137,7 @@ LEXICON PRED_H!!≈ !!!@CODE@
 !! }}}
 
 
-!! denne skal også ut 
+!! denne skal også ut ! - --> intersatn om dette er en norsk suffiks egentlig?
 LEXICON PRED_NE_ODD!!≈ !!!@CODE@
 !! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
 !! {{{
@@ -150,16 +150,18 @@ LEXICON PRED_N!!≈ !!!@CODE@    -  GENITIV
 !! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
 !! {{{
  +A+Sg+Nom:%>n FINAL1 ; !!= @CODE@
+          :%>n adv ;
 !! }}}
 
-LEXICON PRED_AN!!≈ !!!@CODE@
-!! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
-!! {{{
+LEXICON PRED_AN!!≈ !!!@CODE@  !
+! The __@LEXNAME@__ lexicon is used for adjectives Predicatives.
+! {{{
    +A+Sg+Nom:%>an FINAL1 ; !!= @CODE@
-!! }}}
-  
-
-! *SLUTT* BARE PRED-former  *SLUTT*   !
+            :%>n adv ;
+! }}}
+      
+    
+    ! *SLUTT* BARE PRED-former  *SLUTT*   !
 
 
 
@@ -437,7 +439,7 @@ LEXICON NAAKE
 
 
 ! UMLAUT 3 = e(3)-stamme
-LEXICON SOOKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
+LEXICON SOOKES ! disse leksikonene må brytes opp. undøvendig - dobbelt-leksikon.   ---> TWOL
  :söök   es_ES_EVENNOCOMP1 ;
  :suekie EVENCOMPONLY      ;
  :sööke  MES               ;
@@ -446,7 +448,7 @@ LEXICON SOOKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.
 
 
 ! UMLAUT 3 = e(3)-stamme, som får EVEN-Komparasjon
-LEXICON VEELKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
+LEXICON VEELKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.   ---> TWOL
         :veelke  ATTR_S       ;
         :veelke  PRED_S       ;
  +Use/NG:vielkie EVENCOMPONLY ;
@@ -455,7 +457,7 @@ LEXICON VEELKES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon
 !ODDCASE ;
 
 ! UMLAUT 3 = e(3)-stamme
-LEXICON ROOPSES! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
+LEXICON ROOPSES! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.   ---> TWOL
         :rööps    es_ES_EVENNOCOMP1 ;
  +Use/NG:reeps    es_ES_EVENNOCOMP1 ;
         :ruepsie  EVENCOMPONLY      ;
@@ -464,7 +466,7 @@ LEXICON ROOPSES! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.
  +Use/NG:rååpsehk HKE_ODD_NGCOMP    ;
 
 !! UMLAUT 3 = e(3)-stamme  = Unødvendig lexicon
-!!LEXI SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
+!!LEXI SNEEHPES ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?  ---> Twol
 !!               :sneehpe   ATTR_S            ;
 !                :sneehpe   PRED_S            ;
 !         +Use/NG:sneehp    es_ES_EVENNOCOMP1 ; ! pga sneehpebe
@@ -475,7 +477,7 @@ LEXICON ROOPSES! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.
 !                :sneehpes  ODDCOMP           ;
 !                        
 ! UMLAUT 3 = e(3)-stamme  - UNØDVENDIG LEXICON
-! LEXI GEEHPES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
+! LEXI GEEHPES ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.    ---> TWOL 
 ! !        :geehpes  ODDCASEOBL   ;
 !          :geehpe   ATTR_S       ;
 !  +Err/Orth:geehpe   s_S_ODD      ;
@@ -486,7 +488,7 @@ LEXICON ROOPSES! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.
 !          :geehpe   PRED_S       ;
 
 !! UMLAUT 3 = e(3)-stamme
-!LEXICON GEERVE ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon. 
+!LEXICON GEERVE ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.    ---> TWOL
 !        :geerv   e_E_EVEN     ;
 ! +Use/NG:giervie EVENCOMPONLY ;
 ! +Use/NG:giervie MES          ;
@@ -631,13 +633,13 @@ LEXICON e_ES_ODDEVEN2
 !***UMLAUT FOR e(2)-stammen, Klasse-2
 
 ! UMLAUT 2 = e(1)-stamme
-LEXICON SNAARE2
+LEXICON SNAARE2  !----> TWOL
  :snaar   e_ES_EVENNOCOMP2 ;
  :snaerie EVENCOMPONLY     ;
  :sneere  MES              ;
  :snaerie DIMCOMP          ;
 
-! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
+! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut  ----> TWOL
 LEXICON ORRE2
         :orr  e_E_EVEN     ;
 ! +Use/NG:urr  e_E_EVEN     ; ! Wrong!(Maja)
@@ -645,7 +647,7 @@ LEXICON ORRE2
  +Use/NG:urre MES          ;
 !+Err/Orth:orr e_ES_ODDEVEN ; !comment from Aajege, MLK: bør subbes. orresistie? - 
 
-! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
+! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut  ----> TWOL 
 LEXICON NOERE_STOERE2
         :oer   e_E_EVEN ; ! stoere-noere-ebe/emes ?? covered by below
  +Use/NG:oere  EVENCOMPONLY    ;
@@ -653,7 +655,7 @@ LEXICON NOERE_STOERE2
  +Use/NG:ööre  MES             ;
 !       :oer   e_E_EVEN        ; ! oere-oerebe-oeremes
 
-! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
+! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut  ----> TWOL
 LEXICON GISSE2
          :gïss    e_E_EVEN ;
          :gissie  EVENCOMPONLY    ;
@@ -664,7 +666,7 @@ LEXICON GISSE2
   +Use/NG:gïssege PRED_0          ; 
          :gïsseg  ODDCOMP  ;! eller er dette et annet lemma? jfr. -hke og gabtege ,MLK: Iflg. bergsland 1994, s 116 pkt. 5 er dette en 'særtilfelle (Predikatformen for det meste foreldet)'
 
-! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
+! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut  ----> TWOL
 LEXICON GAMTE2
  :te            ATTR_0   ;
  :tege          PRED_0   ;
@@ -675,7 +677,7 @@ LEXICON GAMTE2
 !+Use/NG:t             NIEJTE   ;
 
 ! UMLAUT 2
-LEXICON GIEVTE2
+LEXICON GIEVTE2  ! ----> TWOL
         :gïevt  e_E_EVENNOCOMP1 ;
         :geavte EVENCOMPONLY    ;
  +Use/NG:gievte EVENCOMPONLY    ;
@@ -683,14 +685,14 @@ LEXICON GIEVTE2
         :gievte DIMCOMP         ;
  +Use/NG:geavte DIMCOMP         ;
 
-! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut
+! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut   ! ----> TWOL
 LEXICON TJOEVKES2
  :tjoevke  s_S_ODD      ; ! ODD ikke i LMM, ikke i corp.
  :tjuevkie EVENCOMPONLY ;
  :tjuevkie DIMCOMP      ;
  :tjoevke  MES          ;
 
-! UMLAUT 2 = e(1)-stamme, men med en underliggende ie eller a-stamme som bidrar til umlaut
+! UMLAUT 2 = e(1)-stamme, men med en underliggende ie eller a-stamme som bidrar til umlaut  ! ----> TWOL
 LEXICON KRUANA2
                 :kruan  a_A_EVEN1_NOCOMP ;
          +Use/NG:kruene EVENCOMPONLY     ;
