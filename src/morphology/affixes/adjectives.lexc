@@ -798,7 +798,7 @@ LEXICON as_AN_ODDNOCOMP4       !==>
 !! small undergruppe of the 4.group
 !! {{{
  :a ATTR_S   ; !!= @CODE@
- :a PRED_AN  ; !!= @CODE@
+! :a PRED_AN  ; !!= @CODE@               ! Outcommented because theese are averbs
  :an adv ;
  :a MAANAOBL ;
 !! }}}
@@ -810,7 +810,7 @@ LEXICON oes_AN_ODDNOCOMP4        !==> UT!
 !! This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group
 !! {{{
    :oe     ATTR_S   ; !!= @CODE@
-   :%^3UML PRED_AN  ; !!= @CODE@
+ !  :%^3UML PRED_AN  ; !!= @CODE@
    :an adv ;
  +A:       N_OE_OBL ; !!= @CODE@
 !! }}}
@@ -819,7 +819,7 @@ LEXICON oes_AN_ODDNOCOMP4        !==> UT!
 LEXICON oeh_OEN_ODD4   !  ==> UT!
 !! {{{
  :oe  ATTR_H     ; !!= @CODE@
- :oe  PRED_N     ; !!= @CODE@
+! :oe  PRED_N     ; !!= @CODE@             ! Outcommented because theese are averbs
  :oen adv ;
  :ohk ODDCASEOBL ;
 !! }}}
@@ -834,7 +834,7 @@ LEXICON oeh_AN_ODD4 ! an- is adverb    ==> UT!
 
 LEXICON ah_AN_ODD !   ==> UT!
  :a   ATTR_H     ;
- :a   PRED_N     ;
+! :a   PRED_N     ;                        ! Outcommented because theese are averbs
  :an adv ;
 !:ahk ODDCOMP    ;
  :ehk ODDCASEOBL ;
@@ -843,7 +843,8 @@ LEXICON ah_AN_ODD !   ==> UT!
 LEXICON oeh_ah_AN_ODD_NOCOMP4 !   ==> UT!
  +Use/NG:%^3UMLa ATTR_H     ;
         :oe      ATTR_H     ;
-        :%^3UML  PRED_AN    ;
+  !      :%^3UML  PRED_AN    ;              ! Outcommented because theese are averbs
+         :an   adv ;
  +Use/NG:ohk     ODDCASEOBL ;
  +Use/NG:ehk     ODDCASEOBL ;
 
