@@ -62,12 +62,12 @@ EXTEDITOR=@SEE@
 ##### --exclude "(pattern1|pattern2|...)"                          #####
 # Regular attributive lemmas:
 @GTCORE@/scripts/extract-lemmas.sh \
-    --exclude "(PRED|CASE| MES|EVTEBE)" \
+    --exclude "(PRED|CASE.*;| MES|EVTEBE)" \
     $source_file > $attr_lemmas
 
 # Predicative lemmas:
 @GTCORE@/scripts/extract-lemmas.sh \
-    --include "(PRED|CASE)" \
+    --include "(PRED|CASE.*;)" \
     $source_file > $pred_lemmas
 
 # Comparative lemmas:
