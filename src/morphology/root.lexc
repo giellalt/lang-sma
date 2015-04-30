@@ -547,12 +547,12 @@ LEXICON Root
 !! Here is the list of lexica in the sma analyser
 
 !            Prefixes     ;
-!@U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-nocomp ; ! Lexicon for short names blocked from compounding
-!@U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-nocomp ; ! Lexicon for short names blocked from compounding
+ @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding
+ @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding
  @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding
  @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding
- @U.Cap.Obl@ ProperNoun           ; ! SME proper nouns - always uppercase
- @U.Cap.Opt@ ProperNoun           ; ! SME proper nouns - downcased for derivations
+ @U.Cap.Obl@ ProperNoun-sma       ; ! SMA proper nouns - always uppercase
+ @U.Cap.Opt@ ProperNoun-sma       ; ! SMA proper nouns - downcased for derivations
  @U.Cap.Obl@ ProperNoun-smi       ; ! SMI proper nouns
  @U.Cap.Opt@ ProperNoun-smi       ; ! SMI proper nouns
              NounRoot     ; !!= * @CODE@
@@ -570,6 +570,11 @@ LEXICON Root
              Abbreviation ; !!= * @CODE@
              Acronym      ; !!= * @CODE@
 
+LEXICON ProperNoun   !!= * __@CODE@__ 
+ @U.CmpHyph.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for SMA short names - always require hyphen
+ @U.CmpHyph.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for SMI short names - always require hyphen
+                  ProperNoun-sma        ; ! contains the full SMA name list
+                  ProperNoun-smi        ; ! SMI proper nouns
 
 LEXICON ENDLEX
 !! !!!Lexicon @LEXNAME@
