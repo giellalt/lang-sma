@@ -1,5 +1,3 @@
-
-
 ! Divvun & Giellatekno - open source grammars for Sámi and other languages
 ! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
 ! http://giellatekno.uit.no & http://divvun.no
@@ -571,10 +569,11 @@ LEXICON Root
              Acronym      ; !!= * @CODE@
 
 LEXICON ProperNoun   !!= * __@CODE@__ 
- @U.CmpHyph.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for SMA short names - always require hyphen
- @U.CmpHyph.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for SMI short names - always require hyphen
-                  ProperNoun-sma        ; ! contains the full SMA name list
+ @U.CmpHyph.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for SMJ short names - always require hyphen
+ @U.CmpHyph.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names - always require hyphen
                   ProperNoun-smi        ; ! SMI proper nouns
+                  ProperNoun-sma        ; ! contains the full smj name list
+
 
 LEXICON ENDLEX
 !! !!!Lexicon @LEXNAME@
