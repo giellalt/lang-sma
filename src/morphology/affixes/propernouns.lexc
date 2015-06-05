@@ -190,9 +190,6 @@ LEXICON VNAME-fem
 LEXICON VNAME-obj
  +N+Prop+Sem/Obj: ACCRA_FLAG ;
 
-
-
-
 LEXICON ACCRA-plc
 +N+Prop+Sem/Plc: ACCRA_FLAG ;
 
@@ -215,6 +212,30 @@ LEXICON ACCRA-obj
  
 LEXICON ACCRA-ani
  +N+Prop+Sem/Ani: ACCRA_FLAG ;
+
+! Separate lexicon for ACCRA y final names because these have to go NYSTØ in smj, but cannot be NYSTØ in sma
+
+LEXICON ACCRA-Y-fem 
+ ACCRA-fem ;
+  
+LEXICON ACCRA-Y-obj
+ ACCRA-obj ;
+ 
+LEXICON ACCRA-Y-plc
+ ACCRA-plc ;
+ 
+LEXICON ACCRA-Y-mal
+ ACCRA-mal ;
+ 
+LEXICON ACCRA-Y-sur
+ ACCRA-sur ;
+ 
+LEXICON ACCRA-Y-org
+ ACCRA-org ;
+ 
+LEXICON ACCRA-ani
+ ACCRA-ani ;
+
 
 ! ACCCRA- må tilpasses mer vokalstammene , a-e og oe.
 
