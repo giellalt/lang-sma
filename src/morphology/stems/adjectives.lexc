@@ -148,6 +148,7 @@ aareh+Use/NG:aare ATTR_S ;! Ikke enig i at disse to betyr "det samme", men ok! d
 aareh:aar AAREH ; !aarebi,aaremes. aerebe, aeremes
 aarehke:aarehk Ce_CE_ODD ;
 aajeske:aajesk Ce_CE_ODDNOCOMP ;
+vealemeske:vealmesk Ce_CE_ODDNOCOMP ;
 spaenjeske:spaenjesk Ce_CE_ODDNOCOMP ;
 vealmeske:vealmesk Ce_CE_ODDNOCOMP ;
 vaatneske:vaatnesk Ce_CE_ODDNOCOMP ;
@@ -774,6 +775,7 @@ feahperes:feahper Ces_CES_CE_ODD ; !fååhpere
 fealadadteme ATTR_0 ;
 faageldh:faageldh ATTR_0 ;
 fealadimmes:fealadimme ATTR_S ;
+hearremes:hearreme ATTR_S ;
 feaskoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:feask oeh_OEH_ODD1 ;
 feasoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:feas oeh_AN_ODD4 ; !
 feavseres+CmpN/SgN+CmpN/SgG+CmpN/PlG:feavsere ATTR_S ;
@@ -812,6 +814,7 @@ frååpmes+v3+CmpN/SgN+CmpN/SgG+CmpN/PlG:freepme s_S_ODD ; !SOUTH
 frååpmes+v1+CmpN/SgN+CmpN/SgG+CmpN/PlG:frååpme s_S_ODD ;
 frååpmes+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:frååpmehk HKE_ODD_COMP ;
 fuakehtje+CmpN/SgN+CmpN/SgG+CmpN/PlG:fuakehtj Ce_CE_ODDNOCOMP ;
+healhkehtje:healhkehtj Ce_CE_ODDNOCOMP ;
 fuehpies+CmpN/SgN+CmpN/SgG+CmpN/PlG:fuehpies ATTR_0 ; !er ikke 'par': fuehpesne - fuahpan
 fundamentaale+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:fundamenta AALE ;
 fysihkeles+OLang/NOB:fysihkel LES ;
@@ -857,6 +860,7 @@ gaarhtseske+CmpN/SgN+CmpN/SgG+CmpN/PlG:gaarhtsesk Ce_CE_ODDNOCOMP ; ! the same a
 gaarkeles:gaarkel Ces_Ce_CES_CE_ODD ; !dervert fra gaarkh
 gaarkijes+CmpN/SgN+CmpN/SgG+CmpN/PlG:gaarkij ijes_ijs_IJE_ODD ; !SgNomCmp
 gaarmeres:gaarmer Ces_CES_CE_ODD ; !Attr=gaarmeres, pred=gaarmere og gaarmeres
+
 gaarnjoeh:gaarnj oeh_ah_AN_ODD_NOCOMP4   "skeiv om sko" ;
 gaarroeh+v2:gaarr AH_&_OEH_ODD1  "som går el. står brett med beina" ;!av gaerrie
 gaarroeh+v1:gaarr oeh_AN_ODD4 ;! "som går el. står brett med beina" ! av gaerrie
@@ -919,6 +923,7 @@ gamte+v1:gam GAMTE2 ;!
 gamte+Use/NG:gamtege PRED_0 ;! gamtegåbpoe? CHECK!
 gamte+v2:gemt ies_IE_EVEN3 ;  !  Klasse 3 ! e(1)-st. !LA
 gaptjeldihkie:gaptjeldihk ie_IE_EVENNOCOMP ;
+gïjreldihkie:gïjreldihk ie_IE_EVENNOCOMP ;
 garhpege:garhpeg Ce_CE_ODDNOCOMP ;
 garkeles:garkel Ces_CES_CE_ODD ; ! XXX usikkert kva som er rett, ikkje endra,
 garmerdihks+CmpN/SgN+CmpN/SgG+CmpN/PlG:garmerd ihks_IHKS_igs_IGS_EVENNOCOMP ; !garmerdidh!SgNomCmp
@@ -3835,37 +3840,39 @@ sjalhke:sjalhk e_ES_ODDEVEN2 ;
 !tjillieståbpoe
 
 
-!pleangoeh
-!gaarngoeh
-!sæbjoeh
-!bajjoeh
-!stajjoeh
-!haaljoeh
-veannjoeh:veannjoe ATTR_H ;
-!slænnjoeh
-!buarjoeh
-!sjalsjoeh
-!skaadtjoeh
-!svaanhtjoeh
-!låaptjoeh
-!klåptjoeh
-!snuagkoeh
-!slahkoeh
-!stanghkoeh
-!geajhkoeh
-!råajhkoeh
-!gålhkoeh
-!gamhkoeh
-!skarhkoeh
-!krætnoeh
-!råapoeh
-!tåapoeh
-!skåmhpoeh
-!sæhpoeh
-!slåmpoeh
-!flearoeh
-!spåavhroeh
-!båarroeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:båarr oeh_OEH_AN_ODD4 ;
+pleangoeh:pleangoe ATTR_H ;      ! an=adverb, oeh=også predikativ?
+gaarngoeh:gaarngoe ATTR_H ;      ! an=adverb, oeh=også predikativ?
+sæbjoeh:sæbjoe ATTR_H ;          ! an=adverb, oeh=også predikativ?
+bajjoeh:bajjoe ATTR_H ;          ! an=adverb, oeh=også predikativ?
+stajjoeh:stajjoe ATTR_H ;        ! an=adverb, oeh=også predikativ?
+haaljoeh:haaljoe ATTR_H ;        ! an=adverb, oeh=også predikativ?
+veannjoeh:veannjoe ATTR_H ;      ! an=adverb, oeh=også predikativ?
+haaksoeh:haaksoe ATTR_H ;        ! an=adverb, oeh=også predikativ?
+haaljoeh:haaljoe ATTR_H ;        ! an=adverb, oeh=også predikativ?
+slænnjoeh:slænnjoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+buarjoeh:buarjoe  ATTR_H ;       ! an=adverb, oeh=også predikativ?
+sjalsjoeh:sjalsjoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+skaadtjoeh:skaadtjoe ATTR_H ;    ! an=adverb, oeh=også predikativ?
+svaanhtjoeh:svaanhtjoe ATTR_H ;  ! an=adverb, oeh=også predikativ?
+låaptjoeh:låaptjoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+klåptjoeh:klåptjoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+snuagkoeh:snuagkoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+slahkoeh:slahkoe  ATTR_H ;       ! an=adverb, oeh=også predikativ?
+stanghkoeh:stanghkoe  ATTR_H ;   ! an=adverb, oeh=også predikativ?
+geajhkoeh:geajhkoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+råajhkoeh:råajhkoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+gålhkoeh:gålhkoe  ATTR_H ;       ! an=adverb, oeh=også predikativ?
+gamhkoeh:gamhkoe  ATTR_H ;       ! an=adverb, oeh=også predikativ?
+skarhkoeh:skarhkoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+krætnoeh:krætnoe  ATTR_H ;       ! an=adverb, oeh=også predikativ?
+råapoeh:råapoe  ATTR_H ;         ! an=adverb, oeh=også predikativ?
+tåapoeh:tåapoe  ATTR_H ;         ! an=adverb, oeh=også predikativ?
+skåmhpoeh:skåmhpoe  ATTR_H ;     ! an=adverb, oeh=også predikativ?
+sæhpoeh:sæhpoe  ATTR_H ;         ! an=adverb, oeh=også predikativ?
+slåmpoeh:slåmpoe  ATTR_H ;       ! an=adverb, oeh=også predikativ?
+flearoeh:flearoe  ATTR_H ;       ! an=adverb, oeh=også predikativ?
+spåavhroeh:spåavhroe  ATTR_H ;   ! an=adverb, oeh=også predikativ?
+båarroeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:båarr oeh_OEH_AN_ODD4 ;
 !tjåvroeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:tjåvr oeh_OEH_AN_ODD4 ;
 !haaksoeh+CmpN/SgN+CmpN/SgG+CmpN/PlG:haaks oeh_OEH_AN_ODD4 ;
 !næksoeh
@@ -4072,7 +4079,10 @@ bïlles:bïlle  ATTR_S ;
 dïlles:dïlle ATTR_S ;
 vïlles:vïlle ATTR_S ;
 doesnes:doesne ATTR_S ;
-vealhtjan:vealhtjan PRED_0 ;
+!vealhtjan:vealhtjan PRED_0 ; ! adverb
+hatsves:hatsve ATTR_S ;
+haavhkes:haavhke ATTR_S ;!Durativ, er glefsete bestandig, har dette som permanent egenskap)
+haavhkoeh:haavhk oeh_ah_AN_ODD_NOCOMP4 ;!(Momentan, glefsete nå, men er ikke slik permanent vs. haavhkes)
 !
 !snearvah
 !snearvoeh
