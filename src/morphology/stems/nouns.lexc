@@ -2555,7 +2555,7 @@ gïemhpe+N+CmpNP/Pref+CmpN/SgN:gïemhpe R ;
 LEXICON Noun   !!= * __@CODE@__ dividing in NounNoPx, NounPx (with a P.Px.add
                !!               flag)  and NounPxKin (with a P.Nom3Px.add flag)
  @P.Px.add@@P.Nom3Px.add@ NounPxKin ;
-                          NounNoPx  ;
+!                          NounNoPx  ; ! This one commented out since the lexicon is empty.
  @P.Px.add@               NounPx    ;
 
 LEXICON NounPxKin ! copy from julev
@@ -2874,8 +2874,11 @@ vïjve+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:vïjv NIEJTE ;
 vyjve+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:vyjv NIEJTE ;
 vïeneskodtje+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:vïeneskodtj NIEJTE ;
 
-LEXICON NounNoPx !
-# ;
+! The following lexicon is commented out, as it contains a direct pointer to #.
+! This gives spurious analyses that we don't want. Uncomment when there is real
+! content (ie words) to fill the lexicon with.
+!LEXICON NounNoPx ! Nouns that should not take possessives at all.
+!# ;
 
 LEXICON NounPx ! 
 
