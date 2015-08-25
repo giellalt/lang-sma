@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Take tab-separated input in 2+ colums (like a typos file), extract the first
+# column, send it through a spell checker, and convert the result to xml.
+# Finally open the xml in the default browser.
+# From the xml, extract the average suggestion position, and fail if below a
+# given threshold.
+
+MIN_AVRG_SUGG_POS=2
+GTLANG2=sma
+
+# Directory variables:
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+top_srcdir="$SCRIPT_DIR/.."
+builddir="build/spellers"
+top_builddir="$top_srcdir/$builddir"
+spellerdir=tools/spellcheckers/fstbased/hfst
+
+# File variables:
+typos_file="$top_srcdir/test/data/typos.txt"
+speller_results="$SCRIPT_DIR/speller_result.xml"
+
+# Other variables:
+DATE=$(date +%Y%m%d)
+TESTTIME=$(date +%H%M)
+
+# Extract the typos:
+grep -v '^#' "$typos_file" | grep -v '^$' | cut -f1 \
+	> $SCRIPT_DIR/speller_input.txt
+
+# Run the speller;
+$GTCORE/scripts/run_voikko_speller.sh $SCRIPT_DIR/speller_input.txt \
+                                      $SCRIPT_DIR/speller_output.txt \
+                                      $GTLANG2 \
+                                      "$top_builddir/$spellerdir"
+
+# Convert to xml:
+$GTCORE/scripts/speller-testres.pl \
+		--engine=vk \
+		--lang=$GTLANG2 \
+		--input="$typos_file" \
+		--output="$SCRIPT_DIR/speller_output.txt" \
+		--document=$(basename "$typos_file") \
+		--date=$DATE-$TESTTIME \
+		--version="n/a" \
+		--toolversion="n/a" \
+		--corpusversion="n/a" \
+		--memoryuse="n/a" \
+		--timeuse="n/a" \
+		--xml="$speller_results"
+
+# Add xml header + css style sheet reference:
+fgrep -v '<?xml version' "$speller_results" > "$speller_results.tmp"
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>" > "$speller_results"
+echo "<?xml-stylesheet href=\"$GTHOME/scripts/style/speller_xml.css\" \
+    type=\"text/css\"?>"   >> "$speller_results"
+cat "$speller_results.tmp" >> "$speller_results"
+rm -f "$speller_results.tmp"
+
+# Open the xml file in the default browser
+open "$speller_results"
