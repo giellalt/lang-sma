@@ -31,6 +31,7 @@ grep -v '^#' "$typos_file" | grep -v '^$' | cut -f1 \
 # Run the speller;
 $GTCORE/scripts/run_voikko_speller.sh $SCRIPT_DIR/speller_input.txt \
                                       $SCRIPT_DIR/speller_output.txt \
+                                      $SCRIPT_DIR/spellertimeusage.txt \
                                       $GTLANG2 \
                                       "$top_builddir/$spellerdir"
 
@@ -46,7 +47,7 @@ $GTCORE/scripts/speller-testres.pl \
 		--toolversion="n/a" \
 		--corpusversion="n/a" \
 		--memoryuse="n/a" \
-		--timeuse="n/a" \
+		--timeuse="$SCRIPT_DIR/spellertimeusage.txt" \
 		--xml="$speller_results"
 
 # Add xml header + css style sheet reference:
