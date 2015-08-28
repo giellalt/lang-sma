@@ -12,7 +12,7 @@ GTLANG2=sma
 # Directory variables:
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 top_srcdir="$SCRIPT_DIR/.."
-builddir="build/spellers"
+builddir="."
 top_builddir="$top_srcdir/$builddir"
 spellerdir=tools/spellcheckers/fstbased/hfst
 
