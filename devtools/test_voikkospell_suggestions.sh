@@ -25,7 +25,7 @@ DATE=$(date +%Y%m%d)
 TESTTIME=$(date +%H%M)
 
 # Extract the typos:
-grep -v '^#' "$typos_file" | grep -v '^$' | cut -f1 \
+grep -v '^[!#]' "$typos_file" | grep -v '^$' | cut -f1 \
 	> $SCRIPT_DIR/speller_input.txt
 
 # Run the speller;
