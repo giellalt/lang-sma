@@ -35,6 +35,8 @@ $GTCORE/scripts/run_voikko_speller.sh $SCRIPT_DIR/speller_input.txt \
                                       $GTLANG2 \
                                       "$top_builddir/$spellerdir"
 
+rm -f "$speller_results"
+
 # Convert to xml:
 $GTCORE/scripts/speller-testres.pl \
 		--engine=vk \
