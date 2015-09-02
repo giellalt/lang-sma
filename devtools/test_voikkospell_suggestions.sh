@@ -3,10 +3,8 @@
 # Take tab-separated input in 2+ colums (like a typos file), extract the first
 # column, send it through a spell checker, and convert the result to xml.
 # Finally open the xml in the default browser.
-# From the xml, extract the average suggestion position, and fail if below a
-# given threshold.
 
-MIN_AVRG_SUGG_POS=2
+# Language being tested, ISO 639-1 code if available:
 GTLANG2=sma
 
 # Directory variables:
@@ -18,7 +16,8 @@ spellerdir=tools/spellcheckers/fstbased/hfst
 
 # File variables:
 typos_file="$top_srcdir/test/data/typos.txt"
-speller_results="$SCRIPT_DIR/speller_result.xml"
+file_spesifier="$(basename ${typos_file} .txt)"
+speller_results="$SCRIPT_DIR/speller_result_${file_spesifier}.xml"
 
 # Other variables:
 DATE=$(date +%Y%m%d)
