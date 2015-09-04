@@ -49,7 +49,8 @@ $GTCORE/scripts/speller-testres.pl \
 		--corpusversion="n/a" \
 		--memoryuse="n/a" \
 		--timeuse="$SCRIPT_DIR/spellertimeusage.txt" \
-		--xml="$speller_results"
+		--xml="$speller_results" \
+		--corrsugg
 
 # Add xml header + css style sheet reference:
 fgrep -v '<?xml version' "$speller_results" > "$speller_results.tmp"
