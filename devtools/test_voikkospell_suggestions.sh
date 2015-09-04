@@ -61,4 +61,9 @@ cat "$speller_results.tmp" >> "$speller_results"
 rm -f "$speller_results.tmp"
 
 # Open the xml file in the default browser
-open "$speller_results"
+if [ `uname` == "Darwin" ]
+then
+    open "$speller_results"
+else
+    xdg-open "$speller_result"
+fi
