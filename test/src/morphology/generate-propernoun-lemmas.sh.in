@@ -23,8 +23,8 @@ generator_file=./../../../src/generator-gt-norm
 analyser_file=./../../../src/analyser-gt-norm
 
 ### out ###
-lemmas=./filtered-${POS}
-attr_lemmas=./filtered-attr-${POS}
+lemmas=./filtered-${POS}.txt
+attr_lemmas=./filtered-attr-${POS}.txt
 generated_lemmas=./generated-${POS}
 generated_attr_lemmas=./generated-attr-${POS}
 missing_file=missing_${POS}_lemmas
@@ -145,9 +145,9 @@ for f in $fsttype; do
 				$EXTEDITOR $gen_missing_file.$f.txt
             else
                 echo "There where problem lemmas. Details in:"
-                echo "* $result_file.$f.txt    "
-                echo "* $gen_result_file.$f.txt"
-                echo "* $ana_result_file.$f.txt"
+                echo "* $missing_file.$f.txt    "
+                echo "* $ana_missing_file.$f.txt"
+                echo "* $gen_missing_file.$f.txt"
 			fi
 		    Fail=1
 		    echo "$f - FAIL"
