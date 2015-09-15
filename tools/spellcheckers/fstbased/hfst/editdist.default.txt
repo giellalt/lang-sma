@@ -1,35 +1,4 @@
 ## Inclusions: this is the real alphabet definition:
-A
-B
-C
-D
-E
-F
-G
-H
-I
-## Ï - this UC letter is not used in the lexical fst, only LC ï is used
-J
-K
-L
-M
-N
-O
-P
-R
-S
-T
-U
-V
-W
-X
-Y
-Z
-Ä
-Ö
-Æ
-Ø
-Å
 a
 b
 c
@@ -61,7 +30,7 @@ z
 æ
 ø
 å
--	100
+-	10
 .
 :
 
@@ -69,12 +38,12 @@ z
 @@
 
 ## Transition pair specifications + weight:
-ø	ö	0
-ä	æ	0
+ø	ö	-5
+ä	æ	-5
 i	ï	-10
 ï	i	-1
 å	o	0
--	:	0
+-	:	-5
 
 ## Swaps:
 ## Change dh into hd with the weight 0.5:
