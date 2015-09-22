@@ -11,7 +11,7 @@ CORPUSNAME=spellercorpus
 # Specify whether to use corpus weights for frequency ranking of suggestions.
 # Make sure you test the suggestion quality both before and after changing this
 # setting.
-ENABLE_CORPUS_WEIGHTS=no
+ENABLE_CORPUS_WEIGHTS=yes
 
 ### BEGIN: Local build rules: *.hfst: *.tmp.hfst ###
 
