@@ -19,7 +19,7 @@ ENABLE_CORPUS_WEIGHTS=yes
 # point could be to only include word forms occurring at least twice. Try
 # different values to find the best compromise between fst size and suggestion
 # quality.
-CORPUS_SIZE=
+CORPUS_SIZE=18400
 
 ### BEGIN: Local build rules: *.hfst: *.tmp.hfst ###
 
