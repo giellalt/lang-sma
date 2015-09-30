@@ -339,7 +339,7 @@ LEXICON LES  !!= * __@CODE@__ Should contain only loanwords (?)
  +A+Pl+Ela:%>ass%>ijste       FINAL1   ;
  +A+Pl+Com:%>ass%>igujmie     FINAL1   ;
         +A:ass                EVEN_ESS ;
-!+A+SgNomCmp:%>%^DISIMPes    R ; ! trond
+!+A+Cmp/SgNom:%>%^DISIMPes    R ; ! trond
 !+A+SgGenCmp:asse%>n R ;		 ! trond
 !+A+PlGenCmp:ass%>i  R ;		 ! trond
 
@@ -349,7 +349,7 @@ LEXICON IJAALE_A_LOAN !!= * __@CODE@__
     +Err/Orth:al   AALEFORMS ;
     +Err/Orth:jal  AALEFORMS ;
             :jaal AALEFORMS ;
- +A+SgNomCmp:al   R         ;
+ +A+Cmp/SgNom:al   R         ;
 
 
 LEXICON AATE_adj_LOAN  !!= * __@CODE@__
@@ -361,7 +361,7 @@ LEXICON AATE_adj_LOAN  !!= * __@CODE@__
 LEXICON AALE !!= * __@CODE@__
             :al AALEFORMS ; ! vitaale = norm
     +Err/Orth:l  AALEFORMS ; ! vitale = descriptive
- +N+SgNomCmp:l  R         ;
+ +N+Cmp/SgNom:l  R         ;
 
 LEXICON AALEFORMS !!= * __@CODE@__
 ! merging spinaale e_E_EVEN  and spinaales es_ES_EVEN
@@ -499,7 +499,7 @@ LEXICON LES_LASSE_NOM_ie  !!= * __@CODE@__
    +A+Sg+Nom:eles     FINAL1   ;
    +A+Pl+Nom:elass%>h FINAL1   ;
    +A+Pl+Gen:elass%>  IGENSUFF ;
- +A+SgNomCmp:eles     R        ;
+ +A+Cmp/SgNom:eles     R        ;
 
 
 LEXICON LES_LASSE_OBL_ie  !!= * __@CODE@__
@@ -536,7 +536,7 @@ LEXICON e_ES_ODDEVEN  !!= * __@CODE@__
                 eCASEOBL   ; ! galmem
             :es ODDCASEOBL ; ! galmesem ??? XXX Check!
    +A+Sg+Nom:es FINAL1     ;
- +A+SgNomCmp:es R          ;
+ +A+Cmp/SgNom:es R          ;
      +Use/NG:e  EVENCOMP   ;
             :es ODDCOMP    ; ! Both even and odd?
 
@@ -613,7 +613,7 @@ LEXICON ies_IES_IE_EVENNOCOMP   !!= * __@CODE@__ Attr=s, Pred. = s jih Ø, Comp 
             :ie  ATTR_S ; !
                  ieCASE ;
    +A+Sg+Nom:ies FINAL1 ;
- +A+SgNomCmp:ies R      ;
+ +A+Cmp/SgNom:ies R      ;
 
 !OK!( åhtas spatnas)
 LEXICON as_AS_EVEN   !!= * __@CODE@__ Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
@@ -621,7 +621,7 @@ LEXICON as_AS_EVEN   !!= * __@CODE@__ Attr=s, Pred. = s jih Ø, Comp jih caese= 
                 aCASEOBL ;
             :a  EVENCOMP ;
    +A+Sg+Nom:as FINAL1   ;
- +A+SgNomCmp:as R        ;
+ +A+Cmp/SgNom:as R        ;
 
 
 LEXICON IJLE_LOAN_A !!= * __@CODE@__
@@ -672,7 +672,7 @@ LEXICON hth_HTH_ODD  !!= * __@CODE@__
             :%^DISIMP  ATTR_H     ;
             :%^DISIMP  PRED_H     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPh R          ;
+ +A+Cmp/SgNom:%^DISIMPh R          ;
                        ODDCOMP    ;
 
 LEXICON Ce_CE_ODD   !!= * __@CODE@__ bårreske
@@ -685,8 +685,8 @@ LEXICON ege_EGE_ODDEVEN  !!= * __@CODE@__ rudtjege
             :ege  ATTR_0     ;
             :ege  PRED_0     ;
             :eg   ODDCASEOBL ;
- +A+SgNomCmp:ege  R          ;
-! +A+SgNomCmp:e    R ; ! sjekk
+ +A+Cmp/SgNom:ege  R          ;
+! +A+Cmp/SgNom:e    R ; ! sjekk
  +A+SgGenCmp:e%>n R          ; ! sjekk
  +A+PlGenCmp:%>i  R          ; ! sjekk
             :eg   ODDCOMP    ;
@@ -696,7 +696,7 @@ LEXICON Ce_CE_ODDNOCOMP
             :%^DISIMPe ATTR_0     ;
             :%^DISIMPe PRED_0     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
 
 LEXICON s_S_Ø_ODD  !!= * __@CODE@__ hamhpas
             ATTR_S     ;
@@ -753,7 +753,7 @@ LEXICON oes_OES_ODDNOCOMP  !!= ** __@CODE@__
             :oe  ATTR_S     ;
             :oes ODDCASEOBL ; ! låapsoesem XXX check
    +A+Sg+Nom:oes FINAL1     ;
- +A+SgNomCmp:oes R          ;
+ +A+Cmp/SgNom:oes R          ;
 
 LEXICON oes_OES_ODDahk  !!= * __@CODE@__
  :oe  ATTR_S  ;
@@ -773,7 +773,7 @@ LEXICON Ces_CES_ODDNOCOMP   !!= * __@CODE@__
             :%^DISIMPe ATTR_S     ;
             :%^DISIMPe PRED_S     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
 
 LEXICON les_LES_ODD   !!= * __@CODE@__
  :%^DISIMPe ATTR_S     ;
@@ -791,21 +791,21 @@ LEXICON Cs_CS_CE_ODDNOCOMP  !!= ** __@CODE@__
      +Use/NG:%^DISIMP  PRED_S     ;
             :%^DISIMPe PRED_0     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
 
 
 LEXICON Cs_CS_ODD  !!= * __@CODE@__
             :%^DISIMP  ATTR_S     ;
             :%^DISIMP  PRED_S     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
                        ODDCOMP    ;
 
 LEXICON Cs_CS_ODDNOCOMP  !!= ** __@CODE@__
             :%^DISIMP  ATTR_S     ;
             :%^DISIMP  PRED_S     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
 
 LEXICON hts_HTS_ODD  !!= * __@CODE@__
    hts_HTS_ODDNOCOMP ;
@@ -819,7 +819,7 @@ LEXICON hts_HTS_ODDNOCOMP  !!= ** __@CODE@__
             :%^DISIMP  PRED_S     ;
 ! :%^DISIMPe     PRED_0 ; ! hiejjehte  LK: ikke hiejjehte. LA: finner ikke i korp
             :%^DISIMP  ODDCASEOBL ; !LA tok vekk -s
- +A+SgNomCmp:%^DISIMPs R          ;
+ +A+Cmp/SgNom:%^DISIMPs R          ;
 
 LEXICON hts_HTS_ODDhtCOMP
    hts_HTS_ODDNOCOMP ;
@@ -848,14 +848,14 @@ LEXICON Ce_CES_ODD  !!= * __@CODE@__
  :e PRED_S     ;
 ! :e     PRED_0 ; ! jfr. leksikonnamnet, TT
     ODDCASEOBL ;
-! +A+SgNomCmp:%^DISIMPe R ; ! dïhte komfortaabelegåetie ??
+! +A+Cmp/SgNom:%^DISIMPe R ; ! dïhte komfortaabelegåetie ??
     ODDCOMP    ;
 
 LEXICON ø_S_ODDEVEN   !!= * __@CODE@__ , Comp=even jih ODD, Case= ODD
             :e  ATTR_0     ;
             :e  PRED_S     ;
             :es ODDCASEOBL ;
- +A+SgNomCmp:es R          ;
+ +A+Cmp/SgNom:es R          ;
             :es ODDCOMP    ;
      +Use/NG:e  EVENCOMP   ;
 
@@ -863,7 +863,7 @@ LEXICON ø_S_ODD   !!= * __@CODE@__ , Comp=even jih ODD, Case= ODD
                ATTR_0     ;
                PRED_S     ;
             :s ODDCASEOBL ;
- +A+SgNomCmp:s R          ;
+ +A+Cmp/SgNom:s R          ;
             :s ODDCOMP    ;
 
 
@@ -875,7 +875,7 @@ LEXICON JEASIEGOELKIJE !!= * __@CODE@__
             :%^DISIMPe ATTR_0         ;
             :%^DISIMPe PRED_0         ;
             :%^DISIMP  ije_ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R              ;
+ +A+Cmp/SgNom:%^DISIMPe R              ;
 
 
 !LEXICON LOHKIJES ! Meeting: attr = lohkijs, lohkijes ; pred = lohkije.
@@ -896,7 +896,7 @@ LEXICON jes_js_JES_JS_ODD  !!= * __@CODE@__ to adj: bualijes, fååmijes
      +Use/NG:%^DISIMP  PRED_S         ;
             :%^DISIMPe PRED_S         ;
             :%^DISIMP  ije_ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R              ;
+ +A+Cmp/SgNom:%^DISIMPe R              ;
                        ODDCOMP        ;
 
 
@@ -908,13 +908,13 @@ LEXICON ijes_ijs_IJE_ODDNOCOMP  !!= * __@CODE@__ DÅAJMIJES
             :e         ATTR_S      ; ! LMM: dåajmijes
      +Use/NG:          ATTR_S      ; ! LMM: dåajmijs, KB: gualijs
                        ije_ODDCASE ;
- +A+SgNomCmp:%^DISIMPe R           ;
+ +A+Cmp/SgNom:%^DISIMPe R           ;
 
 !LEXICON VOEJIJS ! ijs-IJE-ODD
 ! :%^DISIMP   ATTR_S ;
 ! :%^DISIMPe  PRED_0 ;
 !     ije_ODDCASEOBL ;
-!+A+SgNomCmp:%^DISIMPe            R ;
+!+A+Cmp/SgNom:%^DISIMPe            R ;
 !     ODDCOMP ;
 
 
@@ -929,14 +929,14 @@ LEXICON Cs_CE_ODD  !!= * __@CODE@__
             :%^DISIMP  ATTR_S     ;
             :%^DISIMPe PRED_0     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
                        ODDCOMP    ;
 
 LEXICON Cs_CE_ODDNOCOMP  !!= ** __@CODE@__
                        ATTR_S     ;
             :e         PRED_0     ;
                        ODDCASEOBL ; !LA
- +A+SgNomCmp:%^DISIMPe R          ; !LA
+ +A+Cmp/SgNom:%^DISIMPe R          ; !LA
 
 LEXICON Ces_CE_ODD  !!= * __@CODE@__
    Ces_CE_ODDNOCOMP ;
@@ -947,7 +947,7 @@ LEXICON Ces_CE_ODDNOCOMP  !!= ** __@CODE@__
             :%^DISIMPe ATTR_S     ;
             :%^DISIMPe PRED_0     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
 
 
 LEXICON Ces_Ce_CES_CE_ODD    !!= * __@CODE@__ as Ces_CES_CE_ODD, but with ATTR_0
@@ -977,7 +977,7 @@ LEXICON Ces_CES_CE_ODD  !!= * __@CODE@__
             :%^DISIMPe ATTR_S  ; !<=====  gir Attr -s
      +Use/NG:%^DISIMPe PRED_S  ;
             :%^DISIMP  ODDCASE ;
- +A+SgNomCmp:%^DISIMPe R       ;
+ +A+Cmp/SgNom:%^DISIMPe R       ;
                        ODDCOMP ;
     +Err/Orth:%^DISIMP  ODDCOMP ;
 
@@ -987,7 +987,7 @@ LEXICON Ces_CES_CE_ODDNOCOMP  !!= ** __@CODE@__
      +Use/NG:%^DISIMPe PRED_S     ;
             :%^DISIMPe PRED_0     ;
             :%^DISIMP  ODDCASEOBL ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
 
 LEXICON hks_hke_HKS_HKE_ODD   !!= * __@CODE@__
             :%^DISIMP  ATTR_S     ;
@@ -996,7 +996,7 @@ LEXICON hks_hke_HKS_HKE_ODD   !!= * __@CODE@__
      +Use/NG:%^DISIMPe PRED_0     ;
                        ODDCASEOBL ;
 ! :%^DISIMPe     PRED_0 ;
- +A+SgNomCmp:%^DISIMPe R          ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
                        ODDCOMP    ;
 
 
@@ -1142,7 +1142,7 @@ LEXICON GEERUVE !!= * __@CODE@__
        +A+Sg:               BÅERUVE_SG  ;
        +A+Pl:               BÅERUVE_PL  ;
           +A:               BÅERUVE_ESS ;
- +A+SgNomCmp:uve%^DISIMP    R           ;
+ +A+Cmp/SgNom:uve%^DISIMP    R           ;
  +A+SgGenCmp:uve%>%^DISIMPn R           ;
  +A+PlGenCmp:uv%>%^DISIMPi  R           ;
             :uv             ODDCOMP     ;
@@ -1152,7 +1152,7 @@ LEXICON JAEDTUVES !!= * __@CODE@__
        +A+Sg:               ÅERUVE_SG  ;
        +A+Pl:               ÅERUVE_PL  ;
           +A:               ÅERUVE_ESS ;
- +A+SgNomCmp:uve%^DISIMP    R          ;
+ +A+Cmp/SgNom:uve%^DISIMP    R          ;
  +A+SgGenCmp:uve%>%^DISIMPn R          ;
  +A+PlGenCmp:uv%>%^DISIMPi  R          ;
             :iev            ODDCOMP    ;
@@ -1288,7 +1288,7 @@ LEXICON aCASENOM !!= ** __@CODE@__
 LEXICON aCASEOBL !!= ** __@CODE@__
                              +A:          MAANA_PL ;
                              +A:          EVEN_ESS ;
-                    +A+SgNomCmp:a         R        ;
+                    +A+Cmp/SgNom:a         R        ;
                     +A+SgGenCmp:a%>n      R        ;
                     +A+PlGenCmp:a%>j      R        ;
 ! +A+Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
@@ -1320,7 +1320,7 @@ LEXICON ieCASEOBL !!= ** __@CODE@__
              +A+Sg:          N_IE_SG_OBLadj ;
              +A+Pl:          N_IE_PL        ;
                 +A:          N_IE_ESS       ;
-       +A+SgNomCmp:ie        R              ;
+       +A+Cmp/SgNom:ie        R              ;
        +A+SgGenCmp:ie%>n     R              ;
  +A+PlGenCmp+NoUml:ie%>j     R              ;
    +A+PlGenCmp+Uml:%>%^iUMLi R              ;
@@ -1344,7 +1344,7 @@ LEXICON A_OE !!= ** __@CODE@__
        +A+Sg:      A_OE_SG  ;
        +A+Pl:      A_OE_PL  ;
           +A:      A_OE_ESS ;
- +A+SgNomCmp:oe    R        ;
+ +A+Cmp/SgNom:oe    R        ;
  +A+SgGenCmp:oe%>n R        ;
  +A+PlGenCmp:oe%>j R        ;
 
@@ -1434,7 +1434,7 @@ LEXICON EVENCOMPCASE !!= * __@CODE@__
    +A+Comp+Pl+Ela:b%>ijstie                   FINAL1    ;
    +A+Comp+Pl+Com:b%>%^DISIMPigujmie          FINAL1    ;
           +A+Comp:b                           N_ODD_ESS ;
- +A+Comp+SgNomCmp:%>%^COMPDISIMPbe%^DISIMP    R         ;
+ +A+Comp+Cmp/SgNom:%>%^COMPDISIMPbe%^DISIMP    R         ;
  +A+Comp+SgGenCmp:%>%^COMPDISIMPbe%>%^DISIMPn R         ;
  +A+Comp+PlGenCmp:%>%^COMPDISIMPb%>%^DISIMPi  R         ;
 
@@ -1459,10 +1459,10 @@ LEXICON EVENCOMPCASE_oe !!= * __@CODE@__
         +A+Comp+Pl+Ela:b%>ijstie                    FINAL1    ;
         +A+Comp+Pl+Com:b%>%^DISIMPigujmie           FINAL1    ;
                +A+Comp:b                            N_ODD_ESS ;
-      +A+Comp+SgNomCmp:%>%^COMPDISIMPbe%^DISIMP     R         ;
+      +A+Comp+Cmp/SgNom:%>%^COMPDISIMPbe%^DISIMP     R         ;
       +A+Comp+SgGenCmp:%>%^COMPDISIMPbe%>%^DISIMPn  R         ;
       +A+Comp+PlGenCmp:%>%^COMPDISIMPb%>%^DISIMPi   R         ;
-      +A+Comp+SgNomCmp:%>%^COMPDISIMP2be%^DISIMP    R         ;
+      +A+Comp+Cmp/SgNom:%>%^COMPDISIMP2be%^DISIMP    R         ;
       +A+Comp+SgGenCmp:%>%^COMPDISIMP2be%>%^DISIMPn R         ;
       +A+Comp+PlGenCmp:%>%^COMPDISIMP2b%>%^DISIMPi  R         ;
 
@@ -1496,7 +1496,7 @@ LEXICON DIMCOMP !!= * __@CODE@__
    +A+Comp+Der1+Der/Dimin+Pl+Com:%>b%»adtj%>igujmie            FINAL1   ;
       +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
       +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
- +A+Comp+Der1+Der/Dimin+SgNomCmp:%>b%»adtje                    R        ;
+ +A+Comp+Der1+Der/Dimin+Cmp/SgNom:%>b%»adtje                    R        ;
  +A+Comp+Der1+Der/Dimin+SgGenCmp:%>b%»adtje%>n                 R        ;
  +A+Comp+Der1+Der/Dimin+PlGenCmp:%>b%»adtj%>i                  R        ;
    +A+Comp+Der1+Der/Dimin+Sg+Nom:%>b%»odtje                    FINAL1   ;
@@ -1524,7 +1524,7 @@ LEXICON DIMCOMP !!= * __@CODE@__
    +A+Comp+Der1+Der/Dimin+Pl+Com:%>b%»odtj%>igujmie            FINAL1   ;
       +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
       +A+Comp+Der1+Der/Dimin+Ess:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
- +A+Comp+Der1+Der/Dimin+SgNomCmp:%>b%»odtje                    R        ;
+ +A+Comp+Der1+Der/Dimin+Cmp/SgNom:%>b%»odtje                    R        ;
  +A+Comp+Der1+Der/Dimin+SgGenCmp:%>b%»odtje%>n                 R        ;
  +A+Comp+Der1+Der/Dimin+PlGenCmp:%>b%»odtj%>i                  R        ;
 
@@ -1541,7 +1541,7 @@ LEXICON ÅBPOE_N_OE !!= * __@CODE@__
        +Sg:      ÅBPOE_N_OE_SG  ;
        +Pl:      ÅBPOE_N_OE_PL  ;
                  ÅBPOE_N_OE_ESS ;
- +SgNomCmp:oe    R              ;
+ +Cmp/SgNom:oe    R              ;
  +SgGenCmp:oe%>n R              ;
  +PlGenCmp:oe%>j R              ;
 
@@ -1607,7 +1607,7 @@ LEXICON MES !!= * __@CODE@__
    +A+Superl+Pl+Ela:%>mass%>ijste                   FINAL1   ;
    +A+Superl+Pl+Com:%>mass%>igujmie                 FINAL1   ;
           +A+Superl:mass                            EVEN_ESS ;
- +A+Superl+SgNomCmp:%>%^COMPDISIMPmes%^DISIMP       R        ;
+ +A+Superl+Cmp/SgNom:%>%^COMPDISIMPmes%^DISIMP       R        ;
  +A+Superl+SgGenCmp:masse%>n                        R        ;
  +A+Superl+PlGenCmp:mass%>i                         R        ;
           +A+Superl:%>%^COMPDISIMPmes%^DISIMP       LAAKAN   ;
@@ -1631,8 +1631,8 @@ LEXICON MES_oe !!= * __@CODE@__
    +A+Superl+Pl+Ela:%>mass%>ijste                    FINAL1   ;
    +A+Superl+Pl+Com:%>mass%>igujmie                  FINAL1   ;
           +A+Superl:mass                             EVEN_ESS ;
- +A+Superl+SgNomCmp:%>%^COMPDISIMPmes%^DISIMP        R        ;
- +A+Superl+SgNomCmp:%>%^COMPDISIMP2mes%^DISIMP       R        ;
+ +A+Superl+Cmp/SgNom:%>%^COMPDISIMPmes%^DISIMP        R        ;
+ +A+Superl+Cmp/SgNom:%>%^COMPDISIMP2mes%^DISIMP       R        ;
  +A+Superl+SgGenCmp:masse%>n                         R        ;
  +A+Superl+PlGenCmp:mass%>i                          R        ;
 
@@ -1646,7 +1646,7 @@ LEXICON OMMES !!= * __@CODE@__
    +A+Superl+Sg+Com:%>inie       FINAL1    ;
        +A+Superl+Pl:             N_ODD_PL  ;
           +A+Superl:             N_ODD_ESS ;
- +A+Superl+SgNomCmp:             R         ;
+ +A+Superl+Cmp/SgNom:             R         ;
  +A+Superl+SgGenCmp:e%>n         R         ;
  +A+Superl+PlGenCmp:%>%^DISIMPi  R         ;
 
