@@ -40,7 +40,7 @@ LEXICON Rreal
                    +Use/Circ+Cmp%-#:%-#               ProperNoun ; ! Proper nouns as the 2nd part of compounds for non-hyph.
                                                                    ! words. viessu-London goes through here.
 
-         +RCmpnd:%- ENDLEX ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
+         +Cmp/SplitR:%- ENDLEX ;     ! This to take care of Oahpo- ja dutkandept - want this in speller
 +Use/Circ+Cmp%-#:%-# HyphNouns ; ! Go to words requiring hyphens, like -tv- and -cd-
 
 
@@ -60,7 +60,7 @@ LEXICON RHyphReal
                                    ! London-Hull is covered here, whereas Hull-viessu
                                    ! is covered by RHyph + Noun.
 
-          +RCmpnd:%-  ENDLEX     ; ! This to take care of Oahpo- ja dutkandept - want this in speller
+          +Cmp/SplitR:%-  ENDLEX     ; ! This to take care of Oahpo- ja dutkandept - want this in speller
  +Use/Circ+Cmp%-#:%-# HyphNouns  ; ! Go to words requiring hyphens, like -tv- and -cd-
 
 ! Proper noun compounds without hyphens are NOT presently covered - if they were
