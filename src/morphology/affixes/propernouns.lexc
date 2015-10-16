@@ -193,6 +193,9 @@ LEXICON VNAME-obj
 LEXICON ACCRA-plc
 +N+Prop+Sem/Plc: ACCRA_FLAG ;
 
+LEXICON ACCRA-A-plc
++N+Prop+Sem/Plc: ACCRA-A_FLAG ;
+
 LEXICON ACCRA-org
 +N+Prop+Sem/Org: ACCRA_FLAG ;
 
@@ -241,6 +244,21 @@ LEXICON ACCRA-Y-ani
 
 LEXICON ACCRATJE   @U.Cap.Obl@ GÅATETJE ;
 LEXICON ACCRA_FLAG @U.Cap.Obl@ ACCRA    ;
+LEXICON ACCRA-A_FLAG @U.Cap.Obl@ A-A_DECL    ;
+
+LEXICON A-A_DECL
+ +Sg+Nom:a%>   FINAL1   ;
+ +Sg+Acc:a%>m   FINAL1   ;
+ +Sg+Gen:a%>n   FINAL1   ;
+ +Sg+Ill:e%>se  FINAL1   ;
+ +Sg+Ine:e%>sne FINAL1   ;
+ +Sg+Ela:e%>ste FINAL1   ;
+ +Sg+Com:%>ine  FINAL1   ;
+     +Pl:       MAANA_PL ;
+                EVEN_ESS ;
+   +Attr:a%>n   FINAL1   ;
+        :a%>n   RHyph    ;
+
 LEXICON ACCRA  ! 
          +Sg+Nom:              FINAL1 ; ! Eira   = maana, ASVO, Anu, Ane, Bao, Aakenus, Aargau, Pulco, NIEJTE,GALLOE
          +Sg+Acc:%>m           FINAL1 ; ! Eiram = maanam, Anum
@@ -777,7 +795,7 @@ LEXICON POLITI
          +Sg+Gen:ijjen       FINAL1 ;
          
          +Sg+Ill:ijjese      FINAL1 ; ! Ingen norm på hvordan disse skal bøyes
-         +Sg+Ill+Uml:an    FINAL1 ; ! Ingen norm på hvordan disse skal bøyes - 
+         +Sg+Ill+Uml:%>%^1UMLan    FINAL1 ; ! Ingen norm på hvordan disse skal bøyes - 
          
          +Sg+Ine:ijjesne     FINAL1 ;
          +Sg+Ela:ijjeste     FINAL1 ;
