@@ -759,38 +759,38 @@ LEXICON PIPPI-plc
 
  
 !!€gt-norm: Haukilahti # Even-syllable   POLITI 
-!!€ Haukilahti:            Haukilahti+N+Prop+Sem/Plc+Sg+Nom
-!!€ Haukilahtijem:         Haukilahti+N+Prop+Sem/Plc+Sg+Acc   
-!!€ Haukilahtan:           Haukilahti+N+Prop+Sem/Plc+Sg+Ill
-!!€ Haukilahtijese:        Haukilahti+N+Prop+Sem/Plc+Sg+Ill
-!!€ Haukilahtijesne:       Haukilahti+N+Prop+Sem/Plc+Sg+Ine 
-!!€ Haukilahtijeste:       Haukilahti+N+Prop+Sem/Plc+Sg+Ela 
-!!€ Haukilahtijine:        Haukilahti+N+Prop+Sem/Plc+Sg+Com 
-!!€ Haukilahtijine:        Haukilahti+N+Prop+Sem/Plc+Ess  
+!!€ Haukilahti:             Haukilahti+N+Prop+Sem/Plc+Sg+Nom
+!!€ Haukilahtijjem:         Haukilahti+N+Prop+Sem/Plc+Sg+Acc   
+!!€ Haukilahtan:            Haukilahti+N+Prop+Sem/Plc+Sg+Ill
+!!€ Haukilahtijjese:        Haukilahti+N+Prop+Sem/Plc+Sg+Ill
+!!€ Haukilahtijjesne:       Haukilahti+N+Prop+Sem/Plc+Sg+Ine 
+!!€ Haukilahtijjeste:       Haukilahti+N+Prop+Sem/Plc+Sg+Ela 
+!!€ Haukilahtijjine:        Haukilahti+N+Prop+Sem/Plc+Sg+Com 
+!!€ Haukilahtijjine:        Haukilahti+N+Prop+Sem/Plc+Ess  
 
 
 LEXICON POLITI_FLAG @U.Cap.Obl@ POLITI ;
 LEXICON POLITI    
-         +Sg+Nom:i          FINAL1 ; 
-                           RHyph  ;                             
-         +Sg+Acc:ijem       FINAL1 ;
-         +Sg+Gen:ijen       FINAL1 ;
+         +Sg+Nom:i           FINAL1 ; 
+                :i           RHyph  ;                             
+         +Sg+Acc:ijjem       FINAL1 ;
+         +Sg+Gen:ijjen       FINAL1 ;
          
-         +Sg+Ill:ijese      FINAL1 ; ! Ingen norm på hvordan disse skal bøyes
+         +Sg+Ill:ijjese      FINAL1 ; ! Ingen norm på hvordan disse skal bøyes
          +Sg+Ill+Uml:an    FINAL1 ; ! Ingen norm på hvordan disse skal bøyes - 
          
-         +Sg+Ine:ijesne     FINAL1 ;
-         +Sg+Ela:ijeste     FINAL1 ;
-         +Sg+Com:ijine      FINAL1 ; 
-         +Pl+Nom:ijh        FINAL1 ;
-         +Pl+Acc:ijide      FINAL1 ;
-         +Pl+Gen:iji        FINAL1 ;
-         +Pl+Ill:ijide      FINAL1 ;
-         +Pl+Ine:ijine      FINAL1 ;
-         +Pl+Ela:ijijste    FINAL1 ;
-         +Pl+Com:ijigujmie  FINAL1 ;
- +Err/Orth+Pl+Com:ijigyjmie  FINAL1 ;
-            +Ess:ijine      FINAL1 ;
+         +Sg+Ine:ijjesne     FINAL1 ;
+         +Sg+Ela:ijjeste     FINAL1 ;
+         +Sg+Com:ijjine      FINAL1 ; 
+         +Pl+Nom:ijjh        FINAL1 ;
+         +Pl+Acc:ijjide      FINAL1 ;
+         +Pl+Gen:ijji        FINAL1 ;
+         +Pl+Ill:ijjide      FINAL1 ;
+         +Pl+Ine:ijjine      FINAL1 ;
+         +Pl+Ela:ijjijste    FINAL1 ;
+         +Pl+Com:ijjigujmie  FINAL1 ;
+ +Err/Orth+Pl+Com:ijjigyjmie  FINAL1 ;
+            +Ess:ijjine      FINAL1 ;
  
 
  
@@ -1371,7 +1371,8 @@ LEXICON PN_I_FINSK
 !+N+Prop+Sem/Plc+Sg+Ill:%>an             FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie? 
 !MLK:- Pippi->Pæppan sounds very strange. -> I think this should rather go as Lorentz -i- borrowing patterns - Fobi - fobijje --> Pippi - Pippijje. But Niemie->Neaman sounds good. Splitt this lexicon.
 
-                    +Sg+Ill+Uml:an FINAL1 ;
+                    +Sg+Ill+Uml:%>%^1UMLan     FINAL1 ;
+                    
                     +Sg+Ine:e%>sne FINAL1 ;
                     +Sg+Ela:e%>ste FINAL1 ;
                     +Sg+Com:%>ine  FINAL1 ;
