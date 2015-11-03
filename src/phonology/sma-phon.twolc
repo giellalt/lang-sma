@@ -54,6 +54,7 @@ Alphabet
   %^DISIMP:0
   %^COMPDISIMP:0
   %^COMPDISIMP2:0
+  %^COMPDISIMP3:0
   %^PLCDISIMP:0
   %^NOMAGieDISIMP:0
   %^1UML:0 %^2UML:0
@@ -96,6 +97,7 @@ Definitions
     %^DISIMP:
     %^COMPDISIMP:
     %^COMPDISIMP2:
+    %^COMPDISIMP3:
     %^PLCDISIMP:
     %^NOMAGieDISIMP:
     %^1UML:
@@ -135,7 +137,7 @@ Rules
    i:0 <=>       _ e  Cns+ (e) (%>:) %^DISIMP: ;
                  _ e           (%>:) %^DISIMP:      Cns+   ;
                  _ e           (%>:) %^COMPDISIMP: [b:|m:] ;
-                 _ e   l:     m:  (%>:) %^COMPDISIMP2: e: ;!%> =morfemgrense
+                 _ e   (l:)     m:  (%>:) %^COMPDISIMP3: e: ;!%> =morfemgrense
 
            (%»:) _ e: Cns+      %»:  %^adteUML: ;
 
@@ -164,8 +166,9 @@ Rules
 "Diphthong simplification oe:o"
 !! __@RULENAME@__  
    e:0 <=> o _  Cns+ (e) (%>:) %^DISIMP: ;
-           o _   (l:)       (m:)  (%>:) %^COMPDISIMP2: [b:|m:|e:] ;!%> =morfemgrense
-          
+           o _   (l:)       (m:)  (%>:) %^COMPDISIMP2: [b:|m:] ;!%> =morfemgrense
+           o _   (l:)       m:  (%>:) %^COMPDISIMP3: e: ;!%> =morfemgrense
+
 
 
 !€ daaroest%>%^DISIMPem
@@ -201,7 +204,7 @@ Rules
 !   a:e <=> Vow Cns+  _ [ Cns - j | %»: t j | h [ t | k ] ] (Cns) (e) (%>:) %^DISIMP: ; ! 3syll
 !   a:e <=>           _  Cns+ (e) (%>:) %^DISIMP: ; ! Denne gjev overgenerering, men ser rett ut, lingv. sett.
                       _                                   (%>:)     %^COMPDISIMP: [b:|m:|l:] ;
-                      _    l:     m:  (%>:) %^COMPDISIMP2: e: ;!%> =morfemgrense
+                      _    (l:)     m:  (%>:) %^COMPDISIMP3: e: ;!%> =morfemgrense
 
               [e:|u:] _   Cns+      %»:                             %^didhUML: e [d|l] ;
                       _ %^PLCDISIMP:   ;
