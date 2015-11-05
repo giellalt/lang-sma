@@ -1,0 +1,42 @@
+Config:
+  hfst:
+    Gen:  ../../../tools/spellcheckers/fstbased/generator-fstspeller-gt-norm.hfst
+    Morph: ../../../tools/spellcheckers/fstbased/analyser-fstspeller-gt-norm.hfst
+  xerox:
+    Gen:  ../../../tools/spellcheckers/fstbased/generator-fstspeller-gt-norm.xfst
+    Morph: ../../../tools/spellcheckers/fstbased/analyser-fstspeller-gt-norm.xfst
+    App: lookup
+
+Tests:
+  Default tests:
+   boallo+N+Cmp#rájgge+N+Sg+Nom: [boallorájgge, ~boalorájgge, ~boalojrájgge]
+
+#  CmpN/Sg tests:
+  
+  CmpN/SgN tests:
+    giella+N+Cmp#miella+N+Sg+Nom: [giellamiella, ~gielamiella, ~gielajmiella]
+    sámpal+N+Cmp#skirtto+N+Sg+Nom: [sámpalskirtto, ~sámmpalaskirtto, ~sámmpalijskirtto]   
+      
+  CmpN/SgG tests:
+    fránsska+N+Cmp#giella+N+Sg+Nom: [fránskagiella, ~fránskajgiella]
+
+  CmpN/PlG tests:
+    allelahá+N+Cmp#sijdda+N+Sg+Nom: [allelahájsijdda, ~allelijsijdda]
+    oarbbenattja+N+Cmp#sijdda+N+Sg+Nom: oarbbenattjajsijdda
+     
+#  CmpN/SgLeft tests:
+  
+  CmpN/SgNomLeft tests:
+    beraj+N+Cmp#namma+N+Sg+Nom: [berajnamma, berrahanamma, ~berrahijnamma] #namma: CmpN/SgNomLeft and CmpN/SgGenLeft
+    áhttje+N+Cmp#rávkke+N+Sg+Nom: [áhttjerávkke, ~áhtjerávkke, ~áhtjijrávkke] #rávkke: +CmpN/SgNomLeft    
+    
+#  CmpN/SgGenLeft tests:
+
+  CmpN/PlGenLeft tests:
+    goahte+N+Cmp#gasska+N+Sg+Nom: [goahtegasska, ~goadegasska, gådijgasska] #gasska: CmpN/SgNomLeft and CmpN/PlGenLeft
+    spánsska+N+Cmp#gasska+N+Sg+Nom: [spánsskagasska, ~spánskagasska, spánskajgasska]
+
+#  CmpN/DefSgGen tests:
+#
+#  CmpN/DefPlGen tests:
+   
