@@ -8,34 +8,55 @@ Config:
     App: lookup
 
 Tests:
-  Default tests:
-   båaloe+N+Cmp#rájgge+N+Sg+Nom: [båaloeraejkie, ~båaloenraejkie, ~båaloejraejkie]
+  Default tests: # Default in SMA is SgNom and SgGen
+    båaloe+N+Cmp#raejkie+N+Sg+Nom: [båaloeraejkie, båaloenraejkie, ~båaloejraejkie]
+    leevege+N+Cmp#gåetie+N+Sg+Nom: [leevehgåetie, ~leevegegåetie, leevegengåetie, ~leevegigåetie]   
 
-#  CmpN/Sg tests:
-  
+# CmpN/SgNom tests:
   CmpN/SgN tests:
-    gïele+N+Cmp#miella+N+Sg+Nom: [gïelemïele, ~gïelenmïele, ~gïelimïele]
-    leeveh+N+Cmp#skirtto+N+Sg+Nom: [leevehgåetie, ~leevegegåetie]   
+    vuelie+N+Cmp#gåetie+N+Sg+Nom: [vueliegåetie, ~vueliengåetie, ~vueliejgåetie, ~vööligåetie]   
       
+# CmpN/SgGen tests: # No cases in the lexicon with only CmpN/SgGen
   CmpN/SgG tests:
-    fraanske+N+Cmp#giella+N+Sg+Nom: [fraanskegïele, ~fraanskgïele]
+    fraanske+A+Attr+Cmp#gïele+N+Sg+Nom: [fraanskegïele, ~fraanskgïele]
 
-  CmpN/PlG tests:
-    gåetie+N+Cmp#sijdda+N+Sg+Nom: [gåetieluhpie, ~gåetienluhpie, ~gåetiejluhpie]
-    gåetien+N+Cmp#sijdda+N+Sg+Nom: [~gåetietsegkie, gåetientsegkie, ~gåetiejtsegkie] 
-    gööth+N+Cmp#sijdda+N+Sg+Nom: [gööthjerkie, gåetiejerkie, ~gåetienjerkie]
-     
-#  CmpN/SgLeft tests:
-  
+# CmpN/PlGen tests: # No cases in the lexicon with only CmpN/PlGen
+#  CmpN/PlG tests:
+#    gööth+N+Cmp#jerkie+N+Sg+Nom: [gööthjerkie, gåetiejerkie, ~gåetienjerkie]
+
+# CmpN/SgNom + CmpN/SgGen tests:
+# This is the default - no such cases found in the lexicon.
+
+# CmpN/SgGen + CmpN/PlGen tests:
+  CmpN/SgGen + CmpN/PlGen tests:
+    gelliengïele+N+Cmp#jerkie+N+Sg+Nom: [~gelliengïelejerkie, gelliengïelenjerkie, gelliengïelijerkie]
+
+# CmpN/SgNom + CmpN/SgGen + CmpN/PlGen tests:
+  CmpN/SgN + SgG + PlG tests:
+    gïele+N+Cmp#mïele+N+Sg+Nom: [gïelemïele, gïelenmïele, gïelimïele]           # gïele  - all three forms, mïele - default
+    gåetie+N+Cmp#luhpie+N+Sg+Nom: [gåetieluhpie, gåetienluhpie, gåetiejluhpie]  # gåetie - all three forms, luhpie - default
+    gåetie+N+Cmp#tsegkie+N+Sg+Nom: [gåetietsegkie, gåetientsegkie, gåetiejtsegkie] # tsegkie - default
+    slïekte+N+Cmp#boelve+N+Sg+Nom: [slïekteboelve, slïektenboelve, slïektiboelve] #slïekte - all three, boelve: all three, no Left
+
+#  CmpN/SgNomLeft tests:
   CmpN/SgNomLeft tests:
-    slïekte+N+Cmp#namma+N+Sg+Nom: [slïekteboelve, ~slïektenboelve, ~slïektiboelve] #namma: CmpN/SgNomLeft and CmpN/SgGenLeft
-    åemie+N+Cmp#rávkke+N+Sg+Nom: [åemieaehtjie, ~åemienaehtjie, ~åemiejaehtjie] #rávkke: +CmpN/SgNomLeft    
+# åemie - FirstComponent ONLY, aehtjie - no Left tag
+#    åemie+N+Cmp#aehtjie+N+Sg+Nom: [åemieaehtjie, ~åemienaehtjie, ~åemiejaehtjie] #aehtjie: +CmpN/SgNomLeft
+    gåetie+N+Cmp#laavetje-guaktah+N+Sg+Nom: [gåetielaavetje-guaktah, ~gåetienlaavetje-guaktah, ~gåetiejlaavetje-guaktah]
     
-#  CmpN/SgGenLeft tests:
+#  CmpN/SgGenLeft tests: # there are no entries in the lexicon with only SgGenLeft
 
-  CmpN/PlGenLeft tests:
-    gået+N+Cmp#gasska+N+Sg+Nom: [gåetaevjie, ~gåetienaevjie,  ~gööthaevjie] #gasska: CmpN/SgNomLeft and CmpN/PlGenLeft
-    spaanske+N+Cmp#gasska+N+Sg+Nom: [spaanskegïele, ~spaanskengïele, ~spaanskigïele]
+#  CmpN/PlGenLeft tests:
+#    spaanske+N+Cmp#gasska+N+Sg+Nom: [spaanskegïele, ~spaanskengïele, ~spaanskigïele]
+
+#  CmpN/SgNomLeft and CmpN/PlGenLeft tests:
+  CmpN/SgNomLeft and CmpN/PlGenLeft tests:
+    gïele+N+Cmp#gaske+N+Sg+Nom: [gïelegaske, ~gïelengaske, gïeligaske] # gïele - all three, gaske: CmpN/SgNomLeft and CmpN/PlGenLeft
+
+#  All three Left tests:
+  CmpN/SgNomLeft SgGenLeft PlGenLeft tests:
+    båaloe+N+Cmp#aalkoe+N+Sg+Nom: [båaloeaalkoe, båaloeaalkove, båaloenaalkoe, båaloenaalkove, båaloejaalkoe, båaloejaalkove] # båaloe - default, aalkoe: all three Left
+    vuelie+N+Cmp#aalkoe+N+Sg+Nom: [vuelieaalkoe, vuelieaalkove, vuelienaalkoe, vuelienaalkove, vueliejaalkoe, vueliejaalkove, vööliaalkoe, vööliaalkove] # vuelie - SgNom, aalkoe: all three Left
 
 #  CmpN/DefSgGen tests:
 #
