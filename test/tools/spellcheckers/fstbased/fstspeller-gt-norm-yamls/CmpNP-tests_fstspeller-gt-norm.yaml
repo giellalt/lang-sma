@@ -10,6 +10,10 @@ Config:
 # Testing CmpNp/xxx tags. Currently only +CmpNP/Pref, +CmpNP/Last and +CmpNP/None are in use in smj
 
 Tests:
+  CmpNP/First tests:
+    Stalin-monumeente+N+Cmp#gïele+N+Sg+Nom: [Stalin-monumeentegïele, Stalin-monumentgïele, Stalin-monumeentengïele]
+    gïele+N+Cmp-#Stalin-monumeente+N+Sg+Nom: []
+
   CmpNP/Pref tests:
     geerve+N+Sg+Nom: ~geerve
     geerve+N+Cmp#bïegke+N+Sg+Nom: geervebïegke
@@ -21,20 +25,26 @@ Tests:
   
     gïeves+N+Sg+Nom: ~gïeves
     gïeves+N+Cmp#gïele+N+Sg+Nom: gïevesgïele
-    laake+N+Cmp#gïele+N+Sg+Nom: laakegïele
-
-  CmpNP/First tests:
-    Stalin-monumeente+N+Cmp#gïele+N+Sg+Nom: [Stalin-monumeentegïele, Stalin-monumentgïele, Stalin-monumeentengïele]
-    gïele+N+Cmp-#Stalin-monumeente+N+Sg+Nom: []
+    laake+N+Cmp#gïele+N+Sg+Nom: [laakegïele, laakengïele]
 
   CmpNP/Last tests: 
 #    njieljie+Num+Sg+Gen+Cmp#juolgge+N+Der/k+A+Sg+Nom: njieljienjoelkege # joelkege only as lexicalised compound
-    gïele+N+Cmp#guaktah+N+Pl+Nom: gïeleguaktah
-    guaktah+N+Cmp#gïele+N+Pl+Nom: [guaktagïeleh, guaktajgïeleh]
+    gïele+N+Cmp#guaktah+N+Pl+Nom: [ gïeleguaktah, ~gïelenguaktah, ~gïeliguaktah] # guaktah: Last, SgNomLeft
+    guaktah+N+Cmp#gïele+N+Pl+Nom: [~guaktagïelh,  ~guaktajgïelh]
     guaktah+N+Pl+Nom: guaktah
     
+  CmpNP/Suff tests: 
+    johkebeala+N+Sg+Nom: ~johkebeala
+    johkebeala+N+Cmp#gïele+N+Sg+Nom: [~guaktegegïele, ~guaktegigïele]
+    gïele+N+Cmp#johkebeala+N+Sg+Nom: [gïelejohkebeala, ~gïelenjohkebeala, gïelijohkebeala]
+
   CmpNP/None tests:
-    mahte+N+Sg+Nom: mahte
-    mahte+N+Cmp#goahte+N+Sg+Nom: [~mahtegoahte, ~madijgoahte, ~madegoahte]
-    goahte+N+Cmp#mahte+N+Sg+Gen: [~goademade, ~goahtemade, ~gådijmade]
-   
+    guaktegh+N+Pl+Nom: guaktegh
+    guaktegh+N+Cmp#gïele+N+Sg+Nom: [~guaktegegïele, ~guaktegigïele]
+    gïele+N+Cmp#guaktegh+N+Pl+Nom: [~gïeleguaktegh, ~gïelenguaktegh, ~gïeliguaktegh]
+
+  CmpNP/Only tests:
+    åelie+N+Sg+Nom: ~åelie
+    åelie+N+Cmp#gïele+N+Sg+Nom: [åeliegïele, åeliengïele]
+    gïele+N+Cmp#åelie+N+Sg+Nom: [gïeleåelie, gïelenåelie, gïeliåelie]
+    gïele+N+Cmp#åelie+N+Cmp#gïele+N+Sg+Nom: [gïeleåeliegïele, gïelenåeliegïele, gïeliåeliegïele, gïeleåeliengïele, gïelenåeliengïele, gïeliåeliengïele]
