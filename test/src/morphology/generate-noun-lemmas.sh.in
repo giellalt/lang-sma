@@ -114,7 +114,7 @@ for f in $fsttype; do
 
 ###### Test compounds: #######
 		# Test nouns that only can generate as compounds:
-		sed 's/$/+N+Cmp#gåetie+N+Sg+Nom/' $comp_lemmas \
+		sed 's/$/+N+Cmp\/SgNom+Cmp#gåetie+N+Sg+Nom/' $comp_lemmas \
 			| $lookup_tool $generator_file.$suffix \
 			| cut -f2 | sed 's/gåetie$//' \
 			| grep -v '^$' > $generated_comp_lemmas.$f.txt
