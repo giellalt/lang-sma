@@ -746,13 +746,16 @@ LEXICON N_IE_SG
 
 LEXICON N_IE_SG_NOM
  +Nom:ie FINAL1 ;
+ 
+ 
+ ! Se nærmere på disse Px-ene
 
 LEXICON N_IE_SG_OBL
         +Nom+Uml+PxSg1:%>%^1UMLeme    FINAL1 ;
         +Nom+Uml+PxSg2:%>%^1UMLedh    FINAL1 ;
         +Nom+Uml+PxSg3:e%>se          FINAL1 ;
         +Nom+Uml+PxSg3:e%>be          FINAL1 ;
-        +Nom+PxSg3:e%>be              FINAL1 ;
+        +Nom+PxSg3:e%>be              FINAL1 ; ! korpus
                   +Acc:ie%>m          FINAL1 ;
         +Acc+Uml+PxSg1:%>%^1UMLeme    FINAL1 ;
  +Acc+Uml+PxSg1+Use/NG:%>%^1UMLemem   FINAL1 ;
@@ -921,19 +924,35 @@ LEXICON N_OE_SG
         +Nom+PxSg1:%>eme           FINAL1 ;
         +Nom+PxSg2:%>edh           FINAL1 ;
         +Nom+PxSg3:e%>se           FINAL1 ;
+        +Nom+PxSg3:o%>be           FINAL1 ;! går som laatjove (s.45) og aajjove (s.48) Magga
               +Acc:oe%>m           FINAL1 ;
         +Acc+PxSg1:%>eme           FINAL1 ;
  +Acc+PxSg1+Use/NG:%>emem          FINAL1 ;
         +Acc+PxSg2:%>emdh          FINAL1 ;
         +Acc+PxSg3:e%>mse          FINAL1 ;
+        +Acc+PxSg3:o%>bem          FINAL1 ; ! går som laatjove (s.45) og aajjove (s.48) Magga
               +Gen:oe%>n           FINAL1 ;
         +Gen+PxSg1:%>ene           FINAL1 ;
+        +Gen+PxSg3:o%>ben          FINAL1 ; ! går som laatjove (s.45) og aajjove (s.48) Magga
+     !  +Ill+PxSg3:oe%>basse       FINAL1 ;! skal den gå som aajj_oe_vasse eller                 
+     !  +Ill+PxSg3:o%>basse        FINAL1 ;! eller skal den gå som laatj_o_vasse? - hvor den korte vokalen i andre stavelse er -o- (s.45.Magga)
               +Ine:o%>sne          FINAL1 ;
               +Ela:o%>ste          FINAL1 ;
+     !   +Ine+PxSg3:oe%>bisnie     FINAL1 ;! skal den gå som aajj_oe_visnie eller                 
+     !   +Ine+PxSg3:o%>bisnie      FINAL1 ;! eller skal den gå som laatj_o_visnie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
         +Ela+PxSg1:oe%>stanne      FINAL1 ;
+     !   +Ela+PxSg3:oe%>bistie     FINAL1 ;! skal den gå som aajj_oe_vistie eller                  
+     !   +Ela+PxSg3:o%>bistie      FINAL1 ;! eller skal den gå som laatj_o_vistie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
  +Ela+PxSg1+Use/NG:oe%>stadth      FINAL1 ;
               +Com:o%>jne          FINAL1 ;
         +Com+PxSg2:oe%>%^1UMLnadth FINAL1 ;
+    !   +Com+PxSg3:oe%>binie       FINAL1 ;! skal den gå som aajj_oe_vinie eller                    
+    !   +Com+PxSg3:o%>binie        FINAL1 ;! eller skal den gå som laatj_o_vinie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
+
+    !   +Ess+PxSg3:oe%>binie       FINAL1 ;! skal den gå som aajj_oe_vinie eller 
+    !   +Ess+PxSg3:o%>binie        FINAL1 ;! eller skal den gå som laatj_o_vinie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
+
+
 
 LEXICON N_OE_PL
          +Nom:oe%>h       FINAL1 ;
@@ -1008,22 +1027,31 @@ LEXICON MAANASGOBL
         +Nom+PxSg1:%>eme     FINAL1 ;
         +Nom+PxSg2:%>edh     FINAL1 ;
         +Nom+PxSg3:e%>se     FINAL1 ;
+        +Nom+PxSg3:e%>be     FINAL1 ;   ! Som daktere
               +Acc:a%>m      FINAL1 ;
         +Acc+PxSg1:%>eme     FINAL1 ;
  +Acc+PxSg1+Use/NG:%>emem    FINAL1 ;
         +Acc+PxSg2:%>emdh    FINAL1 ;
         +Acc+PxSg3:e%>mse    FINAL1 ;
+        +Acc+PxSg3:e%>bem    FINAL1 ; ! som daktere
               +Gen:a%>n      FINAL1 ;
         +Gen+PxSg1:%>ene     FINAL1 ;
+        +Gen+PxSg3:e%>ben    FINAL1 ;
               +Ill:e%>se     FINAL1 ;
         +Ill+PxSg1:%>asanne  FINAL1 ;
         +Ill+PxSg2:%>asadth  FINAL1 ;
+        +Ill+PxSg3:%>abasse  FINAL1 ;! daktarasse
               +Ine:e%>sne    FINAL1 ;
               +Ela:e%>ste    FINAL1 ;
         +Ela+PxSg1:%>astanne FINAL1 ;
+        +Ine+PxSg3:%>abisnie FINAL1 ;! daktarisnie
+        +Ela+PxSg3:%>abistie FINAL1 ;! daktaristie
  +Ela+PxSg1+Use/NG:%>astadth FINAL1 ;
               +Com:%>ine     FINAL1 ;
         +Com+PxSg2:%>anadth  FINAL1 ;
+        +Com+PxSg3:%>abinie  FINAL1 ;! daktarinie
+        +Ess+PxSg3:%>abinie  FINAL1 ;! daktarinie
+        
 
 LEXICON MAANA_PL
          +Nom:a%>h       FINAL1 ;
@@ -1619,25 +1647,33 @@ LEXICON NIEJTESGOBL
         +Nom+PxSg1:%>eme     FINAL1 ;
         +Nom+PxSg2:%>edh     FINAL1 ;
         +Nom+PxSg3:e%>se     FINAL1 ;
-        +Nom+PxSg3:e%>be     FINAL1 ;       
+        +Nom+PxSg3:e%>be     FINAL1 ;  ! som gaamege     
               +Acc:e%>m      FINAL1 ;
         +Acc+PxSg1:%>eme     FINAL1 ;
  +Acc+PxSg1+Use/NG:%>emem    FINAL1 ;
         +Acc+PxSg2:%>emdh    FINAL1 ;
         +Acc+PxSg3:e%>mse    FINAL1 ;
+        +Acc+PxSg3:e%>bem    FINAL1 ;! gaamegem
               +Gen:e%>n      FINAL1 ;
         +Gen+PxSg1:%>ene     FINAL1 ;
+        +Gen+PxSg2:%>edh     FINAL1 ;
+        +Gen+PxSg3:e%>ben    FINAL1 ; ! gaamegen
               +Ill:e%>se     FINAL1 ;
         +Ill+PxSg1:%>esanne  FINAL1 ;
         +Ill+PxSg2:%>esadth  FINAL1 ;
+        +Ill+PxSg3:%>ebasse  FINAL1 ;! gaamegasse
               +Ine:e%>sne    FINAL1 ;
               +Ela:e%>ste    FINAL1 ;     
      +Ine+Err/Orth:isnie     FINAL1 ;
-     +Ela+Err/Orth:istie     FINAL1 ;    
+     +Ill+PxSg3:%>ebisnie    FINAL1 ;! gaamegisnie
+     +Ela+Err/Orth:istie     FINAL1 ;  
+     +Ela+PxSg3:%>ebistie    FINAL1 ; ! gaamegistie 
         +Ela+PxSg1:%>estanne FINAL1 ;
  +Ela+PxSg1+Use/NG:%>estadth FINAL1 ;
               +Com:%>ine     FINAL1 ;
         +Com+PxSg2:%>enadth  FINAL1 ;
+        +Com+PxSg3:%>ebinie  FINAL1 ; ! gaameginie
+        +Ess+PxSg3:%>ebinie  FINAL1 ; ! gaameginie
 
 
 LEXICON NIEJTE_PL
