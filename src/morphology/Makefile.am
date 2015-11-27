@@ -15,6 +15,9 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# Add language-specific flags for hfst-lexc compilation here:
+HFST_LEXC_LOCAL_FLAGS=
+
 # Temporary solution to let sma-oahpa have stable adjectives and nouns while
 # Maja is working her way through them.
 
