@@ -35,7 +35,7 @@ analyser-speller-gt-norm.hfst: analyser-speller-gt-norm.tmp.hfst  \
 		$(top_builddir)/src/filters/remove-homonymy-tags.hfst     \
 		$(top_builddir)/src/filters/remove-test-tags.hfst         \
 		$(top_builddir)/src/filters/remove-hyphenation-marks.hfst \
-    	$(top_builddir)/src/filters/remove-infl_deriv-borders.hfst
+		$(top_builddir)/src/filters/remove-infl_deriv-borders.hfst
 	$(AM_V_HXFST)$(PRINTF) "read regex                                        \
 			@\"$(top_builddir)/src/filters/remove-rel_focus-strings.hfst\"    \
 		.o. @\"$(top_builddir)/src/filters/remove-homonymy-tags.hfst\"        \
@@ -53,7 +53,7 @@ analyser-speller-gt-norm.xfst: analyser-speller-gt-norm.tmp.xfst  \
 		$(top_builddir)/src/filters/remove-homonymy-tags.xfst     \
 		$(top_builddir)/src/filters/remove-test-tags.xfst         \
 		$(top_builddir)/src/filters/remove-hyphenation-marks.xfst \
-    	$(top_builddir)/src/filters/remove-infl_deriv-borders.xfst
+		$(top_builddir)/src/filters/remove-infl_deriv-borders.xfst
 	$(AM_V_XFST)$(PRINTF)                        "read regex \
 			@\"$(top_builddir)/src/filters/remove-rel_focus-strings.xfst\"    \
 		.o. @\"$(top_builddir)/src/filters/remove-homonymy-tags.xfst\"        \
@@ -84,7 +84,7 @@ analyser-speller-gt-norm.foma: analyser-speller-gt-norm.tmp.foma  \
 		$(top_builddir)/src/filters/remove-homonymy-tags.foma     \
 		$(top_builddir)/src/filters/remove-test-tags.foma         \
 		$(top_builddir)/src/filters/remove-hyphenation-marks.foma \
-    	$(top_builddir)/src/filters/remove-infl_deriv-borders.foma
+		$(top_builddir)/src/filters/remove-infl_deriv-borders.foma
 	$(AM_V_XFST)$(PRINTF)                        "read regex \
 			@\"$(top_builddir)/src/filters/remove-rel_focus-strings.foma\"    \
 		.o. @\"$(top_builddir)/src/filters/remove-homonymy-tags.foma\"        \
