@@ -336,7 +336,7 @@ LEXICON ACCRA  !
 !!€ Allysne:           Ally+N+Prop+Sem/Fem+Sg+Ine   !   Går som nïejte
 !!€ Allyste:           Ally+N+Prop+Sem/Fem+Sg+Ela   !   Går som nïejte
 !!€ Allyne:            Ally+N+Prop+Sem/Fem+Sg+Com   !   Går som nïejte
-!!€ Allyne:            Ally+N+Prop+Sem/Fem+Ess      !   Går som nïejte
+!!€ Allyne:            Ally+N+Prop+Sem/Fem+Ess      !   Går som nïejte    
 !!€ Allyde:            Ally+N+Prop+Sem/Fem+Pl+Acc   !     
 !!€ Allyj:             Ally+N+Prop+Sem/Fem+Pl+Gen   !      
 !!€ Allyde:            Ally+N+Prop+Sem/Fem+Pl+Ill   !       
@@ -1688,7 +1688,7 @@ LEXICON SNAME_NIEJTE ! as NIEJTE, but with Prop tag
 LEXICON SNAME_NIEJTE_PLC-ORG_FLAG @U.Cap.Obl@ SNAME_NIEJTE_PLC-ORG ;
 LEXICON SNAME_NIEJTE_PLC-ORG ! as NIEJTE, but with Prop tag
    +Sg:  NIEJTE_SG    ;
-!+Pl:    NIEJTE_PL ;
+   +Pl:  NIEJTE_PL ;
          EVEN_ESS     ;
  +Attr:e FINAL1       ;
          NIEJTE_CMPND ;
@@ -1808,11 +1808,11 @@ LEXICON AEKTUVE
 
 LEXICON AEKTUVE_FLAG @U.Cap.Obl@ AEKTUVE_DECL ;
 LEXICON AEKTUVE_DECL
-   +Sg:             BÅERUVE_SG         ;
-      :uve%^DISIMP  RHyph              ;
-!  +Pl:             BÅERUVE_PL         ;
-                    BÅERUVE_ESS        ;
- +Attr:uve          FINAL1             ;
+  +Sg:            ÅERUVE_SG      ;
+  +Pl:            ÅERUVE_PL      ;
+                  ÅERUVE_ESS     ;      
+     :uve%^DISIMP  RHyph          ;
+ +Attr:uve          FINAL1         ;
 
 !LEXICON LAANTE-plc
 !land+N+Prop+Sem/Plc:land CNAME_EVENLEX_PLC-ORG_FLAG ; ! Småland
