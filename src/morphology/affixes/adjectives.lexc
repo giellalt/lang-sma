@@ -1332,39 +1332,44 @@ LEXICON Ces_CES_CE_ODDNOCOMP
                        ODDCASEOBL ;
  +A+Cmp/SgNom:%^DISIMPe R          ;
 
+
+
 LEXICON hks_hke_HKS_HKE_ODD
             :%^DISIMP  ATTR_S     ;
-     +Use/NG:%^DISIMPe ATTR_0     ;
+     +A+Attr+Use/NG:%^DISIMPe ATTRCONT   ;
+     +A+Use/NG:%^DISIMPe LAAKAN   ;
+	 
             :%^DISIMP  PRED_S     ;
-     +Use/NG:%^DISIMPe PRED_0     ;
                        ODDCASEOBL ;
 !           :%^DISIMPe PRED_0     ;
  +A+Cmp/SgNom:%^DISIMPe R          ;
                        ODDCOMP    ;
 
 LEXICON oehks_oehke_OEHKS_OEHKE_ODD
-            :%^DISIMP  ATTR_S     ;
-     +Use/NG:%^DISIMPe ATTR_0     ;
-            :%^DISIMP  PRED_S     ;
-     +Use/NG:%^DISIMPe PRED_0     ;
-                       ODDCASEOBL ;
-!           :%^DISIMPe PRED_0     ;
- +A+Cmp/SgNom:%^DISIMPe R          ;
-                       ODD_ÅBPOE  ;
+            :%^DISIMP  ATTR_S       ;
++A+Attr+Use/NG:%^DISIMPe ATTRCONT   ;
+     +A+Use/NG:%^DISIMPe LAAKAN     ;
+            :%^DISIMP  PRED_S       ;
+                       ODDCASEOBL   ;
+!           :%^DISIMPe PRED_0       ;
+ +A+Cmp/SgNom:%^DISIMPe R           ;
+                       ODD_ÅBPOE    ;
 
 
 LEXICON HKE_ODD_NGCOMP
- +Err/Orth:%^DISIMPe ATTR_0     ;
+ +A+Attr+Err/Orth:%^DISIMPe ATTRCONT   ;
+ +A+Err/Orth:%^DISIMPe LAAKAN   ;
          :%^DISIMPe PRED_0     ;
                     ODDCASEOBL ;
   +Use/NG:          ODDCOMP    ;
 
 LEXICON HKE_ODD_COMP
- +Err/Orth:%^DISIMPe ATTR_0     ;
-         :%^DISIMPe PRED_0     ;
-                    ODDCASEOBL ;
-                    ODDCOMP    ;
-
+ +A+Attr+Err/Orth:%^DISIMPe ATTRCONT   ;
+ +A+Err/Orth:%^DISIMPe LAAKAN          ;
+         :%^DISIMPe PRED_0             ;
+                    ODDCASEOBL         ;
+                    ODDCOMP            ;
+ 
 
 ! Odd syllabic stems - adjectives
 ! - - - - - - - - - - - - - - - -
