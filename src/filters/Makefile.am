@@ -19,11 +19,13 @@
 ############## BEGIN: Local modifications ###############
 # List any local filter regex files here:
 GIELLA_FILTER_LOCAL_REGEX_SRCS=\
-			   downcase_UCletters.regex \
-			   remove-rel_focus-strings.regex \
-			   remove-test-tags.regex \
-			   remove-Dial_L-strings.regex \
-			   remove-illegal-derivation-strings.regex
+					downcase_UCletters.regex \
+					remove-rel_focus-strings.regex \
+					remove-test-tags.regex \
+					remove-Dial_L-strings.regex \
+					remove-illegal-derivation-strings.regex \
+					remove-derivation-position-tags.regex \
+					rename-POS_before_Der-tags.regex
 
 # List any local filter xfscript files here:
 GIELLA_FILTER_LOCAL_XFSCRIPT_SRCS=
