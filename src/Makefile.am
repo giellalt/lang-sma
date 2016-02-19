@@ -65,6 +65,7 @@ endif # CAN_FOMA
 
 # The SMA morphology has some extra tags used for testing that we want to
 # remove:
+# Hfst - add weights to compounds:
 generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 				filters/remove-test-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
@@ -72,37 +73,89 @@ generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 			.o. @\"$<\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		| $(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
+			-S '+Cmp' -a 10 --arcs-only \
 		> $@
 
-analyser-raw-gt-desc.xfst: analyser-raw-gt-desc.tmp.xfst \
-				filters/remove-test-tags.xfst
+# Xerox & Foma:
+analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
+				filters/remove-test-tags.%
 	$(AM_V_XFST)$(PRINTF) "read regex \
-				@\"filters/remove-test-tags.xfst\" \
+				@\"filters/remove-test-tags.$*\" \
 			.o. @\"$<\" \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)
 
-# Dict-fst local modifications and language-specific changes:
-generator-dict-gt-norm.hfst: generator-dict-gt-norm.tmp.hfst \
-					filters/remove-number-string-tags.hfst
-	$(AM_V_RGX2FST)$(PRINTF)                                "\
-				@\"filters/remove-number-string-tags.hfst\"  \
-			.o. @\"$<\"                                      \
-			;" \
-		| $(HFST_REGEXP2FST) $(VERBOSITY) $(HFST_FLAGS) -S --xerox-composition=ON \
-		> $@
+# We need to add processing of language-specific tags in the analysers:
+define giella_analysers
+analyser-gt-%.$(1): analyser-gt-%.tmp.$(1) \
+					 filters/remove-derivation-position-tags.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
+			    @\"filters/remove-derivation-position-tags.$(1)\" \
+			.o. @\"$$<\"                                      \
+			;\n\
+		 $$(INVERT_HFST)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
+endef
+$(foreach fst,hfst xfst foma,$(eval $(call giella_analysers,$(fst))))
 
-generator-dict-gt-norm.xfst: generator-dict-gt-norm.tmp.xfst \
-					filters/make-optional-variant-tags.xfst  \
-					filters/remove-number-string-tags.xfst
-	$(AM_V_XFST)$(PRINTF)                        "read regex \
-				@\"filters/remove-number-string-tags.xfst\"  \
+# ... and also in the Oahpa analyser:
+analyser-oahpa-gt-norm.%: analyser-gt-norm.tmp.% \
+					filters/remove-derivation-position-tags.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+			    @\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"$<\"                                     \
+			;\n\
+		 $(INVERT_HFST)\
+		 save stack $@\n\
+		 quit\n" | $(XFST_TOOL)
+
+# ... as well as in the disambiguation analyser:
+analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
+					filters/remove-derivation-position-tags.% \
+					filters/rename-POS_before_Der-tags.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+				@\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"filters/rename-POS_before_Der-tags.$*\" \
+			.o. @\"$<\"                                     \
+			;\n\
+		 $(INVERT_HFST)\
+		 save stack $@\n\
+		 quit\n" | $(XFST_TOOL)
+
+# We need to add processing of language-specific tags in the generator:
+define giella_generators
+generator-gt-%.$(1): generator-gt-%.tmp.$(1) \
+					 filters/remove-derivation-position-tags.$(1) \
+					 filters/make-optional-allegro-tags.$(1) \
+					 filters/make-optional-coll-tags.$(1)    \
+					 filters/make-optional-lang_hom-tags.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
+				@\"filters/make-optional-allegro-tags.$(1)\"  \
+			.o. @\"filters/make-optional-coll-tags.$(1)\"     \
+			.o. @\"filters/make-optional-lang_hom-tags.$(1)\" \
+			.o. @\"filters/remove-derivation-position-tags.$(1)\" \
+			.o. @\"$$<\"                                      \
+			;\n\
+		 $$(INVERT_XFST)$$(INVERT_FOMA)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
+endef
+$(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
+
+# Dict-fst local modifications and language-specific changes:
+generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.% \
+					filters/make-optional-variant-tags.%  \
+					filters/remove-number-string-tags.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+				@\"filters/remove-number-string-tags.$*\"  \
 			.o. @\"$<\"                                      \
 			;\n\
-		 invert net\n\
+		 $(INVERT_XFST)$(INVERT_FOMA)\
 		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+		 quit\n" | $(XFST_TOOL)
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
