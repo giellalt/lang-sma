@@ -129,12 +129,10 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 define giella_generators
 generator-gt-%.$(1): generator-gt-%.tmp.$(1) \
 					 filters/remove-derivation-position-tags.$(1) \
-					 filters/make-optional-allegro-tags.$(1) \
 					 filters/make-optional-coll-tags.$(1)    \
 					 filters/make-optional-lang_hom-tags.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
-				@\"filters/make-optional-allegro-tags.$(1)\"  \
-			.o. @\"filters/make-optional-coll-tags.$(1)\"     \
+				@\"filters/make-optional-coll-tags.$(1)\"     \
 			.o. @\"filters/make-optional-lang_hom-tags.$(1)\" \
 			.o. @\"filters/remove-derivation-position-tags.$(1)\" \
 			.o. @\"$$<\"                                      \
@@ -147,10 +145,13 @@ $(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
 
 # Dict-fst local modifications and language-specific changes:
 generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.% \
+					filters/remove-derivation-position-tags.% \
 					filters/make-optional-variant-tags.%  \
 					filters/remove-number-string-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-number-string-tags.$*\"  \
+			.o. @\"filters/remove-derivation-position-tags.$*\"  \
+			.o. @\"filters/make-optional-variant-tags.$*\"  \
 			.o. @\"$<\"                                      \
 			;\n\
 		 $(INVERT_XFST)$(INVERT_FOMA)\
