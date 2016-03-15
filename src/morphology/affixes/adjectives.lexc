@@ -70,45 +70,38 @@ LEXICON ATTR_0_PRED_0
    PRED_0 ;
 
 LEXICON ATTR_0
- +A+Attr: ATTRCONT ;
-      +A: LAAKAN   ;
+      +A: ATTRCONT ;
 
 
 LEXICON ATTR_0_ODD
- +A+Attr:e ATTRCONT ;
-      +A:e LAAKAN   ;
+      +A:e ATTRCONT ;
            ODDCOMP  ;
 !          ODDCASEOBL ;  - predikativ: 'nahkeren' 'geeruvisnie' - i adv.og noun-fila
 
 LEXICON EENSI
- +A+Attr:i  ATTRCONT ;
+      +A:i  ATTRCONT ;
         :ig ODDCOMP  ;
-      +A:i  LAAKAN   ;
 
 LEXICON YÖLELH
- +A+Attr:h ATTRCONT ;
+      +A:h ATTRCONT ;
            ODDCOMP  ;
-      +A:h LAAKAN   ;
 
 LEXICON ATTR_S
- +A+Attr:%>s ATTRCONT ;
-      +A:%>s LAAKAN   ;
+      +A:%>s ATTRCONT ;
 
 LEXICON ATTR_H
- +A+Attr:%>h ATTRCONT ;
-      +A:%>h LAAKAN   ;
+     +A:%>h ATTRCONT ;
 
 LEXICON ATTR_N
- +A+Attr:%>n ATTRCONT ;
-      +A:%>n LAAKAN   ;
+      +A:%>n ATTRCONT ;
 
 
 LEXICON ATTRCONT
-                                  FINAL1         ;
-                                  R              ;
- +Der2+Der/vuota+N+Err/Orth:%»voet GIERIEHTSADTJE ;
-  +Der2+Der/vuota+N+Use/MT:%»voet GIERIEHTSADTJE ;
-!                                 LAAKAN         ; !Lene: moved it to each contlex, to avoid +Attr
+ +Attr:                                 FINAL1         ;
+ +Cmp/Attr:                                 R              ;
+ +Attr+Der2+Der/vuota+N+Err/Orth:%»voet GIERIEHTSADTJE ;
+ +Attr+Der2+Der/vuota+N+Use/MT:%»voet GIERIEHTSADTJE ;
+                                     LAAKAN         ; 
 
 
 ! *Slutt* BARE ATTRIBUTTER  *Slutt* !
@@ -562,8 +555,7 @@ LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 !!€ isvelihke:	 isvelihke+Adv
 
 !! {{{
-+A+Attr+Use/NG:ihk%>s ATTRCONT     ; !!= @CODE@
-     +A+Use/NG:ihk%>s LAAKAN     ; !!= @CODE@
+    +A+Use/NG:ihk%>s ATTRCONT     ; !!= @CODE@
           :ig  ATTR_S     ; !!= @CODE@
 +A+Sg+Nom+Use/NG:ihk%>s FINAL1 ; !!= @CODE@
 +A+Sg+Nom+Use/NG:ig%>s FINAL1 ; !!= @CODE@   
@@ -1335,8 +1327,7 @@ LEXICON Ces_CES_CE_ODDNOCOMP
 
 LEXICON hks_hke_HKS_HKE_ODD
             :%^DISIMP  ATTR_S     ;
-     +A+Attr+Use/NG:%^DISIMPe ATTRCONT   ;
-     +A+Use/NG:%^DISIMPe LAAKAN   ;
+     +A+Use/NG:%^DISIMPe ATTRCONT   ;
 	 
             :%^DISIMP  PRED_S     ;
                        ODDCASEOBL ;
@@ -1346,8 +1337,7 @@ LEXICON hks_hke_HKS_HKE_ODD
 
 LEXICON oehks_oehke_OEHKS_OEHKE_ODD
             :%^DISIMP  ATTR_S       ;
-+A+Attr+Use/NG:%^DISIMPe ATTRCONT   ;
-     +A+Use/NG:%^DISIMPe LAAKAN     ;
++A+Use/NG:%^DISIMPe ATTRCONT   ;
             :%^DISIMP  PRED_S       ;
                        ODDCASEOBL   ;
 !           :%^DISIMPe PRED_0       ;
@@ -1356,15 +1346,13 @@ LEXICON oehks_oehke_OEHKS_OEHKE_ODD
 
 
 LEXICON HKE_ODD_NGCOMP
- +A+Attr+Err/Orth:%^DISIMPe ATTRCONT   ;
- +A+Err/Orth:%^DISIMPe LAAKAN   ;
+ +A+Err/Orth:%^DISIMPe ATTRCONT   ;
          :%^DISIMPe PRED_0     ;
                     ODDCASEOBL ;
   +Use/NG:          ODDCOMP    ;
 
 LEXICON HKE_ODD_COMP
- +A+Attr+Err/Orth:%^DISIMPe ATTRCONT   ;
- +A+Err/Orth:%^DISIMPe LAAKAN          ;
+ +A+Err/Orth:%^DISIMPe ATTRCONT   ;
          :%^DISIMPe PRED_0             ;
                     ODDCASEOBL         ;
                     ODDCOMP            ;
@@ -1474,52 +1462,45 @@ LEXICON EVENCOMP
    EVENSUPONLY  ;
 
 LEXICON EVENCOMPONLY
-   +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP ATTRCONT         ;
+   +A+Comp:%>%^COMPDISIMPbe%^DISIMP ATTRCONT         ;
  +A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP ATTRCONT         ;
                                          EVENCOMPCASE_OBL ;
                                          DIMCOMP          ;
-        +A+Comp:%>%^COMPDISIMPbe%^DISIMP LAAKAN           ;
 
 
 LEXICON EVENSUPONLY
-   +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
+   +A+Superl:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
  +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP FINAL1   ;
                                             MES      ;
-        +A+Superl:%>%^COMPDISIMPmes%^DISIMP LAAKAN   ;
 
 
 LEXICON EVENCOMP_oe
-          +A+Comp+Attr:%>%^COMPDISIMPbe%^DISIMP   ATTRCONT ;
-   +A+Comp+Attr+Use/NG:%>%^COMPDISIMP2be%^DISIMP  ATTRCONT ;
+          +A+Comp:%>%^COMPDISIMPbe%^DISIMP   ATTRCONT ;
+   +A+Comp+Use/NG:%>%^COMPDISIMP2be%^DISIMP  ATTRCONT ;
 !                                                 EVENCOMPCASE_oe ;
-        +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP  ATTRCONT ;
- +A+Superl+Attr+Use/NG:%>%^COMPDISIMP2mes%^DISIMP ATTRCONT ;
+        +A+Superl:%>%^COMPDISIMPmes%^DISIMP  ATTRCONT ;
+ +A+Superl+Use/NG:%>%^COMPDISIMP2mes%^DISIMP ATTRCONT ;
 !                                                 MES_oe          ;
                                                   DIMCOMP  ;
-               +A+Comp:%>%^COMPDISIMPbe%^DISIMP   LAAKAN   ;
 
 LEXICON ODDCOMP
           ODD_ÅBPOE ; ! Arbitrary "yes"
  +Use/NG: ODD_ABPA  ; ! Arbitrary "no", tt.
 
 LEXICON ODD_ÅBPOE
-                +A+Comp+Attr:%>åbpoe     ATTRCONT    ; ! båajoesåbpoe, *båajasåbpoe
+                +A+Comp:%>åbpoe     ATTRCONT    ; ! båajoesåbpoe, *båajasåbpoe
                      +A+Comp:%>åbp       ÅBPOE       ;
                             :%>ommes     OMMES       ;
- +A+Comp+Der1+Der/Dimin+Attr:%>obpe%»tje ATTRCONT    ;
+ +A+Comp+Der1+Der/Dimin:%>obpe%»tje ATTRCONT    ;
       +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
-                     +A+Comp:%>åbpoe     LAAKAN      ;
-      +A+Comp+Der1+Der/Dimin:%>obpe%»tje LAAKAN      ;
 
 
 LEXICON ODD_ABPA
-                       +A+Comp+Attr:%>abpa      ATTRCONT    ; ! båajasabpa,   *båajoesabpa
+                       +A+Comp:%>abpa      ATTRCONT    ; ! båajasabpa,   *båajoesabpa
                             +A+Comp:%>abp       ABPA        ;
                                    :%>ammes     OMMES       ;
- +A+Comp+Der1+Der/Dimin+Attr+Use/NG:%>abpe%»tje ATTRCONT    ;
+ +A+Comp+Der1+Der/Dimin+Use/NG:%>abpe%»tje ATTRCONT    ;
       +A+Comp+Der1+Der/Dimin+Use/NG:%>abpa%»tj  GÅATETJEadj ;
-                            +A+Comp:%>abpa      LAAKAN      ; ! båajasabpa,   *båajoesabpa
-      +A+Comp+Der1+Der/Dimin+Use/NG:%>abpe%»tje LAAKAN      ;
 
 LEXICON OMMES
    +A+Superl+Sg+Nom:%^DISIMP     FINAL1    ;
@@ -1534,8 +1515,7 @@ LEXICON OMMES
  +A+Superl+Cmp/SgNom:             R         ;
  +A+Superl+Cmp/SgGen:e%>n         R         ;
  +A+Superl+Cmp/PlGen:%>%^DISIMPi  R         ;
-     +A+Superl+Attr:%^DISIMP     ATTRCONT  ;
-          +A+Superl:%^DISIMP     LAAKAN    ;
+     +A+Superl:%^DISIMP     ATTRCONT  ;
 
 
 LEXICON EVENCOMPCASE
@@ -1689,7 +1669,7 @@ LEXICON ABPA_PL
  +Com:a%>jgujmie FINAL1 ;
 
 LEXICON MES
-     +A+Superl+Attr:%>%^COMPDISIMPmes%^DISIMP       ATTRCONT ;
+     +A+Superl:%>%^COMPDISIMPmes%^DISIMP       ATTRCONT ;
    +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP       FINAL1   ;
    +A+Superl+Sg+Acc:masse%>m                        FINAL1   ;
    +A+Superl+Sg+Gen:masse%>n                        FINAL1   ;
@@ -1710,10 +1690,9 @@ LEXICON MES
  +A+Superl+Cmp/SgNom:%>%^COMPDISIMPmes%^DISIMP       R        ;
  +A+Superl+Cmp/SgGen:masse%>n                        R        ;
  +A+Superl+Cmp/PlGen:mass%>i                         R        ;
-          +A+Superl:%>%^COMPDISIMPmes%^DISIMP       LAAKAN   ;
 
 LEXICON A_LDH
-   +A+Attr: ATTRCONT ;
+   +A: ATTRCONT ;
  +A+Sg+Nom: FINAL1   ;
   +A+Sg+Pl: FINAL1   ;
   
