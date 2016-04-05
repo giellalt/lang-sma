@@ -188,27 +188,6 @@ LEXICON N_ODD_C   !these words have consonant-ending in nominative
  +N+Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
 
 
-LEXICON AAJEGE        !Sg+Nom=Aajege/Aajeh  Sg+Cmp=Aajeh-
-                             LEEJJEGE ;
- +N+Sg+Nom+Use/NG:eh%^DISIMP FINAL1   ;
-
-! Test data:
-!!€gt-norm: beetnege # Odd-syllable test
-!!€ beetnege:            beetnege+N+Sg+Nom
-!!€ beetneh:             beetnege+N+Sg+Nom
-!!€ beetnegen:           beetnege+N+Sg+Gen
-!!€ beetnegasse:         beetnege+N+Sg+Ill
-!!€ beetnegisnie:        beetnege+N+Sg+Ine
-!!€ beetnegistie:        beetnege+N+Sg+Ela
-!!€ beetneginie:         beetnege+N+Sg+Com
-!!€ beetnegh:            beetnege+N+Pl+Nom
-!!€ beetnegidie:         beetnege+N+Pl+Acc
-!!€ beetnegi:            beetnege+N+Pl+Gen
-!!€ beetnegidie:         beetnege+N+Pl+Ill
-!!€ beetneginie:         beetnege+N+Pl+Ine
-!!€ beetnegijstie:       beetnege+N+Pl+Ela
-!!€ beetnegigujmie:      beetnege+N+Pl+Com
-!!€ beetneginie:         beetnege+N+Ess
 
 
 LEXICON AAREGE        !Sg+Nom=Aarege/Aareh  Sg+Cmp=Aarege-/Aareh-
@@ -244,7 +223,27 @@ LEXICON BAARTEGE        !Sg+Nom=baartege/baarth  Sg+Cmp=baartege-/baarth-
 
 LEXICON GAAJSEGE        !Sg+Nom=gaajsege/gaajsh  Sg+Cmp=gaajsh-
                             LEEJJEGE ;
- +N+Sg+Nom+Use/NG:h%^DISIMP FINAL1   ;
+                 :eh%^DISIMP NOM-CMP   ; !Check
+
+
+! Test data:
+!!€gt-norm: beetnege # Odd-syllable test
+!!€ beetnege:            beetnege+N+Sg+Nom
+!!€ beetneh:             beetnege+N+Sg+Nom
+!!€ beetnegen:           beetnege+N+Sg+Gen
+!!€ beetnegasse:         beetnege+N+Sg+Ill
+!!€ beetnegisnie:        beetnege+N+Sg+Ine
+!!€ beetnegistie:        beetnege+N+Sg+Ela
+!!€ beetneginie:         beetnege+N+Sg+Com
+!!€ beetnegh:            beetnege+N+Pl+Nom
+!!€ beetnegidie:         beetnege+N+Pl+Acc
+!!€ beetnegi:            beetnege+N+Pl+Gen
+!!€ beetnegidie:         beetnege+N+Pl+Ill
+!!€ beetneginie:         beetnege+N+Pl+Ine
+!!€ beetnegijstie:       beetnege+N+Pl+Ela
+!!€ beetnegigujmie:      beetnege+N+Pl+Com
+!!€ beetneginie:         beetnege+N+Ess
+                 
 
 LEXICON LEEJJEGE        !Sg+Nom=leejjege  Sg+Cmp=leejjeh-
            +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
@@ -1636,6 +1635,7 @@ LEXICON  OVSE_LOAN ! ikke les
 
 
 LEXICON NIEJTE
++N+Sg+Nom+Err/Orth: FINAL1 ;
 +N: X_NIEJTE ;
 
 LEXICON X_NIEJTE
@@ -1754,6 +1754,7 @@ LEXICON NIEJTE_COMP
 LEXICON AARJEL_COMP
   +N+Der/A:  EVENCOMP ;
  +N+Sg+Nom:l FINAL1   ;
+ +N+Cmp/SgNom:l R   ;
 
 
 !  LEXICON MAAKE !!= @CODE@ Only for "relatives"
@@ -1931,7 +1932,7 @@ LEXICON JUNI
  +N+Cmp/PlGen:%>i  R           ;
           +N:     EVEN_ESS    ;
 
-LEXICON NOMandCMP
+LEXICON NOM-CMP
 +N+Sg+Nom: FINAL1 ;
 +N+Cmp/SgNom: R ;
 
