@@ -128,13 +128,9 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 # We need to add processing of language-specific tags in the generator:
 define giella_generators
 generator-gt-%.$(1): generator-gt-%.tmp.$(1) \
-					 filters/remove-derivation-position-tags.$(1) \
-					 filters/make-optional-coll-tags.$(1)    \
-					 filters/make-optional-lang_hom-tags.$(1)
+					 filters/remove-derivation-position-tags.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
-				@\"filters/make-optional-coll-tags.$(1)\"     \
-			.o. @\"filters/make-optional-lang_hom-tags.$(1)\" \
-			.o. @\"filters/remove-derivation-position-tags.$(1)\" \
+				@\"filters/remove-derivation-position-tags.$(1)\" \
 			.o. @\"$$<\"                                      \
 			;\n\
 		 $$(INVERT_XFST)$$(INVERT_FOMA)\
