@@ -293,7 +293,7 @@ LEXICON GOLTELIDH_IV  !!= * __@CODE@__
 LEXICON GOLTELIDH   !!= * __@CODE@__, odd-syll with -adte- as Der2
                                     COMMON-ODD     ;
    +Der2+Der/ehte:%»eht             ÅARAJEHTEDH_TV ;
-  +Der3+Der/NomAg:%»æjj@C.NeedNoun@ MAANA          ;
+  +Der3+Der/NomAg:%»æjj             flagMAANA          ;
           +PrsPrc:%>æjja            FINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +Der2+Der/adte+V:%»%^adteUMLadt    GOEGKERDADTEDH ;
 
@@ -326,7 +326,7 @@ LEXICON BALVEDIDH  !!= * __@CODE@__
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
-              +V+IV+Der3+Der/NomAct:%»imm@C.NeedNoun@ NomActEven ;
+              +V+IV+Der3+Der/NomAct:%»imm flagNomActEven ;
          +V+IV+Der3+Der/ahtje+V+Inf:%»ahtj%>edh       FINAL1     ;
         +V+IV+Der3+Der/ahtje+V+VGen:%»ahtj%>en        FINAL1     ;
 ! +V+IV+Der3+Der/ahtje+V+Act:%»ahtj%>eme      FINAL1 ;
@@ -357,7 +357,7 @@ LEXICON DÅAJVOEHTIDH_IV  !!= * __@CODE@__
 LEXICON DÅAJVOEHTIDH    !!= * __@CODE@__ for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
                                      COMMON-ODD     ;
  +Der2+Der/ehte:%»eht                ÅARAJEHTEDH_TV ;
- +Der3+Der/NomAg:%»æjj@C.NeedNoun@   MAANA          ;
+ +Der3+Der/NomAg:%»æjj               flagMAANA          ;
           +PrsPrc:%>æjja             FINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +Der2+Der/alla+V:%»%^adteUMLall     GOEGKERDADTEDH ;
 
@@ -394,7 +394,7 @@ LEXICON COMMON-ODD   !!= * __@CODE@__
 
 !! * Derivations
 ! -----------
-      +Der3+Der/NomAct:%»imm@C.NeedNoun@ NomActEven   ;
+      +Der3+Der/NomAct:%»imm  flagNomActEven   ;
      +Der3+Der/ahtje+V:%»ahtj            AHTJE        ;
 
 
@@ -460,9 +460,9 @@ LEXICON BÅETEDH   !!= * __@CODE@__ row A - Group I
 ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
-                +Der3+Der/NomAg:%»iej@C.NeedNoun@ IJE_ODD            ;
-        +Der3+Der/NomAg+Err/Orth:%»ij@C.NeedNoun@  IJE_ODD            ;
-               +Der3+Der/NomAct:%»iem@C.NeedNoun@ NomActOdd          ;
+                +Der3+Der/NomAg:%»iej  flagIJE_ODD            ;
+        +Der3+Der/NomAg+Err/Orth:%»ij  flagIJE_ODD             ;
+               +Der3+Der/NomAct:%»iem  flagNomActOdd          ;
                   +Der1+Der/les:%»%^1UML          LES_LASSE_ie       ;
               +Der3+Der/InchL+V:%»iegået          GÅETEDH            ;
               +Der1+Der/st+V:%»iest            DÅAJVOEHTIDH       ;
@@ -496,9 +496,9 @@ LEXICON BÅETEDH_NOTVGEN   !!= * __@CODE@__ row A - Group I
 ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
-         +Der3+Der/NomAg:%»iej@C.NeedNoun@ IJE_ODD            ;
- +Der3+Der/NomAg+Err/Orth:%»ij@C.NeedNoun@  IJE_ODD            ;
-        +Der3+Der/NomAct:%»iem@C.NeedNoun@ NomActOdd          ;
+         +Der3+Der/NomAg:%»iej  flagIJE_ODD            ;
+ +Der3+Der/NomAg+Err/Orth:%»ij  flagIJE_ODD            ;
+        +Der3+Der/NomAct:%»iem  flagNomActOdd          ;
            +Der1+Der/les:%»%^1UML          LES_LASSE_ie       ;
        +Der3+Der/InchL+V:%»iegået          GÅETEDH            ;
 ! +Der1+Der/st+V:%»iest DÅAJVOEHTIDH ;
@@ -533,7 +533,7 @@ LEXICON SEVTEDH   !!= * __@CODE@__ row A - Group I  IMPERSONALS!
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»iej@C.NeedNoun@     IJE_ODD ;
-                                       +V+IV+Der3+Der/NomAct:%»iem@C.NeedNoun@                          NomActOdd    ;
+                                       +V+IV+Der3+Der/NomAct:%»iem  flagNomActOdd    ;
 ! +V+IV+Der1+Der/les:%»%^1UML LES_LASSE_ie ;
                                     +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv                              IV_PASSIVE_L ;
                                          +V+IV+Der/PassS+Uml:%»%^PASSUML                                IV_PASSIVE_S ;
@@ -645,9 +645,9 @@ LEXICON ÅEREDH   !!= * __@CODE@__ row A - Group I   NO -øø-UMLAUT!!!!
 ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
-                +V+IV+Der3+Der/NomAg:%»iej@C.NeedNoun@ IJE_ODD            ;
-        +V+IV+Der3+Der/NomAg+Err/Orth:%»ij@C.NeedNoun@  IJE_ODD            ;
-               +V+IV+Der3+Der/NomAct:%»iem@C.NeedNoun@ NomActOdd          ;
+                +V+IV+Der3+Der/NomAg:%»iej  flagIJE_ODD            ;
+        +V+IV+Der3+Der/NomAg+Err/Orth:%»ij  flagIJE_ODD            ;
+               +V+IV+Der3+Der/NomAct:%»iem  flagNomActOdd          ;
                   +V+IV+Der1+Der/les:%»%^1UML          LES_LASSE_ie       ;
             +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv     IV_PASSIVE_L       ;
                  +V+IV+Der/PassS+Uml:%»%^PASSUML       IV_PASSIVE_S       ;
@@ -686,9 +686,9 @@ LEXICON ÅEREDH_TV   !!= * __@CODE@__ row A - Group I   NO -øø-UMLAUT!!!!
 ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
-                +V+TV+Der3+Der/NomAg:%»iej@C.NeedNoun@ IJE_ODD            ;
-        +V+TV+Der3+Der/NomAg+Err/Orth:%»ij@C.NeedNoun@  IJE_ODD            ;
-               +V+TV+Der3+Der/NomAct:%»iem@C.NeedNoun@ NomActOdd          ;
+                +V+TV+Der3+Der/NomAg:%»iej  flagIJE_ODD            ;
+        +V+TV+Der3+Der/NomAg+Err/Orth:%»ij  flagIJE_ODD            ;
+               +V+TV+Der3+Der/NomAct:%»iem  flagNomActOdd          ;
                   +V+TV+Der1+Der/les:%»%^1UML          LES_LASSE_ie       ;
             +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv     SOVVEDH            ;
                  +V+IV+Der/PassS+Uml:%»%^PASSUML       VÅÅJNEDH           ;
@@ -742,8 +742,8 @@ LEXICON TJEARODH   !!= * __@CODE@__ row C - Group II
                     +PrfPrc+Uml:%>%^2UMLeme         FINAL1             ;
 ! Derivations
 ! -----------
-                +Der3+Der/NomAg:%»oej@C.NeedNoun@   N_ODD              ;
-               +Der3+Der/NomAct:%»oem@C.NeedNoun@   NomActOdd          ;
+                +Der3+Der/NomAg:%»oej  flagN_ODD              ;
+               +Der3+Der/NomAct:%»oem  flagNomActOdd          ;
                   +Der1+Der/les:%»%^PASSUMLel       LES                ;
               +Der3+Der/InchL+V:%»oegået            GÅETEDH            ;
               +Der1+Der/st+V:%»oest              DÅAJVOEHTIDH       ;
@@ -779,7 +779,7 @@ LEXICON ABRODH   !!= * __@CODE@__ row C - Group II
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»oej@C.NeedNoun@     N_ODD ;
-                                      +V+IV+Der3+Der/NomAct:%»oem@C.NeedNoun@                      NomActOdd    ;
+                                      +V+IV+Der3+Der/NomAct:%»oem  flagNomActOdd    ;
 ! +V+IV+Der1+Der/les:%»%^PASSUMLel LES ;
                                    +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv                          IV_PASSIVE_L ;
                                         +V+IV+Der/PassS+Uml:%»%^PASSUML                            IV_PASSIVE_S ;
@@ -894,8 +894,8 @@ LEXICON TSEAHKODH   !!= * __@CODE@__ row C - Group II    these have (lexicalized
          +PrfPrc+Uml:%>%^2UMLeme       FINAL1             ;
 ! Derivations
 ! -----------
-     +Der3+Der/NomAg:%»oej@C.NeedNoun@ N_ODD              ;
-    +Der3+Der/NomAct:%»oem@C.NeedNoun@ NomActOdd          ;
+     +Der3+Der/NomAg:%»oej  flagN_ODD              ;
+    +Der3+Der/NomAct:%»oem  flagNomActOdd          ;
        +Der1+Der/les:%»%^PASSUMLel     LES                ;
    +Der3+Der/InchL+V:%»oegået          GÅETEDH            ;
     +Der1+Der/l+V:%»oel             GOLTELIDH          ;
@@ -945,8 +945,8 @@ LEXICON GUARKEDH   !!= * __@CODE@__ row B - Group III
              +ConNeg:%>ah             FINAL1             ;
 ! Derivations
 ! -----------
-     +Der3+Der/NomAg:%»ij@C.NeedNoun@ N_ODD              ;
-    +Der3+Der/NomAct:%»am@C.NeedNoun@ NomActOdd          ;
+     +Der3+Der/NomAg:%»ij  flagN_ODD              ;
+    +Der3+Der/NomAct:%»am  flagNomActOdd          ;
        +Der1+Der/les:%»%^didhUMLel    LES                ;
    +Der3+Der/InchL+V:%»agået          GÅETEDH            ;
    +Der1+Der/st+V:%»ast            DÅAJVOEHTIDH       ;
@@ -1014,8 +1014,8 @@ LEXICON TJOEHPEDH_NOTVGEN  !!= * __@CODE@__
                         +ConNeg:%>0h             FINAL1           ;
 ! Derivations
 ! -----------
-                +Der3+Der/NomAg:%»ij@C.NeedNoun@ N_ODD            ;
-               +Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd        ;
+                +Der3+Der/NomAg:%»ij  flagN_ODD            ;
+               +Der3+Der/NomAct:%»em  flagNomActOdd        ;
                   +Der1+Der/les:e%»l             LES              ;
               +Der3+Der/InchL+V:%»egået          GÅETEDH          ;
               +Der1+Der/st+V:%»est            DÅAJVOEHTIDH     ;
@@ -1050,7 +1050,7 @@ LEXICON GALKEDH_CONT   !!= * __@CODE@__ row D - Group IV
 ! Derivations
 ! -----------
 ! +Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
- +Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd      ;
+ +Der3+Der/NomAct:%»em  flagNomActOdd      ;
 ! +Der1+Der/les:e%»l LES ;
 ! +Der3+Der/InchL+V:%»egået GÅETEDH ;
 ! +Der1+Der/st+V:%»est DÅAJVOEHTIDH ;
@@ -1083,7 +1083,7 @@ LEXICON BIEGKEDH   !!= * __@CODE@__ row D - Group IV !impersonals
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
-                                      +V+IV+Der3+Der/NomAct:%»em@C.NeedNoun@               NomActOdd    ;
+                                      +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd    ;
 ! +V+IV+Der1+Der/les:e%»l LES ;
                                        +V+IV+Der3+Der/PassL:e%»sovv                        IV_PASSIVE_L ;
                                         +V+IV+Der/PassS+Uml:%»%^PASSUML                    IV_PASSIVE_S ;
@@ -1203,8 +1203,8 @@ LEXICON BÅÅHKEDH   !!= * __@CODE@__ row E - Group V
                         +ConNeg:%>h              FINAL1           ;
 ! Derivations
 ! -----------
-                +Der3+Der/NomAg:%»ij@C.NeedNoun@ N_ODD            ;
-               +Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd        ;
+                +Der3+Der/NomAg:%»ij  flagN_ODD            ;
+               +Der3+Der/NomAct:%»em  flagNomActOdd        ;
                   +Der1+Der/les:e%»l             LES              ;
               +Der3+Der/InchL+V:%»egået          GÅETEDH          ;
               +Der1+Der/st+V:%»est            DÅAJVOEHTIDH     ;
@@ -1236,7 +1236,7 @@ LEXICON SÅÅJHTEDH_CONT   !!= * __@CODE@__ row E - Group V
 ! Derivations
 ! -----------
 ! +Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
- +Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd       ;
+ +Der3+Der/NomAct:%»em  flagNomActOdd       ;
 ! +Der1+Der/les:e%»l LES ;
 ! +Der3+Der/InchL+V:%»egået GÅETEDH ;
 ! +Der1+Der/st+V:%»est DÅAJVOEHTIDH ;
@@ -1263,12 +1263,12 @@ LEXICON VÅÅJNEDH  !!= * __@CODE@__
               +V+IV+Ger:%>eminie         FINAL1           ;
 ! +V+IV+PrsPrc:%>ije FINAL1 ;
 ! +V+IV+PrsPrc:%>ijes  FINAL1 ;
-           +V+IV+PrfPrc:%>eme            FINAL1           ;
+           +V+IV+PrfPrc:%>eme            FINAL1           ; !@C.NeedNoun@ ?
            +V+IV+ConNeg:%>h              FINAL1           ;
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
-  +V+IV+Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd        ;
+  +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd        ;
      +V+IV+Der1+Der/les:e%»l             LES              ;
  +V+IV+Der3+Der/InchL+V:%»egået          GÅETEDH          ;
  +V+IV+Der1+Der/st+V:%»est            DÅAJVOEHTIDH     ;
@@ -1318,8 +1318,8 @@ LEXICON GÖÖLEDH   !!= * __@CODE@__ row F - Group VI
                         +ConNeg:%>h              FINAL1           ;
 ! Derivations
 ! -----------
-                +Der3+Der/NomAg:%»ij@C.NeedNoun@ N_ODD            ;
-               +Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd        ;
+                +Der3+Der/NomAg:%»ij  flagN_ODD            ;
+               +Der3+Der/NomAct:%»em  flagNomActOdd        ;
                   +Der1+Der/les:e%»l             LES              ;
               +Der3+Der/InchL+V:%»egået          GÅETEDH          ;
               +Der1+Der/st+V:%»est            DÅAJVOEHTIDH     ;
@@ -1351,7 +1351,7 @@ LEXICON BÖÖVTEDH   !!= * __@CODE@__ row F - Group VI
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
-                                      +V+IV+Der3+Der/NomAct:%»em@C.NeedNoun@               NomActOdd    ;
+                                      +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd    ;
 ! +V+IV+Der1+Der/les:e%»l LES ;
                                        +V+IV+Der3+Der/PassL:e%»sovv                        IV_PASSIVE_L ;
 ! +V+IV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
@@ -1478,9 +1478,9 @@ LEXICON ÅARAJEHTEDH   !!= * __@CODE@__ row A - Group I
 ! row F trigger for Umlaut Prt
 ! Derivations
 ! -----------
-         +Der3+Der/NomAg:%»iej@C.NeedNoun@ IJE_ODD            ;
- +Der3+Der/NomAg+Err/Orth:%»ij@C.NeedNoun@  IJE_ODD            ;
-        +Der3+Der/NomAct:%»iem@C.NeedNoun@ NomActOdd          ;
+         +Der3+Der/NomAg:%»iej  flagIJE_ODD            ;
+ +Der3+Der/NomAg+Err/Orth:%»ij  flagIJE_ODD            ;
+        +Der3+Der/NomAct:%»iem  flagNomActOdd          ;
            +Der1+Der/les:%»%^1UML          LES_LASSE_ie       ;
        +Der3+Der/InchL+V:%»iegået          GÅETEDH            ;
        +Der3+Der/ahtje+V:%»iejahtj         AHTJE              ;
@@ -1502,7 +1502,7 @@ LEXICON BUARADEHTEDH  !!= * __@CODE@__
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»iej@C.NeedNoun@     IJE_ODD ;
-                          +V+IV+Der3+Der/NomAct:%»iem@C.NeedNoun@         NomActOdd ;
+                          +V+IV+Der3+Der/NomAct:%»iem  flagNomActOdd ;
 ! +V+IV+Der1+Der/les:%»%^1UML LES_LASSE_ie ;
          +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»iegået%>%^1UMLa         FINAL1    ;
          +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»iegået%>%^iUMLi         FINAL1    ;
@@ -1551,8 +1551,8 @@ LEXICON GOEGKERDADTEDH   !!= * __@CODE@__ row D - Group IV
            +ConNeg:%>0h             FINAL1           ;
 ! Derivations
 ! -----------
-   +Der3+Der/NomAg:%»ij@C.NeedNoun@ N_ODD            ;
-  +Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd        ;
+   +Der3+Der/NomAg:%»ij  flagN_ODD            ;
+  +Der3+Der/NomAct:%»em  flagNomActOdd        ;
      +Der1+Der/les:e%»l             LES              ;
  +Der3+Der/InchL+V:%»egået          GÅETEDH          ;
  +Der3+Der/ahtje+V:%»ijahtj         AHTJE            ;
@@ -1573,7 +1573,7 @@ LEXICON OBREDADTEDH  !!= * __@CODE@__
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
-                          +V+IV+Der3+Der/NomAct:%»em@C.NeedNoun@         NomActOdd ;
+                          +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd ;
 ! +V+IV+Der1+Der/les:e%»l LES ;
          +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa         FINAL1    ;
          +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi         FINAL1    ;
@@ -1681,7 +1681,7 @@ LEXICON SOVVEDH !!= * __@CODE@__row D - Group IV
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
-  +V+IV+Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd     ;
+  +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd     ;
  +V+IV+Der3+Der/InchL+V:%»egået          GÅETEDH       ;
  +V+IV+Der3+Der/ahtje+V:%»ijahtj         AHTJE         ;
 
@@ -1703,7 +1703,7 @@ LEXICON IV_PASSIVE_L  !!= * __@CODE@__
                                    +V+ConNeg:%>0h                     FINAL1    ;
 ! Derivations
 ! -----------
-                          +V+Der3+Der/NomAct:%»em@C.NeedNoun@         NomActOdd ;
+                          +V+Der3+Der/NomAct:%»em  flagNomActOdd ;
          +V+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa         FINAL1    ;
          +V+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi         FINAL1    ;
  +V+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»egået%>%^iUML%^DISIMPi FINAL1    ;
@@ -1745,7 +1745,7 @@ LEXICON IV_PASSIVE_S   !!= * __@CODE@__ row E - Group V  NB! FOR already derivat
               +V+ConNeg:%>h              FINAL1    ;
 ! Derivations
 ! -----------
-     +V+Der3+Der/NomAct:%»em@C.NeedNoun@ NomActOdd ;
+     +V+Der3+Der/NomAct:%»em  flagNomActOdd ;
 
 
 LEXICON LGIDH  !!= * __@CODE@__
@@ -1779,7 +1779,7 @@ LEXICON LGIDH  !!= * __@CODE@__
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»æjj@C.NeedNoun@     MAANA ;
-  +V+IV+Der3+Der/NomAct:%»imm@C.NeedNoun@ NomActEven   ;
+  +V+IV+Der3+Der/NomAct:%»imm flagNomActEven   ;
  +V+IV+Der3+Der/ahtje+V:%»ahtj            AHTJE        ;
 
 
@@ -2130,7 +2130,20 @@ LEXICON VSUF-PRT-DUPL  !!= * __@CODE@__
  +Pl2:idh  FINAL1 ;
  +Pl3:in   FINAL1 ;
 
+LEXICON flagNomActEven
+@C.NeedNoun@ NomActEven ;
 
+LEXICON flagMAANA
+@C.NeedNoun@ MAANA ;
+
+LEXICON flagIJE_ODD
+@C.NeedNoun@ IJE_ODD ;
+
+LEXICON flagNomActOdd
+@C.NeedNoun@ NomActOdd ;
+
+LEXICON flagN_ODD
+@C.NeedNoun@ N_ODD ;
 
 
 !LEXICON V-II-PRS-DUPL
