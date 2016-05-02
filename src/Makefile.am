@@ -66,16 +66,29 @@ endif # CAN_FOMA
 # The SMA morphology has some extra tags used for testing that we want to
 # remove:
 # Hfst - add weights to compounds:
+if WITH_OFST_TROPICAL
 generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 				filters/remove-test-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"filters/remove-test-tags.hfst\" \
 			.o. @\"$<\" \
 			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
+			-S --xerox-composition=ON \
 		| $(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
 			-S '+Cmp' -a 10 --arcs-only \
 		> $@
+else
+generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
+				filters/remove-test-tags.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"filters/remove-test-tags.hfst\" \
+			.o. @\"$<\" \
+			;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
+			-S --xerox-composition=ON \
+		> $@
+endif
 
 # Xerox & Foma:
 analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
