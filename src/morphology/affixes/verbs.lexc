@@ -284,7 +284,7 @@ LEXICON GOLTELIDH_TV  !!= * __@CODE@__
 
 LEXICON AALHTEDIDH_TV  !!= * __@CODE@__
                 +V+TV:                GOLTELIDH ;
- +V+TV+Der3+Der/PassL:%^ConsDel%»sovv SOVVEDH   ;
+! +V+TV+Der3+Der/PassL:%^ConsDel%»sovv SOVVEDH   ;
 
 LEXICON GOLTELIDH_IV  !!= * __@CODE@__
  +V+IV: GOLTELIDH ;
@@ -354,6 +354,7 @@ LEXICON DÅAJVOEHTIDH_TV  !!= * __@CODE@__
 
 LEXICON DÅAJVOEHTIDH_IV  !!= * __@CODE@__
  +V+IV: DÅAJVOEHTIDH ;
+ +V+IV+Der3+Der/PassL:%»ovv SOVVEDH      ; ! Det finst ingen verb i denne klassen som triggar ConsDel
   
  
 LEXICON DÅAJVOEHTIDH    !!= * __@CODE@__ for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
@@ -783,8 +784,8 @@ LEXICON ABRODH   !!= * __@CODE@__ row C - Group II
 ! +V+IV+Der3+Der/NomAg:%»oej@C.NeedNoun@     N_ODD ;
                                       +V+IV+Der3+Der/NomAct:%»oem  flagNomActOdd    ;
 ! +V+IV+Der1+Der/les:%»%^PASSUMLel LES ;
-                                   +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv                          IV_PASSIVE_L ;
-                                        +V+IV+Der/PassS+Uml:%»%^PASSUML                            IV_PASSIVE_S ;
+                                 !  +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv                          IV_PASSIVE_L ;
+                                      !  +V+IV+Der/PassS+Uml:%»%^PASSUML                            IV_PASSIVE_S ;
                      +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»oegået%>%^1UMLa                      FINAL1       ;
                      +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»oegået%>%^iUMLi                      FINAL1       ;
              +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»oegået%>%^iUML%^DISIMPi              FINAL1       ;
@@ -965,7 +966,7 @@ LEXICON GUARKEDH   !!= * __@CODE@__ row B - Group III
 
 LEXICON SIJHTEDH_TV   !!= * __@CODE@__
                  +V+TV:            TJOEHPEDH_NOTVGEN ;
-  +V+TV+Der3+Der/PassL:e%»sovv     SOVVEDH           ;
+ ! +V+TV+Der3+Der/PassL:e%»sovv     SOVVEDH           ;
    +V+TV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH          ;
  +V+TV+Der1+Der/htalle:%»ehtall    SOVVEDH           ; !Passive, only from transitive verbs
   +V+TV+Der1+Der/lg:%»elg       LGIDH             ; !Passive, only from transitive verbs
@@ -1087,8 +1088,8 @@ LEXICON BIEGKEDH   !!= * __@CODE@__ row D - Group IV !impersonals
 ! +V+IV+Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
                                       +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd    ;
 ! +V+IV+Der1+Der/les:e%»l LES ;
-                                       +V+IV+Der3+Der/PassL:e%»sovv                        IV_PASSIVE_L ;
-                                        +V+IV+Der/PassS+Uml:%»%^PASSUML                    IV_PASSIVE_S ;
+                                      ! +V+IV+Der3+Der/PassL:e%»sovv                        IV_PASSIVE_L ;
+                                      !  +V+IV+Der/PassS+Uml:%»%^PASSUML                    IV_PASSIVE_S ;
                      +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa               FINAL1       ;
                      +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi               FINAL1       ;
              +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»egået%>%^iUML%^DISIMPi       FINAL1       ;
@@ -1355,7 +1356,7 @@ LEXICON BÖÖVTEDH   !!= * __@CODE@__ row F - Group VI
 ! +V+IV+Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
                                       +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd    ;
 ! +V+IV+Der1+Der/les:e%»l LES ;
-                                       +V+IV+Der3+Der/PassL:e%»sovv                        IV_PASSIVE_L ;
+                             !          +V+IV+Der3+Der/PassL:e%»sovv                        IV_PASSIVE_L ;
 ! +V+IV+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
                      +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa               FINAL1       ;
                      +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi               FINAL1       ;
@@ -1452,14 +1453,14 @@ LEXICON EEREDH_IV  !!= * __@CODE@__
 ! ---- Verbal derivation sublexica ----
 LEXICON ÅARAJEHTEDH_TV  !!= * __@CODE@__
                     +V+TV:              ÅARAJEHTEDH ;
- +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH     ;
+! +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH     ;
       +V+TV+Der/PassS+Uml:%»%^PASSUML   VÅÅJNEDH    ;
 
 
 LEXICON ÅARAJEHTEDH_IV  !!= * __@CODE@__
                     +V+IV:              ÅARAJEHTEDH  ;
- +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv IV_PASSIVE_L ;
-      +V+IV+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S ;
+ +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv IV_PASSIVE_L ;! Finnes denne?
+      +V+IV+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S ;! finnes denne? jeg ble kalt for aahka= manne aahkastahtajovvim?- aahkastehtedh= å kalle for aahka
 
 
 LEXICON ÅARAJEHTEDH   !!= * __@CODE@__ row A - Group I
