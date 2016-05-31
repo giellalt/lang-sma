@@ -760,9 +760,28 @@ LEXICON ies_IE_EVEN3NOCOMP
 ! Avlednigsleksikon til ies-stammevokalgruppen - s  ---->   går til klasse 1 som har ies-ies i attr/pred.
 LEXICON ies_IES_IE_EVEN3  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
         :ie ATTR_S     ;
- +Use/NG:ie PRED_S     ; ! Avlednings-s og/eller språkutvikling
-      +A:   N_IE_FORMS ;
+       +A:   A_IE_FORMS ;
         :ie EVENCOMP   ;
+
+
+LEXICON A_IE_FORMS ! similar to N_IE_FORMS, except that +Sg+Nom is -ies, with alternative -ie
+                 +Sg+Nom:ie%>s FINAL1 ; ! Avlednings-s og/eller språkutvikling
+          +Sg+Nom+Use/NG:ie           FINAL1  ;
+                     +Sg:             N_IE_SG_OBL  ;
+                     +Pl:             N_IE_PL  ;
+                                      N_IE_ESS ;
+               +Cmp/SgNom:ie           R        ;
+               +Cmp/SgGen:ie%>n        R        ;
+         +Cmp/PlGen+NoUml:ie%>j        R        ;
+           +Cmp/PlGen+Uml:%>%^iUMLi    R        ;
+       +Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
+ +Der1+Der/ijes+A+Sg+Nom:%»%^1UMLijes FINAL1   ;
+          +Der1+Der/ijes:%»%^1UMLijes ATTR_0   ;
+          +Der1+Der/ijes:%»%^1UMLij   ODDCOMP  ;
+           +Der2+Der/Car:%»eht   hts_HTS_ODDNOCOMP ;
+
+
+
 
 ! Avlednigsleksikon til ies-stammevokalgruppen - s  ---->   går til klasse 1 som har ies-ies i attr/pred.
 LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
