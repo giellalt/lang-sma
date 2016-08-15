@@ -125,13 +125,46 @@ analyser-oahpa-gt-norm.%: analyser-gt-norm.tmp.% \
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
 
-# ... as well as in the disambiguation analyser:
+# ... as well as in the HFST disambiguation analyser:
+analyser-disamb-gt-desc.hfst: analyser-disamb-gt-desc.tmp.hfst \
+				filters/remove-derivation-position-tags.hfst   \
+				filters/rename-POS_before_Der-tags.hfst
+	$(AM_V_HXFST)$(PRINTF) "read regex \
+		    @\"filters/remove-derivation-position-tags.hfst\" \
+		.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
+		.o. @\"$<\"                                           \
+		;\n\
+	invert net\n\
+	save stack $@\n\
+	quit\n" | $(HFST_XFST) -p $(MORE_VERBOSITY)
+
+# ... as well as in the HFST Grammar Checker analyser:
+# (keep the Err/SpaceCmp strings here)
+analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
+				filters/remove-derivation-position-tags.hfst \
+				filters/rename-POS_before_Der-tags.hfst      \
+				filters/remove-word-boundary.hfst
+	$(AM_V_HXFST)$(PRINTF) "\
+	set encode-weights ON\n\
+	read regex \
+			@\"filters/remove-derivation-position-tags.hfst\" \
+		.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
+		.o. @\"$<\"                                           \
+		.o. @\"filters/remove-word-boundary.hfst\"            \
+		;\n\
+	twosided flag-diacritics\n\
+	invert net\n\
+	save stack $@\n\
+	quit\n" | $(HFST_XFST) -p $(MORE_VERBOSITY)
+
+# ... as well as in the XEROX/FOMA disambiguation analyser
+# (remove the Err/SpaceCmp thing here):
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 					filters/remove-derivation-position-tags.% \
 					filters/rename-POS_before_Der-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-derivation-position-tags.$*\" \
-			.o. @\"filters/rename-POS_before_Der-tags.$*\" \
+			.o. @\"filters/rename-POS_before_Der-tags.$*\"  \
 			.o. @\"$<\"                                     \
 			;\n\
 		 $(INVERT_HFST)\
