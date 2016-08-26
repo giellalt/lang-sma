@@ -1679,7 +1679,7 @@ LEXICON SOVVEDH !!= * __@CODE@__row D - Group IV
               +V+IV+Ger:%>eminie         FINAL1        ;
 ! +V+IV+PrsPrc:%>ije   FINAL1 ;
 ! +V+IV+PrsPrc:%>ijes   FINAL1 ;
-           +V+IV+PrfPrc:%>eme            FINAL1        ;
+           +V+IV+PrfPrc:%>eme            flagFINAL1        ;
            +V+IV+ConNeg:%>0h             FINAL1        ;
 ! Derivations
 ! -----------
@@ -1702,7 +1702,7 @@ LEXICON IV_PASSIVE_L  !!= * __@CODE@__
                                       +V+IV+Ger:%>eminie                 FINAL1    ;
 ! +V+PrsPrc:%>ije   FINAL1 ;
 ! +V+PrsPrc:%>ijes   FINAL1 ;
-                                   +V+IV+PrfPrc:%>eme                    FINAL1    ;
+                                   +V+IV+PrfPrc:%>eme                    flagFINAL1    ;
                                    +V+IV+ConNeg:%>0h                     FINAL1    ;
 ! Derivations
 ! -----------
@@ -2147,6 +2147,9 @@ LEXICON flagNomActOdd
 
 LEXICON flagN_ODD
 @C.NeedNoun@ N_ODD ;
+
+LEXICON flagFINAL1
+@C.NeedNoun@ FINAL1 ;
 
 
 !LEXICON V-II-PRS-DUPL
