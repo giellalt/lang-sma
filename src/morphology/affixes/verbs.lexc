@@ -294,7 +294,7 @@ LEXICON GOLTELIDH   !!= * __@CODE@__, odd-syll with -adte- as Der2
                                     COMMON-ODD     ;
    +Der2+Der/ht:%»eht             ÅARAJEHTEDH_TV ;
   +Der3+Der/NomAg:%»æjj             flagMAANA          ;
-          +PrsPrc:%>æjja            FINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+          +PrsPrc:%>æjja            flagFINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +Der2+Der/adte+V:%»%^adteUMLadt    GOEGKERDADTEDH ;
  +Der3+Der/PassL:%»ovv  IV_PASSIVE_L ; 
 
@@ -361,7 +361,7 @@ LEXICON DÅAJVOEHTIDH    !!= * __@CODE@__ for stems ending -t-: dåajvoeht-, odd
                                      COMMON-ODD     ;
  +Der2+Der/ht:%»eht                ÅARAJEHTEDH_TV ;
  +Der3+Der/NomAg:%»æjj               flagMAANA          ;
-          +PrsPrc:%>æjja             FINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+          +PrsPrc:%>æjja             flagFINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
  +Der2+Der/alla+V:%»%^adteUMLall     GOEGKERDADTEDH ;
 
  
@@ -383,7 +383,7 @@ LEXICON COMMON-ODD   !!= * __@CODE@__
                  +VGen:%>%^DISIMPen      FINAL1       ; ! = GH Modalis, KB måtesform, GH Voluntativ
 ! +Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
                   +Ger:%>%^DISIMPeminie  FINAL1       ; ! = GH Gerundium
-               +PrsPrc:%>æjja            FINAL1       ; !XXX Testing, thinking aloud
+               +PrsPrc:%>æjja            flagFINAL1       ; !XXX Testing, thinking aloud
  +Der1+Der/ihks+A+Attr:%>ihks            FINAL1       ; !XXX Testing, thinking aloud
                +PrfPrc:%>amme            FINAL1       ; ! = GH Ptz.Pt.
 !   GH Ptz.Fut. b'ïssejässaa missing here
@@ -456,8 +456,8 @@ LEXICON BÅETEDH   !!= * __@CODE@__ row A - Group I
 ! +Act:%>eme           FINAL1 ;
                            +Ger:%>ieminie            FINAL1             ;
                    +Ger+Err/Orth:%>eminie             FINAL1             ;
-                        +PrsPrc:%>ije                FINAL1             ;
-                   +PrsPrc+Err/Orth:%>eje             FINAL1             ;
+                        +PrsPrc:%>ije                flagFINAL1             ;
+                   +PrsPrc+Err/Orth:%>eje             flagFINAL1             ;
 ! +PrsPrc:%>ijes        FINAL1 ;
                     +PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
 ! row F trigger for Umlaut Prt
@@ -493,7 +493,7 @@ LEXICON BÅETEDH_NOTVGEN   !!= * __@CODE@__ row A - Group I
 ! +Act:%>eme           FINAL1 ;
                     +Ger:%>ieminie         FINAL1             ;
             +Ger+Err/Orth:%>eminie          FINAL1             ;
-                 +PrsPrc:%>ije             FINAL1             ;
+                 +PrsPrc:%>ije             flagFINAL1             ;
 ! +PrsPrc:%>ijes        FINAL1 ;
              +PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
 ! row F trigger for Umlaut Prt
@@ -642,7 +642,7 @@ LEXICON ÅEREDH   !!= * __@CODE@__ row A - Group I   NO -øø-UMLAUT!!!!
                           +V+IV+VGen:%>ien             FINAL1             ;
 ! +V+IV+Act:%>eme           FINAL1 ;
                            +V+IV+Ger:%>ieminie         FINAL1             ;
-                        +V+IV+PrsPrc:%>ije             FINAL1             ;
+                        +V+IV+PrsPrc:%>ije             flagFINAL1             ;
 ! +V+IV+PrsPrc:%>ijes        FINAL1 ;
                     +V+IV+PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
 ! row F trigger for Umlaut Prt
@@ -683,7 +683,7 @@ LEXICON ÅEREDH_TV   !!= * __@CODE@__ row A - Group I   NO -øø-UMLAUT!!!!
                           +V+TV+VGen:%>ien             FINAL1             ;
 ! +V+TV+Act:%>eme           FINAL1 ;
                            +V+TV+Ger:%>ieminie         FINAL1             ;
-                        +V+TV+PrsPrc:%>ije             FINAL1             ;
+                        +V+TV+PrsPrc:%>ije             flagFINAL1             ;
 ! +V+TV+PrsPrc:%>ijes        FINAL1 ;
                     +V+TV+PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
 ! row F trigger for Umlaut Prt
@@ -740,7 +740,7 @@ LEXICON TJEARODH   !!= * __@CODE@__ row C - Group II
                           +VGen:%>oen               FINAL1             ;
 ! +Act:%>eme           FINAL1 ;
                            +Ger:%>oeminie           FINAL1             ;
-                        +PrsPrc:%>oje               FINAL1             ;
+                        +PrsPrc:%>oje               flagFINAL1             ;
 ! +PrsPrc:%>ojes        FINAL1 ;
                     +PrfPrc+Uml:%>%^2UMLeme         FINAL1             ;
 ! Derivations
@@ -892,7 +892,7 @@ LEXICON TSEAHKODH   !!= * __@CODE@__ row C - Group II    these have (lexicalized
                +VGen:%>oen             FINAL1             ;
 ! +Act:%>eme           FINAL1 ;
                 +Ger:%>oeminie         FINAL1             ;
-             +PrsPrc:%>oje             FINAL1             ;
+             +PrsPrc:%>oje             flagFINAL1             ;
 ! +PrsPrc:%>ojes        FINAL1 ;
          +PrfPrc+Uml:%>%^2UMLeme       FINAL1             ;
 ! Derivations
@@ -942,7 +942,7 @@ LEXICON GUARKEDH   !!= * __@CODE@__ row B - Group III
                +VGen:%>an             FINAL1             ;
 ! +Act:%>eme     FINAL1 ;
                 +Ger:%>aminie         FINAL1             ;
-             +PrsPrc:%>ije            FINAL1             ;
+             +PrsPrc:%>ije            flagFINAL1             ;
 ! +PrsPrc:%>ijes  FINAL1 ;
              +PrfPrc:%>eme            FINAL1             ;
              +ConNeg:%>ah             FINAL1             ;
@@ -1010,7 +1010,7 @@ LEXICON TJOEHPEDH_NOTVGEN  !!= * __@CODE@__
                            +Inf:%>edh            FINAL1           ;
 ! +Act:%>eme      FINAL1 ;
                            +Ger:%>eminie         FINAL1           ;
-                        +PrsPrc:%>ije            FINAL1           ;
+                        +PrsPrc:%>ije            flagFINAL1           ;
 ! +PrsPrc:%>ijes  FINAL1 ;
                   +PrfPrc+NoUml:%>eme            FINAL1           ; ! tjoehpeme, bïejeme
                     +PrfPrc+Uml:%>%^1UMLeme      FINAL1           ; ! tjuahpeme, beajeme
@@ -1200,7 +1200,7 @@ LEXICON BÅÅHKEDH   !!= * __@CODE@__ row E - Group V
                           +VGen:%>en             FINAL1           ;
 ! +Act:%>eme    FINAL1 ;
                            +Ger:%>eminie         FINAL1           ;
-                        +PrsPrc:%>ije            FINAL1           ;
+                        +PrsPrc:%>ije            flagFINAL1           ;
 ! +PrsPrc:%>ijes  FINAL1 ;
                         +PrfPrc:%>eme            FINAL1           ;
                         +ConNeg:%>h              FINAL1           ;
@@ -1315,7 +1315,7 @@ LEXICON GÖÖLEDH   !!= * __@CODE@__ row F - Group VI
                           +VGen:%>en             FINAL1           ;
 ! +Act:%>eme    FINAL1 ;
                            +Ger:%>eminie         FINAL1           ;
-                        +PrsPrc:%>ije            FINAL1           ;
+                        +PrsPrc:%>ije            flagFINAL1           ;
 ! +PrsPrc:%>ijes FINAL1 ;
                         +PrfPrc:%>eme            FINAL1           ;
                         +ConNeg:%>h              FINAL1           ;
@@ -1475,7 +1475,7 @@ LEXICON ÅARAJEHTEDH   !!= * __@CODE@__ row A - Group I
                    +VGen:%>ien             FINAL1             ;
 ! +Act:%>eme           FINAL1 ;
                     +Ger:%>ieminie         FINAL1             ;
-                 +PrsPrc:%>ije             FINAL1             ;
+                 +PrsPrc:%>ije             flagFINAL1             ;
 ! +PrsPrc:%>ijes        FINAL1 ;
              +PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
 ! row F trigger for Umlaut Prt
@@ -1548,7 +1548,7 @@ LEXICON GOEGKERDADTEDH   !!= * __@CODE@__ row D - Group IV
              +VGen:%>en             FINAL1           ;
 ! +Act:%>eme      FINAL1 ;
               +Ger:%>eminie         FINAL1           ;
-           +PrsPrc:%>ije            FINAL1           ;
+           +PrsPrc:%>ije            flagFINAL1           ;
 ! +PrsPrc:%>ijes  FINAL1 ;
            +PrfPrc:%>eme            FINAL1           ;
            +ConNeg:%>0h             FINAL1           ;
