@@ -14,6 +14,8 @@ while(<>) {
 	s/HEIM/BERN/g ;
 	s/SIJTE/ACCRA/g ;
 	s/HAWAII/ACCRA/g ;
+# names with South Saami inflection
+	s/^Måehvie\+/!Måehvie+/g ;
 
 	s/b9/b/g ;
 	s/d9/d/g ;
