@@ -93,12 +93,12 @@ endif
 # Xerox & Foma:
 analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 				filters/remove-test-tags.%
-	$(AM_V_XFST)$(PRINTF) "read regex \
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-test-tags.$*\" \
 			.o. @\"$<\" \
 			;\n\
 		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+		 quit\n" | $(XFST_TOOL)
 
 # We need to add processing of language-specific tags in the analysers:
 define giella_analysers
