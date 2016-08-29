@@ -1524,7 +1524,7 @@ LEXICON ODDCOMP
 LEXICON ODD_ÅBPOE
                 +A+Comp:%>åbpoe     ATTRCONT    ; ! båajoesåbpoe, *båajasåbpoe
                      +A+Comp:%>åbp       ÅBPOE       ;
-                            :%>ommes     OMMES       ;
+                     +A+Superl:%>ommes     OMMES       ;
  +A+Comp+Der1+Der/Dimin:%>obpe%»tje ATTRCONT    ;
       +A+Comp+Der1+Der/Dimin:%>obpe%»tj  GÅATETJEadj ;
 
@@ -1532,24 +1532,45 @@ LEXICON ODD_ÅBPOE
 LEXICON ODD_ABPA
                        +A+Comp:%>abpa      ATTRCONT    ; ! båajasabpa,   *båajoesabpa
                             +A+Comp:%>abp       ABPA        ;
-                                   :%>ammes     OMMES       ;
+                            +A+Superl:%>ammes     OMMES       ;
  +A+Comp+Der1+Der/Dimin+Use/NG:%>abpe%»tje ATTRCONT    ;
       +A+Comp+Der1+Der/Dimin+Use/NG:%>abpa%»tj  GÅATETJEadj ;
 
 LEXICON OMMES
-   +A+Superl+Sg+Nom:%^DISIMP     FINAL1    ;
-   +A+Superl+Sg+Acc:e%>%^DISIMPm FINAL1    ;
-   +A+Superl+Sg+Gen:e%>%^DISIMPn FINAL1    ;
-   +A+Superl+Sg+Ill:%>asse       FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
-   +A+Superl+Sg+Ine:%>isnie      FINAL1    ;
-   +A+Superl+Sg+Ela:%>istie      FINAL1    ;
-   +A+Superl+Sg+Com:%>inie       FINAL1    ;
-       +A+Superl+Pl:             N_ODD_PL  ;
-          +A+Superl:             N_ODD_ESS ;
- +A+Superl+Cmp/SgNom:             R         ;
- +A+Superl+Cmp/SgGen:e%>n         R         ;
- +A+Superl+Cmp/PlGen:%>%^DISIMPi  R         ;
-     +A+Superl:%^DISIMP     ATTRCONT  ;
+   +Sg+Nom:%^DISIMP     FINAL1    ;
+   +Sg+Acc:e%>%^DISIMPm FINAL1    ;
+   +Sg+Gen:e%>%^DISIMPn FINAL1    ;
+   +Sg+Ill:%>asse       FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
+   +Sg+Ine:%>isnie      FINAL1    ;
+   +Sg+Ela:%>istie      FINAL1    ;
+   +Sg+Com:%>inie       FINAL1    ;
+       +Pl:             N_ODD_PL  ;
+                        N_ODD_ESS ;
++Cmp/SgNom:             R         ;
++Cmp/SgGen:e%>n         R         ;
++Cmp/PlGen:%>%^DISIMPi  R         ;
+          :%^DISIMP     ATTRCONT  ;
+
+
+LEXICON DIMINCOMP
+          DIMIN_ÅBPOE ; ! Arbitrary "yes"
+ +Use/NG: DIMIN_ABPA  ; ! Arbitrary "no", tt.
+
+LEXICON DIMIN_ÅBPOE
+            +A+Comp+Der/Dimin:%>åbpoe     ATTRCONT    ; ! båajoesåbpoe, *båajasåbpoe
+                     +A+Comp+Der/Dimin:%>åbp       ÅBPOE       ;
+                     +A+Superl+Der/Dimin:%>ommes     OMMES       ;
+
+
+LEXICON DIMIN_ABPA
+                       +A+Comp:%>abpa      ATTRCONT    ; ! båajasabpa,   *båajoesabpa
+                            +A+Comp:%>abp       ABPA        ;
+                          +A+Superl:%>ammes     OMMES       ;
+ +A+Comp+Der1+Der/Dimin+Use/NG:%>abpe%»tje ATTRCONT    ;
+      +A+Comp+Der1+Der/Dimin+Use/NG:%>abpa%»tj  GÅATETJEadj ;
+
+
+
 
 
 LEXICON EVENCOMPCASE
