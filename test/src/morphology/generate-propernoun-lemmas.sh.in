@@ -59,7 +59,7 @@ EXTEDITOR=@SEE@
 ##### --exclude "(pattern1|pattern2|...)"                          #####
 # Extract all lemmas except hardcoded Attr:
 @GTCORE@/scripts/extract-lemmas.sh \
-	--exclude "(Attr)" \
+	--exclude "(Attr| FirstTag)" \
 	$source_file > $lemmas
 
 # Extract all hardcoded Attr:
