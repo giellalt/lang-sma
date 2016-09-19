@@ -552,14 +552,21 @@ LEXICON Root
 !! Here is the list of lexica in the sma analyser
 
             Prefixes     ;
- @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding
- @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding
- @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding
- @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding
- @U.Cap.Obl@ ProperNoun-sma       ; ! SMA proper nouns - always uppercase
- @U.Cap.Opt@ ProperNoun-sma       ; ! SMA proper nouns - downcased for derivations
- @U.Cap.Obl@ ProperNoun-smi       ; ! SMI proper nouns
- @U.Cap.Opt@ ProperNoun-smi       ; ! SMI proper nouns
+! @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
+! @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
+
+! @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
+
+! @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
+
+! @U.Cap.Obl@ ProperNoun-sma       ; ! SMA proper nouns - always uppercase. outcommented 19.9.16
+
+! @U.Cap.Opt@ ProperNoun-sma       ; ! SMA proper nouns - downcased for derivations. outcommented 19.9.16
+
+! @U.Cap.Obl@ ProperNoun-smi       ; ! SMI proper nouns. outcommented 19.9.16
+
+! @U.Cap.Opt@ ProperNoun-smi       ; ! SMI proper nouns. outcommented 19.9.16
+
              NounRoot     ; !!= * @CODE@
              Verb         ; !!= * @CODE@
              Adjective    ; !!= * @CODE@
@@ -574,9 +581,11 @@ LEXICON Root
  +Use/CircN: Numeral      ; !!= * @CODE@
              Abbreviation ; !!= * @CODE@
              Acronym      ; !!= * @CODE@
-
+             ProperNoun   ;
+             
+             
 LEXICON ProperNoun   !!= * __@CODE@__ 
- @U.CmpHyph.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for SMJ short names - always require hyphen
+ @U.CmpHyph.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for SMA short names - always require hyphen
  @U.CmpHyph.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names - always require hyphen
                   ProperNoun-smi        ; ! SMI proper nouns
                   ProperNoun-sma        ; ! contains the full smj name list
