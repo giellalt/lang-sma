@@ -1,0 +1,35 @@
+Kommandoer i analysed i corp:
+
+For å lage ei fil med hvert ord + alle analyser på ei linje.  Nyttig til flere ting.
+cat sma*dep |grep '"<' |cut -d '<' -f2 |cut -d '>' -f1 |usma |sed 's/^$/¢/' | tr '\n' ' ' | tr '¢' '\n' |grep Cmp > linjesmaOnlyCmp
+
+
+cat linjesmaOnlyCmp | grep -v '+Der/NomAct+N+Cmp' | grep 'Cmp/SgNom' | wc -l 
+   50637
+cat linjesmaOnlyCmp | grep -v '+Der/NomAct+N+Cmp' | grep -v 'Cmp/SgNom' | grep 'Cmp/SgGen'  | wc -l
+    3898
+cat linjesmaOnlyCmp | grep -v '+Der/NomAct+N+Cmp' | grep -v 'Cmp/Sg' | grep 'Cmp/PlGen' |wc -l
+    2590
+cat linjesmaOnlyCmp | grep '+Der/NomAct+N+Cmp' | wc -l 
+   10079
+cat linjesmaOnlyCmp | grep -v '+Der/NomAct+N+Cmp' | grep -v 'Cmp/Pl' | grep -v 'Cmp/Sg' |grep 'Cmp/Attr' | wc -l 
+    3695
+cat linjesmaOnlyCmp | grep -v '+Der/NomAct+N+Cmp' | grep -v 'Cmp/Pl' | grep -v 'Cmp/Sg' |grep -v 'Cmp/Attr' | grep 'Num+Cmp' | wc -l 
+     236
+cat linjesmaOnlyCmp | grep -v '+Der/NomAct+N+Cmp' | grep -v 'Cmp/Pl' | grep -v 'Cmp/Sg' |grep -v 'Cmp/Attr' | grep -v 'Num+Cmp' | grep 'ACR+Cmp' | wc -l
+     409
+cat linjesmaOnlyCmp | grep -v '+Der/NomAct+N+Cmp' | grep -v 'Cmp/Pl' | grep -v 'Cmp/Sg' |grep -v 'Cmp/Attr' | grep -v 'Num+Cmp' | grep -v 'ACR+Cmp' | grep 'ABBR+Cmp' | wc -l
+     318
+
+Cmp/SgNom 50637
+Cmp/SgGen 3898
+Cmp/PlGen 2590
+Cmp/Attr 3695
+Num+Cmp 236
+ACR+Cmp 409
+ABBR+Cmp 318
+
+
+
+
+cat sma*dep |grep '"<' |cut -d '<' -f2 |cut -d '>' -f1 |usma |grep Cmp | grep 'Cmp/' | cut -d '+' -f2- |cut -d '#' -f1 | sed 's/Err\/Orth+//g' |sed 's/v1+//' |sed 's/v2+//' |sed 's/Hom1+//'|sed 's/Hom2+//' |sed 's/Der/¢Der/g' |rev | cut -d '¢' -f1 | rev |sort | uniq -c | sort -nr  | grep -v Split > smaCmptaggfrekv
