@@ -101,18 +101,47 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 		 quit\n" | $(XFST_TOOL)
 
 # We need to add processing of language-specific tags in the analysers:
-define giella_analysers
-analyser-gt-%.$(1): analyser-gt-%.tmp.$(1) \
-					 filters/remove-derivation-position-tags.$(1)
-	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
-			    @\"filters/remove-derivation-position-tags.$(1)\" \
-			.o. @\"$$<\"                                      \
+analyser-gt-desc.%: analyser-gt-desc.tmp.% \
+					 filters/remove-derivation-position-tags.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+			    @\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"$<\"                                      \
 			;\n\
-		 $$(INVERT_HFST)\
-		 save stack $$@\n\
-		 quit\n" | $$(XFST_TOOL)
-endef
-$(foreach fst,hfst xfst foma,$(eval $(call giella_analysers,$(fst))))
+		 $(INVERT_HFST)\
+		 save stack $@\n\
+		 quit\n" | $(XFST_TOOL)
+
+# ... and also to the normative analysers:
+analyser-gt-norm.%: analyser-gt-norm.tmp.% \
+					 filters/remove-derivation-position-tags.% \
+					 filters/remove-illegal-derivation-strings-flagbased.% \
+					 filters/insert-default-compounding-tags.% \
+					 filters/insert-default_left_compounding-tags.% \
+					 filters/block-illegal_compound-strings.%  \
+					 filters/split-CmpN-tags.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+			    @\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"filters/block-illegal_compound-strings.$*\"       \
+			.o. @\"filters/split-CmpN-tags.$*\"                      \
+			.o. @\"filters/insert-default_left_compounding-tags.$*\" \
+			.o. @\"filters/insert-default-compounding-tags.$*\"      \
+			.o. @\"filters/remove-illegal-derivation-strings-flagbased.$*\" \
+			.o. @\"$<\"                                      \
+			;\n\
+		 twosided flag-diacritics\n\
+		 $(INVERT_HFST)\
+		 save stack $@\n\
+		 quit\n" | $(XFST_TOOL)
+
+# The Xerox analyser need special treatment due to bugs:
+analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
+					 filters/remove-derivation-position-tags.xfst
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+			    @\"filters/remove-derivation-position-tags.xfst\" \
+			.o. @\"$<\"                                      \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
 
 # ... and also in the Oahpa analyser:
 analyser-oahpa-gt-norm.%: analyser-gt-norm.tmp.% \
@@ -124,19 +153,6 @@ analyser-oahpa-gt-norm.%: analyser-gt-norm.tmp.% \
 		 $(INVERT_HFST)\
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
-
-# ... as well as in the HFST disambiguation analyser:
-analyser-disamb-gt-desc.hfst: analyser-disamb-gt-desc.tmp.hfst \
-				filters/remove-derivation-position-tags.hfst   \
-				filters/rename-POS_before_Der-tags.hfst
-	$(AM_V_HXFST)$(PRINTF) "read regex \
-		    @\"filters/remove-derivation-position-tags.hfst\" \
-		.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
-		.o. @\"$<\"                                           \
-		;\n\
-	invert net\n\
-	save stack $@\n\
-	quit\n" | $(HFST_XFST) -p $(MORE_VERBOSITY)
 
 # ... as well as in the HFST Grammar Checker analyser:
 # (keep the Err/SpaceCmp strings here)
