@@ -153,7 +153,7 @@ LEXICON FirstComponent ! - disse skal helst ikke gå til R-lexicon, untatt de le
 
 OECD-stuvdije+CmpN/SgN+N+Sem/Dummytag+Cmp/SgNom+OLang/NOB:OECD-studie R ; ! RIKTIG Oppføring!
 
-aalth+Cmp/SgNom+Sem/Dummytag:aalth R ;
+aalth+N+Sem/Dummytag+Cmp/SgNom:aalth R ;
 åvtels+N+Sem/Dummytag+Cmp/SgNom:åvtels R ;! attr and cmp produktiv  - 
 avtels+N+Sem/Dummytag+Cmp/SgNom:avtels R ;
 åvtelh+N+Sem/Dummytag+Cmp/SgNom:åvtelh R ;
@@ -162,6 +162,9 @@ avtelh+N+Sem/Dummytag+Cmp/SgNom:avtelh R ;
 avteld+N+Sem/Dummytag+Cmp/SgNom:avteld R ;
 åvte+N+Sem/Dummytag+Cmp/SgNom:åvtelds R ;! bæjngolds // bæjngoeh
 avte+N+Sem/Dummytag+Cmp/SgNom:avtelds R ;
+
+laadth+N+Sem/Dummytag+Cmp/SgNom:laadth R ;
+sjisjnje+N+Sem/Dummytag+Cmp/SgNom:sjisjnje R ;
 
 ! dette er lemma som bare opptrer først i sammensetninger:
 ruaksj+N+Sem/Dummytag+Cmp/SgNom:ruaksj R ;! prefiks - ruaksja 
@@ -517,7 +520,7 @@ aahtjetje-guaktah+CmpNP/None+Err/Orth+Sem/Dummytag:aahtjetje#guakt MÅVHKAH ;
 aahtjetjeguaktah:aahtjetje#guakt MÅVHKAH ;
 aajege+CmpN/SgN+CmpNP/Pref+Sem/Dummytag:aaj GAAJSEGE ; !   NB!
 aajehts+Sem/Dummytag:aajehts N_ODD_C ;
-aajeske+Sem/Dummytag:aajesk N_ODD ;
+
 aajhtere+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:aajhter N_ODD ;
 aajhterereakta:aajhterereakt MAANA ;
 aajhterevoete+Sem/Dummytag:aajhtere#voet NIEJTE ;
@@ -598,6 +601,8 @@ aaltoenmielkie+Sem/Dummytag:aaltoen#mielk N_IE ;
 aaltoenvuasta+Sem/Dummytag:aaltoen#vuast MAANA ;
 aamhte+Sem/Dummytag:aamht NIEJTE ;
 aamhtese+Sem/Dummytag:aamhtes N_ODD ;
+
+
 aamhtesegïetedallije+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:aamhtese#gïetedallij IJE_ODD ;
 aamhtesenummere+OLang/NOB+Sem/Dummytag:aamhtese#nummer N_ODD_LOAN ;
 aamhteseprovsa+Sem/Dummytag:aamhtese#provs MAANA ;
@@ -762,9 +767,8 @@ aelkiehtimmie+Sem/Dummytag:aelkiehtimm N_IE ;
 aelmie+Sem/Dummytag:aelm N_IE ;
 aepie+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:aep N_IE ;
 aerede+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:aeried N_ODD ;
-aereds-aabroedæjja+Sem/Dummytag:aereds-aabroedæjj MAANA ;
 aeredsaabra+Sem/Dummytag:aereds#aabr MAANA ;
-aeredsaabroedæjja+Sem/Dummytag:aereds^aabroedæjj MAANA ;
+aeredsaabroedæjja+Sem/Dummytag:aereds#aabroedæjj MAANA ;
 aeredsbeapmoe+Sem/Dummytag:aereds#beapm N_OE_UML ;
 aeredsbiejjie+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:aereds#biejj N_IE ;
 aeredsgaarvoe+Sem/Dummytag:aereds#gaarv N_OE_UML ;
@@ -1077,11 +1081,13 @@ aprille+Sem/Dummytag+Err/Orth:april MARS ;
 apåstele+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth+OLang/NOB+Sem/Dummytag:aapåstel N_ODD ;
 apåstele+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:apåstel N_ODD ;
 aquakultuvre+OLang/NOB+Sem/Dummytag:aqua#kultu UVRE_LOAN ;
+
 araabere+OLang/NOB+Sem/Dummytag:araaber N_ODD ;
 araapere+OLang/NOB+Sem/Dummytag:araaper N_ODD ;
 
-arabeere+Cmp/SgNom+Dial/-NOR+Sem/Dummytag:arab R ;
-arabeere+Sem/Dummytag:arabeer N_ODD ;
+!arabeere+CmpN/SgN+N+Sem/Dummytag+Cmp/SgNom+OLang/NOB:araber R ; ! Kva er ein arabeer/arabear?
+!arabeere+Cmp/SgNom+Dial/-NOR+Sem/Dummytag:arab R ;
+!arabeere+Sem/Dummytag:arabeer N_ODD ;
 
 areaale+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:are^a AALE_LOAN ;
 argovne+OLang/NOB+Sem/Dummytag:arg OVNE_LOAN ;
@@ -2355,7 +2361,7 @@ cruisetrafihke+OLang/NOB+Sem/Dummytag:cruise#traf IHKE_LOAN ;
 culpanorme+OLang/NOB+Sem/Dummytag:culpa#norm ISTE_LOAN ;
 cyanamijde+OLang/NOB+Sem/Dummytag:cyanam IJDE_LOAN ;
 
-! cyanos+Cmp/SgNom+Sem/Dummytag:cy^anos R ; ! Prop! 
+
 
 cykeele+Sem/Dummytag:cykeel N_ODD ;
 cykeele+CmpN/SgN+N+Sem/Dummytag+Cmp/SgNom+OLang/NOB:cykel R ;
@@ -5450,7 +5456,7 @@ hiehtievuerie+Sem/Dummytag:hiehtie#vuer N_IE ;
 hielmie+Sem/Dummytag:hielm N_IE ;
 hierarkije+OLang/NOB+Sem/Dummytag:hi^er^ark IJE_LOAN ;
 hierkeme+Sem/Dummytag:hierkiem N_ODD ;
-hierkeske+Sem/Dummytag:hierkiesk N_ODD ;
+
 hierkie+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:hierk N_IE ;
 hierkieskovhte+Sem/Dummytag:hierkie#skovht NIEJTE ;
 hiessjie+Sem/Dummytag:hiessj N_IE ;
@@ -7496,7 +7502,7 @@ laable+Sem/Dummytag:laabl NIEJTE ;
 laadtege+Sem/Dummytag:laadt LAADTEGE ;
 laadtegenlaste+Sem/Dummytag:laadtegen#last NIEJTE ;
 
-laadth+Cmp/SgNom+Sem/Dummytag:laadth R ;
+
 
 laadthbiekere+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:laadth#bieker N_ODD ;
 laadthbihkije+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:laadth#bihkij IJE_ODD ;
@@ -7768,7 +7774,6 @@ leukemije+OLang/NOB+Sem/Dummytag:leukem IJE_LOAN ;
 leukocytose+CmpN/SgN+N+Sem/Dummytag+Cmp/SgNom+OLang/NOB:leuko^cytos R ;
 leukocytose+Sem/Dummytag:leuko#cytos NIEJTE ;
 
-! leukocytt+Cmp/SgNom+Sem/Dummytag:leukocytt R ; - Prop!
 leukosyhte+Err/Orth+OLang/NOB+Sem/Dummytag:leukocyht NIEJTE ;
 leukosyhte+OLang/NOB+Sem/Dummytag:leukosyht NIEJTE ;
 leukosytovse+Err/Orth+OLang/NOB+Sem/Dummytag:leukocyto OVSE_LOAN ;
@@ -11872,7 +11877,7 @@ sjinnjele+Sem/Dummytag:sjinnjel N_ODD ;
 sjiraffe+OLang/NOB+Sem/Dummytag:sjiraff ISTE_LOAN ;
 sjisjniestuaroe+Sem/Dummytag:sjisjniestuar N_OE_UML ;
 
-sjisjnje+Sem/Dummytag:sjisjnje R ;
+
 sjisjnjelds+CmpN/SgN+N+Sem/Dummytag+Cmp/SgNom+OLang/NOB+Sem/Dummytag:sjisjnjelds R ;
 
 sjisjnjele+Sem/Dummytag:sjisjnjiel N_ODD ;!XXX
