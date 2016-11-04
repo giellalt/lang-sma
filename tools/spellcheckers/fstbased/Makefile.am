@@ -15,7 +15,7 @@ SUBDIRS = filters . desktop mobile
 # 2. Split multiple tags into separate paths
 # 3. Convert tags to flags
 # 4. Make flags two-sided
-generator-fstspeller-gt-norm-comp_restricted.tmp1.hfst: \
+generator-fstspeller-gt-norm-comp_restricted.hfst: \
 		generator-fstspeller-gt-norm-comp_restricted.tmp.hfst \
 		filters/insert-default-compounding-tags.hfst \
 		filters/insert-default_left_compounding-tags.hfst \
@@ -90,10 +90,10 @@ generator-fstspeller-gt-norm-comp_restricted.tmp1.hfst: \
 #		quit\n" | $(HFST_XFST) -p $(VERBOSITY)
 #
 #endif # HAS_FOMA
-#
-##		eliminate flag CmpHyph\n\
-##		eliminate flag CmpN\n\
-##		eliminate flag NeedNoun\n\
-##### END: Local build rules: *.hfst: *.tmp.hfst ####
+
+#		eliminate flag CmpHyph\n\
+#		eliminate flag CmpN\n\
+#		eliminate flag NeedNoun\n\
+#### END: Local build rules: *.hfst: *.tmp.hfst ####
 
 include $(top_srcdir)/am-shared/tools-spellcheckers-fstbased-dir-include.am
