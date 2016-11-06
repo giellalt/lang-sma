@@ -38,9 +38,9 @@ LEXICON N_ODD_INFL
                +Sg:             N_ODD_SG       ;
                +Pl:             N_ODD_PL       ;
                                 N_ODD_ESS      ;
-         +Cmp/SgNom:e%^DISIMP    R              ;
-         +Cmp/SgGen:e%>%^DISIMPn R              ;
-         +Cmp/PlGen:%>%^DISIMPi  R              ;
+        +Cmp/SgNom:e%^DISIMP    R              ;
+        +Cmp/SgGen:e%>%^DISIMPn R              ;
+        +Cmp/PlGen:%>%^DISIMPi  R              ;
  +Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
 ! Test data:
 !!€gt-norm: gierehtse # Odd-syllable test
@@ -63,33 +63,33 @@ LEXICON N_ODD_INFL
 
 LEXICON N_ODD_LOAN
 !! * Odd-syll loanwords: lexicon @LEXNAME@
-         +N+Sg+Nom:e         FINAL1    ;
-   +N+Sg+Nom+PxSg1:%>amme    FINAL1    ;
-   +N+Sg+Nom+PxSg2:%>adth    FINAL1    ;
-         +N+Sg+Acc:e%>m      FINAL1    ;
-   +N+Sg+Acc+PxSg2:%>amth    FINAL1    ;
-         +N+Sg+Gen:e%>n      FINAL1    ;
-   +N+Sg+Gen+PxSg1:%>anne    FINAL1    ;
-   +N+Sg+Gen+PxSg2:%>anne    FINAL1    ;
-   +N+Sg+Gen+PxSg3:%>anne    FINAL1    ;
-         +N+Sg+Ill:%>asse    FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
-   +N+Sg+Ill+PxSg2:%>assedh  FINAL1    ;
-         +N+Sg+Ine:%>isnie   FINAL1    ;
-         +N+Sg+Ela:%>istie   FINAL1    ;
+          +N+Sg+Nom:e         FINAL1    ;
+    +N+Sg+Nom+PxSg1:%>amme    FINAL1    ;
+    +N+Sg+Nom+PxSg2:%>adth    FINAL1    ;
+          +N+Sg+Acc:e%>m      FINAL1    ;
+    +N+Sg+Acc+PxSg2:%>amth    FINAL1    ;
+          +N+Sg+Gen:e%>n      FINAL1    ;
+    +N+Sg+Gen+PxSg1:%>anne    FINAL1    ;
+    +N+Sg+Gen+PxSg2:%>anne    FINAL1    ;
+    +N+Sg+Gen+PxSg3:%>anne    FINAL1    ;
+          +N+Sg+Ill:%>asse    FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
+    +N+Sg+Ill+PxSg2:%>assedh  FINAL1    ;
+          +N+Sg+Ine:%>isnie   FINAL1    ;
+          +N+Sg+Ela:%>istie   FINAL1    ;
  +N+Sg+Ela+Err/Orth:%>istie   FINAL1    ; !Miesie Mavve
-         +N+Sg+Com:%>inie    FINAL1    ;
-   +N+Sg+Com+PxSg2:%>æjnedh  FINAL1    ;
-         +N+Pl+Nom:%>h       FINAL1    ;
-         +N+Pl+Acc:%>idie    FINAL1    ;
+          +N+Sg+Com:%>inie    FINAL1    ;
+    +N+Sg+Com+PxSg2:%>æjnedh  FINAL1    ;
+          +N+Pl+Nom:%>h       FINAL1    ;
+          +N+Pl+Acc:%>idie    FINAL1    ;
  +N+Pl+Acc+Err/Orth:%>idie    FINAL1    ; !Miesie Mavve
-         +N+Pl+Gen:%>i       FINAL1    ;
+          +N+Pl+Gen:%>i       FINAL1    ;
  +N+Pl+Gen+Err/Orth:%>ij      FINAL1    ;
-         +N+Pl+Ill:%>idie    FINAL1    ;
-         +N+Pl+Ine:%>inie    FINAL1    ;
-         +N+Pl+Ela:%>ijstie  FINAL1    ;
-         +N+Pl+Com:%>igujmie FINAL1    ;
+          +N+Pl+Ill:%>idie    FINAL1    ;
+          +N+Pl+Ine:%>inie    FINAL1    ;
+          +N+Pl+Ela:%>ijstie  FINAL1    ;
+          +N+Pl+Com:%>igujmie FINAL1    ;
  +N+Pl+Com+Err/Orth:%>igyjmie FINAL1    ;
-                +N:          N_ODD_ESS ;
+                 +N:          N_ODD_ESS ;
        +N+Cmp/SgNom:e         R         ;
        +N+Cmp/SgGen:e%>n      R         ;
        +N+Cmp/PlGen:%>i       R         ;
@@ -97,23 +97,23 @@ LEXICON N_ODD_LOAN
 
 LEXICON N_ODD_SG
 !! ** Odd-syll sg: lexicon @LEXNAME@
-!  +Nom:e         FINAL1 ; ! sjekk
-         +Nom:e%^DISIMP       FINAL1 ;
-   +Nom+PxSg1:%>amme          FINAL1 ;
-   +Nom+PxSg2:%>adth          FINAL1 ;
-         +Acc:e%>%^DISIMPm    FINAL1 ;
-   +Acc+PxSg2:%>amth          FINAL1 ;
-         +Gen:e%>%^DISIMPn    FINAL1 ;
-   +Gen+PxSg1:%>anne          FINAL1 ;
-   +Gen+PxSg2:%>anne          FINAL1 ;
-   +Gen+PxSg3:%>anne          FINAL1 ;
-         +Ill:%>asse          FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-   +Ill+PxSg2:%>assedh        FINAL1 ;
-         +Ine:%>isnie         FINAL1 ;
-         +Ela:%>istie         FINAL1 ;
- +Ela+Err/Orth:%>%^DISIMPistie FINAL1 ; !Miesie Mavve
-         +Com:%>inie          FINAL1 ;
-   +Com+PxSg2:%>æjnedh        FINAL1 ;
+!          +Nom:e               FINAL1 ; ! sjekk
+           +Nom:e%^DISIMP       FINAL1 ;
+     +Nom+PxSg1:%>amme          FINAL1 ;
+     +Nom+PxSg2:%>adth          FINAL1 ;
+           +Acc:e%>%^DISIMPm    FINAL1 ;
+     +Acc+PxSg2:%>amth          FINAL1 ;
+           +Gen:e%>%^DISIMPn    FINAL1 ;
+     +Gen+PxSg1:%>anne          FINAL1 ;
+     +Gen+PxSg2:%>anne          FINAL1 ;
+     +Gen+PxSg3:%>anne          FINAL1 ;
+           +Ill:%>asse          FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+     +Ill+PxSg2:%>assedh        FINAL1 ;
+           +Ine:%>isnie         FINAL1 ;
+           +Ela:%>istie         FINAL1 ;
+  +Ela+Err/Orth:%>%^DISIMPistie FINAL1 ; !Miesie Mavve
+           +Com:%>inie          FINAL1 ;
+     +Com+PxSg2:%>æjnedh        FINAL1 ;
 
 LEXICON N_ODD_PL
 !! ** Odd-syll pl: lexicon @LEXNAME@
