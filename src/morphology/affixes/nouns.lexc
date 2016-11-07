@@ -117,18 +117,17 @@ LEXICON N_ODD_SG
 
 LEXICON N_ODD_PL
 !! ** Odd-syll pl: lexicon @LEXNAME@
-         +Nom:%>%^DISIMPh       FINAL1 ;
-         +Acc:%>idie            FINAL1 ;
+          +Nom:%>%^DISIMPh       FINAL1 ;
+          +Acc:%>idie            FINAL1 ;
  +Acc+Err/Orth:%>%^DISIMPidie    FINAL1 ; !Miesie Mavve
- +Acc+Err/Orth:%>%^DISIMPide     FINAL1 ; 
-         +Gen:%>%^DISIMPi       FINAL1 ;
+ +Acc+Err/Orth:%>%^DISIMPide     FINAL1 ;
+          +Gen:%>%^DISIMPi       FINAL1 ;
  +Gen+Err/Orth:%>%^DISIMPij      FINAL1 ;
-         +Ill:%>idie            FINAL1 ;
- +Ill+Err/Orth:%>%^DISIMPide     FINAL1 ;       
-         +Ine:%>inie            FINAL1 ;
-         +Ela:%>ijstie          FINAL1 ;
-        
-         +Com:%>%^DISIMPigujmie FINAL1 ;
+          +Ill:%>idie            FINAL1 ;
+ +Ill+Err/Orth:%>%^DISIMPide     FINAL1 ;
+          +Ine:%>inie            FINAL1 ;
+          +Ela:%>ijstie          FINAL1 ;
+          +Com:%>%^DISIMPigujmie FINAL1 ;
  +Com+Err/Orth:%>%^DISIMPigyjmie FINAL1 ;
 
 LEXICON N_ODD_ESS
@@ -137,37 +136,35 @@ LEXICON N_ODD_ESS
 
 LEXICON ÅABPETJH ! Resiproke og dim.
 !! ** Default N_ODD plural lexicon: lexicon @LEXNAME@
-                    +N+Pl+Nom:%>%^DISIMPh       FINAL1    ;
-                    +N+Pl+Acc:%>idie            FINAL1    ;
-                    +N+Pl+Gen:%>%^DISIMP        IGENSUFF  ;
-                    +N+Pl+Ill:%>idie            FINAL1    ;
-                    +N+Pl+Ine:%>inie            FINAL1    ;
-                    +N+Pl+Ela:%>ijstie          FINAL1    ;
-                    +N+Pl+Com:%>%^DISIMPigujmie FINAL1    ;
-            +N+Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1   ;
-                       +N+Ess:%>inie            FINAL1    ;
-                  +N+Cmp/SgNom:e%^DISIMP         R        ;
-                  +N+Cmp/PlGen:%>%^DISIMPi       R        ;
-       +N+Der1+Der/Dimin+N+Pl:%»adtj            NIEJTE_PL ;
-          +N+Der1+Der/Dimin+N:%»adtj            EVEN_ESS  ;
- +N+Der1+Der/Dimin+N+Cmp/SgNom:%»adtje           R        ;
- +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i         R        ;
- 
+                     +N+Pl+Nom:%>%^DISIMPh       FINAL1    ;
+                     +N+Pl+Acc:%>idie            FINAL1    ;
+                     +N+Pl+Gen:%>%^DISIMP        IGENSUFF  ;
+                     +N+Pl+Ill:%>idie            FINAL1    ;
+                     +N+Pl+Ine:%>inie            FINAL1    ;
+                     +N+Pl+Ela:%>ijstie          FINAL1    ;
+                     +N+Pl+Com:%>%^DISIMPigujmie FINAL1    ;
+            +N+Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1    ;
+                        +N+Ess:%>inie            FINAL1    ;
+                  +N+Cmp/SgNom:e%^DISIMP         R         ;
+                  +N+Cmp/PlGen:%>%^DISIMPi       R         ;
+        +N+Der1+Der/Dimin+N+Pl:%»adtj            NIEJTE_PL ;
+           +N+Der1+Der/Dimin+N:%»adtj            EVEN_ESS  ;
+ +N+Der1+Der/Dimin+N+Cmp/SgNom:%»adtje           R         ;
+ +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i         R         ;
+
  
 !! LEXICON TJE_LASSJE_RESIPR
-
-!        +N+Der1+Der/Dimin+N+Pl:%»adtj            NIEJTE_PL ;
-!           +N+Der1+Der/Dimin+N:%»adtj            EVEN_ESS  ;
-!  +N+Der1+Der/Dimin+N+Cmp/SgNom:%»adtje           R         ;
-!  +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i         R         ;
+!        +N+Der1+Der/Dimin+N+Pl:%»adtj    NIEJTE_PL ;
+!           +N+Der1+Der/Dimin+N:%»adtj    EVEN_ESS  ;
+! +N+Der1+Der/Dimin+N+Cmp/SgNom:%»adtje   R         ;
+! +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i R         ;
 
 
 LEXICON TJE_ETJE_RESIPR
-
-       +N+Pl:%»edtj            NIEJTE_PL ;
-       +N+Pl:%»edtj            EVEN_ESS  ;
-       +N+Cmp/SgNom:edtje          R         ;
-!  +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i         R         ;
+                          +N+Pl:%»edtj    NIEJTE_PL ;
+                          +N+Pl:%»edtj    EVEN_ESS  ;
+                   +N+Cmp/SgNom:edtje     R         ;
+! +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i R         ;
 
 
 
@@ -190,9 +187,9 @@ LEXICON N_ODD_C   !these words have consonant-ending in nominative
         +N+Com+PxSg2:%>æjnedh     FINAL1         ;
                +N+Pl:             N_ODD_PL       ;
                   +N:             N_ODD_ESS      ;
-         +N+Cmp/SgNom:%^DISIMP     R              ;
-         +N+Cmp/SgGen:e%>%^DISIMPn R              ;
-         +N+Cmp/PlGen:%>%^DISIMPi  R              ;
+        +N+Cmp/SgNom:%^DISIMP     R              ;
+        +N+Cmp/SgGen:e%>%^DISIMPn R              ;
+        +N+Cmp/PlGen:%>%^DISIMPi  R              ;
  +N+Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
 
 
