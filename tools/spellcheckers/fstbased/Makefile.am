@@ -20,7 +20,7 @@ generator-fstspeller-gt-norm.hfst: \
 		filters/insert-default-compounding-tags.hfst \
 		filters/insert-default_left_compounding-tags.hfst \
 		filters/block-illegal_compound-strings.hfst  \
-		filters/remove-illegal-derivation-strings.hfst \
+		filters/remove-illegal-derivation-strings-flagbased.hfst \
 		filters/remove-Use_Minus_PLX-tags.hfst       \
 		filters/split-CmpN-tags.hfst \
 		filters/convert_to_flags-CmpNP-tags.hfst \
@@ -31,7 +31,7 @@ generator-fstspeller-gt-norm.hfst: \
 		.o. @\"filters/split-CmpN-tags.hfst\"                      \
 		.o. @\"filters/insert-default_left_compounding-tags.hfst\" \
 		.o. @\"filters/insert-default-compounding-tags.hfst\"      \
-		.o. @\"filters/remove-illegal-derivation-strings.hfst\"    \
+		.o. @\"filters/remove-illegal-derivation-strings-flagbased.hfst\" \
 		.o. @\"filters/remove-Use_Minus_PLX-tags.hfst\"            \
 		.o. @\"filters/convert_to_flags-CmpNP-tags.hfst\"          \
 		.o. @\"filters/split-CmpNP-tags.hfst\"                     \
