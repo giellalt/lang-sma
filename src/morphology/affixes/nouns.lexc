@@ -198,7 +198,7 @@ LEXICON N_ODD_C   !these words have consonant-ending in nominative
 LEXICON AAREGE        !Sg+Nom=Aarege/Aareh  Sg+Cmp=Aarege-/Aareh- Redirects go GAAJSEGE, but adds also -ege and -h for Cmp
                          GAAJSEGE ;
  +N+Cmp/SgNom+Use/NG:ege%^DISIMP R      ; ! Saemiej åålmegebiejjie ! Når -ege?
- +N+Cmp/SgNom+Use/NG:h%^DISIMP R      ;   ! Saemiej åålmhbiejjie når -eh?
+ +N+Cmp/Cmp/AttrH:h%^DISIMP R      ;   ! Saemiej åålmhbiejjie når -eh?
 
 
 LEXICON BAARTEGE        !Sg+Nom=baartege/baarth  Sg+Cmp=baartege-/baarth- Cmp: -h, -ege, -egen, -egi
@@ -253,6 +253,8 @@ LEXICON GAAJSEGE        !Sg+Nom=gaajsege/gaajsh  Sg+Cmp=gaajsh- redirect to LEEJ
                  
 
 LEXICON LEEJJEGE        !Sg+Nom=leejjege  Sg+Cmp=leejjeh-  Cmp: -eh -egen -egi
+
+
            +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
            +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
            +N+Sg+Gen:ege%>%^DISIMPn FINAL1         ;
