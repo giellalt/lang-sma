@@ -138,6 +138,10 @@ LIST Indef = Indef ;
 LIST Num = Num ;
 LIST Prop = Prop ;
 
+LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ;
+LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ;
+
+
 #!! * Sets for Semantic tags
 # -------------
 
@@ -1373,6 +1377,9 @@ MAP (@SUBJ) TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV);
 
 AFTER-SECTIONS              #
 # ======================================== #
+
+REMOVE:errsub $$WORDLEMMA + Err/Orth (0 $$WORDLEMMA - Err/Orth ) ; # Apertium
+REMOVE:errsub2 $$WORDLEMMA + Err/Orth-spes (0 $$WORDLEMMA - Err/Orth-spes ) ; # Apertium
 
 #Disse kommenteres inn når analysen skal brukes i functions.cg3   
 SUBSTITUTE (A) (A <sma>) WORD ;  #RemoveFromApertium
