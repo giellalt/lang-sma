@@ -299,10 +299,7 @@ LIST CLB = CLB ;
 LIST LEFT = LEFT ;
 LIST RIGHT = RIGHT ;
 LIST COMMA = "," ;
-LIST Der1 = Der1 ;
-LIST Der2 = Der2 ;
-LIST Der3 = Der3 ;
-
+LIST Arab = Arab ;
 
 #!! * Syntactic tags
 
@@ -608,6 +605,12 @@ REMOVE:Aregex A-DER (0 A-DER-SUF) ;
 
 REMOVE:waitwithDis (2 V) (0 (1 V)) ;
 
+SELECT:ArabNom (Arab Nom) (-1 BOS)(NEGATE 1 Po) ;
+SELECT:Arab1 (Arab Nom)(0 ("1")) ;
+	#$ a) Álgogursa 1 sámegielas
+SELECT:ArabNomPlc (Arab Nom) (-1 Sem/Plc)(NEGATE 1 Po) ;
+
+SELECT:Arab Arab  ; # In Apertium we get analysis both with and without the tag.
 
 
 #!! Remove Num, ACR, ...
@@ -1419,6 +1422,11 @@ MAP (@SUBJ) TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV);
 
 AFTER-SECTIONS              #
 # ======================================== #
+
+
+LIST WORDLEMMA = (".*"r) ;
+
+REMOVE SUB:1 (cmp_sggen) (0/* (cmp_sgnom)) ;	#This for Apertium
 
 REMOVE:errsub $$WORDLEMMA + Err/Orth (0 $$WORDLEMMA - Err/Orth ) ; # Apertium
 REMOVE:errsub2 $$WORDLEMMA + Err/Orth-spes (0 $$WORDLEMMA - Err/Orth-spes ) ; # Apertium
