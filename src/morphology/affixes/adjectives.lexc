@@ -65,9 +65,9 @@ LEXICON VIELIEH
 ! Attribute lexica
 ! ----------------
 
-LEXICON ATTR_0_PRED_0
-   ATTR_0 ;
-   PRED_0 ;
+!LEXICON ATTR_0_PRED_0
+!   ATTR_0 ;
+!   PRED_0 ;
 
 LEXICON ATTR_0
       +A: ATTRCONT ;
@@ -514,12 +514,12 @@ LEXICON oes_OES_ODD1EVEN !Dette er klasse 3-adjektiv,  del opp adjektivene i det
         :oes ODD_ÅBPOE ;
  +Use/NG:oe  EVENCOMP  ;
 
-LEXICON es_ES_ODD1 ! Kommer fra e(1)-stamme og er derivasjon av e_ES_ODDEVEN2
-            :e  ATTR_S     ;
- +A+Cmp/SgNom:es R          ;
-            :e  PRED_S     ;
-            :es ODDCASEOBL ;
-            :es ODDCOMP    ;
+!LEXICON es_ES_ODD1 ! Kommer fra e(1)-stamme og er derivasjon av e_ES_ODDEVEN2
+!            :e  ATTR_S     ;
+! +A+Cmp/SgNom:es R          ;
+!            :e  PRED_S     ;
+!            :es ODDCASEOBL ;
+!            :es ODDCOMP    ;
 
 
 LEXICON s_S_ODDNOCOMP ! HUFF, del opp adjektivene i dette leksikonet i jamn, odde- og loan-adjektiver
@@ -575,9 +575,9 @@ LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 !! }}}
 
 
-LEXICON n_N_ODDNOCOMP1  ! attr=n, pred= n
-   ATTR_N ;
-   PRED_N ;
+!LEXICON n_N_ODDNOCOMP1  ! attr=n, pred= n
+!   ATTR_N ;
+!   PRED_N ;
 !  sliegrie;sleegre, slehtjie/-m,-n-an,-esne,-este, dette er adverbs
 
 
@@ -1573,12 +1573,12 @@ LEXICON DIMIN_ABPA
 
 
 
-LEXICON EVENCOMPCASE
-   EVENCOMPCASE_NOM ;
-   EVENCOMPCASE_OBL ;
+!LEXICON EVENCOMPCASE
+!   EVENCOMPCASE_NOM ;
+!   EVENCOMPCASE_OBL ;
 
-LEXICON EVENCOMPCASE_NOM
- +A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP FINAL1 ;
+!LEXICON EVENCOMPCASE_NOM
+! +A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP FINAL1 ;
 
 LEXICON EVENCOMPCASE_OBL
    +A+Comp+Sg+Acc:%>%^COMPDISIMPbe%>%^DISIMPm FINAL1    ;
@@ -1766,3 +1766,5 @@ LEXICON LEEJNES
   +Use/NG:#leejns  ATTR_0 ;
  +Err/Orth:-leejnes ATTR_0 ;
  +Err/Orth:-leejns  ATTR_0 ;
+ 
+ 
