@@ -1232,18 +1232,18 @@ LEXICON PERS_SNAME_ODD_FLAG @U.Cap.Obl@ PERS_SNAME_ODD ;
 LEXICON PERS_SNAME_ODD
     +Sg+Acc:%>em      FINAL1 ;
     +Sg+Gen:%>en      FINAL1 ;
-    +Sg+Ill:%>asse            FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-    +Sg+Ine:%>isnie           FINAL1 ;
-    +Sg+Ela:%>istie           FINAL1 ;
-    +Sg+Com:%>inie            FINAL1 ;
-+Sg+Nom:%>e FINAL1 ;
-+Cmp/SgNom:%>e           RHyph  ;
-+Cmp/SgGen:%>e           RHyph  ;
+    +Sg+Ill:%>asse    FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+    +Sg+Ine:%>isnie   FINAL1 ;
+    +Sg+Ela:%>istie   FINAL1 ;
+    +Sg+Com:%>inie    FINAL1 ;
+    +Sg+Nom:%>e       FINAL1 ;
+ +Cmp/SgNom:%>e       RHyph  ;
+ +Cmp/SgGen:%>e       RHyph  ;
 
     +Pl+Nom:%>eh      FINAL1 ;
-    +Pl:          N_ODD_PL  ;
-                  N_ODD_ESS ;
-          +Attr:%>e FINAL1    ;
+        +Pl:          N_ODD_PL  ;
+                      N_ODD_ESS ;
+      +Attr:%>e       FINAL1    ;
  @U.Cap.Obl@+Der1+Der/Dimin+N:@U.Cap.Obl@e%»tj GÅATETJE ; !Åvletje
 
 
@@ -1273,71 +1273,83 @@ LEXICON SNAME_ODD_PLC-ORG ! Southern Sami names
    ERVASTI_PLC-ORG_FLAG ;
 
 LEXICON VAARATJE-plc
-   VAARATJE_FLAG ;
+ +N+Prop+Sem/Plc:  VAARATJE_FLAG ;
 
 LEXICON VAARATJE_FLAG @U.Cap.Obl@ VAARATJE ;
 LEXICON VAARATJE !names vowel expansion in all cases
- +N+Prop+Sem/Plc+Sg+Nom:e       FINAL1 ;
- +N+Prop+Sem/Plc+Cmp/SgNom:e       RHyph  ;
- +N+Prop+Sem/Plc+Cmp/SgGen:e       RHyph  ;
- +N+Prop+Sem/Plc+Sg+Acc:e%>m    FINAL1 ;
- +N+Prop+Sem/Plc+Sg+Gen:e%>n    FINAL1 ;
- +N+Prop+Sem/Plc+Sg+Ill:%>asse  FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
- +N+Prop+Sem/Plc+Sg+Ine:%>isnie FINAL1 ;
- +N+Prop+Sem/Plc+Sg+Ela:%>istie FINAL1 ;
- +N+Prop+Sem/Plc+Sg+Com:%>inie  FINAL1 ;
-! +N+Prop+Sem/Plc+Pl+Nom:%>h       FINAL1 ;
-! +N+Prop+Sem/Plc+Pl+Acc:%>idie            FINAL1 ;
-! +N+Prop+Sem/Plc+Pl+Gen:%>i       FINAL1 ;
-! +N+Prop+Sem/Plc+Pl+Ill:%>idie            FINAL1 ;
-! +N+Prop+Sem/Plc+Pl+Ine:%>inie            FINAL1 ;
-! +N+Prop+Sem/Plc+Pl+Ela:%>ijstie          FINAL1 ;
-! +N+Prop+Sem/Plc+Pl+Com:%>igujmie FINAL1 ;
-! +N+Prop+Sem/Plc+Ess:%>inie          FINAL1 ;
-! +N+Prop+Sem/Plc+Attr:e FINAL1 ;
+    +Sg+Nom:e       FINAL1 ;
+ +Cmp/SgNom:e       RHyph  ;
+ +Cmp/SgGen:e       RHyph  ;
+    +Sg+Acc:e%>m    FINAL1 ;
+    +Sg+Gen:e%>n    FINAL1 ;
+    +Sg+Ill:%>asse  FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
+    +Sg+Ine:%>isnie FINAL1 ;
+    +Sg+Ela:%>istie FINAL1 ;
+    +Sg+Com:%>inie  FINAL1 ;
+! +Pl+Nom:%>h       FINAL1 ;
+! +Pl+Acc:%>idie            FINAL1 ;
+! +Pl+Gen:%>i       FINAL1 ;
+! +Pl+Ill:%>idie            FINAL1 ;
+! +Pl+Ine:%>inie            FINAL1 ;
+! +Pl+Ela:%>ijstie          FINAL1 ;
+! +Pl+Com:%>igujmie FINAL1 ;
+! +Ess:%>inie          FINAL1 ;
+! +Attr:e FINAL1 ;
 
-LEXICON JALKEDSEN ! Names ending in stressless vowel
+LEXICON JALKEDSEN-plc ! Names ending in stressless vowel
++N+Prop+Sem/Plc: JALKEDSEN_FLAG ;
+
+LEXICON JALKEDSEN_FLAG
  @U.Cap.Obl@ JALKEDSEN_INFL ;
 LEXICON JALKEDSEN_INFL ! Names ending in stressless vowel
- +N+Prop+Sem/Plc+Sg+Nom:e%^DISIMPn   FINAL1    ;
- +N+Prop+Sem/Plc+Cmp/SgNom:e%^DISIMPn   RHyph     ;
- +N+Prop+Sem/Plc+Cmp/SgGen:e%^DISIMPn   RHyph     ;
- +N+Prop+Sem/Plc+Sg+Acc:e%>%^DISIMPm FINAL1    ;
- +N+Prop+Sem/Plc+Sg+Gen:e%>%^DISIMPn FINAL1    ;
- +N+Prop+Sem/Plc+Sg+Ill:%>asse       FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
- +N+Prop+Sem/Plc+Sg+Ine:%>isnie      FINAL1    ;
- +N+Prop+Sem/Plc+Sg+Ela:%>istie      FINAL1    ;
- +N+Prop+Sem/Plc+Sg+Com:%>inie       FINAL1    ;
-!+N+Prop+Sem/Plc+Pl: N_ODD_PL ;
-        +N+Prop+Sem/Plc:             N_ODD_ESS ;
-   +N+Prop+Sem/Plc+Attr:e%^DISIMPn   FINAL1    ;
+    +Sg+Nom:e%^DISIMPn   FINAL1    ;
+ +Cmp/SgNom:e%^DISIMPn   RHyph     ;
+ +Cmp/SgGen:e%^DISIMPn   RHyph     ;
+    +Sg+Acc:e%>%^DISIMPm FINAL1    ;
+    +Sg+Gen:e%>%^DISIMPn FINAL1    ;
+    +Sg+Ill:%>asse       FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
+    +Sg+Ine:%>isnie      FINAL1    ;
+    +Sg+Ela:%>istie      FINAL1    ;
+    +Sg+Com:%>inie       FINAL1    ;
+!+Pl: N_ODD_PL ;
+                      N_ODD_ESS ;
+   +Attr:e%^DISIMPn   FINAL1    ;
 
 
 
-LEXICON SNAME_ODD_PLUR ! Southern Sami names
+LEXICON SNAME_ODD_PLUR-plc ! Southern Sami names
++N+Prop+Sem/Plc:  SNAME_ODD_PLUR_FLAG ;
+
+LEXICON SNAME_ODD_PLUR_FLAG ! Names ending in stressless vowel
++N+Prop+Sem/Plc: SNAME_ODD_PLUR_INFL ;
+
+
  @U.Cap.Obl@ SNAME_ODD_PLUR_INFL ;
 LEXICON SNAME_ODD_PLUR_INFL ! Southern Sami names
-   +N+Prop+Sem/Plc+Pl:            N_ODD_PL  ;
- +N+Prop+Sem/Plc+Cmp/PlGen:%>%^DISIMPi RHyph     ;
-      +N+Prop+Sem/Plc:            N_ODD_ESS ;
-!+N+Prop+Sem/Plc+Attr:%>%^DISIMPh FINAL1 ;
+   +Pl:                 N_ODD_PL  ;
+ +Cmp/PlGen:%>%^DISIMPi RHyph     ;
+                        N_ODD_ESS ;
+!+Attr:%>%^DISIMPh FINAL1 ;
 
+LEXICON JAAVRETJEH-plc
++N+Prop+Sem/Plc:   JAAVRETJEH_FLAG ;
 
-LEXICON JAAVRETJEH
+LEXICON JAAVRETJEH_FLAG
  @U.Cap.Obl@ JAAVRETJEH_INFL ;
+
 LEXICON JAAVRETJEH_INFL
-         +N+Prop+Sem/Plc+Cmp/SgGen:%>%^DISIMPe       RHyph     ;
-         +N+Prop+Sem/Plc+Pl+Nom:%>%^DISIMPeh      FINAL1    ;
-         +N+Prop+Sem/Plc+Pl+Acc:%>idie            FINAL1    ;
-         +N+Prop+Sem/Plc+Pl+Gen:%>%^DISIMPi       FINAL1    ;
-      +N+Prop+Sem/Plc+Cmp/PlGen:%>%^DISIMPi       RHyph     ;
-         +N+Prop+Sem/Plc+Pl+Ill:%>idie            FINAL1    ;
-         +N+Prop+Sem/Plc+Pl+Ine:%>inie            FINAL1    ;
-         +N+Prop+Sem/Plc+Pl+Ela:%>ijstie          FINAL1    ;
-         +N+Prop+Sem/Plc+Pl+Com:%>%^DISIMPigujmie FINAL1    ;
- +N+Prop+Sem/Plc+Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1    ; !
-                +N+Prop+Sem/Plc:                  N_ODD_ESS ;
-!+N+Prop+Sem/Plc+Attr:e%>%^DISIMPh FINAL1 ;
+       +Cmp/SgGen:%>%^DISIMPe       RHyph     ;
+          +Pl+Nom:%>%^DISIMPeh      FINAL1    ;
+          +Pl+Acc:%>idie            FINAL1    ;
+          +Pl+Gen:%>%^DISIMPi       FINAL1    ;
+       +Cmp/PlGen:%>%^DISIMPi       RHyph     ;
+          +Pl+Ill:%>idie            FINAL1    ;
+          +Pl+Ine:%>inie            FINAL1    ;
+          +Pl+Ela:%>ijstie          FINAL1    ;
+          +Pl+Com:%>%^DISIMPigujmie FINAL1    ;
+ +Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1    ; !
+                                    N_ODD_ESS ;
+           !+Attr:e%>%^DISIMPh      FINAL1    ;
 
 
 LEXICON RITCHIE-plc
