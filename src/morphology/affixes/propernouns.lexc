@@ -200,8 +200,8 @@ LEXICON VNAME-mal
 LEXICON VNAME-fem
  +N+Prop+Sem/Fem: ACCRA_FLAG ;
 
-LEXICON VNAME-obj
- +N+Prop+Sem/Obj: ACCRA_FLAG ;
+!LEXICON VNAME-obj
+! +N+Prop+Sem/Obj: ACCRA_FLAG ;
 
 LEXICON ACCRA-plc
 +N+Prop+Sem/Plc: ACCRA_FLAG ;
@@ -472,9 +472,9 @@ LEXICON NYSTØ-plc ! placename
 LEXICON NYSTØ-org ! organisasjon
  +N+Prop+Sem/Org: NYSTØ_PLC-ORG_FLAG ;
 
-LEXICON NYSTØ-femsur
- +N+Prop+Sem/Sur: NYSTØDECL_FLAG ;
- +N+Prop+Sem/Fem: NYSTØDECL_FLAG ;
+!LEXICON NYSTØ-femsur
+! +N+Prop+Sem/Sur: NYSTØDECL_FLAG ;
+! +N+Prop+Sem/Fem: NYSTØDECL_FLAG ;
 
 LEXICON NYSTØ-sur ! etternavn
  +N+Prop+Sem/Sur: NYSTØDECL_FLAG ;
@@ -613,14 +613,14 @@ LEXICON LONDON-LOAN-plc
 !        +N+Prop+Sem/Plc: RHyph  ;
 
 
-LEXICON BETFAGE-fem
-  PERS_SNAME_NIEJTE-fem ;
-
-LEXICON BETFAGE-mal
-  PERS_SNAME_NIEJTE-mal ;
-
-LEXICON BETFAGE-plc
-  SNAME_NIEJTE-plc ;
+!LEXICON BETFAGE-fem
+!  PERS_SNAME_NIEJTE-fem ;
+!
+!LEXICON BETFAGE-mal
+!  PERS_SNAME_NIEJTE-mal ;
+!
+!LEXICON BETFAGE-plc
+!  SNAME_NIEJTE-plc ;
 
 LEXICON BERN-ani
    CNAME_EVEN-ani ;
@@ -631,9 +631,6 @@ LEXICON BERN-surmal
 
 LEXICON BERN-sur
  +N+Prop+Sem/Sur: CNAME_EVENLEX_FLAG ;
-
-LEXICON BERN
- +N+Prop: CNAME_EVENLEX_FLAG ;
 
 
 LEXICON BERN-mal
@@ -657,10 +654,10 @@ LEXICON BERN-LOAN-obj
 ! +N+Prop+Sem/Obj+Sg+Nom: FINAL1 ;
 !        +N+Prop+Sem/Obj: RHyph  ;
 
-LEXICON BERN-femplc
- +N+Prop+Sem/Fem: CNAME_EVENLEX_FLAG    ;
- +N+Prop+Sem/Plc: CNAME_EVENLEX_PLC-ORG_FLAG ;
- +N+Prop+Sem/Sur: CNAME_EVENLEX_PLC-ORG_FLAG ;
+!LEXICON BERN-femplc
+! +N+Prop+Sem/Fem: CNAME_EVENLEX_FLAG    ;
+! +N+Prop+Sem/Plc: CNAME_EVENLEX_PLC-ORG_FLAG ;
+! +N+Prop+Sem/Sur: CNAME_EVENLEX_PLC-ORG_FLAG ;
 
 LEXICON BERN-org
  +N+Prop+Sem/Org: CNAME_EVENLEX_PLC-ORG_FLAG ;
@@ -907,8 +904,8 @@ LEXICON MAKI-plc
 ! järviem - järvem i ack? Jeg tror järviem (sørsamifisere), men trenger avklaringer.  Nei, citatlån helt ut, så da blir det "Järvim"  
     
 
-LEXICON MAKI-LOAN-plc
- MAKI-plc ;
+!LEXICON MAKI-LOAN-plc
+! MAKI-plc ;
 ! +N+Prop+Sem/Plc+Sg+Nom: FINAL1     ;
 !        +N+Prop+Sem/Plc: RHyph      ;
 ! +N+Prop+Sem/Plc+Sg+Nom: PN_I_FINSK_FLAG ;
@@ -978,30 +975,30 @@ LEXICON ACCRA-malfem
    ACCRA-mal ;
    ACCRA-fem ;
 
-LEXICON INAME-plc
- +N+Prop+Sem/Plc: INAME_PLC-ORG_FLAG ;
- +N+Prop+Sem/Sur: INAME_PLC-ORG_FLAG ;
+!LEXICON INAME-plc
+! +N+Prop+Sem/Plc: INAME_PLC-ORG_FLAG ;
+! +N+Prop+Sem/Sur: INAME_PLC-ORG_FLAG ;
+!
+!LEXICON INAME-plcorg
+! +N+Prop+Sem/Plc: INAME_PLC-ORG_FLAG ;
+! +N+Prop+Sem/Sur: INAME_PLC-ORG_FLAG ;
+! +N+Prop+Sem/Org: INAME_PLC-ORG_FLAG ;
 
-LEXICON INAME-plcorg
- +N+Prop+Sem/Plc: INAME_PLC-ORG_FLAG ;
- +N+Prop+Sem/Sur: INAME_PLC-ORG_FLAG ;
- +N+Prop+Sem/Org: INAME_PLC-ORG_FLAG ;
-
-LEXICON INAME_PLC-ORG_FLAG @U.Cap.Obl@ INAME_PLC-ORG ;
-LEXICON INAME_PLC-ORG ! Names ending in stressless vowel
- +Sg+Nom:i      FINAL1 ;
-        :i      RHyph  ;
-+Cmp/SgNom:i    RHyph  ;
-+Cmp/SgGen:i    RHyph  ;
-
- +Sg+Acc:i%>m   FINAL1 ;
- +Sg+Gen:i%>n   FINAL1 ;
- +Sg+Ill+Uml:an FINAL1 ;
- +Sg+Ine:e%>sne FINAL1 ;
- +Sg+Ela:e%>ste FINAL1 ;
- +Sg+Com:%>ine  FINAL1 ;
-    +Ess:%>ine  FINAL1 ;
-    +Attr:i      FINAL1 ;
+!LEXICON INAME_PLC-ORG_FLAG @U.Cap.Obl@ INAME_PLC-ORG ;
+!LEXICON INAME_PLC-ORG ! Names ending in stressless vowel
+! +Sg+Nom:i      FINAL1 ;
+!        :i      RHyph  ;
+!+Cmp/SgNom:i    RHyph  ;
+!+Cmp/SgGen:i    RHyph  ;
+!
+! +Sg+Acc:i%>m   FINAL1 ;
+! +Sg+Gen:i%>n   FINAL1 ;
+! +Sg+Ill+Uml:an FINAL1 ;
+! +Sg+Ine:e%>sne FINAL1 ;
+! +Sg+Ela:e%>ste FINAL1 ;
+! +Sg+Com:%>ine  FINAL1 ;
+!    +Ess:%>ine  FINAL1 ;
+!    +Attr:i      FINAL1 ;
 
 
 !LEXICON OENAME-sur
@@ -1090,8 +1087,8 @@ LEXICON UNAME-plc
  +N+Prop+Sem/Plc: UNAME_PLC-ORG ;
  +N+Prop+Sem/Sur: UNAME_PLC-ORG ;
 
-LEXICON UNAME-ani
-+N+Prop+Sem/Ani: UNAME ;
+!LEXICON UNAME-ani
+!+N+Prop+Sem/Ani: UNAME ;
 
 LEXICON UNAME-org
  +N+Prop+Sem/Org: UNAME_PLC-ORG ;
@@ -1418,10 +1415,10 @@ LEXICON PN_IE-org
 LEXICON PN_IE-ani
  +N+Prop+Sem/Ani: PN_IE_FLAG ;
 
-LEXICON PN_IE-plcorg
- +N+Prop+Sem/Plc: PN_IE_FLAG ;
- +N+Prop+Sem/Sur: PN_IE_FLAG ;
- +N+Prop+Sem/Org: PN_IE_FLAG ;
+!LEXICON PN_IE-plcorg
+! +N+Prop+Sem/Plc: PN_IE_FLAG ;
+! +N+Prop+Sem/Sur: PN_IE_FLAG ;
+! +N+Prop+Sem/Org: PN_IE_FLAG ;
 
 
 ! Even syllable Sámi names:
@@ -1501,10 +1498,10 @@ LEXICON PN_I_FINSK-plc
 ! LEXICON PN_I_FINSK-obj
 ! +N+Prop+Sem/Obj: PN_I_FINSK_FLAG ;
 
-LEXICON PN_I_FINSK-plcorg
- +N+Prop+Sem/Plc: PN_I_FINSK_FLAG ;
- +N+Prop+Sem/Sur: PN_I_FINSK_FLAG ;
- +N+Prop+Sem/Org: PN_I_FINSK_FLAG ;
+!LEXICON PN_I_FINSK-plcorg
+! +N+Prop+Sem/Plc: PN_I_FINSK_FLAG ;
+! +N+Prop+Sem/Sur: PN_I_FINSK_FLAG ;
+! +N+Prop+Sem/Org: PN_I_FINSK_FLAG ;
 
 ! LEXICON PN_I_FINSK-malfem
 ! +N+Prop+Sem/Mal: PN_I_FINSK_FLAG ;
@@ -1569,8 +1566,8 @@ LEXICON PN_OE-plc
 LEXICON PN_OE_PL-org
 +N+Prop+Sem/Org: PN_OE_PL ;
 
-LEXICON PN_OE-mal
-+N+Prop+Sem/Mal: PN_OE ;
+!LEXICON PN_OE-mal
+!+N+Prop+Sem/Mal: PN_OE ;
 
 LEXICON PN_OE ! as N_OE, but with Prop tag
  @U.Cap.Obl@ PN_OE_INFL ;
@@ -1593,13 +1590,13 @@ LEXICON PN_OE_INFL
                N_OE_ESS ;
       +Attr:oe FINAL1   ;
 
-LEXICON PN_OE_PLC-ORG ! as N_OE, but with Prop tag
-   +Sg:   N_OE_SG  ;
-   +Cmp/SgNom:oe RHyph    ; ! RHyph = Cmp-lexicon
-   +Cmp/SgGen:oe RHyph    ; ! RHyph = Cmp-lexicon
- !+Pl: N_OE_PL ;
-          N_OE_ESS ;
- +Attr:oe FINAL1   ;
+!LEXICON PN_OE_PLC-ORG ! as N_OE, but with Prop tag
+!   +Sg:   N_OE_SG  ;
+!   +Cmp/SgNom:oe RHyph    ; ! RHyph = Cmp-lexicon
+!   +Cmp/SgGen:oe RHyph    ; ! RHyph = Cmp-lexicon
+! !+Pl: N_OE_PL ;
+!          N_OE_ESS ;
+! +Attr:oe FINAL1   ;
 
 LEXICON PERS_SNAME_MAANA-fem
  +N+Prop+Sem/Fem: PERS_SNAME_MAANA ;
@@ -1615,14 +1612,14 @@ LEXICON PERS_SNAME_MAANA
                          SNAME_MAANA_FLAG ;
  @U.Cap.Obl@+Der1+Der/Dimin+N:@U.Cap.Obl@e%»tj GÅATETJE    ; !Åvletje
 
-LEXICON SNAME_MAANA-fem
- +N+Prop+Sem/Fem: SNAME_MAANA_FLAG ;
+!LEXICON SNAME_MAANA-fem
+! +N+Prop+Sem/Fem: SNAME_MAANA_FLAG ;
 
-LEXICON SNAME_MAANA-sur
- +N+Prop+Sem/Sur: SNAME_MAANA_FLAG ;
+!LEXICON SNAME_MAANA-sur
+! +N+Prop+Sem/Sur: SNAME_MAANA_FLAG ;
 
-LEXICON SNAME_MAANA-mal
- +N+Prop+Sem/Mal: SNAME_MAANA_FLAG ;
+!LEXICON SNAME_MAANA-mal
+! +N+Prop+Sem/Mal: SNAME_MAANA_FLAG ;
 
 !LEXICON SNAME_MAANA-ani
 !+N+Prop+Sem/Ani: SNAME_MAANA_FLAG ;
@@ -1631,11 +1628,11 @@ LEXICON SNAME_MAANA-plc
  +N+Prop+Sem/Plc: SNAME_MAANA_PLC-ORG_FLAG ;
  +N+Prop+Sem/Sur: SNAME_MAANA_PLC-ORG_FLAG ;
 
-LEXICON SNAME_MAANA-org
- +N+Prop+Sem/Org: SNAME_MAANA_PLC-ORG_FLAG ;
+!LEXICON SNAME_MAANA-org
+! +N+Prop+Sem/Org: SNAME_MAANA_PLC-ORG_FLAG ;
 
-LEXICON SNAME_MAANA-obj
- +N+Prop+Sem/Obj: SNAME_MAANA_FLAG ;
+!LEXICON SNAME_MAANA-obj
+! +N+Prop+Sem/Obj: SNAME_MAANA_FLAG ;
 
 LEXICON SNAME_MAANA_FLAG @U.Cap.Obl@ SNAME_MAANA ;
 LEXICON SNAME_MAANA ! as MAANA, but with Prop tag
@@ -1757,8 +1754,8 @@ LEXICON SNAME_NIEJTE-sur
 LEXICON SNAME_NIEJTE-org
  +N+Prop+Sem/Org: SNAME_NIEJTE_PLC-ORG_FLAG ;
 
-LEXICON SNAME_NIEJTE-obj
- +N+Prop+Sem/Obj: SNAME_NIEJTE_FLAG ;
+!LEXICON SNAME_NIEJTE-obj
+! +N+Prop+Sem/Obj: SNAME_NIEJTE_FLAG ;
 
 
 LEXICON SNAME_NIEJTE_FLAG @U.Cap.Obl@ SNAME_NIEJTE ;
@@ -1778,59 +1775,60 @@ LEXICON SNAME_NIEJTE_PLC-ORG ! as NIEJTE, but with Prop tag
          NIEJTE_CMPND ;
 
 
-LEXICON SNAME_NIEJTE-LOAN-plc
-   SNAME_NIEJTE-LOAN_FLAG ; ! To be fixed
+!LEXICON SNAME_NIEJTE-LOAN-plc
+!   SNAME_NIEJTE-LOAN_FLAG ; ! To be fixed
 
-LEXICON SNAME_NIEJTE-LOAN_FLAG @U.Cap.Obl@ SNAME_NIEJTE-LOAN ;
-LEXICON SNAME_NIEJTE-LOAN ! as NIEJTE, but with Prop tag
-                      +N+Prop+Sem/Plc+Sg+Nom:e         FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Nom+PxSg1+Err/Orth:%>eme     FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Nom+PxSg2+Err/Orth:%>edh     FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Nom+PxSg3+Err/Orth:e%>se     FINAL1   ;
-                      +N+Prop+Sem/Plc+Sg+Acc:e%>m      FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Acc+PxSg1+Err/Orth:%>eme     FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Acc+PxSg1+Err/Orth:%>emem    FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Acc+PxSg2+Err/Orth:%>emdh    FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Acc+PxSg3+Err/Orth:e%>mse    FINAL1   ;
-                      +N+Prop+Sem/Plc+Sg+Gen:e%>n      FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Gen+PxSg1+Err/Orth:%>ene     FINAL1   ;
-                      +N+Prop+Sem/Plc+Sg+Ill:e%>se     FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Ill+PxSg1+Err/Orth:%>esanne  FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Ill+PxSg2+Err/Orth:%>esadth  FINAL1   ;
-                      +N+Prop+Sem/Plc+Sg+Ine:e%>sne    FINAL1   ;
-                      +N+Prop+Sem/Plc+Sg+Ela:e%>ste    FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Ela+PxSg1+Err/Orth:%>estanne FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Ela+PxSg1+Err/Orth:%>estadth FINAL1   ;
-                      +N+Prop+Sem/Plc+Sg+Com:%>ine     FINAL1   ;
-        +N+Prop+Sem/Plc+Sg+Com+PxSg2+Err/Orth:%>enadth  FINAL1   ;
-                             +N+Prop+Sem/Plc:e         RHyph    ;
-!  +N+Prop+Sem/Plc+Pl: NIEJTE_PL ;
-                             +N+Prop+Sem/Plc:          EVEN_ESS ;
-                        +N+Prop+Sem/Plc+Attr:e         FINAL1   ;
+!LEXICON SNAME_NIEJTE-LOAN_FLAG @U.Cap.Obl@ SNAME_NIEJTE-LOAN ;
+!LEXICON SNAME_NIEJTE-LOAN ! as NIEJTE, but with Prop tag
+!                      +N+Prop+Sem/Plc+Sg+Nom:e         FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Nom+PxSg1+Err/Orth:%>eme     FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Nom+PxSg2+Err/Orth:%>edh     FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Nom+PxSg3+Err/Orth:e%>se     FINAL1   ;
+!                      +N+Prop+Sem/Plc+Sg+Acc:e%>m      FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Acc+PxSg1+Err/Orth:%>eme     FINAL1   ;
+! +N+Prop+Sem/Plc+Sg+Acc+PxSg1+Err/Orth:%>emem    FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Acc+PxSg2+Err/Orth:%>emdh    FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Acc+PxSg3+Err/Orth:e%>mse    FINAL1   ;
+!                      +N+Prop+Sem/Plc+Sg+Gen:e%>n      FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Gen+PxSg1+Err/Orth:%>ene     FINAL1   ;
+!                      +N+Prop+Sem/Plc+Sg+Ill:e%>se     FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Ill+PxSg1+Err/Orth:%>esanne  FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Ill+PxSg2+Err/Orth:%>esadth  FINAL1   ;
+!                      +N+Prop+Sem/Plc+Sg+Ine:e%>sne    FINAL1   ;
+!                      +N+Prop+Sem/Plc+Sg+Ela:e%>ste    FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Ela+PxSg1+Err/Orth:%>estanne FINAL1   ;
+! +N+Prop+Sem/Plc+Sg+Ela+PxSg1+Err/Orth:%>estadth FINAL1   ;
+!                      +N+Prop+Sem/Plc+Sg+Com:%>ine     FINAL1   ;
+!        +N+Prop+Sem/Plc+Sg+Com+PxSg2+Err/Orth:%>enadth  FINAL1   ;
+!                             +N+Prop+Sem/Plc:e         RHyph    ;
+!!  +N+Prop+Sem/Plc+Pl: NIEJTE_PL ;
+!                             +N+Prop+Sem/Plc:          EVEN_ESS ;
+!                        +N+Prop+Sem/Plc+Attr:e         FINAL1   ;
 
 
-LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
-@U.Cap.Obl@ TJØNNIN_INFL ;
-LEXICON TJØNNIN_INFL ! as NIEJTE, but with Prop tag
- +N+Prop+Sem/Plc+Sg+Nom:i%>n   FINAL1   ;
- +N+Prop+Sem/Plc+Cmp/SgNom:i%>n   RHyph    ;
- +N+Prop+Sem/Plc+Cmp/SgGen:i%>n   RHyph    ;
- +N+Prop+Sem/Plc+Sg+Acc:i%>m   FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Gen:i%>n   FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Ill:e%>se  FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Ine:e%>sne FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Ela:e%>ste FINAL1   ;
- +N+Prop+Sem/Plc+Sg+Com:%>ine  FINAL1   ;
-!+N+Prop+Sem/Plc+Pl+Nom:i%>h        FINAL1 ;
-!+N+Prop+Sem/Plc+Pl+Acc:%>ide      FINAL1 ;
-!+N+Prop+Sem/Plc+Pl+Gen:%>i        FINAL1 ;
-!+N+Prop+Sem/Plc+Pl+Ill:%>ide      FINAL1 ;
-!+N+Prop+Sem/Plc+Pl+Ine:%>ine      FINAL1 ;
-!+N+Prop+Sem/Plc+Pl+Ela:%>ijste    FINAL1 ;
-!+N+Prop+Sem/Plc+Pl+Com:%>igujmie  FINAL1 ;
-! +N+Prop+Sem/Plc+Pl+Com+Err/Orth:%>igyjmie  FINAL1 ; !
-        +N+Prop+Sem/Plc:       EVEN_ESS ;
-   +N+Prop+Sem/Plc+Attr:i%>n   FINAL1   ;
+!LEXICON TJØNNIN ! as NIEJTE, but with Prop tag
+!@U.Cap.Obl@ TJØNNIN_INFL ;
+
+!LEXICON TJØNNIN_INFL ! as NIEJTE, but with Prop tag
+! +N+Prop+Sem/Plc+Sg+Nom:i%>n   FINAL1   ;
+! +N+Prop+Sem/Plc+Cmp/SgNom:i%>n   RHyph    ;
+! +N+Prop+Sem/Plc+Cmp/SgGen:i%>n   RHyph    ;
+! +N+Prop+Sem/Plc+Sg+Acc:i%>m   FINAL1   ;
+! +N+Prop+Sem/Plc+Sg+Gen:i%>n   FINAL1   ;
+! +N+Prop+Sem/Plc+Sg+Ill:e%>se  FINAL1   ;
+! +N+Prop+Sem/Plc+Sg+Ine:e%>sne FINAL1   ;
+! +N+Prop+Sem/Plc+Sg+Ela:e%>ste FINAL1   ;
+! +N+Prop+Sem/Plc+Sg+Com:%>ine  FINAL1   ;
+!!+N+Prop+Sem/Plc+Pl+Nom:i%>h        FINAL1 ;
+!!+N+Prop+Sem/Plc+Pl+Acc:%>ide      FINAL1 ;
+!!+N+Prop+Sem/Plc+Pl+Gen:%>i        FINAL1 ;
+!!+N+Prop+Sem/Plc+Pl+Ill:%>ide      FINAL1 ;
+!!+N+Prop+Sem/Plc+Pl+Ine:%>ine      FINAL1 ;
+!!+N+Prop+Sem/Plc+Pl+Ela:%>ijste    FINAL1 ;
+!!+N+Prop+Sem/Plc+Pl+Com:%>igujmie  FINAL1 ;
+!! +N+Prop+Sem/Plc+Pl+Com+Err/Orth:%>igyjmie  FINAL1 ; !
+!        +N+Prop+Sem/Plc:       EVEN_ESS ;
+!   +N+Prop+Sem/Plc+Attr:i%>n   FINAL1   ;
 
 
 LEXICON SNAME_NIEJTE_PLUR ! as NIEJTE, but with Prop tag
@@ -1963,14 +1961,14 @@ LEXICON SAAMI_CNAME_ODD_SG
               +Sg+Ela:%>istie      FINAL1             ;
               +Sg+Com:%>inie       FINAL1             ;
 
-LEXICON CNAME_ODD-mal
- +N+Prop+Sem/Mal: CNAME_ODD_FLAG ;
+!LEXICON CNAME_ODD-mal
+! +N+Prop+Sem/Mal: CNAME_ODD_FLAG ;
 
 LEXICON CNAME_ODD-fem
  +N+Prop+Sem/Fem: CNAME_ODD_FLAG ;
 
-LEXICON CNAME_ODD-plc
- +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG_FLAG ;
+!LEXICON CNAME_ODD-plc
+! +N+Prop+Sem/Plc: CNAME_ODD_PLC-ORG_FLAG ;
 
 LEXICON CNAME_ODD-sur
  +N+Prop+Sem/Sur: CNAME_ODD_FLAG ;
@@ -2045,23 +2043,23 @@ LEXICON GIRUNA
 ! +N+Prop+Sem/Plc+Attr: FINAL1 ;     ! name special
 !
 
-LEXICON CNAME_EVEN-sur ! generates
- +N+Prop+Sem/Sur: CNAME_EVENLEX_FLAG ;
+!LEXICON CNAME_EVEN-sur ! generates
+! +N+Prop+Sem/Sur: CNAME_EVENLEX_FLAG ;
 
-LEXICON CNAME_EVEN-mal ! generates
- +N+Prop+Sem/Mal: CNAME_EVENLEX_FLAG ;
+!LEXICON CNAME_EVEN-mal ! generates
+! +N+Prop+Sem/Mal: CNAME_EVENLEX_FLAG ;
 
-LEXICON CNAME_EVEN-fem ! generates
- +N+Prop+Sem/Fem: CNAME_EVENLEX_FLAG ;
+!LEXICON CNAME_EVEN-fem ! generates
+! +N+Prop+Sem/Fem: CNAME_EVENLEX_FLAG ;
 
-LEXICON CNAME_EVEN-org
- +N+Prop+Sem/Org: CNAME_EVENLEX_PLC-ORG_FLAG ;
+!LEXICON CNAME_EVEN-org
+! +N+Prop+Sem/Org: CNAME_EVENLEX_PLC-ORG_FLAG ;
 
 LEXICON CNAME_EVEN-plc
  +N+Prop+Sem/Plc: CNAME_EVENLEX_PLC-ORG_FLAG ;
 
-LEXICON CNAME_EVEN-obj
- +N+Prop+Sem/Obj: CNAME_EVENLEX_FLAG ;
+!LEXICON CNAME_EVEN-obj
+! +N+Prop+Sem/Obj: CNAME_EVENLEX_FLAG ;
 
 LEXICON CNAME_EVEN-ani
  +N+Prop+Sem/Ani: CNAME_EVENLEX_FLAG ;
@@ -2106,26 +2104,26 @@ LEXICON CNAME_EVENLEX_PLC-ORG
 !+N+Prop+Sem/Plc:     EVEN_ESS ;
 !+N+Prop+Sem/Plc+Attr: FINAL1 ;
 
-LEXICON SAAMI_CNAME_EVEN ! Names ending in stressless vowel
-@U.Cap.Obl@ SAAMI_CNAME_EVEN_INFL ;
-LEXICON SAAMI_CNAME_EVEN_INFL
-      +N+Prop+Sem/Sur:       SAAMI_CNAME_EVEN_SG ;
-   +N+Prop+Sem/Sur+Pl:       NIEJTE_PL           ;
-      +N+Prop+Sem/Sur:       EVEN_ESS            ;
- +N+Prop+Sem/Sur+Attr:       FINAL1              ;
+!LEXICON SAAMI_CNAME_EVEN ! Names ending in stressless vowel
+!@U.Cap.Obl@ SAAMI_CNAME_EVEN_INFL ;
+!LEXICON SAAMI_CNAME_EVEN_INFL
+!      +N+Prop+Sem/Sur:       SAAMI_CNAME_EVEN_SG ;
+!   +N+Prop+Sem/Sur+Pl:       NIEJTE_PL           ;
+!      +N+Prop+Sem/Sur:       EVEN_ESS            ;
+! +N+Prop+Sem/Sur+Attr:       FINAL1              ;
 
-  LEXICON SAAMI_CNAME_EVEN_SG
-              +Sg+Nom:       FINAL1              ;
-           +Cmp/SgNom:       RHyph               ;
-           +Cmp/SgGen:       RHyph               ;
-              +Sg+Nom:e      FINAL1              ;
-              +Sg+Nom:e      RHyph               ;
-              +Sg+Acc:e%>m   FINAL1              ;
-              +Sg+Gen:e%>n   FINAL1              ;
-              +Sg+Ill:e%>se  FINAL1              ;
-              +Sg+Ine:e%>sne FINAL1              ;
-              +Sg+Ela:e%>ste FINAL1              ;
-              +Sg+Com:%>ine  FINAL1              ;
+!  LEXICON SAAMI_CNAME_EVEN_SG
+!              +Sg+Nom:       FINAL1              ;
+!           +Cmp/SgNom:       RHyph               ;
+!           +Cmp/SgGen:       RHyph               ;
+!              +Sg+Nom:e      FINAL1              ;
+!              +Sg+Nom:e      RHyph               ;
+!              +Sg+Acc:e%>m   FINAL1              ;
+!              +Sg+Gen:e%>n   FINAL1              ;
+!              +Sg+Ill:e%>se  FINAL1              ;
+!              +Sg+Ine:e%>sne FINAL1              ;
+!              +Sg+Ela:e%>ste FINAL1              ;
+!              +Sg+Com:%>ine  FINAL1              ;
 
 
 LEXICON DÅERIES
