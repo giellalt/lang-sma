@@ -16,7 +16,7 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Add language-specific flags for hfst-lexc compilation here:
-HFST_LEXC_LOCAL_FLAGS=
+HFST_LEXC_LOCAL_FLAGS=--Werror
 
 # Temporary solution to let sma-oahpa have stable adjectives and nouns while
 # Maja is working her way through them.
