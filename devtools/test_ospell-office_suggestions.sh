@@ -80,7 +80,7 @@ cut -f1 $SCRIPT_DIR/$speller_test_data | sed 's/^/5 /' \
 	> $SCRIPT_DIR/$speller_input
 
 # Run the speller;
-$giella_core/scripts/run_ospell-office_speller.sh $SCRIPT_DIR/$speller_input \
+$giella_core/scripts/run_ospell-office_speller.py $SCRIPT_DIR/$speller_input \
                                       $SCRIPT_DIR/$speller_output \
                                       $SCRIPT_DIR/$speller_timeusage \
                                       $GTLANG2 \
