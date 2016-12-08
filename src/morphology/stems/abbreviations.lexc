@@ -87,13 +87,13 @@ LEXICON ab-nodot-noun ! The bulk
 LEXICON ab-nodot-adj
 !+ABBR:%> # ; ! no period, that is.
  +A+ABBR+Attr:%>      #     ; ! no period, that is.
-  +A+ABBR+Nom:%>      #     ; ! no period, that is.
-  +N+ABBR+Acc:%>%:m   #     ; ! no period, that is.
-  +N+ABBR+Gen:%>%:n   #     ; ! no period, that is.
-  +N+ABBR+Ill:%>%:se  #     ; ! no period, that is.
-  +N+ABBR+Ine:%>%:sne #     ; ! no period, that is.
-  +N+ABBR+Ela:%>%:ste #     ; ! no period, that is.
-  +N+ABBR+Com:%>%:ine #     ; ! no period, that is.
+  +A+ABBR+Sg+Nom:%>      #     ; ! no period, that is.
+  +N+ABBR+Sg+Acc:%>%:m   #     ; ! no period, that is.
+  +N+ABBR+Sg+Gen:%>%:n   #     ; ! no period, that is.
+  +N+ABBR+Sg+Ill:%>%:se  #     ; ! no period, that is.
+  +N+ABBR+Sg+Ine:%>%:sne #     ; ! no period, that is.
+  +N+ABBR+Sg+Ela:%>%:ste #     ; ! no period, that is.
+  +N+ABBR+Sg+Com:%>%:ine #     ; ! no period, that is.
   +N+ABBR+Ess:%>%:ine #     ; ! no period, that is.
       +A+ABBR:%>      RHyph ;
 
@@ -101,7 +101,7 @@ LEXICON ab-nodot-adv
 +Adv+ABBR:%> # ; ! Adv without case, consider this.
 
 LEXICON ab-nodot-num
- +Num+ABBR+Nom:%> #     ; ! no period, that is.
+ +Num+ABBR+Sg+Nom:%> #     ; ! no period, that is.
      +Num+ABBR:%> RHyph ;
 
 
@@ -131,14 +131,14 @@ LEXICON ab-dot-noun ! This is the lexicon for abbrs that must have a period.
 LEXICON ab-dot-adj ! This is the lexicon for abbrs that must have a period.
 ! +ABBR:%.%> # ;
 +A+ABBR+Attr:%.%> # ;
-+A+ABBR+Nom:%.%> # ;
++A+ABBR+Sg+Nom:%.%> # ;
 
 LEXICON ab-dot-adv ! This is the lexicon for abbrs that must have a period.
 +Adv+ABBR:%.%> # ; ! Adv without case.
 
 LEXICON ab-dot-num ! This is the lexicon for abbrs that must have a period.
 ! +ABBR:%.%> # ;
-+N+ABBR+Num+Nom:%.%> # ;
++N+Num+ABBR+Sg+Nom:%.%> # ;
 
 LEXICON ab-dot-cc
 +CC+ABBR:%.%> # ;
@@ -335,7 +335,7 @@ mg ab-nodot-noun ;
 MHz ab-nodot-noun ;
 milj ab-num ;
 miljo ab-dot-num ;
-mill ab-nodot-num ; !But this is also used with dot
+mill ab-num ; !But this is also used with dot
 mKr ab-dot-noun   ;
 ml ab-noun ;
 !mm ab-dot-noun ;
