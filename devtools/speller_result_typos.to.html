@@ -1,23 +1,28 @@
 <html>
     <body>
+        <div id="log">log</div>
         <div id="demo"/>
         <script>
 var demoElement = document.getElementById("demo");
-var text = "<spelltestresult><results>" +
-"<word>" +
-"<original>Giada De Laurentiis</original>" +
-"<speller>2005</speller></word>" +
-"</results></spelltestresult>";
-
 demoElement.append(createP('uff'));
 
-var parser = new DOMParser();
-var xmlDoc = parser.parseFromString(text, "text/xml");
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this.responseXML, demoElement);
+    }
+};
+xhttp.open("GET", "speller_result_typos.to.xml", true);
+xhttp.send();
 
-myFunction(xmlDoc, demoElement);
 
 function myFunction(xmlD, dElem) {
-    dElem.append(createP(xmlD.getElementsByTagName("original")[0].childNodes[0].nodeValue));
+    dElem.append(createP('uff2'));
+    var originals = xmlD.getElementsByTagName("original");
+    var string = [].map.call( originals, function(node){
+        return node.textContent;
+    }).join(", ");;
+    dElem.append(createP(string));
 }
 
 function createP(text) {
