@@ -14,7 +14,7 @@
       </div>
       <div id="lexicon" version="sma version 4.1rc1, 01.12.2016, rev"/>
       <div id="document">typos.txt</div>
-      <div id="timestamp">20161208-2205</div>
+      <div id="timestamp">20161209-1314</div>
       <div id="truefalsesummary" wordcount="1279">
         <div id="originals" correct="0" error="1279"/>
         <div id="spellers" correct="80" error="1199"/>
@@ -43,6 +43,20 @@
       </div>
     </div>
     <table id="results">
+      <thead>
+        <tr>
+          <th>original</th>
+          <th>speller</th>
+          <th>expected</th>
+          <th>edit dist</th>
+          <th>time</th>
+          <th>position</th>
+          <th>suggestions</th>
+          <th>tokens</th>
+          <th>bugid</th>
+          <th>comment</th>
+        </tr>
+      </thead>
       <tr class="word" corrsugg="1">
         <td class="original" status="error">mnngan</td>
         <td class="speller" status="error"/>
@@ -20106,5 +20120,6 @@
         </td>
       </tr>
     </table>
+    <script>$(document).ready( function() {$("#results").dynatable();});</script>
   </body>
 </html>
