@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <div id="demo"/>
+        <script>
+ var text, parser, xmlDoc;
+
+text = "<spelltestresult><results>" +
+"<word>" +
+"<original>Giada De Laurentiis</original>" +
+"<speller>2005</speller></word>" +
+"</results></spelltestresult>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+myFunction(xmlDoc)
+
+function myFunction(xmlD) {
+    document.getElementById("demo").innerHTML =
+    xmlD.getElementsByTagName("original")[0].childNodes[0].nodeValue;
+}
+        </script>
+    </body>
+</html>
+
+
