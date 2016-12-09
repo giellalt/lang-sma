@@ -7,41 +7,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.css" integrity="sha256-lxcbK1S14B8LMgrEir2lv2akbdyYwD1FwMhFgh2ihls=" crossorigin="anonymous"/>
   </head>
   <body>
-    <header>
-      <engine abbreviation="to">
-        <toolversion>n/a</toolversion>
-        <processing memoryusage="n/a" realtime="166.229555" systime="0" usertime="101.532899" words_per_sec="7.69"/>
-      </engine>
-      <lexicon version="sma version 4.1rc1, 01.12.2016, rev"/>
-      <document>typos.txt</document>
-      <timestamp>20161208-1938</timestamp>
-      <truefalsesummary wordcount="1279">
-        <original correct="0" error="1279"/>
-        <speller correct="80" error="1199"/>
-        <positive true="1199" false="0"/>
-        <negative true="0" false="80"/>
-        <precision>1.00</precision>
-        <recall>0.94</recall>
-        <accuracy>0.94</accuracy>
-      </truefalsesummary>
-      <suggestionsummary>
-        <sugg1 editdist1="518" editdist2="193" editdist3plus="26"/>
-        <sugg2 editdist1="67" editdist2="44" editdist3plus="3"/>
-        <sugg3 editdist1="30" editdist2="22" editdist3plus="1"/>
-        <sugg4 editdist1="18" editdist2="14" editdist3plus="3"/>
-        <sugg5 editdist1="11" editdist2="4" editdist3plus="0"/>
-        <suggbelow5 editdist1="0" editdist2="0" editdist3plus="0"/>
-        <nosugg editdist1="55" editdist2="20" editdist3plus="24"/>
-        <badsuggs editdist1="41" editdist2="81" editdist3plus="45"/>
-        <averageposition>1.40</averageposition>
-        <averagesuggs_with_correct>4.77</averagesuggs_with_correct>
-        <top1pos_percent>61.80</top1pos_percent>
-        <top5pos_percent>79.90</top5pos_percent>
-        <allpos_percent>79.90</allpos_percent>
-        <nosugg_percent>3.09</nosugg_percent>
-        <badsugg_percent>17.01</badsugg_percent>
-      </suggestionsummary>
-    </header>
+    <div id="header">
+      <div id="engine" abbreviation="to">
+        <div id="toolversion">n/a</div>
+        <div id="processing" memoryusage="n/a" usertime="101.532899" realtime="166.229555" systime="0" words_per_sec="7.69"/>
+      </div>
+      <div id="lexicon" version="sma version 4.1rc1, 01.12.2016, rev"/>
+      <div id="document">typos.txt</div>
+      <div id="timestamp">20161208-2205</div>
+      <div id="truefalsesummary" wordcount="1279">
+        <div id="originals" correct="0" error="1279"/>
+        <div id="spellers" correct="80" error="1199"/>
+        <div id="positives" true="1199" false="0"/>
+        <div id="negatives" true="0" false="80"/>
+        <div id="precisions">1.00</div>
+        <div id="recall">0.94</div>
+        <div id="accuracy">0.94</div>
+      </div>
+      <div id="suggestionsummary">
+        <div id="sugg1" editdist1="518" editdist2="193" editdist3plus="26"/>
+        <div id="sugg2" editdist1="67" editdist2="44" editdist3plus="3"/>
+        <div id="sugg3" editdist1="30" editdist2="22" editdist3plus="1"/>
+        <div id="sugg4" editdist1="18" editdist2="14" editdist3plus="3"/>
+        <div id="sugg5" editdist1="11" editdist2="4" editdist3plus="0"/>
+        <div id="suggbelow5" editdist1="0" editdist2="0" editdist3plus="0"/>
+        <div id="nosugg" editdist1="55" editdist2="20" editdist3plus="24"/>
+        <div id="badsuggs" editdist1="41" editdist2="81" editdist3plus="45"/>
+        <div id="averageposition">1.40</div>
+        <div id="averagesuggs_with_correct">4.77</div>
+        <div id="top1pos_percent">61.80</div>
+        <div id="top5pos_percent">79.90</div>
+        <div id="allpos_percent">79.90</div>
+        <div id="nosugg_percent">3.09</div>
+        <div id="badsugg_percent">17.01</div>
+      </div>
+    </div>
     <table id="results">
       <tr class="word" corrsugg="1">
         <td class="original" status="error">mnngan</td>
