@@ -2,22 +2,29 @@
     <body>
         <div id="demo"/>
         <script>
- var text, parser, xmlDoc;
-
-text = "<spelltestresult><results>" +
+var demoElement = document.getElementById("demo");
+var text = "<spelltestresult><results>" +
 "<word>" +
 "<original>Giada De Laurentiis</original>" +
 "<speller>2005</speller></word>" +
 "</results></spelltestresult>";
 
-parser = new DOMParser();
-xmlDoc = parser.parseFromString(text,"text/xml");
+demoElement.append(createP('uff'));
 
-myFunction(xmlDoc)
+var parser = new DOMParser();
+var xmlDoc = parser.parseFromString(text, "text/xml");
 
-function myFunction(xmlD) {
-    document.getElementById("demo").innerHTML =
-    xmlD.getElementsByTagName("original")[0].childNodes[0].nodeValue;
+myFunction(xmlDoc, demoElement);
+
+function myFunction(xmlD, dElem) {
+    dElem.append(createP(xmlD.getElementsByTagName("original")[0].childNodes[0].nodeValue));
+}
+
+function createP(text) {
+    var p = document.createElement('p');
+    p.innerHTML = text;
+
+    return p;
 }
         </script>
     </body>
