@@ -812,16 +812,12 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
 
 
 
-!         HELE KLASSE 4 SKAL UT AV ADJEKTIVFILA ETTERHVERT! Har markert dem med ==> UT!
-!Attributtene skals ettes til attr og pred til adverb - prediaktiv er ohke/-ehke med dens komparering.
+! **************************
+! ** Tidligere "KLASSE 4" = ATTR/ADVERB
+! **************************
 
 
-!!! ** KLASSE 4, -s og -h  i attributt, UMLAUT til -an predikativ** !!!
-
-!**** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. ****!
-
-
-LEXICON as_AN_ODDNOCOMP4                                                     !==> UT
+LEXICON asATTR_anADVERB                                                  
 !! !!!UMLAUT LEXICON @LEXNAME@
 !! These 6 adjectives is in the 4. group of the southsámi adjectives, the group
 !! which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
@@ -831,12 +827,12 @@ LEXICON as_AN_ODDNOCOMP4                                                     !==
 !! small undergruppe of the 4.group
 !! {{{
   :a  ATTR_S   ; !!= @CODE@
-! :a  PRED_AN  ; !!= @CODE@               ! Outcommented because theese are averbs
+! :a  PRED_AN  ; !!= @CODE@             
   :an adv      ;
   :a  MAANAOBL ;
 !! }}}
 
-LEXICON oes_AN_ODDNOCOMP4                                                    !==> UT!
+LEXICON oesATTR_oen_an_ADVERB                                                    !==> UT!
 !! !!!UMLAUT LEXICON @LEXNAME@
 !! Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all
 !! umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
@@ -845,99 +841,51 @@ LEXICON oes_AN_ODDNOCOMP4                                                    !==
     :oe     ATTR_S   ; !!= @CODE@
 !   :%^3UML PRED_AN  ; !!= @CODE@
     :an     adv      ;
+    :oen    adv      ;
   +A:       N_OE_OBL ; !!= @CODE@
 !! }}}
 
 
-LEXICON oeh_OEN_ODD4   !  ==> UT!
+LEXICON oehATTR_oen_ADVERB   !  
 !! {{{
   :oe  ATTR_H     ; !!= @CODE@
-! :oe  PRED_N     ; !!= @CODE@                                              ! Outcommented because theese are averbs
+! :oe  PRED_N     ; !!= @CODE@                                              ! 
   :oen adv        ;
   :ohk ODDCASEOBL ;
 !! }}}
 
-LEXICON oeh_AN_ODD4 ! an- is adverb    ==> UT!
+LEXICON oehATTR_anADVERB ! an- is adverb    
 !! {{{
          :oe        ATTR_H    ; !!= @CODE@
 ! +Use/NG:%^3UMLa   PRED_N    ; !!= @CODE@
-         :an        adv       ;
+
+         :an        adv       ;  
          :ahk       ODDCOMP   ;
-         :oen       adv       ;
+         :oen       adv       ;   
          :oehk      ODD_ÅBPOE ;
 !        :%^3UMLahk ODD_ÅBPOE ; !!= @CODE@
          :ohk       ODDCASE   ;
 !! }}}
 
-LEXICON ah_AN_ODD !   ==> UT!
+LEXICON ahATTR_anADVERB !  
   :a   ATTR_H     ;
-! :a   PRED_N     ; ! Outcommented because theese are averbs
+
   :an  adv        ;
   :ahk ODDCOMP    ;
   :ehk ODDCASEOBL ;
 
 
-
-LEXICON oeh_ah_AN_ODD_NOCOMP4                                                  !   ==> UT!
-  +Use/NG:%^3UMLa ATTR_H     ;
-         :oe      ATTR_H     ;
-!        :%^3UML  PRED_AN    ; ! Outcommented because theese are averbs
-         :an      adv        ;
-  +Use/NG:ohk     ODDCASEOBL ;
-  +Use/NG:ehk     ODDCASEOBL ;
-
-
-LEXICON oeh_OEH_AN_ODD4                                                       ! Attr=oeh, Pred=oeh og an   ==> UT!
-       oeh_OEH_AN_ODDNOCOMP ;
- :ahk  ODDCOMP              ;
- :oehk ODD_ÅBPOE            ;
- :ohk  ODDCASE              ;
-
-LEXICON oeh_OEH_AN_ODDNOCOMP                                                   ! Attr=oeh, Pred=oeh og an   ==> UT!
-         :oe  ATTR_H     ;
-  +Use/NG:oe  PRED_H     ;
-!             PRED_AN    ; ! Outcommented because theese are averbs
-         :an  adv        ;
-         :ohk ODDCASEOBL ;
-
-
-
-LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
-!! The __@LEXNAME@__ lexicon is used for adjectives on {{–ah}} and {{–an}} with an
-!! exceptional predicative on {{–ode/–ede}}. This lexicon is only used for
-!! three adjectives: ''båadtsoeh, båajhtoeh, skåalvoeh''. ''båadtsoeh'' is also
-!! used with the stem ''båadtj–'', although that stem is probably southern.
-!! It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
-!! This must be checked further, possibly with informants.
-
-!!€gt-norm: adjectives ony ah/oeh an/oen/ode - båadtsah
-!!€ båadtsah:     båadtsoeh+A+Attr
-!!€ båadtsoeh:    båadtsoeh+A+Attr
-!!€ båadtsas:     båadtsoes+A+Attr
-!!€ båadtsoes:    båadtsoes+A+Attr
-
-!!€ båadtjas:     båadtsoes+A+Attr
-!!€ båadtjah:     båadtsoeh+A+Attr
-
-
-
- +Use/NG:a   ATTR_H     ;
-        :oe  ATTR_H     ;
- +Use/NG:a   ATTR_S     ;
- +Use/NG:oe  ATTR_S     ;
-        :ohk ODDCASEOBL ; !
- +Use/NG:ehk ODDCASEOBL ;
-             PRED_AN    ; ! normative etter ordbok.
-        :oe  PRED_N     ; ! normative etter ordbok. hvis -an-oen, bør også -ode være et pred. iflg. informanter, men det er ikke oppført. båadtsode, skåalvode og båajhtode i predikativ posisjon er helt vanlig i muntlig tale. men de er adverber. og skal egnetlig ikke være predikativ.
-
- !-ode,-ede,-an,-oen er adverber iflg. Bergsland 1994.Ordbok sier riktignok båadtsan =pred, men grammatikk s.116-117 i Bergsland viser ikke an-som noen pred.gruppe. Maja heller til Bergsland 116-117, 1994 som mest riktig.
-
-
-
-! *************************************************************************************************
-!**SLUTT ** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. **SLUTT **!
-! Hele 4-gruppen skal ut. bare attrbutter som skal stå igjen.
-!**************************************************************************************************
+LEXICON oeh_ahATTR_anADVERB !  
+  :a   ATTR_H     ;
+  :oeh ATTR_H     ;
+  :an  adv        ;
+  :ahk ODDCOMP    ;
+  :ehk ODDCASEOBL ;
+ 
+ 
+! ************************************
+!  SLUTT "KLASSE 4" = ATTR/ADVERB
+!*************************************
 
 
 ! ***************************************************************************************
