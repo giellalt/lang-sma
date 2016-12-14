@@ -167,8 +167,9 @@ LEXICON PRED_AN!!≈ !!!@CODE@  !
 
 
 
-
+! ***************************************************************************************************
 !   *** KLASSE 1, ie,oe,e og a-stammer med 1) attribut og prediaktiv -s, 2) uten attr/pred-s     ***   !
+! ***************************************************************************************************
 
 LEXICON h_H_EVENNOCOMP
              ATTR_H ;
@@ -340,20 +341,20 @@ LEXICON eh_EH_ODDNOCOMP1 ! gïeleh - språklig,"guektiengïeleh maanah"
 
         :e  ATTR_H  ;
         :e  PRED_H  ;
- +Use/NG:eg ODDCASE ; ! språkhist.
+ +Use/NG:eg ODDCASE ;       ! språkhist.
 
 LEXICON AH_&_OEH_ODD1
         :oe   ATTR_H    ;
  +Use/NG:a    ATTR_H    ;
         :oehk ODD_ÅBPOE ;
  +Use/NG:ahk  ODD_ABPA  ;
-        :ehk  ODDCASE   ; ! språkhist.
- +Use/NG:ohk  ODDCASE   ; ! språkhist.
+        :ehk  ODDCASE   ;  ! språkhist.
+ +Use/NG:ohk  ODDCASE   ;  ! språkhist.
 
 LEXICON oeh_OEH_ODD1
         :oe   ATTR_H    ;
  +Use/NG:oe   PRED_H    ;
-        :ohk  ODDCASE   ; ! språkhist.
+        :ohk  ODDCASE   ;   ! språkhist.
         :oehk ODD_ÅBPOE ;
 
 ! VOKALUTVIDELSE på 2-stavelsesadjektiv
@@ -411,8 +412,9 @@ LEXICON GIERIES !    åehpies- skal også hit- UMLAUT!
 
 !   ****slutt Vokalutvidelse i 2.stavelse av 2-stems-adjectives *****
 
-
+!   ******************************************************
 !   !***UMLAUT FOR e(3)-stammen, KLASSE-1- ADJEKTIVENE
+!   ******************************************************
 
 !    ***UMLAUT FOR e(3)-stammen
 
@@ -496,9 +498,9 @@ LEXICON ROOPSES                                                  ! disse leksiko
 !   +Use/NG:giervie   MES               ;
 !          :giervie   DIMCOMP           ;
 
-
+! ******************************************************
 !    **SLUTT**UMLAUT FOR e(3)-stammen     **SLUTT**!
-
+! ******************************************************
 
 
 LEXICON s_S_ODD                                    ! HUFF, del opp adjektivene i dette leksikonet i odde- og loan-adjektiver      = NB!
@@ -581,13 +583,13 @@ LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 !  sliegrie;sleegre, slehtjie/-m,-n-an,-esne,-este, dette er adverbs
 
 
+! *********************************************************************************************************
+!    SLUTT* KLASSE 1, ie,oe,e og a-stammer med 1) attribut og prediaktiv -s, 2) uten attr/pred-s  *SLUTT*!
+! *********************************************************************************************************
 
-!*SLUTT* KLASSE 1, ie,oe,e og a-stammer med 1) attribut og prediaktiv -s, 2) uten attr/pred-s  *SLUTT*!
-
-
-
-!***  KLASSE 2, e(1) attribut og prediaktiv -es   ****!
-
+! *********************************************************************************************************
+!                   ***  KLASSE 2, e(1) attribut og prediaktiv -es   ****!
+! *********************************************************************************************************
 
 !LEXICON e_ES_EVENODDNOCOMP2
 !! !!!LEXICON @LEXNAME@
@@ -639,7 +641,7 @@ LEXICON SNAARE2  !----> TWOL
  :sneere  MES              ;
  :snaerie DIMCOMP          ;
 
-! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut  ----> TWOL
+! UMLAUT 2 = e(1)-stamme, men med en underliggende ie-stamme som bidrar til umlaut  ----> TWOL  
 LEXICON ORRE2
         :orr  e_E_EVEN     ;
 ! +Use/NG:urr  e_E_EVEN     ; ! Wrong!(Maja)
@@ -707,8 +709,10 @@ LEXICON KRUANA2
 ! *SLUTT* KLASSE 2  *SLUTT*   !
 ! ********************************************************
 
-
+! *********************************************************
 !!! ** KLASSE 3, -s i attributt, vokal i predikativ** !!!
+! *********************************************************
+
 
 LEXICON es_E_EVEN3
 !! !!!LEXICON @LEXNAME@
@@ -770,26 +774,26 @@ LEXICON ies_IE_EVEN3NOCOMP
 !AVLEDNINGSLEKSIKONET -s i prediaktiv
 ! Avlednigsleksikon til ies-stammevokalgruppen - s  ---->   går til klasse 1 som har ies-ies i attr/pred.
 LEXICON ies_IES_IE_EVEN3  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
-        :ie ATTR_S     ;
-       +A:   A_IE_FORMS ;
-        :ie EVENCOMP   ;
+   :ie ATTR_S     ;
+ +A:   A_IE_FORMS ;
+   :ie EVENCOMP   ;
 
 
 LEXICON A_IE_FORMS ! similar to N_IE_FORMS, except that +Sg+Nom is -ies, with alternative -ie
-                 +Sg+Nom:ie%>s FINAL1 ; ! Avlednings-s og/eller språkutvikling
-          +Sg+Nom+Use/NG:ie           FINAL1  ;
-                     +Sg:             N_IE_SG_OBL  ;
-                     +Pl:             N_IE_PL  ;
-                                      N_IE_ESS ;
-               +Cmp/SgNom:ie           R        ;
-               +Cmp/SgGen:ie%>n        R        ;
-         +Cmp/PlGen+NoUml:ie%>j        R        ;
-           +Cmp/PlGen+Uml:%>%^iUMLi    R        ;
-       +Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
- +Der1+Der/ijes+A+Sg+Nom:%»%^1UMLijes FINAL1   ;
-          +Der1+Der/ijes:%»%^1UMLijes ATTR_0   ;
-          +Der1+Der/ijes:%»%^1UMLij   ODDCOMP  ;
-           +Der2+Der/Car:%»eht   hts_HTS_ODDNOCOMP ;
+                 +Sg+Nom:ie%>s        FINAL1            ; ! Avlednings-s og/eller språkutvikling
+          +Sg+Nom+Use/NG:ie           FINAL1            ;
+                     +Sg:             N_IE_SG_OBL       ;
+                     +Pl:             N_IE_PL           ;
+                                      N_IE_ESS          ;
+              +Cmp/SgNom:ie           R                 ;
+              +Cmp/SgGen:ie%>n        R                 ;
+        +Cmp/PlGen+NoUml:ie%>j        R                 ;
+          +Cmp/PlGen+Uml:%>%^iUMLi    R                 ;
+       +Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE          ;
+ +Der1+Der/ijes+A+Sg+Nom:%»%^1UMLijes FINAL1            ;
+          +Der1+Der/ijes:%»%^1UMLijes ATTR_0            ;
+          +Der1+Der/ijes:%»%^1UMLij   ODDCOMP           ;
+           +Der2+Der/Car:%»eht        hts_HTS_ODDNOCOMP ;
 
 
 
@@ -799,7 +803,13 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
                  :ie  ATTR_S     ;
                +A:    N_IE_FORMS ;
  +A+Sg+Nom+Use/NG:ies FINAL1     ;
-      +A+Cmp/SgNom:ies R          ;
+     +A+Cmp/SgNom:ies R          ;
+
+
+! *********************************************************************
+!!! SLUTT:  KLASSE 3, -s i attributt, vokal i predikativ     SLUTT  !!!
+! *********************************************************************
+
 
 
 !         HELE KLASSE 4 SKAL UT AV ADJEKTIVFILA ETTERHVERT! Har markert dem med ==> UT!
@@ -811,7 +821,7 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
 !**** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. ****!
 
 
-LEXICON as_AN_ODDNOCOMP4       !==> UT
+LEXICON as_AN_ODDNOCOMP4                                                     !==> UT
 !! !!!UMLAUT LEXICON @LEXNAME@
 !! These 6 adjectives is in the 4. group of the southsámi adjectives, the group
 !! which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
@@ -820,75 +830,75 @@ LEXICON as_AN_ODDNOCOMP4       !==> UT
 !! This group which covers the ies - an/ as-an and oes-an + umlaut change, is a
 !! small undergruppe of the 4.group
 !! {{{
- :a ATTR_S   ; !!= @CODE@
-! :a PRED_AN  ; !!= @CODE@               ! Outcommented because theese are averbs
- :an adv ;
- :a MAANAOBL ;
+  :a  ATTR_S   ; !!= @CODE@
+! :a  PRED_AN  ; !!= @CODE@               ! Outcommented because theese are averbs
+  :an adv      ;
+  :a  MAANAOBL ;
 !! }}}
 
-LEXICON oes_AN_ODDNOCOMP4        !==> UT!
+LEXICON oes_AN_ODDNOCOMP4                                                    !==> UT!
 !! !!!UMLAUT LEXICON @LEXNAME@
 !! Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all
 !! umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
 !! This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group
 !! {{{
-   :oe     ATTR_S   ; !!= @CODE@
- !  :%^3UML PRED_AN  ; !!= @CODE@
-   :an adv ;
- +A:       N_OE_OBL ; !!= @CODE@
+    :oe     ATTR_S   ; !!= @CODE@
+!   :%^3UML PRED_AN  ; !!= @CODE@
+    :an     adv      ;
+  +A:       N_OE_OBL ; !!= @CODE@
 !! }}}
 
 
 LEXICON oeh_OEN_ODD4   !  ==> UT!
 !! {{{
- :oe  ATTR_H     ; !!= @CODE@
-! :oe  PRED_N     ; !!= @CODE@             ! Outcommented because theese are averbs
- :oen adv ;
- :ohk ODDCASEOBL ;
+  :oe  ATTR_H     ; !!= @CODE@
+! :oe  PRED_N     ; !!= @CODE@                                              ! Outcommented because theese are averbs
+  :oen adv        ;
+  :ohk ODDCASEOBL ;
 !! }}}
 
 LEXICON oeh_AN_ODD4 ! an- is adverb    ==> UT!
 !! {{{
-        :oe      ATTR_H  ; !!= @CODE@
-! +Use/NG:%^3UMLa PRED_N  ; !!= @CODE@
-        :an adv ;
-        :ahk ODDCOMP    ;
-        :oen adv ;
-        :oehk ODD_ÅBPOE ;
-!       :%^3UMLahk ODD_ÅBPOE ; !!= @CODE@
-        :ohk     ODDCASE ;
+         :oe        ATTR_H    ; !!= @CODE@
+! +Use/NG:%^3UMLa   PRED_N    ; !!= @CODE@
+         :an        adv       ;
+         :ahk       ODDCOMP   ;
+         :oen       adv       ;
+         :oehk      ODD_ÅBPOE ;
+!        :%^3UMLahk ODD_ÅBPOE ; !!= @CODE@
+         :ohk       ODDCASE   ;
 !! }}}
 
 LEXICON ah_AN_ODD !   ==> UT!
- :a   ATTR_H     ;
-! :a   PRED_N     ;                        ! Outcommented because theese are averbs
- :an adv ;
- :ahk ODDCOMP    ;
- :ehk ODDCASEOBL ;
+  :a   ATTR_H     ;
+! :a   PRED_N     ; ! Outcommented because theese are averbs
+  :an  adv        ;
+  :ahk ODDCOMP    ;
+  :ehk ODDCASEOBL ;
 
 
 
-LEXICON oeh_ah_AN_ODD_NOCOMP4 !   ==> UT!
- +Use/NG:%^3UMLa ATTR_H     ;
-        :oe      ATTR_H     ;
-  !      :%^3UML  PRED_AN    ;              ! Outcommented because theese are averbs
-         :an   adv ;
- +Use/NG:ohk     ODDCASEOBL ;
- +Use/NG:ehk     ODDCASEOBL ;
+LEXICON oeh_ah_AN_ODD_NOCOMP4                                                  !   ==> UT!
+  +Use/NG:%^3UMLa ATTR_H     ;
+         :oe      ATTR_H     ;
+!        :%^3UML  PRED_AN    ; ! Outcommented because theese are averbs
+         :an      adv        ;
+  +Use/NG:ohk     ODDCASEOBL ;
+  +Use/NG:ehk     ODDCASEOBL ;
 
 
-LEXICON oeh_OEH_AN_ODD4  ! Attr=oeh, Pred=oeh og an   ==> UT!
+LEXICON oeh_OEH_AN_ODD4                                                       ! Attr=oeh, Pred=oeh og an   ==> UT!
        oeh_OEH_AN_ODDNOCOMP ;
  :ahk  ODDCOMP              ;
  :oehk ODD_ÅBPOE            ;
  :ohk  ODDCASE              ;
 
-LEXICON oeh_OEH_AN_ODDNOCOMP  ! Attr=oeh, Pred=oeh og an   ==> UT!
-        :oe  ATTR_H     ;
- +Use/NG:oe  PRED_H     ;
- !            PRED_AN   ;                   ! Outcommented because theese are averbs
-        :an         adv ;   
-        :ohk ODDCASEOBL ;
+LEXICON oeh_OEH_AN_ODDNOCOMP                                                   ! Attr=oeh, Pred=oeh og an   ==> UT!
+         :oe  ATTR_H     ;
+  +Use/NG:oe  PRED_H     ;
+!             PRED_AN    ; ! Outcommented because theese are averbs
+         :an  adv        ;
+         :ohk ODDCASEOBL ;
 
 
 
@@ -914,22 +924,26 @@ LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP !!≈ !!!@CODE@
  +Use/NG:a   ATTR_H     ;
         :oe  ATTR_H     ;
  +Use/NG:a   ATTR_S     ;
- +Use/NG:oe  ATTR_S     ; 
-        :ohk ODDCASEOBL ;! 
+ +Use/NG:oe  ATTR_S     ;
+        :ohk ODDCASEOBL ; !
  +Use/NG:ehk ODDCASEOBL ;
-             PRED_AN    ;! normative etter ordbok. 
-        :oe  PRED_N     ; ! normative etter ordbok. hvis -an-oen, bør også -ode være et pred. iflg. informanter, men det er ikke oppført. båadtsode, skåalvode og båajhtode i predikativ posisjon er helt vanlig i muntlig tale. men de er adverber. og skal egnetlig ikke være predikativ. 
-        
- !-ode,-ede,-an,-oen er adverber iflg. Bergsland 1994.Ordbok sier riktignok båadtsan =pred, men grammatikk s.116-117 i Bergsland viser ikke an-som noen pred.gruppe. Maja heller til Bergsland 116-117, 1994 som mest riktig. 
+             PRED_AN    ; ! normative etter ordbok.
+        :oe  PRED_N     ; ! normative etter ordbok. hvis -an-oen, bør også -ode være et pred. iflg. informanter, men det er ikke oppført. båadtsode, skåalvode og båajhtode i predikativ posisjon er helt vanlig i muntlig tale. men de er adverber. og skal egnetlig ikke være predikativ.
+
+ !-ode,-ede,-an,-oen er adverber iflg. Bergsland 1994.Ordbok sier riktignok båadtsan =pred, men grammatikk s.116-117 i Bergsland viser ikke an-som noen pred.gruppe. Maja heller til Bergsland 116-117, 1994 som mest riktig.
 
 
+
+! *************************************************************************************************
 !**SLUTT ** UMLAUT 4 = ie-stamme er i 4-gruppen, hvor umlauten bare er fra attr -pred. **SLUTT **!
 ! Hele 4-gruppen skal ut. bare attrbutter som skal stå igjen.
-!****!
+!**************************************************************************************************
 
+
+! ***************************************************************************************
 !  **** ODD-stavelses-adjektiv   ****   !
 ! ODD-stems (odd stem declension)
-! ===============================
+! ***************************************************************************************
 
 
 
@@ -940,35 +954,35 @@ LEXICON Ce_CE_ODD  !bårreske
             ODDCOMP    ;
 
 LEXICON Ce_CE_ODDNOCOMP
-            :%^DISIMPe ATTR_0     ;
-            :%^DISIMPe PRED_0     ;
-                       ODDCASEOBL ;
- +A+Cmp/SgNom:%^DISIMPe R         ;
- 
- 
+             :%^DISIMPe ATTR_0     ;
+             :%^DISIMPe PRED_0     ;
+                        ODDCASEOBL ;
+ +A+Cmp/SgNom:%^DISIMPe R          ;
+
+
 LEXICON Ch_CE_ODDNOCOMP
-            :h   ATTR_0     ;
-            :ege PRED_0     ;
-                 ODDCASE_EGE ;
- +A+Cmp/SgNom:h R          ;
- 
+             :h   ATTR_0      ;
+             :ege PRED_0      ;
+                  ODDCASE_EGE ;
+ +A+Cmp/SgNom:h   R           ;
+
 LEXICON ODDCASE_EGE
-   +A+Sg+Acc:egem FINAL1    ;
-   +A+Sg+Gen:egen FINAL1    ;
-   +A+Sg+Ill:easse           FINAL1    ;
-   +A+Sg+Ine:egisnie         FINAL1    ;
-   +A+Sg+Ela:egistie         FINAL1    ;
-   +A+Sg+Com:eginie          FINAL1    ;
-   +A+Pl+Nom:egh             FINAL1    ;
-   +A+Pl+Acc:egidie          FINAL1    ;          
-   +A+Pl+Gen:egi             FINAL1    ;
-   +A+Pl+Ill:egidie          FINAL1    ; 
-   +A+Pl+Ine:eginie          FINAL1    ;
-   +A+Pl+Ela:egijstie        FINAL1    ;
-   +A+Pl+Com:egigujmie       FINAL1    ;
-   +A+Pl+Com+Err/Orth:egigyjmie       FINAL1    ;
- +A+Cmp/SgGen:egen R        ;
- +A+Cmp/PlGen:egi  R        ;
+          +A+Sg+Acc:egem      FINAL1 ;
+          +A+Sg+Gen:egen      FINAL1 ;
+          +A+Sg+Ill:easse     FINAL1 ;
+          +A+Sg+Ine:egisnie   FINAL1 ;
+          +A+Sg+Ela:egistie   FINAL1 ;
+          +A+Sg+Com:eginie    FINAL1 ;
+          +A+Pl+Nom:egh       FINAL1 ;
+          +A+Pl+Acc:egidie    FINAL1 ;
+          +A+Pl+Gen:egi       FINAL1 ;
+          +A+Pl+Ill:egidie    FINAL1 ;
+          +A+Pl+Ine:eginie    FINAL1 ;
+          +A+Pl+Ela:egijstie  FINAL1 ;
+          +A+Pl+Com:egigujmie FINAL1 ;
+ +A+Pl+Com+Err/Orth:egigyjmie FINAL1 ;
+       +A+Cmp/SgGen:egen      R      ;
+       +A+Cmp/PlGen:egi       R      ;
 
 
 
@@ -981,26 +995,26 @@ LEXICON oeCe_OECE_ODD  !bårreske
 
 ! Gå igjnenom disse hth-hts-adjektivene
 LEXICON hth_HTH_ODD   ! NB!
-            :%^DISIMP  ATTR_H     ;
-            :%^DISIMP  PRED_H     ;
-                       ODDCASEOBL ;
+             :%^DISIMP  ATTR_H     ;
+             :%^DISIMP  PRED_H     ;
+                        ODDCASEOBL ;
  +A+Cmp/SgNom:%^DISIMPh R          ;
-                       ODDCOMP    ;
+                        ODDCOMP    ;
 
 LEXICON oehth_OEHTH_ODD   !NB!
-            :%^DISIMP  ATTR_H     ;
-            :%^DISIMP  PRED_H     ;
-                       ODDCASEOBL ;
+             :%^DISIMP  ATTR_H     ;
+             :%^DISIMP  PRED_H     ;
+                        ODDCASEOBL ;
  +A+Cmp/SgNom:%^DISIMPh R          ;
-                       ODD_ÅBPOE  ;
+                        ODD_ÅBPOE  ;
 
 LEXICON hth_HTH_ODDNOCOMP   ! NB!
-            :%^DISIMP  ATTR_H     ;
-            :%^DISIMP  PRED_H     ;
-                       ODDCASEOBL ;
+             :%^DISIMP  ATTR_H     ;
+             :%^DISIMP  PRED_H     ;
+                        ODDCASEOBL ;
  +A+Cmp/SgNom:%^DISIMPh R          ;
- 
- 
+
+
 
 LEXICON hts_HTS_ODD        ! NB!
     hts_HTS_ODDNOCOMP ;
@@ -1014,28 +1028,26 @@ LEXICON hts_HTS_ODDNOCOMP     ! NB!
 ! This lexicon is in reality hts_HTS_HTE
 ! We have info on pred -e for two adjs:
 ! heijjehts (corpus) and bieljehts (marit) - LA: fjerner -e, jeg kan ikke se at vi har slik dokumentasjon
-            :%^DISIMP  ATTR_S ;
-            :%^DISIMP  PRED_S ;
-!           :%^DISIMPe PRED_0     ;
-!                      ODDCASEOBL ; !LA tok vekk -s
- +A+Cmp/SgNom:%^DISIMPs R      ;
+              :%^DISIMP  ATTR_S     ;
+              :%^DISIMP  PRED_S     ;
+!             :%^DISIMPe PRED_0     ;
+!                        ODDCASEOBL ; !LA tok vekk -s
+  +A+Cmp/SgNom:%^DISIMPs R          ;
 
 LEXICON hts_HTS_ODDhtCOMP     !NB!
-   hts_HTS_ODDNOCOMP ;
-   ODDCOMP           ; ! joekehtåbpoe
-   ODDCASEOBL        ;
+  hts_HTS_ODDNOCOMP ;
+  ODDCOMP           ; ! joekehtåbpoe
+  ODDCASEOBL        ;
 
 LEXICON oehts_OEHTS_ODDhtCOMP    ! NB!
-   hts_HTS_ODDNOCOMP ;
-   ODD_ÅBPOE         ; ! joekehtåbpoe
-   ODDCASEOBL        ;
+  hts_HTS_ODDNOCOMP ;
+  ODD_ÅBPOE         ; ! joekehtåbpoe
+  ODDCASEOBL        ;
 
 
-
+! ************************
 ! SE på denne gruppen over
-
-
-
+! ************************
 
 LEXICON Ces_CES_ODD
    Ces_CES_ODDNOCOMP ;
