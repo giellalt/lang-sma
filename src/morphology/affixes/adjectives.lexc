@@ -428,6 +428,8 @@ LEXICON BUERIE_UMLAUT_IE_STAMME
  :buerie EVENCOMPONLY     ; !!= @CODE@
  :bööre  MES              ; !!= @CODE@
  :buerie DIMCOMP          ; !!= @CODE@
+ +A+Der1+Der/Dimin:buaratj ODDCOMP ;
+ +A+Der1+Der/Dimin:bööretj ODDCOMP ;
 !! }}}
 
 !Suppletivisme
@@ -626,10 +628,10 @@ LEXICON e_ES_ODDEVEN2
             :e  ATTR_0     ; !!= @CODE@
             :es ODDCASEOBL ; !!= @CODE@
             :e  EVENCOMP   ; !!= @CODE@
-     +Use/NG:e  ATTR_S     ; !!= @CODE@
+  !    +Der/s:e  ATTR_S     ; !!= @CODE@
  +A+Cmp/SgNom:es R          ; !!= @CODE@
             :e  PRED_S     ; !!= @CODE@
-     +Use/NG:es ODDCOMP    ; !!= @CODE@
+  !   +Use/NG:es ODDCOMP    ; !!= @CODE@
 !! }}}
 
 !***UMLAUT FOR e(2)-stammen, Klasse-2
@@ -1459,8 +1461,8 @@ LEXICON EVENCOMP
    EVENSUPONLY  ;
 
 LEXICON EVENCOMPONLY
-   +A+Comp:%>%^COMPDISIMPbe%^DISIMP ATTRCONT         ;
- +A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP FINAL1         ; !Lene endra 18.3.16
+        +A+Comp:%>%^COMPDISIMPbe%^DISIMP ATTRCONT         ;
+ +A+Comp+Sg+Nom:%>%^COMPDISIMPbe%^DISIMP FINAL1           ; !Lene endra 18.3.16
                                          EVENCOMPCASE_OBL ;
                                          DIMCOMP          ;
 
@@ -1569,64 +1571,64 @@ LEXICON EVENCOMPCASE_OBL
 
 
 LEXICON DIMCOMP
-     +A+Comp+Der1+Der/Dimin+A+Attr:%>b%»adtje                    FINAL1   ;
-     +A+Comp+Der1+Der/Dimin+A+Attr:%>b%»odtje                    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»adtje                    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Acc:%>b%»adtje%>m                 FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Gen:%>b%»adtje%>n                 FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMPb%»adtje%>se    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ine:%>%^COMPDISIMPb%»adtje%>sne   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ela:%>%^COMPDISIMPb%»adtje%>ste   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Com:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMP2b%»adtje%>se   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ine:%>%^COMPDISIMP2b%»adtje%>sne  FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ela:%>%^COMPDISIMP2b%»adtje%>ste  FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Com:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Nom:%>b%»adtj%>h                  FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Nom:%>b%»adtj%>eh                 FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Acc:%>%^COMPDISIMPb%»adtj%>ide    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Acc:%>%^COMPDISIMP2b%»adtj%>ide   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Gen:%>b%»adtj%>                   IGENSUFF ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ill:%>%^COMPDISIMPb%»adtj%>ide    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ine:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ela:%>%^COMPDISIMPb%»adtj%>ijste  FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ill:%>%^COMPDISIMP2b%»adtj%>ide   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ine:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ela:%>%^COMPDISIMP2b%»adtj%>ijste FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Com:%>b%»adtj%>igujmie            FINAL1   ;
-      +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
-      +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
- +A+Comp+Der1+Der/Dimin+A+Cmp/SgNom:%>b%»adtje                    R        ;
- +A+Comp+Der1+Der/Dimin+A+Cmp/SgGen:%>b%»adtje%>n                 R        ;
- +A+Comp+Der1+Der/Dimin+A+Cmp/PlGen:%>b%»adtj%>i                  R        ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»odtje                    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Acc:%>b%»odtje%>m                 FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Gen:%>b%»odtje%>n                 FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMPb%»odtje%>se    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ine:%>%^COMPDISIMPb%»odtje%>sne   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ela:%>%^COMPDISIMPb%»odtje%>ste   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Com:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMP2b%»odtje%>se   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ine:%>%^COMPDISIMP2b%»odtje%>sne  FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Ela:%>%^COMPDISIMP2b%»odtje%>ste  FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Sg+Com:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Nom:%>b%»odtj%>h                  FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Nom:%>b%»odtj%>eh                 FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Acc:%>%^COMPDISIMPb%»odtj%>ide    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Acc:%>%^COMPDISIMP2b%»odtj%>ide   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Gen:%>b%»odtj%>                   IGENSUFF ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ill:%>%^COMPDISIMPb%»odtj%>ide    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ine:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ela:%>%^COMPDISIMPb%»odtj%>ijste  FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ill:%>%^COMPDISIMP2b%»odtj%>ide   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ine:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Ela:%>%^COMPDISIMP2b%»odtj%>ijste FINAL1   ;
-   +A+Comp+Der1+Der/Dimin+A+Pl+Com:%>b%»odtj%>igujmie            FINAL1   ;
-      +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
-      +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
+      +A+Comp+Der1+Der/Dimin+A+Attr:%>b%»adtje                    FINAL1   ;
+      +A+Comp+Der1+Der/Dimin+A+Attr:%>b%»odtje                    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»adtje                    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Acc:%>b%»adtje%>m                 FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Gen:%>b%»adtje%>n                 FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMPb%»adtje%>se    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ine:%>%^COMPDISIMPb%»adtje%>sne   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ela:%>%^COMPDISIMPb%»adtje%>ste   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Com:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMP2b%»adtje%>se   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ine:%>%^COMPDISIMP2b%»adtje%>sne  FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ela:%>%^COMPDISIMP2b%»adtje%>ste  FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Com:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Nom:%>b%»adtj%>h                  FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Nom:%>b%»adtj%>eh                 FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Acc:%>%^COMPDISIMPb%»adtj%>ide    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Acc:%>%^COMPDISIMP2b%»adtj%>ide   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Gen:%>b%»adtj%>                   IGENSUFF ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ill:%>%^COMPDISIMPb%»adtj%>ide    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ine:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ela:%>%^COMPDISIMPb%»adtj%>ijste  FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ill:%>%^COMPDISIMP2b%»adtj%>ide   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ine:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ela:%>%^COMPDISIMP2b%»adtj%>ijste FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Com:%>b%»adtj%>igujmie            FINAL1   ;
+       +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
+       +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»odtje                    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Acc:%>b%»odtje%>m                 FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Gen:%>b%»odtje%>n                 FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMPb%»odtje%>se    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ine:%>%^COMPDISIMPb%»odtje%>sne   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ela:%>%^COMPDISIMPb%»odtje%>ste   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Com:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMP2b%»odtje%>se   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ine:%>%^COMPDISIMP2b%»odtje%>sne  FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Ela:%>%^COMPDISIMP2b%»odtje%>ste  FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Com:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Nom:%>b%»odtj%>h                  FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Nom:%>b%»odtj%>eh                 FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Acc:%>%^COMPDISIMPb%»odtj%>ide    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Acc:%>%^COMPDISIMP2b%»odtj%>ide   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Gen:%>b%»odtj%>                   IGENSUFF ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ill:%>%^COMPDISIMPb%»odtj%>ide    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ine:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ela:%>%^COMPDISIMPb%»odtj%>ijste  FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ill:%>%^COMPDISIMP2b%»odtj%>ide   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ine:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Ela:%>%^COMPDISIMP2b%»odtj%>ijste FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Pl+Com:%>b%»odtj%>igujmie            FINAL1   ;
+       +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMPb%»odtj%>ine    FINAL1   ;
+       +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMP2b%»odtj%>ine   FINAL1   ;
  +A+Comp+Der1+Der/Dimin+A+Cmp/SgNom:%>b%»odtje                    R        ;
  +A+Comp+Der1+Der/Dimin+A+Cmp/SgGen:%>b%»odtje%>n                 R        ;
  +A+Comp+Der1+Der/Dimin+A+Cmp/PlGen:%>b%»odtj%>i                  R        ;
+ +A+Comp+Der1+Der/Dimin+A+Cmp/SgNom:%>b%»adtje                    R        ;
+ +A+Comp+Der1+Der/Dimin+A+Cmp/SgGen:%>b%»adtje%>n                 R        ;
+ +A+Comp+Der1+Der/Dimin+A+Cmp/PlGen:%>b%»adtj%>i                  R        ;
 
 ! doublet fix stops here so far Trond.
 
@@ -1690,27 +1692,27 @@ LEXICON ABPA_PL
  +Com:a%>jgujmie FINAL1 ;
 
 LEXICON MES
-     +A+Superl:%>%^COMPDISIMPmes%^DISIMP       ATTRCONT ;
-   +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP       FINAL1   ;
-   +A+Superl+Sg+Acc:masse%>m                        FINAL1   ;
-   +A+Superl+Sg+Gen:masse%>n                        FINAL1   ;
-   +A+Superl+Sg+Ill:masse%>se                       FINAL1   ;
-   +A+Superl+Sg+Ine:masse%>sne                      FINAL1   ;
-   +A+Superl+Sg+Ela:masse%>ste                      FINAL1   ;
-   +A+Superl+Sg+Com:mass%>ine                       FINAL1   ;
-   
-   +A+Superl+Pl+Nom:%>mass%>h                       FINAL1   ;
-   
-   +A+Superl+Pl+Acc:%>mass%>ide                     FINAL1   ;
-   +A+Superl+Pl+Gen:%>mass%>i                       FINAL1   ;
-   +A+Superl+Pl+Ill:%>mass%>ide                     FINAL1   ;
-   +A+Superl+Pl+Ine:%>mass%>ine                     FINAL1   ;
-   +A+Superl+Pl+Ela:%>mass%>ijste                   FINAL1   ;
-   +A+Superl+Pl+Com:%>mass%>igujmie                 FINAL1   ;
-          +A+Superl:mass                            EVEN_ESS ;
- +A+Superl+Cmp/SgNom:%>%^COMPDISIMPmes%^DISIMP       R        ;
- +A+Superl+Cmp/SgGen:masse%>n                        R        ;
- +A+Superl+Cmp/PlGen:mass%>i                         R        ;
+           +A+Superl:%>%^COMPDISIMPmes%^DISIMP ATTRCONT ;
+    +A+Superl+Sg+Nom:%>%^COMPDISIMPmes%^DISIMP FINAL1   ;
+    +A+Superl+Sg+Acc:masse%>m                  FINAL1   ;
+    +A+Superl+Sg+Gen:masse%>n                  FINAL1   ;
+    +A+Superl+Sg+Ill:masse%>se                 FINAL1   ;
+    +A+Superl+Sg+Ine:masse%>sne                FINAL1   ;
+    +A+Superl+Sg+Ela:masse%>ste                FINAL1   ;
+    +A+Superl+Sg+Com:mass%>ine                 FINAL1   ;
+
+    +A+Superl+Pl+Nom:%>mass%>h                 FINAL1   ;
+
+    +A+Superl+Pl+Acc:%>mass%>ide               FINAL1   ;
+    +A+Superl+Pl+Gen:%>mass%>i                 FINAL1   ;
+    +A+Superl+Pl+Ill:%>mass%>ide               FINAL1   ;
+    +A+Superl+Pl+Ine:%>mass%>ine               FINAL1   ;
+    +A+Superl+Pl+Ela:%>mass%>ijste             FINAL1   ;
+    +A+Superl+Pl+Com:%>mass%>igujmie           FINAL1   ;
+           +A+Superl:mass                      EVEN_ESS ;
+ +A+Superl+Cmp/SgNom:%>%^COMPDISIMPmes%^DISIMP R        ;
+ +A+Superl+Cmp/SgGen:masse%>n                  R        ;
+ +A+Superl+Cmp/PlGen:mass%>i                   R        ;
 
 LEXICON A_LDH
    +A: ATTRCONT ;
