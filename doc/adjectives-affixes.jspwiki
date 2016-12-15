@@ -75,9 +75,6 @@ The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
   +A+Sg+Nom:%>n FINAL1 ; 
 }}}
 
- !!!LEXICON PRED_AN  !
-    +A+Sg+Nom:%>an FINAL1 ; 
-
 
 
 
@@ -123,9 +120,9 @@ The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  
  !!!LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
 The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP.
 {{{
-             :a  ATTR_S ; 
-    +A+Sg+Nom:as FINAL1 ; 
-  +A+Cmp/SgNom:as R      ; 
+               :a  ATTR_S   ; 
+      +A+Sg+Nom:as FINAL1   ; 
+   +A+Cmp/SgNom:as R        ; 
 }}}
 
 
@@ -153,9 +150,9 @@ The __a_A_EVEN1_NOCOMP__ lexicon is used for adjectives on {{–ie}} and {{–ie
  !!!LEXICON es_ES_EVEN
 The __es_ES_EVEN!!≈__ lexicon is used for adjectives on {{–es}} and {{–es}}  In attributes and predicatives. With EVEN-COMP.
 {{{
-  :e ATTR_S   ; 
-  :e PRED_S   ; 
-  :e EVENCOMP ; 
+            :e      ATTR_S       ; 
+            :e      PRED_S       ; 
+            :e      EVENCOMP     ; 
 }}}
 
 
@@ -180,8 +177,8 @@ The __ies_IES_EVEN1__ lexicon is used for adjectives on {{–ies}} and {{–ies}
 
 The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on {{–ies}} and {{–ies}}  In attributes and predicatives. With EVEN-NOCOMP.
 {{{
-  :ie ATTR_S ; 
-  :ie PRED_S ; 
+   :ie ATTR_S    ; 
+   :ie PRED_S    ; 
 }}}
 
 
@@ -203,9 +200,9 @@ __adjectives examples:__
 UNEVEN adjective, attr = pred. Comporation uneven syllable.
 Presentlly only used for "båeries" adjective.
 {{{
-  :båerie ATTR_S  ; 
-  :båerie PRED_S  ; 
-  :båaras ODDCOMP ; 
+   :båerie ATTR_S   ; 
+   :båerie PRED_S   ; 
+   :båaras ODDCOMP  ; 
 }}}
 
 !!!ÅEHPIES LEXICON ÅEHPIES
@@ -230,14 +227,13 @@ This lexicon covers the ies - ehke + umlaut change.
 
 
 
-
 !!!BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
 EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 {{{
   :buer   ie_IE_EVENNOCOMP ; 
-  :buerie EVENCOMPONLY      ; 
-  :bööre  MES               ; 
-  :buerie DIMCOMP           ; 
+  :buerie EVENCOMPONLY     ; 
+  :bööre  MES              ; 
+  :buerie DIMCOMP          ; 
 }}}
 
 
@@ -247,11 +243,8 @@ EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 
 
 UMLAUT 3 = e(3)-stamme  = Unødvendig lexicon
-              :sneehpe   ATTR_S            ;
 
 UMLAUT 3 = e(3)-stamme
-
-
 
 
 
@@ -282,18 +275,14 @@ __adjectives examples:__
 * __isvelihke: __ {{isvelihke+Adv }}
 
 {{{
-     +A+Use/NG:ihk%>s ATTRCONT     ; 
-           :ig  ATTR_S     ; 
- +A+Sg+Nom+Use/NG:ihk%>s FINAL1 ; 
- +A+Sg+Nom+Use/NG:ig%>s FINAL1 ;    
-          +A:ihk X_NIEJTE     ; 
-    +A+Use/NG:igk X_NIEJTE     ; 
-  +A+Use/NG:ig  N_IE_FORMS ; 
+          +A+Use/NG:ihk%>s ATTRCONT   ; 
+                   :ig     ATTR_S     ; 
+   +A+Sg+Nom+Use/NG:ihk%>s FINAL1     ; 
+   +A+Sg+Nom+Use/NG:ig%>s  FINAL1     ; 
+                 +A:ihk    X_NIEJTE   ; 
+          +A+Use/NG:igk    X_NIEJTE   ; 
+          +A+Use/NG:ig     N_IE_FORMS ; 
 }}}
-
-
-
-
 
 
 
@@ -332,6 +321,7 @@ This one gives EVEN and ODD  Comporation.
              :e  PRED_S     ; 
       +Use/NG:es ODDCOMP    ; 
 }}}
+
 
 
 
@@ -402,7 +392,7 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
 
 
 
-!!!UMLAUT LEXICON as_AN_ODDNOCOMP4
+!!!UMLAUT LEXICON asATTR_anADVERB
 These 6 adjectives is in the 4. group of the southsámi adjectives, the group
 which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
 attributeform and an as predicativeform, is south-southsámi adjectives, and
@@ -410,57 +400,27 @@ they dont have any comparation.
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a
 small undergruppe of the 4.group
 {{{
-  :a ATTR_S   ; 
+   :a  ATTR_S   ; 
 }}}
 
-!!!UMLAUT LEXICON oes_AN_ODDNOCOMP4
+!!!UMLAUT LEXICON oesATTR_oen_an_ADVERB
 Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all
 umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
 This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group
 {{{
-    :oe     ATTR_S   ; 
-  !  :%^3UML PRED_AN  ; 
-  +A:       N_OE_OBL ; 
+     :oe     ATTR_S   ; 
+   +A:       N_OE_OBL ; 
 }}}
 
 
 {{{
-  :oe  ATTR_H     ; 
+   :oe  ATTR_H     ; 
 }}}
 
 {{{
-         :oe      ATTR_H  ; 
+          :oe        ATTR_H    ; 
+
 }}}
-
-
-
-
-
-
-
-
-
-
- !!!LEXICON ah_oeh_OEN_AN_ODE_ODDNOCOMP
-The __ah_oeh_OEN_AN_ODE_ODDNOCOMP__ lexicon is used for adjectives on {{–ah}} and {{–an}} with an
-exceptional predicative on {{–ode/–ede}}. This lexicon is only used for
-three adjectives: ''båadtsoeh, båajhtoeh, skåalvoeh''. ''båadtsoeh'' is also
-used with the stem ''båadtj–'', although that stem is probably southern.
-It might be that we overgenerate forms as ''båadtjoeh'' and ''båadtjode''.
-This must be checked further, possibly with informants.
-
-
-__adjectives ony ah/oeh an/oen/ode - båadtsah examples:__
-* __båadtsah: __ {{båadtsoeh+A+Attr }}
-* __båadtsoeh: __ {{båadtsoeh+A+Attr }}
-* __båadtsas: __ {{båadtsoes+A+Attr }}
-* __båadtsoes: __ {{båadtsoes+A+Attr }}
-
-* __båadtjas: __ {{båadtsoes+A+Attr }}
-* __båadtjah: __ {{båadtsoeh+A+Attr }}
-
-
-
 
 
 
