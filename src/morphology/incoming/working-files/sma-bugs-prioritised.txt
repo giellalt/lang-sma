@@ -1,0 +1,61 @@
+Most important/urgent:
+
+I WANT THIS UP: Hmm, is it not working? we want penalties for hyphens, they should not be suggested
+URGENT 894	tomi.pieski@hum.uit.no	hyphens or not in compounds - yes, we want them for all words in all langs, but with penalties on the suggs - recompile with penalty on hyphen
+URGENT 805	tomi.pieski@hum.uit.no	Nouns+Acronyms - still broken, Tomi is working on it
+URGENT 892	tomi.pieski@hum.uit.no	noun+Acro without hyphen - duplicate of 805, broken
+URGENT 893	thomas.omma@samediggi.	wowels in compound - how should we resolve this? - a#aa & e#ee - still broken, see 805
+
+Second most important/urgent:
+2URGENT 889	tomi.pieski@hum.uit.no	number+case - fixed in sma, broken in sme & smj
+2URGENT 831	tomi.pieski@hum.uit.no	gellie not recognized - gellie added as pron lately - pronoun is ok, numeral is not
+
+The least urgent of the urgent bugs:
+
+834	tomi.pieski@hum.uit.no	collective numerals - Thomas changed the tags, probably fixed now. Retest after next speller
+837	tomi.pieski@hum.uit.no	noun+adjective compounds
+891	tomi.pieski@hum.uit.no	millijovne is not recognized - duplicate of 831 (Numeral not included)
+
+Regular bugs, mostly not sma-specific:
+
+595	tomi.pieski@hum.uit.no		prefix+name as split comp without hyphen
+619	thomas.omma@samediggi.n		numerals and pronouns to NAMÁK and SASJ fails
+621	sjur.moshagen@samediggi		hyphen-suggestions resulting in double hyphen
+629	tomi.pieski@hum.uit.no	    a taking part of compound
+634	sjur.moshagen@samediggi		Prop gen + hyphen + Prop gen
+641	tomi.pieski@hum.uit.no	    numeral+noun compounds
+644	tomi.pieski@hum.uit.no	    cased numeral+numeral compounds
+647	tomi.pieski@hum.uit.no	    numerals+NOUN
+648	sjur.moshagen@samediggi		unmotivated suggestions with numeral+noun
+652	sjur.moshagen@samediggi		UPPERCASE-typos only get acronym-suggestions
+711	tomi.pieski@hum.uit.no	    numeral compounds and cases
+785	tomi.pieski@hum.uit.no	    does not recognize alphabet-abbr+noun
+802	sjur.moshagen@samediggi		multi word proper nouns
+803	tomi.pieski@hum.uit.no	    FINJU-/VINJU- words accepted single-handed
+
+Tomi's task list:
+1. recompile speller lexicon with hyphen penalty, redistribrute installer
+2. fix the hyphenated compounds bug (e-ee, noun+acro bug)
+3. fix the acro hyphen bug (NRK-nïejte bug)
+
+Proper nouns vs. common nouns: we misused an already existing set of PLX flags. The following works:
+
+give all Proper Nouns (names etc.) PLX TAG "NeP" instead of "N" (= Noun with subclass 'e' and flag P)
+add an A flag to every (Proper or common) Noun that can be a left part (or even to all Nouns)
+Example: if lexicon contains:
+
+land    NR
+Lapland NePR
+davvi   NAL
+Davvi-- NePAL    // NB: PLX uses two minuses to encode 1 hard hyphen, which is ugly as well as problematic.
+
+The following compounds are now recognized:
+
+Davvi-Lapland
+davviland
+
+but not:
+
+davviLapland
+Davvi-land
+
