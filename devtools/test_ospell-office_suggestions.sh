@@ -25,6 +25,7 @@ speller_input=speller_input.${engine}.txt
 speller_output=speller_output.${engine}.txt
 speller_timeusage=speller_timeusage.${engine}.txt
 speller_results="$SCRIPT_DIR/speller_result_${file_spesifier}.${engine}.html"
+suggtiming="no"
 
 # Other variables:
 DATE=$(date +%Y%m%d)
@@ -39,6 +40,10 @@ function print_usage() {
     echo "  -h, --help          Print this usage info"
     echo "  -b, --builddir DIR  Specify top build directory relative to"
     echo "                      the directory containing configure.ac"
+    echo "  -s, --suggestion-timing"
+    echo "                      Records the time it takes to generate the"
+    echo "                      suggestions for each input word. This causes"
+    echo "                      the testing to run ca 65 % slower."
     echo
 }
 
@@ -61,6 +66,8 @@ while test $# -ge 1 ; do
             builddir="$2"
             shift
         fi
+    elif test x$1 = x--suggestion-timing -o x$1 = x-s ; then
+        suggtiming="yes"
     fi
     shift
 done
@@ -80,11 +87,21 @@ cut -f1 $SCRIPT_DIR/$speller_test_data | sed 's/^/5 /' \
 	> $SCRIPT_DIR/$speller_input
 
 # Run the speller;
-$giella_core/scripts/run_ospell-office_speller.py $SCRIPT_DIR/$speller_input \
+if test "x$suggtiming" == "xyes" ; then
+    $giella_core/scripts/run_ospell-office_speller.py \
+                                      $SCRIPT_DIR/$speller_input \
                                       $SCRIPT_DIR/$speller_output \
                                       $SCRIPT_DIR/$speller_timeusage \
                                       $GTLANG2 \
                                       "$top_builddir/$spellerdir"
+else
+    $giella_core/scripts/run_ospell-office_speller.sh \
+                                      $SCRIPT_DIR/$speller_input \
+                                      $SCRIPT_DIR/$speller_output \
+                                      $SCRIPT_DIR/$speller_timeusage \
+                                      $GTLANG2 \
+                                      "$top_builddir/$spellerdir"
+fi
 
 rm -f "$speller_results"
 
@@ -101,6 +118,7 @@ $giella_core/scripts/speller-testres.pl \
 		--corpusversion="n/a" \
 		--memoryuse="n/a" \
 		--timeuse="$SCRIPT_DIR/$speller_timeusage" \
+		--suggtiming="$suggtiming" \
 		--xml="$speller_results" \
 		--corrsugg
 
