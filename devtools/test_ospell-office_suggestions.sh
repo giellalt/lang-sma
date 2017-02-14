@@ -33,6 +33,9 @@ TESTTIME=$(date +%H%M)
 
 giella_core=$GTHOME/giella-core
 
+# Number of suggestions requested:
+suggnumber=10
+
 function print_usage() {
     echo "Usage: $0 [OPTIONS...]"
     echo "Test the hfst-ospell-office command line speller using typos data"
@@ -83,7 +86,7 @@ grep -v '^[!#]' "$typos_file" | grep -v '^$' \
 	>> $SCRIPT_DIR/$speller_test_data
 
 # Extract the actual test data:
-cut -f1 $SCRIPT_DIR/$speller_test_data | sed 's/^/5 /' \
+cut -f1 $SCRIPT_DIR/$speller_test_data | sed "s/^/$suggnumber /" \
 	> $SCRIPT_DIR/$speller_input
 
 # Run the speller;
