@@ -51,7 +51,7 @@ function print_usage() {
 }
 
 # Wrong usage - short instruction:
-if test $# -ge 3 ; then
+if test $# -ge 4 ; then
     print_usage
     exit 1
 fi
