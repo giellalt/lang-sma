@@ -102,7 +102,6 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 
 # We need to add processing of language-specific tags in the analysers:
 analyser-gt-desc.%: analyser-gt-desc.tmp.% \
-					morphology/url.%                          \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
@@ -110,8 +109,6 @@ analyser-gt-desc.%: analyser-gt-desc.tmp.% \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"$<\"                                      \
 			;\n\
-		 $(INVERT_HFST)\
-		 load stack morphology/url.$*\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
