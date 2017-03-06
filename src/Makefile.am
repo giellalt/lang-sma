@@ -192,7 +192,6 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 # ... as well as in the XEROX/FOMA disambiguation analyser
 # (remove the Err/SpaceCmp thing here):
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
-					morphology/url.%                          \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
 					filters/rename-POS_before_Der-tags.%
@@ -202,8 +201,6 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
 			.o. @\"$<\"                                         \
 			;\n\
-		 $(INVERT_HFST)\
-		 load stack morphology/url.$*\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
