@@ -231,6 +231,10 @@ AC_CONFIG_FILES([test/src/phonology/pair-test-hfst.sh], \
 # Lemma generation tests, all languages:
 AC_CONFIG_FILES([test/src/morphology/generate-adjective-lemmas.sh], \
       [chmod a+x test/src/morphology/generate-adjective-lemmas.sh])
+AC_CONFIG_FILES([test/src/morphology/generate-adpos-lemmas.sh], \
+      [chmod a+x test/src/morphology/generate-adpos-lemmas.sh])
+AC_CONFIG_FILES([test/src/morphology/generate-adverb-lemmas.sh], \
+      [chmod a+x test/src/morphology/generate-adverb-lemmas.sh])
 AC_CONFIG_FILES([test/src/morphology/generate-noun-lemmas.sh], \
       [chmod a+x test/src/morphology/generate-noun-lemmas.sh])
 AC_CONFIG_FILES([test/src/morphology/generate-propernoun-lemmas.sh], \
