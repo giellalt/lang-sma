@@ -21,12 +21,12 @@ LEXICON NounRoot
 LEXICON HyphNouns
 
 !ATV-fievru+CmpNP/First+Sem/Veh:ATV-fiev'ru GOAHTI-U ;
-ATV-sygkele+CmpNP/First+Sem/Veh:ATV-sygkel N_ODD ;  
-ATV-sykkel+CmpNP/First+Sem/Veh:ATV-sykkel N_ODD ;
+ATV-sygkele+CmpN/SgN+Sem/Veh:ATV-sygkel N_ODD ;  
+ATV-sykkel+CmpN/SgN+Sem/Veh:ATV-sykkel N_ODD ;
 AUF-noere+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpNP/First+Sem/Hum:AUF-noer NIEJTE ; 
-AV-foente+CmpNP/First+Sem/Ctain-abstr:AV-foent NIEJTE ;
+AV-foente+CmpN/SgN+Sem/Ctain-abstr:AV-foent NIEJTE ;
 ATV-vuajahtahke+CmpNP/First+Sem/Veh:ATV-vuajahtahk NIEJTE ;
-vuajahtahke+CmpN/SgG+Sem/Veh:vuajahtahk NIEJTE ;
+vuajahtahke+CmpNP/First+CmpN/SgG+Sem/Veh:vuajahtahk NIEJTE ;
 
 ! done 
 
@@ -38,11 +38,9 @@ skaarjah+CmpN/SgG+Sem/Dummytag:skaarj MÅVHKAH ; ! skaarjan -dahpe
 jïjje+CmpN/SgN+Sem/Time:jïjj NIEJTE ;   ! 
 gaskejïjje+CmpN/SgN+Sem/Time:gaske#jïjj NIEJTE ;
 jåvlejïjje+CmpN/SgN+Sem/Time:jåvle#jïjj NIEJTE ;
-d-biejjie+CmpN/SgN+CmpN/SgG+First+Sem/Time:d-biejj N_IE ;
-
+d-biejjie+CmpN/SgN+CmpN/SgG+Sem/Time:d-biejj N_IE ;
 
 ! Done-Time (Áigi, Idja, Beaivi etc)
-
 
 A-duvre+OLang/NOB+Sem/Dummytag:A-du UVRE_LOAN ;
 A-momeente+OLang/NOB+Sem/Dummytag:A-mome ENTE_LOAN ;
@@ -295,12 +293,12 @@ nårroe+Sem/Dummytag:nårr N_OE_UML ;
 raajnevaarjoe+Sem/Dummytag:raajne#vaarj N_OE_UML ;
 raajroe+Sem/Dummytag:raajr N_OE_UML ;
 raarhkoe+Sem/Dummytag:raarhk N_OE_UML "renskiljning" ;
-råafoe+Sem/Dummytag:råaf N_OE_UML "" ;! rååfese
+råafoe+Sem/Plc-elevate:råaf N_OE_UML "" ;! rååfese
 råaksoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:råaks N_OE_UML ;
 maadthdaajroe:maadthdaajr N_OE_UML ;
 råantjoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:råantj N_OE_UML ;
 råavkoe+Sem/Dummytag:råavk N_OE_UML ;
-rånhtjoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:rånhtj N_OE_UML "" ;
+rånhtjoe+CmpN/SgN+CmpN/SgG+Sem/Plc-elevate:rånhtj N_OE_UML "" ;
 råtnoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:råtn N_OE_UML ;
 ræjhtoe+Sem/Dummytag:ræjht N_OE_UML ;
 ræjtoe+Sem/Dummytag:ræjt N_OE_UML ;
@@ -329,10 +327,10 @@ såjhtoe+Sem/Dummytag:såjht N_OE_UML ;
 sårkoe+Sem/Dummytag:sårk N_OE_UML ;
 såvsoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:såvs N_OE_UML ;
 tæjmoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:tæjm N_OE_UML ;
-vaajmoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:vaajm N_OE_UML ;! to px-lexicon
-vaaresgåptoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:vaares#gåpt N_OE_UML ;
-vaaresvaarjoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:vaares#vaarj N_OE_UML ;
-vaarjoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:vaarj N_OE_UML ;
+vaajmoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:vaajm N_OE_UML ;! to px-lexicon
+vaaresgåptoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:vaares#gåpt N_OE_UML ;
+vaaresvaarjoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:vaares#vaarj N_OE_UML ;
+vaarjoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:vaarj N_OE_UML ;
 
 veaskoe+CmpN/SgN+CmpN/SgG+Sem/Hum:veask N_OE_UML ;
 
@@ -341,22 +339,23 @@ vuajnoe+Sem/Dummytag:vuajn N_OE_UML ;! to px-leksicon
 
 våarhkoeguvvie+Sem/Dummytag:våarhkoeguvv N_IE ; ! px-lexicon
 
-våarhkoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:våarhk N_OE_UML ;! px-lexicon
+våarhkoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:våarhk N_OE_UML ;! px-lexicon
 
-
-våaroe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:våar N_OE_UML "vara, tur" ;
+våaroe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:våar N_OE_UML "vara, tur" ;
 våhkoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:våhk N_OE_UML ;! til px-lexicon
 
 væjjoe+Sem/Dummytag:væjj N_OE_UML ;
 vælloe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:væll N_OE_UML ;! til px-lexiocn
 
 værjoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:værj N_OE_UML ;
-vætnoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:vætn N_OE_UML "handslöjd, handarbete" ;
-åajvoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:åajv N_OE_UML ;! til px-lexicon
-ålloe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:åll N_OE_UML ;! til px-lexicon
-ålloetråajjoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:ålloe#tråajj N_OE_UML ;! px-lexicon
-sjaavnjoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:sjaavnj N_OE_UML ;! til px-lexicons
-aerpiemaahtoe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Dummytag:aerpie#maaht N_OE_UML ;! til px-lexicon
+vætnoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:vætn N_OE_UML "handslöjd, handarbete" ;
+åajvoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:åajv N_OE_UML ;! til px-lexicon
+ålloe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:åll N_OE_UML ;! til px-lexicon
+ålloetråajjoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:ålloe#tråajj N_OE_UML ;! px-lexicon
+sjaavnjoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:sjaavnj N_OE_UML ;! til px-lexicons
+
+aerpiemaahtoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:aerpie#maaht N_OE_UML ;! til px-lexicon
+
 væljoe+CmpN/SgN+CmpN/SgG+Sem/Dummytag:vælj N_OE_UML ;! til px-lexicons
 
 aahka+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:aahk MAANA ;!!! PX-Lexicon
@@ -7459,7 +7458,7 @@ krystallisasjovne+OLang/NOB+Sem/Dummytag:krystallisa SJOVNE_LOAN ;
 krystalloijde+OLang/NOB+Sem/Dummytag:krystallo IJDE_LOAN ;
 krystallstruktuvre+OLang/NOB+Sem/Dummytag:krystall#struktu UVRE_LOAN ;
 
-kråahpe+CmpN/SgN+CmpN/SgG+CmpN+Sem/Body:kråahp NIEJTE ;
+kråahpe+CmpN/SgN+CmpN/SgG+Sem/Body:kråahp NIEJTE ;
 
 kråahtje+OLang/NOB+Sem/Dummytag:kråahtj NIEJTE ;
 kråane+OLang/NOB+Sem/Dummytag:kråan NIEJTE ;
@@ -9308,10 +9307,8 @@ nejpiennjuenie+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:nejpien#njuen N_IE ;
 nejpiensjapmere+Sem/Dummytag:nejpien#sjapmar N_ODD ;
 nejpiestaelie+Sem/Dummytag:nejpie#stael N_IE ;
 nekrolååge+OLang/NOB+Sem/Dummytag:nekrol LÅÅGE_LOAN ;
-
 nekrovse+Cmp/SgNom+Dial/-NOR+Sem/Dummytag:nekros R ;
 nekrovse+OLang/NOB+Sem/Dummytag:nekro OVSE_LOAN ;
-
 
 nellihke+CmpN/SgN+N+Sem/Dummytag+Cmp/SgNom+OLang/NOB:nellik R ;
 nellihke+Sem/Dummytag:nellihk NIEJTE ;
@@ -9360,8 +9357,6 @@ nevrovtikere+OLang/NOB+Sem/Dummytag:nevrovtiker N_ODD ;
 
 ! nicaraguijaneere+Sem/Dummytag:nicaragui IJAANERE_LOAN ;
 
-
-
 niebrie+Sem/Dummytag:niebr N_IE ;
 niehkere+Sem/Dummytag:niehkier N_ODD ;
 niejt’-åadtjah+CmpN/PlG+Sem/Dummytag:niejt’-åadtj MÅVHKAH ;
@@ -9378,12 +9373,10 @@ niestiesbearkoe+Sem/Dummytag:niesties#beark N_OE_UML ;
 niestiesbovtse+Sem/Dummytag:niesties#bovts NIEJTE ;
 niestiesvoesse+Err/Orth+Sem/Dummytag:niesties-voess NIEJTE ;
 niestiesvoesse+Sem/Dummytag:niesties#voess NIEJTE ;
-nietsege+Sem/Dummytag:nietseg N_ODD ;!XXX is it right?
+njïetsege+Err/Orth+Sem/Dummytag:nietseg N_ODD ;
 
 nigerijaanere+Cmp/SgNom+Dial/-SW+Sem/Dummytag:nigeri^aner R ;
 nigerijaanere+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:nigeri IJAANERE_LOAN ;
-
-
 
 nihilisme+OLang/NOB+Sem/Dummytag:nihil ISME_LOAN ;
 nihtjele+Sem/Dummytag:nihtjel N_ODD ;
@@ -9415,7 +9408,7 @@ njaaregsåedtjie:njaaregs#åedtj N_IE ;
 njaareme+Sem/Dummytag:njaarem N_ODD ;
 njaarhtja+Sem/Dummytag:njaarhtj MAANA ;
 njaarhtjabielie+Sem/Dummytag:njaarhtja#biel N_IE ;
-njaarke+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njaark NIEJTE ;
+njaarke+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Plc-elevate:njaark NIEJTE ;
 njaarpeskebielie+Sem/Dummytag:njaarpeske#biel N_IE ;
 njaarpeskenbielie+Sem/Dummytag:njaarpesken#biel N_IE ;
 njaatja+Sem/Dummytag:njaatj MAANA ;
@@ -9436,8 +9429,8 @@ njajketjåervie:njajke#tjåerv N_IE ;
 
 gaertjiedimmie:gaertjiedimm N_IE ; 
 
-njalhkadahke+Sem/Dummytag:njalhkadahk NIEJTE ;
-njalhkedahke+Sem/Dummytag:njalhkedahk NIEJTE ;
+njalhkadahke+Sem/Plc-elevate:njalhkadahk NIEJTE ;
+njalhkedahke+Sem/Plc-elevate:njalhkedahk NIEJTE ;
 njalhte+Sem/Dummytag:njalht NIEJTE ;
 njalhtehke+Sem/Dummytag:njalhtahk N_ODD ;
 njalhtjadahke+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njalhtjadahk NIEJTE ;
@@ -9465,7 +9458,7 @@ njealoe+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njeal N_OE_UML ;
 njeamehke+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njeamahk N_ODD ;
 njeana+Sem/Dummytag:njean MAANA ;
 njeblie+Sem/Dummytag:njebl N_IE ;
-njeeruve+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njeeruv N_ODD ;
+njeeruve+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Plc-elevate:njeeruv N_ODD ;
 njerrie+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njerr N_IE ;! njerries= attributt, njarran= predikativ
 njevkie+Sem/Dummytag:njevk N_IE ;
 njevlie+Sem/Dummytag:njevl N_IE ;
@@ -9501,7 +9494,7 @@ njoktje+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njoktj NIEJTE ;
 njoktje+Err/Orth+Sem/Dummytag:mars MARS ;!OBS, ikke samme ord
 njonnjele+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njonnjel N_ODD ;
 njorke+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njork NIEJTE ;
-njuana+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njuan MAANA ;
+njuana+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Plc-elevate:njuan MAANA ;
 njuanetje+Sem/Dummytag:njuanatj N_ODD ;
 njuarka+Sem/Dummytag:njuark MAANA ;
 njuekie+Sem/Dummytag:njuek N_IE ;
@@ -9513,7 +9506,7 @@ njuevie+Sem/Dummytag:njuev N_IE ;
 njuevtie+Sem/Dummytag:njuevt N_IE ;
 njulhtjehtahke+Sem/Dummytag:njulhtjehtahk NIEJTE ;
 njulhtjestahke+Sem/Dummytag:njulhtjestahk NIEJTE ;
-njuvvie+Sem/Dummytag:njuvv N_IE ;
+njuvvie+Sem/Plc-elevate:njuvv N_IE ;
 njyhtele+Sem/Dummytag:njyhtel N_ODD ;
 njylletjetïjje:njylletje#tïjj NIEJTE ;
 njynnje+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njynnj NIEJTE ;
@@ -9537,7 +9530,7 @@ njåetsie+Sem/Dummytag:njåets N_IE ;
 njålhtja+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njålhtj MAANA ;
 njålhtjehke+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njålhtjahk N_ODD ;
 njålhtjohke+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njålhtjoehk N_ODD ;
-njååjte+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:njååjt NIEJTE ;
+njååjte+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Plc-elevate:njååjt NIEJTE ;
 njåålkehtahke+Sem/Dummytag:njåålkehtahk NIEJTE ;
 njåålmedahke+Sem/Dummytag:njåålmedahk NIEJTE ;
 njåålmedasse+Sem/Dummytag:njåålmedass NIEJTE ;
@@ -14868,7 +14861,7 @@ vaadtere+Sem/Dummytag:vaadtar N_ODD ;
 vaadtsahtahke+CmpN/SgN+CmpN/SgG+Sem/Plc-elevate:vaadtsahtahk NIEJTE ;
 vaadtsaldahke+CmpN/SgN+CmpN/SgG+Sem/Plc-elevate:vaadtsaldahk NIEJTE ;
 
-vaadtsehth+Sem/Dummytag:vaadtsehth N_ODD_C ;
+vaadtsehth+CmpN/SgN+CmpN/SgG+Sem/Plc-elevate:vaadtsehth N_ODD_C ;
 vaadtsehthokse+Sem/Dummytag:vaadtsehth#oks NIEJTE ;
 vaagkasijjie:vaagka#sijj N_IE ;
 vaahra+Sem/Dummytag:vaahr MAANA ;
@@ -14900,10 +14893,10 @@ vaalje+Sem/Plc-elevate:vaalj NIEJTE ;
 vaalmerdæjja+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:vaalmerdæjj MAANA ;
 vaalmestahke+Sem/Dummytag:vaalmestahk NIEJTE ;
 vaalmesthrïejhpe+Sem/Dummytag:vaalmesth#rïejhp NIEJTE ;
-vaaloe+Sem/Dummytag:vaal N_OE_UML ;
-vaaltahtahke+Sem/Dummytag:vaaltahtahk NIEJTE ;
-vaaltehth+Sem/Dummytag:vaaltehth N_ODD_C ;
-vaaltoe+Sem/Dummytag:vaalt N_OE_UML ; 
+vaaloe+Sem/Plc-elevate:vaal N_OE_UML ;
+vaaltahtahke+Sem/Plc-elevate:vaaltahtahk NIEJTE ;
+vaaltehth+Sem/Plc-elevate:vaaltehth N_ODD_C ;
+vaaltoe+Sem/Plc-elevate:vaalt N_OE_UML ; 
 vaaltoenïere+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:vaaltoe#nïer NIEJTE ;
 vaane+Sem/Dummytag:vaan NIEJTE ;!vane, en vane
 vaanejaahkoe+Sem/Dummytag:vaanejaahk N_OE_UML ;
