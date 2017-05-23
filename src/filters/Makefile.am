@@ -63,7 +63,7 @@ all-local: change-optionally-word_boundary_to_hyphen.whfst
 change-optionally-word_boundary_to_hyphen.whfst: \
 		change-optionally-word_boundary_to_hyphen.hfst
 	$(AM_V_REWEIGHT)$(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
-		-a1000 --symbol="@C.LexComp@" --arcs-only < $< > $@
+		-a10000 --symbol="@C.LexComp@" --arcs-only < $< > $@
 
 ############### END: Local modifications ################
 #########################################################
