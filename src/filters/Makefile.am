@@ -58,6 +58,12 @@ GIELLA_FILTER_LOCAL_GENERATED_LEXC_SRCS=
 EXTRA_SRCS=
 
 ########## Add local build rules below here: ############
+all-local: change-optionally-word_boundary_to_hyphen.whfst
+
+change-optionally-word_boundary_to_hyphen.whfst: \
+		change-optionally-word_boundary_to_hyphen.hfst
+	$(AM_V_REWEIGHT)$(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
+		-a1000 --symbol="@C.LexComp@" --arcs-only < $< > $@
 
 ############### END: Local modifications ################
 #########################################################
