@@ -8,6 +8,12 @@ perl -p -i -e 's/^(.+oe)$/\1:\1 N_OE ;/g' LemmaListe_Rev_Sort_Aktesne.txt  
 perl -p -i -e 's/^(.+e)$/\1:\1 NIEJTE ;/g' LemmaListe_Rev_Sort_Aktesne.txt  
 perl -p -i -e 's/^(.+a)$/\1:\1 MAANA ;/g' LemmaListe_Rev_Sort_Aktesne.txt 
 
+
+perl -p -i -e ’s/^(.+)a$/\1a:\1 MAANA ;/g' LemmaListe_Rev_Sort_Aktesne.txt
+legg merke til at a kjem etter parentesten
+og på nytt før :
+men ikkje til slutt før MAANA
+på den måten blir resultatet rett med ein gong
 	
 
 
