@@ -1,4 +1,16 @@
-EN
+Kommando for å få lemmaliste med : og lexicon.
+
+
+boerre:
+	Kommandoene jeg brukte var:
+perl -p -i -e 's/^(.+ie)$/\1:\1 N_IE ;/g' LemmaListe_Rev_Sort_Aktesne.txt  
+perl -p -i -e 's/^(.+oe)$/\1:\1 N_OE ;/g' LemmaListe_Rev_Sort_Aktesne.txt  
+perl -p -i -e 's/^(.+e)$/\1:\1 NIEJTE ;/g' LemmaListe_Rev_Sort_Aktesne.txt  
+perl -p -i -e 's/^(.+a)$/\1:\1 MAANA ;/g' LemmaListe_Rev_Sort_Aktesne.txt 
+
+	
+
+
 vijking
 vaarja:vaarja MAANA ;
 Almetjereakta:Almetjereakta MAANA ;
