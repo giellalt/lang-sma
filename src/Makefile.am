@@ -109,11 +109,13 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 # We need to add processing of language-specific tags in the analysers:
 analyser-gt-desc.%: analyser-gt-desc.tmp.% \
 					filters/remove-norm-comp-tags.%           \
-					filters/remove-derivation-position-tags.%
+					filters/remove-derivation-position-tags.% \
+					filters/remove-DNorm-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 			    @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
-			.o. @\"$<\"                                      \
+			.o. @\"filters/remove-DNorm-tags.$*\"               \
+			.o. @\"$<\"                                         \
 			;\n\
 		 $(INVERT_HFST)\
 		 save stack $@\n\
@@ -121,14 +123,15 @@ analyser-gt-desc.%: analyser-gt-desc.tmp.% \
 
 # ... and also to the normative analysers:
 analyser-gt-norm.%: analyser-gt-norm.tmp.% \
-					 filters/remove-derivation-position-tags.% \
-					 filters/remove-illegal-derivation-strings-flagbased.% \
-					 filters/insert-default-compounding-tags.% \
-					 filters/insert-default_left_compounding-tags.% \
-					 filters/block-illegal_compound-strings.%  \
-					 filters/split-CmpN-tags.%                             \
-					 filters/convert_to_flags-CmpNP-tags.%                 \
-					 filters/split-CmpNP-tags.%
+					filters/remove-derivation-position-tags.% \
+					filters/remove-illegal-derivation-strings-flagbased.% \
+					filters/insert-default-compounding-tags.% \
+					filters/insert-default_left_compounding-tags.% \
+					filters/block-illegal_compound-strings.%  \
+					filters/split-CmpN-tags.%                             \
+					filters/convert_to_flags-CmpNP-tags.%                 \
+					filters/split-CmpNP-tags.%           \
+					filters/remove-DNorm-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 			    @\"filters/remove-derivation-position-tags.$*\"             \
 			.o. @\"filters/block-illegal_compound-strings.$*\"              \
@@ -138,6 +141,7 @@ analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 			.o. @\"filters/remove-illegal-derivation-strings-flagbased.$*\" \
 			.o. @\"filters/convert_to_flags-CmpNP-tags.$*\"                 \
 			.o. @\"filters/split-CmpNP-tags.$*\"                            \
+			.o. @\"filters/remove-DNorm-tags.$*\"                           \
 			.o. @\"$<\"                                                     \
 			;\n\
 		 twosided flag-diacritics\n\
@@ -149,11 +153,13 @@ analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 					 filters/remove-norm-comp-tags.xfst             \
 					 filters/remove-derivation-position-tags.xfst   \
-					 filters/remove-illegal-derivation-strings.xfst
+					 filters/remove-illegal-derivation-strings.xfst \
+					 filters/remove-DNorm-tags.xfst
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 			    @\"filters/remove-derivation-position-tags.xfst\"   \
 			.o. @\"filters/remove-norm-comp-tags.xfst\"             \
 			.o. @\"filters/remove-illegal-derivation-strings.xfst\" \
+			.o. @\"filters/remove-DNorm-tags.xfst\"                 \
 			.o. @\"$<\"                                             \
 			;\n\
 		 save stack $@\n\
@@ -163,11 +169,13 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 analyser-oahpa-gt-norm.%: analyser-gt-norm.tmp.% \
 					 filters/remove-norm-comp-tags.%             \
 					 filters/remove-derivation-position-tags.%   \
-					 filters/remove-illegal-derivation-strings.%
+					 filters/remove-illegal-derivation-strings.% \
+					 filters/remove-DNorm-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 			    @\"filters/remove-derivation-position-tags.$*\"   \
 			.o. @\"filters/remove-norm-comp-tags.$*\"             \
 			.o. @\"filters/remove-illegal-derivation-strings.$*\" \
+			.o. @\"filters/remove-DNorm-tags.$*\"                 \
 			.o. @\"$<\"                                           \
 			;\n\
 		 $(INVERT_HFST)\
@@ -180,13 +188,15 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 				filters/remove-norm-comp-tags.hfst                   \
 				filters/remove-derivation-position-tags.hfst         \
 				filters/rename-POS_before_Der-tags.hfst              \
-				filters/remove-word-boundary.hfst
+				filters/remove-word-boundary.hfst                    \
+				filters/remove-DNorm-tags.hfst
 	$(AM_V_HXFST)$(PRINTF) "\
 	set encode-weights ON\n\
 	read regex \
 			@\"filters/remove-derivation-position-tags.hfst\" \
 		.o. @\"filters/remove-norm-comp-tags.hfst\"           \
 		.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
+		.o. @\"filters/remove-DNorm-tags.hfst\"               \
 		.o. @\"$<\"                                           \
 		.o. @\"filters/remove-word-boundary.hfst\"            \
 		;\n\
@@ -200,11 +210,13 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
-					filters/rename-POS_before_Der-tags.%
+					filters/rename-POS_before_Der-tags.%      \
+					filters/remove-DNorm-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
+			.o. @\"filters/remove-DNorm-tags.$*\"               \
 			.o. @\"$<\"                                         \
 			;\n\
 		 $(INVERT_HFST)\
@@ -215,10 +227,12 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 define giella_generators
 generator-gt-%.$(1): generator-gt-%.tmp.$(1) \
 					 filters/remove-norm-comp-tags.$(1)           \
-					 filters/remove-derivation-position-tags.$(1)
+					 filters/remove-derivation-position-tags.$(1) \
+					 filters/remove-DNorm-tags.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
 				@\"filters/remove-derivation-position-tags.$(1)\" \
 			.o. @\"filters/remove-norm-comp-tags.$(1)\"           \
+			.o. @\"filters/remove-DNorm-tags.$(1)\"               \
 			.o. @\"$$<\"                                          \
 			;\n\
 		 $$(INVERT_XFST)$$(INVERT_FOMA)\
@@ -231,13 +245,15 @@ $(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
 generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.% \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
-					filters/make-optional-variant-tags.%  \
-					filters/remove-number-string-tags.%
+					filters/make-optional-variant-tags.%      \
+					filters/remove-number-string-tags.%       \
+					filters/remove-DNorm-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-number-string-tags.$*\"  \
 			.o. @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/make-optional-variant-tags.$*\"      \
+			.o. @\"filters/remove-DNorm-tags.$*\"               \
 			.o. @\"$<\"                                         \
 			;\n\
 		 $(INVERT_XFST)$(INVERT_FOMA)\

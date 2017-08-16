@@ -23,6 +23,7 @@ GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					remove-norm-comp-tags.regex \
 					remove-rel_focus-strings.regex \
 					remove-test-tags.regex \
+					remove-DNorm-tags.regex \
 					remove-Dial_L-strings.regex \
 					remove-Dial_SH-strings.regex \
 					remove-illegal-derivation-strings.regex \
