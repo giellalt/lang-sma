@@ -58,7 +58,10 @@ while(<>) {
 	# j->i || Vow i .* : .* Vow _ ; Heaika:Heajka -> Heaika:Heaika. But Majken 	
 #	s/([ÁAEIOUaáeiou])i(.*):(.*)([ÁAEIOUaáeiou])j/$1i$2:$3$4i/g ;
     s/([ÁAEIOUaáeiou])i([^j].*):(.*)([ÁAEIOUaáeiou])j([^ÁAEIOUaáeiou])/$1i$2:$3$4i$5/g ;
-    
+
+	s/ia\+(.+ MOLDAVIA)/ije+$1/g ; # Change the lemma form of MOLDAVIA words
+	s/i\+(.+ MALAWI)/ije+$1/g ;    # Change the lemma form of MALAWI words
+
 	my $line = $_;
 
 	print $line;
