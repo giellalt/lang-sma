@@ -20,8 +20,19 @@
 ! textbooks, just based upon guessing from a dictionary.
 
 
-! The order of number and digit is NOT correct
+! The order of number and digit is now correct
+! The file:
+! transcriptions/transcriptor-clock-text2digit.filtered.lookup.xfst 
+! works fine both directions in xfst
+! whereas the file
+! transcriptor-clock-digit2text.filtered.lookup.xfst
+! only works for 24:00 <-> luhkiegöökte, not for other times
 
+! +Use/NG = not-generate, for ped generation isme-ped.fst
+! +Use/NA = not-analyse, for restricting analyses needed for MT generation not to pop up elsewhere
+! Thus, ignore the +Use/NA tag for Oahpa/Numra purposes. Use +Use/NG for forms you want to accept, but not present.
+! 
+! The +Use/NG (and +Use/NA) are handled in the file LANG/am-shared/src-transcriptions-dir-include.am, called by the Makefile.am in the transcriptions folder.
 
 
 Multichar_Symbols
@@ -43,47 +54,31 @@ Multichar_Symbols
 +Use/NA
 
 LEXICON Root
+     %0: smallhour ; ! One-digit hour: Correct is 02:30
++Use/NA: smallhour ; ! One-digit hour: Allowing sloppy 2:30 in answer
+         largehour ; ! Two-digit hours (10 and onward): 10:30
 
-! Allowing sloppy 2:30 in answer
-  @U.TIME.1@1+Use/NA:@U.TIME.1@ AFTpunkt ; !01:00 - 01:19
-  @U.TIME.2@1+Use/NA:@U.TIME.2@ BEFpunkt ; !01:20 - 01:59
-  @U.TIME.2@2+Use/NA:@U.TIME.2@ AFTpunkt ; !02:00 - 02:19
-  @U.TIME.3@2+Use/NA:@U.TIME.3@ BEFpunkt ; !02:20 - 02:59
-  @U.TIME.3@3+Use/NA:@U.TIME.3@ AFTpunkt ; !03:00 - 03:19
-  @U.TIME.4@3+Use/NA:@U.TIME.4@ BEFpunkt ; !03:20 - 03:59
-  @U.TIME.4@4+Use/NA:@U.TIME.4@ AFTpunkt ; !04:00 - 04:19
-  @U.TIME.5@4+Use/NA:@U.TIME.5@ BEFpunkt ; !04:20 - 04:59
-  @U.TIME.5@5+Use/NA:@U.TIME.5@ AFTpunkt ; !05:00 - 05:19
-  @U.TIME.6@5+Use/NA:@U.TIME.6@ BEFpunkt ; !05:20 - 05:59
-  @U.TIME.6@6+Use/NA:@U.TIME.6@ AFTpunkt ; !06:00 - 06:19
-  @U.TIME.7@6+Use/NA:@U.TIME.7@ BEFpunkt ; !06:20 - 06:59
-  @U.TIME.7@7+Use/NA:@U.TIME.7@ AFTpunkt ; !07:00 - 07:19
-  @U.TIME.8@7+Use/NA:@U.TIME.8@ BEFpunkt ; !07:20 - 07:59
-  @U.TIME.8@8+Use/NA:@U.TIME.8@ AFTpunkt ; !08:00 - 08:19
-  @U.TIME.9@8+Use/NA:@U.TIME.9@ BEFpunkt ; !08:20 - 08:59
-  @U.TIME.9@9+Use/NA:@U.TIME.9@ AFTpunkt ; !09:00 - 09:19
-  @U.TIME.10@9+Use/NA:@U.TIME.10@ BEFpunkt ; !09:20 - 09:59
+LEXICON smallhour 
+  @U.TIME.1@1:@U.TIME.1@ AFTpunkt ; !01:00 - 01:19
+  @U.TIME.2@1:@U.TIME.2@ BEFpunkt ; !01:20 - 01:59
+  @U.TIME.2@2:@U.TIME.2@ AFTpunkt ; !02:00 - 02:19
+  @U.TIME.3@2:@U.TIME.3@ BEFpunkt ; !02:20 - 02:59
+  @U.TIME.3@3:@U.TIME.3@ AFTpunkt ; !03:00 - 03:19
+  @U.TIME.4@3:@U.TIME.4@ BEFpunkt ; !03:20 - 03:59
+  @U.TIME.4@4:@U.TIME.4@ AFTpunkt ; !04:00 - 04:19
+  @U.TIME.5@4:@U.TIME.5@ BEFpunkt ; !04:20 - 04:59
+  @U.TIME.5@5:@U.TIME.5@ AFTpunkt ; !05:00 - 05:19
+  @U.TIME.6@5:@U.TIME.6@ BEFpunkt ; !05:20 - 05:59
+  @U.TIME.6@6:@U.TIME.6@ AFTpunkt ; !06:00 - 06:19
+  @U.TIME.7@6:@U.TIME.7@ BEFpunkt ; !06:20 - 06:59
+  @U.TIME.7@7:@U.TIME.7@ AFTpunkt ; !07:00 - 07:19
+  @U.TIME.8@7:@U.TIME.8@ BEFpunkt ; !07:20 - 07:59
+  @U.TIME.8@8:@U.TIME.8@ AFTpunkt ; !08:00 - 08:19
+  @U.TIME.9@8:@U.TIME.9@ BEFpunkt ; !08:20 - 08:59
+  @U.TIME.9@9:@U.TIME.9@ AFTpunkt ; !09:00 - 09:19
+  @U.TIME.10@9:@U.TIME.10@ BEFpunkt ; !09:20 - 09:59
 
-! Correct is 02:30
-  @U.TIME.1@%01:@U.TIME.1@  AFTpunkt ; !01:00 - 01:19
-  @U.TIME.2@%01:@U.TIME.2@  BEFpunkt ; !01:20 - 01:59
-  @U.TIME.2@%02:@U.TIME.2@  AFTpunkt ; !02:00 - 02:19
-  @U.TIME.3@%02:@U.TIME.3@  BEFpunkt ; !02:20 - 02:59
-  @U.TIME.3@%03:@U.TIME.3@  AFTpunkt ; !03:00 - 03:19
-  @U.TIME.4@%03:@U.TIME.4@  BEFpunkt ; !03:20 - 03:59
-  @U.TIME.4@%04:@U.TIME.4@  AFTpunkt ; !04:00 - 04:19
-  @U.TIME.5@%04:@U.TIME.5@  BEFpunkt ; !04:20 - 04:59
-  @U.TIME.5@%05:@U.TIME.5@  AFTpunkt ; !05:00 - 05:19
-  @U.TIME.6@%05:@U.TIME.6@  BEFpunkt ; !05:20 - 05:59
-  @U.TIME.6@%06:@U.TIME.6@  AFTpunkt ; !06:00 - 06:19
-  @U.TIME.7@%06:@U.TIME.7@  BEFpunkt ; !06:20 - 06:59
-  @U.TIME.7@%07:@U.TIME.7@  AFTpunkt ; !07:00 - 07:19
-  @U.TIME.8@%07:@U.TIME.8@  BEFpunkt ; !07:20 - 07:59
-  @U.TIME.8@%08:@U.TIME.8@  AFTpunkt ; !08:00 - 08:19
-  @U.TIME.9@%08:@U.TIME.9@  BEFpunkt ; !08:20 - 08:59
-  @U.TIME.9@%09:@U.TIME.9@  AFTpunkt ; !09:00 - 09:19
- @U.TIME.10@%09:@U.TIME.10@ BEFpunkt ; !09:20 - 09:59
-
+LEXICON largehour 
  @U.TIME.10@1%0:@U.TIME.10@  AFTpunkt ; !10:00 - 10:19
  @U.TIME.11@1%0:@U.TIME.11@  BEFpunkt ; !10:20 - 10:59
  @U.TIME.11@11:@U.TIME.11@   AFTpunkt ; !11:00 - 11:59
@@ -115,14 +110,15 @@ LEXICON Root
  @U.TIME.12@%0%0:@U.TIME.12@ AFTpunkt ; !00:00 - 00:19
   @U.TIME.1@%0%0:@U.TIME.1@  BEFpunkt ; !00:19 - 00:59
       24%:%0%0:luhkiegöökte  #        ; !24:00
+      24%.%0%0+Use/NA:luhkiegöökte  #        ; !24:00
 
 
 LEXICON BEFpunkt
-%:+Use/NA: BEF ;
+%:+Use/NA: BEF ; ! +Use/NA
 %.+Use/NA: BEF ;
 
 LEXICON AFTpunkt
-%:+Use/NA: AFT  ; ! 2:00 = göökte
+%:+Use/NA: AFT  ; ! 2:00 = göökte ! +Use/NA
 %.+Use/NA: AFT  ; ! 2.00 = göökte
   +Use/NA: HOUR ; ! 2 = göökte
 
