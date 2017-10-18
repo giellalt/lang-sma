@@ -113,12 +113,18 @@ LEXICON largehour
       24%.%0%0+Use/NA:luhkiegöökte  #        ; !24:00
 
 
+! Removed +Use/NA from the "xx:yy" entry in Befpunkt and AFTpunkt below
+! in order to make 
+! cat ~/main/ped/doc/common/TestClock.txt | \
+! lookup src/transcriptions/transcriptor-clock-digit2text.filtered.lookup.xfst
+! possible, but all clock files have %:
+
 LEXICON BEFpunkt
-%:+Use/NA: BEF ; ! +Use/NA
+%:: BEF ; ! +Use/NA
 %.+Use/NA: BEF ;
 
 LEXICON AFTpunkt
-%:+Use/NA: AFT  ; ! 2:00 = göökte ! +Use/NA
+%:: AFT  ; ! 2:00 = göökte ! +Use/NA
 %.+Use/NA: AFT  ; ! 2.00 = göökte
   +Use/NA: HOUR ; ! 2 = göökte
 
@@ -162,7 +168,7 @@ LEXICON BEF
 47:luhkiegolme%         TO ;
 48:luhkiegöökte%         TO ;
 49:luhkieakte%         TO ;
-50:luhkie%       TO ;
+5%0:luhkie%       TO ;
 51:uktsie%         TO ;
 52:gaektsie%         TO ;
 53:tjïjhtje%         TO ;
