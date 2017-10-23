@@ -87,9 +87,6 @@ This is free and open source Southern Sami morphology.
 
 
 
-CMP -
-
-
 !!Normative/prescriptive compounding tags
 (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
@@ -125,27 +122,34 @@ CMP -
  | +Cmp/AttrH | Alle Cmp som har en attr-h
 
 
-CMP --
-
-
 
 !!Descriptive compounding tags
-Tags for compound analysis - this is what a compound actually is:
+Tags for compound analysis - this is what a compound actually is. We use this
+to research compounding patterns in the corpus.
 
-
- * +Cmp/Sg         
- * +Cmp/SgNom      
- * +Cmp/SgGen      
- * +Cmp/PlGen      
- * +Cmp/Attr      
-
-
- ; +Cmp : Dynamic compound - this tag should ''always'' be part of a dynamic compound.
- It is important for Apertium, and useful in other cases as well.
- ; +Cmp/SplitR : This is a split compound with the other part to the right: \\
- "Arbeids- og inkluderingsdepartementet" => Arbeids- = +Cmp/SplitR
- ; +Cmp/SplitL : This is a split compound with the other part to the left
- ; +Cmp/Sh : Testing ShCmp
+ ; +Cmp/Sg       : Compounding using an unspecified singular stem
+ ; +Cmp/SgNom    : Compounding using nominative singular
+ ; +Cmp/SgGen    : Compounding using genitive singular
+ ; +Cmp/PlGen    : Compounding using genitive plural
+ ; +Cmp/Attr     : Compounding using attribute form
+ ; +Cmp/eh : Compound stem in __–eh__, as in ''gaameh-gåaroje'',
+            from ''gaamege''
+ ; +Cmp/ege : Compound stem in __–ege__, as in ''gaamege-gåaroje''
+ ; +Cmp/FinEDel : Deletion of final __e__, as in ''voelem-gaaroeh'',
+            from ''voeleme''
+ ; +Cmp/ShH : Compounding using a short stem + __h__: ''–biejjh–''
+            (from ''biejjie''), cf ''reakedsbiejjhvadtese''
+ ; +Cmp/Sh : Compounding using a short stem: ''–biejj–''
+            (from ''biejjie'')
+ ; +Cmp/SplitR : This is a split compound with the other part to the
+            right: \\ "Arbeids- og inkluderingsdepartementet" =>
+            ''Arbeids–'' = __+Cmp/SplitR__
+ ; +Cmp/SplitL : This is a split compound with the other part to the
+            left, this is the oposite of the previous case
+ ; +Cmp : Dynamic compound - this tag should ''always'' be
+            part of a dynamic compound. It is important for
+            Apertium and the speller (to give extra weights to
+            compounds, and useful in other cases as well.
 
 !!Tags for Inflection
 
