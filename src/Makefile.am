@@ -121,6 +121,22 @@ analyser-gt-desc.%: analyser-gt-desc.tmp.% \
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
 
+# We need to add processing of language-specific tags in the analysers:
+analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
+					filters/remove-norm-comp-tags.%           \
+					filters/remove-derivation-position-tags.% \
+					filters/remove-DNorm-tags.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+			    @\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"filters/remove-norm-comp-tags.$*\"           \
+			.o. @\"filters/remove-DNorm-tags.$*\"               \
+			.o. @\"$<\"                                         \
+			;\n\
+		 $(INVERT_HFST)\
+		 save stack $@\n\
+		 quit\n" | $(XFST_TOOL)
+
+
 # ... and also to the normative analysers:
 analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 					filters/remove-derivation-position-tags.% \
