@@ -69,16 +69,18 @@ endif # CAN_FOMA
 if WITH_OFST_TROPICAL
 generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 				filters/remove-test-tags.hfst \
-				filters/change-optionally-word_boundary_to_hyphen.whfst
+				filters/change-optionally-word_boundary_to_hyphen.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"filters/remove-test-tags.hfst\" \
 			.o. @\"$<\" \
-			.o. @\"filters/change-optionally-word_boundary_to_hyphen.whfst\" \
+			.o. @\"filters/change-optionally-word_boundary_to_hyphen.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
 			-S --xerox-composition=ON \
 		| $(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
 			-S '+Cmp' -a 10 --arcs-only \
+		| $(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
+			-S '-' -a 10 --arcs-only \
 		> $@
 else
 generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
