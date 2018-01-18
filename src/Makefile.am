@@ -204,6 +204,7 @@ analyser-oahpa-gt-norm.%: analyser-gt-norm.tmp.% \
 # (keep the Err/SpaceCmp strings here)
 analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 				filters/remove-norm-comp-tags.hfst                   \
+				filters/remove-dialect-tags.hfst                     \
 				filters/remove-derivation-position-tags.hfst         \
 				filters/rename-POS_before_Der-tags.hfst              \
 				filters/remove-word-boundary.hfst                    \
@@ -213,6 +214,7 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 	read regex \
 			@\"filters/remove-derivation-position-tags.hfst\" \
 		.o. @\"filters/remove-norm-comp-tags.hfst\"           \
+		.o. @\"filters/remove-dialect-tags.hfst\"             \
 		.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
 		.o. @\"filters/remove-DNorm-tags.hfst\"               \
 		.o. @\"$<\"                                           \
@@ -226,12 +228,14 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 # ... as well as in the XEROX/FOMA disambiguation analyser
 # (remove the Err/SpaceCmp thing here):
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
+					filters/remove-dialect-tags.%             \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
 					filters/rename-POS_before_Der-tags.%      \
 					filters/remove-DNorm-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"filters/remove-dialect-tags.$*\"             \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
 			.o. @\"filters/remove-DNorm-tags.$*\"               \
