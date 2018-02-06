@@ -30,19 +30,19 @@ LEXICON R
  @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ Rreal ; ! Flags to control compounding
 
 LEXICON Rreal
-                         +Cmp#:😱#                Noun       ; ! This is the normal case.
-          @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@😱# Verb       ; ! Flag diacr declares that the compound
-          @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@😱# Adjective  ; ! needs a N tag later in the derivation
-                +Cmp/Hyph+Cmp#:%-                 Noun       ; ! These 3 cases add a hyphen, so
- @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-  Verb       ; ! Sem-julggaštus and maana-gåetie
- @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-  Adjective  ; ! are allowed.
-                       +Cmp%-#:%-😱#              Acronym    ; ! maana-tv, "lomme-cd-spelar"
-                       +Cmp%-#:%-😱#              Numeral    ; ! maana-tv, "lomme-cd-spelar"
-                       +Cmp%-#:%-😱#              ProperNoun ; ! Proper nouns as the 2nd part of compounds for non-hyph.
+                                +Cmp#:😱#                Noun       ; ! This is the normal case.
+                 @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@😱# Verb       ; ! Flag diacr declares that the compound
+                 @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@😱# Adjective  ; ! needs a N tag later in the derivation
+                       +Cmp/Hyph+Cmp#:%-                 Noun       ; ! These 3 cases add a hyphen, so
+        @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-  Verb       ; ! Sem-julggaštus and maana-gåetie
+        @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-  Adjective  ; ! are allowed.
+                     +Cmp/Hyph+Cmp%-#:%-😱#              Acronym    ; ! maana-tv, "lomme-cd-spelar"
+                     +Cmp/Hyph+Cmp%-#:%-😱#              Numeral    ; ! maana-tv, "lomme-cd-spelar"
+                     +Cmp/Hyph+Cmp%-#:%-😱#              ProperNoun ; ! Proper nouns as the 2nd part of compounds for non-hyph.
                                                                ! words. viessu-London goes through here.
 
-   +Cmp/SplitR+Use/SpellNoSugg:%-                 ENDLEX     ; ! This to take care of Oahpo- ja dutkandept - want this in speller
-                       +Cmp%-#:%-😱#              HyphNouns  ; ! Go to nouns requiring hyphens, like -tv- and -cd-
+ +Cmp/Hyph+Cmp/SplitR+Use/SpellNoSugg:%-                 ENDLEX     ; ! This to take care of Oahpo- ja dutkandept - want this in speller
+                     +Cmp/Hyph+Cmp%-#:%-😱#              HyphNouns  ; ! Go to nouns requiring hyphens, like -tv- and -cd-
 
 
 ! This is for compounding with hyphen. All entries REQUIRING a hyphen should point to this:
@@ -51,17 +51,17 @@ LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
 @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RHyphReal ; ! Block certain types of compounds in spellers.
 
 LEXICON RHyphReal
-                     +Cmp%-#:%-😱#                Noun       ; ! This is the normal case.
-      @P.NeedNoun.ON@+Cmp%-#:@P.NeedNoun.ON@%-😱# Verb       ; ! Flag diacr declares that the compound
-      @P.NeedNoun.ON@+Cmp%-#:@P.NeedNoun.ON@%-😱# Adjective  ; ! needs a N tag later in the derivation
+                     +Cmp/Hyph+Cmp%-#:%-😱#                Noun       ; ! This is the normal case.
+      @P.NeedNoun.ON@+Cmp/Hyph+Cmp%-#:@P.NeedNoun.ON@%-😱# Verb       ; ! Flag diacr declares that the compound
+      @P.NeedNoun.ON@+Cmp/Hyph+Cmp%-#:@P.NeedNoun.ON@%-😱# Adjective  ; ! needs a N tag later in the derivation
 
-                     +Cmp%-#:%-😱#                Acronym    ; ! maana-tv, "lomme-cd-spelar"
-                     +Cmp%-#:%-😱#                ProperNoun ; ! Proper nouns as the 2nd part of compounds for hyph-words.
-                                                               ! London-Hull is covered here, whereas Hull-viessu
-                                                               ! is covered by RHyph + Noun.
+                     +Cmp/Hyph+Cmp%-#:%-😱#                Acronym    ; ! maana-tv, "lomme-cd-spelar"
+                     +Cmp/Hyph+Cmp%-#:%-😱#                ProperNoun ; ! Proper nouns as the 2nd part of compounds for hyph-words.
+                                                                        ! London-Hull is covered here, whereas Hull-viessu
+                                                                        ! is covered by RHyph + Noun.
 
- +Cmp/SplitR+Use/SpellNoSugg:%-                   ENDLEX     ; ! This to take care of Oahpo- ja dutkandept - want this in speller
-                     +Cmp%-#:%-😱#                HyphNouns  ; ! Go to words requiring hyphens, like -tv- and -cd-
+ +Cmp/Hyph+Cmp/SplitR+Use/SpellNoSugg:%-                   ENDLEX     ; ! This to take care of Oahpo- ja dutkandept - want this in speller
+                     +Cmp/Hyph+Cmp%-#:%-😱#                HyphNouns  ; ! Go to words requiring hyphens, like -tv- and -cd-
 
 ! Proper noun compounds without hyphens are NOT presently covered - if they were
 ! to be added, they need to be marked +Err/Orth. Examples: LondonHull & viessuLondon.
