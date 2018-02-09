@@ -63,22 +63,15 @@ LEXICON N_ODD_INFL
 
 LEXICON N_ODD_LOAN
 !! * Odd-syll loanwords: lexicon @LEXNAME@
+N_ODD_LOAN_Px ;
           +N+Sg+Nom:e         FINAL1    ;
-    +N+Sg+Nom+PxSg1:%>amme    FINAL1    ;
-    +N+Sg+Nom+PxSg2:%>adth    FINAL1    ;
           +N+Sg+Acc:e%>m      FINAL1    ;
-    +N+Sg+Acc+PxSg2:%>amth    FINAL1    ;
           +N+Sg+Gen:e%>n      FINAL1    ;
-    +N+Sg+Gen+PxSg1:%>anne    FINAL1    ;
-    +N+Sg+Gen+PxSg2:%>anne    FINAL1    ;
-    +N+Sg+Gen+PxSg3:%>anne    FINAL1    ;
           +N+Sg+Ill:%>asse    FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
-    +N+Sg+Ill+PxSg2:%>assedh  FINAL1    ;
           +N+Sg+Ine:%>isnie   FINAL1    ;
           +N+Sg+Ela:%>istie   FINAL1    ;
  +N+Sg+Ela+Err/Orth:%>istie   FINAL1    ; !Miesie Mavve
           +N+Sg+Com:%>inie    FINAL1    ;
-    +N+Sg+Com+PxSg2:%>æjnedh  FINAL1    ;
           +N+Pl+Nom:%>h       FINAL1    ;
           +N+Pl+Acc:%>idie    FINAL1    ;
  +N+Pl+Acc+Err/Orth:%>idie    FINAL1    ; !Miesie Mavve
@@ -96,24 +89,17 @@ LEXICON N_ODD_LOAN
 
 
 LEXICON N_ODD_SG
+N_ODD_SG_Px ;
 !! ** Odd-syll sg: lexicon @LEXNAME@
 !          +Nom:e               FINAL1 ; ! sjekk
            +Nom:e%^DISIMP       FINAL1 ;
-     +Nom+PxSg1:%>amme          FINAL1 ;
-     +Nom+PxSg2:%>adth          FINAL1 ;
            +Acc:e%>%^DISIMPm    FINAL1 ;
-     +Acc+PxSg2:%>amth          FINAL1 ;
            +Gen:e%>%^DISIMPn    FINAL1 ;
-     +Gen+PxSg1:%>anne          FINAL1 ;
-     +Gen+PxSg2:%>anne          FINAL1 ;
-     +Gen+PxSg3:%>anne          FINAL1 ;
            +Ill:%>asse          FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
-     +Ill+PxSg2:%>assedh        FINAL1 ;
            +Ine:%>isnie         FINAL1 ;
            +Ela:%>istie         FINAL1 ;
   +Ela+Err/Orth:%>%^DISIMPistie FINAL1 ; !Miesie Mavve
            +Com:%>inie          FINAL1 ;
-     +Com+PxSg2:%>æjnedh        FINAL1 ;
 
 LEXICON N_ODD_PL
 !! ** Odd-syll pl: lexicon @LEXNAME@
@@ -170,6 +156,7 @@ LEXICON ÅABPETJH ! Resiproke og dim.
 
 
 LEXICON N_ODD_C   !these words have consonant-ending in nominative
+N_ODD_C_Px ;
            +N+Sg+Nom:%^DISIMP     FINAL1         ;
            +N+Sg+Acc:e%>%^DISIMPm FINAL1         ;
            +N+Sg+Gen:e%>%^DISIMPn FINAL1         ;
@@ -177,14 +164,6 @@ LEXICON N_ODD_C   !these words have consonant-ending in nominative
            +N+Sg+Ine:%>isnie      FINAL1         ;
            +N+Sg+Ela:%>istie      FINAL1         ;
            +N+Sg+Com:%>inie       FINAL1         ;
-        +N+Nom+PxSg1:%>amme       FINAL1         ;
-        +N+Nom+PxSg2:%>adth       FINAL1         ;
-        +N+Acc+PxSg2:%>amth       FINAL1         ;
-        +N+Gen+PxSg1:%>anne       FINAL1         ;
-        +N+Gen+PxSg2:%>anne       FINAL1         ;
-        +N+Gen+PxSg3:%>anne       FINAL1         ;
-        +N+Ill+PxSg2:%>assedh     FINAL1         ;
-        +N+Com+PxSg2:%>æjnedh     FINAL1         ;
                +N+Pl:             N_ODD_PL       ;
                   +N:             N_ODD_ESS      ;
         +N+Cmp/SgNom:%^DISIMP     R              ;
@@ -202,6 +181,7 @@ LEXICON AAREGE        !Sg+Nom=Aarege/Aareh  Sg+Cmp=Aarege-/Aareh- Redirects go G
 
 
 LEXICON BAARTEGE        !Sg+Nom=baartege/baarth  Sg+Cmp=baartege-/baarth- Cmp: -h, -ege, -egen, -egi
+BAARTEGE_Px ;
     +N+Sg+Nom+Use/NG:h%^DISIMP      FINAL1         ;
            +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
            +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
@@ -210,14 +190,6 @@ LEXICON BAARTEGE        !Sg+Nom=baartege/baarth  Sg+Cmp=baartege-/baarth- Cmp: -
            +N+Sg+Ine:eg%>isnie      FINAL1         ;
            +N+Sg+Ela:eg%>istie      FINAL1         ;
            +N+Sg+Com:eg%>inie       FINAL1         ;
-        +N+Nom+PxSg1:eg%>amme       FINAL1         ;
-        +N+Nom+PxSg2:eg%>adth       FINAL1         ;
-        +N+Acc+PxSg2:eg%>amth       FINAL1         ;
-        +N+Gen+PxSg1:eg%>anne       FINAL1         ;
-        +N+Gen+PxSg2:eg%>anne       FINAL1         ;
-        +N+Gen+PxSg3:eg%>anne       FINAL1         ;
-        +N+Ill+PxSg2:eg%>assedh     FINAL1         ;
-        +N+Com+PxSg2:eg%>æjnedh     FINAL1         ;
                +N+Pl:eg             N_ODD_PL       ;
                   +N:eg             N_ODD_ESS      ;
          +N+Cmp/SgNom:h%^DISIMP      R              ;
@@ -252,7 +224,7 @@ LEXICON GAAJSEGE        !Sg+Nom=gaajsege/gaajsh  Sg+Cmp=gaajsh- redirect to LEEJ
                  
 
 LEXICON LEEJJEGE        !Sg+Nom=leejjege  Sg+Cmp=leejjeh-  Cmp: -eh -egen -egi
-
+LEEJJEGE_Px ;
 
            +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
            +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
@@ -261,14 +233,6 @@ LEXICON LEEJJEGE        !Sg+Nom=leejjege  Sg+Cmp=leejjeh-  Cmp: -eh -egen -egi
            +N+Sg+Ine:eg%>isnie      FINAL1         ;
            +N+Sg+Ela:eg%>istie      FINAL1         ;
            +N+Sg+Com:eg%>inie       FINAL1         ;
-        +N+Nom+PxSg1:eg%>amme       FINAL1         ;
-        +N+Nom+PxSg2:eg%>adth       FINAL1         ;
-        +N+Acc+PxSg2:eg%>amth       FINAL1         ;
-        +N+Gen+PxSg1:eg%>anne       FINAL1         ;
-        +N+Gen+PxSg2:eg%>anne       FINAL1         ;
-        +N+Gen+PxSg3:eg%>anne       FINAL1         ;
-        +N+Ill+PxSg2:eg%>assedh     FINAL1         ;
-        +N+Com+PxSg2:eg%>æjnedh     FINAL1         ;
                +N+Pl:eg             N_ODD_PL       ;
                   +N:eg             N_ODD_ESS      ;
         +N+Cmp/SgNom:eh%^DISIMP     R              ;
@@ -284,6 +248,7 @@ LEXICON SAADTEGE        !Sg+Nom=saadtege  Sg+Cmp=saadtege-/saadth-
  +N+Cmp/SgNom+Use/NG:ege%^DISIMP R        ;
 
 LEXICON LAADTEGE        !Sg+Nom=laadtege  Sg+Cmp=laadth-
+LAADTEGE_Px ;
            +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
            +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
            +N+Sg+Gen:ege%>%^DISIMPn FINAL1         ;
@@ -291,14 +256,6 @@ LEXICON LAADTEGE        !Sg+Nom=laadtege  Sg+Cmp=laadth-
            +N+Sg+Ine:eg%>isnie      FINAL1         ;
            +N+Sg+Ela:eg%>istie      FINAL1         ;
            +N+Sg+Com:eg%>inie       FINAL1         ;
-        +N+Nom+PxSg1:eg%>amme       FINAL1         ;
-        +N+Nom+PxSg2:eg%>adth       FINAL1         ;
-        +N+Acc+PxSg2:eg%>amth       FINAL1         ;
-        +N+Gen+PxSg1:eg%>anne       FINAL1         ;
-        +N+Gen+PxSg2:eg%>anne       FINAL1         ;
-        +N+Gen+PxSg3:eg%>anne       FINAL1         ;
-        +N+Ill+PxSg2:eg%>assedh     FINAL1         ;
-        +N+Com+PxSg2:eg%>æjnedh     FINAL1         ;
                +N+Pl:eg             N_ODD_PL       ;
                   +N:eg             N_ODD_ESS      ;
          +N+Cmp/SgNom:h%^DISIMP      R              ;
@@ -308,7 +265,11 @@ LEXICON LAADTEGE        !Sg+Nom=laadtege  Sg+Cmp=laadth-
 
 
 
+
 LEXICON DEAKEHKE        !Sg+Nom=deakehke/deakah  Sg+Cmp=deakehke-/deakah-
+
+DEAKEHKE_Px ;
+
            +N+Sg+Nom:ke%^DISIMP    FINAL1         ; ! ==> fropmehke+N+Sg+Nom fropmehke
     +N+Sg+Nom+Use/NG:              FINAL1         ; ! => fropmehke+N+Sg+Nom fropmeh
            +N+Sg+Acc:ke%>%^DISIMPm FINAL1         ;
@@ -317,14 +278,6 @@ LEXICON DEAKEHKE        !Sg+Nom=deakehke/deakah  Sg+Cmp=deakehke-/deakah-
            +N+Sg+Ine:k%>isnie      FINAL1         ;
            +N+Sg+Ela:k%>istie      FINAL1         ;
            +N+Sg+Com:k%>inie       FINAL1         ;
-        +N+Nom+PxSg1:k%>amme       FINAL1         ;
-        +N+Nom+PxSg2:k%>adth       FINAL1         ;
-        +N+Acc+PxSg2:k%>amth       FINAL1         ;
-        +N+Gen+PxSg1:k%>anne       FINAL1         ;
-        +N+Gen+PxSg2:k%>anne       FINAL1         ;
-        +N+Gen+PxSg3:k%>anne       FINAL1         ;
-        +N+Ill+PxSg2:k%>assedh     FINAL1         ;
-        +N+Com+PxSg2:k%>æjnedh     FINAL1         ;
                +N+Pl:k             N_ODD_PL       ;
                   +N:k             N_ODD_ESS      ;
          +N+Cmp/SgNom:              R              ;
@@ -379,6 +332,8 @@ LEXICON ÅERUVE
 
 
 LEXICON ÅERUVE_SG
+ÅERUVE_SG_Px ;
+
        +Nom:uve%^DISIMP    FINAL1 ;
        +Acc:uve%>%^DISIMPm FINAL1 ;
        +Gen:uve%>%^DISIMPn FINAL1 ;
@@ -386,14 +341,6 @@ LEXICON ÅERUVE_SG
        +Ine:iev%>isnie     FINAL1 ;
        +Ela:iev%>istie     FINAL1 ;
        +Com:iev%>inie      FINAL1 ;
- +Nom+PxSg1:iev%>amme      FINAL1 ;
- +Nom+PxSg2:iev%>adth      FINAL1 ;
- +Acc+PxSg2:iev%>amth      FINAL1 ;
- +Gen+PxSg1:iev%>anne      FINAL1 ;
- +Gen+PxSg2:iev%>anne      FINAL1 ;
- +Gen+PxSg3:iev%>anne      FINAL1 ;
- +Ill+PxSg2:iev%>assedh    FINAL1 ;
- +Com+PxSg2:iev%>æjnedh    FINAL1 ;
 
 
 LEXICON ÅERUVE_PL
@@ -462,21 +409,14 @@ LEXICON VUANOVE
  +N+Der1+Der/Dimin+N:%»avadtj       GIERIEHTSADTJE ;
 
 LEXICON VUANOVE_SG
+VUANOVE_SG_Px ;
        +Nom:ove%^DISIMP    FINAL1 ;
- +Nom+PxSg1:av%>amme       FINAL1 ;
- +Nom+PxSg2:av%>adth       FINAL1 ;
        +Acc:ove%>%^DISIMPm FINAL1 ;
- +Acc+PxSg2:av%>amth       FINAL1 ;
        +Gen:ove%>%^DISIMPn FINAL1 ;
- +Gen+PxSg1:av%>anne       FINAL1 ;
- +Gen+PxSg2:av%>anne       FINAL1 ;
- +Gen+PxSg3:av%>anne       FINAL1 ;
        +Ill:av%>asse       FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
- +Ill+PxSg2:av%>assedh     FINAL1 ;
        +Ine:av%>isnie      FINAL1 ;
        +Ela:av%>istie      FINAL1 ;
        +Com:av%>inie       FINAL1 ;
- +Com+PxSg2:av%>æjnedh     FINAL1 ;
 
 
 LEXICON VUANOVE_PL
@@ -503,6 +443,9 @@ LEXICON BÅERUJE
 
 
 LEXICON BÅERUJE_SG
+
+BÅERUJE_SG_Px ;
+
        +Nom:uje%^DISIMP    FINAL1 ;
        +Acc:uje%>%^DISIMPm FINAL1 ;
        +Gen:uje%>%^DISIMPn FINAL1 ;
@@ -510,14 +453,8 @@ LEXICON BÅERUJE_SG
        +Ine:iej%>isnie     FINAL1 ;
        +Ela:iej%>istie     FINAL1 ;
        +Com:iej%>inie      FINAL1 ;
- +Nom+PxSg1:iej%>amme      FINAL1 ;
- +Nom+PxSg2:iej%>adth      FINAL1 ;
- +Acc+PxSg2:iej%>amth      FINAL1 ;
- +Gen+PxSg1:iej%>anne      FINAL1 ;
- +Gen+PxSg2:iej%>anne      FINAL1 ;
- +Gen+PxSg3:iej%>anne      FINAL1 ;
- +Ill+PxSg2:iej%>assedh    FINAL1 ;
- +Com+PxSg2:iej%>æjnedh    FINAL1 ;
+       
+       
 
 LEXICON BÅERUJE_PL
          +Nom:uj%>%^DISIMPh        FINAL1 ;
@@ -564,21 +501,15 @@ LEXICON IJE_ODD
 !!€ seerijistie:	            seerije+N+Sg+Ela
 
 LEXICON IJE_ODD_SG
+IJE_ODD_SG_Px ;
+
        +Nom:e%^NOMAGieDISIMP    FINAL1 ;
- +Nom+PxSg1:%>amme              FINAL1 ;
- +Nom+PxSg2:%>adth              FINAL1 ;
        +Acc:e%>%^NOMAGieDISIMPm FINAL1 ;
- +Acc+PxSg2:%>amth              FINAL1 ;
        +Gen:e%>%^NOMAGieDISIMPn FINAL1 ;
- +Gen+PxSg1:%>anne              FINAL1 ;
- +Gen+PxSg2:%>anne              FINAL1 ;
- +Gen+PxSg3:%>anne              FINAL1 ;
        +Ill:%>asse              FINAL1 ; !Rule to delete Jesuse%>asse >Jesusasse
- +Ill+PxSg2:%>assedh            FINAL1 ;
        +Ine:%>isnie             FINAL1 ;
        +Ela:%>istie             FINAL1 ;
        +Com:%>inie              FINAL1 ;
- +Com+PxSg2:%>æjnedh            FINAL1 ;
 
 
 LEXICON IJE_ODD_PL
@@ -771,34 +702,16 @@ LEXICON N_IE_SG_NOM
  ! Se nærmere på disse Px-ene
 
 LEXICON N_IE_SG_OBL
-        +Nom+Uml+PxSg1:%>%^1UMLeme    FINAL1 ;
-        +Nom+Uml+PxSg2:%>%^1UMLedh    FINAL1 ;
-        +Nom+Uml+PxSg3:e%>se          FINAL1 ;
-        +Nom+Uml+PxSg3:e%>be          FINAL1 ;
-        +Nom+PxSg3:e%>be              FINAL1 ; ! korpus
-                  +Acc:ie%>m          FINAL1 ;
-        +Acc+Uml+PxSg1:%>%^1UMLeme    FINAL1 ;
- +Acc+Uml+PxSg1+Use/NG:%>%^1UMLemem   FINAL1 ;
-        +Acc+Uml+PxSg2:%>%^1UMLemdh   FINAL1 ;
-            +Acc+PxSg3:e%>mse         FINAL1 ;
-            +Acc+PxSg3:e%>bem         FINAL1 ;
+
+N_IE_SG_OBL_Px ;
+
+                         +Acc:ie%>m          FINAL1 ;
                   +Gen:ie%>n          FINAL1 ;
-            +Gen+PxSg3:e%>ben         FINAL1 ;
- +Gen+Uml+PxSg1+Use/NG:%>%^1UMLene    FINAL1 ;
               +Ill+Uml:%>%^1UMLan     FINAL1 ;
-        +Ill+Uml+PxSg1:%>%^1UMLasanne FINAL1 ;
-        +Ill+Uml+PxSg2:%>%^1UMLasadth FINAL1 ;
-        +Ill+Uml+PxSg3:iebasse        FINAL1 ;
                   +Ine:e%>sne         FINAL1 ;
                   +Ela:e%>ste         FINAL1 ;
-            +Ela+PxSg1:ie%>stanne     FINAL1 ;
-        +Ela+Uml+PxSg3:iebistie      FINAL1 ;
-        +Ine+Uml+PxSg3:iebinie       FINAL1 ;
-     +Ela+PxSg2+Use/NG:ie%>stadth     FINAL1 ;
                   +Com:%>ine          FINAL1 ;
-        +Com+Uml+PxSg3:iebinie       FINAL1 ;
        +Com+Uml+Use/NG:%>%^iUMLine    FINAL1 ;
-        +Com+Uml+PxSg2:%>%^1UMLanadth FINAL1 ;
 
 
 LEXICON N_IE_PL
@@ -888,9 +801,10 @@ LEXICON N_OE_UML
 
 
 LEXICON N_OE_SGILL_UML
+N_OE_SGILL_UML_Px ;
+
+
        +Ill+Uml:e%>%^2UMLse    FINAL1 ; ! Causes Umlaut
- +Ill+Uml+PxSg1:e%>%^2UMLsanne FINAL1 ;
- +Ill+Uml+PxSg2:e%>%^2UMLsadth FINAL1 ;
 
 LEXICON N_OE_SGILL_NOUML
  +Ill:o%>se FINAL1 ;
@@ -921,36 +835,13 @@ LEXICON N_OE_NO_ILL
    +Der2+Der/Car:oht   hts_HTS_ODDNOCOMP ;
 
 LEXICON N_OE_SG
-        +Nom+PxSg1:%>ome           FINAL1 ;
-        +Nom+PxSg2:%>edh           FINAL1 ;
-        +Nom+PxSg3:e%>se           FINAL1 ;
-        +Nom+PxSg3:o%>be           FINAL1 ;! går som laatjove (s.45) og aajjove (s.48) Magga
-              +Acc:oe%>m           FINAL1 ;
-        +Acc+PxSg1:%>eme           FINAL1 ;
- +Acc+PxSg1+Use/NG:%>emem          FINAL1 ;
-        +Acc+PxSg2:%>emdh          FINAL1 ;
-        +Acc+PxSg3:e%>mse          FINAL1 ;
-        +Acc+PxSg3:o%>bem          FINAL1 ; ! går som laatjove (s.45) og aajjove (s.48) Magga
+N_OE_SG_Px ;
+                      +Acc:oe%>m           FINAL1 ;
               +Gen:oe%>n           FINAL1 ;
-        +Gen+PxSg1:%>ene           FINAL1 ;
-        +Gen+PxSg3:o%>ben          FINAL1 ; ! går som laatjove (s.45) og aajjove (s.48) Magga
-       +Ill+PxSg3:oe%>basse        FINAL1 ;! skal den gå som aajj_oe_vasse eller                 
-     !  +Ill+PxSg3:o%>basse        FINAL1 ;! eller skal den gå som laatj_o_vasse? - hvor den korte vokalen i andre stavelse er -o- (s.45.Magga)
               +Ine:o%>sne          FINAL1 ;
               +Ela:o%>ste          FINAL1 ;
-        +Ine+PxSg3:oe%>bisnie      FINAL1 ;! skal den gå som aajj_oe_visnie eller                 
-     !   +Ine+PxSg3:o%>bisnie      FINAL1 ;! eller skal den gå som laatj_o_visnie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
-        +Ela+PxSg1:oe%>stanne      FINAL1 ;
-        +Ela+PxSg3:oe%>bistie      FINAL1 ;! skal den gå som aajj_oe_vistie eller                  
-     !   +Ela+PxSg3:o%>bistie      FINAL1 ;! eller skal den gå som laatj_o_vistie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
- +Ela+PxSg2+Use/NG:oe%>stadth      FINAL1 ;
               +Com:o%>jne          FINAL1 ;
-       +Com+PxSg2:oe%>%^1UMLnadth  FINAL1 ;
-       +Com+PxSg3:oe%>binie        FINAL1 ;! skal den gå som aajj_oe_vinie eller                    
-    !   +Com+PxSg3:o%>binie        FINAL1 ;! eller skal den gå som laatj_o_vinie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
 
-       +Ess+PxSg3:oe%>binie        FINAL1 ;! skal den gå som aajj_oe_vinie eller 
-    !   +Ess+PxSg3:o%>binie        FINAL1 ;! eller skal den gå som laatj_o_vinie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
     
     
 LEXICON N_OE_PL
@@ -1049,33 +940,13 @@ LEXICON MAANAOBL
  +Der2+Der/Car:eht   hts_HTS_ODDNOCOMP ;
  
 LEXICON MAANASGOBL
-        +Nom+PxSg1:%>eme     FINAL1 ;
-        +Nom+PxSg2:%>edh     FINAL1 ;
-        +Nom+PxSg3:e%>se     FINAL1 ;
-        +Nom+PxSg3:e%>be     FINAL1 ;   ! Som daktere
-              +Acc:a%>m      FINAL1 ;
-        +Acc+PxSg1:%>eme     FINAL1 ;
- +Acc+PxSg1+Use/NG:%>emem    FINAL1 ;
-        +Acc+PxSg2:%>emdh    FINAL1 ;
-        +Acc+PxSg3:e%>mse    FINAL1 ;
-        +Acc+PxSg3:e%>bem    FINAL1 ; ! som daktere
+MAANASGOBL_Px ;
+                      +Acc:a%>m      FINAL1 ;
               +Gen:a%>n      FINAL1 ;
-        +Gen+PxSg1:%>ene     FINAL1 ;
-        +Gen+PxSg3:e%>ben    FINAL1 ;
               +Ill:e%>se     FINAL1 ;
-        +Ill+PxSg1:%>asanne  FINAL1 ;
-        +Ill+PxSg2:%>asadth  FINAL1 ;
-        +Ill+PxSg3:%>abasse  FINAL1 ;! daktarasse
               +Ine:e%>sne    FINAL1 ;
               +Ela:e%>ste    FINAL1 ;
-        +Ela+PxSg1:%>astanne FINAL1 ;
-        +Ine+PxSg3:%>abisnie FINAL1 ;! daktarisnie
-        +Ela+PxSg3:%>abistie FINAL1 ;! daktaristie
- +Ela+PxSg1+Use/NG:%>astadth FINAL1 ;
               +Com:%>ine     FINAL1 ;
-        +Com+PxSg2:%>anadth  FINAL1 ;
-        +Com+PxSg3:%>abinie  FINAL1 ;! daktarinie
-        +Ess+PxSg3:%>abinie  FINAL1 ;! daktarinie
         
 
 LEXICON MAANA_PL
@@ -1667,37 +1538,16 @@ LEXICON NIEJTESGNOM
             
 
 LEXICON NIEJTESGOBL
-        +Nom+PxSg1:%>eme     FINAL1 ;
-        +Nom+PxSg2:%>edh     FINAL1 ;
-        +Nom+PxSg3:e%>se     FINAL1 ;
-        +Nom+PxSg3:e%>be     FINAL1 ;  ! som gaamege     
+NIEJTESGOBL_Px ; 
+
               +Acc:e%>m      FINAL1 ;
-        +Acc+PxSg1:%>eme     FINAL1 ;
- +Acc+PxSg1+Use/NG:%>emem    FINAL1 ;
-        +Acc+PxSg2:%>emdh    FINAL1 ;
-        +Acc+PxSg3:e%>mse    FINAL1 ;
-        +Acc+PxSg3:e%>bem    FINAL1 ;! gaamegem
               +Gen:e%>n      FINAL1 ;
-        +Gen+PxSg1:%>ene     FINAL1 ;
-        +Gen+PxSg2:%>edh     FINAL1 ;
-        +Gen+PxSg3:e%>ben    FINAL1 ; ! gaamegen
               +Ill:e%>se     FINAL1 ;
-        +Ill+PxSg1:%>esanne  FINAL1 ;
-        +Ill+PxSg2:%>esadth  FINAL1 ;
-        +Ill+PxSg3:%>ebasse  FINAL1 ;! gaamegasse
               +Ine:e%>sne    FINAL1 ;
               +Ela:e%>ste    FINAL1 ;     
      +Ine+Err/Orth:isnie     FINAL1 ;
-     +Ill+PxSg3:%>ebisnie    FINAL1 ;! gaamegisnie
      +Ela+Err/Orth:istie     FINAL1 ;  
-     +Ela+PxSg3:%>ebistie    FINAL1 ; ! gaamegistie 
-        +Ela+PxSg1:%>estanne FINAL1 ;
- +Ela+PxSg1+Use/NG:%>estadth FINAL1 ;
               +Com:%>ine     FINAL1 ;
-        +Com+PxSg2:%>enadth  FINAL1 ;
-        +Com+PxSg3:%>ebinie  FINAL1 ; ! gaameginie
-        +Ess+PxSg3:%>ebinie  FINAL1 ; ! gaameginie
-
 
 
 
@@ -1782,6 +1632,7 @@ LEXICON ÅERPIENADTJH ! - plural noun
  +N+Der1+Der/Dimin+N+Cmp/PlGen:e%»tj%>%^DISIMPi R         ;
 
 LEXICON JOVKEMES
+JOVKEMES_Px ;
               +N+Sg+Nom:%>%^COMPDISIMP3es%^DISIMP FINAL1   ;
               +N+Sg+Acc:asse%>m                   FINAL1   ;
               +N+Sg+Gen:asse%>n                   FINAL1   ;
@@ -1800,22 +1651,10 @@ LEXICON JOVKEMES
             +N+Cmp/SgNom:%>%^COMPDISIMP3es%^DISIMP R        ;
             +N+Cmp/SgGen:asse%>n                   R        ;
             +N+Cmp/PlGen:ass%>i                    R        ;
-        +N+Sg+Nom+PxSg1:ass%>eme                  FINAL1   ;
-        +N+Sg+Nom+PxSg2:ass%>edh                  FINAL1   ;
-        +N+Sg+Nom+PxSg3:ass%>se                   FINAL1   ;
-        +N+Sg+Acc+PxSg1:ass%>eme                  FINAL1   ;
- +N+Sg+Acc+PxSg1+Use/NG:ass%>emem                 FINAL1   ;
-        +N+Sg+Acc+PxSg2:ass%>emdh                 FINAL1   ;
-        +N+Sg+Acc+PxSg3:asse%>mse                 FINAL1   ;
-        +N+Sg+Gen+PxSg1:ass%>ene                  FINAL1   ;
-        +N+Sg+Ill+PxSg1:ass%>esanne               FINAL1   ;
-        +N+Sg+Ill+PxSg2:ass%>esadth               FINAL1   ;
-        +N+Sg+Ela+PxSg1:ass%>estanne              FINAL1   ;
- +N+Sg+Ela+PxSg1+Use/NG:ass%>estadth              FINAL1   ;
-        +N+Sg+Com+PxSg2:ass%>enadth               FINAL1   ;
 
 
 LEXICON NES
+NES_Px ;
              +N+Sg+Nom:%>%^COMPDISIMP2es%^DISIMP FINAL1   ;
              +N+Sg+Acc:asse%>m                   FINAL1   ;
              +N+Sg+Gen:asse%>n                   FINAL1   ;
@@ -1834,19 +1673,6 @@ LEXICON NES
             +N+Cmp/SgNom:%>%^COMPDISIMP2es%^DISIMP R        ;
             +N+Cmp/SgGen:asse%>n                   R        ;
             +N+Cmp/PlGen:ass%>i                    R        ;
-        +N+Sg+Nom+PxSg1:ass%>eme                  FINAL1   ;
-        +N+Sg+Nom+PxSg2:ass%>edh                  FINAL1   ;
-        +N+Sg+Nom+PxSg3:ass%>se                   FINAL1   ;
-        +N+Sg+Acc+PxSg1:ass%>eme                  FINAL1   ;
- +N+Sg+Acc+PxSg1+Use/NG:ass%>emem                 FINAL1   ;
-        +N+Sg+Acc+PxSg2:ass%>emdh                 FINAL1   ;
-        +N+Sg+Acc+PxSg3:asse%>mse                 FINAL1   ;
-        +N+Sg+Gen+PxSg1:ass%>ene                  FINAL1   ;
-        +N+Sg+Ill+PxSg1:ass%>esanne               FINAL1   ;
-        +N+Sg+Ill+PxSg2:ass%>esadth               FINAL1   ;
-        +N+Sg+Ela+PxSg1:ass%>estanne              FINAL1   ;
- +N+Sg+Ela+PxSg1+Use/NG:ass%>estadth              FINAL1   ;
-        +N+Sg+Com+PxSg2:ass%>enadth               FINAL1   ;
 
 
 
@@ -1989,22 +1815,15 @@ LEXICON GÅATETJE
  +Cmp/PlGen:%>%^DISIMPi R         ;
 
 LEXICON GÅATETJEadj
+GÅATETJEadj_Px ; 
                +Sg+Nom:e%^DISIMP       FINAL1    ;
- +Sg+Nom+PxSg1+Err/Orth:%>amme          FINAL1    ;
- +Sg+Nom+PxSg2+Err/Orth:%>adth          FINAL1    ;
                +Sg+Acc:e%>%^DISIMPm    FINAL1    ;
- +Sg+Acc+PxSg2+Err/Orth:%>amth          FINAL1    ;
                +Sg+Gen:e%>%^DISIMPn    FINAL1    ;
- +Sg+Gen+PxSg1+Err/Orth:%>anne          FINAL1    ;
- +Sg+Gen+PxSg2+Err/Orth:%>anne          FINAL1    ;
- +Sg+Gen+PxSg3+Err/Orth:%>anne          FINAL1    ;
                +Sg+Ill:%>asse          FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
- +Sg+Ill+PxSg2+Err/Orth:%>assedh        FINAL1    ;
                +Sg+Ine:%>isnie         FINAL1    ;
                +Sg+Ela:%>istie         FINAL1    ;
        +Sg+Ela+Err/Orth:%>%^DISIMPistie FINAL1    ; !Miesie Mavve
                +Sg+Com:%>inie          FINAL1    ;
- +Sg+Com+PxSg2+Err/Orth:%>æjnedh        FINAL1    ;
                    +Pl:                N_ODD_PL  ;
                                        N_ODD_ESS ;
              +Cmp/SgNom:e               R         ;
