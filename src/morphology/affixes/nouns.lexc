@@ -63,7 +63,7 @@ LEXICON N_ODD_INFL
 
 LEXICON N_ODD_LOAN
 !! * Odd-syll loanwords: lexicon @LEXNAME@
-N_ODD_LOAN_Px ;
++N+Sg: N_ODD_SG_Px ;
           +N+Sg+Nom:e         FINAL1    ;
           +N+Sg+Acc:e%>m      FINAL1    ;
           +N+Sg+Gen:e%>n      FINAL1    ;
@@ -156,7 +156,8 @@ LEXICON ÅABPETJH ! Resiproke og dim.
 
 
 LEXICON N_ODD_C   !these words have consonant-ending in nominative
-N_ODD_C_Px ;
++N+Sg: N_ODD_SG_Px ;
+
            +N+Sg+Nom:%^DISIMP     FINAL1         ;
            +N+Sg+Acc:e%>%^DISIMPm FINAL1         ;
            +N+Sg+Gen:e%>%^DISIMPn FINAL1         ;
@@ -181,7 +182,8 @@ LEXICON AAREGE        !Sg+Nom=Aarege/Aareh  Sg+Cmp=Aarege-/Aareh- Redirects go G
 
 
 LEXICON BAARTEGE        !Sg+Nom=baartege/baarth  Sg+Cmp=baartege-/baarth- Cmp: -h, -ege, -egen, -egi
-BAARTEGE_Px ;
++N+Sg:eg N_ODD_SG_Px ;
+
     +N+Sg+Nom+Use/NG:h%^DISIMP      FINAL1         ;
            +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
            +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
@@ -224,7 +226,8 @@ LEXICON GAAJSEGE        !Sg+Nom=gaajsege/gaajsh  Sg+Cmp=gaajsh- redirect to LEEJ
                  
 
 LEXICON LEEJJEGE        !Sg+Nom=leejjege  Sg+Cmp=leejjeh-  Cmp: -eh -egen -egi
-LEEJJEGE_Px ;
+
++N+Sg:eg N_ODD_SG_Px ;
 
            +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
            +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
@@ -248,7 +251,8 @@ LEXICON SAADTEGE        !Sg+Nom=saadtege  Sg+Cmp=saadtege-/saadth-
  +N+Cmp/SgNom+Use/NG:ege%^DISIMP R        ;
 
 LEXICON LAADTEGE        !Sg+Nom=laadtege  Sg+Cmp=laadth-
-LAADTEGE_Px ;
++N+Sg:eg N_ODD_SG_Px ;
+
            +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
            +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
            +N+Sg+Gen:ege%>%^DISIMPn FINAL1         ;
@@ -268,8 +272,7 @@ LAADTEGE_Px ;
 
 LEXICON DEAKEHKE        !Sg+Nom=deakehke/deakah  Sg+Cmp=deakehke-/deakah-
 
-DEAKEHKE_Px ;
-
++N+Sg:k N_ODD_SG_Px ;
            +N+Sg+Nom:ke%^DISIMP    FINAL1         ; ! ==> fropmehke+N+Sg+Nom fropmehke
     +N+Sg+Nom+Use/NG:              FINAL1         ; ! => fropmehke+N+Sg+Nom fropmeh
            +N+Sg+Acc:ke%>%^DISIMPm FINAL1         ;
@@ -332,7 +335,7 @@ LEXICON ÅERUVE
 
 
 LEXICON ÅERUVE_SG
-ÅERUVE_SG_Px ;
++N+Sg:iev N_ODD_SG_Px ;
 
        +Nom:uve%^DISIMP    FINAL1 ;
        +Acc:uve%>%^DISIMPm FINAL1 ;
@@ -409,7 +412,7 @@ LEXICON VUANOVE
  +N+Der1+Der/Dimin+N:%»avadtj       GIERIEHTSADTJE ;
 
 LEXICON VUANOVE_SG
-VUANOVE_SG_Px ;
++N+Sg:av N_ODD_SG_Px ;
        +Nom:ove%^DISIMP    FINAL1 ;
        +Acc:ove%>%^DISIMPm FINAL1 ;
        +Gen:ove%>%^DISIMPn FINAL1 ;
@@ -444,7 +447,7 @@ LEXICON BÅERUJE
 
 LEXICON BÅERUJE_SG
 
-BÅERUJE_SG_Px ;
++N+Sg:iej N_ODD_SG_Px ;
 
        +Nom:uje%^DISIMP    FINAL1 ;
        +Acc:uje%>%^DISIMPm FINAL1 ;
@@ -501,7 +504,7 @@ LEXICON IJE_ODD
 !!€ seerijistie:	            seerije+N+Sg+Ela
 
 LEXICON IJE_ODD_SG
-IJE_ODD_SG_Px ;
+N_ODD_SG_Px ;
 
        +Nom:e%^NOMAGieDISIMP    FINAL1 ;
        +Acc:e%>%^NOMAGieDISIMPm FINAL1 ;
@@ -1632,7 +1635,7 @@ LEXICON ÅERPIENADTJH ! - plural noun
  +N+Der1+Der/Dimin+N+Cmp/PlGen:e%»tj%>%^DISIMPi R         ;
 
 LEXICON JOVKEMES
-JOVKEMES_Px ;
++N+Sg:ass JOVKEMES_Px ;
               +N+Sg+Nom:%>%^COMPDISIMP3es%^DISIMP FINAL1   ;
               +N+Sg+Acc:asse%>m                   FINAL1   ;
               +N+Sg+Gen:asse%>n                   FINAL1   ;
@@ -1654,7 +1657,7 @@ JOVKEMES_Px ;
 
 
 LEXICON NES
-NES_Px ;
++N+Sg:ass JOVKEMES_Px ;
              +N+Sg+Nom:%>%^COMPDISIMP2es%^DISIMP FINAL1   ;
              +N+Sg+Acc:asse%>m                   FINAL1   ;
              +N+Sg+Gen:asse%>n                   FINAL1   ;
@@ -1815,7 +1818,7 @@ LEXICON GÅATETJE
  +Cmp/PlGen:%>%^DISIMPi R         ;
 
 LEXICON GÅATETJEadj
-GÅATETJEadj_Px ; 
++Sg+Err/Orth:N_ODD_SG_Px; 
                +Sg+Nom:e%^DISIMP       FINAL1    ;
                +Sg+Acc:e%>%^DISIMPm    FINAL1    ;
                +Sg+Gen:e%>%^DISIMPn    FINAL1    ;
