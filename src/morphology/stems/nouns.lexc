@@ -397,11 +397,18 @@ sjisjnje+N+Sem/Dummytag+Cmp/SgNom:sjisjnje R ;
 LEXICON Noun   !!= * __@CODE@__ dividing in NounNoPx, NounPx (with a P.Px.add
                !!               flag)  and NounPxKin (with a P.Nom3Px.add flag)
 !                          NounNoPx  ; ! This one commented out since the lexicon is empty.
-                @P.Px.add@ NounPx    ;
-  @P.Px.add@@P.Nom3Px.add@ NounPxKin ;
+!                @P.Px.add@ NounPx    ;
+!  @P.Px.add@@P.Nom3Px.add@ NounPxKin ;
+
+             NounNoPx    ; 
+  @P.Px.add@ NounPxKin ;
+
+
+
+
+
 
 LEXICON NounPxKin ! Dette er lemma som kan få flere possesive suffikser enn andre lemma.
-!LEXICON NounNoPx ! Nouns that should not take possessives at all.
 
 
 aahka+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:aahk MAANA ;!!! PX-Lexicon
@@ -750,35 +757,26 @@ vöörpedimmie+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:vöörpedimm N_IE ;
 åvteguvvie+Sem/Dummytag:åvte#guvv N_IE ;
 åvtehke:åvtehk N_ODD ;
 
+
+LEXICON NounNoPx !
+
 jienebelåhkoe:jienebelåhk N_OE_UML ;
 nasjonaalelaavloe:nasjonaalelaavl N_OE_UML ;
 offiserebarkoe:offiserebark N_OE_UML ;
 katoskegærhkoe:katoskegærhk N_OE_UML ;
 rantandahkoe:rantandahk N_OE_UML ;
 byjjesfaamoe:byjjesfaam N_OE_UML ;
-
-
-
 ! digkiedimmes-siebre:digkiedimmes-siebr NIEJTE ;
 gæmhpomeaamhtese:gæmhpome#aamhtes N_ODD ;
 nyjsenesaamhtese:nyjsenes#aamhtes N_ODD ;
-
-
-
 nïejteskuvle:nïejteskuvl NIEJTE ;
 lahtese:lahtes N_ODD ;
 telegraafestasjovne:telegraafe#stasjovn NIEJTE ;
 tjïelteveeljeme:tjïelteveeljem N_ODD ;
 åejvieaamhtese:åejvie#aamhtes N_ODD ;
-
-
-
 ammesreereme:ammes#reerem N_ODD ;
-
-
 domteme:domtem N_ODD ;
 domtese:domtes N_ODD ;
-
 hïejmestaare:hïejmestaar NIEJTE ;
 jïjtjevyljehke:jïjtje#vyljehk N_ODD ;
 jïjtjevyljehke+Err/Orth:jijtje#vyljehk N_ODD ;
@@ -792,20 +790,14 @@ nasjonaaledomteme:nasjonaale#domtem N_ODD ;
 nasjonaalestaate:nasjonaalestaat NIEJTE ;
 nasjonalisme:nasjonalism NIEJTE ;
 serbere:serber N_ODD ;  !bison
-
 presidente+Use/DNorm:president NIEJTE ;  ! Lorentz´vedtak
 presidente+Use/NotDNorm:presideent NIEJTE ; ! GG´s vedtak
-
-
 tjekkere:tjekker N_ODD ;  ! bison
 komponiste:komponist NIEJTE ;
 kompositööre:kompositöör NIEJTE ;
 Englaantenparlameente:Englaantenparlameent NIEJTE ;
-
-
 biejjiesysteeme+Use/NotDNorm:biejjie#system NIEJTE ; ! GG:svedtak 
 biejjiesysteeme+Use/NotDNorm:biejjie#systeem NIEJTE ; ! O.L
-
 bigkemeteknihke:bigkemeteknihk NIEJTE ;
 dåarjoje:dåarjoj NIEJTE ;
 aktegsreereme:aktegs#reerem N_ODD ;
@@ -826,10 +818,6 @@ lutnjese:lutnjes N_ODD ;
 vuelietjaalege:vuelietjaaleg NIEJTE ;
 gïrreme:gïrrem N_ODD ;
 hov-reakta:hov-reakt MAANA ;
-
-
-
-LEXICON NounPx!
 Baartesåhkoeh+Sem/Dummytag:Baartesåhk GAAROEH ;!OBS Prop?
 Balfoure:Balfour NIEJTE ;
 Bastilje:Bastilj NIEJTE ;
@@ -16096,8 +16084,9 @@ videobutihke+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:video#but IHKE_LO
 videograafe+OLang/NOB+Sem/Dummytag:video^gra GRAAFE_LOAN ;
 videogramme+OLang/NOB+Sem/Dummytag:video^gram GRAMME_LOAN ;
 videoinstallasjovne+OLang/NOB+Sem/Dummytag:video#in^stalla SJOVNE_LOAN ;
-videomasjijne+Err/Orth+OLang/NOB+Sem/Dummytag:video#mask IJNE_LOAN ;
-videomasjijne+OLang/NOB+Sem/Dummytag:video#masjijn NIEJTE ;
+videomaskijne+OLang/NOB+Sem/Dummytag:video#mask IJNE_LOAN ;
+videomaskijne+Err/Orth+OLang/NOB+Sem/Dummytag:video#masjijn NIEJTE ;
+
 videoprogramme+Sem/Dummytag:video#pro^gram GRAMME_LOAN ;
 vidtjie+Sem/Dummytag:vidtj N_IE ;! vædtjan=adverb, vidtjies eller vædtjoeh=attr?
 vidtjienïere+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:vidtjie#nïer NIEJTE ;
@@ -17635,6 +17624,8 @@ naaperedïrrege:naapere#dïrreg N_ODD ;
 
 napalme:napalm NIEJTE ;
 eejehtsdarjome:eejehts#darjom N_ODD ;
+
+dïedtemepruvrenasse:dïedteme#pruvrenass NIEJTE ;
 
 barkaaske:barka#ask NIEJTE ;
 barkabealla:barka#beall MAANA ;
