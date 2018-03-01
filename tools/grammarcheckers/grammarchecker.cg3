@@ -35,8 +35,8 @@
 #   Then edit/test as:   #
 # ---------------------- #
 #
-# emacs grammarchecker.cg3  # and C-c C-i / C-c C-c if you have cg-mode installed
-# echo "Sun ij puátá." | sh modes/smagram.mode  # from the terminal
+## emacs grammarchecker.cg3  # and C-c C-i / C-c C-c if you have cg-mode installed
+## echo "Manne båata." | sh modes/smagram.mode
 #
 # ---------------------- #
 #   Other debug-pipes:   #
@@ -48,7 +48,7 @@
 
 
 # The pipeline (but use modes, above)
-# echo "Hei." | hfst-tokenise -g ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g disambiguator.cg3 -t | vislcg3 -g grammarchecker.cg3 -t  
+## echo "Hei." | hfst-tokenise -g ../tokenisers/tokeniser-gramcheck-gt-desc.pmhfst | vislcg3 -g disambiguator.cg3 -t | vislcg3 -g grammarchecker.cg3 -t  
 
 
 
@@ -617,6 +617,7 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 # A simple grammar checker rule without suggestions: Ensure preceding nominal agrees with the verb
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom) (0 V) (NOT 0 Sg3);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg1 + Nom) (0 V) (NOT 0 Sg1);
+## Manne båata.
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg2 + Nom) (0 V) (NOT 0 Sg2);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl1 + Nom) (0 V) (NOT 0 Pl1);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl2 + Nom) (0 V) (NOT 0 Pl2);
