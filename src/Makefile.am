@@ -141,14 +141,15 @@ analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
 
 # ... and also to the normative analysers:
 analyser-gt-norm.%: analyser-gt-norm.tmp.% \
-					filters/remove-derivation-position-tags.% \
-					filters/remove-illegal-derivation-strings-flagbased.% \
-					filters/insert-default-compounding-tags.% \
-					filters/insert-default_left_compounding-tags.% \
-					filters/block-illegal_compound-strings.%  \
-					filters/split-CmpN-tags.%                             \
-					filters/convert_to_flags-CmpNP-tags.%                 \
-					filters/split-CmpNP-tags.%           \
+					filters/remove-derivation-position-tags.%              \
+					filters/remove-illegal-derivation-strings-flagbased.%  \
+					filters/remove-MinusSpell-strings.%                    \
+					filters/insert-default-compounding-tags.%              \
+					filters/insert-default_left_compounding-tags.%         \
+					filters/block-illegal_compound-strings.%               \
+					filters/split-CmpN-tags.%                              \
+					filters/convert_to_flags-CmpNP-tags.%                  \
+					filters/split-CmpNP-tags.%                             \
 					filters/remove-DNorm-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 			    @\"filters/remove-derivation-position-tags.$*\"             \
@@ -159,6 +160,7 @@ analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 			.o. @\"filters/remove-illegal-derivation-strings-flagbased.$*\" \
 			.o. @\"filters/convert_to_flags-CmpNP-tags.$*\"                 \
 			.o. @\"filters/split-CmpNP-tags.$*\"                            \
+			.o. @\"filters/remove-MinusSpell-strings.$*\"                   \
 			.o. @\"filters/remove-DNorm-tags.$*\"                           \
 			.o. @\"$<\"                                                     \
 			;\n\
