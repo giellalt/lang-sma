@@ -729,7 +729,7 @@ REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 #!! Verbs
 
 
-REMOVE Der/InchL IF (0 ("skïemtjegåetie") LINK 0 Nom OR Gen) ;
+REMOVE Der/InchL IF (0 ("skïemtjegåetie") OR ("roestegåetie") LINK 0 Nom OR Gen) ;
 	#$ skïemtjegåetieh skïemtjegåetien
 
 IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA LINK 1 ConNeg)  (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
