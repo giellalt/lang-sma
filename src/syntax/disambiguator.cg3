@@ -141,34 +141,34 @@ LIST Prop = Prop ;
 
 #!! !Derivation tags
 
+LIST Der/A = Der/A ; #!! Der/A
+LIST Der/Car = Der/Car ; #!! Der/Car
+LIST Der/Dimin = Der/Dimin ; #!! Der/Dimin 
+LIST Der/InchL = Der/InchL ; #!! Der/InchL
+LIST Der/NomAct = Der/NomAct ; #!! Der/NomAct
+LIST Der/NomAg = Der/NomAg ; #!! Der/NomAg
+LIST Der/PassL = Der/PassL ; #!! Der/PassL
+LIST Der/PassS = Der/PassS ; #!! Der/PassS
+LIST Der/Rec = Der/Rec ; #!! Der/Rec
+LIST Der/adte = Der/adte ; #!! Der/adte
+LIST Der/ahtje = Der/ahtje ; #!! Der/ahtje
+LIST Der/alla = Der/alla ; #!! Der/alla
+LIST Der/d = Der/d ; #!! Der/d
+LIST Der/eds = Der/eds ; #!! Der/eds
+LIST Der/ht = Der/ht ; #!! Der/ht
 LIST Der/htalle  = Der/htalle  ; #!! Der/htalle 
-LIST Der/lg = Der/lg  ; #!! Der/lg
-LIST Der/ijes = Der/ijes ; #!! Der/ijes
+LIST Der/htj = Der/htj ; #!! Der/htj
 LIST Der/ihks = Der/ihks ; #!!  Der/ihks
-LIST Der/les = Der/les ; #!! Der/les
-LIST Der/ldihkie = Der/ldihkie ; #!! Der/ldihkie
+LIST Der/ijes = Der/ijes ; #!! Der/ijes
+LIST Der/l = Der/l ; #!! Der/l
+LIST Der/laakan = Der/laakan ; #!! Der/laakan
 LIST Der/ldahke = Der/ldahke ; #!! Der/ldahke
 LIST Der/ldh = Der/ldh ; #!! Der/ldh
-LIST Der/ht = Der/ht ; #!! Der/ht
-LIST Der/l = Der/l ; #!! Der/l
+LIST Der/ldihkie = Der/ldihkie ; #!! Der/ldihkie
+LIST Der/les = Der/les ; #!! Der/les
+LIST Der/lg = Der/lg  ; #!! Der/lg
 LIST Der/st = Der/st ; #!! Der/st
-LIST Der/d = Der/d ; #!! Der/d
-LIST Der/Car = Der/Car ; #!! Der/Car
-LIST Der/htj = Der/htj ; #!! Der/htj
-LIST Der/Dimin = Der/Dimin ; #!! Der/Dimin 
-LIST Der/Rec = Der/Rec ; #!! Der/Rec
-LIST Der/laakan = Der/laakan ; #!! Der/laakan
 LIST Der/vuota = Der/vuota ; #!! Der/vuota 
-LIST Der/adte = Der/adte ; #!! Der/adte
-LIST Der/alla = Der/alla ; #!! Der/alla
-LIST Der/eds = Der/eds ; #!! Der/eds
-LIST Der/PassL = Der/PassL ; #!! Der/PassL
-LIST Der/NomAg = Der/NomAg ; #!! Der/NomAg
-LIST Der/NomAct = Der/NomAct ; #!! Der/NomAct
-LIST Der/ahtje = Der/ahtje ; #!! Der/ahtje
-LIST Der/InchL = Der/InchL ; #!! Der/InchL
-LIST Der/PassS = Der/PassS ; #!! Der/PassS
-LIST Der/A = Der/A ; #!! Der/A
 
 
 
@@ -727,6 +727,10 @@ REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NPNH LINK NOT 0 TIME) 
 REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 
 #!! Verbs
+
+
+REMOVE Der/InchL IF (0 ("skïemtjegåetie") LINK 0 Nom OR Gen) ;
+	#$ skïemtjegåetieh skïemtjegåetien
 
 IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA LINK 1 ConNeg)  (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
 
