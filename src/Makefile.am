@@ -68,12 +68,10 @@ endif # CAN_FOMA
 # Hfst - add weights to compounds:
 if WITH_OFST_TROPICAL
 generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
-				filters/remove-test-tags.hfst \
-				filters/change-optionally-word_boundary_to_hyphen.hfst
+				filters/remove-test-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"filters/remove-test-tags.hfst\" \
 			.o. @\"$<\" \
-			.o. @\"filters/change-optionally-word_boundary_to_hyphen.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
 			-S --xerox-composition=ON \
@@ -84,12 +82,10 @@ generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 		> $@
 else
 generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
-				filters/remove-test-tags.hfst \
-				filters/change-optionally-word_boundary_to_hyphen.hfst
+				filters/remove-test-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"filters/remove-test-tags.hfst\" \
 			.o. @\"$<\" \
-			.o. @\"filters/change-optionally-word_boundary_to_hyphen.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
 			-S --xerox-composition=ON \
@@ -98,12 +94,10 @@ endif
 
 # Xerox & Foma:
 analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
-				filters/remove-test-tags.% \
-				filters/change-optionally-word_boundary_to_hyphen.%
+				filters/remove-test-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-test-tags.$*\" \
 			.o. @\"$<\" \
-			.o. @\"filters/change-optionally-word_boundary_to_hyphen.$*\" \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
