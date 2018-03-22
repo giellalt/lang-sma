@@ -12,6 +12,8 @@ egrep -v '(Area|Err|\+v| R)' nouns_dubl > pure_nouns_dubl
 (man kunne tatt vekk OLang/NOB også, men taggen markerer ikke alltid forskjell mellom entryene, se f.eks. allergije)
 sort pure_nouns_dubl > nouns_dubl
 
+(OBS Lista inneholder en del sammensatte ord som ikke er dubletter, f.eks. ord som begynner med astma. grep kommandoen må forebedres med slik at den legger til : eller +)
+
 Problemer med dubletter:
 * det tar masse tid å legge dem inn, så har bør det være gode rutiner for å unngå det
 * skrivefeil i koden blir ikke oppdaget av lemmagenereringstesten, f.eks.
@@ -301,13 +303,6 @@ båarka:båark  MAANA ;
 båarka:båark MAANA ;
 båatsoeorganisasjovne:båatsoe#organisasjovn NIEJTE ;
 båatsoeorganisasjovne:båatsoeorganisasjovn  NIEJTE ;
-båetije% biejjie+N+Sem/Dummytag+Sg+Gen:båetijen% biejjien FINAL1 ;
-båetije% biejjie+N+Sem/Dummytag+Sg+Ill:båetijen% beajjan FINAL1 ;!
-båetije% biejjie+N+Sem/Dummytag+Sg+Nom:båetije% biejjie FINAL1 ;!
-båetije% biejjieh+N+Sem/Dummytag+Sg+Nom:båetije% biejjieh FINAL1 ;!
-båetije% boelve+N+Sem/Dummytag+Sg+Gen:båetijen% boelven FINAL1 ;
-båetije% boelve+N+Sem/Dummytag+Sg+Ill:båetijen% boelvese FINAL1 ;
-båetije% boelve+N+Sem/Dummytag+Sg+Nom:båetije% boelve FINAL1 ;!
 bånhtsa+Sem/Dummytag:bånhts MAANA ;
 bånhtsa:bånhts  MAANA ;
 bæhta+Sem/Dummytag:bæht MAANA ;
