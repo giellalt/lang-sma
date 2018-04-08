@@ -85,6 +85,8 @@ LIST Pl1 = Pl1 ;
 LIST Pl2 = Pl2 ;
 LIST Pl3 = Pl3 ;
 
+LIST PERS-TAG = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
+
 LIST Inf = Inf ;
 LIST Neg = Neg ;
 LIST ConNeg = ConNeg ;
@@ -532,7 +534,7 @@ LIST SOMESMALLABBR = "a" "r" "c" "d" "e" "f" "f" "g" "h" "i" "l" "m" "b" "j" "s"
 LIST SOMECAPABBR = "A" "R" "C" "D" "E" "F" "F" "G" "H" "I" "L" "M" "B" "J" "S" ;
 
 # Der sets
-LIST V-DER = Der/didh Der/htidh Der/alle Der/stidh Der/ehte Der/lidh Der/htalle Der/lgidh Der/htjidh Der/htovve Der/htoeve Der/htehte Der/ahtje Der/gåete Der/ehte Der/adte Der/eds Der/PassL;
+LIST V-DER = Der/didh Der/htidh Der/alle Der/stidh Der/ehte Der/lidh Der/htalle Der/lgidh Der/htjidh Der/htovve Der/htoeve Der/htehte Der/ahtje Der/gåete Der/ehte Der/adte Der/eds Der/PassL Der/PassS;
 
 LIST V-DER-SUF = (".*didh"r) (".*htidh"r)  (".*alledh"r) (".*stidh"r) (".*ehtedh"r) (".*lidh"r) (".*lgidh"r) (".*htjidh"r)  (".*htovvedh"r)  (".*htoevedh"r)  (".*htehtedh"r)  (".*ahtjedh"r)  (".*gåetedh"r) (".*ehtedh"r) (".*gåetedh"r) (".*adtedh"r) (".*edsedh"r) (".*sovvedh"r) ;
 
@@ -601,7 +603,7 @@ SECTION  #!! !!@CODE@
 
 #!! Removing non-lexicalised forms when lexicalised 
 
-#REMOVE:PassS (Der/PassS) ; # ikke bra
+REMOVE:PassS (Der/PassS) IF (0 Der/PassS + $$PERS-TAG)(0 Ind + $$PERS-TAG); # ikke bra
 
 REMOVE:Vregex V-DER (0 V-DER-SUF) ;
 REMOVE:Nregex N-DER (0 N-DER-SUF) ;
@@ -742,8 +744,6 @@ REMOVE:PrtInNeg Prs IF (0 Neg)(*1C ConNeg + Prt BARRIER NOT-ADV);
 	
 REMOVE:PrsInNeg Prt IF (0 Neg)(*1C ConNeg BARRIER NOT-ADV LINK NOT 0 Prt);
 
-LIST PERS-TAG = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
-
 SELECT:PersonInNeg $$PERS-TAG (0 Neg + Prt)(*1C $$PERS-TAG + ConNeg BARRIER NOT-ADV);
 REMOVE:NegPrt (Neg Prt)(NEGATE 1 ("lea" ConNeg Prt)) ;
 ## this is for removing the 'ij' etc. 
@@ -767,7 +767,7 @@ REMOVE:Imprtd Imprt (*-1 WORD BARRIER CC OR COMMA OR BOS)(NOT 0 Neg)(NEGATE -1 C
 SELECT:Imprte (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) ;
 
 # Select the finite verb reading if this is the only finite verb reading within the clause
-SELECT:sjur VFIN IF ( NOT *0C VFIN BARRIER S-BOUNDARY OR CLB ) ;
+SELECT:sjur VFIN IF ( NEGATE *0 VFIN BARRIER S-BOUNDARY OR CLB ) ;
 	## Saemieh leah akte åålmege jalhts joekehts laantine orre, gïele dïhte åålmegidie raasti dåaresth ektede.
 
 	#!! !!CC- and CS-Mapping
