@@ -43,7 +43,7 @@ LEXICON Rreal
                      +Cmp/Hyph+Cmp%-#:%-∑#              ProperNoun ; ! Proper nouns as the 2nd part of compounds for non-hyph.
                                                                       ! words. viessu-London goes through here.
 
- +Cmp/Hyph+Cmp/SplitR+Use/SpellNoSugg:%-                 ENDLEX     ; ! This to take care of Oahpo- ja dutkandept - want this in speller
+ +Cmp/Hyph+Cmp/SplitR+Use/SpellNoSugg+Cmp:%-                 ENDLEX     ; ! This to take care of Oahpo- ja dutkandept
 
 
 ! This is for compounding with hyphen. All entries REQUIRING a hyphen should point to this:
@@ -63,7 +63,7 @@ LEXICON RHyphReal
                                                                         ! London-Hull is covered here, whereas Hull-viessu
                                                                         ! is covered by RHyph + Noun.
 
- +Cmp/Hyph+Cmp/SplitR+Use/SpellNoSugg:%-                   ENDLEX     ; ! This to take care of Oahpo- ja dutkandept - want this in speller
+ +Cmp/Hyph+Cmp/SplitR+Use/SpellNoSugg+Cmp:%-                   ENDLEX     ; ! This to take care of Oahpo- ja dutkandept
 
 ! Proper noun compounds without hyphens are NOT presently covered - if they were
 ! to be added, they need to be marked +Err/Orth. Examples: LondonHull & viessuLondon.
