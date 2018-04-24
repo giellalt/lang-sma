@@ -368,7 +368,14 @@ LIST @SUBJ-QH = @SUBJ-QH ;
 LIST @TITLE = @TITLE ; 
 LIST @VOC = @VOC ; 
 LIST @X = @X ;
-
+LIST ADVL = @ADVL @ADVL> @ADVL< @<ADVL @>ADVL @-F<ADVL @-FADVL> ;  
+SET SUBJ = @<SUBJ OR @SUBJ> OR @SUBJ ;
+SET SPRED = @<SPRED OR @SPRED> OR @SPRED ;
+SET OPRED = @<OPRED OR @OPRED> OR @OPRED ;
+LIST FOBJ = @-F<OBJ @-FOBJ> ; 
+SET FMAINV = @-FMAINV OR @+FMAINV ;
+SET FAUXV = @-FAUXV OR @+FAUXV ;
+SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ;
 
 #!! * More sets
 
@@ -727,6 +734,7 @@ REMOVE:tjïrrh (N Pl) (0 ("tjïrrh" Po)) ;
 REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NPNH LINK NOT 0 TIME) ;
 	## Bïegke vaarjoej tjïrrh bïegkedi.
 REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
+REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 
 #!! Verbs
 
@@ -875,6 +883,14 @@ MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf IF (*-1 VFIN BARRIER S-BOUN
 	#$ Luste tjoejkedh.
 	# 
 
+MAP:OnlyPrfPrc (@-FMAINV) TARGET PrfPrc IF (NEGATE *-1 VFIN BARRIER BOS) ;
+	#$ Dellie giesie-eejehtimmie nåhkeme.
+
+
+SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ;
+
+#!! !__killifVinCohort__ This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+SELECT:killifVinCohort SYN-V  ;
 
 
 #!! !!PrfPrc
