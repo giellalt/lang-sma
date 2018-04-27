@@ -754,10 +754,11 @@ REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 REMOVE Der/InchL IF (0 ("skïemtjegåetie") OR ("roestegåetie") LINK 0 Nom OR Gen) ;
 	#$ skïemtjegåetieh skïemtjegåetien
 
-IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA LINK 1 ConNeg)  (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
+IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA OR ConNeg)  (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
 
 	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
 	## NEGATE: Laavloejigan jih tuhtjigan luste, jih gosse idtjigan åerieh jallh byøpmedh, die heehkigan jih beenghkigan dam baeniem guktie dihte gåetie edtja stoerre jih tjeekeds SJIDTEDH.
+	#% Ij leah luhpie skaajhvoeh årrodh daesnie!
 
 REMOVE:PrtInNeg Prs IF (0 Neg)(*1C ConNeg + Prt BARRIER NOT-ADV);
 	## Ij lin gujht daarah altese vielie jienebh biejjieh daesnie.
