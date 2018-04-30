@@ -530,7 +530,7 @@ LIST GRADE-ADV =  "aaptsah" "aaptsh" "ållesth" "allesth" "ååpsen" "aave" "aej
 #!! * BOUNDARY SETS
 
 
-SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIEGOSSE OR BOS OR EOS ;
+SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIEGOSSE OR BOS OR EOS OR @CVP ;
 SET REALCLB = CLB - COMMA ;
 
 SET SV-BOUNDARY = S-BOUNDARY OR Inf OR V-MAIN - PrsPrc ;
@@ -605,8 +605,9 @@ SUBSTITUTE (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-
 COPY:NNom (N Nom) EXCEPT Adv TARGET (Sem/Adr)  ;
 	## www.samediggi.fi http://yle.fi/sapmi lene62@gmail.com anja.irina.ahola(at)gmail.com
 
-
 SECTION  #!! !!@CODE@
+
+
 
 #!! !!Cycle 0
 
@@ -619,6 +620,8 @@ REMOVE:Nregex N-DER (0 N-DER-SUF) ;
 REMOVE:Aregex A-DER (0 A-DER-SUF) ;
 
 REMOVE:Nregex SUB:1 N-DER (0/* N-DER-SUF) ;	
+
+
 
 
 SET NOT-HYPH = N - Cmp/Hyph ;
@@ -635,6 +638,7 @@ SELECT:ArabNomPlc (Arab Nom) (-1 Sem/Plc)(NEGATE 1 Po) ;
 
 SELECT:Arab Arab  ; # In Apertium we get analysis both with and without the tag.
 
+SELECT:YearNom Sem/Year + Nom (-1 ("jaepie") + Gen) ;
 
 
 #!! Remove Num, ACR, ...
@@ -677,6 +681,12 @@ REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
 #REMOVE: ("<[a-zäöåøæï]>"r) IF (0 ("<[A-ZÄÖÅØÆÏ]>"r));
 	## J. A.	
 
+LIST NOT-SUR = "Saemie" "Trøndelag"  ;
+
+REMOVE:PlcSur Sem/Sur IF (0 NOT-SUR) ;
+
+REMOVE:PlcSur Sem/Plc IF (0 Sem/Sur LINK 0 Acc OR Nom OR Attr LINK -1 Sem/Mal OR Sem/Fem) ;
+	#$ Ella Holm Bull saemesti mohte idtjin gieh jeatja dejstie lohkehtæjjijste.
 
 LIST SEL-PROP = "Noerhtelaanth" "Såevmie" ;
 
@@ -747,6 +757,9 @@ REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NPNH LINK NOT 0 TIME) 
 	## Bïegke vaarjoej tjïrrh bïegkedi.
 REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
+
+
+
 
 #!! Verbs
 
@@ -875,9 +888,18 @@ MAP (@CVP) TARGET CS ;
 	
 MAP (@CVP) TARGET CC (0 ("mohte") OR ("men")) ;
 
-MAP (@CVP) TARGET CC (*-1 MAINV BARRIER S-BOUNDARY)(*1 MAINV BARRIER S-BOUNDARY);
+MAP (@CVP) TARGET CC (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
 
-#
+#!! Attributes
+SELECT:Attr Attr (0 VFIN) (1 N LINK *1 VFIN BARRIER S-BOUNDARY) ;
+	#$ Saemieh Aarborteste jih Vaapseste billin edtjin skuvlem Aarbortesne dassedh jis orre skuvle saemide Trøndelagesne tseegkesovvi.
+
+REMOVE:VFIN VFIN (0 N) (-1 Attr LINK *-1 VFIN BARRIER S-BOUNDARY) ;
+
+
+SECTION  #!! !!@CODE@
+
+
 MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY);
 MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC) OR (-1 PrfPrc));
 MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
@@ -887,7 +909,7 @@ MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NOT *1 PrfPrc OR Ger BARRIER S-BOUNDARY);
 MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg);
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR CC);
 
-MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) ;
+MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY) ;
 
 MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NOT *1 Inf OR PrfPrc BARRIER S-BOUNDARY) ;
 
@@ -1283,10 +1305,17 @@ REMOVE:Lea ("Lea") IF (-1 BOS OR PUNCT OR (":"))(1 A);
 
 	# Particular proper nouns
 	# -----------------------
+
+REMOVE:SaemieProp Prop IF (0 ("Saemie") + Pl) ;
+	#$ Saemieh Aarborteste jih Vaapseste billin edtjin skuvlem Aarbortesne dassedh jis orre skuvle saemide Trøndelagesne tseegkesovvi.
+
+
 LIST SAPMI-PROP-HEAD = "Sijte" "skuvle" "skovle" "misjovne" "learoeviertie" "parlamentarije" "statistihke" "Saervie" "Institudte" "Gielemoenehte" ;
 
   # Those combine with the propernoun Sápmi instead of sápmi
   
+
+
 LIST SAPMI-N-HEAD =  "gïele" "lidterature" "voestes" "sijjienomme" "tjaalaldahke" (PUNCT LEFT) ;
 		
 	# These should probably be unified later.
@@ -1304,7 +1333,28 @@ LIST SAPMI-N-HEAD =  "gïele" "lidterature" "voestes" "sijjienomme" "tjaalaldahk
 	
 #REMOVE:r1911 Prop IF (0 ("Saemie"))(NEGATE *1 SAPMI-PROP-HEAD BARRIER NPNH);
 	# We remove the last Prop-analysis.
-	
+
+
+# pronouns
+SELECT:rel Rel (0 ("guhte") LINK *-1 VFIN)(*1 VFIN) ;	
+	#$ Naaken jeatjebh dejstie internate-barkijste aaj saemiestin, guktie Skjolvor Joma jih Åsta Larsen guhth desnie ståantetjem barkigan.
+
+# verb lemmas
+
+# TV OR IV
+SELECT:V_TV TV (0 IV - COPULAS LINK 1 EOS)(-1 Acc) ;
+	#$ Dellie maa bååstede mïnnijægan dahkoe Onneponnem leehpigan.
+
+
+# "böötedh" OR "båetedh"
+SELECT:LEXbåetedh ("båetedh") (0 ("böötedh")) ((-1 Ill OR Ela) OR (1 Ill OR Ela)) ;
+	#$ Ealla lij desnie boelhketjem goh lohkehtæjja-skuvleste bøøti.
+
+
+# "maehtedh" OR "meehtedh"
+SELECT:LEXmaehtedh ("maehtedh") (0 ("meehtedh")) ((-1 Sem/Lang OR Inf) OR (1 Sem/Lang OR Inf)) ;
+
+
 	
 	# SAFE RULES
 	# ----------
