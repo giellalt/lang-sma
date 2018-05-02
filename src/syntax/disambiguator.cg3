@@ -416,9 +416,9 @@ SET GUJMIE = (Pl Gen) OR (Pl1 Gen) OR (Pl2 Gen) OR (Pl3 Gen) ;
 
 SET NOT-NPMOD = WORD - PRE-NP-HEAD OR ABBR OR @CVP ;                     
 
-SET NOT-NPMODADV    = WORD - PRE-NP-HEAD - Adv - (Pcle) ; # OR MO                      
+SET NOT-NPMODADV = WORD - PRE-NP-HEAD - Adv - (Pcle) ; # OR MO                      
 
-SET NOT-NPMODADV-INDEF   = WORD - PRE-NP-HEAD - Adv - Indef ;              
+SET NOT-NPMODADV-INDEF = WORD - PRE-NP-HEAD - Adv - Indef ;              
 
 
 
@@ -430,9 +430,6 @@ SET PX = PxSg1 OR PxSg2 OR PxSg3 OR PxDu1 OR PxDu2 OR PxDu3 OR PxPl1 OR PxPl2 OR
 LIST FAMILY = "aahka" "aahkove" "aajja" "aajjove" "aajkoehkadtjh" "aajkohke" "aajnehke" "aarpije" "aehtjaahka" "aehtjaajja" "aehtjie" "baernie" "boelve" "daktere" "eejhtegh" "elkie" "fijrie" "fuelhkie" "gaalla" "geelle" "geellege" "gåeskie" "gåeskuve" "gåetehke" "gåmma" "gåmmebe" "ietnie" "jiekie" "jiekuve" "jijmie" "jijmuve" "jyöne" "jöömmetje" "krist’aehtjie" "krist’ietnie" "laahkoe" "laevie" "laeviehkadtjh" "maadteraahka" "maadteraajja" "maadtoe" "maake" "maaketje" "maana" "meata" "moehrele" "muahra" "månnja" "mænnja" "neapede" "neebne" "nååte" "nïejte" "onnevïelle" "onneåabpa" "seasa" "slïekte" "stoerrevïelle" "stoerreåabpa" "sïesele" "tjidtjaahka" "tjidtjaajja" "tjidtjie" "tjietsie" "tjietsuve" "voehpe" "voehpealmetjh" "vuanove" "vïelle" "vïjve" "åabpa" "åabpetjh" "åerpele" "åerpene" "åerpienadtjh" "vïelletjh" ;
 
 
- 
-# those can both be buildings and represent humans
- # Duomma:lea
 
 LIST INSTITUTION = "jarnge" "kultuvrejarnge" "raerie" "kultuvreraerie" ; 
 
@@ -456,12 +453,8 @@ LIST LESSON =  "kuvsje" ;
 
 LIST OTHER-INDUSTRY = "bálvalus#ealáhus" ;
 
-# Not related to certain political verbs
- # Duomma:lea
 
 LIST POLITICAL-INDUSTRY = "alkohol#politihkka"  ;
- # Related to certain political verbs
- # Duomma:lea
  
 SET INDUSTRY = POLITICAL-INDUSTRY OR OTHER-INDUSTRY ;
 
@@ -536,12 +529,12 @@ LIST GRADE-ADV =  "aaptsah" "aaptsh" "ållesth" "allesth" "ååpsen" "aave" "aej
 #!! * BOUNDARY SETS
 
 
-SET S-BOUNDARY = (Pron Interr) OR (Pron Rel) OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIEGOSSE OR BOS OR EOS OR @CVP ;
+SET S-BOUNDARY = Interr OR Rel OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIEGOSSE OR BOS OR EOS OR @CVP ;
 SET REALCLB = CLB - COMMA ;
 
 SET SV-BOUNDARY = S-BOUNDARY OR Inf OR V-MAIN - PrsPrc ;
 
-SET NP-BOUNDARY = BOS OR EOS OR REALCLB OR VFIN OR Inf OR (Actio Ess) OR ConNeg OR VGen OR Po OR Pr OR Pcle OR Interj OR CS ;
+SET NP-BOUNDARY = BOS OR EOS OR REALCLB OR VFIN OR Inf OR Ger OR ConNeg OR VGen OR Po OR Pr OR Pcle OR Interj OR CS ;
 
 # The following set contains the one-letter abbrs from abbr-sma-lex.txt
 LIST SOMESMALLABBR = "a" "r" "c" "d" "e" "f" "f" "g" "h" "i" "l" "m" "b" "j" "s" ;
@@ -600,16 +593,27 @@ SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR B
 
 BEFORE-SECTIONS  #!! !!@CODE@
 
-#!! Rule for adding Sem/Date as a tag to readings which looks like dates
+#!! Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes når vi får felles numeralfil fra shared)
 SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][1-2][0-9][0-9][0-9]>"r Num) ;
 SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-9][.][0-9][.][1-2][0-9][0-9][0-9]>"r Num) ;
 SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][0-9][0-9]>"r Num) ;
 SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Year) TARGET ("<[1-2][0-9][0-9][0-9]>"r Num) ;
 
 #!! !!Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
-SUBSTITUTE (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z][a-z].*[.][a-z][a-z].*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
-COPY:NNom (N Nom) EXCEPT Adv TARGET (Sem/Adr)  ;
+#SUBSTITUTE (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z][a-z].*[.][a-z][a-z].*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
+#COPY:NNom (N Nom) EXCEPT Adv TARGET (Sem/Adr)  ;
 	## www.samediggi.fi http://yle.fi/sapmi lene62@gmail.com anja.irina.ahola(at)gmail.com
+
+
+#!! * Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
+LIST JIEHTEDH = "jiehtedh" "stilledh" "vaestiedidh" ;
+SET HUMAN-INDIVIDUAL = Sem/Mal OR Sem/Fem OR Sem/Sur OR Sem/Hum ;
+
+ADD:jiehtedh1 <vdic> TARGET JIEHTEDH (0 VFIN OR PrfPrc LINK *-1 COMMA BARRIER WORD)((1 HUMAN-INDIVIDUAL + Nom) OR (1 Attr LINK 1 HUMAN-INDIVIDUAL + Nom)) ; 
+	#$ «Manne dan aavosne juhkoe giesie lea,» tjidtjebe jeahta.
+	
+ADD:jiehtedh2 <vdic> TARGET JIEHTEDH (0 VFIN OR PrfPrc LINK 1 EOS) (-1 HUMAN-INDIVIDUAL + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
+	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
 
 SECTION  #!! !!@CODE@
 
@@ -620,6 +624,7 @@ SECTION  #!! !!@CODE@
 #!! Removing non-lexicalised forms when lexicalised 
 
 REMOVE:PassS (Der/PassS) IF (0 Der/PassS + $$PERS-TAG)(0 Ind + $$PERS-TAG); # ikke bra
+REMOVE:PassS (Der/PassS) IF (0 Der/PassS + PrfPrc)(0 PrfPrc); # ikke bra
 
 REMOVE:Vregex V-DER (0 V-DER-SUF) ;
 REMOVE:Nregex N-DER (0 N-DER-SUF) ;
@@ -628,6 +633,11 @@ REMOVE:Aregex A-DER (0 A-DER-SUF) ;
 REMOVE:Nregex SUB:1 N-DER (0/* N-DER-SUF) ;	
 
 
+#REMOVE:testA A-DER (0 LEX-A);
+
+#REMOVE:testV4 V-DER (0 LEX-V) ;  ## should be restriction
+#REMOVE:testN N-DER (0 LEX-N LINK NOT 0 PX) ;
+
 
 
 SET NOT-HYPH = N - Cmp/Hyph ;
@@ -635,8 +645,13 @@ SET NOT-HYPH = N - Cmp/Hyph ;
 REMOVE:hyph SUB:1 Cmp/Hyph (0/* NOT-HYPH) ;	
 
 
+REMOVE Der/InchL IF (0 N LINK 0 Nom OR Gen) ;
+	#$ skïemtjegåetieh roestegåetie
+
 REMOVE:waitwithDis (2 V) (0 (1 V)) ;
 
+
+#!! !Numerals and ACR
 SELECT:ArabNom (Arab Nom) (-1 BOS)(NEGATE 1 Po) ;
 SELECT:Arab1 (Arab Nom)(0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
@@ -647,12 +662,13 @@ SELECT:Arab Arab  ; # In Apertium we get analysis both with and without the tag.
 SELECT:YearNom Sem/Year + Nom (-1 ("jaepie") + Gen) ;
 
 
-#!! Remove Num, ACR, ...
 REMOVE:R_Num Num (0 Neg);
 REMOVE:R_ACR ACR (0 CC);
 	## Im leah naan saemieskuvlesne vaadtseme.
 	## Jih daejtie gærjide edtjem aaj sjeakodh, – jijtje jeahta jih aalka sjeakodh.
 
+
+#!! !Interj
 
 #foreløpig regel: 
 SELECT:coorInterj Interj (*-1 Interj BARRIER WORD)(1 EOS OR COMMA OR PUNCT) ; 
@@ -661,15 +677,10 @@ IFF:S_Interj Interj (*-1 BOS BARRIER WORD)(1 EOS OR COMMA OR PUNCT OR Interj) ;
 	#$ Nåå, skodtede amma voesside tsagkedh.
 
 
-#REMOVE:testA A-DER (0 LEX-A);
-
-#REMOVE:testV4 V-DER (0 LEX-V) ;  ## should be restriction
-#REMOVE:testN N-DER (0 LEX-N LINK NOT 0 PX) ;
-
 
 #!! Possessive suffix
 # Probably exists only for Refl and for kinship terms
-REMOVE:APx A + PX ; #Foreløpig revel, vi gjør unntak etterhvert
+REMOVE:APx A + PX ; #Foreløpig regel, vi gjør unntak etterhvert
 
 REMOVE:PrfPrc_Not_PxSg1 PxSg1 IF (0 PrfPrc);
 	## Mijjieh saemieh daarah aaj aalkeme gærjah lohkedh.
@@ -686,10 +697,6 @@ REMOVE:R_Nom_ABBR_Prop Nom IF (0 (ABBR Attr) OR (Prop Attr))(1  Prop OR ABBR);
 REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
 	## Trond Trosterud
 
-#REMOVE:CAPABBR ("<[a-zäöåøæï]>"r) IF  (0 SOMECAPABBR); #NOTUSED does not work
-#REMOVE: ("j") IF (0 ("J"));
-#REMOVE: ("<[a-zäöåøæï]>"r) IF (0 ("<[A-ZÄÖÅØÆÏ]>"r));
-	## J. A.	
 
 LIST NOT-SUR = "Saemie" "Trøndelag"  ;
 
@@ -708,7 +715,15 @@ SELECT:PropNom Nom (0C Prop + Sg LINK -1 Dem + Sg + Nom) ;
 	#$ Daate Karsten ...
 
 
-#!! Trivialia
+#!! !Verb or not
+
+REMOVE:vfinIfGen VFIN (0 N LINK -1 Indef + Gen) ;
+	#$ Mubpien aereden jïevehtahkh jïh ålloe-råavkah bïjlese guedtieh.
+
+
+
+
+#!! !Particles
 
 
 SELECT:vaejtie Pcle (0 ("vaejtie") LINK *-1 BOS BARRIER WORD)(1 Pers) ;
@@ -717,10 +732,9 @@ SELECT:vaejtie Pcle (0 ("vaejtie") LINK *-1 BOS BARRIER WORD)(1 Pers) ;
 SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS BARRIER WORD)(1 Pers OR N LINK *1 ("?")) ;
 	#$ Mejtie aehtjie gaantede?
 
-SELECT:imprt Imprt ((-1 CLB) OR (*-1 BOS BARRIER WORD))(1 ("amma")) ;
-	#$ Nåå, skodtede amma voesside tsagkedh.
 
 
+#!! !Dem
 
 
 REMOVE:prop_daate Prop IF (0 Pers); # too strong
@@ -763,12 +777,18 @@ REMOVE:NotDem2 Dem IF (0 Pers)(NEGATE *1 NOMEN-NOT-PRON BARRIER NOT-NPMOD) (NEGA
 	## Dihte joekoen lustes jalhts ajve akten jaepien båeries.
 
 
+#!! !Genitive
+
+
 SELECT:NGen (N Gen)(-1C (Dem Gen)) ;
 	## Daam jijjem hov lea fealadamme, daan aereden varki bøøti, tjoevere åadtjodh åeriestidh.
-#SELECT:PronPers (Pron Pers Gen) (0 Pron LINK 1C Po) ; #dan åvteste is mostly Dem, repalced by the two following rules:
+#SELECT:PronPers Pers + Gen (0 Pron LINK 1C Po) ; #dan åvteste is mostly Dem, repalced by the two following rules:
 	## Johan jih aahkam joekoen gaskese dan åvteste satnem veelji.
 REMOVE:PcleNotPron ("dån" Pcle) (0 (Pron Gen) LINK 1 Po) ;
 REMOVE:AttrNotGen Attr (0 (Pron Gen) LINK 1 Po) ;
+
+
+#!! !Adjective or not
 
 REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 N OR (Cmpnd))(*1 N BARRIER NOT-NPMODADV) ;
 	## Mohte ohtsedibie amma treavkah jallh tjielhketjem jih minnibie doh deavabaahkoeh gierestallibie.
@@ -779,6 +799,7 @@ REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 FORMS)(1 FORMS) ;
 SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR COMMA) ;
 	## Helena, jallh Aili man dan aaj nomme, lea saemien maadtoste.
 
+#!! !Postpositions
 
 REMOVE:tjïrrh (N Pl) (0 ("tjïrrh" Po)) ;
 REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NOT-NPMOD LINK NOT 0 TIME) ;
@@ -787,7 +808,7 @@ REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 
 
-#!! Po or Pr
+#!! !Po or Pr
 SELECT:PoGena Po (0 Pr)(-1 Gen) ;
 REMOVE:Pr Pr (NEGATE *1 N BARRIER NOT-NPMOD) ;
 REMOVE:PoGenb Po (NEGATE -1 Gen) ;
@@ -796,14 +817,9 @@ SELECT:PoGenb Po (-1 Gen) ;
 
 #!! Verbs
 
-
 SELECT:VPl2 Pl2 (0 VFIN LINK -1 Pers + Pl2 + Nom) ;
 
-REMOVE Der/InchL IF (0 ("skïemtjegåetie") OR ("roestegåetie") LINK 0 Nom OR Gen) ;
-	#$ skïemtjegåetieh skïemtjegåetien
-
-IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA OR ConNeg)  (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
-
+IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA OR ConNeg) (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
 	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
 	## NEGATE: Laavloejigan jih tuhtjigan luste, jih gosse idtjigan åerieh jallh byøpmedh, die heehkigan jih beenghkigan dam baeniem guktie dihte gåetie edtja stoerre jih tjeekeds SJIDTEDH.
 	#% Ij leah luhpie skaajhvoeh årrodh daesnie!
@@ -835,8 +851,12 @@ REMOVE:Imprtd Imprt (*-1 WORD BARRIER CC OR COMMA OR BOS)(NOT 0 Neg)(NEGATE -1 C
 	## Aejkie sjïdteme åarjese Voernesen vuestie jarredh.
 SELECT:Imprte (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) ;
 
+SELECT:imprt Imprt ((-1 CLB) OR (*-1 BOS BARRIER WORD))(1 ("amma")) ;
+	#$ Nåå, skodtede amma voesside tsagkedh.
+
+
 # Select the finite verb reading if this is the only finite verb reading within the clause
-SELECT:sjur VFIN IF ( NEGATE *0 VFIN BARRIER S-BOUNDARY OR CLB ) ;
+#SELECT:vfin VFIN IF (NEGATE *0 V BARRIER S-BOUNDARY OR CLB) ;
 	## Saemieh leah akte åålmege jalhts joekehts laantine orre, gïele dïhte åålmegidie raasti dåaresth ektede.
 
 	#!! !!CC- and CS-Mapping
@@ -932,7 +952,18 @@ SELECT:Attr Attr (0 VFIN) (1 N LINK *1 VFIN BARRIER S-BOUNDARY) ;
 REMOVE:VFIN VFIN (0 N) (-1 Attr LINK *-1 VFIN BARRIER S-BOUNDARY) ;
 
 
+#!! !!PrfPrc
+
+#!! Select PrfPrc if DerNomAct
+
+#SELECT: PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
+SELECT:PrfPrs_DerNomAct PrfPrc (0 (Der/NomAct) LINK *-1 S-BOUNDARY BARRIER V)(NEGATE *1 V BARRIER S-BOUNDARY) ;
+	## Disse maahtam tjaeledh gosse sijhtem, jih aaj lohkedh gosse båarasåbpoe  sjidteme.
+	## Manne aktem gärjam man nomme jupmele-vaerie lohkeme.
+
 SECTION  #!! !!@CODE@
+
+#!! !! Mapping verbs
 
 
 MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY);
@@ -945,6 +976,8 @@ MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg);
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR CC);
 
 MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY) ;
+MAP (@+FMAINV) TARGET VFIN IF (0 <vdic>)  ;
+MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
 
 MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NOT *1 Inf OR PrfPrc BARRIER S-BOUNDARY) ;
 
@@ -962,15 +995,6 @@ SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V 
 #!! !__killifVinCohort__ This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 SELECT:killifVinCohort SYN-V  ;
 
-
-#!! !!PrfPrc
-
-#!! Select PrfPrc if DerNomAct
-
-#SELECT: PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
-SELECT:PrfPrs_DerNomAct PrfPrc (0 (Der/NomAct) LINK *-1 S-BOUNDARY BARRIER V)(NEGATE *1 V BARRIER S-BOUNDARY) ;
-	## Disse maahtam tjaeledh gosse sijhtem, jih aaj lohkedh gosse båarasåbpoe  sjidteme.
-	## Manne aktem gärjam man nomme jupmele-vaerie lohkeme.
 
 #!! !!Person
 
@@ -1040,9 +1064,11 @@ SELECT:IneIfEss/Com (N Pl Ine) (0 (N Ess) OR (N Sg Com)) (1 ("viedtedh" V* TV De
 REMOVE:EssIfCom/Ine (N Ess) (0 (N Sg Com) OR (N Pl Ine)) (*-1 (Pron Sg Com) OR (Pron Pl Ine) BARRIER NOT-NPMOD OR S-BOUNDARY) ;
 # dajnie barkoeplaanine
 
-SELECT:NPlIll (N Pl Ill) (0 (N Pl Acc)) (NOT *0 (V TV) BARRIER S-BOUNDARY) ;
+SELECT:NPlIll (N Pl Ill) (0 (N Pl Acc)) (NOT 1 (V TV)) ;
 # ..., mejtie juridigkesne veadtjaldahkesne staatide, jih deklarasjovnide.
 
+SELECT:NPlAcc Acc (0 (N Pl Acc) LINK 1 TV) ;
+	#$ “Nåå, skodtede amma voesside tsagkedh", aehtjie maanide stillie.
 
 #!! !Verb or Noun
 
