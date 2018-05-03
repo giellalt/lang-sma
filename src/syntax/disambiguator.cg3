@@ -501,6 +501,7 @@ LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ;
 
 LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" ;
+LIST OPRED-V = "tuhtjedh" "utnedh" ;
 
 LIST COM-ADJ = "latjkes" ;
 
@@ -529,7 +530,7 @@ LIST GRADE-ADV =  "aaptsah" "aaptsh" "ållesth" "allesth" "ååpsen" "aave" "aej
 #!! * BOUNDARY SETS
 
 
-SET S-BOUNDARY = Interr OR Rel OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR GUKTIEGOSSE OR BOS OR EOS OR @CVP ;
+SET S-BOUNDARY = Interr OR Rel OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS OR @CVP ; #GUKTIEGOSSE
 SET REALCLB = CLB - COMMA ;
 
 SET SV-BOUNDARY = S-BOUNDARY OR Inf OR V-MAIN - PrsPrc ;
@@ -606,13 +607,13 @@ SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Year) TARGET ("<[1-2][0-9][0-9][0-9]>"r Nu
 
 
 #!! * Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
-LIST JIEHTEDH = "jiehtedh" "stilledh" "vaestiedidh" ;
+LIST JIEHTEDH = "bæjhkoehtidh" "gæljodh" "jiehtedh" "stilledh" "vaestiedidh" ;
 SET HUMAN-INDIVIDUAL = Sem/Mal OR Sem/Fem OR Sem/Sur OR Sem/Hum ;
 
-ADD:jiehtedh1 <vdic> TARGET JIEHTEDH (0 VFIN OR PrfPrc LINK *-1 COMMA BARRIER WORD)((1 HUMAN-INDIVIDUAL + Nom) OR (1 Attr LINK 1 HUMAN-INDIVIDUAL + Nom)) ; 
+ADD:jiehtedh1 <vdic> TARGET JIEHTEDH (0 VFIN OR PrfPrc LINK *-1 COMMA BARRIER WORD)((1 N + Nom) OR (1 Attr LINK 1 N + Nom)) ; 
 	#$ «Manne dan aavosne juhkoe giesie lea,» tjidtjebe jeahta.
 	
-ADD:jiehtedh2 <vdic> TARGET JIEHTEDH (0 VFIN OR PrfPrc LINK 1 EOS) (-1 HUMAN-INDIVIDUAL + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
+ADD:jiehtedh2 <vdic> TARGET JIEHTEDH (0 VFIN OR PrfPrc LINK 1 EOS) (-1 N + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
 	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
 
 SECTION  #!! !!@CODE@
@@ -624,7 +625,7 @@ SECTION  #!! !!@CODE@
 #!! Removing non-lexicalised forms when lexicalised 
 
 REMOVE:PassS (Der/PassS) IF (0 Der/PassS + $$PERS-TAG)(0 Ind + $$PERS-TAG); # ikke bra
-REMOVE:PassS (Der/PassS) IF (0 Der/PassS + PrfPrc)(0 PrfPrc); # ikke bra
+REMOVE:PassS (Der/PassS) IF (0 Der/PassS + PrfPrc)(0 PrfPrc); 
 
 REMOVE:Vregex V-DER (0 V-DER-SUF) ;
 REMOVE:Nregex N-DER (0 N-DER-SUF) ;
@@ -808,11 +809,24 @@ REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 
 
+#!! !Adverbs
+SELECT:meatanAdv Adv IF (0 ("meatan") LINK 1 ("vaeltedh")) ;
+
+SELECT:aarehkeAdv Adv IF (0 ("aarehke") LINK 1 Sem/Time) ;
+	#$ Dallahmasten vaedtsieh åarajidh guktie maehtieh aarehke aereden tjuedtjielidh.
+
+SELECT:Sem/TimeN N (0 Sem/Time LINK 0 Adv LINK -1 ("aarehke")) ;
+	#$ Dallahmasten vaedtsieh åarajidh guktie maehtieh aarehke aereden tjuedtjielidh.
+
+
 #!! !Po or Pr
 SELECT:PoGena Po (0 Pr)(-1 Gen) ;
+	#$ Minngemes dellie ebrievaarjoeh gaeblien nualan rijtieh.
 REMOVE:Pr Pr (NEGATE *1 N BARRIER NOT-NPMOD) ;
 REMOVE:PoGenb Po (NEGATE -1 Gen) ;
 SELECT:PoGenb Po (-1 Gen) ;
+SELECT:PoGena Gen (-1 Gen) ;
+	#$ Minngemes dellie ebrievaarjoeh gaeblien nualan rijtieh.
 
 
 #!! Verbs
@@ -975,16 +989,22 @@ MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NOT *1 PrfPrc OR Ger BARRIER S-BOUNDARY);
 MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg);
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR CC);
 
-MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY) ;
+MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Inf LINK *-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf)  ;
 MAP (@+FMAINV) TARGET VFIN IF (0 <vdic>)  ;
 MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
 
 MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NOT *1 Inf OR PrfPrc BARRIER S-BOUNDARY) ;
 
-MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf IF (*1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
-MAP (@-FMAINV) TARGET Ger OR ConNeg OR PrfPrc OR Inf IF (*-1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
+MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
+MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*-1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
+MAP (@-FMAINV) TARGET ConNeg IF (*-1 Neg BARRIER S-BOUNDARY) ;
+MAP (@-FMAINV) TARGET Ger OR PrfPrc  ;
 	#$ Luste tjoejkedh.
 	# 
+
+MAP:InfCoor (@-FMAINV) TARGET Inf IF (*-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf + @-FMAINV ) ;
+	#$ Stoerejïevegem maehtebe vaeltedh jïh dam råafojne utnedh.
+
 
 MAP:OnlyPrfPrc (@-FMAINV) TARGET PrfPrc IF (NEGATE *-1 VFIN BARRIER BOS) ;
 	#$ Dellie giesie-eejehtimmie nåhkeme.
@@ -1054,9 +1074,13 @@ REMOVE:PropAttr (Prop Attr) IF (NOT 1 Prop);
 SELECT:GenIfLeaNom Gen (1 ("lea" V) LINK 0 Pl3 OR Sg3 LINK *1 (N Nom) BARRIER NOT-NPMOD) ; 
 	# Dan lin baenieh njaelmesne.
 
-
 SELECT:AccIfSVOV (Acc Sg) IF (*-1C INFV BARRIER NOT-NPMOD)(1C V); # consider VFIN for INFV
 	## Jis sååjhtoe ålkoelaantesne gogka akth dienesjidh dellie barkosne tjuara aelkedh dam laanten gïelem soptsestidh.
+
+SELECT:Ess Ess (0 (N Com) LINK 1 OPRED-V)(-1 Acc) ;
+	#$ Stoerejïevegem maehtebe vaeltedh jïh dam råafojne utnedh.
+
+
 	
 SELECT:IneIfEss/Com (N Pl Ine) (0 (N Ess) OR (N Sg Com)) (1 ("viedtedh" V* TV Der1 Der/ldahke N Sg Ine) OR ("vïedteldahke" N Sg Ine)) ;
 # Njolkedassh ålmine veadtaldahkesne
