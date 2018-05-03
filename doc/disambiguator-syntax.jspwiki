@@ -93,7 +93,6 @@ Der/vuota
 MAINV
 
 
-
 * More sets
 
 
@@ -110,8 +109,13 @@ MAINV
 
 
 
-* Noun sets
 
+
+
+
+
+
+* Noun sets
 
 
 
@@ -194,17 +198,24 @@ MAINV
 
 
 
+
  !!!Disambiguation #
 
 
 !!@NO CODE@
 
-Rule for adding Sem/Date as a tag to readings which looks like dates
+Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes når vi får felles numeralfil fra shared)
 
 !!Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
 
 
+* Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
+
+
+
 !!@NO CODE@
+
+
 
 !!Cycle 0
 
@@ -217,9 +228,21 @@ Removing non-lexicalised forms when lexicalised
 
 
 
-Remove Num, ACR, ...
 
 
+
+
+
+
+
+!Numerals and ACR
+
+
+
+
+
+
+!Interj
 
 
 
@@ -236,7 +259,27 @@ Proper nouns
 
 
 
-Trivialia
+
+
+
+
+
+
+
+!Verb or not
+
+
+
+
+
+!Particles
+
+
+
+
+
+
+!Dem
 
 
 
@@ -249,7 +292,19 @@ Trivialia
 
 
 
+!Genitive
 
+
+
+
+!Adjective or not
+
+
+!Postpositions
+
+
+
+!Po or Pr
 
 
 Verbs
@@ -259,9 +314,9 @@ Verbs
 
 
 
-
-
 Imperative
+
+
 
 
 
@@ -286,16 +341,29 @@ Mapping @CVP to all CS
 
 
 
-
-
-
-
+Attributes
 
 
 
 !!PrfPrc
 
 Select PrfPrc if DerNomAct
+
+
+!!@NO CODE@
+
+Mapping verbs
+
+
+
+
+
+
+
+
+
+
+!__killifVinCohort__ This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 
 
 !!Person
@@ -396,10 +464,6 @@ Rel or Interr
 
 
 
-Po or Pr
-
-
-
 Adv or Po/Pr
 
 
@@ -440,6 +504,20 @@ Rule set taken from sme
 
 
 Substituting Prop tags 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
