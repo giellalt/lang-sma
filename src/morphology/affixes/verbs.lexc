@@ -99,7 +99,7 @@ LEXICON NEG  !!= * __@CODE@__
       +Ind+Prs:     IJ-PRES   ;
       +Ind+Prt:idtj VSUF-PRT  ;
         +Imprt:aell NEGIMP    ;
- +Imprt+Use/NG:oll  OLLE      ;
+      +ImprtII:oll  OLLE      ;
       +Ind+Prt:     IJ-COPULA ;
 
 
@@ -722,7 +722,7 @@ LEXICON ÅEREDH_TV   !!= * __@CODE@__ row A - Group I   NO -øø-UMLAUT!!!!
 LEXICON TJEARODH_TV  !!= * __@CODE@__
                     +V+TV:                  TJEARODH ;
  +V+TV+Der3+Der/PassL+Uml:%»%^2UMLesovv     SOVVEDH  ;
-      +V+TV+Der/PassS+Uml:%»%^PASSUML       VÅÅJNEDH ;
+      +V+TV+Der/PassS+Uml:%»%^PASSUML       VÅÅJNEDH_notPrfPrc ;
     +V+TV+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH  ; !Passive, only from transitive verbs
      +V+TV+Der1+Der/lg:%»%^PASSUMLelg    LGIDH    ; !Passive, only from transitive verbs
 
@@ -730,7 +730,7 @@ LEXICON TJEARODH_TV  !!= * __@CODE@__
 LEXICON TJEARODH_IV  !!= * __@CODE@__
                     +V+IV:              TJEARODH     ;
  +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv IV_PASSIVE_L ;
-      +V+IV+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S ;
+      +V+IV+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S_notPrfPrc ;
 
 
 LEXICON TJEARODH   !!= * __@CODE@__ row C - Group II
@@ -1194,7 +1194,7 @@ LEXICON SÅÅJHTEDH_IV  !!= * __@CODE@__
 LEXICON BÅÅHKEDH_IV  !!= * __@CODE@__
                 +V+IV:            BÅÅHKEDH     ;
  +V+IV+Der3+Der/PassL:e%»sovv     IV_PASSIVE_L ;
-  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+  +V+IV+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S_notPrfPrc ;
 
 
 LEXICON BÅÅHKEDH   !!= * __@CODE@__ row E - Group V
@@ -1262,6 +1262,14 @@ LEXICON SÅÅJHTEDH_CONT   !!= * __@CODE@__ row E - Group V
 ! +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld FINAL1 ; !
 
 LEXICON VÅÅJNEDH  !!= * __@CODE@__
+           +V+IV+PrfPrc:%>eme            FINAL1           ; !@C.NeedNoun@ ?
+  +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd        ;
+								  	   	    VÅÅJNEDH_REST ;
+
+LEXICON VÅÅJNEDH_notPrfPrc
+										    VÅÅJNEDH_REST ;
+
+LEXICON VÅÅJNEDH_REST 
           +V+IV+Ind+Prs:%>               VSUF-V-EVEN-PRS  ;
           +V+IV+Ind+Prt:%>               VSUF-PRT         ;
             +V+IV+Imprt:%>               VSUF-IV-EVEN-IMP ;
@@ -1273,12 +1281,10 @@ LEXICON VÅÅJNEDH  !!= * __@CODE@__
               +V+IV+Ger:%>eminie         FINAL1           ;
 ! +V+IV+PrsPrc:%>ije FINAL1 ;
 ! +V+IV+PrsPrc:%>ijes  FINAL1 ;
-           +V+IV+PrfPrc:%>eme            FINAL1           ; !@C.NeedNoun@ ?
            +V+IV+ConNeg:%>h              FINAL1           ;
 ! Derivations
 ! -----------
 ! +V+IV+Der3+Der/NomAg:%»ij@C.NeedNoun@     N_ODD ;
-  +V+IV+Der3+Der/NomAct:%»em  flagNomActOdd        ;
      +V+IV+Der1+Der/les:e%»l             LES              ;
  +V+IV+Der3+Der/InchL+V:%»egået          GÅETEDH          ;
  +V+IV+Der1+Der/st+V:%»est            DÅAJVOEHTIDH     ;
@@ -1296,6 +1302,7 @@ LEXICON VÅÅJNEDH  !!= * __@CODE@__
 ! +V+IV+Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld FINAL1 ; !
 
 ! passiv Der/d = dovvedh.
+
 
 
 LEXICON GÖÖLEDH_TV  !!= * __@CODE@__
@@ -1740,6 +1747,16 @@ LEXICON IV_PASSIVE_L  !!= * __@CODE@__ - Passive of intransitive verbs => impers
 
 
 LEXICON IV_PASSIVE_S   !!= * __@CODE@__ row E - Group V  NB! FOR already derivated PASSIVES!!!
+                +V+IV+PrfPrc:%>eme       FINAL1        ;
+                                     IV_PASSIVE_S_REST ;
+
+LEXICON IV_PASSIVE_S_notPrfPrc  
+                                     IV_PASSIVE_S_REST ;
+! Derivations
+! -----------
+       +V+IV+Der3+Der/NomAct:%»em        flagNomActOdd ;
+
+LEXICON IV_PASSIVE_S_REST  
            +V+IV+Ind+Prs+Sg3:%>oe        FINAL1        ;
            +V+IV+Ind+Prs+Pl3:%>X2h       FINAL1        ;
            +V+IV+Ind+Prt+Sg3:%>i         FINAL1        ;
@@ -1753,11 +1770,7 @@ LEXICON IV_PASSIVE_S   !!= * __@CODE@__ row E - Group V  NB! FOR already derivat
                    +V+IV+Ger:%>eminie    FINAL1        ;
 !               +V+IV+PrsPrc:%>ije       FINAL1        ;
 !               +V+IV+PrsPrc:%>ijes      FINAL1        ;
-                +V+IV+PrfPrc:%>eme       FINAL1        ;
                 +V+IV+ConNeg:%>h         FINAL1        ;
-! Derivations
-! -----------
-       +V+IV+Der3+Der/NomAct:%»em        flagNomActOdd ;
 
 
 LEXICON LGIDH  !!= * __@CODE@__
