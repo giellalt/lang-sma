@@ -377,6 +377,7 @@ LIST FOBJ = @-F<OBJ @-FOBJ> ;
 SET FMAINV = @-FMAINV OR @+FMAINV ;
 SET FAUXV = @-FAUXV OR @+FAUXV ;
 SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ;
+SET INF-SYN = SUBJ OR SPRED OR OBJ OR ADVL ;
 
 #!! * More sets
 
@@ -468,7 +469,7 @@ LIST NORGA = "Dánmárku-#Norga" "davvi#Norga" "Davvi-Norga" "gaska-#Norga" "Nor
 LIST REALCOPULAS = "lea" ;
 
 # The set COPULAS is for predicative constructions
-LIST COPULAS = REALCOPULAS ;
+SET COPULAS = REALCOPULAS ;
 
 SET V-NOT-COP = V - COPULAS ;
 
@@ -810,6 +811,10 @@ REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 
 
 #!! !Adverbs
+
+SELECT:dusnieAdv Adv IF (0 ("dusnie") LINK 1 Adv OR EOS OR Prop) ;
+	#$ Dusnie aaj buesjies kraanna Hulda.
+
 SELECT:meatanAdv Adv IF (0 ("meatan") LINK 1 ("vaeltedh")) ;
 
 SELECT:aarehkeAdv Adv IF (0 ("aarehke") LINK 1 Sem/Time) ;
@@ -979,6 +984,13 @@ SECTION  #!! !!@CODE@
 
 #!! !! Mapping verbs
 
+MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV);    
+	#$ Lustes tjoejkedh.
+MAP @<SUBJ TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr));
+	#$ Lustes aate tjoejkedh.
+	
+MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER V LINK -1 COPULAS)(1 EOS);
+	#$ Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
 
 MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY);
 MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC) OR (-1 PrfPrc));
@@ -987,9 +999,10 @@ MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
 MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 V BARRIER S-BOUNDARY OR CC);
 MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NOT *1 PrfPrc OR Ger BARRIER S-BOUNDARY);
 MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg);
-MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR CC);
+MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom);
+	#% Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
 
-MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Inf LINK *-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf)  ;
+MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Inf LINK *-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf)(NOT 0 INF-SYN) ;
 MAP (@+FMAINV) TARGET VFIN IF (0 <vdic>)  ;
 MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
 
@@ -1436,10 +1449,6 @@ SELECT:LEXmaehtedh ("maehtedh") (0 ("meehtedh")) ((-1 Sem/Lang OR Inf) OR (1 Sem
 	# SAFE RULES
 	# ----------
 
-MAP (@SUBJ) TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV);    
-    ## Luste tjoejkedh.
-#MAP (@SUBJ) TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr));
-#	## Lustes aate tjoejkedh.
 #MAP (@HNOUN) TARGET Nom IF (*-1 BOS BARRIER NOT-NPMOD)(1 EOS);
 #	## Tjåetskeme.
 #MAP (@HNOUN) TARGET Po IF (*-1 BOS BARRIER NOT-NPMOD)(1 EOS);
@@ -1585,12 +1594,20 @@ MAP (@SUBJ) TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV);
 #	##Doh gøøkte KAARRETJH hijven utnigan.  "kaarretje" N Pl Nom @OBJ> MAP:958
 #	##Men Jense, dihte guhten dah BAENIEH ij lij dihte ov geerjene dejtie desnie tjoeredh utnedh. "baenie" N Pl Nom @OBJ> MAP:958 
 
+
+
+LIST SG-NOUN = "deerpege" ;
+LIST PL-NOUN = "deerpegh" ;
+
+SELECT:PlN PL-NOUN IF (0 SG-NOUN + Pl) ;
+
 AFTER-SECTIONS              #
 # ======================================== #
 
-
 LIST WORDLEMMA = (".*"r) ;
 
+REMOVE SUB:1 (Cmp/SgNom) (0/* (Cmp/Attr)) ;	
+REMOVE SUB:1 (Cmp/SgGen) (0/* (Cmp/SgNom)) ;	
 REMOVE SUB:1 (cmp_sggen) (0/* (cmp_sgnom)) ;	#This for Apertium
 
 REMOVE:errsub $$WORDLEMMA + Err/Orth (0 $$WORDLEMMA - Err/Orth ) ; # Apertium
