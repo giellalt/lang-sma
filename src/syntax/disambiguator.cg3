@@ -608,14 +608,17 @@ SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Year) TARGET ("<[1-2][0-9][0-9][0-9]>"r Nu
 
 
 #!! * Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
-LIST JIEHTEDH = "bæjhkoehtidh" "gæljodh" "jiehtedh" "stilledh" "vaestiedidh" ;
+LIST JIEHTEDH = "boejhkelidh" "bæjhkoehtidh" "gæljadidh" "gæljodh" "jiehtedh" "stilledh" "tjaalasovvedh" "vaestiedidh" ;
 SET HUMAN-INDIVIDUAL = Sem/Mal OR Sem/Fem OR Sem/Sur OR Sem/Hum ;
 
-ADD:jiehtedh1 <vdic> TARGET JIEHTEDH (0 VFIN OR PrfPrc LINK *-1 COMMA BARRIER WORD)((1 N + Nom) OR (1 Attr LINK 1 N + Nom)) ; 
+ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WORD)((1 N + Nom) OR (1 Attr LINK 1 N + Nom)) ; 
 	#$ «Manne dan aavosne juhkoe giesie lea,» tjidtjebe jeahta.
 	
-ADD:jiehtedh2 <vdic> TARGET JIEHTEDH (0 VFIN OR PrfPrc LINK 1 EOS) (-1 N + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
+ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS) (-1 N + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
 	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
+
+ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":")) ; 
+
 
 SECTION  #!! !!@CODE@
 
@@ -700,7 +703,7 @@ REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
 	## Trond Trosterud
 
 
-LIST NOT-SUR = "Saemie" "Trøndelag"  ;
+LIST NOT-SUR = "Galilea" "Saemie" "Trøndelag"  ;
 
 REMOVE:PlcSur Sem/Sur IF (0 NOT-SUR) ;
 
@@ -816,6 +819,9 @@ SELECT:dusnieAdv Adv IF (0 ("dusnie") LINK 1 Adv OR EOS OR Prop) ;
 	#$ Dusnie aaj buesjies kraanna Hulda.
 
 SELECT:meatanAdv Adv IF (0 ("meatan") LINK 1 ("vaeltedh")) ;
+
+SELECT:novAdv Adv IF (0 ("nov")) ;	#waiting for example with Pcle
+
 
 SELECT:aarehkeAdv Adv IF (0 ("aarehke") LINK 1 Sem/Time) ;
 	#$ Dallahmasten vaedtsieh åarajidh guktie maehtieh aarehke aereden tjuedtjielidh.
@@ -962,7 +968,18 @@ MAP (@CVP) TARGET CS ;
 	
 MAP (@CVP) TARGET CC (0 ("mohte") OR ("men")) ;
 
-MAP (@CVP) TARGET CC (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
+MAP (@CVP @CNP) TARGET CC ;
+
+
+SELECT @CVP IF (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
+SELECT @CVP IF (1 CS);
+SELECT @CVP IF (-1 BOS OR COMMA OR (";"));
+SELECT @CVP IF (*-1 V BARRIER S-BOUNDARY)(*1 V BARRIER S-BOUNDARY)(NEGATE -1 Inf LINK 2 Inf) ;
+
+
+
+REMOVE @CVP IF (0 @CNP);
+
 
 #!! Attributes
 SELECT:Attr Attr (0 VFIN) (1 N LINK *1 VFIN BARRIER S-BOUNDARY) ;
@@ -984,22 +1001,22 @@ SECTION  #!! !!@CODE@
 
 #!! !! Mapping verbs
 
-MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV);    
+MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV) ;    
 	#$ Lustes tjoejkedh.
-MAP @<SUBJ TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr));
+MAP @<SUBJ TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr)) ;
 	#$ Lustes aate tjoejkedh.
 	
-MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER V LINK -1 COPULAS)(1 EOS);
+MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER V LINK -1 COPULAS)(1 EOS) ;
 	#$ Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
 
-MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY);
-MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC) OR (-1 PrfPrc));
+MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY OR COMMA) ;
+MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC OR COMMA) OR (-1 PrfPrc)) ;
 MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
 
-MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 V BARRIER S-BOUNDARY OR CC);
-MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NOT *1 PrfPrc OR Ger BARRIER S-BOUNDARY);
-MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg);
-MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom);
+MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 V BARRIER S-BOUNDARY OR CC OR COMMA) ;
+MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NOT *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA) ;
+MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg) ;
+MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR COMMA OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom) ;
 	#% Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
 
 MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Inf LINK *-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf)(NOT 0 INF-SYN) ;
@@ -1014,6 +1031,9 @@ MAP (@-FMAINV) TARGET ConNeg IF (*-1 Neg BARRIER S-BOUNDARY) ;
 MAP (@-FMAINV) TARGET Ger OR PrfPrc  ;
 	#$ Luste tjoejkedh.
 	# 
+
+MAP (@+FMAINV) TARGET VFIN (0C VFIN)  ;
+
 
 MAP:InfCoor (@-FMAINV) TARGET Inf IF (*-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf + @-FMAINV ) ;
 	#$ Stoerejïevegem maehtebe vaeltedh jïh dam råafojne utnedh.
@@ -1596,8 +1616,8 @@ SELECT:LEXmaehtedh ("maehtedh") (0 ("meehtedh")) ((-1 Sem/Lang OR Inf) OR (1 Sem
 
 
 
-LIST SG-NOUN = "deerpege" ;
-LIST PL-NOUN = "deerpegh" ;
+LIST SG-NOUN = "deerpege" "voepte" ;
+LIST PL-NOUN = "deerpegh" "voepteh" ;
 
 SELECT:PlN PL-NOUN IF (0 SG-NOUN + Pl) ;
 
