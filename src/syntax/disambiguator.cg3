@@ -676,6 +676,9 @@ REMOVE:R_ACR ACR (0 CC);
 	## Im leah naan saemieskuvlesne vaadtseme.
 	## Jih daejtie gærjide edtjem aaj sjeakodh, – jijtje jeahta jih aalka sjeakodh.
 
+#!! !CC og not
+SELECT:jallh CC (0 ("jallh")) ; #jallh can also be A Pl Nom, but not likely, look for examples with this analysis, if they exist
+
 
 #!! !Interj
 
@@ -771,6 +774,7 @@ SELECT:AttrNotNom (Pron Interr Attr) OR (A Attr) (0 (Pron Interr Sg Nom) OR (A S
     ##...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
 
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NOT-NPMOD LINK 0 NOMEN-NOT-PRON) ;
+SELECT:unifDemGen Gen (0 Dem OR Indef LINK *1 Gen BARRIER NOT-NPMOD LINK 0 NOMEN-NOT-PRON) ;
 	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
 
 REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NOT-NPMOD);
@@ -807,6 +811,12 @@ REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 FORMS)(1 FORMS) ;
 	## Dagkeri tjoeverieh joekoen veaksehke juelkieh, mohte disse lissine tjoevere abpe almetje joekoen voerkes jallh fahkoes årrodh.
 SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR COMMA) ;
 	## Helena, jallh Aili man dan aaj nomme, lea saemien maadtoste.
+SELECT:Acase $$CASES (0 A LINK -1 Dem + $$CASES) ;
+	#$ Im dom guhkebem vielie vuejnieh.
+
+SELECT:AAcc A (0 A + Acc LINK 1 N + Acc) ;
+	#$ Manne guhkebem geajnoem vuajam.
+
 
 #!! !Postpositions
 
@@ -818,6 +828,12 @@ REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 
 
 #!! !Adverbs
+
+SELECT:AdvnotA Adv IF (0 A LINK 1 Adv LINK *1 REAL-V BARRIER S-BOUNDARY)(*-1 VFIN BARRIER S-BOUNDARY) ;
+	#$ Im manne guhkebem daesnie sïjhth årrodh.
+
+SELECT:Adv GRADE-ADV (1 A LINK 0 Attr OR Nom) ;
+	#$ Akte snjearafuelhkie gaadtan saadtesovvi, båeries bovtsh sinsitnien tjåervine gïebredin jïh akte gaajh stoerre gaajtoe lij gemkiehtamme tsåekesne.
 
 SELECT:dusnieAdv Adv IF (0 ("dusnie") LINK 1 Adv OR EOS OR Prop) ;
 	#$ Dusnie aaj buesjies kraanna Hulda.
@@ -1465,7 +1481,7 @@ SELECT:V_TV TV (0 IV - COPULAS LINK 1 EOS)(-1 Acc) ;
 
 
 # "böötedh" OR "båetedh"
-SELECT:LEXbåetedh ("båetedh") (0 ("böötedh")) ((-1 Ill OR Ela) OR (1 Ill OR Ela)) ;
+SELECT:LEXbåetedh ("båetedh") (0 ("böötedh")) ((-1 Ill OR Ela) OR (1 Ill OR Ela OR VGen)) ;
 SELECT:LEXbåetedh ("båetedh") (0 ("böötedh")) (*0 Sem/Veh OR Sem/Ani LINK 0 Nom) ;
 	#$ Ealla lij desnie boelhketjem goh lohkehtæjja-skuvleste bøøti.
 
