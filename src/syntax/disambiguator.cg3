@@ -484,6 +484,8 @@ LIST AUX-OR-MAIN = "aelkedh" "edtjedh" "maehtedh" "sïjhtedh" "sjïdtedh" "bået
  
 SET AUX = COPULAS OR Neg OR MOD-ASP OR AUX-OR-MAIN ;
 
+SET REAL-V = V - VGen ;
+
 
 SET VFIN = Ind OR Imprt ;
 
@@ -503,6 +505,8 @@ LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "provhkedh" ;
 LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" ;
 LIST OPRED-V = "tuhtjedh" "utnedh" ;
+
+LIST MOVEMENT-V = "båetedh" "feeredh" ;
 
 LIST COM-ADJ = "latjkes" ;
 
@@ -608,16 +612,16 @@ SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Year) TARGET ("<[1-2][0-9][0-9][0-9]>"r Nu
 
 
 #!! * Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
-LIST JIEHTEDH = "boejhkelidh" "bæjhkoehtidh" "gæljadidh" "gæljodh" "jiehtedh" "stilledh" "tjaalasovvedh" "vaestiedidh" ;
+LIST JIEHTEDH = "boejhkelidh" "bæjhkoehtidh" "gæljadidh" "gæljodh" "jiehtedh" "praahkedh" "stilledh" "tjaalasovvedh" "tjåarvodh" "vaestiedidh" ;
 SET HUMAN-INDIVIDUAL = Sem/Mal OR Sem/Fem OR Sem/Sur OR Sem/Hum ;
 
 ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WORD)((1 N + Nom) OR (1 Attr LINK 1 N + Nom)) ; 
 	#$ «Manne dan aavosne juhkoe giesie lea,» tjidtjebe jeahta.
 	
-ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS) (-1 N + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
+ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS)(NOT 0 <vdic>) (-1 N + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
 	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
 
-ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":")) ; 
+ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":") OR EOS)(NOT 0 <vdic>)  ; 
 
 
 SECTION  #!! !!@CODE@
@@ -726,7 +730,7 @@ REMOVE:vfinIfGen VFIN (0 N LINK -1 Indef + Gen) ;
 	#$ Mubpien aereden jïevehtahkh jïh ålloe-råavkah bïjlese guedtieh.
 
 
-
+#OBS guktie ja gumhtie
 
 #!! !Particles
 
@@ -974,7 +978,7 @@ MAP (@CVP @CNP) TARGET CC ;
 SELECT @CVP IF (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
 SELECT @CVP IF (1 CS);
 SELECT @CVP IF (-1 BOS OR COMMA OR (";"));
-SELECT @CVP IF (*-1 V BARRIER S-BOUNDARY)(*1 V BARRIER S-BOUNDARY)(NEGATE -1 Inf LINK 2 Inf) ;
+SELECT @CVP IF (*-1 REAL-V BARRIER S-BOUNDARY)(*1 REAL-V BARRIER S-BOUNDARY)(NEGATE -1 Inf LINK 2 Inf) ;
 
 
 
@@ -993,7 +997,7 @@ REMOVE:VFIN VFIN (0 N) (-1 Attr LINK *-1 VFIN BARRIER S-BOUNDARY) ;
 #!! Select PrfPrc if DerNomAct
 
 #SELECT: PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
-SELECT:PrfPrs_DerNomAct PrfPrc (0 (Der/NomAct) LINK *-1 S-BOUNDARY BARRIER V)(NEGATE *1 V BARRIER S-BOUNDARY) ;
+SELECT:PrfPrs_DerNomAct PrfPrc (0 (Der/NomAct) LINK *-1 S-BOUNDARY BARRIER V)(NEGATE *1 REAL-V BARRIER S-BOUNDARY) ;
 	## Disse maahtam tjaeledh gosse sijhtem, jih aaj lohkedh gosse båarasåbpoe  sjidteme.
 	## Manne aktem gärjam man nomme jupmele-vaerie lohkeme.
 
@@ -1006,14 +1010,14 @@ MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV) ;
 MAP @<SUBJ TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr)) ;
 	#$ Lustes aate tjoejkedh.
 	
-MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER V LINK -1 COPULAS)(1 EOS) ;
+MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER REAL-V LINK -1 COPULAS)(1 EOS) ;
 	#$ Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
 
-MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 V BARRIER S-BOUNDARY OR COMMA) ;
+MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 REAL-V BARRIER S-BOUNDARY OR COMMA) ;
 MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC OR COMMA) OR (-1 PrfPrc)) ;
 MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
 
-MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 V BARRIER S-BOUNDARY OR CC OR COMMA) ;
+MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 REAL-V BARRIER S-BOUNDARY OR CC OR COMMA) ;
 MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NOT *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA) ;
 MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg) ;
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR COMMA OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom) ;
@@ -1030,6 +1034,10 @@ MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*-1 VFIN BARRIER S-BOUNDARY LINK 
 MAP (@-FMAINV) TARGET ConNeg IF (*-1 Neg BARRIER S-BOUNDARY) ;
 MAP (@-FMAINV) TARGET Ger OR PrfPrc  ;
 	#$ Luste tjoejkedh.
+
+MAP:VGen (@<ADVL) TARGET VGen (-1 MOVEMENT-V) ;
+MAP:VGen (@<ADVL) TARGET VGen (0C VGen LINK -1 REAL-V) ;
+MAP:VGen (@ADVL>) TARGET VGen (0C VGen LINK 1 REAL-V) ;
 	# 
 
 MAP (@+FMAINV) TARGET VFIN (0C VFIN)  ;
@@ -1053,7 +1061,7 @@ SELECT:killifVinCohort SYN-V  ;
 
 #!! leah Prs Sg2 = Pl3
 
-SELECT:VSg2IfPersSg2a (V Sg2)(NOT 0 N) ((*-1 (Pers Nom Sg2) OR (Rel Sg Nom) BARRIER V OR Nom) OR (1 (Pers Nom Sg2)));
+SELECT:VSg2IfPersSg2a (V Sg2)(NOT 0 N) ((*-1 (Pers Nom Sg2) OR (Rel Sg Nom) BARRIER REAL-V OR Nom) OR (1 (Pers Nom Sg2)));
 SELECT:Pl3WhenPlSubj (V Pl3) IF ((*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY) OR (-1 (N Sg Nom) LINK -1 CC))(0 ("lea" V));
 #SELECT:Pl3WhenSubjCC (V Pl3) IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
 REMOVE:Pl3 (V Pl3) (NOT *0 Nom BARRIER S-BOUNDARY) ;
@@ -1458,6 +1466,7 @@ SELECT:V_TV TV (0 IV - COPULAS LINK 1 EOS)(-1 Acc) ;
 
 # "böötedh" OR "båetedh"
 SELECT:LEXbåetedh ("båetedh") (0 ("böötedh")) ((-1 Ill OR Ela) OR (1 Ill OR Ela)) ;
+SELECT:LEXbåetedh ("båetedh") (0 ("böötedh")) (*0 Sem/Veh OR Sem/Ani LINK 0 Nom) ;
 	#$ Ealla lij desnie boelhketjem goh lohkehtæjja-skuvleste bøøti.
 
 
