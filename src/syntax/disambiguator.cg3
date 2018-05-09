@@ -399,8 +399,6 @@ LIST WORD = N A V Adv Pron Interj Num CS CC Pcle Pr Po ;
 SET REALWORD = WORD - Num - Ord ;
 SET REALWORD-NOTABBR = WORD - Num - Ord - ABBR ;
 
-SET NOT-QMARK = WORD OR CLB OR PUNCT - QMARK ;
-
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS ;
 
 SET NOT-ADV = WORD - Adv ;
@@ -512,12 +510,6 @@ LIST COM-ADJ = "latjkes" ;
 
 LIST STV = Der/Caus ;
 
-LIST ILLADV = "bæjjese" "davvese" "daase" "dahkoe" "diekie" "doekoe" "dohkoe" "jallese" "mænngese" "noerhtese" "olkese" "vueliebasse" "våålese" "åarjese" "åvtese" ;
-
-LIST INEADV =  "daebpene" "debpene" "duebpene" "dubpene" "daagkoe" "dagkoe" "doegkoe" "dogkoe" "daajkoe" "dajkoe" "doejkoe" "dojkoe" ;
-
-LIST ELAADV = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
-
 LIST GUKTIEGOSSE = ("gusnie" Adv) ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
 
 LIST DAESNIE = "daesnie" "desnie" "duesnie" "dusnie" "åvtesne" "sjisjnjielisnie" "dusnie" "miehtjielisnie" "dubpielisnie" "jilliebisnie" "luvlielisnie" "ålkoelisnie" "gusnie" "luvliegisnie" "åarjalisnie" "minngielisnie" "bijjielisnie" "sisnjielisnie" "åarjielisnie" "åerjielisnie" "vuelielisnie" "debpielisnie" "duebpielisnie" "åarjelisnie" "noerhtelisnie" "jillielisnie" "luvliebisnie" "vueliebisnie";
@@ -525,12 +517,23 @@ LIST DAESNIE = "daesnie" "desnie" "duesnie" "dusnie" "åvtesne" "sjisjnjielisnie
 LIST DAESTIE = "daestie" "destie" "duestie" "dustie" "åvteste" "sjisjnjielistie" "dustie" "miehtjielistie" "dubpielistie" "jilliebistie" "luvlielistie" "ålkoelistie" "gustie" "luvliegistie" "åarjalistie" "minngielistie" "bijjielistie" "sisnjielistie" "åarjielistie" "åerjielistie" "vuelielistie" "debpielistie" "duebpielistie" "åarjelistie" "noerhtelistie" "jillielistie" "luvliebistie" "vueliebistie" ;
 
 
-LIST ADV-MOD-ADV = "aaptsah" "aaptsh" "aave" "gaaje" "gaajh" "joekoen" "ååpsen" "fer" "for" "dan" ("mij" Sg Gen) "øøvre" ;
+LIST ILLADV = "bæjjese" "davvese" "daase" "dahkoe" "diekie" "doekoe" "dohkoe" "jallese" "mænngese" "noerhtese" "olkese" "vueliebasse" "våålese" "åarjese" "åvtese" ;
 
-LIST ADV-MOD-NP = "ållesth" "allesth" "aave" "aejvie" "dovne" "eevre" "öövre" "ov" "ovve" "rikti" "ajve" "barre" "gaaje" "gaajh" "joekoen" "hujht" "hujhtskabph" "lïgke" "lïjhke" "gujht" "læjhkan" "van" "darhkan" "eantan" "man" "mahte" "ovrehte" "raakte" "varke" "varki" "aaptsah" "aaptsh" "medtie" ;
+LIST INEADV1 =  "daebpene" "debpene" "duebpene" "dubpene" "daagkoe" "dagkoe" "doegkoe" "dogkoe" "daajkoe" "dajkoe" "doejkoe" "dojkoe" ;
 
-LIST GRADE-ADV =  "aaptsah" "aaptsh" "ållesth" "allesth" "ååpsen" "aave" "aejvie" "dovne" "eevre" "ajve" "barre" ("jienebe" Adv) ("jeenjebe" Adv) "ov" "ovve" "rikti" "gaaje" "gaajh" "joekoen" "åpmohts" "åpmehts" "aajmohts" "åpmoeh" ("man" Adv) "mahte" "ovrehte" "raakte" "varke" "varki" "seamma" "öövre" "uhtjienadtje" "sagke" ;
+LIST ELAADV1 = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
 
+SET	INEADV = INEADV1 OR DAESNIE ;
+
+SET	ELAADV = ELAADV1 OR DAESTIE ;
+
+LIST ADV-MOD-ADV = "aaptsah" "aaptsh" "aave" "gaaje" "gaajh" "joekoen" "ååpsen" "fer" "dan" "man" "öövre" ;
+
+LIST ADV-MOD-NP =  "aave" "aejvie" "dovne" "eevre" "öövre" "ov" "rikti" "ajve" "barre" "gaaje" "gaajh" "joekoen" "hujht"  "lïgke" "lïjhke"  "læjhkan" "eantan" "man" "mahte" "ovrehte" "varke" "varki" "aaptsah" "aaptsh" "medtie" ; #"ållesth" "allesth" "hujhtskabph" "gujht" ovve  "van"  "darhkan"  "raakte" are not Adv in FST
+
+LIST GRADE-ADV =  "aaptsah" "aaptsh" "ååpsen" "aave" "aejvie" "dovne" "eevre" "ajve" "barre"  "ov" "rikti" "gaaje" "gaajh" "joekoen" "åpmohts" "åpmoeh" "man" "mahte" "ovrehte" "varke" "varki" "seamma" "öövre" "uhtjienadtje" "sagke" ; # "ållesth" "allesth" "ovve"  "åpmehts" "aajmohts"  "raakte"  are not Adv in FST
+
+ 
 
 #!! * BOUNDARY SETS
 
@@ -577,7 +580,7 @@ LIST BUILDING = "gåetie" ;
 
 #LIST ROOM = "ladnja" "oadem#ladnja" ;
 
-LIST GEOGRAPHICAL-PLACE = "dajve" "deava" "gaedtie" "gádde" "jaevrie" "vaerie" "miehtsie";  
+LIST GEOGRAPHICAL-PLACE = "dajve" "deava" "gaedtie" "gádde" "jaevrie" "vaerie" "miehtsie" ;  
 LIST POLITICAL-PLACE = "rïjhke"; 
 LIST GENERAL-PLACE = "sïjte";  
 #LIST SPEC-PLACE = "värro#áltár" ; # for Ill disamb
@@ -646,7 +649,6 @@ REMOVE:Nregex SUB:1 N-DER (0/* N-DER-SUF) ;
 
 
 #REMOVE:testA A-DER (0 LEX-A);
-
 #REMOVE:testV4 V-DER (0 LEX-V) ;  ## should be restriction
 #REMOVE:testN N-DER (0 LEX-N LINK NOT 0 PX) ;
 
@@ -660,7 +662,7 @@ REMOVE:hyph SUB:1 Cmp/Hyph (0/* NOT-HYPH) ;
 REMOVE Der/InchL IF (0 N LINK 0 Nom OR Gen) ;
 	#$ skïemtjegåetieh roestegåetie
 
-REMOVE:waitwithDis (2 V) (0 (1 V)) ;
+#REMOVE:waitwithDis (2 V) (0 (1 V)) ;	#What is this?
 
 
 #!! !Numerals and ACR
@@ -669,9 +671,10 @@ SELECT:Arab1 (Arab Nom)(0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
 SELECT:ArabNomPlc (Arab Nom) (-1 Sem/Plc)(NEGATE 1 Po) ;
 
+SELECT:YearNom Sem/Year + Nom (-1 ("jaepie") + Gen) ;
+
 SELECT:Arab Arab  ; # In Apertium we get analysis both with and without the tag.
 
-SELECT:YearNom Sem/Year + Nom (-1 ("jaepie") + Gen) ;
 
 
 REMOVE:R_Num Num (0 Neg);
@@ -679,7 +682,7 @@ REMOVE:R_ACR ACR (0 CC);
 	## Im leah naan saemieskuvlesne vaadtseme.
 	## Jih daejtie gærjide edtjem aaj sjeakodh, – jijtje jeahta jih aalka sjeakodh.
 
-#!! !CC og not
+#!! !CC og not (spesifikke regler lenger ned)
 SELECT:jallh CC (0 ("jallh")) ; #jallh can also be A Pl Nom, but not likely, look for examples with this analysis, if they exist
 
 
@@ -701,9 +704,12 @@ REMOVE:PrfPrc_Not_PxSg1 PxSg1 IF (0 PrfPrc);
 	## Mijjieh saemieh daarah aaj aalkeme gærjah lohkedh.
 REMOVE:PxWhenAcc PxSg1 IF (0 Acc LINK *1 TV BARRIER WORD - ADVLCASE)(NEGATE *-1 Sg1) ; 
 
-REMOVE:notFAMILY PX (0 N - FAMILY) ;
+#!! REmove Px if not family
+
+REMOVE:notFAMILY PX IF (0 N)(NOT 0 FAMILY OR Pron);
+	## Bïepmehtehteme jåarhka goh gïjrese vuertieminie.
+
 	
-#!! Short Pronouns
 
 
 #!! Proper nouns
@@ -763,6 +769,8 @@ SELECT:Adv GRADE-ADV (1 A LINK 0 Attr OR Nom) ;
 	#$ Akte snjearafuelhkie gaadtan saadtesovvi, båeries bovtsh sinsitnien tjåervine gïebredin jïh akte gaajh stoerre gaajtoe lij gemkiehtamme tsåekesne.
 
 
+SELECT:AdvFoc Adv (0 (Foc/ge)) ;
+
 #!! !Adjective or Indef
 SELECT:jijnjeIndef Indef  (0 ("jïjnje") LINK 1 N OR REAL-V OR EOS) ;
 SELECT:jijnjeIndef Indef  (0 ("jïjnje") + Pl) ;
@@ -796,6 +804,8 @@ SELECT:AttrNotNom (Pron Interr Attr) OR (A Attr) (0 (Pron Interr Sg Nom) OR (A S
     ##...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
 
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NOT-NPMOD LINK 0 NOMEN-NOT-PRON) ;
+
+# på grunn av 0C i forrige regel, trenger vi denne:
 SELECT:unifDemGen Gen (0 Dem OR Indef OR Num LINK *1 Gen BARRIER NOT-NPMOD LINK 0 NOMEN-NOT-PRON) ;
 	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
 
@@ -817,14 +827,15 @@ REMOVE:NotDem2 Dem IF (0 Pers)(NEGATE *1 NOMEN-NOT-PRON BARRIER NOT-NPMOD) (NEGA
 
 SELECT:NGen (N Gen)(-1C (Dem Gen)) ;
 	## Daam jijjem hov lea fealadamme, daan aereden varki bøøti, tjoevere åadtjodh åeriestidh.
-#SELECT:PronPers Pers + Gen (0 Pron LINK 1C Po) ; #dan åvteste is mostly Dem, repalced by the two following rules:
+SELECT:PronPers Pron + Gen (0 Pron LINK 1C Po) ; #dan åvteste is mostly Dem, replaced by the two following rules:
 	## Johan jih aahkam joekoen gaskese dan åvteste satnem veelji.
-REMOVE:PcleNotPron ("dån" Pcle) (0 (Pron Gen) LINK 1 Po) ;
-REMOVE:AttrNotGen Attr (0 (Pron Gen) LINK 1 Po) ;
+#REMOVE:PcleNotPron ("dån" Pcle) (0 (Pron Gen) LINK 1 Po) ; # trengs ikke
+#REMOVE:AttrNotGen Attr (0 (Pron Gen) LINK 1 Po) ; # trengs ikke
 
 
 #!! !Adjective or not
 
+#vi har en select jallh CC lenger opp, dvs at disse reglene ikke er i bruk
 REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 N OR (Cmpnd))(*1 N BARRIER NOT-NPMODADV) ;
 	## Mohte ohtsedibie amma treavkah jallh tjielhketjem jih minnibie doh deavabaahkoeh gierestallibie.
 REMOVE:jallh (A Pl) (0 ("jallh" CC) LINK 1 Neg LINK 1 S-BOUNDARY OR ConNeg LINK NOT 0 Pl3) ;
@@ -847,14 +858,19 @@ REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NOT-NPMOD LINK NOT 0 T
 REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
 REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 
+SELECT:PoGena Po (0 Pr)(-1 Gen) ;
+	#$ Minngemes dellie ebrievaarjoeh gaeblien nualan rijtieh.
+REMOVE:Pr Pr (NEGATE *1 N BARRIER NOT-NPMOD) ;
+REMOVE:PoGenb Po (NEGATE -1 Gen) ;
+SELECT:PoGenb Po (-1 Gen) ;
+SELECT:PoGena Gen (-1 Gen) ;
+	#$ Minngemes dellie ebrievaarjoeh gaeblien nualan rijtieh.
+
 
 #!! !Adverbs
 
 SELECT:AdvnotA Adv IF (0 A LINK 1 Adv LINK *1 REAL-V BARRIER S-BOUNDARY)(*-1 VFIN BARRIER S-BOUNDARY) ;
 	#$ Im manne guhkebem daesnie sïjhth årrodh.
-
-
-
 
 SELECT:dusnieAdv Adv IF (0 ("dusnie") LINK 1 Adv OR EOS OR Prop) ;
 	#$ Dusnie aaj buesjies kraanna Hulda.
@@ -870,15 +886,6 @@ SELECT:aarehkeAdv Adv IF (0 ("aarehke") LINK 1 Sem/Time) ;
 SELECT:Sem/TimeN N (0 Sem/Time LINK 0 Adv LINK -1 ("aarehke")) ;
 	#$ Dallahmasten vaedtsieh åarajidh guktie maehtieh aarehke aereden tjuedtjielidh.
 
-
-#!! !Po or Pr
-SELECT:PoGena Po (0 Pr)(-1 Gen) ;
-	#$ Minngemes dellie ebrievaarjoeh gaeblien nualan rijtieh.
-REMOVE:Pr Pr (NEGATE *1 N BARRIER NOT-NPMOD) ;
-REMOVE:PoGenb Po (NEGATE -1 Gen) ;
-SELECT:PoGenb Po (-1 Gen) ;
-SELECT:PoGena Gen (-1 Gen) ;
-	#$ Minngemes dellie ebrievaarjoeh gaeblien nualan rijtieh.
 
 
 #!! Verbs
@@ -904,9 +911,7 @@ SELECT:Du1NotVGen Du1 (0 VGen LINK -*1 ("månnoeh") BARRIER S-BOUNDARY) ;
 #!! Imperative
 #REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
 #REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
-       ## 
 
-# There can be Interj, VOC, 
 SELECT:Imprta Imprt (*-1 BOS OR (":") OR Interj BARRIER WORD)(0 2-PERS)(NOT *1 2-PERS + Pers + Nom BARRIER S-BOUNDARY) ;
 	## Utnieh hijven.
 	#$ Govlede!
@@ -931,10 +936,10 @@ SELECT:imprt Imprt ((-1 CLB) OR (*-1 BOS BARRIER WORD))(1 ("amma")) ;
 	
 
 MAP (@COMP-CS<) TARGET Adv OR A IF (-1 ("goh" CS) LINK -1 A OR Adv)(1 COMMA LINK 1 ("die")) ;
-   ## Daelie goh beetnehbïjle buerebe goh åvtelen, die bïjlen jienebh gaeptieh.
+	#$ Daelie goh beetnehbïjle buerebe goh åvtelen, die bïjlen jienebh gaeptieh.
 MAP (@COMP-CS<) TARGET $$ADVLCASE IF (-1 ("goh" CS) LINK -1 $$ADVLCASE)(1 COMMA LINK 1 VFIN) ;
 #	## Juohkehaš guhte earrána áhkástis mange eará sivas go fuorrávuođas, dagaha su rihkkut náittosdili. 
-#   ## Kaarre, gie båata gujneste jeatjah bieleste goh vissjeste, edtja satnem vuartasjidh. 
+# 	## Kaarre, gie båata gujneste jeatjah bieleste goh vissjeste, edtja satnem vuartasjidh. 
 #
 #ADD:r423 (@COMP-CS<) TARGET Nom IF (*-2 ("nu") BARRIER NOT-NP LINK 1 A OR Adv OR PrsPrc OR CC OR CS)(-1 ("go" CS));
 #	## Nu guhkás go vejolaš galgá dat čuovvoluvvot.
@@ -1136,10 +1141,6 @@ SELECT:Ger Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY) ;
 
 #!!  !Nomen
 
-#!! REmove Px if not family
-
-REMOVE:No_Px PX IF (0 N)(NOT 0 FAMILY OR Pron);
-	## Bïepmehtehteme jåarhka goh gïjrese vuertieminie.
 
 #!! Remove Prop Attr if not 1 Prop 
 
@@ -1411,13 +1412,6 @@ REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NOT *-1 Pron + Pl2 + Nom);
 	# Proper nouns
 	# ============
 
-#!! Substituting Prop tags 
-# -------------------------
-SUBSTITUTE:Sur (Sem/Plc) (Sem/Sur) TARGET Prop IF (-1 (Sem/Mal Attr) OR (Sem/Fem Attr))(NEGATE 0 Sem/Sur);
-  	## Linda England.
-SUBSTITUTE:Sur (Sem/Plc) (Sem/Sur) TARGET Prop IF (-2 (Sem/Mal Attr) OR (Sem/Fem Attr))(-1 ABBR);
-	## Linda B. England.
-
 
 	# Prop or not
 	# ----------- 
@@ -1520,6 +1514,13 @@ REMOVE:govledhIV  IV + Imprt (0 ("govledh")) ;
 # "maehtedh" OR "meehtedh"
 SELECT:LEXmaehtedh ("maehtedh") (0 ("meehtedh")) ((-1 Sem/Lang OR Inf) OR (1 Sem/Lang OR Inf)) ;
 
+# Noun lemmas
+
+
+LIST SG-NOUN = "deerpege" "voepte" ;
+LIST PL-NOUN = "deerpegh" "voepteh" ;
+
+SELECT:PlN PL-NOUN IF (0 SG-NOUN + Pl) ;
 
 	
 	# SAFE RULES
@@ -1670,12 +1671,6 @@ SELECT:LEXmaehtedh ("maehtedh") (0 ("meehtedh")) ((-1 Sem/Lang OR Inf) OR (1 Sem
 #	##Doh gøøkte KAARRETJH hijven utnigan.  "kaarretje" N Pl Nom @OBJ> MAP:958
 #	##Men Jense, dihte guhten dah BAENIEH ij lij dihte ov geerjene dejtie desnie tjoeredh utnedh. "baenie" N Pl Nom @OBJ> MAP:958 
 
-
-
-LIST SG-NOUN = "deerpege" "voepte" ;
-LIST PL-NOUN = "deerpegh" "voepteh" ;
-
-SELECT:PlN PL-NOUN IF (0 SG-NOUN + Pl) ;
 
 AFTER-SECTIONS              #
 # ======================================== #
