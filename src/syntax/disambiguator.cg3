@@ -506,7 +506,7 @@ LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" ;
 LIST OPRED-V = "tuhtjedh" "utnedh" ;
 
-LIST MOVEMENT-V = "båetedh" "feeredh" ;
+LIST MOVEMENT-V = "båetedh" "feeredh" "vuelkedh" "vaedtsedh" "vuejedh" "voejedh" "vaarredh" "hajkedh" "roehtedh" "feeledh" "sygkeldidh" "girtedh" "skodtedh" "njaakedh" ;
 
 LIST COM-ADJ = "latjkes" ;
 
@@ -1142,6 +1142,11 @@ SELECT:AccIfSVOV (Acc Sg) IF (*-1C INFV BARRIER NOT-NPMOD)(1C V); # consider VFI
 SELECT:Ess Ess (0 (N Com) LINK 1 OPRED-V)(-1 Acc) ;
 	#$ Stoerejïevegem maehtebe vaeltedh jïh dam råafojne utnedh.
 
+REMOVE:SgGen Gen (0 Ill + Sg LINK 1 FMAINV) ;
+	#$ varki gåatan bïesem jïh aaj mov daelvie-dogkesh gåatan fihkem.
+
+REMOVE:SgIll Ill (0 Adv LINK 1 FMAINV LINK NOT 0 MOVEMENT-V) ;
+	#$ varki gåatan bïesem jïh aaj mov daelvie-dogkesh gåatan fihkem.
 
 	
 SELECT:IneIfEss/Com (N Pl Ine) (0 (N Ess) OR (N Sg Com)) (1 ("viedtedh" V* TV Der1 Der/ldahke N Sg Ine) OR ("vïedteldahke" N Sg Ine)) ;
@@ -1155,6 +1160,7 @@ SELECT:NPlIll (N Pl Ill) (0 (N Pl Acc)) (NOT 1 (V TV)) ;
 
 SELECT:NPlAcc Acc (0 (N Pl Acc) LINK 1 TV) ;
 	#$ “Nåå, skodtede amma voesside tsagkedh", aehtjie maanide stillie.
+
 
 #!! !Verb or Noun
 
