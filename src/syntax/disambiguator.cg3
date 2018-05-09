@@ -568,6 +568,9 @@ SET LEX-A = A - A-DER;
 
 LIST VERB-FORMS = Inf Sg1 Sg2 Sg3 ;
 
+LIST 2-PERS = Sg2 Du2 Pl2 ;
+
+
 SET FORMS = VERB-FORMS OR WORD ;
 
 LIST BUILDING = "gåetie" ;
@@ -904,7 +907,7 @@ SELECT:Du1NotVGen Du1 (0 VGen LINK -*1 ("månnoeh") BARRIER S-BOUNDARY) ;
        ## 
 
 # There can be Interj, VOC, 
-SELECT:Imprta Imprt (*-1 BOS OR (":") OR Interj BARRIER WORD)(0 Sg2 OR Pl2)(NOT *1 (Pers Sg2 Nom) OR (Pers Pl2 Nom) BARRIER S-BOUNDARY) ;
+SELECT:Imprta Imprt (*-1 BOS OR (":") OR Interj BARRIER WORD)(0 2-PERS)(NOT *1 2-PERS + Pers + Nom BARRIER S-BOUNDARY) ;
 	## Utnieh hijven.
 	#$ Govlede!
 SELECT:Imprtb Imprt (-1 BOS OR (":") OR Interj)(1 COMMA) ;
