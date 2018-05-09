@@ -520,9 +520,9 @@ LIST ELAADV = "daebpede" "debpede" "duebpede" "dubpede"  "dåvvese" ;
 
 LIST GUKTIEGOSSE = ("gusnie" Adv) ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
 
-LIST DAESNIE = ("daesnie" Adv) ("åvtesne" Adv) ("sjisjnjielisnie" Adv) ("dusnie" Adv) ("miehtjielisnie" Adv) ("dubpielisnie" Adv) ("jilliebisnie" Adv) ("luvlielisnie" Adv) ("ålkoelisnie" Adv) ("gusnie" Adv) ("luvliegisnie" Adv) ("åarjalisnie" Adv) ("minngielisnie" Adv) ("bijjielisnie" Adv) ("sisnjielisnie" Adv) ("åarjielisnie" Adv) ("åerjielisnie" Adv) ("vuelielisnie" Adv) ("debpielisnie" Adv) ("duebpielisnie" Adv) ("åarjelisnie" Adv) ("noerhtelisnie" Adv) ("jillielisnie" Adv) ("luvliebisnie" Adv) ("vueliebisnie" Adv);
+LIST DAESNIE = "daesnie" "desnie" "duesnie" "dusnie" "åvtesne" "sjisjnjielisnie" "dusnie" "miehtjielisnie" "dubpielisnie" "jilliebisnie" "luvlielisnie" "ålkoelisnie" "gusnie" "luvliegisnie" "åarjalisnie" "minngielisnie" "bijjielisnie" "sisnjielisnie" "åarjielisnie" "åerjielisnie" "vuelielisnie" "debpielisnie" "duebpielisnie" "åarjelisnie" "noerhtelisnie" "jillielisnie" "luvliebisnie" "vueliebisnie";
 
-LIST DAESTIE = ("daestie" Adv) ("åvteste" Adv) ("sjisjnjielistie" Adv) ("dustie" Adv) ("miehtjielistie" Adv) ("dubpielistie" Adv) ("jilliebistie" Adv) ("luvlielistie" Adv) ("ålkoelistie" Adv) ("gustie" Adv) ("luvliegistie" Adv) ("åarjalistie" Adv) ("minngielistie" Adv) ("bijjielistie" Adv) ("sisnjielistie" Adv) ("åarjielistie" Adv) ("åerjielistie" Adv) ("vuelielistie" Adv) ("debpielistie" Adv) ("duebpielistie" Adv) ("åarjelistie" Adv) ("noerhtelistie" Adv) ("jillielistie" Adv) ("luvliebistie" Adv) ("vueliebistie" Adv);
+LIST DAESTIE = "daestie" "destie" "duestie" "dustie" "åvteste" "sjisjnjielistie" "dustie" "miehtjielistie" "dubpielistie" "jilliebistie" "luvlielistie" "ålkoelistie" "gustie" "luvliegistie" "åarjalistie" "minngielistie" "bijjielistie" "sisnjielistie" "åarjielistie" "åerjielistie" "vuelielistie" "debpielistie" "duebpielistie" "åarjelistie" "noerhtelistie" "jillielistie" "luvliebistie" "vueliebistie" ;
 
 
 LIST ADV-MOD-ADV = "aaptsah" "aaptsh" "aave" "gaaje" "gaajh" "joekoen" "ååpsen" "fer" "for" "dan" ("mij" Sg Gen) "øøvre" ;
@@ -727,7 +727,7 @@ SELECT:PropNom Nom (0C Prop + Sg LINK -1 Dem + Sg + Nom) ;
 	#$ Daate Karsten ...
 
 
-#!! !Verb or not
+#!! !Verb
 
 REMOVE:vfinIfGen VFIN (0 N LINK -1 Indef + Gen) ;
 	#$ Mubpien aereden jïevehtahkh jïh ålloe-råavkah bïjlese guedtieh.
@@ -735,16 +735,35 @@ REMOVE:vfinIfGen VFIN (0 N LINK -1 Indef + Gen) ;
 
 #OBS guktie ja gumhtie
 
-#!! !Particles
+#!! !Particles and adverbs
 
 
 SELECT:vaejtie Pcle (0 ("vaejtie") LINK *-1 BOS BARRIER WORD)(1 Pers) ;
 	#$ Vaejtie mijjieh, gaajhkesh låhkesh, maehtebe leessemebïjlesne åeredh?
 	
-SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS BARRIER WORD)(1 Pers OR N LINK *1 ("?")) ;
+SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS BARRIER WORD)(*1 ("?")) ;
 	#$ Mejtie aehtjie gaantede?
 
 SELECT:goh Pcle (0 ("goh") LINK -1 Neg) ;
+
+SELECT:veeleAdv Adv IF (0 ("veele") LINK -1 Nom) ;
+	#$ manne veele måjhtam ihke ikth hov baenide skubpi.
+
+SELECT Adv (0 ("daesnie") OR ("desnie") OR ("duesnie") OR ("dusnie")) ;
+
+SELECT Adv (0 ("dan") OR ("man") LINK 1 A) ;
+
+SELECT:AAcc A (0 A + Acc LINK 1 N + Acc) ;
+	#$ Manne guhkebem geajnoem vuajam.
+
+SELECT:Adv GRADE-ADV (1 A LINK 0 Attr OR Nom) ;
+	#$ Akte snjearafuelhkie gaadtan saadtesovvi, båeries bovtsh sinsitnien tjåervine gïebredin jïh akte gaajh stoerre gaajtoe lij gemkiehtamme tsåekesne.
+
+
+#!! !Adjective or Indef
+SELECT:jijnjeIndef Indef  (0 ("jïjnje") LINK 1 N OR REAL-V OR EOS) ;
+SELECT:jijnjeIndef Indef  (0 ("jïjnje") + Pl) ;
+
 
 #!! !Dem
 
@@ -814,8 +833,7 @@ SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR CO
 SELECT:Acase $$CASES (0 A LINK -1 Dem + $$CASES) ;
 	#$ Im dom guhkebem vielie vuejnieh.
 
-SELECT:AAcc A (0 A + Acc LINK 1 N + Acc) ;
-	#$ Manne guhkebem geajnoem vuajam.
+
 
 
 #!! !Postpositions
@@ -832,11 +850,6 @@ REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 SELECT:AdvnotA Adv IF (0 A LINK 1 Adv LINK *1 REAL-V BARRIER S-BOUNDARY)(*-1 VFIN BARRIER S-BOUNDARY) ;
 	#$ Im manne guhkebem daesnie sïjhth årrodh.
 
-SELECT:Adv GRADE-ADV (1 A LINK 0 Attr OR Nom) ;
-	#$ Akte snjearafuelhkie gaadtan saadtesovvi, båeries bovtsh sinsitnien tjåervine gïebredin jïh akte gaajh stoerre gaajtoe lij gemkiehtamme tsåekesne.
-
-SELECT:veeleAdv Adv IF (0 ("veele") LINK -1 Nom) ;
-	#$ manne veele måjhtam ihke ikth hov baenide skubpi.
 
 
 
@@ -891,8 +904,9 @@ SELECT:Du1NotVGen Du1 (0 VGen LINK -*1 ("månnoeh") BARRIER S-BOUNDARY) ;
        ## 
 
 # There can be Interj, VOC, 
-SELECT:Imprta Imprt (-1 BOS OR (":") OR Interj)(0 (V Sg2))(NOT *1 (Pers Sg2 Nom) BARRIER S-BOUNDARY) ;
+SELECT:Imprta Imprt (*-1 BOS OR (":") OR Interj BARRIER WORD)(0 Sg2 OR Pl2)(NOT *1 (Pers Sg2 Nom) OR (Pers Pl2 Nom) BARRIER S-BOUNDARY) ;
 	## Utnieh hijven.
+	#$ Govlede!
 SELECT:Imprtb Imprt (-1 BOS OR (":") OR Interj)(1 COMMA) ;
 	##  Jiehtieh, datne gien ij naan bovtsh, ih leah datne vielie saemie.
 REMOVE:Imprtc Imprt (-1 Interr OR Adv OR (Pers Sg2))(0 (Prs Sg2)) ;
@@ -1495,6 +1509,9 @@ SELECT:V_TV TV (0 IV - COPULAS LINK 1 EOS)(-1 Acc) ;
 SELECT:LEXbåetedh ("båetedh") (0 ("böötedh")) ((-1 Ill OR Ela) OR (1 Ill OR Ela OR VGen)) ;
 SELECT:LEXbåetedh ("båetedh") (0 ("böötedh")) (*0 Sem/Veh OR Sem/Ani LINK 0 Nom) ;
 	#$ Ealla lij desnie boelhketjem goh lohkehtæjja-skuvleste bøøti.
+
+# "govledh" IV og TV
+REMOVE:govledhIV  IV + Imprt (0 ("govledh")) ;
 
 
 # "maehtedh" OR "meehtedh"
