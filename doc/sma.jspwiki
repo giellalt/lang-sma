@@ -412,8 +412,8 @@ get the same pronounciation whether read as SME or NOB/NNO/SWE.
  ; +v3 : variant 3
  ; +v4 : variant 4
  ; +v5 : variant 5
- ; +v6 : variant 5
- ; +v7 : variant 5
+ ; +v6 : variant 6
+ ; +v7 : variant 7
 
 
 !!Umlaut and diphthong simplification triggers
@@ -2976,7 +2976,6 @@ MAINV
 
 
 
-
 * Noun sets
 
 
@@ -3035,7 +3034,12 @@ MAINV
 
 
 
+
+
+
 * BOUNDARY SETS
+
+
 
 
 
@@ -3100,14 +3104,14 @@ Removing non-lexicalised forms when lexicalised
 
 
 
-
 !Numerals and ACR
 
 
 
 
 
-!CC og not
+
+!CC og not (spesifikke regler lenger ned)
 
 
 !Interj
@@ -3119,8 +3123,10 @@ Removing non-lexicalised forms when lexicalised
 Possessive suffix
 
 
+REmove Px if not family
 
-Short Pronouns
+
+
 
 
 Proper nouns
@@ -3134,18 +3140,29 @@ Proper nouns
 
 
 
-!Verb or not
+!Verb
 
 
 
 
-!Particles
+!Particles and adverbs
 
 
 
+
+
+
+
+
+
+
+
+
+!Adjective or Indef
 
 
 !Dem
+
 
 
 
@@ -3168,7 +3185,9 @@ Proper nouns
 
 
 
+
 !Postpositions
+
 
 
 
@@ -3181,12 +3200,6 @@ Proper nouns
 
 
 
-
-
-
-
-
-!Po or Pr
 
 
 Verbs
@@ -3279,8 +3292,6 @@ Select Inf If Infv
 
 
  !Nomen
-
-REmove Px if not family
 
 
 Remove Prop Attr if not 1 Prop 
@@ -3401,7 +3412,9 @@ Rule set taken from sme
 
 
 
-Substituting Prop tags 
+
+
+
 
 
 
@@ -3445,9 +3458,6 @@ Substituting Prop tags
 
 adverbs modifying another adverb
 Adv modifying a pronoun or noun
-
-
-
 
 
 
