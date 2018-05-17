@@ -752,6 +752,9 @@ SELECT:vaejtie Pcle (0 ("vaejtie") LINK *-1 BOS BARRIER WORD)(1 Pers) ;
 	
 SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS BARRIER WORD)(*1 ("?")) ;
 	#$ Mejtie aehtjie gaantede?
+SELECT:mejtie Rel (-1 N + Pl) ;
+
+
 
 SELECT:goh Pcle (0 ("goh") LINK -1 Neg) ;
 
@@ -1184,7 +1187,7 @@ REMOVE:EssIfCom/Ine (N Ess) (0 (N Sg Com) OR (N Pl Ine)) (*-1 (Pron Sg Com) OR (
 SELECT:NPlIll (N Pl Ill) (0 (N Pl Acc)) (NOT 1 (V TV)) ;
 # ..., mejtie juridigkesne veadtjaldahkesne staatide, jih deklarasjovnide.
 
-SELECT:NPlAcc Acc (0 (N Pl Acc) LINK 1 TV) ;
+SELECT:NPlAcc Acc (0 (N Pl Acc) OR Pron + Pl LINK 1 TV) ;
 	#$ “Nåå, skodtede amma voesside tsagkedh", aehtjie maanide stillie.
 
 
