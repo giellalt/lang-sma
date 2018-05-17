@@ -755,6 +755,9 @@ SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS BARRIER WORD)(*1 ("?")) ;
 
 SELECT:goh Pcle (0 ("goh") LINK -1 Neg) ;
 
+SELECT:vihthAdv Adv IF (0 ("vihth")) ;	#is vihte possible in plural?
+
+
 SELECT:veeleAdv Adv IF (0 ("veele") LINK -1 Nom) ;
 	#$ manne veele måjhtam ihke ikth hov baenide skubpi.
 
@@ -808,6 +811,9 @@ SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NOT-NPMOD LINK 0
 # på grunn av 0C i forrige regel, trenger vi denne:
 SELECT:unifDemGen Gen (0 Dem OR Indef OR Num LINK *1 Gen BARRIER NOT-NPMOD LINK 0 NOMEN-NOT-PRON) ;
 	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, ...
+SELECT:NomNum Nom (0 Num LINK *1 Nom + N BARRIER NOT-NPMOD) ;
+	#$ Mov leah golme aath.
+
 
 REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NOT-NPMOD);
 REMOVE:NotPersWhenDemSg Pers IF (0 Dem + Sg + $$CASES LINK *1 N + Sg + $$CASES BARRIER NOT-NPMOD);
@@ -891,6 +897,8 @@ SELECT:Sem/TimeN N (0 Sem/Time LINK 0 Adv LINK -1 ("aarehke")) ;
 #!! Verbs
 
 SELECT:VPl2 Pl2 (0 VFIN LINK -1 Pers + Pl2 + Nom) ;
+SELECT:VPl3 Pl3 (0 VFIN LINK 1 Num - ("akte") LINK 0 Nom)(NEGATE -1 Pl2) ;
+	#$ Mov leah golme aath.
 
 IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA OR ConNeg) (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
 	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
@@ -910,9 +918,9 @@ REMOVE:NegPrt (Neg Prt)(NEGATE 1 ("lea" ConNeg Prt)) ;
 SELECT:Du1NotVGen Du1 (0 VGen LINK -*1 ("månnoeh") BARRIER S-BOUNDARY) ;
 #!! Imperative
 #REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
-#REMOVE:NotIndIfImpAndExcl Ind IF (NOT *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
+#REMOVE:NotIndIfImpAndExcl Ind IF (NEGATE *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
 
-SELECT:Imprta Imprt (*-1 BOS OR (":") OR Interj BARRIER WORD)(0 2-PERS)(NOT *1 2-PERS + Pers + Nom BARRIER S-BOUNDARY) ;
+SELECT:Imprta Imprt (*-1 BOS OR (":") OR Interj BARRIER WORD)(0 2-PERS)(NEGATE *1 2-PERS + Pers + Nom BARRIER S-BOUNDARY) ;
 	## Utnieh hijven.
 	#$ Govlede!
 SELECT:Imprtb Imprt (-1 BOS OR (":") OR Interj)(1 COMMA) ;
@@ -953,14 +961,14 @@ MAP (@COMP-CS<) TARGET $$ADVLCASE IF (-1 ("goh" CS) LINK -1 $$ADVLCASE)(1 COMMA 
 #
 #MAP:r425 (@COMP-CS<) TARGET Nom IF (*-1 ("go" CS) BARRIER NOT-NP LINK NOT -1 VFIN)(1 CC)(NEGATE *1 VFIN-NOT-IMP);
 #
-#MAP:r426 (@COMP-CS<) TARGET NP IF (*-1 ("go") BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS)(1 CLB LINK NOT *1 VFIN BARRIER CC); 
+#MAP:r426 (@COMP-CS<) TARGET NP IF (*-1 ("go") BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS)(1 CLB LINK NEGATE *1 VFIN BARRIER CC); 
 #	## Muhto buođđogeažit ja giđđabuođut ráhkaduvvojit muđui seammá vugiid mielde go geassebuođut, ja danne heive buođđun birra obbalohkái juo muitaluvvot.
 #	
-#MAP:r427 (@COMP-CS<) TARGET Loc IF (*-1 ("go" CS) LINK 1 Indef BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS LINK *-1 Loc BARRIER SV-BOUNDARY)(1 CLB LINK NOT *1 VFIN BARRIER CC); 
+#MAP:r427 (@COMP-CS<) TARGET Loc IF (*-1 ("go" CS) LINK 1 Indef BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS LINK *-1 Loc BARRIER SV-BOUNDARY)(1 CLB LINK NEGATE *1 VFIN BARRIER CC); 
 #    ## 
 #MAP:r428 (@COMP-CS<) TARGET Com IF (*-1 ("go" CS) LINK 1 Indef BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS LINK *-1 Com BARRIER SV-BOUNDARY)(1 CLB LINK NOT *1 VFIN BARRIER CC);
-#MAP:r429 (@COMP-CS<) TARGET Ill IF (*-1 ("go" CS) LINK 1 Indef BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS LINK *-1 Ill BARRIER SV-BOUNDARY)(1 CLB LINK NOT *1 VFIN BARRIER CC);
-#MAP:r430 (@COMP-CS<) TARGET Ess IF (*-1 ("go" CS) LINK 1 Indef BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS LINK *-1 Ess BARRIER SV-BOUNDARY)(1 CLB LINK NOT *1 VFIN BARRIER CC);
+#MAP:r429 (@COMP-CS<) TARGET Ill IF (*-1 ("go" CS) LINK 1 Indef BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS LINK *-1 Ill BARRIER SV-BOUNDARY)(1 CLB LINK NEGATE *1 VFIN BARRIER CC);
+#MAP:r430 (@COMP-CS<) TARGET Ess IF (*-1 ("go" CS) LINK 1 Indef BARRIER NOT-NP OR Nom LINK NOT -1 VFIN OR BOS LINK *-1 Ess BARRIER SV-BOUNDARY)(1 CLB LINK NEGATE *1 VFIN BARRIER CC);
 #
 #MAP:r431 (@COMP-CS<) TARGET NP IF (*-1 ("go" CS) BARRIER NOT-NPMOD LINK *-1 Nom BARRIER S-BOUNDARY)(*-1 ("go" CS) BARRIER NOT-NPMOD LINK *-1 Comp BARRIER S-BOUNDARY)(NEGATE *-1 go BARRIER NOT-NPMOD LINK -1 VFIN LINK *-1 VFIN BARRIER S-BOUNDARY)(0 Nom OR ADVLCASE)(1 EOS OR CLB) (NEGATE 1 CLB LINK *1 VFIN BARRIER CC) (NEGATE 1 CLB LINK *1 NP-HEAD-NOM BARRIER NOT-NPMOD) (NEGATE 2 Interr LINK *1 VFIN LINK *1 VFIN BARRIER S-BOUNDARY); 
 #	## ...muhto galjebut dat lea go guv-čalmmit. 
@@ -984,7 +992,7 @@ MAP (@COMP-CS<) TARGET $$ADVLCASE IF (-1 ("goh" CS) LINK -1 $$ADVLCASE)(1 COMMA 
 #	## Dego njamaheaddji eadni dikšumin mánáidis...
 #	
 #MAP (@COMP-CS<) TARGET N (*-1 ("goh") BARRIER S-BOUNDARY );
-#MAP (@COMP-CS<) TARGET NP-MEMBER IF (*-1 ("goh" CS) BARRIER NOT-NP LINK NOT -1 VFIN OR CC)(0 Nom OR ADVLCASE)(NEGATE 0 Attr OR TITLE LINK 1 N OR A)(NOT *-1 (@COMP-CS<) BARRIER S-BOUNDARY);
+#MAP (@COMP-CS<) TARGET NP-MEMBER IF (*-1 ("goh" CS) BARRIER NOT-NP LINK NOT -1 VFIN OR CC)(0 Nom OR ADVLCASE)(NEGATE 0 Attr OR TITLE LINK 1 N OR A)(NEGATE *-1 (@COMP-CS<) BARRIER S-BOUNDARY);
 	## 
 
 #!! !!CNP mapping
@@ -1061,7 +1069,7 @@ MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR C
 MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
 
 MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 REAL-V BARRIER S-BOUNDARY OR CC OR COMMA) ;
-MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NOT *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA) ;
+MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NEGATE *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA) ;
 MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg) ;
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR COMMA OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom) ;
 	#% Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
@@ -1070,7 +1078,7 @@ MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(N
 MAP (@+FMAINV) TARGET VFIN IF (0 <vdic>)  ;
 MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
 
-MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NOT *1 Inf OR PrfPrc BARRIER S-BOUNDARY) ;
+MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NEGATE *1 Inf OR PrfPrc BARRIER S-BOUNDARY) ;
 
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*-1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
@@ -1107,7 +1115,7 @@ SELECT:killifVinCohort SYN-V  ;
 SELECT:VSg2IfPersSg2a (V Sg2)(NOT 0 N) ((*-1 (Pers Nom Sg2) OR (Rel Sg Nom) BARRIER REAL-V OR Nom) OR (1 (Pers Nom Sg2)));
 SELECT:Pl3WhenPlSubj (V Pl3) IF ((*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY) OR (-1 (N Sg Nom) LINK -1 CC))(0 ("lea" V));
 #SELECT:Pl3WhenSubjCC (V Pl3) IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
-REMOVE:Pl3 (V Pl3) (NOT *0 Nom BARRIER S-BOUNDARY) ;
+REMOVE:Pl3 (V Pl3) (NEGATE *0 Nom BARRIER S-BOUNDARY) ;
 SELECT:Sg3WhenRelSg (V Sg3) ((-1 (Rel Sg Nom)) OR (-1 CC LINK *-1C (V Sg3) BARRIER S-BOUNDARY OR V));
 #SELECT:Sg3WhenSg3toLeft (V Sg3) (-1 CC LINK *-1C (V Sg3) BARRIER S-BOUNDARY OR V);
 
@@ -1137,7 +1145,7 @@ SELECT:Ger Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY) ;
 #!! !!Span sentences
 
 
-#"<lea>" REMOVE:lea Pl3 IF (<*-1 Sg1 OR Sg2)(NOT *-1 (N Pl Nom));
+#"<lea>" REMOVE:lea Pl3 IF (<*-1 Sg1 OR Sg2)(NEGATE *-1 (N Pl Nom));
 
 #!!  !Nomen
 
@@ -1182,7 +1190,7 @@ SELECT:NPlAcc Acc (0 (N Pl Acc) LINK 1 TV) ;
 
 #!! !Verb or Noun
 
-SELECT:PlNomObj (N Pl Nom) IF (0 (V Pl3)) (NOT *0 VFIN BARRIER NOT-NPMOD OR S-BOUNDARY) ;
+SELECT:PlNomObj (N Pl Nom) IF (0 (V Pl3)) (NEGATE *0 VFIN BARRIER NOT-NPMOD OR S-BOUNDARY) ;
 #...Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki
 
 REMOVE:NotNomIfInf (N Pl Nom) IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
@@ -1206,7 +1214,7 @@ IFF:GoNotCs ("goh" Pcle) (-1 Neg OR ConNeg OR ("sån"));
 	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
 	## Dallah goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. # CS
 
-REMOVE:CSNotVfin CS IF (NOT *-1 VFIN OR ("jis" CS))(0 ("dellie") OR ("dle"));
+REMOVE:CSNotVfin CS IF (NEGATE *-1 VFIN OR ("jis" CS))(0 ("dellie") OR ("dle"));
 	##
 
 REMOVE:NotNomIfCs (N Nom) (0 CS)(1 (N Nom)) ;
@@ -1338,7 +1346,7 @@ REMOVE:"ektine" (Pr) (*1 Com BARRIER NOT-NPMOD) ;
 
 #!! Illative or genetive
 SELECT:IllNotGena Ill (0 Gen)(*1 ILLV BARRIER NOT-ADV);
-REMOVE:IllNotGenb Gen (0 Ill)(NOT *-1 Pr BARRIER NOT-NPMOD)(1 EOS OR S-BOUNDARY);
+REMOVE:IllNotGenb Gen (0 Ill)(NEGATE *-1 Pr BARRIER NOT-NPMOD)(1 EOS OR S-BOUNDARY);
 	## Tåamma fuehpesne gåatan.
 
 SELECT:Ill Ill (*0 ILLV BARRIER S-BOUNDARY OR ILLADV) ;
@@ -1398,8 +1406,8 @@ REMOVE:Sg2_Not_Inf Inf IF (0 (V TV Der1 Der/d Ind Prs Sg2)) (*-1 Pron + Sg2 + No
 REMOVE:Pl2_Not_Inf Inf IF (0 (V TV Ind Prt Pl2))(*-1 Pron + Pl2 + Nom BARRIER VFIN);
 
 # Even stronger. No pro-drop. ## WARNING! This is probably too strong.
-REMOVE:Inf_Not_Sg2_ProDrop (V TV Der1 Der/d Ind Prs Sg2) IF (NOT *-1 Pron + Sg2 + Nom);
-REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NOT *-1 Pron + Pl2 + Nom);
+REMOVE:Inf_Not_Sg2_ProDrop (V TV Der1 Der/d Ind Prs Sg2) IF (NEGATE *-1 Pron + Sg2 + Nom);
+REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NEGATE *-1 Pron + Pl2 + Nom);
 
 
 
@@ -1541,12 +1549,12 @@ SELECT:PlN PL-NOUN IF (0 SG-NOUN + Pl) ;
 #
 #MAP (@SUBJ>) TARGET Nom IF (*-1 BOS BARRIER NOT-NPMOD)(*1 VFIN BARRIER S-BOUNDARY) (NEGATE *1 (@SUBJ));
 #	## Dov orre gaamegh bijlen nuelesne.
-#MAP (@SUBJ) TARGET Nom IF (-1 GUKTIEGOSSE)(NOT *1 VFIN BARRIER S-BOUNDARY);
+#MAP (@SUBJ) TARGET Nom IF (-1 GUKTIEGOSSE)(NEGATE *1 VFIN BARRIER S-BOUNDARY);
 #	## Gusnie @ADVL> gaamegh? @SUBJ
-#MAP (@SUBJ) TARGET Nom IF (*-1 BOS BARRIER NOT-NPMOD)(NOT 0 A LINK *1 (N Nom) OR ADVLCASE + PLACE OR DAESNIE OR PLACE-P BARRIER NOT-NPMOD)(NOT *1 VFIN BARRIER S-BOUNDARY);
+#MAP (@SUBJ) TARGET Nom IF (*-1 BOS BARRIER NOT-NPMOD)(NOT 0 A LINK *1 (N Nom) OR ADVLCASE + PLACE OR DAESNIE OR PLACE-P BARRIER NOT-NPMOD)(NEGATE *1 VFIN BARRIER S-BOUNDARY);
 #	## Dov orre gaamegh @SUBJ seangkoen nuelesne <@ADVL.
 #    # for ellipsis
-#MAP (@<SUBJ) TARGET Nom IF (NOT *-1 Nom BARRIER S-BOUNDARY LINK *-1 VFIN BARRIER S-BOUNDARY);
+#MAP (@<SUBJ) TARGET Nom IF (NEGATE *-1 Nom BARRIER S-BOUNDARY LINK *-1 VFIN BARRIER S-BOUNDARY);
 #
 #
 #MAP (@SPRED) TARGET Nom IF (*1C (@SUBJ) BARRIER NOT-NPMOD);
