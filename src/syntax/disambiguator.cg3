@@ -467,7 +467,7 @@ LIST NORGA = "Dánmárku-#Norga" "davvi#Norga" "Davvi-Norga" "gaska-#Norga" "Nor
 LIST REALCOPULAS = "lea" ;
 
 # The set COPULAS is for predicative constructions
-SET COPULAS = REALCOPULAS ;
+SET COPULAS = REALCOPULAS OR ("sjïdtedh") ;
 
 SET V-NOT-COP = V - COPULAS ;
 
@@ -504,7 +504,7 @@ LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" ;
 LIST OPRED-V = "tuhtjedh" "utnedh" ;
 
-LIST MOVEMENT-V = "båetedh" "feeredh" "vuelkedh" "vaedtsedh" "vuejedh" "voejedh" "vaarredh" "hajkedh" "roehtedh" "feeledh" "sygkeldidh" "girtedh" "skodtedh" "njaakedh" ;
+LIST MOVEMENT-V = "båetedh" "feeledh" "feeredh" "girtedh" "hajkedh" "njaakedh" "roehtedh" "skodtedh" "sygkeldidh" "vaarredh" "vaedtsedh" "voejedh" "vuejedh" "vuelkedh" ;
 
 LIST COM-ADJ = "latjkes" ;
 
@@ -728,6 +728,7 @@ REMOVE:PlcSur Sem/Plc IF (0 Sem/Sur LINK 0 Acc OR Nom OR Attr LINK -1 Sem/Mal OR
 
 LIST SEL-PROP = "Noerhtelaanth" "Såevmie" ;
 
+
 SELECT:Prop  SEL-PROP ;
 
 SELECT:PropNom Nom (0C Prop + Sg LINK 1 VFIN + Sg3) ;
@@ -740,6 +741,9 @@ SELECT:PropNom Nom (0C Prop + Sg LINK -1 Dem + Sg + Nom) ;
 
 REMOVE:vfinIfGen VFIN (0 N LINK -1 Indef + Gen) ;
 	#$ Mubpien aereden jïevehtahkh jïh ålloe-råavkah bïjlese guedtieh.
+
+REMOVE:ifNum V (0 N + Pl LINK -1 Num) ;
+	#$ Mov leah golme aath mejtie sijhtem dihte mov geelle edtja åestedh.
 
 
 #OBS guktie ja gumhtie
@@ -774,6 +778,9 @@ SELECT:AAcc A (0 A + Acc LINK 1 N + Acc) ;
 SELECT:Adv GRADE-ADV (1 A LINK 0 Attr OR Nom) ;
 	#$ Akte snjearafuelhkie gaadtan saadtesovvi, båeries bovtsh sinsitnien tjåervine gïebredin jïh akte gaajh stoerre gaajtoe lij gemkiehtamme tsåekesne.
 
+SELECT:Adv ILLADV (1 MOVEMENT-V) ;
+	#$ Njulhtjestalla goh maanetje jïh varki tjoevere deavam våålese roehtedh maanaj gåajkoe jïh dej ektesne paradijsem njålhtjodh.
+
 
 SELECT:AdvFoc Adv (0 (Foc/ge)) ;
 
@@ -806,8 +813,9 @@ SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NOT-NPMODADV-INDEF)  ;
 
 SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR (A Attr)) ;
 
-SELECT:AttrNotNom (Pron Interr Attr) OR (A Attr) (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv))) ;
+SELECT:AttrNotNom (Pron Interr Attr) OR (A Attr) (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv))) ;
     ##...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
+	#% Daelie biejjieh guhkebe jïh tjuevkebe sjïdteme.
 
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NOT-NPMOD LINK 0 NOMEN-NOT-PRON) ;
 
@@ -1427,10 +1435,15 @@ REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NEGATE *-1 Pron + Pl2 + Nom);
 	# Prop or not
 	# ----------- 
 
-SELECT:Prop Prop IF (NEGATE *-1 BOS OR (":") OR (PUNCT LEFT) OR (Num Nom) BARRIER REALWORD); 
+LIST NOT-PROP = "Gåetie" ; # usually not Prop if in beginning of sentence
+
+SELECT:Prop Prop IF (NEGATE *-1 BOS OR (":") OR (PUNCT LEFT) OR (Num Nom) BARRIER REALWORD) ; 
 	## Áirras Egil Olli nammaduvvui Sámedikki ovddasteaddjin.
 	## 1.1. Sámi doaibmaplána darbu ja ulbmilat.
  # Capitalised nouns in the middle of a sentence are names - (not always).
+
+REMOVE:Prop NOT-PROP IF (*-1 BOS OR (":") BARRIER REALWORD) ; 
+
 
 REMOVE:PropSg (Prop Pl) IF (0 (Prop Sg))(NEGATE 0 ("Saemiedigkie"));  
 	## Marit lea dál.
