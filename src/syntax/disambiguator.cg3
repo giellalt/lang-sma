@@ -745,6 +745,9 @@ REMOVE:vfinIfGen VFIN (0 N LINK -1 Indef + Gen) ;
 REMOVE:ifNum V (0 N + Pl LINK -1 Num) ;
 	#$ Mov leah golme aath mejtie sijhtem dihte mov geelle edtja åestedh.
 
+SELECT:sjïdtedh V (0 ("sjïdtedh") LINK -1 Nom) ;
+	#$ Gosse daejtie vuejniejibie, dellie daejriejibie daelvie guhkies jïh tjåetskemes sjædta.
+
 
 #OBS guktie ja gumhtie
 
@@ -813,8 +816,8 @@ SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NOT-NPMODADV-INDEF)  ;
 
 SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR (A Attr)) ;
 
-SELECT:AttrNotNom (Pron Interr Attr) OR (A Attr) (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv))) ;
-    ##...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
+SELECT:AttrNotNom Attr (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv))) ;
+	## ...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
 	#% Daelie biejjieh guhkebe jïh tjuevkebe sjïdteme.
 
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NOT-NPMOD LINK 0 NOMEN-NOT-PRON) ;
