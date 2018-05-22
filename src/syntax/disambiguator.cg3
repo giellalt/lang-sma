@@ -131,6 +131,8 @@ LIST Pers = Pers ;
 LIST Dem = Dem ;
 LIST Interr = Interr ;
 LIST Rel = Rel ;
+LIST Logo = Logo ;
+
 #LIST Adp = Adp ;
 LIST Po = Po ;
 LIST Pr = Pr ;
@@ -401,6 +403,7 @@ SET REALWORD-NOTABBR = WORD - Num - Ord - ABBR ;
 
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS ;
 
+SET NOT-A = WORD - A ;
 SET NOT-ADV = WORD - Adv ;
 
 SET NP-HEAD = Num OR N OR Pron ;
@@ -709,7 +712,12 @@ REMOVE:PxWhenAcc PxSg1 IF (0 Acc LINK *1 TV BARRIER WORD - ADVLCASE)(NEGATE *-1 
 REMOVE:notFAMILY PX IF (0 N)(NOT 0 FAMILY OR Pron);
 	## Bïepmehtehteme jåarhka goh gïjrese vuertieminie.
 
-	
+
+#!! Pronouns
+
+REMOVE:3Logo Logo + Pl3 IF (NOT *-1 Pl3);
+
+SELECT Attr IF (0 Pron + Indef)(*1 N BARRIER NOT-A);
 
 
 #!! Proper nouns
@@ -948,6 +956,13 @@ SELECT:Imprte (Imprt Sg2) (-1 CC LINK *-1C (Imprt Sg2) BARRIER S-BOUNDARY OR V) 
 SELECT:imprt Imprt ((-1 CLB) OR (*-1 BOS BARRIER WORD))(1 ("amma")) ;
 	#$ Nåå, skodtede amma voesside tsagkedh.
 
+#!! Remove verb readings
+
+REMOVE VFIN IF (0 N)(*1C VFIN BARRIER S-BOUNDARY);
+#REMOVE VFIN IF (0 N + Sg)(1C VFIN + Sg3);
+#REMOVE VFIN IF (0 N + Pl)(1C VFIN + Pl3);
+        ## Joekoen bïjvele lea jïh guakedh.
+# Merk: Dette kan i verste fall fjerne dobbeltverbkonstruksjonar.
 
 # Select the finite verb reading if this is the only finite verb reading within the clause
 #SELECT:vfin VFIN IF (NEGATE *0 V BARRIER S-BOUNDARY OR CLB) ;
