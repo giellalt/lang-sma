@@ -507,7 +507,7 @@ LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" ;
 LIST OPRED-V = "tuhtjedh" "utnedh" ;
 
-LIST MOVEMENT-V = "båetedh" "feeledh" "feeredh" "girtedh" "hajkedh" "njaakedh" "roehtedh" "skodtedh" "sygkeldidh" "vaarredh" "vaedtsedh" "voejedh" "vuejedh" "vuelkedh" ;
+LIST MOVEMENT-V = "båetedh" "feeledh" "feeredh" "gaavnedh" "girtedh" "hajkedh" "njaakedh" "roehtedh" "skodtedh" "sygkeldidh" "vaarredh" "vaedtsedh" "voejedh" "vuejedh" "vuelkedh" ;
 
 LIST COM-ADJ = "latjkes" ;
 
@@ -794,6 +794,10 @@ SELECT:Adv ILLADV (1 MOVEMENT-V) ;
 
 
 SELECT:AdvFoc Adv (0 (Foc/ge)) ;
+
+SELECT:AifGrade A (0 N LINK -1 GRADE-ADV) ;
+	#$ Joekoen bïjvele lea jïh guakedh.
+
 
 #!! !Adjective or Indef
 SELECT:jijnjeIndef Indef  (0 ("jïjnje") LINK 1 N OR REAL-V OR EOS) ;
