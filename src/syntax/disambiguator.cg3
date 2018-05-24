@@ -405,10 +405,11 @@ LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS ;
 
 SET NOT-A = WORD - A ;
 SET NOT-ADV = WORD - Adv ;
+SET NOT-ADV-PCLE = NOT-ADV - Pcle ;
 
 SET NP-HEAD = Num OR N OR Pron ;
 
-SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron Pers Gen) OR (Pron Logo Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr OR ("gånka") ;
+SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR Attr OR (ABBR Attr) OR (Pron Pers Gen) OR (Pron Logo Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr OR ("gånka") ;
          # The strict version of items that can only be premodifiers, not parts of the predicate - copied from sme-dis.rle
          
 
@@ -714,6 +715,7 @@ REMOVE:notFAMILY PX IF (0 N)(NOT 0 FAMILY OR Pron);
 
 
 #!! Pronouns
+REMOVE:altese PxSg3 (0 Pers + Gen) ; #Dette må vi se på. altese brukes (mot Bergsland) i korpus også refleksivt, men det er umulig (?) å disambiguere
 
 REMOVE:3Logo Logo + Pl3 IF (NOT *-1 Pl3);
 
@@ -840,8 +842,13 @@ SELECT:unifDemGen Gen (0 Dem OR Indef OR Num LINK *1 Gen BARRIER NOT-NPMOD LINK 
 SELECT:NomNum Nom (0 Num LINK *1 Nom + N BARRIER NOT-NPMOD) ;
 	#$ Mov leah golme aath.
 
+SECTION  #!! !!@CODE@
 
 REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NOT-NPMOD);
+REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER WORD - A); #OBS Denne burde fungere med WORD - Attr 
+	#$ Pluppe tjuara dam rovnegs tjoevkem vuartasjidh guktie buelieminie.
+
+
 REMOVE:NotPersWhenDemSg Pers IF (0 Dem + Sg + $$CASES LINK *1 N + Sg + $$CASES BARRIER NOT-NPMOD);
 REMOVE:NotPersWhenDemPl Pers IF (0 Dem + Pl + $$CASES LINK *1 N + Pl + $$CASES BARRIER NOT-NPMOD);
 	## Dah minngemes jaepieh jïjtje jåhta.
@@ -908,6 +915,8 @@ SELECT:dusnieAdv Adv IF (0 ("dusnie") LINK 1 Adv OR EOS OR Prop) ;
 	#$ Dusnie aaj buesjies kraanna Hulda.
 
 SELECT:meatanAdv Adv IF (0 ("meatan") LINK 1 ("vaeltedh")) ;
+SELECT:læjhkanAdv Adv IF (0 ("læjhkan")) ;
+	#$ Mohte Læjsa geerjene læjhkan.
 
 SELECT:novAdv Adv IF (0 ("nov")) ;	#waiting for example with Pcle
 
@@ -922,7 +931,9 @@ SELECT:Sem/TimeN N (0 Sem/Time LINK 0 Adv LINK -1 ("aarehke")) ;
 
 #!! Verbs
 
-SELECT:VPl2 Pl2 (0 VFIN LINK -1 Pers + Pl2 + Nom) ;
+SELECT:VPl2 Pl2 (0 VFIN LINK *-1 Pers + Pl2 + Nom BARRIER NOT-ADV-PCLE) ;
+	#$ Viehkehth mannem bæjjese, edtjem öörnedh guktie dijjieh olkese bïesede.
+
 SELECT:VPl3 Pl3 (0 VFIN LINK 1 Num - ("akte") LINK 0 Nom)(NEGATE -1 Pl2) ;
 	#$ Mov leah golme aath.
 
@@ -1146,7 +1157,9 @@ SELECT:killifVinCohort SYN-V  ;
 #!! leah Prs Sg2 = Pl3
 
 SELECT:VSg2IfPersSg2a (V Sg2)(NOT 0 N) ((*-1 (Pers Nom Sg2) OR (Rel Sg Nom) BARRIER REAL-V OR Nom) OR (1 (Pers Nom Sg2)));
-SELECT:Pl3WhenPlSubj (V Pl3) IF ((*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY) OR (-1 (N Sg Nom) LINK -1 CC))(0 ("lea" V));
+SELECT:Pl3WhenPlSubj (V Pl3) IF ((*-1 (N Pl Nom) OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY) OR (-1 (N Sg Nom) LINK -1 CC))(0 VFIN);
+	#$ Maam dah daelvege darjoeh?
+
 #SELECT:Pl3WhenSubjCC (V Pl3) IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
 REMOVE:Pl3 (V Pl3) (NEGATE *0 Nom BARRIER S-BOUNDARY) ;
 SELECT:Sg3WhenRelSg (V Sg3) ((-1 (Rel Sg Nom)) OR (-1 CC LINK *-1C (V Sg3) BARRIER S-BOUNDARY OR V));
