@@ -720,7 +720,7 @@ REMOVE:altese PxSg3 (0 Pers + Gen) ; #Dette må vi se på. altese brukes (mot Be
 
 REMOVE:3Logo Logo + Pl3 IF (NOT *-1 Pl3);
 
-SELECT Attr IF (0 Pron + Indef)(*1 N BARRIER NOT-A);
+SELECT Attr IF (0 (Pron Indef) LINK NOT 0 Gen)(*1 N BARRIER NOT-A);
 
 
 #!! Proper nouns
