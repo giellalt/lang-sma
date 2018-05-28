@@ -165,9 +165,9 @@ Rules
 
 "Diphthong simplification oe:o"
 !! __@RULENAME@__  
-   e:0 <=> o _  Cns+ (e) (%>:) %^DISIMP: ;
-           o _   (l:)       (m:)  (%>:) %^COMPDISIMP2: [b:|m:] ;!%> =morfemgrense
-           o _   (l:)       m:  (%>:) %^COMPDISIMP3: e: ;!%> =morfemgrense
+   e:0 <=> o _ Cns+     (e) (%>:) %^DISIMP:              ;
+           o _ (l:) (m:)    (%>:) %^COMPDISIMP2: [b:|m:] ;!%> =morfemgrense
+           o _ (l:)  m:     (%>:) %^COMPDISIMP3:  e:     ;!%> =morfemgrense
 
 
 
@@ -189,10 +189,10 @@ Rules
            (%»:) _ e Cns+ %»:  %^adteUML: ;
 
 
-!!€ jearkoe%>%^DISIMPbe
+!!€ jearkoe%>%^COMPDISIMPbe
 !!€ jeark0e%>0be
 
-!!$ jearkoe%>%^DISIMPbe
+!!$ jearkoe%>%^COMPDISIMPbe
 !!$ jearkoe%>0be
 
 ! ADJ - 
@@ -235,23 +235,22 @@ Rules
 
 
 "ä/e alternation"
-
-ä:e <=> _  %>: %^ILLELA: [ s e |s n e|s t e] ;
+ä:e <=> _ %>: %^ILLELA: [ s e | s n e | s t e ] ;
 
 "á/e alternation"
-á:e <=> _ %>: %^ILLELA:  [ s e| s n e|s t e] ;
+á:e <=> _ %>: %^ILLELA: [ s e | s n e | s t e ] ;
 
 "æ/e alternation"
-æ:e <=> _ %>: %^ILLELA:  [  s e|s n e|s t e] ;
+æ:e <=> _ %>: %^ILLELA: [ s e | s n e | s t e ] ;
 
 "ä/i alternation"
-ä:i <=> _ %>: %^COMESS: [n e| (i) j s t e| d e] ;
+ä:i <=> _ %>: %^COMESS: [ n e | (i) j s t e | d e ] ;
 
 "æ/i alternation"
-æ:i <=> _ %>: %^COMESS: [n e| (i) j s t e| d e] ;
+æ:i <=> _ %>: %^COMESS: [ n e | (i) j s t e | d e ] ;
 
 "á/i alternation"
-á:i <=> _ %>: %^COMESS: [n e| (i) j s t e| d e] ;
+á:i <=> _ %>: %^COMESS: [ n e | (i) j s t e | d e ] ;
 
 
 
@@ -259,7 +258,7 @@ Rules
 "a/i alternation"
 !! __@RULENAME@__  
 a:i <=>   _ j (e) (%>:) %^DISIMP: ; ! Diftongforenkling  : Maana:maanine
-       \i _ %>: %^COMESS:         ; ! a -> i, når det ikke er -i- i stammevokal
+       \i _        %>:  %^COMESS: ; ! a -> i, når det ikke er -i- i stammevokal
 
 
 ! No nouns following this pattern, see last part of §103 in Bergsland - ???
