@@ -690,6 +690,9 @@ REMOVE:R_ACR ACR (0 CC);
 #!! !CC og not (spesifikke regler lenger ned)
 SELECT:jallh CC (0 ("jallh")) ; #jallh can also be A Pl Nom, but not likely, look for examples with this analysis, if they exist
 
+REMOVE:Adv Adv (0 ("gosse") LINK NEGATE *1 MOVEMENT-V) ;
+	#$ Daenjaepien leah jijtje åådtjeme veeljedh mejnie giehtelidh gosse gietevætnoe.
+
 
 #!! !Interj
 
@@ -832,9 +835,10 @@ SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NOT-NPMODADV-INDEF)  ;
 
 SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR (A Attr)) ;
 
-SELECT:AttrNotNom Attr (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv))) ;
+SELECT:AttrNotNom Attr (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv)))(NEGATE 0 Nom LINK 1 Ill LINK *1 Inf BARRIER S-BOUNDARY OR V) ;
 	## ...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
 	#% Daelie biejjieh guhkebe jïh tjuevkebe sjïdteme.
+	#% Buerebe Læjsese guvvieh darjodh.
 
 SELECT:unifDem $$CASES (0C Dem OR Indef LINK *1 $$CASES BARRIER NOT-NPMOD LINK 0 NOMEN-NOT-PRON) ;
 
@@ -1099,7 +1103,11 @@ SELECT @CVP IF (*-1 REAL-V BARRIER S-BOUNDARY)(*1 REAL-V BARRIER S-BOUNDARY)(NEG
 REMOVE @CVP IF (0 @CNP);
 
 
-#!! Attributes
+#!! Attributes or not
+
+SELECT:NomWhenAttr Nom (0 A + Nom LINK 1 Ill LINK *1 Inf BARRIER S-BOUNDARY OR V)(*-1 BOS BARRIER NOT-ADV) ;
+	## Buerebe Læjsese guvvieh darjodh.
+
 SELECT:Attr Attr (0 VFIN) (1 N LINK *1 VFIN BARRIER S-BOUNDARY) ;
 	#$ Saemieh Aarborteste jih Vaapseste billin edtjin skuvlem Aarbortesne dassedh jis orre skuvle saemide Trøndelagesne tseegkesovvi.
 
@@ -1133,6 +1141,11 @@ MAP @<SUBJ TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr)) ;
 MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER REAL-V LINK -1 COPULAS)(1 EOS) ;
 	#$ Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
 
+
+MAP:AInf (@-FMAINV) TARGET Inf IF (*-1 A + Nom BARRIER S-BOUNDARY OR V LINK *-1 BOS BARRIER NOT-ADV)(NEGATE 0 AUX) ;
+	#$ Geerve nimhtie taali jih baakoejgujmie ryøknedh.
+
+
 MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 REAL-V BARRIER S-BOUNDARY OR COMMA) ;
 MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC OR COMMA) OR (-1 PrfPrc)) ;
 MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
@@ -1143,7 +1156,10 @@ MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg) ;
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR COMMA OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom) ;
 	#% Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
 
-MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Inf LINK *-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf)(NOT 0 INF-SYN) ;
+MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Inf LINK *-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf)(NOT 0 INF-SYN)(NEGATE *-1 A + Nom BARRIER S-BOUNDARY OR V LINK *-1 BOS BARRIER NOT-ADV) ;
+	#% Geerve nimhtie taali jih baakoejgujmie ryøknedh.
+
+
 MAP (@+FMAINV) TARGET VFIN IF (0 <vdic>)  ;
 MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
 
@@ -1321,11 +1337,15 @@ SELECT:AdjAttrBeforeNoun (A Attr) IF ( 1C N ) ;
 
 #!! !!Adj or Adv
 
-REMOVE:AdvNotA A (0 Adv)((1C V OR (A Sg Nom)) OR (1 Ela LINK *1 V BARRIER NOT-ADV));
+
+
+REMOVE:AdvNotA A (0 Adv)((1C V OR (A Sg Nom) LINK NOT 0 COPULAS) OR (1 Ela LINK *1 V BARRIER NOT-ADV)) ;
 	## Minngemes aejkien goh dam heannedi lij 1988.
 	## Manne båatam sagke buerebe datneste jieledh, Karijuse.
 REMOVE:AdvNotA_Cop A (0 Adv)(-1C V LINK NOT 0 COPULAS)(NEGATE 1 A OR N) ;
 	## Maanah utnieh guhkiem nuekies vuarteme jih daelie mahte vissjehtovveminie.
+
+SELECT:ANom A + Nom (0 Adv)(1 COPULAS) ;
 
 SELECT:AAttr (A Attr) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv)))(NOT 0 N) ;
 	## Gïjre lea sjïdteme daelvien männgan goh lea nåake gåatome jïh jïjnjh juvrh orreme.
