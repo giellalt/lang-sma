@@ -1,28 +1,49 @@
 
 
-S O U T H   S Á M I   D I S A M B I G U A T O R          
+!!!S O U T H   S Á M I   D I S A M B I G U A T O R          
 
 
 
 
-!!!Delimiters 
+!!Delimiters 
 
 
+"<.>" "<!>" "<?>" "<...>" "<¶>" sent
 
 
 !!Tags and sets 
 
-* BOS/EOS
+!BOS/EOS:
+
+* (>>>) (<s>)
+  (<<<) (</s>)
+
+!Morphological tags
+
+* N 
+* Sg 
+Pl
+* Nom
+Acc
+Gen
+Ine
+Ela
+Ill
+Com
+Ess
+
+* PxSg1 
+PxSg2
+PxSg3
+PxPl1
+PxPl3
+PxPl3
 
 
-* Tags declared as single-membered LISTs 
 
 
 
-
-
-
-
+* Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
 
 
 
@@ -40,7 +61,7 @@ S O U T H   S Á M I   D I S A M B I G U A T O R
 
 !Derivation tags
 
-Der/A
+* Der/A
 Der/Car
 Der/Dimin 
 Der/InchL
@@ -75,17 +96,19 @@ Der/vuota
 
 
 
-* Sets for Semantic tags
+! Semantic tags
+
+Sem/Act
+Sem/Amount
+etc.
 
 
 
 
 
+!Syntactic tags
 
-
-* Syntactic tags
-
-@CNP
+* @CNP
 @CVP
 @+FAUXV
 @+FMAINV
@@ -94,13 +117,20 @@ Der/vuota
 MAINV
 
 
-* More sets
 
+!Titles
 
 
+REAL-TITLE
+OFFICE
+TITLE
 
 
+!Sets of morphological tags for syntactic use
 
+CASES
+ADVLCASE
+NUMBER
 
 
 
@@ -115,21 +145,33 @@ MAINV
 
 
 
-* Noun sets
 
+!Noun sets
 
 
 
 
 
+INSTITUTION
+MEDIA
+ORGANIZATION
+EDUCATION
+CURRENCY
+LESSON
+OTHER-INDUSTRY 
 
 
 
+!Verb sets
 
 
+REALCOPULAS
 
+COPULAS
 
+V-NOT-COP
 
+MOD-ASP
 
 
 
@@ -139,7 +181,6 @@ MAINV
 
 
 
-* Verb sets
 
 
 
@@ -148,41 +189,72 @@ MAINV
 
 
 
+!Adective sets
 
 
 
+!Adverb sets
 
 
+GUKTIEGOSSE
 
+DAESTIE
 
 
+ILLADV
 
+INEADV1
 
+ELAADV1
 
+INEADV
 
+ELAADV
 
+DV-MOD-ADV
 
+ADV-MOD-NP
 
+GRADE-ADV
 
 
+!Postposition sets
 
+ILLPO
 
 
+!BOUNDARY SETS
 
 
+S-BOUNDARY
+REALCLB
 
+SV-BOUNDARY
 
+NP-BOUNDARY
 
 
+!Derivation sets
 
+V-DER
 
-* BOUNDARY SETS
+V-DER-SUF
 
+N-DER
+N-DER-SUF
 
+A-DER
+A-DER-SUF
 
 
+PASS
 
+LEX-V
+LEX-N
+LEX-A
 
+VERB-FORMS
+2-PERS
 
 
 
@@ -194,39 +266,25 @@ MAINV
 
 
 
+ !!!Disambiguation rules
 
 
-
-
-
-
-
-
-
-
-
-
- !!!Disambiguation #
-
-
-!!@NO CODE@
 
 Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes når vi får felles numeralfil fra shared)
 
 !!Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
 
 
-* Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
+Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
 
 
 
 
 
-!!@NO CODE@
 
 
 
-!!Cycle 0
+!!Cycle 0 (Early rules)
 
 Removing non-lexicalised forms when lexicalised 
 
@@ -253,37 +311,43 @@ Removing non-lexicalised forms when lexicalised
 !CC og not (spesifikke regler lenger ned)
 
 
+
 !Interj
 
 
 
 
 
-Possessive suffix
+!Possessive suffix
 
 
 REmove Px if not family
 
 
 
-Pronouns
-
-
-
-
-Proper nouns
+!Pronouns
 
 
 
 
 
 
+!Proper nouns
 
 
 
 
 
-!Verb
+
+
+
+
+
+
+
+
+
+!Verbs
 
 
 
@@ -310,10 +374,13 @@ Proper nouns
 
 
 
+
+
+
 !Adjective or Indef
 
 
-!Dem
+!Demonstratives
 
 
 
@@ -323,7 +390,9 @@ Proper nouns
 
 
 
-!!@NO CODE@
+
+
+
 
 
 
@@ -347,11 +416,23 @@ Rel or Interr
 
 
 !Postpositions
+Selecting postpositions when preceded by genitives, etc.
 
 
 
 
 !Adverbs
+Selecting adverbs in local contexts
+
+
+
+
+
+
+
+
+!Verbs
+Selecting verbs in local contexts, based upon agreement patterns
 
 
 
@@ -361,17 +442,8 @@ Rel or Interr
 
 
 
+Selecting imperative sentence-initially with appropriate right context
 
-Verbs
-
-
-
-
-
-
-
-
-Imperative
 
 
 
@@ -379,7 +451,16 @@ Remove verb readings
 
 
 
-!!CC- and CS-Mapping
+
+
+
+
+
+!!Mapping rules
+
+!CC- and CS-Mapping
+
+* __COMPCS__  @COMP-CS< to Adv or A after goh etc.
 
 
 
@@ -406,7 +487,9 @@ Mapping @CVP to all CS
 
 
 
-Attributes
+Attributes or not
+
+
 
 
 
@@ -417,9 +500,13 @@ Attributes
 Select PrfPrc if DerNomAct
 
 
-!!@NO CODE@
 
 Mapping verbs
+
+
+
+
+
 
 
 
@@ -459,8 +546,8 @@ Select Inf If Infv
 
 
 
- !Nomen
 
+ !Nomen
 
 Remove Prop Attr if not 1 Prop 
 
@@ -505,9 +592,12 @@ Remove Prop Attr if not 1 Prop
 
 
 
+
+
+
+
+
 !!Grammatisk ord eller N eller A
-
-
 
 
 
@@ -626,8 +716,15 @@ Rule set taken from sme
 
 
 
+
 adverbs modifying another adverb
 Adv modifying a pronoun or noun
+
+
+
+
+
+
 
 
 
