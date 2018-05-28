@@ -512,6 +512,8 @@ LIST MOVEMENT-V = "båetedh" "feeledh" "feeredh" "gaavnedh" "girtedh" "hajkedh" 
 
 LIST COM-ADJ = "latjkes" "riejries" ;
 
+LIST SPRED-ADJ = "buerie" "lustes" "nåake" ; #luste?
+
 LIST STV = Der/Caus ;
 
 LIST GUKTIEGOSSE = ("gusnie" Adv) ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
@@ -632,7 +634,7 @@ ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WO
 ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS)(NOT 0 <vdic>) (-1 N + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
 	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
 
-ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":") OR EOS)(NOT 0 <vdic>)  ; 
+ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":") OR EOS)(NOT 0 <vdic>)(NOT -1 Po)  ; 
 
 
 SECTION  #!! !!@CODE@
@@ -855,7 +857,11 @@ SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NOT-NPMODADV-INDEF)  ;
 
 SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR (A Attr)) ;
 
-SELECT:AttrNotNom Attr (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv)))(NEGATE 0 Nom LINK 1 Ill LINK *1 Inf BARRIER S-BOUNDARY OR V)(NEGATE 0 Nom LINK -1 ("dan") OR ("man")) ;
+SELECT:NomWhenAttr Nom (0 SPRED-ADJ + Nom LINK 1 ADVLCASE LINK *1 Inf BARRIER S-BOUNDARY OR V)(*-1 BOS OR COMMA BARRIER NOT-ADV) ;
+	#$ Buerebe Læjsese guvvieh darjodh.
+	#$ Idtji sijhth sjeakodh, buerebe seangkosne vealasjidh Lavran bijre ussjedidh.
+	
+SELECT:AttrNotNom Attr (0 (Pron Interr Sg Nom) OR (A Sg Nom)) ((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv)))(NEGATE 0 SPRED-ADJ + Nom LINK 1 Ill LINK *1 Inf BARRIER S-BOUNDARY OR V)(NEGATE 0 Nom LINK -1 ("dan") OR ("man")) ;
 	## ...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
 	#% Daelie biejjieh guhkebe jïh tjuevkebe sjïdteme.
 	#% Buerebe Læjsese guvvieh darjodh.
@@ -1020,7 +1026,10 @@ SELECT:imprt Imprt ((-1 CLB) OR (*-1 BOS BARRIER WORD))(1 ("amma")) ;
 REMOVE VFIN IF (0 N + Ela)((-1 MOVEMENT-V) OR (1 MOVEMENT-V));
 	#$ Læjsa bøøti skuvleste roehten. 
 
-REMOVE:vfin VFIN IF (0 N)(*1C VFIN BARRIER S-BOUNDARY OR CC);
+REMOVE:vfin VFIN IF (0 N)(*1C VFIN BARRIER S-BOUNDARY OR CC OR COMMA OR ("dellie"));
+
+	#% Jis idtji vaestiedasside åadtjoeh mejtie sijhti, dellie mårvies sjidti.
+
 SELECT:vfin TV IF (0 N)(-1C Acc);
 	#$ Læjsa gaahtoem veelti jih gåatan veedtsi.
 
@@ -1133,8 +1142,6 @@ REMOVE @CVP IF (0 @CNP);
 
 #!! Attributes or not
 
-SELECT:NomWhenAttr Nom (0 A + Nom LINK 1 Ill LINK *1 Inf BARRIER S-BOUNDARY OR V)(*-1 BOS BARRIER NOT-ADV) ;
-	## Buerebe Læjsese guvvieh darjodh.
 
 SELECT:Attr Attr (0 VFIN) (1 N LINK *1 VFIN BARRIER S-BOUNDARY) ;
 	#$ Saemieh Aarborteste jih Vaapseste billin edtjin skuvlem Aarbortesne dassedh jis orre skuvle saemide Trøndelagesne tseegkesovvi.
