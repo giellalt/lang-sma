@@ -798,6 +798,7 @@ SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS OR JIEHTEDH BARRIER WORD)(*1 S-BOU
 	
 SELECT:mejtie Rel (-1 N + Pl) ;
 
+IFF:dihte Pcle (0 ("dïhte") LINK -1 Nom LINK 0 Sem/Hum OR Sem/Ani OR Prop OR Pers) ;
 
 
 SELECT:goh Pcle (0 ("goh") LINK -1 Neg) ;
@@ -1523,10 +1524,10 @@ SELECT:PropGen (Prop Sg Gen) (0 (Prop Sg Nom) LINK *1 N BARRIER V OR S-BOUNDARY)
 	## Daennie JENSEN njaelmesne nov maa månnoeh daesnie seadtosne åadtjoen årrodh!
 	
 # Not this one…
-LIST PROP-NOT2 = "Ajlin" "Bergene" "Jeesus" "Kristus" "Urban";
+LIST PROP-NOT2 = "Ajlin" "Bergene" "Jeesus" "Kristus" "Lavran" "Urban";
 
 # But this one!
-LIST PROP1 = "Ajline" "Bergen" "Jeesuse" "Kristuse" "Urbane" ;
+LIST PROP1 = "Ajline" "Bergen" "Jeesuse" "Kristuse" "Lavra" "Urbane" ;
 		
 SELECT:Prop PROP1 IF (0 PROP-NOT2) ; #(NEGATE -1 BOS LINK 2 Prop);	
 
