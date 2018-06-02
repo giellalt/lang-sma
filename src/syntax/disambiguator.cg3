@@ -785,7 +785,8 @@ SELECT:PoGena Gen (-1 Gen) ;
 
 #!! !Particles and adverbs
 
-
+REMOVE:Pcle2 Adv IF (-2 BOS)(-1 Adv OR Ine)(0 Pcle);
+	
 SELECT:vaejtie Pcle (0 ("vaejtie") LINK *-1 BOS BARRIER WORD)(1 Pers) ;
 	#$ Vaejtie mijjieh, gaajhkesh låhkesh, maehtebe leessemebïjlesne åeredh?
 	
@@ -795,13 +796,15 @@ SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS BARRIER WORD)(*1 ("?")) ;
 SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS OR JIEHTEDH BARRIER WORD)(*1 Acc OR Pl + Nom BARRIER V OR S-BOUNDARY LINK *1 TV + V BARRIER V OR S-BOUNDARY)  ;
 SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS OR JIEHTEDH BARRIER WORD)(*1 S-BOUNDARY OR EOS BARRIER TV)  ;
 	#$ Mejtie dån jijnjh snjearah bårrh!
-	
+
 SELECT:mejtie Rel (-1 N + Pl) ;
 
-IFF:dihte Pcle (0 ("dïhte") LINK -1 Nom LINK 0 Sem/Hum OR Sem/Ani OR Prop OR Pers) ;
-
-
 SELECT:goh Pcle (0 ("goh") LINK -1 Neg) ;
+
+	
+IFF:dihte Pcle (0 ("dïhte") LINK -1 Nom + Sem/Hum OR Sem/Ani OR Prop OR Pers LINK *-1 BOS BARRIER Adv OR V) ;
+
+
 
 SELECT:vihthAdv Adv IF (0 ("vihth")) ;	#is vihte possible in plural?
 
