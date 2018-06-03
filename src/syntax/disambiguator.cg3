@@ -735,6 +735,13 @@ LIST SEL-PROP = "Noerhtelaanth" "Såevmie" ;
 
 
 SELECT:Prop  SEL-PROP ;
+SELECT:Prop  Prop IF (0 ("Maahte") LINK 0 Adv + Err/Orth) ;
+
+REMOVE:Prop Sem/Plc IF (0 ("Ajloe")) ;	#kan Ajloe være Plc?
+
+REMOVE:PropPl Prop + Pl IF (0 Prop - Pl) ;	
+	#$ Kirsti
+
 
 SELECT:PropNom Nom (0C Prop + Sg LINK 1 VFIN + Sg3) ;
 SELECT:PropNom Nom (0C Prop + Sg LINK -1 Dem + Sg + Nom) ;
@@ -800,6 +807,9 @@ SELECT:mejtie Pcle (0 ("mejtie") LINK *-1 BOS OR JIEHTEDH BARRIER WORD)(*1 S-BOU
 SELECT:mejtie Rel (-1 N + Pl) ;
 
 SELECT:goh Pcle (0 ("goh") LINK -1 Neg) ;
+
+REMOVE:laake Gen IF (0 ("laake" Err/Orth) LINK 0 Adv) ;
+	#$ lustes laakan
 
 	
 IFF:dihte Pcle (0 ("dïhte") LINK -1 Nom + Sem/Hum OR Sem/Ani OR Prop OR Pers LINK *-1 BOS BARRIER Adv OR V) ;
@@ -1509,7 +1519,7 @@ REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NEGATE *-1 Pron + Pl2 + Nom);
 	# Prop or not
 	# ----------- 
 
-LIST NOT-PROP = "Bievlá" "Gåetie" ; # usually not Prop if in beginning of sentence
+LIST NOT-PROP = "Bievlá" "Gåetie" "Oksa" ; # usually not Prop if in beginning of sentence
 
 SELECT:Prop Prop IF (NEGATE *-1 BOS OR (":") OR (PUNCT LEFT) OR (Num Nom) BARRIER REALWORD) ; 
 	## Áirras Egil Olli nammaduvvui Sámedikki ovddasteaddjin.
