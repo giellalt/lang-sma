@@ -114,6 +114,7 @@ LIST ABBR = ABBR ;
 LIST ACR = ACR ;
 
 LIST Guess = Guess ;
+LIST Subqst = Subqst ;
 
 LIST QMARK = """ ; # ADD " FOR SYNTAX COLOURING.
 LIST PPUNCT = PUNCT ;
@@ -1628,6 +1629,14 @@ SELECT:V_TV TV (0 IV - COPULAS LINK 1 EOS)(-1 Acc)(NOT 0 ("böötedh")) ;
 	#$ Dellie maa bååstede mïnnijægan dahkoe Onneponnem leehpigan.
 
 # Noun lemmas
+
+
+# Adv Subqst, copies from sme
+#REMOVE:AdvSubqst Adv + Subqst + (Foc/Neg-ge) ; #((0 Foc/Neg-ge OR Foc/Pos-ge) OR (-1 ("nu")) OR (0 ("man"))) ;	
+#REMOVE:AdvSubqst Adv + Subqst + (Foc/Pos-ge) ; 
+
+SELECT:AdvSubqst Adv + Subqst IF (NEGATE 0 Pron)(NEGATE 0 Sem/Sur LINK -1 ABBR OR Sem/Mal OR Sem/Fem) ;	
+SELECT:AdvSubqst Adv + Subqst IF (0 Pron LINK 1 A + Attr OR A + Nom) ;	
 
 
 LIST SG-NOUN = "deerpege" "voepte" ;
