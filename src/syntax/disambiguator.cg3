@@ -1018,6 +1018,12 @@ REMOVE:NegPrt (Neg Prt)(NEGATE 1 ("lea" ConNeg Prt)) ;
 
 SELECT:Du1NotVGen Du1 (0 VGen LINK -*1 ("månnoeh") BARRIER S-BOUNDARY) ;
 
+SET VERB-LEMMA = (".*"r) + V ;
+
+SELECT:infNotErr VERB-LEMMA + Inf - Err/Orth IF (0 VERB-LEMMA + VFIN + Err/Orth LINK NOT 0 VFIN - Err/Orth) ;
+	#$ Bøøremes jis åadtjodh saemie-laanten dåehkesne meatan.
+
+
 #!! Selecting imperative sentence-initially with appropriate right context
 
 #REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
@@ -1131,6 +1137,7 @@ SELECT:Nom Nom (0 A OR N LINK -1 ("dan") OR ("man") OR GRADE-ADV LINK -1 N + Nom
 SELECT:Nom Nom (0 A OR N LINK -1 N + Nom)(1 N LINK NOT 0 Nom) ;
 	#$ Ditnie-barkoe dan søøjmes Læjsese, idtji man jijnjem hinnh darjodh.
 
+
 #!! !!PrfPrc
 
 #!! Select PrfPrc if DerNomAct
@@ -1205,6 +1212,9 @@ SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V 
 
 #!! !__killifVinCohort__ This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 SELECT:killifVinCohort SYN-V  ;
+
+MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf  ;
+	#$ de som ikke har annen verblesning
 
 
 #!! !!Person
