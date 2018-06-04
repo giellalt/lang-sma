@@ -819,6 +819,7 @@ REMOVE:laake Gen IF (0 ("laake" Err/Orth) LINK 0 Adv) ;
 	
 IFF:dihte Pcle (0 ("dïhte") LINK -1 Nom + Sem/Hum OR Sem/Ani OR Prop OR Pers LINK *-1 BOS BARRIER Adv OR V) ;
 
+SELECT:båadtsodeAdv Adv IF (0 ("båadtsode") LINK 0 ("båatsoe") + Err/Orth) ;
 
 
 SELECT:vihthAdv Adv IF (0 ("vihth")) ;	#is vihte possible in plural?
@@ -1445,7 +1446,7 @@ SELECT:NumAndOrdNum (Ord Nom)(0 Num LINK 1 N);
 SELECT:AdvNotPo Adv (0 Po)(NEGATE -1 Gen) ;
 	## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
 REMOVE:PoNotAdv Adv (0 Po)(-1 Gen) ;
-SELECT:PcleNotPron ("dån" Pcle) (0 (Pron Gen) LINK 1 A OR V OR Pcle OR Coll OR Adv) (NEGATE 1 Po OR Ord) ;
+SELECT:PcleNotPron ("dån" Adv) (0 (Pron Gen) LINK 1 A OR V OR Pcle OR Coll OR Adv) (NEGATE 1 Po OR Ord) ;
 	## Mujhtedh vielle, gosse månnoeh dan jijnjh gåahtah jih karamellh biejjegi byøpmedien...
 REMOVE:"ektine" (Pr) (*1 Com BARRIER NOT-NPMOD) ;
 
