@@ -726,14 +726,14 @@ REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
 REMOVE:Ani_Attr Attr IF (0 (Prop Sem/Ani)) ;
 
 
-LIST NOT-SUR = "Galilea" "Judea" "Saemie" "Trøndelag"  ;
+LIST NOT-SUR = "Galilea" "Judea"  "Karasjok" "Saemie" "Trøndelag"  "Vuaktere" ;
 
 REMOVE:PlcSur Sem/Sur IF (0 NOT-SUR) ;
 
 REMOVE:PlcSur Sem/Plc IF (0 Sem/Sur LINK 0 Acc OR Nom OR Attr LINK -1 Sem/Mal OR Sem/Fem) ;
 	#$ Ella Holm Bull saemesti mohte idtjin gieh jeatja dejstie lohkehtæjjijste.
 
-LIST SEL-PROP = "Noerhtelaanth" "Såevmie" ;
+LIST SEL-PROP = "Noerhtelaanth" "Noerhte-Trøndelag" "Såevmie" ; 
 
 
 SELECT:Prop  SEL-PROP ;
@@ -1094,7 +1094,7 @@ MAP (@CNP) TARGET CS (0 ("goh"))(NEGATE -1 CC OR CS OR (":") OR Adv)(NEGATE *-1 
 	## Ussjedh barre - gosse jijnjesh daagkoe sjidtebe, gosse gåetieh gaajhkine baenine sjidtieh - die Karijuse, die manne goh jeatjah gånka daennie mov gåetesne maahtam tjahkasjidh jih abpe staarem vuartasjidh
 	
 
-MAP (@>CC) TARGET CC (0 ("dovne")) ;
+MAP (@>CC) TARGET Adv (0 ("dovne")) ;
 
 MAP (@CNP) TARGET CC (-1 $$CASES LINK 2 $$CASES) ;
 MAP (@CNP) TARGET CC (-1C Inf LINK 2C Inf) ;
@@ -1298,7 +1298,9 @@ REMOVE:EssIfCom/Ine (N Ess) (0 (N Sg Com) OR (N Pl Ine)) (*-1 (Pron Sg Com) OR (
 # dajnie barkoeplaanine
 
 SELECT:NPlAcc Acc (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK *1 TV BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
+SELECT:NPlAcc Acc (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK *1 COPULAS BARRIER NOT-ADV LINK *1 TV BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
 	#$ “Nåå, skodtede amma voesside tsagkedh", aehtjie maanide stillie.
+		#$ akte dejstie njielje jaevrijste dennie tjieltesne mejtie leah deememe.
 SELECT:NPlAcc Acc (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK 1 ADVLCASE + Sg LINK *1 TV BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
 	#$ Manne gærjide gåetesne lohkem.
 
@@ -1340,7 +1342,7 @@ REMOVE:NotNomIfCs (N Nom) (0 CS)(1 (N Nom)) ;
 	# Guktie vielle Baktuse, giehtelh maa!
 
 
-SELECT:CCdovne CC IF (0 ("dovne"))(*1 ("jïh" CC) BARRIER VFIN);
+SELECT:CCdovne Adv IF (0 ("dovne"))(1 N OR A OR Pron LINK *1 ("jïh" CC)) ;
 	## … almetjistie gieh maehtieh saemien dovne tjaaleldh jïh njaalmeldh barkoesijjide tjïeltesne.
 	
 #REMOVE:CsIfNotFuncword Pcle (NEGATE *-1 NOT-ADV-INT-PCLE)(0 CS) ; #NOTUSED
