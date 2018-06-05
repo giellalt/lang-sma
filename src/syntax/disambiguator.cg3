@@ -726,14 +726,14 @@ REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
 REMOVE:Ani_Attr Attr IF (0 (Prop Sem/Ani)) ;
 
 
-LIST NOT-SUR = "Galilea" "Judea"  "Karasjok" "Saemie" "Trøndelag"  "Vuaktere" ;
+LIST NOT-SUR = "Galilea" "Judea"  "Karasjok" "Noerhte-Trøndelag" "Saemie" "Trøndelag"  "Tromsø" "Vuaktere" ;
 
 REMOVE:PlcSur Sem/Sur IF (0 NOT-SUR) ;
 
 REMOVE:PlcSur Sem/Plc IF (0 Sem/Sur LINK 0 Acc OR Nom OR Attr LINK -1 Sem/Mal OR Sem/Fem) ;
 	#$ Ella Holm Bull saemesti mohte idtjin gieh jeatja dejstie lohkehtæjjijste.
 
-LIST SEL-PROP = "Noerhtelaanth" "Noerhte-Trøndelag" "Såevmie" ; 
+LIST SEL-PROP = "Noerhtelaanth" "Såevmie" ; 
 
 
 SELECT:Prop  SEL-PROP ;
