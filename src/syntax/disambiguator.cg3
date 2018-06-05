@@ -1050,6 +1050,10 @@ REMOVE VFIN IF (0 N + Ela)((-1 MOVEMENT-V) OR (1 MOVEMENT-V));
 
 REMOVE:vfin VFIN IF (0 N)(*1C VFIN BARRIER S-BOUNDARY OR CC OR COMMA OR ("dellie"));
 
+
+REMOVE:V VFIN IF (0 N + Nom)(*-1 CC BARRIER NOT-A LINK -1C N + Nom) ;
+	#$ Læjsan mirhke voepth jih provnetjeehpes tjelmieh.
+
 	#% Jis idtji vaestiedasside åadtjoeh mejtie sijhti, dellie mårvies sjidti.
 
 SELECT:vfin TV IF (0 N)(-1C Acc);
@@ -1637,7 +1641,8 @@ SELECT:rel Rel (0 ("guhte") LINK *-1 VFIN)(*1 VFIN) ;
 
 # verb lemmas
 
-
+SELECT:notErr VERB-LEMMA - Err/Orth IF (0 VERB-LEMMA + Err/Orth) ;
+	#$ Veanhta påajhkh eeremes lyjhkieh niejth mej guhkies tjaebpies voepth. # veanhtedh vs vïenhtedh
 
 # "böötedh" OR "båetedh"
 SELECT:LEXbåetedh ("båetedh") IF (0 ("böötedh")) ((-1 Ill OR Ela OR ILLADV OR ILLPO) OR (1 Ill OR Ela OR VGen)) ;
