@@ -817,7 +817,7 @@ REMOVE:laake Gen IF (0 ("laake" Err/Orth) LINK 0 Adv) ;
 	#$ lustes laakan
 
 	
-IFF:dihte Pcle (0 ("dïhte") LINK -1 Nom + Sem/Hum OR Sem/Ani OR Prop OR Pers LINK *-1 BOS BARRIER Adv OR V) ;
+IFF:dihte ("dïhte" Pcle) (0 ("dïhte") LINK -1 Nom + Sem/Hum OR Sem/Ani OR Prop OR Pers LINK *-1 BOS BARRIER Adv OR V) ;
 
 SELECT:båadtsodeAdv Adv IF (0 ("båadtsode") LINK 0 ("båatsoe") + Err/Orth) ;
 
@@ -1115,7 +1115,6 @@ MAP (@CVP @CNP) TARGET CC ;
 
 
 SELECT @CVP IF (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
-SELECT @CVP IF (1 CS);
 SELECT @CVP IF (-1 BOS OR COMMA OR (";"));
 SELECT @CVP IF (*-1 REAL-V BARRIER S-BOUNDARY)(*1 REAL-V BARRIER S-BOUNDARY)(NEGATE -1 Inf LINK 2 Inf) ;
 
