@@ -628,26 +628,33 @@ LEXICON e_ES_EVENNOCOMP2
 !! }}}
 
 LEXICON e_es_E_ES_ODDEVEN2 ! As e_ES_ODDEVEN2, but with extra -es-Attr
-:e ATTR_S ;
-:e PRED_0 ;
-e_ES_ODDEVEN2 ;
+ :e ATTR_0     ; !!= @CODE@
+ :e ATTR_S ;
+ :e PRED_0 ;
+ :e PRED_S     ; !!= @CODE@
+    ODDEVEN2 ;
 
 LEXICON e_es_ES_ODDEVEN2 ! As e_ES_ODDEVEN2, but with extra -es-Attr
-:e ATTR_S ;
-e_ES_ODDEVEN2 ;
+ :e ATTR_S ;
+ :e ATTR_0     ; !!= @CODE@
+ :e PRED_S     ; !!= @CODE@
+    ODDEVEN2 ;
 
 LEXICON e_ES_ODDEVEN2
+ :e  ATTR_0     ; !!= @CODE@
+ :e  PRED_S     ; !!= @CODE@
+     ODDEVEN2 ;
+
+LEXICON ODDEVEN2
 !! !!!LEXICON @LEXNAME@
 !! This one gives EVEN and ODD  Comporation.
 
 !! {{{
-            :e  ATTR_0     ; !!= @CODE@
-            :es ODDCASEOBL ; !!= @CODE@
-            :e  EVENCOMP   ; !!= @CODE@
-  !    +Der/s:e  ATTR_S     ; !!= @CODE@
+	    
+             :es ODDCASEOBL ; !!= @CODE@
+             :e  EVENCOMP   ; !!= @CODE@
  +A+Cmp/SgNom:es R          ; !!= @CODE@
-            :e  PRED_S     ; !!= @CODE@
-     +Use/NG:es ODDCOMP    ; !!= @CODE@ ! trond test, utkommentert gjev Total passes: 1140, Total fails: 61, Total: 1201
+      +Use/NG:es ODDCOMP    ; !!= @CODE@ ! trond test, utkommentert gjev Total passes: 1140, Total fails: 61, Total: 1201
 !! }}}
 
 !***UMLAUT FOR e(2)-stammen, Klasse-2
