@@ -647,7 +647,7 @@ LEXICON e_ES_ODDEVEN2
   !    +Der/s:e  ATTR_S     ; !!= @CODE@
  +A+Cmp/SgNom:es R          ; !!= @CODE@
             :e  PRED_S     ; !!= @CODE@
-  !   +Use/NG:es ODDCOMP    ; !!= @CODE@
+     +Use/NG:es ODDCOMP    ; !!= @CODE@ ! trond test, utkommentert gjev Total passes: 1140, Total fails: 61, Total: 1201
 !! }}}
 
 !***UMLAUT FOR e(2)-stammen, Klasse-2
@@ -732,13 +732,16 @@ LEXICON KRUANA2
 !!! ** KLASSE 3, -s i attributt, vokal i predikativ** !!!
 ! *********************************************************
 
-
+LEXICON es_E_ES_EVEN3 ! luste
+:e   PRED_S ;
+    es_E_EVEN3 ;
+ 
 LEXICON es_E_EVEN3
 !! !!!LEXICON @LEXNAME@
 !! This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 !! {{{
         :e ATTR_S      ; !!= @CODE@
-   +A+Sg:  NIEJTESGOBL ;
+   +A+Sg:  NIEJTE_SG ; 
  !  +A+Sg:  NIEJTESGOBL ;
    +A+Pl:  NIEJTE_PL   ;
       +A:  NIEJTEREST  ;
