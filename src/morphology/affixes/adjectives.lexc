@@ -40,8 +40,8 @@
 
 LEXICON REAKTOE
  :reakt   oeCASE ;
- :rïekte  ATTR_S     ; 
-
+ :rïekte  ATTR_S ; 
+ :rïekte  PRED_S ;
 
 LEXICON JAEDTUVES
             :uves           ATTR_0     ;
@@ -1605,8 +1605,13 @@ LEXICON EVENCOMPCASE_OBL
 
 LEXICON DIMCOMP
       +A+Comp+Der1+Der/Dimin+A+Attr:%>b%»adtje                    FINAL1   ;
-      +A+Comp+Der1+Der/Dimin+A+Attr:%>b%»odtje                    FINAL1   ;
-    +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»adtje                    FINAL1   ;
+!      +A+Comp+Der1+Der/Dimin+A+Attr:%>b%»odtje                    FINAL1   ; ! tt
+
+    +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>tjabpa                    FINAL1   ;
+    +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>tjåbpoe                    FINAL1   ;
+!    +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»adtje                    FINAL1   ;
+!    +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»adtje                    FINAL1   ;
+
     +A+Comp+Der1+Der/Dimin+A+Sg+Acc:%>b%»adtje%>m                 FINAL1   ;
     +A+Comp+Der1+Der/Dimin+A+Sg+Gen:%>b%»adtje%>n                 FINAL1   ;
     +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMPb%»adtje%>se    FINAL1   ;
@@ -1631,7 +1636,8 @@ LEXICON DIMCOMP
     +A+Comp+Der1+Der/Dimin+A+Pl+Com:%>b%»adtj%>igujmie            FINAL1   ;
        +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMPb%»adtj%>ine    FINAL1   ;
        +A+Comp+Der1+Der/Dimin+A+Ess:%>%^COMPDISIMP2b%»adtj%>ine   FINAL1   ;
-    +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»odtje                    FINAL1   ;
+
+!   +A+Comp+Der1+Der/Dimin+A+Sg+Nom:%>b%»odtje                    FINAL1   ; ! tt
     +A+Comp+Der1+Der/Dimin+A+Sg+Acc:%>b%»odtje%>m                 FINAL1   ;
     +A+Comp+Der1+Der/Dimin+A+Sg+Gen:%>b%»odtje%>n                 FINAL1   ;
     +A+Comp+Der1+Der/Dimin+A+Sg+Ill:%>%^COMPDISIMPb%»odtje%>se    FINAL1   ;
@@ -1746,6 +1752,9 @@ LEXICON MES
  +A+Superl+Cmp/SgNom:%>%^COMPDISIMPmes%^DISIMP R        ;
  +A+Superl+Cmp/SgGen:masse%>n                  R        ;
  +A+Superl+Cmp/PlGen:mass%>i                   R        ;
+
+ +A+Superl+Der/Dimin+A+Sg+Nom:tjommes                   FINAL1        ;
+ +A+Superl+Der/Dimin+A+Sg+Nom:tjammes                   FINAL1        ;
 
 LEXICON A_LDH
    +A: ATTRCONT ;
