@@ -309,6 +309,7 @@ SET HUMAN-INDIVIDUAL = Sem/Mal OR Sem/Fem OR Sem/Sur OR Sem/Hum ;
 
 LIST @CNP = @CNP ;				   #!! * @CNP
 LIST @CVP = @CVP ;				   #!! @CVP
+LIST @>CC = @>CC ;
 LIST @+FAUXV = @+FAUXV ; 		   #!! @+FAUXV
 LIST @+FMAINV = @+FMAINV ; 		   #!! @+FMAINV
 LIST @-FAUXV = @-FAUXV ;		   #!! @-FAUXV
@@ -1094,7 +1095,7 @@ MAP (@CNP) TARGET CS (0 ("goh"))(NEGATE -1 CC OR CS OR (":") OR Adv)(NEGATE *-1 
 	## Ussjedh barre - gosse jijnjesh daagkoe sjidtebe, gosse gåetieh gaajhkine baenine sjidtieh - die Karijuse, die manne goh jeatjah gånka daennie mov gåetesne maahtam tjahkasjidh jih abpe staarem vuartasjidh
 	
 
-MAP (@>CC) TARGET Adv (0 ("dovne")) ;
+MAP (@>CC) TARGET Adv IF (0 ("dovne"))(*1 ("gon") OR ("jïh") BARRIER CS) ; 
 
 MAP (@CNP) TARGET CC (-1 $$CASES LINK 2 $$CASES) ;
 MAP (@CNP) TARGET CC (-1C Inf LINK 2C Inf) ;
@@ -1110,6 +1111,7 @@ MAP (@CVP) TARGET CS ;
 	#$ Ussjedh barre - gosse jijnjesh daagkoe sjidtebe, gosse gåetieh gaajhkine baenine sjidtieh - die Karijuse, die manne goh jeatjah gånka daennie mov gåetesne maahtam tjahkasjidh jih abpe staarem vuartasjidh
 	
 MAP (@CVP) TARGET CC (0 ("mohte") OR ("men")) ;
+MAP (@CVP) TARGET CC (1 CS);
 
 MAP (@CVP @CNP) TARGET CC ;
 
