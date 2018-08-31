@@ -41,48 +41,6 @@ analyser-mt-gt-desc.%.hfst: analyser-mt-gt-desc.%.tmp.hfst \
 		-o $@
 	$(AM_V_at)rm -f $<.tmp
 
-# We want to rename the POS tags in front of derivations:
-analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
-			$(top_builddir)/src/filters/remove-norm-comp-tags.hfst           \
-			$(top_builddir)/src/filters/remove-dialect-tags.hfst \
-			$(top_builddir)/src/filters/remove-test-tags.hfst    \
-			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst \
-			$(top_builddir)/src/filters/rename-POS_before_Der-tags.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "\
-		@\"$(top_builddir)/src/filters/remove-dialect-tags.hfst\" \
-	.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\"    \
-	.o. @\"$(top_builddir)/src/filters/remove-derivation-position-tags.hfst\" \
-	.o. @\"$(top_builddir)/src/filters/remove-norm-comp-tags.hfst\"           \
-	.o. @\"$(top_builddir)/src/filters/rename-POS_before_Der-tags.hfst\" \
-   	.o. @\"$<\" \
-    	;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
-			-S --xerox-composition=ON \
-		| $(HFST_INVERT) $(HFSTFLAGS) \
-		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
-		-o $@
-
-# And also for the generator:
-generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
-			$(top_builddir)/src/filters/remove-norm-comp-tags.hfst           \
-			$(top_builddir)/src/filters/remove-Dial_SH-strings.hfst          \
-			$(top_builddir)/src/filters/remove-dialect-tags.hfst             \
-			$(top_builddir)/src/filters/remove-test-tags.hfst                \
-			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst \
-			filters/make-optional-Attr_before_dervuota-tags.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "\
-		@\"$(top_builddir)/src/filters/remove-dialect-tags.hfst\"             \
-	.o. @\"$(top_builddir)/src/filters/remove-Dial_SH-strings.hfst\"          \
-	.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\"                \
-	.o. @\"filters/make-optional-Attr_before_dervuota-tags.hfst\"             \
-	.o. @\"$(top_builddir)/src/filters/remove-derivation-position-tags.hfst\" \
-   	.o. @\"$(top_builddir)/src/filters/remove-norm-comp-tags.hfst\"           \
-   	.o. @\"$<\" \
-    	;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
-			-S --xerox-composition=ON \
-		> $@
-
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
 ##################################################################
