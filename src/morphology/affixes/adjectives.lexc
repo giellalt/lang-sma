@@ -646,9 +646,10 @@ LEXICON e_es_ES_ODDEVEN2 ! As e_ES_ODDEVEN2, but with extra -es-Attr
     ODDEVEN2 ;
 
 LEXICON e_ES_ODDEVEN2
- :e  ATTR_0     ; !!= @CODE@
- :e  PRED_S     ; !!= @CODE@
-     ODDEVEN2 ;
+          :e ATTR_0   ; !!= @CODE@
+ +Err/Attr:e ATTR_S   ;
+          :e PRED_S   ; !!= @CODE@
+             ODDEVEN2 ;
 
 LEXICON ODDEVEN2
 !! !!!LEXICON @LEXNAME@
