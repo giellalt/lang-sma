@@ -1,16 +1,18 @@
 Config:
   hfst:
-    Gen: ../../../src/generator-gt-norm.hfst
-    Morph: ../../../src/analyser-gt-norm.hfst
+    Gen: ../../../src/generator-gt-desc.hfst
+    Morph: ../../../src/analyser-gt-desc.hfst
   xerox:
-    Gen: ../../../src/generator-gt-norm.xfst
-    Morph: ../../../src/analyser-gt-norm.xfst
+    Gen: ../../../src/generator-gt-desc.xfst
+    Morph: ../../../src/analyser-gt-desc.xfst
     App: lookup
 
 Tests:
  
   Adjective - båadtsoeh: # 
-    båadtsoeh+A+Attr: [båadtsoeh, båadtjah, båadtsah] 
+    båadtsoeh+v1+A+Attr: båadtsoeh
+    båadtsoeh+v2+A+Attr: båadtsah
+    båadtsoeh+v3+A+Attr: båadtjah
     
 
   Adjective - feejjene: # 
@@ -18,8 +20,10 @@ Tests:
     feejjene+Adv: feejjene
 
   Adjective - læhkoeladtje: # 
-    læhkoeladtje+A+Attr: [læhkoeladtje, lahkoeladtje] 
-    læhkoeladtje+A+Sg+Nom: [læhkoeladtje, lahkoeladtje] 
+    læhkoeladtje+v1+A+Attr: læhkoeladtje
+    læhkoeladtje+v2+A+Attr: lahkoeladtje
+    læhkoeladtje+v1+A+Sg+Nom: læhkoeladtje
+    læhkoeladtje+v2+A+Sg+Nom: lahkoeladtje
 
   Adjective - rudtjege: # 
     rudtjege+A+Attr: [rudtje, rudtjege] 
