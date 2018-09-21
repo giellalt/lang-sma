@@ -24,44 +24,42 @@
 ! Also splitting when in doubt: -noun-adj => -noun and -adj
 ! Then pointing to two contlexes, a dot-one and a non-dot-one.
 
-!LEXICON ab ! No POS, don't know what pos
-!ab-nodot ;
-!ab-dot ;
-
-! Some of these POS
-!LEXICON ab-noun-adj
-! ab-noun ;
-! ab-adj ;
-
+LEXICON ab-dot-noun-adj-trab ab-dot-noun-adj ;
 LEXICON ab-dot-noun-adj
 ab-dot-noun ;
 ab-dot-adj ;
 
+LEXICON ab-noun-itrab   ab-noun ;
+LEXICON ab-noun-trab    ab-noun ;
+LEXICON ab-noun-trnumab ab-noun ;
 LEXICON ab-noun
 +Use/NG: ab-nodot-noun ;
          ab-dot-noun ;
 
+LEXICON ab-adj-itrab ab-adj ;
+!LEXICON ab-adj-trab  ab-adj ;
 LEXICON ab-adj
 +Use/NG: ab-nodot-adj ;
          ab-dot-adj ;
 
+LEXICON ab-adv-itrab ab-adv ;
+LEXICON ab-adv-trab  ab-adv ;
 LEXICON ab-adv
 +Use/NG: ab-nodot-adv ;
          ab-dot-adv ;
 
+LEXICON ab-num-itrab ab-num ;
 LEXICON ab-num
 +Use/NG: ab-nodot-num ;
          ab-dot-num;
 
-!still not in use.
-!LEXICON ab-cc
-!ab-nodot-cc ;
-!ab-dot-cc ;
-
-
 ! Here come POS and Case tags, and no period.
 
-LEXICON ab-nodot-noun ! The bulk
+LEXICON ab-nodot-noun-itrab   ab-nodot-noun ;
+LEXICON ab-nodot-noun-trab    ab-nodot-noun ;
+LEXICON ab-nodot-noun-trnumab ab-nodot-noun ;
+LEXICON ab-nodot-noun
+!! Most abbreviations point to @LEXNAME@.
    +N+ABBR+Attr:%>      #     ; ! no period, that is.
  +N+ABBR+Sg+Nom:%>      #     ; ! no period, that is.
  +N+ABBR+Sg+Acc:%>%:m   #     ; ! no period, that is.
@@ -86,6 +84,8 @@ LEXICON ab-nodot-adj
   +N+ABBR+Ess:%>%:ine #     ; ! no period, that is.
       +A+ABBR:%>      RHyph ;
 
+LEXICON ab-nodot-adv-itrab ab-nodot-adv ;
+LEXICON ab-nodot-adv-trab  ab-nodot-adv ;
 LEXICON ab-nodot-adv
 +Adv+ABBR:%> # ; ! Adv without case, consider this.
 
@@ -93,27 +93,11 @@ LEXICON ab-nodot-num
  +Num+ABBR+Sg+Nom:%> #     ; ! no period, that is.
      +Num+ABBR:%> RHyph ;
 
-
-! Still not in use.
-!LEXICON ab-nodot-cc
-! +ABBR+CC:%> # ; ! no period, that is.
-
-! noun the default POS
-!LEXICON ab-nodot ! default
-!+N+ABBR+Attr:%> # ; ! no period, that is.
-!+N+ABBR+Nom:%> # ; ! no period, that is.
-!+N+ABBR:%> RHyph ;
-
-
-! Here come POS and Case tags, with the period added.
-
-!LEXICON ab-dot ! Default
-! +ABBR:%.%> # ;
-!+N+ABBR+Attr:%.%> # ;
-!+N+ABBR+Nom:%.%> # ;
-
-LEXICON ab-dot-noun ! This is the lexicon for abbrs that must have a period.
-! +ABBR:%.%> # ;
+LEXICON ab-dot-noun-itrab   ab-dot-noun ;
+LEXICON ab-dot-noun-trab    ab-dot-noun ;
+LEXICON ab-dot-noun-trnumab ab-dot-noun ;
+LEXICON ab-dot-noun
+!! @LEXNAME@ is the lexicon for noun abbrs that must have a period.
 +N+ABBR+Attr: DOTwBACKTRACK ;
 ! +N+ABBR+Sg+Nom: DOTwBACKTRACK ;
 
@@ -123,36 +107,75 @@ LEXICON DOTwBACKTRACK
 ! This one should create an mwe sub-reading:                                                                                                                                                                
 < "@P.Pmatch.Loc@" {.} "+PUNCT":0 "+Use/Disamb":0 > # ;
 
-
-LEXICON ab-dot-adj ! This is the lexicon for abbrs that must have a period.
-! +ABBR:%.%> # ;
+LEXICON ab-dot-adj-itrab   ab-dot-adj ;
+LEXICON ab-dot-adj-trab    ab-dot-adj ;
+LEXICON ab-dot-adj-trnumab ab-dot-adj ;
+LEXICON ab-dot-adj
+!! @LEXNAME@ is the lexicon for adjectival abbrs that must have a period.
 +A+ABBR+Attr:%.%> # ;
 +A+ABBR+Sg+Nom:%.%> # ;
 
-LEXICON ab-dot-adv ! This is the lexicon for abbrs that must have a period.
+LEXICON ab-dot-adv-itrab ab-dot-adv ;
+LEXICON ab-dot-adv-trab  ab-dot-adv ;
+LEXICON ab-dot-adv
+!! @LEXNAME@ is the lexicon for adverbial abbrs that must have a period.
 +Adv+ABBR:%.%> # ; ! Adv without case.
 
-LEXICON ab-dot-num ! This is the lexicon for abbrs that must have a period.
-! +ABBR:%.%> # ;
+LEXICON ab-dot-num-itrab ab-dot-num ;
+LEXICON ab-dot-num
+!! @LEXNAME@ is the lexicon for numerical abbrs that must have a period.
 +N+ABBR+Sg+Nom:%.%> # ;
 
+!LEXICON ab-dot-cc-itrab ab-dot-cc ;
+LEXICON ab-dot-cc-trab  ab-dot-cc ;
 LEXICON ab-dot-cc
 +CC+ABBR:%.%> # ;
 
-! Adding case suffixes to the abbrs in a tentative manner, to test it
-! out. The problem with the original treatment represented by the first,
-! outcommented member of the two lexica) is that especially intransiv
-
-
-! Then, as an afterthought, come our two verbs, gč. and vrd.
-
-!LEXICON ab-verb ! A lexicon for "gč." and perhaps also other abbreviated verbs.
-! ab-dot-verb ;
-! ab-nodot-verb ;
-! Not in use
+!LEXICON ab-dot-verb-itrab ab-dot-verb ;
+LEXICON ab-dot-verb-trab  ab-dot-verb ;
 LEXICON ab-dot-verb
 +V+ABBR+TV+Imprt:%.%> # ; ! Period.
 
+! Contlexes not in use, kept for the future.
+
+!LEXICON ab ! No POS, don't know what pos
+!ab-nodot ;
+!ab-dot ;
+
+! Some of these POS
+!LEXICON ab-noun-adj
+! ab-noun ;
+! ab-adj ;
+
+!LEXICON ab-cc
+!ab-nodot-cc ;
+!ab-dot-cc ;
+
+!LEXICON ab-nodot-cc
+! +ABBR+CC:%> # ; ! no period, that is.
+
+! noun the default POS
+!LEXICON ab-nodot ! default
+!+N+ABBR+Attr:%> # ; ! no period, that is.
+!+N+ABBR+Nom:%> # ; ! no period, that is.
+!+N+ABBR:%> RHyph ;
+
+!LEXICON ab-dot ! Default
+! +ABBR:%.%> # ;
+!+N+ABBR+Attr:%.%> # ;
+!+N+ABBR+Nom:%.%> # ;
+
+! Then, as an afterthought, come our two verbs, gč. and vrd.
+
+!LEXICON ab-verb-trab ab-verb ;
+!LEXICON ab-verb
+! A lexicon for "gč." and perhaps also other abbreviated verbs.
+! ab-dot-verb ;
+! ab-nodot-verb ;
+! Not in use
+
+!LEXICON ab-nodot-verb-trab ab-nodot-verb ;
 !LEXICON ab-nodot-verb
+! All entries pointing to this contlex are commented out, thus itself as well
 ! +ABBR+V+TV+Imprt:%> # ; ! No period.
 ! Not in use.
