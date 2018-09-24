@@ -25,88 +25,89 @@
 ! Then pointing to two contlexes, a dot-one and a non-dot-one.
 
 !! !!Abbreviations written both with and without a following full stop
-LEXICON ab-noun-itrab   ab-noun ;
-LEXICON ab-noun-trab    ab-noun ;
-LEXICON ab-noun-trnumab ab-noun ;
+LEXICON ab-noun-itrab   +N+ABBR+Gram/IAbbr:    ab-noun ;
+LEXICON ab-noun-trab    +N+ABBR+Gram/TAbbr:    ab-noun ;
+LEXICON ab-noun-trnumab +N+ABBR+Gram/TNumAbbr: ab-noun ;
 LEXICON ab-noun
  +Use/NG: ab-nodot-noun ;
           ab-dot-noun   ;
 
-LEXICON ab-adj-itrab ab-adj ;
-! LEXICON ab-adj-trab ab-adj ;
+LEXICON ab-adj-itrab +A+ABBR+Gram/IAbbr: ab-adj ;
+!LEXICON ab-adj-trab +A+ABBR+Gram/TAbbr: ab-adj ;
 LEXICON ab-adj
  +Use/NG: ab-nodot-adj ;
           ab-dot-adj   ;
 
-LEXICON ab-adv-itrab ab-adv ;
-LEXICON ab-adv-trab  ab-adv ;
+LEXICON ab-adv-itrab +Adv+ABBR+Gram/IAbbr: ab-adv ;
+LEXICON ab-adv-trab  +Adv+ABBR+Gram/TAbbr: ab-adv ;
 LEXICON ab-adv
  +Use/NG: ab-nodot-adv ;
           ab-dot-adv   ;
 
-LEXICON ab-num-itrab ab-num ;
+LEXICON ab-num-itrab +Num+ABBR+Gram/IAbbr: ab-num ;
 LEXICON ab-num
  +Use/NG: ab-nodot-num ;
           ab-dot-num   ;
 
 !! !!Abbreviations written without a following full stop
-LEXICON ab-nodot-noun-itrab   ab-nodot-noun ;
-LEXICON ab-nodot-noun-trab    ab-nodot-noun ;
-LEXICON ab-nodot-noun-trnumab ab-nodot-noun ;
+!! Most abbreviations point to various variants of {{ab-nodot-noun}}.
+
+LEXICON ab-nodot-noun-itrab   +N+ABBR+Gram/IAbbr:    ab-nodot-noun ;
+LEXICON ab-nodot-noun-trab    +N+ABBR+Gram/TAbbr:    ab-nodot-noun ;
+LEXICON ab-nodot-noun-trnumab +N+ABBR+Gram/TNumAbbr: ab-nodot-noun ;
 LEXICON ab-nodot-noun
-!! Most abbreviations point to @LEXNAME@.
- +N+ABBR: abbr-nominal-infl ;
- +N+ABBR: RHyph             ;
+ abbr-nominal-infl ;
+ RHyph             ;
 
 LEXICON ab-nodot-adj
- +A+ABBR: abbr-nominal-infl ;
- +A+ABBR: RHyph             ;
+ abbr-nominal-infl ;
+ RHyph             ;
 
-LEXICON ab-nodot-adv-itrab ab-nodot-adv ;
-LEXICON ab-nodot-adv-trab  ab-nodot-adv ;
+LEXICON ab-nodot-adv-itrab +Adv+ABBR+Gram/IAbbr: ab-nodot-adv ;
+LEXICON ab-nodot-adv-trab  +Adv+ABBR+Gram/TAbbr: ab-nodot-adv ;
 LEXICON ab-nodot-adv
- +Adv+ABBR: # ; ! Adv without case, consider this.
+ # ; ! Adv without case, consider this.
 
 LEXICON ab-nodot-num
- +Num+ABBR+Sg+Nom: #     ; ! no period, that is.
-        +Num+ABBR: RHyph ;
+ +Sg+Nom: #     ; ! no period, that is.
+          RHyph ;
 
 !! !!Abbreviations written with a following full stop
 LEXICON ab-dot-noun-adj-trab
   ab-dot-noun-trab ;
   ab-dot-adj-trab  ;
 
-LEXICON ab-dot-noun-itrab   ab-dot-noun ;
-LEXICON ab-dot-noun-trab    ab-dot-noun ;
-LEXICON ab-dot-noun-trnumab ab-dot-noun ;
+LEXICON ab-dot-noun-itrab   +N+ABBR+Gram/IAbbr:    ab-dot-noun ;
+LEXICON ab-dot-noun-trab    +N+ABBR+Gram/TAbbr:    ab-dot-noun ;
+LEXICON ab-dot-noun-trnumab +N+ABBR+Gram/TNumAbbr: ab-dot-noun ;
 LEXICON ab-dot-noun
 !! @LEXNAME@ is the lexicon for noun abbrs that must have a period.
-    +N+ABBR+Attr: DOTwBACKTRACK ;
+    +Attr: DOTwBACKTRACK ;
 ! +N+ABBR+Sg+Nom: DOTwBACKTRACK ;
 
-LEXICON ab-dot-adj-itrab   ab-dot-adj ;
-LEXICON ab-dot-adj-trab    ab-dot-adj ;
-LEXICON ab-dot-adj-trnumab ab-dot-adj ;
+LEXICON ab-dot-adj-itrab   +A+ABBR+Gram/IAbbr:    ab-dot-adj ;
+LEXICON ab-dot-adj-trab    +A+ABBR+Gram/TAbbr:    ab-dot-adj ;
+LEXICON ab-dot-adj-trnumab +A+ABBR+Gram/TNumAbbr: ab-dot-adj ;
 LEXICON ab-dot-adj
 !! @LEXNAME@ is the lexicon for adjectival abbrs that must have a period.
-   +A+ABBR+Attr:%. # ;
- +A+ABBR+Sg+Nom:%. # ;
+   +Attr:%. # ;
+ +Sg+Nom:%. # ;
 
-LEXICON ab-dot-adv-itrab ab-dot-adv ;
-LEXICON ab-dot-adv-trab  ab-dot-adv ;
+LEXICON ab-dot-adv-itrab +Adv+ABBR+Gram/IAbbr: ab-dot-adv ;
+LEXICON ab-dot-adv-trab  +Adv+ABBR+Gram/TAbbr: ab-dot-adv ;
 LEXICON ab-dot-adv
 !! @LEXNAME@ is the lexicon for adverbial abbrs that must have a period.
- +Adv+ABBR:%. # ; ! Adv without case.
+ :%. # ; ! Adv without case.
 
-LEXICON ab-dot-num-itrab ab-dot-num ;
+LEXICON ab-dot-num-itrab +Num+ABBR+Gram/IAbbr: ab-dot-num ;
 LEXICON ab-dot-num
 !! @LEXNAME@ is the lexicon for numerical abbrs that must have a period.
- +N+ABBR+Sg+Nom:%. #         ;
+ +Sg+Nom:%. #         ;
 
 ! LEXICON ab-dot-cc-itrab ab-dot-cc ;
-LEXICON ab-dot-cc-trab    ab-dot-cc ;
+LEXICON ab-dot-cc-trab +CC+ABBR+Gram/TAbbr: ab-dot-cc ;
 LEXICON ab-dot-cc
- +CC+ABBR:%. # ;
+ :%. # ;
 
 ! LEXICON ab-dot-verb-itrab ab-dot-verb ;
 LEXICON ab-dot-verb-trab    ab-dot-verb ;
