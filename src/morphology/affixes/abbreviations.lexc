@@ -12,9 +12,9 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or feedback@divvun.no
 
-! ================================================ !
-! File containing abbreviation affixes & contlexes !
-! ================================================ !
+!  ====================================
+!! !!! Abbreviation affixes & contlexes
+!  ====================================
 
 
 ! Now splitting according to POS, and according to dot or not
@@ -24,11 +24,7 @@
 ! Also splitting when in doubt: -noun-adj => -noun and -adj
 ! Then pointing to two contlexes, a dot-one and a non-dot-one.
 
-LEXICON ab-dot-noun-adj-trab ab-dot-noun-adj ;
-LEXICON ab-dot-noun-adj
-  ab-dot-noun ;
-  ab-dot-adj  ;
-
+!! !! Abbreviations written both with and without a following full stop
 LEXICON ab-noun-itrab   ab-noun ;
 LEXICON ab-noun-trab    ab-noun ;
 LEXICON ab-noun-trnumab ab-noun ;
@@ -53,8 +49,7 @@ LEXICON ab-num
  +Use/NG: ab-nodot-num ;
           ab-dot-num   ;
 
-! Here come POS and Case tags, and no period.
-
+!! !! Abbreviations written without a following full stop
 LEXICON ab-nodot-noun-itrab   ab-nodot-noun ;
 LEXICON ab-nodot-noun-trab    ab-nodot-noun ;
 LEXICON ab-nodot-noun-trnumab ab-nodot-noun ;
@@ -67,17 +62,6 @@ LEXICON ab-nodot-adj
  +A+ABBR: abbr-nominal-infl ;
  +A+ABBR: RHyph             ;
 
-LEXICON abbr-nominal-infl
-   +Attr:        # ;
- +Sg+Nom:        # ;
- +Sg+Acc:%>%:m   # ;
- +Sg+Gen:%>%:n   # ;
- +Sg+Ill:%>%:se  # ;
- +Sg+Ine:%>%:sne # ;
- +Sg+Ela:%>%:ste # ;
- +Sg+Com:%>%:ine # ;
-    +Ess:%>%:ine # ;
-
 LEXICON ab-nodot-adv-itrab ab-nodot-adv ;
 LEXICON ab-nodot-adv-trab  ab-nodot-adv ;
 LEXICON ab-nodot-adv
@@ -86,6 +70,11 @@ LEXICON ab-nodot-adv
 LEXICON ab-nodot-num
  +Num+ABBR+Sg+Nom: #     ; ! no period, that is.
         +Num+ABBR: RHyph ;
+
+!! !! Abbreviations written with a following full stop
+LEXICON ab-dot-noun-adj-trab
+  ab-dot-noun-trab ;
+  ab-dot-adj-trab  ;
 
 LEXICON ab-dot-noun-itrab   ab-dot-noun ;
 LEXICON ab-dot-noun-trab    ab-dot-noun ;
@@ -123,6 +112,18 @@ LEXICON ab-dot-cc
 LEXICON ab-dot-verb-trab    ab-dot-verb ;
 LEXICON ab-dot-verb
  +V+ABBR+TV+Imprt:%. # ; ! Period.
+
+!! !! Case suffixes and analysis tags
+LEXICON abbr-nominal-infl
+   +Attr:        # ;
+ +Sg+Nom:        # ;
+ +Sg+Acc:%>%:m   # ;
+ +Sg+Gen:%>%:n   # ;
+ +Sg+Ill:%>%:se  # ;
+ +Sg+Ine:%>%:sne # ;
+ +Sg+Ela:%>%:ste # ;
+ +Sg+Com:%>%:ine # ;
+    +Ess:%>%:ine # ;
 
 LEXICON DOTwBACKTRACK
 ! This should create a new backtrack-point before the dot, but no sub-reading:                                                                                                                          
