@@ -203,8 +203,9 @@ to research compounding patterns in the corpus.
  ; +Ind : Indicative
  ; +Imprt : Imperative
  ; +ImprtII : Imperative, for Neg: ollem ollh ...
- ; +Cond : Kondisjonalis, for one form: lidtjie.  To be looked at.+ lidtjim, + lidtjih
- ; +Act : -eme, could be chagned to +Actio
+ ; +Cond : Kondisjonalis, for one form: lidtjie.
+            To be looked at.+ lidtjim, + lidtjih
+ ; +Act : '' -eme'', could be changed to {{+Actio}}
 
 !Tags for adjectives
 
@@ -213,12 +214,20 @@ to research compounding patterns in the corpus.
  ; +Ord : Ordinal number
 
 !!Other tags
- ; +ABBR +ACR : Abbreviation, acronym
- ; +TV +IV : Transitivity tags
+ ; +ABBR : Abbreviation
+ ; +ACR : Acronym
+ ; +TV : Transitive verb
+ ; +IV : Intansitive verb
+ ; +Gram/TAbbr : Transitive abbreviation (it needs an argument)
+ ; +Gram/TNumAbbr : Transitive abbreviation if the following
+            constituent is numeric
+ ; +Gram/TIAbbr : Both transitive and intransitive abbreviation
+ ; +Gram/IAbbr : Intransitive abbreviation (it takes no argument)
  ; +Multi : Multiword phrase tag ?
  ; +Guess : for the name guesser ?
  ; +LOAN : ad hoc tag for development purposes ?
- ; +Cmp/Hyph : A tag to indicate that a hyphen was used when compounding?
+ ; +Cmp/Hyph : A tag to indicate that a hyphen was used when
+            compounding?
 
 !Tags for testing the frequency of certain phenomenas in our corpora
 
@@ -529,6 +538,47 @@ And this is the ENDLEX of everything:
 The {{@D.CmpOnly.FALSE@}} flag diacritic is ued to disallow words tagged
 with +CmpNP/Only to end here.
 The {{@D.NeedNoun.ON@}} flag diacritic is used to block illegal compounds.
+
+Abbreviation affixes & contlexes
+
+
+
+
+Abbreviations written both with and without a following full stop
+
+
+
+
+Abbreviations written without a following full stop
+Most abbreviations point to ab-nodot-noun.
+
+
+
+
+Abbreviations written with a following full stop
+
+ab-dot-noun is the lexicon for noun abbrs that must have a period.
+
+ab-dot-adj is the lexicon for adjectival abbrs that must have a period.
+
+ab-dot-adv is the lexicon for adverbial abbrs that must have a period.
+
+ab-dot-num is the lexicon for numerical abbrs that must have a period.
+
+
+
+Case suffixes and analysis tags
+
+
+
+
+
+
+
+
+
+
+
 
 
 
