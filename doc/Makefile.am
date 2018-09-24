@@ -10,6 +10,7 @@
 if CAN_DOCC
 
 JSP_PAGES=root-morphology.jspwiki \
+		  abbreviations-affixes.jspwiki      \
 		  adjectives-affixes.jspwiki \
 		  adjectives-stems.jspwiki \
 		  adjectives-oahpa-affixes.jspwiki \
@@ -21,7 +22,6 @@ JSP_PAGES=root-morphology.jspwiki \
 		  sma-phon-phonology.jspwiki
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
-# abbreviations-stems.jspwiki      \
 # acronyms-stems.jspwiki           \
 # adpositions-stems.jspwiki        \
 # adverbs-stems.jspwiki            \
