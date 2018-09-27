@@ -296,6 +296,7 @@ LIST Sem/Wpn = Sem/Wpn ; #oaggut oaggunstákkuin, goddit X+Com
 
 LIST Sem/Date = Sem/Date ;
 LIST Sem/Year = Sem/Year ;
+LIST Sem/Time-clock = Sem/Time-clock ;
 	
 SET TIME-N-SET = N + Sem/Time ;
 LIST NOT-TIME = "dulvi" "lohpi" "vuorru" ;
@@ -446,6 +447,25 @@ LIST OTHER-INDUSTRY = "bálvalus#ealáhus" "alkohol#politihkka" ; #!! OTHER-INDU
 SET INDUSTRY = OTHER-INDUSTRY ;
 
 LIST NORGA = "Dánmárku-#Norga" "davvi#Norga" "Davvi-Norga" "gaska-#Norga" "Norga" "norga" "norgga#bealli" "Norgga-#ruoŧŧa" ;
+
+LIST VOLUME = "cl" "lijhtere" (".*lijhtere"r) "dl" "ml"  ;
+
+LIST WEIGHT = "mg" "kg" "tjahta"  ;
+
+LIST LENGTH = "kilomeetere" (".*meetere"r) "cm" "km" "mm" "mïjle" ;
+
+LIST TEMPERATURE = (".*graade"r) (".*tsiehkie"r)  ;
+
+LIST AMOUNT = "vaenie" ;
+
+LIST TIME-UNIT-MEASURE =  "minuhte" "tæjma" "tæjmoe" "våhkoe" ;  # in MEASURE-set
+
+LIST TIME-UNIT2 =  (".*jahki"r) "maanoe" "biejjie" ;
+
+SET TIME-UNIT = TIME-UNIT-MEASURE OR TIME-UNIT2 ;
+	# For use for rules hitting "maŋŋel" as Adv instead of Po. 
+
+SET MEASURE = VOLUME OR WEIGHT OR LENGTH OR AMOUNT OR TEMPERATURE OR TIME-UNIT-MEASURE OR ("m2") ;
 
 
 #!! !Verb sets
@@ -601,15 +621,42 @@ SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR B
 BEFORE-SECTIONS
 
 #!! Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes når vi får felles numeralfil fra shared)
-SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][1-2][0-9][0-9][0-9]>"r Num) ;
-SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-9][.][0-9][.][1-2][0-9][0-9][0-9]>"r Num) ;
-SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][0-9][0-9]>"r Num) ;
-SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Year) TARGET ("<[1-2][0-9][0-9][0-9]>"r Num) ;
+#SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][1-2][0-9][0-9][0-9]>"r Num) ;
+#SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-9][.][0-9][.][1-2][0-9][0-9][0-9]>"r Num) ;
+#SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][0-9][0-9]>"r Num) ;
+#SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Year) TARGET ("<[1-2][0-9][0-9][0-9]>"r Num) ;
 
 #!! !!Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
 #SUBSTITUTE (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z][a-z].*[.][a-z][a-z].*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
 #COPY:NNom (N Nom) EXCEPT Adv TARGET (Sem/Adr)  ;
 	## www.samediggi.fi http://yle.fi/sapmi lene62@gmail.com anja.irina.ahola(at)gmail.com
+SELECT:SemYear Sem/Date (0 Num) ;
+SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY)(NOT 1 CURRENCY OR MEASURE OR ("jahki")) ;
+	#% Bures boahtin 2016 beaivái
+SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY)(1 Po) ;
+SELECT:SemYear Sem/Year (0 Num)(1 ("jahki") + Pl) ; #apertium
+REMOVE:SemYear Sem/Year (0 Num) ((-1 CURRENCY) OR (1 CURRENCY OR MEASURE)) ;
+REMOVE:SemPhonenr Sem/Phonenr (0 Num) ; #vi fjerner alle inntil videre
+
+SELECT:Sem/DateGen  Sem/Date + Gen ((1 Po) OR (-1 Pr)) ; #foreløpig, for MT 
+SELECT:Sem/Date  Sem/Date + Nom ; #foreløpig, for MT 
+SELECT:clock Sem/Time-clock + Nom  ;
+
+#!! !!Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
+
+
+SUBSTITUTE (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z][a-z].*[.][a-z][a-z].*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
+COPY:NNom (N Nom) EXCEPT Adv TARGET (Sem/Adr)  ;
+	## www.samediggi.fi http://yle.fi/sapmi lene62@gmail.com anja.irina.ahola(at)gmail.com
+
+SELECT:ArabNom (Arab Nom) (-1 BOS)(NEGATE 1 Po)(NEGATE 1 Sem/Time LINK 1 ("áigi") + Adv) ;
+SELECT:Arab1 (Arab Nom)(0 ("1")) ;
+	#$ a) Álgogursa 1 sámegielas
+#SELECT:ArabNomPlc (Arab Nom) (-1 Sem/Plc)(NEGATE 1 Po) ;
+
+SELECT:Arab Arab IF (NOT 0 Ord OR Prop) ; # In Apertium we get analysis both with and without the tag.
+
+REMOVE:diNom Coll (-1 ("dii") OR ("diibmu")) ;
 
 
 #!! Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
