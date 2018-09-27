@@ -42,6 +42,7 @@ GT_LEXC_SRCS_L1_L2=\
 			compounding.lexc         \
 			affixes/abbreviations.lexc \
 			affixes/nouns.lexc       \
+			affixes/numerals.lexc    \
 			affixes/possessive-suffixes.lexc \
 			affixes/propernouns.lexc \
 			affixes/verbs.lexc       \
