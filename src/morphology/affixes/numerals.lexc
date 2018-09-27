@@ -204,6 +204,12 @@ LEXICON ARABICDELIMITERCOLL
 +Err/Orth:%' ARABICCASECOLL ; ! This is the 1984's case.
 +Err/Orth:%- ARABICCASECOLL ; ! This is the 1984-s case.
 
+LEXICON ACASETAG   !!≈ * __@CODE@__  is for 1e+Num+Sg+Num:1e
++Num: ARABICCASES ;
+
+LEXICON ARABICCASES   !≈ * __@CODE@__  to distinguish between 0 and oblique
+ARABICCASE0 ;
+ARABICCASE ;
 
 LEXICON ARABICCASE0
 +Arab+Sg+Nom: # ;
@@ -267,7 +273,39 @@ LEXICON ARABICCASECOLL
 +Arab+Pl+Com:%>sigujmie # ;
 +Arab+Ess:%>sinie    # ;
 
+LEXICON datetag
+ +Num+Sem/Date: dateyearcase ;
 
+LEXICON yeartag
+ +Num+Sem/Year: dateyearcase ;
+
+LEXICON numclock
+ +Num+Sem/Time-clock: dateyearcase ; !foreløpig
+
+LEXICON yeartagpl
+          +Num+Sem/Year+Pl+Nom:    # ;
+          +Num+Sem/Year+Pl+Gen:    # ;
+          +Num+Sem/Year+Pl+Acc:    # ;
+ +Num+Sem/Year+Err/Orth+Pl+Loc:%:s # ;
+
+LEXICON dateyearcase
+          +Sg+Nom:     #      ;
+          +Sg+Gen:     #      ;
+          +Sg+Acc:     #      ;
+ +Err/Orth+Sg+Acc:%:a  #      ;
+ +Err/Orth+Sg+Gen:%:a  #      ;
+          +Sg+Loc:%:s  #      ;
+ +Err/Orth+Sg+Loc:s    #      ;
+ +Err/Orth+Sg+Loc:%:is #      ;
+ +Err/Orth+Sg+Loc:is #      ;
+ +Err/Orth+Sg+Loc:%:as #      ;
+          +Sg+Ill:%:i  #      ;
+ +Err/Orth+Sg+Ill:i    #      ;
+ +Err/Orth+Sg+Ill:%:ii #      ;
+     +Sg+Ill+Attr:     #      ;
+     +Sg+Loc+Attr:     #      ;
+      +Cmp/SplitR:%-   ENDLEX ;
+      +Cmp/SplitR:%–   ENDLEX ;
 
 LEXICON ROMNUMTAG !
 +Num+Rom+Sg+Nom: # ;
