@@ -33,7 +33,7 @@ LEXICON Numeral
  OLD ; ! for "thirteen hundred, etc.
 !num-imprecise ;
  COLLECTIVE ;
-+Use/Circ: ARABIC ; ! for the arabic numerals !
++Use/Circ: ARABICS ; ! for the arabic numerals !
 +Use/Circ: ROMAN ; ! for the roman numerals!
 +Use/Circ: NUM-PREFIXES ; ! for §34 etc.!
 +Use/Circ: ISOLATED-NUMEXP ; ! for ½ etc.!
@@ -579,10 +579,113 @@ LEXICON NUM-PREFIXES
 %>+Use/Circ:%[%>%] ARABIC ; ! >24
 s%.+Use/Circ:s%. ARABIC ;   ! s.24
 
-LEXICON ARABIC
-< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOP ;
-< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOPORD ;
-< [1|2|3|4|5|6|7|8|9|%0] >   ARABICLOOPCOLL ;
+LEXICON ARABICS
+            +Use/Circ: ARABIC          ; ! for the arabic numerals
+                       ARABICDATE       ; ! for dates
+                       ARABICYEAR       ; ! for years
+                       ARABICCLOCK       ; ! for time
+                       ARABICORD        ; ! for ordinals
+
+LEXICON ARABIC   !!≈ * __@CODE@__ arabic numerals
+< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPS ;
+
+
+LEXICON ARABICLOOPS
+ ARABICLOOP      ;
+ ARABICLOOPCOLL  ;
+ ARABICSabcdef ;
+! ARABICLOOPORD   ; !vi begrenser til tall opp til 100
+! ARABICLOOPphone ; !denne overgenerer
+
+LEXICON ARABICSabcdef
+ < [a|b|c|d|e|f|f %  f] > ACASETAG ;
+LEXICON ARABICDATE
+                                      ARABICDATENUM ;
+< [1|2|3|%0] [1|2|3|4|5|6|7|8|9|%0] > ARABICDATEDOT ;
+
+LEXICON ARABICDATEDOT
+ %.%- ARABICDATENUM ;
+   %- ARABICDATENUM ;
+ %.%– ARABICDATENUM ;
+   %– ARABICDATENUM ;
+
+LEXICON ARABICDATENUM
+ < [1|2|3|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|%0] [1|2|3|4|5|6|7|8|9|%0] %. > ARABICDATENUM2 ;
+ <     [1|2|3|4|5|6|7|8|9] %. [1|2|3|4|5|6|7|8|9] %. > ARABICDATENUM2 ;
+ <      [1|2|3|4|5|6|7|8|9] %. [1] [1|2|3|4|5|6|7|8|9|%0] %. > ARABICDATENUM2 ;
+ <     [1|2|3] [1|2|3|4|5|6|7|8|9|%0] %.   [1|2|3|4|5|6|7|8|9] %. > ARABICDATENUM2 ;
+
+LEXICON ARABICDATENUM2
+ < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > datetag ;
+                              < [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > datetag ;
+                                                                                datetag ;
+
+LEXICON datetag
+ +Num+Sem/Date: dateyearcase ;
+
+LEXICON ARABICCLOCK
+ < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
+ < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
+ <   [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
+ <   [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
+ 
+LEXICON CLOCK-sep
+   %- ARABICCLOCK2 ;
+   %– ARABICCLOCK2 ;
+   numclock ;
+
+LEXICON ARABICCLOCK2
+ < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
+ < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
+ <   [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
+ <   [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
+
+
+LEXICON numclock
+ +Num+Sem/Time-clock: dateyearcase ; !foreløpig
+
+
+LEXICON ARABICYEAR
+ < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > numyear ;
+
+LEXICON numyear
+       yeartag  ;
+ %/:%/ moreyear ;
+ %-:%- moreyear ;
+ %–:%– moreyear ;
+
+LEXICON moreyear
+                              < [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > yeartagpl ;
+ < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > yeartagpl ;
+
+
+LEXICON ARABICORD
+ < [1|2|3|4|5|6|7|8|9|0] [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPORD ;
+                        < [1|2|3|4|5|6|7|8|9] > ARABICLOOPORD ;
+                                          1%0%0 ARABICLOOPORD ;
+
+
+!LEXICON ARABICLOOPphone      +358(0)16671254, 01-16671254, 166 71 254
+! + ARABICLOOPphoneNum ;   ! 
+!   ARABICLOOPphoneNum ;
+
+!LEXICON ARABICLOOPphoneNum    +358(0)16671254, 01-16671254, 166 71 254
+!< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPphoneNum ;
+!< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPphoneSep ;
+!< [1|2|3|4|5|6|7|8|9|%0] > ARABICCASEphone ;
+!
+!LEXICON ARABICLOOPphoneSep     +358(0)16671254, 01-16671254, 166 71 254
+!  (                      ARABICLOOPphoneNum ;
+!  )                      ARABICLOOPphoneNum ;
+!  —                      ARABICLOOPphoneNum ; 
+! %-                      ARABICLOOPphoneNum ; 
+! %                       ARABICLOOPphoneNum ; ! Space as separator
+
+!LEXICON ARABICCASEphone  
+! +Num+Sem/Phonenr+Sg+Nom: # ;
+! +Num+Sem/Phonenr+Sg+Acc: # ;
+
+
 
 LEXICON ARABICLOOP
 +Use/Circ: ARABIC ;
@@ -651,6 +754,13 @@ LEXICON ARABICDELIMITERCOLL
 +Err/Orth:%' ARABICCASECOLL ; ! This is the 1984's case.
 +Err/Orth:%- ARABICCASECOLL ; ! This is the 1984-s case.
 
+LEXICON ACASETAG   !!≈ * __@CODE@__  is for 1e+Num+Sg+Num:1e
++Num: ARABICCASES ;
+
+
+LEXICON ARABICCASES   !≈ * __@CODE@__  to distinguish between 0 and oblique
+ARABICCASE0 ;
+ARABICCASE ;
 
 LEXICON ARABICCASE0
 +Arab+Sg+Nom: # ;
@@ -713,6 +823,35 @@ LEXICON ARABICCASECOLL
 +Arab+Pl+Ela:%>sijstie  # ;
 +Arab+Pl+Com:%>sigujmie # ;
 +Arab+Ess:%>sinie    # ;
+
+
+LEXICON yeartag
+ +Num+Sem/Year: dateyearcase ;
+
+LEXICON yeartagpl
+          +Num+Sem/Year+Pl+Nom:    # ;
+          +Num+Sem/Year+Pl+Gen:    # ;
+          +Num+Sem/Year+Pl+Acc:    # ;
+ +Num+Sem/Year+Err/Orth+Pl+Loc:%:s # ;
+
+LEXICON dateyearcase
+          +Sg+Nom:     #      ;
+          +Sg+Gen:     #      ;
+          +Sg+Acc:     #      ;
+ +Err/Orth+Sg+Acc:%:a  #      ;
+ +Err/Orth+Sg+Gen:%:a  #      ;
+          +Sg+Loc:%:s  #      ;
+ +Err/Orth+Sg+Loc:s    #      ;
+ +Err/Orth+Sg+Loc:%:is #      ;
+ +Err/Orth+Sg+Loc:is #      ;
+ +Err/Orth+Sg+Loc:%:as #      ;
+          +Sg+Ill:%:i  #      ;
+ +Err/Orth+Sg+Ill:i    #      ;
+ +Err/Orth+Sg+Ill:%:ii #      ;
+     +Sg+Ill+Attr:     #      ;
+     +Sg+Loc+Attr:     #      ;
+      +Cmp/SplitR:%-   ENDLEX ;
+      +Cmp/SplitR:%–   ENDLEX ;
 
 
 ! The Roman numerals !
