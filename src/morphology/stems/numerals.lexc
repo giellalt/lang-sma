@@ -427,62 +427,25 @@ LEXICON NUM-PREFIXES
 s%.+Use/Circ:s%. ARABIC ;   ! s.24
 
 LEXICON ARABICS
-            +Use/Circ: ARABIC          ; ! for the arabic numerals
-                       ARABICDATE       ; ! for dates
-                       ARABICYEAR       ; ! for years
-                       ARABICCLOCK       ; ! for time
-                       ARABICORD        ; ! for ordinals
+ +Use/Circ: ARABIC      ; ! for the arabic numerals
+            ARABICDATE  ; ! for dates
+            ARABICYEAR  ; ! for years
+            ARABICCLOCK ; ! for time
+            ARABICORD   ; ! for ordinals
 
 LEXICON ARABIC   !!≈ * __@CODE@__ arabic numerals
 < [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPS ;
 
 
 LEXICON ARABICLOOPS
- ARABICLOOP      ;
- ARABICLOOPCOLL  ;
- ARABICSabcdef ;
-! ARABICLOOPORD   ; !vi begrenser til tall opp til 100
-! ARABICLOOPphone ; !denne overgenerer
+   ARABICLOOP      ;
+   ARABICLOOPCOLL  ;
+   ARABICSabcdef   ;
+!  ARABICLOOPORD   ; ! vi begrenser til tall opp til 100
+!  ARABICLOOPphone ; ! denne overgenerer
 
 LEXICON ARABICSabcdef
  < [a|b|c|d|e|f|f %  f] > ACASETAG ;
-LEXICON ARABICDATE
-                                      ARABICDATENUM ;
-< [1|2|3|%0] [1|2|3|4|5|6|7|8|9|%0] > ARABICDATEDOT ;
-
-LEXICON ARABICDATEDOT
- %.%- ARABICDATENUM ;
-   %- ARABICDATENUM ;
- %.%– ARABICDATENUM ;
-   %– ARABICDATENUM ;
-
-LEXICON ARABICDATENUM
- < [1|2|3|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|%0] [1|2|3|4|5|6|7|8|9|%0] %. > ARABICDATENUM2 ;
- <     [1|2|3|4|5|6|7|8|9] %. [1|2|3|4|5|6|7|8|9] %. > ARABICDATENUM2 ;
- <      [1|2|3|4|5|6|7|8|9] %. [1] [1|2|3|4|5|6|7|8|9|%0] %. > ARABICDATENUM2 ;
- <     [1|2|3] [1|2|3|4|5|6|7|8|9|%0] %.   [1|2|3|4|5|6|7|8|9] %. > ARABICDATENUM2 ;
-
-LEXICON ARABICDATENUM2
- < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > datetag ;
-                              < [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > datetag ;
-                                                                                datetag ;
-
-LEXICON ARABICCLOCK
- < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
- < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
- <   [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
- <   [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
- 
-LEXICON CLOCK-sep
-   %- ARABICCLOCK2 ;
-   %– ARABICCLOCK2 ;
-   numclock ;
-
-LEXICON ARABICCLOCK2
- < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
- < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
- <   [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
- <   [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
 
 LEXICON ARABICYEAR
  < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > numyear ;
@@ -497,6 +460,43 @@ LEXICON moreyear
                               < [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > yeartagpl ;
  < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > yeartagpl ;
 
+LEXICON ARABICDATE
+                                      ARABICDATENUM ;
+< [1|2|3|%0] [1|2|3|4|5|6|7|8|9|%0] > ARABICDATEDOT ;
+
+LEXICON ARABICDATEDOT
+ %.%- ARABICDATENUM ;
+   %- ARABICDATENUM ;
+ %.%– ARABICDATENUM ;
+   %– ARABICDATENUM ;
+
+LEXICON ARABICDATENUM
+ < [1|2|3|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|%0] [1|2|3|4|5|6|7|8|9|%0] %. > ARABICDATENUM2 ;
+ <            [1|2|3|4|5|6|7|8|9]    %.        [1|2|3|4|5|6|7|8|9]    %. > ARABICDATENUM2 ;
+ <            [1|2|3|4|5|6|7|8|9]    %. [1]    [1|2|3|4|5|6|7|8|9|%0] %. > ARABICDATENUM2 ;
+ < [1|2|3]    [1|2|3|4|5|6|7|8|9|%0] %.        [1|2|3|4|5|6|7|8|9]    %. > ARABICDATENUM2 ;
+
+LEXICON ARABICDATENUM2
+ < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > datetag ;
+ <                              [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > datetag ;
+                                                                                datetag ;
+
+LEXICON ARABICCLOCK
+ < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
+ < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
+ <          [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
+ <          [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
+ 
+LEXICON CLOCK-sep
+   %- ARABICCLOCK2 ;
+   %– ARABICCLOCK2 ;
+   numclock ;
+
+LEXICON ARABICCLOCK2
+ < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
+ < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
+ <          [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
+ <          [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
 
 LEXICON ARABICORD
  < [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPORD ;
