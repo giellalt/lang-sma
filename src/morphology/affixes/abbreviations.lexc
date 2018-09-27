@@ -129,8 +129,10 @@ LEXICON abbr-nominal-infl
 LEXICON DOTwBACKTRACK
 ! This should create a new backtrack-point before the dot, but no sub-reading:                                                                                                                          
  :%. # ;
-! This should create an mwe sub-reading:                                                                                                                                                                
-< "@P.Pmatch.Loc@" {.} "+PUNCT":0 "+Use/Disamb":0 > # ;
+ < "+Use/Disamb":0 "@P.Pmatch.Backtrack@" > NUMDOT ; ! This creates a split point                                                                                                         
+
+LEXICON NUMDOT
+.+CLB:. ENDLEX;
 
 ! Contlexes not in use, kept for the future.
 
