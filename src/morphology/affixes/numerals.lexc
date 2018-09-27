@@ -286,26 +286,28 @@ LEXICON yeartagpl
           +Num+Sem/Year+Pl+Nom:    # ;
           +Num+Sem/Year+Pl+Gen:    # ;
           +Num+Sem/Year+Pl+Acc:    # ;
- +Num+Sem/Year+Err/Orth+Pl+Loc:%:s # ;
+ +Num+Sem/Year+Err/Orth+Pl+Ine:%:dinie # ;
 
 LEXICON dateyearcase
-          +Sg+Nom:     #      ;
-          +Sg+Gen:     #      ;
-          +Sg+Acc:     #      ;
- +Err/Orth+Sg+Acc:%:a  #      ;
- +Err/Orth+Sg+Gen:%:a  #      ;
-          +Sg+Loc:%:s  #      ;
- +Err/Orth+Sg+Loc:s    #      ;
- +Err/Orth+Sg+Loc:%:is #      ;
- +Err/Orth+Sg+Loc:is #      ;
- +Err/Orth+Sg+Loc:%:as #      ;
-          +Sg+Ill:%:i  #      ;
- +Err/Orth+Sg+Ill:i    #      ;
- +Err/Orth+Sg+Ill:%:ii #      ;
-     +Sg+Ill+Attr:     #      ;
-     +Sg+Loc+Attr:     #      ;
-      +Cmp/SplitR:%-   ENDLEX ;
-      +Cmp/SplitR:%–   ENDLEX ;
+     +Sg+Nom:        #      ;
+     +Sg+Gen:n       #      ;
+     +Sg+Acc:m       #      ;
+     +Sg+Ill:se      #      ;
+     +Sg+Ine:sne     #      ; ! NRK:sne
+     +Sg+Ela:ste     #      ; ! NRK:ste
+     +Sg+Com:ine     #      ;
+        +Ess:ine     #      ; ! NBR:ine
+     +Pl+Nom:h       #      ;
+     +Pl+Gen:j       #      ;
+     +Pl+Acc:ide     #      ;
+     +Pl+Ill:ide     #      ;
+     +Pl+Ine:ine     #      ;
+     +Pl+Ela:jste    #      ;
+     +Pl+Com:jgujmie #      ;
+ +Sg+Ill+Attr:       #      ;
+ +Sg+Ine+Attr:       #      ;
+ +Cmp/SplitR:%-      ENDLEX ;
+ +Cmp/SplitR:%–      ENDLEX ;
 
 LEXICON ROMNUMTAG !
 +Num+Rom+Sg+Nom: # ;
