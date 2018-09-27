@@ -29,13 +29,19 @@ GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					remove-illegal-derivation-strings.regex \
 					remove-derivation-position-tags.regex \
 					rename-POS_before_Der-tags.regex \
-				    remove-illegal-derivation-strings-flagbased.regex \
-				    block-illegal_compound-strings.regex    \
-				    insert-default-compounding-tags.regex   \
-				    insert-default_left_compounding-tags.regex \
-				    split-CmpN-tags.regex \
+					remove-illegal-derivation-strings-flagbased.regex \
+					block-illegal_compound-strings.regex    \
+					insert-default-compounding-tags.regex   \
+					insert-default_left_compounding-tags.regex \
+					split-CmpN-tags.regex \
 					split-CmpNP-tags.regex \
-					convert_to_flags-CmpNP-tags.regex
+					convert_to_flags-CmpNP-tags.regex \
+					remove-Use_Disamb-strings.regex       \
+					remove-Use_Disamb-tags.regex          \
+					remove-Use_GC-strings.regex           \
+					remove-Use_GC-tags.regex              \
+					remove-Use_minus_PMatch-strings.regex \
+					remove-Use_minus_PMatch-tags.regex
 
 # List any local filter xfscript files here:
 GIELLA_FILTER_LOCAL_XFSCRIPT_SRCS=
