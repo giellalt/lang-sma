@@ -227,6 +227,7 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 					filters/remove-orig_lang-tags.%           \
 					filters/remove-dialect-tags.%             \
 					filters/remove-norm-comp-tags.%           \
+					filters/remove-homonymy-tags.%           \
 					filters/remove-derivation-position-tags.% \
 					filters/rename-POS_before_Der-tags.%      \
 					filters/remove-DNorm-tags.%
@@ -234,6 +235,7 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 				@\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-dialect-tags.$*\"             \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
+			.o. @\"filters/remove-homonymy-tags.$*\"           \
 			.o. @\"filters/remove-orig_lang-tags.$*\"           \
 			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
 			.o. @\"filters/remove-DNorm-tags.$*\"               \
