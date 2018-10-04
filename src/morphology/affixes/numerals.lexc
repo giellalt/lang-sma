@@ -179,7 +179,7 @@ LEXICON COLLTAG
 
 
 LEXICON ARABICLOOPORD
- +A+Ord+Attr: DOTwBACKTRACK      ;
+ +A+Ord+Attr: ORD_DOTwBACKTRACK  ;
       +A+Ord: ARABICDELIMITERORD ;
 
 LEXICON ARABICLOOPCOLL
@@ -273,6 +273,11 @@ LEXICON ARABICCASECOLL
  +Arab+Pl+Com:%>sigujmie # ;
     +Arab+Ess:%>sinie    # ;
 
+LEXICON ORD_DOTwBACKTRACK
+! This should create a new backtrack-point before the dot, but no sub-reading:                                                                                                                          
+   +Use/-PMatch:%. # ;
+< "+Use/PMatch":0 "@P.Pmatch.Backtrack@" 0:%. > # ; ! This creates a split point                                                                                                         
+
 LEXICON datetag
  +Num+Sem/Date: dateyearcase ;
 
@@ -311,7 +316,7 @@ LEXICON dateyearcase
 
 LEXICON ROMNUMTAG !
 +Num+Rom+Sg+Nom: # ;
-+A+Rom+Ord:   DOTwBACKTRACK ;
++A+Rom+Ord:   ORD_DOTwBACKTRACK ;
 +Num:%:         ROMNUMTAGOBL ; ! IV:se
 +Num+Err/Orth:'7 ROMNUMTAGOBL ; ! IV'se
 +Num+Err/Orth:%- ROMNUMTAGOBL ; ! IV-se
