@@ -274,9 +274,17 @@ LEXICON ARABICCASECOLL
     +Arab+Ess:%>sinie    # ;
 
 LEXICON ORD_DOTwBACKTRACK
-! This should create a new backtrack-point before the dot, but no sub-reading:                                                                                                                          
-   +Use/-PMatch:%. # ;
-< "+Use/PMatch":0 "@P.Pmatch.Backtrack@" 0:%. > # ; ! This creates a split point                                                                                                         
+    +Use/-PMatch:%.                              # ; ! Regular fst
+ < "+Use/PMatch":0 "@P.Pmatch.Backtrack@" 0:%. > # ; ! pmatch fst w/ backtrack
+ ! The idea is that input like '10.' can then be analysed both as the ordinal
+ ! '10.', and as the sequence cardinal '10' + the sentence ending full stop '.'.
+ ! The lexicon above with only give the ordinal analysis of '10.', but then tell
+ ! the fst runtime to go back and try to find alternatives for the same input,
+ ! in which case it will find that '10' + '.' matches the same input. Both
+ ! tokenisations will then be printed by hfst-tokenise --giella, so that further
+ ! processing can be done to choose the correct one in a given context. The
+ ! location of the symbol "@P.Pmatch.Backtrack@" determines where the split is
+ ! being done.
 
 LEXICON datetag
  +Num+Sem/Date: dateyearcase ;
@@ -288,48 +296,48 @@ LEXICON numclock
  +Num+Sem/Time-clock: dateyearcase ; !foreløpig
 
 LEXICON yeartagpl
-          +Num+Sem/Year+Pl+Nom:    # ;
-          +Num+Sem/Year+Pl+Gen:    # ;
-          +Num+Sem/Year+Pl+Acc:    # ;
+          +Num+Sem/Year+Pl+Nom:        # ;
+          +Num+Sem/Year+Pl+Gen:        # ;
+          +Num+Sem/Year+Pl+Acc:        # ;
  +Num+Sem/Year+Err/Orth+Pl+Ine:%:dinie # ;
 
 LEXICON dateyearcase
-     +Sg+Nom:        #      ;
-     +Sg+Gen:n       #      ;
-     +Sg+Acc:m       #      ;
-     +Sg+Ill:se      #      ;
-     +Sg+Ine:sne     #      ; ! NRK:sne
-     +Sg+Ela:ste     #      ; ! NRK:ste
-     +Sg+Com:ine     #      ;
-        +Ess:ine     #      ; ! NBR:ine
-     +Pl+Nom:h       #      ;
-     +Pl+Gen:j       #      ;
-     +Pl+Acc:ide     #      ;
-     +Pl+Ill:ide     #      ;
-     +Pl+Ine:ine     #      ;
-     +Pl+Ela:jste    #      ;
-     +Pl+Com:jgujmie #      ;
- +Sg+Ill+Attr:       #      ;
- +Sg+Ine+Attr:       #      ;
- +Cmp/SplitR:%-      ENDLEX ;
- +Cmp/SplitR:%–      ENDLEX ;
+      +Sg+Nom:        #      ;
+      +Sg+Gen:n       #      ;
+      +Sg+Acc:m       #      ;
+      +Sg+Ill:se      #      ;
+      +Sg+Ine:sne     #      ; ! NRK:sne
+      +Sg+Ela:ste     #      ; ! NRK:ste
+      +Sg+Com:ine     #      ;
+         +Ess:ine     #      ; ! NBR:ine
+      +Pl+Nom:h       #      ;
+      +Pl+Gen:j       #      ;
+      +Pl+Acc:ide     #      ;
+      +Pl+Ill:ide     #      ;
+      +Pl+Ine:ine     #      ;
+      +Pl+Ela:jste    #      ;
+      +Pl+Com:jgujmie #      ;
+ +Sg+Ill+Attr:        #      ;
+ +Sg+Ine+Attr:        #      ;
+  +Cmp/SplitR:%-      ENDLEX ;
+  +Cmp/SplitR:%–      ENDLEX ;
 
 LEXICON ROMNUMTAG !
-+Num+Rom+Sg+Nom: # ;
-+A+Rom+Ord:   ORD_DOTwBACKTRACK ;
-+Num:%:         ROMNUMTAGOBL ; ! IV:se
-+Num+Err/Orth:'7 ROMNUMTAGOBL ; ! IV'se
-+Num+Err/Orth:%- ROMNUMTAGOBL ; ! IV-se
-+Num+Err/Orth:%´ ROMNUMTAGOBL ; ! IV´se
-+Num+Err/Orth:%> ROMNUMTAGOBL ; ! IVse
+ +Num+Rom+Sg+Nom:   #                 ;
+      +A+Rom+Ord:   ORD_DOTwBACKTRACK ;
+            +Num:%: ROMNUMTAGOBL      ; ! IV:se
+   +Num+Err/Orth:'7 ROMNUMTAGOBL      ; ! IV'se
+   +Num+Err/Orth:%- ROMNUMTAGOBL      ; ! IV-se
+   +Num+Err/Orth:%´ ROMNUMTAGOBL      ; ! IV´se
+   +Num+Err/Orth:%> ROMNUMTAGOBL      ; ! IVse
 
 LEXICON ROMNUMTAGOBL !
-+Rom+Sg+Gen:n # ; ! But here 123a 123
-+Rom+Sg+Acc: # ;
-+Rom+Sg+Ill:se # ;
-+Rom+Sg+Ine:sne # ;
-+Rom+Sg+Ine+Attr:ne # ;
-+Rom+Sg+Ela+Attr:de # ;
-+Rom+Sg+Ela:ste # ;
-+Rom+Sg+Com:ine # ;
-+Rom+Sg+Ess:ine # ;
+      +Rom+Sg+Gen:n   # ; ! But here 123a 123
+      +Rom+Sg+Acc:    # ;
+      +Rom+Sg+Ill:se  # ;
+      +Rom+Sg+Ine:sne # ;
+ +Rom+Sg+Ine+Attr:ne  # ;
+ +Rom+Sg+Ela+Attr:de  # ;
+      +Rom+Sg+Ela:ste # ;
+      +Rom+Sg+Com:ine # ;
+      +Rom+Sg+Ess:ine # ;
