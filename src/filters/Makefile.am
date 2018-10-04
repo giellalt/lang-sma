@@ -19,30 +19,24 @@
 ############## BEGIN: Local modifications ###############
 # List any local filter regex files here:
 GIELLA_FILTER_LOCAL_REGEX_SRCS=\
-					downcase_UCletters.regex \
-					remove-norm-comp-tags.regex \
-					remove-rel_focus-strings.regex \
-					remove-test-tags.regex \
-					remove-homonymy-tags.regex \
-					remove-DNorm-tags.regex \
-					remove-Dial_L-strings.regex \
-					remove-Dial_SH-strings.regex \
-					remove-illegal-derivation-strings.regex \
-					remove-derivation-position-tags.regex \
-					rename-POS_before_Der-tags.regex \
+					block-illegal_compound-strings.regex              \
+					convert_to_flags-CmpNP-tags.regex                 \
+					downcase_UCletters.regex                          \
+					insert-default-compounding-tags.regex             \
+					insert-default_left_compounding-tags.regex        \
+					remove-DNorm-tags.regex                           \
+					remove-Dial_L-strings.regex                       \
+					remove-Dial_SH-strings.regex                      \
+					remove-derivation-position-tags.regex             \
+					remove-homonymy-tags.regex                        \
 					remove-illegal-derivation-strings-flagbased.regex \
-					block-illegal_compound-strings.regex    \
-					insert-default-compounding-tags.regex   \
-					insert-default_left_compounding-tags.regex \
-					split-CmpN-tags.regex \
-					split-CmpNP-tags.regex \
-					convert_to_flags-CmpNP-tags.regex \
-					remove-Use_Disamb-strings.regex       \
-					remove-Use_Disamb-tags.regex          \
-					remove-Use_GC-strings.regex           \
-					remove-Use_GC-tags.regex              \
-					remove-Use_minus_PMatch-strings.regex \
-					remove-Use_minus_PMatch-tags.regex
+					remove-illegal-derivation-strings.regex           \
+					remove-norm-comp-tags.regex                       \
+					remove-rel_focus-strings.regex                    \
+					remove-test-tags.regex                            \
+					rename-POS_before_Der-tags.regex                  \
+					split-CmpN-tags.regex                             \
+					split-CmpNP-tags.regex
 
 # List any local filter xfscript files here:
 GIELLA_FILTER_LOCAL_XFSCRIPT_SRCS=
