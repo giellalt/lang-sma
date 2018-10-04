@@ -103,7 +103,7 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 		 quit\n" | $(XFST_TOOL)
 
 # We need to add processing of language-specific tags in the analysers:
-analyser-gt-desc.%: analyser-gt-desc.tmp.% \
+analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
 					filters/remove-DNorm-tags.%
@@ -118,7 +118,7 @@ analyser-gt-desc.%: analyser-gt-desc.tmp.% \
 		 quit\n" | $(XFST_TOOL)
 
 # We need to add processing of language-specific tags in the analysers:
-analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.% \
+analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.%          \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
 					filters/remove-DNorm-tags.%
