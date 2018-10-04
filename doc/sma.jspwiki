@@ -68,13 +68,12 @@ This is free and open source Southern Sami morphology.
  | __+Err/Lex__ | lemma med dens ordformer er utenfor normen.
                 No normative lemma, it's grammatically correct.
  | __+Err/Der__ | Errors in derivations
- | __+Use/NotDNorm__ | For words without formal normalization.
-                Divvun suggest that this shouldn't be normative. Included in speller.
+ | __+Use/NotDNorm__ | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
  | __+Use/DNorm__ | For words without formal normalization.
                 Divvun suggest that this should be normative. Included in speller.
- | __+Use/Disamb__ | means that the following is only used in the analyser feeding the disambiguator
- | __+Use/GC__ | only retained in the HFST Grammar Checker disambiguation analyser
+ | __+Use/PMatch__ | Do ''only'' include in fst's for hfst-pmatch
  | __+Use/-PMatch__ | Do not include in fst's made for hfst-pmatch
+ | __+Use/GC__ | Only retained in the gramchecker analyser
 
  !!Dialect tags:
 
