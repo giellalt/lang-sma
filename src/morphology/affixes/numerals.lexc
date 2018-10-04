@@ -167,111 +167,111 @@ LEXICON ORDTAGEVEN
 
 
 LEXICON COLLTAG
-+N+Coll+Pl+Nom:%>%^DISIMPh FINAL1 ;
-+N+Coll+Pl+Acc:%>idie FINAL1 ;
-+N+Coll+Pl+Gen:%>%^DISIMPi FINAL1 ;
-+N+Coll+Pl+Ill:%>idie FINAL1 ;
-+N+Coll+Pl+Ine:%>inie FINAL1 ;
-+N+Coll+Pl+Ela:%>ijstie FINAL1 ;
-+N+Coll+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
-+N+Coll+Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1 ;
-+N+Coll+Ess:%>inie FINAL1 ;
+          +N+Coll+Pl+Nom:%>%^DISIMPh       FINAL1 ;
+          +N+Coll+Pl+Acc:%>idie            FINAL1 ;
+          +N+Coll+Pl+Gen:%>%^DISIMPi       FINAL1 ;
+          +N+Coll+Pl+Ill:%>idie            FINAL1 ;
+          +N+Coll+Pl+Ine:%>inie            FINAL1 ;
+          +N+Coll+Pl+Ela:%>ijstie          FINAL1 ;
+          +N+Coll+Pl+Com:%>%^DISIMPigujmie FINAL1 ;
+ +N+Coll+Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1 ;
+             +N+Coll+Ess:%>inie            FINAL1 ;
 
 
 LEXICON ARABICLOOPORD
-+A+Ord+Attr: DOTwBACKTRACK ;
-+A+Ord: ARABICDELIMITERORD ;
+ +A+Ord+Attr: DOTwBACKTRACK      ;
+      +A+Ord: ARABICDELIMITERORD ;
 
 LEXICON ARABICLOOPCOLL
-+N+Coll: ARABICDELIMITERCOLL ;
+ +N+Coll: ARABICDELIMITERCOLL ;
 
 LEXICON ARABICDELIMITER
-+Num:           ARABICCASE0 ;   ! This is the 1984 case (ie nominative and accusative).
-+Num:%:         ARABICCASE ;    ! This is the 1984:s case.
-+Num+Err/Orth:%> ARABICCASE ;    ! This is the 1984s case.
-+Num+Err/Orth:%' ARABICCASE ;    ! This is the 1984's case.
-+Num+Err/Orth:%- ARABICCASE ;    ! This is the 1984-s case.
+          +Num:   ARABICCASE0 ; ! This is the 1984 case (ie nominative and accusative).
+          +Num:%: ARABICCASE  ; ! This is the 1984:s case.
+ +Num+Err/Orth:%> ARABICCASE  ; ! This is the 1984s case.
+ +Num+Err/Orth:%' ARABICCASE  ; ! This is the 1984's case.
+ +Num+Err/Orth:%- ARABICCASE  ; ! This is the 1984-s case.
 
 LEXICON ARABICDELIMITERORD
-:%:         ARABICCASEORD ; ! This is the 1984:s case.
-+Err/Orth:%> ARABICCASEORD ; ! This is the 1984s case.
-+Err/Orth:%' ARABICCASEORD ; ! This is the 1984's case.
-+Err/Orth:%- ARABICCASEORD ; ! This is the 1984-s case.
+          :%: ARABICCASEORD ; ! This is the 1984:s case.
+ +Err/Orth:%> ARABICCASEORD ; ! This is the 1984s case.
+ +Err/Orth:%' ARABICCASEORD ; ! This is the 1984's case.
+ +Err/Orth:%- ARABICCASEORD ; ! This is the 1984-s case.
 
 LEXICON ARABICDELIMITERCOLL
-:%:         ARABICCASECOLL ; ! This is the 1984:s case.
-+Err/Orth:%> ARABICCASECOLL ; ! This is the 1984s case.
-+Err/Orth:%' ARABICCASECOLL ; ! This is the 1984's case.
-+Err/Orth:%- ARABICCASECOLL ; ! This is the 1984-s case.
+          :%: ARABICCASECOLL ; ! This is the 1984:s case.
+ +Err/Orth:%> ARABICCASECOLL ; ! This is the 1984s case.
+ +Err/Orth:%' ARABICCASECOLL ; ! This is the 1984's case.
+ +Err/Orth:%- ARABICCASECOLL ; ! This is the 1984-s case.
 
 LEXICON ACASETAG   !!≈ * __@CODE@__  is for 1e+Num+Sg+Num:1e
-+Num: ARABICCASES ;
+ +Num: ARABICCASES ;
 
 LEXICON ARABICCASES   !≈ * __@CODE@__  to distinguish between 0 and oblique
-ARABICCASE0 ;
-ARABICCASE ;
+  ARABICCASE0 ;
+  ARABICCASE  ;
 
 LEXICON ARABICCASE0
-+Arab+Sg+Nom: # ;
-+Arab+Sg+Ill+Attr: # ;
-+Arab+Sg+Ine+Attr: # ;
-+Arab+Sg+Ela+Attr: # ;
-+Arab+Sg+Acc+Attr: # ;
-+Arab+Sg+Gen+Attr: # ;
+      +Arab+Sg+Nom: # ;
+ +Arab+Sg+Ill+Attr: # ;
+ +Arab+Sg+Ine+Attr: # ;
+ +Arab+Sg+Ela+Attr: # ;
+ +Arab+Sg+Acc+Attr: # ;
+ +Arab+Sg+Gen+Attr: # ;
 !+Sg+Acc: # ; Outcommented this one, because numerals Nom got Acc- analyse without case ending, and thats wrong.(Maja)
 
 LEXICON ARABICCASE
-f+Sg+Nom+Err/Orth:f  # ; ! s. 123f.
-ff+Sg+Nom+Err/Orth:ff # ; ! s. 123ff.
-b+Sg+Nom+Err/Orth:b  # ; ! § 123b
-c+Sg+Nom+Err/Orth:c  # ; ! § 123c
-d+Sg+Nom+Err/Orth:d  # ; ! § 123d
-e+Sg+Nom+Err/Orth:e  # ; ! § 123e
-!+Sg+Gen:           # ;
-+Arab+Sg+Gen:n          # ;
-+Arab+Sg+Acc:m          # ;
-+Arab+Sg+Ill:se         # ;
-+Arab+Sg+Ine:sne        # ; ! NRK:sne
-+Arab+Sg+Ela:ste        # ; ! NRK:ste
-+Arab+Sg+Com:ine        # ;
-+Arab+Ess:ine           # ; ! NBR:ine
-+Arab+Pl+Nom:h          # ;
-+Arab+Pl+Gen:j          # ;
-+Arab+Pl+Acc:ide        # ;
-+Arab+Pl+Ill:ide        # ;
-+Arab+Pl+Ine:ine        # ;
-+Arab+Pl+Ela:jste       # ;
-+Arab+Pl+Com:jgujmie    # ;
+   f+Sg+Nom+Err/Orth:f       # ; ! s. 123f.
+  ff+Sg+Nom+Err/Orth:ff      # ; ! s. 123ff.
+   b+Sg+Nom+Err/Orth:b       # ; ! § 123b
+   c+Sg+Nom+Err/Orth:c       # ; ! § 123c
+   d+Sg+Nom+Err/Orth:d       # ; ! § 123d
+   e+Sg+Nom+Err/Orth:e       # ; ! § 123e
+!            +Sg+Gen:        # ;
+        +Arab+Sg+Gen:n       # ;
+        +Arab+Sg+Acc:m       # ;
+        +Arab+Sg+Ill:se      # ;
+        +Arab+Sg+Ine:sne     # ; ! NRK:sne
+        +Arab+Sg+Ela:ste     # ; ! NRK:ste
+        +Arab+Sg+Com:ine     # ;
+           +Arab+Ess:ine     # ; ! NBR:ine
+        +Arab+Pl+Nom:h       # ;
+        +Arab+Pl+Gen:j       # ;
+        +Arab+Pl+Acc:ide     # ;
+        +Arab+Pl+Ill:ide     # ;
+        +Arab+Pl+Ine:ine     # ;
+        +Arab+Pl+Ela:jste    # ;
+        +Arab+Pl+Com:jgujmie # ;
 !ordinals
 
 LEXICON ARABICCASEORD
-+Arab+Sg+Nom:%>de          # ;
-+Arab+Sg+Gen:%>den         # ;
-+Arab+Sg+Acc:%>dem         # ;
-+Arab+Sg+Ill:%>dasse       # ;
-+Arab+Sg+Ine+Attr:%>dinie  # ;
-+Arab+Sg+Ela+Attr:%>dihtie # ;
-+Arab+Sg+Ine:%>disnie      # ;
-+Arab+Sg+Ela:%>distie      # ;
-+Arab+Sg+Com:%>dinie       # ;
-+Arab+Sg+Ess:%>dinie       # ;
-+Arab+Pl+Nom:%>dh          # ;
-+Arab+Pl+Gen:%>di          # ;
-+Arab+Pl+Acc:%>didie       # ;
-+Arab+Pl+Ill:%>didie       # ;
-+Arab+Pl+Ine:%>dinie       # ;
-+Arab+Pl+Ela:%>dijstie     # ;
-+Arab+Pl+Com:%>digujmie    # ;
+      +Arab+Sg+Nom:%>de       # ;
+      +Arab+Sg+Gen:%>den      # ;
+      +Arab+Sg+Acc:%>dem      # ;
+      +Arab+Sg+Ill:%>dasse    # ;
+ +Arab+Sg+Ine+Attr:%>dinie    # ;
+ +Arab+Sg+Ela+Attr:%>dihtie   # ;
+      +Arab+Sg+Ine:%>disnie   # ;
+      +Arab+Sg+Ela:%>distie   # ;
+      +Arab+Sg+Com:%>dinie    # ;
+      +Arab+Sg+Ess:%>dinie    # ;
+      +Arab+Pl+Nom:%>dh       # ;
+      +Arab+Pl+Gen:%>di       # ;
+      +Arab+Pl+Acc:%>didie    # ;
+      +Arab+Pl+Ill:%>didie    # ;
+      +Arab+Pl+Ine:%>dinie    # ;
+      +Arab+Pl+Ela:%>dijstie  # ;
+      +Arab+Pl+Com:%>digujmie # ;
 
 LEXICON ARABICCASECOLL
-+Arab+Pl+Nom:%>sh       # ;
-+Arab+Pl+Acc:%>sidie    # ;
-+Arab+Pl+Gen:%>si       # ;
-+Arab+Pl+Ill:%>sidie    # ;
-+Arab+Pl+Ine:%>sinie    # ;
-+Arab+Pl+Ela:%>sijstie  # ;
-+Arab+Pl+Com:%>sigujmie # ;
-+Arab+Ess:%>sinie    # ;
+ +Arab+Pl+Nom:%>sh       # ;
+ +Arab+Pl+Acc:%>sidie    # ;
+ +Arab+Pl+Gen:%>si       # ;
+ +Arab+Pl+Ill:%>sidie    # ;
+ +Arab+Pl+Ine:%>sinie    # ;
+ +Arab+Pl+Ela:%>sijstie  # ;
+ +Arab+Pl+Com:%>sigujmie # ;
+    +Arab+Ess:%>sinie    # ;
 
 LEXICON datetag
  +Num+Sem/Date: dateyearcase ;
