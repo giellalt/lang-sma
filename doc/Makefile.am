@@ -17,6 +17,7 @@ JSP_PAGES=root-morphology.jspwiki \
 		  adjectives-oahpa-stems.jspwiki   \
 		  smi-propernouns-stems.jspwiki    \
 		  nouns-affixes.jspwiki \
+		  numerals-affixes.jspwiki \
 		  verbs-affixes.jspwiki \
 		  disambiguator-syntax.jspwiki \
 		  sma-phon-phonology.jspwiki
