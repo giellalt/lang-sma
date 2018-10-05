@@ -221,6 +221,30 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 	save stack $@\n\
 	quit\n" | $(HFST_XFST) -p $(MORE_VERBOSITY)
 
+# The pmatch disamb analyser. Filtering should be identical to the general
+# disamb analyser below. Special target needed because of the filename.
+analyser-pmatchdisamb-gt-desc.%: analyser-pmatchdisamb-gt-desc.tmp.% \
+					filters/remove-orig_lang-tags.%           \
+					filters/remove-dialect-tags.%             \
+					filters/remove-norm-comp-tags.%           \
+					filters/remove-homonymy-tags.%           \
+					filters/remove-derivation-position-tags.% \
+					filters/rename-POS_before_Der-tags.%      \
+					filters/remove-DNorm-tags.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
+				@\"filters/remove-derivation-position-tags.$*\" \
+			.o. @\"filters/remove-dialect-tags.$*\"             \
+			.o. @\"filters/remove-norm-comp-tags.$*\"           \
+			.o. @\"filters/remove-homonymy-tags.$*\"           \
+			.o. @\"filters/remove-orig_lang-tags.$*\"           \
+			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
+			.o. @\"filters/remove-DNorm-tags.$*\"               \
+			.o. @\"$<\"                                         \
+			;\n\
+		 $(INVERT_HFST)\
+		 save stack $@\n\
+		 quit\n" | $(XFST_TOOL)
+
 # ... as well as in the XEROX/FOMA disambiguation analyser
 # (remove the Err/SpaceCmp thing here):
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
