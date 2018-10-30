@@ -3730,7 +3730,9 @@ aamhtesegïetedalleme+Sem/Act:aamhtese#gïetedallem N_ODD ;
 
 aamhtesenummere+OLang/NOB+Sem/Sign:aamhtese#nummer N_ODD_LOAN ; ! tags_via_apertium
 aamhteseprovsa+Sem/Dummytag:aamhtese#provs MAANA ;
-aamhteseprovsateekste+Sem/Txt:aamhtese#provsa#te EKSTE_LOAN ; ! tags_via_apertium
+
+aamhteseprovsatekste+Sem/Txt:aamhtese#provsa#t EKSTE_LOAN ; 
+
 aamhteseöörnege+Sem/Dummytag:aamhteseöörneg N_ODD ;
 aamhtesgærja+Sem/Txt:aamhtes#gærj MAANA ; ! aamhtese - Hasselbrink / - settes til vanlig leksikon : aamhtes-gærja / aamhtese-gærja
 aamhtespaehpere+Sem/Txt:aamhtes#paehpier N_ODD ; ! tags_via_apertium
@@ -6868,7 +6870,10 @@ faagepedagååge+OLang/NOB+Sem/Hum:faage#pedag LÅÅGE_LOAN ;
 faageplaane+OLang/NOB+Sem/Prod-cogn:faage#plaan NIEJTE ; ! tags_via_apertium
 faageskuvle+Sem/Edu_Org:faage#skuvl NIEJTE ; ! tags_via_apertium
 faagesïebre+Sem/Dummytag:faage#sïebr NIEJTE ;
-faageteekste+Sem/Txt:faage#te EKSTE_LOAN ; ! tags_via_apertium
+
+faagetekste+Sem/Txt:faage#t EKSTE_LOAN ;
+faagetekste+Err/Orth+Sem/Txt:faage#te EKSTE_LOAN ;
+
 faageteerme+Err/Orth+Sem/Cat:faage#tearm NIEJTE ; ! tags_via_apertium
 faageteerme+OLang/NOB+Sem/Cat:faage#te ERME_LOAN ; ! tags_via_apertium
 faageterminologije+OLang/NOB+Sem/Dummytag:faage#terminolog IJE_LOAN ;
@@ -15650,12 +15655,18 @@ teaterkritihke+OLang/NOB+Sem/Dummytag:te^ater#krit IHKE_LOAN ;
 teatermusihke+OLang/NOB+Sem/Dummytag:te^ater#mus IHKE_LOAN ;
 teeatereboelhke+Sem/Dummytag:teeatereboelhk NIEJTE ;
 teegele+OLang/NOB+Sem/Dummytag:teegel N_ODD ;
-teekste+Err/Orth+OLang/NOB+Sem/Txt:tekst NIEJTE ; ! tags_via_apertium
-teekste+OLang/NOB+Sem/Txt:te EKSTE_LOAN ; ! tags_via_apertium
-teekstebægkoe+Sem/Dummytag:teekste#bægk N_OE_UML ;
-teekstegïetedalleme+Err/Orth+Sem/Dummytag:tekste#gïetedallem N_ODD ;
-teekstegïetedalleme+Sem/Act:teekste#gïetedallem N_ODD ;
-teekstetjaeleme+Sem/Dummytag:teekste#tjaelem N_ODD ;
+
+tekste+Err/Orth+OLang/NOB+Sem/Txt:teekst NIEJTE ; 
+tekste+OLang/NOB+Sem/Txt:t EKSTE_LOAN ; 
+
+tekstebægkoe+Sem/Dummytag:tekste#bægk N_OE_UML ;
+tekstebægkoe+Err/Orth+Sem/Dummytag:teekste#bægk N_OE_UML ;
+
+tekstegïetedalleme+Err/Orth+Sem/Act:teekste#gïetedallem N_ODD ;
+tekstegïetedalleme+Sem/Act:tekste#gïetedallem N_ODD ;
+
+tekstetjaeleme+Sem/Dummytag:tekste#tjaelem N_ODD ;
+
 teelerhke+Sem/Dummytag:teelerhk NIEJTE ;
 teellere+OLang/NOB+Sem/Dummytag:teeller N_ODD ;
 teemagærja+Sem/Txt:teema#gærj MAANA ;
