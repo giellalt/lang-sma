@@ -24,12 +24,14 @@ attr_lemmas=./filtered-attr-${POS}.txt
 pred_lemmas=./filtered-pred-${POS}.txt
 comp_lemmas=./filtered-comp-${POS}.txt
 supr_lemmas=./filtered-supr-${POS}.txt
-lemma_files="$attr_lemmas $pred_lemmas $comp_lemmas $supr_lemmas"
+todo_lemmas=./filtered-todo-${POS}.txt
+lemma_files="$attr_lemmas $pred_lemmas $comp_lemmas $supr_lemmas $todo_lemmas"
 generated_all_lemmas=./generated-all-${POS}
 generated_attr_lemmas=./generated-attr-${POS}
 generated_pred_lemmas=./generated-pred-${POS}
 generated_comp_lemmas=./generated-comp-${POS}
 generated_supr_lemmas=./generated-supr-${POS}
+generated_todo_lemmas=./generated-todo-${POS}
 result_file=missing_${POS}_lemmas
 ana_result_file=analysed_missing_${POS}_lemmas
 gen_result_file=generated_missing_${POS}_lemmas
@@ -80,6 +82,11 @@ EXTEDITOR=@SEE@
 @GTCORE@/scripts/extract-lemmas.sh \
     --include "( MES)" \
     $source_file > $supr_lemmas
+
+# TODO lemmas:
+@GTCORE@/scripts/extract-lemmas.sh \
+    --include "( A-TODO)" \
+    $source_file > $todo_lemmas
 
 ###### Start testing: #######
 transducer_found=0
@@ -137,6 +144,12 @@ for f in $fsttype; do
             | fgrep -v "+?" | grep -v "^$" | cut -f2 | sort -u \
             > $generated_supr_lemmas.$f.txt 
 
+        # generate TODO lemmas, extract the resulting generated
+        # lemmas, store them:
+        sed 's/$/+A+TODO/' $todo_lemmas \
+            | $lookup_tool $generator_file.$suffix \
+            | fgrep -v "+?" | grep -v "^$" | cut -f2 | sort -u \
+            > $generated_todo_lemmas.$f.txt 
 
 ###### Collect results, and generate debug info if FAIL: #######
         # Sort and compare original input with resulting output - the diff is
@@ -146,6 +159,7 @@ for f in $fsttype; do
             $generated_pred_lemmas.$f.txt \
             $generated_comp_lemmas.$f.txt \
             $generated_supr_lemmas.$f.txt \
+            $generated_todo_lemmas.$f.txt \
             | sort -u > $generated_all_lemmas.$f.txt
         comm -23 $all_lemmas $generated_all_lemmas.$f.txt > $result_file.$f.txt
 
