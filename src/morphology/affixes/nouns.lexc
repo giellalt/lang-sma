@@ -25,7 +25,7 @@
 
 
 LEXICON N_ODD
- +N: N_ODD_INFL ;
+  N_ODD_INFL ;
 
 LEXICON N_ODD_INFL
 !! The basic odd-syll lexicon is: @LEXNAME@
@@ -63,30 +63,30 @@ LEXICON N_ODD_INFL
 
 LEXICON N_ODD_LOAN
 !! * Odd-syll loanwords: lexicon @LEXNAME@
-+N+Sg: N_ODD_SG_Px ;
-          +N+Sg+Nom:e         FINAL1    ;
-          +N+Sg+Acc:e%>m      FINAL1    ;
-          +N+Sg+Gen:e%>n      FINAL1    ;
-          +N+Sg+Ill:%>asse    FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
-          +N+Sg+Ine:%>isnie   FINAL1    ;
-          +N+Sg+Ela:%>istie   FINAL1    ;
- +N+Sg+Ine+Err/Orth:%>esne   FINAL1    ; 
- +N+Sg+Ela+Err/Orth:%>este   FINAL1    ; 
-          +N+Sg+Com:%>inie    FINAL1    ;
-          +N+Pl+Nom:%>h       FINAL1    ;
-          +N+Pl+Acc:%>idie    FINAL1    ;
- +N+Pl+Acc+Err/Orth:%>idie    FINAL1    ; !Miesie Mavve
-          +N+Pl+Gen:%>i       FINAL1    ;
- +N+Pl+Gen+Err/Orth:%>ij      FINAL1    ;
-          +N+Pl+Ill:%>idie    FINAL1    ;
-          +N+Pl+Ine:%>inie    FINAL1    ;
-          +N+Pl+Ela:%>ijstie  FINAL1    ;
-          +N+Pl+Com:%>igujmie FINAL1    ;
- +N+Pl+Com+Err/Orth:%>igyjmie FINAL1    ;
-                 +N:          N_ODD_ESS ;
-       +N+Cmp/SgNom:e         R         ;
-       +N+Cmp/SgGen:e%>n      R         ;
-       +N+Cmp/PlGen:%>i       R         ;
++Sg: N_ODD_SG_Px ;
+          +Sg+Nom:e         FINAL1    ;
+          +Sg+Acc:e%>m      FINAL1    ;
+          +Sg+Gen:e%>n      FINAL1    ;
+          +Sg+Ill:%>asse    FINAL1    ; !Rule to delete Jesuse%>asse > Jesusasse
+          +Sg+Ine:%>isnie   FINAL1    ;
+          +Sg+Ela:%>istie   FINAL1    ;
+ +Sg+Ine+Err/Orth:%>esne   FINAL1    ; 
+ +Sg+Ela+Err/Orth:%>este   FINAL1    ; 
+          +Sg+Com:%>inie    FINAL1    ;
+          +Pl+Nom:%>h       FINAL1    ;
+          +Pl+Acc:%>idie    FINAL1    ;
+ +Pl+Acc+Err/Orth:%>idie    FINAL1    ; !Miesie Mavve
+          +Pl+Gen:%>i       FINAL1    ;
+ +Pl+Gen+Err/Orth:%>ij      FINAL1    ;
+          +Pl+Ill:%>idie    FINAL1    ;
+          +Pl+Ine:%>inie    FINAL1    ;
+          +Pl+Ela:%>ijstie  FINAL1    ;
+          +Pl+Com:%>igujmie FINAL1    ;
+ +Pl+Com+Err/Orth:%>igyjmie FINAL1    ;
+                            N_ODD_ESS ;
+       +Cmp/SgNom:e         R         ;
+       +Cmp/SgGen:e%>n      R         ;
+       +Cmp/PlGen:%>i       R         ;
 
 
 LEXICON N_ODD_SG
@@ -129,55 +129,55 @@ LEXICON N_ODD_ESS
 
 LEXICON ÅABPETJH ! Resiproke og dim.
 !! ** Default N_ODD plural lexicon: lexicon @LEXNAME@
-                     +N+Pl+Nom:%>%^DISIMPh       FINAL1    ;
-                     +N+Pl+Acc:%>idie            FINAL1    ;
-                     +N+Pl+Gen:%>%^DISIMP        IGENSUFF  ;
-                     +N+Pl+Ill:%>idie            FINAL1    ;
-                     +N+Pl+Ine:%>inie            FINAL1    ;
-                     +N+Pl+Ela:%>ijstie          FINAL1    ;
-                     +N+Pl+Com:%>%^DISIMPigujmie FINAL1    ;
-            +N+Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1    ;
-                        +N+Ess:%>inie            FINAL1    ;
-                  +N+Cmp/SgNom:e%^DISIMP         R         ;
-                  +N+Cmp/PlGen:%>%^DISIMPi       R         ;
-        +N+Der1+Der/Dimin+N+Pl:%»adtj            NIEJTE_PL ;
-           +N+Der1+Der/Dimin+N:%»adtj            EVEN_ESS  ;
- +N+Der1+Der/Dimin+N+Cmp/SgNom:%»adtje           R         ;
- +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i         R         ;
+                     +Pl+Nom:%>%^DISIMPh       FINAL1    ;
+                     +Pl+Acc:%>idie            FINAL1    ;
+                     +Pl+Gen:%>%^DISIMP        IGENSUFF  ;
+                     +Pl+Ill:%>idie            FINAL1    ;
+                     +Pl+Ine:%>inie            FINAL1    ;
+                     +Pl+Ela:%>ijstie          FINAL1    ;
+                     +Pl+Com:%>%^DISIMPigujmie FINAL1    ;
+            +Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1    ;
+                        +Ess:%>inie            FINAL1    ;
+                  +Cmp/SgNom:e%^DISIMP         R         ;
+                  +Cmp/PlGen:%>%^DISIMPi       R         ;
+        +Der1+Der/Dimin+N+Pl:%»adtj            NIEJTE_PL ;
+           +Der1+Der/Dimin+N:%»adtj            EVEN_ESS  ;
+ +Der1+Der/Dimin+N+Cmp/SgNom:%»adtje           R         ;
+ +Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i         R         ;
 
  
 !! LEXICON TJE_LASSJE_RESIPR
-!        +N+Der1+Der/Dimin+N+Pl:%»adtj    NIEJTE_PL ;
-!           +N+Der1+Der/Dimin+N:%»adtj    EVEN_ESS  ;
-! +N+Der1+Der/Dimin+N+Cmp/SgNom:%»adtje   R         ;
-! +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i R         ;
+!        +Der1+Der/Dimin+N+Pl:%»adtj    NIEJTE_PL ;
+!           +Der1+Der/Dimin+N:%»adtj    EVEN_ESS  ;
+! +Der1+Der/Dimin+N+Cmp/SgNom:%»adtje   R         ;
+! +Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i R         ;
 
 
 !LEXICON TJE_ETJE_RESIPR !not in use
-!                          +N+Pl:%»edtj    NIEJTE_PL ;
-!                          +N+Pl:%»edtj    EVEN_ESS  ;
-!                   +N+Cmp/SgNom:edtje     R         ;
-! +N+Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i R         ;
+!                          +Pl:%»edtj    NIEJTE_PL ;
+!                          +Pl:%»edtj    EVEN_ESS  ;
+!                   +Cmp/SgNom:edtje     R         ;
+! +Der1+Der/Dimin+N+Cmp/PlGen:%»adtj%>i R         ;
 
 
 
 
 LEXICON N_ODD_C   !these words have consonant-ending in nominative
-+N+Sg: N_ODD_SG_Px ;
++Sg: N_ODD_SG_Px ;
 
-           +N+Sg+Nom:%^DISIMP     FINAL1         ;
-           +N+Sg+Acc:e%>%^DISIMPm FINAL1         ;
-           +N+Sg+Gen:e%>%^DISIMPn FINAL1         ;
-           +N+Sg+Ill:%>asse       FINAL1         ; !Rule to delete Jesuse%>asse > Jesusasse
-           +N+Sg+Ine:%>isnie      FINAL1         ;
-           +N+Sg+Ela:%>istie      FINAL1         ;
-           +N+Sg+Com:%>inie       FINAL1         ;
-               +N+Pl:             N_ODD_PL       ;
-                  +N:             N_ODD_ESS      ;
-        +N+Cmp/SgNom:%^DISIMP     R              ;
-        +N+Cmp/SgGen:e%>%^DISIMPn R              ;
-        +N+Cmp/PlGen:%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
+           +Sg+Nom:%^DISIMP     FINAL1         ;
+           +Sg+Acc:e%>%^DISIMPm FINAL1         ;
+           +Sg+Gen:e%>%^DISIMPn FINAL1         ;
+           +Sg+Ill:%>asse       FINAL1         ; !Rule to delete Jesuse%>asse > Jesusasse
+           +Sg+Ine:%>isnie      FINAL1         ;
+           +Sg+Ela:%>istie      FINAL1         ;
+           +Sg+Com:%>inie       FINAL1         ;
+               +Pl:             N_ODD_PL       ;
+                                N_ODD_ESS      ;
+        +Cmp/SgNom:%^DISIMP     R              ;
+        +Cmp/SgGen:e%>%^DISIMPn R              ;
+        +Cmp/PlGen:%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
 
 
 
@@ -185,34 +185,34 @@ LEXICON N_ODD_C   !these words have consonant-ending in nominative
 LEXICON AAREGE        !Sg+Nom=Aarege/Aareh  Sg+Cmp=Aarege-/Aareh- Redirects go GAAJSEGE, but adds also -ege and -h for Cmp
                                  LEEJJEGE ;  
                     :eh%^DISIMP  NOM-CMP   ;  
- +N+Cmp/SgNom+Use/NG:ege%^DISIMP R      ; ! Saemiej åålmegebiejjie ! Når -ege?
-        +N+Cmp/AttrH:h%^DISIMP   R      ;   ! Saemiej åålmhbiejjie når -eh?
+ +Cmp/SgNom+Use/NG:ege%^DISIMP R      ; ! Saemiej åålmegebiejjie ! Når -ege?
+        +Cmp/AttrH:h%^DISIMP   R      ;   ! Saemiej åålmhbiejjie når -eh?
 
 
 LEXICON BAARTEGE        !Sg+Nom=baartege/baarth  Sg+Cmp=baartege-/baarth- Cmp: -h, -ege, -egen, -egi
-+N+Sg:eg N_ODD_SG_Px ;
++Sg:eg N_ODD_SG_Px ;
 
-    +N+Sg+Nom+Use/NG:h%^DISIMP      FINAL1         ;
-           +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
-           +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
-           +N+Sg+Gen:ege%>%^DISIMPn FINAL1         ;
-           +N+Sg+Ill:eg%>asse       FINAL1         ; !Rule to delete Jesuse%>asse > Jesusasse
-           +N+Sg+Ine:eg%>isnie      FINAL1         ;
-           +N+Sg+Ela:eg%>istie      FINAL1         ;
-           +N+Sg+Com:eg%>inie       FINAL1         ;
-               +N+Pl:eg             N_ODD_PL       ;
-                  +N:eg             N_ODD_ESS      ;
-         +N+Cmp/SgNom:h%^DISIMP      R              ;
-         +N+Cmp/SgNom:ege%^DISIMP    R              ;
-         +N+Cmp/SgGen:ege%>%^DISIMPn R              ;
-         +N+Cmp/PlGen:eg%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:eg%»adtj       GIERIEHTSADTJE ;
+    +Sg+Nom+Use/NG:h%^DISIMP      FINAL1         ;
+           +Sg+Nom:ege%^DISIMP    FINAL1         ;
+           +Sg+Acc:ege%>%^DISIMPm FINAL1         ;
+           +Sg+Gen:ege%>%^DISIMPn FINAL1         ;
+           +Sg+Ill:eg%>asse       FINAL1         ; !Rule to delete Jesuse%>asse > Jesusasse
+           +Sg+Ine:eg%>isnie      FINAL1         ;
+           +Sg+Ela:eg%>istie      FINAL1         ;
+           +Sg+Com:eg%>inie       FINAL1         ;
+               +Pl:eg             N_ODD_PL       ;
+                  :eg             N_ODD_ESS      ;
+         +Cmp/SgNom:h%^DISIMP      R              ;
+         +Cmp/SgNom:ege%^DISIMP    R              ;
+         +Cmp/SgGen:ege%>%^DISIMPn R              ;
+         +Cmp/PlGen:eg%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:eg%»adtj       GIERIEHTSADTJE ;
 
 
 LEXICON GAAJSEGE        !Sg+Nom=gaajsege/gaajsh  Sg+Cmp=gaajsh- redirect to LEEJJEGE, but adds in addtion -eh for Sg+Nom and Cmp 
                             LEEJJEGE ;  !Check. Bare åårkeh-, ikke åårkege- ?
                  :eh%^DISIMP NOM-CMP   ; ! 
-!                +N+Sg+Nom+Use/NG: FINAL1 ; ! is this one correct?   
+!                +Sg+Nom+Use/NG: FINAL1 ; ! is this one correct?   
 
 ! Test data:
 !!€gt-norm: beetnege # Odd-syllable test
@@ -235,77 +235,77 @@ LEXICON GAAJSEGE        !Sg+Nom=gaajsege/gaajsh  Sg+Cmp=gaajsh- redirect to LEEJ
 
 LEXICON LEEJJEGE        !Sg+Nom=leejjege  Sg+Cmp=leejjeh-  Cmp: -eh -egen -egi
 
-+N+Sg:eg N_ODD_SG_Px ;
++Sg:eg N_ODD_SG_Px ;
 
-           +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
-           +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
-           +N+Sg+Gen:ege%>%^DISIMPn FINAL1         ;
-           +N+Sg+Ill:eg%>asse       FINAL1         ; !Rule to delete Jesuse%>asse > Jesusasse
-           +N+Sg+Ine:eg%>isnie      FINAL1         ;
-           +N+Sg+Ela:eg%>istie      FINAL1         ;
-           +N+Sg+Com:eg%>inie       FINAL1         ;
-               +N+Pl:eg             N_ODD_PL       ;
-                  +N:eg             N_ODD_ESS      ;
-        +N+Cmp/SgNom:eh%^DISIMP     R              ;
-        +N+Cmp/SgGen:ege%>%^DISIMPn R              ;
-        +N+Cmp/PlGen:eg%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:eg%»adtj       GIERIEHTSADTJE ;
+           +Sg+Nom:ege%^DISIMP    FINAL1         ;
+           +Sg+Acc:ege%>%^DISIMPm FINAL1         ;
+           +Sg+Gen:ege%>%^DISIMPn FINAL1         ;
+           +Sg+Ill:eg%>asse       FINAL1         ; !Rule to delete Jesuse%>asse > Jesusasse
+           +Sg+Ine:eg%>isnie      FINAL1         ;
+           +Sg+Ela:eg%>istie      FINAL1         ;
+           +Sg+Com:eg%>inie       FINAL1         ;
+               +Pl:eg             N_ODD_PL       ;
+                  :eg             N_ODD_ESS      ;
+        +Cmp/SgNom:eh%^DISIMP     R              ;
+        +Cmp/SgGen:ege%>%^DISIMPn R              ;
+        +Cmp/PlGen:eg%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:eg%»adtj       GIERIEHTSADTJE ;
 
 
 
 
 LEXICON SAADTEGE        !Sg+Nom=saadtege  Sg+Cmp=saadtege-/saadth-
                          LAADTEGE ;
- +N+Cmp/SgNom+Use/NG:ege%^DISIMP R        ;
+ +Cmp/SgNom+Use/NG:ege%^DISIMP R        ;
 
 LEXICON LAADTEGE        !Sg+Nom=laadtege  Sg+Cmp=laadth-
-+N+Sg:eg N_ODD_SG_Px ;
++Sg:eg N_ODD_SG_Px ;
 
-           +N+Sg+Nom:ege%^DISIMP    FINAL1         ;
-           +N+Sg+Acc:ege%>%^DISIMPm FINAL1         ;
-           +N+Sg+Gen:ege%>%^DISIMPn FINAL1         ;
-           +N+Sg+Ill:eg%>asse       FINAL1         ; !Rule to delete Jesuse%>asse > Jesusasse
-           +N+Sg+Ine:eg%>isnie      FINAL1         ;
-           +N+Sg+Ela:eg%>istie      FINAL1         ;
-           +N+Sg+Com:eg%>inie       FINAL1         ;
-               +N+Pl:eg             N_ODD_PL       ;
-                  +N:eg             N_ODD_ESS      ;
-         +N+Cmp/SgNom:h%^DISIMP      R              ;
-         +N+Cmp/SgGen:ege%>%^DISIMPn R              ;
-         +N+Cmp/PlGen:eg%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:eg%»adtj       GIERIEHTSADTJE ;
+           +Sg+Nom:ege%^DISIMP    FINAL1         ;
+           +Sg+Acc:ege%>%^DISIMPm FINAL1         ;
+           +Sg+Gen:ege%>%^DISIMPn FINAL1         ;
+           +Sg+Ill:eg%>asse       FINAL1         ; !Rule to delete Jesuse%>asse > Jesusasse
+           +Sg+Ine:eg%>isnie      FINAL1         ;
+           +Sg+Ela:eg%>istie      FINAL1         ;
+           +Sg+Com:eg%>inie       FINAL1         ;
+               +Pl:eg             N_ODD_PL       ;
+                  :eg             N_ODD_ESS      ;
+         +Cmp/SgNom:h%^DISIMP      R              ;
+         +Cmp/SgGen:ege%>%^DISIMPn R              ;
+         +Cmp/PlGen:eg%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:eg%»adtj       GIERIEHTSADTJE ;
 
 
 
 
 LEXICON DEAKEHKE        !Sg+Nom=deakehke/deakah  Sg+Cmp=deakehke-/deakah-
 
-+N+Sg:k N_ODD_SG_Px ;
-           +N+Sg+Nom:ke%^DISIMP    FINAL1         ; ! ==> fropmehke+N+Sg+Nom fropmehke
-    +N+Sg+Nom+Use/NG:              FINAL1         ; ! => fropmehke+N+Sg+Nom fropmeh
-           +N+Sg+Acc:ke%>%^DISIMPm FINAL1         ;
-           +N+Sg+Gen:ke%>%^DISIMPn FINAL1         ;
-           +N+Sg+Ill:k%>asse       FINAL1         ; ! Rule to delete Jesuse%>asse > Jesusasse
-           +N+Sg+Ine:k%>isnie      FINAL1         ;
-           +N+Sg+Ela:k%>istie      FINAL1         ;
-           +N+Sg+Com:k%>inie       FINAL1         ;
-               +N+Pl:k             N_ODD_PL       ;
-                  +N:k             N_ODD_ESS      ;
-         +N+Cmp/SgNom:              R              ;
-         +N+Cmp/SgNom:ke%^DISIMP    R              ;
-         +N+Cmp/SgGen:ke%>%^DISIMPn R              ;
-         +N+Cmp/PlGen:k%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:k%»adtj       GIERIEHTSADTJE ;
++Sg:k N_ODD_SG_Px ;
+           +Sg+Nom:ke%^DISIMP    FINAL1         ; ! ==> fropmehke+Sg+Nom fropmehke
+    +Sg+Nom+Use/NG:              FINAL1         ; ! => fropmehke+Sg+Nom fropmeh
+           +Sg+Acc:ke%>%^DISIMPm FINAL1         ;
+           +Sg+Gen:ke%>%^DISIMPn FINAL1         ;
+           +Sg+Ill:k%>asse       FINAL1         ; ! Rule to delete Jesuse%>asse > Jesusasse
+           +Sg+Ine:k%>isnie      FINAL1         ;
+           +Sg+Ela:k%>istie      FINAL1         ;
+           +Sg+Com:k%>inie       FINAL1         ;
+               +Pl:k             N_ODD_PL       ;
+                  :k             N_ODD_ESS      ;
+         +Cmp/SgNom:              R              ;
+         +Cmp/SgNom:ke%^DISIMP    R              ;
+         +Cmp/SgGen:ke%>%^DISIMPn R              ;
+         +Cmp/PlGen:k%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:k%»adtj       GIERIEHTSADTJE ;
 
 
 LEXICON ÅERUVE
-               +N+Sg:               ÅERUVE_SG      ;
-               +N+Pl:               ÅERUVE_PL      ;
-                  +N:               ÅERUVE_ESS     ;
-         +N+Cmp/SgNom:uve%^DISIMP    R              ;
-         +N+Cmp/SgGen:uve%>%^DISIMPn R              ;
-         +N+Cmp/PlGen:uv%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:%»ievadtj      GIERIEHTSADTJE ;
+               +Sg:               ÅERUVE_SG      ;
+               +Pl:               ÅERUVE_PL      ;
+                                  ÅERUVE_ESS     ;
+         +Cmp/SgNom:uve%^DISIMP    R              ;
+         +Cmp/SgGen:uve%>%^DISIMPn R              ;
+         +Cmp/PlGen:uv%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:%»ievadtj      GIERIEHTSADTJE ;
 
 ! Test data:
 !!€gt-norm: åeruve # Odd-syllable test
@@ -343,7 +343,7 @@ LEXICON ÅERUVE
 
 
 LEXICON ÅERUVE_SG
-+N+Sg:iev N_ODD_SG_Px ;
++Sg:iev N_ODD_SG_Px ;
 
        +Nom:uve%^DISIMP    FINAL1 ;
        +Acc:uve%>%^DISIMPm FINAL1 ;
@@ -368,13 +368,13 @@ LEXICON ÅERUVE_ESS
  +Ess:iev%>inie FINAL1 ;
 
 !LEXICON BÅERUVE !not in use
-!               +N+Sg:               BÅERUVE_SG     ;
-!               +N+Pl:               BÅERUVE_PL     ;
-!                  +N:               BÅERUVE_ESS    ;
-!         +N+Cmp/SgNom:uve%^DISIMP    R              ;
-!         +N+Cmp/SgGen:uve%>%^DISIMPn R              ;
-!         +N+Cmp/PlGen:uv%>%^DISIMPi  R              ;
-! +N+Der1+Der/Dimin+N:%»uvadtj       GIERIEHTSADTJE ;
+!               +Sg:               BÅERUVE_SG     ;
+!               +Pl:               BÅERUVE_PL     ;
+!                                 BÅERUVE_ESS    ;
+!         +Cmp/SgNom:uve%^DISIMP    R              ;
+!         +Cmp/SgGen:uve%>%^DISIMPn R              ;
+!         +Cmp/PlGen:uv%>%^DISIMPi  R              ;
+! +Der1+Der/Dimin+N:%»uvadtj       GIERIEHTSADTJE ;
 
 !LEXICON BÅERUVE_SG
 !       +Nom:uve%^DISIMP    FINAL1 ;
@@ -411,16 +411,16 @@ LEXICON BÅERUVE_PL
 ! +Ess:uv%>inie FINAL1 ;
 
 LEXICON VUANOVE
-               +N+Sg:               VUANOVE_SG     ;
-               +N+Pl:               VUANOVE_PL     ;
-                  +N:               VUANOVE_ESS    ;
-         +N+Cmp/SgNom:uve%^DISIMP    R              ;
-         +N+Cmp/SgGen:uve%>%^DISIMPn R              ;
-         +N+Cmp/PlGen:uv%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:%»avadtj       GIERIEHTSADTJE ;
+               +Sg:               VUANOVE_SG     ;
+               +Pl:               VUANOVE_PL     ;
+                                  VUANOVE_ESS    ;
+         +Cmp/SgNom:uve%^DISIMP    R              ;
+         +Cmp/SgGen:uve%>%^DISIMPn R              ;
+         +Cmp/PlGen:uv%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:%»avadtj       GIERIEHTSADTJE ;
 
 LEXICON VUANOVE_SG
-+N+Sg:av N_ODD_SG_Px ;
++Sg:av N_ODD_SG_Px ;
        +Nom:ove%^DISIMP    FINAL1 ;
        +Acc:ove%>%^DISIMPm FINAL1 ;
        +Gen:ove%>%^DISIMPn FINAL1 ;
@@ -444,18 +444,18 @@ LEXICON VUANOVE_ESS
  +Ess:av%>inie FINAL1 ;
 
 LEXICON BÅERUJE
-               +N+Sg:               BÅERUJE_SG     ;
-               +N+Pl:               BÅERUJE_PL     ;
-                  +N:               BÅERUJE_ESS    ;
-         +N+Cmp/SgNom:uje%^DISIMP    R              ;
-         +N+Cmp/SgGen:uje%>%^DISIMPn R              ;
-         +N+Cmp/PlGen:uj%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:%»iejadtj      GIERIEHTSADTJE ;
+               +Sg:               BÅERUJE_SG     ;
+               +Pl:               BÅERUJE_PL     ;
+                                  BÅERUJE_ESS    ;
+         +Cmp/SgNom:uje%^DISIMP    R              ;
+         +Cmp/SgGen:uje%>%^DISIMPn R              ;
+         +Cmp/PlGen:uj%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:%»iejadtj      GIERIEHTSADTJE ;
 
 
 LEXICON BÅERUJE_SG
 
-+N+Sg:iej N_ODD_SG_Px ;
++Sg:iej N_ODD_SG_Px ;
 
        +Nom:uje%^DISIMP    FINAL1 ;
        +Acc:uje%>%^DISIMPm FINAL1 ;
@@ -481,35 +481,35 @@ LEXICON BÅERUJE_ESS
  +Ess:iej%>inie FINAL1 ;
 
 LEXICON PL_RESIPROK
-         +N+Pl+Nom:tj%>%^DISIMPh       FINAL1 ;
-         +N+Pl+Acc:tj%>idie            FINAL1 ;
-         +N+Pl+Gen:tj%>%^DISIMPi       FINAL1 ;
-         +N+Pl+Ill:tj%>idie            FINAL1 ;
-         +N+Pl+Ine:tj%>inie            FINAL1 ;
-         +N+Pl+Ela:tj%>ijstie          FINAL1 ;
-        +N+Pl+Com:tje%>%^DISIMPigujmie FINAL1 ;
- +N+Pl+Com+Err/Orth:tje%>%^DISIMPigyjmie FINAL1 ;
+         +Pl+Nom:tj%>%^DISIMPh       FINAL1 ;
+         +Pl+Acc:tj%>idie            FINAL1 ;
+         +Pl+Gen:tj%>%^DISIMPi       FINAL1 ;
+         +Pl+Ill:tj%>idie            FINAL1 ;
+         +Pl+Ine:tj%>inie            FINAL1 ;
+         +Pl+Ela:tj%>ijstie          FINAL1 ;
+        +Pl+Com:tje%>%^DISIMPigujmie FINAL1 ;
+ +Pl+Com+Err/Orth:tje%>%^DISIMPigyjmie FINAL1 ;
 
 !LEXICON ÅÅHPETJH_ESS
-! +N+Ess:tj%>inie FINAL1 ;
+! +Ess:tj%>inie FINAL1 ;
 ! Maja Háliidá sierra leksikona Resiprok-pron:ii. ja bidjat tagga, mii čájeha dan. 
 
 LEXICON IJE_ODD
-               +N+Sg:                    IJE_ODD_SG     ;
-               +N+Pl:                    IJE_ODD_PL     ;
-                  +N:                    IJE_ODD_ESS    ;
-         +N+Cmp/SgNom:e%^NOMAGieDISIMP    R              ;
-         +N+Cmp/SgGen:e%>%^NOMAGieDISIMPn R              ;
-         +N+Cmp/PlGen:%>%^NOMAGieDISIMPi  R              ;
- +N+Der1+Der/Dimin+N:%»adtj              GIERIEHTSADTJE ;
+               +Sg:                    IJE_ODD_SG     ;
+               +Pl:                    IJE_ODD_PL     ;
+                                       IJE_ODD_ESS    ;
+         +Cmp/SgNom:e%^NOMAGieDISIMP    R              ;
+         +Cmp/SgGen:e%>%^NOMAGieDISIMPn R              ;
+         +Cmp/PlGen:%>%^NOMAGieDISIMPi  R              ;
+ +Der1+Der/Dimin+N:%»adtj              GIERIEHTSADTJE ;
 
 !!€gt-norm: seerije # ODD-syllable test
-!!€ seerije:                 seerije+N+Sg+Nom
-!!€ seerijem:                seerije+N+Sg+Acc
+!!€ seerije:                seerije+N+Sg+Nom
+!!€ seerijem:               seerije+N+Sg+Acc
 !!€ seerijen:	            seerije+N+Sg+Gen
 !!€ seerijasse:	            seerije+N+Sg+Ill
-!!€ seerijisnie:             seerije+N+Sg+Ine
-!!€ seerijistie:	            seerije+N+Sg+Ela
+!!€ seerijisnie:            seerije+N+Sg+Ine
+!!€ seerijistie:	        seerije+N+Sg+Ela
 
 LEXICON IJE_ODD_SG
 N_ODD_SG_Px ;
@@ -537,14 +537,14 @@ LEXICON IJE_ODD_ESS
  +Ess:%>inie FINAL1 ;
 
 LEXICON DAKTERE
-   +N+Der1+Der/Rec+N:             LAAHKOEH_ODD   ;
-               +N+Sg:             N_ODD_SG       ;
-               +N+Pl:             N_ODD_PL       ;
-                  +N:             N_ODD_ESS      ;
-         +N+Cmp/SgNom:e%^DISIMP    R              ;
-         +N+Cmp/SgGen:e%>%^DISIMPn R              ;
-         +N+Cmp/PlGen:%>%^DISIMPi  R              ;
- +N+Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
+   +Der1+Der/Rec+N:             LAAHKOEH_ODD   ;
+               +Sg:             N_ODD_SG       ;
+               +Pl:             N_ODD_PL       ;
+                                N_ODD_ESS      ;
+         +Cmp/SgNom:e%^DISIMP    R              ;
+         +Cmp/SgGen:e%>%^DISIMPn R              ;
+         +Cmp/PlGen:%>%^DISIMPi  R              ;
+ +Der1+Der/Dimin+N:%»adtj       GIERIEHTSADTJE ;
 ! Test data:
 !!€gt-norm: daktere # Odd-syllable test
 !!€ daktere:             daktere+N+Sg+Nom
@@ -585,13 +585,13 @@ LEXICON IJEENERE_LOAN
              +Err/Orth:^enar  N_ODD ;
              +Err/Orth:jenar  N_ODD ;
                       :jeenar N_ODD ;
- +N+Cmp/SgNom+Dial/-SW+Use/NG:^ener  R     ; !italiener-
+ +Cmp/SgNom+Dial/-SW+Use/NG:^ener  R     ; !italiener-
 
 !!€gt-norm: australijeenere # Even-syllable test
-!!€ australijeenere:                 australijeenere+N+Sg+Nom
-!!€ australijeenerem:                australijeenere+N+Sg+Acc
+!!€ australijeenere:                australijeenere+N+Sg+Nom
+!!€ australijeenerem:               australijeenere+N+Sg+Acc
 !!€ australijeeneren:	            australijeenere+N+Sg+Gen
-!!€ australijeenaristie:             australijeenere+N+Sg+Ela
+!!€ australijeenaristie:            australijeenere+N+Sg+Ela
 
 
 LEXICON IJAANERE_LOAN
@@ -599,7 +599,7 @@ LEXICON IJAANERE_LOAN
              +Err/Orth:^anar  N_ODD ;
              +Err/Orth:janar  N_ODD ;
                       :jaanar N_ODD ;
- +N+Cmp/SgNom+Dial/-SW+Use/NG:^aner  R     ; !indianer-
+ +Cmp/SgNom+Dial/-SW+Use/NG:^aner  R     ; !indianer-
 
 !!€gt-norm: sisilijaanere # Even-syllable test
 !!€ sisilijaanere:                sisilijaanere+N+Sg+Nom
@@ -612,7 +612,7 @@ LEXICON IJAATORE_LOAN
     +Err/Orth:^ator  N_ODD ;
     +Err/Orth:jator  N_ODD ;
              :jaator N_ODD ;
- +N+Cmp/SgNom+Use/NG:^ator  R     ; !gladiator-
+ +Cmp/SgNom+Use/NG:^ator  R     ; !gladiator-
 
 !!€gt-norm: radijaatore # Even-syllable test
 !!€ radijaatore:                  radijaatore+N+Sg+Nom
@@ -627,7 +627,7 @@ LEXICON IJAANOVE_LOAN
     +Err/Orth:^anov  N_ODD ;
     +Err/Orth:janov  N_ODD ;
              :jaanov N_ODD ;
- +N+Cmp/SgNom+Use/NG:^ano   R     ; !piano-
+ +Cmp/SgNom+Use/NG:^ano   R     ; !piano-
 
 !!€gt-norm: pijaanove # ODD-syllable test
 !!€ pijaanove:                  pijaanove+N+Sg+Nom
@@ -686,7 +686,7 @@ LEXICON BURRIE
        +v1:burr  N_IE ;
        
 LEXICON N_IE
- +N: N_IE_FORMS ;
+   N_IE_FORMS ;
 
 LEXICON N_IE_FORMS
                      +Sg:             N_IE_SG  ;
@@ -698,9 +698,9 @@ LEXICON N_IE_FORMS
            +Cmp/PlGen+Uml:%>%^iUMLi    R        ;
        +Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE ;
  +Der1+Der/ijes+A+Sg+Nom:%»%^1UMLijes FINAL1   ;
-          +Der1+Der/ijes:%»%^1UMLijes ATTR_0   ;
-          +Der1+Der/ijes:%»%^1UMLij   ODDCOMP  ;
-           +Der2+Der/Car:%»eht   hts_HTS_ODDNOCOMP ;
+          +Der1+Der/ijes+A:%»%^1UMLijes ATTR_0   ;
+          +Der1+Der/ijes+A:%»%^1UMLij   ODDCOMP  ;
+           +Der2+Der/Car+A:%»eht   hts_HTS_ODDNOCOMP ;
 
 LEXICON N_IE_SG
    N_IE_SG_NOM ;
@@ -752,50 +752,50 @@ LEXICON N_IE_ESS
 
 !LEXICON N_IE_COMP ! a reference from the Adj.affix-file
 !N_IE ;
-!+N+Der+Der/A:ie EVENCOMP ;
+!+Der+Der/A+A:ie EVENCOMP ;
 
 LEXICON TJULHPIE ! adverb
          :tjulhp     N_IE    ;
- +N+Der+Der/A:tjulhpiehk ODDCOMP ;
+ +Der+Der/A+A:tjulhpiehk ODDCOMP ;
 
 
 ! LEXICON TJIDTJIE
-!          +N+Der1+Der/Rec+N:ie           LAAHKOEH_EVEN ;
-!                      +N+Sg:             N_IE_SG       ;
-!                      +N+Pl:             N_IE_PL       ;
-!                         +N:             N_IE_ESS      ;
-!                +N+Cmp/SgNom:ie           R             ;
-!                +N+Cmp/SgGen:ie%>n        R             ;
-!                +N+Cmp/PlGen:ie%>j        R             ;
-!            +N+Cmp/PlGen+Uml:%>%^iUMLi    R             ;
-!        +N+Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE      ;
-!    +N+Der1+Der/ijes+A+Attr:%»%^1UMLijes ATTR_0        ;
-!  +N+Der1+Der/ijes+A+Sg+Nom:%»%^1UMLijes FINAL1        ;
-!           +N+Der1+Der/ijes:%»%^1UMLij   ODDCOMP       ;
+!          +Der1+Der/Rec+N:ie           LAAHKOEH_EVEN ;
+!                      +Sg:             N_IE_SG       ;
+!                      +Pl:             N_IE_PL       ;
+!                                       N_IE_ESS      ;
+!                +Cmp/SgNom:ie           R             ;
+!                +Cmp/SgGen:ie%>n        R             ;
+!                +Cmp/PlGen:ie%>j        R             ;
+!            +Cmp/PlGen+Uml:%>%^iUMLi    R             ;
+!        +Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE      ;
+!    +Der1+Der/ijes+A+Attr:%»%^1UMLijes ATTR_0        ;
+!  +Der1+Der/ijes+A+Sg+Nom:%»%^1UMLijes FINAL1        ;
+!           +Der1+Der/ijes+A:%»%^1UMLij   ODDCOMP       ;
 
 !LEXICON TJÅENIEH !ie plural lexicon
-!               +N+Pl+Nom:ie%>h           FINAL1    ;
-!         +N+Pl+Acc+NoUml:%>ide           FINAL1    ;
-!    +N+Pl+Acc+Uml+Use/NG:%>%^iUMLide     FINAL1    ;
-!         +N+Pl+Gen+NoUml:ie%>j           FINAL1    ;
-!    +N+Pl+Gen+Uml+Use/NG:%>%^iUMLi       FINAL1    ;
-!         +N+Pl+Ill+NoUml:%>ide           FINAL1    ;
-!    +N+Pl+Ill+Uml+Use/NG:%>%^iUMLide     FINAL1    ;
-!         +N+Pl+Ine+NoUml:%>ine           FINAL1    ;
-!    +N+Pl+Ine+Uml+Use/NG:%>%^iUMLine     FINAL1    ;
-!         +N+Pl+Ela+NoUml:%>ijste         FINAL1    ;
-!    +N+Pl+Ela+Uml+Use/NG:%>%^iUMLijste   FINAL1    ;
-!         +N+Pl+Com+NoUml:ie%>jgujmie     FINAL1    ;
-!   +N+Pl+Com+Uml+Err/Orth:%>%^iUMLigyjmie FINAL1   ;
-! +N+Pl+Com+NoUml+Err/Orth:ie%>jgyjmie     FINAL1   ;
-!    +N+Pl+Com+Uml+Use/NG:%>%^iUMLigujmie FINAL1    ;
-!            +N+Ess+NoUml:%>ine           FINAL1    ;
-!       +N+Ess+Uml+Use/NG:%>%^iUMLine     FINAL1    ;
-!             +N+Cmp/SgNom:ie              R        ;
-!       +N+Cmp/PlGen+NoUml:ie%>j           R        ;
-!         +N+Cmp/PlGen+Uml:%>%^iUMLi       R        ;
-!  +N+Der1+Der/Dimin+N+Pl:%^aLATUS%»tj    N_ODD_PL  ;
-!     +N+Der1+Der/Dimin+N:%^aLATUS%»tj    N_ODD_ESS ;
+!               +Pl+Nom:ie%>h           FINAL1    ;
+!         +Pl+Acc+NoUml:%>ide           FINAL1    ;
+!    +Pl+Acc+Uml+Use/NG:%>%^iUMLide     FINAL1    ;
+!         +Pl+Gen+NoUml:ie%>j           FINAL1    ;
+!    +Pl+Gen+Uml+Use/NG:%>%^iUMLi       FINAL1    ;
+!         +Pl+Ill+NoUml:%>ide           FINAL1    ;
+!    +Pl+Ill+Uml+Use/NG:%>%^iUMLide     FINAL1    ;
+!         +Pl+Ine+NoUml:%>ine           FINAL1    ;
+!    +Pl+Ine+Uml+Use/NG:%>%^iUMLine     FINAL1    ;
+!         +Pl+Ela+NoUml:%>ijste         FINAL1    ;
+!    +Pl+Ela+Uml+Use/NG:%>%^iUMLijste   FINAL1    ;
+!         +Pl+Com+NoUml:ie%>jgujmie     FINAL1    ;
+!   +Pl+Com+Uml+Err/Orth:%>%^iUMLigyjmie FINAL1   ;
+! +Pl+Com+NoUml+Err/Orth:ie%>jgyjmie     FINAL1   ;
+!    +Pl+Com+Uml+Use/NG:%>%^iUMLigujmie FINAL1    ;
+!            +Ess+NoUml:%>ine           FINAL1    ;
+!       +Ess+Uml+Use/NG:%>%^iUMLine     FINAL1    ;
+!             +Cmp/SgNom:ie              R        ;
+!       +Cmp/PlGen+NoUml:ie%>j           R        ;
+!         +Cmp/PlGen+Uml:%>%^iUMLi       R        ;
+!  +Der1+Der/Dimin+N+Pl:%^aLATUS%»tj    N_ODD_PL  ;
+!     +Der1+Der/Dimin+N:%^aLATUS%»tj    N_ODD_ESS ;
 
 
 !! !!Inflection for nouns ending in oe
@@ -806,10 +806,10 @@ LEXICON TJULHPIE ! adverb
 !! and have the non-uml ones as +Use/NG.
 
 LEXICON N_OE_UML
-    +N+Sg+Nom:oe FINAL1           ;
- +N+Sg+Use/NG:   N_OE_SGILL_UML   ; ! Causes Umlaut
-        +N+Sg:   N_OE_SGILL_NOUML ; ! Does not cause Umlaut, 
-           +N:   N_OE_NO_ILL      ; ! gives the other cases
+    +Sg+Nom:oe FINAL1           ;
+ +Sg+Use/NG:   N_OE_SGILL_UML   ; ! Causes Umlaut
+        +Sg:   N_OE_SGILL_NOUML ; ! Does not cause Umlaut, 
+               N_OE_NO_ILL      ; ! gives the other cases
 
 
 LEXICON N_OE_SGILL_UML
@@ -826,8 +826,8 @@ LEXICON N_OE_SGILL_NOUML
 !! only, naturally without +Use/NG.
 
 LEXICON N_OE
- +N+Sg+Nom:oe FINAL1   ;
-        +N:   N_OE_OBL ;
+ +Sg+Nom:oe FINAL1   ;
+            N_OE_OBL ;
 
 LEXICON N_OE_OBL
 !! Lexicon @LEXNAME@ is for the -oe nouns without umlaut
@@ -844,7 +844,7 @@ LEXICON N_OE_NO_ILL
          +Cmp/SgGen:oe%>n       R        ;
          +Cmp/PlGen:oe%>j       R        ;
  +Der1+Der/Dimin+N:e%»%^2UMLtj GÅATETJE ;
-   +Der2+Der/Car:oht   hts_HTS_ODDNOCOMP ;
+   +Der2+Der/Car+A:oht   hts_HTS_ODDNOCOMP ;
 
 LEXICON N_OE_SG
 N_OE_SG_Px ;
@@ -899,26 +899,26 @@ LEXICON N_OE_ESS
  +Ess:o%>jne FINAL1 ;
 
 ! LEXICON LAAHKOE
-!  +N+Der1+Der/Rec+N:oe LAAHKOEH_EVEN  ;
-!              +N+Sg:   N_OE_SGILL_UML ; ! Causes Umlaut
+!  +Der1+Der/Rec+N:oe LAAHKOEH_EVEN  ;
+!              +Sg:   N_OE_SGILL_UML ; ! Causes Umlaut
 !                       N_OE           ;
 ! 
 ! LEXICON GAAROEH ! -oe plural
-!                     +N+Pl+Nom:oe%>h                  FINAL1    ;
-!                     +N+Pl+Acc:o%>jde                 FINAL1    ;
-!                     +N+Pl+Gen:oe%>j                  FINAL1    ;
-!                     +N+Pl+Ill:o%>jde                 FINAL1    ;
-!                     +N+Pl+Ine:o%>jne                 FINAL1    ;
-!                     +N+Pl+Ela:o%>jste                FINAL1    ;
-!                     +N+Pl+Com:oe%>jgujmie            FINAL1    ;
-!             +N+Pl+Com+Err/Orth:oe%>jgyjmie            FINAL1    ;
-!                        +N+Ess:o%>jne                 FINAL1    ;
-!                   +N+Cmp/SgNom:oe                     R         ;
-!                   +N+Cmp/PlGen:oe%>j                  R         ;
-!        +N+Der1+Der/Dimin+N+Pl:e%»%^2UMLtj            N_ODD_PL  ;
-!           +N+Der1+Der/Dimin+N:e%»%^2UMLtj            N_ODD_ESS ;
-!  +N+Der1+Der/Dimin+N+Cmp/SgNom:e%»%^2UMLtje           R         ;
-!  +N+Der1+Der/Dimin+N+Cmp/PlGen:e%»%^2UMLtj%>%^DISIMPi R         ;
+!                     +Pl+Nom:oe%>h                  FINAL1    ;
+!                     +Pl+Acc:o%>jde                 FINAL1    ;
+!                     +Pl+Gen:oe%>j                  FINAL1    ;
+!                     +Pl+Ill:o%>jde                 FINAL1    ;
+!                     +Pl+Ine:o%>jne                 FINAL1    ;
+!                     +Pl+Ela:o%>jste                FINAL1    ;
+!                     +Pl+Com:oe%>jgujmie            FINAL1    ;
+!             +Pl+Com+Err/Orth:oe%>jgyjmie            FINAL1    ;
+!                        +Ess:o%>jne                 FINAL1    ;
+!                   +Cmp/SgNom:oe                     R         ;
+!                   +Cmp/PlGen:oe%>j                  R         ;
+!        +Der1+Der/Dimin+N+Pl:e%»%^2UMLtj            N_ODD_PL  ;
+!           +Der1+Der/Dimin+N:e%»%^2UMLtj            N_ODD_ESS ;
+!  +Der1+Der/Dimin+N+Cmp/SgNom:e%»%^2UMLtje           R         ;
+!  +Der1+Der/Dimin+N+Cmp/PlGen:e%»%^2UMLtj%>%^DISIMPi R         ;
 !  
 !  
  
@@ -932,13 +932,13 @@ LEXICON N_OE_ESS
 
 
 LEXICON MAANA
- +N+Sg: MAANASGNOM ;
-    +N: MAANAOBL   ;
+ +Sg: MAANASGNOM ;
+      MAANAOBL   ;
 
 
 !LEXICON MAANA_SG
-! +N+Sg: MAANASGNOM ;
-! +N+Sg: MAANASGOBL ;
+! +Sg: MAANASGNOM ;
+! +Sg: MAANASGOBL ;
 
 LEXICON MAANASGNOM
  +Nom:a FINAL1 ;
@@ -951,7 +951,7 @@ LEXICON MAANAOBL
          +Cmp/SgGen:a%>n         R          ;
          +Cmp/PlGen:a%>j         R          ;
  +Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE   ;
- +Der2+Der/Car:eht   hts_HTS_ODDNOCOMP ;
+ +Der2+Der/Car+A:eht   hts_HTS_ODDNOCOMP ;
  
 LEXICON MAANASGOBL
 MAANASGOBL_Px ;
@@ -975,87 +975,87 @@ LEXICON MAANA_PL
  +Com+Err/Orth:a%>jgyjmie FINAL1 ;
 
 ! LEXICON AAHKA
-!    +N+Der1+Der/Rec+N:a            LAAHKOEH_EVEN ;
+!    +Der1+Der/Rec+N:a            LAAHKOEH_EVEN ;
 !                                   MAANA_SG      ;
-!                +N+Pl:             MAANA_PL      ;
-!                   +N:             EVEN_ESS      ;
-!          +N+Cmp/SgNom:a            R             ;
-!          +N+Cmp/SgGen:a%>n         R             ;
-!          +N+Cmp/PlGen:a%>j         R             ;
-!  +N+Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE      ;
+!                +Pl:             MAANA_PL      ;
+!                                 EVEN_ESS      ;
+!          +Cmp/SgNom:a            R             ;
+!          +Cmp/SgGen:a%>n         R             ;
+!          +Cmp/PlGen:a%>j         R             ;
+!  +Der1+Der/Dimin+N:%^aLATUS%»tj GÅATETJE      ;
 
 !PLURALLEMMA
 LEXICON MÅVHKAH !a plural noun
-                    +N+Pl+Nom:a%>h                    FINAL1    ;
-                    +N+Pl+Acc:%>ide                   FINAL1    ;
-           +N+Pl+Acc+Err/Orth:a%>jde                  FINAL1    ;
-                    +N+Pl+Gen:a%>j                    FINAL1    ;
-                    +N+Pl+Ill:%>ide                   FINAL1    ;
-                    +N+Pl+Ine:%>ine                   FINAL1    ;
-                    +N+Pl+Ela:%>ijste                 FINAL1    ;
-                    +N+Pl+Com:a%>jgujmie              FINAL1    ;
-           +N+Pl+Com+Err/Orth:a%>jgyjmie              FINAL1    ;
-                       +N+Ess:%>ine                   FINAL1    ;
-                 +N+Cmp/PlGen:a%>j                    R         ;
-       +N+Der1+Der/Dimin+N+Pl:%^aLATUS%»tj            N_ODD_PL  ;
-          +N+Der1+Der/Dimin+N:%^aLATUS%»tj            N_ODD_ESS ;
-+N+Der1+Der/Dimin+N+Cmp/SgNom:%^aLATUS%»tje           R         ;
-+N+Der1+Der/Dimin+N+Cmp/PlGen:%^aLATUS%»tj%>%^DISIMPi R         ;
+                    +Pl+Nom:a%>h                    FINAL1    ;
+                    +Pl+Acc:%>ide                   FINAL1    ;
+           +Pl+Acc+Err/Orth:a%>jde                  FINAL1    ;
+                    +Pl+Gen:a%>j                    FINAL1    ;
+                    +Pl+Ill:%>ide                   FINAL1    ;
+                    +Pl+Ine:%>ine                   FINAL1    ;
+                    +Pl+Ela:%>ijste                 FINAL1    ;
+                    +Pl+Com:a%>jgujmie              FINAL1    ;
+           +Pl+Com+Err/Orth:a%>jgyjmie              FINAL1    ;
+                       +Ess:%>ine                   FINAL1    ;
+                 +Cmp/PlGen:a%>j                    R         ;
+       +Der1+Der/Dimin+N+Pl:%^aLATUS%»tj            N_ODD_PL  ;
+          +Der1+Der/Dimin+N:%^aLATUS%»tj            N_ODD_ESS ;
++Der1+Der/Dimin+N+Cmp/SgNom:%^aLATUS%»tje           R         ;
++Der1+Der/Dimin+N+Cmp/PlGen:%^aLATUS%»tj%>%^DISIMPi R         ;
 
 LEXICON NIEJTEH !e plural noun
-                    +N+Pl+Nom:h                       FINAL1    ;
-             +N+Pl+Nom+Use/NG:e%>h                    FINAL1    ;
-                    +N+Pl+Acc:%>ide                   FINAL1    ;
-                    +N+Pl+Gen:i                       FINAL1    ;
-                    +N+Pl+Ill:%>ide                   FINAL1    ;
-                    +N+Pl+Ine:%>ine                   FINAL1    ;
-                    +N+Pl+Ela:%>ijste                 FINAL1    ;
-                    +N+Pl+Com:i%>gujmie               FINAL1    ;
-           +N+Pl+Com+Err/Orth:i%>gyjmie               FINAL1    ;
-                       +N+Ess:%>ine                   FINAL1    ;
-       !         +N+Cmp/SgNom:e                       R         ;
-                 +N+Cmp/PlGen:i                       R         ;
-       +N+Der1+Der/Dimin+N+Pl:%^aLATUS%»tj            N_ODD_PL  ;
-          +N+Der1+Der/Dimin+N:%^aLATUS%»tj            N_ODD_ESS ;
-+N+Der1+Der/Dimin+N+Cmp/SgNom:%^aLATUS%»tje           R         ;
-+N+Der1+Der/Dimin+N+Cmp/PlGen:%^aLATUS%»tj%>%^DISIMPi R         ;
+                    +Pl+Nom:h                       FINAL1    ;
+             +Pl+Nom+Use/NG:e%>h                    FINAL1    ;
+                    +Pl+Acc:%>ide                   FINAL1    ;
+                    +Pl+Gen:i                       FINAL1    ;
+                    +Pl+Ill:%>ide                   FINAL1    ;
+                    +Pl+Ine:%>ine                   FINAL1    ;
+                    +Pl+Ela:%>ijste                 FINAL1    ;
+                    +Pl+Com:i%>gujmie               FINAL1    ;
+           +Pl+Com+Err/Orth:i%>gyjmie               FINAL1    ;
+                       +Ess:%>ine                   FINAL1    ;
+       !         +Cmp/SgNom:e                       R         ;
+                 +Cmp/PlGen:i                       R         ;
+       +Der1+Der/Dimin+N+Pl:%^aLATUS%»tj            N_ODD_PL  ;
+          +Der1+Der/Dimin+N:%^aLATUS%»tj            N_ODD_ESS ;
++Der1+Der/Dimin+N+Cmp/SgNom:%^aLATUS%»tje           R         ;
++Der1+Der/Dimin+N+Cmp/PlGen:%^aLATUS%»tj%>%^DISIMPi R         ;
  
  
 LEXICON TJÅENIEH !ie plural noun
-                    +N+Pl+Nom:ieh                    FINAL1    ;
-                    +N+Pl+Acc:ide                    FINAL1    ;
-                    +N+Pl+Gen:iej                    FINAL1    ;
-                    +N+Pl+Ill:ide                    FINAL1    ;
-                    +N+Pl+Ine:ine                    FINAL1    ;
-                    +N+Pl+Ela:ijste                  FINAL1    ;
-                    +N+Pl+Com:i%>gujmie              FINAL1    ;
-            +N+Pl+Com+Err/Orth:i%>gyjmie              FINAL1   ;
-                       +N+Ess:ine                    FINAL1    ;
-                  +N+Cmp/PlGen:iej                    R        ;
+                    +Pl+Nom:ieh                    FINAL1    ;
+                    +Pl+Acc:ide                    FINAL1    ;
+                    +Pl+Gen:iej                    FINAL1    ;
+                    +Pl+Ill:ide                    FINAL1    ;
+                    +Pl+Ine:ine                    FINAL1    ;
+                    +Pl+Ela:ijste                  FINAL1    ;
+                    +Pl+Com:i%>gujmie              FINAL1    ;
+            +Pl+Com+Err/Orth:i%>gyjmie              FINAL1   ;
+                       +Ess:ine                    FINAL1    ;
+                  +Cmp/PlGen:iej                    R        ;
                   
-       +N+Der1+Der/Dimin+N+Pl:%^aLATUS%»tj            N_ODD_PL  ;
-          +N+Der1+Der/Dimin+N:%^aLATUS%»tj            N_ODD_ESS ;
- +N+Der1+Der/Dimin+N+Cmp/SgNom:%^aLATUS%»tje           R         ;
- +N+Der1+Der/Dimin+N+Cmp/PlGen:%^aLATUS%»tj%>%^DISIMPi R         ;
+       +Der1+Der/Dimin+N+Pl:%^aLATUS%»tj            N_ODD_PL  ;
+          +Der1+Der/Dimin+N:%^aLATUS%»tj            N_ODD_ESS ;
+ +Der1+Der/Dimin+N+Cmp/SgNom:%^aLATUS%»tje           R         ;
+ +Der1+Der/Dimin+N+Cmp/PlGen:%^aLATUS%»tj%>%^DISIMPi R         ;
  
  
 LEXICON GAAROEH !oe plural noun
-                    +N+Pl+Nom:oeh                    FINAL1    ;
-                    +N+Pl+Acc:ojde                   FINAL1    ;
-                    +N+Pl+Gen:oej                    FINAL1    ;
-                    +N+Pl+Ill:ojde                   FINAL1    ;
-                    +N+Pl+Ine:ojne                   FINAL1    ;
-                    +N+Pl+Ela:ojste                  FINAL1    ;
-                    +N+Pl+Com:oej%>gujmie            FINAL1    ;
-            +N+Pl+Com+Err/Orth:oej%>gyjmie            FINAL1    ;
-                       +N+Ess:ojne                   FINAL1    ;
+                    +Pl+Nom:oeh                    FINAL1    ;
+                    +Pl+Acc:ojde                   FINAL1    ;
+                    +Pl+Gen:oej                    FINAL1    ;
+                    +Pl+Ill:ojde                   FINAL1    ;
+                    +Pl+Ine:ojne                   FINAL1    ;
+                    +Pl+Ela:ojste                  FINAL1    ;
+                    +Pl+Com:oej%>gujmie            FINAL1    ;
+            +Pl+Com+Err/Orth:oej%>gyjmie            FINAL1    ;
+                       +Ess:ojne                   FINAL1    ;
                        
-                  +N+Cmp/PlGen:oej                    R         ;
+                  +Cmp/PlGen:oej                    R         ;
                   
-       +N+Der1+Der/Dimin+N+Pl:%^aLATUS%»tj            N_ODD_PL  ;
-          +N+Der1+Der/Dimin+N:%^aLATUS%»tj            N_ODD_ESS ;
- +N+Der1+Der/Dimin+N+Cmp/SgNom:%^aLATUS%»tje           R         ;
- +N+Der1+Der/Dimin+N+Cmp/PlGen:%^aLATUS%»tj%>%^DISIMPi R         ;
+       +Der1+Der/Dimin+N+Pl:%^aLATUS%»tj            N_ODD_PL  ;
+          +Der1+Der/Dimin+N:%^aLATUS%»tj            N_ODD_ESS ;
+ +Der1+Der/Dimin+N+Cmp/SgNom:%^aLATUS%»tje           R         ;
+ +Der1+Der/Dimin+N+Cmp/PlGen:%^aLATUS%»tj%>%^DISIMPi R         ;
 
 
 
@@ -1063,10 +1063,10 @@ LEXICON GAAROEH !oe plural noun
 ! --------------------------------
 
 LEXICON IJVE ! Until abessive / abessijve is decided...
-                +N:ijv X_NIEJTE ;
-        +N+Err/Orth:ïjv X_NIEJTE ;
-        +N+Err/Orth:iv  X_NIEJTE ;
- +N+Cmp/SgNom+Use/NG:iv  R      ;
+                 :ijv X_NIEJTE ;
+        +Err/Orth:ïjv X_NIEJTE ;
+        +Err/Orth:iv  X_NIEJTE ;
+ +Cmp/SgNom+Use/NG:iv  R      ;
 
 
 LEXICON IHKE_LOAN
@@ -1076,453 +1076,453 @@ LEXICON IHKE_LOAN
  +Err/Orth:ïgk IHKELES ; ! +Test/MørkI+Test/GK 
   +Err/Orth:ijk IHKELES ; ! +Test/LysI+Test/JK
  +Err/Orth:ïjk IHKELES ; ! +Test/MørkI+Test/JK
-               +N+Cmp/SgNom+Dial/-SW+Use/NG:ikk R       ; !NOR problematikk-
-              +N+Cmp/SgNom+Dial/-NOR+Use/NG:ik  R       ; !SW problematik-
+               +Cmp/SgNom+Dial/-SW+Use/NG:ikk R       ; !NOR problematikk-
+              +Cmp/SgNom+Dial/-NOR+Use/NG:ik  R       ; !SW problematik-
 
 LEXICON HTE_LOAN
-                   +N:ht X_NIEJTE ;
-          +N+Err/Orth:dt X_NIEJTE ;
-          +N+Err/Orth:tt X_NIEJTE ;
-  +N+Cmp/SgNom+Use/NG:tt R      ; ! budsjett-
+                   :ht X_NIEJTE ;
+          +Err/Orth:dt X_NIEJTE ;
+          +Err/Orth:tt X_NIEJTE ;
+  +Cmp/SgNom+Use/NG:tt R      ; ! budsjett-
 
 LEXICON UHTE/IHTE_LOAN
-                            +N:ht X_NIEJTE ;
-                   +N+Err/Orth:t X_NIEJTE ;
-                   +N+Err/Orth:dt X_NIEJTE ;
-                   +N+Err/Orth:tt X_NIEJTE ;
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:tt R      ; !NOR attributt-
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:t  R      ; !SW  attribut-
+                            :ht X_NIEJTE ;
+                   +Err/Orth:t X_NIEJTE ;
+                   +Err/Orth:dt X_NIEJTE ;
+                   +Err/Orth:tt X_NIEJTE ;
+  +Cmp/SgNom+Dial/-SW+Use/NG:tt R      ; !NOR attributt-
+ +Cmp/SgNom+Dial/-NOR+Use/NG:t  R      ; !SW  attribut-
 
 
 !LEXICON NET_LOAN !not in use
-!                   +N:ht X_NIEJTE ;
-!          +N+Err/Orth:dt X_NIEJTE ;
-!          +N+Err/Orth:tt X_NIEJTE ;
-!  +N+Cmp/SgNom+Use/NG:t  R      ;
+!                   :ht X_NIEJTE ;
+!          +Err/Orth:dt X_NIEJTE ;
+!          +Err/Orth:tt X_NIEJTE ;
+!  +Cmp/SgNom+Use/NG:t  R      ;
 
 LEXICON ISME_LOAN
-                        +N:ism X_NIEJTE ;! +Test/LysI
-               +N+Err/Orth:ïsm X_NIEJTE ;!+Test/MørkI
-       +N+Cmp/SgNom+Use/NG:ism R      ; !absolutism-
+                        :ism X_NIEJTE ;! +Test/LysI
+               +Err/Orth:ïsm X_NIEJTE ;!+Test/MørkI
+       +Cmp/SgNom+Use/NG:ism R      ; !absolutism-
 
 LEXICON IJISME_LOAN
-                       +N:jism X_NIEJTE ;!  +Test/LysI
-              +N+Err/Orth:jïsm X_NIEJTE ; ! +Test/MørkI
-                       +N:^ism X_NIEJTE ;!  +Test/LysI
-              +N+Err/Orth:^ïsm X_NIEJTE ;!  +Test/MørkI
-      +N+Cmp/SgNom+Use/NG:^ism R      ; !arkaism-
+                       :jism X_NIEJTE ;!  +Test/LysI
+              +Err/Orth:jïsm X_NIEJTE ; ! +Test/MørkI
+                       :^ism X_NIEJTE ;!  +Test/LysI
+              +Err/Orth:^ïsm X_NIEJTE ;!  +Test/MørkI
+      +Cmp/SgNom+Use/NG:^ism R      ; !arkaism-
 
 LEXICON HISTOVRIJE_LOAN
                          :vrij IJE_ODD ;
-+N+Sem/Dummytag+Cmp/SgNom+Use/NG:ria R ; !bibelhistoria-
-+N+Sem/Dummytag+Cmp/SgNom+Use/NG:rie R ; !bibelhistorie-
++Sem/Dummytag+Cmp/SgNom+Use/NG:ria R ; !bibelhistoria-
++Sem/Dummytag+Cmp/SgNom+Use/NG:rie R ; !bibelhistorie-
 
 LEXICON IJE_LOAN
-           +N+Sg:ij NIEJTESGNOM ; ! Test/LysI
-           +N+Sg:ij NIEJTESGOBL ; !Test/LysI
-           +N+Pl:ij NIEJTE_PL   ; !+Test/LysI
-              +N:ij NIEJTEREST  ; !Test/LysI
+           +Sg:ij NIEJTESGNOM ; ! Test/LysI
+           +Sg:ij NIEJTESGOBL ; !Test/LysI
+           +Pl:ij NIEJTE_PL   ; !+Test/LysI
+              :ij NIEJTEREST  ; !Test/LysI
 
- +N+Sg+Err/Orth:i  NIEJTESGNOM ; !Test/MørkI
- +N+Sg+Err/Orth:ïj NIEJTESGNOM ; !Test/MørkI
- +N+Sg+Err/Orth:ïj NIEJTESGOBL ; !+Test/MørkI
- +N+Pl+Err/Orth:ïj NIEJTE_PL   ;! +Test/MørkI
-    +N+Err/Orth:ïj NIEJTEREST  ; !+Test/MørkI
+ +Sg+Err/Orth:i  NIEJTESGNOM ; !Test/MørkI
+ +Sg+Err/Orth:ïj NIEJTESGNOM ; !Test/MørkI
+ +Sg+Err/Orth:ïj NIEJTESGOBL ; !+Test/MørkI
+ +Pl+Err/Orth:ïj NIEJTE_PL   ;! +Test/MørkI
+    +Err/Orth:ïj NIEJTEREST  ; !+Test/MørkI
 
-       +N+Cmp/SgNom+Use/NG:i  R      ; !parti-
+       +Cmp/SgNom+Use/NG:i  R      ; !parti-
 
 LEXICON IJNE_LOAN
-                   +N:ijn X_NIEJTE ; ! +Test/LysI
-          +N+Err/Orth:ïjn X_NIEJTE ; ! +Test/MørkI
-  +N+Cmp/SgNom+Use/NG:in  R      ; !alpin-
+                   :ijn X_NIEJTE ; ! +Test/LysI
+          +Err/Orth:ïjn X_NIEJTE ; ! +Test/MørkI
+  +Cmp/SgNom+Use/NG:in  R      ; !alpin-
 
 LEXICON IHKELES
              NIEJTE ;
- +N+Der1+Der/les:el LES    ;
+ +Der1+Der/les+A:el LES    ;
 
 LEXICON SJOVNE_LOAN
                               :sjovn IHKELES ;
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:sjons R       ; !NOR konvensjons-
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:tions R       ; !SW  konventions-
+  +Cmp/SgNom+Dial/-SW+Use/NG:sjons R       ; !NOR konvensjons-
+ +Cmp/SgNom+Dial/-NOR+Use/NG:tions R       ; !SW  konventions-
 
 
 LEXICON SJOVNE2_LOAN
                               :sjovn  IHKELES ;
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:sjons  R       ; !NOR aggresjons-
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:ssions R       ; !SW  aggressions-
+  +Cmp/SgNom+Dial/-SW+Use/NG:sjons  R       ; !NOR aggresjons-
+ +Cmp/SgNom+Dial/-NOR+Use/NG:ssions R       ; !SW  aggressions-
 
 LEXICON SJOVNE3_LOAN
                               :sjovn IHKELES ;
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:sjons R       ; !NOR pensjons-
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:sions R       ; !SW  pensions-
+  +Cmp/SgNom+Dial/-SW+Use/NG:sjons R       ; !NOR pensjons-
+ +Cmp/SgNom+Dial/-NOR+Use/NG:sions R       ; !SW  pensions-
 
 LEXICON IJOVNE_LOAN
-           +N+Err/Orth:^ovn X_NIEJTE ;
-                    +N:jovn X_NIEJTE ;
-   +N+Cmp/SgNom+Use/NG:^on  R      ;  !bastion-
+           +Err/Orth:^ovn X_NIEJTE ;
+                    :jovn X_NIEJTE ;
+   +Cmp/SgNom+Use/NG:^on  R      ;  !bastion-
 
 LEXICON IJOVTE_LOAN
-           +N+Err/Orth:^ovt X_NIEJTE ;
-                    +N:jovt X_NIEJTE ;
-   +N+Cmp/SgNom+Use/NG:^ot  R      ; !idiot-
+           +Err/Orth:^ovt X_NIEJTE ;
+                    :jovt X_NIEJTE ;
+   +Cmp/SgNom+Use/NG:^ot  R      ; !idiot-
 
 LEXICON IJOVRE_LOAN
-           +N+Err/Orth:^ovr X_NIEJTE ;
-                    +N:jovr X_NIEJTE ;
-   +N+Cmp/SgNom+Use/NG:^or  R      ; !junior-
+           +Err/Orth:^ovr X_NIEJTE ;
+                    :jovr X_NIEJTE ;
+   +Cmp/SgNom+Use/NG:^or  R      ; !junior-
 
 LEXICON IJOVSE_LOAN
-                   +N+Err/Orth:^ovs X_NIEJTE ;
-                            +N:jovs X_NIEJTE ;
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:^os  R      ; !symbios-
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:^ose R      ; !symbiose-
+                   +Err/Orth:^ovs X_NIEJTE ;
+                            :jovs X_NIEJTE ;
+ +Cmp/SgNom+Dial/-NOR+Use/NG:^os  R      ; !symbios-
+  +Cmp/SgNom+Dial/-SW+Use/NG:^ose R      ; !symbiose-
 
 LEXICON OVNE_LOAN
                     :ovn IHKELES ;
- +N+Cmp/SgNom+Use/NG:on  R       ; !altsaksofon-
+ +Cmp/SgNom+Use/NG:on  R       ; !altsaksofon-
 
 LEXICON UVRE_LOAN
-                    +N:vr   X_NIEJTE ; ! A-duvre, kantovre
-           +N+Err/Orth:r    X_NIEJTE ; ! A-dure, kantore
+                    :vr   X_NIEJTE ; ! A-duvre, kantovre
+           +Err/Orth:r    X_NIEJTE ; ! A-dure, kantore
                       :vrel LES    ; ! vet ikke om denne skal ha les
-   +N+Cmp/SgNom+Use/NG:r    R      ; ! A-dur-
+   +Cmp/SgNom+Use/NG:r    R      ; ! A-dur-
 
 LEXICON IJEENE_LOAN
-         +N+Err/Orth:^een X_NIEJTE ;
-         +N+Err/Orth:^en  X_NIEJTE ;
-         +N+Err/Orth:jen  X_NIEJTE ;
-                  +N:jeen X_NIEJTE ;
- +N+Cmp/SgNom+Use/NG:^en  R      ; !hygien-
+         +Err/Orth:^een X_NIEJTE ;
+         +Err/Orth:^en  X_NIEJTE ;
+         +Err/Orth:jen  X_NIEJTE ;
+                  :jeen X_NIEJTE ;
+ +Cmp/SgNom+Use/NG:^en  R      ; !hygien-
 
 
 LEXICON IJENTE_LOAN
-          +N+Err/Orth:^ent  X_NIEJTE ;
-          +N+Err/Orth:^eent X_NIEJTE ;
-                   +N:jent X_NIEJTE ;
-  +N+Cmp/SgNom+Use/NG:^ent  R      ; !pasient-
+          +Err/Orth:^ent  X_NIEJTE ;
+          +Err/Orth:^eent X_NIEJTE ;
+                   :jent X_NIEJTE ;
+  +Cmp/SgNom+Use/NG:^ent  R      ; !pasient-
 
 LEXICON IJANSE_LOAN
-          +N+Err/Orth:^ans  X_NIEJTE ;
-          +N+Err/Orth:^aans X_NIEJTE ;
-                   +N:jaans X_NIEJTE ;
-          +N+Err/Orth:jans  X_NIEJTE ;
-  +N+Cmp/SgNom+Use/NG:^ans  R      ; !allians-
+          +Err/Orth:^ans  X_NIEJTE ;
+          +Err/Orth:^aans X_NIEJTE ;
+                   :jaans X_NIEJTE ;
+          +Err/Orth:jans  X_NIEJTE ;
+  +Cmp/SgNom+Use/NG:^ans  R      ; !allians-
 
 
 LEXICON IJANTE_LOAN
-          +N+Err/Orth:^ant  X_NIEJTE ;
-          +N+Err/Orth:^aant X_NIEJTE ;
-                   +N:jaant X_NIEJTE ;
-          +N+Err/Orth:jant  X_NIEJTE ;
-  +N+Cmp/SgNom+Use/NG:^ant  R      ; !foliant-
+          +Err/Orth:^ant  X_NIEJTE ;
+          +Err/Orth:^aant X_NIEJTE ;
+                   :jaant X_NIEJTE ;
+          +Err/Orth:jant  X_NIEJTE ;
+  +Cmp/SgNom+Use/NG:^ant  R      ; !foliant-
 
 LEXICON JASME_LOAN
-                   +N+Err/Orth:^asm  X_NIEJTE ;
-                   +N+Err/Orth:^aasm X_NIEJTE ;
-                            +N:jaasm X_NIEJTE ;
-                   +N+Err/Orth:jasm  X_NIEJTE ;
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:^asm  R      ; !entusiasm-
+                   +Err/Orth:^asm  X_NIEJTE ;
+                   +Err/Orth:^aasm X_NIEJTE ;
+                            :jaasm X_NIEJTE ;
+                   +Err/Orth:jasm  X_NIEJTE ;
+ +Cmp/SgNom+Dial/-NOR+Use/NG:^asm  R      ; !entusiasm-
 
 LEXICON ISTE_LOAN
                       NIEJTE ; ! ikke les
- +N+Cmp/SgNom+Use/NG: R      ; ! HVPU-reform-
+ +Cmp/SgNom+Use/NG: R      ; ! HVPU-reform-
 
 LEXICON ALJE_LOAN
-                    +N:alj X_NIEJTE ; ! ikke les
-           +N+Err/Orth:lj  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:lj  R      ; !emalj-
+                    :alj X_NIEJTE ; ! ikke les
+           +Err/Orth:lj  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:lj  R      ; !emalj-
 
 LEXICON EKSTE_LOAN
-                    +N:ekst X_NIEJTE ; ! ikke les
-           +N+Err/Orth:kst  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:kst  R      ; !provsatekst-
+                    :ekst X_NIEJTE ; ! ikke les
+           +Err/Orth:kst  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:kst  R      ; !provsatekst-
 
 LEXICON ALME_LOAN
-                    +N:alm X_NIEJTE ; ! ikke les
-           +N+Err/Orth:lm  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:lm  R      ; !malm-
+                    :alm X_NIEJTE ; ! ikke les
+           +Err/Orth:lm  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:lm  R      ; !malm-
 
 
 LEXICON ASTE_LOAN
-                    +N:ast X_NIEJTE ; ! ikke les
-           +N+Err/Orth:st  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:st  R      ; !kvast-
+                    :ast X_NIEJTE ; ! ikke les
+           +Err/Orth:st  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:st  R      ; !kvast-
 
 
 LEXICON AKSE_LOAN
-                    +N:aks X_NIEJTE ; ! ikke les
-           +N+Err/Orth:ks  X_NIEJTE ; ! ikke les
-           +N+Err/Orth:x   X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:ks  R      ; !faks-
+                    :aks X_NIEJTE ; ! ikke les
+           +Err/Orth:ks  X_NIEJTE ; ! ikke les
+           +Err/Orth:x   X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:ks  R      ; !faks-
 
 
 LEXICON ARDE_LOAN
-                    +N:ard X_NIEJTE ; ! ikke les
-           +N+Err/Orth:rd  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:rd  R      ; !boulevard-
+                    :ard X_NIEJTE ; ! ikke les
+           +Err/Orth:rd  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:rd  R      ; !boulevard-
 
 
 LEXICON ENGE_LOAN
-                    +N:eng X_NIEJTE ; ! ikke les
-           +N+Err/Orth:ng  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:ng  R      ; !basseng-
+                    :eng X_NIEJTE ; ! ikke les
+           +Err/Orth:ng  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:ng  R      ; !basseng-
 
 
 LEXICON ERSE_LOAN
-                    +N:ers  X_NIEJTE ; ! ikke les
-           +N+Err/Orth:rs  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:rs  R      ; !kontrovers-
+                    :ers  X_NIEJTE ; ! ikke les
+           +Err/Orth:rs  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:rs  R      ; !kontrovers-
 
 
 LEXICON ASME_LOAN
-                    +N:asm X_NIEJTE ; ! ikke les
-           +N+Err/Orth:sm  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:sm  R      ; !entusism-
+                    :asm X_NIEJTE ; ! ikke les
+           +Err/Orth:sm  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:sm  R      ; !entusism-
 
 
 LEXICON ASKE_LOAN
-                    +N:ask X_NIEJTE ; ! ikke les
-           +N+Err/Orth:sk  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:sk  R      ; !monegask-
+                    :ask X_NIEJTE ; ! ikke les
+           +Err/Orth:sk  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:sk  R      ; !monegask-
 
 
 LEXICON ANSE_LOAN
-                    +N:ans X_NIEJTE ; ! ikke les
-           +N+Err/Orth:ns  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:ns  R      ; !konferans-
+                    :ans X_NIEJTE ; ! ikke les
+           +Err/Orth:ns  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:ns  R      ; !konferans-
 
 LEXICON ANTE_LOAN
-                    +N:ant X_NIEJTE ; ! ikke les
-           +N+Err/Orth:nt  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:nt  R      ; !representant-
+                    :ant X_NIEJTE ; ! ikke les
+           +Err/Orth:nt  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:nt  R      ; !representant-
 
 LEXICON ENTE_LOAN
-                    +N:ent X_NIEJTE ;   ! momente
-           +N+Err/Orth:eent  X_NIEJTE ; ! momeente
-   +N+Cmp/SgNom+Use/NG:ent  R      ;    ! moment-
+                    :ent X_NIEJTE ;   ! momente
+           +Err/Orth:eent  X_NIEJTE ; ! momeente
+   +Cmp/SgNom+Use/NG:ent  R      ;    ! moment-
 
 LEXICON ENDE_LOAN
-                    +N:end  X_NIEJTE ; ! ikke les
-           +N+Err/Orth:nd  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:nd  R      ; !legend-
+                    :end  X_NIEJTE ; ! ikke les
+           +Err/Orth:nd  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:nd  R      ; !legend-
 
 
 LEXICON ERME_LOAN
-                    +N:erm X_NIEJTE ; ! ikke les
-           +N+Err/Orth:rm  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:rm  R      ; !skjerm-
+                    :erm X_NIEJTE ; ! ikke les
+           +Err/Orth:rm  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:rm  R      ; !skjerm-
 
 LEXICON ERBE_LOAN
-                    +N:erb X_NIEJTE ; ! ikke les
-           +N+Err/Orth:rb  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:rb  R      ; !verb-
+                    :erb X_NIEJTE ; ! ikke les
+           +Err/Orth:rb  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:rb  R      ; !verb-
 
 LEXICON ERNE_LOAN
-                    +N:ern X_NIEJTE ; ! ikke les
-           +N+Err/Orth:rn  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:rn  R      ; !cistern-
+                    :ern X_NIEJTE ; ! ikke les
+           +Err/Orth:rn  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:rn  R      ; !cistern-
 
 LEXICON ESKE_LOAN
-                    +N:esk X_NIEJTE ; ! ikke les
-           +N+Err/Orth:sk  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:sk  R      ; !burlesk-
+                    :esk X_NIEJTE ; ! ikke les
+           +Err/Orth:sk  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:sk  R      ; !burlesk-
 
 LEXICON OVBE_LOAN
-                   +N:ovb X_NIEJTE ; ! ikke les
-  +N+Cmp/SgNom+Use/NG:ovb R      ; !homofovb-
+                   :ovb X_NIEJTE ; ! ikke les
+  +Cmp/SgNom+Use/NG:ovb R      ; !homofovb-
 
 LEXICON IJDE_LOAN
-                   +N:ijd X_NIEJTE ; ! ikke les
-  +N+Cmp/SgNom+Use/NG:ijd R      ; !alkaloijd-
+                   :ijd X_NIEJTE ; ! ikke les
+  +Cmp/SgNom+Use/NG:ijd R      ; !alkaloijd-
 
 !LEXICON IJLE_LOAN
-!                   +N:ijl X_NIEJTE ; ! ikke les
-!  +N+Cmp/SgNom+Use/NG:ijl R      ; !profijl-
+!                   :ijl X_NIEJTE ; ! ikke les
+!  +Cmp/SgNom+Use/NG:ijl R      ; !profijl-
 
 
 LEXICON EKTE_LOAN
-                    +N:ekt X_NIEJTE ; ! ikke les
-           +N+Err/Orth:kt  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:kt  R      ; !prosjekt-
+                    :ekt X_NIEJTE ; ! ikke les
+           +Err/Orth:kt  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:kt  R      ; !prosjekt-
 
 LEXICON AKTE_LOAN
-                    +N:akt X_NIEJTE ; ! ikke les
-           +N+Err/Orth:kt  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:kt  R      ; !vakt-
+                    :akt X_NIEJTE ; ! ikke les
+           +Err/Orth:kt  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:kt  R      ; !vakt-
 
 
 LEXICON ARME_LOAN
-                    +N:arm X_NIEJTE ; ! ikke les
-           +N+Err/Orth:rm  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:rm  R      ; !alarm-
+                    :arm X_NIEJTE ; ! ikke les
+           +Err/Orth:rm  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:rm  R      ; !alarm-
 
 LEXICON ARVE_LOAN
-                     +N:arv X_NIEJTE ; ! ikke les
-            +N+Err/Orth:rv  X_NIEJTE ; ! ikke les
-    +N+Cmp/SgNom+Use/NG:rv  R      ; !skarv-
+                     :arv X_NIEJTE ; ! ikke les
+            +Err/Orth:rv  X_NIEJTE ; ! ikke les
+    +Cmp/SgNom+Use/NG:rv  R      ; !skarv-
 
 LEXICON ERVE_LOAN
-                    +N:erv X_NIEJTE ; ! ikke les
-           +N+Err/Orth:rv  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:rv  R      ; !konserv-
+                    :erv X_NIEJTE ; ! ikke les
+           +Err/Orth:rv  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:rv  R      ; !konserv-
 
 LEXICON ERTE_LOAN
-                    +N:ert X_NIEJTE ; ! ikke les
-           +N+Err/Orth:rt  X_NIEJTE ; ! ikke les
-   +N+Cmp/SgNom+Use/NG:rt  R      ; !kuvert-
+                    :ert X_NIEJTE ; ! ikke les
+           +Err/Orth:rt  X_NIEJTE ; ! ikke les
+   +Cmp/SgNom+Use/NG:rt  R      ; !kuvert-
 
 
 LEXICON ASJE_LOAN
-           +N+Err/Orth:sj  X_NIEJTE ; ! ikke les
-                    +N:asj X_NIEJTE ; ! apanaasje
-   +N+Cmp/SgNom+Use/NG:sje R      ; !apanasje-
+           +Err/Orth:sj  X_NIEJTE ; ! ikke les
+                    :asj X_NIEJTE ; ! apanaasje
+   +Cmp/SgNom+Use/NG:sje R      ; !apanasje-
 
 LEXICON GRAAFE_LOAN
-           +N+Err/Orth:f  X_NIEJTE ; ! ikke les
-                    +N:af X_NIEJTE ; ! autograafe
-   +N+Cmp/SgNom+Use/NG:f  R      ; ! autograf-
+           +Err/Orth:f  X_NIEJTE ; ! ikke les
+                    :af X_NIEJTE ; ! autograafe
+   +Cmp/SgNom+Use/NG:f  R      ; ! autograf-
 
 LEXICON JUME
-           +N+Err/Orth:^umm X_NIEJTE ;
-           +N+Err/Orth:^um  X_NIEJTE ;
-            +N+Use/NG:jumm X_NIEJTE ;
-                   +N:jum  X_NIEJTE ;
- +N+Cmp/SgNom+Use/NG:^um  R      ;
+           +Err/Orth:^umm X_NIEJTE ;
+           +Err/Orth:^um  X_NIEJTE ;
+            +Use/NG:jumm X_NIEJTE ;
+                   :jum  X_NIEJTE ;
+ +Cmp/SgNom+Use/NG:^um  R      ;
 
 
 LEXICON JÖÖRE
-              +N+Err/Orth:öör   X_NIEJTE ; ! ikke les
-              +N+Err/Orth:ör   X_NIEJTE ; ! ikke les
-              +N+Err/Orth:jör  X_NIEJTE ; ! ikke les
-                      +N:jöör X_NIEJTE ;
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:ör   R      ; !SW
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:ør   R      ; !NOR
+              +Err/Orth:öör   X_NIEJTE ; ! ikke les
+              +Err/Orth:ör   X_NIEJTE ; ! ikke les
+              +Err/Orth:jör  X_NIEJTE ; ! ikke les
+                       :jöör X_NIEJTE ;
+ +Cmp/SgNom+Dial/-NOR+Use/NG:ör   R      ; !SW
+  +Cmp/SgNom+Dial/-SW+Use/NG:ør   R      ; !NOR
 
 LEXICON ÖÖRE_LOAN
-                            +N:öör X_NIEJTE ; ! ikke les
-                   +N+Err/Orth:ör X_NIEJTE ; !Lene
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:ör  R      ; !SW
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:ør  R      ; !NOR
+                            :öör X_NIEJTE ; ! ikke les
+                   +Err/Orth:ör X_NIEJTE ; !Lene
+ +Cmp/SgNom+Dial/-NOR+Use/NG:ör  R      ; !SW
+  +Cmp/SgNom+Dial/-SW+Use/NG:ør  R      ; !NOR
 
 LEXICON LÅÅGE_LOAN
-                   +N:ååg X_NIEJTE ; ! ikke les
-           +N+Err/Orth:og  X_NIEJTE ; ! ikke les
- +N+Cmp/SgNom+Use/NG:og  R      ;
-          +N+Der1+Der/les:åågel LES ; ! NB! vej. Der/lassje Der/ladtje konversjon ?
+                   :ååg X_NIEJTE ; ! ikke les
+           +Err/Orth:og  X_NIEJTE ; ! ikke les
+ +Cmp/SgNom+Use/NG:og  R      ;
+          +Der1+Der/les+A:åågel LES ; ! NB! vej. Der/lassje Der/ladtje konversjon ?
 
 LEXICON AALE_LOAN
-           +N+Err/Orth:l  X_NIEJTE ; ! ikke les ! nasjovnaale
-                   +N:al X_NIEJTE ; ! ikke les ! nasjovnaale
-          +N+Err/Orth:l  X_NIEJTE ; ! nasjovnale
-  +N+Cmp/SgNom+Use/NG:l  R      ;
+           +Err/Orth:l  X_NIEJTE ; ! ikke les ! nasjovnaale
+                   :al X_NIEJTE ; ! ikke les ! nasjovnaale
+          +Err/Orth:l  X_NIEJTE ; ! nasjovnale
+  +Cmp/SgNom+Use/NG:l  R      ;
 
 LEXICON IJAALE_LOAN
-         +N+Err/Orth:aal  X_NIEJTE ;
-         +N+Err/Orth:al   X_NIEJTE ;
-         +N+Err/Orth:jal  X_NIEJTE ;
-                  +N:jaal X_NIEJTE ;
- +N+Cmp/SgNom+Use/NG:al   R      ;
+         +Err/Orth:aal  X_NIEJTE ;
+         +Err/Orth:al   X_NIEJTE ;
+         +Err/Orth:jal  X_NIEJTE ;
+                  :jaal X_NIEJTE ;
+ +Cmp/SgNom+Use/NG:al   R      ;
 
 LEXICON IJAATE_LOAN
-           +N+Err/Orth:aat  X_NIEJTE ;
-           +N+Err/Orth:at   X_NIEJTE ;
-           +N+Err/Orth:jat  X_NIEJTE ;
-                    +N:jaat X_NIEJTE ;
-   +N+Cmp/SgNom+Use/NG:at   R      ;
+           +Err/Orth:aat  X_NIEJTE ;
+           +Err/Orth:at   X_NIEJTE ;
+           +Err/Orth:jat  X_NIEJTE ;
+                    :jaat X_NIEJTE ;
+   +Cmp/SgNom+Use/NG:at   R      ;
 
 LEXICON IJAADE_LOAN
-              +N+Err/Orth:aad  X_NIEJTE ;
-              +N+Err/Orth:ad   X_NIEJTE ;
-              +N+Err/Orth:jad  X_NIEJTE ;
-                      +N:jaad X_NIEJTE ;
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:ad   R      ; !SW
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:ade  R      ; !NOR
+              +Err/Orth:aad  X_NIEJTE ;
+              +Err/Orth:ad   X_NIEJTE ;
+              +Err/Orth:jad  X_NIEJTE ;
+                      :jaad X_NIEJTE ;
+ +Cmp/SgNom+Dial/-NOR+Use/NG:ad   R      ; !SW
+  +Cmp/SgNom+Dial/-SW+Use/NG:ade  R      ; !NOR
 
 
 LEXICON IJAARE_LOAN
-           +N+Err/Orth:aar  X_NIEJTE ;
-           +N+Err/Orth:ar   X_NIEJTE ;
-           +N+Err/Orth:jar  X_NIEJTE ;
-                    +N:jaar X_NIEJTE ;
-   +N+Cmp/SgNom+Use/NG:ar   R      ;
+           +Err/Orth:aar  X_NIEJTE ;
+           +Err/Orth:ar   X_NIEJTE ;
+           +Err/Orth:jar  X_NIEJTE ;
+                    :jaar X_NIEJTE ;
+   +Cmp/SgNom+Use/NG:ar   R      ;
 
 LEXICON IJARKE_LOAN
-           +N+Err/Orth:aark  X_NIEJTE ;
-           +N+Err/Orth:ark   X_NIEJTE ;
-                    +N:jaark X_NIEJTE ;
-           +N+Err/Orth:jark  X_NIEJTE ;
-   +N+Cmp/SgNom+Use/NG:ark   R      ;
+           +Err/Orth:aark  X_NIEJTE ;
+           +Err/Orth:ark   X_NIEJTE ;
+                    :jaark X_NIEJTE ;
+           +Err/Orth:jark  X_NIEJTE ;
+   +Cmp/SgNom+Use/NG:ark   R      ;
 
 
 LEXICON AATE_LOAN
-                    +N:at X_NIEJTE ; ! ikke les
-           +N+Err/Orth:t  X_NIEJTE ;
-           +N+Err/Orth:ht X_NIEJTE ;
-   +N+Cmp/SgNom+Use/NG:t  R      ;
+                    :at X_NIEJTE ; ! ikke les
+           +Err/Orth:t  X_NIEJTE ;
+           +Err/Orth:ht X_NIEJTE ;
+   +Cmp/SgNom+Use/NG:t  R      ;
 
 
 LEXICON AARE_LOAN
-                   +N:ar  X_NIEJTE ; ! januaare
-  +N+Sg+Nom+Err/Orth:r  FINAL1 ; ! januar
-           +N+Err/Orth:r  X_NIEJTE ; ! januare
- +N+Cmp/SgNom+Use/NG:r  R      ;
+                   :ar  X_NIEJTE ; ! januaare
+  +Sg+Nom+Err/Orth:r  FINAL1 ; ! januar
+           +Err/Orth:r  X_NIEJTE ; ! januare
+ +Cmp/SgNom+Use/NG:r  R      ;
 
 LEXICON IJLE_LOAN_N
- +N+Use/NG:ijl X_NIEJTE ;
-        +N:ïjl X_NIEJTE ;
+ +Use/NG:ijl X_NIEJTE ;
+        :ïjl X_NIEJTE ;
 
 LEXICON EETE_LOAN   !!= @CODE@ loanwords with -eete -
-    +N+Err/Orth:t  X_NIEJTE ; ! identitete
-                   +N:et X_NIEJTE ; ! ikke les identiteete
- +N+Cmp/SgNom+Use/NG:t  R      ;
+    +Err/Orth:t  X_NIEJTE ; ! identitete
+                   :et X_NIEJTE ; ! ikke les identiteete
+ +Cmp/SgNom+Use/NG:t  R      ;
 
 !!€gt-norm: universiteete # Even-syllable test
-!!€ universiteete:           universiteete+N+Sg+Nom
-!!€ universiteetem:          universiteete+N+Sg+Acc
+!!€ universiteete:          universiteete+N+Sg+Nom
+!!€ universiteetem:         universiteete+N+Sg+Acc
 !!€ universiteetesne:	    universiteete+N+Sg+Ine
 !!€ universiteetetje:	    universiteete+N+Der/Dimin+N+Sg+Nom
 !!€ universiteetetjem:	    universiteete+N+Der/Dimin+N+Sg+Acc
 !!€ universiteetetjisnie:	universiteete+N+Der/Dimin+N+Sg+Ine
 
 LEXICON IJAANE_LOAN
-    +N+Err/Orth:an   X_NIEJTE ;
-    +N+Err/Orth:aan  X_NIEJTE ;
-    +N+Err/Orth:jan  X_NIEJTE ;
-                   +N:jaan X_NIEJTE ; ! ikke les
- +N+Cmp/SgNom+Use/NG:an   R      ;
+    +Err/Orth:an   X_NIEJTE ;
+    +Err/Orth:aan  X_NIEJTE ;
+    +Err/Orth:jan  X_NIEJTE ;
+                   :jaan X_NIEJTE ; ! ikke les
+ +Cmp/SgNom+Use/NG:an   R      ;
 
 LEXICON AANE_LOAN
-    +N+Err/Orth:n  X_NIEJTE ; ! banane
-                   +N:an X_NIEJTE ; ! ikke les
- +N+Cmp/SgNom+Use/NG:n  R      ;
+    +Err/Orth:n  X_NIEJTE ; ! banane
+                   :an X_NIEJTE ; ! ikke les
+ +Cmp/SgNom+Use/NG:n  R      ;
 
 LEXICON AADE_LOAN
-                      +N:ad X_NIEJTE ; ! ikke les
-              +N+Err/Orth:d  X_NIEJTE ; ! ikke les
- +N+Cmp/SgNom+Dial/-NOR+Use/NG:d  R      ; !SW
-  +N+Cmp/SgNom+Dial/-SW+Use/NG:de R      ; !NOR
+                      :ad X_NIEJTE ; ! ikke les
+              +Err/Orth:d  X_NIEJTE ; ! ikke les
+ +Cmp/SgNom+Dial/-NOR+Use/NG:d  R      ; !SW
+  +Cmp/SgNom+Dial/-SW+Use/NG:de R      ; !NOR
 
 
 LEXICON EEME_LOAN
-    +N+Err/Orth:m  X_NIEJTE ; ! nasjovnale
-                   +N:em X_NIEJTE ; ! 
- +N+Cmp/SgNom+Use/NG:m  R      ; ! problem-
+    +Err/Orth:m  X_NIEJTE ; ! nasjovnale
+                   :em X_NIEJTE ; ! 
+ +Cmp/SgNom+Use/NG:m  R      ; ! problem-
 
 LEXICON GRAMME_LOAN
-                    +N:m X_NIEJTE ; ! ikke les
-           +N+Err/Orth:  X_NIEJTE ;
-   +N+Cmp/SgNom+Use/NG:  R      ; !program- 
+                    :m X_NIEJTE ; ! ikke les
+           +Err/Orth:  X_NIEJTE ;
+   +Cmp/SgNom+Use/NG:  R      ; !program- 
 
 LEXICON OVSE_LOAN ! ikke les
-                   +N:vs X_NIEJTE ; !sellulovse
-           +N+Err/Orth:s  X_NIEJTE ; !sellulose
-  +N+Cmp/SgNom+Use/NG:se R      ; !sellulose-
+                   :vs X_NIEJTE ; !sellulovse
+           +Err/Orth:s  X_NIEJTE ; !sellulose
+  +Cmp/SgNom+Use/NG:se R      ; !sellulose-
 
 
 
 LEXICON NIEJTE
-+N+Sg+Nom+Err/Orth: FINAL1 ;
-+N: X_NIEJTE ;
++Sg+Nom+Err/Orth: FINAL1 ;
+: X_NIEJTE ;
 
 LEXICON X_NIEJTE
  +Sg: NIEJTESGNOM ;
@@ -1597,32 +1597,32 @@ LEXICON NIEJTE_CMPND
 LEXICON NIEJTE_DER
          +Der1+Der/Dimin+N:e%»tj GÅATETJE ;
  +Der1+Der/Dimin+N+Err/Orth:etj  GÅATETJE ;
-             +Der2+Der/Car:eht   hts_HTS_ODDNOCOMP ;
+             +Der2+Der/Car+A:eht   hts_HTS_ODDNOCOMP ;
 
 
 LEXICON NIEJTE_COMP
             NIEJTE   ;
- +N+Der+Der/A:e EVENCOMP ;
+ +Der+Der/A+A:e EVENCOMP ;
 
 LEXICON AARJEL_COMP
-  +N+Der+Der/A:  EVENCOMP ;
- +N+Sg+Nom:l FINAL1   ;
- +N+Cmp/SgNom:l R   ;
+  +Der+Der/A+A:  EVENCOMP ;
+ +Sg+Nom:l FINAL1   ;
+ +Cmp/SgNom:l R   ;
 
 
 !  LEXICON MAAKE !!= @CODE@ Only for "relatives"
 !  !! The __@LEXNAME@__ lexicon is used for SUBSTANTIVE_RELATIVES wwhich often has Px.
-!     +N+Der1+Der/Rec+N:e     LAAHKOEH_EVEN ;
-!                 +N+Sg:      NIEJTE_SG     ;
-!                 +N+Pl:      NIEJTE_PL     ;
-!                    +N:      EVEN_ESS      ;
-!           +N+Cmp/SgNom:e     R             ;
-!           +N+Cmp/SgGen:e%>n  R             ;
-!           +N+Cmp/PlGen:%>i   R             ;
-!   +N+Der1+Der/Dimin+N:e%»tj GÅATETJE      ;
+!     +Der1+Der/Rec+N:e     LAAHKOEH_EVEN ;
+!                 +Sg:      NIEJTE_SG     ;
+!                 +Pl:      NIEJTE_PL     ;
+!                           EVEN_ESS      ;
+!           +Cmp/SgNom:e     R             ;
+!           +Cmp/SgGen:e%>n  R             ;
+!           +Cmp/PlGen:%>i   R             ;
+!   +Der1+Der/Dimin+N:e%»tj GÅATETJE      ;
 
 !!€gt-norm: vïelle # Even-syllable test
-!!€ vïelle:               vïelle+N+Sg+Nom
+!!€ vïelle:              vïelle+N+Sg+Nom
 !!€ vïellese:	         vïelle+N+Sg+Ill
 !!€ vïelline:            vïelle+N+Sg+Com
 !!€ vïelletje:	         vïelle+N+Der/Dimin+N+Sg+Nom
@@ -1634,71 +1634,71 @@ LEXICON AARJEL_COMP
 !!€ vïellebe:	         vïelle+N+Sg+Nom+PxSg3
 
 LEXICON ÅERPIENADTJH ! - plural noun
-                  +N+Cmp/SgNom:e                R         ;
-                  +N+Cmp/PlGen:%>i              R         ;
-                    +N+Pl+Nom:%>h              FINAL1    ;
-             +N+Pl+Nom+Use/NG:%>eh             FINAL1    ;
-                    +N+Pl+Acc:%>ide            FINAL1    ;
-                    +N+Pl+Gen:%>               IGENSUFF  ;
-                    +N+Pl+Ill:%>ide            FINAL1    ;
-                    +N+Pl+Ine:%>ine            FINAL1    ;
-                    +N+Pl+Ela:%>ijste          FINAL1    ;
-                    +N+Pl+Com:%>igujmie        FINAL1    ;
-            +N+Pl+Com+Err/Orth:%>igyjmie        FINAL1    ;
-                       +N+Ess:%>ine            FINAL1    ;
-       +N+Der1+Der/Dimin+N+Pl:e%»tj            N_ODD_PL  ;
-          +N+Der1+Der/Dimin+N:e%»tj            N_ODD_ESS ;
- +N+Der1+Der/Dimin+N+Cmp/SgNom:e%»tje           R         ;
- +N+Der1+Der/Dimin+N+Cmp/PlGen:e%»tj%>%^DISIMPi R         ;
+                  +Cmp/SgNom:e                R         ;
+                  +Cmp/PlGen:%>i              R         ;
+                    +Pl+Nom:%>h              FINAL1    ;
+             +Pl+Nom+Use/NG:%>eh             FINAL1    ;
+                    +Pl+Acc:%>ide            FINAL1    ;
+                    +Pl+Gen:%>               IGENSUFF  ;
+                    +Pl+Ill:%>ide            FINAL1    ;
+                    +Pl+Ine:%>ine            FINAL1    ;
+                    +Pl+Ela:%>ijste          FINAL1    ;
+                    +Pl+Com:%>igujmie        FINAL1    ;
+            +Pl+Com+Err/Orth:%>igyjmie        FINAL1    ;
+                       +Ess:%>ine            FINAL1    ;
+       +Der1+Der/Dimin+N+Pl:e%»tj            N_ODD_PL  ;
+          +Der1+Der/Dimin+N:e%»tj            N_ODD_ESS ;
+ +Der1+Der/Dimin+N+Cmp/SgNom:e%»tje           R         ;
+ +Der1+Der/Dimin+N+Cmp/PlGen:e%»tj%>%^DISIMPi R         ;
 
 LEXICON JOVKEMES
-+N+Sg:ass JOVKEMES_Px ;
-              +N+Sg+Nom:%>%^COMPDISIMP3es%^DISIMP FINAL1   ;
-              +N+Sg+Acc:asse%>m                   FINAL1   ;
-              +N+Sg+Gen:asse%>n                   FINAL1   ;
-              +N+Sg+Ill:asse%>se                  FINAL1   ;
-              +N+Sg+Ine:asse%>sne                 FINAL1   ;
-              +N+Sg+Ela:asse%>ste                 FINAL1   ;
-              +N+Sg+Com:ass%>ine                  FINAL1   ;
-              +N+Pl+Nom:%>ass%>h                  FINAL1   ;
-              +N+Pl+Acc:%>ass%>ide                FINAL1   ;
-              +N+Pl+Gen:%>ass%>i                  FINAL1   ;
-              +N+Pl+Ill:%>ass%>ide                FINAL1   ;
-              +N+Pl+Ine:%>ass%>ine                FINAL1   ;
-              +N+Pl+Ela:%>ass%>ijste              FINAL1   ;
-              +N+Pl+Com:%>ass%>igujmie            FINAL1   ;
-                     +N:ass                       EVEN_ESS ;
-            +N+Cmp/SgNom:%>%^COMPDISIMP3es%^DISIMP R        ;
-            +N+Cmp/SgGen:asse%>n                   R        ;
-            +N+Cmp/PlGen:ass%>i                    R        ;
++Sg:ass JOVKEMES_Px ;
+              +Sg+Nom:%>%^COMPDISIMP3es%^DISIMP FINAL1   ;
+              +Sg+Acc:asse%>m                   FINAL1   ;
+              +Sg+Gen:asse%>n                   FINAL1   ;
+              +Sg+Ill:asse%>se                  FINAL1   ;
+              +Sg+Ine:asse%>sne                 FINAL1   ;
+              +Sg+Ela:asse%>ste                 FINAL1   ;
+              +Sg+Com:ass%>ine                  FINAL1   ;
+              +Pl+Nom:%>ass%>h                  FINAL1   ;
+              +Pl+Acc:%>ass%>ide                FINAL1   ;
+              +Pl+Gen:%>ass%>i                  FINAL1   ;
+              +Pl+Ill:%>ass%>ide                FINAL1   ;
+              +Pl+Ine:%>ass%>ine                FINAL1   ;
+              +Pl+Ela:%>ass%>ijste              FINAL1   ;
+              +Pl+Com:%>ass%>igujmie            FINAL1   ;
+                     :ass                       EVEN_ESS ;
+            +Cmp/SgNom:%>%^COMPDISIMP3es%^DISIMP R        ;
+            +Cmp/SgGen:asse%>n                   R        ;
+            +Cmp/PlGen:ass%>i                    R        ;
 
 
 LEXICON NES
-+N+Sg:ass JOVKEMES_Px ;
-             +N+Sg+Nom:%>%^COMPDISIMP2es%^DISIMP FINAL1   ;
-             +N+Sg+Acc:asse%>m                   FINAL1   ;
-             +N+Sg+Gen:asse%>n                   FINAL1   ;
-             +N+Sg+Ill:asse%>se                  FINAL1   ;
-             +N+Sg+Ine:asse%>sne                 FINAL1   ;
-             +N+Sg+Ela:asse%>ste                 FINAL1   ;
-             +N+Sg+Com:ass%>ine                  FINAL1   ;
-             +N+Pl+Nom:%>ass%>h                  FINAL1   ;
-             +N+Pl+Acc:%>ass%>ide                FINAL1   ;
-             +N+Pl+Gen:%>ass%>%^DISIMPi          FINAL1   ;
-             +N+Pl+Ill:%>ass%>ide                FINAL1   ;
-             +N+Pl+Ine:%>ass%>ine                FINAL1   ;
-             +N+Pl+Ela:%>ass%>ijste              FINAL1   ;
-             +N+Pl+Com:%>ass%>igujmie            FINAL1   ;
-                     +N:ass                       EVEN_ESS ;
-            +N+Cmp/SgNom:%>%^COMPDISIMP2es%^DISIMP R        ;
-            +N+Cmp/SgGen:asse%>n                   R        ;
-            +N+Cmp/PlGen:ass%>i                    R        ;
++Sg:ass JOVKEMES_Px ;
+             +Sg+Nom:%>%^COMPDISIMP2es%^DISIMP FINAL1   ;
+             +Sg+Acc:asse%>m                   FINAL1   ;
+             +Sg+Gen:asse%>n                   FINAL1   ;
+             +Sg+Ill:asse%>se                  FINAL1   ;
+             +Sg+Ine:asse%>sne                 FINAL1   ;
+             +Sg+Ela:asse%>ste                 FINAL1   ;
+             +Sg+Com:ass%>ine                  FINAL1   ;
+             +Pl+Nom:%>ass%>h                  FINAL1   ;
+             +Pl+Acc:%>ass%>ide                FINAL1   ;
+             +Pl+Gen:%>ass%>%^DISIMPi          FINAL1   ;
+             +Pl+Ill:%>ass%>ide                FINAL1   ;
+             +Pl+Ine:%>ass%>ine                FINAL1   ;
+             +Pl+Ela:%>ass%>ijste              FINAL1   ;
+             +Pl+Com:%>ass%>igujmie            FINAL1   ;
+                     :ass                       EVEN_ESS ;
+            +Cmp/SgNom:%>%^COMPDISIMP2es%^DISIMP R        ;
+            +Cmp/SgGen:asse%>n                   R        ;
+            +Cmp/PlGen:ass%>i                    R        ;
 
 
 
 LEXICON KONTO  !!= @CODE@ Lexicon for vowel-final words with invariant stems"
 !! {{{
- +N: KONTODECL ; !!= @CODE@
+ : KONTODECL ; !!= @CODE@
 !! }}}
 LEXICON KONTODECL !!= @CODE@ Lexicon for vowel-final words with invariant stems"
 !! {{{
@@ -1746,22 +1746,22 @@ LEXICON KONTO_PL
  +Com+Err/Orth:%>jgyjmie FINAL1 ;
 
 LEXICON MARS
- +N+Sg+Nom: FINAL1 ; ! mars
+ +Sg+Nom: FINAL1 ; ! mars
             NIEJTE ; ! marse
 
 
 LEXICON JUNI
-   +N+Sg+Nom:i    FINAL1      ; !juni
-       +N+Sg:     NIEJTESGOBL ; ! junesne
-       +N+Pl:     NIEJTE_PL   ;
- +N+Cmp/SgNom:i    R           ;
- +N+Cmp/SgGen:e%>n R           ;
- +N+Cmp/PlGen:%>i  R           ;
-          +N:     EVEN_ESS    ;
+   +Sg+Nom:i    FINAL1      ; !juni
+       +Sg:     NIEJTESGOBL ; ! junesne
+       +Pl:     NIEJTE_PL   ;
+ +Cmp/SgNom:i    R           ;
+ +Cmp/SgGen:e%>n R           ;
+ +Cmp/PlGen:%>i  R           ;
+                EVEN_ESS    ;
 
 LEXICON NOM-CMP !nouns with only nominative form and compounding, ex. abredh
-+N+Sg+Nom+Use/NG: FINAL1 ;
-+N+Cmp/SgNom: R ;
++Sg+Nom+Use/NG: FINAL1 ;
++Cmp/SgNom: R ;
 
 
 ! Sub-paradigm inflections:
@@ -1851,32 +1851,32 @@ LEXICON GÅATETJEadj
              +Cmp/PlGen:%>%^DISIMPi     R         ;
 
 LEXICON NomActOdd
-       +N+Sg:             N_ODD_SG  ;
-       +N+Pl:             N_ODD_PL  ;
-          +N:             N_ODD_ESS ;
- +N+Cmp/SgNom:e%^DISIMP    R         ;
- +N+Cmp/SgGen:e%>%^DISIMPn R         ;
- +N+Cmp/PlGen:%>%^DISIMPi  R         ;
+       +Sg:             N_ODD_SG  ;
+       +Pl:             N_ODD_PL  ;
+                        N_ODD_ESS ;
+ +Cmp/SgNom:e%^DISIMP    R         ;
+ +Cmp/SgGen:e%>%^DISIMPn R         ;
+ +Cmp/PlGen:%>%^DISIMPi  R         ;
 
 LEXICON NomActEven
-             +N+Sg:          N_IE_SG  ;
-             +N+Pl:          N_IE_PL  ;
-                +N:          N_IE_ESS ;
-       +N+Cmp/SgNom:ie        R        ;
-       +N+Cmp/SgGen:ie%>n     R        ;
- +N+Cmp/PlGen+NoUml:ie%>j     R        ;
-   +N+Cmp/PlGen+Uml:%>%^iUMLi R        ;
+             +Sg:          N_IE_SG  ;
+             +Pl:          N_IE_PL  ;
+                           N_IE_ESS ;
+       +Cmp/SgNom:ie        R        ;
+       +Cmp/SgGen:ie%>n     R        ;
+ +Cmp/PlGen+NoUml:ie%>j     R        ;
+   +Cmp/PlGen+Uml:%>%^iUMLi R        ;
 
 LEXICON LDAHKE
-         +N+Cmp/SgNom:e     R         ;
-               +N+Sg:      NIEJTE_SG ;
-               +N+Pl:      NIEJTE_PL ;
-                  +N:      EVEN_ESS  ;
- +N+Der1+Der/Dimin+N:e%»tj GÅATETJE  ;
+         +Cmp/SgNom:e     R         ;
+               +Sg:      NIEJTE_SG ;
+               +Pl:      NIEJTE_PL ;
+                         EVEN_ESS  ;
+ +Der1+Der/Dimin+N:e%»tj GÅATETJE  ;
  
  
 !LEXICON EDH_DAHKE
-!     +N: EDH_DAHKE_INFL ;d
+!       EDH_DAHKE_INFL ;d
 
 LEXICON EDH_DAHKE_INFL
            +Sg+Nom:edh   FINAL1    ;
@@ -1889,22 +1889,22 @@ LEXICON EDH_DAHKE_INFL
 
 LEXICON VUELIE ! adverbleksikon
          :vuel   N_IE         ;
- +N+Der+Der/A:vuelie EVENCOMPONLY ;
- +N+Der+Der/A:vööle  MES          ;
+ +Der+Der/A+A:vuelie EVENCOMPONLY ;
+ +Der+Der/A+A:vööle  MES          ;
 
 LEXICON GAEDTIE ! adverbleksikon   - adverb og adjektiv kan kompareres
          :gaedt    N_IE    ;
- +N+Der+Der/A:gaedtieg ODDCOMP ;
+ +Der+Der/A+A:gaedtieg ODDCOMP ;
 
 LEXICON JILLIE ! adverb  - adverb og adjektiv kan kompareres- men adjektiv -//- adverb?
 !+A: N_IE_FORMS ;
 !    EVENCOMP ;
              N_IE     ;
- +N+Der+Der/A:ie EVENCOMP ;
+ +Der+Der/A+A:ie EVENCOMP ;
  
  
  LEXICON BERN_NOUN
-  +N: CNAME_EVENLEX ;
+    CNAME_EVENLEX ;
   
   
 !! !!Px lexica     = Copy from Julev
