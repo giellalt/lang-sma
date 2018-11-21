@@ -20,6 +20,7 @@
 # List any local filter regex files here:
 GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					block-illegal_compound-strings.regex              \
+					change-optionally-word_boundary_to_hyphen.regex	  \
 					convert_to_flags-CmpNP-tags.regex                 \
 					downcase_UCletters.regex                          \
 					insert-default-compounding-tags.regex             \
