@@ -43,19 +43,19 @@ before compiling.
  !!!LEXICON PRED_S
 The __PRED_S__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>s FINAL1 ; 
+  +Sg+Nom:%>s FINAL1 ; 
 }}}
 
  !!!LEXICON PRED_0
 The __PRED_0__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom: FINAL1 ; 
+  +Sg+Nom: FINAL1 ; 
 }}}
 
  !!!LEXICON PRED_H
 The __PRED_H!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>h FINAL1 ; 
+  +Sg+Nom:%>h FINAL1 ; 
 }}}
 
 
@@ -63,7 +63,7 @@ denne skal også ut ! - --> intersatn om dette er en norsk suffiks egentlig?
  !!!LEXICON PRED_NE_ODD
 The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>ne FINAL1     ; 
+  +Sg+Nom:%>ne FINAL1     ; 
           :n     ODDCASEOBL ; 
           :n     ODDCOMP    ; 
 }}}
@@ -71,7 +71,7 @@ The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
  !!!LEXICON PRED_N    -  GENITIV
 The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
 {{{
-  +A+Sg+Nom:%>n FINAL1 ; 
+  +Sg+Nom:%>n FINAL1 ; 
 }}}
 
 
@@ -89,9 +89,9 @@ The __e_E_EVEN!!≈__ lexicon is used for adjectives on {{–e}} and {{–e}}  I
 {{{
        :e ATTR_0      ; 
        :e PRED_0      ; 
-  +A+Sg:  NIEJTESGOBL ; 
-  +A+Pl:  NIEJTE_PL   ; 
-     +A:  NIEJTEREST  ; 
+  +Sg:  NIEJTESGOBL ; 
+  +Pl:  NIEJTE_PL   ; 
+       NIEJTEREST  ; 
        :e EVENCOMP    ; 
 }}}
 
@@ -101,10 +101,10 @@ The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–e}} and {{�
 {{{
        :e ATTR_0      ; 
        :e PRED_0      ; 
-  +A+Sg:  NIEJTESGOBL ; 
-  ! +A+Sg:  NIEJTESGOBL ; 
-  +A+Pl:  NIEJTE_PL   ; 
-     +A:  NIEJTEREST  ; 
+  +Sg:  NIEJTESGOBL ; 
+  ! +Sg:  NIEJTESGOBL ; 
+  +Pl:  NIEJTE_PL   ; 
+       NIEJTEREST  ; 
 }}}
 
 
@@ -112,8 +112,8 @@ The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on {{–e}} and {{�
 The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  In attributes and predicatives.With EVEN-COMP.
 {{{
        :a ATTR_0     ; 
-  +A+Sg:  MAANASGNOM ; 
-     +A:  MAANAOBL   ; 
+  +Sg:  MAANASGNOM ; 
+       MAANAOBL   ; 
        :a EVENCOMP   ; 
 }}}
 
@@ -121,8 +121,8 @@ The __a_A_EVEN1!!≈__ lexicon is used for adjectives on {{–a}} and {{–a}}  
 The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as}}  In attributes and predicatives.With EVEN-COMP.
 {{{
                :a  ATTR_S   ; 
-      +A+Sg+Nom:as FINAL1   ; 
-   +A+Cmp/SgNom:as R        ; 
+      +Sg+Nom:as FINAL1   ; 
+   +Cmp/SgNom:as R        ; 
 }}}
 
 
@@ -130,7 +130,7 @@ The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on {{–as}} and {{–as
 The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives.With EVEN-COMP.
 {{{
     :ie ATTR_0     ; 
-  +A:   N_IE_FORMS ; 
+     N_IE_FORMS ; 
     :ie EVENCOMP   ; 
 }}}
 
@@ -139,7 +139,7 @@ The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie
 The __ie_IE_EVENNOCOMP!!≈__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
 {{{
     :ie ATTR_0     ; 
-  +A:   N_IE_FORMS ; 
+     N_IE_FORMS ; 
 }}}
 
 The __a_A_EVEN1_NOCOMP__ lexicon is used for adjectives on {{–ie}} and {{–ie}}  In attributes and predicatives. With EVEN-COMP.
@@ -278,14 +278,14 @@ __adjectives examples:__
 * __isvelihke: __ {{isvelihke+Adv }}
 
 {{{
-          +A+Use/NG:ihk%>s ATTRCONT   ; 
+          +Use/NG:ihk%>s ATTRCONT   ; 
                    :ig     ATTR_S     ; 
           +Err/Orth:igks     ATTR_H     ;  onterligksh
-   +A+Sg+Nom+Use/NG:ihk%>s FINAL1     ; 
-   +A+Sg+Nom+Use/NG:ig%>s  FINAL1     ; 
-                 +A:ihk    X_NIEJTE   ; 
-          +A+Use/NG:igk    X_NIEJTE   ; 
-          +A+Use/NG:ig     N_IE_FORMS ; 
+   +Sg+Nom+Use/NG:ihk%>s FINAL1     ; 
+   +Sg+Nom+Use/NG:ig%>s  FINAL1     ; 
+                 :ihk    X_NIEJTE   ; 
+          +Use/NG:igk    X_NIEJTE   ; 
+          +Use/NG:ig     N_IE_FORMS ; 
 }}}
 
 
@@ -347,7 +347,7 @@ This one gives EVEN and ODD  Comporation.
 
               :es ODDCASEOBL ; 
               :e  EVENCOMP   ; 
-  +A+Cmp/SgNom:es R          ; 
+  +Cmp/SgNom:es R          ; 
        +Use/NG:es ODDCOMP    ;  ! trond test, utkommentert gjev Total passes: 1140, Total fails: 61, Total: 1201
 }}}
 
@@ -398,7 +398,7 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, wh
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 {{{
     :ie ATTR_S     ; 
-  +A:   N_IE_FORMS ; 
+     N_IE_FORMS ; 
     :ie EVENCOMP   ; 
 }}}
 
@@ -406,7 +406,7 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, wh
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
 {{{
     :ie ATTR_S     ; 
-  +A:   N_IE_FORMS ; 
+     N_IE_FORMS ; 
 }}}
 
 
@@ -430,7 +430,7 @@ they dont have any comparation.
 This group which covers the ies - an/ as-an and oes-an + umlaut change, is a
 small undergruppe of the 4.group
 {{{
-   :a  ATTR_S   ; 
+   +A:a  ATTR_S   ; 
 }}}
 
 !!!UMLAUT LEXICON oesATTR_oen_an_ADVERB
@@ -438,17 +438,17 @@ Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group w
 umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
 This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group
 {{{
-     :oe     ATTR_S   ; 
+   +A:oe     ATTR_S   ; 
    +A:       N_OE_OBL ; 
 }}}
 
 
 {{{
-   :oe  ATTR_H     ; 
+   +A:oe  ATTR_H     ; 
 }}}
 
 {{{
-          :oe        ATTR_H    ; 
+          +A:oe        ATTR_H    ; 
 
 }}}
 
