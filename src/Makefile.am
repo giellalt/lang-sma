@@ -69,9 +69,11 @@ endif # CAN_FOMA
 if WITH_OFST_TROPICAL
 generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 				filters/remove-test-tags.hfst
+#	$(AM_V_RGX2FST)$(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS)
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"filters/remove-test-tags.hfst\" \
 			.o. @\"$<\" \
+			.o. @\"filters/change-optionally-word_boundary_to_hyphen.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
 			-S --xerox-composition=ON \
@@ -86,6 +88,7 @@ generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"filters/remove-test-tags.hfst\" \
 			.o. @\"$<\" \
+			.o. @\"filters/change-optionally-word_boundary_to_hyphen.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
 			-S --xerox-composition=ON \
@@ -98,6 +101,7 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
 				@\"filters/remove-test-tags.$*\" \
 			.o. @\"$<\" \
+			.o. @\"filters/change-optionally-word_boundary_to_hyphen.$*\" \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST_TOOL)
@@ -204,7 +208,8 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 				filters/remove-derivation-position-tags.hfst         \
 				filters/rename-POS_before_Der-tags.hfst              \
 				filters/remove-word-boundary.hfst                    \
-				filters/remove-DNorm-tags.hfst
+				filters/remove-DNorm-tags.hfst						 \
+				orthography/spellrelax-with-flagtags.compose.hfst
 	$(AM_V_HXFST)$(PRINTF) "\
 	set encode-weights ON\n\
 	read regex \
@@ -214,6 +219,7 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 		.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
 		.o. @\"filters/remove-DNorm-tags.hfst\"               \
 		.o. @\"$<\"                                           \
+		.o. @\"orthography/spellrelax-with-flagtags.compose.hfst\" \
 		.o. @\"filters/remove-word-boundary.hfst\"            \
 		;\n\
 	twosided flag-diacritics\n\
