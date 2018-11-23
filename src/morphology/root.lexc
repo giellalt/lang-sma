@@ -54,9 +54,18 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Arab    !!= * __@CODE@__ = Arabic numeral
 +Rom    !!= * __@CODE@__ =
 
-                   !!  || Usage tags || Explanation
-+Err/Orth         !!≈ | __@CODE@__ | Substandard, unormert form av et ord
-+Err/Attr         !!≈ | __@CODE@__ | Substandard, unormert Attr-form av et ord
+!! !Error (non-standard language) tags
+
+                 !! || Usage tags || Explanation
++Err/Orth        !!≈ | __@CODE@__ | Substandard, unormert form av et ord
++Err/Attr        !!≈ | __@CODE@__ | Substandard, unormert Attr-form av et ord
++Err/Lex         !!≈ | __@CODE@__ | lemma med dens ordformer er utenfor normen.
+                 !!                 No normative lemma, it's grammatically correct.
++Err/Der         !!≈ | __@CODE@__ | Errors in derivations
+ +Err/Spellrelax !!≈ | __@CODE@__ | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
+
+!! !Usage tags
+
 +Use/Marg        !!≈ | __@CODE@__ | Marginal, correcte eksisterende former,men
                  !!                 som er sjeldne. vi kan fjerne disse ordene
                  !!                 f.eks fra speller, fordi de er så sjeldne og
@@ -70,9 +79,6 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Use/Ped         !!≈ | __@CODE@__ | Remove from pedagogical speller
 +Use/NG          !!≈ | __@CODE@__ | Do not generate \\ for isme-ped.fst and apertium
 +Use/MT          !!≈ | __@CODE@__ | Generate for apertium only
-+Err/Lex         !!≈ | __@CODE@__ | lemma med dens ordformer er utenfor normen.
-                 !!                 No normative lemma, it's grammatically correct.
-+Err/Der         !!≈ | __@CODE@__ | Errors in derivations
 +Use/NotDNorm    !!≈ | __@CODE@__ | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
 +Use/DNorm       !!≈ | __@CODE@__ | For words without formal normalization.
                  !!                 Divvun suggest that this should be normative. Included in speller.
@@ -654,6 +660,10 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  @U.Cap.Opt@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
 !                                ! Actually, downcasing should be obligatory
 
+@R.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
+@D.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
+@C.SpellRlx@    !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
+
  @P.Pmatch.Loc@       !!≈ | @CODE@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
  @P.Pmatch.Backtrack@ !!≈ | @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
 
@@ -712,8 +722,12 @@ LEXICON ENDLEX
 !! !!!Lexicon @LEXNAME@
 !! And this is the @LEXNAME@ of everything:
 !! {{{
-   @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ # ; !!≈ @CODE@
+   @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ ENDLEX2 ; !!≈ @CODE@
 !! }}}
 !! The {{@D.CmpOnly.FALSE@}} flag diacritic is ued to disallow words tagged
 !! with +CmpNP/Only to end here.
 !! The {{@D.NeedNoun.ON@}} flag diacritic is used to block illegal compounds.
+
+LEXICON ENDLEX2
+ @R.SpellRlx.ON@+Err/Spellrelax@C.SpellRlx@:@R.SpellRlx.ON@@C.SpellRlx@ # ;
+ @D.SpellRlx.ON@@C.SpellRlx@                                            # ;
