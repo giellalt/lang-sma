@@ -39,9 +39,18 @@
  * __+Arab    __ = Arabic numeral
  * __+Rom    __ =
 
- || Usage tags || Explanation
+!Error (non-standard language) tags
+
+|| Usage tags || Explanation
  | __+Err/Orth__ | Substandard, unormert form av et ord
  | __+Err/Attr__ | Substandard, unormert Attr-form av et ord
+ | __+Err/Lex__ | lemma med dens ordformer er utenfor normen.
+                No normative lemma, it's grammatically correct.
+ | __+Err/Der__ | Errors in derivations
+ | __+Err/Spellrelax__ | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
+
+!Usage tags
+
  | __+Use/Marg__ | Marginal, correcte eksisterende former,men
                 som er sjeldne. vi kan fjerne disse ordene
                 f.eks fra speller, fordi de er så sjeldne og
@@ -55,9 +64,6 @@
  | __+Use/Ped__ | Remove from pedagogical speller
  | __+Use/NG__ | Do not generate \\ for isme-ped.fst and apertium
  | __+Use/MT__ | Generate for apertium only
- | __+Err/Lex__ | lemma med dens ordformer er utenfor normen.
-                No normative lemma, it's grammatically correct.
- | __+Err/Der__ | Errors in derivations
  | __+Use/NotDNorm__ | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
  | __+Use/DNorm__ | For words without formal normalization.
                 Divvun suggest that this should be normative. Included in speller.
@@ -621,6 +627,10 @@ given the proper use of these flags.
  | @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  | @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
 
+ * @R.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
+ * @D.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
+ * @C.SpellRlx@ Flag used to tag spell-relax-analysed strings (and only those).
+
  | @P.Pmatch.Loc@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
  | @P.Pmatch.Backtrack@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
 
@@ -660,8 +670,9 @@ Here is the list of lexica in the sma analyser
 !!!Lexicon ENDLEX
 And this is the ENDLEX of everything:
 {{{
- @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ # ;
+ @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ ENDLEX2 ;
 }}}
 The {{@D.CmpOnly.FALSE@}} flag diacritic is ued to disallow words tagged
 with +CmpNP/Only to end here.
 The {{@D.NeedNoun.ON@}} flag diacritic is used to block illegal compounds.
+
