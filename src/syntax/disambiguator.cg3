@@ -315,7 +315,7 @@ LIST @+FAUXV = @+FAUXV ; 		   #!! @+FAUXV
 LIST @+FMAINV = @+FMAINV ; 		   #!! @+FMAINV
 LIST @-FAUXV = @-FAUXV ;		   #!! @-FAUXV
 LIST @-FMAINV = @-FMAINV ;		   #!! @-FMAINV
-SET MAINV = @-FMAINV OR @+FMAINV ; #!! MAINV
+SET MAINV = @-FMAINV OR @+FMAINV ; #!! MAINV  = 
 
 LIST @ADVL = @ADVL ;
 LIST @>ADVL = @>ADVL ;
@@ -1474,9 +1474,22 @@ SELECT:Vfin VFIN (0 (N Gen) LINK 1 S-BOUNDARY)(NEGATE -1 Pr)(NEGATE *-1 VFIN BAR
 	## Tjidtjie diekie juhtieji goh aehtjine pruvri.
 
 SELECT:N Gen (0 (Du1) LINK -1 Attr)  ;
+
 	
 SELECT:golme (Num Gen)(0 ("golme"))(1 (N Gen)) ;
 	## Jih die libriem dijpebe, gulhkine tjaeliestibie golmen aejkien jih doeltehtibie.	
+
+
+SELECT:NumElaIll (Num Sg Ela Attr) IF (1 (N Ela)) (2 (Num Ill) OR (Ord Sg Ill) ) ;
+	## Mohte ij mij gænnah aktehte biejjeste måbpan maehtieh varhtodh.
+
+#"<aktehte>"
+#	"akte" Num <sma> Sg Ela <W:22.4951> <WA:12.4951> <spelled> "<akteste>"
+#	"akte" Num <sma> Sg Ela Attr <W:28.7646> <WA:8.76465> <spelled> "<aktede>"
+#"<biejjeste>"
+#	"biejjie" N <sma> <sma> Sem/Time Sg Ela <W:0.0> SUBSTITUTE:1908 SUBSTITUTE:1907
+#"<måbpan>"
+#	"mubpie" A <sma> <sma> Ord Sg Ill <W:0.0> SUBSTITUTE:1907 SUBSTITUTE:1906
 
 
 #!! Ger or Der/NomAct
@@ -1903,19 +1916,19 @@ REMOVE SUB:1 (cmp_sggen) (0/* (cmp_sgnom)) ;	#This for Apertium
 REMOVE:errsub $$WORDLEMMA + Err/Orth (0 $$WORDLEMMA - Err/Orth ) ; # Apertium
 REMOVE:errsub2 $$WORDLEMMA + Err/Orth-spes (0 $$WORDLEMMA - Err/Orth-spes ) ; # Apertium
 
-#Disse kommenteres inn når analysen skal brukes i functions.cg3   
-SUBSTITUTE (A) (A <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (N) (N <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (Adv) (Adv <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (V) (V <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (Num) (Num <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (Interj) (Interj <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (Po) (Po <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (Pr) (Pr <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (Pron) (Pron <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (CC) (CC <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (CS) (CS <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (Pcle) (Pcle <sma>) WORD ; #RemoveFromApertium
+# Disse kommenteres inn når analysen skal brukes i functions.cg3   
+#SUBSTITUTE (A) (A <sma>) WORD ;  #RemoveFromApertium
+#SUBSTITUTE (N) (N <sma>) WORD ;  #RemoveFromApertium
+#SUBSTITUTE (Adv) (Adv <sma>) WORD ;  #RemoveFromApertium
+#SUBSTITUTE (V) (V <sma>) WORD ; #RemoveFromApertium
+#SUBSTITUTE (Num) (Num <sma>) WORD ;  #RemoveFromApertium
+#SUBSTITUTE (Interj) (Interj <sma>) WORD ;  #RemoveFromApertium
+#SUBSTITUTE (Po) (Po <sma>) WORD ; #RemoveFromApertium
+#SUBSTITUTE (Pr) (Pr <sma>) WORD ; #RemoveFromApertium
+#SUBSTITUTE (Pron) (Pron <sma>) WORD ; #RemoveFromApertium
+#SUBSTITUTE (CC) (CC <sma>) WORD ; #RemoveFromApertium
+#SUBSTITUTE (CS) (CS <sma>) WORD ; #RemoveFromApertium
+#SUBSTITUTE (Pcle) (Pcle <sma>) WORD ; #RemoveFromApertium
 
 
 # Not in use:
