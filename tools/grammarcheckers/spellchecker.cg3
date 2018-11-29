@@ -13,4 +13,22 @@ ADD:Err/Orth (&typo) (Err/Orth) (NOT 0 (*) - (Err/Orth)) ;
 COPY:Err/Orth (&SUGGEST) EXCEPT (Ex/N Ex/V Ex/A Ex/IV Ex/TV Err/Orth) TARGET (Err/Orth &typo) ;
 
 REMOVE:MinusEla (Attr) + Case - (Ela) IF (1C (N Ela));
-	# Mohte ij mij gænnah aktehte biejjeste måbpan maehtieh varhtodh.
+	## Mohte ij mij gænnah aktehte biejjeste måbpan maehtieh varhtodh.
+
+# Remove the following two suggestions for the misspelled word form 'ruhtjehke':
+#	"ruhtjehtidh" V TV Ind Prs Sg3 <W:22.4951> <WA:12.4951> <spelled> "<ruhtjehte>"
+#	"runhtjehtidh" V TV Ind Prs Sg3 <W:32.4951> <WA:12.4951> <spelled> "<runhtjehte>"
+REMOVE:SpellerVerbSug (V Sg3) IF (0 (<spelled>)) ( -1* (V Sg3));
+    ## Ååredæjja lea ruhtjehke goh sjovkolaade.
+
+# Remove Foc/ge suggestions if there are other alternatives (input word: 'ruhtjehke'):
+#	"ruhtjie" N Sem/Dummytag Pl Nom Foc/ge <W:23.4951> <WA:12.4951> <spelled> "<ruhtjiehge>"
+REMOVE:SpellerSugFocGe (Foc/ge) IF (0 (<spelled>)) ;
+    ## Ååredæjja lea ruhtjehke goh sjovkolaade.
+
+# Select only Adj readings if in a predicative position (input word: 'ruhtjehke'):
+SELECT:AdjInPredPos (A Sg Nom) IF (0 (<spelled>)) (-1 ("lea")) (-2 (N Sg Nom));
+    ## Ååredæjja lea ruhtjehke goh sjovkolaade.
+
+SELECT:SameCaseAndNumAFterGoh (Sg Nom) IF (0 (<spelled>)) (-1 ("goh")) (-2 (Sg Nom));
+    ## Ååredæjja lea ruhtjehke goh sjovkolaade.
