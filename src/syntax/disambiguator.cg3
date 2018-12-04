@@ -1267,6 +1267,10 @@ MAP:InfCoor (@-FMAINV) TARGET Inf IF (*-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -
 MAP:OnlyPrfPrc (@-FMAINV) TARGET PrfPrc IF (NEGATE *-1 VFIN BARRIER BOS) ;
 	#$ Dellie giesie-eejehtimmie nåhkeme.
 
+	
+MAP:InfAfterAux (@-FMAINV) TARGET Inf IF (*-1 AUX-OR-MAIN BARRIER SV-BOUNDARY);
+    ## Dïhte hov gaajhkh eevtjeminie guktie aelkedh åarjelsaemiengielesne nuhtjedh.
+
 
 SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ;
 
