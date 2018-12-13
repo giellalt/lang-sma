@@ -32,10 +32,15 @@ Alphabet
  «7     ! «
  %[%>%] ! >
  %[%<%] ! <
+
   
   %-
-  ':0 !'
- %  
+
+! SNM 13.12.2018: Commented out, this rule is not used anywhere, that is, there are no verbs with this
+!  mark. It was added in svn r16941, with this comment: Added diphtong alternation rules.
+! As it is now, this alphabet definition causes other entries like Val d'Isere etc to appear incorrectly.
+!  ':0 !'
+ %  ! Space
 
 ! Morpheme boundaries:
  «  ! Derivational prefix
@@ -285,9 +290,11 @@ a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Mor
 !!! __@RULENAME@__  
 !%^COMESS:j <=> [u | o] %>: _ ; ! etter en bakre, runda stammevokal skal det være en -j-
 
-"Even syllabic verbs Du1Pl3 e/oe V"
-!! __@RULENAME@__  
-  ':o <=> _ e: X2: Cns ;
+! SNM 13.12.2018: Commented out, this rule is not used anywhere, that is, there are no verbs with this mark.
+! It was added in svn r16941, with this comment: Added diphtong alternation rules.
+! "Even syllabic verbs Du1Pl3 e/oe V"
+! ! __@RULENAME@__  
+!   ':o <=> _ e: X2: Cns ;
   
 "Even syllabic verbs Du3 e/i alternation V"
 !! __@RULENAME@__  
