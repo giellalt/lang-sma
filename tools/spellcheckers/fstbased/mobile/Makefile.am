@@ -28,8 +28,8 @@ CORPUS_SIZE=11000
 
 ### BEGIN: Local build rules: *.hfst: *.tmp.hfst ###
 
-generator-desktopspeller-gt-norm.hfst: \
-			generator-desktopspeller-gt-norm.tmp.hfst \
+generator-mobilespeller-gt-norm.hfst: \
+			generator-mobilespeller-gt-norm.tmp.hfst \
 			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst
 	$(AM_V_HXFST)$(PRINTF) "\
 	set encode-weights ON \n\
