@@ -1781,6 +1781,21 @@ LIST PL-NOUN = "deerpegh" "voepteh" ;
 
 SELECT:PlN PL-NOUN IF (0 SG-NOUN + Pl) ;
 
+
+SELECT:LEXgïele1 ("gïele") IF (0 ("gielie")) (*0 JIEHTEDH BARRIER SV-BOUNDARY) ;
+SELECT:LEXgïele2 ("gïele") IF (0 ("gielie")) (-1 ("ålkoelaante") + Gen) ;
+
+SELECT:LEXjïelege ("jïelege") IF (0 ("jïele")) ; # hva er jielege ?
+
+LIST PropCmp = ("[A-ZÖÅ].*#.*"r) ;
+SET NOT-PropCmp = N - PropCmp ;
+	
+REMOVE:notPropCmp PropCmp IF (0 NOT-PropCmp) ; 
+	# Jïjsenledtiem
+SELECT:Pluppe ("Pluppe") IF (0 ("Plupp")) ; 
+
+REMOVE:Van ("Van") IF (NOT 1 Sem/Sur) ; 
+	
 	
 	# SAFE RULES
 	# ----------
