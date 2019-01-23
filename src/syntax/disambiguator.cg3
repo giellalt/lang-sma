@@ -593,7 +593,6 @@ LIST 2-PERS = Sg2 Du2 Pl2 ; #!! 2-PERS
 SET FORMS = VERB-FORMS OR WORD ;
 
 
-LIST BUILDING = "gåetie" ;
 #LIST ROOM = "ladnja" "oadem#ladnja" ;
 LIST GEOGRAPHICAL-PLACE = "dajve" "deava" "gaedtie" "gádde" "jaevrie" "vaerie" "miehtsie" ;  
 LIST POLITICAL-PLACE = "rïjhke"; 
@@ -610,7 +609,7 @@ LIST ABSTR-ROUTE = "mïjle" (".*mïjle"r) "lehkie#mïjletje" (".*meetere"r) ;
 
 SET ROUTE = CONCRETE-ROUTE OR ABSTR-ROUTE ; 
 
-SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR BUILDING OR Sem/Plc OR Sem/Plc-abstr OR Sem/Plc-line OR Sem/Plc-water ;
+SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR Sem/Build OR Sem/Plc OR Sem/Plc-abstr OR Sem/Plc-line OR Sem/Plc-water ;
  ;
 
 #       ============== #
@@ -853,6 +852,7 @@ SELECT:PoGena Gen (-1 Gen) ;
 #!! !Particles and adverbs
 
 REMOVE:Pcle2 Adv IF (-2 BOS)(-1 Adv OR Ine)(0 Pcle);
+REMOVE:AttrAdv Adv IF (0 N LINK -1 Attr) ;
 	
 SELECT:vaejtie Pcle (0 ("vaejtie") LINK *-1 BOS BARRIER WORD)(1 Pers) ;
 	#$ Vaejtie mijjieh, gaajhkesh låhkesh, maehtebe leessemebïjlesne åeredh?
@@ -1246,7 +1246,7 @@ MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR C
 MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
 
 MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 REAL-V BARRIER S-BOUNDARY OR CC OR COMMA) ;
-MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NEGATE *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA) ;
+MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NEGATE *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
 MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg) ;
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR COMMA OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom) ;
 	#% Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
@@ -1258,7 +1258,7 @@ MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(N
 MAP (@+FMAINV) TARGET VFIN IF (0 <vdic>)  ;
 MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
 
-MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NEGATE *1 Inf OR PrfPrc BARRIER S-BOUNDARY) ;
+MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NEGATE *1 Inf OR PrfPrc BARRIER S-BOUNDARY)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
 
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*-1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
@@ -1480,6 +1480,8 @@ REMOVE:IllNotNom Nom (0 ILLADV)(1 VFIN) ;
 	## Dahkoe lin aaj sijhteme edtjin naan noere saemieh aaj båetedh.
 
 
+SELECT:gåetie N + Ill (0 ("gåetie") LINK *0 ("tjaangedh") BARRIER SV-BOUNDARY) ;
+
 #!! !!N or V
 
 # "<aejkien>" N Sg Gen  V IV Ind Prs Du1 @+FMAINV 
@@ -1635,7 +1637,11 @@ REMOVE:Pl2_Not_Inf Inf IF (0 (V TV Ind Prt Pl2))(*-1 Pron + Pl2 + Nom BARRIER VF
 REMOVE:Inf_Not_Sg2_ProDrop (V TV Der1 Der/d Ind Prs Sg2) IF (NEGATE *-1 Pron + Sg2 + Nom);
 REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NEGATE *-1 Pron + Pl2 + Nom);
 
-
+SELECT:PrsPrc PrsPrc IF (0 A + Nom LINK 1 N) ;
+REMOVE:PrsPrc PrsPrc IF (0 N + Nom LINK NOT 1 N) ;
+REMOVE:PrsPrc PrsPrc IF (0 N + Nom LINK -1 BOS OR CS)(NOT 1 N + Nom LINK 1 VFIN) ;
+	#$ Varke akte doekije baaktoe båata gihtjie mejtie sijhtieh tjoevkesem åestedh.
+	#$ Juktie Jaavoeladtje iktesth jaavoe jeahta gosse doekije oksese båata jïh sæjhta maam akt doekedh.
 
 #!! !!!Proper nouns
 # ============
@@ -1681,9 +1687,20 @@ REMOVE:Prop (Prop Pl Nom) IF (-1 BOS)(NEGATE *1 V + Pl3 BARRIER S-BOUNDARY);	   
 #SELECT:Prop Prop IF (-1 BOS)(0 ("Saemie" Prop))(1 ORGANIZATION OR Org);
   	## Sámi allaskuvla láhčá diliid dulkoma joatkkaoahppofáldahkii, mii oaivvilduvvo olbmuide, geat dovdet dearvvašvuođa- ja sosiálasuorggi, ja maiddái MBD ovddasvástádussuorggi.
   
+SELECT:Pluppe ("Pluppe") IF (0 ("Plupp")) ; 
 
 	# Removing proper nouns that are lookalikes
 	# - - - - - - - - - - - - - - - - - - - - -
+
+
+LIST PropCmp = ("[A-ZÖÅ].*#.*"r) ;
+SET NOT-PropCmp = N - PropCmp ;
+	
+REMOVE:notPropCmp PropCmp IF (0 NOT-PropCmp) ; 
+	# Jïjsenledtiem
+
+REMOVE:Van ("Van") IF (NOT 1 Sem/Sur) ; 
+	
 
 SELECT:r1894 ("Da") OR ("Dan") IF (NEGATE -1 BOS OR (":") OR PUNCT)(1 (Prop Sem/Sur) OR (Prop Sem/Mal));
 SELECT:r1895 ("Da") OR ("dan") IF (-1 BOS OR (":") OR PUNCT);
@@ -1746,9 +1763,15 @@ SELECT:LEXbåetedh ("båetedh") IF (0 ("böötedh")) (*0 ("faahketji")) ;
 REMOVE:LEXböötedh ("böötedh") IF (0 ("båetedh")) (NEGATE *-1 Acc OR Nom + Pl OR Nom + Pl3 BARRIER SV-BOUNDARY) ;
 	#$ Ealla lij desnie boelhketjem goh lohkehtæjja-skuvleste bøøti. 
 
+
+# "gïesedh" OR "giesedh"
+SELECT:LEXgiesedh ("giesedh") IF (0 ("gïesedh")) (-1 ("bijjelen")) ;
+	#$ Jaavoeladtje jïh Ijjeladtje bïllijieh, jïh gajpem jïh tjohpem tjelmiej bijjelen giesieh.
+
+
 # "govledh" IV og TV
 REMOVE:govledhIV  IV IF (0 ("govledh") + Imprt) ;
-REMOVE:govledhIV IV IF (0 ("govledh") LINK *-1C Acc BARRIER S-BOUNDARY OR V - AUX) ;
+REMOVE:govledhIV IV IF (0 ("govledh") LINK *-1C Acc OR ("sïjhtedh") BARRIER S-BOUNDARY OR V - AUX) ;
 	#$ Sijhti aaj bieljide dompesjidh juktie idtji maam vielie dan bijre sijhth govledh.
 
 
@@ -1760,6 +1783,13 @@ SELECT:LEXmaehtedh ("maehtedh") IF (0 ("meehtedh")) ((-1 Sem/Lang OR Inf) OR (1 
 
 # "vuejedh" OR "voejedh"
 SELECT:LEXvuejedh ("vuejedh") IF (0 ("voejedh")) ((*0 Sem/Veh)) ;
+SELECT:LEXvuejedh ("vuejedh") IF (0 ("voejedh") LINK 1 Inf OR VFIN) ;
+	#$ Jaavoeladtje vuaja gihtjie mejtie Ijjeladtje jorpelaajpetjh sæjhta.
+
+
+# "vuajnoe" OR "vååjnedh"
+SELECT:LEXvuejedh ("vååjnedh") IF (0 ("vuajnoe") LINK -1 ("isveligke" Adv)) ;
+	#$ Ijjeladtje tuhtjie dïhte isveligke vååjnoe.
 
 # TV OR IV
 SELECT:V_TV TV IF (0 IV - COPULAS LINK 1 EOS)(-1 Acc)(NOT 0 ("böötedh")) ;
@@ -1781,21 +1811,22 @@ LIST PL-NOUN = "deerpegh" "voepteh" ;
 
 SELECT:PlN PL-NOUN IF (0 SG-NOUN + Pl) ;
 
+SELECT ("årromesijjie") ; # vs "årromesijje"
 
 SELECT:LEXgïele1 ("gïele") IF (0 ("gielie")) (*0 JIEHTEDH BARRIER SV-BOUNDARY) ;
 SELECT:LEXgïele2 ("gïele") IF (0 ("gielie")) (-1 ("ålkoelaante") + Gen) ;
 
 SELECT:LEXjïelege ("jïelege") IF (0 ("jïele")) ; # hva er jielege ?
 
-LIST PropCmp = ("[A-ZÖÅ].*#.*"r) ;
-SET NOT-PropCmp = N - PropCmp ;
-	
-REMOVE:notPropCmp PropCmp IF (0 NOT-PropCmp) ; 
-	# Jïjsenledtiem
-SELECT:Pluppe ("Pluppe") IF (0 ("Plupp")) ; 
+REMOVE:olkese ("olke") IF (0 Adv) ; 
 
-REMOVE:Van ("Van") IF (NOT 1 Sem/Sur) ; 
-	
+REMOVE:v V IF (0 N + ADVLCASE LINK 1 PrfPrc OR Inf)(*-1 AUX BARRIER SV-BOUNDARY) ; 
+
+
+REMOVE:mænngan N (0 ("mænngan") LINK 1 ("gosse")) ;
+
+REMOVE:N N + Nom (0 A + Nom LINK 1 ("sjïdtedh")) ;
+REMOVE:N N + Ine (0 A + Ine OR A + Ess LINK *1 ("årrodh")) ;
 	
 	# SAFE RULES
 	# ----------
