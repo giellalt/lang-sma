@@ -1837,9 +1837,10 @@ REMOVE:olkese ("olke") IF (0 Adv) ;
 REMOVE:v V IF (0 N + ADVLCASE LINK 1 PrfPrc OR Inf)(*-1 AUX BARRIER SV-BOUNDARY) ; 
 
 
-REMOVE:mænngan N (0 ("mænngan") LINK 1 ("gosse")) ;
+SELECT:N_Adv Adv (0 ("mænngan") OR ("dallamasten") LINK 1 ("gosse") OR CS) ;
 
-REMOVE:N N + Nom (0 A + Nom LINK 1 ("sjïdtedh")) ;
+SELECT:N A + Nom (0 N + Nom OR VFIN LINK 1 ("sjïdtedh")) ;
+	#$ Gosse aalka sjuevnjede sjïdtedh akte krokodilla baaktoe båata.
 REMOVE:N N + Ine (0 A + Ine OR A + Ess LINK *1 ("årrodh")) ;
 	
 	# SAFE RULES
