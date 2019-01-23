@@ -101,7 +101,7 @@ LEXICON ATTRCONT
                        +Cmp/Attr:       R          ;
  +Attr+Der2+Der/vuota+N+Err/Orth:%»voet VUOTA_FLAG ;
    +Attr+Der2+Der/vuota+N+Use/MT:%»voet VUOTA_FLAG ;
-                                        LAAKAN     ;
+                           +Attr:        LAAKAN     ;
 
 LEXICON VUOTA_FLAG
  @C.NeedNoun@ GIERIEHTSADTJE ;
@@ -1789,6 +1789,10 @@ LEXICON IJLE_LOAN_A
 LEXICON LAAKAN
          +Der1+Der/laakan:#laakan adv ;
 +Der1+Der/laakan+Err/Orth:-laakan adv ;
+         +Der1+Der/laaketje+A+Attr:#laaketje  FINAL1 ;
++Der1+Der/laaketje+A+Attr+Err/Orth:-laaketje FINAL1 ;
+         +Der1+Der/laaketje+A+Sg+Nom:#laaketje FINAL1 ;
++Der1+Der/laaketje+A+Sg+Nom+Err/Orth:-laaketje FINAL1 ;
 
 LEXICON LEEJNES
          :#leejnes ATTR_0 ;
