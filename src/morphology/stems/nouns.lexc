@@ -7602,7 +7602,7 @@ geahke+N+Sem/Dummytag:geahk NIEJTE ;
 geajna+N+Sem/Dummytag:geajn MAANA ;
 geajnagærja+N+Sem/Txt:geajna#gærj MAANA ;
 geajnavalkeselaake+N+Sem/Rule:geajnavalkeselaak NIEJTE ;
-geajnoebarkije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:geajnoe#barkij IJE_ODD ;
+geajnoebarkije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:geajnoe#barkij IJE_ODD ;
 geajnoegærja+N+Sem/Txt:geajnoe#gærj MAANA ;
 geajnoevalkeselaake+N+Sem/Rule:geajnoevalkeselaak NIEJTE ;
 gealasadtje+N+Sem/Dummytag:gealasadtj NIEJTE ;
@@ -10380,16 +10380,16 @@ laaketjaeleme+N+Sem/Rule:laake#tjaeliem N_ODD ;
 laaketjiehpije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:laake#tjiehpij IJE_ODD ; 
 prosjekteohtsije+N+Sem/Dummytag:prosjekteohtsij IJE_ODD ;
 laakeuvtelasse+N+Sem/Rule:laake#uvtelass NIEJTE ; 
-laakse+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:laaks NIEJTE ;
+laakse+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Food:laaks NIEJTE ;! laks
 laakteme+N+Sem/Dummytag:laaktem N_ODD ;
 laama+N+Sem/Dummytag:laam MAANA ;
 
 laampe+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Ani_Obj-el:laamp NIEJTE ; ! ja, men dette er også "ei lampe". legges til i root også.
 
 laanoegåetie+N+Sem/Dummytag:laanoe#gået N_IE ;
-laansgeajnoe+N+Sem/Dummytag:laans#geajn N_OE_UML ;
-laante-gaahtjeme+N+Sem/Dummytag:laante-gaahtjem N_ODD ;
-laanteburrie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Domain:laante# BURRIE ; ! tags_via_apertium
+laansgeajnoe+N+Sem/Route:laans#geajn N_OE_UML ;
+laantegaahtjeme+N+Sem/Dummytag:laante#gaahtjem N_ODD ;
+laanteburrie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Domain:laante# BURRIE ; ! denne er også Sem/Hum?
 laanteburriebarkije+N+Sem/Hum:laanteburrie#barkij IJE_ODD ;
 laanteburriedepartemente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Org:laante#burrie#departem ENTE_LOAN ;
 laanteburriedorjese+N+Sem/Dummytag:laante#burrie#dorjes N_ODD ;
@@ -10397,21 +10397,23 @@ laanteburriedåarjege+N+Sem/Dummytag:laante#burrie#dåarjeg N_ODD ;
 laanteburriefaage+N+Sem/Edu:laante#burrie#faag NIEJTE ;
 laanteburriemaskijne+N+Sem/Dummytag:laante#burrie#maskijn NIEJTE ;
 laanteburriesivilisasjovne+N+Sem/Dummytag:laante#burrie#sivilisasjovn NIEJTE ;
-laanteburrieskuvle+N+Sem/Org:laante#burrie#skuvl NIEJTE ; ! tags_via_apertium
+laanteburrieskuvle+N+Sem/Org:laante#burrie#skuvl NIEJTE ; ! 
 laantedigkie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Rule:laante#digk N_IE ;! men også Plc/Org etc.? Hvordan tagge denne?
 laantegæmhpome+N+Sem/Dummytag:laante#gæmhpoem N_ODD ;
 laantekrïense+N+Sem/Rule:laante#krïens NIEJTE ;
 laantelaake+N+Sem/Rule:laante#laak NIEJTE ;
 laantemuerjie+N+Sem/Fruit:laante#muerj N_IE ; ! tags_via_apertium
 laanteorganisasjovne+N+Sem/Dummytag:laante#organisasjovn NIEJTE ;
-laanteraaste+N+Sem/Dummytag:laante#raast NIEJTE ;
+laanteraaste+N+Sem/Rule:laante#raast NIEJTE ;
 laantesoejkesjæjja+N+Sem/Hum:laante#soejkesjæjj MAANA ;
-laantestasjovne+N+Sem/Dummytag:laante#stasjovn NIEJTE ;
+laantestasjovne+N+Sem/Plc:laante#stasjovn NIEJTE ;! både Plc og Org?
 laapestahke+N+Sem/Dummytag:laapestahk NIEJTE ;
 laapte+N+Sem/Dummytag:laapt NIEJTE ;
 laareme+N+Sem/Dummytag:laarem N_ODD ;
 laarije+N+Sem/Dummytag:laar IJE_LOAN ;
-laatege+N+Sem/Dummytag:laateg N_ODD ;
+
+laatege+N+Sem/Route:laateg N_ODD ;
+
 laatjemejïlloe+N+Sem/Dummytag:laatjeme#jïll N_OE_UML ;
 laatjovadtjh+N+Sem/Dummytag:laatjovad PL_RESIPROK ;
 laatjove+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:laatjov N_ODD "svigersønns el -datters far el mor" ; ! Denne har -o- i 2.stavelse, da den -o- tilsvarer -kort -a- i f.eks láh?ama, rátkama, gállama.
@@ -10437,7 +10439,7 @@ laavkome+N+Sem/Event:laavkoem N_ODD ; ! tags_via_apertium
 laavkomebassenge+N+Sem/Dummytag:laavkome#basseng NIEJTE ;
 laavkomeboelhke+N+Sem/Dummytag:laavkome#boelhk NIEJTE ;
 laavkometjengkere+N+Sem/Dummytag:laavkome#tjengkier N_ODD ;
-laavkometjïehtjele+N+Sem/Build-part:laavkome#tjïehtjel N_ODD ; ! tags_via_apertium
+laavkometjïehtjele+N+Sem/Build-part:laavkome#tjïehtjel N_ODD ; 
 laavloje+N+Sem/Prod-audio:laavloj N_ODD ; ! tags_via_apertium
 laavlome+N+Sem/Dummytag:laavloem N_ODD ;
 laavlomestijle+N+OLang/NOB+Sem/Dummytag:laavlome#st IJLE_LOAN_N ;
@@ -13662,8 +13664,8 @@ ruehtsiemuerjie+N+Sem/Dummytag:ruehtsie#muerj N_IE ;
 ruerhkeme+N+Sem/Dummytag:ruerhkiem N_ODD ;
 ruevtieaaltere+N+Sem/Dummytag:ruevtie#aalter N_ODD ;
 ruevtiegeajna+N+Sem/Dummytag:ruevtiegeajn MAANA ;
-ruevtiegeajnoeviermie+N+Sem/Dummytag:ruevtiegeajnoe#vierm N_IE ;
-ruevtiekonstruksjovne+N+Sem/Dummytag:ruevtie#konstruksjovn NIEJTE ;
+ruevtiegeajnoeviermie+N+Sem/Route:ruevtiegeajnoe#vierm N_IE ;
+ruevtiekonstruksjovne+N+Sem/Route:ruevtie#konstruksjovn NIEJTE ;
 ruevtiemaalme+N+Sem/Dummytag:ruevtie#maalm NIEJTE ;
 ruevtieraajroevåågne+N+Sem/Dummytag:ruevtie#raajroe#våågn NIEJTE ;
 ruevtiesvaltja+N+Sem/Dummytag:ruevtie#svaltj MAANA ;
@@ -17513,9 +17515,12 @@ zoonovse+N+OLang/NOB+Sem/Dummytag:zo^ono OVSE_LOAN ;
 åesiesfaetie+N+Sem/Dummytag:åesies#faet N_IE ;
 åesiesfealadæjja+N+Sem/Hum:åesies#fealadæjj MAANA ;
 åesiesgeajna+N+Sem/Dummytag:åesies#geajn MAANA ;
-åesiesgeajnoe+N+Sem/Dummytag:åesies#geajn N_OE_UML ;
-åesiesgåetie+N+Sem/Dummytag:åesies#gået N_IE ;
-åesiesinstituhte+N+Sem/Dummytag:åesies#instituht NIEJTE ;
+åesiesgeajnoe+N+Sem/Route:åesies#geajn N_OE_UML ;
+
+åesiesgåetie+N+Sem/Org:åesies#gået N_IE ;! Org/Plc
+
+åesiesinstituhte+N+Sem/Org:åesies#instituht NIEJTE ;
+
 åesieskåarje+N+Sem/Dummytag:åesie#skåarj NIEJTE ;
 åesieslatjkoe+N+Sem/Dummytag:åesies#latjk N_OE_UML ;
 åesieslæstoe+N+Sem/Dummytag:åesies#læst N_OE_UML ;
