@@ -622,6 +622,9 @@ ADD:spell-it-all (&typo &SUGGESTWF) (<spelled>) ;
 # But perhaps you want to only suggest spellings of words that are not inside "quotes":
 ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK 2 QMARK);
 
+# Add &typo error tag to unkown words that are not corrected by the speller, so that they at least get a blue underline and a message
+ADD:uncorrected-typos (&typo) (?) ;
+
 # A simple grammar checker rule without suggestions: Ensure preceding nominal agrees with the verb
 ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom) (0 V) (NOT 0 Sg3);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg1 + Nom) (0 V) (NOT 0 Sg1);
