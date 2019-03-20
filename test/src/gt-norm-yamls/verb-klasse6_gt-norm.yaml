@@ -1,0 +1,39 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Verb - gurkedh: # verb 5, stem -e, root vowel e-
+    gurkedh+V+TV+Inf: gurkedh
+    gurkedh+V+TV+Ind+Prs+Sg1: gurkem
+    gurkedh+V+TV+Ind+Prs+Sg2: gurkh
+    gurkedh+V+TV+Ind+Prs+Sg3: gurkie
+    gurkedh+V+TV+Ind+Prs+Du1: gurkien
+    gurkedh+V+TV+Ind+Prs+Du2: [gurkeden, gurkijidien]
+    gurkedh+V+TV+Ind+Prs+Du3: gurkijægan
+    gurkedh+V+TV+Ind+Prs+Pl1: [gurkebe, gurkijibie]
+    gurkedh+V+TV+Ind+Prs+Pl2: [gurkede, gurkijidie]
+    gurkedh+V+TV+Ind+Prs+Pl3: gurkieh
+    gurkedh+V+TV+Ind+Prt+Sg1: gurkim
+    gurkedh+V+TV+Ind+Prt+Sg2: gurkih
+    gurkedh+V+TV+Ind+Prt+Sg3: gurki
+    gurkedh+V+TV+Ind+Prt+Du1: gurkimen
+    gurkedh+V+TV+Ind+Prt+Du2: gurkiden
+    gurkedh+V+TV+Ind+Prt+Du3: gurkigan
+    gurkedh+V+TV+Ind+Prt+Pl1: gurkimh
+    gurkedh+V+TV+Ind+Prt+Pl2: gurkidh
+    gurkedh+V+TV+Ind+Prt+Pl3: gurkin
+    gurkedh+V+TV+Imprt+Sg2: gurkh
+    gurkedh+V+TV+Imprt+Du2: [gurkeden, gurkijidien]
+    gurkedh+V+TV+Imprt+Pl2: [gurkede, gurkijidie] 
+    gurkedh+V+TV+ConNeg: gurkh
+    gurkedh+V+TV+Ger: gurkeminie
+    gurkedh+V+TV+PrfPrc: gurkeme
+    gurkedh+V+TV+VGen: gurken 
+
