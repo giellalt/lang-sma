@@ -1,0 +1,66 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Verb - vååjnedh: # verb 5, stem -e, root vowel e-
+    vååjnedh+V+IV+Inf: vååjnedh
+    vååjnedh+V+IV+Ind+Prs+Sg1: vååjnem
+    vååjnedh+V+IV+Ind+Prs+Sg2: vååjnh
+    vååjnedh+V+IV+Ind+Prs+Sg3: vååjnoe
+    vååjnedh+V+IV+Ind+Prs+Du1: vååjneden
+    vååjnedh+V+IV+Ind+Prs+Du2: [vååjneden, vååjnijidien]
+    vååjnedh+V+IV+Ind+Prs+Du3: vååjnijægan
+    vååjnedh+V+IV+Ind+Prs+Pl1: [vååjnebe, vååjnijibie]
+    vååjnedh+V+IV+Ind+Prs+Pl2: [vååjnede, vååjnijidie]
+    vååjnedh+V+IV+Ind+Prs+Pl3: vååjnoeh
+    vååjnedh+V+IV+Ind+Prt+Sg1: vååjnim
+    vååjnedh+V+IV+Ind+Prt+Sg2: vååjnih
+    vååjnedh+V+IV+Ind+Prt+Sg3: vååjni
+    vååjnedh+V+IV+Ind+Prt+Du1: vååjnimen
+    vååjnedh+V+IV+Ind+Prt+Du2: vååjniden
+    vååjnedh+V+IV+Ind+Prt+Du3: vååjnigan
+    vååjnedh+V+IV+Ind+Prt+Pl1: vååjnimh
+    vååjnedh+V+IV+Ind+Prt+Pl2: vååjnidh
+    vååjnedh+V+IV+Ind+Prt+Pl3: vååjnin
+    vååjnedh+V+IV+Imprt+Sg2: vååjnh
+    vååjnedh+V+IV+Imprt+Du2: [vååjnede, vååjnijidien]
+    vååjnedh+V+IV+Imprt+Pl2: [vååjnede, vååjnijidie] 
+    vååjnedh+V+IV+ConNeg: vååjnh
+    vååjnedh+V+IV+Ger: vååjneminie
+    vååjnedh+V+IV+PrfPrc: vååjneme
+    vååjnedh+V+IV+VGen: vååjnoen 
+
+  Verb - lyjhkedh: # verb 5, stem -e, root vowel e-
+    lyjhkedh+V+TV+Inf: vååjnedh
+    lyjhkedh+V+TV+Ind+Prs+Sg1: lyjhkem
+    lyjhkedh+V+TV+Ind+Prs+Sg2: lyjhkh
+    lyjhkedh+V+TV+Ind+Prs+Sg3: lyjhkoe
+    lyjhkedh+V+TV+Ind+Prs+Du1: lyjhkoen
+    lyjhkedh+V+TV+Ind+Prs+Du2: [lyjhkeden, lyjhkijidien]
+    lyjhkedh+V+TV+Ind+Prs+Du3: llyjhkijægan
+    lyjhkedh+V+TV+Ind+Prs+Pl1: [lyjhkebe, lyjhkijibie]
+    lyjhkedh+V+TV+Ind+Prs+Pl2: [lyjhkede, lyjhkijidie]
+    lyjhkedh+V+TV+Ind+Prs+Pl3: lyjhkoeh
+    lyjhkedh+V+TV+Ind+Prt+Sg1: lyjhkim
+    lyjhkedh+V+TV+Ind+Prt+Sg2: lyjhkih
+    lyjhkedh+V+TV+Ind+Prt+Sg3: lyjhki
+    lyjhkedh+V+TV+Ind+Prt+Du1: lyjhkimen
+    lyjhkedh+V+TV+Ind+Prt+Du2: lyjhkiden
+    lyjhkedh+V+TV+Ind+Prt+Du3: lyjhkigan
+    lyjhkedh+V+TV+Ind+Prt+Pl1: lyjhkimh
+    lyjhkedh+V+TV+Ind+Prt+Pl2: lyjhkidh
+    lyjhkedh+V+TV+Ind+Prt+Pl3: lyjhkin
+    lyjhkedh+V+TV+Imprt+Sg2: lyjhkh
+    lyjhkedh+V+TV+Imprt+Du2: [lyjhkeden, lyjhkijidien]
+    lyjhkedh+V+TV+Imprt+Pl2: [lyjhkede, lyjhkijidie] 
+    lyjhkedh+V+TV+ConNeg: lyjhkh
+    lyjhkedh+V+TV+Ger: lyjhkeminie
+    lyjhkedh+V+TV+PrfPrc: lyjhkeme 
+
