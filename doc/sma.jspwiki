@@ -423,7 +423,7 @@ to research compounding patterns in the corpus.
  *  +Sem/Route                 
  *  +Sem/Rule                  
  *  +Sem/Semcon                
- *  +Sem/Semcon__Wthr          
+ *  +Sem/Semcon_Wthr          
  *  +Sem/Sign                  
  *  +Sem/State                 
  *  +Sem/State-sick            
@@ -555,9 +555,9 @@ get the same pronunciation whether read as SME or NOB/NNO/SWE.
 
 
 !!Triggers for morphophonological rules
- ; X2 : Trigger for ???
+ ; X2 : Trigger for e:0 before suffix i: manne > mannine
  ; X3 : Trigger for ???
- ; X4 : Trigger for ???
+ ; X4 : Trigger for e->i in even syllabic verbs Du2 & Pl12
  ; E2 : insert e ! Fjern denne.
 
 !Morphophonemes and Sámi letters
@@ -1408,6 +1408,9 @@ This file is used for spellchecking, the alternative file
 This file is compiled by default, the other one is compiled by in
 langs/sma giving the command ''.configure --with-oahpa''
 before compiling.
+
+
+
 
 
 
@@ -3102,8 +3105,12 @@ Nominal derivation sublexica
 
  * __LEXICON VSUF-V-EVEN-PRS   __
 
+ * __LEXICON VSUF-V-EVEN-PRS-DUPL   __
+
+
 
  * __LEXICON VSUF-EVEN-PRS-DUPL   __
+
 
 
  * __LEXICON VSUF-VI-EVEN-PRS   __
@@ -4159,7 +4166,7 @@ __Even syllabic verbs Du3 e/i alternation V__
 
 __Proper PlGen, PlCom__  
 
-__Even syllabic verbs Du2Pl12 e/i V__  
+__Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i V __  
 
 
 __Even syllabic verbs Du2Pl12 e/i V part2__  
