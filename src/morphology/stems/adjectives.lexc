@@ -1456,7 +1456,10 @@ minngeds+A:minnged ATTR_S ;
 minngeld+A:minngeld ATTR_0 ;
 minngeles+v2+A:minngel s_S_ODDNOCOMP ; !OBS minngels?
 minngeles+v1+A:minngele s_S_ODDNOCOMP ;
-mjovhke+A:mjovhk e_ES_ODDEVEN2 ; ! Klasse 2 ! fra corp
+
+mjovhke+A+Use/NotDNorm:mjovhk e_ES_ODDEVEN2 ; ! Klasse 2 ! fra corp
+
+
 moehtege+A:moehteg Ce_CE_ODDNOCOMP ;
 moehtegs+A:moehteg Cs_CS_ODD ;
 moenjeh+A:moenje ATTR_H ; ! moenjeh elmie - klar himmel
@@ -1492,7 +1495,9 @@ murries+A:murrie s_S_ODD ; !LA
 mynnehke+A:mynnehk Ce_CE_ODD ;
 myvhke+A:myvhk e_ES_ODDEVEN2 ; ! Klasse 2 ! ! e(2)-st. system2 + myövhke og mïevhke har EVENODD
 myvhkehke+A:myvhkehk Ce_CE_ODD ;
-myövhke+A:myövhk e_ES_ODDEVEN2 ; ! Klasse 2 !SYSTEM2, myövhke = attr= myövhkes= pred ! e(2)-st. system2
+
+myövhke+A+Use/DNorm:myövhk e_ES_ODDEVEN2 ; ! Klasse 2 !SYSTEM2, myövhke = attr= myövhkes= pred ! e(2)-st. system2
+
 myövhke+A+Err/Orth:mövhk e_ES_ODDEVEN2 ; ! Klasse 2 !SYSTEM2, myövhke = attr= myövhkes= pred ! e(2)-st. system2
 myövhkehke+A:myövhkehk Ce_CE_ODD ;
 måajkoes:måajk oesATTR_oen_an_ADVERB ; ! , oes-an
@@ -1782,7 +1787,9 @@ plåjnah:plåjn ahATTR_anADVERB ; !
 plåjnoeh:plåjn oehATTR_oen_ADVERB ;
 plåktohke+A:plåktoehk oeCe_OECE_ODD ;
 plænhtjah+A:plænhtja ATTR_H ;
+
 plïehtje+A:plïehtj e_ES_ODDEVEN2 ;
+
 plïejhke+A:plïejhk e_ES_ODDEVEN2 ; ! plïejhke/plïejhkes - plïejhkebe-plïejhkemes
 plïereh+A:plïere ATTR_H ;! plïerehke, durativt, plïeresne(kasus) moment, nå
 plïeres+A:plïere ATTR_S ;!OBS, OBS, samme mønster som gïeleh
