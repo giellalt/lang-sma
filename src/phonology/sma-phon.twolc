@@ -56,8 +56,11 @@ Alphabet
 
 ! Triggers:
   X2:0     ! Trigger for e:0 before suffix i
+! Dette gjelder for verbklasse.5-6, hvor e--> i
   X3:0     ! Trigger for e->i in even syllabic verbs Du3
   X4:0     ! Trigger for e->i in even syllabic verbs Du2 & Pl12
+! Trigger for verbklasse 1-2:
+! ??
   
 ! xxx - X3 og X4 kan slåast i hop, det er ingen grunn til å ha to triggarar for den same endringa.
 
@@ -310,6 +313,9 @@ a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Mor
 "Proper PlGen, PlCom"
 !! __@RULENAME@__  
   j:0 <=> e:i %>: %^PLGENPLCOM: _ ; ! -j- blir til 0, når -e- blir til -i-. da slår (%>) denne triggeren inn (%^PLGENPLCOM) : (NB!) i posisjonen etter -e- !! 
+
+
+
 
 "Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i V" 
 !! __@RULENAME@__  
