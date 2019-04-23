@@ -10761,7 +10761,10 @@ laakegærja+N+Sem/Txt:laake#gærj MAANA ;
 laakemaenniereakta+N+Sem/Rule:laakemaennie#reakt MAANA ;
 laakenjoelkedasse+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Rule:laake#njoelkedass NIEJTE ; 
 laaketjaeleme+N+Sem/Rule:laake#tjaeliem N_ODD ;
+
 laaketjiehpije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:laake#tjiehpij IJE_ODD ; 
+scenetjiehpije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:scene#tjiehpij IJE_ODD ; 
+
 prosjekteohtsije+N+Sem/Hum:prosjekteohtsij IJE_ODD ;
 laakeuvtelasse+N+Sem/Rule:laake#uvtelass NIEJTE ; 
 laakse+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Food:laaks NIEJTE ;! laks
@@ -13213,6 +13216,9 @@ politihke+N+Err/Orth+OLang/NOB+Sem/Domain:povlitigk NIEJTE ; !
 politihke+N+OLang/NOB+Sem/Domain:polit IHKE_LOAN ; ! 
 politihkere+N+CmpN/SgN+Sem/Hum+Cmp/SgNom+OLang/NOB:politiker R ;
 politihkere+N+Sem/Hum:politihker N_ODD ;
+dramatihkere+N+Sem/Hum:dramatihker N_ODD ;
+scenedramatihkere+N+Sem/Hum:scenedramatihker N_ODD ;
+pragmatihkere+N+Sem/Hum:pragmatihker N_ODD ;
 
 politije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth+OLang/NOB+Sem/Dummytag:bulet IJE_LOAN ;
 politije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag+Use/DNorm:polit IJE_LOAN ;
@@ -18252,8 +18258,7 @@ finanseministeere+N+Sem/Hum:finanse#ministeer N_ODD ;
 
 åvtegietjie+N+Sem/Obj:åvte#gietj N_IE ;
  
-åvtehke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:åvtehk N_ODD ;
-åvtehke+N+Err/Orth+Sem/Hum:åvtohk N_ODD ; 
+
 åvtejuelkie+N+Err/Orth+Sem/Body:åvte-juelk N_IE ;
 åvtejuelkie+N+Sem/Body:åvte#juelk N_IE ;
 åvtelhmaalese+N+Sem/Food:åvtelh#maales N_ODD ;
@@ -18850,13 +18855,24 @@ seekerevoete+N+Sem/State:seekere#voet NIEJTE ;
 åesietjïerte+N+Use/NotDNorm+Sem/Group_Hum:åesie#tjiert NIEJTE ; ! https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:andelslag
 
 ålkoedajve+N+Sem/Plc:ålkoedajv NIEJTE ; ! https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:ålkoedajve
+
 ! ålkoerijhkese:ålkoerijhkese TODO ! https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:utvandring
 ! årromereaktasijte:årromereaktasijte TODO ! https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:frittstående_borettslag
 ! årromereaktatjierte:årromereaktatjierte TODO ! https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslag
 ! årromes-stipeende:årromes-stipeende TODO ! https://satni.uit.no/termwiki/index.php?title=Education:borteboerstipend
-! åvhtege:åvhtege TODO ! https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:daglig_leder
+
+!!! VUEP!! GG normerer en ny form? - 
+åvtehke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum+Use/DNorm:åvtehk N_ODD ;
+åvtehke+N+Err/Orth+Sem/Hum:åvtohk N_ODD ; 
+åvtehke+N+Sem/Hum+Use/NotDNorm:åvhteg N_ODD ; ! https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:daglig_leder  
+
+
 ! ååljagaavnoe:ååljagaavnoe TODO ! https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:ååljagaavnoe
-! åålkoelaante:åålkoelaante TODO ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:utland
+
+ålkoelaante+N+Use/DNorm+Sem/Plc:ålkoelaant NIEJTE ;! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:utland
+ålkoelaante+N+Use/NotDNorm+Sem/Plc:åålkoelaant NIEJTE ; ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:utland
+
+
 ! åålmeg-almetji:åålmeg-almetji TODO ! https://satni.uit.no/termwiki/index.php?title=Juridihkka:massemord
 ! åålmegh-faage:åålmegh-faage TODO ! https://satni.uit.no/termwiki/index.php?title=Education:allmennfag
 ! åålmegh-faagen:åålmegh-faagen TODO ! https://satni.uit.no/termwiki/index.php?title=Education:studieretning_for_allmenne_fag
