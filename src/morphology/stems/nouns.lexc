@@ -122,8 +122,8 @@ Midtösten-korrespondente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpNP/First+OLang/NOB+Sem
 Moskva-korrespondente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpNP/First+OLang/NOB+Sem/Hum:Moskva-korre^spond ENTE_LOAN ;
 Mossad-agente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpNP/First+OLang/NOB+Sem/Dummytag:Mossad-ag ENTE_LOAN ;
 OECD-stuvdije+N+Err/Orth+OLang/NOB+Sem/Dummytag:OECD-studij IJE_ODD ;
-OECD-stuvdije+N+Use/NG+OLang/NOB+Sem/Dummytag:OECD-stuvdij IJE_ODD ;
-OECD-stuvdije+N+CmpN/SgN+Sem/Dummytag+Cmp/SgNom+OLang/NOB:OECD-studie R ; ! RIKTIG Oppføring!
+OECD-stuvdije+N+OLang/NOB+Sem/Dummytag:OECD-stuvdij IJE_ODD ;
+OECD-stuvdije+N+CmpN/SgN+Sem/Dummytag+Cmp/SgNom+OLang/NOB+Use/NG:OECD-studie R ; ! RIKTIG Oppføring!
 OG-organisasjovne+N+OLang/NOB+Sem/Org:OG-organisa SJOVNE_LOAN ;
 OK-balhka+N+Sem/Dummytag:OK-balhk MAANA ;
 OL-arrangemente+N+OLang/NOB+Sem/Dummytag:OL-arrangem ENTE_LOAN ;
@@ -2448,7 +2448,7 @@ redmie+N+Sem/Dummytag:redm N_IE ;
 redtie+N+Sem/Dummytag:redt N_IE ;
 reektesgærja+N+Sem/Txt:reektes#gærj MAANA ;
 ryøknegærja+N+Sem/Txt:ryøkne#gærj MAANA ; !norm?
-ryøkne-gærja+N+Sem/Txt+Use/NG:ryøkne-gærj MAANA ; !foreløpig entry med hyph
+ryøknegærja+N+Sem/Txt+Use/NG:ryøkne-gærj MAANA ; !foreløpig entry med hyph
 reglie+N+Sem/Dummytag:regl N_IE ;
 regrie+N+Sem/Dummytag:regr N_IE ;
 rehpie+N+Sem/Build-part:rehp N_IE ; 
@@ -3501,8 +3501,8 @@ tåånnga+N+Sem/Dummytag:tåånng MAANA ; !Hasselbrink/Bergsland-Saemien lohkeme
 tæjmoe+N+CmpN/SgN+CmpN/SgG+Sem/Measr_Time:tæjm N_OE_UML ;
  
 
-ryöknehtæjmoe+N+CmpN/SgN+CmpN/SgG+Sem/Edu+Use/NG+Err/Orth:ryøkne#tæjm N_OE_UML ; !foreløpig entry med hyph
-ryöknehtæjmoe+N+CmpN/SgN+CmpN/SgG+Sem/Edu+Use/NG:ryökneh#tæjm N_OE_UML ; !foreløpig entry med hyph
+ryöknehtæjmoe+N+Sem/Edu+Err/Orth:ryøkne#tæjm N_OE_UML ; !foreløpig entry med hyph
+ryöknehtæjmoe+N+CmpN/SgN+CmpN/SgG+Sem/Edu:ryökneh#tæjm N_OE_UML ; !foreløpig entry med hyph
 
 uhtsie+N+Sem/Dummytag:uhts N_IE ;
 ulmie+N+Sem/Semcon:ulm N_IE ;
@@ -3567,7 +3567,7 @@ vaerhkie+N+Sem/Dummytag:vaerhk N_IE ;
 vaerhpie+N+Sem/Dummytag:vaerhp N_IE ;
 vaerie+N+CmpN/SgN+CmpN/SgG+Sem/Plc:vaer N_IE ; 
 vaevlie+N+Sem/Plc-elevate:vaevl N_IE ; !LA
-vahka+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG+Sem/Dummytag:vahk MAANA ;
+vahka+N+Sem/Dummytag+CmpN/SgN+CmpN/SgG+CmpN/PlG:vahk MAANA ;
 veadta+N+Sem/Dummytag:veadt MAANA ;
 veahka+N+Sem/Amount:veahk MAANA ; 
 veahkabaataræjja+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:veahka#baataræjj MAANA ;
@@ -3950,9 +3950,9 @@ aalhkagånka+N+Sem/Dummytag:aalhka#gånk MAANA ; !gïelegaaltje
 aalhkije+N+Sem/Hum:aalhkij IJE_ODD ;
 aalhtemeruevtie+N+Sem/Dummytag:aalhteme#ruevt N_IE ;
 !aalkoalmetji siebrie+N+Sem/Dummytag:aalkoalmetji siebr N_IE ; ! «Collection:Dååhkesjahteme_Sametinget_samisk_norsk» «Stáda almmolaš hálddašeapmi:urfolksorganisasjon»
-aalkoe+N+v1+CmpN/SgN+CmpN/SgG+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft+Sem/Time:aalk N_OE_UML ; 
-aalkoe+N+v2+CmpN/SgN+CmpN/SgG+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft+Err/Orth+Sem/Time:aalkuv N_ODD ; 
-aalkoe+N+v2+CmpN/SgN+CmpN/SgG+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft+Use/NG+Sem/Time:aalkov N_ODD ; 
+aalkoe+v1+N+CmpN/SgN+CmpN/SgG+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft+Sem/Time:aalk N_OE_UML ; 
+aalkoe+N+Sem/Time+Err/Orth:aalkuv N_ODD ; 
+aalkoe+v2+N+CmpN/SgN+CmpN/SgG+CmpN/SgNomLeft+CmpN/SgGenLeft+CmpN/PlGenLeft+Sem/Time:aalkov N_ODD ; 
 aalkoealmetje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:aalkoe#almetj N_ODD ;
 aalkoekurse+N+Err/Orth+Sem/Edu:aalkoe#kuvsj NIEJTE ; 
 aalkoekurse+N+Sem/Edu:aalkoe#kurs NIEJTE ; 
@@ -4320,8 +4320,8 @@ aluminaate+N+OLang/NOB+Sem/Dummytag:alumina AATE_LOAN ;
 aluminiume+N+Sem/Dummytag:aluminium NIEJTE ;
 aluminiumevierhke+N+Sem/Dummytag:aluminiume#vierhk NIEJTE ;
 aluminiumfabrihke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:alumini^um#fabr IHKE_LOAN ;
-aluminiumfovlije+N+Sem/Dummytag+Cmp/SgNom:alumini^um#folie R ;
-aluminiumfovlije+N+Use/NG+OLang/NOB+Sem/Dummytag:alumini^um#fovlij IJE_ODD ;
+aluminiumfovlije+N+Sem/Dummytag+Cmp/SgNom+Use/NG:alumini^um#folie R ;
+aluminiumfovlije+N+OLang/NOB+Sem/Dummytag:alumini^um#fovlij IJE_ODD ;
 aluminiumhydroksijde+N+OLang/NOB+Sem/Dummytag:aluminiumhydroks IJDE_LOAN ;
 aluminiumklorijde+N+OLang/NOB+Sem/Dummytag:aluminiumklor IJDE_LOAN ;
 aluminiumoksijde+N+OLang/NOB+Sem/Dummytag:aluminiumoks IJDE_LOAN ;
@@ -7437,7 +7437,7 @@ fiksfakserije+N+OLang/NOB+Sem/Dummytag:fiksfakser IJE_LOAN ;
 fiksjonslitteratuvre+N+OLang/NOB+Sem/Dummytag:fiksjons#litteratu UVRE_LOAN ;
 fiksjovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Area/SE+Sem/Dummytag+Use/NG:ficti OVNE_LOAN ;
 fiksjovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:fik SJOVNE_LOAN ;
-fiksjovne+N+CmpN/SgN+Sem/Dummytag+Cmp/SgNom+OLang/NOB:fiction R ;
+fiksjovne+N+CmpN/SgN+Sem/Dummytag+Cmp/SgNom+OLang/NOB+Use/NG:fiction R ;
 filantropije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:fil^antrop IJE_LOAN ;
 filatelije+N+OLang/NOB+Sem/Dummytag:filatel IJE_LOAN ;
 filharmonije+N+OLang/NOB+Sem/Dummytag:filharmon IJE_LOAN ;
@@ -9241,10 +9241,10 @@ isolasjovne+N+OLang/NOB+Sem/Dummytag:isola SJOVNE_LOAN ;
 isoteerme+N+OLang/NOB+Sem/Dummytag:isote ERME_LOAN ;
 israeele+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Err/Orth+Sem/Hum:israjeel NIEJTE ;
 israeele+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:isra^eel NIEJTE ;
-israeelere+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:isra^eeler N_ODD ;
-israeelere+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG+OLang/NOB+Err/Orth+Sem/Hum:israjeeler N_ODD ;
-israelehke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG+OLang/NOB+Err/Orth+Sem/Hum:israjelehk N_ODD ;
-israelehke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG+OLang/NOB+Sem/Hum:israelehk N_ODD ;
+israeelere+N+Sem/Hum+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:isra^eeler N_ODD ;
+israeelere+N+Sem/Hum+OLang/NOB+Err/Orth:israjeeler N_ODD ;
+israelehke+N+Sem/Hum+OLang/NOB+Err/Orth:israjelehk N_ODD ;
+israelehke+N+Sem/Hum+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:israelehk N_ODD ;
 israelere+N+Sem/Dummytag:israeler N_ODD ;
 italiengïele+N+Sem/Lang:italien#gïel NIEJTE ; !http://www.udir.no/Upload/vitnemal/samisk/4/Grunnskolefag_sorsamisk.pdf
 italijeenere+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:itali IJEENERE_LOAN ;
@@ -9765,8 +9765,8 @@ kameele+N+Err/Orth+OLang/NOB+Sem/Ani:kaamel NIEJTE ;
 kameele+N+Sem/Ani+Cmp/SgNom:kamel R ;
 kameelengoelke+N+Err/Orth+Sem/Dummytag:kaameelen#goelk NIEJTE ;
 kameelengoelke+N+Sem/Dummytag:kameelen#goelk NIEJTE ;
-kameleovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:kamele^ OVNE_LOAN ;
-kameleovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG+OLang/NOB+Err/Orth+Sem/Dummytag:kamelej OVNE_LOAN ;
+kameleovne+N+Sem/Dummytag+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:kamele^ OVNE_LOAN ;
+kameleovne+N+OLang/NOB+Err/Orth+Sem/Dummytag:kamelej OVNE_LOAN ;
 kameraate+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth+OLang/NOB+Sem/Dummytag:kaamraat NIEJTE ;
 kameraate+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:kamera AATE_LOAN ;
 kameraderije+N+OLang/NOB+Sem/Dummytag:kamerader IJE_LOAN ;
@@ -17021,7 +17021,7 @@ traktemente+N+Sem/Dummytag:traktem ENTE_LOAN ;
 
 traktovre+N+OLang/NOB+Sem/Veh:traktovr NIEJTE ; 
 traktovre+N+Err/Orth+OLang/NOB+Sem/Veh:traaktovr NIEJTE ;  ! Sametingets opplæringsplakat
-traktovre+N+OLang/NOB+Sem/Veh+Use/NG+Err/Orth:tr AKTORE_LOAN ; 
+traktovre+N+OLang/NOB+Sem/Veh+Err/Orth:tr AKTORE_LOAN ; 
 
 traktorkompressore+N+OLang/NOB+Sem/Dummytag:traktor#kom^press ORE_LOAN ;
 
@@ -18206,10 +18206,7 @@ zoonovse+N+OLang/NOB+Sem/Dummytag:zo^ono OVSE_LOAN ;
 åljaveahka+N+Sem/Dummytag:ålja#veahk MAANA ;
 åljaåasa+N+Sem/Dummytag:ålja#åas MAANA ;
 ålkoealmetje+N+Sem/Dummytag:ålkoe#almetj N_ODD ;
-ålkoelaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Plc:ålkoe#laant NIEJTE ;
-ålkoelaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Plc+Use/NG:ålkoe-laant NIEJTE ; !Skal fjernes
 ålkoeokse+N+Sem/Build-part:ålkoe#oks NIEJTE ; 
-ålkoeokse+Use/NG+N+Sem/Build-part:ålkoe#oks NIEJTE ; 
 ålkoerijhkehke+N+Sem/Dummytag:ålkoe#rijhkehk N_ODD ;
 ålkoerïjhke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Org:ålkoe#rïjhk NIEJTE ; 
 
@@ -18255,8 +18252,7 @@ finanseministeere+N+Sem/Hum:finanse#ministeer N_ODD ;
 åssjalomme+N+Sem/Dummytag:åssjalomm NIEJTE ;
 
 åssjalommes+N+Err/Orth+Sem/Prod-cogn:åssjalomm NIEJTE ; ! LA i corp - Sub?
-åssjalommes+N+Sem/Prod-cogn:åssjalommes N_ODD_C ; 
-åssjalommes+N+Sem/Prod-cogn+Use/NG:åssja#lommes N_ODD_C ; 
+åssjalommes+N+Sem/Prod-cogn:åssja#lommes N_ODD_C ; 
 
 åssjele+N+Sem/Prod-cogn:åssjel N_ODD ;  
 
@@ -18886,6 +18882,8 @@ seekerevoete+N+Sem/State:seekere#voet NIEJTE ;
 
 ålkoelaante+N+Use/DNorm+Sem/Plc:ålkoelaant NIEJTE ;! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:utland
 ålkoelaante+N+Use/NotDNorm+Sem/Plc:åålkoelaant NIEJTE ; ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:utland
+ålkoelaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Plc:ålkoe#laant NIEJTE ;
+ålkoelaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Plc+Use/NG:ålkoe-laant NIEJTE ; !Skal fjernes
 
 ! Sp.mål til GG: disse variantene i Bergsland:åålmeg-, 
 ! åålmeg-almetji:åålmeg-almetji TODO ! https://satni.uit.no/termwiki/index.php?title=Juridihkka:massemord
