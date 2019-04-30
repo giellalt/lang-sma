@@ -114,7 +114,10 @@ Hydro-fabrihke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+CmpNP/First+OLang/NOB+Sem/Dummytag:H
 ILO-konferanse+N+OLang/NOB+Sem/Dummytag:ILO-konfer ANSE_LOAN ;
 ILO-konvensjovne+N+OLang/NOB+Sem/Dummytag:ILO-konven SJOVNE_LOAN ;
 KGB-agente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:KGB-ag ENTE_LOAN ;
-Komsa-kultuvre+N+CmpNP/First+OLang/NOB+Sem/Dummytag:Komsa-kultu UVRE_LOAN ;
+
+Komsa-kultuvre+N+CmpNP/First+OLang/NOB+Sem/Domain:Komsa-kultu UVRE_LOAN ;
+kveenekultuvre+N+Sem/Domain:kveene#kultu UVRE_LOAN ;
+
 LCD-skjeerme+N+OLang/NOB+Sem/Dummytag:LCD-skje ERME_LOAN ;
 MOT-organisasjovne+N+OLang/NOB+Sem/Org:MOT-organisa SJOVNE_LOAN ;
 MS-pasijente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:MS-pasi IJENTE_LOAN ;
@@ -1314,9 +1317,7 @@ haerrie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Ani-fish:haerr N_IE ;
 haevie+N+Sem/Dummytag:haev N_IE ;
 haevtie+N+Sem/Plc:haevt N_IE ; 
 hahkoe+N+Sem/Dummytag:hahk N_OE_UML ;
-
 hahtjoe+N+Sem/Build:hahtj N_OE_UML  ; ! hohtjese 
-
 hajna+N+Sem/Dummytag:hajn MAANA ;
 haksa+N+Sem/Dummytag:haks MAANA ;
 halhta+N+Sem/Dummytag:halht MAANA ;
@@ -1899,7 +1900,13 @@ læbnja+N+Sem/Dummytag:læbnj MAANA ;
 læhka+N+Sem/Dummytag:læhk MAANA ;
 
 læhkoe+N+Sem/State:læhk N_OE_UML ; 
-læhkoelåhkoe+N+Sem/Amount:læhkoelåhk N_OE_UML ; 
+læhkoelåhkoe+N+Sem/Amount:læhkoelåhk N_OE_UML ;
+læhkohtsvoete+N+Sem/State:læhkohts#voet NIEJTE ;
+læhkohtsvoetedajve+N+Sem/Plc:læhkohtsvoete#dajv NIEJTE ;
+læhkohtsvoetelåhkoe+N+Sem/Amount:læhkohtsvoetelåhk N_OE_UML ; 
+læhkohtsvoetereportaasje+N+Sem/Prod-vis:læhkohtsvoete#reportaasj NIEJTE ;
+
+!læhkoespïele+N+Sem/Dummytag:læhkoe#spïel NIEJTE ;
 
 læjja+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:læjj MAANA ;
 læjnoe+N+Sem/Dummytag:læjn N_OE_UML ;
@@ -4177,7 +4184,7 @@ agraarepolitihke+N+Err/Orth+Sem/Dummytag:agrar#polit IHKE_LOAN ;
 agraarepolitihke+N+Sem/Dummytag:agraare#polit IHKE_LOAN ;
 agrarpartije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:agrar#part IJE_LOAN ;
 agrarsektore+N+OLang/NOB+Sem/Dummytag:agrar#s EKTORE_LOAN ;
-agrikultuvre+N+OLang/NOB+Sem/Dummytag:agri#kultu UVRE_LOAN ;
+agrikultuvre+N+OLang/NOB+Sem/Domain:agri#kultu UVRE_LOAN ;
 agurke+N+Err/Orth+OLang/NOB+Sem/Dummytag:aagurk NIEJTE ;
 agurke+N+OLang/NOB+Sem/Dummytag:agurk NIEJTE ;
 ahkedhjïenge+N+Sem/Dummytag:ahkedh#jïeng NIEJTE ;
@@ -4240,7 +4247,7 @@ aktrïjse+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:aktrïjs NIEJTE ;
 aktööre+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:akt ÖÖRE_LOAN ; 
 akupunktuvre+N+OLang/NOB+Sem/Dummytag:akupunktu UVRE_LOAN ;
 akustihke+N+OLang/NOB+Sem/Dummytag:akust IHKE_LOAN ;
-akvakultuvre+N+OLang/NOB+Sem/Dummytag:akva#kultu UVRE_LOAN ;
+akvakultuvre+N+OLang/NOB+Sem/Domain:akva#kultu UVRE_LOAN ;
 akvarellteknihke+N+OLang/NOB+Sem/Dummytag:akvarell#tekn IHKE_LOAN ;
 alaarme+N+OLang/NOB+Sem/Dummytag:ala ARME_LOAN ;
 alarmsignaale+N+OLang/NOB+Sem/Dummytag:alarm#signa AALE_LOAN ;
@@ -4270,7 +4277,7 @@ alkelsbielie+N+Sem/Dummytag:alkelsbiel N_IE ;
 alkoeåålmehnoere+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:alkoe#åålmeh#noer NIEJTE ; ! noene only as adjektiv
 alkoholikerklinihke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:alkoholiker#klin IHKE_LOAN ;
 alkoholisme+N+OLang/NOB+Sem/Dummytag:alkohol ISME_LOAN ;
-alkoholkultuvre+N+OLang/NOB+Sem/Dummytag:alkohol#kultu UVRE_LOAN ;
+alkoholkultuvre+N+OLang/NOB+Sem/Domain:alkohol#kultu UVRE_LOAN ;
 alkoholprosente+N+OLang/NOB+Sem/Dummytag:alkohol#pros ENTE_LOAN ;
 alkoholstatistihke+N+OLang/NOB+Sem/Dummytag:alkohol#statist IHKE_LOAN ;
 alkoholtoleraanse+N+OLang/NOB+Sem/Dummytag:alkohol#tolera ANSE_LOAN ;
@@ -4357,7 +4364,7 @@ amijde+N+OLang/NOB+Sem/Dummytag:am IJDE_LOAN ;
 ammesbaakoe+N+Sem/Cat:ammes#baak N_OE_UML ; 
 ammesbarkije+N+Sem/Hum:ammes#barkij IJE_ODD ;
 ammesgïele+N+Sem/Lang:ammes#gïel NIEJTE ;
-ammesjaahkoeladtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:ammes#jaahkoeladtj NIEJTE ;
+ammesjaahkoeladtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:ammes#jaahkoeladtj NIEJTE ;
 ammesreereme+N+Sem/Dummytag:ammes#reerem N_ODD ;
 ammunisjovne+N+OLang/NOB+Sem/Dummytag:ammuni SJOVNE_LOAN ;
 amnestije+N+OLang/NOB+Sem/Dummytag:amnest IJE_LOAN ;
@@ -4386,7 +4393,7 @@ anekdote+N+OLang/NOB+Sem/Dummytag:anekdot NIEJTE ;
 anemije+N+OLang/NOB+Sem/Dummytag:anem IJE_LOAN ;
 anestesije+N+OLang/NOB+Sem/Dummytag:anestes IJE_LOAN ;
 angelsaksere+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:angelsakser N_ODD_LOAN ;
-anghkeladtje+N+Sem/Dummytag:anghkeladtj NIEJTE ;
+anghkeladtje+N+Sem/Hum:anghkeladtj NIEJTE ;
 anghkele+N+Sem/Dummytag:anghkel N_ODD ;
 anghkelimmie+N+Sem/Act:anghkelimm N_IE ; ! Høyde, men bare en liten antydningntil høyde i ellers flatt terreng
 anghkelnamme+N+Sem/Dummytag:anghkelnamm NIEJTE ; ! Høyde, men bare en liten antydningntil høyde i ellers flatt terreng
@@ -4482,7 +4489,7 @@ aalkoeåålmehpedagogihke+N+Sem/Dummytag:aalkoeåålmeh#pedagogihk NIEJTE ;
 
 apåstele+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth+OLang/NOB+Sem/Hum:aapåstel N_ODD ; !
 apåstele+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:apåstel N_ODD ; ! 
-aquakultuvre+N+OLang/NOB+Sem/Dummytag:aqua#kultu UVRE_LOAN ;
+aquakultuvre+N+OLang/NOB+Sem/Domain:aqua#kultu UVRE_LOAN ;
 araabere+N+OLang/NOB+Sem/Dummytag:araaber N_ODD ;
 araapere+N+OLang/NOB+Sem/Dummytag:araaper N_ODD ;
 !arabeere+N+CmpN/SgN+Sem/Dummytag+Cmp/SgNom+OLang/NOB:araber R ; ! Kva er ein arabeer/arabear?
@@ -4867,7 +4874,7 @@ bahtsehke+N+Sem/Dummytag:bahtseh DEAKEHKE ;
 baissespekulaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:baisse#spekula ANTE_LOAN ;
 bajjesimmie+N+Sem/Act:bajjesimm N_IE ;
 bajsjeme+N+Sem/Dummytag:bajsjem N_ODD ;
-bakteriekultuvre+N+OLang/NOB+Sem/Dummytag:bakterie#kultu UVRE_LOAN ;
+bakteriekultuvre+N+OLang/NOB+Sem/Domain:bakterie#kultu UVRE_LOAN ;
 bakterije+N+Sem/Dummytag:bakter IJE_LOAN ;
 bakteriologije+N+OLang/NOB+Sem/Dummytag:bakteriolog IJE_LOAN ;
 bakteriolååge+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:bakteriol LÅÅGE_LOAN ;
@@ -5037,7 +5044,7 @@ barytovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:baryt OVNE_LOAN ;
 baseanhydrijde+N+OLang/NOB+Sem/Dummytag:baseanhydr IJDE_LOAN ;
 basiliske+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:basilisk NIEJTE ;
 basille+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:basill NIEJTE ;
-basillkultuvre+N+OLang/NOB+Sem/Dummytag:basill#kultu UVRE_LOAN ;
+basillkultuvre+N+OLang/NOB+Sem/Domain:basill#kultu UVRE_LOAN ;
 basilïske+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:basilïsk NIEJTE ;
 basisdaajroe+N+Err/Orth+Sem/Dummytag:baasise#daajr N_OE_UML ;
 basisdaajroe+N+Sem/Dummytag:basis#daajr N_OE_UML ;
@@ -5980,7 +5987,7 @@ bïevneserevolusjovne+N+Sem/Dummytag:bïevnese#revolusjovn NIEJTE ;
 bïevnesesïebredahke+N+Sem/Dummytag:bïevnesesïebredahk NIEJTE ;
 bïevnesetïjje+N+Sem/Dummytag:bïevnesetïjj NIEJTE ;
 bïevnesjoekedimmie+N+Sem/Act:bïevnesjoekedimm N_IE ;
-bïevnjeladtje+N+Sem/Dummytag:bïevnjeladtj NIEJTE ;
+bïevnjeladtje+N+Sem/Hum:bïevnjeladtj NIEJTE ;
 bïevnjele+N+Sem/Dummytag:bïevnjel N_ODD ;
 bïevre+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:bïevr NIEJTE ;
 bïevstere+N+Sem/Dummytag:bïevster N_ODD ; !LA Saaran gærja
@@ -6042,7 +6049,7 @@ böötegh+N+Sem/Dummytag:bööteg ÅABPETJH ;
 cannabise+N+Sem/Dummytag:cannabis NIEJTE ;
 !canyon+N+Sem/Dummytag+Cmp/SgNom:can^yon R ; ! -- To prop!!!
 catwalke+N+Sem/Dummytag:catwalk NIEJTE ;
-cellekultuvre+N+OLang/NOB+Sem/Dummytag:celle#kultu UVRE_LOAN ;
+cellekultuvre+N+OLang/NOB+Sem/Domain:celle#kultu UVRE_LOAN ;
 cellulosa+N+Sem/Dummytag:cellulos MAANA ;
 cellulosefabrihke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:cellulose#fabr IHKE_LOAN ;
 celluloseprodusente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:cellulose#produs ENTE_LOAN ;
@@ -6738,7 +6745,7 @@ dåaraskïhpe+N+Sem/Dummytag:dåara#skïhp NIEJTE ;
 dåarehtje+N+Sem/Dummytag:dåarehtje NOM-CMP ;
 dåarjege+N+Sem/Dummytag:dåarjeg N_ODD ;
 dåarjegekontovre+N+Sem/Dummytag:dåarjege#kontovr NIEJTE ;
-dåarjeladtje+N+Sem/Dummytag:dåarjeladtj NIEJTE ;
+dåarjeladtje+N+Sem/Hum:dåarjeladtj NIEJTE ;
 dåarjoedåastoje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:dåarjoe#dåastoj N_ODD ;
 dåarjoeöörnege+N+Sem/Rule:dåarjoe#öörneg NIEJTE ; ! 
 dåarjoje+N+Sem/Dummytag:dåarjoj NIEJTE ;
@@ -6844,12 +6851,12 @@ eajmeske+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:eajmask N_ODD ;
 eajnoeh+N+Sem/Dummytag:eajn GAAROEH ;
 eakere+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:eakar N_ODD ;
 ealamadtje+N+Sem/Dummytag:ealamadtj NIEJTE ;
-ealoeladtje+N+Sem/Dummytag:ealoeladtj NIEJTE ;
+ealoeladtje+N+Sem/Hum:ealoeladtj NIEJTE ;
 earene+N+Sem/Dummytag:earan N_ODD ;
 earhtene+N+Sem/Dummytag:earhten N_ODD ;
 earhtenejoptse+N+Err/Orth+Sem/Dummytag:earhtenh#jopts NIEJTE ;
 earhtenejoptse+N+Sem/Dummytag:earhtene#jopts NIEJTE ;
-earoeladtje+N+Sem/Dummytag:earoeladtj NIEJTE ;
+earoeladtje+N+Sem/Hum:earoeladtj NIEJTE ;
 easaldahke+N+Sem/Dummytag:easaldahk NIEJTE ;
 easkoegierkie+N+Sem/Dummytag:easkoegierk N_IE ;
 
@@ -7104,7 +7111,7 @@ elevaatore+N+OLang/NOB+Sem/Dummytag:eleva AATORE_LOAN ;
 !elfaamoevierhkie+N+Sem/Dummytag:elfaamoevierhk N_IE ; ! «Ekologiija ja biras:elfápmodoaimmahat»
 eliminaatore+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:elimina AATORE_LOAN ;
 eliminasjovne+N+OLang/NOB+Sem/Dummytag:elimina SJOVNE_LOAN ;
-elitekultuvre+N+OLang/NOB+Sem/Dummytag:elite#kultu UVRE_LOAN ;
+elitekultuvre+N+OLang/NOB+Sem/Domain:elite#kultu UVRE_LOAN ;
 elliesraajese+N+Sem/Cat:ellies#raajes N_ODD ; ! 
 elliestaale+N+Sem/Dummytag:ellies#taal NIEJTE ;
 elliestijje+N+Sem/Dummytag:elliestijj NIEJTE ;
@@ -7235,7 +7242,7 @@ etere+N+Sem/Dummytag:eter N_ODD ;
 eternarkovse+N+Sem/Dummytag+Cmp/SgNom+Dial/-NOR:eter#narkos R ;
 eternarkovse+N+OLang/NOB+Sem/Dummytag:eter#narko OVSE_LOAN ;
 etihke+N+OLang/NOB+Sem/Domain:et IHKE_LOAN ; !
-etiopialadtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:etiopialadtj NIEJTE ;
+etiopialadtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:etiopialadtj NIEJTE ;
 etnihke+N+OLang/NOB+Sem/Dummytag:etn IHKE_LOAN ;
 etnije+N+OLang/NOB+Sem/Dummytag:etnij IJE_ODD ;
 etnisisme+N+OLang/NOB+Sem/Dummytag:etnis ISME_LOAN ;
@@ -7532,7 +7539,7 @@ forume+N+Sem/Plc-abstr:forum NIEJTE ;
 fosfaate+N+OLang/NOB+Sem/Dummytag:fosfa AATE_LOAN ;
 fosfore+N+OLang/NOB+Sem/Dummytag:fosf ORE_LOAN ;
 fosforsåara+N+Sem/Dummytag:fosfor#såar MAANA ;
-fosnakultuvre+N+OLang/NOB+Sem/Dummytag:fosna#kultu UVRE_LOAN ;
+fosnakultuvre+N+OLang/NOB+Sem/Domain:fosna#kultu UVRE_LOAN ;
 vueliekultuvre+N+OLang/NOB+Sem/Domain:vuelie#kultu UVRE_LOAN ;
 turiste+N+OLang/NOB+Sem/Hum:turist ISTE_LOAN ;
 fosse+N+Sem/Dummytag:foss NIEJTE ;
@@ -7666,8 +7673,8 @@ gaajenes+N+Sem/Dummytag:gaajen NES ;
 gaajhkesieeke+N+Sem/Dummytag:gaajhkesieek NIEJTE ;
 gaajhtse+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Ani:gaajhts NIEJTE ; ! 
 gaajmere+N+Sem/Dummytag:gaajmer N_ODD ;
-gaajnaladtje+N+Sem/Dummytag:gaajnaladtj NIEJTE ;
-gaajnoeladtje+N+Sem/Dummytag:gaajnoeladtj NIEJTE ;
+gaajnaladtje+N+Sem/Hum:gaajnaladtj NIEJTE ;
+gaajnoeladtje+N+Sem/Hum:gaajnoeladtj NIEJTE ;
 gaajsege+N+Sem/Plant:gaajs GAAJSEGE ; ! 
 gaajvele+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:gaajvel N_ODD ;
 gaakgije+N+Sem/Hum:gaakg IJE_LOAN ;
@@ -7833,7 +7840,7 @@ galakse+N+Sem/Dummytag:galaks NIEJTE ;
 galanterije+N+Sem/Dummytag:galanter IJE_LOAN ;
 galhkove+N+Err/Orth+Sem/Dummytag:galhkuv N_ODD ;
 galhkove+N+Sem/Dummytag:galhkov N_ODD ; ! -o- eller -oe- ?
-galilealadtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:galilealadtj NIEJTE ;
+galilealadtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:galilealadtj NIEJTE ;
 galkasaske+N+Sem/Dummytag:galkas#ask NIEJTE ;
 galkehtasse+N+Sem/Dummytag:galkehtass NIEJTE ;
 galkehtje+N+Sem/Dummytag:galkehtj NIEJTE ;
@@ -8804,7 +8811,7 @@ hinduisme+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Err/Orth+Sem/Dummytag:hinduvism
 hinduisme+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Err/Orth+Sem/Dummytag:hinduvïsm NIEJTE ;
 hinduisme+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:hindu ISME_LOAN ;
 hindustanije+N+OLang/NOB+Sem/Dummytag:hindustan IJE_LOAN ;
-hippiekultuvre+N+OLang/NOB+Sem/Dummytag:hippie#kultu UVRE_LOAN ;
+hippiekultuvre+N+OLang/NOB+Sem/Domain:hippie#kultu UVRE_LOAN ;
 hippolååge+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:hippol LÅÅGE_LOAN ;
 hirseïentje+N+Sem/Dummytag:hirseïentj NIEJTE ;
 histogramme+N+OLang/NOB+Sem/Dummytag:histo^gram GRAMME_LOAN ;
@@ -8998,7 +9005,7 @@ ietnieskïhpe+N+Sem/Dummytag:ietnie#skïhp NIEJTE ;
 ignoraanse+N+OLang/NOB+Sem/Dummytag:ignora ANSE_LOAN ;
 ignoraante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:ignora ANTE_LOAN ;
 ihkuve+N+Sem/State:ihkuv N_ODD ; ! eller ÅERUVE - altså sp.mål er om det skal ha vokalutvidelse i andre stavelse (som åerievisnie) eller ikke, som jeeluve. 
-ijjeladtje+N+Sem/Dummytag:ijjeladtj NIEJTE ;
+ijjeladtje+N+Sem/Hum:ijjeladtj NIEJTE ;
 ijtjenïerehke+N+Sem/Dummytag:ijtje#nïerehk N_ODD ;
 ijtjeraarehke+N+Sem/Dummytag:ijtje#raarehk N_ODD ;
 ijtjeråårehke+N+Sem/Dummytag:ijtje#råårehk N_ODD ;
@@ -9082,7 +9089,7 @@ industrijesïebredahke+N+Sem/Org:industrijesïebredahk NIEJTE ;
 industrikonsesjovne+N+Sem/Dummytag+Cmp/SgNom+Dial/-SW:indu^stri#konsesjons R ;
 industrikonsesjovne+N+OLang/NOB+Sem/Dummytag:indu^stri#konsesjovn NIEJTE ;
 industrikonsulente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:indu^stri#konsul ENTE_LOAN ;
-industrikultuvre+N+OLang/NOB+Sem/Dummytag:indu^stri#kultu UVRE_LOAN ;
+industrikultuvre+N+OLang/NOB+Sem/Domain:indu^stri#kultu UVRE_LOAN ;
 
 inessijve+N+OLang/NOB+Sem/State:in^ess IJVE ; 
 infaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:infa ANTE_LOAN ;
@@ -9124,7 +9131,7 @@ injurijaante+N+OLang/NOB+Sem/Dummytag:injuri IJANTE_LOAN ;
 injuvrije+N+Err/Orth+OLang/NOB+Sem/Dummytag:injurij IJE_ODD ;
 injuvrije+N+OLang/NOB+Sem/Dummytag:injuvrij IJE_ODD ;
 inka+N+Sem/Dummytag:ink MAANA ;
-inkakultuvre+N+OLang/NOB+Sem/Dummytag:inka#kultu UVRE_LOAN ;
+inkakultuvre+N+OLang/NOB+Sem/Domain:inka#kultu UVRE_LOAN ;
 inkassaatore+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:inkassa AATORE_LOAN ;
 inkassasjovne+N+OLang/NOB+Sem/Dummytag:inkassa SJOVNE_LOAN ;
 inklinasjovne+N+OLang/NOB+Sem/Dummytag:in^klina SJOVNE_LOAN ;
@@ -9181,7 +9188,7 @@ interessente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:interess ENTE_LOAN ;
 interferensprobleeme+N+OLang/NOB+Sem/Dummytag:interferens#pro^ble EEME_LOAN ;
 interijööre+N+OLang/NOB+Sem/Dummytag:interi JÖÖRE ;
 interjeksjovne+N+OLang/NOB+Sem/Dummytag:interjek SJOVNE_LOAN ;
-interkultuvre+N+OLang/NOB+Sem/Dummytag:interkultu UVRE_LOAN ;
+interkultuvre+N+OLang/NOB+Sem/Domain:interkultu UVRE_LOAN ;
 internaate+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Org:interna AATE_LOAN ; !
 internaateskuvle+N+Sem/Dummytag:internaate#skuvl NIEJTE ;
 internatskuvle+N+OLang/NOB+Sem/Edu_Org:internat#skuvl NIEJTE ; 
@@ -9270,7 +9277,7 @@ jaamedahke+N+Sem/Dummytag:jaame#dahk NIEJTE ;
 jaanehke+N+Sem/Dummytag:jaanehk N_ODD ;
 jaarke+N+Sem/Dummytag:jaark NIEJTE ;
 jaarkesadtje+N+Sem/Dummytag:jaarkesadtj NIEJTE ;
-jaavoeladtje+N+Sem/Dummytag:jaavoeladtj NIEJTE ;
+jaavoeladtje+N+Sem/Hum:jaavoeladtj NIEJTE ;
 jaavretje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:jaavratj N_ODD ;
 jaavvoeh+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:jaavv GAAROEH ;
 jaavvotje+N+Sem/Dummytag:jaavvotj N_ODD ;
@@ -9322,7 +9329,7 @@ januaare+N+OLang/NOB+Sem/Dummytag:janua AARE_LOAN ;
 japaane+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:japa AANE_LOAN ;
 japaanere+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:japaanar N_ODD ;
 japaanere+N+Sem/Hum+Cmp/SgNom+Dial/-SW:japaner R ;
-jappekultuvre+N+OLang/NOB+Sem/Dummytag:jappe#kultu UVRE_LOAN ;
+jappekultuvre+N+OLang/NOB+Sem/Domain:jappe#kultu UVRE_LOAN ;
 jarkoestimmie+N+Sem/Prod-ling:jarkoestimm N_IE ; 
 jarkoestimmiebarkoe+N+Sem/Dummytag:jarkoestimmie#bark N_OE_UML ;
 jarkoestæjja+N+Sem/Hum:jarkoestæjj MAANA ;
@@ -9347,10 +9354,10 @@ jealamadtjeöörnege+N+Sem/Dummytag:jealamadtje#öörneg N_ODD ;
 jealehburrie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:jealeh# BURRIE ; !
 jeana+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:jean MAANA ;
 jeana-baara+N+Sem/Dummytag:jeana-baar MAANA ;
-jeanakultuvre+N+Sem/Dummytag:jeana#kultu UVRE_LOAN ;
+jeanakultuvre+N+Sem/Domain:jeana#kultu UVRE_LOAN ;
 jeanavalkese+N+Sem/Dummytag:jeana#valkes N_ODD ;
 jeanehke+N+Sem/Dummytag:jeanehk N_ODD ;
-jeanoekultuvre+N+Sem/Dummytag:jeanoe#kultu UVRE_LOAN ;
+jeanoekultuvre+N+Sem/Domain:jeanoe#kultu UVRE_LOAN ;
 jeanoestravka+N+Sem/Dummytag:jeanoe#stravk MAANA ;
 jeanoevalkese+N+Sem/Dummytag:jeanoe#valkes N_ODD ;
 jeansgigaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:jeans#giga ANTE_LOAN ;
@@ -9362,7 +9369,7 @@ jeaverdh+N+Sem/Dummytag:jeaverdh NOM-CMP "spekalvskinn" ;
 jeeluve+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Ani:jeeluv N_ODD ;
 
 jeeluveburrie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:jeeluve# BURRIE ; !
-jeeluveburriekultuvre+N+Sem/Dummytag:jeeluveburrie#kultu UVRE_LOAN ;
+jeeluveburriekultuvre+N+Sem/Domain:jeeluveburrie#kultu UVRE_LOAN ;
 jeemegassje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:jeemegassj NIEJTE ;
 jeemege+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth+Sem/Dummytag:jaameg N_ODD ; !Saara gærja
 jeemege+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:jeemeg N_ODD ;
@@ -9669,6 +9676,7 @@ jïjneldahke+N+Sem/Dummytag:jïjneldahk NIEJTE ;
 jïjse+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Ani:jïjs NIEJTE ; 
 jïjseme+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:jïjsem N_ODD ;
 jïjsengoelke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:jïjsen#goelk NIEJTE ;
+aalkoeplaane+N+Sem/Dummytag:aalkoeplaan NIEJTE ;
 jïjtjebearkadæjja+N+Sem/Hum:jïjtjebearkadæjj MAANA ;
 jïjtjedarjeme+N+Sem/Dummytag:jïjtje#darjem N_ODD ;
 jïjtjedomtese+N+Sem/Dummytag:jïjtje#domtes N_ODD ;
@@ -9724,7 +9732,7 @@ kaderpartije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:kader#part IJE_
 kadettuniforme+N+OLang/NOB+Sem/Dummytag:kadett#uniform ISTE_LOAN ;
 kaffa+N+OLang/NOB+Sem/Dummytag:kaff MAANA ;
 kaffeijne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:kaffe^ IJNE_LOAN ;
-kafékultuvre+N+OLang/NOB+Sem/Dummytag:kafé#kultu UVRE_LOAN ;
+kafékultuvre+N+OLang/NOB+Sem/Domain:kafé#kultu UVRE_LOAN ;
 kajahke+N+Use/DNorm+v1+Sem/Dummytag:kajahk NIEJTE ;
 !kajahke+N+Use/DNorm+v1+Cmp/SgNom+OLang/NOB+Sem/Dummytag:kajak R ;
 kajahke+N+Use/DNorm+v2+Sem/Dummytag:kajak NIEJTE ; ! Burde vel egentlig være "kajahke", fölge samme lånemönster som politihke. korriger meg gjerne.
@@ -10721,7 +10729,8 @@ kvantovre+N+OLang/NOB+Sem/Dummytag:kvanto UVRE_LOAN ;
 kvartaale+N+OLang/NOB+Sem/Dummytag:kvarta AALE_LOAN ;
 kvartærsysteeme+N+OLang/NOB+Sem/Semcon:kvartær#syste EEME_LOAN ;
 kveene+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:kveen NIEJTE ; !samediggediedahus 2012
-kveeneladtje+N+Sem/Dummytag:kveeneladtj NIEJTE ;
+
+kveeneladtje+N+Sem/Hum:kveeneladtj NIEJTE ;
 kverulaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:kverula ANTE_LOAN ;
 kvestore+N+OLang/NOB+Sem/Dummytag:kvest ORE_LOAN ;
 kvestuvre+N+OLang/NOB+Sem/Dummytag:kvestu UVRE_LOAN ;
@@ -11349,9 +11358,9 @@ maahtaldahke+N+Sem/Edu:maahtaldahk NIEJTE ; !
 maahtaldahkeulmie+N+Sem/Semcon:maahtaldahke#ulm N_IE ; ! 
 maahtoebigkeme+N+Sem/Dummytag:maahtoe#bigkem N_ODD ;
 maahtoedepartemente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Org:maahtoe#departem ENTE_LOAN ;
-maahtoeladtje+N+Sem/Dummytag:maahtoeladtj NIEJTE ;
-maahtoeladtje+N+Use/DNorm+v1+Sem/Dummytag:maahtoe#ladtj NIEJTE ;
-maahtoeladtje+N+Use/NotDNorm+v2+Sem/Dummytag:maahtoeladj NIEJTE ;
+maahtoeladtje+N+Sem/Hum:maahtoeladtj NIEJTE ;
+maahtoeladtje+N+Use/DNorm+v1+Sem/Hum:maahtoe#ladtj NIEJTE ;
+maahtoeladtje+N+Use/NotDNorm+v2+Sem/Hum:maahtoeladj NIEJTE ;
 maahtoelutnjeme+N+Sem/Dummytag:maahtoe#lutnjem N_ODD ;
 maahtoepryövenasse+N+Sem/Act:maahtoe#pryövenass NIEJTE ; ! 
 maahtoetjiehpie+N+Sem/Dummytag:maahtoe#tjiehp N_IE ;
@@ -11574,7 +11583,7 @@ mavhledh+N+Sem/Dummytag:mavhledh NOM-CMP "dypsnø, meget nysnø så det blir dyp
 mavve+N+Sem/Dummytag:mavv NIEJTE ;
 mayakultuvre+N+OLang/NOB+Sem/Dummytag:ma^ya#kultu UVRE_LOAN ;
 meadtehke+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:meadtahk N_ODD ;
-meadtoeladtje+N+Sem/Dummytag:meadtoeladtj NIEJTE ;
+meadtoeladtje+N+Sem/Hum:meadtoeladtj NIEJTE ;
 meadtoeladtjeaaltere+N+Sem/Dummytag:meadtoeladtje#aalter N_ODD ;
 meadtoeladtjedaahkeme+N+Sem/Dummytag:meadtoeladtje#daahkem N_ODD ;
 meadtoelassje+N+Sem/Dummytag:meadtoelassj NIEJTE ;
@@ -11592,7 +11601,7 @@ mearoedaltese+N+Sem/Dummytag:mearoedaltes N_ODD ;
 mearoegeehtije+N+Sem/Dummytag:mearoegeeht IJE_LOAN ;
 mearoegïerege+N+Sem/Dummytag:mearoegïereg N_ODD ;
 mearoegööleme+N+Sem/Dummytag:mearoe#göölem N_ODD ;
-mearoeladtje+N+Sem/Dummytag:mearoeladtj NIEJTE ;
+mearoeladtje+N+Sem/Hum:mearoeladtj NIEJTE ;
 mearoemaennie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:mearoe#maenn N_IE ;
 mearoemijle+N+Sem/Dummytag:mearoe#mijl NIEJTE ;
 mearoendaltese+N+Sem/Dummytag:mearoendaltes N_ODD ;
@@ -14523,7 +14532,7 @@ seabradahkenhaesteme+N+Err/Orth+Sem/Dummytag:siebriedahken#haestem N_ODD ;
 seabradahketsagkese+N+Sem/Dummytag:seabradahke#tsagkes N_ODD ;
 seabradahketsagkese+N+Err/Orth+Sem/Dummytag:siebriedahke#tsagkes N_ODD ;
 seadta+N+Sem/Dummytag:seadt MAANA ;
-seafoeladtje+N+Sem/Dummytag:seafoeladtj NIEJTE ;
+seafoeladtje+N+Sem/Hum:seafoeladtj NIEJTE ;
 seahkoemåara+N+Sem/Dummytag:seahkoe#måar MAANA ;
 seahkoetjavkese+N+Sem/Dummytag:seahkoe#tjavkes N_ODD ;
 seahkoevoeje+N+Sem/Dummytag:seahkoe#voej NIEJTE ;
@@ -15875,7 +15884,7 @@ stueriedehtije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:stueriedehtiej IJE_ODD 
 stuhtje+N+Sem/Part:stuhtj NIEJTE ;
 stuhtjetje+N+Sem/Dummytag:stuhtjietj N_ODD ;
 stuhtjetje+N+Err/Orth+Sem/Dummytag:stuhtjiehtj N_ODD ;
-stujmieladtje+N+Sem/Dummytag:stujmieladtj NIEJTE ;
+stujmieladtje+N+Sem/Hum:stujmieladtj NIEJTE ;
 stukkatuvre+N+OLang/NOB+Sem/Dummytag:stukkatu UVRE_LOAN ;
 stulhtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:stulhtj NIEJTE ;
 sturreme+N+Sem/Dummytag:sturrem N_ODD ;
@@ -16190,7 +16199,7 @@ såjhtoedepartemente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Org:såjhtoe#departem ENTE
 såjte+N+Sem/Dummytag:såjt NIEJTE ;
 såvhtere+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:såvhtar N_ODD ;
 såvledh+N+Sem/Dummytag:såvledh NOM-CMP "solrøyk, varmedis" ;
-såvmahtimmie-åajvaladtje+N+Sem/Dummytag:såvmahtimmie-åajvaladtj NIEJTE ;
+såvmahtimmie-åajvaladtje+N+Sem/Hum:såvmahtimmie-åajvaladtj NIEJTE ;
 åajvaladtje+N+Sem/Hum:åajvaladtj NIEJTE ;
 såvmahtæjja+N+Sem/Hum:såvmahtæjj MAANA ;
 såvroegihpekraavhtse+N+Sem/Dummytag:såvroe#gihpe#kraavhts NIEJTE ;
@@ -17207,7 +17216,7 @@ tyfovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:tyf OVNE_LOAN ;
 tyjje+N+Sem/Mat:tyjj NIEJTE ; 
 tyjke+N+Sem/Dummytag:tyjk NIEJTE ;
 tyjpe+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:tyjp NIEJTE ;
-tyjpeladtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:tyjpeladtj NIEJTE ;
+tyjpeladtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:tyjpeladtj NIEJTE ;
 typograafe+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:typo^gra GRAAFE_LOAN ;
 typografije+N+OLang/NOB+Sem/Dummytag:typo^graf IJE_LOAN ;
 typologije+N+OLang/NOB+Sem/Dummytag:typolog IJE_LOAN ;
@@ -17249,7 +17258,7 @@ tïjme+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:tïjm NIEJTE ;
 tïmperdahke+N+Sem/Dummytag:tïmperdahk NIEJTE ;
 tïmpere+N+Sem/Dummytag:tïmper N_ODD ;
 ufolååge+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:ufol LÅÅGE_LOAN ;
-ugraladtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:ugraladtj NIEJTE ;
+ugraladtje+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum:ugraladtj NIEJTE ;
 ugre+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:ugr NIEJTE ;
 
 uhtjiesgïele+N+Sem/Lang:uhtjies#gïel NIEJTE ; ! barnespråk, snakke barnslig språk
@@ -17659,7 +17668,7 @@ vijkingerïjhke+N+Sem/Plc:vijkinge#rïjhk NIEJTE ;
 vijkingeskïhpe+N+Sem/Veh:vijkinge#skïhp NIEJTE ;
 vijkingetïjje+N+Sem/Time:vijkinge#tïjj NIEJTE ;
 vijne+N+OLang/NOB+Sem/Drink:v IJNE_LOAN ; 
-vijne-maahtoeladtje+N+Sem/Dummytag:vijne-maahtoeladtj NIEJTE ;
+vijne-maahtoeladtje+N+Sem/Hum:vijne-maahtoeladtj NIEJTE ;
 vijnebohtele+N+Sem/Dummytag:vijne#bohtel N_ODD ;
 vijnebovre+N+Sem/Dummytag:vijne#bovr NIEJTE ;
 vijnedarjoje+N+CmpN/SgN+CmpN/SgG+Sem/Hum:vijne#darjoej N_ODD ;!Vinprodusent
@@ -17785,7 +17794,7 @@ voessedh+N+Sem/Ctain-clth:voessedh NOM-CMP "pung (til penger)" ;
 voessetje+N+Sem/Ctain-clth_Veh:voessetj N_ODD ; 
 voessjememierie+N+Sem/Dummytag:voessjeme#mier N_IE ;
 !voestes åejvie+N+Sem/Dummytag:voestes åejv N_IE ; ! «Collection:Dååhkesjahteme_Sametinget_samisk_norsk» «Stáda almmolaš hálddašeapmi:leder første»
-voestesaejkienmeadtoeladtje+N+Sem/Dummytag:voestesaejkien#meadtoeladtj NIEJTE ;
+voestesaejkienmeadtoeladtje+N+Sem/Hum:voestesaejkien#meadtoeladtj NIEJTE ;
 voestesgietjie+N+Sem/Dummytag:voestes#gietj N_IE ;
 voestesgïele+N+Sem/Lang:voestes#gïel NIEJTE ;
 voesteskonsulente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:voestes#konsul ENTE_LOAN ;
@@ -17833,7 +17842,7 @@ vuasta+N+Sem/Food:vuast MAANA "ost" ;
 
 vuastadahke+N+Sem/Dummytag:vuastadahk NIEJTE ;
 vuastagaahkoe+N+Sem/Food:vuasta#gaahk N_OE_UML ;
-vuastaladtje+N+Sem/Dummytag:vuastaladtj NIEJTE ;
+vuastaladtje+N+Sem/Hum:vuastaladtj NIEJTE ;
 
 vuastalimmesdåehkie+N+Sem/Group_Hum:vuastalimmesdåehk N_IE ;
 
@@ -17857,7 +17866,7 @@ vuejkenes+N+Sem/Dummytag:vuejken NES ;
 
 vuejkienasse+N+Sem/Dummytag:vuejkienass NIEJTE ;
 vuejneme+N+Sem/Act:vuejniem N_ODD ;
-vuekieladtje+N+Sem/Dummytag:vuekieladtj NIEJTE ;
+!   vuekieladtje+N+Sem/Dummytag:vuekieladtj NIEJTE ;  ! Burde bli omlyd- vuakaladtje jfr. vuestie-vuastaladtje
 vuekielïhtse+N+Sem/Dummytag:vuekie#lïhts NIEJTE ;
 vuelehksskåaveh+N+Sem/Dummytag:vuelehks#skåav NIEJTEH ;
 vuelemebielie+N+Sem/Body:vueleme#biel N_IE ;
@@ -17875,6 +17884,7 @@ vuemieseehteme+N+Sem/Dummytag:vuemie#seehtem N_ODD ;
 
 vuemiesoemeladtje+N+Sem/Hum:vuemie#soemeladtj NIEJTE ;
 vuemiesoemeladtje+N+Sem/Hum+Err/Orth:vuemie#såevmieladtj NIEJTE ;
+nöörjensoemeladtje+N+Sem/Hum:nöörjen#soemeladtj NIEJTE ;
 
 vuenjele+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Ani:vuenjiel N_ODD ;
 
