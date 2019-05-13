@@ -322,12 +322,12 @@ a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Mor
 
 
 
-"Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i V" 
+"Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V" 
 !! __@RULENAME@__  
-  e:i <=> Letter - [o|i]   _ X4: j i [d|b] i e (n) ; ! Du2, Pl1, Pl2
-          Letter - [o|i]   _ X3: j æ g a n ; ! Du3
-        \i : _ %>: %^COMESS: ; ! e --> i veksling i Com og Ess
-        \i : _ %>: %^PLGENPLCOM: ; ! e --> i i Pl+Gen og i Pl+Com
+  e:i <=> Letter - [o|i] ( %>: ) _ X4: j i [d|b] i e (n) ; ! Du2, Pl1, Pl2
+          Letter - [o|i] ( %>: ) _ X3: j æ g a n         ; ! Du3
+            \i : _ %>: %^COMESS:     ; ! e --> i veksling i Com og Ess
+            \i : _ %>: %^PLGENPLCOM: ; ! e --> i i Pl+Gen og i Pl+Com
 
 
 ! € = positive-pairs-out
@@ -338,7 +338,12 @@ a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Mor
 !!$ vååjn>eX4jibie
 !!$ vååjn>e0jibie
 
-  
+!!€ vååjn>eX3jægan
+!!€ vååjn>i0jægan
+
+!!$ vååjn>eX3jægan
+!!$ vååjn>e0jægan
+
 !!€ juht»ieje%>%^NOMAGieDISIMPm
 !!€ juht»i0je%>0m
 
