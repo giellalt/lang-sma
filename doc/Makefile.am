@@ -21,9 +21,11 @@ JSP_PAGES=root-morphology.jspwiki \
 		  verbs-affixes.jspwiki \
 		  disambiguator-syntax.jspwiki \
 		  sma-phon-phonology.jspwiki
+
+#         acronyms-stems.jspwiki           \
+#         acronyms-affixes.jspwiki           \
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
-# acronyms-stems.jspwiki           \
 # adpositions-stems.jspwiki        \
 # adverbs-stems.jspwiki            \
 # conjunctions-stems.jspwiki       \
@@ -36,7 +38,6 @@ JSP_PAGES=root-morphology.jspwiki \
 # punctuation-stems.jspwiki        \
 # subjunctions-stems.jspwiki       \
 # verbs-stems.jspwiki              \
-# adjectives-oahpa-affixes.jspwiki \
 # propernouns-affixes.jspwiki
 
 ALLINONE_JSP_PAGE=$(srcdir)/$(GTLANG).jspwiki
