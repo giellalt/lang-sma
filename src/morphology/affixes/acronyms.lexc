@@ -1,0 +1,51 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+LEXICON ACRO              ! Here we add the POS tag
++N+ACR: acroconnector ;
+
+LEXICON acroconnector     ! Here comes a set of possible symbols to ...
+               acronull ; ! SgNom only in sma
+         :%>%: acrosuff ;
+ +Err/Orth:%>%- acrosuff ; 
+ +Err/Orth:%>   acrosuff ; ! ... put between the abbreviation and its suffix
+ +Err/Orth:%>'  acrosuff ; ! No POS tag here in order to avoid the POS
+ +Err/Orth:%>%´ acrosuff ; ! tag for non-ACRO entries using the acroconnector
+ +Err/Orth:%>%` acrosuff ; ! inflection lexicon. (cf. the punct-sme-lex.txt file)
+               RHyph    ; ! Acros compound with a hyphen
+ +Err/Orth:     R ;        ! Without hyphen, not normative:  NRK23
+
+LEXICON acronull
++Sg+Nom: # ;
+
+LEXICON acrosuff
++Sg+Gen+Err/Orth:en   # ;
++Sg+Acc+Err/Orth:em   # ;
++Sg+Ill+Err/Orth:asse # ;
+
++Sg+Gen:n       # ;
++Sg+Acc:m       # ;
++Sg+Ill:se      # ;
++Sg+Ine:sne     # ;   ! NRK:sne
++Sg+Ine+Err/Orth:esne     # ;   ! NRK:esne
++Sg+Ela:ste     # ;   ! NRK:ste
++Sg+Com:ine     # ;
++Pl+Nom:h       # ;
++Pl+Gen:j       # ;
++Pl+Acc:ide     # ;
++Pl+Ill:ide     # ;
++Pl+Ine:ine     # ;
++Pl+Ela:jste    # ;
++Pl+Com:jgujmie # ;
++Ess:ine        # ; ! NBR:ine
