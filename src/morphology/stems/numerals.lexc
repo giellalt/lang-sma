@@ -400,324 +400,6 @@ LEXICON LUHKIEF
 
 
 
-! Arabic numerals
-! ---------------
-
-
-LEXICON NUM-PREFIXES
-§+Use/Circ:§ ARABIC ;       ! §24
-§§+Use/Circ:§§ ARABIC ;     ! §§24
-§% +Use/Circ:§%  ARABIC ;   ! § 24
-§§% +Use/Circ:§§%  ARABIC ; ! §§ 24
-%-+Use/Circ:%- ARABIC ;     ! -24 U+002D / regular hyphen
-%‒+Use/Circ:%‒ ARABIC ;     ! -24 U+2012 / figure dash
-%–+Use/Circ:%– ARABIC ;     ! -24 U+2013 / en dash
-%—+Use/Circ:%— ARABIC ;     ! -24 U+2014 / em dash
-%―+Use/Circ:%― ARABIC ;     ! -24 U02015 / horizontal bar
-%++Use/Circ:%+ ARABIC ;     ! <plus>24
-%-% +Use/Circ:%-%  ARABIC ; ! - 24
-%‒% +Use/Circ:%‒%  ARABIC ; ! - 24 U+2012
-%–% +Use/Circ:%–%  ARABIC ; ! - 24 U+2013
-%—% +Use/Circ:%—%  ARABIC ; ! - 24 U+2014
-%―% +Use/Circ:%―%  ARABIC ; ! - 24 U+2015
-%+% +Use/Circ:%+%  ARABIC ; ! <plus> 24
-%*+Use/Circ:%* ARABIC ;     ! *24
-%$+Use/Circ:%$ ARABIC ;     ! $24
-%€+Use/Circ:%€ ARABIC ;     ! €24
-%<+Use/Circ:%[%<%] ARABIC ; ! <24
-%>+Use/Circ:%[%>%] ARABIC ; ! >24
-s%.+Use/Circ:s%. ARABIC ;   ! s.24
-
-LEXICON ARABICS
- +Use/Circ: ARABIC      ; ! for the arabic numerals
-            ARABICDATE  ; ! for dates
-            ARABICYEAR  ; ! for years
-            ARABICCLOCK ; ! for time
-            ARABICORD   ; ! for ordinals
-
-LEXICON ARABIC   !!≈ * __@CODE@__ arabic numerals
-< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPS ;
-
-
-LEXICON ARABICLOOPS
-   ARABICLOOP      ;
-   ARABICLOOPCOLL  ;
-   ARABICSabcdef   ;
-!  ARABICLOOPORD   ; ! vi begrenser til tall opp til 100
-!  ARABICLOOPphone ; ! denne overgenerer
-
-LEXICON ARABICSabcdef
- < [a|b|c|d|e|f|f %  f] > ACASETAG ;
-
-LEXICON ARABICYEAR
- < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > numyear ;
-
-LEXICON numyear
-       yeartag  ;
- %/:%/ moreyear ;
- %-:%- moreyear ;
- %–:%– moreyear ;
-
-LEXICON moreyear
-                              < [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > yeartagpl ;
- < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > yeartagpl ;
-
-LEXICON ARABICDATE
-                                      ARABICDATENUM ;
-< [1|2|3|%0] [1|2|3|4|5|6|7|8|9|%0] > ARABICDATEDOT ;
-
-LEXICON ARABICDATEDOT
- %.%- ARABICDATENUM ;
-   %- ARABICDATENUM ;
- %.%– ARABICDATENUM ;
-   %– ARABICDATENUM ;
-
-LEXICON ARABICDATENUM
- < [1|2|3|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|%0] [1|2|3|4|5|6|7|8|9|%0] %. > ARABICDATENUM2 ;
- <            [1|2|3|4|5|6|7|8|9]    %.        [1|2|3|4|5|6|7|8|9]    %. > ARABICDATENUM2 ;
- <            [1|2|3|4|5|6|7|8|9]    %. [1]    [1|2|3|4|5|6|7|8|9|%0] %. > ARABICDATENUM2 ;
- < [1|2|3]    [1|2|3|4|5|6|7|8|9|%0] %.        [1|2|3|4|5|6|7|8|9]    %. > ARABICDATENUM2 ;
-
-LEXICON ARABICDATENUM2
- < [1|2] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > datetag ;
- <                              [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > datetag ;
-                                                                                datetag ;
-
-LEXICON ARABICCLOCK
- < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
- < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
- <          [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
- <          [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > CLOCK-sep ;
- 
-LEXICON CLOCK-sep
-   %- ARABICCLOCK2 ;
-   %– ARABICCLOCK2 ;
-   numclock ;
-
-LEXICON ARABICCLOCK2
- < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
- < [1|2|%0] [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
- <          [1|2|3|4|5|6|7|8|9|%0] %. [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
- <          [1|2|3|4|5|6|7|8|9|%0] %: [1|2|3|4|5|%0] [1|2|3|4|5|6|7|8|9|%0] > numclock ;
-
-LEXICON ARABICORD
- < [1|2|3|4|5|6|7|8|9|%0] [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPORD ;
- < [1|2|3|4|5|6|7|8|9]                           > ARABICLOOPORD ;
-                                          1%0%0    ARABICLOOPORD ;
-
-
-!LEXICON ARABICLOOPphone      +358(0)16671254, 01-16671254, 166 71 254
-! + ARABICLOOPphoneNum ;   ! 
-!   ARABICLOOPphoneNum ;
-
-!LEXICON ARABICLOOPphoneNum    +358(0)16671254, 01-16671254, 166 71 254
-!< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPphoneNum ;
-!< [1|2|3|4|5|6|7|8|9|%0] > ARABICLOOPphoneSep ;
-!< [1|2|3|4|5|6|7|8|9|%0] > ARABICCASEphone ;
-!
-!LEXICON ARABICLOOPphoneSep     +358(0)16671254, 01-16671254, 166 71 254
-!  (                      ARABICLOOPphoneNum ;
-!  )                      ARABICLOOPphoneNum ;
-!  —                      ARABICLOOPphoneNum ; 
-! %-                      ARABICLOOPphoneNum ; 
-! %                       ARABICLOOPphoneNum ; ! Space as separator
-
-!LEXICON ARABICCASEphone  
-! +Num+Sem/Phonenr+Sg+Nom: # ;
-! +Num+Sem/Phonenr+Sg+Acc: # ;
-
-
-
-LEXICON ARABICLOOP
-          +Use/Circ:         ARABIC          ;
-        %-+Use/Circ:%-       ARABIC          ; ! 1-2    multipart numbers
-        %–+Use/Circ:%–       ARABIC          ; ! 1–2    multipart numbers
-        %—+Use/Circ:%—       ARABIC          ; ! 1—2    multipart numbers
-      %.%-+Use/Circ:%.%-     ARABIC          ; ! 1.-2   multipart numbers
-      %.%–+Use/Circ:%.%–     ARABIC          ; ! 1.–2   multipart numbers
-      %.%—+Use/Circ:%.%—     ARABIC          ; ! 1.—2   multipart numbers
-      %-% +Use/Circ:%-%      ARABIC          ; ! 1- 2   multipart numbers
-      %–% +Use/Circ:%–%      ARABIC          ; ! 1– 2   multipart numbers
-      %—% +Use/Circ:%—%      ARABIC          ; ! 1— 2   multipart numbers
-      % %-+Use/Circ:% %-     ARABIC          ; ! 1 -2   multipart numbers
-      % %–+Use/Circ:% %–     ARABIC          ; ! 1 –2   multipart numbers
-      % %—+Use/Circ:% %—     ARABIC          ; ! 1 —2   multipart numbers
-    % %-% +Use/Circ:% %-%    ARABIC          ; ! 1 - 2  multipart numbers
-    % %–% +Use/Circ:% %–%    ARABIC          ; ! 1 – 2  multipart numbers
-    % %—% +Use/Circ:% %—%    ARABIC          ; ! 1 — 2  multipart numbers
-  % %-%-% +Use/Circ:% %-%-%  ARABIC          ; ! 1 -- 2 multipart numbers
-  % %–%–% +Use/Circ:% %–%–%  ARABIC          ; ! 1 –– 2 multipart numbers
-  % %—%—% +Use/Circ:% %—%—%  ARABIC          ; ! 1 —— 2 multipart numbers
-               % %-          ARABICDELIMITER ; ! 1 -    multipart numbers
-               % %–          ARABICDELIMITER ; ! 1 –    multipart numbers
-               % %—          ARABICDELIMITER ; ! 1 —    multipart numbers
-             % %-%-          ARABICDELIMITER ; ! 1 --   multipart numbers
-             % %–%–          ARABICDELIMITER ; ! 1 ––   multipart numbers
-             % %—%—          ARABICDELIMITER ; ! 1 ——   multipart numbers
-        %.+Use/Circ:%.       ARABIC          ;
-        %,+Use/Circ:%,       ARABIC          ;
-        % +Use/Circ:%        ARABIC          ; ! Allowing for "23 500".
-          +Use/Circ:         ARABIC          ; ! Allowing for "23 500" w/nbsp (initial char is alt-space)
-        %/+Use/Circ:%/       ARABIC          ; ! 24/12
-!                %'          ARABIC          ; ! Since ' denotes cons.grad. This is not optimal either.
-!            +A+Ord:%.       #               ;
-            ,%-+Num:,%-      #               ; ! 10,-
-            ,%–+Num:,%–      #               ; ! 10,–
-            ,%—+Num:,%—      #               ; ! 10,—
-      %%+Num+Sg+Nom:%%¥      #               ; ! 50%. It is wrong, but 75 % of us write "75%".
-    %¥%%+Num+Sg+Nom:%¥%%¥    #               ; ! We must analyse the correct ones as well... 50 % etc.
-                             ARABICDELIMITER ; ! list of number-case delimiters
-               +Num:         RNum           ; ! Hyphen and +Use/Circ added appropriately in RHyph
-
-
-! The Roman numerals !
-! ------------------ !
-
-LEXICON ROMAN!
-+Use/Circ: ROM-THOUSAND ; !
-+Use/Circ: ROM-HUNDRED ; !
-+Use/Circ: ROM-TEN ; !
-+Use/Circ: ROM-ONE ; !
-
-LEXICON ROM-THOUSAND !
-M+Use/Circ:M ROM-THOUSAND-TAG; !
-MM+Use/Circ:MM ROM-THOUSAND-TAG; !
-MMM+Use/Circ:MMM ROM-THOUSAND-TAG; !
-MMMM+Use/Circ:MMMM ROM-THOUSAND-TAG; !
-MMMMM+Use/Circ:MMMMM ROM-THOUSAND-TAG; !
-
-LEXICON ROM-THOUSAND-TAG !
-+Use/Circ: ROMNUMTAG ; !
-+Use/Circ: ROM-HUNDRED ; !
-+Use/Circ: ROM-TEN ;!
-+Use/Circ: ROM-ONE ;!
-+Use/Circ: ROM-SPLIT ; !
-
-LEXICON ROM-HUNDRED !
-C+Use/Circ:C ROM-HUNDRED-TAG; !
-CC+Use/Circ:CC ROM-HUNDRED-TAG; !
-CCC+Use/Circ:CCC ROM-HUNDRED-TAG; !
-CD+Use/Circ:CD ROM-HUNDRED-TAG; !
-D+Use/Circ:D ROM-HUNDRED-TAG; !
-DC+Use/Circ:DC ROM-HUNDRED-TAG; !
-DCC+Use/Circ:DCC ROM-HUNDRED-TAG; !
-DCCC+Use/Circ:DCCC ROM-HUNDRED-TAG; !
-CM+Use/Circ:CM ROM-HUNDRED-TAG; !
-
-LEXICON ROM-HUNDRED-TAG !
-+Use/Circ: ROMNUMTAG ; !
-+Use/Circ: ROM-TEN ; !
-+Use/Circ: ROM-ONE ;!
-+Use/Circ: ROM-SPLIT ; !
-
-LEXICON ROM-TEN!
-X+Use/Circ:X ROM-TEN-TAG; !
-XX+Use/Circ:XX ROM-TEN-TAG; !
-XXX+Use/Circ:XXX ROM-TEN-TAG; !
-XL+Use/Circ:XL ROM-TEN-TAG; !
-L+Use/Circ:L ROM-TEN-TAG; !
-LX+Use/Circ:LX ROM-TEN-TAG; !
-LXX+Use/Circ:LXX ROM-TEN-TAG; !
-LXXX+Use/Circ:LXXX ROM-TEN-TAG; !
-XC+Use/Circ:XC ROM-TEN-TAG; !
-
-LEXICON ROM-TEN-TAG !
-+Use/Circ: ROMNUMTAG ; !
-+Use/Circ: ROM-ONE ; !
-+Use/Circ: ROM-SPLIT ; !
-
-LEXICON ROM-ONE!
-I+Use/Circ:I ROM-ONE-TAG; !
-II+Use/Circ:II ROM-ONE-TAG; !
-III+Use/Circ:III ROM-ONE-TAG; !
-IV+Use/Circ:IV ROM-ONE-TAG; !
-V+Use/Circ:V ROM-ONE-TAG; !
-VI+Use/Circ:VI ROM-ONE-TAG; !
-VII+Use/Circ:VII ROM-ONE-TAG; !
-VIII+Use/Circ:VIII ROM-ONE-TAG; !
-IX+Use/Circ:IX ROM-ONE-TAG; !
-
-LEXICON ROM-ONE-TAG !
-+Use/Circ: ROMNUMTAG ; !
-! +N: ROMNUMTAG ; ! !The Olav viđeš fix (Roman V now gets A)
-%-+Use/Circ: ROM-SPLIT ; !
-
-! Here, we split the Roman numerals, in order to account for cases like "Kapihtal II-IV".
-! We may send this first part directly to ROM-TAG below (and get the +Num tag), or we may
-! send them through a second loop, identical to the first one, but marked wit "2" (the lexica
-! are called 2ROMAN, etc. We do this instead of making a loop, since we do not want cases
-! like "II-IV-VI-VII-IX". If that should turn out to be a good idea, a loop would do the
-! trick.
-
-LEXICON ROM-SPLIT !
-+Use/Circ:%- 2ROMAN ; ! II-VI, etc. !
-
-
-! Here goes loop 2.
-
-LEXICON 2ROMAN!
-+Use/Circ: 2ROM-THOUSAND ; !
-+Use/Circ: 2ROM-HUNDRED ; !
-+Use/Circ: 2ROM-TEN ; !
-+Use/Circ: 2ROM-ONE ; !
-
-LEXICON 2ROM-THOUSAND !
-M+Use/Circ:M 2ROM-THOUSAND-TAG; !
-MM+Use/Circ:MM 2ROM-THOUSAND-TAG; !
-MMM+Use/Circ:MMM 2ROM-THOUSAND-TAG; !
-MMMM+Use/Circ:MMMM 2ROM-THOUSAND-TAG; !
-MMMMM+Use/Circ:MMMMM 2ROM-THOUSAND-TAG; !
-
-LEXICON 2ROM-THOUSAND-TAG !
-+Use/Circ: ROMNUMTAG ; !
-+Use/Circ: 2ROM-HUNDRED ; !
-+Use/Circ: 2ROM-TEN ; !
-+Use/Circ: 2ROM-ONE ;!
-
-LEXICON 2ROM-HUNDRED !
-C+Use/Circ:C 2ROM-HUNDRED-TAG; !
-CC+Use/Circ:CC 2ROM-HUNDRED-TAG; !
-CCC+Use/Circ:CCC 2ROM-HUNDRED-TAG; !
-CD+Use/Circ:CD 2ROM-HUNDRED-TAG; !
-D+Use/Circ:D 2ROM-HUNDRED-TAG; !
-DC+Use/Circ:DC 2ROM-HUNDRED-TAG; !
-DCC+Use/Circ:DCC 2ROM-HUNDRED-TAG; !
-DCCC+Use/Circ:DCCC 2ROM-HUNDRED-TAG; !
-CM+Use/Circ:CM 2ROM-HUNDRED-TAG; !
-
-LEXICON 2ROM-HUNDRED-TAG !
-+Use/Circ: ROMNUMTAG ; !
-+Use/Circ: 2ROM-TEN ; !
-+Use/Circ: 2ROM-ONE ;!
-
-LEXICON 2ROM-TEN !
-X+Use/Circ:X 2ROM-TEN-TAG; !
-XX+Use/Circ:XX 2ROM-TEN-TAG; !
-XXX+Use/Circ:XXX 2ROM-TEN-TAG; !
-XL+Use/Circ:XL 2ROM-TEN-TAG; !
-L+Use/Circ:L 2ROM-TEN-TAG; !
-LX+Use/Circ:LX 2ROM-TEN-TAG; !
-LXX+Use/Circ:LXX 2ROM-TEN-TAG; !
-LXXX+Use/Circ:LXXX 2ROM-TEN-TAG; !
-XC+Use/Circ:XC 2ROM-TEN-TAG; !
-
-LEXICON 2ROM-TEN-TAG !
-+Use/Circ: ROMNUMTAG ; !
-+Use/Circ: 2ROM-ONE ; !
-
-LEXICON 2ROM-ONE !
-I+Use/Circ:I 2ROM-ONE-TAG; !
-II+Use/Circ:II 2ROM-ONE-TAG; !
-III+Use/Circ:III 2ROM-ONE-TAG; !
-IV+Use/Circ:IV 2ROM-ONE-TAG; !
-V+Use/Circ:V 2ROM-ONE-TAG; !
-VI+Use/Circ:VI 2ROM-ONE-TAG; !
-VII+Use/Circ:VII 2ROM-ONE-TAG; !
-VIII+Use/Circ:VIII 2ROM-ONE-TAG; !
-IX+Use/Circ:IX 2ROM-ONE-TAG; !
-
-LEXICON 2ROM-ONE-TAG
-+Use/Circ: ROMNUMTAG ;
 
 LEXICON NUMBERLIKE
 gellie+Num+Sg:gell muvhtiesg ;
@@ -733,13 +415,6 @@ gellie+Num+Pl:gell muvhtiepl ;
 ! ------------------------------------------------------- !
 
 
-LEXICON ISOLATED-NUMEXP
-½+Num:½ # ;
-¹+Num:¹ # ;
-²+Num:² # ;
-³+Num:³ # ;
-¼+Num:¼ # ;
-¾+Num:¾ # ;
 
 
 LEXICON COLLECTIVE !Some collective numbers that do not fit in anywhere else
@@ -876,14 +551,34 @@ LEXICON Num-TODO
 +Num+TODO:0 # ;
 
 
-!LEXICON NUMERALCOMPOUNDS ! numeral as first part
-! NAMÁK ; ! tuvsánjienat, logigielat, etc.
-! SASJ ;
-! NounSecond ;! golmmačiegahas
-! geardásaš:geardás DABALAS ;
-! !tuvsán#geardásaš
-! jahkásaš:jahkás DABALAS ;
+LEXICON ARABICCOMPOUNDS   !!≈ * __@CODE@__  ! arabic as first part, 
+! :-  NAMAT ;            ! 10-jienat, etc. NAMAT derivs are
+                    ! treated as compounds and excluded from the nonrec
+                    ! variants, otherwise the PLX lexicon size explodes
+!+Cmp/Hyph+Cmp#:-»»# SASCont ; !6-jahkásaš
++Use/NG: RHyph ; ! 3-
+  
 
+!LEXICON NUMERALCOMPOUNDS !!≈ * __@CODE@__: numeral as first part: duhatjienat,
+!                         !!  logigielat, etc.
+!!         NAMAT ; ! duhatjienat, logigielat, etc. NAMAT derivs are
+!                 ! treated as compounds and excluded from the nonrec
+!                 ! variants, otherwise the PLX lexicon size explodes
+!! SAS ; !viđajahkásaš
+!+Use/NG: RHyph ; ! golmma-
+
+!LEXICON SAS  * __@CODE@__ gives :»»» and goes to SASCont
+!+Cmp#:»»# SASCont ;
+
+!LEXICON NOM-COMPOUNDS != * __@CODE@__ logijahki, čuohtejahki
+!+Cmp#:»»# NOM-COMPOUNDSCont ;
+
+
+!LEXICON NOM-COMPOUNDSCont != * __@CODE@__ logijahki
+!jahki+Sem/Time:jahºki ALBMI ; !logijahki
+!proseanta+Sem/Part:proseanºta GOAHTI-A ;
+!kilo+Sem/Measr:kilo GARGIA ;
+!salla+Sem/Body_Measr:salla BEARRI ;
 
 ! Imprecise numbers
 ! -----------------

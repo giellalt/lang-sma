@@ -177,40 +177,34 @@ LEXICON COLLTAG
  +N+Coll+Pl+Com+Err/Orth:%>%^DISIMPigyjmie FINAL1 ;
              +N+Coll+Ess:%>inie            FINAL1 ;
 
+LEXICON dateyearcase_nullsuff_w_dot
+          +Sg+Nom: MARKDOT ;
+          +Sg+Gen: MARKDOT ;
+          +Sg+Acc: MARKDOT ;
+     +Sg+Ill+Attr: MARKDOT ;
+     +Sg+Ela+Attr: MARKDOT ;
 
-LEXICON ARABICLOOPORD
- +A+Ord+Attr: ORD_DOTwBACKTRACK  ;
-      +A+Ord: ARABICDELIMITERORD ;
 
-LEXICON ARABICLOOPCOLL
- +N+Coll: ARABICDELIMITERCOLL ;
+LEXICON dateyearcase_fullsuff
+ +Err/Orth+Sg+Acc:%:a  #      ;
+ +Err/Orth+Sg+Gen:%:a  #      ;
+          +Sg+Ela:%:s  #      ;
+ +Err/Orth+Sg+Ela:s    #      ;
+ +Err/Orth+Sg+Ela:%:is #      ;
+ +Err/Orth+Sg+Ela:is   #      ;
+ +Err/Orth+Sg+Ela:%:as #      ;
+          +Sg+Ill:%:i  #      ;
+ +Err/Orth+Sg+Ill:i    #      ;
+ +Err/Orth+Sg+Ill:%:ii #      ;
+      +Cmp/SplitR:%-   ENDLEX ;
+      +Cmp/SplitR:%–   ENDLEX ;
 
-LEXICON ARABICDELIMITER
-          +Num:   ARABICCASE0 ; ! This is the 1984 case (ie nominative and accusative).
-          +Num:%: ARABICCASE  ; ! This is the 1984:s case.
- +Num+Err/Orth:%> ARABICCASE  ; ! This is the 1984s case.
- +Num+Err/Orth:%' ARABICCASE  ; ! This is the 1984's case.
- +Num+Err/Orth:%- ARABICCASE  ; ! This is the 1984-s case.
 
-LEXICON ARABICDELIMITERORD
-          :%: ARABICCASEORD ; ! This is the 1984:s case.
- +Err/Orth:%> ARABICCASEORD ; ! This is the 1984s case.
- +Err/Orth:%' ARABICCASEORD ; ! This is the 1984's case.
- +Err/Orth:%- ARABICCASEORD ; ! This is the 1984-s case.
 
-LEXICON ARABICDELIMITERCOLL
-          :%: ARABICCASECOLL ; ! This is the 1984:s case.
- +Err/Orth:%> ARABICCASECOLL ; ! This is the 1984s case.
- +Err/Orth:%' ARABICCASECOLL ; ! This is the 1984's case.
- +Err/Orth:%- ARABICCASECOLL ; ! This is the 1984-s case.
 
-LEXICON ACASETAG   !!≈ * __@CODE@__  is for 1e+Num+Sg+Num:1e
- +Num: ARABICCASE0 ;
- +Num:%: ARABICCASE ;
-
-!LEXICON ARABICCASES    __@CODE@__  to distinguish between 0 and oblique
-!  ARABICCASE0 ;
-!  ARABICCASE  ;
+LEXICON ARABICCASES   !!≈ * __@CODE@__  to distinguish between 0 and oblique
+  ARABICCASE0 ;
+  ARABICCASE  ;
 
 LEXICON ARABICCASE0
       +Arab+Sg+Nom: # ;
@@ -274,7 +268,7 @@ LEXICON ARABICCASECOLL
  +Arab+Pl+Com:%>sigujmie # ;
     +Arab+Ess:%>sinie    # ;
 
-LEXICON ORD_DOTwBACKTRACK !!≈ The __@CODE@__ is used to handle the tokenisation
+!LEXICON ORD_DOTwBACKTRACK  The __@CODE@__ is used to handle the tokenisation
 !! of ordinals. Strings like {{10.}} are inherently ambiguous — they can eitiher
 !! be a regular cardinal followed by an end-of-sentence full stop, or they can
 !! be an ordinal, potentially in the middle of a sentence. Regular fst's know
@@ -282,8 +276,8 @@ LEXICON ORD_DOTwBACKTRACK !!≈ The __@CODE@__ is used to handle the tokenisatio
 !! analysis. But for pmatch-based lookup and tokenisation, we try to find all
 !! the alternatives. The lexicon contains just the following two lines:
 !! {{{
-    +Use/-PMatch:%.                              # ; !!= @CODE@
- < "+Use/PMatch":0 "@P.Pmatch.Backtrack@" 0:%. > # ; !!= @CODE@
+!    +Use/-PMatch:%.                              # ; !!= @CODE@
+! < "+Use/PMatch":0 "@P.Pmatch.Backtrack@" 0:%. > # ; !!= @CODE@
 !! }}}
 !! The idea is that input like {{10.}} can then be analysed both as the ordinal
 !! {{10.}}, and as the sequence cardinal {{10}} + the sentence ending full stop
@@ -296,14 +290,8 @@ LEXICON ORD_DOTwBACKTRACK !!≈ The __@CODE@__ is used to handle the tokenisatio
 !! the split is being done, and thus which parts could potentially get other
 !! analyses.
 
-LEXICON datetag
- +Num+Sem/Date: dateyearcase ;
 
-LEXICON yeartag
- +Num+Sem/Year: dateyearcase ;
 
-LEXICON numclock
- +Num+Sem/Time-clock: dateyearcase ; !foreløpig
 
 LEXICON yeartagpl
           +Num+Sem/Year+Pl+Nom:        # ;
@@ -332,14 +320,6 @@ LEXICON dateyearcase
   +Cmp/SplitR:%-      ENDLEX ;
   +Cmp/SplitR:%–      ENDLEX ;
 
-LEXICON ROMNUMTAG !
- +Num+Rom+Sg+Nom:   #                 ;
-      +A+Rom+Ord:   ORD_DOTwBACKTRACK ;
-            +Num:%: ROMNUMTAGOBL      ; ! IV:se
-   +Num+Err/Orth:'  ROMNUMTAGOBL      ; ! IV'se
-   +Num+Err/Orth:%- ROMNUMTAGOBL      ; ! IV-se
-   +Num+Err/Orth:%´ ROMNUMTAGOBL      ; ! IV´se
-   +Num+Err/Orth:%> ROMNUMTAGOBL      ; ! IVse
 
 LEXICON ROMNUMTAGOBL !
       +Rom+Sg+Gen:n   # ; ! But here 123a 123
