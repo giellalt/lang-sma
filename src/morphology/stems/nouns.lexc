@@ -4305,8 +4305,10 @@ alkoholkultuvre+N+OLang/NOB+Sem/Domain:alkohol#kultu UVRE_LOAN ;
 alkoholprosente+N+OLang/NOB+Sem/Dummytag:alkohol#pros ENTE_LOAN ;
 alkoholstatistihke+N+OLang/NOB+Sem/Dummytag:alkohol#statist IHKE_LOAN ;
 alkoholtoleranse+N+OLang/NOB+Sem/Dummytag:alkohol#tolera ANSE_LOAN ;
+
 alkohovle+N+Use/DNorm+v1+Sem/Drink:alkohovl NIEJTE ; ! 
 alkohovle+N+Use/NotDNorm+v2+Sem/Drink:alkohåal NIEJTE ; 
+
 alkohovlebiedtedovveme+N+Sem/Dummytag:alkohovle#biedtedovvem N_ODD ;
 alkohovlepolitihke+N+Err/Orth+Sem/Act_Domain:alkohol#polit IHKE_LOAN ;
 alkohovlepolitihke+N+Sem/Act_Domain:alkohovle#polit IHKE_LOAN ;
@@ -10841,7 +10843,7 @@ laanteraaste+N+Sem/Rule:laante#raast NIEJTE ;
 laantesoejkesjæjja+N+Sem/Hum:laante#soejkesjæjj MAANA ;
 laantestasjovne+N+Sem/Plc:laante#stasjovn NIEJTE ;! både Plc og Org?
 laapestahke+N+Sem/Dummytag:laapestahk NIEJTE ;
-laapte+N+Sem/Dummytag:laapt NIEJTE ;
+laapte+N+Sem/Plc:laapt NIEJTE ; ! Build_part?
 laareme+N+Sem/Act:laarem N_ODD ;
 laarije+N+Sem/Hum:laar IJE_LOAN ;
 
@@ -12814,13 +12816,15 @@ ordinasjovne+N+OLang/NOB+Sem/Dummytag:ordina SJOVNE_LOAN ;
 
 orgaane+N+Use/NotDNorm+OLang/NOB+Sem/Org:åårgan NIEJTE ; ! ! https://satni.uit.no/termwiki/index.php?title=Medisiidna:åårgane, tilpassing i første ledd, men ikke midtre eller siste ledd? 
 orgaane+N+Use/DNorm+Sem/Org:orga AANE_LOAN ; ! Jfr. GG´s vedtak 2010, tilpassing i siste ledd 
-orgaane+N+Err/Orth+Sem/Org:åark AANE_LOAN ; ! åarkaane = tilpassing alle ledd. Dette er "The big quistion" mht. sørsamisk lånetilpassing, vi bør bli enig om hvilke ledd (første ledd, siste ledd eller alle ledd?) og lånetilpassing vi skal ha? 
+orgaane+N+Err/Orth+Sem/Org:åårk AANE_LOAN ; ! åårkaane = tilpassing alle ledd. Dette er "The big quistion" mht. sørsamisk lånetilpassing, vi bør bli enig om hvilke ledd (første ledd, siste ledd eller alle ledd?) og lånetilpassing vi skal ha? 
+orgaane+N+Err/Orth+Sem/Org:åårg AANE_LOAN ; ! åårgaane, jfr laake og laage?
 
 organiasjovnebarkoe+N+OLang/NOB+Sem/Dummytag:organiasjovne#bark N_OE_UML ;
 organiasjovnehaemie+N+Sem/Dummytag:organiasjovne#haem N_IE ;
 
-organisasjovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth+OLang/NOB+Sem/Org:åårganisasjovn NIEJTE ; 
-organisasjovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Org:organisa SJOVNE_LOAN ; 
+! organisasjovne eller åårganisasjovne? eller "åårkanæjsasjovne" Spørsmål GG- Hvilkt vedtak 2010 eller 2017? 
+organisasjovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NotDNorm+OLang/NOB+Sem/Org:åårganisasjovn NIEJTE ; ! ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:urfolksorganisasjon  
+organisasjovne+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Org+Use/DNorm:organisa SJOVNE_LOAN ; ! jfr. GG-vedtak 2010 - 
 
 organisasjovnehistovrije+N+OLang/NOB+Sem/Dummytag:organisasjovne#histo HISTOVRIJE_LOAN ;
 organisasjovnejieleme+N+OLang/NOB+Sem/Dummytag:organisasjovne#jieliem N_ODD ;
