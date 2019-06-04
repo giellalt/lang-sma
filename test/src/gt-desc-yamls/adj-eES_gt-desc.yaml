@@ -10,52 +10,56 @@ Config:
     App: lookup
 
 Tests:
-  Adjective - baahke: # ok c 
-    baahke+A+Attr: baahke
-    baahke+A+Err/Attr+Attr: baahkes
-    baahke+A+Sg+Nom: baahkes 
-    baahke+A+Comp+Sg+Nom: [baahkebe, baahkesåbpoe, baahkesabpa]
-    baahke+A+Superl+Sg+Nom: [baahkemes, baahkesommes, baahkesammes]
+  Adjective - baahke: # ok c # XXX v1 og v2 er ikkje konsistent nytta!
+    baahke+v1+A+Attr: baahke
+    baahke+v2+A+Attr: baahkes
+#    baahke+A+Err/Attr+Attr: baahkes
+#    baahke+A+Sg+Nom: baahke
+    baahke+v1+A+Sg+Nom: baahkes
+    baahke+v1+A+Comp+Sg+Nom: [baahkebe, baahkesåbpoe, baahkesabpa]
+    baahke+v1+A+Superl+Sg+Nom: [baahkemes, baahkesommes, baahkesammes]
 
   Adjective - byögke: # 
-    byögke+A+Attr: byögke
-    byögke+A+Err/Attr+Attr: byögkes
-    byögke+A+Sg+Nom: byögkes 
-    byögke+A+Comp+Sg+Nom: [byögkebe, byögkesåbpoe, byögkesabpa]
-    byögke+A+Superl+Sg+Nom: [byögkemes, byögkesommes, byögkesammes]
+    byögke+v1+A+Attr: byögke
+    byögke+v2+A+Attr: byögkes
+#   byögke+v1+A+Err/Attr+Attr: byögkes
+    byögke+v1+A+Sg+Nom: byögkes 
+    byögke+v1+A+Comp+Sg+Nom: [byögkebe, byögkesåbpoe, byögkesabpa]
+    byögke+v1+A+Superl+Sg+Nom: [byögkemes, byögkesommes, byögkesammes]
 
   Adjective - dïeve: # 
     dïeve+A+Attr: dïeve
-    dïeve+A+Err/Attr+Attr: dïeves
+#    dïeve+A+Err/Attr+Attr: dïeves
     dïeve+A+Sg+Nom: dïeves 
     dïeve+A+Comp+Sg+Nom: [dïevebe, dïevesåbpoe, dïevesabpa]
     dïeve+A+Superl+Sg+Nom: [dïevemes, dïevesommes, dïevesammes]
     
   Adjective - fïerske: # 
-    fïerske+A+Attr: fïerskes 
-    fïerske+A+Err/Attr+Attr: fïerskes
+    fïerske+A+Attr: fïerske
+#    fïerske+A+Err/Attr+Attr: fïerskes
     fïerske+A+Sg+Nom: fïerskes
     fïerske+A+Comp+Sg+Nom: [fïerskebe, fïerskesåbpoe, fïerskesabpa]
     fïerske+A+Superl+Sg+Nom: [fïerskemes, fïerskesommes, fïerskesammes]
 
   Adjective - galme: # 
     galme+A+Attr: galme 
-    galme+A+Err/Attr+Attr: galmes
+#    galme+A+Err/Attr+Attr: galmes
     galme+A+Sg+Nom: galmes 
     galme+A+Comp+Sg+Nom: [galmebe, galmesåbpoe, galmesabpa]
     galme+A+Superl+Sg+Nom: [galmemes, galmesommes, galmesammes]
 
   Adjective - garre: # c 
     garre+A+Attr: garre 
-    garre+A+Err/Attr+Attr: garres
+#    garre+A+Err/Attr+Attr: garres
     garre+A+Sg+Nom: garres
     garre+A+Comp+Sg+Nom: [garrebe, garresåbpoe, garresabpa]
     garre+A+Superl+Sg+Nom: [garremes, garresommes, garresammes]
 
-  Adjective - gïemhpe: # 
-    gïemhpe+A+Attr: gïemhpe
-    gïemhpe+A+Err/Attr+Attr: gïemhpes 
-    gïemhpe+A+Sg+Nom: gïemhpes 
+  Adjective - gïemhpe: # XXX giempes blir analysert som err, generert som norm
+    gïemhpe+A+Attr: [gïemhpe, gïemhpes]
+    gïemhpe+A+Err/Orth+Attr: giempes 
+    gïemhpe+A+Sg+Nom: [gïemhpes]
+    gïemhpe+A+Err/Orth+Sg+Nom: giempes 
     gïemhpe+A+Comp+Sg+Nom: [gïemhpebe, gïemhpesåbpoe, gïemhpesabpa]
     gïemhpe+A+Superl+Sg+Nom: [gïemhpemes, gïemhpesommes, gïemhpesammes]
    
@@ -71,14 +75,14 @@ Tests:
     
   Adjective - lïene: # 
     lïene+A+Attr: lïene 
-    lïene+A+Err/Attr+Attr: lïenes
+#    lïene+A+Err/Attr+Attr: lïenes
     lïene+A+Sg+Nom: lïenes 
     lïene+A+Comp+Sg+Nom: [lïenebe, lïenesåbpoe, lïenesabpa]
     lïene+A+Superl+Sg+Nom: [lïenemes, lïenesammes, lïenesommes]
     
-  Adjective - mïevhke: # 
-    mïevhke+A+Attr: mïevhke
-    mïevhke+A+Err/Attr+Attr: mïevhkes
+  Adjective - mïevhke: # XXX mïevhkes blir analysert som err, generert som norm
+    mïevhke+A+Attr: [mïevhke]
+    mïevhke+A+Err/Orth+Attr: mïevhkes
     mïevhke+A+Sg+Nom: mïevhkes 
     mïevhke+A+Comp+Sg+Nom: [mïevhkebe, mïevhkesåbpoe, mïevhkesabpa]
     mïevhke+A+Superl+Sg+Nom: [mïevhkemes, mïevhkesommes, mïevhkesammes]
@@ -92,7 +96,7 @@ Tests:
 
   Adjective - plaave: # 
     plaave+A+Attr: plaave 
-    plaave+A+Err/Attr+Attr: plaaves
+#    plaave+A+Err/Attr+Attr: plaaves
     plaave+A+Sg+Nom: [plaave, plaaves]
     plaave+A+Comp+Sg+Nom: [plaavebe, plaavesåbpoe, plaavesabpa]
     plaave+A+Superl+Sg+Nom: [plaavemes, plaavesommes, plaavesammes]
@@ -107,7 +111,7 @@ Tests:
 
   Adjective - plïehtje: # 
     plïehtje+A+Attr: plïehtje
-    plïehtje+A+Err/Attr+Attr: plïehtjes
+#    plïehtje+A+Err/Attr+Attr: plïehtjes
     plïehtje+A+Sg+Nom: plïehtjes 
     plïehtje+A+Comp+Sg+Nom: [plïehtjebe, plïehtjesåbpoe, plïehtjesabpa] 
     plïehtje+A+Superl+Sg+Nom: [plïehtjemes, plïehtjesommes, plïehtjesammes]
@@ -120,7 +124,7 @@ Tests:
     
   Adjective - skïemtje: # 
     skïemtje+A+Attr: skïemtje 
-    skïemtje+A+Err/Attr+Attr: skïemtjes
+#    skïemtje+A+Err/Attr+Attr: skïemtjes
     skïemtje+A+Sg+Nom: skïemtjes 
     skïemtje+A+Comp+Sg+Nom: [skïemtjebe, skïemtjesåbpoe, skïemtjesabpa]
     skïemtje+A+Superl+Sg+Nom: [skïemtjemes, skïemtjesommes, skïemtjesammes]
@@ -145,7 +149,7 @@ Tests:
 
   Adjective - tjïelke: # c 
     tjïelke+A+Attr: tjïelke 
-    tjïelke+A+Err/Attr+Attr: tjïelkes
+#    tjïelke+A+Err/Attr+Attr: tjïelkes
     tjïelke+A+Sg+Nom: tjïelkes 
     tjïelke+A+Comp+Sg+Nom: [tjïelkebe, tjïelkesåbpoe, tjïelkesabpa]
     tjïelke+A+Superl+Sg+Nom: [tjïelkemes, tjïelkesammes, tjïelkesommes]
