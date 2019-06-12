@@ -37,7 +37,8 @@ GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					remove-test-tags.regex                            \
 					rename-POS_before_Der-tags.regex                  \
 					split-CmpN-tags.regex                             \
-					split-CmpNP-tags.regex
+					split-CmpNP-tags.regex                            \
+					remove-dynamic_compound-char.regex
 
 # List any local filter xfscript files here:
 GIELLA_FILTER_LOCAL_XFSCRIPT_SRCS=
