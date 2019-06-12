@@ -5,7 +5,7 @@ SHELL = /bin/sh
 # It is language independent within the framework of the Sámi language
 # technology project. See further user documentation (and technical as well)
 # in $GTHOME/techdoc/ling/docu-testing.html /
-# http://giellatekno.uit.no/doc/ling/docu-testing.html
+# https://giellalt.uit.no/ling/docu-testing.html
 #
 # If you want to test a single word, use the command:
 #
