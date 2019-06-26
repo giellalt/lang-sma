@@ -446,7 +446,9 @@ LIST INSTITUTION = "jarnge" "kultuvrejarnge" "raerie" "kultuvreraerie" ; #!! INS
 LIST MEDIA = "media" "radio" "TV" ; # "oahpahus#rádio" "rádio" "televišuvdna" ; #!! MEDIA
 LIST ORGANIZATION = (Prop Org) "digkie" "digkiegåetie" "skuvlekontovre" ; #!! ORGANIZATION
 LIST EDUCATION = "skuvle" ; #!! EDUCATION
-LIST CURRENCY = "denaare" "kråvna" "kråvnoe" "kravna" "kr" "ru" "¢" "€" "$"; #!! CURRENCY
+LIST CURRENCY-ABBR = "kr" "ru" "¢" "€" "$"; #!! CURRENCY
+LIST CURRENCY-NOT-ABBR = "denaare" "kråvna" "kråvnoe" "kravna" ; #!! CURRENCY
+SET CURRENCY = CURRENCY-ABBR OR CURRENCY-NOT-ABBR ;
 LIST LESSON =  "kuvsje" ; #!! LESSON
 LIST OTHER-INDUSTRY = "bálvalus#ealáhus" "alkohol#politihkka" ; #!! OTHER-INDUSTRY 
 SET INDUSTRY = OTHER-INDUSTRY ;
@@ -640,7 +642,7 @@ PROTECT (<spelled>) ;
 #COPY:NNom (N Nom) EXCEPT Adv TARGET (Sem/Adr)  ;
 	## www.samediggi.fi http://yle.fi/sapmi lene62@gmail.com anja.irina.ahola(at)gmail.com
 SELECT:SemYear Sem/Date (0 Num) ;
-SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY)(NOT 1 CURRENCY OR MEASURE OR ("jahki")) ;
+SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY-ABBR)(NOT 1 CURRENCY OR MEASURE OR ("jahki")) ;
 	#% Bures boahtin 2016 beaivái
 SELECT:SemYear Sem/Year (0 Num)(NOT -1 CURRENCY)(1 Po) ;
 SELECT:SemYear Sem/Year (0 Num)(1 ("jahki") + Pl) ; #apertium
