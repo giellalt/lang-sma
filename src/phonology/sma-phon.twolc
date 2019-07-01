@@ -309,7 +309,7 @@ a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Mor
 ! "Even syllabic verbs Du1Pl3 e/oe V"
 ! ! __@RULENAME@__  
 !   ':o <=> _ e: X2: Cns ;
-  
+
 "Even syllabic verbs Du3 e/i alternation V"
 !! __@RULENAME@__  
 !  e:0 <=>      ': _             X3:               ; !this must be e:i, subrule moved to next rule
@@ -324,10 +324,10 @@ a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Mor
 
 "Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V" 
 !! __@RULENAME@__  
-  e:i <=> Letter - [o|i] ( %>: ) _ X4: j i [d|b] i e (n) ; ! Du2, Pl1, Pl2
-          Letter - [o|i] ( %>: ) _ X3: j æ g a n         ; ! Du3
-            \i : _ %>: %^COMESS:     ; ! e --> i veksling i Com og Ess
-            \i : _ %>: %^PLGENPLCOM: ; ! e --> i i Pl+Gen og i Pl+Com
+  e:i <=> \[o|i] ( %>: ) _     X4:       j i [d|b] i e (n) ; ! Du2, Pl1, Pl2
+          \[o|i] ( %>: ) _     X3:       j æ g a n         ; ! Du3
+          \[o|i]         _ %>: %^COMESS:                   ; ! e --> i veksling i Com og Ess
+          \[o|i]         _ %>: %^PLGENPLCOM:               ; ! e --> i i Pl+Gen og i Pl+Com
 
 
 ! € = positive-pairs-out
@@ -686,11 +686,11 @@ e:ö <=> [ å: | u: | o: ] _ Cns* [ %>: | %»: ] %^iUML: ;
 !"e:i past tense, (MAJA:which is e:e)"
 !  e:i <=> [ #: | Cns+ ] _ Cns* [ %>: | %»: ] %^iUML: ;
 
-!!€ heps%>%^iUMLim
-!!€ hips%>0im
+!! € heps%>%^iUMLim
+!! € hips%>0im
 
-!!€ gesn%>%^iUMLim
-!!€ gisn%>0im
+!! € gesn%>%^iUMLim
+!! € gisn%>0im
 
 
 
