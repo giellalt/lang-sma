@@ -7489,6 +7489,9 @@ fabrihkebarkije+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:fabrihke#barkij I
 
 fabrikaante+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:fabrika ANTE_LOAN ;
 
+keramikere:keramiker N_ODD ; ! https://satni.uit.no/termwiki/index.php?title=Teknihkka_industriija_duodji:keramiker
+
+
 fabrikaate+N+OLang/NOB+Sem/Dummytag:fabrika AATE_LOAN ;
 fabulatovre+N+OLang/NOB+Sem/Dummytag:fabulato UVRE_LOAN ;
 faelies+N+Sem/Dummytag:faelies NOM-CMP ;
@@ -10094,8 +10097,10 @@ kemnerkontovre+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:kemner#konto 
 kentauvre+N+OLang/NOB+Sem/Dummytag:kentau UVRE_LOAN ;
 kenyaane+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Hum:keny^a AANE_LOAN ;
 keramihke+N+OLang/NOB+Sem/Dummytag:keram IHKE_LOAN ;
-keramihkere+N+Err/Orth+Sem/Hum:keramiker N_ODD ; ! Nylig vedtatt av GG
-keramihkere+N+Sem/Hum:keramihker N_ODD ;
+
+keramihkere+N+Err/Orth+Sem/Hum+Use/NotDNorm:keramiker N_ODD ; ! Nylig vedtatt av GG
+keramihkere+N+Sem/Hum+Use/DNorm:keramihker N_ODD ;
+
 keramikkskulptuvre+N+OLang/NOB+Sem/Dummytag:keramikk#skulptu UVRE_LOAN ;
 keramikkstudente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB+Sem/Dummytag:keramikk#stud ENTE_LOAN ;
 ketovse+N+OLang/NOB+Sem/Dummytag:keto OVSE_LOAN ;
@@ -10777,7 +10782,11 @@ kultuvreaerpie+N+OLang/NOB+Sem/Dummytag:kultuvre#aerp N_IE ;
 kultuvreaerpielæstoe+N+Sem/Dummytag:kultuvre#aerpie#læst N_OE_UML ;
 kultuvrebiejjie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Time:kultuvre#biejj N_IE ;
 kultuvredarjome+N+Sem/Act:kultuvre#darjoem N_ODD ; !
-kultuvredepartemente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Org:kultuvre#departem ENTE_LOAN ;
+
+kultuvredepartemente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Org+Use/DNorm:kultuvre#departem ENTE_LOAN ;
+kultuvredepartemente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Org+Use/NotDNorm:kultuvre#departeme ENTE_LOAN ;
+kultuvredepartemente+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Org+Use/NotDNorm:kultuvre#departemaang NIEJTE ; 
+
 kultuvredoedtebeetnege+N+Sem/Money:kultuvre#doedte#beetn GAAJSEGE ;
 kultuvredokumentasjovne+N+OLang/NOB+Sem/Dummytag:kultuvre#dokumenta SJOVNE_LOAN ;
 
