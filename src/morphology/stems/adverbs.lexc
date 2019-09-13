@@ -27,9 +27,12 @@ LEXICON adv-interr-rel
 +Adv: FINAL1 ; ! We go for the sme way of doing things.
 
 LEXICON laakanlex
-:#laakan adv ;
-+Err/Orth:-laakan adv ;
-+MWE+Err/Orth:% laakan adv ;
+              :#  laakanword ;
+     +Err/Orth:-  laakanword ;
+ +MWE+Err/Orth:%  laakanword ;
+
+LEXICON laakanword
+ :laakan adv ;
 
 LEXICON ligkelex
 !LEXICON Cmp-Adv
@@ -1220,7 +1223,7 @@ krænhtjode:krænhtjode adv ;
 kvalitatijvelaakan:kvalitatijve laakanlex ;
 laabroen:laabroen adv; ! ! laabra/laabroe= substantiv
 laagne adv ;
-laakan: laakanlex ; ! need to able second word in compounds
+laakan: laakanword ; ! need to able second word in compounds
 laaketje:laaketje adv ; ! need to able second word in compounds
 laakte adv ; !! laakte bïejedh - legge for tett sammen
 laangke adv ;
