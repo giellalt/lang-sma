@@ -38,8 +38,6 @@ analyser-speller-gt-norm.%: analyser-speller-gt-norm.tmp.%  \
 		.o. @\"$(top_builddir)/src/filters/remove-homonymy-tags.$*\"        \
 		.o. @\"$(top_builddir)/src/filters/remove-test-tags.$*\"            \
 		.o. @\"$<\" \
-		.o. @\"$(top_builddir)/src/filters/remove-hyphenation-marks.$*\"    \
-		.o. @\"$(top_builddir)/src/filters/remove-infl_deriv-borders.$*\"   \
 		; \n\
 		$(INVERT_HFST)\
 		save stack $@\n\
