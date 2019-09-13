@@ -20,13 +20,13 @@
 "@U.Want_Left.FALSE@" <- [..] || %#
                                 _
 
-                               \[ "+N" | "+A" | "+PrsPrc" | %# 
+                               \[ "+PrsPrc" | "+Der" | "+Cmp" | %# 
                                 | "+CmpN/SgNomLeft"
                                 | "+CmpN/SgGenLeft"
                                 | "+CmpN/PlGenLeft"
                                 ]+
                                 
-                                [ "+N" | "+A" | "+PrsPrc" ]
+                                [ "+PrsPrc" | "+Der" | "+Cmp" | .#. | %# ]
 
 .o.
 
@@ -35,7 +35,7 @@
 "@U.Want_Left.TRUE@" <- [..] || %#
                                 _
 
-                               \[ "+N" | "+A" | "+PrsPrc" | %# 
+                               \[ "+PrsPrc" | "+Der" | "+Cmp" | %# 
                                 | "+CmpN/SgNomLeft"
                                 | "+CmpN/SgGenLeft"
                                 | "+CmpN/PlGenLeft"
@@ -45,8 +45,6 @@
                                 | "+CmpN/SgGenLeft"
                                 | "+CmpN/PlGenLeft"
                                 ]^{1,3}
-                                
-                                [ "+N" | "+A" | "+PrsPrc" ]
 ;
 
 # In all other contexts, there is already a +CmpN/ tag, and thus we do NOT want
