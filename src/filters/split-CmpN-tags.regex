@@ -19,7 +19,7 @@
 # The split is done independently for the regular CmpN tags, the CmpNLeft tags
 # and the CmpNDEf tags.
 
-! Only +CmpN/ tags, no Left or Def:
+! Only +CmpN/ tags, no Left:
 [ [ "+CmpN/SgN" | "+CmpN/SgG" ] <- "+CmpN/SgN" "+CmpN/SgG" ,
   [ "+CmpN/SgN" | "+CmpN/PlG" ] <- "+CmpN/SgN" "+CmpN/PlG" ,
   [ "+CmpN/SgG" | "+CmpN/PlG" ] <- "+CmpN/SgG" "+CmpN/PlG" ,
@@ -27,16 +27,10 @@
 ! Left tags:
   [ "+CmpN/SgNomLeft" | "+CmpN/SgGenLeft" ] <- "+CmpN/SgNomLeft" "+CmpN/SgGenLeft" ,
   [ "+CmpN/SgNomLeft" | "+CmpN/PlGenLeft" ] <- "+CmpN/SgNomLeft" "+CmpN/PlGenLeft" ,
-  [ "+CmpN/SgGenLeft" | "+CmpN/PlGenLeft" ] <- "+CmpN/SgGenLeft" "+CmpN/PlGenLeft" ,
-
-! Def tags:
-  [ "+CmpN/DefSgGen" | "+CmpN/DefPlGen" ] <- "+CmpN/DefSgGen" "+CmpN/DefPlGen"
+  [ "+CmpN/SgGenLeft" | "+CmpN/PlGenLeft" ] <- "+CmpN/SgGenLeft" "+CmpN/PlGenLeft"
 ]
-
 .o.
-
-[ [ "+CmpN/SgN" | "+CmpN/SgG" | "+CmpN/PlG" ] <-
-    "+CmpN/SgN"   "+CmpN/SgG"   "+CmpN/PlG" ,
-  [ "+CmpN/SgNomLeft" | "+CmpN/SgGenLeft" | "+CmpN/PlGenLeft" ] <-
-    "+CmpN/SgNomLeft"   "+CmpN/SgGenLeft"   "+CmpN/PlGenLeft"
+[
+ [ "+CmpN/SgN"       | "+CmpN/SgG"       | "+CmpN/PlG"       ] <- "+CmpN/SgN"       "+CmpN/SgG"       "+CmpN/PlG" ,
+ [ "+CmpN/SgNomLeft" | "+CmpN/SgGenLeft" | "+CmpN/PlGenLeft" ] <- "+CmpN/SgNomLeft" "+CmpN/SgGenLeft" "+CmpN/PlGenLeft"
 ];
