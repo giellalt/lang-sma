@@ -8,17 +8,17 @@ Config:
     App: lookup
 
 Tests:
-  Default tests: # Default in SMA is SgNom and SgGen
-    båaloe+N+Cmp#raejkie+N+Sg+Nom: [båaloeraejkie, båaloenraejkie, ~båaloejraejkie]
-    leevege+N+Cmp#gåetie+N+Sg+Nom: [leevehgåetie, ~leevegegåetie, leevegengåetie, ~leevegigåetie]   
+  Default tests: # Default in SMA is SgNom
+    båaloe+N+Sem/Clthpart+Cmp#raejkie+N+Sem/Dummytag+Sg+Nom: [båaloe∑#raejkie, ~båaloen∑#raejkie, ~båaloej∑#raejkie]
+    leevege+N+Sem/Dummytag+Cmp#gåetie+N+Sem/Build+Sg+Nom: [leeveh∑#gåetie, ~leevege∑#gåetie, ~leevegen∑#gåetie, ~leevegi∑#gåetie]
 
-# CmpN/SgNom tests:
+# Explicit CmpN/SgNom tests:
   CmpN/SgN tests:
-    vuelie+N+Cmp#gåetie+N+Sg+Nom: [vueliegåetie, ~vueliengåetie, ~vueliejgåetie, ~vööligåetie]   
+    vuelie+N+Sem/Prod-audio+Cmp#gåetie+N+Sem/Build+Sg+Nom: [vuelie∑#gåetie, ~vuelien∑#gåetie, ~vueliej∑#gåetie, ~vööli∑#gåetie]
       
 # CmpN/SgGen tests: # No cases in the lexicon with only CmpN/SgGen
   CmpN/SgG tests:
-    fraanske+A+Attr+Cmp#gïele+N+Sg+Nom: [fraanskegïele, ~fraanskgïele]
+    fraanske+A+Cmp/Attr+Cmp#gïele+N+Sem/Lang_Tool+Sg+Nom: [fraanske∑#gïele, ~fraansk∑#gïele]
 
 # CmpN/PlGen tests: # No cases in the lexicon with only CmpN/PlGen
 #  CmpN/PlG tests:
@@ -29,15 +29,17 @@ Tests:
 
 # CmpN/SgGen + CmpN/PlGen tests:
   CmpN/SgGen + CmpN/PlGen tests:
-    gelliengïele+N+Cmp#jerkie+N+Sg+Nom: [~gelliengïelejerkie, gelliengïelenjerkie, gelliengïelijerkie]
+    gelliengïele+N+Sem/Lang+Cmp#jerkie+N+Sem/Dummytag+Sg+Nom: [~gellien#gïele∑#jerkie, gellien#gïelen∑#jerkie, gellien#gïeli∑#jerkie, gellien-gïelen∑#jerkie, gellien-gïeli∑#jerkie]
 
 # CmpN/SgNom + CmpN/SgGen + CmpN/PlGen tests:
   CmpN/SgN + SgG + PlG tests:
-    bovtse+N+Cmp#baalka+N+Sg+Nom: [bovtsebaalka, bovtsenbaalka, bovtsibaalka]  # gåetie - all three forms, luhpie - default
+    bovtse+N+Sem/Ani+Sg+Nom: [bovtse]
+    baalka+N+Sem/Route+Sg+Nom: [baalka]
+    bovtse+N+Sem/Ani+Cmp#baalka+N+Sem/Route+Sg+Nom: [bovtse∑#baalka, bovtsen∑#baalka, bovtsi∑#baalka]
 
 #  CmpN/SgNomLeft tests:
   CmpN/SgNomLeft tests:
-    gåetie+N+Cmp#guaktah+N+Pl+Nom: [gåetieguaktah, ~gåetienguaktah, ~gåetiejguaktah]
+    gåetie+N+Sem/Build+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [gåetie∑#guaktah, ~gåetien∑#guaktah, ~gåetiej∑#guaktah]
     
 #  CmpN/SgGenLeft tests: # there are no entries in the lexicon with only SgGenLeft
 
@@ -46,14 +48,8 @@ Tests:
 
 #  CmpN/SgNomLeft and CmpN/PlGenLeft tests:
   CmpN/SgNomLeft and CmpN/PlGenLeft tests:
-    gïele+N+Cmp#gaske+N+Sg+Nom: [gïelegaske, ~gïelengaske, gïeligaske] # gïele - all three, gaske: CmpN/SgNomLeft and CmpN/PlGenLeft . 
+    gïele+N+Sem/Lang_Tool+Cmp#gaske+N+Sem/Feat-measr_Plc+Sg+Nom: [gïele∑#gaske, ~gïelen∑#gaske, gïeli∑#gaske] # gïele - all three, gaske: CmpN/SgNomLeft and CmpN/PlGenLeft . 
 
 #  All three Left tests:
   CmpN/SgNomLeft SgGenLeft PlGenLeft tests:
-    båaloe+N+Cmp#faamoe+N+Sg+Nom: [båaloefaamoe, båaloenfaamoe, båaloejfaamoe] # båaloe - default, faamoe: all three Left
-#    vuelie+N+Cmp#raedtie+N+Sg+Nom: [vuelieraedtie,~vuelienraedtie, ~vueliejraedtie, ~vööliraedtie] # vuelie - SgNom, raedtie: all three Left
-
-#  CmpN/DefSgGen tests:
-#
-#  CmpN/DefPlGen tests:
-   
+    båaloe+N+Sem/Clthpart+Cmp#aejkie+N+Sem/Time+Sg+Nom: [båaloe∑#aejkie, båaloen∑#aejkie, båaloej∑#aejkie] # båaloe - default, aejkie: all three Left
