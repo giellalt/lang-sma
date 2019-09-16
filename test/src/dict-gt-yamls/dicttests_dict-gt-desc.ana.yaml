@@ -10,52 +10,22 @@ Config:
 Tests:
 
 # Tag tests:
-  G3 - vuorru:
-    vuorru+G3+N+Sg+Gen: vuorru
+  v1-v2 - elkie:
+    elkie+v1+N+Sg+Gen: elkien
+    elkie+v2+N+Sg+Gen: eelkien
+    elkie+N+v2+Sg+Gen: ~eelkien
 
-# Replace with proper data for your language:
-#  G7 - gálli:
-#    gálli+G7+N+Sg+Gen: gálli
-#
-#  NomAg - nubbijođiheaddji:
-#    nubbijođiheaddji+N+NomAg+Sg+Gen: nubbijođiheaddji
-#
-#  v1 - rekruterenoassi:
-#    rekruterenoassi+v1+N+Sg+Gen: rekruterenoasi
-#
-#  v2 - servodatfágalinjá:
-#    servodatfágalinjá+v2+N+Sg+Gen: servvodatfágalinjá
-#
-#  v3 - lohkanlistu:
-#    lohkanlistu+v3+N+Sg+Gen: lohkanlisttá
-#
-#  v4 - servodatvásihus:
-#    servodatvásihus+v4+N+Sg+Gen: servvodatvásihusa
-#
-#  v5 - sihkkelkursa:
-#    sihkkelkursa+v5+N+Sg+Gen: syhkkelgurssa
-#
-#  v6 - eanahálddašanláhka:
-#    eanahálddašanláhka+v6+N+Sg+Gen: eatnanhálddahanlága
-#
-#  v7 - eahkediskursa:
-#    eahkediskursa+v7+N+Sg+Gen: eahketkurssa
-#
-#  v8 - diibmolistu:
-#    diibmolistu+v8+N+Sg+Gen: tiibmalistta
-#
-## Sem tags only after Prop:
-#
-## Sem tags only after Prop:
-#  Sem/Sur - Risten:
-#    Risten+N+Prop+Sem/Sur+Sg+Gen: Risten
-#
-#  Sem/Plc - Romsa:
-#    Romsa+N+Prop+Sem/Plc+Sg+Gen: Romssa
-#
-#  Sem/Hum - ipmil: # No tag here:
-#    ipmil+N+Sg+Gen: ipmil
-#
-## Spell relax tests:
-#  eth - diehtit:
-#    diehtit+V+TV+Ind+Prs+ConNeg: dieðe
+  v3-v4 - dåakterekontovre:
+    dåakterekontovre+v3+N+Sg+Gen: [dåkterekontovren, dåktere-kontovren]
+    dåakterekontovre+v4+N+Sg+Gen: [dakterekontovren, daktere-kontovren]
+    dåakterekontovre+N+v4+Sg+Gen: ~dakterekontovren
+
+# Sem tags obligatory for Prop:
+  Sem/Sur - Risten:
+    Risten+N+Prop+Sem/Fem+Sg+Gen: Ristenen
+
+  Sem/Plc - Romsa:
+    Romsa+N+Prop+Sem/Plc+Sg+Gen: Romsan
+
+  Sem/Hum - ipmil: # No tag here:
+    jupmele+N+Sg+Gen: jupmelen
