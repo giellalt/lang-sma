@@ -22,15 +22,10 @@ HFST_LEXC_LOCAL_FLAGS=--Werror
 # Maja is working her way through them.
 
 ADJECTIVES=
-
 if WANT_OAHPA
-ADJECTIVES+=\
-			affixes/adjectives-oahpa.lexc  \
-			stems/adjectives-oahpa.lexc   
+ADJECTIVES+=  
 else
-ADJECTIVES+=\
-			affixes/adjectives.lexc  \
-			stems/adjectives.lexc   
+ADJECTIVES+=
 endif # WANT_OAHPA
 
 # Set this to name of lexc file containing Multichar_Symbols and LEXICON Root
@@ -42,6 +37,7 @@ GT_LEXC_SRCS_L1_L2=\
 			compounding.lexc         \
 			affixes/abbreviations.lexc \
 			affixes/acronyms.lexc      \
+			affixes/adjectives.lexc  \
 			affixes/nouns.lexc       \
 			affixes/numerals.lexc    \
 			affixes/possessive-suffixes.lexc \
@@ -50,6 +46,7 @@ GT_LEXC_SRCS_L1_L2=\
 			affixes/verbs.lexc       \
 			stems/abbreviations.lexc \
 			stems/adpositions.lexc   \
+			stems/adjectives.lexc   
 			stems/adverbs.lexc       \
 			stems/conjunctions.lexc  \
 			stems/interjections.lexc \
