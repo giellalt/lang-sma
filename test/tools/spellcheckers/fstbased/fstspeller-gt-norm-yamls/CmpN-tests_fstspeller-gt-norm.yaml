@@ -9,12 +9,18 @@ Config:
 
 Tests:
   Default tests: # Default in SMA is SgNom
-    båaloe+N+Sem/Clthpart+Cmp#raejkie+N+Sem/Dummytag+Sg+Nom: [båaloe∑#raejkie, ~båaloen∑#raejkie, ~båaloej∑#raejkie]
-    leevege+N+Sem/Dummytag+Cmp#gåetie+N+Sem/Build+Sg+Nom: [leeveh∑#gåetie, ~leevege∑#gåetie, ~leevegen∑#gåetie, ~leevegi∑#gåetie]
+    båaloe+N+Sem/Clthpart+Cmp/SgNom+Cmp#raejkie+N+Sem/Dummytag+Sg+Nom: [ båaloe∑#raejkie]
+    båaloe+N+Sem/Clthpart+Cmp/SgGen+Cmp#raejkie+N+Sem/Dummytag+Sg+Nom: [~båaloen∑#raejkie]
+    båaloe+N+Sem/Clthpart+Cmp/PlGen+Cmp#raejkie+N+Sem/Dummytag+Sg+Nom: [~båaloej∑#raejkie]
+    leevege+N+Sem/Dummytag+Cmp/SgGen+Cmp#gåetie+N+Sem/Build+Sg+Nom: [leeveh∑#gåetie, ~leevege∑#gåetie]
+    leevege+N+Sem/Dummytag+Cmp/SgGen+Cmp#gåetie+N+Sem/Build+Sg+Nom: [~leevegen∑#gåetie]
+    leevege+N+Sem/Dummytag+Cmp/SgGen+Cmp#gåetie+N+Sem/Build+Sg+Nom: [~leevegi∑#gåetie]
 
 # Explicit CmpN/SgNom tests:
   CmpN/SgN tests:
-    vuelie+N+Sem/Prod-audio+Cmp#gåetie+N+Sem/Build+Sg+Nom: [vuelie∑#gåetie, ~vuelien∑#gåetie, ~vueliej∑#gåetie, ~vööli∑#gåetie]
+    vuelie+N+Sem/Prod-audio+Cmp/SgNom+Cmp#gåetie+N+Sem/Build+Sg+Nom: [ vuelie∑#gåetie]
+    vuelie+N+Sem/Prod-audio+Cmp/SgGen+Cmp#gåetie+N+Sem/Build+Sg+Nom: [~vuelien∑#gåetie]
+    vuelie+N+Sem/Prod-audio+Cmp/PlGen+Cmp#gåetie+N+Sem/Build+Sg+Nom: [~vueliej∑#gåetie, ~vööli∑#gåetie]
       
 # CmpN/SgGen tests: # No cases in the lexicon with only CmpN/SgGen
   CmpN/SgG tests:
@@ -22,34 +28,46 @@ Tests:
 
 # CmpN/PlGen tests: # No cases in the lexicon with only CmpN/PlGen
 #  CmpN/PlG tests:
-#    gööth+N+Cmp#jerkie+N+Sg+Nom: [gööthjerkie, gåetiejerkie, ~gåetienjerkie]
+#    gööth+N+Cmp/SgNom+Cmp#jerkie+N+Sg+Nom: [ gåetiejerkie]
+#    gööth+N+Cmp/SgGen+Cmp#jerkie+N+Sg+Nom: [~gåetienjerkie]
+#    gööth+N+Cmp/PlGen+Cmp#jerkie+N+Sg+Nom: [ gööthjerkie]
 
 # CmpN/SgNom + CmpN/SgGen tests:
 # This is the default - no such cases found in the lexicon.
 
 # CmpN/SgGen + CmpN/PlGen tests:
   CmpN/SgGen + CmpN/PlGen tests:
-    gelliengïele+N+Sem/Lang+Cmp#jerkie+N+Sem/Dummytag+Sg+Nom: [~gellien#gïele∑#jerkie, gellien#gïelen∑#jerkie, gellien#gïeli∑#jerkie, gellien-gïelen∑#jerkie, gellien-gïeli∑#jerkie]
+    gelliengïele+N+Sem/Lang+Cmp/SgNom+Cmp#jerkie+N+Sem/Dummytag+Sg+Nom: [~gellien#gïele∑#jerkie, ~gellien-gïele∑#jerkie ]
+    gelliengïele+N+Sem/Lang+Cmp/SgGen+Cmp#jerkie+N+Sem/Dummytag+Sg+Nom: [gellien#gïelen∑#jerkie,  gellien-gïelen∑#jerkie]
+    gelliengïele+N+Sem/Lang+Cmp/PlGen+Cmp#jerkie+N+Sem/Dummytag+Sg+Nom: [gellien#gïeli∑#jerkie,   gellien-gïeli∑#jerkie ]
 
 # CmpN/SgNom + CmpN/SgGen + CmpN/PlGen tests:
   CmpN/SgN + SgG + PlG tests:
     bovtse+N+Sem/Ani+Sg+Nom: [bovtse]
     baalka+N+Sem/Route+Sg+Nom: [baalka]
-    bovtse+N+Sem/Ani+Cmp#baalka+N+Sem/Route+Sg+Nom: [bovtse∑#baalka, bovtsen∑#baalka, bovtsi∑#baalka]
+    bovtse+N+Sem/Ani+Cmp/SgNom+Cmp#baalka+N+Sem/Route+Sg+Nom: [bovtse∑#baalka ]
+    bovtse+N+Sem/Ani+Cmp/SgGen+Cmp#baalka+N+Sem/Route+Sg+Nom: [bovtsen∑#baalka]
+    bovtse+N+Sem/Ani+Cmp/PlGen+Cmp#baalka+N+Sem/Route+Sg+Nom: [bovtsi∑#baalka ]
 
 #  CmpN/SgNomLeft tests:
   CmpN/SgNomLeft tests:
-    gåetie+N+Sem/Build+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [gåetie∑#guaktah, ~gåetien∑#guaktah, ~gåetiej∑#guaktah]
+    gåetie+N+Sem/Build+Cmp/SgNom+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [  gåetie∑#guaktah]
+    gåetie+N+Sem/Build+Cmp/SgGen+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [~gåetien∑#guaktah]
+    gåetie+N+Sem/Build+Cmp/PlGen+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [~gåetiej∑#guaktah]
     
 #  CmpN/SgGenLeft tests: # there are no entries in the lexicon with only SgGenLeft
 
 #  CmpN/PlGenLeft tests:
-#    spaanske+N+Cmp#gasska+N+Sg+Nom: [spaanskegïele, ~spaanskengïele, ~spaanskigïele]
+#    spaanske+N+Cmp/SgGen+Cmp#gasska+N+Sg+Nom: [spaanskegïele, ~spaanskengïele, ~spaanskigïele]
 
 #  CmpN/SgNomLeft and CmpN/PlGenLeft tests:
   CmpN/SgNomLeft and CmpN/PlGenLeft tests:
-    gïele+N+Sem/Lang_Tool+Cmp#gaske+N+Sem/Feat-measr_Plc+Sg+Nom: [gïele∑#gaske, ~gïelen∑#gaske, gïeli∑#gaske] # gïele - all three, gaske: CmpN/SgNomLeft and CmpN/PlGenLeft . 
+    gïele+N+Sem/Lang_Tool+Cmp/SgNom+Cmp#gaske+N+Sem/Feat-measr_Plc+Sg+Nom: [  gïele∑#gaske] # gïele - all three, gaske: CmpN/SgNomLeft and CmpN/PlGenLeft . 
+    gïele+N+Sem/Lang_Tool+Cmp/SgGen+Cmp#gaske+N+Sem/Feat-measr_Plc+Sg+Nom: [~gïelen∑#gaske] # gïele - all three, gaske: CmpN/SgNomLeft and CmpN/PlGenLeft . 
+    gïele+N+Sem/Lang_Tool+Cmp/PlGen+Cmp#gaske+N+Sem/Feat-measr_Plc+Sg+Nom: [  gïeli∑#gaske] # gïele - all three, gaske: CmpN/SgNomLeft and CmpN/PlGenLeft . 
 
 #  All three Left tests:
   CmpN/SgNomLeft SgGenLeft PlGenLeft tests:
-    båaloe+N+Sem/Clthpart+Cmp#aejkie+N+Sem/Time+Sg+Nom: [båaloe∑#aejkie, båaloen∑#aejkie, båaloej∑#aejkie] # båaloe - default, aejkie: all three Left
+    båaloe+N+Sem/Clthpart+Cmp/SgNom+Cmp#aejkie+N+Sem/Time+Sg+Nom: [ båaloe∑#aejkie] # båaloe - default, aejkie: all three Left
+    båaloe+N+Sem/Clthpart+Cmp/SgGen+Cmp#aejkie+N+Sem/Time+Sg+Nom: [båaloen∑#aejkie] # båaloe - default, aejkie: all three Left
+    båaloe+N+Sem/Clthpart+Cmp/PlGen+Cmp#aejkie+N+Sem/Time+Sg+Nom: [båaloej∑#aejkie] # båaloe - default, aejkie: all three Left
