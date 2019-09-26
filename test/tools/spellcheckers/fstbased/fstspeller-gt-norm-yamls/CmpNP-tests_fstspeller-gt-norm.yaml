@@ -11,36 +11,45 @@ Config:
 
 Tests:
   CmpNP/First tests:
-    Stalin-monumente+N+Sem/Dummytag+Cmp#gïele+N+Sem/Lang_Tool+Sg+Nom: [Stalin-monumente∑#gïele, Stalin-monument∑#gïele, ~Stalin-monumenten∑#gïele]
+    Stalin-monumente+N+Sem/Dummytag+Cmp/SgNom+Cmp#gïele+N+Sem/Lang_Tool+Sg+Nom: [Stalin-monumente∑#gïele, Stalin-monument∑#gïele]
+    Stalin-monumente+N+Sem/Dummytag+Cmp/SgGen+Cmp#gïele+N+Sem/Lang_Tool+Sg+Nom: [~Stalin-monumenten∑#gïele]
     gïele+N+Sem/Lang_Tool+Cmp-#Stalin-monumente+N+Sem/Dummytag+Sg+Nom: []
 
 #det som kommer foran
   CmpNP/Pref tests:
 #    geerve+A+Sg+Nom: ~geerve # Endra pos til A, har ingen avgrensingar når det gjeld samansetjing lenger.
-    geerve+A+Cmp#bïegke+N+Sem/Substnc_Wthr+Sg+Nom: geerve∑#bïegke
-    bïegke+N+Sem/Substnc_Wthr+Cmp#geerve+A+Sg+Nom: ~bïegke∑#geerve
-    bïegke+N+Sem/Substnc_Wthr+Cmp#geerve+A+Cmp#bïegke+N+Sem/Substnc_Wthr+Sg+Nom: ~bïegke∑#geerve∑#bïegke
+    geerve+A+Cmp/Attr+Cmp#bïegke+N+Sem/Substnc_Wthr+Sg+Nom: geerve∑#bïegke
+    bïegke+N+Sem/Substnc_Wthr+Cmp/SgNom+Cmp#geerve+A+Sg+Nom: ~bïegke∑#geerve
+    bïegke+N+Sem/Substnc_Wthr+Cmp/SgNom+Cmp#geerve+A+Cmp/Attr+Cmp#bïegke+N+Sem/Substnc_Wthr+Sg+Nom: ~bïegke∑#geerve∑#bïegke
 
-    aajege+N+Sem/Plc+Cmp#bïegke+N+Sem/Substnc_Wthr+Sg+Nom: aajeh∑#bïegke
-    bïegke+N+Sem/Substnc_Wthr+Cmp#aajege+N+Sem/Plc+Sg+Nom: ~bïegke∑#aajege
-    bïegke+N+Sem/Substnc_Wthr+Cmp#aajege+N+Sem/Plc+Cmp#bïegke+N+Sem/Substnc_Wthr+Sg+Nom: ~bïegke∑#aajeh∑#bïegke
+    aajege+N+Sem/Plc+Cmp/SgNom+Cmp#bïegke+N+Sem/Substnc_Wthr+Sg+Nom: aajeh∑#bïegke
+    bïegke+N+Sem/Substnc_Wthr+Cmp/SgNom+Cmp#aajege+N+Sem/Plc+Sg+Nom: ~bïegke∑#aajege
+    bïegke+N+Sem/Substnc_Wthr+Cmp/SgNom+Cmp#aajege+N+Sem/Plc+Cmp/SgNom+Cmp#bïegke+N+Sem/Substnc_Wthr+Sg+Nom: ~bïegke∑#aajeh∑#bïegke
 
   CmpNP/Last tests: 
 #    njieljie+Num+Sg+Gen+Cmp#juolgge+N+Der/k+A+Sg+Nom: njieljienjoelkege # joelkege only as lexicalised compound
-    gïele+N+Sem/Lang_Tool+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [ gïele∑#guaktah, ~gïelen∑#guaktah, ~gïeli∑#guaktah] # guaktah: Last, SgNomLeft
+    gïele+N+Sem/Lang_Tool+Cmp/SgNom+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [ gïele∑#guaktah]   # guaktah: Last, SgNomLeft
+    gïele+N+Sem/Lang_Tool+Cmp/SgGen+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [~gïelen∑#guaktah] # guaktah: Last, SgNomLeft
+    gïele+N+Sem/Lang_Tool+Cmp/PlGen+Cmp#guaktah+N+Sem/Dummytag+Pl+Nom: [~gïeli∑#guaktah]  # guaktah: Last, SgNomLeft
     guaktah+N+Sem/Dummytag+Cmp#gïele+N+Sem/Lang_Tool+Pl+Nom: [~guakta∑#gïelh,  ~guaktaj∑#gïelh]
     guaktah+N+Sem/Dummytag+Pl+Nom: guaktah
     
 #det som kommer bak   
   CmpNP/Suff tests: 
     nuelie+N+Sem/Dummytag+Sg+Nom: ~nuelie
-    nuelie+N+Sem/Dummytag+Cmp#gïele+N+Sem/Lang_Tool+Sg+Nom: [~nuelie∑#gïele, ~nuelien∑#gïele]
-    gïele+N+Sem/Lang_Tool+Cmp#nuelie+N+Sem/Dummytag+Sg+Nom: [gïele∑#nuelie, gïelen∑#nuelie, gïeli∑#nuelie]
+    nuelie+N+Sem/Dummytag+Cmp/SgNom+Cmp#gïele+N+Sem/Lang_Tool+Sg+Nom: [~nuelie∑#gïele]
+    nuelie+N+Sem/Dummytag+Cmp/SgGen+Cmp#gïele+N+Sem/Lang_Tool+Sg+Nom: [~nuelien∑#gïele]
+    gïele+N+Sem/Lang_Tool+Cmp/SgNom+Cmp#nuelie+N+Sem/Dummytag+Sg+Nom: [gïele∑#nuelie]
+    gïele+N+Sem/Lang_Tool+Cmp/SgGen+Cmp#nuelie+N+Sem/Dummytag+Sg+Nom: [gïelen∑#nuelie]
+    gïele+N+Sem/Lang_Tool+Cmp/PlGen+Cmp#nuelie+N+Sem/Dummytag+Sg+Nom: [gïeli∑#nuelie]
 
   CmpNP/None tests:
     guaktegh+N+Sem/Dummytag+Pl+Nom: guaktegh
-    guaktegh+N+Sem/Dummytag+Cmp#gïele+N+Sg+Nom: [~guaktegegïele, ~guaktegigïele]
-    gïele+N+Cmp#guaktegh+N+Sem/Dummytag+Pl+Nom: [~gïeleguaktegh, ~gïelenguaktegh, ~gïeliguaktegh]
+    guaktegh+N+Sem/Dummytag+Cmp/SgNom+Cmp#gïele+N+Sg+Nom: [~guaktegegïele]
+    guaktegh+N+Sem/Dummytag+Cmp/PlGen+Cmp#gïele+N+Sg+Nom: [~guaktegigïele]
+    gïele+N+Sem/Lang_Tool+Cmp/SgNom+Cmp#guaktegh+N+Sem/Dummytag+Pl+Nom: [~gïeleguaktegh]
+    gïele+N+Sem/Lang_Tool+Cmp/SgGen+Cmp#guaktegh+N+Sem/Dummytag+Pl+Nom: [~gïelenguaktegh]
+    gïele+N+Sem/Lang_Tool+Cmp/PlGen+Cmp#guaktegh+N+Sem/Dummytag+Pl+Nom: [~gïeliguaktegh]
 
 # Outcommented because faerhmie is not tagged +CmpNP/Only, and there is no entry in the lexicon with the +CmpNP/Only tag.
 # We do know from earlier tests that the machinery is working, though.
