@@ -17,10 +17,10 @@ JSP_PAGES=root-morphology.jspwiki       \
 		  abbreviations-affixes.jspwiki \
           acronyms-affixes.jspwiki      \
 		  adjectives-stems.jspwiki      \
-		  smi-propernouns-stems.jspwiki \
 		  disambiguator-syntax.jspwiki
 
-#         acronyms-stems.jspwiki        \
+#         sma-acronyms-stems.jspwiki    \
+#		  smi-propernouns-stems.jspwiki \
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
 # adpositions-stems.jspwiki        \
