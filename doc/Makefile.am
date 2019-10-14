@@ -9,21 +9,20 @@
 
 if CAN_DOCC
 
-JSP_PAGES=root-morphology.jspwiki \
-		  abbreviations-affixes.jspwiki      \
-		  adjectives-affixes.jspwiki \
-		  adjectives-stems.jspwiki \
-		  adjectives-oahpa-affixes.jspwiki \
-		  adjectives-oahpa-stems.jspwiki   \
-		  smi-propernouns-stems.jspwiki    \
-		  nouns-affixes.jspwiki \
-		  numerals-affixes.jspwiki \
-		  verbs-affixes.jspwiki \
-		  disambiguator-syntax.jspwiki \
-		  sma-phon-phonology.jspwiki
+JSP_PAGES=root-morphology.jspwiki       \
+		  sma-phon-phonology.jspwiki    \
+		  nouns-affixes.jspwiki         \
+		  propernouns-affixes.jspwiki   \
+		  adjectives-affixes.jspwiki    \
+		  verbs-affixes.jspwiki         \
+		  numerals-affixes.jspwiki      \
+		  abbreviations-affixes.jspwiki \
+          acronyms-affixes.jspwiki      \
+		  adjectives-stems.jspwiki      \
+		  smi-propernouns-stems.jspwiki \
+		  disambiguator-syntax.jspwiki
 
-#         acronyms-stems.jspwiki           \
-#         acronyms-affixes.jspwiki           \
+#         acronyms-stems.jspwiki        \
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
 # adpositions-stems.jspwiki        \
@@ -37,8 +36,7 @@ JSP_PAGES=root-morphology.jspwiki \
 # propernouns-stems.jspwiki        \
 # punctuation-stems.jspwiki        \
 # subjunctions-stems.jspwiki       \
-# verbs-stems.jspwiki              \
-# propernouns-affixes.jspwiki
+# verbs-stems.jspwiki
 
 ALLINONE_JSP_PAGE=$(srcdir)/$(GTLANG).jspwiki
 
