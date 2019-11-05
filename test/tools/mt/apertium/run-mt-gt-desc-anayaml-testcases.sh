@@ -6,7 +6,7 @@
 
 ###### User variables - adjust as needed: #######
 # Specify the invariable part of the transducer name:
-transducer=mt-gt-desc
+transducer=mt-gt-desc.und
 
 # Specify whether the test runner should test only generation, analysis or both:
 # gen = generation test
