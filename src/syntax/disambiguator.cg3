@@ -23,6 +23,13 @@
               # Cycle 3: Global disambiguation 
 	          # Cycle 4: Syntactic disambiguation 
 	          # Cycle 5: Post-syntactic morphological disambiguation
+	          
+	          
+				# ================================= #
+				# To test the sma disambiguator do:
+				# ================================= #
+	          
+	          # echo "buerie. text" | preprocess | lookup -q src/analyser-disamb-gt-desc.xfst | lookup2cg | vislcg3 -g src/syntax/disambiguator.cg3 | less
 
 
 # ========== #
