@@ -485,9 +485,9 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
  @P.Pmatch.Backtrack@ !!≈ | @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this poin in the form (to find combinations of shorter analyses that would otherwise be missed)
 
- @D.ErrOrth.ON@      !!≈ | @CODE@ 
- @C.ErrOrth@	        !!≈ | @CODE@ 
- @P.ErrOrth.ON@      !!≈ | @CODE@ 
+ @D.ErrOrth.ON@      !!≈ | @CODE@  | asdf
+ @C.ErrOrth@	        !!≈ | @CODE@ | asdf
+ @P.ErrOrth.ON@      !!≈ | @CODE@ | asdf
 
 
 !! !!Derivation position in a derivation row
@@ -498,7 +498,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Der1                                          !!≈ | @CODE@ | Position
                 +Der2                          !!≈ | @CODE@ | Position
                                 +Der3          !!≈ | @CODE@ | Position
-!! | Der#1
+
+!!  Der#1
 +Der/htalle                                    !!≈ | @CODE@ | VV - Passive, frekeventative
 +Der/lg                                     !!≈ | @CODE@ | VV - Passive
 +Der/ijes                                      !!≈ | @CODE@ | NA - Nomen agentis
@@ -508,17 +509,17 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Der/ldahke                                    !!≈ | @CODE@ | VA - Resultatnomen (?)
 +Der/ldh                                       !!≈ | @CODE@ | VA - Attributt
 +Der/ht                                     !!≈ | @CODE@ | VV - Causative
-! +Der/Caus                                   ! ≈ | @CODE@ | VV - Causative
+! +Der/Caus                                    ≈  @CODE@  VV - Causative
 +Der/l                                      !!≈ | @CODE@ | VV - Subitive
 +Der/st                                     !!≈ | @CODE@ | VV - Diminutive, Subitive
 +Der/d                                      !!≈ | @CODE@ | VV - Continuative, Konative, Frequentative, Refleksive, Momentan
 +Der/Car                                     !!≈ | @CODE@ | -hts, Caritive, was Der/heapmi in sme
-!! +Der/dMOM  ?
-!! +Der/dKON  ?
-!! +Der/dREFL ?
-!! +Der/dCONT ?
-!! +Der/dCONTFREC ?
-!! +Der/dFREC ?
+! +Der/dMOM  ?
+! +Der/dKON  ?
+! +Der/dREFL ?
+! +Der/dCONT ?
+! +Der/dCONTFREC ?
+! +Der/dFREC ?
 
 +Der/htj                                    !!≈ | @CODE@ | Dim-cont, Frequentative
 +Der/Dimin                                     !!≈ | @CODE@ | NN - Diminutive
@@ -528,18 +529,21 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !laaketje = legg til denne!
 
-!! | Der#2
+!! Der#2
                 +Der/vuota                     !!≈ | @CODE@ | AN - Noun
                 +Der/adte                      !!≈ | @CODE@ | VV - Frequentative, Kontinuativ
                 +Der/alla                      !!≈ | @CODE@ | VV - Frequentative
                 +Der/eds                       !!≈ | @CODE@ | NA - Attributt
-!! | Der#3
+
+!!  Der#3
                                 +Der/PassL     !!≈ | @CODE@ | VV - long only
                                 +Der/NomAg     !!≈ | @CODE@ | VN - Nomen Agentis
                                 +Der/NomAct    !!≈ | @CODE@ | VN - Nomen Actionis
                                 +Der/ahtje     !!≈ | @CODE@ | VV - Inchoative
                                 +Der/InchL     !!≈ | @CODE@ | VV - Inchoative
-!! | Der#4   | ''So far +Der4 is not motivated for SMA.''
+
+!!  Der#4    ''So far +Der4 is not motivated for SMA.''
+
 
 !! !Other, non-positional derivations
 
@@ -629,7 +633,9 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
   +v7 !!≈ ; @CODE@ : variant 7
 !!
 
-|» !!≈ ; @CODE@ : clitic boundary mark - a multichar that usually just go to zero
+
+!! clitic boundary mark - a multichar that usually just go to zero
+|» 
 
 !! !!Umlaut and diphthong simplification triggers
 
