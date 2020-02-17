@@ -380,15 +380,15 @@ to research compounding patterns in the corpus.
  *  +Sem/Measr_Time            	år, mnd,uke,time,minutt
  *  +Sem/Money                 	penger,depositum, gevinst, stipend
  *  +Sem/Money_Obj             
- *  +Sem/Obj                   
- *  +Sem/Obj-clo               
+ *  +c7                   		
+ *  +Sem/Obj-clo               	handduk, flagg, pledd, 
  *  +Sem/Obj-el                
- *  +Sem/Obj-ling              
+ *  +Sem/Obj-ling              	kort,biletter
  *  +Sem/Obj-ling_Obj-surfc    
- *  +Sem/Obj-play              
+ *  +Sem/Obj-play              	ball eks:vollyball,fotball, snøball
  *  +Sem/Obj-rope              
  *  +Sem/Obj-surfc             
- *  +Sem/Hum_Obj               
+ *  +Sem/Hum_Obj               	eks: snømann, snøengel
  *  +Sem/Obj_State             
  *  +Sem/Obj_Veh               
  *  +Sem/Org                   
@@ -466,9 +466,9 @@ given the proper use of these flags.
 
  | @P.Pmatch.Backtrack@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this poin in the form (to find combinations of shorter analyses that would otherwise be missed)
 
- | @D.ErrOrth.ON@ 
- | @C.ErrOrth@	 
- | @P.ErrOrth.ON@ 
+ | @D.ErrOrth.ON@  | asdf
+ | @C.ErrOrth@	 | asdf
+ | @P.ErrOrth.ON@ | asdf
 
 
 !!Derivation position in a derivation row
@@ -478,7 +478,8 @@ Affix and tag, frompos - topos
  | +Der1 | Position
  | +Der2 | Position
  | +Der3 | Position
-| Der#1
+
+ Der#1
  | +Der/htalle | VV - Passive, frekeventative
  | +Der/lg | VV - Passive
  | +Der/ijes | NA - Nomen agentis
@@ -492,12 +493,6 @@ Affix and tag, frompos - topos
  | +Der/st | VV - Diminutive, Subitive
  | +Der/d | VV - Continuative, Konative, Frequentative, Refleksive, Momentan
  | +Der/Car | -hts, Caritive, was Der/heapmi in sme
-+Der/dMOM  ?
-+Der/dKON  ?
-+Der/dREFL ?
-+Der/dCONT ?
-+Der/dCONTFREC ?
-+Der/dFREC ?
 
  | +Der/htj | Dim-cont, Frequentative
  | +Der/Dimin | NN - Diminutive
@@ -506,18 +501,21 @@ Affix and tag, frompos - topos
  | +Der/laaketje | AA - adjektiv
 
 
-| Der#2
+Der#2
  | +Der/vuota | AN - Noun
  | +Der/adte | VV - Frequentative, Kontinuativ
  | +Der/alla | VV - Frequentative
  | +Der/eds | NA - Attributt
-| Der#3
+
+ Der#3
  | +Der/PassL | VV - long only
  | +Der/NomAg | VN - Nomen Agentis
  | +Der/NomAct | VN - Nomen Actionis
  | +Der/ahtje | VV - Inchoative
  | +Der/InchL | VV - Inchoative
-| Der#4   | ''So far +Der4 is not motivated for SMA.''
+
+ Der#4    ''So far +Der4 is not motivated for SMA.''
+
 
 !Other, non-positional derivations
 
@@ -598,7 +596,8 @@ get the same pronunciation whether read as SME or NOB/NNO/SWE.
  ; +v6 : variant 6
  ; +v7 : variant 7
 
- ; |» : clitic boundary mark - a multichar that usually just go to zero
+
+clitic boundary mark - a multichar that usually just go to zero
 
 !!Umlaut and diphthong simplification triggers
 
