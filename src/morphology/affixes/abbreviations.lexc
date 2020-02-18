@@ -25,21 +25,21 @@
 ! Then pointing to two contlexes, a dot-one and a non-dot-one.
 
 !! !!Abbreviations written both with and without a following full stop
-LEXICON ab-noun-itrab   +N+ABBR+Gram/IAbbr:    ab-noun ;
-LEXICON ab-noun-trab    +N+ABBR+Gram/TAbbr:    ab-noun ;
-LEXICON ab-noun-trnumab +N+ABBR+Gram/TNumAbbr: ab-noun ;
+LEXICON ab-noun-itrab   +ABBR+Gram/IAbbr:    ab-noun ;
+LEXICON ab-noun-trab    +ABBR+Gram/TAbbr:    ab-noun ;
+LEXICON ab-noun-trnumab +ABBR+Gram/TNumAbbr: ab-noun ;
 LEXICON ab-noun
  +Use/NG: ab-nodot-noun ;
           ab-dot-noun   ;
 
-LEXICON ab-adj-itrab +A+ABBR+Gram/IAbbr: ab-adj ;
-!LEXICON ab-adj-trab +A+ABBR+Gram/TAbbr: ab-adj ;
+LEXICON ab-adj-itrab +ABBR+Gram/IAbbr: ab-adj ;
+!LEXICON ab-adj-trab +ABBR+Gram/TAbbr: ab-adj ;
 LEXICON ab-adj
  +Use/NG: ab-nodot-adj ;
           ab-dot-adj   ;
 
-LEXICON ab-adv-itrab +Adv+ABBR+Gram/IAbbr: ab-adv ;
-LEXICON ab-adv-trab  +Adv+ABBR+Gram/TAbbr: ab-adv ;
+LEXICON ab-adv-itrab +ABBR+Gram/IAbbr: ab-adv ;
+LEXICON ab-adv-trab  +ABBR+Gram/TAbbr: ab-adv ;
 LEXICON ab-adv
  +Use/NG: ab-nodot-adv ;
           ab-dot-adv   ;
@@ -52,9 +52,9 @@ LEXICON ab-num
 !! !!Abbreviations written without a following full stop
 !! Most abbreviations point to various variants of {{ab-nodot-noun}}.
 
-LEXICON ab-nodot-noun-itrab   +N+ABBR+Gram/IAbbr:    ab-nodot-noun ;
-LEXICON ab-nodot-noun-trab    +N+ABBR+Gram/TAbbr:    ab-nodot-noun ;
-LEXICON ab-nodot-noun-trnumab +N+ABBR+Gram/TNumAbbr: ab-nodot-noun ;
+LEXICON ab-nodot-noun-itrab   +ABBR+Gram/IAbbr:    ab-nodot-noun ;
+LEXICON ab-nodot-noun-trab    +ABBR+Gram/TAbbr:    ab-nodot-noun ;
+LEXICON ab-nodot-noun-trnumab +ABBR+Gram/TNumAbbr: ab-nodot-noun ;
 LEXICON ab-nodot-noun
  abbr-nominal-infl ;
  RHyph             ;
@@ -63,8 +63,8 @@ LEXICON ab-nodot-adj
  abbr-nominal-infl ;
  RHyph             ;
 
-LEXICON ab-nodot-adv-itrab +Adv+ABBR+Gram/IAbbr: ab-nodot-adv ;
-!LEXICON ab-nodot-adv-trab  +Adv+ABBR+Gram/TAbbr: ab-nodot-adv ;
+LEXICON ab-nodot-adv-itrab +ABBR+Gram/IAbbr: ab-nodot-adv ;
+!LEXICON ab-nodot-adv-trab  +ABBR+Gram/TAbbr: ab-nodot-adv ;
 LEXICON ab-nodot-adv
  # ; ! Adv without case, consider this.
 
@@ -77,24 +77,24 @@ LEXICON ab-nodot-num
 !  ab-dot-noun-trab ;
 !  ab-dot-adj-trab  ;
 
-LEXICON ab-dot-noun-itrab   +N+ABBR+Gram/IAbbr:    ab-dot-noun ;
-LEXICON ab-dot-noun-trab    +N+ABBR+Gram/TAbbr:    ab-dot-noun ;
-LEXICON ab-dot-noun-trnumab +N+ABBR+Gram/TNumAbbr: ab-dot-noun ;
+LEXICON ab-dot-noun-itrab   +ABBR+Gram/IAbbr:    ab-dot-noun ;
+LEXICON ab-dot-noun-trab    +ABBR+Gram/TAbbr:    ab-dot-noun ;
+LEXICON ab-dot-noun-trnumab +ABBR+Gram/TNumAbbr: ab-dot-noun ;
 LEXICON ab-dot-noun
 !! @LEXNAME@ is the lexicon for noun abbrs that must have a period.
            +Attr: FINAL_DOT ;
-! +N+ABBR+Sg+Nom: FINAL_DOT ;
+! +ABBR+Sg+Nom: FINAL_DOT ;
 
-LEXICON ab-dot-adj-itrab   +A+ABBR+Gram/IAbbr:    ab-dot-adj ;
-LEXICON ab-dot-adj-trab    +A+ABBR+Gram/TAbbr:    ab-dot-adj ;
-LEXICON ab-dot-adj-trnumab +A+ABBR+Gram/TNumAbbr: ab-dot-adj ;
+LEXICON ab-dot-adj-itrab   +ABBR+Gram/IAbbr:    ab-dot-adj ;
+LEXICON ab-dot-adj-trab    +ABBR+Gram/TAbbr:    ab-dot-adj ;
+LEXICON ab-dot-adj-trnumab +ABBR+Gram/TNumAbbr: ab-dot-adj ;
 LEXICON ab-dot-adj
 !! @LEXNAME@ is the lexicon for adjectival abbrs that must have a period.
    +Attr:   FINAL_DOT ;
  +Sg+Nom:%. #             ;
 
-LEXICON ab-dot-adv-itrab +Adv+ABBR+Gram/IAbbr: ab-dot-adv ;
-LEXICON ab-dot-adv-trab  +Adv+ABBR+Gram/TAbbr: ab-dot-adv ;
+LEXICON ab-dot-adv-itrab +ABBR+Gram/IAbbr: ab-dot-adv ;
+LEXICON ab-dot-adv-trab  +ABBR+Gram/TAbbr: ab-dot-adv ;
 LEXICON ab-dot-adv
 !! @LEXNAME@ is the lexicon for adverbial abbrs that must have a period.
  FINAL_DOT ; ! Adv without case.
@@ -154,14 +154,14 @@ LEXICON CLB_DOT
 
 ! noun the default POS
 !LEXICON ab-nodot ! default
-!+N+ABBR+Attr: # ; ! no period, that is.
-!+N+ABBR+Nom: # ; ! no period, that is.
-!+N+ABBR: RHyph ;
+!+ABBR+Attr: # ; ! no period, that is.
+!+ABBR+Nom: # ; ! no period, that is.
+!+ABBR: RHyph ;
 
 !LEXICON ab-dot ! Default
 ! +ABBR:%. # ;
-!+N+ABBR+Attr:%. # ;
-!+N+ABBR+Nom:%. # ;
+!+ABBR+Attr:%. # ;
+!+ABBR+Nom:%. # ;
 
 ! Then, as an afterthought, come our two verbs, gč. and vrd.
 
