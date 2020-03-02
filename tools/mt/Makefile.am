@@ -40,7 +40,7 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 # And also for the generator:
 generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 			$(top_builddir)/src/filters/remove-norm-comp-tags.hfst           \
-			$(top_builddir)/src/filters/remove-Dial_SH-strings.hfst          \
+			$(top_builddir)/src/filters/remove-Dial_L-strings.hfst          \
 			$(top_builddir)/src/filters/remove-dialect-tags.hfst             \
 			$(top_builddir)/src/filters/remove-test-tags.hfst                \
 			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst \
@@ -51,7 +51,7 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 			filters/make-optional-Attr_before_dervuota-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 		@\"$(top_builddir)/src/filters/remove-dialect-tags.hfst\"             \
-	.o. @\"$(top_builddir)/src/filters/remove-Dial_SH-strings.hfst\"          \
+	.o. @\"$(top_builddir)/src/filters/remove-Dial_L-strings.hfst\"          \
 	.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\"                \
 	.o. @\"$(top_builddir)/src/filters/remove-derivation-position-tags.hfst\" \
    	.o. @\"$(top_builddir)/src/filters/remove-norm-comp-tags.hfst\"           \
