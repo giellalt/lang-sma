@@ -1114,6 +1114,8 @@ SUBSTITUTE (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-
 COPY:NNom (N Nom) EXCEPT Adv TARGET (Sem/Adr)  ;
 	## www.samediggi.fi http://yle.fi/sapmi lene62@gmail.com anja.irina.ahola(at)gmail.com
 
+REMOVE:ArabErr Err/Orth (0 Arab) ;
+
 SELECT:ArabNom (Arab Nom) (-1 BOS)(NEGATE 1 Po)(NEGATE 1 Sem/Time LINK 1 ("áigi") + Adv) ;
 SELECT:Arab1 (Arab Nom)(0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
