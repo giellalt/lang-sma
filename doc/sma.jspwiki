@@ -715,6 +715,8 @@ Here is the list of lexica in the sma analyser
  *              Acronym      ; 
 
 
+
+
  * __LEXICON ProperNoun   __
 
 
@@ -3875,46 +3877,72 @@ analyses.
 
 
 
-!!!Abbreviation affixes & contlexes
+!!!Continuation lexicons for abbreviations
+
+!!Lexica for adding tags and periods
+
+!!The sublexica
+
+!Continuation lexicons for abbrs both with and witout final period
+
+
+ * __LEXICON ab-noun   __
+
+ * __LEXICON ab-adj   __
+
+ * __LEXICON ab-adv   __
+
+ * __LEXICON ab-num   __
+
+!Lexicons without final period
+
+ * __LEXICON ab-nodot-noun   __  The bulk
+
+ * __LEXICON ab-nodot-adj   __
+
+ * __LEXICON ab-nodot-adv   __
+
+ * __LEXICON ab-nodot-num   __
+
+!Lexicons with final period
+
+ * __LEXICON ab-dot-noun   __  This is the lexicon for abbrs that must have a period.
+
+ * __LEXICON ab-dot-adj   __  This is the lexicon for abbrs that must have a period.
+
+ * __LEXICON ab-dot-adv   __  This is the lexicon for abbrs that must have a period.
+
+ * __LEXICON ab-dot-num   __  This is the lexicon for abbrs that must have a period.
+
+ * __LEXICON ab-dot-cc   __
 
 
 
 
-!!Abbreviations written both with and without a following full stop
+
+ * __LEXICON ab-dot-verb   __
+
+ * __LEXICON ab-nodot-verb   __
 
 
+ * __LEXICON ab-dot-IVprfprc   __
 
 
-!!Abbreviations written without a following full stop
-Most abbreviations point to various variants of {{ab-nodot-noun}}.
+ * __LEXICON nodot-attrnomaccgen-infl   __
+
+ * __LEXICON nodot-attr-infl   __
+
+ * __LEXICON nodot-nomaccgen-infl   __
 
 
+ * __LEXICON dot-attrnomaccgen-infl   __
+
+ * __LEXICON dot-attr   __
+
+ * __LEXICON dot-nomaccgen-infl   __
 
 
-
-!!Abbreviations written with a following full stop
-
-ab-dot-noun is the lexicon for noun abbrs that must have a period.
-
-ab-dot-adj is the lexicon for adjectival abbrs that must have a period.
-
-ab-dot-adv is the lexicon for adverbial abbrs that must have a period.
-
-ab-dot-num is the lexicon for numerical abbrs that must have a period.
-
-
-
-!!Case suffixes and analysis tags
-
-
-
-
-
-
-
-
-
-
+ * __LEXICON DOT   __ - Adds the dot to dotted abbreviations.
 
 
 
@@ -3953,6 +3981,7 @@ This file is used for spellchecking, the alternative file
 This file is compiled by default, the other one is compiled by in
 langs/sma giving the command ''.configure --with-oahpa''
 before compiling.
+
 
 
 
@@ -4369,6 +4398,7 @@ Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes n√
 
 
 !!Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
+
 
 
 
