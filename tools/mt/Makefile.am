@@ -37,8 +37,37 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
 		-o $@
 
-# And also for the generator:
+# And also for the South generator (removing L):
 generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
+			$(top_builddir)/src/filters/remove-norm-comp-tags.hfst           \
+			$(top_builddir)/src/filters/remove-Dial_L-strings.hfst          \
+			$(top_builddir)/src/filters/remove-dialect-tags.hfst             \
+			$(top_builddir)/src/filters/remove-test-tags.hfst                \
+			$(top_builddir)/src/filters/remove-derivation-position-tags.hfst \
+			$(top_builddir)/src/filters/remove-Use_minus_PMatch-tags.hfst    \
+			$(top_builddir)/src/filters/remove-Use_PMatch-strings.hfst       \
+			$(top_builddir)/src/filters/remove-Use_GC-strings.hfst           \
+			$(top_builddir)/src/filters/remove-Use_minusGC-tags.hfst         \
+			filters/make-optional-Attr_before_dervuota-tags.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+		@\"$(top_builddir)/src/filters/remove-dialect-tags.hfst\"             \
+	.o. @\"$(top_builddir)/src/filters/remove-Dial_L-strings.hfst\"          \
+	.o. @\"$(top_builddir)/src/filters/remove-test-tags.hfst\"                \
+	.o. @\"$(top_builddir)/src/filters/remove-derivation-position-tags.hfst\" \
+   	.o. @\"$(top_builddir)/src/filters/remove-norm-comp-tags.hfst\"           \
+	.o. @\"$(top_builddir)/src/filters/remove-Use_minus_PMatch-tags.hfst\"    \
+	.o. @\"$(top_builddir)/src/filters/remove-Use_PMatch-strings.hfst\"       \
+	.o. @\"$(top_builddir)/src/filters/remove-Use_GC-strings.hfst\"           \
+	.o. @\"$(top_builddir)/src/filters/remove-Use_minusGC-tags.hfst\"         \
+	.o. @\"filters/make-optional-Attr_before_dervuota-tags.hfst\"             \
+   	.o. @\"$<\" \
+    	;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
+			-S --xerox-composition=ON \
+		> $@
+
+# And also for the North generator (removing SH):
+generator-mt-gt-norm_North.hfst: generator-mt-gt-norm.tmp.hfst \
 			$(top_builddir)/src/filters/remove-norm-comp-tags.hfst           \
 			$(top_builddir)/src/filters/remove-Dial_SH-strings.hfst          \
 			$(top_builddir)/src/filters/remove-dialect-tags.hfst             \
@@ -80,3 +109,5 @@ clean-local:
 # General build rules included from here:#
 
 include $(top_srcdir)/am-shared/tools-mt-dir-include.am
+
+APERTIUM_GENERATORS_HFST+=generator-mt-gt-norm_North.hfst

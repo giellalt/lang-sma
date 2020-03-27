@@ -31,8 +31,8 @@ analyser-mt-gt-desc.%.hfst: analyser-mt-gt-desc.%.tmp.hfst \
 	$(AM_V_FST2FST)$(HFST_FST2FST) $(HFSTFLAGS) $(HFST_FORMAT) $< -o $<.tmp
 	$(AM_V_RGX2FST)$(PRINTF) "\
 		@\"$(top_builddir)/src/filters/make-optional-semantic-tags.hfst\" \
-   	.o. @\"$<.tmp\" \
-    	;" \
+	.o. @\"$<.tmp\" \
+	;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) $(HFST_FORMAT) \
 			-S --xerox-composition=ON \
 		| hfst-compose-intersect -1 - -2 $(top_builddir)/src/orthography/spellrelax.compose.hfst \
@@ -40,6 +40,30 @@ analyser-mt-gt-desc.%.hfst: analyser-mt-gt-desc.%.tmp.hfst \
 		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
 		-o $@
 	$(AM_V_at)rm -f $<.tmp
+
+# Relabel Giella tags to Apertium tags - generator, step 1:
+generator-mt-apertium-norm_North.tmp1.hfst: \
+			../generator-mt-gt-norm_North.hfst \
+			tagsets/apertium.relabel
+	$(AM_V_HSUBST)$(HFST_SUBSTITUTE) $(HFSTFLAGS) -i $< \
+		-F tagsets/apertium.relabel \
+		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
+		-o $@
+
+# Relabel Giella tags to Apertium tags - generator, step 2c:
+# * general tag change regex file ONLY
+generator-mt-apertium-norm_North.%.hfst: \
+			generator-mt-apertium-norm_North.%1.hfst \
+			tagsets/modify-tags.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+		@\"tagsets/modify-tags.hfst\".i \
+	.o. @\"$<\" \
+	;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+		-o $@
+
+apertium-$(GTLANG).$(GTLANG)_North.RL.att.gz: generator-mt-apertium-norm_North.att.gz
+	$(AM_V_CP)cp -f $< $@
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
@@ -55,3 +79,5 @@ clean-local:
 # General build rules included from here:#
 
 include $(top_srcdir)/am-shared/tools-mt-apertium-dir-include.am
+
+APERTIUM_GENERATOR_ATTGZ+=apertium-$(GTLANG).$(GTLANG)_North.RL.att.gz
