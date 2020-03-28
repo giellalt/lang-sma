@@ -81,3 +81,4 @@ clean-local:
 include $(top_srcdir)/am-shared/tools-mt-apertium-dir-include.am
 
 APERTIUM_GENERATOR_ATTGZ+=apertium-$(GTLANG).$(GTLANG)_North.RL.att.gz
+APERTIUM_GENERATORS_HFST+=generator-mt-apertium-norm_North.hfstol

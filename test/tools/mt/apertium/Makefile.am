@@ -13,6 +13,7 @@ if CAN_YAML_TEST
 if WANT_APERTIUM
 TESTS+=run-mt-gt-desc-anayaml-testcases.sh
 TESTS+=run-mt-gt-norm-genyaml-testcases.sh
+TESTS+=run-mt-gt-norm_North-genyaml-testcases.sh
 
 endif # WANT_APERTIUM
 endif # CAN_YAML_TEST
