@@ -1146,14 +1146,14 @@ SECTION
 
 #!! Removing non-lexicalised forms when lexicalised 
 
-REMOVE:PassS (Der/PassS) IF (0 Der/PassS + $$PERS-TAG)(0 Ind + $$PERS-TAG); # ikke bra
-REMOVE:PassS (Der/PassS) IF (0 Der/PassS + PrfPrc)(0 PrfPrc); 
+#D# REMOVE:PassS (Der/PassS) IF (0 Der/PassS + $$PERS-TAG)(0 Ind + $$PERS-TAG); # ikke bra
+#D# REMOVE:PassS (Der/PassS) IF (0 Der/PassS + PrfPrc)(0 PrfPrc); 
 
-REMOVE:Vregex V-DER (0 V-DER-SUF) ;
-REMOVE:Nregex N-DER (0 N-DER-SUF) ;
-REMOVE:Aregex A-DER (0 A-DER-SUF) ;
+#D# REMOVE:Vregex V-DER (0 V-DER-SUF) ;
+#D# REMOVE:Nregex N-DER (0 N-DER-SUF) ;
+#D# REMOVE:Aregex A-DER (0 A-DER-SUF) ;
 
-REMOVE:Nregex SUB:1 N-DER (0/* N-DER-SUF) ;	
+#D# REMOVE:Nregex SUB:1 N-DER (0/* N-DER-SUF) ;	
 
 
 #REMOVE:testA A-DER (0 LEX-A);
