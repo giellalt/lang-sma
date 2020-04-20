@@ -8,7 +8,7 @@
 # dir/filename.lexc => filename-dir.jspwiki
 
 JSP_PAGES=root-morphology.jspwiki       \
-		  sma-phon-phonology.jspwiki    \
+		  phonology-morphology.jspwiki  \
 		  nouns-affixes.jspwiki         \
 		  propernouns-affixes.jspwiki   \
 		  adjectives-affixes.jspwiki    \
