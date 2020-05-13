@@ -1,0 +1,23 @@
+Config:
+  hfst:
+    Gen:   ../../../../tools/mt/apertium/generator-mt-gt-norm.hfst
+    Morph: ../../../../tools/mt/apertium/analyser-mt-gt-desc.hfst
+  xerox:
+    Gen:   ../../../../tools/mt/apertium/generator-mt-gt-norm.xfst
+    Morph: ../../../../tools/mt/apertium/analyser-mt-gt-desc.xfst
+    App: lookup
+
+Tests:
+
+# Tag tests:
+
+  Sem/Hum - ipmil: # No tag here:
+    jupmele+N+Sem/Hum+Sg+Gen: jupmelen
+
+# Use/alternative removal:
+  Use - mijjem:
+    mijjieh+Pron+Pers+Pl1+Acc: mijjem
+
+# Spell relax tests:
+  eth - diehtit: # no spell relax in MT
+    diehtit+V+TV+Ind+Prs+ConNeg: ~dieðe

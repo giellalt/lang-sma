@@ -1,0 +1,31 @@
+Config:
+  hfst:
+    Gen:   ../../../../tools/mt/apertium/generator-mt-gt-norm.hfst
+    Morph: ../../../../tools/mt/apertium/analyser-mt-gt-desc.hfst
+  xerox:
+    Gen:   ../../../../tools/mt/apertium/generator-mt-gt-norm.xfst
+    Morph: ../../../../tools/mt/apertium/analyser-mt-gt-desc.xfst
+    App: lookup
+
+Tests:
+
+# Tag tests:
+
+  Sem/Hum - ipmil: # No tag here:
+    jupmele<n><sem_hum><sg><gen>: [jupmelen]
+
+# Dialect/alternative removal:
+  Dialect/SH keep - jiehtedh:
+    jiehtedh<vblex><tv><indic><pres><p1><pl>: [~jiehtiejibie, jiehtebe]
+
+# Use/alternative removal:
+  Use - mijjem:
+    mijjieh<prn><pers><p1><pl><acc>: [mijjem]
+
+# Should only give one reading:
+  Plural-lemma - åejvieladtjh:
+    åejvieladtjh<n><sem_group_hum><pl><nom>: [åejvieladtjh]
+
+# Spell relax tests:
+  eth - diehtit: # no spell relax in MT
+    diedtedh<vblex><tv><conneg>: [~dïedtieh, diedtieh]

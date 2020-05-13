@@ -1,0 +1,242 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+! ==================== !
+! The South Sámi clock !
+! ==================== !
+
+! Note! This is NOT checked with native speakers nor
+! textbooks, just based upon guessing from a dictionary.
+
+
+! The order of number and digit is now correct
+! The file:
+! transcriptions/transcriptor-clock-text2digit.filtered.lookup.xfst 
+! works fine both directions in xfst
+! whereas the file
+! transcriptor-clock-digit2text.filtered.lookup.xfst
+! only works for 24:00 <-> luhkiegöökte, not for other times
+
+! +Use/NG = not-generate, for ped generation isme-ped.fst
+! +Use/NA = not-analyse, for restricting analyses needed for MT generation not to pop up elsewhere
+! Thus, ignore the +Use/NA tag for Oahpa/Numra purposes. Use +Use/NG for forms you want to accept, but not present.
+! 
+! The +Use/NG (and +Use/NA) are handled in the file LANG/am-shared/src-transcriptions-dir-include.am, called by the Makefile.am in the transcriptions folder.
+
+
+Multichar_Symbols
+
+@U.TIME.1@
+@U.TIME.2@
+@U.TIME.3@
+@U.TIME.4@
+@U.TIME.5@
+@U.TIME.6@
+@U.TIME.7@
+@U.TIME.8@
+@U.TIME.9@
+@U.TIME.10@
+@U.TIME.11@
+@U.TIME.12@
+
++Use/NG
++Use/NA
+
+LEXICON Root
+     %0: smallhour ; ! One-digit hour: Correct is 02:30
++Use/NA: smallhour ; ! One-digit hour: Allowing sloppy 2:30 in answer
+         largehour ; ! Two-digit hours (10 and onward): 10:30
+
+LEXICON smallhour 
+  @U.TIME.1@1:@U.TIME.1@ AFTpunkt ; !01:00 - 01:19
+  @U.TIME.2@1:@U.TIME.2@ BEFpunkt ; !01:20 - 01:59
+  @U.TIME.2@2:@U.TIME.2@ AFTpunkt ; !02:00 - 02:19
+  @U.TIME.3@2:@U.TIME.3@ BEFpunkt ; !02:20 - 02:59
+  @U.TIME.3@3:@U.TIME.3@ AFTpunkt ; !03:00 - 03:19
+  @U.TIME.4@3:@U.TIME.4@ BEFpunkt ; !03:20 - 03:59
+  @U.TIME.4@4:@U.TIME.4@ AFTpunkt ; !04:00 - 04:19
+  @U.TIME.5@4:@U.TIME.5@ BEFpunkt ; !04:20 - 04:59
+  @U.TIME.5@5:@U.TIME.5@ AFTpunkt ; !05:00 - 05:19
+  @U.TIME.6@5:@U.TIME.6@ BEFpunkt ; !05:20 - 05:59
+  @U.TIME.6@6:@U.TIME.6@ AFTpunkt ; !06:00 - 06:19
+  @U.TIME.7@6:@U.TIME.7@ BEFpunkt ; !06:20 - 06:59
+  @U.TIME.7@7:@U.TIME.7@ AFTpunkt ; !07:00 - 07:19
+  @U.TIME.8@7:@U.TIME.8@ BEFpunkt ; !07:20 - 07:59
+  @U.TIME.8@8:@U.TIME.8@ AFTpunkt ; !08:00 - 08:19
+  @U.TIME.9@8:@U.TIME.9@ BEFpunkt ; !08:20 - 08:59
+  @U.TIME.9@9:@U.TIME.9@ AFTpunkt ; !09:00 - 09:19
+  @U.TIME.10@9:@U.TIME.10@ BEFpunkt ; !09:20 - 09:59
+
+LEXICON largehour 
+ @U.TIME.10@1%0:@U.TIME.10@  AFTpunkt ; !10:00 - 10:19
+ @U.TIME.11@1%0:@U.TIME.11@  BEFpunkt ; !10:20 - 10:59
+ @U.TIME.11@11:@U.TIME.11@   AFTpunkt ; !11:00 - 11:59
+ @U.TIME.12@11:@U.TIME.12@   BEFpunkt ; !11:19 - 11:59
+ @U.TIME.12@12:@U.TIME.12@   AFTpunkt ; !12:00 - 12:19
+  @U.TIME.1@12:@U.TIME.1@    BEFpunkt ; !12:19 - 12:59
+  @U.TIME.1@13:@U.TIME.1@    AFTpunkt ; !13:00 - 13:19
+  @U.TIME.2@13:@U.TIME.2@    BEFpunkt ; !13:19 - 13:59
+  @U.TIME.2@14:@U.TIME.2@    AFTpunkt ; !14:00 - 114:19
+  @U.TIME.3@14:@U.TIME.3@    BEFpunkt ; !14:19 - 14:59
+  @U.TIME.3@15:@U.TIME.3@    AFTpunkt ; !15:00 - 15:19
+  @U.TIME.4@15:@U.TIME.4@    BEFpunkt ; !15:19 - 15:59
+  @U.TIME.4@16:@U.TIME.4@    AFTpunkt ; !16:00 - 16:19
+  @U.TIME.5@16:@U.TIME.5@    BEFpunkt ; !16:19 - 16:59
+  @U.TIME.5@17:@U.TIME.5@    AFTpunkt ; !17:00 - 17:19
+  @U.TIME.6@17:@U.TIME.6@    BEFpunkt ; !17:19 - 17:59
+  @U.TIME.6@18:@U.TIME.6@    AFTpunkt ; !18:00 - 18:19
+  @U.TIME.7@18:@U.TIME.7@    BEFpunkt ; !18:19 - 18:59
+  @U.TIME.7@19:@U.TIME.7@    AFTpunkt ; !19:00 - 19:19
+  @U.TIME.8@19:@U.TIME.8@    BEFpunkt ; !19:20 - 19:59
+  @U.TIME.8@2%0:@U.TIME.8@   AFTpunkt ; !20:00 - 20:19
+  @U.TIME.9@2%0:@U.TIME.9@   BEFpunkt ; !20:20 - 20:59
+  @U.TIME.9@21:@U.TIME.9@    AFTpunkt ; !21:00 - 21:19
+ @U.TIME.10@21:@U.TIME.10@   BEFpunkt ; !21:20 - 21:59
+ @U.TIME.10@22:@U.TIME.10@   AFTpunkt ; !22:00 - 22:19
+ @U.TIME.11@22:@U.TIME.11@   BEFpunkt ; !22:19 - 22:59
+ @U.TIME.11@23:@U.TIME.11@   AFTpunkt ; !23:00 - 23:19
+ @U.TIME.12@23:@U.TIME.12@   BEFpunkt ; !23:19 - 23:59
+ @U.TIME.12@%0%0:@U.TIME.12@ AFTpunkt ; !00:00 - 00:19
+  @U.TIME.1@%0%0:@U.TIME.1@  BEFpunkt ; !00:19 - 00:59
+      24%:%0%0:luhkiegöökte  #        ; !24:00
+      24%.%0%0+Use/NA:luhkiegöökte  #        ; !24:00
+
+
+! Removed +Use/NA from the "xx:yy" entry in Befpunkt and AFTpunkt below
+! in order to make 
+! cat ~/main/ped/doc/common/TestClock.txt | \
+! lookup src/transcriptions/transcriptor-clock-digit2text.filtered.lookup.xfst
+! possible, but all clock files have %:
+
+LEXICON BEFpunkt
+%:: BEF ; ! +Use/NA
+%.+Use/NA: BEF ;
+
+LEXICON AFTpunkt
+%:: AFT  ; ! 2:00 = göökte ! +Use/NA
+%.+Use/NA: AFT  ; ! 2.00 = göökte
+  +Use/NA: HOUR ; ! 2 = göökte
+
+LEXICON BEF
+2%0:luhkie%        TOHALF ;
+21:uktsie%         TOHALF ;
+22:gaektsie%         TOHALF ;
+23:tjïjhtje%         TOHALF ;
+24:govhte%         TOHALF ;
+25:vïjhte%         TOHALF ;
+26:njieljie%         TOHALF ;
+26+Use/NG:njielje%  TOHALF ;
+26+Use/NG:nieljie%   TOHALF ;
+26+Use/NG:nielje%   TOHALF ;
+27:golme%         TOHALF ;
+28:göökte%         TOHALF ;
+29:akte%         TOHALF ;
+3%0:bielie%        HOUR ;
+31:akte%         OVERHALF ;
+32:göökte%         OVERHALF ;
+33:golme%         OVERHALF ;
+34:njieljie%         OVERHALF ;
+34+Use/NG:njielje%   OVERHALF ;
+34+Use/NG:nieljie%   OVERHALF ;
+34+Use/NG:nielje%   OVERHALF ;
+35:vïjhte%         OVERHALF ;
+36:govhte%         OVERHALF ;
+37:tjïjhtje%         OVERHALF ;
+38:gaektsie%         OVERHALF ;
+39:uktsie%         OVERHALF ;
+4%0:luhkie%        OVERHALF ;
+41:luhkieuktsie%         TO ;
+42:luhkiegaektsie%         TO ;
+43:luhkietjïjhtje%         TO ;
+44:luhkiegovhte%         TO ;
+45:njealjehts%         TO ;
+46:luhkienjieljie%         TO ;
+46+Use/NG:luhkienjielje%  TO ;
+46+Use/NG:luhkienieljie%   TO ;
+46+Use/NG:luhkienielje%   TO ;
+47:luhkiegolme%         TO ;
+48:luhkiegöökte%         TO ;
+49:luhkieakte%         TO ;
+5%0:luhkie%       TO ;
+51:uktsie%         TO ;
+52:gaektsie%         TO ;
+53:tjïjhtje%         TO ;
+54:govhte%         TO ;
+55:vïjhte%         TO ;
+56:njieljie%         TO ;
+56+Use/NG:njielje%  TO ;
+56+Use/NG:nieljie%  TO ;
+56+Use/NG:nielje%   TO ;
+57:golme%           TO ;
+58:göökte%          TO ;
+59:akte%            TO ;
+
+LEXICON AFT
+%0%0:       HOUR ;
+%01:akte%         OVER ;
+%02:göökte%         OVER ;
+%03:golme%         OVER ;
+%04:njieljie%         OVER ;
+%04+Use/NG:njielje%   OVER ;
+%04+Use/NG:nieljie%   OVER ;
+%04+Use/NG:nielje%   OVER ;
+%05:vïjhte%       OVER ;
+%06:govhte%          OVER ;
+%07:tjïjhtje%          OVER ;
+%08:gaektsie%          OVER ;
+%09:uktsie%          OVER ;
+1%0:luhkie%          OVER ;
+11:luhkieakte%           OVER ;
+12:luhkiegöökte%           OVER ;
+13:luhkiegolme%           OVER ;
+14:luhkienjieljie%           OVER ;
+14+Use/NG:luhkienjielje%    OVER ;
+14+Use/NG:luhkienieljie%    OVER ;
+14+Use/NG:luhkienielje%    OVER ;
+15:njealjehts%           OVER ;
+16:luhkiegovhte%           OVER ;
+17:luhkietjïjhtje%           OVER ;
+18:luhkiegaektsie%           OVER ;
+19:luhkieuktsie%           OVER ;
+
+LEXICON TOHALF
+:åvtelen% bielie%         HOUR ;
++Use/NG:avtelen% bielie%   HOUR ;
+
+LEXICON OVERHALF
+:bijjelen% bielie%   HOUR ;
+
+LEXICON TO
+:åvtelen%         HOUR ;
++Use/NG:avtelen%   HOUR ; ! variant
+
+LEXICON OVER
+:bijjelen%   HOUR ;
+
+LEXICON HOUR
+@U.TIME.1@:@U.TIME.1@akte        # ;
+@U.TIME.2@:@U.TIME.2@göökte		     # ;
+@U.TIME.3@:@U.TIME.3@golme		     # ;
+@U.TIME.4@:@U.TIME.4@njieljie	     # ;
+@U.TIME.4@+Use/NG:@U.TIME.4@njielje  # ;
+@U.TIME.4@+Use/NG:@U.TIME.4@nieljie  # ;
+@U.TIME.4@+Use/NG:@U.TIME.4@nielje   # ;
+@U.TIME.5@:@U.TIME.5@vïjhte		     # ;
+@U.TIME.6@:@U.TIME.6@govhte		     # ;
+@U.TIME.7@:@U.TIME.7@tjïjhtje	     # ;
+@U.TIME.8@:@U.TIME.8@gaektsie	     # ;
+@U.TIME.9@:@U.TIME.9@uktsie		     # ;
+@U.TIME.10@:@U.TIME.10@luhkie	     # ;
+@U.TIME.11@:@U.TIME.11@luhkieakte    # ;
+@U.TIME.12@:@U.TIME.12@luhkiegöökte  # ;

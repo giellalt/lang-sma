@@ -1,0 +1,130 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  Adj - noere: # adj. on -e
+    noere+A+Attr: noere
+    noere+A+Sg+Nom: noere
+    noere+A+Sg+Gen: noeren
+    noere+A+Sg+Acc: noerem
+    noere+A+Sg+Ill: noerese
+    noere+A+Sg+Ine: noeresne
+    noere+A+Sg+Ela: noereste
+    noere+A+Sg+Com: noerine
+    noere+A+Pl+Nom: noerh
+    noere+A+Pl+Gen: noeri
+    noere+A+Pl+Acc: noeride
+    noere+A+Pl+Ill: noeride
+    noere+A+Pl+Ine: noerine
+    noere+A+Pl+Ela: noerijste
+    noere+A+Pl+Com: noerigujmie
+    noere+A+Ess: noerine
+    noere+A+Comp+Attr: [nuerebe, noerebe]
+    noere+A+Comp+Sg+Nom: [nuerebe, noerebe]
+    noere+A+Comp+Sg+Gen: [nuereben, noereben]
+    noere+A+Comp+Sg+Acc: [nuerebem, noerebem] 
+    noere+A+Comp+Sg+Ill: [nueriebasse, noerebasse]
+    noere+A+Comp+Sg+Ine: [nueriebisnie, noerebisnie]
+    noere+A+Comp+Sg+Ela: [nueriebistie, noerebistie]
+    noere+A+Comp+Sg+Com: [nueriebinie, noerebinie]
+    noere+A+Comp+Pl+Nom: [nuerebh, noerebh] 
+    noere+A+Comp+Pl+Acc: [nueriebidie, noerebidie]
+    noere+A+Comp+Pl+Gen: [nuerebi, noerebi, noerebij] 
+    noere+A+Comp+Pl+Ill: [nueriebidie, noerebidie]
+    noere+A+Comp+Pl+Ine: [nueriebinie, noerebinie] 
+    noere+A+Comp+Pl+Ela: [nueriebijstie, noerebijstie] 
+    noere+A+Comp+Pl+Com: [nuerebigujmie, noerebigujmie]
+    noere+A+Comp+Ess: [nueriebinie, noerebinie]
+        
+  Adj - noere: # adj. on -e  # Sørlig- Røros, 
+    noere+A+Attr: noere
+    noere+A+Sg+Nom: noere
+    noere+A+Sg+Gen: noeren
+    noere+A+Sg+Acc: noerem
+    noere+A+Sg+Ill: noerese
+    noere+A+Sg+Ine: noeresne
+    noere+A+Sg+Ela: noereste
+    noere+A+Sg+Com: noerine
+    noere+A+Pl+Nom: noerh
+    noere+A+Pl+Gen: noeri
+    noere+A+Pl+Acc: noeride
+    noere+A+Pl+Ill: noeride
+    noere+A+Pl+Ine: noerine
+    noere+A+Pl+Ela: noerijste
+    noere+A+Pl+Com: noerigujmie
+    noere+A+Ess: noerine
+        
+    
+    noere+A+Superl+Attr: [noeremes, nööremes]
+    noere+A+Superl+Sg+Nom: [noeremes, nööremes] # nööremos, noeremos
+    noere+A+Superl+Sg+Gen: [noeremassen, nööremassen] # nööremossen, noeremossen
+    noere+A+Superl+Sg+Acc: [noeremassem, nööremassem] #nööremossem, noeremossem
+    noere+A+Superl+Sg+Ill: [noeremassese, nööremassese] # nööremossese, noeremossese
+    noere+A+Superl+Sg+Ine: [noeremassesne, nööremassesne]  # nööremossesne, noeremossesne
+    noere+A+Superl+Sg+Ela: [noeremasseste, nööremasseste] # nööremosseste, noeremosseste
+    noere+A+Superl+Sg+Com: [noeremassine, nööremassine] # nööremossine, noeremossine
+    noere+A+Superl+Pl+Nom: [noeremassh, nööremassh]  # nööremosh, noeremosh
+    noere+A+Superl+Pl+Acc: [noeremasside, nööremasside]  # nööremosside, noeremosside
+    noere+A+Superl+Pl+Gen: [noeremassi, nööremassi] # nööremossi, noeremossi
+    noere+A+Superl+Pl+Ill: [noeremasside, nööremasside] # nööremosside, noeremosside
+    noere+A+Superl+Pl+Ine: [noeremassine, nööremassine] # nööremossine,noeremossine
+    noere+A+Superl+Pl+Ela: [noeremassijste, nööremassijste]  # nööremossijste, noeremossijste
+    noere+A+Superl+Pl+Com: [noeremassigujmie, nööremassigujmie]  # nööremossigujmie, noeremossigujmie
+    noere+A+Superl+Ess:  [noeremassine, nööremassine] # nööremossine, noeremossine 
+
+
+  Adj - stoere: # adj. on -e # både nordlig + sørlig
+    stoere+A+Attr: [stoerre, stoere]
+    stoere+A+Sg+Nom: [stoerre, stoere]
+    stoere+A+Sg+Gen: [stoerren, stoeren]
+    stoere+A+Sg+Acc: [stoerrem, stoerem]
+    stoere+A+Sg+Ill: [stoerrese, stoerese]
+    stoere+A+Sg+Ine: [stoerresne, stoeresne]
+    stoere+A+Sg+Ela: [stoerreste, stoereste]
+    stoere+A+Sg+Com: [stoerrine, stoerine]
+    stoere+A+Pl+Nom: [stoerh, stoerrh]
+    stoere+A+Pl+Gen: [stoerri, stoeri]
+    stoere+A+Pl+Acc: [stoerride, stoeride]
+    stoere+A+Pl+Ill: [stoerride, stoeride]
+    stoere+A+Pl+Ine: [stoerrine, stoerine]
+    stoere+A+Pl+Ela: [stoerrijste, stoerijste]
+    stoere+A+Pl+Com: [stoerrigujmie, stoerigujmie]
+    stoere+A+Ess: [stoerrine, stoerine]
+    stoere+A+Comp+Attr: [stuerebe, stoerebe]
+    stoere+A+Comp+Sg+Nom: [stuerebe, stoerebe]
+    stoere+A+Comp+Sg+Gen: [stuereben, stoereben]
+    stoere+A+Comp+Sg+Acc: [stuerebem, stoerebem]
+    stoere+A+Comp+Sg+Ill: [stueriebasse, stoerebasse]
+    stoere+A+Comp+Sg+Ine: [stueriebisnie, stoerebisnie] # ikke stoeriebisnie
+    stoere+A+Comp+Sg+Ela: [stueriebistie, stoerebistie]
+    stoere+A+Comp+Sg+Com: [stueriebinie, stoerebinie]
+    stoere+A+Comp+Pl+Nom: [stuerebh, stoerebh]
+    stoere+A+Comp+Pl+Acc: [stueriebidie, stoerebidie]
+    stoere+A+Comp+Pl+Gen: [stuerebi, stoerebi] # subformer stoerebij,stuerebij  OBS! OBS! 
+    stoere+A+Comp+Pl+Ill: [stueriebidie, stoerebidie]
+    stoere+A+Comp+Pl+Ine: [stueriebinie, stoerebinie]
+    stoere+A+Comp+Pl+Ela: [stueriebijstie, stoerebijstie]
+    stoere+A+Comp+Pl+Com: [stuerebigujmie, stoerebigujmie]
+    stoere+A+Comp+Ess: [stueriebinie, stoerebinie]
+    stoere+A+Superl+Attr: [stööremes, stoeremes]
+    stoere+A+Superl+Sg+Nom: [stööremes, stoeremes]
+    stoere+A+Superl+Sg+Gen: [stööremassen, stoeremassen] # stoeremossen
+    stoere+A+Superl+Sg+Acc: [stööremassem, stoeremassem] # stoeremossen
+    stoere+A+Superl+Sg+Ill: [stööremassese, stoeremassese] # stoeremossese
+    stoere+A+Superl+Sg+Ine: [stööremassesne, stoeremassesne] # stoeremossesne
+    stoere+A+Superl+Sg+Ela: [stööremasseste, stoeremasseste] # stoeremosseste
+    stoere+A+Superl+Sg+Com: [stööremassine, stoeremassine] # stoeremosseste
+    stoere+A+Superl+Pl+Nom: [stööremassh, stoeremassh]
+    stoere+A+Superl+Pl+Acc: [stööremasside, stoeremasside]  # stoeremosside
+    stoere+A+Superl+Pl+Gen: [stööremassi, stoeremassi] # stoeremossi
+    stoere+A+Superl+Pl+Ill: [stööremasside, stoeremasside] # stoeremosside
+    stoere+A+Superl+Pl+Ine: [stööremassine, stoeremassine] # stoeremossine
+    stoere+A+Superl+Pl+Ela: [stööremassijste, stoeremassijste]  #  stoeremossijste
+    stoere+A+Superl+Pl+Com: [stööremassigujmie, stoeremassigujmie] #  stoeremossigujmie
+    stoere+A+Superl+Ess: [stööremassine, stoeremassine] # stoeremossine

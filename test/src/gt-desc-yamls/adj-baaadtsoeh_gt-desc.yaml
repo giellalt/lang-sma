@@ -1,0 +1,40 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-desc.hfst
+    Morph: ../../../src/analyser-gt-desc.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-desc.xfst
+    Morph: ../../../src/analyser-gt-desc.xfst
+    App: lookup
+
+Tests:
+ 
+  Adjective - båadtsoeh: # 
+    båadtsoeh+v1+A+Attr: båadtsoeh
+    båadtsoeh+v2+A+Attr: båadtsah
+    båadtsoeh+v3+A+Attr: båadtjah
+    
+
+  Adjective - feejjene: # 
+    feejjene+A+Attr: feejjene 
+    feejjene+Adv: feejjene
+
+  Adjective - læhkoeladtje: # 
+    læhkoeladtje+v1+A+Attr: læhkoeladtje
+    læhkoeladtje+v2+A+Attr: lahkoeladtje
+    læhkoeladtje+v1+A+Sg+Nom: læhkoeladtje
+    læhkoeladtje+v2+A+Sg+Nom: lahkoeladtje
+
+  Adjective - rudtjege: # 
+    rudtjege+A+Attr: [rudtje, rudtjege] 
+    rudtjege+A+Comp+Sg+Nom: [rudtjegabpa, rudtjebe, rudtjegåbpoe]
+    rudtjege+A+Sg+Nom: [rudtje, rudtjege, rudtjehke] 
+    rudtjege+A+Superl+Sg+Nom: [rudtjegommes, rudtjemes, rudtjegammes]
+
+  Adjective - rudtjege: # 
+    rudtjege+A+Err/Orth+Attr: rudtjehke 
+    rudtjege+A+Err/Orth+Comp+Attr: [rudtjehkåbpoe, rudtjehkabpa]
+    rudtjege+A+Err/Orth+Sg+Nom: rudtjehke 
+    rudtjege+A+Err/Orth+Superl+Sg+Nom: [rudtjehkommes, rudtjehkammes]
+
+  

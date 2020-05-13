@@ -1,0 +1,2281 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software ; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+! ========================================================================== !
+!                     South Sámi morphological analyser                      !
+! ========================================================================== !
+
+
+
+!! This is the file for the South Saami verb inflection and derivation.
+
+! ===========================
+!! !!!Verbal inflection sublexica
+! ===========================
+
+!! Table of content for this file:
+
+!! * The auxiliaries
+!! ** The negative verb
+!! ** Other auxiliaries
+!! * Odd-syllable verbs
+!! ** Inflection common to all odd verbs
+!! * Even-syllable verbs
+!! ** Nominal derivation sublexica
+!! * Verbal affixes
+!! ** Finite forms
+!! ** Even
+!! *** Present
+!! *** Imperative
+!! *** Present
+!! ** Odd
+!! *** Present
+!! *** Past
+!! *** Imperative
+!! ** Common even-odd
+!! *** Present
+!! *** Past
+
+
+!! !!!The auxiliaries
+! ===============
+
+!! First we just list the auxiliaries and their inflection.
+
+LEXICON LEA  !!= * __@CODE@__ the copula
+
+!+Inf:lea   FINAL1 ; ! Uses årrodh
+        +Ind+Prs:l       LEA-PRES ;
+        +Ind+Prt:l       LEA-PRET ;
+ +Ind+Prt+ConNeg:l       LEA-PRET ;
+          +Imprt:l       LEA-IMP  ;
+         +ConNeg:leah    FINAL1   ;
+   +Cond+Prs+Sg3:lidtjie FINAL1   ; ! Magkeres lidtjie deere orreme?
+
+LEXICON LEA-PRES  !!= ** __@CODE@__
+ +Sg1:eam   FINAL1 ;
+ +Sg2:eah   FINAL1 ;
+ +Sg3:ea    FINAL1 ;
+ +Du1:ean   FINAL1 ;
+ +Du2:idien FINAL1 ;
+ +Du3:ægan  FINAL1 ;
+ 
+ +Pl1:ibie  FINAL1 ;
+ +Pl2:idie  FINAL1 ;
+ +Pl3:eah   FINAL1 ;
+
+LEXICON LEA-PRET !!= ** __@CODE@__
+ +Sg1:im   FINAL1 ;
+ +Sg2:ih   FINAL1 ;
+ +Sg3:ij   FINAL1 ;
+ +Du1:imen FINAL1 ;
+ +Du2:iden FINAL1 ;
+ +Du3:igan FINAL1 ;
+ +Pl1:imh  FINAL1 ;
+ +Pl2:idh  FINAL1 ;
+ +Pl3:in   FINAL1 ;
+
+LEXICON LEA-IMP !!= ** __@CODE@__
+ +Sg2:eah   FINAL1 ;
+ +Du2:idien FINAL1 ;
+ +Pl2:idie  FINAL1 ;
+
+
+
+
+!! !!The negative verb
+! =================
+
+LEXICON NEG  !!= * __@CODE@__
+      +Ind+Prs:     IJ-PRES   ;
+      +Ind+Prt:idtj VSUF-PRT  ;
++Ind+Prt+Err/Orth:idj VSUF-PRT  ;
+        +Imprt:aell NEGIMP    ;
+      +ImprtII:oll  OLLE      ;
+!      +Ind+Prt:     IJ-COPULA ;
+
+
+
+!Negation "var ikke" -  is not in, but we have here three kind of negationsystems
+!AJ= Anna Jacobsen
+!KB= Knut Bergsland
+
+
+!SG
+!         -AJ-      KB         -Røros
+!1.sg: im lih  - im lim      - eedtjem lih (merknader s.45 i Bergsland)
+!2.sg: ih lih - ih lih       - eedtjh lih (merknader s.45 i Bergsland)
+!3.sg: ij lij - ij lih       - eedtji lih (merknader s.45 i Bergsland)
+
+!Dual
+!          - AJ         - KB-
+!1.dual: ij limen - ean limen
+!2.dual: ij liden - idien liden
+!3.dual: ij ligan - eakan ligan
+
+! Plural
+!        -AJ     -  KB -
+!1.pl:  ij limh  - ibie limh      (merknader s.45 på også ij limh i Bergsland)
+!2.pl:  ij lidh  - idie lidh
+!3.pl:  ij lin   - eah lin
+
+! And her are some eks.
+!ij lim(b) manne gåetesne dellie - this one is like KB's 1.p.sg.
+!datne ih lih gåetesne gænnah
+!Piere ij lih gåetesne
+!
+!ij limen månnoeh gåetesne gænnah
+!ij liden dåtnoeh gåetesne
+!Dah guaktah ij lin/ligan gåetesne gænnah
+!
+!Ij limh mijjieh gåetesne gænnah
+!Dijjieh ij lidh gåetesne gænnah
+!Dah ij lin gåetesne gænnah
+
+
+
+LEXICON OLLE  !!= ** __@CODE@__
+ +Sg1:em   FINAL1 ;
+ +Sg2:h    FINAL1 ;
+ +Sg3:es   FINAL1 ;
+ +Du1:en   FINAL1 ;
+!+Du2:ijidien    FINAL1 ;
+ +Du2:eden FINAL1 ;
+ +Du3:es   FINAL1 ;
+ +Pl1:ebe  FINAL1 ;
+!+Pl1:ijibie    FINAL1 ;
+!+Pl2:ijidie    FINAL1 ;
+ +Pl2:ede  FINAL1 ;
+ +Pl3:es   FINAL1 ;
+
+
+LEXICON NEGIMP  !!= ** __@CODE@__
+ +Sg1:iem  FINAL1 ;
+ +Sg2:ieh  FINAL1 ;
+ +Sg3:ies  FINAL1 ;
+ +Du1:ien  FINAL1 ;
+ +Du2:eden FINAL1 ;
+!+Du2:iejidien   FINAL1 ;
+ +Du3:ies  FINAL1 ;
+ +Pl1:ebe  FINAL1 ;
+ +Pl2:ede  FINAL1 ;
+!+Pl2:iejidie    FINAL1 ;
+ +Pl3:ies  FINAL1 ;
+
+
+LEXICON IJ-PRES  !!= ** __@CODE@__
+         +Sg1:im    FINAL1 ;
+ +Sg1+Err/Orth:eap  FINAL1 ; ! Gaaltije
+         +Sg2:ih    FINAL1 ;
+ +Sg2+Err/Orth:eah  FINAL1 ;
+         +Sg3:ij    FINAL1 ;
+ +Sg3+Err/Orth:ii   FINAL1 ;
+
+         +Du1:ean   FINAL1 ;
+         +Du2:idien FINAL1 ;
+         +Du3:eakan FINAL1 ;
+         +Pl1:ibie  FINAL1 ;
+         +Pl2:idie  FINAL1 ;
+         +Pl3:eah   FINAL1 ;
+         
+         
+
+!LEXICON IJ-COPULA  = ** __@CODE@__ Hva er dette? denne gir nesten alle talls analyse til ij. Dette ser ut som noe som ikke er ferdig.
+! +Sg1+Use/NG:im FINAL1 ;
+! +Sg2+Use/NG:ih FINAL1 ;
+! +Sg3+Use/NG:ij FINAL1 ;
+! 
+! +Du1+Use/NG:ij FINAL1 ;
+! +Du2+Use/NG:ij FINAL1 ;
+! +Du3+Use/NG:ij FINAL1 ;
+! 
+! +Pl1+Use/NG:ij FINAL1 ;
+! +Pl2+Use/NG:ij FINAL1 ;
+! +Pl3+Use/NG:ij FINAL1 ;
+
+
+
+!! !!Other auxiliaries
+
+LEXICON EDTJEDH  !!= * __@CODE@__
+ +Ind+Prs:       ED-PRES ;
+ +Ind+Prt:       ED-PRET ;
+   +Imprt:       ED-IMP  ;
+     +Inf:edh    FINAL1  ;
+    +VGen:eminie FINAL1  ;
+!+Act:eme        FINAL1  ;
+  +ConNeg:h      FINAL1  ;
+  +PrfPrc:eme    FINAL1  ;
+  
+  
+
+LEXICON ED-PRES  !!= ** __@CODE@__
+        +Sg1:em      FINAL1 ;
+        +Sg2:h       FINAL1 ;
+        +Sg3:a       FINAL1 ;
+        +Du1:ien     FINAL1 ;
+        +Du2+Dial/SH:eden    FINAL1 ;
+        +Du2+Dial/L:ijidien FINAL1 ; ! MLK: I arbitrarily go for the long ones.
+        +Du3:ijægan  FINAL1 ;
+        +Pl1+Dial/SH:ebe     FINAL1 ; ! MLK: I arbitrarily go for the long ones.
+        +Pl1+Dial/L:ijibie  FINAL1 ;
+        +Pl1+Err/Orth:ibie  FINAL1 ;
+        
+        +Pl2+Err/Orth:idie  FINAL1 ;
+        +Pl1+Dial/L:ijibie  FINAL1 ;
+        
+        +Pl2+Dial/SH:ede     FINAL1 ; ! MLK: I arbitrarily go for the long ones.
+        +Pl2+Err/Orth:idie FINAL1 ;
+        +Pl3:ieh     FINAL1 ;
+
+LEXICON ED-PRET !!= ** __@CODE@__
+ +Sg1:im   FINAL1 ;
+ +Sg2:ih   FINAL1 ;
+ +Sg3:i    FINAL1 ;
+ +Du1:imen FINAL1 ;
+ +Du2:iden FINAL1 ;
+ +Du3:igan FINAL1 ;
+ +Pl1:imh  FINAL1 ;
+ +Pl2:idh  FINAL1 ;
+ +Pl3:in   FINAL1 ;
+
+LEXICON ED-IMP !!= ** __@CODE@__
+ +Sg2:h    FINAL1 ;
+ +Du2:eden FINAL1 ;
+ +Pl2:ede  FINAL1 ;
+
+
+
+
+!! !!!Odd-syllable verbs
+! ==================
+
+!! Odd syllable verbs differ in Prt Sg3.
+!! This form is treated separately, and
+!! the rest of the paradigm is conflated.
+
+! According to Errata för Verbh this is not the case.
+! Thus, the form in -e is wrong, and we wil replace DÅERIEDIDH
+! WITH GOLTELIDH.
+
+LEXICON TJOEVERIDH_IV  !!= * __@CODE@__
+ +V+IV+Ind+Prs:%>               VSUF-ODD-PRS ;
+ +V+IV+Ind+Prt:%>               VSUF-ODD-PRT ;
+! +V+IV+Imprt:%>     VSUF-ODD-IMP ;
+
+! Infinite forms
+! --------------
+     +V+IV+Inf:%>idh            FINAL1       ;
+  +V+IV+ConNeg:%>%^DISIMPh      FINAL1       ;
+! +V+IV+VGen:%>%^DISIMPen     FINAL1 ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +V+IV+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+     +V+IV+Ger:%>%^DISIMPeminie FINAL1       ; ! = GH Gerundium
+! +V+IV+PrsPrc+Der+Der/A+A+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+! +V+IV+Der1+Der/ihks+A+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+  +V+IV+PrfPrc:%>amme           FINAL1       ; ! = GH Ptz.Pt.
+  
+!   GH Ptz.Fut. b'ïssejässaa missing here
+
+!!+V+IV+VAbess:%>h            FINAL1 ;
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen, äbreks der nicht regnet, baal'eks der nicht gräbt, b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
+
+! +V+IV+Der3+Der/NomAg+N:%»æjj@C.NeedNoun@     MAANA ;
+! +V+IV+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+! +V+IV+Der2+Der/adte+V:%»%^adteUMLadt GOEGKERDADTEDH ;
+
+LEXICON GOLTELIDH_TV  !!= * __@CODE@__
+ +V+TV: GOLTELIDH ;
+
+LEXICON AALHTEDIDH_TV  !!= * __@CODE@__
+                +V+TV:                GOLTELIDH ;
+! +V+TV+Der3+Der/PassL:%^ConsDel%»sovv SOVVEDH   ;
+
+LEXICON GOLTELIDH_IV  !!= * __@CODE@__
+ +V+IV: GOLTELIDH ;
+
+
+LEXICON GOLTELIDH   !!= * __@CODE@__, odd-syll with -adte- as Der2
+                                    COMMON-ODD     ;
+   +Der2+Der/ht:%»eht             ÅARAJEHTEDH_TV ;
+  +Der3+Der/NomAg+N:%»æjj             flagMAANA          ;
+          +PrsPrc:%>æjja            flagFINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +Der2+Der/adte+V:%»%^adteUMLadt    GOEGKERDADTEDH ;
+ +Der3+Der/PassL:%»ovv  IV_PASSIVE_L ;
+ 
+ 
+  
+
+LEXICON BALVEDIDH  !!= * __@CODE@__
+                  +V+IV+Ind+Prs+Sg3:%>%^DISIMPe       FINAL1     ;
+                  +V+IV+Ind+Prt+Sg3:%>i               FINAL1     ;
+          +V+IV+Ind+Prt+Sg3+Err/Orth:%>%^DISIMPi       FINAL1     ;
+! +V+IV+Imprt:%>     VSUF-ODD-IMP ;
+
+! Infinite forms
+! --------------
+                          +V+IV+Inf:%>idh             FINAL1     ;
+                       +V+IV+ConNeg:%>%^DISIMPh       FINAL1     ;
+                         +V+IV+VGen:%>%^DISIMPen      FINAL1     ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +V+IV+Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+                          +V+IV+Ger:%>%^DISIMPeminie  FINAL1     ; ! = GH Gerundium
+! +V+IV+PrsPrc:%>æjja         FINAL1 ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+! +V+IV+A+Der1+Der/æjja+Attr:%>æjja     FINAL1 ; !XXX Testing, thinking aloud
+! +V+IV+A+Der1+Der/ihks+Attr:%>ihks     FINAL1 ; !XXX Testing, thinking aloud
+                       +V+IV+PrfPrc:%>amme            FINAL1     ; ! = GH Ptz.Pt.
+!   GH Ptz.Fut. b'ïssejässaa missing here
+
+!+V+IV+VAbess:%>h            FINAL1 ;
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen, äbreks der nicht regnet, baal'eks der nicht gräbt, b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
+
+
+! Derivations
+! -----------
+! +V+IV+Der3+Der/NomAg+N:%»æjj@C.NeedNoun@     MAANA ;
+              +V+IV+Der3+Der/NomAct+N:%»imm flagNomActEven ;
+         +V+IV+Der3+Der/ahtje+V+Inf:%»ahtj%>edh       FINAL1     ;
+        +V+IV+Der3+Der/ahtje+V+VGen:%»ahtj%>en        FINAL1     ;
+! +V+IV+Der3+Der/ahtje+V+Act:%»ahtj%>eme      FINAL1 ;
+         +V+IV+Der3+Der/ahtje+V+Ger:%»ahtj%>eminie    FINAL1     ;
+      +V+IV+Der3+Der/ahtje+V+PrfPrc:%»ahtj%>eme       FINAL1     ;
+      +V+IV+Der3+Der/ahtje+V+ConNeg:%»ahtj%>0h        FINAL1     ;
+     +V+IV+Der3+Der/ahtje+V+Sg3+Uml:%»ahtj%>%^3sUMLa  FINAL1     ;
+         +V+IV+Der3+Der/ahtje+V+Sg3:%»ahtj%>i         FINAL1     ;
+ +V+IV+Der3+Der/ahtje+V+Sg3+Err/Orth:%»ahtj%>%^DISIMPi FINAL1     ;
+
+LEXICON RIHPESIDH   !!= * __@CODE@__,  -nidh and -sidh
+                 +V+IV:               COMMON-ODD     ;
+ +V+IV+Der2+Der/alla+V:%»%^adteUMLall GOEGKERDADTEDH ;
+
+LEXICON AAJVESTIDH_TV     !!= * __@CODE@__, for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
+                +V+TV:                DÅAJVOEHTIDH ;
+ +V+TV+Der3+Der/PassL:%»ovv SOVVEDH      ;  !orrest
+
+LEXICON DÅAJVOEHTIDH_TV  !!= * __@CODE@__
+ +V+TV: DÅAJVOEHTIDH ;
+ 
+ +V+TV+Der3+Der/PassL:%»ovv SOVVEDH      ; ! Det finst ingen verb i denne klassen som triggar ConsDel
+                                                     
+
+LEXICON DÅAJVOEHTIDH_IV  !!= * __@CODE@__
+ +V+IV: DÅAJVOEHTIDH ;
+ +V+IV+Der3+Der/PassL:%»ovv SOVVEDH      ; ! Det finst ingen verb i denne klassen som triggar ConsDel
+  
+ 
+LEXICON DÅAJVOEHTIDH    !!= * __@CODE@__ for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
+                                     COMMON-ODD     ;
+ +Der2+Der/ht:%»eht                ÅARAJEHTEDH_TV ;
+ +Der3+Der/NomAg+N:%»æjj               flagMAANA          ;
+          +PrsPrc:%>æjja             flagFINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+ +Der2+Der/alla+V:%»%^adteUMLall     GOEGKERDADTEDH ;
+
+ 
+ 
+!! !!Inflection common to all odd verbs
+
+LEXICON COMMON-ODD   !!= * __@CODE@__
+
+!! * Finite forms
+! ------------
+              +Ind+Prs:%>                VSUF-ODD-PRS ;
+              +Ind+Prt:%>                VSUF-ODD-PRT ;
+                +Imprt:%>                VSUF-ODD-IMP ;
+
+!! * Infinite forms
+! --------------
+                  +Inf:%>idh             FINAL1       ;
+               +ConNeg:%>%^DISIMPh       FINAL1       ;
+                 +VGen:%>%^DISIMPen      FINAL1       ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +Act:%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+                  +Ger:%>%^DISIMPeminie  FINAL1       ; ! = GH Gerundium
+               +PrsPrc:%>æjja            flagFINAL1       ; !XXX Testing, thinking aloud
+ +Der1+Der/ihks+A+Attr:%>ihks            FINAL1       ; !XXX Testing, thinking aloud
+               +PrfPrc:%>amme            FINAL1       ; ! = GH Ptz.Pt.
+!   GH Ptz.Fut. b'ïssejässaa missing here
+
+!+VAbess:%>h            FINAL1 ;
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen, äbreks der nicht regnet, baal'eks der nicht gräbt, b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
+
+
+!! * Derivations
+! -----------
+      +Der3+Der/NomAct+N:%»imm  flagNomActEven   ;
+     +Der3+Der/ahtje+V:%»ahtj            AHTJE        ;
+
+
+
+!! !!!Even-syllable verbs
+! ===================
+
+LEXICON MAEHTEDH_TV  !!= * __@CODE@__
+ +V+TV: BÅETEDH_NOTVGEN ;
+! +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH ;
+! +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+! +V+TV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
+! +V+TV+Der1+Der/lg:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
+
+
+LEXICON BÅETEDH_TV  !!= * __@CODE@__
+                     +V+TV:               BÅETEDH  ;
+ +V+TV+Ind+Prt+Uml+Dial/SH:%>%^iUML       VSUF-PRT ;
+  +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv  SOVVEDH  ;
+!  +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML    VÅÅJNEDH ;
+     +V+TV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH  ; !Passive, only from transitive verbs
+         +V+TV+Der1+Der/lg:%»%^1UMLalg    LGIDH    ; !Passive, only from transitive verbs
+
+LEXICON BÅETEDH_TV_ePRET  !!= * __@CODE@__
+                     +V+TV:               BÅETEDH  ;
+ +V+TV+Ind+Prt+Uml+Dial/SH:%>             VSUF-PRT ;
+  +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv  SOVVEDH  ;
+!   +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML    VÅÅJNEDH ;
+     +V+TV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH  ; !Passive, only from transitive verbs
+      +V+TV+Der1+Der/lg:%»%^1UMLalg    LGIDH    ; !Passive, only from transitive verbs
+
+LEXICON BÅETEDH_IV  !!= * __@CODE@__
+                     +V+IV:              BÅETEDH      ;
+ +V+IV+Ind+Prt+Uml+Dial/SH:%>%^iUML      VSUF-PRT     ;
+  +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv IV_PASSIVE_L ;
+!       +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S ;
+
+LEXICON BÅETEDH_IV_ePRET  !!= * __@CODE@__
+                     +V+IV:              BÅETEDH      ;
+ +V+IV+Ind+Prt+Uml+Dial/SH:%>            VSUF-PRT     ;
+  +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv IV_PASSIVE_L ;
+!       +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S ;
+
+
+LEXICON BÅETEDH   !!= * __@CODE@__ row A - Group I
+                   +Ind+Prs+Uml:%>%^1UMLa         V-I-PRS-SG         ; ! class I special
+                       +Ind+Prs:%>ie              VSUF-EVEN-PRS-DUPL ;
+                +Ind+Prt+Dial/L:%>iej             VSUF-ODD-PRT       ;
+                         +Imprt:%>                VSUF-EVEN-IMP      ;
+          +Ind+Prt+Pl1+Err/Orth:%>ibie            FINAL1       ;
+          +Ind+Prt+Pl2+Err/Orth:%>idie            FINAL1       ;
+          +Ind+Prt+Du2+Err/Orth:%>idien            FINAL1       ;
+
+                
+! Infinite forms
+! --------------
+                           +Inf:%>edh             FINAL1             ;
+                          +VGen:%>ien             FINAL1             ;
+                        +ConNeg:%>ieh             FINAL1             ;
+! +Act:%>eme           FINAL1 ;
+                           +Ger:%>ieminie            FINAL1             ;
+                   +Ger+Err/Orth:%>eminie             FINAL1             ;
+                        +PrsPrc:%>ije                flagFINAL1             ;
+                   +PrsPrc+Err/Orth:%>eje             flagFINAL1             ;
+! +PrsPrc:%>ijes        FINAL1 ;
+                    +PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
+! row F trigger for Umlaut Prt
+! Derivations
+! -----------
+                +Der3+Der/NomAg+N:%»iej  flagIJE_ODD            ;
+        +Der3+Der/NomAg+N+Err/Orth:%»ij  flagIJE_ODD             ;
+               +Der3+Der/NomAct+N:%»iem  flagNomActOdd          ;
+                  +Der1+Der/les+A:%»%^1UML          LES_LASSE_ie       ;
+              +Der3+Der/InchL+V:%»iegået          GÅETEDH            ;
+              +Der1+Der/st+V:%»iest            DÅAJVOEHTIDH       ;
+               +Der1+Der/l+V:%»iel             GOLTELIDH          ;
+             +Der1+Der/htj+V:%»%^htjidhUMLehtj GOLTELIDH          ;
+                +Der1+Der/ht:%»ieht            DÅAJVOEHTIDH_TV    ;
+! +Der1+Der/Caus:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+              +Der3+Der/ahtje+V:%»iejahtj         AHTJE              ;
+              +Der1+Der/ldihkie+A:%»%^1UMLaldihkie  ie_IE_EVENNOCOMP  ;          
+               +Der1+Der/ldahke+N:%»%^1UMLaldahk    flagLDAHKE             ;
+       +Der1+Der/ldh+N+Cmp/SgNom:%»%^1UMLeldh      R                  ;
+         +Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh      flagFINAL1             ;
+ +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»%^1UMLeld      flagFINAL1             ; !
+
+LEXICON BÅETEDH_NOTVGEN   !!= * __@CODE@__ row A - Group Ixxf
+            +Ind+Prs+Uml:%>%^1UMLa         V-I-PRS-SG         ; ! class I special
+                +Ind+Prs:%>ie              VSUF-EVEN-PRS-DUPL ;
+         +Ind+Prt+Dial/L:%>iej             VSUF-ODD-PRT       ;
+    +Ind+Prt+Uml+Dial/SH:%>%^iUML          VSUF-PRT           ;
+   +Ind+Prt+Pl1+Err/Orth:%>ibie            FINAL1       ;
+   +Ind+Prt+Pl2+Err/Orth:%>idie            FINAL1       ;
+   +Ind+Prt+Du2+Err/Orth:%>idien            FINAL1       ;
+! +Imprt:%>              VSUF-EVEN-IMP ;
+! Infinite forms
+! --------------
+                    +Inf:%>edh             FINAL1             ;
+                 +ConNeg:%>ieh             FINAL1             ;
+! +Act:%>eme           FINAL1 ;
+                    +Ger:%>ieminie         FINAL1             ;
+            +Ger+Err/Orth:%>eminie          FINAL1             ;
+                 +PrsPrc:%>ije             flagFINAL1             ;
+! +PrsPrc:%>ijes        FINAL1 ;
+             +PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
+! row F trigger for Umlaut Prt
+! Derivations
+! -----------
+         +Der3+Der/NomAg+N:%»iej  flagIJE_ODD            ;
+ +Der3+Der/NomAg+N+Err/Orth:%»ij  flagIJE_ODD            ;
+        +Der3+Der/NomAct+N:%»iem  flagNomActOdd          ;
+           +Der1+Der/les+A:%»%^1UML          LES_LASSE_ie       ;
+       +Der3+Der/InchL+V:%»iegået          GÅETEDH            ;
+! +Der1+Der/st+V:%»iest DÅAJVOEHTIDH ;
+! +Der1+Der/l+V:%»iel GOLTELIDH ;
+! +Der1+Der/htj+V:%»%^htjidhUMLehtj GOLTELIDH ;
+! +Der1+Der/ht:%»ieht DÅAJVOEHTIDH_TV ;
+! +Der1+Der/Caus:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+       +Der3+Der/ahtje+V:%»iejahtj         AHTJE              ;
+! +Der1+Der/ldihkie+A:%»%^1UMLaldihk ie_IE_EVENNOCOMP ;
+! +Der1+Der/ldahke+N:%»%^1UMLaldahk flagLDAHKE ;
+! +Der1+Der/ldh+N+Cmp/SgNom:%»%^1UMLeldh R ;
+! +Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
+! +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»%^1UMLeld FINAL1 ; !
+
+
+LEXICON SEVTEDH   !!= * __@CODE@__ row A - Group I  IMPERSONALS!
+                                       +V+IV+Ind+Prs+Uml+Sg3:%>%^1UMLa                                  FINAL1       ; ! class I special
+                                   +V+IV+Ind+Prt+Sg3+Err/Orth:%>ieji                                     FINAL1       ;
+                                   +V+IV+Ind+Prt+Sg3+Err/Orth:%>iej%^DISIMPi                             FINAL1       ;
+                                       +V+IV+Ind+Prt+Uml+Sg3:%>%^iUMLi                                  FINAL1       ;
+                               +V+IV+Ind+Prt+Uml+Sg3+Err/Orth:%>%^iUML%^DISIMPi                          FINAL1       ;
+! +V+IV+Imprt:%>              VSUF-EVEN-IMP ;
+! Infinite forms
+! --------------
+                                                   +V+IV+Inf:%>edh                                      FINAL1       ;
+                                                +V+IV+ConNeg:%>ieh                                      FINAL1       ;
+                                                  +V+IV+VGen:%>ien                                      FINAL1       ;
+! +V+IV+Act:%>eme           FINAL1 ;
+                                                   +V+IV+Ger:%>ieminie                                  FINAL1       ;
+                                            +V+IV+PrfPrc+Uml:%>%^1UMLeme                                FINAL1       ;
+! row F trigger for Umlaut Prt
+! Derivations
+! -----------
+! +V+IV+Der3+Der/NomAg+N:%»iej@C.NeedNoun@     IJE_ODD ;
+                                       +V+IV+Der3+Der/NomAct+N:%»iem  flagNomActOdd    ;
+! +V+IV+Der1+Der/les+A:%»%^1UML LES_LASSE_ie ;
+                                    +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv                              IV_PASSIVE_L ;
+!                                         +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML                                IV_PASSIVE_S ;
+                      +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»iegået%>%^1UMLa                          FINAL1       ;
+                      +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»iegået%>%^iUMLi                          FINAL1       ;
+              +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»iegået%>%^iUML%^DISIMPi                  FINAL1       ;
+                                  +V+IV+Der3+Der/InchL+V+Inf:%»iegået%>edh                              FINAL1       ;
+                               +V+IV+Der3+Der/InchL+V+ConNeg:%»iegået%>ieh                              FINAL1       ;
+                                 +V+IV+Der3+Der/InchL+V+VGen:%»iegået%>ien                              FINAL1       ;
+! +V+IV+Der3+Der/InchL+V+Act:%»iegået%>eme           FINAL1 ;
+                                  +V+IV+Der3+Der/InchL+V+Ger:%»iegået%>ieminie                          FINAL1       ;
+                           +V+IV+Der3+Der/InchL+V+PrfPrc+Uml:%»iegået%>%^1UMLeme                        FINAL1       ;
+                          +V+IV+Der1+Der/st+V+Ind+Prs+Sg3:%»iest%>%^DISIMPe                          FINAL1       ;
+                          +V+IV+Der1+Der/st+V+Ind+Prt+Sg3:%»iest%>i                                  FINAL1       ;
+                  +V+IV+Der1+Der/st+V+Ind+Prt+Sg3+Err/Orth:%»iest%>%^DISIMPi                          FINAL1       ;
+                                  +V+IV+Der1+Der/st+V+Inf:%»iest%>idh                                FINAL1       ;
+                               +V+IV+Der1+Der/st+V+ConNeg:%»iest%>%^DISIMPh                          FINAL1       ;
+                                 +V+IV+Der1+Der/st+V+VGen:%»iest%>%^DISIMPen                         FINAL1       ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +V+IV+Der1+Der/st+V+Act:%»iest%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+                                  +V+IV+Der1+Der/st+V+Ger:%»iest%>%^DISIMPeminie                     FINAL1       ; ! = GH Gerundium
+                               +V+IV+Der1+Der/st+V+PrfPrc:%»iest%>amme                               FINAL1       ; ! = GH Ptz.Pt.
+!   GH Ptz.Fut. b'ïssejässaa missing here
+      +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prs+Sg3+Uml:%»iest%»%^adteUMLall%>%^3sUMLa             FINAL1       ;
+          +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prt+Sg3:%»iest%»%^adteUMLall%>i                    FINAL1       ;
+  +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prt+Sg3+Err/Orth:%»iest%»%^adteUMLall%>%^DISIMPi            FINAL1       ;
+                  +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Inf:%»iest%»%^adteUMLall%>edh                  FINAL1       ;
+                 +V+IV+Der1+Der/st+V+Der2+Der/alla+V+VGen:%»iest%»%^adteUMLall%>en                   FINAL1       ;
+! +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Act:%»iest%»%^adteUMLall%>eme      FINAL1 ;
+                  +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ger:%»iest%»%^adteUMLall%>eminie               FINAL1       ;
+               +V+IV+Der1+Der/st+V+Der2+Der/alla+V+PrfPrc:%»iest%»%^adteUMLall%>eme                  FINAL1       ;
+               +V+IV+Der1+Der/st+V+Der2+Der/alla+V+ConNeg:%»iest%»%^adteUMLall%>0h                   FINAL1       ;
+                           +V+IV+Der1+Der/l+V+Ind+Prs+Sg3:%»iel%>%^DISIMPe                           FINAL1       ;
+                           +V+IV+Der1+Der/l+V+Ind+Prt+Sg3:%»iel%>i                                   FINAL1       ;
+                   +V+IV+Der1+Der/l+V+Ind+Prt+Sg3+Err/Orth:%»iel%>%^DISIMPi                           FINAL1       ;
+                                   +V+IV+Der1+Der/l+V+Inf:%»iel%>idh                                 FINAL1       ;
+                                +V+IV+Der1+Der/l+V+ConNeg:%»iel%>%^DISIMPh                           FINAL1       ;
+                                  +V+IV+Der1+Der/l+V+VGen:%»iel%>%^DISIMPen                          FINAL1       ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +V+IV+Der1+Der/l+V+Act:%»iel%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+                                   +V+IV+Der1+Der/l+V+Ger:%»iel%>%^DISIMPeminie                      FINAL1       ; ! = GH Gerundium
+                                +V+IV+Der1+Der/l+V+PrfPrc:%»iel%>amme                                FINAL1       ; ! = GH Ptz.Pt.
+!   GH Ptz.Fut. b'ïssejässaa missing here
+       +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»iel%»%^adteUMLadt%>%^3sUMLa              FINAL1       ;
+           +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»iel%»%^adteUMLadt%>i                     FINAL1       ;
+   +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prt+Sg3+Err/Orth:%»iel%»%^adteUMLadt%>%^DISIMPi             FINAL1       ;
+                   +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Inf:%»iel%»%^adteUMLadt%>edh                   FINAL1       ;
+                  +V+IV+Der1+Der/l+V+Der2+Der/adte+V+VGen:%»iel%»%^adteUMLadt%>en                    FINAL1       ;
+! +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Act:%»iel%»%^adteUMLadt%>eme      FINAL1 ;
+                   +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ger:%»iel%»%^adteUMLadt%>eminie                FINAL1       ;
+                +V+IV+Der1+Der/l+V+Der2+Der/adte+V+PrfPrc:%»iel%»%^adteUMLadt%>eme                   FINAL1       ;
+                +V+IV+Der1+Der/l+V+Der2+Der/adte+V+ConNeg:%»iel%»%^adteUMLadt%>0h                    FINAL1       ;
+                         +V+IV+Der1+Der/htj+V+Ind+Prs+Sg3:%»%^htjidhUMLehtj%>%^DISIMPe               FINAL1       ;
+                         +V+IV+Der1+Der/htj+V+Ind+Prt+Sg3:%»%^htjidhUMLehtj%>i                       FINAL1       ;
+                 +V+IV+Der1+Der/htj+V+Ind+Prt+Sg3+Err/Orth:%»%^htjidhUMLehtj%>%^DISIMPi               FINAL1       ;
+                                 +V+IV+Der1+Der/htj+V+Inf:%»%^htjidhUMLehtj%>idh                     FINAL1       ;
+                              +V+IV+Der1+Der/htj+V+ConNeg:%»%^htjidhUMLehtj%>%^DISIMPh               FINAL1       ;
+                                +V+IV+Der1+Der/htj+V+VGen:%»%^htjidhUMLehtj%>%^DISIMPen              FINAL1       ; ! = GH Modalis, KB måtesform, GH Voluntativ
+! +V+IV+Der1+Der/htj+V+Act:%»%^htjidhUMLehtj%>immie           FINAL1 ; ! = GH verbalsubst, KB nomen actionis
+                                 +V+IV+Der1+Der/htj+V+Ger:%»%^htjidhUMLehtj%>%^DISIMPeminie          FINAL1       ; ! = GH Gerundium
+                              +V+IV+Der1+Der/htj+V+PrfPrc:%»%^htjidhUMLehtj%>amme                    FINAL1       ; ! = GH Ptz.Pt.
+!   GH Ptz.Fut. b'ïssejässaa missing here
+     +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»%^htjidhUMLehtj%»%^adteUMLadt%>%^3sUMLa  FINAL1       ;
+         +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»%^htjidhUMLehtj%»%^adteUMLadt%>i         FINAL1       ;
+ +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+Ind+Prt+Sg3+Err/Orth:%»%^htjidhUMLehtj%»%^adteUMLadt%>%^DISIMPi FINAL1       ;
+                 +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+Inf:%»%^htjidhUMLehtj%»%^adteUMLadt%>edh       FINAL1       ;
+                +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+VGen:%»%^htjidhUMLehtj%»%^adteUMLadt%>en        FINAL1       ;
+! +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+Act:%»%^htjidhUMLehtj%»%^adteUMLadt%>eme      FINAL1 ;
+                 +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+Ger:%»%^htjidhUMLehtj%»%^adteUMLadt%>eminie    FINAL1       ;
+              +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+PrfPrc:%»%^htjidhUMLehtj%»%^adteUMLadt%>eme       FINAL1       ;
+              +V+IV+Der1+Der/htj+V+Der2+Der/adte+V+ConNeg:%»%^htjidhUMLehtj%»%^adteUMLadt%>0h        FINAL1       ;
+                                  +V+IV+Der3+Der/ahtje+V+Inf:%»iejahtj%>edh                             FINAL1       ;
+                                 +V+IV+Der3+Der/ahtje+V+VGen:%»iejahtj%>en                              FINAL1       ;
+! +V+IV+Der3+Der/ahtje+V+Act:%»iejahtj%>eme      FINAL1 ;
+                                  +V+IV+Der3+Der/ahtje+V+Ger:%»iejahtj%>eminie                          FINAL1       ;
+                               +V+IV+Der3+Der/ahtje+V+PrfPrc:%»iejahtj%>eme                             FINAL1       ;
+                               +V+IV+Der3+Der/ahtje+V+ConNeg:%»iejahtj%>0h                              FINAL1       ;
+                        +V+IV+Der3+Der/ahtje+Ind+Prs+Sg3+Uml:%»iejahtj%>%^3sUMLa                        FINAL1       ;
+                            +V+IV+Der3+Der/ahtje+Ind+Prt+Sg3:%»iejahtj%>i                               FINAL1       ;
+                    +V+IV+Der3+Der/ahtje+Ind+Prt+Sg3+Err/Orth:%»iejahtj%>%^DISIMPi                       FINAL1       ;
+! +V+IV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/lg:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/ldihkie+A:%»%^1UMLaldihk ie_IE_EVENNOCOMP ;
+! +V+IV+Der1+Der/ldahke+N:%»%^1UMLaldahk flagLDAHKE ;
+! +V+IV+Der1+Der/ldh+N+Cmp/SgNom:%»%^1UMLeldh R ;
+! +V+IV+Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh FINAL1 ;
+! +V+IV+Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»%^1UMLeld FINAL1 ; !
+
+
+LEXICON IJH_ÅEREDH 
+  +V+IV+Inf+Use/NG:%>ijh            FINAL1             ;
+  ÅEREDH ;
+  
+  
+LEXICON ÅEREDH   !!= * __@CODE@__ row A - Group I   Hasselbrink: "öörim."- (Thomassen) Qvigstad: "vöörtim" 
+
+                   +V+IV+Ind+Prs+Uml:%>%^1UMLa         V-I-PRS-SG         ; ! class I special
+                       +V+IV+Ind+Prs:%>ie              VSUF-EVEN-PRS-DUPL ;
+                       +V+IV+Ind+Prt:%>iej             VSUF-ODD-PRT       ;
+                       
+ +V+IV+Ind+Prt+Uml+Use/NG:%>%^iUML    VSUF-PRT ; !Umlaut jfr.Hasselbrink og Qvigstad
+                         +V+IV+Imprt:%>                VSUF-EVEN-IMP      ;
+! Infinite forms
+! --------------
+                           +V+IV+Inf:%>edh             FINAL1             ;
+                        +V+IV+ConNeg:%>ieh             FINAL1             ;
+                          +V+IV+VGen:%>ien             FINAL1             ;
+! +V+IV+Act:%>eme           FINAL1 ;
+                           +V+IV+Ger:%>ieminie         FINAL1             ;
+                        +V+IV+PrsPrc:%>ije             flagFINAL1             ;
+! +V+IV+PrsPrc:%>ijes        FINAL1 ;
+                    +V+IV+PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
+! row F trigger for Umlaut Prt
+! Derivations
+! -----------
+                +V+IV+Der3+Der/NomAg+N:%»iej  flagIJE_ODD            ;
+        +V+IV+Der3+Der/NomAg+N+Err/Orth:%»ij  flagIJE_ODD            ;
+               +V+IV+Der3+Der/NomAct+N:%»iem  flagNomActOdd          ;
+                  +V+IV+Der1+Der/les+A:%»%^1UML          LES_LASSE_ie       ;
+            +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv     IV_PASSIVE_L       ;
+!                 +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML       IV_PASSIVE_S       ;
+              +V+IV+Der3+Der/InchL+V:%»iegået          GÅETEDH            ;
+              +V+IV+Der1+Der/st+V:%»iest            DÅAJVOEHTIDH       ;
+               +V+IV+Der1+Der/l+V:%»iel             GOLTELIDH          ;
+             +V+IV+Der1+Der/htj+V:%»%^htjidhUMLehtj GOLTELIDH          ;
+                +V+IV+Der1+Der/ht:%»ieht            DÅAJVOEHTIDH_TV    ;
+! +V+IV+Der1+Der/Caus:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+              +V+IV+Der3+Der/ahtje+V:%»iejahtj         AHTJE              ;
+! +V+IV+Der1+Der/htalle:%»%^1UMLahtall SOVVEDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/lg:%»%^1UMLalg LGIDH ; !Passive, only from transitive verbs
+              +V+IV+Der1+Der/ldihkie+A:%»%^1UMLaldihk ie_IE_EVENNOCOMP           ;
+               +V+IV+Der1+Der/ldahke+N:%»%^1UMLaldahk    flagLDAHKE             ;
+       +V+IV+Der1+Der/ldh+N+Cmp/SgNom:%»%^1UMLeldh      R                  ;
+         +V+IV+Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh      flagFINAL1             ;
+ +V+IV+Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»%^1UMLeld       flagFINAL1             ; !
+
+
+LEXICON ÅEREDH_TV   !!= * __@CODE@__ row A - Group I   NO -øø-UMLAUT!!!!
+                   +V+TV+Ind+Prs+Uml:%>%^1UMLa         V-I-PRS-SG         ; ! class I special
+                       +V+TV+Ind+Prs:%>ie              VSUF-EVEN-PRS-DUPL ;
+                       +V+TV+Ind+Prt:%>iej             VSUF-ODD-PRT       ;
+! +V+TV+Ind+Prt+Uml:%>%^iUML    VSUF-PRT ; NO -øø-UMLAUT!!!!
+                         +V+TV+Imprt:%>                VSUF-EVEN-IMP      ;
+! Infinite forms
+! --------------
+                           +V+TV+Inf:%>edh             FINAL1             ;
+                        +V+TV+ConNeg:%>ieh             FINAL1             ;
+                          +V+TV+VGen:%>ien             FINAL1             ;
+! +V+TV+Act:%>eme           FINAL1 ;
+                           +V+TV+Ger:%>ieminie         FINAL1             ;
+                        +V+TV+PrsPrc:%>ije             flagFINAL1             ;
+! +V+TV+PrsPrc:%>ijes        FINAL1 ;
+                    +V+TV+PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
+! row F trigger for Umlaut Prt
+! Derivations
+! -----------
+                +V+TV+Der3+Der/NomAg+N:%»iej  flagIJE_ODD            ;
+        +V+TV+Der3+Der/NomAg+N+Err/Orth:%»ij  flagIJE_ODD            ;
+               +V+TV+Der3+Der/NomAct+N:%»iem  flagNomActOdd          ;
+                  +V+TV+Der1+Der/les+A:%»%^1UML          LES_LASSE_ie       ;
+            +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv     SOVVEDH            ;
+!                 +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML       VÅÅJNEDH           ;
+              +V+TV+Der3+Der/InchL+V:%»iegået          GÅETEDH            ;
+              +V+TV+Der1+Der/st+V:%»iest            DÅAJVOEHTIDH       ;
+               +V+TV+Der1+Der/l+V:%»iel             GOLTELIDH          ;
+             +V+TV+Der1+Der/htj+V:%»%^htjidhUMLehtj GOLTELIDH          ;
+                +V+TV+Der1+Der/ht:%»ieht            DÅAJVOEHTIDH_TV    ;
+! +V+TV+Der1+Der/Caus:%»iedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+              +V+TV+Der3+Der/ahtje+V:%»iejahtj         AHTJE              ;
+               +V+TV+Der1+Der/htalle:%»%^1UMLahtall    SOVVEDH            ; !Passive, only from transitive verbs
+                +V+TV+Der1+Der/lg:%»%^1UMLalg       LGIDH              ; !Passive, only from transitive verbs
+              +V+TV+Der1+Der/ldihkie+A:%»%^1UMLaldihk ie_IE_EVENNOCOMP           ;
+               +V+TV+Der1+Der/ldahke+N:%»%^1UMLaldahk    flagLDAHKE             ;
+       +V+TV+Der1+Der/ldh+N+Cmp/SgNom:%»%^1UMLeldh      R                  ;
+         +V+TV+Der1+Der/ldh+N+Sg+Nom:%»%^1UMLeldh      flagFINAL1             ;
+ +V+TV+Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»%^1UMLeld       flagFINAL1             ; !
+ 
+ 
+
+
+
+LEXICON TJEARODH_TV  !!= * __@CODE@__
+                    +V+TV:                  TJEARODH ;
+ +V+TV+Der3+Der/PassL+Uml:%»%^2UMLesovv     SOVVEDH  ;
+!      +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML       VÅÅJNEDH ;
+    +V+TV+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH  ; !Passive, only from transitive verbs
+     +V+TV+Der1+Der/lg:%»%^PASSUMLelg    LGIDH    ; !Passive, only from transitive verbs
+
+
+LEXICON TJEARODH_IV  !!= * __@CODE@__
+                    +V+IV:              TJEARODH     ;
+ +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv IV_PASSIVE_L ;
+!      +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S ;
+
+
+LEXICON TJEARODH   !!= * __@CODE@__ row C - Group II
+                       +Ind+Prs:%>                  V-II-PRS-SG        ; ! class II special
+                       +Ind+Prs:%>oe                VSUF-EVEN-PRS-DUPL ;
+                       +Ind+Prt:%>oej               VSUF-PRT           ;
+                         +Imprt:%>                  VSUF-II-EVEN-IMP   ;
+            +Ind+Prt+Sg3+Use/NG:%>oej               FINAL1             ;
+! Infinite forms
+! --------------
+                           +Inf:%>odh               FINAL1             ;
+                           +Inf+Use/NG:%>ijh               FINAL1             ; ! south-south sami
+                        +ConNeg:%>oeh               FINAL1             ;
+                          +VGen:%>oen               FINAL1             ;
+! +Act:%>eme           FINAL1 ;
+                           +Ger:%>oeminie           FINAL1             ;
+                        +PrsPrc:%>oje               flagFINAL1             ;
+! +PrsPrc:%>ojes        FINAL1 ;
+                    +PrfPrc+Uml:%>%^2UMLeme         FINAL1             ;
+! Derivations
+! -----------
+                +Der3+Der/NomAg+N:%»oej  flagN_ODD              ;
+               +Der3+Der/NomAct+N:%»oem  flagNomActOdd          ;
+                  +Der1+Der/les+A:%»%^PASSUMLel       LES                ;
+              +Der3+Der/InchL+V:%»oegået            GÅETEDH            ;
+              +Der1+Der/st+V:%»oest              DÅAJVOEHTIDH       ;
+               +Der1+Der/l+V:%»oel               GOLTELIDH          ;
+                +Der1+Der/ht:%»oeht              DÅAJVOEHTIDH_TV    ;
+! +Der1+Der/Caus:%»oedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+              +Der3+Der/ahtje+V:%»oejahtj           AHTJE              ;
+               +Der1+Der/d+V:%»%^PASSUMLed       GOLTELIDH          ; ! oe?
+       +Der1+Der/d+V+Err/Orth:%»oed               GOLTELIDH          ; ! Miesie Mavve
+              +Der1+Der/ldihkie+A:%»%^PASSUMLeldihk ie_IE_EVENNOCOMP           ;
+               +Der1+Der/ldahke+N:%»%^PASSUMLeldahk   flagLDAHKE             ;
+       +Der1+Der/ldh+N+Cmp/SgNom:%»%^PASSUMLeldh     R                  ;
+         +Der1+Der/ldh+N+Sg+Nom:%»%^PASSUMLeldh     flagFINAL1             ;
+ +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»%^PASSUMLeld      flagFINAL1             ; !
+
+
+
+
+LEXICON ABRODH   !!= * __@CODE@__ row C - Group II
+                                      +V+IV+Ind+Prs+Uml+Sg3:%>%^2UMLe                              FINAL1       ; ! class II special
+                                          +V+IV+Ind+Prt+Sg3:%>oeji                                 FINAL1       ;
+                                  +V+IV+Ind+Prt+Sg3+Err/Orth:%>oej%^DISIMPi                         FINAL1       ;
+                                   +V+IV+Ind+Prt+Sg3+Use/NG:%>oej                                  FINAL1       ;
+
+! Infinite forms
+! --------------
+                                                  +V+IV+Inf:%>odh                                  FINAL1       ;
+                                               +V+IV+ConNeg:%>oeh                                  FINAL1       ;
+                                                 +V+IV+VGen:%>oen                                  FINAL1       ;
+! +V+IV+Act:%>eme           FINAL1 ;
+                                                  +V+IV+Ger:%>oeminie                              FINAL1       ;
+                                           +V+IV+PrfPrc+Uml:%>%^2UMLeme                            FINAL1       ;
+! Derivations
+! -----------
+! +V+IV+Der3+Der/NomAg+N:%»oej@C.NeedNoun@     N_ODD ;
+                                      +V+IV+Der3+Der/NomAct+N:%»oem  flagNomActOdd    ;
+! +V+IV+Der1+Der/les+A:%»%^PASSUMLel LES ;
+                                 !  +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv                          IV_PASSIVE_L ;
+                                      !  +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML                            IV_PASSIVE_S ;
+                     +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»oegået%>%^1UMLa                      FINAL1       ;
+                     +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»oegået%>%^iUMLi                      FINAL1       ;
+             +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»oegået%>%^iUML%^DISIMPi              FINAL1       ;
+                                 +V+IV+Der3+Der/InchL+V+Inf:%»oegået%>edh                          FINAL1       ;
+                              +V+IV+Der3+Der/InchL+V+ConNeg:%»oegået%>ieh                          FINAL1       ;
+                                +V+IV+Der3+Der/InchL+V+VGen:%»oegået%>ien                          FINAL1       ;
+! +V+IV+Der3+Der/InchL+V+Act:%»oegået%>eme           FINAL1 ;
+                                 +V+IV+Der3+Der/InchL+V+Ger:%»oegået%>ieminie                      FINAL1       ;
+                          +V+IV+Der3+Der/InchL+V+PrfPrc+Uml:%»oegået%>%^1UMLeme                    FINAL1       ;
+                         +V+IV+Der1+Der/st+V+Ind+Prs+Sg3:%»oest%>%^DISIMPe                      FINAL1       ;
+                         +V+IV+Der1+Der/st+V+Ind+Prt+Sg3:%»oest%>i                              FINAL1       ;
+                 +V+IV+Der1+Der/st+V+Ind+Prt+Sg3+Err/Orth:%»oest%>%^DISIMPi                      FINAL1       ;
+                                 +V+IV+Der1+Der/st+V+Inf:%»oest%>idh                            FINAL1       ;
+                              +V+IV+Der1+Der/st+V+ConNeg:%»oest%>%^DISIMPh                      FINAL1       ;
+                                +V+IV+Der1+Der/st+V+VGen:%»oest%>%^DISIMPen                     FINAL1       ;
+! +V+IV+Der1+Der/st+V+Act:%»oest%>immie           FINAL1 ;
+                                 +V+IV+Der1+Der/st+V+Ger:%»oest%>%^DISIMPeminie                 FINAL1       ;
+                              +V+IV+Der1+Der/st+V+PrfPrc:%»oest%>amme                           FINAL1       ;
+     +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prs+Sg3+Uml:%»oest%»%^adteUMLall%>%^3sUMLa         FINAL1       ;
+         +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prt+Sg3:%»oest%»%^adteUMLall%>i                FINAL1       ;
+ +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prt+Sg3+Err/Orth:%»oest%»%^adteUMLall%>%^DISIMPi        FINAL1       ;
+                 +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Inf:%»oest%»%^adteUMLall%>edh              FINAL1       ;
+                +V+IV+Der1+Der/st+V+Der2+Der/alla+V+VGen:%»oest%»%^adteUMLall%>en               FINAL1       ;
+! +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Act:%»oest%»%^adteUMLall%>eme      FINAL1 ;
+                 +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ger:%»oest%»%^adteUMLall%>eminie           FINAL1       ;
+              +V+IV+Der1+Der/st+V+Der2+Der/alla+V+PrfPrc:%»oest%»%^adteUMLall%>eme              FINAL1       ;
+              +V+IV+Der1+Der/st+V+Der2+Der/alla+V+ConNeg:%»oest%»%^adteUMLall%>0h               FINAL1       ;
+                          +V+IV+Der1+Der/l+V+Ind+Prs+Sg3:%»oel%>%^DISIMPe                       FINAL1       ;
+                          +V+IV+Der1+Der/l+V+Ind+Prt+Sg3:%»oel%>i                               FINAL1       ;
+                  +V+IV+Der1+Der/l+V+Ind+Prt+Sg3+Err/Orth:%»oel%>%^DISIMPi                       FINAL1       ;
+                                  +V+IV+Der1+Der/l+V+Inf:%»oel%>idh                             FINAL1       ;
+                               +V+IV+Der1+Der/l+V+ConNeg:%»oel%>%^DISIMPh                       FINAL1       ;
+                                 +V+IV+Der1+Der/l+V+VGen:%»oel%>%^DISIMPen                      FINAL1       ;
+! +V+IV+Der1+Der/l+V+Act:%»oel%>immie           FINAL1 ;
+                                  +V+IV+Der1+Der/l+V+Ger:%»oel%>%^DISIMPeminie                  FINAL1       ;
+                               +V+IV+Der1+Der/l+V+PrfPrc:%»oel%>amme                            FINAL1       ;
+      +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»oel%»%^adteUMLadt%>%^3sUMLa          FINAL1       ;
+          +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»oel%»%^adteUMLadt%>i                 FINAL1       ;
+  +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prt+Sg3+Err/Orth:%»oel%»%^adteUMLadt%>%^DISIMPi         FINAL1       ;
+                  +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Inf:%»oel%»%^adteUMLadt%>edh               FINAL1       ;
+                 +V+IV+Der1+Der/l+V+Der2+Der/adte+V+VGen:%»oel%»%^adteUMLadt%>en                FINAL1       ;
+! +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Act:%»oel%»%^adteUMLadt%>eme      FINAL1 ;
+                  +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ger:%»oel%»%^adteUMLadt%>eminie            FINAL1       ;
+               +V+IV+Der1+Der/l+V+Der2+Der/adte+V+PrfPrc:%»oel%»%^adteUMLadt%>eme               FINAL1       ;
+               +V+IV+Der1+Der/l+V+Der2+Der/adte+V+ConNeg:%»oel%»%^adteUMLadt%>0h                FINAL1       ;
+                     +V+IV+Der3+Der/ahtje+V+Ind+Prs+Sg3+Uml:%»oejahtj%>%^3sUMLa                    FINAL1       ;
+                         +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3:%»oejahtj%>i                           FINAL1       ;
+                 +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3+Err/Orth:%»oejahtj%>%^DISIMPi                   FINAL1       ;
+                                 +V+IV+Der3+Der/ahtje+V+Inf:%»oejahtj%>edh                         FINAL1       ;
+                                +V+IV+Der3+Der/ahtje+V+VGen:%»oejahtj%>en                          FINAL1       ;
+! +V+IV+Der3+Der/ahtje+V+Act:%»oejahtj%>eme      FINAL1 ;
+                                 +V+IV+Der3+Der/ahtje+V+Ger:%»oejahtj%>eminie                      FINAL1       ;
+                              +V+IV+Der3+Der/ahtje+V+PrfPrc:%»oejahtj%>eme                         FINAL1       ;
+                              +V+IV+Der3+Der/ahtje+V+ConNeg:%»oejahtj%>0h                          FINAL1       ;
+                          +V+IV+Der1+Der/d+V+Ind+Prs+Sg3:%»%^PASSUMLed%>%^DISIMPe               FINAL1       ;
+                          +V+IV+Der1+Der/d+V+Ind+Prt+Sg3:%»%^PASSUMLed%>i                       FINAL1       ;
+                  +V+IV+Der1+Der/d+V+Ind+Prt+Sg3+Err/Orth:%»%^PASSUMLed%>%^DISIMPi               FINAL1       ;
+                                  +V+IV+Der1+Der/d+V+Inf:%»%^PASSUMLed%>idh                     FINAL1       ;
+                               +V+IV+Der1+Der/d+V+ConNeg:%»%^PASSUMLed%>%^DISIMPh               FINAL1       ;
+                                 +V+IV+Der1+Der/d+V+VGen:%»%^PASSUMLed%>%^DISIMPen              FINAL1       ;
+! +V+IV+Der1+Der/d+V+Act:%»%^PASSUMLed%>immie           FINAL1 ;
+                                  +V+IV+Der1+Der/d+V+Ger:%»%^PASSUMLed%>%^DISIMPeminie          FINAL1       ;
+                               +V+IV+Der1+Der/d+V+PrfPrc:%»%^PASSUMLed%>amme                    FINAL1       ;
+      +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»%^PASSUMLed%»%^adteUMLadt%>%^3sUMLa  FINAL1       ;
+          +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»%^PASSUMLed%»%^adteUMLadt%>i         FINAL1       ;
+  +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prt+Sg3+Err/Orth:%»%^PASSUMLed%»%^adteUMLadt%>%^DISIMPi FINAL1       ;
+                    +V+IV+Der1+Der/d+V+Der2+Der/adte+Inf:%»%^PASSUMLed%»%^adteUMLadt%>edh       FINAL1       ;
+                   +V+IV+Der1+Der/d+V+Der2+Der/adte+VGen:%»%^PASSUMLed%»%^adteUMLadt%>en        FINAL1       ;
+! +V+IV+Der1+Der/d+V+Der2+Der/adte+Act:%»%^PASSUMLed%»%^adteUMLadt%>eme      FINAL1 ;
+                    +V+IV+Der1+Der/d+V+Der2+Der/adte+Ger:%»%^PASSUMLed%»%^adteUMLadt%>eminie    FINAL1       ;
+                 +V+IV+Der1+Der/d+V+Der2+Der/adte+PrfPrc:%»%^PASSUMLed%»%^adteUMLadt%>eme       FINAL1       ;
+                 +V+IV+Der1+Der/d+V+Der2+Der/adte+ConNeg:%»%^PASSUMLed%»%^adteUMLadt%>0h        FINAL1       ;
+! +V+IV+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/lg:%»%^PASSUMLelg LGIDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/ldihkie+A:%»%^PASSUMLeldihk ie_IE_EVENNOCOMP ;
+! +V+IV+Der1+Der/ldahke+N:%»%^PASSUMLeldahk flagLDAHKE ;
+! +V+IV+Der1+Der/ldh+N+Cmp/SgNom:%»%^PASSUMLeldh R ;
+! +V+IV+Der1+Der/ldh+N+Sg+Nom:%»%^PASSUMLeldh FINAL1 ;
+! +V+IV+Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»%^PASSUMLeld FINAL1 ; !
+
+LEXICON TSEAHKODH_TV  !!= * __@CODE@__
+                    +V+TV:                  TSEAHKODH ;
+ +V+TV+Der3+Der/PassL+Uml:%»%^2UMLesovv     SOVVEDH   ;
+!      +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML       VÅÅJNEDH  ;
+    +V+TV+Der1+Der/htalle:%»%^PASSUMLehtall SOVVEDH   ; !Passive, only from transitive verbs
+     +V+TV+Der1+Der/lg:%»alg             LGIDH     ; !Passive, only from transitive verbs
+
+LEXICON TSEAHKODH_IV  !!= * __@CODE@__
+                    +V+IV:              TSEAHKODH    ;
+ +V+IV+Der3+Der/PassL+Uml:%»%^2UMLesovv IV_PASSIVE_L ;
+!      +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S ;
+
+
+LEXICON TSEAHKODH   !!= * __@CODE@__ row C - Group II    these have (lexicalized) diminutives on -estit, and passives on -algidh
+            +Ind+Prs:%>                V-II-PRS-SG        ; ! class II special
+            +Ind+Prs:%>oe              VSUF-EVEN-PRS-DUPL ;
+            +Ind+Prt:%>oej             VSUF-PRT           ;
+              +Imprt:%>                VSUF-II-EVEN-IMP   ;
+ +Ind+Prt+Sg3+Use/NG:%>oej             FINAL1             ;
+! Infinite forms
+! --------------
+                +Inf:%>odh             FINAL1             ;
+             +ConNeg:%>oeh             FINAL1             ;
+               +VGen:%>oen             FINAL1             ;
+! +Act:%>eme           FINAL1 ;
+                +Ger:%>oeminie         FINAL1             ;
+             +PrsPrc:%>oje             flagFINAL1             ;
+! +PrsPrc:%>ojes        FINAL1 ;
+         +PrfPrc+Uml:%>%^2UMLeme       FINAL1             ;
+! Derivations
+! -----------
+     +Der3+Der/NomAg+N:%»oej  flagN_ODD              ;
+    +Der3+Der/NomAct+N:%»oem  flagNomActOdd          ;
+       +Der1+Der/les+A:%»%^PASSUMLel     LES                ;
+   +Der3+Der/InchL+V:%»oegået          GÅETEDH            ;
+    +Der1+Der/l+V:%»oel             GOLTELIDH          ;
+     +Der1+Der/ht:%»oeht            DÅAJVOEHTIDH_TV    ;
+! +Der1+Der/Caus:%»oedeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+   +Der3+Der/ahtje+V:%»oejahtj         AHTJE              ;
+    +Der1+Der/d+V:%»%^PASSUMLed     GOLTELIDH          ;
+
+!---did not find many examples of these and one found was saarkeldahkesne, which is incompatible, it should be saarkaldahkesne
+! +Der1+Der/ldihkie+A:%»aldihk ie_IE_EVENNOCOMP ;
+! +Der1+Der/ldahke+N:%»aldahk flagLDAHKE ;
+! +Der1+Der/ldh+N+Cmp/SgNom:%»aldh R ;
+! +Der1+Der/ldh+N+Sg+Nom:%»aldh FINAL1 ;
+
+LEXICON GUARKEDH_TV  !!= * __@CODE@__
+                 +V+TV:            GUARKEDH ;
+  +V+TV+Der3+Der/PassL:a%»sovv     SOVVEDH  ;
+!   +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+TV+Der1+Der/htalle:%»ahtall    SOVVEDH  ; !Passive, only from transitive verbs
+  +V+TV+Der1+Der/lg:%»alg       LGIDH    ; !Passive, only from transitive verbs
+
+LEXICON GUARKEDH_IV  !!= * __@CODE@__
+                +V+IV:            GUARKEDH     ;
+ +V+IV+Der3+Der/PassL:a%»sovv     IV_PASSIVE_L ;
+!  +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+
+
+LEXICON GUARKEDH   !!= * __@CODE@__ row B - Group III
+            +Ind+Prs:%>a              V-PRS-SG-12        ; ! Class III 
+            +Ind+Prs:%>               V-III-PRS-SG       ; ! class III special
+            +Ind+Prs:%>a              VSUF-EVEN-PRS-DUPL ; !gives jåtskajidien and jåtskijidien
+            
+ +Ind+Prs+Pl3+Use/NG:%>oeh            FINAL1             ; ! arbitrarily +Use/
+ +Ind+Prs+Du1+Use/NG:%>oen            FINAL1             ; 
+            +Ind+Prt:%>aj             VSUF-PRT           ;
+              +Imprt:%>               VSUF-III-EVEN-IMP  ;
+              +Imprt+Err/Orth:h       FINAL1             ;  !! Fått tilbakemelding på denne om at "jarkah" er +Ind+Prs+Sg2, og "Jarkh!" er +Imprt. Har forelöpig satt denne inn som Err/Orth
+ +Ind+Prt+Sg3+Use/NG:%>aj             FINAL1             ;
+! Infinite forms
+! --------------
+                +Inf:%>edh            FINAL1             ;
+               +VGen:%>an             FINAL1             ;
+! +Act:%>eme     FINAL1 ;
+                +Ger:%>aminie         FINAL1             ;
+             +PrsPrc:%>ije            flagFINAL1             ;
+! +PrsPrc:%>ijes  FINAL1 ;
+             +PrfPrc:%>eme            FINAL1             ;
+             +ConNeg:%>ah             FINAL1             ;
+! Derivations
+! -----------
+     +Der3+Der/NomAg+N:%»ij  flagN_ODD              ;
+    +Der3+Der/NomAct+N:%»am  flagNomActOdd          ;
+       +Der1+Der/les+A:%»%^didhUMLel    LES                ;
+   +Der3+Der/InchL+V:%»agået          GÅETEDH            ;
+   +Der1+Der/st+V:%»ast            DÅAJVOEHTIDH       ;
+    +Der1+Der/l+V:%»al             GOLTELIDH          ;
+     +Der1+Der/ht:%»aht            DÅAJVOEHTIDH_TV    ;
+! +Der1+Der/Caus:%»adeht ÅARAJEHTEDH_TV ; !we have -didh + -ehtedh
+   +Der3+Der/ahtje+V:%»ajahtj         AHTJE              ;
+    +Der1+Der/d+V:%»%^didhUMLed    GOLTELIDH          ;
+! +Der1+Der/ldihkie+A:%»aldihk ie_IE_EVENNOCOMP ; !not to a-verbs
+! +Der1+Der/ldahke+N:%»aldahk flagLDAHKE ; !not to a-verbs
+! +Der1+Der/ldh+N+Cmp/SgNom:%»eldh R ; !not to a-verbs
+! +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ; !not to a-verbs
+
+
+LEXICON SIJHTEDH_TV   !!= * __@CODE@__
+                 +V+TV:            TJOEHPEDH_NOTVGEN ;
+ ! +V+TV+Der3+Der/PassL:e%»sovv     SOVVEDH           ;
+!   +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH          ;
+ +V+TV+Der1+Der/htalle:%»ehtall    SOVVEDH           ; !Passive, only from transitive verbs
+  +V+TV+Der1+Der/lg:%»elg       LGIDH             ; !Passive, only from transitive verbs
+
+
+
+LEXICON TJOEHPEDH_TV  !!= * __@CODE@__
+                 +V+TV:            TJOEHPEDH ;
+  +V+TV+Der3+Der/PassL:e%»sovv     SOVVEDH   ;
+!   +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH  ;
+ +V+TV+Der1+Der/htalle:%»ehtall    SOVVEDH   ; !Passive, only from transitive verbs
+  +V+TV+Der1+Der/lg:%»elg       LGIDH     ; !Passive, only from transitive verbs
+
+LEXICON GALKEDH_IV  !!= * __@CODE@__
+ +V+IV: GALKEDH_CONT ;
+! +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
+! +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+
+
+
+LEXICON TJOEHPEDH_IV  !!= * __@CODE@__
+                +V+IV:            TJOEHPEDH    ;
+ +V+IV+Der3+Der/PassL:e%»sovv     IV_PASSIVE_L ;
+!  +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+
+
+LEXICON TJOEHPEDH   !!= * __@CODE@__ row D - Group IV
+         +VGen:%>en FINAL1            ;
+ +VGen+Err/Orth:ien  FINAL1            ;
+                    TJOEHPEDH_NOTVGEN ;
+
+
+LEXICON TJOEHPEDH_NOTVGEN  !!= * __@CODE@__
+                       +Ind+Prs:%>               V-IV-EVEN-PRS    ;
+                       +Ind+Prt:%>               VSUF-PRT-SG-12   ;
+                       +Ind+Prt:%>               VSUF-PRT-DUPL    ;
+                   +Ind+Prt+Sg3:%>i              FINAL1           ;
+                         +Imprt:%>               VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+                           +Inf:%>edh            FINAL1           ;
+! +Act:%>eme      FINAL1 ;
+                           +Ger:%>eminie         FINAL1           ;
+                        +PrsPrc:%>ije            flagFINAL1           ;
+! +PrsPrc:%>ijes  FINAL1 ;
+                  +PrfPrc+NoUml:%>eme            FINAL1           ; ! tjoehpeme, bïejeme
+                    +PrfPrc+Uml:%>%^1UMLeme      FINAL1           ; ! tjuahpeme, beajeme
+                        +ConNeg:%>0h             FINAL1           ;
+! Derivations
+! -----------
+                +Der3+Der/NomAg+N:%»ij  flagN_ODD            ;
+               +Der3+Der/NomAct+N:%»em  flagNomActOdd        ;
+                  +Der1+Der/les+A:e%»l             LES              ;
+              +Der3+Der/InchL+V:%»egået          GÅETEDH          ;
+              +Der1+Der/st+V:%»est            DÅAJVOEHTIDH     ;
+               +Der1+Der/l+V:%»el             GOLTELIDH        ;
+                +Der1+Der/ht:%»eht            DÅAJVOEHTIDH_TV  ;
+! +Der1+Der/Caus:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehtedh
+              +Der3+Der/ahtje+V:%»ijahtj         AHTJE            ;
+               +Der1+Der/d+V:%»ed             GOLTELIDH        ;
+              +Der1+Der/ldihkie+A:%»eldihk ie_IE_EVENNOCOMP         ;
+               +Der1+Der/ldahke+N:%»eldahk         flagLDAHKE           ;
+       +Der1+Der/ldh+N+Cmp/SgNom:%»eldh           R                ;
+         +Der1+Der/ldh+N+Sg+Nom:%»eldh           flagFINAL1           ;
+ +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld            flagFINAL1           ; !
+
+
+LEXICON GALKEDH_CONT   !!= * __@CODE@__ row D - Group IV
+         +Ind+Prs:%>               V-IV-EVEN-PRS  ;
+         +Ind+Prt:%>               VSUF-PRT-SG-12 ;
+         +Ind+Prt:%>               VSUF-PRT-DUPL  ;
+     +Ind+Prt+Sg3:%>i              FINAL1         ;
+! +Imprt:%>         VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+             +Inf:%>edh            FINAL1         ;
+! +Act:%>eme      FINAL1 ;
+             +Ger:%>eminie         FINAL1         ;
+! +PrsPrc:%>ije   FINAL1 ;
+! +PrsPrc:%>ijes  FINAL1 ;
+    +PrfPrc+NoUml:%>eme            FINAL1         ; ! tjoehpeme, bïejeme
+      +PrfPrc+Uml:%>%^1UMLeme      FINAL1         ; ! tjuahpeme, beajeme
+          +ConNeg:%>0h             FINAL1         ;
+! Derivations
+! -----------
+! +Der3+Der/NomAg+N:%»ij@C.NeedNoun@     N_ODD ;
+ +Der3+Der/NomAct+N:%»em  flagNomActOdd      ;
+! +Der1+Der/les+A:e%»l LES ;
+! +Der3+Der/InchL+V:%»egået GÅETEDH ;
+! +Der1+Der/st+V:%»est DÅAJVOEHTIDH ;
+! +Der1+Der/l+V:%»el GOLTELIDH ;
+! +Der1+Der/ht:%»eht DÅAJVOEHTIDH_TV ;
+! +Der1+Der/Caus:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehtedh
+! +Der3+Der/ahtje+V:%»ijahtj AHTJE ;
+! +Der1+Der/d+V:%»ed GOLTELIDH ;
+! +Der1+Der/ldihkie+A:%»eldihk ie_IE_EVENNOCOMP ;
+! +Der1+Der/ldahke+N:%»eldahk flagLDAHKE ;
+! +Der1+Der/ldh+N+Cmp/SgNom:%»eldh R ;
+! +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
+! +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld FINAL1 ; !
+
+
+
+
+LEXICON BIEGKEDH   !!= * __@CODE@__ row D - Group IV !impersonals
+                                      +V+IV+Ind+Prs+Sg3+Uml:%>%^3sUMLa                     FINAL1       ;
+                                          +V+IV+Ind+Prt+Sg3:%>i                            FINAL1       ;
+! +V+IV+Imprt:%>         VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+                                                  +V+IV+Inf:%>edh                          FINAL1       ;
+                                                 +V+IV+VGen:%>en                           FINAL1       ;
+! +V+IV+Act:%>eme      FINAL1 ;
+                                                  +V+IV+Ger:%>eminie                       FINAL1       ;
+                                           +V+IV+PrfPrc+Uml:%>%^1UMLeme                    FINAL1       ; !
+                                               +V+IV+ConNeg:%>0h                           FINAL1       ;
+! Derivations
+! -----------
+! +V+IV+Der3+Der/NomAg+N:%»ij@C.NeedNoun@     N_ODD ;
+                                      +V+IV+Der3+Der/NomAct+N:%»em  flagNomActOdd    ;
+! +V+IV+Der1+Der/les+A:e%»l LES ;
+                                      ! +V+IV+Der3+Der/PassL:e%»sovv                        IV_PASSIVE_L ;
+                                      !  +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML                    IV_PASSIVE_S ;
+                     +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa               FINAL1       ;
+                     +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi               FINAL1       ;
+             +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»egået%>%^iUML%^DISIMPi       FINAL1       ;
+                                 +V+IV+Der3+Der/InchL+V+Inf:%»egået%>edh                   FINAL1       ;
+                              +V+IV+Der3+Der/InchL+V+ConNeg:%»egået%>ieh                   FINAL1       ;
+                                +V+IV+Der3+Der/InchL+V+VGen:%»egået%>ien                   FINAL1       ;
+! +V+IV+Der3+Der/InchL+V+Act:%»egået%>eme           FINAL1 ;
+                                 +V+IV+Der3+Der/InchL+V+Ger:%»egået%>ieminie               FINAL1       ;
+                          +V+IV+Der3+Der/InchL+V+PrfPrc+Uml:%»egået%>%^1UMLeme             FINAL1       ;
+                         +V+IV+Der1+Der/st+V+Ind+Prs+Sg3:%»est%>%^DISIMPe               FINAL1       ;
+                         +V+IV+Der1+Der/st+V+Ind+Prt+Sg3:%»est%>i                       FINAL1       ;
+                 +V+IV+Der1+Der/st+V+Ind+Prt+Sg3+Err/Orth:%»est%>%^DISIMPi               FINAL1       ;
+                                 +V+IV+Der1+Der/st+V+Inf:%»est%>idh                     FINAL1       ;
+                              +V+IV+Der1+Der/st+V+ConNeg:%»est%>%^DISIMPh               FINAL1       ;
+                                +V+IV+Der1+Der/st+V+VGen:%»est%>%^DISIMPen              FINAL1       ;
+! +V+IV+Der1+Der/st+V+Act:%»est%>immie           FINAL1 ;
+                                 +V+IV+Der1+Der/st+V+Ger:%»est%>%^DISIMPeminie          FINAL1       ;
+                              +V+IV+Der1+Der/st+V+PrfPrc:%»est%>amme                    FINAL1       ;
+     +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prs+Sg3+Uml:%»est%»%^adteUMLall%>%^3sUMLa  FINAL1       ;
+         +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prt+Sg3:%»est%»%^adteUMLall%>i         FINAL1       ;
+ +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prt+Sg3+Err/Orth:%»est%»%^adteUMLall%>%^DISIMPi FINAL1       ;
+                 +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Inf:%»est%»%^adteUMLall%>edh       FINAL1       ;
+                +V+IV+Der1+Der/st+V+Der2+Der/alla+V+VGen:%»est%»%^adteUMLall%>en        FINAL1       ;
+! +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Act:%»est%»%^adteUMLall%>eme      FINAL1 ;
+                 +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ger:%»est%»%^adteUMLall%>eminie    FINAL1       ;
+              +V+IV+Der1+Der/st+V+Der2+Der/alla+V+PrfPrc:%»est%»%^adteUMLall%>eme       FINAL1       ;
+              +V+IV+Der1+Der/st+V+Der2+Der/alla+V+ConNeg:%»est%»%^adteUMLall%>0h        FINAL1       ;
+                          +V+IV+Der1+Der/l+V+Ind+Prs+Sg3:%»el%>%^DISIMPe                FINAL1       ;
+                          +V+IV+Der1+Der/l+V+Ind+Prt+Sg3:%»el%>i                        FINAL1       ;
+                  +V+IV+Der1+Der/l+V+Ind+Prt+Sg3+Err/Orth:%»el%>%^DISIMPi                FINAL1       ;
+                                  +V+IV+Der1+Der/l+V+Inf:%»el%>idh                      FINAL1       ;
+                               +V+IV+Der1+Der/l+V+ConNeg:%»el%>%^DISIMPh                FINAL1       ;
+                                 +V+IV+Der1+Der/l+V+VGen:%»el%>%^DISIMPen               FINAL1       ;
+! +V+IV+Der1+Der/l+V+Act:%»el%>immie           FINAL1 ;
+                                  +V+IV+Der1+Der/l+V+Ger:%»el%>%^DISIMPeminie           FINAL1       ;
+                               +V+IV+Der1+Der/l+V+PrfPrc:%»el%>amme                     FINAL1       ;
+      +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»el%»%^adteUMLadt%>%^3sUMLa   FINAL1       ;
+          +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»el%»%^adteUMLadt%>i          FINAL1       ;
+  +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prt+Sg3+Err/Orth:%»el%»%^adteUMLadt%>%^DISIMPi  FINAL1       ;
+                  +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Inf:%»el%»%^adteUMLadt%>edh        FINAL1       ;
+                 +V+IV+Der1+Der/l+V+Der2+Der/adte+V+VGen:%»el%»%^adteUMLadt%>en         FINAL1       ;
+! +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Act:%»el%»%^adteUMLadt%>eme      FINAL1 ;
+                  +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ger:%»el%»%^adteUMLadt%>eminie     FINAL1       ;
+               +V+IV+Der1+Der/l+V+Der2+Der/adte+V+PrfPrc:%»el%»%^adteUMLadt%>eme        FINAL1       ;
+               +V+IV+Der1+Der/l+V+Der2+Der/adte+V+ConNeg:%»el%»%^adteUMLadt%>0h         FINAL1       ;
+                     +V+IV+Der3+Der/ahtje+V+Ind+Prs+Sg3+Uml:%»ijahtj%>%^3sUMLa             FINAL1       ;
+                         +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3:%»ijahtj%>i                    FINAL1       ;
+                 +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3+Err/Orth:%»ijahtj%>%^DISIMPi            FINAL1       ;
+                                 +V+IV+Der3+Der/ahtje+V+Inf:%»ijahtj%>edh                  FINAL1       ;
+                                +V+IV+Der3+Der/ahtje+V+VGen:%»ijahtj%>en                   FINAL1       ;
+! +V+IV+Der3+Der/ahtje+V+Act:%»ijahtj%>eme      FINAL1 ;
+                                 +V+IV+Der3+Der/ahtje+V+Ger:%»ijahtj%>eminie               FINAL1       ;
+                              +V+IV+Der3+Der/ahtje+V+PrfPrc:%»ijahtj%>eme                  FINAL1       ;
+                              +V+IV+Der3+Der/ahtje+V+ConNeg:%»ijahtj%>0h                   FINAL1       ;
+                          +V+IV+Der1+Der/d+V+Ind+Prs+Sg3:%»ed%>%^DISIMPe                FINAL1       ;
+                          +V+IV+Der1+Der/d+V+Ind+Prt+Sg3:%»ed%>i                        FINAL1       ;
+                  +V+IV+Der1+Der/d+V+Ind+Prt+Sg3+Err/Orth:%»ed%>%^DISIMPi                FINAL1       ;
+                                  +V+IV+Der1+Der/d+V+Inf:%»ed%>idh                      FINAL1       ;
+                               +V+IV+Der1+Der/d+V+ConNeg:%»ed%>%^DISIMPh                FINAL1       ;
+                                 +V+IV+Der1+Der/d+V+VGen:%»ed%>%^DISIMPen               FINAL1       ;
+! +V+IV+Der1+Der/d+V+Act:%»ed%>immie           FINAL1 ;
+                                  +V+IV+Der1+Der/d+V+Ger:%»ed%>%^DISIMPeminie           FINAL1       ;
+                               +V+IV+Der1+Der/d+V+PrfPrc:%»ed%>amme                     FINAL1       ;
+      +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»ed%»%^adteUMLadt%>%^3sUMLa   FINAL1       ;
+          +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»ed%»%^adteUMLadt%>i          FINAL1       ;
+  +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prt+Sg3+Err/Orth:%»ed%»%^adteUMLadt%>%^DISIMPi  FINAL1       ;
+                  +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Inf:%»ed%»%^adteUMLadt%>edh        FINAL1       ;
+                 +V+IV+Der1+Der/d+V+Der2+Der/adte+V+VGen:%»ed%»%^adteUMLadt%>en         FINAL1       ;
+! +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Act:%»ed%»%^adteUMLadt%>eme      FINAL1  ;
+                  +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ger:%»ed%»%^adteUMLadt%>eminie     FINAL1       ;
+               +V+IV+Der1+Der/d+V+Der2+Der/adte+V+PrfPrc:%»ed%»%^adteUMLadt%>eme        FINAL1       ;
+               +V+IV+Der1+Der/d+V+Der2+Der/adte+V+ConNeg:%»ed%»%^adteUMLadt%>0h         FINAL1       ;
+! +V+IV+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/lg:%»elg LGIDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/ldihkie+A:%»eldihk ie_IE_EVENNOCOMP ;
+! +V+IV+Der1+Der/ldahke+N:%»eldahk flagLDAHKE ;
+! +V+IV+Der1+Der/ldh+N+Cmp/SgNom:%»eldh R ;
+! +V+IV+Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
+! +V+IV+Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld FINAL1 ; !
+
+LEXICON BÅÅHKEDH_TV  !!= * __@CODE@__
+                 +V+TV:            BÅÅHKEDH ;
+  +V+TV+Der3+Der/PassL:e%»sovv     SOVVEDH  ;
+!   +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ;
+ +V+TV+Der1+Der/htalle:%»ehtall    SOVVEDH  ; !Passive, only from transitive verbs
+  +V+TV+Der1+Der/lg:%»elg       LGIDH    ; !Passive, only from transitive verbs
+
+LEXICON SÅÅJHTEDH_IV  !!= * __@CODE@__
+ +V+IV: SÅÅJHTEDH_CONT ;
+! +V+IV+Der3+Der/PassL:e%»sovv IV_PASSIVE_L ;
+! +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+
+
+
+LEXICON BÅÅHKEDH_IV  !!= * __@CODE@__
+                +V+IV:            BÅÅHKEDH     ;
+ +V+IV+Der3+Der/PassL:e%»sovv     IV_PASSIVE_L ;
+!  +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ;
+
+
+LEXICON BÅÅHKEDH   !!= * __@CODE@__ row E - Group V
+                       +Ind+Prs:%>               VSUF-V-EVEN-PRS  ;
+                       +Ind+Prt:%>               VSUF-PRT         ;
+                         +Imprt:%>               VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+                           +Inf:%>edh            FINAL1           ;
+                          +VGen:%>en             FINAL1           ;
+! +Act:%>eme    FINAL1 ;
+                           +Ger:%>eminie         FINAL1           ;
+                        +PrsPrc:%>ije            flagFINAL1           ;
+! +PrsPrc:%>ijes  FINAL1 ;
+                        +PrfPrc:%>eme            FINAL1           ;
+                        +ConNeg:%>h              FINAL1           ;
+! Derivations
+! -----------
+                +Der3+Der/NomAg+N:%»ij  flagN_ODD            ;
+               +Der3+Der/NomAct+N:%»em  flagNomActOdd        ;
+                  +Der1+Der/les+A:e%»l             LES              ;
+              +Der3+Der/InchL+V:%»egået          GÅETEDH          ;
+              +Der1+Der/st+V:%»est            DÅAJVOEHTIDH     ;
+               +Der1+Der/l+V:%»el             GOLTELIDH        ;
+                +Der1+Der/ht:%»eht            DÅAJVOEHTIDH_TV  ;
+! +Der1+Der/Caus:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+              +Der3+Der/ahtje+V:%»ejahtj         AHTJE            ;
+               +Der1+Der/d+V:%»ed             GOLTELIDH        ;
+              +Der1+Der/ldihkie+A:%»eldihk ie_IE_EVENNOCOMP         ;
+               +Der1+Der/ldahke+N:%»eldahk         flagLDAHKE           ;
+       +Der1+Der/ldh+N+Cmp/SgNom:%»eldh           R                ;
+         +Der1+Der/ldh+N+Sg+Nom:%»eldh           flagFINAL1           ;
+ +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld            flagFINAL1           ; !
+
+LEXICON SÅÅJHTEDH_CONT   !!= * __@CODE@__ row E - Group V
+         +Ind+Prs:%>               VSUF-V-EVEN-PRS ;
+         +Ind+Prt:%>               VSUF-PRT        ;
+! +Imprt:%>       VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+             +Inf:%>edh            FINAL1          ;
+! +VGen:%>en    FINAL1 ;
+! +Act:%>eme    FINAL1 ;
+             +Ger:%>eminie         FINAL1          ;
+! +PrsPrc:%>ije FINAL1 ;
+! +PrsPrc:%>ijes  FINAL1 ;
+          +PrfPrc:%>eme            FINAL1          ;
+          +ConNeg:%>h              FINAL1          ;
+! Derivations
+! -----------
+! +Der3+Der/NomAg+N:%»ij@C.NeedNoun@     N_ODD ;
+ +Der3+Der/NomAct+N:%»em  flagNomActOdd       ;
+! +Der1+Der/les+A:e%»l LES ;
+! +Der3+Der/InchL+V:%»egået GÅETEDH ;
+! +Der1+Der/st+V:%»est DÅAJVOEHTIDH ;
+! +Der1+Der/l+V:%»el GOLTELIDH ;
+! +Der1+Der/ht:%»eht DÅAJVOEHTIDH_TV ;
+! +Der1+Der/Caus:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+! +Der3+Der/ahtje+V:%»ejahtj AHTJE ;
+! +Der1+Der/d+V:%»ed GOLTELIDH ;
+! +Der1+Der/ldihkie+A:%»eldihk ie_IE_EVENNOCOMP ;
+! +Der1+Der/ldahke+N:%»eldahk flagLDAHKE ;
+! +Der1+Der/ldh+N+Cmp/SgNom:%»eldh R ;
+! +Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
+! +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld FINAL1 ; !
+
+LEXICON VÅÅJNEDH  !!= * __@CODE@__
+          +V+IV+Ind+Prs:%>               VSUF-V-EVEN-PRS  ;
+          +V+IV+Ind+Prt:%>               VSUF-PRT         ;
+            +V+IV+Imprt:%>               VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+              +V+IV+Inf:%>edh            FINAL1           ;
+             +V+IV+VGen:%>en             FINAL1           ;
+! +V+IV+Act:%>eme    FINAL1 ;
+              +V+IV+Ger:%>eminie         FINAL1           ;
+! +V+IV+PrsPrc:%>ije FINAL1 ;
+! +V+IV+PrsPrc:%>ijes  FINAL1 ;
+           +V+IV+PrfPrc:%>eme            FINAL1           ; !@C.NeedNoun@ ?
+           +V+IV+ConNeg:%>h              FINAL1           ;
+! Derivations
+! -----------
+! +V+IV+Der3+Der/NomAg+N:%»ij@C.NeedNoun@     N_ODD ;
+  +V+IV+Der3+Der/NomAct+N:%»em  flagNomActOdd        ;
+     +V+IV+Der1+Der/les+A:e%»l             LES              ;
+ +V+IV+Der3+Der/InchL+V:%»egået          GÅETEDH          ;
+ +V+IV+Der1+Der/st+V:%»est            DÅAJVOEHTIDH     ;
+  +V+IV+Der1+Der/l+V:%»el             GOLTELIDH        ;
+   +V+IV+Der1+Der/ht:%»eht            DÅAJVOEHTIDH_TV  ;
+! +V+IV+Der1+Der/Caus:%»edeht ÅARAJEHTEDH_TV ; !we have -didh + -ehte
+ +V+IV+Der3+Der/ahtje+V:%»ejahtj         AHTJE            ;
+  +V+IV+Der1+Der/d+V:%»ed             GOLTELIDH        ;
+! +V+IV+Der1+Der/htalle:%»ehtall SOVVEDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/lg:%»elg LGIDH ; !Passive, only from transitive verbs
+! +V+IV+Der1+Der/ldihkie+A:%»eldihk ie_IE_EVENNOCOMP ;
+! +V+IV+Der1+Der/ldahke+N:%»eldahk flagLDAHKE ;
+! +V+IV+Der1+Der/ldh+N+Cmp/SgNom:%»eldh R ;
+! +V+IV+Der1+Der/ldh+N+Sg+Nom:%»eldh FINAL1 ;
+! +V+IV+Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld FINAL1 ; !
+
+! passiv Der/d = dovvedh.
+
+
+LEXICON GÖÖLEDH_TV  !!= * __@CODE@__
+                  +V+TV:            GÖÖLEDH  ;
+   +V+TV+Der3+Der/PassL:e%»sovv     SOVVEDH  ;
+!   +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH ; ! No short passives in Group VI
+  +V+TV+Der1+Der/htalle:%»ehtall    SOVVEDH  ; !Passive, only from transitive verbs
+      +V+TV+Der1+Der/lg:%»elg       LGIDH    ; !Passive, only from transitive verbs
+
+
+LEXICON GÖÖLEDH_IV  !!= * __@CODE@__
+                 +V+IV:            GÖÖLEDH      ;
+       +V+IV+Der3+Der/PassL:e%»sovv     IV_PASSIVE_L ;
+!  +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S ; ! No short passives in Group VI
+
+
+LEXICON GÖÖLEDH   !!= * __@CODE@__ row F - Group VI
+                         +Ind+Prs:%>       VSUF-VI-EVEN-PRS ;
+                         +Ind+Prt:%>       VSUF-PRT         ;
+                           +Imprt:%>       VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+                             +Inf:%>edh    FINAL1           ;
+                            +VGen:%>en     FINAL1           ;
+!                            +Act:%>eme    FINAL1           ;
+                             +Ger:%>eminie FINAL1           ;
+                          +PrsPrc:%>ije    flagFINAL1       ;
+!                         +PrsPrc:%>ijes   FINAL1           ;
+                          +PrfPrc:%>eme    FINAL1           ;
+                          +ConNeg:%>h      FINAL1           ;
+! Derivations
+! -----------
+                  +Der3+Der/NomAg+N:%»ij     flagN_ODD        ;
+                 +Der3+Der/NomAct+N:%»em     flagNomActOdd    ;
+                    +Der1+Der/les+A:e%»l     LES              ;
+                +Der3+Der/InchL+V:%»egået  GÅETEDH          ;
+                   +Der1+Der/st+V:%»est    DÅAJVOEHTIDH     ;
+                    +Der1+Der/l+V:%»el     GOLTELIDH        ;
+                     +Der1+Der/ht:%»eht    DÅAJVOEHTIDH_TV  ;
+!                  +Der1+Der/Caus:%»edeht  ÅARAJEHTEDH_TV   ; !we have -didh + -ehte
+                +Der3+Der/ahtje+V:%»ijahtj AHTJE            ;
+                    +Der1+Der/d+V:%»ed     GOLTELIDH        ;
+                +Der1+Der/ldihkie+A:%»eldihk ie_IE_EVENNOCOMP ;
+                 +Der1+Der/ldahke+N:%»eldahk flagLDAHKE           ;
+        +Der1+Der/ldh+N+Cmp/SgNom:%»eldh   R                ;
+           +Der1+Der/ldh+N+Sg+Nom:%»eldh   flagFINAL1           ;
+  +Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld    flagFINAL1           ; !
+
+
+LEXICON BÖÖVTEDH   !!= * __@CODE@__ row F - Group VI
+                                          +V+IV+Ind+Prs+Sg3:%>ie                           FINAL1       ;
+                                          +V+IV+Ind+Prt+Sg3:%>i                            FINAL1       ;
+                                  +V+IV+Ind+Prt+Sg3+Err/Orth:%>%^DISIMPi                    FINAL1       ;
+! +V+IV+Imprt:%>       VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+                                                  +V+IV+Inf:%>edh                          FINAL1       ;
+                                                 +V+IV+VGen:%>en                           FINAL1       ;
+! +V+IV+Act:%>eme    FINAL1 ;
+                                                  +V+IV+Ger:%>eminie                       FINAL1       ;
+                                               +V+IV+PrfPrc:%>eme                          FINAL1       ;
+                                               +V+IV+ConNeg:%>h                            FINAL1       ;
+! Derivations
+! -----------
+!                                     +V+IV+Der3+Der/NomAg+N:%»ij@C.NeedNoun@               N_ODD            ;
+                                     +V+IV+Der3+Der/NomAct+N:%»em                           flagNomActOdd    ;
+!                                       +V+IV+Der1+Der/les+A:e%»l                           LES              ;
+!                                     +V+IV+Der3+Der/PassL:e%»sovv                        IV_PASSIVE_L     ;
+!                                      +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML                    VÅÅJNEDH         ; ! No short passives in Group VI
+                    +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa               FINAL1           ;
+                    +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi               FINAL1           ;
+           +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»egået%>%^iUML%^DISIMPi       FINAL1           ;
+                                +V+IV+Der3+Der/InchL+V+Inf:%»egået%>edh                   FINAL1           ;
+                             +V+IV+Der3+Der/InchL+V+ConNeg:%»egået%>ieh                   FINAL1           ;
+                               +V+IV+Der3+Der/InchL+V+VGen:%»egået%>ien                   FINAL1           ;
+!                               +V+IV+Der3+Der/InchL+V+Act:%»egået%>eme                   FINAL1           ;
+                                +V+IV+Der3+Der/InchL+V+Ger:%»egået%>ieminie               FINAL1           ;
+                         +V+IV+Der3+Der/InchL+V+PrfPrc+Uml:%»egået%>%^1UMLeme             FINAL1           ;
+                           +V+IV+Der1+Der/st+V+Ind+Prs+Sg3:%»est%>%^DISIMPe               FINAL1           ;
+                           +V+IV+Der1+Der/st+V+Ind+Prt+Sg3:%»est%>i                       FINAL1           ;
+                  +V+IV+Der1+Der/st+V+Ind+Prt+Sg3+Err/Orth:%»est%>%^DISIMPi               FINAL1           ;
+                                   +V+IV+Der1+Der/st+V+Inf:%»est%>idh                     FINAL1           ;
+                                +V+IV+Der1+Der/st+V+ConNeg:%»est%>%^DISIMPh               FINAL1           ;
+                                  +V+IV+Der1+Der/st+V+VGen:%»est%>%^DISIMPen              FINAL1           ;
+!                                  +V+IV+Der1+Der/st+V+Act:%»est%>immie                   FINAL1           ;
+                                   +V+IV+Der1+Der/st+V+Ger:%»est%>%^DISIMPeminie          FINAL1           ;
+                                +V+IV+Der1+Der/st+V+PrfPrc:%»est%>amme                    FINAL1           ;
+       +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prs+Sg3+Uml:%»est%»%^adteUMLall%^3sUMLa    FINAL1           ;
+           +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prt+Sg3:%»est%»%^adteUMLall%>i         FINAL1           ;
+  +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ind+Prt+Sg3+Err/Orth:%»est%»%^adteUMLall%>%^DISIMPi FINAL1           ;
+                   +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Inf:%»est%»%^adteUMLall%>edh       FINAL1           ;
+                  +V+IV+Der1+Der/st+V+Der2+Der/alla+V+VGen:%»est%»%^adteUMLall%>en        FINAL1           ;
+!                  +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Act:%»est%»%^adteUMLall%>eme       FINAL1           ;
+                   +V+IV+Der1+Der/st+V+Der2+Der/alla+V+Ger:%»est%»%^adteUMLall%>eminie    FINAL1           ;
+                +V+IV+Der1+Der/st+V+Der2+Der/alla+V+PrfPrc:%»est%»%^adteUMLall%>eme       FINAL1           ;
+                +V+IV+Der1+Der/st+V+Der2+Der/alla+V+ConNeg:%»est%»%^adteUMLall%>0h        FINAL1           ;
+                            +V+IV+Der1+Der/l+V+Ind+Prs+Sg3:%»el%>%^DISIMPe                FINAL1           ;
+                            +V+IV+Der1+Der/l+V+Ind+Prt+Sg3:%»el%>i                        FINAL1           ;
+                   +V+IV+Der1+Der/l+V+Ind+Prt+Sg3+Err/Orth:%»el%>%^DISIMPi                FINAL1           ;
+                                    +V+IV+Der1+Der/l+V+Inf:%»el%>idh                      FINAL1           ;
+                                 +V+IV+Der1+Der/l+V+ConNeg:%»el%>%^DISIMPh                FINAL1           ;
+                                   +V+IV+Der1+Der/l+V+VGen:%»el%>%^DISIMPen               FINAL1           ;
+!                                   +V+IV+Der1+Der/l+V+Act:%»el%>immie                    FINAL1           ;
+                                    +V+IV+Der1+Der/l+V+Ger:%»el%>%^DISIMPeminie           FINAL1           ;
+                                 +V+IV+Der1+Der/l+V+PrfPrc:%»el%>amme                     FINAL1           ;
+        +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»el%»%^adteUMLadt%>%^3sUMLa   FINAL1           ;
+            +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»el%»%^adteUMLadt%>i          FINAL1           ;
+   +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ind+Prt+Sg3+Err/Orth:%»el%»%^adteUMLadt%>%^DISIMPi  FINAL1           ;
+                    +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Inf:%»el%»%^adteUMLadt%>edh        FINAL1           ;
+                   +V+IV+Der1+Der/l+V+Der2+Der/adte+V+VGen:%»el%»%^adteUMLadt%>en         FINAL1           ;
+!                   +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Act:%»el%»%^adteUMLadt%>eme        FINAL1           ;
+                    +V+IV+Der1+Der/l+V+Der2+Der/adte+V+Ger:%»el%»%^adteUMLadt%>eminie     FINAL1           ;
+                 +V+IV+Der1+Der/l+V+Der2+Der/adte+V+PrfPrc:%»el%»%^adteUMLadt%>eme        FINAL1           ;
+                 +V+IV+Der1+Der/l+V+Der2+Der/adte+V+ConNeg:%»el%»%^adteUMLadt%>0h         FINAL1           ;
+                    +V+IV+Der3+Der/ahtje+V+Ind+Prs+Sg3+Uml:%»ijahtj%>%^3sUMLa             FINAL1           ;
+                        +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3:%»ijahtj%>i                    FINAL1           ;
+               +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3+Err/Orth:%»ijahtj%>%^DISIMPi            FINAL1           ;
+                                +V+IV+Der3+Der/ahtje+V+Inf:%»ijahtj%>edh                  FINAL1           ;
+                               +V+IV+Der3+Der/ahtje+V+VGen:%»ijahtj%>en                   FINAL1           ;
+!                               +V+IV+Der3+Der/ahtje+V+Act:%»ijahtj%>eme                  FINAL1           ;
+                                +V+IV+Der3+Der/ahtje+V+Ger:%»ijahtj%>eminie               FINAL1           ;
+                             +V+IV+Der3+Der/ahtje+V+PrfPrc:%»ijahtj%>eme                  FINAL1           ;
+                             +V+IV+Der3+Der/ahtje+V+ConNeg:%»ijahtj%>0h                   FINAL1           ;
+                            +V+IV+Der1+Der/d+V+Ind+Prs+Sg3:%»ed%>%^DISIMPe                FINAL1           ;
+                            +V+IV+Der1+Der/d+V+Ind+Prt+Sg3:%»ed%>i                        FINAL1           ;
+                   +V+IV+Der1+Der/d+V+Ind+Prt+Sg3+Err/Orth:%»ed%>%^DISIMPi                FINAL1           ;
+                                    +V+IV+Der1+Der/d+V+Inf:%»ed%>idh                      FINAL1           ;
+                                 +V+IV+Der1+Der/d+V+ConNeg:%»ed%>%^DISIMPh                FINAL1           ;
+                                   +V+IV+Der1+Der/d+V+VGen:%»ed%>%^DISIMPen               FINAL1           ;
+!                                   +V+IV+Der1+Der/d+V+Act:%»ed%>immie                    FINAL1           ;
+                                    +V+IV+Der1+Der/d+V+Ger:%»ed%>%^DISIMPeminie           FINAL1           ;
+                                 +V+IV+Der1+Der/d+V+PrfPrc:%»ed%>amme                     FINAL1           ;
+        +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prs+Sg3+Uml:%»ed%»%^adteUMLadt%>%^3sUMLa   FINAL1           ;
+            +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prt+Sg3:%»ed%»%^adteUMLadt%>i          FINAL1           ;
+   +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ind+Prt+Sg3+Err/Orth:%»ed%»%^adteUMLadt%>%^DISIMPi  FINAL1           ;
+                    +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Inf:%»ed%»%^adteUMLadt%>edh        FINAL1           ;
+                   +V+IV+Der1+Der/d+V+Der2+Der/adte+V+VGen:%»ed%»%^adteUMLadt%>en         FINAL1           ;
+!                   +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Act:%»ed%»%^adteUMLadt%>eme        FINAL1           ;
+                    +V+IV+Der1+Der/d+V+Der2+Der/adte+V+Ger:%»ed%»%^adteUMLadt%>eminie     FINAL1           ;
+                 +V+IV+Der1+Der/d+V+Der2+Der/adte+V+PrfPrc:%»ed%»%^adteUMLadt%>eme        FINAL1           ;
+                 +V+IV+Der1+Der/d+V+Der2+Der/adte+V+ConNeg:%»ed%»%^adteUMLadt%>0h         FINAL1           ;
+!                                   +V+IV+Der1+Der/ldihkie+A:%»eldihk                       ie_IE_EVENNOCOMP ;
+!                                    +V+IV+Der1+Der/ldahke+N:%»eldahk                       flagLDAHKE           ;
+!                           +V+IV+Der1+Der/ldh+N+Cmp/SgNom:%»eldh                         R                ;
+!                              +V+IV+Der1+Der/ldh+N+Sg+Nom:%»eldh                         FINAL1           ;
+!                     +V+IV+Der1+Der/ldh+N+Sg+Nom+Err/Orth:%»eld                          FINAL1           ; !
+
+
+LEXICON EEREDH_TV  !!= * __@CODE@__
+          :er   GÖÖLEDH_TV   ;
+ +Err/Orth:r    GÖÖLEDH_TV   ;
+ +Err/Orth:rad  GOLTELIDH_TV ;
+ +Err/Orth:erad GOLTELIDH_TV ;
+
+LEXICON EEREDH_IV  !!= * __@CODE@__
+          :er   GÖÖLEDH_IV   ;
+ +Err/Orth:r    GÖÖLEDH_IV   ;
+ +Err/Orth:rad  GOLTELIDH_IV ;
+ +Err/Orth:erad GOLTELIDH_IV ;
+ 
+ 
+
+
+! ---- Verbal derivation sublexica ----
+LEXICON ÅARAJEHTEDH_TV  !!= * __@CODE@__
+                    +V+TV:              ÅARAJEHTEDH ;
+! +V+TV+Der3+Der/PassL+Uml:%»%^1UMLasovv SOVVEDH     ;
+!      +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML   VÅÅJNEDH    ;
+
+
+LEXICON ÅARAJEHTEDH_IV  !!= * __@CODE@__
+                    +V+IV:              ÅARAJEHTEDH  ;
+ +V+IV+Der3+Der/PassL+Uml:%»%^1UMLasovv IV_PASSIVE_L ;! Finnes denne?
+!      +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML   IV_PASSIVE_S ;! finnes denne? jeg ble kalt for aahka= manne aahkastahtajovvim?- aahkastehtedh= å kalle for aahka
+
+
+LEXICON ÅARAJEHTEDH   !!= * __@CODE@__ row A - Group I
+            +Ind+Prs+Uml:%>%^1UMLa         V-I-PRS-SG         ; ! class I special
+                +Ind+Prs:%>ie              VSUF-EVEN-PRS-DUPL ;
+            +Ind+Prt+Uml:%>%^iUML          VSUF-PRT           ;
+                  +Imprt:%>                VSUF-EVEN-IMP      ;
+! Infinite forms
+! --------------
+                    +Inf:%>edh             FINAL1             ;
+                 +ConNeg:%>ieh             FINAL1             ;
+                   +VGen:%>ien             FINAL1             ;
+! +Act:%>eme           FINAL1 ;
+                    +Ger:%>ieminie         FINAL1             ;
+                 +PrsPrc:%>ije             flagFINAL1             ;
+! +PrsPrc:%>ijes        FINAL1 ;
+             +PrfPrc+Uml:%>%^1UMLeme       FINAL1             ;
+! row F trigger for Umlaut Prt
+! Derivations
+! -----------
+         +Der3+Der/NomAg+N:%»iej  flagIJE_ODD            ;
+ +Der3+Der/NomAg+N+Err/Orth:%»ij  flagIJE_ODD            ;
+        +Der3+Der/NomAct+N:%»iem  flagNomActOdd          ;
+           +Der1+Der/les+A:%»%^1UML          LES_LASSE_ie       ;
+       +Der3+Der/InchL+V:%»iegået          GÅETEDH            ;
+       +Der3+Der/ahtje+V:%»iejahtj         AHTJE              ;
+
+LEXICON BUARADEHTEDH  !!= * __@CODE@__
+                          +V+IV+Ind+Prs+Uml+Sg3:%>%^1UMLa                 FINAL1    ; ! class I special
+                          +V+IV+Ind+Prt+Uml+Sg3:%>%^iUMLi                 FINAL1    ;
+                  +V+IV+Ind+Prt+Uml+Sg3+Err/Orth:%>%^iUML%^DISIMPi         FINAL1    ;
+! +V+IV+Imprt:%>              VSUF-EVEN-IMP ;
+! Infinite forms
+! --------------
+                                      +V+IV+Inf:%>edh                     FINAL1    ;
+                                   +V+IV+ConNeg:%>ieh                     FINAL1    ;
+                                     +V+IV+VGen:%>ien                     FINAL1    ;
+! +V+IV+Act:%>eme           FINAL1 ;
+                                      +V+IV+Ger:%>ieminie                 FINAL1    ;
+                               +V+IV+PrfPrc+Uml:%>%^1UMLeme               FINAL1    ;
+! row F trigger for Umlaut Prt
+! Derivations
+! -----------
+! +V+IV+Der3+Der/NomAg+N:%»iej@C.NeedNoun@     IJE_ODD ;
+                          +V+IV+Der3+Der/NomAct+N:%»iem  flagNomActOdd ;
+! +V+IV+Der1+Der/les+A:%»%^1UML LES_LASSE_ie ;
+         +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»iegået%>%^1UMLa         FINAL1    ;
+         +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»iegået%>%^iUMLi         FINAL1    ;
+ +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»iegået%>%^iUML%^DISIMPi FINAL1    ;
+                     +V+IV+Der3+Der/InchL+V+Inf:%»iegået%>edh             FINAL1    ;
+                  +V+IV+Der3+Der/InchL+V+ConNeg:%»iegået%>ieh             FINAL1    ;
+                    +V+IV+Der3+Der/InchL+V+VGen:%»iegået%>ien             FINAL1    ;
+! +V+IV+Der3+Der/InchL+V+Act:%»iegået%>eme           FINAL1 ;
+                     +V+IV+Der3+Der/InchL+V+Ger:%»iegået%>ieminie         FINAL1    ;
+              +V+IV+Der3+Der/InchL+V+PrfPrc+Uml:%»iegået%>%^1UMLeme       FINAL1    ;
+         +V+IV+Der3+Der/ahtje+V+Ind+Prs+Sg3+Uml:%»iejahtj%>%^3sUMLa       FINAL1    ;
+             +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3:%»iejahtj%>i              FINAL1    ;
+     +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3+Err/Orth:%»iejahtj%>%^DISIMPi      FINAL1    ;
+                     +V+IV+Der3+Der/ahtje+V+Inf:%»iejahtj%>edh            FINAL1    ;
+                    +V+IV+Der3+Der/ahtje+V+VGen:%»iejahtj%>en             FINAL1    ;
+! +V+IV+Der3+Der/ahtje+V+Act:%»iejahtj%>eme      FINAL1 ;
+                     +V+IV+Der3+Der/ahtje+V+Ger:%»iejahtj%>eminie         FINAL1    ;
+                  +V+IV+Der3+Der/ahtje+V+PrfPrc:%»iejahtj%>eme            FINAL1    ;
+                  +V+IV+Der3+Der/ahtje+V+ConNeg:%»iejahtj%>0h             FINAL1    ;
+
+
+LEXICON GOEGKERDADTEDH_TV  !!= * __@CODE@__
+                +V+TV:            GOEGKERDADTEDH ;
+ +V+TV+Der3+Der/PassL:e%»sovv     SOVVEDH        ;
+!  +V+TV+Der3+Der/PassS+Uml:%»%^PASSUML VÅÅJNEDH       ;
+
+LEXICON GOEGKERDADTEDH_IV  !!= * __@CODE@__
+                +V+IV:            GOEGKERDADTEDH ;
+ +V+IV+Der3+Der/PassL:e%»sovv     IV_PASSIVE_L   ;
+!  +V+IV+Der3+Der/PassS+Uml:%»%^PASSUML IV_PASSIVE_S   ;
+
+
+LEXICON GOEGKERDADTEDH   !!= * __@CODE@__ row D - Group IV
+          +Ind+Prs:%>               V-IV-EVEN-PRS    ;
+          +Ind+Prt:%>               VSUF-PRT         ;
+            +Imprt:%>               VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+              +Inf:%>edh            FINAL1           ;
+             +VGen:%>en             FINAL1           ;
+! +Act:%>eme      FINAL1 ;
+              +Ger:%>eminie         FINAL1           ;
+           +PrsPrc:%>ije            flagFINAL1           ;
+! +PrsPrc:%>ijes  FINAL1 ;
+           +PrfPrc:%>eme            FINAL1           ;
+           +ConNeg:%>0h             FINAL1           ;
+! Derivations
+! -----------
+   +Der3+Der/NomAg+N:%»ij  flagN_ODD            ;
+  +Der3+Der/NomAct+N:%»em  flagNomActOdd        ;
+     +Der1+Der/les+A:e%»l             LES              ;
+ +Der3+Der/InchL+V:%»egået          GÅETEDH          ;
+ +Der3+Der/ahtje+V:%»ijahtj         AHTJE            ;
+
+LEXICON OBREDADTEDH  !!= * __@CODE@__
+                          +V+IV+Ind+Prs+Sg3+Uml:%>%^3sUMLa               FINAL1    ;
+                              +V+IV+Ind+Prt+Sg3:%>i                      FINAL1    ;
+                      +V+IV+Ind+Prt+Sg3+Err/Orth:%>%^DISIMPi              FINAL1    ;
+! +V+IV+Imprt:%>         VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+                                      +V+IV+Inf:%>edh                    FINAL1    ;
+                                     +V+IV+VGen:%>en                     FINAL1    ;
+! +V+IV+Act:%>eme      FINAL1 ;
+                                      +V+IV+Ger:%>eminie                 FINAL1    ;
+                                   +V+IV+PrfPrc:%>eme                    FINAL1    ;
+                                   +V+IV+ConNeg:%>0h                     FINAL1    ;
+! Derivations
+! -----------
+! +V+IV+Der3+Der/NomAg+N:%»ij@C.NeedNoun@     N_ODD ;
+                          +V+IV+Der3+Der/NomAct+N:%»em  flagNomActOdd ;
+! +V+IV+Der1+Der/les+A:e%»l LES ;
+         +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa         FINAL1    ;
+         +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi         FINAL1    ;
+ +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»egået%>%^iUML%^DISIMPi FINAL1    ;
+                     +V+IV+Der3+Der/InchL+V+Inf:%»egået%>edh             FINAL1    ;
+                  +V+IV+Der3+Der/InchL+V+ConNeg:%»egået%>ieh             FINAL1    ;
+                    +V+IV+Der3+Der/InchL+V+VGen:%»egået%>ien             FINAL1    ;
+! +V+IV+Der3+Der/InchL+V+Act:%»egået%>eme           FINAL1 ;
+                     +V+IV+Der3+Der/InchL+V+Ger:%»egået%>ieminie         FINAL1    ;
+              +V+IV+Der3+Der/InchL+V+PrfPrc+Uml:%»egået%>%^1UMLeme       FINAL1    ;
+         +V+IV+Der3+Der/ahtje+V+Ind+Prs+Sg3+Uml:%»ijahtj%>%^3sUMLa       FINAL1    ;
+             +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3:%»ijahtj%>i              FINAL1    ;
+     +V+IV+Der3+Der/ahtje+V+Ind+Prt+Sg3+Err/Orth:%»ijahtj%>%^DISIMPi      FINAL1    ;
+                     +V+IV+Der3+Der/ahtje+V+Inf:%»ijahtj%>edh            FINAL1    ;
+                    +V+IV+Der3+Der/ahtje+V+VGen:%»ijahtj%>en             FINAL1    ;
+! +V+IV+Der3+Der/ahtje+V+Act:%»ijahtj%>eme      FINAL1 ;
+                     +V+IV+Der3+Der/ahtje+V+Ger:%»ijahtj%>eminie         FINAL1    ;
+                  +V+IV+Der3+Der/ahtje+V+PrfPrc:%»ijahtj%>eme            FINAL1    ;
+                  +V+IV+Der3+Der/ahtje+V+ConNeg:%»ijahtj%>0h             FINAL1    ;
+
+LEXICON GÅETEDH_TV  !!= * __@CODE@__
+ +V+TV: GÅETEDH ;
+
+LEXICON GÅETEDH_IV  !!= * __@CODE@__
+ +V+IV: GÅETEDH ;
+
+
+LEXICON GÅETEDH   !!= * __@CODE@__ from Der/InchL
+ +Ind+Prs+Uml:%>%^1UMLa   V-I-PRS-SG         ; ! class I special
+     +Ind+Prs:%>ie        VSUF-EVEN-PRS-DUPL ;
+ +Ind+Prt+Uml:%>%^iUML    VSUF-PRT           ;
+       +Imprt:%>          VSUF-EVEN-IMP      ;
+! Infinite forms
+! --------------
+         +Inf:%>edh       FINAL1             ;
+      +ConNeg:%>ieh       FINAL1             ;
+        +VGen:%>ien       FINAL1             ;
+! +Act:%>eme           FINAL1 ;
+         +Ger:%>ieminie   FINAL1             ;
+  +PrfPrc+Uml:%>%^1UMLeme FINAL1             ;
+! row F trigger for Umlaut Prt
+
+LEXICON STIEHPEGÅETEDH  !!= * __@CODE@__
+         +V+IV+Ind+Prs+Uml+Sg3:%>%^1UMLa   FINAL1 ; ! class I special
+         +V+IV+Ind+Prt+Uml+Sg3:%>%^iUMLi   FINAL1 ;
+ +V+IV+Ind+Prt+Uml+Sg3+Err/Orth:%>%^iUMLi   FINAL1 ;
+! +V+IV+Imprt:%>              VSUF-EVEN-IMP ;
+! Infinite forms
+! --------------
+                     +V+IV+Inf:%>edh       FINAL1 ;
+                  +V+IV+ConNeg:%>ieh       FINAL1 ;
+                    +V+IV+VGen:%>ien       FINAL1 ;
+! +V+IV+Act:%>eme           FINAL1 ;
+                     +V+IV+Ger:%>ieminie   FINAL1 ;
+              +V+IV+PrfPrc+Uml:%>%^1UMLeme FINAL1 ;
+
+
+LEXICON AHTJE_TV  !!= * __@CODE@__
+ +V+TV: AHTJE ;
+
+LEXICON AHTJE_IV  !!= * __@CODE@__
+ +V+IV: AHTJE ;
+
+LEXICON OBRIJAHTJEDH  !!= * __@CODE@__
+     +V+IV+Ind+Prs+Sg3+Uml:%>%^3sUMLa  FINAL1 ;
+         +V+IV+Ind+Prt+Sg3:%>i         FINAL1 ;
+ +V+IV+Ind+Prt+Sg3+Err/Orth:%>%^DISIMPi FINAL1 ;
+! Infinite forms
+! --------------
+                 +V+IV+Inf:%>edh       FINAL1 ;
+                +V+IV+VGen:%>en        FINAL1 ;
+! +V+IV+Act:%>eme      FINAL1 ;
+                 +V+IV+Ger:%>eminie    FINAL1 ;
+              +V+IV+PrfPrc:%>eme       FINAL1 ;
+              +V+IV+ConNeg:%>0h        FINAL1 ;
+
+
+LEXICON AHTJE   !!= * __@CODE@__ row D - Group IV
+ +Ind+Prs:%>       V-IV-EVEN-PRS    ;
+ +Ind+Prt:%>       VSUF-PRT         ;
+   +Imprt:%>       VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+     +Inf:%>edh    FINAL1           ;
+    +VGen:%>en     FINAL1           ;
+! +Act:%>eme      FINAL1 ;
+     +Ger:%>eminie FINAL1           ;
+  +PrfPrc:%>eme    FINAL1           ;
+  +ConNeg:%>0h     FINAL1           ;
+
+LEXICON SOVVEDH !!= * __@CODE@__row D - Group IV
+          +V+IV+Ind+Prs:%>               V-IV-EVEN-PRS ;
+          +V+IV+Ind+Prt:%>               VSUF-PRT      ;
+! +V+IV+Imprt:%>         VSUF-IV-EVEN-IMP ;
+! Infinite forms
+! --------------
+              +V+IV+Inf:%>edh            FINAL1        ;
+             +V+IV+VGen:%>en             FINAL1        ;
+! +V+IV+Act:%>eme      FINAL1 ;
+              +V+IV+Ger:%>eminie         FINAL1        ;
+! +V+IV+PrsPrc:%>ije   FINAL1 ;
+! +V+IV+PrsPrc:%>ijes   FINAL1 ;
+           +V+IV+PrfPrc:%>eme            flagFINAL1        ;
+           +V+IV+ConNeg:%>0h             FINAL1        ;
+! Derivations
+! -----------
+! +V+IV+Der3+Der/NomAg+N:%»ij@C.NeedNoun@     N_ODD ;
+  +V+IV+Der3+Der/NomAct+N:%»em  flagNomActOdd     ;
+ +V+IV+Der3+Der/InchL+V:%»egået          GÅETEDH       ;
+ +V+IV+Der3+Der/ahtje+V:%»ijahtj         AHTJE         ;
+
+LEXICON IV_PASSIVE_L  !!= * __@CODE@__ - Passive of intransitive verbs => impersonate verbs, like "dïjvelduvvieh" = "(de sakene) ble diskutert", from "dïjveldidh" = "diskutere" (IV), only used in 3rd person Sg and Pl.
+                          +V+IV+Ind+Prs+Sg3+Uml:%>%^3sUMLa               FINAL1    ;
+                          +V+IV+Ind+Prs+Pl3+Uml:%^3dUMLieh               FINAL1    ; ! Skal bli "dïjvelduvvieh", men blir "dïjveldovvieh"
+                              +V+IV+Ind+Prt+Sg3:%>i                      FINAL1    ;
+                     +V+IV+Ind+Prt+Sg3+Err/Orth:%>%^DISIMPi              FINAL1    ;
+                              +V+IV+Ind+Prt+Pl3:%>in                     FINAL1    ;
+! Infinite forms
+! --------------
+                                      +V+IV+Inf:%>edh                    FINAL1    ;
+                                     +V+IV+VGen:%>en                     FINAL1    ;
+! +V+Act:%>eme      FINAL1 ;
+                                      +V+IV+Ger:%>eminie                 FINAL1    ;
+! +V+PrsPrc:%>ije   FINAL1 ;
+! +V+PrsPrc:%>ijes   FINAL1 ;
+                                   +V+IV+PrfPrc:%>eme                    flagFINAL1    ;
+                                   +V+IV+ConNeg:%>0h                     FINAL1    ;
+! Derivations
+! -----------
+                            +V+IV+Der3+Der/NomAct+N:%»em                     flagNomActOdd ;
+           +V+IV+Der3+Der/InchL+V+Ind+Prs+Uml+Sg3:%»egået%>%^1UMLa         FINAL1        ;
+           +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3:%»egået%>%^iUMLi         FINAL1        ;
+  +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Sg3+Err/Orth:%»egået%>%^iUML%^DISIMPi FINAL1        ;
+               +V+IV+Der3+Der/InchL+V+Ind+Prs+Pl3:%»egået%>ieX2h           FINAL1        ;
+           +V+IV+Der3+Der/InchL+V+Ind+Prt+Uml+Pl3:%»egået%>%^iUMLin        FINAL1        ;
+                       +V+IV+Der3+Der/InchL+V+Inf:%»egået%>edh             FINAL1        ;
+                    +V+IV+Der3+Der/InchL+V+ConNeg:%»egået%>ieh             FINAL1        ;
+                      +V+IV+Der3+Der/InchL+V+VGen:%»egået%>ien             FINAL1        ;
+!                      +V+IV+Der3+Der/InchL+V+Act:%»egået%>eme             FINAL1        ;
+                       +V+IV+Der3+Der/InchL+V+Ger:%»egået%>ieminie         FINAL1        ;
+                +V+IV+Der3+Der/InchL+V+PrfPrc+Uml:%»egået%>%^1UMLeme       FINAL1        ;
+           +V+IV+Der3+Der/ahtje+V+Ind+Prs+Sg3+Uml:%»ijahtj%>%^3sUMLa       FINAL1        ;
+           +V+IV+Der3+Der/ahtje+V+Ind+Prs+Pl3+Uml:%»ijahtj%>%^3dUMLieh     FINAL1        ;
+               +V+IV+Der3+Der/ahtje+V+Ind+Prt+Pl3:%»ijahtj%>in             FINAL1        ;
+                       +V+IV+Der3+Der/ahtje+V+Inf:%»ijahtj%>edh            FINAL1        ;
+                      +V+IV+Der3+Der/ahtje+V+VGen:%»ijahtj%>en             FINAL1        ;
+!                      +V+IV+Der3+Der/ahtje+V+Act:%»ijahtj%>eme            FINAL1        ;
+                       +V+IV+Der3+Der/ahtje+V+Ger:%»ijahtj%>eminie         FINAL1        ;
+                    +V+IV+Der3+Der/ahtje+V+PrfPrc:%»ijahtj%>eme            FINAL1        ;
+                    +V+IV+Der3+Der/ahtje+V+ConNeg:%»ijahtj%>0h             FINAL1        ;
+
+
+
+!LEXICON IV_PASSIVE_S   !!= * __@CODE@__ row E - Group V  NB! FOR already derivated PASSIVES!!!
+!           +V+IV+Ind+Prs+Sg3:%>oe        FINAL1        ;
+!           +V+IV+Ind+Prs+Pl3:%>X2h       FINAL1        ;
+!           +V+IV+Ind+Prt+Sg3:%>i         FINAL1        ;
+!  +V+IV+Ind+Prt+Sg3+Err/Orth:%>%^DISIMPi FINAL1        ;
+!           +V+IV+Ind+Prt+Pl3:%>in        FINAL1        ;
+!! Infinite forms
+!! --------------
+!                   +V+IV+Inf:%>edh       FINAL1        ;
+!                  +V+IV+VGen:%>en        FINAL1        ;
+!!                  +V+IV+Act:%>eme       FINAL1        ;
+!                   +V+IV+Ger:%>eminie    FINAL1        ;
+!!               +V+IV+PrsPrc:%>ije       FINAL1        ;
+!!               +V+IV+PrsPrc:%>ijes      FINAL1        ;
+!                +V+IV+PrfPrc:%>eme       FINAL1        ;
+!                +V+IV+ConNeg:%>h         FINAL1        ;
+!! Derivations
+!! -----------
+!       +V+IV+Der3+Der/NomAct+N:%»em        flagNomActOdd ;
+
+
+LEXICON LGIDH  !!= * __@CODE@__
+
+! Finite forms
+! ------------
+           +V+IV+Ind+Prs:%>                VSUF-ODD-PRS   ;
+           +V+IV+Ind+Prt:%>                VSUF-ODD-PRT   ;
+             +V+IV+Imprt:%>                VSUF-ODD-IMP   ;
+
+! Infinite forms
+! --------------
+               +V+IV+Inf:%>idh             FINAL1         ;
+            +V+IV+ConNeg:%>%^DISIMPh       FINAL1         ;
+              +V+IV+VGen:%>%^DISIMPen      FINAL1         ; ! = GH Modalis, KB måtesform, GH Voluntativ
+!              +V+IV+Act:%>immie           FINAL1         ; ! = GH verbalsubst, KB nomen actionis
+               +V+IV+Ger:%>%^DISIMPeminie  FINAL1         ; ! = GH Gerundium
+!           +V+IV+PrsPrc:%>æjja            FINAL1         ; ! = GH Ptz.Pr. => must go to nominal lexicon instead
+            +V+IV+PrfPrc:%>amme            FINAL1         ; ! = GH Ptz.Pt.
+!   GH Ptz.Fut. b'ïssejässaa missing here
+
+!           +V+IV+VAbess:%>h               FINAL1         ;
+! On the issue on a possible Verbal abessive (karitiv), cf Hasselbrink:
+! GH s. 139, V-Adj: präd -k(e)h , attr -k(e)s
+! äbrekh ohne zu regnen
+! äbreks der nicht regnet
+! baal'eks der nicht gräbt
+! b'üdnekh ungezwirnt
+! vädd'ekh ungegeben, ohne zu geben
+
+! Derivations
+! -----------
+!   +V+IV+Der3+Der/NomAg+N:%»æjj@C.NeedNoun@ MAANA          ;
+   +V+IV+Der3+Der/NomAct+N:%»imm             flagNomActEven ;
+  +V+IV+Der3+Der/ahtje+V:%»ahtj            AHTJE          ;
+
+
+
+
+
+!! !!! Nominal derivation sublexica
+
+!LEXICON LAAHKOEH_EVEN   !!= * __@CODE@__
+!   LAAHKOEH_BE  ;
+!   LAAHKOEH_MES ;
+
+!LEXICON LAAHKOEH_BE  !!= ** __@CODE@__
+! +Sg+Nom:%>%^COMPDISIMPbe%^DISIMP     FINAL1   ;
+! +Sg+Acc:%>%^COMPDISIMPbe%>%^DISIMPm  FINAL1   ;
+! +Sg+Gen:%>%^COMPDISIMPbe%>%^DISIMPn  FINAL1   ;
+! +Sg+Nom:%>%^COMPDISIMP2be%^DISIMP    FINAL1   ;
+! +Sg+Acc:%>%^COMPDISIMP2be%>%^DISIMPm FINAL1   ;
+! +Sg+Gen:%>%^COMPDISIMP2be%>%^DISIMPn FINAL1   ;
+! +Sg+Ill:b%>asse                      FINAL1   ; !Rule to delete Jesuse%>asse > Jesusasse
+! +Sg+Ine:b%>isnie                     FINAL1   ;
+! +Sg+Ela:b%>istie                     FINAL1   ;
+! +Sg+Com:b%>inie                      FINAL1   ;
+! +Pl+Nom:%>%^COMPDISIMPb%>%^DISIMPh   FINAL1   ;
+! +Pl+Nom:%>%^COMPDISIMP2b%>%^DISIMPh  FINAL1   ;
+! +Pl+Acc:b%>idie                      FINAL1   ;
+! +Pl+Gen:%>%^COMPDISIMPb%>%^DISIMP    IGENSUFF ;
+! +Pl+Gen:%>%^COMPDISIMP2b%>%^DISIMP   IGENSUFF ;
+! +Pl+Ill:b%>idie                      FINAL1   ;
+! +Pl+Ine:b%>inie                      FINAL1   ;
+! +Pl+Ela:b%>ijstie                    FINAL1   ;
+! +Pl+Com:b%>%^DISIMPigujmie           FINAL1   ;
+!    +Ess:b%>inie                      FINAL1   ;
+!
+!LEXICON LAAHKOEH_MES  !!= ** __@CODE@__
+! +Sg+Nom:%>%^COMPDISIMPmes%^DISIMP       FINAL1   ;
+! +Sg+Nom:%>%^COMPDISIMP2mes%^DISIMP      FINAL1   ;
+! +Sg+Acc:masse%>m                        FINAL1   ;
+! +Sg+Gen:masse%>n                        FINAL1   ;
+! +Sg+Ill:masse%>se                       FINAL1   ;
+! +Sg+Ine:masse%>sne                      FINAL1   ;
+! +Sg+Ela:masse%>ste                      FINAL1   ;
+! +Sg+Com:mass%>ine                       FINAL1   ;
+! +Pl+Nom:%>%^COMPDISIMPmas%>%^DISIMPh    FINAL1   ;
+! +Pl+Nom:%>%^COMPDISIMP2mas%>%^DISIMPh   FINAL1   ;
+! +Pl+Acc:%>mass%>ide                     FINAL1   ;
+! +Pl+Gen:%>%^COMPDISIMP%>mass%>%^DISIMP  IGENSUFF ;
+! +Pl+Gen:%>%^COMPDISIMP2%>mass%>%^DISIMP IGENSUFF ;
+! +Pl+Ill:%>mass%>ide                     FINAL1   ;
+! +Pl+Ine:%>mass%>ine                     FINAL1   ;
+! +Pl+Ela:%>mass%>ijste                   FINAL1   ;
+! +Pl+Com:%>mass%>igujmie                 FINAL1   ;
+!    +Ess:mass%>ine                       FINAL1   ;
+
+
+LEXICON LAAHKOEH_ODD  !!= * __@CODE@__
+  LAAHKOEH_ÅBPOE ;
+  LAAHKOEH_OMMES ;
+
+LEXICON LAAHKOEH_ÅBPOE  !!= ** __@CODE@__
+          +Sg+Nom:%>åbpoe          FINAL1 ;
+          +Sg+Acc:%>åbpoe%>m       FINAL1 ;
+          +Sg+Gen:%>åbpoe%>n       FINAL1 ;
+          +Sg+Ill:%>åbpo%>se       FINAL1 ;
+      +Sg+Ill+Uml:%>åbpe%>%^2UMLse FINAL1 ; ! Causes Umlaut
+          +Sg+Ine:%>åbpo%>sne      FINAL1 ;
+          +Sg+Ela:%>åbpo%>ste      FINAL1 ;
+          +Sg+Com:%>åbpo%>jne      FINAL1 ;
+          +Pl+Nom:%>åbpoe%>h       FINAL1 ;
+          +Pl+Acc:%>åbpo%>jde      FINAL1 ;
+          +Pl+Gen:%>åbpoe%>j       FINAL1 ;
+          +Pl+Ill:%>åbpo%>jde      FINAL1 ;
+          +Pl+Ine:%>åbpo%>jne      FINAL1 ;
+          +Pl+Ela:%>åbpo%>jste     FINAL1 ;
+          +Pl+Com:%>åbpoe%>jgujmie FINAL1 ;
+             +Ess:%>åbpo%>jne      FINAL1 ;
+
+ +Sg+Nom+Err/Orth:%>abpa           FINAL1 ;
+ +Sg+Acc+Err/Orth:%>abpa%>m        FINAL1 ;
+ +Sg+Gen+Err/Orth:%>abpa%>n        FINAL1 ;
+ +Sg+Ill+Err/Orth:%>abpe%>se       FINAL1 ;
+ +Sg+Ine+Err/Orth:%>abpe%>sne      FINAL1 ;
+ +Sg+Ela+Err/Orth:%>abpe%>ste      FINAL1 ;
+ +Sg+Com+Err/Orth:%>abp%>ine       FINAL1 ;
+    +Ess+Err/Orth:%>abp%>ine       FINAL1 ;
+ +Pl+Nom+Err/Orth:%>abpa%>h        FINAL1 ;
+ +Pl+Acc+Err/Orth:%>abp%>ide       FINAL1 ;
+ +Pl+Gen+Err/Orth:%>abpa%>j        FINAL1 ;
+ +Pl+Ill+Err/Orth:%>abp%>ide       FINAL1 ;
+ +Pl+Ine+Err/Orth:%>abp%>ine       FINAL1 ;
+ +Pl+Ela+Err/Orth:%>abp%>ijste     FINAL1 ;
+ +Pl+Com+Err/Orth:%>abpa%>jgujmie  FINAL1 ;
+
+LEXICON LAAHKOEH_OMMES   !!= ** __@CODE@__
+          +Sg+Nom:%>ommes%^DISIMP          FINAL1   ;
+          +Sg+Acc:%>ommese%>%^DISIMPm      FINAL1   ;
+          +Sg+Gen:%>ommese%>%^DISIMPn      FINAL1   ;
+          +Sg+Ill:%>ommes%>asse            FINAL1   ; !Rule to delete Jesuse%>asse > Jesusasse
+          +Sg+Ine:%>ommes%>isnie           FINAL1   ;
+          +Sg+Ela:%>ommes%>istie           FINAL1   ;
+          +Sg+Com:%>ommes%>inie            FINAL1   ;
+          +Pl+Nom:%>ommes%>%^DISIMPh       FINAL1   ;
+          +Pl+Acc:%>ommes%>idie            FINAL1   ;
+          +Pl+Gen:%>ommes%>%^DISIMP        IGENSUFF ;
+          +Pl+Ill:%>ommes%>idie            FINAL1   ;
+          +Pl+Ine:%>ommes%>inie            FINAL1   ;
+          +Pl+Ela:%>ommes%>ijstie          FINAL1   ;
+          +Pl+Com:%>ommes%>%^DISIMPigujmie FINAL1   ;
+ +Pl+Com+Err/Orth:%>ommes%>%^DISIMPigyjmie FINAL1   ; !
+             +Ess:%>ommes%>inie            FINAL1   ;
+
+
+
+LEXICON IGENSUFF   !!= * __@CODE@__
+           :i  ENDLEX ; ! The normative -i +Gen+Pl suffix
+    +Use/NG:ij ENDLEX ; ! A fairly common non-normative -ij suffix
+! +Err/Orth:ij ENDLEX ; ! A fairly common non-normative -ij suffix
+
+
+!! !!!Verbal affixes
+! ==============
+
+!! !!Finite forms
+! ------------
+
+!! !Even
+! ----
+
+!! !Present
+
+LEXICON V-I-PRS-SG   !!= * __@CODE@__ Merge with V-EVEN-PRS if nothing special here.
+  V-PRS-SG-12 ;
+  V-PRS-SG-3  ;
+
+LEXICON V-II-PRS-SG   !!= * __@CODE@__
+     :oe      V-PRS-SG-12 ;
+ +Uml:%^2UMLe V-PRS-SG-3  ; ! ?? parallels the byörkesne case
+ +Uml+Err/Orth:%^2UMLie V-PRS-SG-3  ; !
+
+LEXICON V-III-PRS-SG   !!= * __@CODE@__
+  +Err/Orth:a  V-PRS-SG-3 ;
+           :oe V-PRS-SG-3 ; ! this is wrong, gives *guarka pro guarkoe
+! perhaps use A2 as 0 rule, triggers deletion in front of aff border
+! but then oe aff must come afterwards
+!          :oe FINAL1     ; !This gave no tag! !archi-looking ?
+
+LEXICON VSUF-V-EVEN-PRS   !!= * __@CODE@__
+ :e  V-PRS-SG-1         ;
+     V-PRS-SG-2         ;
+ :oe V-PRS-SG-3         ;
+     VSUF-V-EVEN-PRS-DUPL ;
+
+LEXICON VSUF-V-EVEN-PRS-DUPL   !!= * __@CODE@__
+           +Du1:oen          FINAL1 ; !
+    +Du2+Dial/L:eX4jidien    FINAL1 ; !Long form
+   +Du2+Dial/SH:ed%^DISIMPen FINAL1 ; !oe>o a>e ie>e
+           +Du3:eX3jægan     FINAL1 ; !
+    +Pl1+Dial/L:eX4jibie     FINAL1 ; ! Long form
+   +Pl1+Dial/SH:eb%^DISIMPe  FINAL1 ; !oe>o a>e ie>e
+    +Pl2+Dial/L:eX4jidie     FINAL1 ; ! Long form
+   +Pl2+Dial/SH:ed%^DISIMPe  FINAL1 ; !oe>o a>e ie>e
+           +Pl3:oeh          FINAL1 ; !
+
+
+
+LEXICON VSUF-EVEN-PRS-DUPL   !!= * __@CODE@__
+           +Du1:X2n         FINAL1 ;
+!          +Du1:oen         FINAL1 ;
+
+    +Du2+Dial/L:X4jidien    FINAL1 ; !Long form !Lene: denne lager dublett, og gjør kun forskjell for GUARKEDH: jåtskajidien og jåtskijidien. Hvis dette er riktige former, bør denne stien flyttes opp i  GUARKEDH. Samme gjelder sanns. +Pl1+Dial/L:X4jibie og +Pl2+Dial/L:X4jidie
+    +Du2+Dial/L:jidien    FINAL1 ; !Long form   
+    
+   +Du2+Dial/SH:d%^DISIMPen FINAL1 ; !oe>o a>e ie>e
+           +Du3:X3jægan     FINAL1 ;
+           +Du3:jægan       FINAL1 ;
+             
+    +Pl1+Dial/L:X4jibie     FINAL1 ; ! Long form
+    +Pl1+Dial/L:jibie     FINAL1 ; ! Long form 
+       
+   +Pl1+Dial/SH:b%^DISIMPe  FINAL1 ; !oe>o a>e ie>e
+   
+    +Pl2+Dial/L:X4jidie     FINAL1 ; ! Long form
+    +Pl2+Dial/L:jidie     FINAL1 ; ! Long form
+    
+   +Pl2+Dial/SH:d%^DISIMPe  FINAL1 ; !oe>o a>e ie>e
+           +Pl3:X2h         FINAL1 ;
+! +Du3+Err/Orth:b%^DISIMPen FINAL1 ;
+
+
+!!
+
+LEXICON VSUF-VI-EVEN-PRS   !!= * __@CODE@__
+              :e       V-PRS-SG-1 ;
+                       V-PRS-SG-2 ;
+          +Sg3:ie      FINAL1     ;
+          +Du1:ien     FINAL1     ;
+   +Du2+Dial/L:ijidien FINAL1     ; !i>0
+  +Du2+Dial/SH:eden    FINAL1     ; !i>0
+          +Du3:ijægan  FINAL1     ; !e>0
+   +Pl1+Dial/L:ijibie  FINAL1     ; !i>0
+ +Pl1+Err/Orth:ibie    FINAL1     ;
+  +Pl1+Dial/SH:ebe     FINAL1     ; !i>0
+   +Pl2+Dial/L:ijidie  FINAL1     ; !i>0
+  +Pl2+Dial/SH:ede     FINAL1     ; !i>0
+          +Pl3:ieh     FINAL1     ;
+
+
+!! !Imperative
+
+LEXICON VSUF-EVEN-IMP   !!= * __@CODE@__
+!      +Sg1+Uml:%^1UMLam FINAL1 ;
+           +Sg2:ieh      FINAL1 ;
+  +Sg2+Err/Orth:h        FINAL1 ;
++Use/-Spell+Du1:ien      FINAL1 ;
+           +Du2:eden     FINAL1 ;
++Err/Orth+Du2:idien     FINAL1 ;
++Use/-Spell+Pl1+Dial/SH:ebe   FINAL1 ;
++Use/-Spell+Pl1+Dial/L:ijibie FINAL1 ;
+           +Pl2:ede      FINAL1 ;
+  +Err/Orth+Pl2:idie     FINAL1 ;
+
+
+
+!Klasse 2
+LEXICON VSUF-II-EVEN-IMP  !!= * __@CODE@__
+ +Sg2:oeh      FINAL1 ;
+ +Du2:oden     FINAL1 ;
+ +Err/Orth+Du2:oejidien FINAL1 ;
+ +Pl2:ode      FINAL1 ;
+ +Err/Orth+Pl2:oejidie  FINAL1 ;
+
+
+
+!Klasse 3
+LEXICON VSUF-III-EVEN-IMP  !!= * __@CODE@__
+ +Sg2:ah      FINAL1 ;
+ +Du2:eden    FINAL1 ;
+ +Err/Orth+Du2:ajidien FINAL1 ;
+ +Pl2:ede     FINAL1 ;
+ +Err/Orth+Pl2:ajidie  FINAL1 ;
+!! !Present
+
+
+
+
+LEXICON V-IV-EVEN-PRS  !!= * __@CODE@__
+                      :e          V-PRS-SG-1 ;
+                                  V-PRS-SG-2 ;
+              +Sg3+Uml:%^3sUMLa   FINAL1     ;
+              +Du1+Uml:%^3dUMLien FINAL1     ;
+           +Du2+Dial/L:ijidien    FINAL1     ;
+          +Du2+Dial/SH:eden       FINAL1     ;
+                  +Du3:ijægan     FINAL1     ;
+           +Pl1+Dial/L:ijibie     FINAL1     ;
+         +Pl1+Err/Orth:ibie       FINAL1     ;
+          +Pl1+Dial/SH:ebe        FINAL1     ;
+ +Pl1+Dial/SH+Err/Orth:ibie       FINAL1     ;
+           +Pl2+Dial/L:ijidie     FINAL1     ;
+          +Pl2+Dial/SH:ede        FINAL1     ;
+         +Pl2+Err/Orth:idie       FINAL1     ;
+ +Pl2+Dial/SH+Err/Orth:idie       FINAL1     ;
+              +Pl3+Uml:%^3dUMLieh FINAL1     ;
+
+
+
+
+LEXICON VSUF-IV-EVEN-IMP
+          +Sg2:h       FINAL1 ;
+  +Du2+Dial/SH:eden    FINAL1 ;
+   +Err/Orth+Du2+Dial/L:ijidien FINAL1 ;
+  +Pl2+Dial/SH:ede     FINAL1 ;
+ +Err/Orth+Pl2:idie    FINAL1 ;
+   +Err/Orth+Pl2+Dial/L:ijidie  FINAL1 ;
+
+
+!! !! Ulikestavelsesverb - ODD
+
+!! !Present
+
+LEXICON VSUF-ODD-PRS  !!= * __@CODE@__
+   V-ODD-PRS-SG   ;
+   V-ODD-PRS-DUPL ;
+
+LEXICON V-ODD-PRS-SG  !!= ** __@CODE@__
+ :%^DISIMPe V-PRS-SG-1 ;
+ :%^DISIMP  V-PRS-SG-2 ;
+ :%^DISIMPe V-PRS-SG-3 ;
+
+LEXICON V-ODD-PRS-DUPL  !!= ** __@CODE@__
+   ODD_PRS_NON_DU3 ;
+   ODD_PRS_DU3     ;
+
+LEXICON ODD_PRS_NON_DU3  !!= ** __@CODE@__
+ +Du1:ien   FINAL1 ;
+ +Du2:idien FINAL1 ;
+ +Pl1:ibie  FINAL1 ;
+ +Pl2:idie  FINAL1 ;
+ +Pl3:ieh   FINAL1 ;
+
+LEXICON ODD_PRS_DU3  !!= ** __@CODE@__
+ +Du3:ægan FINAL1 ;
+! +Du3:æban  FINAL1  ; !SUB
+
+
+!! !Past
+
+LEXICON VSUF-ODD-PRT  !!= * __@CODE@__
+   VSUF-PRT-SG-12 ;
+   VSUF-PRT-SG-3  ;
+   VSUF-PRT-DUPL  ;
+
+!! !Imperative
+
+LEXICON VSUF-ODD-IMP   !!= * __@CODE@__
+ +Sg2:%^DISIMPh FINAL1 ;
+ +Du2:idien     FINAL1 ;
+ +Pl2:idie      FINAL1 ;
+
+
+! Contract
+! LEXICON VSUF-CONTR-PRS
+!      :e  V-PRS-SG-1 ;
+!      :   V-PRS-SG-2 ;
+!      :ie V-PRS-SG-3 ;
+!            VSUF-CONTR-DUPL ;
+!
+! LEXICON VSUF-CONTR-DUPL
+!  +Du1:ien  FINAL1  ;
+!  +Du2:eden  FINAL1  ;
+! ! Dual third does not get an +CTR tag
+!  +Du3:eben  FINAL1  ; !SUB
+!  +Pl1:ebe  FINAL1  ;
+!  +Pl2:ede  FINAL1  ;
+!  +Pl3:ieh  FINAL1  ;
+!
+! LEXICON VSUF-CONTR-PRT
+!          VSUF-PRT-SG-12 ;
+!          VSUF-PRT-DUPL ;
+!
+! LEXICON VSUF-CONTR-IMP
+!  +Sg2:h    FINAL1  ;
+!  +Du2:eden FINAL1  ;
+!  +Pl2:ede  FINAL1  ;
+
+
+!! !!Common even-odd
+! ---------------
+
+
+!! !Present
+
+LEXICON V-PRS-SG-12   !!= * __@CODE@__ Kutt denne viss ikkje ref til
+   V-PRS-SG-1 ;
+   V-PRS-SG-2 ;
+
+LEXICON V-PRS-SG-1  !!= * __@CODE@__
+ +Sg1:m FINAL1 ; ! Border in prev lex
+
+LEXICON V-PRS-SG-2  !!= * __@CODE@__
+ +Sg2:h FINAL1 ;
+
+LEXICON V-PRS-SG-3  !!= * __@CODE@__
+ +Sg3: FINAL1 ;
+
+
+!! !Past
+
+LEXICON VSUF-PRT  !!= * __@CODE@__
+   VSUF-PRT-SG-12 ;
+   VSUF-PRT-SG-3  ;
+   VSUF-PRT-DUPL  ;
+
+
+
+LEXICON VSUF-PRT-SG-12  !!= * __@CODE@__
+ +Sg1:im FINAL1 ;
+ +Sg2:ih FINAL1 ;
+
+LEXICON VSUF-PRT-SG-3  !!= * __@CODE@__
+                +Sg3:i         FINAL1 ;
+ +Sg3+Err/Orth:%^DISIMPi FINAL1 ; !
+
+
+LEXICON VSUF-PRT-DUPL  !!= * __@CODE@__
+ +Du1:imen FINAL1 ;
+ +Du2:iden FINAL1 ;
+ +Du3:igan FINAL1 ;
+ +Pl1:imh  FINAL1 ;
+ +Pl2:idh  FINAL1 ;
+ +Pl3:in   FINAL1 ;
+ +Pl3+Err/Orth:ien   FINAL1 ;
+
+LEXICON flagNomActEven
+@C.NeedNoun@ NomActEven ;
+
+LEXICON flagLDAHKE
+@C.NeedNoun@ LDAHKE ;
+
+
+LEXICON flagMAANA
+@C.NeedNoun@ MAANA ;
+
+LEXICON flagIJE_ODD
+@C.NeedNoun@ IJE_ODD ;
+
+LEXICON flagNomActOdd
+@C.NeedNoun@ NomActOdd ;
+
+LEXICON flagN_ODD
+@C.NeedNoun@ N_ODD ;
+
+LEXICON flagFINAL1
+@C.NeedNoun@ FINAL1 ;
+
+
+!LEXICON V-II-PRS-DUPL
+! :oe      VSUF-EVEN-PRS-DUPL ;
+! +Du1:oen      FINAL1  ;
+! +Du2:oden  FINAL1  ; !e>0
+! +Du3:oejægan FINAL1  ;
+! +Du3:oeben FINAL1  ; !SUB
+! +Pl1:obe  FINAL1  ; !e>0
+! +Pl2:ode  FINAL1  ; !e>0
+! +Pl3:oeh  FINAL1  ;
+
+!LEXICON V-III-PRS-DUPL
+! :a   VSUF-EVEN-PRS-DUPL ;
+! +Du1:an       FINAL1  ;
+! +Du2:eden  FINAL1  ; !a>e
+! +Du3:ajægan FINAL1  ;
+! +Du3:aben FINAL1  ; !SUB
+! +Pl1:ebe  FINAL1  ; !a>e
+! +Pl2:ede  FINAL1  ; !a>e
+! +Pl3:ah  FINAL1  ;
+
+! From V verbs
+! +Du1:oen       FINAL1  ;
+! +Du2:eden  FINAL1  ;
+! +Du3:ijægan FINAL1  ; !e>i
+! +Du3:iben     FINAL1  ; !SUB !e>i
+! +Pl1:ebe  FINAL1  ;
+! +Pl2:ede  FINAL1  ;
+! +Pl3:oeh  FINAL1  ;
+
+!! LEXICON V-EVEN-PRS
+!!   V-PRS-SG-12 ;
+!!   V-PRS-SG-3 ;
+!!    V-EVEN-PRS-DUPL ;
+
+!LEXICON V-EVEN-PRS-DUPL
+! :ie  VSUF-EVEN-PRS-DUPL ;
+! +Du1:ien       FINAL1  ;
+! +Du2:eden  FINAL1  ; !i>0
+! +Du3:iejægan FINAL1  ;
+! +Du3:ieben FINAL1  ; !SUB
+! +Pl1:ebe  FINAL1  ; !i>0
+! +Pl2:ede  FINAL1  ; !i>0
+! +Pl3:ieh  FINAL1  ;
+
+
+

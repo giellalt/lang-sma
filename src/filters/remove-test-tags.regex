@@ -1,0 +1,14 @@
+# This regex removes tags we do not want in the ordinary $(GTLANG).fst
+# That is, we do not give them as output from analysis
+
+# deleting the sma Uml tags as long as we do not actively test
+0 <- %+Uml,
+0 <- %+NoUml,
+
+# delete the other sma test tags as long as we do not test
+0 <- %+Test%/LysI,
+0 <- %+Test%/MørkI,
+0 <- %+Test%/HK,
+0 <- %+Test%/GK,
+0 <- %+Test%/JK
+;

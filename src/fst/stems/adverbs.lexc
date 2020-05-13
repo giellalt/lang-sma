@@ -1,0 +1,2241 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+! First comes the continuation lexicon, in order to see it easier
+
+LEXICON adv
++Adv: FINAL1 ;
+
+LEXICON adv-comp
++Adv+Comp: FINAL1 ;
+LEXICON adv-sup
++Adv+Superl: FINAL1 ;
+
+LEXICON adv-interr-rel
++Adv+Subqst: FINAL1 ;									! NOTLEMMA
++Adv: FINAL1 ; ! We go for the sme way of doing things.
+
+LEXICON laakanlex
+              :#  laakanword ;
+     +Err/Orth:-  laakanword ;
+ +MWE+Err/Orth:%  laakanword ;
+
+LEXICON laakanword
+ :laakan adv ;
+
+LEXICON ligkelex
+!LEXICON Cmp-Adv
+! Then comes the Adverb lexicon itself. There are many (sub)regular adverbial
+! case patterns here, they are not encoded in the present system.
+!:s Adv-Cmp ;
+:#ligke adv ;
++Err/Orth:-ligke adv ;
+
+LEXICON Adverb
+!
+! baakoej<b/>mietie
+!
+!gadtj´sisnie =tissenødig = finner ikke stavemåten på denne?
+!paak´sisnie = bæsjenødig = finner ikke stavemåten på denne?
+!sleavvan:sleavvan adv ; to adj-file
+!  OK- se på disse i forhold til nounene og adverbene! lage lexicon for attributt, noun og adverb - altså ikke +A+Sg+Nom men heller N+Sg+Nom + adverbene, som egentlig er nooun i kasus.
+!  OK- se på disse i forhold til nounene og adverbene! lage lexicon for attributt, noun og adverb - altså ikke +A+Sg+Nom men heller N+Sg+Nom + adverbene, som egentlig er nooun i kasus.
+!Fra adj-fila, mener disse predikativene kan også være adverbs: Skal også legge inn alle AN-predikativene som adverbs
+!dsubformer -fra missinglist
+!daegkers -> adj-file
+
+< {daan} "@P.Pmatch.Backtrack@" { biejjien} "+v1":0> adv ;
+   daan% biejjien+Err/MissingSpace+v1:daan∑#biejjien adv ;
+   daan% biejjien+v2:daan∑#bien adv ;
+   daan% biejjien+v3:daen∑#bien adv ;
+
+! dette er MWE-uttrykk- hvordan legge til disse?
+goss’-akt:goss’-akt adv ;
+gåess’akt:gåess’akt adv ;
+gukt’akt:gukt’akt adv ;
+! såå:såå
+gusn’-akt:gusn’-akt adv ;
+gukt’em:gukt’em adv ;
+dojs-dajs:dojs-dajs adv ;
+duesmies-duesmies:duesmies-duesmies adv ;
+
+! dogh daagkh, dogken daagken	her og der
+! gusn’-akt	(på) et eller annet sted 
+
+! Korleis skal desse adverba førast i lexc? Kva er rett ortografi for dei?
+! dogkoe dagkoe
+! doegkoe dagkoe 
+ 
+! dogk´dagk
+! doegk´dagkoe - her og der, hist og pist
+!dovlen
+!daelen
+   
+!< {daen} "@P.Pmatch.Backtrack@"       { akth}> adv ;
+!   gusnie% akth+Err/MissingSpace:daen∑#biejjien adv ;
+
+
+
+halhta adv ; !nesten, bortimot "Halhta måeresne vååjnoe" - så nesten sint ut
+magkeren-tjagkeren:magkeren-tjagkeren adv ; 
+vaen’vaeniem:vaen’vaeniem adv ; 
+! HVorfor er disse outcommented?
+! avteld:avteld Cmp-Adv ;
+! avtelds:avtelds Cmp-Adv ;
+! avtels:avtels Cmp-Adv ;
+! åvteld:åvteld Cmp-Adv ;
+! åvtelh:åvtelh Cmp-Adv ;
+! åvtels:åvtels Cmp-Adv ;
+!!   egentlig satt disse inn i noun-adv-leksikon
+!! om disse skal være adverb?
+!gaertjie% gaertjebe+Use/MT:gaertjie% gaertjebe adv ;
+!gaertjie% gaertjebem+Use/MT:gaertjie% gaertjebem adv ;
+
+!geljie% geljebe+Use/MT:geljie% geljebe adv ;
+!geljie% geljebem+Use/MT:geljie% geljebem adv ;
+!varki% verkebe:varki% verkebe adv ;
+
+jeenje-jeenebe adv ;
+jeenje-jeenebem adv ; !
+jeenje-jeenjebe adv ;
+jeenje-jeenjebem adv ;
+jijnebem:jijnebem adv-comp ; ! this is adjective.
+!jijnje-jijnjebem adv ;
+!jïjnje-jïjnebe+:jïjnje-jïjnebe adv ;
+!jïjnje-jïjnebem:jïjnje-jïjnebem adv ;
+!jïjnje-jïjnjebem adv ;
+!lïhke% lïhkebe+Use/MT:lïhke% lïhkebe adv ;
+!lïhke% lïhkebem+Use/MT:lïhke% lïhkebem adv ;
+!onne% unnebe+Use/MT:onne% unnebe adv ;
+!onne-unnebe:onne-unnebe adv ;
+!onne-unnebem:onne-unnebem adv ;
+!stoerre% stuerebe+Use/MT:stoerre% stuerebe adv ;
+!stoerre-stuerebem:stoerre-stuerebem adv ;
+
+
+mietie-biejjiem:mietie-biejjiem adv ;
+laath-raejkiem:laath-raejkiem adv ;
+loeven-nåeliem:loeven-nåeliem adv ;
+vaen’vaeniem:vaen’vaeniem adv ;
+gaatesjem:gaatesjem adv ; ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:beklager„sorry“
+
+heeveles-laakan:heeveles-laakan adv ; ! https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:heeveles-ligke
+heeveles-ligke:heeveles-ligke adv ; ! https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:heeveles-ligke
+soevine adv ;
+soevene adv ;
+gåhkedæjjesne adv ;
+sïejhmedelaakan adv ;
+jællan adv ;
+Sveerjen% raedtesne+Use/MT:Sveerjen% raedtesne adv ;
+Svöörjen% raedtesne:Svöörjen% raedtesne adv ;
+Nöörjen% raedtesne:Nöörjen% raedtesne adv ;
+aadtjege adv ;
+aadtjegh+Err/Orth:aadtjegkh adv ;
+aadtjegh+Err/Orth:adtjegh adv ;
+aadtjegh:aadtjegh adv ;
+aadtjegissie:aadtjegissie adv ;
+aadtjen+Err/Orth:aadtjen adv ;
+aadtjen:aadtjen adv ;
+aadtjetje adv ;
+aaj:aaj adv ;
+aajmene:aajmene adv ;
+aajmine:aajmine adv ;
+aajmoelaakan:aajmoe laakanlex ;
+aajmoen:aajmoen adv ;
+aajmojne:aajmojne adv ;
+aajmone:aajmone adv ;
+aalkarossem adv ;
+aalkesth:aalkesth adv ;
+aalkoelisnie:aalkoelisnie adv ;
+aalkoelistie:aalkoelistie adv ;
+aalkoelisnie+Err/Orth:alkoelisnie adv ;
+aalkoelistie+Err/Orth:alkoelistie adv ;
+aalmene:aalmene adv ;
+aaltelen adv ;
+aalvere adv ; !LMM
+aamhtesen% mietie+Use/MT:aamhtesen% mietie adv ;
+aamhteslaaketje adv ;
+aanaehpesne:aanaehpesne adv ;
+aangennuelesne:aangen#nuelesne adv ;
+aanteges:aanteges adv ;
+aaptsah:aaptsah adv ;
+aaptsh:aaptsh adv ;
+aarebi+Err/Orth:aerebi adv ; !
+aarebi:aarebi adv ;
+aarebistie+Err/Orth:aerebistie adv ;
+aarebistie+Err/Orth:aeriebistie adv ;
+aarebistie:aarebistie adv ;
+aarege:aarege adv ;
+aarehke:aarehke adv ;
+aaremosth adv ;
+aarjeleslaakan:aarjeles laakanlex ;
+aassjoelaakan:aassjoe laakanlex ;
+aatsolen:aatsolen adv ;
+aave:aave adv ;
+aavne:aavne adv ;
+aavone:aavone adv ;
+aehtjielaakan:aehtjie laakanlex ;
+aejlieslaakan:aejlies laakanlex ;
+aejvie:aejvie adv ;
+aelhkie:aelhkie adv ;
+aelhkieslaakan:aelhkies laakanlex ;
+aelpiebuktie:aelpiebuktie adv ;
+aereden adv ;
+aeredslåvnen:aereds#låvnen adv ;
+aeriedasse adv ;
+aeriedistie adv ;
+aerpiesïejhmetji adv ;
+aerpievuekien% mietie+Use/MT:aerpie#vuekien% mietie adv ;
+aevere:aevere adv ;
+aeveren:aeveren adv ;
+ahkedh+Err/Orth:aakedh adv ;
+ahkedh:ahkedh adv ;
+ahtjetje:ahtjetje adv ;
+ajve:ajve adv ;
+aktelaaketje:akte#laaketje adv ;
+aktelen:aktelen adv ;
+aktemieresne:akte#mieresne adv ;
+aktenaejkien adv ;
+aktene:aktene adv ;
+aktengiertien:akten#giertien adv ;
+aktenjuelkien:akten#juelkien adv ;
+aktenraeresne:akten#raeresne adv ;
+akteraeresne:akte#raeresne adv ;
+aktesevyöki:aktese#vyöki adv ;
+aktesi-aktesi:aktesi-aktesi adv ;
+aktesi:aktesi adv ;
+aktesivyöki:aktesi#vyöki adv ;
+aktesne:aktesne adv ;  ! Use/MT
+aktetje adv ;
+aktetjeleejne+Err/Orth:aktetje-leejne adv ;
+aktetjeleejne:aktetje#leejne adv ;
+akth:akth adv ;
+akthjuelkien:akth#juelkien adv ;
+akti-akti+MWE+Use/NG:akti% akti adv ;
+akti-akti:akti-akti adv ;
+aktiakti:akti#akti adv ;
+aktivyöki:akti#vyöki adv ;
+alkabistie:alkabistie adv ;
+alkalisnie:alkalisnie adv ;
+alkalistie:alkalistie adv ;
+alkelde adv ;
+alkelen:alkelen adv ;
+alkeli adv ;
+alkene:alkene adv ;
+alme:alme adv ;
+almene:almene adv ;
+almetjenligke:almetjen ligkelex ;
+alvas:alvas adv ;
+alvaslaakan:alvas laakanlex ;
+alvoes:alvoes adv ;
+alvoeslaakan:alvoes laakanlex ;
+amhkadahken adv ;
+ammaj adv ;
+annetje:annetje adv ;
+annje+Err/Orth:aanje adv ;
+annje:annje adv ;
+annjebodts+Err/Orth:anjebodts adv ;
+annjebodts:annjebodts adv ;
+annjevasth adv ;
+annjevusth adv ;
+avtebe:avtebe adv-comp ; 
+avtebisnie adv ;
+avtege adv ;
+avtelbodti+Err/Orth:avtel-bodti adv ;
+avtelbodti:avtel#bodti adv ;
+avtelde adv ;
+avtelen:avtelen adv ;
+avteli:avteli adv ;
+avtelisnie:avtelisnie adv ;
+avtelistie:avtelistie adv ;
+avtem:avtem adv ;
+avtene:avtene adv ;
+avtesne:avtesne adv ;
+avtetje adv ;
+baadtaldihkie:baadtaldihkie  adv ;
+baakoej% mietie+Use/MT:baakoej% mietie adv ;
+baakt adv ;
+baaktege:baaktege adv ;
+baaktoe:baaktoe adv ;
+baalte:baalte adv ;
+baaltele adv ;
+baaltes:baaltes adv ;
+baaltese:baaltese adv ;
+baanhtsan adv ;
+badten adv ;
+badth adv ;
+badtjaldahkesne:badtjaldahkesne adv ;
+badtsetji:badtsetji adv ;
+baenhtsesne:baenhtsesne adv ;
+bagkan adv ;
+bagkode:bagkode adv ;
+bajhketrehpesne adv ;
+balnege:balnege adv ;
+balnerge:balnerge adv ;
+balneske:balneske adv ;
+bampan adv ;
+barhtsan adv ;
+barre:barre adv ;
+basteldihkie:basteldihkie  adv ;
+batnaldahkesne adv ;
+beahtsan adv ;
+beelhtennuelesne+Err/Orth:beelten#nuelesne adv ;
+beelhtennuelesne:beelhten#nuelesne adv ;
+beelhtennåelesne:beelhten#nåelesne adv ;
+bene adv ;
+biejjege+Use/NG:biejjegi adv ;
+biejjege:biejjege adv ;
+biejjieladtje:biejjieladtje adv ;
+bielelen:bielelen adv ;
+bieltelen adv ;
+bijjede:bijjede adv ;
+bijjege:bijjege adv ;
+bijjelde:bijjelde adv ;
+bijjelen:bijjelen adv ;
+bijjeli:bijjeli adv ;
+bijjene:bijjene adv ;
+bijjie-bijjiebasse:bijjie-bijjiebasse adv-comp ;
+bijjiebasse+Err/Orth:bijjiebaase adv-comp ;
+bijjiebasse:bijjiebasse adv-comp ;
+bijjiebisnie:bijjiebisnie adv ;
+bijjiebistie:bijjiebistie adv ;
+bijjiegommes:bijjiegommes adv-sup ;
+bijjiegåbpoe:bijjiegåbpoe adv-comp ;
+bijjielisnie:bijjielisnie adv ;
+bijjielistie+Err/Orth:bijjelistie adv ;
+bijjielistie:bijjielistie adv ;
+bist adv ;
+bodtjeldahkesne adv ;
+boelvhjöölki:boelvh#jöölki adv ;
+boerehkelaakan:boerehke laakanlex ;
+bortege:bortege adv ;
+botnestahkesne:botnestahkesne adv ;
+botnjeldahkesne adv ;
+buavnjan adv ;
+budteldahkesne adv ;
+buerebe:buerebe adv-comp ;
+buerebelaakan:buerebe#laakan adv-comp ; 
+buerebelaakan+Err/Orth:buerebe-laakan adv-comp ;
+buerebelaakan+MWE+Err/Orth:buerebe% laakan adv-comp ;
+
+buerebh:buerebh adv ;
+buerie-buerebe:buerie-buerebe adv-comp ; !
+bueriebiktie:bueriebiktie adv;
+bueriebuktie:bueriebuktie adv ; !buerebe-ligke=bueriebuktie,
+buerielaakan:buerie laakanlex ;
+buertiebealese:buertie#bealese adv ;
+buertiebealesne:buertie#bealesne adv ;
+buertiebealeste:buertie#bealeste adv ;
+buntjierdahkesne:buntjier#dahkesne adv ;
+byjngese:byjngese adv ;
+byjres:byjres adv ;
+byjreskisnie+Use/MT:byjreskisnie adv ; !báikkalaččat ! kan denne være
+bysseldahkesne adv ;
+båadtjede:båadtjede adv ;
+båadtjoen:båadtjoen adv ;
+båadtsan adv ;
+båadtsede:båadtsede adv ;
+båadtsjuelkien:båadts#juelkien adv ;
+båadtsjuelkien+Use/NG:båadts-juelkien adv ; !skal tas vekk
+båadtsjöölki:båadts#jöölki adv ;
+båadtsode+Err/Orth:båatsode adv ;
+båadtsode:båadtsode adv ;
+båadtsoehåejjien adv ;
+båadtsoen:båadtsoen adv ;
+båadtsoesjuelkien:båadtsoes#juelkien adv ;
+båadtsoesåejjien adv ;
+båadtsåejjien+Err/Orth:båadts#hööjji adv ;
+båadtsåejjien:båadts#åejjien adv ;
+båajhtahligke:båajhtah ligkelex ;
+båajhtede:båajhtede adv ;
+båajhtode+Err/Orth:båajhtoede adv ;
+båajhtode:båajhtode adv ;
+båajhtoehlaakan:båajhtoeh laakanlex ;
+båalmaldahkesne adv ;
+båarhte adv ;
+båarhte+Err/Orth:påarhte adv ;
+båarkeldihkie:båarkeldihkie  adv ;
+båarveldahkesne adv ;
+båastahligke:båastah ligkelex ;
+båastede:båastede adv ;
+båastode:båastode adv ;
+båastoehlaakan:båastoeh laakanlex ;
+båastolen:båastolen adv ;
+båatke adv ;
+båavhran adv ;
+båavhroen:båavhroen adv ;
+båavjan adv ;
+båavjoen:båavjoen adv ;
+bådtjaldahkesne adv ;
+bågkan adv ;
+bågkode:bågkode adv ;
+bårmoen:bårmoen adv ;
+bårrode+Err/Orth:båvrode adv ;
+bårrode:bårrode adv ;
+bårrojde adv ;
+båtnjan adv ;! attr: båtnjoeh
+båtnjoen:båtnjoen adv ;! genitiv:adverb
+bååjhtide:bååjhtide adv ;
+bååstede+Err/Orth:båastide adv ;
+bååstede+Err/Orth:båestede adv ;
+bååstede+Err/Orth:båstede adv ;
+bååstede:bååstede adv ;
+bååstere adv ;
+bååstide:bååstide adv ;
+bæjjes-våårte adv ;! bindestrekene fungerer ikke i Divvun, skal vi legge dem inn manuelt?
+bæjjes-våårti adv ; ! bindestrekene fungerer ikke i Divvun, skal vi legge dem inn manuelt?
+bæjjese:bæjjese adv ;
+
+bæjjesvåårte:bæjjes#våårte adv ;
+bæjjesvåårti+Err/Orth:bæjjesh#vorti adv ;
+bæjjesvåårti:bæjjes#våårti adv ;
+
+bæjjesvåårti+Err/Orth:bæjjes#vorti adv ; ! Anna Jacobsen Don,dan bïjre
+
+bæjngalisnie adv ;
+bæjngalistie:bæjngalistie adv ;
+bæjngoebieliem:bæjngoebieliem adv ;
+bæjngoelistie+Err/Orth:bæjngoeliste adv ;
+bæjngoelistie:bæjngoelistie adv ;
+bæjngolde:bæjngolde adv ;
+bæjngolen:bæjngolen adv ;
+bïegkeraejkien:bïegke#raejkien adv ;
+bïhteleslaakan:bïhteles laakanlex ;
+bïjre:bïjre adv ;
+bïsseldahkesne adv ;
+bööremeslaakan:bööremes#laakan adv-sup ;
+bööremeslaakan+Err/Orth:bööremes-laakan adv-sup ;
+bööremeslaakan+MWE+Err/Orth:bööremes% laakan adv-sup ;
+
+
+bööremesth:bööremesth adv ;
+daabpanahkh:daabpanahkh adv ;
+daagka:daagka adv ;
+daagken:daagken adv ;
+daagkh:daagkh adv ;
+daagkoe:daagkoe adv ;
+daaj-baaletje adv ;
+daajka:daajka adv ;
+daajkoe:daajkoe adv ;
+daajvaj:daajvaj adv ;
+daajvetji adv ;
+daaletje+Err/Orth:daaltji adv ;
+daaletje:daaletje adv ;
+daalh adv ;
+daalmasmasten adv ;
+daalmasmasth adv ;
+daalvege+Err/Lex:daalvege adv ;
+daalvege+Err/Lex:daalvegen adv ;
+daamhtah:daamhtah adv ; !XXX from dict, check! ? MLK: This is ok!
+daamhtaj:daamhtaj adv ; !XXX from dict, check! ?MLK: This one is ok!
+daamhtajommes adv-sup ;
+daamhtajåbpoe adv-comp ;
+daamhtajabpa adv-comp ;
+daamhtegh adv ;
+daamhtetje:daamhtetje adv ;
+daamtaj:daamtaj adv ; !
+daamtajommes:daamtajommes adv-sup ;
+daamtajåbpoe:daamtajåbpoe adv-comp ;
+daan% mearan+Use/MT:daan% mearan adv ;
+daan% raajan+Use/MT:daan% raajan adv ;
+daanbiejjien:daan#biejjien adv ;
+daanbiejjien+Use/NG:daan-biejjien adv ;
+daanbien:daan#bien adv ;
+daarrah adv ;  ! vet du,jo,ja,nok, vel 
+daase:daase adv ;
+daasegh:daasegh adv ;
+daasnegh:daasnegh adv ;
+daastegh adv ;
+dabpanahkh:dabpanahkh adv ;
+dabran:dabran adv ;
+daebpebe:daebpebe adv-comp ; ! 
+daebpede:daebpede adv ;
+daebpelde:daebpelde adv ;
+daebpelen:daebpelen adv ;
+daebpeli:daebpeli adv ;
+daebpemes:daebpemes adv-sup ; 
+daebpene+Err/Orth:daepene adv ;
+daebpene:daebpene adv ;
+daebpiebasse:daebpiebasse adv-comp ;
+daebpiebisnie:daebpiebisnie adv ;
+daebpiebistie:daebpiebistie adv ;
+daebpiegabpa adv ;
+daebpiegommes:daebpiegommes adv-sup ;
+daebpiegåbpoe:daebpiegåbpoe adv-comp ;
+daebpielasse:daebpielasse adv ;
+daebpielisnie:daebpielisnie adv ;
+daebpielistie:daebpielistie adv ;
+daejmadti adv ;
+daelh adv ;
+daelie:daelie adv ;
+daelvege+Err/Orth:daelvegen adv ;
+daelvege:daelvege adv ;
+daemhtie:daemhtie adv ;
+daen% åvteli+Use/MT:daen% åvteli adv ;
+daenbiejjien:daen#biejjien adv ;
+daenbiejjien+Use/NG:daen-biejjien adv ;
+daenbien+Err/Orth:dan#bien adv ;
+daenbien:daen#bien adv ;
+daerpies adv ;
+daerps:daerps adv ;
+daesnie+Err/Orth:dasenie adv ;
+daesnie:daesnie adv ;
+daestie:daestie adv ;
+dagka:dagka adv ;
+dagkarinie:dagkarinie adv ;
+dagke% ojhte:dagke% ojhte adv ;
+ojhte:ojhte adv ;
+dagkh adv ;
+dagkoe:dagkoe adv ;
+dahka:dahka adv ;
+dahkoe:dahkoe adv ;
+dahpeldihkie:dahpeldihkie  adv ;
+dajbeeli:daj#beeli adv ;
+dajka:dajka adv ;
+dajkoe:dajkoe adv ;
+dallah:dallah adv ;
+dallahmasten:dallahmasten adv ;
+dallahmasten+Use/NG:dallah-masten adv ; !Lene norm?
+dallatjinie:dallatjinie adv ;
+dallegh+Err/Orth:daallegh adv ;
+dallegh+Err/Orth:dællegh adv ;
+dallegh:dallegh adv ;
+dan:dan adv ;
+dannasinie:dannasinie adv ;
+mannasinie:mannasinie adv ;
+dannegh adv ;
+dansoe:dan#soe adv ; !Lene: norm?
+darhkan adv ;
+dasnegh:dasnegh adv ;
+dastegh adv ; !LMM
+davhkesmieresne:davhkes#mieresne adv ;
+davvese adv ;
+dealoeldihkie:dealoeldihkie  adv ;
+dearjan adv ;
+debpebe:debpebe adv-comp ; 
+debpede:debpede adv ;
+debpelde adv ;
+debpelen% dahkoe+Use/MT:debpelen% dahkoe adv ;
+debpelen:debpelen adv ;
+debpeli:debpeli adv ;
+debpemes:debpemes adv-sup ; 
+debpene:debpene adv ;
+debpiebasse:debpiebasse adv-comp ;
+debpiebisnie:debpiebisnie adv ;
+debpiebistie:debpiebistie adv ;
+debpiegabpa:debpiegabpa adv ;
+debpiegammes:debpiegammes adv-sup ;
+debpiegommes:debpiegommes adv-sup ;
+debpiegåbpoe:debpiegåbpoe adv-comp ;
+debpielasse:debpielasse adv ;
+debpielisnie:debpielisnie adv ;
+debpielistie:debpielistie adv ;
+deemeldahkesne adv ;
+dehtie% minngede+Use/MT:dehtie% minngede adv ;
+dejbaaletji+Err/Orth:dejbeeletje adv ;
+dejbaaletji:dej#baaletji adv ;
+dejbeeli:dej#beeli adv ;
+dejpeli:dejpeli adv ;
+daejtie:daejtie adv ;
+dellie+Err/Orth:dell adv ;
+dellie+Err/Orth:delle adv ;
+dellie:dellie adv ;
+dennie% mieresne+Use/MT:dennie% mieresne adv ;
+desnegh:desnegh adv ;
+desnie:desnie adv ;
+destie:destie adv ;
+devverde:devverde adv ;
+die:die adv ;
+diekie:diekie adv ;
+diekie+Err/Orth:dieke adv ;
+dillie:dillie adv ;
+dissiegåessie:dissiegåessie adv ;
+ditneldahkesne adv ;
+dle:dle adv ;
+dlie:dlie adv ;
+doegk% daagk:doegk% daagk adv ;
+doegka:doegka adv ;
+doegkoe+Err/Orth:duagka adv ;
+doegkoe:doegkoe adv ;
+doehpeldahkesne adv ;
+doejka:doejka adv ;
+doejkoe:doejkoe adv ;
+doeka:doeka adv ;
+doekoe:doekoe adv ;
+doerkeldahkesne adv ;
+dogh% daagkh:dogh% daagkh adv ;
+dogka:dogka adv ;
+dogken adv ;
+dogken% daagken:dogken% daagken adv ;
+dogkoe:dogkoe adv ;
+dohk-diekie:dohk-diekie adv ;
+dohka:dohka adv ;
+dohkh:dohkh adv ;
+dohkoe:dohkoe adv ;
+dojka:dojka adv ;
+dojkoe:dojkoe adv ;
+domhpesisnie:domhpesisnie adv ;
+dongkeldahkesne adv ;
+dorjeldahkesne adv ;
+dossjes:dossjes adv ;
+dovlen+Err/Orth:dojen adv ;
+dovlen:dovlen adv ;
+dovne:dovne adv ;
+dubpebe:dubpebe adv-comp ; 
+dubpede:dubpede adv ;
+dubpelde adv ;
+dubpelen:dubpelen adv ;
+dubpeli:dubpeli adv ;
+dubpemes:dubpemes adv-sup ;
+dubpene:dubpene adv ;
+dubpiebasse:dubpiebasse adv-comp ;
+dubpiebisnie:dubpiebisnie adv ;
+dubpiebistie:dubpiebistie adv ;
+dubpiegabpa:dubpiegabpa adv ;
+dubpiegammes:dubpiegammes adv-sup ;
+dubpiegommes:dubpiegommes adv-sup ;
+dubpiegåbpoe:dubpiegåbpoe adv-comp ;
+dubpielasse:dubpielasse adv ;
+dubpielisnie:dubpielisnie adv ;
+dubpielistie:dubpielistie adv ;
+dubpielommes:dubpielommes adv-sup ;
+dubpielåbpoe:dubpielåbpoe adv-comp ;
+duebpebe:duebpebe adv-comp ;
+duebpede:duebpede adv ;
+duebpelde adv ;
+duebpelen:duebpelen adv ;
+duebpeli:duebpeli adv ;
+duebpemes:duebpemes adv-sup ; !
+duebpene:duebpene adv ;
+duebpiebasse:duebpiebasse adv-comp ;
+duebpiebisnie:duebpiebisnie adv ;
+duebpiebistie:duebpiebistie adv ;
+duebpiegabpa:duebpiegabpa adv ;
+duebpiegammes:duebpiegammes adv-sup ;
+duebpiegommes:duebpiegommes adv-sup ;
+duebpiegåbpoe:duebpiegåbpoe adv-comp ;
+duebpielasse:duebpielasse adv ;
+duebpielisnie:duebpielisnie adv ;
+duebpielistie:duebpielistie adv ;
+duebpielommes:duebpielommes adv-sup ;
+duebpielåbpoe:duebpielåbpoe adv-comp ;
+duekelen:duekelen adv ;
+duekeli:duekeli adv ;
+duelie:duelie adv ;
+duesnie:duesnie adv ;
+dujmieslaakan:dujmies laakanlex ;
+dujmiesligke:dujmies ligkelex ;
+dusnie:dusnie adv ;
+duvlie:duvlie adv ;
+duvvede adv ;
+duvvelde adv ;
+duvvelen:duvvelen adv ;
+duvvene:duvvene adv ;
+duvviebasse adv ;
+duvviebogke adv ;
+duvviegommes adv-sup ;
+duvviegåbpoe adv-comp ;
+duvvielasse adv ;
+duvvielisnie adv ;
+duvvielistie adv ;
+dyjka:dyjka adv ;
+dåajmetjelaakan:dåajmetje laakanlex ;
+dåajmijeslaakan:dåajmijes laakanlex ;
+dåajmijslaakan:dåajmijs laakanlex ;
+dåajngan adv ;
+dålhtjoen:dålhtjoen adv ;
+dåvvese:dåvvese adv ;
+dååjhteldahkesne adv ;
+dæjman+Err/Orth:daejman adv ;
+dæjman:dæjman adv ;
+dæjmatjasse:dæjmatjasse adv ;
+dæjmatjistie:dæjmatjistie adv ;
+dæjmetje+Err/Orth:daejmetje adv ;
+dæjmetje:dæjmetje adv ;
+dæljoen:dæljoen adv ;
+dællegh:dællegh adv ;
+bïjrejarkan:bïjrejarkan adv ;
+
+dïmperdahkesne:dïmperdahkesne adv ;
+eadtjohke:eadtjohke adv ; ! dah båeries almetjh eadtjohke soptsestidh.
+eadtjohkelaakan:eadtjohke laakanlex ;
+eanghkoen:eanghkoen adv ;
+eanghkome adv ;
+eanghkomhte adv ;
+eanna adv ;
+eannah adv ;
+eantan adv ;
+easkah:easkah adv ;
+easkan:easkan adv ;
+easketje adv ;
+ebrien:ebrien adv ; ! i dette regnet
+edtiedahkeste adv ;
+eejnegen:eejnegen adv ;
+eelleme adv ;
+eenghkomhte adv ;
+eenhtsi:eenhtsi adv ;
+eenjsi adv ;
+eenselaakan:eense laakanlex ;
+eensigommes:eensigommes adv-sup ;
+eensigåbpoe:eensigåbpoe adv-comp ;
+eensilaakan:eensi laakanlex ;
+eeptji adv ;
+eeptseeremes adv-sup ; ! "gosse vaanesovveme, dellie hov eepts-eeremes dejtie beapmojde sæjhta"
+eeremasth adv ;
+eeremes:eeremes adv-sup ;
+eevre+Err/Orth:uvre adv ;
+eevre:eevre adv ;
+ektede adv ;
+ektede+Err/Orth:eektede adv ;
+ektelen:ektelen adv ;
+ekteli:ekteli adv ;
+ektesevyöki:ektese#vyöki adv ;
+ektesne:ektesne adv ;
+ektide:ektide adv ;
+ektiegaajhke  adv ;
+ektielisnie:ektielisnie adv ;
+ektielistie:ektielistie adv ;
+ektine:ektine adv ;
+ellieslaakan:ellies laakanlex ;
+ennje:ennje adv ;
+evtebe:evtebe adv-comp ; 
+evtemost adv ;
+evtiebasse adv ;
+evtiebisnie adv ;
+faagka:faagka adv ;
+faagkan:faagkan adv ;
+faahketje+Err/Orth:fahketje adv ;
+faahketje:faahketje adv ;
+faahketji:faahketji adv ;
+faelhkesne adv ;
+faellie:faellie adv ;
+fagkan:fagkan adv ;
+fahka:fahka adv ;
+feagan adv ;
+fearan adv ;
+feare:feare adv ;
+fearhne adv ;
+feejjen adv ;
+feejjen+Err/Orth:fejjen adv ;
+feejjene:feejjene adv ;
+feer adv ; ! er usikker på hvilke av disse tre jeg skal subbe, fer, feer eller feerh
+feerh adv ; !
+feertege adv ;
+feerti adv ;
+feil adv ;
+felhtie adv ;
+fer adv ; !fer jïjnje
+fierhtien adv ;
+fraamme:fraamme adv ; ! mt
+fraksoehlaakan:fraksoeh laakanlex ;
+fæjhroen:fæjhroen adv ; !
+fïerhne adv ;
+fïerhte:fïerhte adv ;
+fïerhten% asken+Use/MT:fïerhten% asken adv ;
+fïerhten% jaepien+Use/MT:fïerhten% jaepien adv ;
+fööjjen adv ;
+fööjjene adv ;
+gaaalkeldahkesne adv ;
+gaagneslaakan:gaagnes laakanlex ;
+gaahpan:gaahpan adv ;!attr. gaahpoeh
+gaahpede adv ;
+gaahpere:gaahpere adv ;
+gaahpode:gaahpode adv ;
+gaaje:gaaje adv ;
+gaajehlaakan:gaajeh laakanlex ;
+gaajh:gaajh adv ;
+gaajhke:gaajhke adv ;
+gaajhkelaakan:gaajhke laakanlex ;
+gaarmegisnie:gaarmegisnie adv ;
+gaarngode:gaarngode adv ;
+gaarnjede  adv ;
+gaarrede:gaarrede adv ;
+gaarrode:gaarrode adv ;
+gaartesne:gaartesne adv ;
+gaarvestahkesne:gaarvestahkesne adv ;
+gaasnjede adv ;
+gaasnjoen:gaasnjoen adv ; !"skeiv, d.eks om sko- vindskeiv."
+gaatesjen:gaatesjen adv ; !XXX from dict, check!MLK:OK!
+gaavnjoerokte adv ;
+gadtjetrehpesne adv ;
+gaedtiebealam:gaedtie#bealam adv ;
+gaedtiegabpa adv-comp ; 
+gaedtiegammes adv-comp ;
+gaedtiegommes adv-comp ;
+gaedtiegåbpoe adv-comp ;
+gaektsi-gaektsi:gaektsi-gaektsi adv ;
+gakngoen:gakngoen adv ;
+galhkh adv ;
+gallede adv ;
+gapmaldahkesne:gapmaldahkesne adv ;
+gapmalistie adv ;
+gapmebïegken adv ;
+gapmede adv ;
+gapmehke:gapmehke adv ;
+gapmelen adv ;
+gaptjeldahkesne adv ;
+gaptjeldihkie:gaptjeldihkie  adv ;
+garhpege:garhpege adv ;
+garrebhlaakan:garrebh laakanlex ;
+gaskah:gaskah adv ;
+gaskem% jeatjah+Use/MT:gaskem% jeatjah adv ;
+gaskem:gaskem adv ;!
+gaskenasjovnaale% daltesisnie+Use/MT:gaskenasjovnaale% daltesisnie adv ;
+gaskeraejesne:gaske#raejesne adv ;
+gaskoeh+Err/Orth:gaskoe adv ;
+gaskoeh:gaskoeh adv ;
+gavnehte adv ;
+geajnoebealesne:geajnoe#bealesne adv ;
+geajnoeraejkien:geajnoe#raejkien adv ;
+geamhpan:geamhpan adv ;
+geangsjan adv ;
+geasjege:geasjege adv ; !om sommeren
+geatskamisnie:geatskamisnie adv ; !LA Saaran gærja
+geehpeslaakan:geehpes laakanlex ;
+geehpesligke:geehpes ligkelex ;
+geekteleejne+Err/Orth:geekte-leejne adv ;
+geekteleejne:geekte#leejne adv ;
+geektsh:geektsh adv ;
+geelkeldahkesne adv ;
+geerjene:geerjene adv ;
+geeruvisnie:geeruvisnie adv ;
+geervelaakan:geerve laakanlex ;
+geerveligke:geerve ligkelex ;
+geesjelelaakan:geesjele laakanlex ;
+geevedahkesne:geevedahkesne adv ;
+gelksh:gelksh adv ;
+gellielaakan:gellie laakanlex ;
+gellielaaketje:gellie#laaketje adv ;
+gellieliktie adv ;
+gellien% aejkien+Use/MT:gellien% aejkien adv ; !dávjá = daamtaj
+gelliengiertien:gellien#giertien adv ;
+gellienlaakan:gellien laakanlex ;
+genhtielimmesne:genhtielimmesne adv ;
+genhtsemen:genhtsemen adv ;
+genhtsemi:genhtsemi adv ;
+genhtsiemisnie:genhtsiemisnie adv ;
+genhtsiemistie:genhtsiemistie adv ;
+gidtjh adv ;
+giedtjh:giedtjh adv ;
+giektjiebaase adv ;
+giektjiebisnie:giektjiebisnie adv ;
+giektjiebistie adv ;
+gierkienuelieh:gierkie#nuelieh adv ;
+giesege:giesege adv ;
+giesegi:giesegi adv ;
+giesien:giesien adv ;
+gietskene adv ;
+gietskie:gietskie adv ;
+gietskiebasse:gietskiebasse adv-comp ;
+gietskiebisnie:gietskiebisnie adv ;
+gietskiebistie:gietskiebistie adv ;
+gietskiemisnie adv ;
+girvene:girvene adv ;! er som predikativ i adj-fila, men tror dette egentlig er adverb
+goekedahken adv ;
+goepeldahkesne adv ;
+goes adv ;
+gogka:gogka adv ;
+gogkoe:gogkoe adv-interr-rel ; ! váccán dagkoe, gogkoe don vázzet
+gojkoe+Err/Orth:gajkoe adv ;
+gojkoe:gojkoe adv ;
+goh adv ; !manne goh haajpenem dan sïjse
+golh adv ; !hører du,jo,ja,nok, vel 
+golmesi-golmesi+MWE+Use/NG:golmesi% golmesi adv ;
+golmesi-golmesi:golmesi-golmesi adv ;
+golmi-golmi+MWE+Use/NG:golmi% golmi adv ;
+golmi-golmi:golmi-golmi adv ;
+gomtehke adv ;
+gomtehkeligke:gomtehke ligkelex ;
+gomtehkem:gomtehkem adv ;
+goske:goske adv-interr-rel ; ! mon boadán, gosse don boadát
+goss adv ;
+goss%-akt:goss%-akt adv ;
+gosse+Err/Orth:goss adv-interr-rel ;
+gosse:gosse adv-interr-rel ; ! mon boadán, gosse don boadát
+gossege:gossege adv ;
+gossegh:gossegh adv ;
+govhti-govhti:govhti-govhti adv ;
+govledæjjesne adv ;
+govleræjjesne:govleræjjesne adv ;
+govloes:govloes adv ;
+guakadahken adv ;
+guanhtede+Err/Orth:guanhtere adv ;!
+guanhtede:guanhtede adv ;
+guarjan:guarjan adv ;
+gubpede:gubpede adv-interr-rel ;
+gubpelde:gubpelde adv ;
+gubpene:gubpene adv-interr-rel ;
+gudtjien adv ;
+gudtjien-gudtjien adv ;
+guektelen:guektelen adv ;
+guektelisnie:guektelisnie adv ;
+guektieleejne+Err/Orth:guektie-leejne adv ;
+guektieleejne:guektie#leejne adv ;
+guektielisnie:guektielisnie adv ;
+guektielistie:guektielistie adv ;
+guektiendaajesne:guektien#daajesne adv ;
+guektiengiertien:guektien#giertien adv ;
+guelmiengiertien:guelmien#giertien adv ;
+guenhtede:guenhtede adv ;
+guenhtie:guenhtie adv ;
+guenhtieh adv ;
+guenhtieh% gællan:guenhtieh% gællan adv ;
+guhkebem:guhkebem adv ;
+guhkede:guhkede adv ;
+guhkelde:guhkelde adv ;
+guhkemosth:guhkemosth adv ;
+guhkene:guhkene adv ;
+guhkere% gietjeste:guhkere% gietjeste adv ;
+guhkere:guhkere adv ;
+guhkie:guhkie adv ;
+guhkiebasse:guhkiebasse adv-comp ;
+guhkiebistie:guhkiebistie adv ;
+guhkiem:guhkiem adv ; !XXX
+gujhth adv ;
+gujmie adv ; ! mealtan
+gukt:gukt adv-interr-rel ;
+guktema adv ;
+guktie:guktie adv-interr-rel ; !slik som/at
+guktie% akt+MWE:guktie% akt adv ;
+gulmh:gulmh adv ;
+gumhtie:gumhtie adv ;
+gus:gus adv ;
+gusn:gusn adv-interr-rel ;
+gusnie:gusnie adv-interr-rel ;
+gusnie+Err/Orth:gusne adv-interr-rel ;
+gussene adv ;
+gussene-gussene adv ;
+gussie:gussie adv ;
+gustie:gustie adv-interr-rel ;
+guvhth:guvhth adv ;
+gylleldihkie:gylleldihkie  adv ;
+gåabpah:gåabpah adv-interr-rel ;
+gåabpalistie:gåabpalistie adv ;
+gåabpasuhkesh adv ;
+gåabpasuhkh adv ;
+gåabpelen:gåabpelen adv ;
+gåabph:gåabph adv-interr-rel ; !! <== why no case?
+gåabpoeh:gåabpoeh adv-interr-rel ;
+gåabran adv ;
+gåajede adv ;
+gåalmadisth adv ;
+gåamhpeden adv ;
+gåangkan adv ;
+gåaph:gåaph adv-interr-rel ;
+gåarhmahligke:gåarhmah ligkelex ;
+gåarhmalistie adv ;
+gåarhman:gåarhman adv ;
+gåarhmede:gåarhmede adv ;
+gåarhmeden:gåarhmeden adv ;
+gåarhmelen adv ;
+gåarhmere:gåarhmere adv ;
+gåarhmoehlaakan:gåarhmoeh laakanlex ;
+gåarhmoelistie adv ;
+gåarhmolen adv ;
+gåarvoen:gåarvoen adv ;
+gåatan:gåatan adv ; !ruoktot
+gåavastahken:gåavastahken adv ;
+gåavede:gåavede adv ;
+gåavhran:gåavhran adv ;
+gåavode:gåavode adv ;
+gåavtan adv ;
+gåavvan:gåavvan adv ;
+gåavvede adv ;
+gåavvoen:gåavvoen adv ;
+gåebpelen:gåebpelen adv ;
+gåebpieliste:gåebpieliste adv ;
+gåebpielistie:gåebpielistie adv ;
+gåelmien adv ; ! i halvmørkret
+gåessie:gåessie adv ;
+gåetede:gåetede adv ;
+gåetere:gåetere adv ;
+gåetide:gåetide adv ;
+gåhkaldahkesne adv ;
+gåhkese:gåhkese adv ;
+gålhpoen:gålhpoen adv ;
+gåpmaldahkesne adv ;
+gåpman adv ;
+gåpmode:gåpmode adv ;
+gåpmoelistie adv ;
+gåpmohke:gåpmohke adv ;
+gåpmolen:gåpmolen adv ;
+gårraldihkie:gårraldihkie  adv ;
+gåvnehte adv ;
+gååde adv ;
+gåårelaakan:gååre laakanlex ;
+gååreldahkesne adv ;
+gåårveldihkie+CmpN/SgN+CmpN/SgG+CmpN/PlG:gåårveldihkie  adv ;
+gååvnesjh:gååvnesjh adv ;
+gæhtsan:gæhtsan adv ;
+gæjkadahken adv ;
+gæjman:gæjman adv ;
+gæjmoen:gæjmoen adv ;
+gæjroen:gæjroen adv ;
+gælhkan adv ;
+gællan:gællan adv ;
+gængsjan:gængsjan adv ;
+gærhkoelaaketje adv ;
+gïdth adv ;
+gïebreldahkesne adv ;
+gïemhpeslaakan:gïemhpes laakanlex ;
+gïemhpesligke:gïemhpes ligkelex ;
+gïengelisnie:gïengelisnie adv ;
+gïetegaskesne:gïete#gaskesne adv ;
+gïetskesisnie:gïetskesisnie adv ;
+gïetskesmieresne:gïetskes#mieresne adv ;
+gïevege:gïevege adv ;
+gïjdege:gïjdege adv ;
+gïjredaelvege:gïjre#daelvege adv ;
+gïjrege:gïjrege adv ;
+gïjregeasjege:gïjre#geasjege adv ;
+gïjregiesege:gïjre#giesege adv ;
+gïjreldahkesne adv ;
+gïjreldihkie:gïjreldihkie  adv ;
+gööktesi-gööktesi:gööktesi-gööktesi adv ;
+göökth:göökth adv ;
+göökti-göökti+MWE+Use/NG:göökti% göökti adv ;
+göökti-göökti:göökti-göökti adv ;
+göölege:göölege adv ;
+göölehke:göölehke adv ;
+haaksoehlaakan:haaksoeh laakanlex ;
+haallode:haallode adv ;
+haaltjan:haaltjan adv ;
+haarran:haarran adv ;
+haavhkan:haavhkan adv ;! står som predikativ til haavhkes, haavhkoeh, men er egentlig adverb, rydd opp i dette leksikonet
+habjoehlaakan:habjoeh laakanlex ;
+habjoen adv ;
+hagloehlaakan:hagloeh laakanlex ;
+halhta% tjalhta+Use/MT:halhta% tjalhta adv ;
+halke:halke adv ;
+hamhpan adv ; ! hamhpode - hamhpas
+hamhpode:hamhpode adv ;
+hamhpoehlaakan:hamhpoeh laakanlex ;
+hampasligke:hampas ligkelex ;
+hapte:hapte adv ;
+harhtsan adv ;
+hassehke:hassehke adv ;
+havjan adv ;
+havnan adv ;
+hearran adv ; !hierrie -hearran - heerrehke - heerredidh
+hearvenlaakan:hearven laakanlex ;
+heaven:heaven adv ;
+heelpe:heelpe adv ;
+heerven:heerven adv ;
+heevenlaakan:heeven laakanlex ;
+hijven adv ;
+hijvenlaakan:hijven laakanlex ;
+hijvenligke:hijven ligkelex ;
+hujht adv ;
+håakan:håakan adv ;
+håakene:håakene adv ; ! både adverb og predikativ  - pl.ine
+håavkoen:håavkoen adv ;
+hågkh adv ;
+håjnan:håjnan adv ;
+håjnesne:håjnesne adv ;
+hårvoen:hårvoen adv ;
+håvhnjede  adv ;
+håvhnjode:håvhnjode adv ;
+håvjan adv ;
+hååken:hååken adv ; ! både adverb og står i predikativ posissjon
+hååkene:hååkene adv ;! både adverb og predikativ - pl-ine
+hïehkede adv ;
+hïehkesth adv ;
+hïehketji adv ;
+hïehpede adv ;
+hïehpedi adv ;
+hïehpetji adv ;
+hïerven adv ;
+hïervenlaakan:hïerven laakanlex ;
+hïeven adv ;
+iehkeden+Err/Orth:ihkeden adv ;
+iehkeden:iehkeden adv ;
+iehkiedasse:iehkiedasse adv ;
+iehkiedistie:iehkiedistie adv ;
+iemie-laaketje adv ;
+iemielaakan:iemie laakanlex ;
+ieskien:ieskien adv ;
+ihkebe% gogkoe:ihkebe% gogkoe adv ;
+ijtjeligke:ijtje ligkelex ;
+ikte-mearan:ikte-mearan adv ; !XXX from dict, check!
+ikte:ikte adv ; !XXX from dict, check!
+iktegisth+Err/Orth:iktsth adv ;
+iktegisth:iktegisth adv ;
+iktemearan:ikte#mearan adv ; !XXX from dict, check!
+iktes:iktes adv ;
+iktesth:iktesth adv ;
+ikth% vielie+Use/MT:ikth% vielie adv ;
+ikth:ikth adv ;
+uktsh:uktsh adv ;! https://satni.uit.no/termwiki/index.php?title=Luonddudieđa_ja_matematihkka:uktsh
+vijhth:vijhth adv ; ! https://satni.uit.no/termwiki/index.php?title=Luonddudieđa_ja_matematihkka:vijhth
+
+illedihkie:illedihkie  adv ;
+illeldihkie:illeldihkie  adv ;
+inhtse:inhtse adv ;
+inhtselaakan:inhtse laakanlex ;
+inhtsie:inhtsie adv ;
+ipmieslaakan:ipmies laakanlex ;
+iskan:iskan adv ;
+isketje adv ;
+isveligie:isveligie adv ;
+isveligke:isveligke adv ;
+isveligkie:isveligkie adv ;
+isvelihke:isvelihke adv ;
+jaabnan:jaabnan adv ; !jevnlig, stadig
+jaabnelaaketje adv ;
+jabjoen:jabjoen adv ;
+jahka:jahka adv ;
+jahtjeldahkesne:jahtjeldahkesne adv ;
+jahtsaldihkie:jahtsaldihkie  adv ;
+jaksoemieresne:jaksoe#mieresne adv ;
+jaksoesmïeresne:jaksoesmïeresne adv ;
+jalladahken:jalladahken adv ;
+jallan:jallan adv ;
+jallese:jallese adv ;
+jarkan:jarkan adv ;
+bïjre% jarkan+MWE:bïjre% jarkan adv ;
+jarki adv ;
+jeajesne:jeajesne adv ;
+jeajine adv ;
+jeatjahlaakan:jeatjah laakanlex ;
+jeatjahlaaketje:jeatjah#laaketje adv ;
+jeatjahleejne+Err/Orth:jeatjah-leejne adv ;
+jeatjahleejne:jeatjah#leejne adv ;
+jeatjahligke:jeatjah ligkelex ;
+jeatjahliktie:jeatjah#liktie adv ;
+jeatjhlaakan:jeatjh laakanlex ;
+jebpelde adv ;
+jebpene adv ;
+jeejene adv ;
+jeejesne:jeejesne adv ;
+jeenemasth adv ;
+jeenemes:jeenemes adv-sup ;
+jeenjemasth adv ;
+jeenjemes adv-sup ;
+jemhtie adv ;
+jiddeden adv ;
+jielijelaakan:jielije laakanlex ;
+jienebh adv-comp ; ! mt = sme eanet
+jiesken:jiesken adv ;
+jijne:jijne adv ;
+jillede:jillede adv ;
+jillege:jillege adv ;
+jillelde adv ;
+jillelen:jillelen adv ;
+jilleli:jilleli adv ;
+jillene:jillene adv ;
+jilliebaase:jilliebaase adv ; ! lenger mot vest
+jilliebasse:jilliebasse adv-comp ;
+jilliebisnie:jilliebisnie adv ; ! (litt) lenger i vest
+jilliebistie:jilliebistie adv ; ! (litt) lenger vest fra
+jilliegabpa:jilliegabpa adv ;
+jilliegåbpoe:jilliegåbpoe adv-comp ;
+jillielisnie:jillielisnie adv ; !lenger i vest
+jillielistie:jillielistie adv ; ! mer vestfra, fra vestafor
+jirredeaereden:jirrede#aereden adv ;
+jirredeaeriedasse:jirrede#aeriedasse adv ;
+jirredeaeriedistie:jirrede#aeriedistie adv ;
+jirredebeajjan:jirrede#beajjan adv ;
+jirredebiejjeste:jirrede#biejjeste adv ;
+jirredebiejjien:jirrede#biejjien adv ;
+jirreden:jirreden adv ;
+jirriedasse:jirriedasse adv ;
+jirriedistie:jirriedistie adv ;
+jissehtslaakan:jissehts laakanlex ;
+jissehtsligke:jissehts ligkelex ;
+joe:joe adv ;
+joekehthlaakan:joekehth laakanlex ;
+joekehtslaakan:joekehts laakanlex ;
+joekoen:joekoen adv ;
+joekoenlaakan:joekoen laakanlex;
+joem:joem adv ;
+joevege:joevege adv ;
+johkebealam adv ;
+jortetji adv ;
+jov:jov adv ;
+jovnesåhkoemadti adv ;
+jovtehken adv ;
+juehkelde adv ;
+juelkijste+Err/Orth:julkijste adv ;
+juelkijste:juelkijste adv ;
+jueriedisnie:jueriedisnie adv ;
+jyseldihkie:jyseldihkie  adv ;
+jåampoen:jåampoen adv ;
+jåasan adv ;
+jåasoen:jåasoen adv ;
+jånhtsoen adv ;
+jååktan+Err/Orth:jåktan adv ;
+jååktan:jååktan adv ;
+jååktatjasse:jååktatjasse adv ;
+jååktatjistie:jååktatjistie adv ;
+jååkten:jååkten adv ;
+jååktetje:jååktetje adv ;
+jååktetjeiehkeden+Err/Orth:jåktjh#iehkeden adv ; ! LA Saaran gærja
+jååktetjeiehkeden:jååktetje#iehkeden adv ;
+jååvkelde adv ;
+jïjjege+Err/Orth:jïjjegen adv ;
+jïjjege:jïjjege adv ;
+jïjnje:jïjnje adv ; !
+jïjtje% vientien:jïjtje% vientien adv ;
+jïjtjemuhteste adv ;
+jïjtjevieltien:jïjtje#vieltien adv ;
+jïlle% jilliebasse+Use/MT:jïlle% jilliebasse adv ;
+kaanne+Err/Orth:kanne adv ;
+kaanne:kaanne adv ;
+kaanne:kaanna adv ;
+klaahkannahtegen:klaahkan#nahtegen adv ;
+klabpahkistie adv ;
+klavjan adv ;
+klintje adv ;
+klovnjehtahkesne:klovnjehtahkesne adv ;
+klovredahkesne:klovredahkesne adv ;
+klyjhpeldihkie:klyjhpeldihkie  adv ;
+klyvnjehtahkesne:klyvnjehtahkesne adv ;
+klåabtan adv ;
+klåadtahlaakan:klåadtah laakanlex ;
+klåadtan adv ;
+klåadtoehlaakan:klåadtoeh laakanlex ;
+klåahkan adv ;
+klåahkede adv ;
+klåanghkan adv ;
+klåbtjan adv ;
+klåmtjan adv ;
+klåvhnjan adv ;
+klåvhran adv ;
+klååmese adv ;
+klæjhpan:klæjhpan adv ;
+klæmhpoen:klæmhpoen adv ;
+kraamhkoen:kraamhkoen adv ; !
+krakngede  adv ;
+krakngoen:krakngoen adv ; !LA iflg. LMM
+kranhtjode:kranhtjode adv ;
+kreanghkan adv ;
+kroessehtahken adv ;
+kråabjan adv ;
+kråavhkan adv ;
+kråavhkede adv ;
+kråavhkode:kråavhkode adv ;
+kråavhtjahligke:kråavhtjah ligkelex ;
+kråavhtjoehlaakan:kråavhtjoeh laakanlex ;
+kråavhtjoen:kråavhtjoen adv  ; !
+kråavvede:kråavvede adv ;
+kråavvoehrudtjen:kråavvoeh#rudtjen adv ;
+kråavvoen:kråavvoen adv ; !
+kråhtjoen:kråhtjoen adv ;
+kråkngode:kråkngode adv ;
+kråkngoen:kråkngoen adv ;
+krååssukte adv ;
+krænhtjode:krænhtjode adv ;
+kvalitatijvelaakan:kvalitatijve laakanlex ;
+laabroen:laabroen adv; ! ! laabra/laabroe= substantiv
+laagne adv ;
+laakan: laakanword ; ! need to able second word in compounds
+laaketje:laaketje adv ; ! need to able second word in compounds
+laakte adv ; !! laakte bïejedh - legge for tett sammen
+laangke adv ;
+laedtielaakan:laedtie laakanlex ;
+lahkede adv ;
+lajtode:lajtode adv ;
+larhvan adv ;
+lavladahken:lavladahken adv ; ! østavind
+lavletje adv ;
+leagroen:leagroen adv ;
+leajpeldahkesne:leajpeldahkesne adv ;
+ligkie:ligkie adv ; ! need to able second word in compounds
+lijhkan:lijhkan adv ;
+loemehtahkese adv ;
+lokse adv ;
+loksese:loksese adv ;
+luhkh:luhkh adv ;
+luhki-luhki:luhki-luhki adv ;
+lulhtie:lulhtie adv ;
+lulnie:lulnie adv ; !i øst
+lulvnie:lulvnie adv ;
+luvlebaase:luvlebaase adv ;
+luvlede:luvlede adv ;
+luvlege:luvlege adv ;
+luvlelde:luvlelde adv ;
+luvlelen:luvlelen adv ; ! østafor (sg)
+luvleli:luvleli adv ; ! østafor (flere steder pl.)
+luvlene:luvlene adv ;
+luvliebaase:luvliebaase adv ; !lenger østerover
+luvliebasse:luvliebasse adv-comp ;
+luvliebisnie:luvliebisnie adv ; !lenger øst
+luvliebistie:luvliebistie adv ; !lenger østfra
+luvliebïegken:luvlie#bïegken adv ; ! i denne østavind
+luvliegisnie:luvliegisnie adv ;
+luvliegåbpoe:luvliegåbpoe adv-comp ;
+luvlielisnie:luvlielisnie adv ; !XXX from dict, check!
+luvlielistie:luvlielistie adv ;
+lyjhkedelaakan:lyjhkede laakanlex ;
+lyjhkelaakan:lyjhke laakanlex ;
+lyövlehke adv ;
+lyövlehkelaakan:lyövlehke laakanlex ;
+lyövleslaakan:lyövles laakanlex ;
+lyövlesligke:lyövles ligkelex ;
+låamedahkese adv ;
+låapode:låapode adv ;
+låaptjede adv ;
+låaptjode:låaptjode adv ;
+långkh:långkh adv ; !LA Saaran gærja
+låssas:låssas adv ;
+låvladahken:låvladahken adv ;
+låvlese:låvlese adv ;
+låångke adv ;
+låångkegh adv ;
+læjhkan:læjhkan adv ;
+læjnoes:læjnoes adv ; !LA Saaran gærja
+læjnosth:læjnosth adv ;
+lïhke adv ;
+lïhkebasse:lïhkebasse adv-comp ;
+lïhkebe:lïhkebe adv-comp ;
+lïhkemes:lïhkemes adv-sup ;
+lïjhkan:lïjhkan adv ;
+lïjhke:lïjhke adv ;
+lööfegisnie adv ;
+maaje:maaje adv ;
+maajetjh:maajetjh adv ;
+madtan adv ;
+madtanlaakan:madtan laakanlex ;
+madte:madte adv ;
+madtegelaakan:madtege laakanlex ;
+madtjede adv ;
+mahte+Err/Orth:máhte adv ;
+mahte+Err/Orth:maahte adv ;
+mahte:mahte adv ;
+man+Err/Orth:maan adv ;
+man:man adv ;
+mannemes adv-sup ;
+marngoen:marngoen adv ;
+marvan adv ;
+meadan:meadan adv ;
+mealtan:mealtan adv ;
+mealtjan adv ;
+meatan:meatan adv ;
+meatesth:meatesth adv ;
+meatesth+Use/NG:mietesth adv ; !variant MM
+medtie:medtie adv ;
+mejjesne:mejjesne adv ;
+miehtjelde:miehtjelde adv ;
+miehtjelen:miehtjelen adv ;
+miehtjene adv ;
+miehtjiebasse:miehtjiebasse adv-comp ;
+miehtjielasse:miehtjielasse adv ;
+miehtjielisnie:miehtjielisnie adv ;
+miehtjielistie:miehtjielistie adv ;
+mietelen:mietelen adv ;
+mieteli:mieteli adv ;
+mietiebiejjiem adv ;
+mietiebiejjien adv ;
+mietiejohkem adv ;
+mietielisnie:mietielisnie adv ;
+mietielistie:mietielistie adv ;
+mihkh adv ;
+mihte:mihte adv ;
+mihti:mihti adv ;
+minngebe:minngebe adv-comp ;  !XXX from dict, check!
+minngede:minngede adv ;
+minngede+Err/Orth:mænngide adv ;
+minngege adv ;
+minngelde:minngelde adv ;
+minngelen:minngelen adv ;
+minngeli:minngeli adv ;
+minngemes:minngemes adv-sup ; 
+minngemosth:minngemosth adv ;
+minngesne:minngesne adv ;
+minngiebasan adv ;
+minngiebasse:minngiebasse adv-comp ;
+minngiebisnie:minngiebisnie adv ;
+minngiebistie:minngiebistie adv ;
+minngiegasse adv ;
+minngiegietjesne:minngiegietjesne adv ;
+minngiegisnie adv ;
+minngiegistie adv ;
+minngielisnie:minngielisnie adv ;
+minngielisth adv ;
+minngielistie:minngielistie adv ;
+minngiemadtjesne:minngiemadtjesne adv ;
+minngiemadtjine adv ;
+miste:miste adv ;!er dette adv?
+mojhteleslaakan:mojhteles laakanlex ;
+mojjesisnie:mojjesisnie adv ;
+mollehtahken adv ;
+mollenahken adv ;
+molsehthlaakan:molsehth laakanlex ;
+mubpelen:mubpelen adv ;
+mubph adv ;
+muerhkieslaakan:muerhkies laakanlex ;
+mujjels:mujjels adv ;
+murrie:murrie adv ; !XXX from dict, check!
+muvhten% aejkien+Use/MT:muvhten% aejkien adv ; !
+muvhtene:muvhtene adv ;
+muvhtine:muvhtine adv ;
+måadtieleejne+Err/Orth:måadtie-leejne adv ;
+måadtieleejne:måadtie#leejne adv ;
+måalaldihkie:måalaldihkie  adv ;
+måalhvan adv ;
+måbpadist adv ;
+mådtan adv ;
+mådtanlaakan:mådtan laakanlex ;
+mådtanligke:mådtan ligkelex ;
+mådtas:mådtas adv ;
+mådtegelaakan:mådtege laakanlex ;
+mådtsoderaagkode adv ;! I hummel og dommel! PÅ vranga og skeiva!
+mådtsoen:mådtsoen adv ;
+måedtielaakan:måedtie laakanlex ;
+måedtieleejne+Err/Orth:måedtie-leejne adv ;
+måedtieleejne:måedtie#leejne adv ;
+måedtiesåårts:måedtie#såårts adv ;
+måeresne:måeresne adv ;
+måevien adv ;
+måhtsode:måhtsode adv ;
+mårhtjoen:mårhtjoen adv ;
+mårvan adv ;
+mænngan+Err/Orth:mænngide adv ;
+mænngan:mænngan adv ;
+mænngeldh:mænngeldh adv ;
+mænngese:mænngese adv ;
+mïektjeldahkesne:mïektjeldahkesne adv ;
+naa+Err/Orth:na adv ;
+naa:naa adv ;
+naaskoen:naaskoen adv ;
+nabtan adv ;
+naemhtemes:naemhtemes adv-sup ;  !XXX from dict, check!
+naemhtie:naemhtie adv ;
+nahkeren:nahkeren adv ;
+nahtegen adv ;
+najvoen:najvoen adv ;
+nallan adv ;
+namhtah:namhtah adv ;
+namhtegh:namhtegh adv ;
+namhtemasse adv ;
+nearran adv ;
+negativjelaakan:negativje laakanlex ;
+nemhtie:nemhtie adv ;
+nieljiegiertien:nieljie#giertien adv ;
+nijjerdihkie:nijjerdihkie  adv ;
+nimhtemes adv-sup ;
+nimhtems adv-sup ;
+nimhtie:nimhtie adv ;
+njaalmeldahkesne adv ;
+njaalmeldh adv ;
+njadtsoen:njadtsoen adv ;
+njaelkieslaakan:njaelkies laakanlex ;
+njaelkiesligke:njaelkies ligkelex ;
+njahkode:njahkode adv ;
+njahpedahkesne:njahpedahkesne adv ;
+njahpedihkie:njahpedihkie  adv ;
+njajhkede:njajhkede adv ;
+njajkan adv ;
+njalpan adv ;
+njamkan:njamkan adv ;
+njarran:njarran adv ;
+njealjadisth adv ;
+njeeljh:njeeljh adv ;
+njieljiengiertien:njieljien#giertien adv ;
+njoektjelen:njoektjelen adv ;
+njåadtsan adv ;
+njåajhkan adv ;
+njåajjan adv ;
+njåajjoen:njåajjoen adv ;
+njåallode:njåallode adv ;
+njåaman adv ;
+njåamkasisnie:njåamkasisnie adv ;
+njåasjlan adv ;
+njåavvan adv ;
+njåavvoen:njåavvoen adv ;
+njåmkan:njåmkan adv ;
+njåvvoen:njåvvoen adv ;
+njæjjan adv ;
+njïeljengiertien:njïeljen#giertien adv ;
+njïelji-njïelji:njïelji-njïelji adv ;
+noerhtebasse:noerhtebasse adv-comp ; ! lenger mot nord
+noerhtede:noerhtede adv ;
+noerhtedhbïegken:noerhtedh#bïegken adv ;
+noerhtedhvearelden:noerhtedh#vearelden adv ;
+noerhtege:noerhtege adv ; ! i nord, i nordlig retning
+noerhtegåbpoe:noerhtegåbpoe adv-comp;
+noerhtelaanti% daltesisnie+Use/MT:noerhtelaanti% daltesisnie adv ;
+noerhtelde:noerhtelde adv ; ! nordfra
+noerhteldhbïegken:noerhteldh#bïegken adv ; ! nordavind
+noerhteldhvearelden:noerhteldh#vearelden adv ; !nordavind
+noerhtelen:noerhtelen adv ; ! prep. og prep. (til) nordafor, nord om
+noerhteli:noerhteli adv ; ! nordafor (flere steder)
+noerhtelisnie:noerhtelisnie adv ; ! lenger i nord
+noerhtelistie:noerhtelistie adv ; ! lengre nordfra, fra nordafor
+noerhtene:noerhtene adv ; ! i nord
+noerhtese:noerhtese adv ; ! mot nord, nordover
+noerhtide:noerhtide adv ;
+nohke:nohke adv ;
+nov:nov adv ;
+novh:novh adv ;
+nualan:nualan adv ;
+nuarvan adv ;
+nubpelen:nubpelen adv ;
+nubph adv ;
+nuekies:nuekies adv ;
+nuelelen adv ;
+nueliem:nueliem adv ; !
+nuemhtemes adv-sup ;
+nuemhtems adv ;
+nuemhtie:nuemhtie adv ;
+nuepiem% vedta+Use/MT:nuepiem% vedta adv ;
+nukte:nukte adv ;
+numhtebe adv ;
+numhtegh:numhtegh adv ;
+numhtemes adv-sup ;
+numhtems adv-sup ;
+numhtie:numhtie adv ;
+nuvtie adv ;
+nåagkan adv ;
+nåajsan adv ;! nåejsie - nåajsan-
+nåake:nåake adv ; ! Saaran gærja
+nåakelaakan:nåake laakanlex ; !XXX from dict, check!
+nåakeligkie:nåake#ligkie adv ;
+nåantan adv ;
+nåarhtjan adv ;
+nåasjlan adv ;
+nåavede adv ;
+nåavedeleejne+Err/Orth:nåavede-leejne adv ;
+nåavedeleejne:nåavede#leejne adv ;
+nåbpadist adv ;
+nåjjoen:nåjjoen adv ;
+nåljode:nåljode adv ;
+nåljoen:nåljoen adv ;
+nållan adv ;
+nåts:nåts adv ;
+nåtsh:nåtsh adv ; ! mt
+nåågkeldihkie:nåågkeldihkie  adv ;
+nååts:nååts adv ;
+nïeljengiertien:nïeljen#giertien adv ;
+nïllebielien:nïlle#bielien adv ;
+nïllebielien:nïlle-bielien adv ; 
+nïlledebielien:nïllede#bielien adv ;
+nïllehbielien:nïlleh#bielien adv ;
+nïmhtegh:nïmhtegh adv ;
+oddehke adv ;
+ohtje:ohtje adv ;  ! Use/MT
+ohtjemasth adv ;
+oktebisnie:oktebisnie adv ;
+okteges:okteges adv ; !XXX from dict, check!
+oktegh:oktegh adv ;
+oktegibse adv ;
+oktegims:oktegims adv ; !XXX from dict, check!
+oktegimse:oktegimse adv ;
+oktegimsh:oktegimsh adv ;
+oktegimsie:oktegimsie adv ;
+oktemierien adv ;
+oktemisnie:oktemisnie adv ;
+olkemes adv-sup ;
+olkene:olkene adv ;
+olkese:olkese adv ;
+onn%’ohtje:onn%’ohtje adv ; !XXX from dict, check!
+orrehke adv ;
+orresistie:orresistie adv ;
+ovmese:ovmese adv ;
+ovmessielaakan:ovmessie laakanlex ;
+ovrehte:ovrehte adv ;
+ovsïemes+Err/Orth:ov-sïemes adv ;
+ovsïemes:ov#sïemes adv ; ! XXX ov- is not a word, so # is really wrong. Prefix boundary?
+ovtetjebeeli:ovtetje#beeli adv ;
+plaahkan:plaahkan adv ;
+plaahkede adv ;
+plaahkode:plaahkode adv ;
+plantan adv ;
+pleahkode:pleahkode adv ;
+pleahkoen:pleahkoen adv ;
+pleahtjede adv ;
+pleahtjode:pleahtjode adv ;
+pleajhkan:pleajhkan adv ;
+pleaksjede adv ;
+pleaksjode:pleaksjode adv ;
+pleasoen:pleasoen adv ; !LK
+plåjnoen:plåjnoen adv ;
+politihkelaakan:politihke laakanlex ;
+praade:praade adv ;
+praadesth adv ;
+praare:praare adv ;
+praaresth adv ;
+praaretje:praaretje adv ;
+praaretji:praaretji adv ;
+praktihkelaakan:praktihke laakanlex ;
+preahtsan adv ;
+preanghkode:preanghkode adv ;
+preanghkoen:preanghkoen adv ; !
+preangkede adv ;
+pruvnieldihkie:pruvnieldihkie  adv ;
+påavran adv ;
+påavroen:påavroen adv ;
+pårjode:pårjode adv ;
+raagkode:raagkode adv ;
+raagkoen:raagkoen adv ;
+raaktan:raaktan adv ;
+raakth:raakth adv ; !XXX from dict, check!
+raastenbijjelen:raasten#bijjelen adv ;
+raatjan adv ;
+raavsoeslaakan:raavsoes laakanlex ;
+radtjoeslaakan:radtjoes laakanlex ;
+radtsoehlaakan:radtsoeh laakanlex ;
+raejeste:raejeste adv ;
+raejkene adv ;
+raetjehke adv ;  ! raatjan, raetjehke pred.	liggende (om tre)
+rantan adv ;
+rarhmoen:rarhmoen adv ;
+reakta:reakta adv ;
+reaktoe:reaktoe adv ;
+reangode:reangode adv ;
+reantsede adv ;
+reenhte adv ;
+rikti:rikti adv ;
+riktilaakan:rikti laakanlex ;
+rinngan:rinngan adv ;
+ritneldihkie adv ;
+rovkijelaakan:rovkije laakanlex ;
+rovnege:rovnege adv ;
+rudtjeste:rudtjeste adv ;! skal denne stå? denne har også en annen betydning enn . "Dühte rudtjeste! Han har vondt i ryggen
+runhtjieldihkie:runhtjieldihkie  adv ;
+ryöktehke:ryöktehke adv ;
+ryöktesth adv ; !LMM
+råadtsan adv ;
+råahtan adv ;
+råajjan adv ;
+råaptan adv ;
+råaptede adv ;
+råaptode:råaptode adv ;
+råaptoen:råaptoen adv ;
+råaptojde adv ;
+råarhvan adv ;
+råarhvoen:råarhvoen adv ;
+råavhnjan adv ;
+råavhtsan adv ;
+råavhtsoen:råavhtsoen adv ; ! , Pred=Substantiv=råavtja,råavtsa
+råffan adv ;
+råhtjoen:råhtjoen adv ;
+rånhtjan adv ;
+råågkehkelaakan:råågkehke laakanlex ;
+rååktehke:rååktehke adv ;
+rærvode:rærvode adv ;
+rærvoen:rærvoen adv ; ! Substantiv = 'rirvie'
+rætnoe:rætnoe adv ;
+rætnoe+Use/NG:retnoe adv ; !Lene: norm?
+rïekte:rïekte adv ;
+rïektes% raadtan+Use/MT:rïektes% raadtan adv ;
+rïekteslaakan+Err/Orth:riekts laakanlex ;
+rïekteslaakan:rïektes laakanlex ;
+rïhpesisnie:rïhpesisnie adv ;
+saadtesisnie adv ;
+saaht adv ;
+saaht% guktemslaakan:saaht% guktems laakanlex ; !MT
+saahtlaakan:saaht laakanlex ;
+saarvehkelaakan:saarvehke laakanlex ; !XXX from dict, check!
+saatnan:saatnan adv ;
+saavrehkelaakan:saavrehke laakanlex ;
+saemielaakan:saemie laakanlex ;
+sagke:sagke adv ;
+sagki:sagki adv ;
+samhkadahken adv ;
+samhtjan:samhtjan adv ;
+samkan:samkan adv ;
+seadtoesåbpoe:seadtoesåbpoe adv-comp ;
+seajka:seajka adv ;
+seajsan adv ;
+seamma% tïjjen+Use/MT:seamma% tïjjen adv ; ! Added by FMT for sme-sma
+seamma+Err/Orth:saemma adv ;
+seamma+Err/Orth:seamme adv ;
+seamma:seamma adv ;
+seammalaakan:seamma laakanlex ;
+seammaleejne+Err/Orth:seamma-leejne adv ;
+seammaleejne:seamma#leejne adv ;
+seammaligke:seamma ligkelex ;
+seamman adv ; ! siemmie (noun) - seammoeh - attributt
+seammaplieresne:seamma#plieresne adv ;
+seammaplïeresne+Err/Orth:seamma-plïeresne adv ;
+seammaplïeresne:seamma#plïeresne adv ;
+seammasïenten:seamma#sïenten adv ;
+seapan adv ;
+searran adv ;
+searrede adv ;
+searrere:searrere adv ;
+searrode:searrode adv ;
+seekere:seekere adv ;
+seenhte:seenhte adv ;
+seente:seente adv ;
+setnies:setnies adv ; !XXX from dict, check!
+sïjse adv ;
+sisnjelde adv ;
+sisnjelen:sisnjelen adv ;
+sisnjeli:sisnjeli adv ;
+sisnjemossese adv ; ! innerst : skåapen sjisjnjiemisnie = innerst i skapet
+sisnjemossesne adv ; ! innerst : skåapen sjisjnjiemisnie = innerst i skapet
+sisnjemosseste adv ;
+sisnjielisnie:sisnjielisnie adv ;
+sisnjielistie:sisnjielistie adv ;
+sjaavede:sjaavede adv ;
+sjaavedh:sjaavedh adv ;
+sjaaven:sjaaven adv ;
+sjalloen adv ;
+sjeavodslaakan:sjeavods laakanlex ;
+sjiehteleslaakan:sjiehteles laakanlex ;
+sjisjnjelde adv ;
+sjisjnjeli:sjisjnjeli adv ;
+sjisjnjielisnie:sjisjnjielisnie adv ;
+sjisjnjielistie:sjisjnjielistie adv ;
+sjisjnjiemasse adv ; ! innerst : skåapen sjisjnjiemisnie = innerst i skapet
+sjisjnjiemisnie  adv ;  ! innerst : skåapen sjisjnjiemisnie = innerst i skapet
+sjisjnjiemistie adv ; ! innerst : skåapen sjisjnjiemistie bööti goegkerden= han kom krabbende fra innerst i skapet
+sjollehke adv ;
+sjåajman adv ; ! sjuejieh attr- adj.fil
+sjïere adv ;
+skaajmesisnie adv ;
+skaanhteste adv ;
+skagloen:skagloen adv ;
+skeabtjan:skeabtjan adv ;
+skeajmede adv ;
+skealhkoen:skealhkoen adv ;
+skeamtjan:skeamtjan adv ;
+skearhpoen:skearhpoen adv ;
+skoenkehtahkesne:skoenkehtahkesne adv ;
+skranghkan adv ;
+skreajnan adv ;
+skråadtjan adv ;
+skråanhkan adv ;
+skråanhkode:skråanhkode adv ;
+skrånhtjan adv ;
+skræjresne:skræjresne adv ;
+skuekierdihkie:skuekierdihkie  adv ;
+skungkehtahkesne:skungkehtahkesne adv ;
+skåalloen:skåalloen adv ;
+skåalvede adv ;
+skåalvode:skåalvode adv ;
+skåalvoen:skåalvoen adv ;
+skågroen:skågroen adv ;
+skålnjoen:skålnjoen adv ;
+skæhtjan adv ;
+skæjhkoen:skæjhkoen adv ;
+skælhtan adv ;
+skælhtede:skælhtede adv ;
+skælhtere:skælhtere adv ;
+skærnjan adv ;
+slaajes:slaajes adv ;
+slaaptjoen:slaaptjoen adv ;
+slaavvoen:slaavvoen adv ; !
+slabpan adv ;
+slabpede adv ;
+slabroen:slabroen adv ; !slabrah-bieljie :nedhengende
+slahkode:slahkode adv ;
+slahtjan:slahtjan adv ;
+slahtjan+Err/Orth:slaahtjan adv ;
+slajvoen:slajvoen adv ; !
+slapman adv ;
+slassoehlaakan:slassoeh laakanlex ;
+slassoehligke:slassoeh ligkelex ;
+sleabradahken adv ;
+sleagran:sleagran adv ;! noun:sliegrie, attr:sleagroeh
+sleanjode:sleanjode adv ;
+sleavkan adv ;
+sleavnede adv ;
+sleavnoen:sleavnoen adv ; ! !slakk
+sleavvan:sleavvan adv ;
+sleehpeldihkie:sleehpeldihkie  adv ;
+slåahpode:slåahpode adv ;
+slåahtjan adv ;
+slåaptjan adv ;
+slåaptjede adv ;
+slåaptjode:slåaptjode adv ;
+slåaptjoen:slåaptjoen adv ;
+slåvhtjode:slåvhtjode adv ;
+slæhkede adv ;
+slæjjan:slæjjan adv ;
+smagran adv ;
+smarhtjan adv ;
+smealojde adv ;
+smuhkien adv ;
+småahte adv ;
+snaarhte adv ;
+snaebpie:snaebpie adv ;
+snajvoen:snajvoen adv ; !
+snalpan adv ;
+snarhpan adv ;
+snarvoen:snarvoen adv ; !
+snavroen:snavroen adv ; !avbrukket om bein
+sneehpeslaakan:sneehpes laakanlex ;
+snjadtsoen:snjadtsoen adv ;
+snjajkan adv ;
+snjallede adv ;
+snjalloen:snjalloen adv ; !
+snjåammoen:snjåammoen adv ;
+snjåarhtja adv ;
+snjåarhtjan adv ;
+snjållode:snjållode adv ;
+snjædtjoen:snjædtjoen adv ;
+snjæjhtjoen:snjæjhtjoen adv ; !
+snåhkide adv ;
+snåhkode:snåhkode adv ;
+snïrrehbielien:snïrreh#bielien adv ;
+soejme:soejme adv ;
+soejmetje:soejmetje adv ;
+soejmetjelaakan:soejmetje laakanlex ;
+soejmetji+Err/Orth:soejmehtji adv ;
+soejmetji+Err/Orth:sööjmehtje adv ;
+soejmetji:soejmetji adv ;
+soejmetjilaakan:soejmetji laakanlex ;
+soejmi+Err/Orth:suejmen adv ;
+soejmi:soejmi adv ;
+soejmilaakan:soejmi laakanlex ;
+soejmilaakan+Use/NG:soejme laakanlex ;	!Lene la til variant, er den ok?
+sontere adv ;
+spaajhte:spaajhte adv ;
+spåarjoen:spåarjoen adv ;
+staaran:staaran adv ;
+staavloen:staavloen adv ;
+stabnjoen:stabnjoen adv ; !
+stavhtan adv ;
+steadtjoen:steadtjoen adv ; !
+steavrede adv ;
+stedtjesne:stedtjesne adv ;
+steegkeldihkie:steegkeldihkie adv ;
+stenkie adv ; ! standhaftig i troen- også adjektiv
+straatnjoen:straatnjoen adv ; !KB SOUTH =se råentjies attr-> råantjan, råentjien pred.
+striengkieslaakan:striengkies laakanlex ;
+stråadtsan adv ;
+stråadtsoen:stråadtsoen adv ; !KB
+strïenjelaakan:strïenje laakanlex ;
+stæhtjoen:stæhtjoen adv ;
+stïeresne:stïeresne adv ;
+suajman adv ;
+suaradahken adv ;
+suelede:suelede adv ;
+sueleden:sueleden adv ;
+sueledslaakan:sueleds laakanlex ;
+suelien:suelien adv ;
+svælngan adv ;
+svælnjoen:svælnjoen adv ;
+systeemelaaketje adv ;
+såabran:såabran adv ;
+såagkede adv ;
+såajjan adv ;
+såajjoen:såajjoen adv ;
+såasan adv ;
+såemies% aejkien+Use/MT:såemies% aejkien adv ; !
+sårhpoen:sårhpoen adv ;
+såvhtjan adv ;
+såvsoen:såvsoen adv ;
+sååjmehke adv ;
+sååjmetje:sååjmetje adv ;
+sæjkoen:sæjkoen adv ;
+sïbpesisnie:sïbpesisnie adv ;
+sïbpesne:sïbpesne adv ;
+sïejhmede:sïejhmede adv ;
+sïejhmetji adv ;
+sïemen adv ;
+sïemeslaakan:sïemes laakanlex ;
+sïerrene adv ;
+tjaaladihkie:tjaaladihkie  adv ;
+tjaalaldihkie:tjaalaldihkie  adv ;
+tjaaleldahkesne adv ;
+tjaaleldh adv ;
+tjaebpie:tjaebpie adv ;
+tjaebpieslaakan:tjaebpies laakanlex ;
+tjaebpiesligke:tjaebpies ligkelex ;
+tjaekedslaakan:tjaekeds laakanlex ;
+tjaekedsligke:tjaekeds ligkelex ;
+tjaekeresligke:tjaekeres ligkelex ;
+tjaglan adv ;
+tjagran adv ;
+tjahkan:tjahkan adv ;
+tjahkede adv ;
+tjaktjedaelvege:tjaktje#daelvege adv ;
+tjaktjege:tjaktjege adv ;
+tjaktjegeasjege:tjaktje#geasjege adv ;
+tjaktjegiesege:tjaktje#giesege adv ;
+tjaktjegïjdege:tjaktje#gïjdege adv ;
+tjalhta adv ;
+tjamki:tjamki adv ;
+tjantehke adv ;
+tjarke:tjarke adv ;
+tjarkebe:tjarkebe adv-comp ;
+tjarkemes:tjarkemes adv-sup ;
+tjarki:tjarki adv ;
+tjavkesth:tjavkesth adv ;
+tjeagkede:tjeagkede adv ;
+tjeahpetje adv ;
+tjeahpetje+Err/Orth:tjeahpetji adv ;
+tjeahpetji:tjeahpetji adv ;
+tjeakokte adv ;
+tjeakolde adv ;
+tjeapetji adv ;
+tjerkebe+Err/Orth:tjerkebi adv ;
+tjerkebe:tjerkebe adv-comp ;
+tjerkebelaakan:tjerkebe laakanlex ;
+tjerkeme:tjerkeme adv ;
+tjiehpiebuktie:tjiehpiebuktie adv ;
+tjiehpieslaakan:tjiehpies laakanlex ;
+tjiehpiesligke:tjiehpies ligkelex ;
+tjiehpiesligkie:tjiehpiesligkie adv ;
+tjietjele:tjietjele adv ;
+tjietjelen:tjietjelen adv ;
+tjijhtjh:tjijhtjh adv ;
+tjimkeslaakan:tjimkes laakanlex ;
+tjinhte adv ;
+tjirke:tjirke adv ;
+tjirkeslaakan:tjirkes laakanlex ;
+tjirkesligke:tjirkes ligkelex ;
+tjolhkeldihkie:tjolhkeldihkie  adv ;
+tjuavkadahken adv ;
+tjuerpieslaakan:tjuerpies laakanlex ;
+tjåadtjede adv ;
+tjåadtjoen:tjåadtjoen adv ;
+tjåalede adv ;
+tjåaloen:tjåaloen adv ;
+tjåalpoen:tjåalpoen adv ;
+tjåanghkan+Err/Orth:tjåangkan adv ;
+tjåanghkan:tjåanghkan adv ;
+tjåarhtjan adv ;
+tjåenghkesne adv ; !XXX from dict, check! Lene: Commented this one in again - there are 17 of this one in Rørossamiske tekster
+tjåengkesne:tjåengkesne adv ;
+tjåkngode:tjåkngode adv ;
+tjålhtoen:tjålhtoen adv ;
+tjånhtjan adv ;
+tjårregen adv ;
+tjïelkelaakan:tjïelke laakanlex ;
+tjïelkeslaakan:tjïelkes laakanlex ;
+tjïjhtji-tjïjhtji:tjïjhtji-tjïjhtji adv ;
+tjööjjeste:tjööjjeste adv ;
+traaptsan adv ;
+treaptjan adv ;
+tseagkode:tseagkode adv ;
+tseagkoen:tseagkoen adv ;
+tsegkie:tsegkie adv ;
+tsovh adv ;
+tsuemehti adv ;
+tsåatskeleslaakan:tsåatskeles laakanlex ;
+tåasan adv ;
+tåaskoen:tåaskoen adv ;
+tåasode:tåasode adv ;
+tïmperdahkesne:tïmperdahkesne adv ;
+uhoov adv ;
+uhtjienadtje:uhtjienadtje adv ;
+uktsieguerviem:uktsie#guerviem adv ; ! han pratet bare tuill !
+unnemes adv-sup ; 
+unterligkie:unterligkie adv ;
+upmerigen adv ;
+upmerægkan adv ;
+utksh:utksh adv ;
+utne:utne adv ;
+uvhte:uvhte adv ;
+uvhtie adv ;
+uvte+Err/Orth:avte adv ;
+uvte:uvte adv ;
+uvtebe:uvtebe adv-comp ; !  
+uvtemes+Err/Orth:evtemes adv-sup ;
+uvtemes+Err/Orth:åvtemes adv-sup ;
+uvtemes:uvtemes adv-sup ; 
+övtemes:övtemes adv-sup ; !  
+övtemes+Err/Orth:öövtemes adv-sup ; !
+uvtemesth:uvtemesth adv ;
+vaagkerebielien:vaagkere#bielien adv ;
+vaaj adv ;
+vaajhkan:vaajhkan adv ;
+vaajhkoen:vaajhkoen adv ;
+vaajmojste:vaajmojste adv ;
+vaane:vaane adv ;
+vaanenaama adv ;
+vaejtie adv ;
+vaen adv ;
+vaen-vaenie adv ;
+vaenebe adv-comp ; 
+vaenie adv ; !corpus
+vaeniegïeten:vaenie#gïeten adv ;
+varke:varke adv ;
+varkebe:varkebe adv-comp ; 
+varkemes:varkemes adv-sup ;
+varki+Err/Orth:varkie adv ;
+varki:varki adv ;
+veadtagisnie+Err/Lex:veadtagisnie adv ;
+veadtaldihkie:veadtaldihkie  adv ;
+veajhtosne:veajhtosne adv ;
+veajkoej:veajkoej adv ;
+veaksehkelaakan:veaksehke laakanlex ;
+vealan adv ;! verbgenitiv
+vealede:vealede adv ;
+vealhtjan:vealhtjan adv ; !alle an= vurdere også legge inn som lexicon
+vearre-vearrebe:vearre-vearrebe adv-comp ; 
+veehte:veehte adv ;
+veele:veele adv ;
+veestede:veestede adv ;
+velvesne:velvesne adv ; ! adverb: lever i beste velgående. Overflod
+verkebe:verkebe adv-comp ; 
+verkemes:verkemes adv-sup ;
+vervesne:vervesne adv ; ! innesiv av noun: vervie, attributt: vervies
+vestie:vestie adv ; !vestie hov nimhtie jiehtedh!
+vestieslaakan:vesties laakanlex ;
+vestiesligke:vesties ligkelex ;
+vielie:vielie adv ;
+vielie+Err/Orth:viele adv ;
+vienth:vienth adv ;
+vientien adv ;
+viesjiehtåbpoe:viesjiehtåbpoe adv-comp ;
+vietseleslaakan:vietseles laakanlex ;
+vietselslaakan:vietsels laakanlex ;
+vietselsligke:vietsels ligkelex ;
+vihkele adv ;
+viht+Err/Orth:vith adv ;
+viht:viht adv ;
+vihteles:vihteles adv ; !LA Saaran gærja
+vihth:vihth adv ;
+vihtieslaakan:vihties laakanlex ;
+vijrebe:vijrebe adv-comp ; ! 
+vijrie-vijriebasse:vijrie-vijriebasse adv-comp ;
+vijriebasse:vijriebasse adv-comp ;
+vijriebisnie:vijriebisnie adv ;
+vijriebistie:vijriebistie adv ;
+vijriegommes adv-sup ; 
+vijriegåbpoe adv-comp ; 
+vijriehkommes:vijriehkommes adv-sup ; 
+vijriehkåbpoe:vijriehkåbpoe adv-comp ;
+voedtjen adv ;
+voedtjine adv ; !voedtje=substantiv
+voedtsen adv ; ! voedtse=substantiv
+voepsijeslaakan:voepsijes laakanlex ;
+voeptesasse adv ;
+voest adv ;
+voestegas adv ;
+voestegistie adv ;
+voestegh:voestegh adv ;
+voestenahkeste adv ;
+vostehke adv ;
+vualagasse:vualagasse adv ;
+vualagisnie:vualagisnie adv ;
+vualagistie:vualagistie adv ;
+vualege:vualege adv ;
+vuarhkaslaakan:vuarhkas laakanlex ;
+vuarhkasligke adv ;
+vuastelebiejjien adv ;
+vuelege:vuelege adv ;
+vuelehke:vuelehke adv ;
+vuelelen:vuelelen adv ;
+vueleli:vueleli adv ;
+vuelemassjen adv ;
+vuelhtie:vuelhtie adv ;
+vuelie% vueliegasse+Use/MT:vuelie% vueliegasse adv ;
+vuelie-vueliegasse:vuelie-vueliegasse adv ;
+vuelie-vueliegåbpoe:vuelie-vueliegåbpoe adv-comp ;
+vueliebasse:vueliebasse adv-comp ; !XXX from dict, check!
+vueliebisnie:vueliebisnie adv ;
+vueliegasse:vueliegasse adv ;
+vueliegisnie:vueliegisnie adv ;
+vueliegistie:vueliegistie adv ;
+vueliegommes:vueliegommes adv-sup ; 
+vueliegåbpoe:vueliegåbpoe adv-comp ;
+vueliehkasse:vueliehkasse adv ;
+vueliehkisnie:vueliehkisnie adv ;
+vueliehkistie:vueliehkistie adv ;
+vuelielisnie:vuelielisnie adv ;
+vuelielistie:vuelielistie adv ; !XXX from dict, check!
+vuelnie:vuelnie adv ;
+vueriedisnie:vueriedisnie adv ;
+vuerierisnie:vuerierisnie adv ;
+vuerkesne adv ;
+vuertievisnie adv ;
+vuesiehtimmien% gaavhtan+Use/MT:vuesiehtimmien% gaavhtan adv ;
+vuestelen:vuestelen adv ;
+vuesteli:vuesteli adv ;
+vuestielisnie:vuestielisnie adv ;
+vuestielistie:vuestielistie adv ;
+vyökehtje:vyökehtje adv ;
+vyörtegslaakan:vyörtegs laakanlex ;
+våajnoes:våajnoes adv ;
+våajnose adv ;
+vålle:vålle adv ;
+vååjnedimmesne adv ;
+vååjnesisnie adv ;
+vååjnedæjjesne adv ;
+vååjnehtahkese adv ;
+vååjnerimmesne adv ;
+vååjnesasse adv ;
+vååjnoes:vååjnoes adv ;
+våålese:våålese adv ;
+vååregelaakan:våårege laakanlex ;
+vååvne:vååvne adv ;
+vædtjan adv ;
+vædtsoehlaakan:vædtsoeh laakanlex ;
+væjkeleslaakan:væjkeles laakanlex ;
+væjsehkelaakan:væjsehke laakanlex ;
+vælloen adv ;
+vælnjan:vælnjan adv ;! noun: vilnjie (jfr:stedsnavn vilnjiesvuemie),attr:vælnjoeh
+vælnjede:vælnjede adv ;
+vælnjode:vælnjode adv ;
+værtan:værtan adv ;
+vætnasjinie adv ;
+vætnjoen:vætnjoen adv ;
+vïedteldihkie+Err/Orth:viedtieldihkie  adv ;
+vïedteldihkie:vïedteldihkie  adv ;
+vïjhth:vïjhth adv ;
+vïjhti-vïjhti:vïjhti-vïjhti adv ;
+vïssjeleslaakan:vïssjeles laakanlex ;
+vïssjelsligke adv ;
+vïssjelsligke+Err/Orth:vïssjels ligkelex ; !
+vöölle:vöölle adv ;
+vööstede adv ;
+yöjtede:yöjtede adv ;
+åabrelen:åabrelen adv ;
+åajvahlaakan:åajvah laakanlex ;
+åajvoehlaakan:åajvoeh laakanlex ;
+åarjabasse:åarjabasse adv-comp ;
+åarjabisnie:åarjabisnie adv ;
+åarjabistie:åarjabistie adv ;
+åarjadahken:åarjadahken adv ;
+åarjagommes:åarjagommes adv-sup ;
+åarjagåbpoe:åarjagåbpoe adv-comp ;
+åarjalisnie:åarjalisnie adv ;
+åarjalistie:åarjalistie adv ;
+åarjatjabpa adv ;
+åarjede:åarjede adv ;
+åarjege:åarjege adv ;
+åarjelbïegken:åarjel#bïegken adv ;
+åarjelde:åarjelde adv ; ! fra syd, sønnafor
+åarjeldhbïegken:åarjeldh#bïegken adv ; ! sønnavind
+åarjelen:åarjelen adv ; ! (til) sønnafor
+åarjelisnie:åarjelisnie adv ;
+åarjene:åarjene adv ; !i syd
+åarjene+Err/Orth:åarjesne adv ; 
+åarjese:åarjese adv ; !sydover diekie åarjese sydover hit
+åarjielisnie:åarjielisnie adv ;
+åarjielistie:åarjielistie adv ;
+åebrelen:åebrelen adv ;
+åebreli:åebreli adv ;
+åebrielisnie:åebrielisnie adv ;
+åebrielistie:åebrielistie adv ;
+åejjiejurresne:åejjie#jurresne adv ;
+åenehkslaakan:åenehks laakanlex ;
+åerjege:åerjege adv ;
+åerjiebasse:åerjiebasse adv-comp ;
+åerjiebisnie:åerjiebisnie adv ;
+åerjiebistie:åerjiebistie adv ;
+åerjiegommes:åerjiegommes adv-sup ;
+åerjiegåbpoe:åerjiegåbpoe adv-comp ;
+åerjielasse:åerjielasse adv ;
+åerjielisnie:åerjielisnie adv ; !
+åerjielistie:åerjielistie adv ;
+åhtjetje:åhtjetje adv ;
+åhtjetji:åhtjetji adv ;
+åktsadisth adv ;
+ålkede:ålkede adv ;
+ålkene:ålkene adv ;
+ålkide:ålkide adv ; !XXX from dict, check!
+ålkine:ålkine adv ;
+ålkode:ålkode adv ;
+ålkoebealan adv ;
+ålkoebistie:ålkoebistie adv ;
+ålkoelisnie:ålkoelisnie adv ; !XXX from dict, check!
+ålkoelistie:ålkoelistie adv ;
+ålkolde:ålkolde adv ;
+ålkolen:ålkolen adv ;
+ålkoli:ålkoli adv ;
+ålkone:ålkone adv ;
+ållesthlaakan:ållesth laakanlex ;
+ålvas:ålvas adv ;
+ålvoes:ålvoes adv ;
+ålvoeslaakan:ålvoes laakanlex ;
+ånnetje:ånnetje adv ;
+ånnetji% mænngan+Use/MT:ånnetji% mænngan adv ;
+ånnetji:ånnetji adv ;
+åpmoeh:åpmoeh adv ;
+åtnose adv ;
+åvte:åvte adv ;
+åvtegasse adv ;
+åvtege adv ;
+åvtegiegisnie adv ;
+åvtegiegistie adv ;
+åvtelbeeli:åvtel#beeli adv ;
+åvtelbodth:åvtelbodth adv ;
+åvtelbodti+Err/Orth:åvtel-bodti adv ;
+åvtelbodti:åvtel#bodti adv ;
+åvtelde:åvtelde adv ;
+åvtelen:åvtelen adv ;
+åvtelhbodti+Err/Orth:åvtelh-bodti adv ;
+åvtelhbodti:åvtelh#bodti adv ;
+åvteli:åvteli adv ;
+åvtene:åvtene adv ;
+åvtese:åvtese adv ;
+åvtesne:åvtesne adv ;
+åvtetje:åvtetje adv ;
+åvtetji adv ;
+åvtine:åvtine adv ;
+ååkteldihkie:ååkteldihkie adv ;
+åålegh:åålegh adv ;
+ååpsen:ååpsen adv ;
+åårnegisnie:åårnegisnie adv ;
+ïpmeres adv ;
+ïpmergen adv ;
+ïpmerijhken adv ;
+övtebe adv-comp ; 
+övteben:övteben adv ;
+övtiebasse adv ;
+övtiebisnie adv ;
+ööjtede:ööjtede adv ;
+öövre:öövre adv ;
+aereds-låvnen:aereds-låvnen adv ; 
+akth-juelkien:akth-juelkien adv ;
+gaatesjen+Err/Orth:gaatesjem adv ;
+vyllesjen:vyllesjen adv ;
+gapme-bïegken:gapme-bïegken adv ;
+gopmedh-bïegken:gopmedh-bïegken adv ; 
+gåarhmede+Use/DNorm:gåarhmede adv ; 
+gåarhmede+Use/NotDNorm:gåarhmode adv ; ! https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:mangel
+				 
+buerebeligke adv ;
+gejhkieligke adv ;
+haerrehtjeligke adv ;
+lïenjegligke adv ;
+dåassahligke adv ;
+slaasoehligke adv ;
+riktiligke adv ;
+hïevenligke adv ;
+stijvenligke adv ;
+vuarhkasligke adv ;
+astasligke adv ;
+haerhpiesligke	adv ;
+reegkesligke adv ;
+doekemesligke adv ;
+
+
+bïjre-jarkan adv ; 
+aereds-lååjeden adv ;
+mietie-biejjien:mietie-biejjien adv ; 
+vuastele-biejjien:vuastele-biejjien adv ; 
+skraevvies-_biejjien:skraevvies-_biejjien adv ; 
+gaajeh-ligkien:gaajeh-ligkien adv ; 
+sveek-aejkien:sveek-aejkien adv ; 
+skraevvies-_aejkien:skraevvies-_aejkien adv ; 
+oks-raejkien:oks-raejkien adv ; 
+stööbleh-juelkien:stööbleh-juelkien adv ; 
+boelvh-juelkien:boelvh-juelkien adv ; 
+iehkeds-vyllen:iehkeds-vyllen adv ;
+aereds-vyllen:aereds-vyllen adv ;
+mietie-biejjiem:mietie-biejjiem adv ;
+laath-raejkiem:laath-raejkiem adv ;
+loeven-nåeliem:loeven-nåeliem adv ;
+naemhtems:naemhtems adv ;
+guktems:guktems adv ;
+
+oks-bealan:oks-bealan adv ;
+båastelen:båastelen adv ;
+
+bijjieskaase:bijjieskaase adv ;
+
+daesnegh adv "nettopp her" ; !Bibel
+
+!LEXICON Adv-TODO
+!+Adv+TODO:0 # ;
+

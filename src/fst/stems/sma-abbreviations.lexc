@@ -1,0 +1,153 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+! ==========================================
+! File containing South Saami abbreviations
+! =========================================
+
+
+! Lexica for adding tags and periods
+! ----------------------------------
+
+! Splitting in 3 groups, because of the preprocessor
+! - - - - - - - - - - - - - - - - - - - - - - - - -
+
+LEXICON Abbreviation-sma
+  ITRAB   ;
+  TRNUMAB ;
+  TRAB    ;
+
+
+! ===============================================
+! Intransitive abbreviations
+! ===============================================
+
+LEXICON ITRAB
+3-st+N+Sem/Cat:3-st ab-dot-noun-itrab ;
+S%:t+N+Sem/Org:S%:t ab-nodot-noun-itrab ;
+b%:n+Adv:b%:n ab-nodot-adv-itrab ;
+bj+Adv:bj ab-dot-adv-itrab ; ! biejjie
+d.d+Adv:d.d ab-dot-adv-itrab ;
+dat+N:dat ab-dot-noun-itrab ;
+do+Adv:do ab-dot-adv-itrab ;
+dus+Adv:dus ab-dot-adv-itrab ;
+g.b+N:g.b ab-nodot-noun-itrab ;
+gl.rs+N:gl.rs ab-dot-noun-itrab ;
+j.i+Adv:j.i ab-dot-adv-itrab ;
+j.n.v+Adv:j.n.v ab-dot-adv-itrab ; ! jïh nimhtie vijriebasse
+n.j+N:n.j ab-dot-noun-itrab ;
+ts+Adv:ts ab-adv-itrab ; ! tsåahka
+u.b+N:u.b ab-dot-noun-itrab ;
+v.g+Adv:v.g ab-dot-adv-trab ; ! vuesiehtimmien gaavhtan
+jnv+Adv:jnv ab-dot-adv-itrab ; !
+
+
+! Here comes a set of acronyms, but
+! since they mix small and capital
+! letters, they are listed here, and
+! not generated in acr-sme-lex.txt
+
+! Art ab-nodot-noun-itrab ;
+! Bb:Bb ab-nodot-noun-itrab ;
+! Bbl ab-nodot-noun-itrab ; ! Bargobirašlávdegoddi
+! DnB:DnB ab-nodot-noun-itrab ;
+! Dssn:Dssn ab-nodot-noun-itrab ;
+! Flf ab-nodot-noun-itrab ;
+! FoU ab-nodot-noun-itrab ;
+! KBb ab-nodot-noun-itrab ; ! Kárášjoga Bargiidbellodat
+! KoKS ab-nodot-noun-itrab ;
+! LuW ab-nodot-noun-itrab ;
+! NgL ab-nodot-noun-itrab ;
+! NoKTuRNL ab-nodot-noun-itrab ;
+! Rp:Rp ab-nodot-noun-itrab ;
+! SáB ab-nodot-noun-itrab ;
+! SvJT:SvJT ab-nodot-noun-itrab ;
+! UiB:UiB ab-nodot-noun-itrab ;
+! UiO ab-nodot-noun-itrab ;
+! UiT ab-nodot-noun-itrab ;
+! UiTø ab-nodot-noun-itrab ;
+
+
+! ============================================================
+! Abreviations who are transitive in front of numerals
+! ============================================================
+
+LEXICON TRNUMAB
+! For abbrs for which numerals are complements, but other
+! words not necessarily are. This group treats arabic numerals as
+! if it were transitive but letters as if it were intransitive.
+! TODO: Bug the fact that these abbrs do not distinguish between
+! cap and small letters, whereast he ITRAB ones do.
+
+
+
+kapp+N+Sem/Sign:kapp ab-dot-noun-trnumab ;
+konv+N+Sem/Sign:konv ab-dot-noun-trnumab ;
+b+Adv+Sem/Time:b ab-adv-trnumab ; 
+
+! ===============================================
+! Transitive abbreviations
+! ===============================================
+
+LEXICON TRAB
+! For abbrs that always have a constituent following it.
+
+
+
+al+N:al ab-noun-trab ;
+arkijveaamhtesnr+N:arkijveaamhtesnr ab-dot-noun-trnumab ;
+bs ab-dot-verb-trab ;
+bv+N:bv ab-dot-noun-trab ;
+!e.e ab-dot-adv-trab ;
+
+Oth+N:Oth ab-dot-noun-trnumab ;
+Oth.prop+N:Oth.prop ab-dot-noun-trnumab ; ! h?
+Oth.prp+N:Oth.prp ab-dot-noun-trnumab ;
+
+St.% bïevn.% nr+N:St.% bïevn.% nr ab-dot-noun-trnumab ;
+St.bïevn.nr+N:St.bïevn.nr ab-dot-noun-trnumab ;
+
+tell+N:tell ab-dot-noun-trab ; !tellefovne
+åss+N:åss ab-dot-noun-trab ;
+
+Aejv+N+Sem/Txt:Aejv ab-noun-trab ;
+Volv+N+Sem/Txt:Volv ab-noun-trab ;
+Daan+N+Sem/Txt:Daan ab-noun-trab ;
+Duap+N+Sem/Txt:Duap ab-noun-trab ;
+Gånk+N+Sem/Txt:Gånk ab-noun-trab ;
+Hosj+N+Sem/Txt:Hosj ab-noun-trab ;
+Jaah+N+Sem/Txt:Jaah ab-noun-trab ;
+Jo-el+N+Sem/Txt:Jo-el ab-noun-trab ;
+Jååv+N+Sem/Txt:Jååv ab-noun-trab ;
+Jååh+N+Sem/Txt:Jååh ab-noun-trab ;
+Josj+N+Sem/Txt:Josj ab-noun-trab ;
+Meeht+N+Sem/Txt:Meeht ab-noun-trab ;
+Maah+N+Sem/Txt:Maah ab-noun-trab ;
+Mujh+N+Sem/Txt:Mujh ab-noun-trab ;
+Pïeh+N+Sem/Txt:Pïeh ab-noun-trab ;
+Rudt+N+Sem/Txt:Rudt ab-noun-trab ;
+Saak+N+Sem/Txt:Saak ab-noun-trab ;
+Saalm+N+Sem/Txt:Saalm ab-noun-trab ;
+Vijs+N+Sem/Txt:Vijs ab-noun-trab ;
+
+
+
+! Here comes the initials
+! They are found in names etc.
+! Removed the -dot from this lexicon, the
+! periods are stripped from the preprocessor anyway.
+Ï+Use/SpellNoSugg+CmpNP/First+Use/NG:Ï ab-nodot-noun-trab ;
+ï+Use/SpellNoSugg+CmpNP/First+Use/NG:ï ab-nodot-noun-trab ;
+Ï+Use/SpellNoSugg:Ï ab-dot-noun-trab ;
+ï+Use/SpellNoSugg:ï ab-dot-noun-trab ;

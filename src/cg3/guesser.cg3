@@ -1,0 +1,298 @@
+
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>";
+
+LIST BOS = (>>>) (<s>); 
+LIST EOS = (<<<) (</s>); # vislcg and CG-2 together.
+
+LIST ? = ? ;
+
+
+LIST N = N ;
+LIST Sg = Sg ;
+LIST Pl = Pl ;
+LIST Nom = Nom ;
+LIST Acc = Acc ;
+LIST Gen = Gen ;
+LIST Ine = Ine ;
+LIST Ela = Ela ;
+LIST Ill = Ill ;
+LIST Com = Com ;
+LIST Ess = Ess ;
+
+LIST PxSg1 = PxSg1 ;
+LIST PxSg2 = PxSg2 ;
+LIST PxSg3 = PxSg3 ;
+
+LIST PxDu1 = PxDu1 ;
+LIST PxDu2 = PxDu2 ;
+LIST PxDu3 = PxDu3 ;
+
+LIST PxPl1 = PxPl1 ;
+LIST PxPl2 = PxPl2 ;
+LIST PxPl3 = PxPl3 ;
+
+LIST V = V ;
+LIST Prs = Prs ;
+LIST Prt = Prt ;
+
+LIST Sg1 = Sg1 ;
+LIST Sg2 = Sg2 ;
+LIST Sg3 = Sg3 ;
+
+LIST Du1 = Du1 ;
+LIST Du2 = Du2 ;
+LIST Du3 = Du3 ;
+
+LIST Pl1 = Pl1 ;
+LIST Pl2 = Pl2 ;
+LIST Pl3 = Pl3 ;
+
+LIST Inf = Inf ;
+LIST Neg = Neg ;
+LIST ConNeg = ConNeg ;
+LIST Foc/gan = Foc/gan ;
+
+LIST PrfPrc = PrfPrc ;
+LIST VGen = VGen ;
+LIST Ger = Ger ;
+
+LIST Ind = Ind ;
+
+LIST Imp = Imp ;
+LIST ImpII = ImpII ;
+
+LIST Pot = Pot ;
+LIST Cond = Cond ;
+LIST Imprt = Imprt ;
+
+LIST Opt = Opt ;
+
+LIST Actor = Actor ;
+LIST Clt = Clt ;
+LIST A = A ;
+LIST Ord = Ord ;
+LIST ABBR = ABBR ;
+LIST ACR = ACR ;
+
+LIST Comp = Comp ;
+LIST Superl = Superl ;
+
+LIST Attr = Attr ;
+
+LIST Pron = Pron ;
+LIST Pers = Pers ;
+LIST Dem = Dem ;
+LIST Interr = Interr ;
+LIST Rel = Rel ;
+#LIST Adp = Adp ;
+LIST Po = Po ;
+LIST Pr = Pr ;
+LIST Adv = Adv ;
+LIST Interj = Interj ;
+LIST Indef = Indef ;
+LIST Num = Num ;
+LIST Prop = Prop ;
+
+LIST Mal = Mal ;
+LIST Fem = Fem ;
+LIST Sur = Sur ;
+LIST Org = Org ;
+
+LIST CS = CS ;
+LIST CC = CC ;
+LIST Pcle = Pcle ;
+LIST CLB = CLB ;
+LIST PUNCT = PUNCT ;
+LIST LEFT = LEFT ;
+LIST RIGHT = RIGHT ;
+LIST COMMA = "," ;
+LIST Der1 = Der1 ;
+LIST Der2 = Der2 ;
+LIST Der3 = Der3 ;
+
+LIST REAL-TITLE = "prof" "cand.philol" ;
+LIST OFFICE = "gånka" ;
+SET TITLE = REAL-TITLE OR OFFICE ; 
+LIST Guess = Guess ;
+
+#LIST XX = XX ; # for testing
+
+SECTION
+
+# Adding tags
+
+# Ord med - er ikke verb
+SUBSTITUTE ? (N Pl Com Guess) TARGET ("<.*\-.*gujmie>"r ?) ;
+SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*\-.*sne>"r ?) ;
+SUBSTITUTE ? (N Sg Ela Guess) TARGET ("<.*\-.*ste>"r ?) ;
+SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*\-.*[ij]ne>"r ?) ;
+SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*\-.*[ea]>"r ?) ;
+SUBSTITUTE ? (N Sg Acc Guess) TARGET ("<.*\-.*[eai]m>"r ?) ;
+SUBSTITUTE ? (N Sg Ill Guess) TARGET ("<.*\-.*se>"r ?) ;
+SUBSTITUTE ? (N Pl Nom Guess) TARGET ("<.*\-.*h>"r ?) ;
+SUBSTITUTE ? (N Sg Gen Guess) TARGET ("<.*\-.*n>"r ?) ;
+SUBSTITUTE ? (N Pl Gen Guess) TARGET ("<.*\-.*i>"r ?) ;
+
+# 7
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*fjorden>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*fjellet>"r ?) ;
+#SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*>"r ?)(NOT -1 BOS)  ;
+
+# 6
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(tind|sund|skog|bäck|bekk|bank|mark|damm|port)en>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(sund)et>"r ?) ;
+SUBSTITUTE ? (Adv Guess) TARGET ("<.*(laakan|ligkie)>"r ?) ;
+SUBSTITUTE ? (N Pl Com Guess) TARGET ("<.*gujmie>"r ?) ;
+SUBSTITUTE ? (V Ger Guess) TARGET ("<.*[ea]minie>"r ?) ;
+
+# 5
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(hög|vik|dal|kil|elv|älv|sjø)en>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Ine Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*isnie>"r ?)(NOT -1 BOS)  ;
+SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*isnie>"r ?) ;
+SUBSTITUTE ? (A Comp Sg Guess) TARGET ("<.*åbpoe>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du3 Guess) TARGET ("<.*jigan>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du2 Guess) TARGET ("<.*jiden>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du2 Guess) TARGET ("<.*idien>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du1 Guess) TARGET ("<.*jimen>"r ?) ;
+
+# 4
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(vatn|gård)>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(elv|vik)a>"r ?) ;
+SUBSTITUTE ? (V PrsPrc Guess) TARGET ("<.*æjja>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*åvva>"r ?) ;
+SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*(ovn|ovs|uvr|ant|ent|ihk|ism)e>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl1 Guess) TARGET ("<.*ibie>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl2 Guess) TARGET ("<.*idie>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Com Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*inie>"r ?)(NOT -1 BOS)  ;
+SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*inie>"r ?) ;
+SUBSTITUTE ? (A Sg Nom Guess) TARGET ("<.*elle>"r ?) ;
+SUBSTITUTE ? (V PrfPrc Guess) TARGET ("<.*amme>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Ill Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*(as|[eo])se>"r ?)(NOT -1 BOS)  ;
+SUBSTITUTE ? (N Sg Ill Guess) TARGET ("<.*(as|[eo])se>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl2 Guess) TARGET ("<.*jidh>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl1 Guess) TARGET ("<.*jimh>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl3 Guess) TARGET ("<.*ehti>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du3 Guess) TARGET ("<.*igan>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du3 Guess) TARGET ("<.*ægan>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du2 Guess) TARGET ("<.*[eo]den>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du2 Guess) TARGET ("<.*iden>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Du1 Guess) TARGET ("<.*imen>"r ?) ;
+
+# 3
+
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ].*(elv|dal|vik)>"r ?) ;
+SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*(ij|åg|ad|af|or|[ö|ø]r)e>"r ?) ;
+SUBSTITUTE ? (A Sg Nom Guess) TARGET ("<.*(sk|ks|al|el|jl|ær|[ö|ø]s)e>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl1 Guess) TARGET ("<.*[eo]be>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl2 Guess) TARGET ("<.*[eo]de>"r ?) ;
+SUBSTITUTE ? (N Pl Acc Guess) TARGET ("<.*ide>"r ?) ;
+SUBSTITUTE ? (V PrfPrc Guess) TARGET ("<.*eme>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Com Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*ine>"r ?)(NOT -1 BOS)  ;
+SUBSTITUTE ? (N Sg Com Guess) TARGET ("<.*ine>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Ine Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*sne>"r ?)(NOT -1 BOS)  ;
+SUBSTITUTE ? (N Sg Ine Guess) TARGET ("<.*sne>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl2 Guess) TARGET ("<.*idh>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*ieh>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Pl3 Guess) TARGET ("<.*oeh>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg2 Guess) TARGET ("<.*jih>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl1 Guess) TARGET ("<.*imh>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg1 Guess) TARGET ("<.*jim>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du1 Guess) TARGET ("<.*ien>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Du1 Guess) TARGET ("<.*oen>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl3 Guess) TARGET ("<.*jin>"r ?) ;
+
+# 2
+
+SUBSTITUTE ? (V Inf Guess) TARGET ("<.*dh>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg2 Guess) TARGET ("<.*ih>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg3 Guess) TARGET ("<.*ji>"r ?) ;
+SUBSTITUTE ? (N Pl Gen Guess) TARGET ("<.*[aei]j>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Acc Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*[ouæøåö]m>"r ?)(NOT -1 BOS)  ;
+SUBSTITUTE ? (N Sg Acc Guess) TARGET ("<.*[ouæøåö]m>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Sg1 Guess) TARGET ("<.*[ea]m>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg1 Guess) TARGET ("<.*im>"r ?) ;
+SUBSTITUTE ? (N Prop Sg Gen Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*[ae]n>"r ?)(NOT -1 BOS)  ;
+SUBSTITUTE ? (N Sg Gen Guess) TARGET ("<.*[ae]n>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Pl3 Guess) TARGET ("<.*in>"r ?) ;
+
+# 1
+SUBSTITUTE ? (Num Sg Guess) TARGET ("<.*[0-9]>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Sg2 Guess) TARGET ("<.*h>"r ?) ;
+SUBSTITUTE ? (V Ind Prs Sg3 Guess) TARGET ("<.*[ea]>"r ?) ;
+SUBSTITUTE ? (V Ind Prt Sg3 Guess) TARGET ("<.*i>"r ?) ;
+SUBSTITUTE ? (A Attr Guess) TARGET ("<.*s>"r ?) ;
+SUBSTITUTE ? (N SgNomCmp Cmpnd Guess) TARGET ("<[a-zæöå]*->"r ?) ;
+#SUBSTITUTE ? (N Abbr Sg Nom Guess) TARGET ("<.*\.>"r ?) ;
+
+# 0
+SUBSTITUTE ? (N Prop Sg Nom Guess) TARGET ("<[A-ZÆØÅÄÖ][a-zæøåäö].*>"r ?)(NOT -1 BOS)  ;
+SUBSTITUTE ? (N Sg Nom Guess) TARGET ("<.*>"r ?) ;
+
+# Add cohorts for ambiguous tagstrings
+# ====================================
+
+# The SUBSTITUTE rules above replace "?" with a tagstring. This tagstring is
+# often not the only one possible. Therefore we make a new copy containing
+# both the old and the new tags (COPY…) and then we adjust the result to
+# whatever we want (SUBSTITUTE…)
+
+# COPY to-new-copy from-original-tagstring;
+# SUBSTITUTE (original-tagstring-plus-new-copy) (target-new-copy) TARGET (regex original-tagstring-plus-new-copy);
+
+COPY (V Inf Guess)  (V Ind Prt Pl2 Guess) ;
+SUBSTITUTE (V Ind Prt Pl2 Guess Inf) (V Inf Guess) TARGET ("<.*idh>"r V Ind Prt Pl2 Guess Inf);
+
+COPY (N Sg Nom Guess)  (V Ind Prs Sg3 Guess) ;
+SUBSTITUTE (V Ind Prs Sg3 Guess N Sg Nom) (N Sg Nom Guess) TARGET ("<.*[ae]>"r V Ind Prs Sg3 Guess N Sg Nom);
+
+COPY (N Sg Gen Guess)  (V Ind Prs Du1 Guess) ;
+SUBSTITUTE (V Ind Prs Du1 Guess N Sg Gen) (N Sg Gen Guess) TARGET ("<.*en>"r V Ind Prs Du1 Guess N Sg Gen);
+
+COPY (N Pl Gen Guess)  (V Ind Prt Sg3 Guess) ;
+SUBSTITUTE (V Ind Prt Sg3 Guess N Pl Gen) (N Pl Gen Guess) TARGET ("<.*i>"r V Ind Prt Sg3 Guess N Pl Gen);
+
+COPY (N Pl Nom Guess)  (V Ind Prs Sg2 Guess) ;
+SUBSTITUTE (V Ind Prs Sg2 Guess N Pl Nom) (N Pl Nom Guess) TARGET ("<.*h>"r V Ind Prs Sg2 Guess N Pl Nom);
+
+COPY (N Sg Acc Guess)  (V Ind Prs Sg1 Guess) ;
+SUBSTITUTE (V Ind Prs Sg1 Guess N Sg Acc) (N Sg Acc Guess) TARGET (V Ind Prs Sg1 Guess N Sg Acc);
+
+COPY (V Ind Prs Sg1 Guess) (N Sg Acc Guess)(NOT 0 ("<.*\-.*>"r))   ;
+SUBSTITUTE (N Sg Acc Guess V Ind Prs Sg1) (V Ind Prs Sg1 Guess) TARGET (N Sg Acc Guess V Ind Prs Sg1)(NOT 0 ("<.*\-.*>"r));
+
+
+COPY (N Pl Nom Guess)  (V Ind Prs Pl3 Guess);
+SUBSTITUTE (V Ind Prs Pl3 Guess N Pl Nom) (N Pl Nom Guess) TARGET (V Ind Prs Pl3 Guess N Pl Nom);
+
+
+
+COPY (N Pl Ine Guess)  (N Sg Com Guess) ;
+SUBSTITUTE (N Sg Com Guess Pl Ine) (N Pl Ine Guess) TARGET ("<.*[ij]ne>"r N Sg Com Guess Pl Ine);
+SUBSTITUTE (N Sg Com Guess Pl Ine) (N Pl Ine Guess) TARGET ("<.*inie>"r N Sg Com Guess Pl Ine);
+
+COPY (N Ess Guess)  (N Sg Com Guess) ;
+SUBSTITUTE (N Sg Com Guess Ess) (N Ess Guess) TARGET ("<.*ine>"r N Sg Com Guess Ess);
+SUBSTITUTE (N Sg Com Guess Ess) (N Ess Guess) TARGET ("<.*inie>"r N Sg Com Guess Ess);
+
+COPY (N Pl Ill Guess)  (N Pl Acc Guess) ;
+SUBSTITUTE (N Pl Acc Guess Ill) (N Pl Ill Guess) TARGET ("<.*ide>"r N Pl Acc Guess Ill);
+
+COPY (A Attr Guess)  (A Sg Nom Guess) ;
+SUBSTITUTE (A Sg Nom Guess Attr) (A Attr Guess) TARGET (A Sg Nom Guess Attr);
+
+COPY (A Comp Sg Nom Guess) (V Ind Prs Pl1 Guess) ;
+SUBSTITUTE (V Ind Prs Pl1 Guess A Comp Sg Nom) (A Comp Sg Nom Guess) TARGET ("<.*[eo]be>"r V Ind Prs Pl1 Guess A Comp Sg Nom) ;
+
+COPY (A Comp Attr Guess)  (V Ind Prs Pl1 Guess) ;
+SUBSTITUTE (V Ind Prs Pl1 Guess A Comp Attr) (A Comp Attr Guess) TARGET ("<.*[eo]be>"r V Ind Prs Pl1 Guess A Comp Attr) ;
+
+
+# REMOVE:gïele VFIN (0 Guess LINK 0 Acc OR Nom)((*1 (V TV) OR Inf BARRIER S-BOUNDARY OR MAINV) OR (*-1 (V TV) BARRIER NPNH OR S-BOUNDARY)) ;
+# 	## Gaajhkesh mih maaje daejribie man vihkele lea daam mijjen gielem vaarjelidh.
+# REMOVE:gïele Sg2 (0 Guess LINK -1 Num OR Indef) ;
+# 	## Nøørjesne aaj jeatjah gïelh juktie leah jeenjh sïjsejuhtijh gieh jïjtsh ietniengïelem soptsestieh.
+# REMOVE:gïele VGen (0 Guess LINK NEGATE -1 MAINV) ;
+
+
+
+

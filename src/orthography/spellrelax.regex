@@ -1,0 +1,38 @@
+á (->) á,
+Á (->) Á,
+đ (->) ð,
+ŋ (->) ń, # precomposed
+ŋ (->) ń, # n + combining acure
+ŋ (->) ñ, # ditto
+ŋ (->) ñ,
+æ (->) ä, # Swedish ä in text: gärja
+æ (->) ä, # Composed
+Æ (->) Ä, # Swedish Ä in text:
+Æ (->) Ä, # Composed.
+ø (->) ö, # Swedish ö in text: Röros
+ø (->) ö, # Composed letter in text
+Ø (->) Ö, # Swedish ö in text: Öystese
+Ø (->) Ö, # Composed letter in text
+ö (->) ø, # Norw ø in text: bøøti
+Ö (->) Ø, # Norw Ø in text
+ï (->) i, # sma norm
+Ï (->) I,
+i (->) ï, # hypercorrect ï pro correct i
+I (->) Ï,
+ï (->) ï  # composed letter in text
+
+;
+
+# Explanation:
+# lexical side (->) input 
+
+# Note:
+# Some of the lines above seem to contain identical letters, 
+# and in some cases the same right-hand letter seems to occure twice.
+# In each case, the __second__ of these is a non-precomposed letter.
+# In order to check which one is which one, copy the character
+# into the program UnicodeChecker.
+
+# Note that the ï/Ï letters are there for sma.
+# They are probably substandard, and should be relegated to sma.fst
+# but removed from a sma.norm.fst.

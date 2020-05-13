@@ -1,0 +1,155 @@
+# sma/test/src/morphology/adj-eES-gt-desc.yaml
+
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-desc.hfst
+    Morph: ../../../src/analyser-gt-desc.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-desc.xfst
+    Morph: ../../../src/analyser-gt-desc.xfst
+    App: lookup
+
+Tests:
+  Adjective - baahke: # ok c # XXX v1 og v2 er ikkje konsistent nytta!
+    baahke+v1+A+Attr: baahke
+    baahke+v2+A+Attr: baahkes
+#    baahke+A+Err/Attr+Attr: baahkes
+#    baahke+A+Sg+Nom: baahke
+    baahke+v1+A+Sg+Nom: baahkes
+    baahke+v1+A+Comp+Sg+Nom: [baahkebe, baahkesåbpoe, baahkesabpa]
+    baahke+v1+A+Superl+Sg+Nom: [baahkemes, baahkesommes, baahkesammes]
+
+  Adjective - byögke: # 
+    byögke+v1+A+Attr: byögke
+    byögke+v2+A+Attr: byögkes
+#   byögke+v1+A+Err/Attr+Attr: byögkes
+    byögke+v1+A+Sg+Nom: byögkes 
+    byögke+v1+A+Comp+Sg+Nom: [byögkebe, byögkesåbpoe, byögkesabpa]
+    byögke+v1+A+Superl+Sg+Nom: [byögkemes, byögkesommes, byögkesammes]
+
+  Adjective - dïeve: # 
+    dïeve+A+Attr: dïeve
+#    dïeve+A+Err/Attr+Attr: dïeves
+    dïeve+A+Sg+Nom: dïeves 
+    dïeve+A+Comp+Sg+Nom: [dïevebe, dïevesåbpoe, dïevesabpa]
+    dïeve+A+Superl+Sg+Nom: [dïevemes, dïevesommes, dïevesammes]
+    
+  Adjective - fïerske: # 
+    fïerske+A+Attr: fïerske
+#    fïerske+A+Err/Attr+Attr: fïerskes
+    fïerske+A+Sg+Nom: fïerskes
+    fïerske+A+Comp+Sg+Nom: [fïerskebe, fïerskesåbpoe, fïerskesabpa]
+    fïerske+A+Superl+Sg+Nom: [fïerskemes, fïerskesommes, fïerskesammes]
+
+  Adjective - galme: # 
+    galme+A+Attr: galme 
+#    galme+A+Err/Attr+Attr: galmes
+    galme+A+Sg+Nom: galmes 
+    galme+A+Comp+Sg+Nom: [galmebe, galmesåbpoe, galmesabpa]
+    galme+A+Superl+Sg+Nom: [galmemes, galmesommes, galmesammes]
+
+  Adjective - garre: # c 
+    garre+A+Attr: garre 
+#    garre+A+Err/Attr+Attr: garres
+    garre+A+Sg+Nom: garres
+    garre+A+Comp+Sg+Nom: [garrebe, garresåbpoe, garresabpa]
+    garre+A+Superl+Sg+Nom: [garremes, garresommes, garresammes]
+
+  Adjective - gïemhpe: # XXX giempes blir analysert som err, generert som norm
+    gïemhpe+A+Attr: [gïemhpe, gïemhpes, giempes]
+    gïemhpe+A+Err/Orth+Attr: giempes 
+    gïemhpe+A+Sg+Nom: [gïemhpes, giempes]
+    gïemhpe+A+Err/Orth+Sg+Nom: giempes 
+    gïemhpe+A+Comp+Sg+Nom: [gïemhpebe, gïemhpesåbpoe, gïemhpesabpa]
+    gïemhpe+A+Superl+Sg+Nom: [gïemhpemes, gïemhpesommes, gïemhpesammes]
+   
+  Adjective - jaame: # 
+    jaame+A+Attr: jaame 
+    jaame+A+Sg+Nom: jaames 
+
+  Adjective - lovve: # 
+    lovve+A+Attr: lovve
+    lovve+A+Sg+Nom: lovves
+    lovve+A+Comp+Sg+Nom: [lovvesåbpoe, lovvebe, lovvesabpa]
+    lovve+A+Superl+Sg+Nom: [lovvesommes, lovvemes, lovvesammes]
+    
+  Adjective - lïene: # 
+    lïene+A+Attr: lïene 
+#    lïene+A+Err/Attr+Attr: lïenes
+    lïene+A+Sg+Nom: lïenes 
+    lïene+A+Comp+Sg+Nom: [lïenebe, lïenesåbpoe, lïenesabpa]
+    lïene+A+Superl+Sg+Nom: [lïenemes, lïenesammes, lïenesommes]
+    
+  Adjective - mïevhke: # XXX mïevhkes blir analysert som err, generert som norm
+    mïevhke+A+Attr: [mïevhke, mïevhkes]
+    mïevhke+A+Err/Orth+Attr: mïevhkes
+    mïevhke+A+Sg+Nom: mïevhkes 
+    mïevhke+A+Comp+Sg+Nom: [mïevhkebe, mïevhkesåbpoe, mïevhkesabpa]
+    mïevhke+A+Superl+Sg+Nom: [mïevhkemes, mïevhkesommes, mïevhkesammes]
+
+  Adjective - njoere: # 
+    njoere+A+Attr: njoere 
+
+    njoere+A+Sg+Nom: njoeres 
+    njoere+A+Comp+Sg+Nom: [njoerebe, njoeresåbpoe, njoeresabpa] 
+    njoere+A+Superl+Sg+Nom: [njoeremes, njoeresommes, njoeresammes]
+
+  Adjective - plaave: # 
+    plaave+A+Attr: plaave 
+#    plaave+A+Err/Attr+Attr: plaaves
+    plaave+A+Sg+Nom: [plaave, plaaves]
+    plaave+A+Comp+Sg+Nom: [plaavebe, plaavesåbpoe, plaavesabpa]
+    plaave+A+Superl+Sg+Nom: [plaavemes, plaavesommes, plaavesammes]
+    
+    
+  Adjective - plaave: # 
+    plaave+A+Err/Orth+Attr: plaevies 
+    plaave+A+Err/Orth+Sg+Nom: plaevie
+    plaave+A+Err/Orth+Comp+Attr: plaevebe
+    plaave+A+Err/Orth+Superl+Sg+Nom: plaevemes
+
+
+  Adjective - plïehtje: # 
+    plïehtje+A+Attr: plïehtje
+#    plïehtje+A+Err/Attr+Attr: plïehtjes
+    plïehtje+A+Sg+Nom: plïehtjes 
+    plïehtje+A+Comp+Sg+Nom: [plïehtjebe, plïehtjesåbpoe, plïehtjesabpa] 
+    plïehtje+A+Superl+Sg+Nom: [plïehtjemes, plïehtjesommes, plïehtjesammes]
+
+  Adjective - praare: # 
+    praare+A+Attr: praare 
+    praare+A+Sg+Nom: praares
+    praare+A+Comp+Sg+Nom: [praarebe, praaresåbpoe, praaresabpa]
+    praare+A+Superl+Sg+Nom: [praaremes, praaresommes, praaresammes]
+    
+  Adjective - skïemtje: # 
+    skïemtje+A+Attr: skïemtje 
+#    skïemtje+A+Err/Attr+Attr: skïemtjes
+    skïemtje+A+Sg+Nom: skïemtjes 
+    skïemtje+A+Comp+Sg+Nom: [skïemtjebe, skïemtjesåbpoe, skïemtjesabpa]
+    skïemtje+A+Superl+Sg+Nom: [skïemtjemes, skïemtjesommes, skïemtjesammes]
+
+  Adjective - stoere: #
+    stoere+A+Attr: [stoere, stoerre] 
+    stoere+A+Sg+Nom: [stoere, stoerre] 
+    stoere+A+Comp+Sg+Nom: [stuerebe, stoerebe]
+    stoere+A+Superl+Sg+Nom: [stööremes, stoeremes]
+
+  Adjective - noere: #  
+    noere+A+Attr: noere 
+    noere+A+Sg+Nom: noere 
+    noere+A+Comp+Sg+Nom: [nuerebe, noerebe]
+    noere+A+Superl+Sg+Nom: [nööremes, noeremes]
+
+  Adjective - onne: # c 
+    onne+A+Attr: onne
+    onne+A+Sg+Nom: onne
+    onne+A+Comp+Sg+Nom: [unnebe, onnebe]
+    onne+A+Superl+Sg+Nom: [unnemes, onnemes]
+
+  Adjective - tjïelke: # c 
+    tjïelke+A+Attr: tjïelke 
+#   tjïelke+A+Err/Attr+Attr: tjïelkes
+    tjïelke+A+Sg+Nom: tjïelkes 
+    tjïelke+A+Comp+Sg+Nom: [tjïelkebe, tjïelkesåbpoe, tjïelkesabpa]
+    tjïelke+A+Superl+Sg+Nom: [tjïelkemes, tjïelkesammes, tjïelkesommes]

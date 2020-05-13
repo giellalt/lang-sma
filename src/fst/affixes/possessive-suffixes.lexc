@@ -1,0 +1,179 @@
+!! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@uit.no or feedback@divvun.no
+
+! ==========================================================================
+!                     South Sámi morphological analyser                    
+! ==========================================================================
+
+
+! -------------------
+!! !!!South Saami Possessive suffixes
+! -------------------
+
+
+
+LEXICON N_ODD_SG_Px
+     +Nom+PxSg1:%>amme          PXFLAGG ;
+     +Nom+PxSg2:%>adth          PXFLAGG ;
+     +Acc+PxSg2:%>amth          PXFLAGG ;
+     +Gen+PxSg1:%>anne          PXFLAGG ;
+     +Gen+PxSg2:%>anne          PXFLAGG ;
+     +Gen+PxSg3:%>anne          PXFLAGG ;
+     +Ill+PxSg2:%>assedh        PXFLAGG ;
+     +Com+PxSg2:%>æjnedh        PXFLAGG ;
+             
+
+                      
+LEXICON N_IE_SG_OBL_Px
+        +Nom+Uml+PxSg1:%>%^1UMLeme    PXFLAGG ;
+        +Nom+Uml+PxSg2:%>%^1UMLedh    PXFLAGG ;
+        +Nom+Uml+PxSg3:e%>se          PXFLAGG ;
+        +Nom+Uml+PxSg3:e%>be          PXFLAGG ;
+        +Nom+PxSg3:e%>be              PXFLAGG ; ! korpus
+        +Acc+Uml+PxSg1:%>%^1UMLeme    PXFLAGG ;
+ +Acc+Uml+PxSg1+Use/NG:%>%^1UMLemem   PXFLAGG ;
+        +Acc+Uml+PxSg2:%>%^1UMLemdh   PXFLAGG ;
+            +Acc+PxSg3:e%>mse         PXFLAGG ;
+            +Acc+PxSg3:e%>bem         PXFLAGG ;
+            +Gen+PxSg3:e%>ben         PXFLAGG ;
+ +Gen+Uml+PxSg1+Use/NG:%>%^1UMLene    PXFLAGG ;
+        +Ill+Uml+PxSg1:%>%^1UMLasanne PXFLAGG ;
+        +Ill+Uml+PxSg2:%>%^1UMLasadth PXFLAGG ;
+        +Ill+Uml+PxSg3:iebasse        PXFLAGG ;
+            +Ela+PxSg1:ie%>stanne     PXFLAGG ;
+        +Ela+Uml+PxSg3:iebistie      PXFLAGG ;
+        +Ine+Uml+PxSg3:iebinie       PXFLAGG ;
+     +Ela+PxSg2+Use/NG:ie%>stadth     PXFLAGG ;
+        +Com+Uml+PxSg3:iebinie       PXFLAGG ;
+        +Com+Uml+PxSg2:%>%^1UMLanadth PXFLAGG ;
+        
+        
+LEXICON N_OE_SGILL_UML_Px
+ +Ill+Uml+PxSg1:e%>%^2UMLsanne PXFLAGG ;
+ +Ill+Uml+PxSg2:e%>%^2UMLsadth PXFLAGG ;
+
+
+LEXICON N_OE_SG_Px
+        +Nom+PxSg1:%>ome           PXFLAGG ;
+        +Nom+PxSg2:%>edh           PXFLAGG ;
+        +Nom+PxSg3:e%>se           PXFLAGG ;
+        +Nom+PxSg3:o%>be           PXFLAGG ;! går som laatjove (s.45) og aajjove (s.48) Magga
+        +Acc+PxSg1:%>eme           PXFLAGG ;
+ +Acc+PxSg1+Use/NG:%>emem          PXFLAGG ;
+        +Acc+PxSg2:%>emdh          PXFLAGG ;
+        +Acc+PxSg3:e%>mse          PXFLAGG ;
+        +Acc+PxSg3:o%>bem          PXFLAGG ; ! går som laatjove (s.45) og aajjove (s.48) Magga
+        +Gen+PxSg1:%>ene           PXFLAGG ;
+        +Gen+PxSg3:o%>ben          PXFLAGG ; ! går som laatjove (s.45) og aajjove (s.48) Magga
+       +Ill+PxSg3:oe%>basse        PXFLAGG ;! skal den gå som aajj_oe_vasse eller                 
+     !  +Ill+PxSg3:o%>basse        PXFLAGG ;! eller skal den gå som laatj_o_vasse? - hvor den korte vokalen i andre stavelse er -o- (s.45.Magga)
+        +Ine+PxSg3:oe%>bisnie      PXFLAGG ;! skal den gå som aajj_oe_visnie eller                 
+     !   +Ine+PxSg3:o%>bisnie      PXFLAGG ;! eller skal den gå som laatj_o_visnie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
+        +Ela+PxSg1:oe%>stanne      PXFLAGG ;
+        +Ela+PxSg3:oe%>bistie      PXFLAGG ;! skal den gå som aajj_oe_vistie eller                  
+     !   +Ela+PxSg3:o%>bistie      PXFLAGG ;! eller skal den gå som laatj_o_vistie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
+ +Ela+PxSg2+Use/NG:oe%>stadth      PXFLAGG ;
+       +Com+PxSg2:oe%>%^1UMLnadth  PXFLAGG ;
+       +Com+PxSg3:oe%>binie        PXFLAGG ;! skal den gå som aajj_oe_vinie eller                    
+    !   +Com+PxSg3:o%>binie        PXFLAGG ;! eller skal den gå som laatj_o_vinie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
+       +Ess+PxSg3:oe%>binie        PXFLAGG ;! skal den gå som aajj_oe_vinie eller 
+    !   +Ess+PxSg3:o%>binie        PXFLAGG ;! eller skal den gå som laatj_o_vinie? - hvor den korte vokalen i andre stavelse er -o-  (s.45.Magga)
+
+
+LEXICON MAANASGOBL_Px
+        +Nom+PxSg1:%>eme     PXFLAGG ;
+        +Nom+PxSg2:%>edh     PXFLAGG ;
+        +Nom+PxSg3:e%>se     PXFLAGG ;
+        +Nom+PxSg3:e%>be     PXFLAGG ;   ! Som daktere
+        +Acc+PxSg1:%>eme     PXFLAGG ;
+ +Acc+PxSg1+Use/NG:%>emem    PXFLAGG ;
+        +Acc+PxSg2:%>emdh    PXFLAGG ;
+        +Acc+PxSg3:e%>mse    PXFLAGG ;
+        +Acc+PxSg3:e%>bem    PXFLAGG ; ! som daktere
+        +Gen+PxSg1:%>ene     PXFLAGG ;
+        +Gen+PxSg3:e%>ben    PXFLAGG ;
+        +Ill+PxSg1:%>asanne  PXFLAGG ;
+        +Ill+PxSg2:%>asadth  PXFLAGG ;
+        +Ill+PxSg3:%>abasse  PXFLAGG ;! daktarasse
+        +Ela+PxSg1:%>astanne PXFLAGG ;
+        +Ine+PxSg3:%>abisnie PXFLAGG ;! daktarisnie
+        +Ela+PxSg3:%>abistie PXFLAGG ;! daktaristie
+ +Ela+PxSg1+Use/NG:%>astadth PXFLAGG ;
+        +Com+PxSg2:%>anadth  PXFLAGG ;
+        +Com+PxSg3:%>abinie  PXFLAGG ;! daktarinie
+        +Ess+PxSg3:%>abinie  PXFLAGG ;! daktarinie
+
+LEXICON NIEJTESGOBL_Px
+        +Nom+PxSg1:%>eme     PXFLAGG ;
+        +Nom+PxSg2:%>edh     PXFLAGG ;
+        +Nom+PxSg3:e%>se     PXFLAGG ;
+        +Nom+PxSg3:e%>be     PXFLAGG ;  ! som gaamege     
+        +Acc+PxSg1:%>eme     PXFLAGG ;
+ +Acc+PxSg1+Use/NG:%>emem    PXFLAGG ;
+        +Acc+PxSg2:%>emdh    PXFLAGG ;
+        +Acc+PxSg3:e%>mse    PXFLAGG ;
+        +Acc+PxSg3:e%>bem    PXFLAGG ;! gaamegem
+        +Gen+PxSg1:%>ene     PXFLAGG ;
+        +Gen+PxSg2:%>edh     PXFLAGG ;
+        +Gen+PxSg3:e%>ben    PXFLAGG ; ! gaamegen
+        +Ill+PxSg1:%>esanne  PXFLAGG ;
+        +Ill+PxSg2:%>esadth  PXFLAGG ;
+        +Ill+PxSg3:%>ebasse  PXFLAGG ;! gaamegasse
+     +Ill+PxSg3:%>ebisnie    PXFLAGG ;! gaamegisnie
+     +Ela+PxSg3:%>ebistie    PXFLAGG ; ! gaamegistie 
+        +Ela+PxSg1:%>estanne PXFLAGG ;
+ +Ela+PxSg1+Use/NG:%>estadth PXFLAGG ;
+        +Com+PxSg2:%>enadth  PXFLAGG ;
+        +Com+PxSg3:%>ebinie  PXFLAGG ; ! gaameginie
+        +Ess+PxSg3:%>ebinie  PXFLAGG ; ! gaameginie
+
+
+LEXICON JOVKEMES_Px
+        +Nom+PxSg1:%>eme                  PXFLAGG   ;
+        +Nom+PxSg2:%>edh                  PXFLAGG   ;
+        +Nom+PxSg3:%>ese                   PXFLAGG   ;
+        +Acc+PxSg1:%>eme                  PXFLAGG   ;
+ +Acc+PxSg1+Use/NG:%>emem                 PXFLAGG   ;
+        +Acc+PxSg2:%>emdh                 PXFLAGG   ;
+        +Acc+PxSg3:%>emse                 PXFLAGG   ;
+        +Gen+PxSg1:%>ene                  PXFLAGG   ;
+        +Ill+PxSg1:%>esanne               PXFLAGG   ;
+        +Ill+PxSg2:%>esadth               PXFLAGG   ;
+        +Ela+PxSg1:%>estanne              PXFLAGG   ;
+ +Ela+PxSg1+Use/NG:%>estadth              PXFLAGG   ;
+        +Com+PxSg2:%>enadth               PXFLAGG   ;
+       
+
+
+!! !!Px lexica    
+
+LEXICON PXFLAGG
+@R.Px.add@ FINAL1 ;
+
+!LEXICON NPxV_Px
+! @R.Px.add@ PxV ;
+!LEXICON NPxV-12_Px
+! @R.Px.add@ PxV-12 ;
+!LEXICON NPxV3_Px
+! @R.Px.add@ PxV3 ;
+!LEXICON NPxNomPlV_Px
+! @R.Px.add@ PxNomPlV ;
+!LEXICON NPxCi_Px
+! @R.Px.add@ PxCi ;
+!LEXICON NPxC_Px
+! @R.Px.add@ PxC ;
+!LEXICON NPxCs_Px
+! @R.Px.add@ PxCs ;
+!LEXICON NPxCc_Px
+! @R.Px.add@ PxCc ;
