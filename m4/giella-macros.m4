@@ -41,18 +41,9 @@ AC_ARG_WITH([giella-core],
             [with_giella_core=$withval],
             [with_giella_core=false])
 
-pushd . > /dev/null
-SCRIPT_PATH="${BASH_SOURCE[0]}"
-if ([ test -L "${SCRIPT_PATH}" ]); then
-  while([ test -L "${SCRIPT_PATH}" ]); do cd $(dirname "$SCRIPT_PATH"); 
-  SCRIPT_PATH=$(readlink "${SCRIPT_PATH}"); done
-fi
-SCRIPT_PATH=$(cd $(dirname ${SCRIPT_PATH}) > /dev/null && pwd -P)
-popd  > /dev/null
-CONFIGUREDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd -P )"
+# CONFIGUREDIR=$( cd $( dirname "${BASH_SOURCE[0]}" ) >/dev/null 2>&1 && pwd )
 
-echo "SCRIPT_PATH: $SCRIPT_PATH"
-echo "CONFIGUREDIR: $CONFIGUREDIR"
+# echo "CONFIGUREDIR: $CONFIGUREDIR"
 
 _giella_core_not_found_message="
 GIELLA_CORE could not be set:
