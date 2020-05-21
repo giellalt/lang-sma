@@ -134,14 +134,14 @@ for f in $fsttype; do
 
         # generate lemmas in comparative, extract the resulting generated
         # lemma, store it:
-        sed 's/$/+A+Comp+Sg+Nom/' $comp_lemmas \
+        sed 's/$/+A+Der\/Comp+A+Sg+Nom/' $comp_lemmas \
             | $lookup_tool $generator_file.$suffix \
             | fgrep -v "+?" | grep -v "^$" | cut -f2 | sort -u \
             > $generated_comp_lemmas.$f.txt 
 
         # generate lemmas in superlative, extract the resulting generated
         # lemma, store it:
-        sed 's/$/+A+Superl+Sg+Nom/' $supr_lemmas \
+        sed 's/$/+A+Der\/Superl+A+Sg+Nom/' $supr_lemmas \
             | $lookup_tool $generator_file.$suffix \
             | fgrep -v "+?" | grep -v "^$" | cut -f2 | sort -u \
             > $generated_supr_lemmas.$f.txt 
