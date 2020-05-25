@@ -26,33 +26,11 @@ jobs:
           path: lang/build
           key: ${{ runner.os }}-lang-build
       - name: Install dependencies
-        run: |
-          set -e
-          sudo apt-get update
-          sudo apt-get install -y wget build-essential autotools-dev autoconf git pkg-config gawk python3-pip zip
-          sudo pip3 install PyYAML
-          wget https://apertium.projectjj.com/apt/install-nightly.sh && sudo bash install-nightly.sh
-          sudo apt-get install -y hfst vislcg3 libdivvun divvun-gramcheck
-          sudo mkdir ~/.ssh 
-          ssh-keyscan -H github.com | sudo tee -a ~/.ssh/known_hosts
+        uses: divvun/actions/lang/install-deps@master
       - name: Build
-        run: |
-          set -ex
-          # configure and install dependencies
-          cd $GITHUB_WORKSPACE/giella-core
-          ./autogen.sh && ./configure && sudo make install
-          cd $GITHUB_WORKSPACE/giella-shared
-          ./autogen.sh && ./configure && sudo make install
-
-          # build speller
-          cd $GITHUB_WORKSPACE/lang
-          ./autogen.sh
-          mkdir -p build && cd build
-          ../configure --disable-hfst-desktop-spellers --enable-spellers --enable-fst-hyphenator --enable-hfst-mobile-speller
-          make -j$(nproc)
-          # fails atm
-          # make check
-          ls -lah tools/spellcheckers/
+        uses: divvun/actions/lang/build@master
+        with:
+          fst: ["foma", "hfst"]
       - name: Upload spellers
         uses: actions/upload-artifact@v2
         with:
