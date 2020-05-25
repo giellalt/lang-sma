@@ -27,6 +27,8 @@ jobs:
           key: ${{ runner.os }}-lang-build
       - name: Install dependencies
         uses: divvun/actions/lang/install-deps@master
+        with:
+          sudo: true
       - name: Build
         uses: divvun/actions/lang/build@master
         with:
