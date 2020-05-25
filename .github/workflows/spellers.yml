@@ -20,11 +20,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: lang
-      - name: Cache build dir
-        uses: actions/cache@v1
-        with:
-          path: lang/build
-          key: ${{ runner.os }}-lang-build
       - name: Install dependencies
         uses: divvun/actions/lang/install-deps@master
         with:
