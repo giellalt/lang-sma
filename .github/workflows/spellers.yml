@@ -30,7 +30,7 @@ jobs:
       - name: Build
         uses: divvun/actions/lang/build@master
         with:
-          fst: ["foma", "hfst"]
+          fst: "[\"foma\", \"hfst\"]"
       - name: Upload spellers
         uses: actions/upload-artifact@v2
         with:
