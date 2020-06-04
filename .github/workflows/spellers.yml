@@ -80,6 +80,7 @@ jobs:
           speller-type: ${{ matrix.type }}
           speller-manifest-path: "manifest.toml"
           speller-paths: ${{ needs.build.outputs['speller-paths'] }}
+          GITHUB_TOKEN: ${{ secret.GITHUB_TOKEN }}
       - name: Deploy to Pahkat
         uses: divvun/actions/speller/deploy@master
         with:
