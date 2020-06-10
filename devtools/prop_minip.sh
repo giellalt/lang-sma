@@ -10,7 +10,7 @@
 
 PATTERN=$1
 L_FILE="in.txt"
-cut -d '!' -f1 src/fst/stems/sma-propernouns.lexc | grep $PATTERN | cut -d ':' -f1 | tr -d '%'>$L_FILE
+cut -d '!' -f1 src/fst/generated_files/smi-sma-propernouns.lexc | grep $PATTERN | tr '+' ':' | cut -d ':' -f1 | tr -d '%'>$L_FILE
 
 P_FILE="test/data/testpropparadigm.txt"
 
@@ -18,7 +18,7 @@ for lemma in $(cat $L_FILE);
 do
  for form in $(cat $P_FILE);
  do
-   echo "${lemma}${form}" | hfst-lookup $GTHOME/langs/sma/src/generator-gt-norm.hfstol
+   echo "${lemma}${form}" | $HLOOKUP $GTLANGS/lang-sma/src/generator-gt-norm.hfstol
  done
 done
 
