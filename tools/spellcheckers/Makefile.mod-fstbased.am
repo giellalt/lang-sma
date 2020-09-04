@@ -34,6 +34,7 @@ generator-fstspeller-gt-norm.hfst: \
 		.o. @\"filters/split-CmpNP-tags.hfst\"                     \
 		.o. @\"$<\"                                                \
 		; \n\
+		minimize\n\
 		twosided flag-diacritics\n\
 		eliminate flag CmpHyph\n\
 		eliminate flag CmpN\n\
