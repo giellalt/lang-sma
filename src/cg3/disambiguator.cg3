@@ -1686,6 +1686,9 @@ SELECT:Nom Nom (0 A OR N LINK -1 N + Nom)(1 N LINK NOT 0 Nom)(NOT 0 Adv) ;
 	#$ Ditnie-barkoe dan søøjmes Læjsese, idtji man jijnjem hinnh darjodh.
 	#$ Nïejte daelie tjaelieminie.
 
+SELECT:NumAttr Num + Attr + Ine IF (1 Ine) ;
+	#$ Dïhte tjidtjie gonnoeh aehtjine årroeminie aktene voenesne man nomme Jorpejaevrie.
+
 
 #!! !!PrfPrc
 
@@ -2050,6 +2053,10 @@ SELECT:ektine (N Com) OR (Pron Com) OR (A Com) (*-1 ("ektine") BARRIER NOT-NPMOD
 	## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
 SELECT:ektine (N Com) OR (Pron Com) OR (A Com) (*1 ("ektine") BARRIER S-BOUNDARY) ;	
 	## Giejnie leah skuvlesne ektine?
+SELECT:gonnoeh (N Com)  (-1 ("gonnoeh")) ;
+	#$ Dïhte tjidtjie gonnoeh aehtjine årroeminie aktene voenesne man nomme Jorpejaevrie.
+
+
 
 REMOVE:ComIfComV Ine (*0 COMV BARRIER S-BOUNDARY) ;
 REMOVE:ComIfComV Ess (*0 COMV BARRIER S-BOUNDARY) ;
