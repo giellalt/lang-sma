@@ -18,16 +18,6 @@
 # Add language-specific flags for hfst-lexc compilation here:
 HFST_LEXC_LOCAL_FLAGS=--Werror
 
-# Temporary solution to let sma-oahpa have stable adjectives and nouns while
-# Maja is working her way through them.
-
-ADJECTIVES=
-if WANT_OAHPA
-ADJECTIVES+=  
-else
-ADJECTIVES+=
-endif # WANT_OAHPA
-
 ####### Morphology source file defs: ########
 
 # Set this to name of lexc file containing Multichar_Symbols and LEXICON Root
@@ -58,8 +48,7 @@ GT_LEXC_SRCS_L1_L2=\
 			stems/pronouns.lexc      \
 			stems/sma-acronyms.lexc  \
 			stems/subjunctions.lexc  \
-			stems/verbs.lexc         \
-			$(ADJECTIVES)
+			stems/verbs.lexc
 
 # If you are building an error-detecting L2 analyser, specify the lexc files
 # that differ between the regular L1 and the L2 analysers below, in L1 and
