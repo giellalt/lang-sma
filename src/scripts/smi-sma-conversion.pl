@@ -47,8 +47,8 @@ while(<>) {
 
 	# Substitutions due to orthographic differences between SMJ and SME:
 	s/t:(.*)h /t:$1d9 /g ;
-	s/čč/ttj/g ;
-	s/Č/Tj/g ;
+#	s/čč/ttj/g ;
+#	s/Č/Tj/g ;
 	# Andreevič -> Andreevitj:
 #	s/^(.*)č /$1tj:$1t9j /g ;
 #	s/č/tj/g ;
