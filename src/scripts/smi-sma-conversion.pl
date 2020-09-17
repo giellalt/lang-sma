@@ -45,24 +45,12 @@ while(<>) {
 	s/8#/#/g ;
 	s/9#/#/g ;
 
-	# Substitutions due to orthographic differences between SMJ and SME:
+	# Substitutions due to orthographic differences between SMA and SME:
 	s/t:(.*)h /t:$1d9 /g ;
-#	s/čč/ttj/g ;
-#	s/Č/Tj/g ;
-	# Andreevič -> Andreevitj:
-#	s/^(.*)č /$1tj:$1t9j /g ;
-#	s/č/tj/g ;
-#	s/šž/sjtj/g ;
-#	s/Šž/Sjtj/g ;
-#	s/šš/ssj/g ;
-#	s/žž/dtj/g ;
-#	s/Š/Sj/g ;
-#	s/š/sj/g ;
-#	s/ž/dj/g ;
-	s/#/^/g ;  # Endra alle smi-# til ^, slik at vi kan la alle andre # bli til bindestrek
+
 	# j->i || Vow i .* : .* Vow _ ; Heaika:Heajka -> Heaika:Heaika. But Majken 	
-#	s/([ÁAEIOUaáeiou])i(.*):(.*)([ÁAEIOUaáeiou])j/$1i$2:$3$4i/g ;
-    s/([ÁAEIOUaáeiou])i([^j].*):(.*)([ÁAEIOUaáeiou])j([^ÁAEIOUaáeiou])/$1i$2:$3$4i$5/g ;
+#   s/([ÁAEIOUaáeiou])i(.*):(.*)([ÁAEIOUaáeiou])j/$1i$2:$3$4i/g ;
+	s/([ÁAEIOUaáeiou])i([^j].*):(.*)([ÁAEIOUaáeiou])j([^ÁAEIOUaáeiou])/$1i$2:$3$4i$5/g ;
 
 	s/ia\+(.+ MOLDAVIA)/ije+$1/g ; # Change the lemma form of MOLDAVIA words
 	s/sia\+(Err.Orth.+ ACCRA-LOAN)/sije+$1/g ; # Change the lemma form of MOLDAVIA words
