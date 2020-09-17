@@ -51,14 +51,14 @@ while(<>) {
 	s/Č/Tj/g ;
 	# Andreevič -> Andreevitj:
 #	s/^(.*)č /$1tj:$1t9j /g ;
-	s/č/tj/g ;
-	s/šž/sjtj/g ;
-	s/Šž/Sjtj/g ;
-	s/šš/ssj/g ;
-	s/žž/dtj/g ;
-	s/Š/Sj/g ;
-	s/š/sj/g ;
-	s/ž/dj/g ;
+#	s/č/tj/g ;
+#	s/šž/sjtj/g ;
+#	s/Šž/Sjtj/g ;
+#	s/šš/ssj/g ;
+#	s/žž/dtj/g ;
+#	s/Š/Sj/g ;
+#	s/š/sj/g ;
+#	s/ž/dj/g ;
 	s/#/^/g ;  # Endra alle smi-# til ^, slik at vi kan la alle andre # bli til bindestrek
 	# j->i || Vow i .* : .* Vow _ ; Heaika:Heajka -> Heaika:Heaika. But Majken 	
 #	s/([ÁAEIOUaáeiou])i(.*):(.*)([ÁAEIOUaáeiou])j/$1i$2:$3$4i/g ;
