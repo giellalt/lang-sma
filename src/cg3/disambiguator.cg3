@@ -1321,7 +1321,7 @@ SELECT:PoGena Gen (-1 Gen) ;
 #!! !Particles and adverbs
 
 REMOVE:Pcle2 Adv IF (-2 BOS)(-1 Adv OR Ine)(0 Pcle);
-REMOVE:AttrAdv Adv IF (0 N LINK -1 Attr) ;
+REMOVE:AttrAdv Adv IF (0 N LINK -1 Attr - Prop) (NEGATE 0 ("vihth")) ;
 	
 SELECT:vaejtie Pcle (0 ("vaejtie") LINK *-1 BOS BARRIER WORD)(1 Pers) ;
 	#$ Vaejtie mijjieh, gaajhkesh låhkesh, maehtebe leessemebïjlesne åeredh?
@@ -1837,6 +1837,11 @@ SELECT:Ess Ess (0 (N Com) LINK 1 OPRED-V)(-1 Acc) ;
 	
 SELECT:Ess Ess (0 (N Com) LINK -1 (V <TH-Acc-Any><RO-Ess-Any>) LINK -1 Acc) ;
 	## Dam åtnam bïjline.
+
+SELECT:Com Com (0 Ess + Sem/Veh LINK 1 MOVEMENT-V) ;
+	#$ Bræjhta luste åtna skovterinie vuelkedh.
+
+
 
 REMOVE:SgGen Gen (0 Ill + Sg LINK 1 FMAINV) ;
 	#$ varki gåatan bïesem jïh aaj mov daelvie-dogkesh gåatan fihkem.
