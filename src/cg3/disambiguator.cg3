@@ -903,7 +903,7 @@ REMOVE:laake Gen IF (0 ("laake" Err/Orth) LINK 0 Adv) ;
 	#$ lustes laakan
 
 SELECT:adv-mod Adv (0 ADV-MOD-ADV LINK 1 Adv) ;
-SELECT:adv-mod Adv (0 ADV-MOD-ADJ LINK 1 A) ;
+SELECT:adv-mod Adv (0 ADV-MOD-ADJ LINK *1 A BARRIER WORD - Pcle) ;
 	#$ Njieskiehtimmie lij gaajh hijven.
 
 	
@@ -1091,9 +1091,10 @@ SELECT:novAdv Adv IF (0 ("nov")) ;	#waiting for example with Pcle
 SELECT:aarehkeAdv Adv IF (0 ("aarehke") LINK 1 Sem/Time) ;
 	#$ Dallahmasten vaedtsieh åarajidh guktie maehtieh aarehke aereden tjuedtjielidh.
 
-SELECT:Sem/TimeN N (0 Sem/Time LINK 0 Adv LINK -1 ("aarehke")) ;
+SELECT:Sem/TimeN N (0 Sem/Time LINK -1 ("aarehke") OR ("mubpie")) ;
 	#$ Dallahmasten vaedtsieh åarajidh guktie maehtieh aarehke aereden tjuedtjielidh.
 
+SELECT:Adv Adv (0 ("gåessie") LINK 1 ("gænnah")) ;
 
 
 #!! !Verbs
@@ -1164,6 +1165,12 @@ REMOVE:V VFIN IF (0 N + Nom)(*-1 CC BARRIER NOT-A LINK -1C N + Nom) ;
 
 SELECT:vfin TV IF (0 N)(-1C Acc);
 	#$ Læjsa gaahtoem veelti jih gåatan veedtsi.
+
+REMOVE:V VFIN IF (0 Acc LINK -1 COMMA LINK -1 Acc OR Nom + Pl)(1 COMMA LINK 1 Acc OR Nom + Pl) ;
+	#$ Fïereguhte dallah baenie-skubpehkem, abpesem, guapetjh jïh lijhkievaarjoeh ohtsede jïh voessem tsagka.
+
+REMOVE:V VFIN IF (0 A + Nom LINK -1 ("dan")) ;
+	#$ Dïhte dan madtjele gosse tjihkede byöpmestalla.
 
 
 #REMOVE VFIN IF (0 N + Sg)(1C VFIN + Sg3);
@@ -1242,7 +1249,6 @@ SELECT:Attr Attr (0 A LINK 1 N LINK 1 COPULAS)(-1 Nom) ;
 REMOVE:VFIN VFIN (0 N) (-1 Attr LINK *-1 VFIN BARRIER S-BOUNDARY) ;
 
 SELECT:vaaneAdv Adv (0 ("vaane") LINK 1 ("sjïdtedh"))(NOT -1 Gen) ;
-
 	#$ Bræjhta vaane sjïdteme skovteretjoejem govledh jïh healhkoe, gosse skovtere sjååve.
 	
 SELECT:Nom Nom (0 A OR N LINK 1 COPULAS)(*-1 Nom BARRIER NOT-NPMODADV) ;
@@ -1518,6 +1524,8 @@ REMOVE:NotAAttr (A Attr) (NOT 1 N OR A LINK NEGATE 0 CC OR COMMA LINK 1 Attr) ;
 	## Dam maam dorje lea gaerhtelesvoeten jïh riektesvoeten mietie, jïh altese stillemh leah stynkehke jïh ihkuvasse tjåadtjoeh.
 	## Datne edtjh dov elkiejgujmie, dov måarine jïh dov mænnjajgujmie vïnhtsese tjaangedh, jïh fïerhten jielijijstie, urries jïh minngels, edtjh akth paarrh vïnhtsese vaedtsiehtidh, båetieh datnine ektine jieledh.
 	
+SELECT:Nom N + Nom (0 ("ånnetje") LINK 1 COMMA)(*-1 BOS BARRIER WORD) ;
+	#$ Ånnetje, dej sirrie-kåahpide deavhteme.
 	
 	
 #!! !!Grammatisk ord eller N eller A
@@ -1904,7 +1912,9 @@ SELECT:N_Adv Adv (0 ("mænngan") OR ("dallamasten") LINK 1 ("gosse") OR CS) ;
 SELECT:N_Adv Adv (0 ("mænngan") LINK -1 ("guhkiem")) ;
 SELECT:Adv Adv (0 ("guhkiem") LINK 1 ("mænngan")) ;
 
-SELECT:Adv Adv (0 ("hijven") LINK -1 ("tuhtjedh")) ;
+SELECT:Adv Adv (0 ("hijven") LINK -1 ("tuhtjedh") OR ("dan")) ;
+
+SELECT:N_Adv Adv (0 ("iehkeden") LINK 1 ("dellie")) ;
 
 
 SELECT:N A + Nom (0 N + Nom OR VFIN LINK 1 ("sjïdtedh")) ;
