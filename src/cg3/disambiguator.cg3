@@ -690,7 +690,7 @@ REMOVE:diNom Coll (-1 ("dii") OR ("diibmu")) ;
 
 
 #!! Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
-LIST JIEHTEDH = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "praahkedh" "stilledh" "tjaalasovvedh" "tjåarvodh" "ussjedidh" "vaestiedidh" ;
+LIST JIEHTEDH = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "praahkedh" "stilledh" "tjaalasovvedh" "tjåarvodh" "onterdidh" "ussjedidh" "vaestiedidh" ;
 
 ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WORD)((1 N + Nom) OR (1 Attr LINK 1 N + Nom)) ; 
 	#$ «Manne dan aavosne juhkoe giesie lea,» tjidtjebe jeahta.
@@ -1053,7 +1053,7 @@ REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 FORMS)(1 FORMS) ;
 	## Dagkeri tjoeverieh joekoen veaksehke juelkieh, mohte disse lissine tjoevere abpe almetje joekoen voerkes jallh fahkoes årrodh.
 SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR COMMA) ;
 	## Helena, jallh Aili man dan aaj nomme, lea saemien maadtoste.
-SELECT:Acase $$CASES (0 A LINK -1 Dem + $$CASES) ;
+SELECT:Acase $$CASES (0 A LINK -1 Dem + $$CASES)(NEGATE 0 Attr) ;
 	#$ Im dom guhkebem vielie vuejnieh.
 
 #!! Rel or Interr
@@ -1507,7 +1507,9 @@ REMOVE:hijven Attr (0 ("hijven")) ; # Attr?
 
 #!! !!Adj or Adv
 
+LIST DAERPIES = "daerpies" "vihkeles" ;
 
+SELECT:daerpies A (0 DAERPIES LINK -1 COPULAS LINK *1 Inf BARRIER SV-BOUNDARY) ;
 
 REMOVE:AdvNotA A (0 Adv)((1C V OR (A Sg Nom) LINK NOT 0 COPULAS) OR (1 Ela LINK *1 V BARRIER NOT-ADV)) ;
 	## Minngemes aejkien goh dam heannedi lij 1988.
@@ -1911,6 +1913,7 @@ REMOVE:v V IF (0 N + ADVLCASE LINK 1 PrfPrc OR Inf)(*-1 AUX BARRIER SV-BOUNDARY)
 SELECT:N_Adv Adv (0 ("mænngan") OR ("dallamasten") LINK 1 ("gosse") OR CS) ;
 SELECT:N_Adv Adv (0 ("mænngan") LINK -1 ("guhkiem")) ;
 SELECT:Adv Adv (0 ("guhkiem") LINK 1 ("mænngan")) ;
+SELECT:Adv Adv (0 ("guhkiem") LINK *1 IV BARRIER SV-BOUNDARY) ;
 
 SELECT:Adv Adv (0 ("hijven") LINK -1 ("tuhtjedh") OR ("dan")) ;
 
