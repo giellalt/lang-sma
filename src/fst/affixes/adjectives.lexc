@@ -909,7 +909,7 @@ LEXICON ies_IES_IE_EVEN3NOCOMP  ! Attr=s, Pred. = s jih Ø, Comp jih caese= even
 ! **************************
 
 
-LEXICON asATTR_anADVERB                                                  
+LEXICON asATTR_anADVERB 
 !! !!!UMLAUT LEXICON @LEXNAME@
 !! These 6 adjectives is in the 4. group of the southsámi adjectives, the group
 !! which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
@@ -920,7 +920,7 @@ LEXICON asATTR_anADVERB
 !! {{{
   +A:a  ATTR_S   ; !!= @CODE@
 ! +A:a  PRED_AN  ; !!= @CODE@             
-  :an adv      ;
+!  :an adv      ;
   +A:a  MAANAOBL ;
 !! }}}
 
@@ -938,23 +938,23 @@ LEXICON oesATTR_oen_an_ADVERB                                                   
 !! }}}
 
 
-LEXICON oehATTR_oen_ADVERB   !  
+LEXICON oehATTR   !  !var oehATTR_oen_ADVERB
 !! {{{
   +A:oe  ATTR_H     ; !!= @CODE@
-! :oe  PRED_N     ; !!= @CODE@                                              ! 
-  :oen adv        ;
+! :oe  PRED_N     ; !!= @CODE@   
+!   :oen adv                                           ! 
   +A:ohk ODDCASEOBL ;
 !! }}}
 
-LEXICON oehATTR_anADVERB ! an- is adverb    
+LEXICON oehATTR2 ! an- is adverb    !var oehATTR_anADVERB
 !! {{{
          +A:oe        ATTR_H    ; !!= @CODE@
 ! +Use/NG:%^3UMLa   PRED_N    ; !!= @CODE@
 
-   +Use/NG:an        adv       ;  
-         +A:ahk       ODDCOMP   ;
-         :oen       adv       ;   
-         +A:oehk      ODD_ÅBPOE ;
+!   +Use/NG:an        adv      ;
+  +Use/NG+A:ahk       ODDCOMP   ;
+!          :oen       adv       ;
+  +Use/NG+A:oehk      ODD_ÅBPOE ;
 !        :%^3UMLahk ODD_ÅBPOE ; !!= @CODE@
          +A:ohk       ODDCASE   ;
 !! }}}
