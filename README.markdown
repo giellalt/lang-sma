@@ -11,6 +11,7 @@ choices.
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
  [![Build Status](https://github.com/giellalt/lang-sma/workflows/Build%20Speller%20Archives%20and%20Bundles/badge.svg)](https://github.com/giellalt/lang-sma/actions)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Install proofing tools and [keyboards](https://github.com/giellalt/keyboard-sma)
 for the Southern Sámi language by using the [Divvun Installer](http://divvun.no)
