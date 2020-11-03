@@ -1,7 +1,7 @@
-The Southern Sámi morphology and tools
+The South Sámi morphology and tools
 ==========================================
 
-This repository contains finite state source files for the Southern Sámi language,
+This repository contains finite state source files for the South Sámi language,
 for building morphological analysers, proofing tools
 and dictionaries. The data and implementation are licenced under __LICENCE__
 licence, also detailed in the
@@ -14,7 +14,7 @@ choices.
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Install proofing tools and [keyboards](https://github.com/giellalt/keyboard-sma)
-for the Southern Sámi language by using the [Divvun Installer](http://divvun.no)
+for the South Sámi language by using the [Divvun Installer](http://divvun.no)
 (some languages are only available via the nightly channel).
 
 Documentation
@@ -28,7 +28,7 @@ Documentation can be found at:
 Core dependencies
 -----------------
 
-In order to compile and use Southern Sámi language morphology and
+In order to compile and use South Sámi language morphology and
 dictionaries, you need:
 
 - an FST compiler: [HFST](https://github.com/hfst/hfst), [Foma](https://github.com/mhulden/foma) or [Xerox Xfst](https://web.stanford.edu/~laurik/fsmbook/home.html)
