@@ -15,9 +15,21 @@ JSP_PAGES=root-morphology.jspwiki       \
 		  verbs-affixes.jspwiki         \
 		  numerals-affixes.jspwiki      \
 		  abbreviations-affixes.jspwiki \
-          acronyms-affixes.jspwiki      \
+		  acronyms-affixes.jspwiki      \
 		  adjectives-stems.jspwiki      \
 		  disambiguator-syntax.jspwiki
+
+MD_PAGES=root-morphology.md       \
+		  phonology-morphology.md  \
+		  nouns-affixes.md         \
+		  propernouns-affixes.md   \
+		  adjectives-affixes.md    \
+		  verbs-affixes.md         \
+		  numerals-affixes.md      \
+		  abbreviations-affixes.md \
+		  acronyms-affixes.md      \
+		  adjectives-stems.md      \
+		  disambiguator-syntax.md
 
 #         sma-acronyms-stems.jspwiki    \
 #		  smi-propernouns-stems.jspwiki \
@@ -36,4 +48,4 @@ JSP_PAGES=root-morphology.jspwiki       \
 # subjunctions-stems.jspwiki       \
 # verbs-stems.jspwiki
 
-include $(top_srcdir)/../giella-core/am-shared/doc-dir-include.am
+include $(top_srcdir)/../giella-core/am-shared/docs-dir-include.am
