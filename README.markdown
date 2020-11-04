@@ -24,6 +24,7 @@ Documentation can be found at:
 
 -   <https://giellalt.uit.no/lang/smadoc/index.html>
 -   <https://giellalt.uit.no/index.html>
+-   [In-source documentation](doc/Links.md)
 
 Core dependencies
 -----------------
