@@ -127,26 +127,26 @@
 Tags for compound analysis - this is what a compound actually is. We use this
 to research compounding patterns in the corpus.
 
- ; +Cmp/Sg       : Compounding using an unspecified singular stem
- ; +Cmp/SgNom    : Compounding using nominative singular
- ; +Cmp/SgGen    : Compounding using genitive singular
- ; +Cmp/PlGen    : Compounding using genitive plural
- ; +Cmp/Attr     : Compounding using attribute form
- ; +Cmp/eh : Compound stem in *–eh*, as in ''gaameh-gåaroje'',
+* ** +Cmp/Sg       **:  Compounding using an unspecified singular stem |
+* ** +Cmp/SgNom    **:  Compounding using nominative singular |
+* ** +Cmp/SgGen    **:  Compounding using genitive singular |
+* ** +Cmp/PlGen    **:  Compounding using genitive plural |
+* ** +Cmp/Attr     **:  Compounding using attribute form |
+* ** +Cmp/eh **:  Compound stem in *–eh*, as in ''gaameh-gåaroje'', |
             from ''gaamege''
- ; +Cmp/ege : Compound stem in *–ege*, as in ''gaamege-gåaroje''
- ; +Cmp/FinEDel : Deletion of final *e*, as in ''voelem-gaaroeh'',
+* ** +Cmp/ege **:  Compound stem in *–ege*, as in ''gaamege-gåaroje'' |
+* ** +Cmp/FinEDel **:  Deletion of final *e*, as in ''voelem-gaaroeh'', |
             from ''voeleme''
- ; +Cmp/ShH : Compounding using a short stem + *h*: ''–biejjh–''
+* ** +Cmp/ShH : Compounding using a short stem + *h***:  ''–biejjh–'' |
             (from ''biejjie''), cf ''reakedsbiejjhvadtese''
- ; +Cmp/Sh : Compounding using a short stem: ''–biejj–''
+* ** +Cmp/Sh : Compounding using a short stem**:  ''–biejj–'' |
             (from ''biejjie'')
- ; +Cmp/SplitR : This is a split compound with the other part to the
+* ** +Cmp/SplitR **:  This is a split compound with the other part to the |
             right: \\ "Arbeids- og inkluderingsdepartementet" =>
             ''Arbeids–'' = *+Cmp/SplitR*
- ; +Cmp/SplitL : This is a split compound with the other part to the
+* ** +Cmp/SplitL **:  This is a split compound with the other part to the |
             left, this is the oposite of the previous case
- ; +Cmp : Dynamic compound - this tag should ''always'' be
+* ** +Cmp **:  Dynamic compound - this tag should ''always'' be |
             part of a dynamic compound. It is important for
             Apertium and the speller (to give extra weights to
             compounds, and useful in other cases as well.
@@ -197,69 +197,69 @@ to research compounding patterns in the corpus.
 |  +ConNeg | main verb complement to Neg, form identical to Imp |
 |  +VAbess | Verb Abessive |
 
- ; +Inf : Infinitive and participles
- ; +PrfPrc :  Infinitive and participles
- ; +PrsPrc : Infinitive and participles
- ; +Ger : Gerundium
- ; +VGen : Verbgenitive
+* ** +Inf **:  Infinitive and participles |
+* ** +PrfPrc **:   Infinitive and participles |
+* ** +PrsPrc **:  Infinitive and participles |
+* ** +Ger **:  Gerundium |
+* ** +VGen **:  Verbgenitive |
 
- ; +Ind : Indicative
- ; +Imprt : Imperative
- ; +ImprtII : Imperative, for Neg: ollem ollh ...
- ; +Cond : Kondisjonalis, for one form: lidtjie.
+* ** +Ind **:  Indicative |
+* ** +Imprt **:  Imperative |
+* ** +ImprtII : Imperative, for Neg**:  ollem ollh ... |
+* ** +Cond : Kondisjonalis, for one form**:  lidtjie. |
             To be looked at.+ lidtjim, + lidtjih
- ; +Act : '' -eme'', could be changed to `+Actio`
+* ** +Act **:  '' -eme'', could be changed to `+Actio` |
 
 ### Tags for adjectives
 
- ; +Comp +Superl : Comparation
- ; +Attr : Attribute form
- ; +Ord : Ordinal number
+* ** +Comp +Superl **:  Comparation |
+* ** +Attr **:  Attribute form |
+* ** +Ord **:  Ordinal number |
 
 ## Other tags
- ; +ABBR : Abbreviation
- ; +Symbol : Symbols in the text stream, like £, €, ©
- ; +ACR : Acronym
- ; +TV : Transitive verb
- ; +IV : Intansitive verb
- ; +Gram/TAbbr : Transitive abbreviation (it needs an argument)
- ; +Gram/TNumAbbr : Transitive abbreviation if the following
+* ** +ABBR **:  Abbreviation |
+* ** +Symbol **:  Symbols in the text stream, like £, €, © |
+* ** +ACR **:  Acronym |
+* ** +TV **:  Transitive verb |
+* ** +IV **:  Intansitive verb |
+* ** +Gram/TAbbr **:  Transitive abbreviation (it needs an argument) |
+* ** +Gram/TNumAbbr **:  Transitive abbreviation if the following |
             constituent is numeric
- ; +Gram/TIAbbr : Both transitive and intransitive abbreviation
- ; +Gram/IAbbr : Intransitive abbreviation (it takes no argument)
- ; +Gram/NumNoAbbr : Transitive abbreviations for which numerals
- ; +Multi : Multiword phrase tag ?
- ; +Guess : for the name guesser ?
- ; +LOAN : ad hoc tag for development purposes ?
- ; +Cmp/Hyph : A tag to indicate that a hyphen was used when
+* ** +Gram/TIAbbr **:  Both transitive and intransitive abbreviation |
+* ** +Gram/IAbbr **:  Intransitive abbreviation (it takes no argument) |
+* ** +Gram/NumNoAbbr **:  Transitive abbreviations for which numerals |
+* ** +Multi **:  Multiword phrase tag ? |
+* ** +Guess **:  for the name guesser ? |
+* ** +LOAN **:  ad hoc tag for development purposes ? |
+* ** +Cmp/Hyph **:  A tag to indicate that a hyphen was used when |
             compounding?
 
 ### Tags for testing the frequency of certain phenomenas in our corpora
 
- ; +Test/LysI : form uses i
- ; +Test/MørkI : form uses ï
- ; +Test/HK : form uses consonant cluster hk
- ; +Test/GK : form uses consonant cluster gk
- ; +Test/JK : form uses consonant cluster jk
- ; +Uml : A tag to indicate realised or potential Umlaut
- ; +NoUml : A tag to indicate the lack of realised or potential Umlaut
+* ** +Test/LysI **:  form uses i |
+* ** +Test/MørkI **:  form uses ï |
+* ** +Test/HK **:  form uses consonant cluster hk |
+* ** +Test/GK **:  form uses consonant cluster gk |
+* ** +Test/JK **:  form uses consonant cluster jk |
+* ** +Uml **:  A tag to indicate realised or potential Umlaut |
+* ** +NoUml **:  A tag to indicate the lack of realised or potential Umlaut |
 
 ### Tags for punctuation
 
- ; +CLB : XXX These should be documented better
- ; +PUNCT : XXX These should be documented better
- ; +LEFT : XXX These should be documented better
- ; +RIGHT : XXX These should be documented better
+* ** +CLB **:  XXX These should be documented better |
+* ** +PUNCT **:  XXX These should be documented better |
+* ** +LEFT **:  XXX These should be documented better |
+* ** +RIGHT **:  XXX These should be documented better |
  * *+CLBfinal*  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
 
 
 ### Different focus particles
 
- ; +Foc : XXX Document better = Forsterkende particle?
- ; +Foc/ge : XXX Document better = Forsterkende particle
- ; +Foc/gan : XXX Document better = Forsterkende particle
- ; +Foc/gih : XXX Document better = Forsterkende particle
- ; +Foc/gænnah : XXX Document better = Forsterkende particle
+* ** +Foc **:  XXX Document better = Forsterkende particle? |
+* ** +Foc/ge **:  XXX Document better = Forsterkende particle |
+* ** +Foc/gan **:  XXX Document better = Forsterkende particle |
+* ** +Foc/gih **:  XXX Document better = Forsterkende particle |
+* ** +Foc/gænnah **:  XXX Document better = Forsterkende particle |
 
 
 ## Semantic tags to help disambiguation & synt. analysis:
@@ -533,7 +533,7 @@ All non-positional derivations should be preceded by the following tag,
 to make it possible to target regular expressions in all derivations in a
 language-independent way:
 just specify ```[+Der](+Der1 .. +Der5)``` and you are set.
- ; +Der : Tag to precede any non-positional derivation
+* ** +Der **:  Tag to precede any non-positional derivation |
 
 |  +Der/PassS | VV - short passive only |
 |  +Der/A | NA - comparation of N's |
@@ -576,10 +576,10 @@ get the same pronunciation whether read as SME or NOB/NNO/SWE.
 
 
 ## Triggers for morphophonological rules
- ; X2 : Trigger for e:0 before suffix i: manne > mannine
- ; X3 : Trigger for e->i in even syllabic verbs Du3
- ; X4 : Trigger for e->i in even syllabic verbs Du2 & Pl12
- ; E2 : insert e ! Fjern denne.
+* ** X2 : Trigger for e:0 before suffix i**:  manne > mannine |
+* ** X3 **:  Trigger for e->i in even syllabic verbs Du3 |
+* ** X4 **:  Trigger for e->i in even syllabic verbs Du2 & Pl12 |
+* ** E2 **:  insert e ! Fjern denne. |
 
 ### Morphophonemes and Sámi letters
 
@@ -587,24 +587,24 @@ get the same pronunciation whether read as SME or NOB/NNO/SWE.
  * o9  twol rule override,  so that o doesn't turn into u infront of j
 
 ## Symbols that need to be escaped on the lower side (towards twolc):
- ; »7 : Literal »
- ; «7 : Literal «
+* ** »7 **:  Literal » |
+* ** «7 **:  Literal « |
 ```
   %[%>%]  - Literal >
   %[%<%]  - Literal <
 ```
 ## Lexeme disambiguation tags
- ; +Hom1 : Homonymy
- ; +Hom2 : Homonymy
+* ** +Hom1 **:  Homonymy |
+* ** +Hom2 **:  Homonymy |
 
 ## Stem variant tags
- ; +v1 : variant 1
- ; +v2 : variant 2
- ; +v3 : variant 3
- ; +v4 : variant 4
- ; +v5 : variant 5
- ; +v6 : variant 6
- ; +v7 : variant 7
+* ** +v1 **:  variant 1 |
+* ** +v2 **:  variant 2 |
+* ** +v3 **:  variant 3 |
+* ** +v4 **:  variant 4 |
+* ** +v5 **:  variant 5 |
+* ** +v6 **:  variant 6 |
+* ** +v7 **:  variant 7 |
 
 
 clitic boundary mark - a multichar that usually just go to zero
