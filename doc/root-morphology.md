@@ -5,76 +5,76 @@
 # Multichar_Symbols definitions
 
 ## Tags for POS (Part-Of-Speech, Word class)
- * *+N* = Noun
- * *+A* = Adjective
- * *+Adv* = Adverb
- * *+V* = Verb
- * *+Pron* = Pronomen
- * *+CS* = Subjunction
- * *+CC* = Conjunction
- * *+Po* = Postposition
- * *+Pr* = Preposition
- * *+Interj* = Interjection
- * *+Pcle* = Particle
- * *+Num* = Numerals
- * *+TODO* = Code for items that have not been modeled yet
+ * **+N** = Noun
+ * **+A** = Adjective
+ * **+Adv** = Adverb
+ * **+V** = Verb
+ * **+Pron** = Pronomen
+ * **+CS** = Subjunction
+ * **+CC** = Conjunction
+ * **+Po** = Postposition
+ * **+Pr** = Preposition
+ * **+Interj** = Interjection
+ * **+Pcle** = Particle
+ * **+Num** = Numerals
+ * **+TODO** = Code for items that have not been modeled yet
 
  * +Logo    
  * +Subqst     for adverbs
 
 ### Tags for sub-POS
 ## Proper nouns
- * *+Prop     * =
+ * **+Prop     ** =
 
 ## Pronoun subtypes
- * *+Pers    * = Personal
- * *+Dem     * = Demonstrative
- * *+Interr  * = Interrogative
- * *+Refl    * = Reflexive
- * *+Recipr  * = Reciprocal
- * *+Rel     * = Relative
- * *+Indef   * = Indefinite
- * *+Coll    * = Collective numeral
- * *+Arab    * = Arabic numeral
- * *+Rom    * =
+ * **+Pers    ** = Personal
+ * **+Dem     ** = Demonstrative
+ * **+Interr  ** = Interrogative
+ * **+Refl    ** = Reflexive
+ * **+Recipr  ** = Reciprocal
+ * **+Rel     ** = Relative
+ * **+Indef   ** = Indefinite
+ * **+Coll    ** = Collective numeral
+ * **+Arab    ** = Arabic numeral
+ * **+Rom    ** =
 
 ### Error (non-standard language) tags
 
-|  Usage tags || Explanation |
-|  *+Err/Orth* | Substandard, unormert form av et ord |
-|  *+Err/Hyph* | Substandard, unormert |
-|  *+Err/SpaceCmp* | Substandard, unormert  |
-|  *+Err/Attr* | Substandard, unormert Attr-form av et ord |
-|  *+Err/Lex* | lemma med dens ordformer er utenfor normen. |
+| | Usage tags || Explanation |
+|  **+Err/Orth** | Substandard, unormert form av et ord |
+|  **+Err/Hyph** | Substandard, unormert |
+|  **+Err/SpaceCmp** | Substandard, unormert  |
+|  **+Err/Attr** | Substandard, unormert Attr-form av et ord |
+|  **+Err/Lex** | lemma med dens ordformer er utenfor normen. |
                 No normative lemma, it's grammatically correct.
-|  *+Err/Der* | Errors in derivations |
-|  *+Err/Spellrelax* | Used to tag spellrelaxed typos (tag is inserted via flag diacritics) |
-|  *+Err/MissingSpace* | in use ins smi lexc |
+|  **+Err/Der** | Errors in derivations |
+|  **+Err/Spellrelax** | Used to tag spellrelaxed typos (tag is inserted via flag diacritics) |
+|  **+Err/MissingSpace** | in use ins smi lexc |
 
 ### Usage tags
 
-|  *+Use/Marg* | Marginal, correcte eksisterende former,men |
+|  **+Use/Marg** | Marginal, correcte eksisterende former,men |
                 som er sjeldne. vi kan fjerne disse ordene
                 f.eks fra speller, fordi de er så sjeldne og
                 lite i bruke at de lemma som ligger nært kan
                 bli forvekslet.
-|  *+Use/-Spell* | Excluded from speller |
-|  *+Use/-PLX* | Excluded in PLX speller |
-|  *+Use/SpellNoSugg* | Recognized but not suggested in speller |
-|  *+Use/Circ* | Circular path |
-|  *+Use/CircN* | Circular number path? |
-|  *+Use/Ped* | Remove from pedagogical speller |
-|  *+Use/NG* | Do not generate \\ for isme-ped.fst and apertium |
-|  *+Use/MT* | Generate for apertium only |
-|  *+Use/NotDNorm* | For (spellings of) words that do not follow the |
+|  **+Use/-Spell** | Excluded from speller |
+|  **+Use/-PLX** | Excluded in PLX speller |
+|  **+Use/SpellNoSugg** | Recognized but not suggested in speller |
+|  **+Use/Circ** | Circular path |
+|  **+Use/CircN** | Circular number path? |
+|  **+Use/Ped** | Remove from pedagogical speller |
+|  **+Use/NG** | Do not generate \\ for isme-ped.fst and apertium |
+|  **+Use/MT** | Generate for apertium only |
+|  **+Use/NotDNorm** | For (spellings of) words that do not follow the |
  orthographic principles of sma. Divvun suggest that this shouldn't
  be normative, even thugh they are decided upon by GG. Included in speller.
-|  *+Use/DNorm* | For words without formal normalization. |
+|  **+Use/DNorm** | For words without formal normalization. |
                 Divvun suggest that this should be normative. Included in speller.
  Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
-|  *+Use/PMatch* | Do ''only'' include in fst's for hfst-pmatch |
-|  *+Use/-PMatch* | Do not include in fst's made for hfst-pmatch |
-|  *+Use/GC* | Only retained in the gramchecker analyser |
+|  **+Use/PMatch** | Do *only* include in fst's for hfst-pmatch |
+|  **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch |
+|  **+Use/GC** | Only retained in the gramchecker analyser |
 
 ## Dialect tags:
 
@@ -103,11 +103,11 @@
 
 
 ### This part of the component can ...
- * +CmpNP/All - ... be in all positions, *default*, this tag does not have to be written
+ * +CmpNP/All - ... be in all positions, **default**, this tag does not have to be written
  * +CmpNP/First - ... only be first part in a compound or alone
- * +CmpNP/Pref - ... only *first* part in a compound, NEVER alone
+ * +CmpNP/Pref - ... only **first** part in a compound, NEVER alone
  * +CmpNP/Last - ... only be last part in a compound or alone
- * +CmpNP/Suff - ... only *last* part in a compound, NEVER alone
+ * +CmpNP/Suff - ... only **last** part in a compound, NEVER alone
  * +CmpNP/None - ... not take part in compounds
  * +CmpNP/Only - ... only be part of a compound, i.e. can never
                 be used alone, but can appear in any position
@@ -127,26 +127,26 @@
 Tags for compound analysis - this is what a compound actually is. We use this
 to research compounding patterns in the corpus.
 
-* ** +Cmp/Sg       **:  Compounding using an unspecified singular stem |
-* ** +Cmp/SgNom    **:  Compounding using nominative singular |
-* ** +Cmp/SgGen    **:  Compounding using genitive singular |
-* ** +Cmp/PlGen    **:  Compounding using genitive plural |
-* ** +Cmp/Attr     **:  Compounding using attribute form |
-* ** +Cmp/eh **:  Compound stem in *–eh*, as in ''gaameh-gåaroje'', |
-            from ''gaamege''
-* ** +Cmp/ege **:  Compound stem in *–ege*, as in ''gaamege-gåaroje'' |
-* ** +Cmp/FinEDel **:  Deletion of final *e*, as in ''voelem-gaaroeh'', |
-            from ''voeleme''
-* ** +Cmp/ShH : Compounding using a short stem + *h***:  ''–biejjh–'' |
-            (from ''biejjie''), cf ''reakedsbiejjhvadtese''
-* ** +Cmp/Sh : Compounding using a short stem**:  ''–biejj–'' |
-            (from ''biejjie'')
-* ** +Cmp/SplitR **:  This is a split compound with the other part to the |
+* ** +Cmp/Sg       **:  Compounding using an unspecified singular stem
+* ** +Cmp/SgNom    **:  Compounding using nominative singular
+* ** +Cmp/SgGen    **:  Compounding using genitive singular
+* ** +Cmp/PlGen    **:  Compounding using genitive plural
+* ** +Cmp/Attr     **:  Compounding using attribute form
+* ** +Cmp/eh **:  Compound stem in **–eh**, as in *gaameh-gåaroje*,
+            from *gaamege*
+* ** +Cmp/ege **:  Compound stem in **–ege**, as in *gaamege-gåaroje*
+* ** +Cmp/FinEDel **:  Deletion of final **e**, as in *voelem-gaaroeh*,
+            from *voeleme*
+* ** +Cmp/ShH : Compounding using a short stem + **h****:  *–biejjh–*
+            (from *biejjie*), cf *reakedsbiejjhvadtese*
+* ** +Cmp/Sh : Compounding using a short stem**:  *–biejj–*
+            (from *biejjie*)
+* ** +Cmp/SplitR **:  This is a split compound with the other part to the
             right: \\ "Arbeids- og inkluderingsdepartementet" =>
-            ''Arbeids–'' = *+Cmp/SplitR*
-* ** +Cmp/SplitL **:  This is a split compound with the other part to the |
+            *Arbeids–* = **+Cmp/SplitR**
+* ** +Cmp/SplitL **:  This is a split compound with the other part to the
             left, this is the oposite of the previous case
-* ** +Cmp **:  Dynamic compound - this tag should ''always'' be |
+* ** +Cmp **:  Dynamic compound - this tag should *always* be
             part of a dynamic compound. It is important for
             Apertium and the speller (to give extra weights to
             compounds, and useful in other cases as well.
@@ -155,111 +155,111 @@ to research compounding patterns in the corpus.
 
 ### Tags for Case and Number Inflection
 ## Case and number
- * *+Sg    * = Singular
- * *+Pl    * = Plural
- * *+Du    * = Dual
+ * **+Sg    ** = Singular
+ * **+Pl    ** = Plural
+ * **+Du    ** = Dual
 
- * *+Nom   * = Nominative
- * *+Acc   * = Ackusative
- * *+Gen   * = Genitive
- * *+Ine   * = Inesive
- * *+Ela   * = Elative
- * *+Ill   *= Illative
- * *+Com   *= Comitative
- * *+Ess   * = Essive
+ * **+Nom   ** = Nominative
+ * **+Acc   ** = Ackusative
+ * **+Gen   ** = Genitive
+ * **+Ine   ** = Inesive
+ * **+Ela   ** = Elative
+ * **+Ill   **= Illative
+ * **+Com   **= Comitative
+ * **+Ess   ** = Essive
 
 
 ## Px
- * *  +PxSg1                            * =  Possessives Singular
- * *  +PxSg2                            * =  Possessives Singular
- * *  +PxSg3                            * =  Possessives Singular
- * *  +PxDu1                            * =  Possessives Dual
- * *  +PxDu2                            * =  Possessives Dual
- * *  +PxDu3                            * =  Possessives Dual
- * *  +PxPl1                            * =  Possessives Plural
- * *  +PxPl2                            * =  Possessives Plural
- * *  +PxPl3                            * =  Possessives Plural
+ * **  +PxSg1                            ** =  Possessives Singular
+ * **  +PxSg2                            ** =  Possessives Singular
+ * **  +PxSg3                            ** =  Possessives Singular
+ * **  +PxDu1                            ** =  Possessives Dual
+ * **  +PxDu2                            ** =  Possessives Dual
+ * **  +PxDu3                            ** =  Possessives Dual
+ * **  +PxPl1                            ** =  Possessives Plural
+ * **  +PxPl2                            ** =  Possessives Plural
+ * **  +PxPl3                            ** =  Possessives Plural
 
-|  *+Prs* | Presens |
-|  *+Prt* | Preteritum |
+|  **+Prs** | Presens |
+|  **+Prt** | Preteritum |
 
-|  *+Sg1* | Singular, 1.person |
-|  *+Sg2* | Singular, 2.person |
-|  *+Sg3* | Singular, 3.person |
-|  *+Du1* | Dual    , 1.person |
-|  *+Du2* | Dual    , 2.person |
-|  *+Du3* | Dual    , 3.person |
-|  *+Pl1* | Plural  , 1.person |
-|  *+Pl2* | Plural  , 2.person |
-|  *+Pl3* | Plural  , 3.person |
+|  **+Sg1** | Singular, 1.person |
+|  **+Sg2** | Singular, 2.person |
+|  **+Sg3** | Singular, 3.person |
+|  **+Du1** | Dual    , 1.person |
+|  **+Du2** | Dual    , 2.person |
+|  **+Du3** | Dual    , 3.person |
+|  **+Pl1** | Plural  , 1.person |
+|  **+Pl2** | Plural  , 2.person |
+|  **+Pl3** | Plural  , 3.person |
 
 |  +Neg | negation verb ij |
 |  +ConNeg | main verb complement to Neg, form identical to Imp |
 |  +VAbess | Verb Abessive |
 
-* ** +Inf **:  Infinitive and participles |
-* ** +PrfPrc **:   Infinitive and participles |
-* ** +PrsPrc **:  Infinitive and participles |
-* ** +Ger **:  Gerundium |
-* ** +VGen **:  Verbgenitive |
+* ** +Inf **:  Infinitive and participles
+* ** +PrfPrc **:   Infinitive and participles
+* ** +PrsPrc **:  Infinitive and participles
+* ** +Ger **:  Gerundium
+* ** +VGen **:  Verbgenitive
 
-* ** +Ind **:  Indicative |
-* ** +Imprt **:  Imperative |
-* ** +ImprtII : Imperative, for Neg**:  ollem ollh ... |
-* ** +Cond : Kondisjonalis, for one form**:  lidtjie. |
+* ** +Ind **:  Indicative
+* ** +Imprt **:  Imperative
+* ** +ImprtII : Imperative, for Neg**:  ollem ollh ...
+* ** +Cond : Kondisjonalis, for one form**:  lidtjie.
             To be looked at.+ lidtjim, + lidtjih
-* ** +Act **:  '' -eme'', could be changed to `+Actio` |
+* ** +Act **:  * -eme*, could be changed to `+Actio`
 
 ### Tags for adjectives
 
-* ** +Comp +Superl **:  Comparation |
-* ** +Attr **:  Attribute form |
-* ** +Ord **:  Ordinal number |
+* ** +Comp +Superl **:  Comparation
+* ** +Attr **:  Attribute form
+* ** +Ord **:  Ordinal number
 
 ## Other tags
-* ** +ABBR **:  Abbreviation |
-* ** +Symbol **:  Symbols in the text stream, like £, €, © |
-* ** +ACR **:  Acronym |
-* ** +TV **:  Transitive verb |
-* ** +IV **:  Intansitive verb |
-* ** +Gram/TAbbr **:  Transitive abbreviation (it needs an argument) |
-* ** +Gram/TNumAbbr **:  Transitive abbreviation if the following |
+* ** +ABBR **:  Abbreviation
+* ** +Symbol **:  Symbols in the text stream, like £, €, ©
+* ** +ACR **:  Acronym
+* ** +TV **:  Transitive verb
+* ** +IV **:  Intansitive verb
+* ** +Gram/TAbbr **:  Transitive abbreviation (it needs an argument)
+* ** +Gram/TNumAbbr **:  Transitive abbreviation if the following
             constituent is numeric
-* ** +Gram/TIAbbr **:  Both transitive and intransitive abbreviation |
-* ** +Gram/IAbbr **:  Intransitive abbreviation (it takes no argument) |
-* ** +Gram/NumNoAbbr **:  Transitive abbreviations for which numerals |
-* ** +Multi **:  Multiword phrase tag ? |
-* ** +Guess **:  for the name guesser ? |
-* ** +LOAN **:  ad hoc tag for development purposes ? |
-* ** +Cmp/Hyph **:  A tag to indicate that a hyphen was used when |
+* ** +Gram/TIAbbr **:  Both transitive and intransitive abbreviation
+* ** +Gram/IAbbr **:  Intransitive abbreviation (it takes no argument)
+* ** +Gram/NumNoAbbr **:  Transitive abbreviations for which numerals
+* ** +Multi **:  Multiword phrase tag ?
+* ** +Guess **:  for the name guesser ?
+* ** +LOAN **:  ad hoc tag for development purposes ?
+* ** +Cmp/Hyph **:  A tag to indicate that a hyphen was used when
             compounding?
 
 ### Tags for testing the frequency of certain phenomenas in our corpora
 
-* ** +Test/LysI **:  form uses i |
-* ** +Test/MørkI **:  form uses ï |
-* ** +Test/HK **:  form uses consonant cluster hk |
-* ** +Test/GK **:  form uses consonant cluster gk |
-* ** +Test/JK **:  form uses consonant cluster jk |
-* ** +Uml **:  A tag to indicate realised or potential Umlaut |
-* ** +NoUml **:  A tag to indicate the lack of realised or potential Umlaut |
+* ** +Test/LysI **:  form uses i
+* ** +Test/MørkI **:  form uses ï
+* ** +Test/HK **:  form uses consonant cluster hk
+* ** +Test/GK **:  form uses consonant cluster gk
+* ** +Test/JK **:  form uses consonant cluster jk
+* ** +Uml **:  A tag to indicate realised or potential Umlaut
+* ** +NoUml **:  A tag to indicate the lack of realised or potential Umlaut
 
 ### Tags for punctuation
 
-* ** +CLB **:  XXX These should be documented better |
-* ** +PUNCT **:  XXX These should be documented better |
-* ** +LEFT **:  XXX These should be documented better |
-* ** +RIGHT **:  XXX These should be documented better |
- * *+CLBfinal*  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
+* ** +CLB **:  XXX These should be documented better
+* ** +PUNCT **:  XXX These should be documented better
+* ** +LEFT **:  XXX These should be documented better
+* ** +RIGHT **:  XXX These should be documented better
+ * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
 
 
 ### Different focus particles
 
-* ** +Foc **:  XXX Document better = Forsterkende particle? |
-* ** +Foc/ge **:  XXX Document better = Forsterkende particle |
-* ** +Foc/gan **:  XXX Document better = Forsterkende particle |
-* ** +Foc/gih **:  XXX Document better = Forsterkende particle |
-* ** +Foc/gænnah **:  XXX Document better = Forsterkende particle |
+* ** +Foc **:  XXX Document better = Forsterkende particle?
+* ** +Foc/ge **:  XXX Document better = Forsterkende particle
+* ** +Foc/gan **:  XXX Document better = Forsterkende particle
+* ** +Foc/gih **:  XXX Document better = Forsterkende particle
+* ** +Foc/gænnah **:  XXX Document better = Forsterkende particle
 
 
 ## Semantic tags to help disambiguation & synt. analysis:
@@ -524,7 +524,7 @@ Der#2
 |  +Der/ahtje | VV - Inchoative |
 |  +Der/InchL | VV - Inchoative |
 
- Der#4    ''So far +Der4 is not motivated for SMA.''
+ Der#4    *So far +Der4 is not motivated for SMA.*
 
 
 ### Other, non-positional derivations
@@ -533,7 +533,7 @@ All non-positional derivations should be preceded by the following tag,
 to make it possible to target regular expressions in all derivations in a
 language-independent way:
 just specify ```[+Der](+Der1 .. +Der5)``` and you are set.
-* ** +Der **:  Tag to precede any non-positional derivation |
+* ** +Der **:  Tag to precede any non-positional derivation
 
 |  +Der/PassS | VV - short passive only |
 |  +Der/A | NA - comparation of N's |
@@ -576,10 +576,10 @@ get the same pronunciation whether read as SME or NOB/NNO/SWE.
 
 
 ## Triggers for morphophonological rules
-* ** X2 : Trigger for e:0 before suffix i**:  manne > mannine |
-* ** X3 **:  Trigger for e->i in even syllabic verbs Du3 |
-* ** X4 **:  Trigger for e->i in even syllabic verbs Du2 & Pl12 |
-* ** E2 **:  insert e ! Fjern denne. |
+* ** X2 : Trigger for e:0 before suffix i**:  manne > mannine
+* ** X3 **:  Trigger for e->i in even syllabic verbs Du3
+* ** X4 **:  Trigger for e->i in even syllabic verbs Du2 & Pl12
+* ** E2 **:  insert e ! Fjern denne.
 
 ### Morphophonemes and Sámi letters
 
@@ -587,24 +587,24 @@ get the same pronunciation whether read as SME or NOB/NNO/SWE.
  * o9  twol rule override,  so that o doesn't turn into u infront of j
 
 ## Symbols that need to be escaped on the lower side (towards twolc):
-* ** »7 **:  Literal » |
-* ** «7 **:  Literal « |
+* ** »7 **:  Literal »
+* ** «7 **:  Literal «
 ```
   %[%>%]  - Literal >
   %[%<%]  - Literal <
 ```
 ## Lexeme disambiguation tags
-* ** +Hom1 **:  Homonymy |
-* ** +Hom2 **:  Homonymy |
+* ** +Hom1 **:  Homonymy
+* ** +Hom2 **:  Homonymy
 
 ## Stem variant tags
-* ** +v1 **:  variant 1 |
-* ** +v2 **:  variant 2 |
-* ** +v3 **:  variant 3 |
-* ** +v4 **:  variant 4 |
-* ** +v5 **:  variant 5 |
-* ** +v6 **:  variant 6 |
-* ** +v7 **:  variant 7 |
+* ** +v1 **:  variant 1
+* ** +v2 **:  variant 2
+* ** +v3 **:  variant 3
+* ** +v4 **:  variant 4
+* ** +v5 **:  variant 5
+* ** +v6 **:  variant 6
+* ** +v7 **:  variant 7
 
 
 clitic boundary mark - a multichar that usually just go to zero
@@ -679,7 +679,7 @@ given the proper use of these flags.
 
 
 # Lexicon Root
-This is the beginning of everything. The *Root* lexicon is reserved in the
+This is the beginning of everything. The **Root** lexicon is reserved in the
 LexC language, and must be the first lexicon defined.
 
 Here is the list of lexica in the sma analyser
@@ -710,7 +710,7 @@ Here is the list of lexica in the sma analyser
 
 
 
- * *LEXICON ProperNoun   *
+ * **LEXICON ProperNoun   **
 
 
 # Lexicon ENDLEX

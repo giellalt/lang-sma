@@ -31,14 +31,14 @@
 
 
 
- * *LEXICON ARABICCASES*  adds +Arab
+ * **LEXICON ARABICCASES**  adds +Arab
 
- * *LEXICON ARABICCASE*  adds +Arab
+ * **LEXICON ARABICCASE**  adds +Arab
 
- * *LEXICON ARABICCASE0*  adds +Arab
+ * **LEXICON ARABICCASE0**  adds +Arab
 
 
- * *LEXICON DIGITCASES*  to distinguish between 0 and oblique
+ * **LEXICON DIGITCASES**  to distinguish between 0 and oblique
 
 
 
@@ -51,8 +51,8 @@ be an ordinal, potentially in the middle of a sentence. Regular fst's know
 nothing about this double nature, so we just give the default ordinal
 analysis. But for pmatch-based lookup and tokenisation, we try to find all
 the alternatives. The lexicon contains just the following two lines:
-`{
-`}
+```
+```
 The idea is that input like `10.` can then be analysed both as the ordinal
 `10.`, and as the sequence cardinal `10` + the sentence ending full stop
 `.`. The lexc entry above will only give the ordinal analysis of `10.`,

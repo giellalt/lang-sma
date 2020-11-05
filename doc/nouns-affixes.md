@@ -514,11 +514,11 @@ Short descrioption of this lexicon, and its purpose.
 
 
  LEXICON KONTO   Lexicon for vowel-final words with invariant stems"
-`{
+```
   : KONTODECL ; 
-`}
+```
  LEXICON KONTODECL  Lexicon for vowel-final words with invariant stems"
-`{
+```
                 +Sg:     KONTO_SG ; 
                 +Pl:     KONTO_PL ; 
                          EVEN_ESS ; 
@@ -526,7 +526,7 @@ Short descrioption of this lexicon, and its purpose.
           +Cmp/SgGen:%>n  R        ; 
           +Cmp/PlGen:%>j  R        ; 
   +Der1+Der/Dimin+N:%»tj GÅATETJE ; 
-`}
+```
 
 
 
