@@ -40,7 +40,8 @@
 
 ### Error (non-standard language) tags
 
-||  Usage tags || Explanation ||
+|   Error tag | Explanation |
+| --- | --- |
 |  **+Err/Orth** | Substandard, unormert form av et ord |
 |  **+Err/Hyph** | Substandard, unormert |
 |  **+Err/SpaceCmp** | Substandard, unormert  |
