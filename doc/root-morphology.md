@@ -24,19 +24,19 @@
 
 ### Tags for sub-POS
 ## Proper nouns
- * **+Prop     ** =
+ * **+Prop** =
 
 ## Pronoun subtypes
- * **+Pers    ** = Personal
- * **+Dem     ** = Demonstrative
- * **+Interr  ** = Interrogative
- * **+Refl    ** = Reflexive
- * **+Recipr  ** = Reciprocal
- * **+Rel     ** = Relative
- * **+Indef   ** = Indefinite
- * **+Coll    ** = Collective numeral
- * **+Arab    ** = Arabic numeral
- * **+Rom    ** =
+ * **+Pers** = Personal
+ * **+Dem** = Demonstrative
+ * **+Interr** = Interrogative
+ * **+Refl** = Reflexive
+ * **+Recipr** = Reciprocal
+ * **+Rel** = Relative
+ * **+Indef** = Indefinite
+ * **+Coll** = Collective numeral
+ * **+Arab** = Arabic numeral
+ * **+Rom** =
 
 ### Error (non-standard language) tags
 
@@ -156,30 +156,30 @@ to research compounding patterns in the corpus.
 
 ### Tags for Case and Number Inflection
 ## Case and number
- * **+Sg    ** = Singular
- * **+Pl    ** = Plural
- * **+Du    ** = Dual
+ * **+Sg** = Singular
+ * **+Pl** = Plural
+ * **+Du** = Dual
 
- * **+Nom   ** = Nominative
- * **+Acc   ** = Ackusative
- * **+Gen   ** = Genitive
- * **+Ine   ** = Inesive
- * **+Ela   ** = Elative
- * **+Ill   **= Illative
- * **+Com   **= Comitative
- * **+Ess   ** = Essive
+ * **+Nom** = Nominative
+ * **+Acc** = Ackusative
+ * **+Gen** = Genitive
+ * **+Ine** = Inesive
+ * **+Ela** = Elative
+ * **+Ill**= Illative
+ * **+Com**= Comitative
+ * **+Ess** = Essive
 
 
 ## Px
- * **  +PxSg1                            ** =  Possessives Singular
- * **  +PxSg2                            ** =  Possessives Singular
- * **  +PxSg3                            ** =  Possessives Singular
- * **  +PxDu1                            ** =  Possessives Dual
- * **  +PxDu2                            ** =  Possessives Dual
- * **  +PxDu3                            ** =  Possessives Dual
- * **  +PxPl1                            ** =  Possessives Plural
- * **  +PxPl2                            ** =  Possessives Plural
- * **  +PxPl3                            ** =  Possessives Plural
+ * **  +PxSg1** =  Possessives Singular
+ * **  +PxSg2** =  Possessives Singular
+ * **  +PxSg3** =  Possessives Singular
+ * **  +PxDu1** =  Possessives Dual
+ * **  +PxDu2** =  Possessives Dual
+ * **  +PxDu3** =  Possessives Dual
+ * **  +PxPl1** =  Possessives Plural
+ * **  +PxPl2** =  Possessives Plural
+ * **  +PxPl3** =  Possessives Plural
 
 |  **+Prs** | Presens |
 |  **+Prt** | Preteritum |
@@ -711,7 +711,7 @@ Here is the list of lexica in the sma analyser
 
 
 
- * **LEXICON ProperNoun   **
+ * **LEXICON ProperNoun**
 
 
 # Lexicon ENDLEX
