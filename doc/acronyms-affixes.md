@@ -2,9 +2,9 @@
 
 
 
- * **LEXICON UNIT   **  As acro, but without paradigm
+ * **LEXICON UNIT**  As acro, but without paradigm
 
- * **LEXICON ACRO_ACCRA  ** 
+ * __LEXICON ACRO_ACCRA  __ 
 
 
 

@@ -24,24 +24,24 @@
 
 ### Tags for sub-POS
 ## Proper nouns
- * **+Prop     ** =
+ * **+Prop** =
 
 ## Pronoun subtypes
- * **+Pers    ** = Personal
- * **+Dem     ** = Demonstrative
- * **+Interr  ** = Interrogative
- * **+Refl    ** = Reflexive
- * **+Recipr  ** = Reciprocal
- * **+Rel     ** = Relative
- * **+Indef   ** = Indefinite
- * **+Coll    ** = Collective numeral
- * **+Arab    ** = Arabic numeral
- * **+Rom    ** =
+ * **+Pers** = Personal
+ * **+Dem** = Demonstrative
+ * **+Interr** = Interrogative
+ * **+Refl** = Reflexive
+ * **+Recipr** = Reciprocal
+ * **+Rel** = Relative
+ * **+Indef** = Indefinite
+ * **+Coll** = Collective numeral
+ * **+Arab** = Arabic numeral
+ * **+Rom** =
 
 ### Error (non-standard language) tags
 
-|   Error tag || Explanation |
-| --- | --- | |
+|   Error tag | Explanation |
+| --- | --- |
 |  **+Err/Orth** | Substandard, unormert form av et ord |
 |  **+Err/Hyph** | Substandard, unormert |
 |  **+Err/SpaceCmp** | Substandard, unormert  |
@@ -156,30 +156,30 @@ to research compounding patterns in the corpus.
 
 ### Tags for Case and Number Inflection
 ## Case and number
- * **+Sg    ** = Singular
- * **+Pl    ** = Plural
- * **+Du    ** = Dual
+ * **+Sg** = Singular
+ * **+Pl** = Plural
+ * **+Du** = Dual
 
- * **+Nom   ** = Nominative
- * **+Acc   ** = Ackusative
- * **+Gen   ** = Genitive
- * **+Ine   ** = Inesive
- * **+Ela   ** = Elative
- * **+Ill   **= Illative
- * **+Com   **= Comitative
- * **+Ess   ** = Essive
+ * **+Nom** = Nominative
+ * **+Acc** = Ackusative
+ * **+Gen** = Genitive
+ * **+Ine** = Inesive
+ * **+Ela** = Elative
+ * **+Ill**= Illative
+ * **+Com**= Comitative
+ * **+Ess** = Essive
 
 
 ## Px
- * **  +PxSg1                            ** =  Possessives Singular
- * **  +PxSg2                            ** =  Possessives Singular
- * **  +PxSg3                            ** =  Possessives Singular
- * **  +PxDu1                            ** =  Possessives Dual
- * **  +PxDu2                            ** =  Possessives Dual
- * **  +PxDu3                            ** =  Possessives Dual
- * **  +PxPl1                            ** =  Possessives Plural
- * **  +PxPl2                            ** =  Possessives Plural
- * **  +PxPl3                            ** =  Possessives Plural
+ * **  +PxSg1** =  Possessives Singular
+ * **  +PxSg2** =  Possessives Singular
+ * **  +PxSg3** =  Possessives Singular
+ * **  +PxDu1** =  Possessives Dual
+ * **  +PxDu2** =  Possessives Dual
+ * **  +PxDu3** =  Possessives Dual
+ * **  +PxPl1** =  Possessives Plural
+ * **  +PxPl2** =  Possessives Plural
+ * **  +PxPl3** =  Possessives Plural
 
 |  **+Prs** | Presens |
 |  **+Prt** | Preteritum |
@@ -711,7 +711,7 @@ Here is the list of lexica in the sma analyser
 
 
 
- * **LEXICON ProperNoun   **
+ * **LEXICON ProperNoun**
 
 
 # Lexicon ENDLEX
@@ -2687,19 +2687,19 @@ before compiling.
 
 
 # LEXICON PRED_S
-The **PRED_S** lexicon is used for adjectives Predicatives.
+The __PRED_S__ lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>s FINAL1 ; 
 ```
 
 # LEXICON PRED_0
-The **PRED_0** lexicon is used for adjectives Predicatives.
+The __PRED_0__ lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom: FINAL1 ; 
 ```
 
 # LEXICON PRED_H
-The **PRED_H!!≈** lexicon is used for adjectives Predicatives.
+The __PRED_H!!≈__ lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>h FINAL1 ; 
 ```
@@ -2707,7 +2707,7 @@ The **PRED_H!!≈** lexicon is used for adjectives Predicatives.
 
 denne skal også ut ! - --> intersatn om dette er en norsk suffiks egentlig?
 # LEXICON PRED_NE_ODD
-The **PRED_NE_ODD!!≈** lexicon is used for adjectives Predicatives.
+The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>ne FINAL1     ; 
           :n     ODDCASEOBL ; 
@@ -2715,7 +2715,7 @@ The **PRED_NE_ODD!!≈** lexicon is used for adjectives Predicatives.
 ```
 
 # LEXICON PRED_N    -  GENITIV
-The **PRED_N!!≈** lexicon is used for adjectives Predicatives.
+The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>n FINAL1 ; 
 
@@ -2732,7 +2732,7 @@ The **PRED_N!!≈** lexicon is used for adjectives Predicatives.
 
 
 # LEXICON e_E_EVEN
-The **e_E_EVEN!!≈** lexicon is used for adjectives on `–e` and `–e`  In attributes and predicatives.With EVEN-NOCOMP.
+The __e_E_EVEN!!≈__ lexicon is used for adjectives on `–e` and `–e`  In attributes and predicatives.With EVEN-NOCOMP.
 ```
        :e ATTR_0      ; 
        :e PRED_0      ; 
@@ -2743,7 +2743,7 @@ The **e_E_EVEN!!≈** lexicon is used for adjectives on `–e` and `–e`  In at
 ```
 
 # LEXICON e_E_EVENNOCOMP1
-The **e_E_EVENNOCOMP1!!≈** lexicon is used for adjectives on `–e` and `–e` stem. In attributes and predicatives.With EVEN-NOCOMP.
+The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on `–e` and `–e` stem. In attributes and predicatives.With EVEN-NOCOMP.
 
 ```
        :e ATTR_0      ; 
@@ -2756,7 +2756,7 @@ The **e_E_EVENNOCOMP1!!≈** lexicon is used for adjectives on `–e` and `–e`
 
 
 # LEXICON a_A_EVEN1
-The **a_A_EVEN1!!≈** lexicon is used for adjectives on `–a` and `–a`  In attributes and predicatives.With EVEN-COMP.
+The __a_A_EVEN1!!≈__ lexicon is used for adjectives on `–a` and `–a`  In attributes and predicatives.With EVEN-COMP.
 ```
        :a ATTR_0     ; 
   +Sg:  MAANASGNOM ; 
@@ -2765,7 +2765,7 @@ The **a_A_EVEN1!!≈** lexicon is used for adjectives on `–a` and `–a`  In a
 ```
 
 # LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
-The **as_AS_EVEN1!!≈** lexicon is used for adjectives on `–as` and `–as`  In attributes and predicatives.With EVEN-COMP.
+The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on `–as` and `–as`  In attributes and predicatives.With EVEN-COMP.
 ```
                :a  ATTR_S   ; 
       +Sg+Nom:as FINAL1   ; 
@@ -2774,7 +2774,7 @@ The **as_AS_EVEN1!!≈** lexicon is used for adjectives on `–as` and `–as`  
 
 
 # LEXICON ie_IE_EVEN1
-The **ie_IE_EVEN1!!≈** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives.With EVEN-COMP.
+The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives.With EVEN-COMP.
 ```
     :ie ATTR_0     ; 
      N_IE_FORMS ; 
@@ -2783,19 +2783,19 @@ The **ie_IE_EVEN1!!≈** lexicon is used for adjectives on `–ie` and `–ie`  
 
 
 # LEXICON ie_IE_EVENNOCOMP
-The **ie_IE_EVENNOCOMP!!≈** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
+The __ie_IE_EVENNOCOMP!!≈__ lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
 ```
     :ie ATTR_0     ; 
      N_IE_FORMS ; 
 ```
 
-The **a_A_EVEN1_NOCOMP** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
+The __a_A_EVEN1_NOCOMP__ lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
 ```
        :a ATTR_0     ; 
 ```
 
 # LEXICON es_ES_EVEN
-The **es_ES_EVEN!!≈** lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-COMP.
+The __es_ES_EVEN!!≈__ lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-COMP.
 ```
             :e      ATTR_S       ; 
             :e      PRED_S       ; 
@@ -2806,7 +2806,7 @@ The **es_ES_EVEN!!≈** lexicon is used for adjectives on `–es` and `–es`  I
 
 
 
-The **es_ES_EVENNOCOMP1** lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-NOCOMP.
+The __es_ES_EVENNOCOMP1__ lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-NOCOMP.
 
 ```
   :e  ATTR_S     ; 
@@ -2815,14 +2815,14 @@ The **es_ES_EVENNOCOMP1** lexicon is used for adjectives on `–es` and `–es` 
 ```
 
 
-The **ies_IES_EVEN1** lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-COMP.
+The __ies_IES_EVEN1__ lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-COMP.
 ```
       ies_IES_EVENNOCOMP1 ; 
   :ie EVENCOMP            ; 
 ```
 
 
-The **ies_IES_EVENNOCOMP1** lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-NOCOMP.
+The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-NOCOMP.
 ```
    :ie ATTR_S    ; 
    :ie PRED_S    ; 
@@ -3273,7 +3273,7 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
- * **LEXICON s_H_EVENNOCOMP   **
+ * __LEXICON s_H_EVENNOCOMP   __
 
 
 
@@ -3345,22 +3345,22 @@ Table of content for this file:
 
 First we just list the auxiliaries and their inflection.
 
- * **LEXICON LEA  ** the copula
+ * **LEXICON LEA** the copula
 
 
- ** **LEXICON LEA-PRES  **
+ ** **LEXICON LEA-PRES**
 
 
- ** **LEXICON LEA-PRET **
+ ** **LEXICON LEA-PRET**
 
- ** **LEXICON LEA-IMP **
+ ** **LEXICON LEA-IMP**
 
 
 
 
 ## The negative verb
 
- * **LEXICON NEG  **
+ * **LEXICON NEG**
 
 
 
@@ -3372,13 +3372,13 @@ First we just list the auxiliaries and their inflection.
 
 
 
- ** **LEXICON OLLE  **
+ ** **LEXICON OLLE**
 
 
- ** **LEXICON NEGIMP  **
+ ** **LEXICON NEGIMP**
 
 
- ** **LEXICON IJ-PRES  **
+ ** **LEXICON IJ-PRES**
 
 
 
@@ -3388,17 +3388,17 @@ First we just list the auxiliaries and their inflection.
 
 ## Other auxiliaries
 
- * **LEXICON EDTJEDH  **
+ * **LEXICON EDTJEDH**
 
 
 
- ** **LEXICON ED-PRES  **
+ ** **LEXICON ED-PRES**
 
 
 
- ** **LEXICON ED-PRET **
+ ** **LEXICON ED-PRET**
 
- ** **LEXICON ED-IMP **
+ ** **LEXICON ED-IMP**
 
 
 
@@ -3410,48 +3410,48 @@ This form is treated separately, and
 the rest of the paradigm is conflated.
 
 
- * **LEXICON TJOEVERIDH_IV  **
+ * __LEXICON TJOEVERIDH_IV  __
 
 
 
 
 
- * **LEXICON GOLTELIDH_TV  **
+ * __LEXICON GOLTELIDH_TV  __
 
- * **LEXICON AALHTEDIDH_TV  **
+ * __LEXICON AALHTEDIDH_TV  __
 
- * **LEXICON GOLTELIDH_IV  **
-
-
- * **LEXICON GOLTELIDH   **, odd-syll with -adte- as Der2
+ * __LEXICON GOLTELIDH_IV  __
 
 
-
-
- * **LEXICON BALVEDIDH  **
+ * **LEXICON GOLTELIDH**, odd-syll with -adte- as Der2
 
 
 
 
-
- * **LEXICON RIHPESIDH   **,  -nidh and -sidh
-
- * **LEXICON AAJVESTIDH_TV     **, for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
-
- * **LEXICON DÅAJVOEHTIDH_TV  **
+ * **LEXICON BALVEDIDH**
 
 
 
- * **LEXICON DÅAJVOEHTIDH_IV  **
 
 
- * **LEXICON DÅAJVOEHTIDH    ** for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
+ * **LEXICON RIHPESIDH**,  -nidh and -sidh
+
+ * __LEXICON AAJVESTIDH_TV     __, for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
+
+ * __LEXICON DÅAJVOEHTIDH_TV  __
+
+
+
+ * __LEXICON DÅAJVOEHTIDH_IV  __
+
+
+ * **LEXICON DÅAJVOEHTIDH** for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
 
 
 
 ## Inflection common to all odd verbs
 
- * **LEXICON COMMON-ODD   **
+ * **LEXICON COMMON-ODD**
 
 * Finite forms
 
@@ -3465,177 +3465,177 @@ the rest of the paradigm is conflated.
 
 # Even-syllable verbs
 
- * **LEXICON MAEHTEDH_TV  **
+ * __LEXICON MAEHTEDH_TV  __
 
 
- * **LEXICON BÅETEDH_TV  **
+ * __LEXICON BÅETEDH_TV  __
 
- * **LEXICON BÅETEDH_TV_ePRET  **
+ * __LEXICON BÅETEDH_TV_ePRET  __
 
- * **LEXICON BÅETEDH_IV  **
+ * __LEXICON BÅETEDH_IV  __
 
- * **LEXICON BÅETEDH_IV_ePRET  **
-
-
- * **LEXICON BÅETEDH   ** row A - Group I
+ * __LEXICON BÅETEDH_IV_ePRET  __
 
 
-
- * **LEXICON BÅETEDH_NOTVGEN   ** row A - Group Ixxf
-
-
- * **LEXICON SEVTEDH   ** row A - Group I  IMPERSONALS!
+ * **LEXICON BÅETEDH** row A - Group I
 
 
 
+ * __LEXICON BÅETEDH_NOTVGEN   __ row A - Group Ixxf
 
- * **LEXICON ÅEREDH   ** row A - Group I   Hasselbrink: "öörim."- (Thomassen) Qvigstad: "vöörtim" 
+
+ * **LEXICON SEVTEDH** row A - Group I  IMPERSONALS!
 
 
 
 
- * **LEXICON ÅEREDH_TV   ** row A - Group I   NO -øø-UMLAUT!!!!
+ * **LEXICON ÅEREDH** row A - Group I   Hasselbrink: "öörim."- (Thomassen) Qvigstad: "vöörtim" 
+
+
+
+
+ * __LEXICON ÅEREDH_TV   __ row A - Group I   NO -øø-UMLAUT!!!!
 
 
 
 
 
- * **LEXICON TJEARODH_TV  **
+ * __LEXICON TJEARODH_TV  __
 
 
- * **LEXICON TJEARODH_IV  **
+ * __LEXICON TJEARODH_IV  __
 
 
- * **LEXICON TJEARODH   ** row C - Group II
+ * **LEXICON TJEARODH** row C - Group II
 
 
 
 
- * **LEXICON ABRODH   ** row C - Group II
+ * **LEXICON ABRODH** row C - Group II
 
 
- * **LEXICON TSEAHKODH_TV  **
+ * __LEXICON TSEAHKODH_TV  __
 
- * **LEXICON TSEAHKODH_IV  **
-
-
- * **LEXICON TSEAHKODH   ** row C - Group II    these have (lexicalized) diminutives on -estit, and passives on -algidh
+ * __LEXICON TSEAHKODH_IV  __
 
 
- * **LEXICON GUARKEDH_TV  **
-
- * **LEXICON GUARKEDH_IV  **
+ * **LEXICON TSEAHKODH** row C - Group II    these have (lexicalized) diminutives on -estit, and passives on -algidh
 
 
- * **LEXICON GUARKEDH   ** row B - Group III
+ * __LEXICON GUARKEDH_TV  __
+
+ * __LEXICON GUARKEDH_IV  __
+
+
+ * **LEXICON GUARKEDH** row B - Group III
 
 Fått tilbakemelding på denne om at "jarkah" er +Ind+Prs+Sg2, og "Jarkh!" er +Imprt. Har forelöpig satt denne inn som Err/Orth
 
 
- * **LEXICON SIJHTEDH_TV   **
+ * __LEXICON SIJHTEDH_TV   __
 
 
 
- * **LEXICON TJOEHPEDH_TV  **
+ * __LEXICON TJOEHPEDH_TV  __
 
- * **LEXICON GALKEDH_IV  **
+ * __LEXICON GALKEDH_IV  __
 
 
 
- * **LEXICON TJOEHPEDH_IV  **
+ * __LEXICON TJOEHPEDH_IV  __
 
 
- * **LEXICON TJOEHPEDH   ** row D - Group IV
+ * **LEXICON TJOEHPEDH** row D - Group IV
 
 
- * **LEXICON TJOEHPEDH_NOTVGEN  **
+ * __LEXICON TJOEHPEDH_NOTVGEN  __
 
 
- * **LEXICON GALKEDH_CONT   ** row D - Group IV
+ * __LEXICON GALKEDH_CONT   __ row D - Group IV
 
 
 
 
- * **LEXICON BIEGKEDH   ** row D - Group IV !impersonals
+ * **LEXICON BIEGKEDH** row D - Group IV !impersonals
 
- * **LEXICON BÅÅHKEDH_TV  **
+ * __LEXICON BÅÅHKEDH_TV  __
 
- * **LEXICON SÅÅJHTEDH_IV  **
+ * __LEXICON SÅÅJHTEDH_IV  __
 
 
 
- * **LEXICON BÅÅHKEDH_IV  **
+ * __LEXICON BÅÅHKEDH_IV  __
 
 
- * **LEXICON BÅÅHKEDH   ** row E - Group V
+ * **LEXICON BÅÅHKEDH** row E - Group V
 
- * **LEXICON SÅÅJHTEDH_CONT   ** row E - Group V
+ * __LEXICON SÅÅJHTEDH_CONT   __ row E - Group V
 
- * **LEXICON VÅÅJNEDH  **
+ * **LEXICON VÅÅJNEDH**
 
 
 
- * **LEXICON GÖÖLEDH_TV  **
+ * __LEXICON GÖÖLEDH_TV  __
 
 
- * **LEXICON GÖÖLEDH_IV  **
+ * __LEXICON GÖÖLEDH_IV  __
 
 
- * **LEXICON GÖÖLEDH   ** row F - Group VI
+ * **LEXICON GÖÖLEDH** row F - Group VI
 
 
- * **LEXICON BÖÖVTEDH   ** row F - Group VI
+ * **LEXICON BÖÖVTEDH** row F - Group VI
 
 
- * **LEXICON EEREDH_TV  **
+ * __LEXICON EEREDH_TV  __
 
- * **LEXICON EEREDH_IV  **
+ * __LEXICON EEREDH_IV  __
 
 
 
 
- * **LEXICON ÅARAJEHTEDH_TV  **
+ * __LEXICON ÅARAJEHTEDH_TV  __
 
 
- * **LEXICON ÅARAJEHTEDH_IV  **
+ * __LEXICON ÅARAJEHTEDH_IV  __
 
 
- * **LEXICON ÅARAJEHTEDH   ** row A - Group I
+ * **LEXICON ÅARAJEHTEDH** row A - Group I
 
- * **LEXICON BUARADEHTEDH  **
+ * **LEXICON BUARADEHTEDH**
 
 
- * **LEXICON GOEGKERDADTEDH_TV  **
+ * __LEXICON GOEGKERDADTEDH_TV  __
 
- * **LEXICON GOEGKERDADTEDH_IV  **
+ * __LEXICON GOEGKERDADTEDH_IV  __
 
 
- * **LEXICON GOEGKERDADTEDH   ** row D - Group IV
+ * **LEXICON GOEGKERDADTEDH** row D - Group IV
 
- * **LEXICON OBREDADTEDH  **
+ * **LEXICON OBREDADTEDH**
 
- * **LEXICON GÅETEDH_TV  **
+ * __LEXICON GÅETEDH_TV  __
 
- * **LEXICON GÅETEDH_IV  **
+ * __LEXICON GÅETEDH_IV  __
 
 
- * **LEXICON GÅETEDH   ** from Der/InchL
+ * **LEXICON GÅETEDH** from Der/InchL
 
- * **LEXICON STIEHPEGÅETEDH  **
+ * **LEXICON STIEHPEGÅETEDH**
 
 
- * **LEXICON AHTJE_TV  **
+ * __LEXICON AHTJE_TV  __
 
- * **LEXICON AHTJE_IV  **
+ * __LEXICON AHTJE_IV  __
 
- * **LEXICON OBRIJAHTJEDH  **
+ * **LEXICON OBRIJAHTJEDH**
 
 
- * **LEXICON AHTJE   ** row D - Group IV
+ * **LEXICON AHTJE** row D - Group IV
 
- * **LEXICON SOVVEDH **row D - Group IV
+ * **LEXICON SOVVEDH**row D - Group IV
 
- * **LEXICON IV_PASSIVE_L  ** - Passive of intransitive verbs => impersonate verbs, like "dïjvelduvvieh" = "(de sakene) ble diskutert", from "dïjveldidh" = "diskutere" (IV), only used in 3rd person Sg and Pl.
+ * __LEXICON IV_PASSIVE_L  __ - Passive of intransitive verbs => impersonate verbs, like "dïjvelduvvieh" = "(de sakene) ble diskutert", from "dïjveldidh" = "diskutere" (IV), only used in 3rd person Sg and Pl.
 
 
 
@@ -3648,7 +3648,7 @@ Derivations
 -----------
 
 
- * **LEXICON LGIDH  **
+ * **LEXICON LGIDH**
 
 
 
@@ -3663,16 +3663,16 @@ Nominal derivation sublexica
 
 
 
- * **LEXICON LAAHKOEH_ODD  **
+ * __LEXICON LAAHKOEH_ODD  __
 
- ** **LEXICON LAAHKOEH_ÅBPOE  **
-
-
- ** **LEXICON LAAHKOEH_OMMES   **
+ ** __LEXICON LAAHKOEH_ÅBPOE  __
 
 
+ ** __LEXICON LAAHKOEH_OMMES   __
 
- * **LEXICON IGENSUFF   **
+
+
+ * **LEXICON IGENSUFF**
 
 
 # Verbal affixes
@@ -3683,21 +3683,19 @@ Nominal derivation sublexica
 
 ### Present
 
- * **LEXICON V-I-PRS-SG   ** Merge with V-EVEN-PRS if nothing special here.
+ * **LEXICON V-I-PRS-SG** Merge with V-EVEN-PRS if nothing special here.
 
- * **LEXICON V-II-PRS-SG   **
+ * **LEXICON V-II-PRS-SG**
 
- * **LEXICON V-III-PRS-SG   **
+ * **LEXICON V-III-PRS-SG**
 
- * **LEXICON VSUF-V-EVEN-PRS   **
+ * **LEXICON VSUF-V-EVEN-PRS**
 
- * **LEXICON VSUF-V-EVEN-PRS-DUPL   **
-
-
-
- * **LEXICON VSUF-EVEN-PRS-DUPL   **
+ * **LEXICON VSUF-V-EVEN-PRS-DUPL**
 
 
+
+ * **LEXICON VSUF-EVEN-PRS-DUPL**
 
 
 
@@ -3705,26 +3703,28 @@ Nominal derivation sublexica
 
 
 
- * **LEXICON VSUF-VI-EVEN-PRS   **
+
+
+ * **LEXICON VSUF-VI-EVEN-PRS**
 
 
 ### Imperative
 
- * **LEXICON VSUF-EVEN-IMP   **
+ * **LEXICON VSUF-EVEN-IMP**
 
 
 
- * **LEXICON VSUF-II-EVEN-IMP  **
+ * **LEXICON VSUF-II-EVEN-IMP**
 
 
 
- * **LEXICON VSUF-III-EVEN-IMP  **
+ * **LEXICON VSUF-III-EVEN-IMP**
 ### Present
 
 
 
 
- * **LEXICON V-IV-EVEN-PRS  **
+ * **LEXICON V-IV-EVEN-PRS**
 
 
 
@@ -3735,24 +3735,24 @@ Ulikestavelsesverb - ODD
 
 ### Present
 
- * **LEXICON VSUF-ODD-PRS  **
+ * **LEXICON VSUF-ODD-PRS**
 
- ** **LEXICON V-ODD-PRS-SG  **
+ ** **LEXICON V-ODD-PRS-SG**
 
- ** **LEXICON V-ODD-PRS-DUPL  **
+ ** **LEXICON V-ODD-PRS-DUPL**
 
- ** **LEXICON ODD_PRS_NON_DU3  **
+ ** __LEXICON ODD_PRS_NON_DU3  __
 
- ** **LEXICON ODD_PRS_DU3  **
+ ** __LEXICON ODD_PRS_DU3  __
 
 
 ### Past
 
- * **LEXICON VSUF-ODD-PRT  **
+ * **LEXICON VSUF-ODD-PRT**
 
 ### Imperative
 
- * **LEXICON VSUF-ODD-IMP   **
+ * **LEXICON VSUF-ODD-IMP**
 
 
 
@@ -3762,27 +3762,27 @@ Ulikestavelsesverb - ODD
 
 ### Present
 
- * **LEXICON V-PRS-SG-12   ** Kutt denne viss ikkje ref til
+ * **LEXICON V-PRS-SG-12** Kutt denne viss ikkje ref til
 
- * **LEXICON V-PRS-SG-1  **
+ * **LEXICON V-PRS-SG-1**
 
- * **LEXICON V-PRS-SG-2  **
+ * **LEXICON V-PRS-SG-2**
 
- * **LEXICON V-PRS-SG-3  **
+ * **LEXICON V-PRS-SG-3**
 
 
 ### Past
 
- * **LEXICON VSUF-PRT  **
+ * **LEXICON VSUF-PRT**
 
 
 
- * **LEXICON VSUF-PRT-SG-12  **
+ * **LEXICON VSUF-PRT-SG-12**
 
- * **LEXICON VSUF-PRT-SG-3  **
+ * **LEXICON VSUF-PRT-SG-3**
 
 
- * **LEXICON VSUF-PRT-DUPL  **
+ * **LEXICON VSUF-PRT-DUPL**
 
 
 
@@ -3886,72 +3886,72 @@ analyses.
 ### Continuation lexicons for abbrs both with and witout final period
 
 
- * **LEXICON ab-noun   **
+ * **LEXICON ab-noun**
 
- * **LEXICON ab-adj   **
+ * **LEXICON ab-adj**
 
- * **LEXICON ab-adv   **
+ * **LEXICON ab-adv**
 
- * **LEXICON ab-num   **
+ * **LEXICON ab-num**
 
 ### Lexicons without final period
 
- * **LEXICON ab-nodot-noun   **  The bulk
+ * **LEXICON ab-nodot-noun**  The bulk
 
- * **LEXICON ab-nodot-adj   **
+ * **LEXICON ab-nodot-adj**
 
- * **LEXICON ab-nodot-adv   **
+ * **LEXICON ab-nodot-adv**
 
- * **LEXICON ab-nodot-num   **
+ * **LEXICON ab-nodot-num**
 
 ### Lexicons with final period
 
- * **LEXICON ab-dot-noun   **  This is the lexicon for abbrs that must have a period.
+ * **LEXICON ab-dot-noun**  This is the lexicon for abbrs that must have a period.
 
- * **LEXICON ab-dot-adj   **  This is the lexicon for abbrs that must have a period.
+ * **LEXICON ab-dot-adj**  This is the lexicon for abbrs that must have a period.
 
- * **LEXICON ab-dot-adv   **  This is the lexicon for abbrs that must have a period.
+ * **LEXICON ab-dot-adv**  This is the lexicon for abbrs that must have a period.
 
- * **LEXICON ab-dot-num   **  This is the lexicon for abbrs that must have a period.
+ * **LEXICON ab-dot-num**  This is the lexicon for abbrs that must have a period.
 
- * **LEXICON ab-dot-cc   **
-
-
-
-
-
- * **LEXICON ab-dot-verb   **
-
- * **LEXICON ab-nodot-verb   **
-
-
- * **LEXICON ab-dot-IVprfprc   **
-
-
- * **LEXICON nodot-attrnomaccgen-infl   **
-
- * **LEXICON nodot-attr-infl   **
-
- * **LEXICON nodot-nomaccgen-infl   **
-
-
- * **LEXICON dot-attrnomaccgen-infl   **
-
- * **LEXICON dot-attr   **
-
- * **LEXICON dot-nomaccgen-infl   **
-
-
- * **LEXICON DOT   ** - Adds the dot to dotted abbreviations.
+ * **LEXICON ab-dot-cc**
 
 
 
 
 
+ * **LEXICON ab-dot-verb**
 
- * **LEXICON UNIT   **  As acro, but without paradigm
+ * **LEXICON ab-nodot-verb**
 
- * **LEXICON ACRO_ACCRA  ** 
+
+ * **LEXICON ab-dot-IVprfprc**
+
+
+ * **LEXICON nodot-attrnomaccgen-infl**
+
+ * **LEXICON nodot-attr-infl**
+
+ * **LEXICON nodot-nomaccgen-infl**
+
+
+ * **LEXICON dot-attrnomaccgen-infl**
+
+ * **LEXICON dot-attr**
+
+ * **LEXICON dot-nomaccgen-infl**
+
+
+ * **LEXICON DOT** - Adds the dot to dotted abbreviations.
+
+
+
+
+
+
+ * **LEXICON UNIT**  As acro, but without paradigm
+
+ * __LEXICON ACRO_ACCRA  __ 
 
 
 
