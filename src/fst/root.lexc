@@ -56,24 +56,20 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! !Error (non-standard language) tags
 
-                 !! || Error tag || Explanation
-+Err/Orth        !!≈ | __@CODE@__ | Substandard, unormert form av et ord
-+Err/Hyph        !!≈ | __@CODE@__ | Substandard, unormert
-+Err/SpaceCmp        !!≈ | __@CODE@__ | Substandard, unormert 
-+Err/Attr        !!≈ | __@CODE@__ | Substandard, unormert Attr-form av et ord
-+Err/Lex         !!≈ | __@CODE@__ | lemma med dens ordformer er utenfor normen.
-                 !!                 No normative lemma, it's grammatically correct.
-+Err/Der         !!≈ | __@CODE@__ | Errors in derivations
- +Err/Spellrelax !!≈ | __@CODE@__ | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
- +Err/MissingSpace !!≈ | __@CODE@__ | in use ins smi lexc
+				  !! || Error tag || Explanation
++Err/Orth         !!≈ | __@CODE@__ | Substandard, unormert form av et ord
++Err/Hyph         !!≈ | __@CODE@__ | Substandard, unormert
++Err/SpaceCmp     !!≈ | __@CODE@__ | Substandard, unormert 
++Err/Attr         !!≈ | __@CODE@__ | Substandard, unormert Attr-form av et ord
++Err/Lex          !!≈ | __@CODE@__ | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
++Err/Der          !!≈ | __@CODE@__ | Errors in derivations
++Err/Spellrelax   !!≈ | __@CODE@__ | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
++Err/MissingSpace !!≈ | __@CODE@__ | in use ins smi lexc
 
 !! !Usage tags
 
-+Use/Marg        !!≈ | __@CODE@__ | Marginal, correcte eksisterende former,men
-                 !!                 som er sjeldne. vi kan fjerne disse ordene
-                 !!                 f.eks fra speller, fordi de er så sjeldne og
-                 !!                 lite i bruke at de lemma som ligger nært kan
-                 !!                 bli forvekslet.
+				 !! || Usage tag || Explanation
++Use/Marg        !!≈ | __@CODE@__ | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 +Use/-Spell      !!≈ | __@CODE@__ | Excluded from speller
 +Use/-PLX        !!≈ | __@CODE@__ | Excluded in PLX speller
 +Use/SpellNoSugg !!≈ | __@CODE@__ | Recognized but not suggested in speller
@@ -82,22 +78,17 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Use/Ped         !!≈ | __@CODE@__ | Remove from pedagogical speller
 +Use/NG          !!≈ | __@CODE@__ | Do not generate \\ for isme-ped.fst and apertium
 +Use/MT          !!≈ | __@CODE@__ | Generate for apertium only
-+Use/NotDNorm    !!≈ | __@CODE@__ | For (spellings of) words that do not follow the
-                 !!  orthographic principles of sma. Divvun suggest that this shouldn't
-                 !!  be normative, even thugh they are decided upon by GG. Included in speller.
-+Use/DNorm       !!≈ | __@CODE@__ | For words without formal normalization.
-                 !!                 Divvun suggest that this should be normative. Included in speller.
-                 !!  Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
++Use/NotDNorm    !!≈ | __@CODE@__ | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
++Use/DNorm       !!≈ | __@CODE@__ | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
 +Use/PMatch      !!≈ | __@CODE@__ | Do ''only'' include in fst's for hfst-pmatch
 +Use/-PMatch     !!≈ | __@CODE@__ | Do not include in fst's made for hfst-pmatch
 +Use/GC          !!≈ | __@CODE@__ | Only retained in the gramchecker analyser
 
-           !!  !!Dialect tags:
+		   !!  !!Dialect tags:
 
-+Dial/-S   !!≈ | @CODE@ | Not in the South ! se på disse i forhold til smj, som
-           !!             har +Dial/N for denne.
-+Dial/-N   !!≈ | @CODE@ | Not in the North ! se på disse i forhold til smj, som
-           !!             har +Dial/s for denne.
+		   !! || Dialect tag || Explanation
++Dial/-S   !!≈ | @CODE@ | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
++Dial/-N   !!≈ | @CODE@ | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
 +Dial/-NOR !!≈ | @CODE@ | Words not in Norway
 +Dial/-SW  !!≈ | @CODE@ | Words not in Sweden
 +Dial/SH   !!≈ | @CODE@ | Short forms
@@ -113,32 +104,30 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! !!Normative/prescriptive compounding tags
 !! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
-                !! !The first part of the component may be ...
-+CmpN/Sg        !!≈ | @CODE@ | Sg
+				!! !The first part of the component may be ...
+				!! || Normative form tag || Explanation
++CmpN/Sg        !!≈ | @CODE@ | Singular
 +CmpN/SgN       !!≈ | @CODE@ | SgNominative
 +CmpN/SgG       !!≈ | @CODE@ | SgGenitive
 +CmpN/PlG       !!≈ | @CODE@ | PlGenitive
 
 
-                 !! !This part of the component can ...
-+CmpNP/All       !!≈ * @CODE@ - ... be in all positions, __default__, this tag does not have to be written
-+CmpNP/First     !!≈ * @CODE@ - ... only be first part in a compound or alone
-+CmpNP/Pref      !!≈ * @CODE@ - ... only __first__ part in a compound, NEVER alone
-+CmpNP/Last      !!≈ * @CODE@ - ... only be last part in a compound or alone
-+CmpNP/Suff      !!≈ * @CODE@ - ... only __last__ part in a compound, NEVER alone
-+CmpNP/None      !!≈ * @CODE@ - ... not take part in compounds
-+CmpNP/Only      !!≈ * @CODE@ - ... only be part of a compound, i.e. can never
-                 !!                 be used alone, but can appear in any position
-
-                !! !The second part of the compound requires:
+				!! !The second part of the compound requires:
+				!! || Normative left-governing tag || Explanation
 +CmpN/SgLeft    !!≈ | @CODE@ | Sg to the left
 +CmpN/SgNomLeft !!≈ | @CODE@ | etc.
 +CmpN/SgGenLeft !!≈ | @CODE@ | "
 +CmpN/PlGenLeft !!≈ | @CODE@ | "
 
-+Cmp/XForm      !!≈ | @CODE@ | Alle Cmp som ikke har en klar klassifisering
-+Cmp/AttrH      !!≈ | @CODE@ | Alle Cmp som har en attr-h
-
+				 !! !This part of the component can ...
+				 !! || Normative position tag || Explanation
++CmpNP/All       !!≈ | @CODE@ | ... be in all positions, __default__, this tag does not have to be written
++CmpNP/First     !!≈ | @CODE@ | ... only be first part in a compound or alone
++CmpNP/Pref      !!≈ | @CODE@ | ... only __first__ part in a compound, NEVER alone
++CmpNP/Last      !!≈ | @CODE@ | ... only be last part in a compound or alone
++CmpNP/Suff      !!≈ | @CODE@ | ... only __last__ part in a compound, NEVER alone
++CmpNP/None      !!≈ | @CODE@ | ... not take part in compounds
++CmpNP/Only      !!≈ | @CODE@ | ... only be part of a compound, i.e. can never be used alone, but can appear in any position
 
 
 !! !!Descriptive compounding tags
@@ -168,6 +157,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
              !!             part of a dynamic compound. It is important for
              !!             Apertium and the speller (to give extra weights to
              !!             compounds, and useful in other cases as well.
++Cmp/XForm      !!≈ | @CODE@ | Alle Cmp som ikke har en klar klassifisering
++Cmp/AttrH      !!≈ | @CODE@ | Alle Cmp som har en attr-h
 
 !! !!Tags for Inflection
 
