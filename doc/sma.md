@@ -40,7 +40,7 @@
 
 ### Error (non-standard language) tags
 
-|   Error tag | Explanation |
+|   Error tag || Explanation |
 | --- | ---
 |  **+Err/Orth** | Substandard, unormert form av et ord
 |  **+Err/Hyph** | Substandard, unormert
@@ -53,7 +53,7 @@
 
 ### Usage tags
 
-|   Usage tag | Explanation |
+|   Usage tag || Explanation |
 | --- | ---
 |  **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 |  **+Use/-Spell** | Excluded from speller
@@ -72,7 +72,7 @@
 
 ## Dialect tags
 
-|   Dialect tag | Explanation |
+|   Dialect tag || Explanation |
 | --- | ---
 |  +Dial/-S | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
 |  +Dial/-N | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
@@ -90,7 +90,7 @@
 (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
 ### The first part of the component may be ...
-|   Normative form tag | Explanation |
+|   Normative form tag || Explanation |
 | --- | ---
 |  +CmpN/Sg | Singular
 |  +CmpN/SgN | SgNominative
@@ -99,7 +99,7 @@
 
 
 ### The second part of the compound requires:
-|   Normative left-governing tag | Explanation |
+|   Normative left-governing tag || Explanation |
 | --- | ---
 |  +CmpN/SgLeft | Sg to the left
 |  +CmpN/SgNomLeft | etc.
@@ -107,7 +107,7 @@
 |  +CmpN/PlGenLeft | "
 
 ### This part of the component can ...
-|   Normative position tag | Explanation |
+|   Normative position tag || Explanation |
 | --- | ---
 |  +CmpNP/All | ... be in all positions, **default**, this tag does not have to be written
 |  +CmpNP/First | ... only be first part in a compound or alone
@@ -3975,9 +3975,9 @@ This is one of two parallel files containing adjective stems.
 The files represent two alternative interpretation of the same data
 (South Saami adjectives).
 This file is used for spellchecking, the alternative file
-''adjectives-oahpa.lexc'' is used for dictionary and icall applications.
+*adjectives-oahpa.lexc* is used for dictionary and icall applications.
 This file is compiled by default, the other one is compiled by in
-langs/sma giving the command ''.configure --with-oahpa''
+langs/sma giving the command *.configure --with-oahpa*
 before compiling.
 
 
