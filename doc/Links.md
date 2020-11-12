@@ -1,5 +1,3 @@
-Here's a list of links to the page for each file of source code. All pages are concatenated and can be found [here](sma.md).
-
 * [root-morphology.md](root-morphology.md)
 * [phonology-morphology.md](phonology-morphology.md)
 * [nouns-affixes.md](nouns-affixes.md)
