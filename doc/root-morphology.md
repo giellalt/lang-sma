@@ -22,11 +22,12 @@
  * +Logo    
  * +Subqst     for adverbs
 
-### Tags for sub-POS
-## Proper nouns
+## Tags for sub-POS
+
+### Proper nouns
  * **+Prop** =
 
-## Pronoun subtypes
+### Pronoun subtypes
  * **+Pers** = Personal
  * **+Dem** = Demonstrative
  * **+Interr** = Interrogative
@@ -38,7 +39,7 @@
  * **+Arab** = Arabic numeral
  * **+Rom** =
 
-### Error (non-standard language) tags
+## Error (non-standard language) tags
 
 |   Error tag || Explanation |
 | --- | ---
