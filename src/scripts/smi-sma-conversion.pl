@@ -38,6 +38,7 @@ while(<>) {
 	s/r9 /r /g ;
 	s/s9 /s /g ;
 	s/t9 /t /g ;
+	s/t9d/td/g ;
 	s/z9 /z /g ;
 
 	s/b9-/b-/g ;
