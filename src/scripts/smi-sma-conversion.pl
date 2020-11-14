@@ -24,29 +24,42 @@ while(<>) {
 # names with South Saami inflection
 	s/^Måehvie\+/!Måehvie+/g ;
 
-	s/b9/b/g ;
-	s/d9/d/g ;
-	s/g9/g/g ;
-	s/h9/h/g ;
+	s/b9 /b /g ;
+	s/d9 /d /g ;
+	s/e9 /e /g ;
+	s/g9 /g /g ;
+	s/h9 /h /g ;
 	s/j9/j/g ;
-	s/k9/k/g ;
-	s/m9/m/g ;
-	s/n9/n/g ;
-	s/p9/p/g ;
-	s/r9/r/g ;
-	s/s9/s/g ;
-	s/t9/t/g ;
-	s/z9/z/g ;
-	s/æ9/æ/g ;
-	s/7 / /g ;
-	s/8 / /g ;
-	s/9 / /g ;
-	s/7#/#/g ;
-	s/8#/#/g ;
-	s/9#/#/g ;
+	s/k9 /k /g ;
+	s/m9 /m /g ;
+	s/n9 /n /g ;
+	s/o9 /o /g ;
+	s/p9 /p /g ;
+	s/r9 /r /g ;
+	s/s9 /s /g ;
+	s/t9 /t /g ;
+	s/z9 /z /g ;
+
+	s/b9-/b-/g ;
+	s/d9-/d-/g ;
+	s/e9-/e-/g ;
+	s/g9-/g-/g ;
+	s/h9-/h-/g ;
+	s/j9-/j-/g ;
+	s/k9-/k-/g ;
+	s/m9-/m-/g ;
+	s/n9-/n-/g ;
+	s/o9-/o-/g ;
+	s/p9-/p-/g ;
+	s/r9-/r-/g ;
+	s/s9-/s-/g ;
+	s/t9-/t-/g ;
+	s/z9-/z-/g ;
+
+
 
 	# Substitutions due to orthographic differences between SMA and SME:
-	s/t:(.*)h /t:$1d9 /g ;
+#	s/t:(.*)h /t:$1d9 /g ;
 	s/#/^/g ;  # Endra alle smi-# til ^, slik at vi kan la alle andre # bli til bindestrek
 
 	# j->i || Vow i .* : .* Vow _ ; Heaika:Heajka -> Heaika:Heaika. But Majken 	
