@@ -41,8 +41,8 @@
 
 ## Error (non-standard language) tags
 
-|   Error tag | Explanation |
-| --- | ---
+|   Error tag | Explanation
+| --- | --- 
 |  **+Err/Orth** | Substandard, unormert form av et ord
 |  **+Err/Hyph** | Substandard, unormert
 |  **+Err/SpaceCmp** | Substandard, unormert 
@@ -54,8 +54,8 @@
 
 ### Usage tags
 
-|   Usage tag | Explanation |
-| --- | ---
+|   Usage tag | Explanation
+| --- | --- 
 |  **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 |  **+Use/-Spell** | Excluded from speller
 |  **+Use/-PLX** | Excluded in PLX speller
@@ -73,8 +73,8 @@
 
 ## Dialect tags
 
-|   Dialect tag | Explanation |
-| --- | ---
+|   Dialect tag | Explanation
+| --- | --- 
 |  +Dial/-S | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
 |  +Dial/-N | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
 |  +Dial/-NOR | Words not in Norway
@@ -91,8 +91,8 @@
 (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
 ### The first part of the component may be ...
-|   Normative form tag | Explanation |
-| --- | ---
+|   Normative form tag | Explanation
+| --- | --- 
 |  +CmpN/Sg | Singular
 |  +CmpN/SgN | SgNominative
 |  +CmpN/SgG | SgGenitive
@@ -100,16 +100,16 @@
 
 
 ### The second part of the compound requires:
-|   Normative left-governing tag | Explanation |
-| --- | ---
+|   Normative left-governing tag | Explanation
+| --- | --- 
 |  +CmpN/SgLeft | Sg to the left
 |  +CmpN/SgNomLeft | etc.
 |  +CmpN/SgGenLeft | "
 |  +CmpN/PlGenLeft | "
 
 ### This part of the component can ...
-|   Normative position tag | Explanation |
-| --- | ---
+|   Normative position tag | Explanation
+| --- | --- 
 |  +CmpNP/All | ... be in all positions, **default**, this tag does not have to be written
 |  +CmpNP/First | ... only be first part in a compound or alone
 |  +CmpNP/Pref | ... only be **first** part in a compound, NEVER alone
@@ -747,14 +747,14 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 # Rules
 
 
-*e deletion before i-initial suffix*  
+**e deletion before i-initial suffix**  
 
 
 * *manneX2ine*
 * *mann00ine*
 
 
-*Diphthong simplification ie:e*  
+**Diphthong simplification ie:e**  
 
 
 
@@ -780,7 +780,7 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 
 
-*Diphthong simplification oe:o*  
+**Diphthong simplification oe:o**  
 
 
 
@@ -807,7 +807,7 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 
 
-*a/e alternation*  
+**a/e alternation**  
 
 
 
@@ -841,7 +841,7 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 
 
-*a/i alternation*  
+**a/i alternation**  
 
 
 
@@ -851,7 +851,7 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 * ★*jåhtaj%^DISIMP%>em* (is not standard language)
 * ★*jåhtaj0%>em* (is not standard language)
 
-*a/0 alternation*  
+**a/0 alternation**  
 
 
 
@@ -860,13 +860,13 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 
 
-*Even syllabic verbs Du3 e/i alternation V*  
+**Even syllabic verbs Du3 e/i alternation V**  
 
-*Proper PlGen, PlCom*  
+**Proper PlGen, PlCom**  
 
 
 
-*Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V *  
+**Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V**  
 
 
 * *vååjn>eX4jibie*

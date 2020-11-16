@@ -25,14 +25,14 @@
 # Rules
 
 
-*e deletion before i-initial suffix*  
+**e deletion before i-initial suffix**  
 
 
 * *manneX2ine*
 * *mann00ine*
 
 
-*Diphthong simplification ie:e*  
+**Diphthong simplification ie:e**  
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-*Diphthong simplification oe:o*  
+**Diphthong simplification oe:o**  
 
 
 
@@ -85,7 +85,7 @@
 
 
 
-*a/e alternation*  
+**a/e alternation**  
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-*a/i alternation*  
+**a/i alternation**  
 
 
 
@@ -129,7 +129,7 @@
 * ★*jåhtaj%^DISIMP%>em* (is not standard language)
 * ★*jåhtaj0%>em* (is not standard language)
 
-*a/0 alternation*  
+**a/0 alternation**  
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-*Even syllabic verbs Du3 e/i alternation V*  
+**Even syllabic verbs Du3 e/i alternation V**  
 
-*Proper PlGen, PlCom*  
+**Proper PlGen, PlCom**  
 
 
 
-*Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V *  
+**Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V**  
 
 
 * *vååjn>eX4jibie*
