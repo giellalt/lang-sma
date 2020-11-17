@@ -35,6 +35,8 @@
  * **+Recipr** = Reciprocal
  * **+Rel** = Relative
  * **+Indef** = Indefinite
+
+### Numeral subtypes
  * **+Coll** = Collective numeral
  * **+Arab** = Arabic numeral
  * **+Rom** =
@@ -75,12 +77,12 @@
 
 |   Dialect tag | Explanation
 | --- | --- 
-|  +Dial/-S | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
-|  +Dial/-N | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
-|  +Dial/-NOR | Words not in Norway
-|  +Dial/-SW | Words not in Sweden
-|  +Dial/SH | Short forms
-|  +Dial/L | Long forms
+|  **+Dial/-S** | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
+|  **+Dial/-N** | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
+|  **+Dial/-NOR** | Words not in Norway
+|  **+Dial/-SW** | Words not in Sweden
+|  **+Dial/SH** | Short forms
+|  **+Dial/L** | Long forms
 
 
 
@@ -90,64 +92,66 @@
 ## Normative/prescriptive compounding tags
 (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
-### The first part of the component may be ...
-|   Normative form tag | Explanation
+### The left part of a compound should be
+
+The default is `+CmpN/SgN`, so when nothing is specified, that
+will be used. To override that one, specify one or more of the
+following tags. `+CmpN/SgN` must be specified if also other tags
+are listed - unless `+CmpN/SgN` should *not* be used, for course.
+
+|   Normative compounding tag | Explanation
 | --- | --- 
-|  +CmpN/Sg | Singular
-|  +CmpN/SgN | SgNominative
-|  +CmpN/SgG | SgGenitive
-|  +CmpN/PlG | PlGenitive
+|  **+CmpN/Sg** | Singular
+|  **+CmpN/SgN** | Singular Nominative
+|  **+CmpN/SgG** | Singular Genitive
+|  **+CmpN/PlG** | Plural Genitive
 
 
-### The second part of the compound requires:
+### The right part of a compound requires to the left
+
+These tags overrule the regular tags defined above. One or more
+can be specified.
+
 |   Normative left-governing tag | Explanation
 | --- | --- 
-|  +CmpN/SgLeft | Sg to the left
-|  +CmpN/SgNomLeft | etc.
-|  +CmpN/SgGenLeft | "
-|  +CmpN/PlGenLeft | "
+|  **+CmpN/SgLeft** | Sg to the left
+|  **+CmpN/SgNomLeft** | etc.
+|  **+CmpN/SgGenLeft** | "
+|  **+CmpN/PlGenLeft** | "
 
 ### This part of the component can ...
 |   Normative position tag | Explanation
 | --- | --- 
-|  +CmpNP/All | ... be in all positions, **default**, this tag does not have to be written
-|  +CmpNP/First | ... only be first part in a compound or alone
-|  +CmpNP/Pref | ... only be **first** part in a compound, NEVER alone
-|  +CmpNP/Last | ... only be last part in a compound or alone
-|  +CmpNP/Suff | ... only be **last** part in a compound, NEVER alone
-|  +CmpNP/None | ... not take part in compounds
-|  +CmpNP/Only | ... only be part of a compound, i.e. can never be used alone, but can appear in any position
+|  **+CmpNP/All** | ... be in all positions, **default**, this tag does not have to be written
+|  **+CmpNP/First** | ... only be first part in a compound or alone
+|  **+CmpNP/Pref** | ... only be **first** part in a compound, NEVER alone
+|  **+CmpNP/Last** | ... only be last part in a compound or alone
+|  **+CmpNP/Suff** | ... only be **last** part in a compound, NEVER alone
+|  **+CmpNP/None** | ... not take part in compounds
+|  **+CmpNP/Only** | ... only be part of a compound, i.e. can never be used alone, but can appear in any position
 
 
 ## Descriptive compounding tags
 Tags for compound analysis - this is what a compound actually is. We use this
 to research compounding patterns in the corpus.
 
-* **+Cmp/Sg**:  Compounding using an unspecified singular stem
-* **+Cmp/SgNom**:  Compounding using nominative singular
-* **+Cmp/SgGen**:  Compounding using genitive singular
-* **+Cmp/PlGen**:  Compounding using genitive plural
-* **+Cmp/Attr**:  Compounding using attribute form
-* **+Cmp/eh**:  Compound stem in **–eh**, as in *gaameh-gåaroje*,
-            from *gaamege*
-* **+Cmp/ege**:  Compound stem in **–ege**, as in *gaamege-gåaroje*
-* **+Cmp/FinEDel**:  Deletion of final **e**, as in *voelem-gaaroeh*,
-            from *voeleme*
-* **+Cmp/ShH : Compounding using a short stem + **h****:  *–biejjh–*
-            (from *biejjie*), cf *reakedsbiejjhvadtese*
-* **+Cmp/Sh : Compounding using a short stem**:  *–biejj–*
-            (from *biejjie*)
-* **+Cmp/SplitR**:  This is a split compound with the other part to the
-            right: <br/> "Arbeids- og inkluderingsdepartementet" =>
-            *Arbeids–* = **+Cmp/SplitR**
-* **+Cmp/SplitL**:  This is a split compound with the other part to the
-            left, this is the oposite of the previous case
-* **+Cmp**:  Dynamic compound - this tag should *always* be
-            part of a dynamic compound. It is important for
-            Apertium and the speller (to give extra weights to
-            compounds, and useful in other cases as well.
-|  +Cmp/XForm | Alle Cmp som ikke har en klar klassifisering
-|  +Cmp/AttrH | Alle Cmp som har en attr-h
+|   Desriptive compounding tag | Explanation
+| --- | --- 
+|  **+Cmp/Sg** | Compounding using an unspecified singular stem
+|  **+Cmp/SgNom** | Compounding using nominative singular
+|  **+Cmp/SgGen** | Compounding using genitive singular
+|  **+Cmp/PlGen** | Compounding using genitive plural
+|  **+Cmp/Attr** | Compounding using attribute form
+|  **+Cmp/eh** | Compound stem in **–eh**, as in *gaameh-gåaroje*, from *gaamege*
+|  **+Cmp/ege** | Compound stem in **–ege**, as in *gaamege-gåaroje*
+|  **+Cmp/FinEDel** | Deletion of final **e**, as in *voelem-gaaroeh*, from *voeleme*
+|  **+Cmp/ShH** | Compounding using a short stem + **h**: *–biejjh–* (from *biejjie*), cf *reakedsbiejjhvadtese*
+|  **+Cmp/Sh** | Compounding using a short stem: *–biejj–* (from *biejjie*)
+|  **+Cmp/SplitR** | This is a split compound with the other part to the right: <br/> "Arbeids- og inkluderingsdepartementet" => *Arbeids–* = **+Cmp/SplitR**
+|  **+Cmp/SplitL** | This is a split compound with the other part to the left, this is the oposite of the previous case
+|  **+Cmp** | Dynamic compound - this tag should *always* be part of a dynamic compound. It is important for  Apertium and the speller (to give extra weights to compounds), and useful in other cases as well.
+|  **+Cmp/XForm** | Alle Cmp som ikke har en klar klassifisering
+|  **+Cmp/AttrH** | Alle Cmp som har en attr-h
 
 # Tags for Inflection
 
@@ -262,8 +266,8 @@ to research compounding patterns in the corpus.
 
 ## Semantic tags to help disambiguation & synt. analysis:
 
- *  +Sem/Act					 = Activity
- *  +Sem/Adr 					 = Webadr
+ *  +Sem/Act                    = Activity
+ *  +Sem/Adr                    = Webadr
  *  +Sem/Amount                 = mengde eks penger og tall
  *  +Sem/Ani                    = 
  *  +Sem/Ani-fish               = fisk
@@ -271,7 +275,7 @@ to research compounding patterns in the corpus.
  *  +Sem/Body                   = Bodypart
  *  +Sem/Body-abstr             = sjel, ånd, jierbmi
  *  +Sem/Build                  = Building
- *  +Sem/Build-room  			 = room in a building, typically place to be
+ *  +Sem/Build-room             = room in a building, typically place to be
  *  +Sem/Buildpart              = Part of Bulding, like the closet
  *  +Sem/Cat                    = Category
  *  +Sem/Clth                   = Clothes
@@ -280,8 +284,8 @@ to research compounding patterns in the corpus.
  *  +Sem/Ctain                  = Container
  *  +Sem/Ctain-abstr            = Abstract container like bank account
  *  +Sem/Ctain-clth             = 
- *  +Sem/Curr            		 = Currency like dollar, Not Money
- *  +Sem/Dance					 = Dance
+ *  +Sem/Curr                   = Currency like dollar, Not Money
+ *  +Sem/Dance                  = Dance
  *  +Sem/Date                   = 
  *  +Sem/Dir                    = Direction like GPS-kursa
  *  +Sem/Domain                 = 
@@ -300,15 +304,14 @@ to research compounding patterns in the corpus.
  *  +Sem/Furn                   = møbler
  *  +Sem/Group                  = 
  *  +Sem/Hum                    = mennesker
- *  +Sem/ID               	     = 
+ *  +Sem/ID                     = 
  *  +Sem/Ideol                  = 
  *  +Sem/Lang                   = språk
  *  +Sem/Mal                    = 
  *  +Sem/Mat                    = material eks: mineral, nikkel,plast, kalvskinn
  *  +Sem/Measr                  = måttenhet ek cm,km, m minutter etc
  *  +Sem/Money                  = penger,depositum, gevinst, stipend
- *  +Sem/Obj              		 = 
- *  +Sem/Obj					 = 
+ *  +Sem/Obj                    = 
  *  +Sem/Obj-clo                = handduk, flagg, pledd, 
  *  +Sem/Obj-el                 = 
  *  +Sem/Obj-ling               = kort,biletter
@@ -369,7 +372,7 @@ Multiple Semantic tags
  *  +Sem/Ani_Group              = gruppe med dyr
  *  +Sem/Ani_Group_Hum          = 
  *  +Sem/Ani_Hum                = 
- *  +Sem/Ani_Obj-el			 = 
+ *  +Sem/Ani_Obj-el             = 
  *  +Sem/Ani_Plc_Txt            = 
  *  +Sem/Ani_Time               = 
  *  +Sem/Ani_Tool               = 
@@ -477,52 +480,49 @@ given the proper use of these flags.
 |  @P.ErrOrth.ON@ | asdf
 
 
-## Derivation position in a derivation row
-Affix and tag, frompos - topos
+## Derivation tags and derivation position tags in a derivation row
+
+Derivations in the same position are mutually exclusive (can not be combined), whereas
+tags in different positions can be combined, so that position 1 derivations must
+precede position 2 derivations, and so on.
 
 
-|  +Der1 | Position
-|  +Der2 | Position
-|  +Der3 | Position
+|    Pos1     | Pos2      | Pos3      | POS switches (from-to)| Explanation
+| --- | --- | --- | --- | --- 
+|  **+Der1** |            |            |      | Position tag, required
+|  **+Der2** |            |            |      | Position tag, required
+|  **+Der3** |            |            |      | Position tag, required
+|  **+Der/htalle** |            |            | VV   | Passive, frekeventative
+|  **+Der/lg** |            |            | VV   | Passive
+|  **+Der/ijes** |            |            | NA   | Nomen agentis
+|  **+Der/ihks** |            |            | VA   | (Handlernomen- tilbøyelig til å utføre den handlingen som grunnordet angir)
+|  **+Der/les** |            |            | VA   | Intensive
+|  **+Der/ldihkie** |            |            | VA   |
+|  **+Der/ldahke** |            |            | VA   | Resultatnomen (?)
+|  **+Der/ldh** |            |            | VA   | Attributt
+|  **+Der/ht** |            |            | VV   | Causative
+|  **+Der/l** |            |            | VV   | Subitive
+|  **+Der/st** |            |            | VV   | Diminutive, Subitive
+|  **+Der/d** |            |            | VV   | Continuative, Konative, Frequentative, Refleksive, Momentan
+|  **+Der/Car** |            |            |      | -hts, Caritive, was Der/heapmi in sme
+|  **+Der/htj** |            |            | NN   | Dim-cont, Frequentative
+|  **+Der/Dimin** |            |            | NN   | Diminutive
+|  **+Der/Rec** |            |            | NN   | Forholdsformer
+|  **+Der/laakan** |            |            | AAdv | adverb
+|  **+Der/laaketje** |            |            | AA   | adjektiv
+|  **+Der/Comp** |            |            | AA   | adjektiv
+|  **+Der/Superl** |            |            | AA   | adjektiv 
+|             | **+Der/vuota** |            | AN   | Noun
+|             | **+Der/adte** |            | VV   | Frequentative, Kontinuativ
+|             | **+Der/alla** |            | VV   | Frequentative
+|             | **+Der/eds** |            | NA   | Attributt
+|             |            | **+Der/PassL** | VV   | long only
+|             |            | **+Der/NomAg** | VN   | Nomen Agentis
+|             |            | **+Der/NomAct** | VN   | Nomen Actionis
+|             |            | **+Der/ahtje** | VV   | Inchoative
+|             |            | **+Der/InchL** | VV   | Inchoative
 
- Der#1
-|  +Der/htalle | VV - Passive, frekeventative
-|  +Der/lg | VV - Passive
-|  +Der/ijes | NA - Nomen agentis
-|  +Der/ihks | VA - (Handlernomen- tilbøyelig til å utføre den handlingen som grunnordet angir)
-|  +Der/les | VA - Intensive
-|  +Der/ldihkie | VA -
-|  +Der/ldahke | VA - Resultatnomen (?)
-|  +Der/ldh | VA - Attributt
-|  +Der/ht | VV - Causative
-|  +Der/l | VV - Subitive
-|  +Der/st | VV - Diminutive, Subitive
-|  +Der/d | VV - Continuative, Konative, Frequentative, Refleksive, Momentan
-|  +Der/Car | -hts, Caritive, was Der/heapmi in sme
 
-|  +Der/htj | Dim-cont, Frequentative
-|  +Der/Dimin | NN - Diminutive
-|  +Der/Rec | NN - Forholdsformer
-|  +Der/laakan | AAdv - adverb
-|  +Der/laaketje | AA - adjektiv
-|  +Der/Comp 								 | AA - adjektiv
-|  +Der/Superl 								 | AA - adjektiv 
-
-
-Der#2
-|  +Der/vuota | AN - Noun
-|  +Der/adte | VV - Frequentative, Kontinuativ
-|  +Der/alla | VV - Frequentative
-|  +Der/eds | NA - Attributt
-
- Der#3
-|  +Der/PassL | VV - long only
-|  +Der/NomAg | VN - Nomen Agentis
-|  +Der/NomAct | VN - Nomen Actionis
-|  +Der/ahtje | VV - Inchoative
-|  +Der/InchL | VV - Inchoative
-
- Der#4    *So far +Der4 is not motivated for SMA.*
 
 
 ### Other, non-positional derivations
@@ -530,13 +530,19 @@ Der#2
 All non-positional derivations should be preceded by the following tag,
 to make it possible to target regular expressions in all derivations in a
 language-independent way:
-just specify ```[+Der](+Der1 .. +Der5)``` and you are set.
+just specify
+```[+Der](+Der1 .. +Der5)```
+and you are set.
 * **+Der**:  Tag to precede any non-positional derivation
 
-|  +Der/PassS | VV - short passive only
-|  +Der/A | NA - comparation of N's
+|   Derivation tag | POS switch | Explanation
+| --- | --- | --- 
+|  +Der/PassS | VV | short passive only
+|  +Der/A | NA | comparation of N's
+
 
 ## Tags for originating language
+
 The following tags are used to guide conversion to IPA: loan words
 and foreign names are usually pronounced (approximately) as in the
 originating (majority) language. Instead of trying to identify the
@@ -560,17 +566,23 @@ with as little work as possible. On the other hand, if more words
 are tagged than strictly needed, this should pose no problem as
 long as the IPA conversion is correct - at least some words will
 get the same pronunciation whether read as SME or NOB/NNO/SWE.
- * +OLang/SME - North Sámi
- * +OLang/SMA - South Sámi
- * +OLang/FIN - Finnish
- * +OLang/SWE - Swedish
- * +OLang/NOB - Norw. bokmål
- * +OLang/NNO - Norw. nynorsk
- * +OLang/ENG - English
- * +OLang/RUS - Russian
- * +OLang/UND - Undefined
- * +Area/SE  In Sweden
- * +Area/NO  In Norway
+
+|   Originating language tag | Originating language
+| --- | --- 
+|  **+OLang/SME** | North Sámi
+|  **+OLang/SMA** | South Sámi
+|  **+OLang/FIN** | Finnish
+|  **+OLang/SWE** | Swedish
+|  **+OLang/NOB** | Norw. bokmål
+|  **+OLang/NNO** | Norw. nynorsk
+|  **+OLang/ENG** | English
+|  **+OLang/RUS** | Russian
+|  **+OLang/UND** | Undefined
+
+## Area tags
+
+ * +Area/SE = In Sweden
+ * +Area/NO = In Norway
 
 
 ## Triggers for morphophonological rules
