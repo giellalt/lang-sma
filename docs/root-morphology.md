@@ -18,9 +18,9 @@
  * **+Pcle** = Particle
  * **+Num** = Numerals
  * **+TODO** = Code for items that have not been modeled yet
-
- * +Logo    
- * +Subqst     for adverbs
+ * **+Logo**
+ * **+Subqst** for adverbs
+ * **+Dyn** = Code dynamic acronyms
 
 ## Tags for sub-POS
 
@@ -44,7 +44,7 @@
 ## Error (non-standard language) tags
 
 |   Error tag | Explanation
-| --- | --- 
+|:--- |:--- 
 |  **+Err/Orth** | Substandard, unormert form av et ord
 |  **+Err/Hyph** | Substandard, unormert
 |  **+Err/SpaceCmp** | Substandard, unormert 
@@ -57,7 +57,7 @@
 ### Usage tags
 
 |   Usage tag | Explanation
-| --- | --- 
+|:--- |:--- 
 |  **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 |  **+Use/-Spell** | Excluded from speller
 |  **+Use/-PLX** | Excluded in PLX speller
@@ -76,7 +76,7 @@
 ## Dialect tags
 
 |   Dialect tag | Explanation
-| --- | --- 
+|:--- |:--- 
 |  **+Dial/-S** | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
 |  **+Dial/-N** | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
 |  **+Dial/-NOR** | Words not in Norway
@@ -100,7 +100,7 @@ following tags. `+CmpN/SgN` must be specified if also other tags
 are listed - unless `+CmpN/SgN` should *not* be used, for course.
 
 |   Normative compounding tag | Explanation
-| --- | --- 
+|:--- |:--- 
 |  **+CmpN/Sg** | Singular
 |  **+CmpN/SgN** | Singular Nominative
 |  **+CmpN/SgG** | Singular Genitive
@@ -113,7 +113,7 @@ These tags overrule the regular tags defined above. One or more
 can be specified.
 
 |   Normative left-governing tag | Explanation
-| --- | --- 
+|:--- |:--- 
 |  **+CmpN/SgLeft** | Sg to the left
 |  **+CmpN/SgNomLeft** | etc.
 |  **+CmpN/SgGenLeft** | "
@@ -121,7 +121,7 @@ can be specified.
 
 ### This part of the component can ...
 |   Normative position tag | Explanation
-| --- | --- 
+|:--- |:--- 
 |  **+CmpNP/All** | ... be in all positions, **default**, this tag does not have to be written
 |  **+CmpNP/First** | ... only be first part in a compound or alone
 |  **+CmpNP/Pref** | ... only be **first** part in a compound, NEVER alone
@@ -136,7 +136,7 @@ Tags for compound analysis - this is what a compound actually is. We use this
 to research compounding patterns in the corpus.
 
 |   Desriptive compounding tag | Explanation
-| --- | --- 
+|:--- |:--- 
 |  **+Cmp/Sg** | Compounding using an unspecified singular stem
 |  **+Cmp/SgNom** | Compounding using nominative singular
 |  **+Cmp/SgGen** | Compounding using genitive singular
@@ -488,7 +488,7 @@ precede position 2 derivations, and so on.
 
 
 |    Pos1     | Pos2      | Pos3      | POS switches (from-to)| Explanation
-| --- | --- | --- | --- | --- 
+|:--- |:--- |:--- |:--- |:--- 
 |  **+Der1** |            |            |      | Position tag, required
 |  **+Der2** |            |            |      | Position tag, required
 |  **+Der3** |            |            |      | Position tag, required
@@ -504,7 +504,7 @@ precede position 2 derivations, and so on.
 |  **+Der/l** |            |            | VV   | Subitive
 |  **+Der/st** |            |            | VV   | Diminutive, Subitive
 |  **+Der/d** |            |            | VV   | Continuative, Konative, Frequentative, Refleksive, Momentan
-|  **+Der/Car** |            |            |      | -hts, Caritive, was Der/heapmi in sme
+|  **+Der/Car** |            |            |      |:-hts, Caritive, was Der/heapmi in sme
 |  **+Der/htj** |            |            | NN   | Dim-cont, Frequentative
 |  **+Der/Dimin** |            |            | NN   | Diminutive
 |  **+Der/Rec** |            |            | NN   | Forholdsformer
@@ -536,7 +536,7 @@ and you are set.
 * **+Der**:  Tag to precede any non-positional derivation
 
 |   Derivation tag | POS switch | Explanation
-| --- | --- | --- 
+|:--- |:--- |:--- 
 |  +Der/PassS | VV | short passive only
 |  +Der/A | NA | comparation of N's
 
@@ -568,7 +568,7 @@ long as the IPA conversion is correct - at least some words will
 get the same pronunciation whether read as SME or NOB/NNO/SWE.
 
 |   Originating language tag | Originating language
-| --- | --- 
+|:--- |:--- 
 |  **+OLang/SME** | North Sámi
 |  **+OLang/SMA** | South Sámi
 |  **+OLang/FIN** | Finnish
