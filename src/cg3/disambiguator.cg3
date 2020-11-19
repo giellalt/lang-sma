@@ -1473,6 +1473,13 @@ IFF:GoNotCs ("goh" Pcle) (-1 Neg OR ConNeg OR ("sån"));
 	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
 	## Dallah goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. # CS
 
+REMOVE:GoAdv CS IF (0 ("goh"))(*1 EOS BARRIER V);
+	     ## Tjuajka goh gaajege.
+	     ## Dïhte sagki stuerebe enn goh dïhte.
+
+REMOVE:GoCS Adv IF (0 ("goh" CS));
+	    ## Goh aahka noere lij, dellie derhviegåetesne årroeji.
+
 REMOVE:CSNotVfin CS IF (NEGATE *-1 VFIN OR ("jis" CS))(0 ("dellie") OR ("dle"));
 	##
 
