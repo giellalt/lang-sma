@@ -18,9 +18,9 @@
  * **+Pcle** = Particle
  * **+Num** = Numerals
  * **+TODO** = Code for items that have not been modeled yet
- * **+Logo**
- * **+Subqst** for adverbs
- * **+Dyn** = Code dynamic acronyms
+
+ * +Logo    
+ * +Subqst     for adverbs
 
 ## Tags for sub-POS
 
@@ -4705,7 +4705,7 @@ Remove verb readings
 
 ### CC- and CS-Mapping
 
-* **COMPCS**  @COMP-CS< to Adv or A after goh etc.
+* *COMPCS*  @COMP-CS< to Adv or A after goh etc.
 
 
 
@@ -4774,7 +4774,7 @@ Mapping verbs
 
 
 
-### **killifVinCohort** This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+### *killifVinCohort* This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 
 
 
@@ -4830,8 +4830,6 @@ Remove Prop Attr if not 1 Prop
 
 
 ## CC and CS or Adv
-
-
 
 
 
