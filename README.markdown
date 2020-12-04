@@ -3,7 +3,7 @@ The South Sámi morphology and tools
 
 This repository contains finite state source files for the South Sámi language,
 for building morphological analysers, proofing tools
-and dictionaries. The data and implementation are licenced under __LICENCE__
+and dictionaries. The data and implementation are licenced under _GNU GPL v3_
 licence, also detailed in the
 [LICENCE](https://github.com/giellalt/lang-sma/blob/develop/LICENCE). The
 authors named in the AUTHORS file are available to grant other licencing
@@ -16,6 +16,14 @@ choices.
 Install proofing tools and [keyboards](https://github.com/giellalt/keyboard-sma)
 for the South Sámi language by using the [Divvun Installer](http://divvun.no)
 (some languages are only available via the nightly channel).
+
+Spell-checker accuracy:
+
+[![Speller
+Accuracy](https://img.shields.io/badge/Speller_Accuracy-83_%25-green.svg)](https://giellalt.github.io/lang-sma/speller-report.html)]
+[![Spell-checking accuracy development
+graph](https://giellalt.github.io/lang-sma/speller-report.svg)](https://giellalt.github.io/lang-sma/speller-report.svg)
+
 
 Documentation
 -------------
