@@ -540,7 +540,7 @@ LIST MOVEMENT-V = "båetedh" "feeledh" "feeredh" "gaavnedh" "girtedh" "hajkedh" 
 LIST STV = Der/Caus ;
 
 
-#!! !Adective sets
+#!! !Adjective sets
 
 LIST COM-ADJ = "latjkes" "riejries" ;
 
@@ -637,6 +637,8 @@ SET ROUTE = CONCRETE-ROUTE OR ABSTR-ROUTE ;
 
 SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR Sem/Build OR Sem/Plc OR Sem/Plc-abstr OR Sem/Plc-line OR Sem/Plc-water ;
  ;
+
+LIST ESS-TIME-WEATHER = "maana" ;
 
 #       ============== #
 #!!  !!!Disambiguation rules
@@ -1056,8 +1058,12 @@ SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR CO
 SELECT:Acase $$CASES (0 A LINK -1 Dem + $$CASES)(NEGATE 0 Attr) ;
 	#$ Im dom guhkebem vielie vuejnieh.
 
-#!! Rel or Interr
-SELECT:Indef Indef (0 Rel LINK -1 Neg) ;
+#!! Rel or Interr OR Indef
+
+SELECT:Indef Indef (0 ("mij") LINK -1 Neg) ;
+SELECT:Indef Indef (0 ("mij") LINK *-1 COPULAS BARRIER SV-BOUNDARY LINK -1 Neg) ;
+	#$ ij leah dan gåvva maam daan bïjre gaavnedh.
+
 SELECT:Indef Indef (0 Rel LINK 1 ("gænnah")) ;
 REMOVE:Indef Indef (0 Rel LINK NOT -1 Neg) ;
 
@@ -1081,6 +1087,9 @@ SELECT:AdvnotA Adv IF (0 A LINK 1 Adv LINK *1 REAL-V BARRIER S-BOUNDARY)(*-1 VFI
 
 SELECT:dusnieAdv Adv IF (0 ("dusnie") LINK 1 Adv OR EOS OR Prop) ;
 	#$ Dusnie aaj buesjies kraanna Hulda.
+
+SELECT:maajeAdv Adv IF (0 ("maaje") LINK 1 A ) ;
+
 
 SELECT:meatanAdv Adv IF (0 ("meatan") LINK 1 ("vaeltedh")) ;
 SELECT:læjhkanAdv Adv IF (0 ("læjhkan")) ;
@@ -1181,6 +1190,11 @@ REMOVE:V VFIN IF (0 A + Nom LINK -1 ("dan")) ;
 # Select the finite verb reading if this is the only finite verb reading within the clause
 #SELECT:vfin VFIN IF (NEGATE *0 V BARRIER S-BOUNDARY OR CLB) ;
 	## Saemieh leah akte åålmege jalhts joekehts laantine orre, gïele dïhte åålmegidie raasti dåaresth ektede.
+
+
+#!! Select Inf
+SELECT:inf Inf IF (0 Pl2 LINK -1 ("guktie") LINK -1 VFIN) ;
+	## Maanine dle leerebe guktie soptsestidh.
 
 
 	#!! !!Mapping rules
@@ -1643,6 +1657,9 @@ SELECT:Ill Ill (*0 ILLV BARRIER S-BOUNDARY OR ILLADV) ;
 
 REMOVE:EssIfEssV Ine IF (*1 ESSV BARRIER S-BOUNDARY)(0 Sem/Hum OR Der/NomAg) ;
 REMOVE:EssIfEssV Com IF (*1 ESSV BARRIER S-BOUNDARY)(0 Sem/Hum OR Der/NomAg) ;
+
+SELECT:Ess Ess IF (0 ESS-TIME-WEATHER LINK 1 VFIN OR ("dle")) ;
+	#$ Maanine dle leerebe guktie soptsestidh.
 
 #!! Comitative
 SELECT:ektine (N Com) OR (Pron Com) OR (A Com) (*-1 ("ektine") BARRIER NOT-NPMOD) ;
