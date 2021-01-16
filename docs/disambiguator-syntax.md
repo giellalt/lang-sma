@@ -203,7 +203,7 @@ MOD-ASP
 
 
 
-### Adective sets
+### Adjective sets
 
 
 
@@ -271,6 +271,7 @@ LEX-ADV
 
 VERB-FORMS
 2-PERS
+
 
 
 
@@ -462,7 +463,9 @@ Selecting postpositions when preceded by genitives, etc.
 ### Adjective or not
 
 
-Rel or Interr
+Rel or Interr OR Indef
+
+
 
 
 
@@ -472,6 +475,8 @@ Rel or Interr
 
 ### Adverbs
 Selecting adverbs in local contexts
+
+
 
 
 
@@ -512,11 +517,14 @@ Remove verb readings
 
 
 
+Select Inf
+
+
 ## Mapping rules
 
 ### CC- and CS-Mapping
 
-* *COMPCS*  @COMP-CS< to Adv or A after goh etc.
+* **COMPCS**  @COMP-CS< to Adv or A after goh etc.
 
 
 
@@ -585,7 +593,7 @@ Mapping verbs
 
 
 
-### *killifVinCohort* This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+### **killifVinCohort** This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 
 
 
@@ -656,6 +664,8 @@ Remove Prop Attr if not 1 Prop
 
 
 
+
+
 ## Adj or Adv
 
 
@@ -711,6 +721,7 @@ Illative or genetive
 
 
 Essive
+
 
 
 Comitative
