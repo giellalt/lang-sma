@@ -429,11 +429,13 @@ MD_PAGES = root-morphology.md       \
 VPATH_MD_PAGES = $(addprefix $(srcdir)/,$(MD_PAGES))
 ALLINONE_MD_PAGE = $(srcdir)/$(GTLANG).md
 LINKS = $(srcdir)/Links.md
+HEADER = $(srcdir)/link-header.md
 INDEX = $(srcdir)/index.md
 
 # no regenerations while debugging
 doc_DATA = $(INDEX) $(LINKS) $(VPATH_MD_PAGES) $(ALLINONE_MD_PAGE)
 DOCC2MDWIKI = $(GTCORE)/scripts/doccomments2gfm.awk
+JSPWIKI2MD = $(GTCORE)/scripts/jspwiki2md.awk
 GRAPHPLOTTER = $(GTCORE)/scripts/plot-speller-progress.R
 #ACCURACY_VIEWER_DIR = $(with_divvunspell)/support/accuracy-viewer/public/
 
@@ -883,6 +885,9 @@ $(srcdir)/%-stems.md: $(top_srcdir)/src/fst/stems/%.lexc
 $(srcdir)/%-affixes.md: $(top_srcdir)/src/fst/affixes/%.lexc
 	$(AM_V_AWK)"$(GAWK)" -f $(DOCC2MDWIKI) < $< > $@
 
+$(srcdir)/%.md: $(top_srcdir)/src/transcriptions/%.lexc
+	$(AM_V_AWK)"$(GAWK)" -f $(DOCC2MDWIKI) < $< > $@
+
 $(ALLINONE_MD_PAGE): $(VPATH_MD_PAGES)
 	$(AM_V_at)-rm -rf build
 	$(AM_V_at)-rm -rf $(srcdir)/build
@@ -896,9 +901,13 @@ $(LINKS): $(VPATH_MD_PAGES)
 			> $@
 
 # FIXME: some temporary stuff to have index page
-$(INDEX): $(LINKS) $(ALLINONE_MD_PAGE)
+$(INDEX): $(LINKS) $(ALLINONE_MD_PAGE) $(HEADER)
 	head -n 3 $(ALLINONE_MD_PAGE) > $@
+	cat $(HEADER) >> $@
 	cat $(LINKS) >> $@
+
+%.md: %.jspwiki
+	$(AM_V_AWK)"$(GAWK)" -f $(JSPWIKI2MD) < $< > $@
 
 # vim: set ft=automake:
 
