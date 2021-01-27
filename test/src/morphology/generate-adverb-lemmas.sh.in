@@ -64,14 +64,14 @@ EXTEDITOR=@SEE@
 # Hent ut lemmaer, bortsett lemmaer som krever Px eller kompareringstagg.
 # Lemmaene lagres som filtered_p-adverbs
 @GTCORE@/scripts/extract-lemmas.sh \
-	--exclude "( LE| Px|NOTLEMMA|Adv-TODO)" \
+	--exclude "( Px|NOTLEMMA|Adv-TODO)" \
      $source_file > $padv_lemmas
 
 # Hent ut lemmaer som krever Comp-tag. Lagres som filtered_c-adverbs
 # (se bz 1926)
-@GTCORE@/scripts/extract-lemmas.sh \
-	--include "LE" \
-     $source_file > $cadv_lemmas
+#@GTCORE@/scripts/extract-lemmas.sh \
+#	--include "LE" \
+#     $source_file > $cadv_lemmas
 
 # Hent ut lemmaer som krever Superl-tag. Lagres som filtered_s-adverbs
 # (se bz 1926)
@@ -140,7 +140,7 @@ sed 's/$/+Adv+TODO/' $todo_lemmas | $lookup_tool $generator_file.$suffix | \
 sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt
 
 # Alle adverblemmaer samles i ei fil
-cat $padv_lemmas $cadv_lemmas $sadv_lemmas $todo_lemmas | sort -u > $all_adv
+cat $padv_lemmas  $todo_lemmas | sort -u > $all_adv
 
 
 # Sammenlikne lista med adverblemmaer med den genererte lista med adverber.
