@@ -214,7 +214,6 @@ to research compounding patterns in the corpus.
 
 ### Tags for adjectives
 
-* **+Comp +Superl**:  Comparation
 * **+Attr**:  Attribute form
 * **+Ord**:  Ordinal number
 
@@ -262,6 +261,9 @@ to research compounding patterns in the corpus.
 * **+Foc/gan**:  XXX Document better = Forsterkende particle
 * **+Foc/gih**:  XXX Document better = Forsterkende particle
 * **+Foc/gænnah**:  XXX Document better = Forsterkende particle
+
+### tags for adverbs and komparerte adj
+* **+Gram/Comp +Gram/Superl**:  
 
 
 ## Semantic tags to help disambiguation & synt. analysis:
