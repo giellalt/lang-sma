@@ -1,7 +1,8 @@
 
 # South Sámi morphological analyser
 
-Here's a list of links to the page for each file of source code. All pages are concatenated and can be found [here](sma.md).
+Here's a list of links to the page for each file of source code. All pages are concatenated and can be found as [sma.html].
+
 
 * [root-morphology.md](root-morphology.md)
 * [phonology-morphology.md](phonology-morphology.md)
