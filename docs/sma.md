@@ -1480,13 +1480,13 @@ Short descrioption of this lexicon, and its purpose.
 * Odd-syll loanwords: lexicon N_ODD_LOAN
 
 
-** Odd-syll sg: lexicon N_ODD_SG
+    - Odd-syll sg: lexicon N_ODD_SG
 
-** Odd-syll pl: lexicon N_ODD_PL
+    - Odd-syll pl: lexicon N_ODD_PL
 
-** Odd-syll loanwords: lexicon N_ODD_ESS
+    - Odd-syll loanwords: lexicon N_ODD_ESS
 
-** Default N_ODD plural lexicon: lexicon ÅABPETJH
+    - Default N_ODD plural lexicon: lexicon ÅABPETJH
 
 
 LEXICON TJE_LASSJE_RESIPR
