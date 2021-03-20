@@ -1167,7 +1167,8 @@ SELECT:imprt Imprt ((-1 CLB) OR (*-1 BOS BARRIER WORD))(1 ("amma")) ;
 REMOVE VFIN IF (0 N + Ela)((-1 MOVEMENT-V) OR (1 MOVEMENT-V));
 	#$ Læjsa bøøti skuvleste roehten. 
 
-REMOVE:vfin VFIN IF (0 N)(*1C VFIN BARRIER S-BOUNDARY OR CC OR COMMA OR ("dellie"));
+REMOVE:vfin VFIN IF (0 N)(*1C VFIN BARRIER S-BOUNDARY OR CC OR COMMA OR ("dellie"))(NOT 0 AUX LINK *1 Inf Or PrfPrc);
+	#% Gosse datne edtjh gaaltijh nuhtjedh, tjoerh daejredh gusnie gaaltijh gaavnh jïh guktie edtjh gaaltijidie reaktoelaakan nuhtjedh.
 
 
 REMOVE:V VFIN IF (0 N + Nom)(*-1 CC BARRIER NOT-A LINK -1C N + Nom) ;
@@ -2115,18 +2116,8 @@ REMOVE:errsub $$WORDLEMMA + Err/Orth (0 $$WORDLEMMA - Err/Orth ) ; # Apertium
 REMOVE:errsub2 $$WORDLEMMA + Err/Orth-spes (0 $$WORDLEMMA - Err/Orth-spes ) ; # Apertium
 
 # Disse kommenteres inn når analysen skal brukes i functions.cg3   
-SUBSTITUTE (A) (A <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (N) (N <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (Adv) (Adv <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (V) (V <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (Num) (Num <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (Interj) (Interj <sma>) WORD ;  #RemoveFromApertium
-SUBSTITUTE (Po) (Po <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (Pr) (Pr <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (Pron) (Pron <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (CC) (CC <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (CS) (CS <sma>) WORD ; #RemoveFromApertium
-SUBSTITUTE (Pcle) (Pcle <sma>) WORD ; #RemoveFromApertium
+ADD:sme (<sma>) TARGET WORD ;
+ADD:sme (<sma>) TARGET PUNCT ;
 
 
 # Not in use:
