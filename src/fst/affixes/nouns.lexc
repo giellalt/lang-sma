@@ -693,7 +693,7 @@ LEXICON AKTORE_LOAN
             :aktor  N_ODD_LOAN ;
    +Err/Orth:aktovr   X_NIEJTE  ;
    +Err/Orth:aaktor N_ODD      ;
-   +Err/Orth:aktor    X_NIEJTE ; ! A-dure, kantore
+   +Err/Orth:aktor    X_NIEJTEnotODD ; ! A-dure, kantore
 
 !!€gt-norm: faktore# Even-syllable test
 !!€ faktore:                  faktore+N+Sg+Nom
@@ -1490,7 +1490,6 @@ LEXICON KANAALE_LOAN
 LEXICON AALE_LOAN
            +Err/Orth:l  X_NIEJTE ; ! ikke les ! nasjovnaale
                    :al X_NIEJTE ; ! ikke les ! nasjovnaale
-          +Err/Orth:l  X_NIEJTE ; ! nasjovnale
   +Cmp/SgNom+Use/NG:l  R      ;
 
 LEXICON IJAALE_LOAN
@@ -1613,7 +1612,27 @@ LEXICON X_NIEJTE
  +Pl: NIEJTE_PL   ;
       NIEJTEREST  ;
 
+LEXICON X_NIEJTEnotODD ! bare former som ikke er i ODD 
+ +Sg+Ill:e%>se     FINAL1 ;
+ +Sg+Ine:e%>sne    FINAL1 ;
+ +Sg+Ela:e%>ste    FINAL1 ;     
+ +Sg+Com:%>ine     FINAL1 ;
+ +Pl+Acc:%>ide      FINAL1 ;
+ +Pl+Ill:%>ide      FINAL1 ;
+ +Pl+Ine:%>ine      FINAL1 ;
+ +Pl+Ela:%>ijste    FINAL1 ;
+    +Ess:%>ine FINAL1 ;
 
+LEXICON N_ODDonlyDIFT ! bare former som får diftong
+           +Ill:%>asse          FINAL1 ;
+           +Ine:%>isnie         FINAL1 ;
+           +Ela:%>istie         FINAL1 ;
+           +Com:%>inie          FINAL1 ;
+          +Acc:%>idie            FINAL1 ;
+          +Ill:%>idie            FINAL1 ;
+          +Ine:%>inie            FINAL1 ;
+          +Ela:%>ijstie          FINAL1 ;
+          +Ess:%>inie FINAL1 ;
 
 
 LEXICON NIEJTE_SG
