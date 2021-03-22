@@ -71,7 +71,8 @@
 |  **+Use/DNorm** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
 |  **+Use/PMatch** | Do *only* include in fst's for hfst-pmatch
 |  **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch
-|  **+Use/GC** | Only retained in the gramchecker analyser
+ * **+Use/GC** only retained in the HFST Grammar Checker disambiguation analyser
+ * **+Use/-GC** never retained in the HFST Grammar Checker disambiguation analyser
 
 ## Dialect tags
 
@@ -555,12 +556,12 @@ to split the lexical transducer in smaller ones according to langu-
 age, and apply different IPA conversion to each of them.
 The principle of tagging is that we only tag to the extent needed,
 and following a priority:
-# any untagged word is pronounced with SME orthographic conventions
-# NNO and NOB have identical pronunciation, NNO is only used if
+1. any untagged word is pronounced with SME orthographic conventions
+1. NNO and NOB have identical pronunciation, NNO is only used if
   different in spelling from NOB
-# SWE has mostly the same pronunciation as NOB, and is only used
+1. SWE has mostly the same pronunciation as NOB, and is only used
   if different in spelling from NOB
-# Occasionally even SME (the default) may be tagged, to block other
+1. Occasionally even SME (the default) may be tagged, to block other
   languages from being specified, mainly during semi-automatic
   language tagging sessions
 All in all, we want to get as much correctly transcribed to IPA
@@ -4549,6 +4550,7 @@ REmove Px if not family
 
 
 
+
 ### Proper nouns
 
 
@@ -4617,6 +4619,8 @@ Selecting postpositions when preceded by genitives, etc.
 
 
 ### Demonstratives
+
+
 
 
 
