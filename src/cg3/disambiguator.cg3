@@ -70,6 +70,13 @@ LIST PxSg3 = PxSg3 ;       #!! PxSg3
 LIST PxPl1 = PxPl1 ;   #!! PxPl1
 LIST PxPl2 = PxPl2 ;   #!! PxPl3
 LIST PxPl3 = PxPl3 ;   #!! PxPl3
+LIST PX-TAG = PxSg1 PxSg2 PxSg3 PxDu1 PxDu2 PxDu3 PxPl1 PxPl2 PxPl3 ;
+LIST PXSG = PxSg1 PxSg2 PxSg3 ;
+LIST PXDU = PxDu1 PxDu2 PxDu3 ;
+LIST PXPL = PxPl1 PxPl2 PxPl3 ;
+LIST SG = Sg1 Sg2 Sg3 ;
+LIST DU = Du1 Du2 Du3 ;
+LIST PL = Pl1 Pl2 Pl3 ;
 
 LIST V = V ;
 LIST Prs = Prs ;
@@ -87,7 +94,7 @@ LIST Pl1 = Pl1 ;
 LIST Pl2 = Pl2 ;
 LIST Pl3 = Pl3 ;
 
-LIST PERS-TAG = Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ; #!! * Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
+LIST PERS-TAG = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ; #!! * Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
 
 LIST Inf = Inf ;
 LIST Neg = Neg ;
@@ -430,6 +437,7 @@ SET REALWORD-NOTABBR = WORD - Num - Ord - ABBR ;
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS ;
 
 SET NOT-A = WORD - A ;
+SET NOT-ATTR = WORD - (A Attr) ;
 SET NOT-ADV = WORD - Adv ;
 SET NOT-ADV-PCLE = NOT-ADV - Pcle ;
 
@@ -806,6 +814,11 @@ REMOVE:3Logo Logo + Pl3 IF (NOT *-1 Pl3);
 
 SELECT Attr IF (0 (Pron Indef) LINK NOT 0 Gen)(*1 N BARRIER NOT-A);
 
+SELECT PXSG IF (-1 SG + Pers) ;
+SELECT PXDU IF (-1 DU + Pers) ;
+SELECT PXPL IF (-1 PL + Pers) ;
+	#$ Dellie datne boelhketjem jallh vihkeles tsiehkieh åehpiedehtieh dov jïjtjedh baakoejgujmie.
+
 
 #!! !Proper nouns
 
@@ -1010,6 +1023,15 @@ SELECT:Dem Dem (0 Indef LINK NEGATE *1 N BARRIER NOT-NPMOD) ;
 	
 
 SELECT:nommeN N (0 ("nomme") LINK -1 Gen OR Prop) ;	
+
+SELECT:NObj N (0 Nom + Pl LINK 1 V-TRANS)(NEGATE 0 AUX) ;
+	#$ Dellie datne tsiehkieh åehpiedehtieh dov jïjtjedh baakoejgujmie.
+
+SELECT:Ncoor $$CASES (0 N LINK *-1 CC BARRIER NOT-A LINK -1 $$CASES) ;
+SELECT:Ncoor $$CASES (0 N LINK 1 CC LINK *1 $$CASES BARRIER NOT-A) ;
+SELECT:Ncoor N (0 Pl + Nom LINK *-1 CC BARRIER NOT-A LINK -1 Acc) ;
+SELECT:Ncoor N (0 Pl + Nom LINK 1 CC LINK *1 Acc BARRIER NOT-A) ;
+	#$ Dellie datne boelhketjem jïh tsiehkieh åehpiedehtieh dov jïjtjedh baakoejgujmie.
 
 
 # =====
