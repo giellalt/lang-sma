@@ -362,6 +362,7 @@ REmove Px if not family
 
 
 
+
 ### Proper nouns
 
 
@@ -430,6 +431,8 @@ Selecting postpositions when preceded by genitives, etc.
 
 
 ### Demonstratives
+
+
 
 
 
