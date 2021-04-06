@@ -2021,8 +2021,8 @@ Short descrioption of this lexicon, and its purpose.
 ## Table of content
 * Continuation lexica
 * Personal names
-** First names
-** Surnames
+    - First names
+    - Surnames
 * Place names
 
 

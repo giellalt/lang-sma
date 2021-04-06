@@ -4,8 +4,8 @@
 ## Table of content
 * Continuation lexica
 * Personal names
-** First names
-** Surnames
+    - First names
+    - Surnames
 * Place names
 
 
