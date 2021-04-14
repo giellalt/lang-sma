@@ -642,7 +642,7 @@ ADD:uncorrected-typos (&typo) (?) ;
 # # used to create human-readable messages.
 
 # Simple punctuation rules showing how to change the lemma in the suggestions:
-ADD:use-guillemets (&guillemets) TARGET (""");
+ADD:use-guillemets (&guillemets) TARGET ("""); #"
 COPY:left-guillemet ("«" &SUGGEST) EXCEPT (""") TARGET (&guillemets) ;
 COPY:right-guillemet ("»" &SUGGEST) EXCEPT (""") TARGET (&guillemets) ;
 
