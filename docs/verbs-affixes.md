@@ -9,25 +9,25 @@ This is the file for the South Saami verb inflection and derivation.
 Table of content for this file:
 
 * The auxiliaries
-** The negative verb
-** Other auxiliaries
+    - The negative verb
+    - Other auxiliaries
 * Odd-syllable verbs
-** Inflection common to all odd verbs
+    - Inflection common to all odd verbs
 * Even-syllable verbs
-** Nominal derivation sublexica
+    - Nominal derivation sublexica
 * Verbal affixes
-** Finite forms
-** Even
-*** Present
-*** Imperative
-*** Present
-** Odd
-*** Present
-*** Past
-*** Imperative
-** Common even-odd
-*** Present
-*** Past
+    - Finite forms
+    - Even
+        - Present
+        - Imperative
+        - Present
+    - Odd
+        - Present
+        - Past
+        - Imperative
+    - Common even-odd
+        - Present
+        - Past
 
 
 # The auxiliaries
