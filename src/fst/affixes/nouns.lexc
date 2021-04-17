@@ -18,10 +18,10 @@
 
 
 ! ================================
-!! !!!Nominal inflection sublexica
+!! # Nominal inflection sublexica
 ! ================================
 
-!! !!Inflection for odd-syllable nouns
+!! ## Inflection for odd-syllable nouns
 
 
 LEXICON N_ODD
@@ -30,7 +30,7 @@ LEXICON N_ODD
 LEXICON N_ODD_INFL
 !! The basic odd-syll lexicon is: @LEXNAME@
 
-!! !Inflection for odd-syllable nouns: lexicon @LEXNAME@
+!! ### Inflection for odd-syllable nouns: lexicon @LEXNAME@
 !  -----------------------------------------------------
 !
 !! Short descrioption of this lexicon, and its purpose.
@@ -129,7 +129,7 @@ LEXICON N_ODD_LOAN
 
 LEXICON N_ODD_SG
 N_ODD_SG_Px ;
-!! ** Odd-syll sg: lexicon @LEXNAME@
+!!     - Odd-syll sg: lexicon @LEXNAME@
 !          +Nom:e               FINAL1 ; ! sjekk
            +Nom:e%^DISIMP       FINAL1 ;
            +Acc:e%>%^DISIMPm    FINAL1 ;
@@ -146,7 +146,7 @@ N_ODD_SG_Px ;
   +Com+Err/Orth:%>ine          FINAL1 ;
 
 LEXICON N_ODD_PL
-!! ** Odd-syll pl: lexicon @LEXNAME@
+!!     - Odd-syll pl: lexicon @LEXNAME@
           +Nom:%>%^DISIMPh       FINAL1 ;
           +Acc:%>idie            FINAL1 ;
  +Acc+Err/Orth:%>%^DISIMPidie    FINAL1 ; !Miesie Mavve
@@ -161,12 +161,12 @@ LEXICON N_ODD_PL
  +Com+Err/Orth:%>%^DISIMPigyjmie FINAL1 ;
 
 LEXICON N_ODD_ESS
-!! ** Odd-syll loanwords: lexicon @LEXNAME@
+!!     - Odd-syll loanwords: lexicon @LEXNAME@
           +Ess:%>inie FINAL1 ;
  +Ess+Err/Orth:%>ine FINAL1 ;
 
 LEXICON ÅABPETJH ! Resiproke og dim.
-!! ** Default N_ODD plural lexicon: lexicon @LEXNAME@
+!!     - Default N_ODD plural lexicon: lexicon @LEXNAME@
                      +Pl+Nom:%>%^DISIMPh       FINAL1    ;
                      +Pl+Acc:%>idie            FINAL1    ;
                      +Pl+Gen:%>%^DISIMP        IGENSUFF  ;
@@ -839,7 +839,7 @@ LEXICON TJULHPIE ! adverb
 !     +Der1+Der/Dimin+N:%^aLATUS%»tj    N_ODD_ESS ;
 
 
-!! !!Inflection for nouns ending in oe
+!! ## Inflection for nouns ending in oe
 !    ---------------------------------
 
 
@@ -1636,7 +1636,7 @@ LEXICON N_ODDonlyDIFT ! bare former som får diftong
 
 
 LEXICON NIEJTE_SG
-!! !!Inflection for NIEJTE_SG nouns: lexicon @LEXNAME@
+!! ## Inflection for NIEJTE_SG nouns: lexicon @LEXNAME@
 ! -------------------------------------------------------
 !
 !! Short descrioption of this lexicon, and its purpose.
@@ -1799,11 +1799,11 @@ LEXICON NES
 
 
 LEXICON KONTO  !!= @CODE@ Lexicon for vowel-final words with invariant stems"
-!! {{{
+!! ```
  : KONTODECL ; !!= @CODE@
-!! }}}
+!! ```
 LEXICON KONTODECL !!= @CODE@ Lexicon for vowel-final words with invariant stems"
-!! {{{
+!! ```
                +Sg:     KONTO_SG ; !!= @CODE@
                +Pl:     KONTO_PL ; !!= @CODE@
                         EVEN_ESS ; !!= @CODE@
@@ -1811,7 +1811,7 @@ LEXICON KONTODECL !!= @CODE@ Lexicon for vowel-final words with invariant stems"
          +Cmp/SgGen:%>n  R        ; !!= @CODE@
          +Cmp/PlGen:%>j  R        ; !!= @CODE@
  +Der1+Der/Dimin+N:%»tj GÅATETJE ; !!= @CODE@
-!! }}}
+!! ```
 
 LEXICON KONTO_SG
  +Nom:      FINAL1 ;
@@ -2009,7 +2009,7 @@ LEXICON JILLIE ! adverb  - adverb og adjektiv kan kompareres- men adjektiv -//- 
     CNAME_EVENLEX ;
   
   
-!! !!Px lexica     = Copy from Julev
+!! ## Px lexica     = Copy from Julev
 !
 !LEXICON NPxV
 ! @R.Px.add@ PxV ;
