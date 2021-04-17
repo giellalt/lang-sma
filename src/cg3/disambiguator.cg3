@@ -5,7 +5,7 @@
 
 # =================================================================== #
 # =================================================================== #
-#!! !!!S O U T H   S Á M I   D I S A M B I G U A T O R          
+#!! # S O U T H   S Á M I   D I S A M B I G U A T O R          
 # =================================================================== #
 # =================================================================== #
 
@@ -33,7 +33,7 @@
 
 
 # ========== #
-#!! !!Delimiters 
+#!! ## Delimiters 
 # ========== #
 
 
@@ -42,15 +42,15 @@ DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ;
 
 
 # ============= #
-#!! !!Tags and sets 
+#!! ## Tags and sets 
 # ============= #
 
-#!! !BOS/EOS:
+#!! ### BOS/EOS:
 
 LIST BOS = (>>>) (<s>);  #!! * (>>>) (<s>)
 LIST EOS = (<<<) (</s>); #!!   (<<<) (</s>)
 
-#!! !Morphological tags
+#!! ### Morphological tags
 	
 LIST N = N ;          #!! * N 
 LIST Sg = Sg ;       #!! * Sg 
@@ -165,7 +165,7 @@ LIST COMMA = "," ;
 LIST Arab = Arab ;
 
 
-#!! !Derivation tags
+#!! ### Derivation tags
 
 LIST Der/A = Der/A ; #!! * Der/A
 LIST Der/Car = Der/Car ; #!! Der/Car
@@ -205,7 +205,7 @@ LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/Der
 LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ;
 
 
-#!! ! Semantic tags
+#!! ###  Semantic tags
 # -------------
 
 LIST Sem/Act = Sem/Act Sem/Act_Clth Sem/Act_Domain Sem/Act_Domain_Measr Sem/Act_Event Sem/Act_Feat Sem/Act_Feat-psych Sem/Act_Fruit Sem/Act_Group Sem/Act_Hum Sem/Act_Hum_Obj Sem/Act_Money Sem/Act_Obj Sem/Act_Obj-play Sem/Act_Org Sem/Act_Perc-emo Sem/Act_Plc Sem/Act_Prod-audio Sem/Act_Prod-vis Sem/Act_Route Sem/Act_Semcon Sem/Act_State Sem/Act_Time Sem/Act_Tool-it Sem/Act_Txt  ;
@@ -337,7 +337,7 @@ LIST <copula> = <copula> ;
 
 
 
-#!! !Syntactic tags
+#!! ### Syntactic tags
 
 LIST @CNP = @CNP ;				   #!! * @CNP
 LIST @CVP = @CVP ;				   #!! @CVP
@@ -414,7 +414,7 @@ SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ;
 SET INF-SYN = SUBJ OR SPRED OR OBJ OR ADVL ;
 
 
-#!! !Titles
+#!! ### Titles
 
 
 LIST REAL-TITLE = "prof" "cand.philol" ; #!! REAL-TITLE
@@ -423,7 +423,7 @@ SET TITLE = REAL-TITLE OR OFFICE ;  #!! TITLE
 
 # SET TITLE = REAL-TITLE OR TITLE-LIKE OR PROFESSION OR OFFICE ; 
 
-#!! !Sets of morphological tags for syntactic use
+#!! ### Sets of morphological tags for syntactic use
 
 LIST CASES = Nom Acc Gen Ill Ine Ela Com Ess ; #!! CASES
 LIST ADVLCASE = Ine Ill Com Ela ; #!! ADVLCASE
@@ -460,7 +460,7 @@ SET NOT-NPMODADV-INDEF = WORD - PRE-NP-HEAD - Adv - Indef ;
 
 
 
-#!! !Noun sets
+#!! ### Noun sets
 
 SET PX = PxSg1 OR PxSg2 OR PxSg3 OR PxPl1 OR PxPl2 OR PxPl3 ;
 
@@ -502,7 +502,7 @@ SET TIME-UNIT = TIME-UNIT-MEASURE OR TIME-UNIT2 ;
 SET MEASURE = VOLUME OR WEIGHT OR LENGTH OR AMOUNT OR TEMPERATURE OR TIME-UNIT-MEASURE OR ("m2") ;
 
 
-#!! !Verb sets
+#!! ### Verb sets
 
 
  # The set REALCOPULAS is smaller than COPULAS, made for verbs with PrfPrc complements: Seammás REALCOPULAS son dovdan iežas...
@@ -551,13 +551,13 @@ LIST MOVEMENT-V = "båetedh" "feeledh" "feeredh" "gaavnedh" "girtedh" "hajkedh" 
 LIST STV = Der/Caus ;
 
 
-#!! !Adjective sets
+#!! ### Adjective sets
 
 LIST COM-ADJ = "latjkes" "riejries" ;
 
 LIST SPRED-ADJ = "buerie" "luste" "lustes" "nåake" ; #luste?
 
-#!! !Adverb sets
+#!! ### Adverb sets
 
 LIST GUKTIEGOSSE = ("gusnie" Adv) ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
 
@@ -584,12 +584,12 @@ LIST ADV-MOD-NP =  "aave" "aejvie" "dovne" "eevre" "öövre" "ov" "rikti" "ajve"
 LIST GRADE-ADV =  "aaptsah" "aaptsh" "ååpsen" "aave" "aejvie" "dovne" "eevre" "ajve" "barre"  "ov" "rikti" "gaaje" "gaajh" "joekoen" "åpmohts" "åpmoeh" "man" "mahte" "ovrehte" "varke" "varki" "seamma" "öövre" "uhtjienadtje" "sagke" ; # "ållesth" "allesth" "ovve"  "åpmehts" "aajmohts"  "raakte"  are not Adv in FST #!! GRADE-ADV
 
 
-#!! !Postposition sets
+#!! ### Postposition sets
 
 LIST ILLPO = "gåajkoe" "sontere" "vööste" ; #!! ILLPO
  
 
-#!! !BOUNDARY SETS
+#!! ### BOUNDARY SETS
 
 
 SET S-BOUNDARY = Interr OR Rel OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS OR @CVP ; #GUKTIEGOSSE #!! S-BOUNDARY
@@ -603,7 +603,7 @@ SET NP-BOUNDARY = BOS OR EOS OR REALCLB OR VFIN OR Inf OR Ger OR ConNeg OR VGen 
 LIST SOMESMALLABBR = "a" "r" "c" "d" "e" "f" "f" "g" "h" "i" "l" "m" "b" "j" "s" ;
 LIST SOMECAPABBR = "A" "R" "C" "D" "E" "F" "F" "G" "H" "I" "L" "M" "B" "J" "S" ;
 
-#!! !Derivation sets
+#!! ### Derivation sets
 
 LIST V-DER = Der/d Der/ht Der/alla Der/st Der/l Der/htalle Der/lg Der/htj Der/ahtje Der/InchL Der/Caus Der/adte Der/PassL Der/PassS; #!! V-DER
 
@@ -652,7 +652,7 @@ SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR S
 LIST ESS-TIME-WEATHER = "maana" ;
 
 #       ============== #
-#!!  !!!Disambiguation rules
+#!! # Disambiguation rules
 #       ============== #
 
 
@@ -667,7 +667,7 @@ PROTECT (<spelled>) ;
 #SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Date) TARGET ("<[0-3][0-9][.][0-2][0-9][.][0-9][0-9]>"r Num) ;
 #SUBSTITUTE:Date1 (Num Sg) (Num Sg Sem/Year) TARGET ("<[1-2][0-9][0-9][0-9]>"r Num) ;
 
-#!! !!Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
+#!! ## Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
 #SUBSTITUTE (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z][a-z].*[.][a-z][a-z].*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
 #COPY:NNom (N Nom) EXCEPT Adv TARGET (Sem/Adr)  ;
 	## www.samediggi.fi http://yle.fi/sapmi lene62@gmail.com anja.irina.ahola(at)gmail.com
@@ -683,7 +683,7 @@ SELECT:Sem/DateGen  Sem/Date + Gen ((1 Po) OR (-1 Pr)) ; #foreløpig, for MT
 SELECT:Sem/Date  Sem/Date + Nom ; #foreløpig, for MT 
 SELECT:clock Sem/Time-clock + Nom  ;
 
-#!! !!Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
+#!! ## Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
 
 
 SUBSTITUTE (?) (Adv Sem/Adr) TARGET ("<www[.].*>"r ?) OR ("http.*"r ?) OR ("<[A-Za-z][a-z].*[.][a-z][a-z].*"r ?) OR ("<[A-Za-z].*[@][a-z].*"r ?) OR ("<[A-Za-z].*[(][a][t][)][a-z].*"r ?) ;
@@ -718,7 +718,7 @@ SECTION
 
 
 
-#!! !!Cycle 0 (Early rules)
+#!! ## Cycle 0 (Early rules)
 
 #!! Removing non-lexicalised forms when lexicalised 
 
@@ -749,7 +749,7 @@ REMOVE Der/InchL IF (0 N LINK 0 Nom OR Gen) ;
 #REMOVE:waitwithDis (2 V) (0 (1 V)) ;	#What is this?
 
 
-#!! !Numerals and ACR
+#!! ### Numerals and ACR
 SELECT:ArabNom (Arab Nom) (-1 BOS)(NEGATE 1 Po) ;
 SELECT:Arab1 (Arab Nom)(0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
@@ -760,7 +760,7 @@ SELECT:YearNom Sem/Year + Nom (-1 ("jaepie") + Gen) ;
 SELECT:Arab Arab  ; # In Apertium we get analysis both with and without the tag.
 
 
-#!! !Numerals in QPs
+#!! ### Numerals in QPs
 
 REMOVE:gellieNum Pron IF (0 ("gellie"))(*1 N BARRIER NOT-A) ;
 
@@ -770,7 +770,7 @@ REMOVE:R_ACR ACR (0 CC);
 	## Im leah naan saemieskuvlesne vaadtseme.
 	## Jih daejtie gærjide edtjem aaj sjeakodh, – jijtje jeahta jih aalka sjeakodh.
 
-#!! !CC og not (spesifikke regler lenger ned)
+#!! ### CC og not (spesifikke regler lenger ned)
 SELECT:jallh CC (0 ("jallh")) ; #jallh can also be A Pl Nom, but not likely, look for examples with this analysis, if they exist
 
 REMOVE:Adv Adv (0 ("gosse") LINK NEGATE *1 MOVEMENT-V) ;
@@ -779,7 +779,7 @@ REMOVE:Adv Adv (0 ("gosse") LINK NEGATE *1 MOVEMENT-V) ;
 
 REMOVE:lïhtsege (Foc/ge) (0 ("lïhtsege")) ;
 
-#!! !Interj
+#!! ### Interj
 
 #foreløpig regel: 
 SELECT:coorInterj Interj (*-1 Interj BARRIER WORD)(1 EOS OR COMMA OR PUNCT) ; 
@@ -789,7 +789,7 @@ IFF:S_Interj Interj (*-1 BOS BARRIER WORD)(1 EOS OR COMMA OR PUNCT OR Interj) ;
 
 
 
-#!! !Possessive suffix
+#!! ### Possessive suffix
 # Probably exists only for Refl and for kinship terms
 REMOVE:APx A + PX ; #Foreløpig regel, vi gjør unntak etterhvert
 
@@ -803,7 +803,7 @@ REMOVE:notFAMILY PX IF (0 N)(NOT 0 FAMILY OR Pron);
 	## Bïepmehtehteme jåarhka goh gïjrese vuertieminie.
 
 
-#!! !Pronouns
+#!! ### Pronouns
 REMOVE:altese PxSg3 (0 Pers + Gen) ; #Dette må vi se på. altese brukes (mot Bergsland) i korpus også refleksivt, men det er umulig (?) å disambiguere
 
 REMOVE:dïhtePl3 Pl3 (0 ("dïhte" Pers Sg3 Gen) LINK *-1 Sg + Nom BARRIER V OR Nom OR S-BOUNDARY LINK NEGATE -1 COMMA OR CC LINK -1 Nom) ;
@@ -820,7 +820,7 @@ SELECT PXPL IF (-1 PL + Pers) ;
 	#$ Dellie datne boelhketjem jallh vihkeles tsiehkieh åehpiedehtieh dov jïjtjedh baakoejgujmie.
 
 
-#!! !Proper nouns
+#!! ### Proper nouns
 
 REMOVE:R_Nom_ABBR_Prop Nom IF (0 (ABBR Attr) OR (Prop Attr))(1  Prop OR ABBR);
 REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR);
@@ -863,7 +863,7 @@ REMOVE:altese_Noun Nom IF (0 ("altese"))(0 Gen LINK 1 Attr LINK 1 N);
 	## Reerenasse tseegkie altese politihkem ...
 
 
-#!! !Verbs
+#!! ### Verbs
 
 REMOVE:vfinIfGen VFIN (0 N LINK -1 Indef + Gen) ;
 	#$ Mubpien aereden jïevehtahkh jïh ålloe-råavkah bïjlese guedtieh.
@@ -880,7 +880,7 @@ REMOVE:Vgen VGen (0 NOT-VGEN) ;
 
 #OBS guktie ja gumhtie
 
-#!! !Postpositions
+#!! ### Postpositions
 #!! Selecting postpositions when preceded by genitives, etc.
 
 REMOVE:tjïrrh (N Pl) (0 ("tjïrrh" Po)) ;
@@ -898,7 +898,7 @@ SELECT:PoGenb Po (-1 Gen) ;
 
 
 
-#!! !Particles and adverbs
+#!! ### Particles and adverbs
 
 REMOVE:Pcle2 Adv IF (-2 BOS)(-1 Adv OR Ine)(0 Pcle);
 REMOVE:AttrAdv Adv IF (0 N LINK -1 Attr - Prop) (NEGATE 0 ("vihth")) ;
@@ -967,12 +967,12 @@ SELECT:AifGrade A (0 N LINK -1 GRADE-ADV) ;
 	#$ Joekoen bïjvele lea jïh guakedh.
 
 
-#!! !Adjective or Indef
+#!! ### Adjective or Indef
 SELECT:jijnjeIndef Indef  (0 ("jïjnje") LINK 1 N OR REAL-V OR EOS) ;
 SELECT:jijnjeIndef Indef  (0 ("jïjnje") + Pl) ;
 
 
-#!! !Demonstratives
+#!! ### Demonstratives
 
 
 REMOVE:prop_daate Prop IF (0 Pers); # too strong
@@ -1060,7 +1060,7 @@ REMOVE:NotDem2 Dem IF (0 Pers)(NEGATE *1 NOMEN-NOT-PRON BARRIER NOT-NPMOD) (NEGA
 	## Dihte joekoen lustes jalhts ajve akten jaepien båeries.
 
 
-#!! !Genitive
+#!! ### Genitive
 
 
 SELECT:NGen (N Gen)(-1C (Dem Gen)) ;
@@ -1071,7 +1071,7 @@ SELECT:PronPers Pron + Gen (0 Pron LINK 1C Po) ; #dan åvteste is mostly Dem, re
 #REMOVE:AttrNotGen Attr (0 (Pron Gen) LINK 1 Po) ; # trengs ikke
 
 
-#!! !Adjective or not
+#!! ### Adjective or not
 
 #vi har en select jallh CC lenger opp, dvs at disse reglene ikke er i bruk
 REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 N OR (Cmpnd))(*1 N BARRIER NOT-NPMODADV) ;
@@ -1107,7 +1107,7 @@ SELECT:RelGen (Rel Gen) (1 N OR Pers)(1 N) ;
 
 
 
-#!! !Adverbs
+#!! ### Adverbs
 #!! Selecting adverbs in local contexts
 SELECT:AdvnotA Adv IF (0 A LINK 1 Adv LINK *1 REAL-V BARRIER S-BOUNDARY)(*-1 VFIN BARRIER S-BOUNDARY) ;
 	#$ Im manne guhkebem daesnie sïjhth årrodh.
@@ -1133,7 +1133,7 @@ SELECT:Sem/TimeN N (0 Sem/Time LINK -1 ("aarehke") OR ("mubpie")) ;
 SELECT:Adv Adv (0 ("gåessie") LINK 1 ("gænnah")) ;
 
 
-#!! !Verbs
+#!! ### Verbs
 #!! Selecting verbs in local contexts, based upon agreement patterns
 
 SELECT:VPl2 Pl2 (0 VFIN LINK *-1 Pers + Pl2 + Nom BARRIER NOT-ADV-PCLE) ;
@@ -1225,12 +1225,12 @@ SELECT:inf Inf IF (0 Pl2 LINK -1 ("guktie") LINK -1 VFIN) ;
 	## Maanine dle leerebe guktie soptsestidh.
 
 
-	#!! !!Mapping rules
+	#!! ## Mapping rules
 	# -------------------
 	
-#!! !CC- and CS-Mapping
+#!! ### CC- and CS-Mapping
 
-#!! * __COMPCS__  @COMP-CS< to Adv or A after goh etc.
+#!! * **COMPCS**  @COMP-CS< to Adv or A after goh etc.
 MAP:COMPCS (@COMP-CS<) TARGET Adv OR A IF (-1 ("goh" CS) LINK -1 A OR Adv)(1 COMMA LINK 1 ("die")) ;
 	#$ Daelie goh beetnehbïjle buerebe goh åvtelen, die bïjlen jienebh gaeptieh.
 MAP (@COMP-CS<) TARGET $$ADVLCASE IF (-1 ("goh" CS) LINK -1 $$ADVLCASE)(1 COMMA LINK 1 VFIN) ;
@@ -1238,7 +1238,7 @@ MAP (@COMP-CS<) TARGET $$ADVLCASE IF (-1 ("goh" CS) LINK -1 $$ADVLCASE)(1 COMMA 
 # Trond flytta ca. 40 utkommenterte CC-reglar frå __nordsamisk ned til slutten av dette dokumentet
 
 
-#!! !!CNP mapping
+#!! ## CNP mapping
 
 #!! Mapping CNP to CC and CS.
 
@@ -1256,7 +1256,7 @@ MAP (@CNP) TARGET CC (-1C Inf LINK 2C Inf) ;
 MAP (@CNP) TARGET CC (*-1C (Pl Gen) BARRIER WORD)(1 (Pl Com)) ;
 
 
-#!! !!CVP Mapping
+#!! ## CVP Mapping
 
 #!! Mapping @CVP to all CS
 
@@ -1305,7 +1305,7 @@ SELECT:NumAttr Num + Attr + Ine IF (1 Ine) ;
 	#$ Dïhte tjidtjie gonnoeh aehtjine årroeminie aktene voenesne man nomme Jorpejaevrie.
 
 
-#!! !!PrfPrc
+#!! ## PrfPrc
 
 #!! Select PrfPrc if DerNomAct
 
@@ -1316,7 +1316,7 @@ SELECT:PrfPrs_DerNomAct PrfPrc (0 (Der/NomAct) LINK *-1 S-BOUNDARY BARRIER V)(NE
 
 SECTION  
 
-#!! !! Mapping verbs
+#!! Mapping verbs
 
 MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV)(NOT 0 COPULAS) ;    
 	#$ Lustes tjoejkedh.
@@ -1381,14 +1381,14 @@ MAP:InfAfterAux (@-FMAINV) TARGET Inf IF (*-1 AUX-OR-MAIN BARRIER SV-BOUNDARY);
 
 SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ;
 
-#!! !__killifVinCohort__ This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+#!! ### **killifVinCohort** This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 SELECT:killifVinCohort SYN-V IF (NOT 0 (<spelled>)) ;
 
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf  ;
 	#$ de som ikke har annen verblesning
 
 
-#!! !!Person
+#!! ## Person
 
 #!! leah Prs Sg2 = Pl3
 
@@ -1424,13 +1424,13 @@ SELECT:Ger Ger (0 (Der/NomAct) LINK *-1 REALCOPULAS BARRIER S-BOUNDARY) ;
 # REMOVE:NotContrIfEven (".*ijidh"r) IF (0 (".*[oe]dh"r));		
 # This rule might be problematic in light of the empirical work.		     
 
-#!! !!Span sentences
+#!! ## Span sentences
 
 
 #"<lea>" REMOVE:lea Pl3 IF (<*-1 Sg1 OR Sg2)(NEGATE *-1 (N Pl Nom));
 
 
-#!!  !Nomen
+#!! ### Nomen
 
 #!! Remove Prop Attr if not 1 Prop 
 
@@ -1489,7 +1489,7 @@ SELECT:NPlIll (N Pl Ill) (0 (N Pl Acc)) (NOT *1 V-TRANS BARRIER NOT-ADV) ;
 
 
 
-#!! !Verb or Noun
+#!! ### Verb or Noun
 
 SELECT:PlNomObj (N Pl Nom) IF (0 (V Pl3)) (NEGATE *0 VFIN BARRIER NOT-NPMOD OR S-BOUNDARY) ;
 #...Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki
@@ -1509,7 +1509,7 @@ REMOVE:gïele VGen (0 ("gïele") LINK NEGATE -1 MAINV) ;
 # Dem
 
 	
-#!! !!CC and CS or Adv
+#!! ## CC and CS or Adv
 
 IFF:GoNotCs ("goh" Pcle) (-1 Neg OR ConNeg OR ("sån")); 
 	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
@@ -1554,7 +1554,7 @@ REMOVE:hijven Attr (0 ("hijven")) ; # Attr?
 
 # Select the Inessive reading of an unambiguous noun in front of a location verb:
 
-#!! !!Adj or Adv
+#!! ## Adj or Adv
 
 LIST DAERPIES = "daerpies" "vihkeles" ;
 
@@ -1579,7 +1579,7 @@ SELECT:Nom N + Nom (0 ("ånnetje") LINK 1 COMMA)(*-1 BOS BARRIER WORD) ;
 	#$ Ånnetje, dej sirrie-kåahpide deavhteme.
 	
 	
-#!! !!Grammatisk ord eller N eller A
+#!! ## Grammatisk ord eller N eller A
 
 	
 # "<daelie>" Adv  N Sg Nom 
@@ -1604,7 +1604,7 @@ SELECT:AnotN A (0 N LINK -1 ADV-MOD-ADJ) ;
 
 
 
-#!! !!N or V
+#!! ## N or V
 
 # "<aejkien>" N Sg Gen  V IV Ind Prs Du1 @+FMAINV 
 REMOVE:aejkie1 VFIN (0 ("aejkie" Gen))((-1 ("naan") OR (Indef Gen) OR ("aerebi") OR (Num Gen) OR Ord) OR (1 VFIN));
@@ -1776,7 +1776,7 @@ REMOVE:PrsPrc PrsPrc IF (0 N + Nom LINK -1 BOS OR CS)(NOT 1 N + Nom LINK 1 VFIN)
 	#$ Varke akte doekije baaktoe båata gihtjie mejtie sijhtieh tjoevkesem åestedh.
 	#$ Juktie Jaavoeladtje iktesth jaavoe jeahta gosse doekije oksese båata jïh sæjhta maam akt doekedh.
 
-#!! !!!Proper nouns
+#!! # Proper nouns
 # ============
 
 #!! Rule set taken from sme
