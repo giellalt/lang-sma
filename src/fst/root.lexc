@@ -13,89 +13,95 @@
 ! giellatekno@uit.no or feedback@divvun.no
 
 ! ========================================================================== !
-!!               !!!South Sámi morphological analyser
+!! # South Sámi morphological analyser
 ! ========================================================================== !
 
 
-Multichar_Symbols  !!≈ !!!@CODE@ definitions
+Multichar_Symbols  !!≈ # @CODE@ definitions
 
-!!  !!Tags for POS (Part-Of-Speech, Word class)
-+N       !!≈ * __@CODE@__ = Noun
-+A       !!≈ * __@CODE@__ = Adjective
-+Adv     !!≈ * __@CODE@__ = Adverb
-+V       !!≈ * __@CODE@__ = Verb
-+Pron    !!≈ * __@CODE@__ = Pronomen
-+CS      !!≈ * __@CODE@__ = Subjunction
-+CC      !!≈ * __@CODE@__ = Conjunction
-+Po      !!≈ * __@CODE@__ = Postposition
-+Pr      !!≈ * __@CODE@__ = Preposition
-+Interj  !!≈ * __@CODE@__ = Interjection
-+Pcle    !!≈ * __@CODE@__ = Particle
-+Num     !!≈ * __@CODE@__ = Numerals
-+TODO    !!≈ * __@CODE@__ = Code for items that have not been modeled yet
-+Logo    !!= * __@CODE@__
-+Subqst  !!= * __@CODE@__ for adverbs
-+Dyn     !!≈ * __@CODE@__ = Code dynamic acronyms
+!! ## Tags for POS (Part-Of-Speech, Word class)
++N       !!≈ * **@CODE@** = Noun
++A       !!≈ * **@CODE@** = Adjective
++Adv     !!≈ * **@CODE@** = Adverb
++V       !!≈ * **@CODE@** = Verb
++Pron    !!≈ * **@CODE@** = Pronomen
++CS      !!≈ * **@CODE@** = Subjunction
++CC      !!≈ * **@CODE@** = Conjunction
++Po      !!≈ * **@CODE@** = Postposition
++Pr      !!≈ * **@CODE@** = Preposition
++Interj  !!≈ * **@CODE@** = Interjection
++Pcle    !!≈ * **@CODE@** = Particle
++Num     !!≈ * **@CODE@** = Numerals
++TODO    !!≈ * **@CODE@** = Code for items that have not been modeled yet
++Logo    !!= * **@CODE@**
++Subqst  !!= * **@CODE@** for adverbs
++Dyn     !!≈ * **@CODE@** = Code dynamic acronyms
 
-!!  !!Tags for sub-POS
+!! ## Tags for sub-POS
 
-!! !Proper nouns
-+Prop     !!≈ * __@CODE@__ =
+!! ### Proper nouns
++Prop     !!≈ * **@CODE@** =
 
-!! !Pronoun subtypes
-+Pers    !!≈ * __@CODE@__ = Personal
-+Dem     !!≈ * __@CODE@__ = Demonstrative
-+Interr  !!≈ * __@CODE@__ = Interrogative
-+Refl    !!≈ * __@CODE@__ = Reflexive
-+Recipr  !!≈ * __@CODE@__ = Reciprocal
-+Rel     !!≈ * __@CODE@__ = Relative
-+Indef   !!≈ * __@CODE@__ = Indefinite
+!! ### Pronoun subtypes
++Pers    !!≈ * **@CODE@** = Personal
++Dem     !!≈ * **@CODE@** = Demonstrative
++Interr  !!≈ * **@CODE@** = Interrogative
++Refl    !!≈ * **@CODE@** = Reflexive
++Recipr  !!≈ * **@CODE@** = Reciprocal
++Rel     !!≈ * **@CODE@** = Relative
++Indef   !!≈ * **@CODE@** = Indefinite
 
-!! !Numeral subtypes
-+Coll    !!≈ * __@CODE@__ = Collective numeral
-+Arab    !!≈ * __@CODE@__ = Arabic numeral
-+Rom     !!≈ * __@CODE@__ =
+!! ### Numeral subtypes
++Coll    !!≈ * **@CODE@** = Collective numeral
++Arab    !!≈ * **@CODE@** = Arabic numeral
++Rom     !!≈ * **@CODE@** =
 
-!! !!Error (non-standard language) tags
+!! ## Error (non-standard language) tags
 
-				  !! || Error tag || Explanation
-+Err/Orth         !!≈ | __@CODE@__ | Substandard, unormert form av et ord
-+Err/Hyph         !!≈ | __@CODE@__ | Substandard, unormert
-+Err/SpaceCmp     !!≈ | __@CODE@__ | Substandard, unormert 
-+Err/Attr         !!≈ | __@CODE@__ | Substandard, unormert Attr-form av et ord
-+Err/Lex          !!≈ | __@CODE@__ | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
-+Err/Der          !!≈ | __@CODE@__ | Errors in derivations
-+Err/Spellrelax   !!≈ | __@CODE@__ | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
-+Err/MissingSpace !!≈ | __@CODE@__ | in use ins smi lexc
+				  !! |   Error tag | Explanation
 
-!! !Usage tags
+!! | --- | --- 
++Err/Orth         !!≈ |  **@CODE@** | Substandard, unormert form av et ord
++Err/Hyph         !!≈ |  **@CODE@** | Substandard, unormert
++Err/SpaceCmp     !!≈ |  **@CODE@** | Substandard, unormert 
++Err/Attr         !!≈ |  **@CODE@** | Substandard, unormert Attr-form av et ord
++Err/Lex          !!≈ |  **@CODE@** | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
++Err/Der          !!≈ |  **@CODE@** | Errors in derivations
++Err/Spellrelax   !!≈ |  **@CODE@** | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
++Err/MissingSpace !!≈ |  **@CODE@** | in use ins smi lexc
 
-				 !! || Usage tag || Explanation
-+Use/Marg        !!≈ | __@CODE@__ | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
-+Use/-Spell      !!≈ | __@CODE@__ | Excluded from speller
-+Use/-PLX        !!≈ | __@CODE@__ | Excluded in PLX speller
-+Use/SpellNoSugg !!≈ | __@CODE@__ | Recognized but not suggested in speller
-+Use/Circ        !!≈ | __@CODE@__ | Circular path
-+Use/CircN       !!≈ | __@CODE@__ | Circular number path?
-+Use/Ped         !!≈ | __@CODE@__ | Remove from pedagogical speller
-+Use/NG          !!≈ | __@CODE@__ | Do not generate <br/> for isme-ped.fst and apertium
-+Use/MT          !!≈ | __@CODE@__ | Generate for apertium only
-+Use/NotDNorm    !!≈ | __@CODE@__ | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
-+Use/DNorm       !!≈ | __@CODE@__ | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
-+Use/PMatch      !!≈ | __@CODE@__ | Do ''only'' include in fst's for hfst-pmatch
-+Use/-PMatch     !!≈ | __@CODE@__ | Do not include in fst's made for hfst-pmatch
-+Use/GC          !!≈ * __@CODE@__ only retained in the HFST Grammar Checker disambiguation analyser
-+Use/-GC         !!≈ * __@CODE@__ never retained in the HFST Grammar Checker disambiguation analyser
+!! ### Usage tags
 
-		   !!  !!Dialect tags
+				 !! |   Usage tag | Explanation
 
-		   !! || Dialect tag || Explanation
-+Dial/-S   !!≈ | __@CODE@__ | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
-+Dial/-N   !!≈ | __@CODE@__ | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
-+Dial/-NOR !!≈ | __@CODE@__ | Words not in Norway
-+Dial/-SW  !!≈ | __@CODE@__ | Words not in Sweden
-+Dial/SH   !!≈ | __@CODE@__ | Short forms
-+Dial/L    !!≈ | __@CODE@__ | Long forms
+!! | --- | --- 
++Use/Marg        !!≈ |  **@CODE@** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
++Use/-Spell      !!≈ |  **@CODE@** | Excluded from speller
++Use/-PLX        !!≈ |  **@CODE@** | Excluded in PLX speller
++Use/SpellNoSugg !!≈ |  **@CODE@** | Recognized but not suggested in speller
++Use/Circ        !!≈ |  **@CODE@** | Circular path
++Use/CircN       !!≈ |  **@CODE@** | Circular number path?
++Use/Ped         !!≈ |  **@CODE@** | Remove from pedagogical speller
++Use/NG          !!≈ |  **@CODE@** | Do not generate <br/> for isme-ped.fst and apertium
++Use/MT          !!≈ |  **@CODE@** | Generate for apertium only
++Use/NotDNorm    !!≈ |  **@CODE@** | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
++Use/DNorm       !!≈ |  **@CODE@** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
++Use/PMatch      !!≈ |  **@CODE@** | Do *only* include in fst's for hfst-pmatch
++Use/-PMatch     !!≈ |  **@CODE@** | Do not include in fst's made for hfst-pmatch
++Use/GC          !!≈ * **@CODE@** only retained in the HFST Grammar Checker disambiguation analyser
++Use/-GC         !!≈ * **@CODE@** never retained in the HFST Grammar Checker disambiguation analyser
+
+		   !! ## Dialect tags
+
+		   !! |   Dialect tag | Explanation
+
+!! | --- | --- 
++Dial/-S   !!≈ |  **@CODE@** | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
++Dial/-N   !!≈ |  **@CODE@** | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
++Dial/-NOR !!≈ |  **@CODE@** | Words not in Norway
++Dial/-SW  !!≈ |  **@CODE@** | Words not in Sweden
++Dial/SH   !!≈ |  **@CODE@** | Short forms
++Dial/L    !!≈ |  **@CODE@** | Long forms
 
 
 !  +Dial/OE  ! oe forms ! We assume these are lexical, and do not tag.
@@ -104,181 +110,189 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 
 
-!! !!Normative/prescriptive compounding tags
+!! ## Normative/prescriptive compounding tags
 !! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
-!! !The left part of a compound should be
+!! ### The left part of a compound should be
 
-!! The default is {{+CmpN/SgN}}, so when nothing is specified, that
+!! The default is `+CmpN/SgN`, so when nothing is specified, that
 !! will be used. To override that one, specify one or more of the
-!! following tags. {{+CmpN/SgN}} must be specified if also other tags
-!! are listed - unless {{+CmpN/SgN}} should ''not'' be used, for course.
+!! following tags. `+CmpN/SgN` must be specified if also other tags
+!! are listed - unless `+CmpN/SgN` should *not* be used, for course.
 
-				!! || Normative compounding tag || Explanation
-+CmpN/Sg        !!≈ | __@CODE@__ | Singular
-+CmpN/SgN       !!≈ | __@CODE@__ | Singular Nominative
-+CmpN/SgG       !!≈ | __@CODE@__ | Singular Genitive
-+CmpN/PlG       !!≈ | __@CODE@__ | Plural Genitive
+				!! |   Normative compounding tag | Explanation
+
+!! | --- | --- 
++CmpN/Sg        !!≈ |  **@CODE@** | Singular
++CmpN/SgN       !!≈ |  **@CODE@** | Singular Nominative
++CmpN/SgG       !!≈ |  **@CODE@** | Singular Genitive
++CmpN/PlG       !!≈ |  **@CODE@** | Plural Genitive
 
 
-!! !The right part of a compound requires to the left
+!! ### The right part of a compound requires to the left
 
 !! These tags overrule the regular tags defined above. One or more
 !! can be specified.
 
-				!! || Normative left-governing tag || Explanation
-+CmpN/SgLeft    !!≈ | __@CODE@__ | Sg to the left
-+CmpN/SgNomLeft !!≈ | __@CODE@__ | etc.
-+CmpN/SgGenLeft !!≈ | __@CODE@__ | "
-+CmpN/PlGenLeft !!≈ | __@CODE@__ | "
+				!! |   Normative left-governing tag | Explanation
 
-				 !! !This part of the component can ...
-				 !! || Normative position tag || Explanation
-+CmpNP/All       !!≈ | __@CODE@__ | ... be in all positions, __default__, this tag does not have to be written
-+CmpNP/First     !!≈ | __@CODE@__ | ... only be first part in a compound or alone
-+CmpNP/Pref      !!≈ | __@CODE@__ | ... only be __first__ part in a compound, NEVER alone
-+CmpNP/Last      !!≈ | __@CODE@__ | ... only be last part in a compound or alone
-+CmpNP/Suff      !!≈ | __@CODE@__ | ... only be __last__ part in a compound, NEVER alone
-+CmpNP/None      !!≈ | __@CODE@__ | ... not take part in compounds
-+CmpNP/Only      !!≈ | __@CODE@__ | ... only be part of a compound, i.e. can never be used alone, but can appear in any position
+!! | --- | --- 
++CmpN/SgLeft    !!≈ |  **@CODE@** | Sg to the left
++CmpN/SgNomLeft !!≈ |  **@CODE@** | etc.
++CmpN/SgGenLeft !!≈ |  **@CODE@** | "
++CmpN/PlGenLeft !!≈ |  **@CODE@** | "
+
+				 !! ### This part of the component can ...
+				 !! |   Normative position tag | Explanation
+
+!! | --- | --- 
++CmpNP/All       !!≈ |  **@CODE@** | ... be in all positions, **default**, this tag does not have to be written
++CmpNP/First     !!≈ |  **@CODE@** | ... only be first part in a compound or alone
++CmpNP/Pref      !!≈ |  **@CODE@** | ... only be **first** part in a compound, NEVER alone
++CmpNP/Last      !!≈ |  **@CODE@** | ... only be last part in a compound or alone
++CmpNP/Suff      !!≈ |  **@CODE@** | ... only be **last** part in a compound, NEVER alone
++CmpNP/None      !!≈ |  **@CODE@** | ... not take part in compounds
++CmpNP/Only      !!≈ |  **@CODE@** | ... only be part of a compound, i.e. can never be used alone, but can appear in any position
 
 
-!! !!Descriptive compounding tags
+!! ## Descriptive compounding tags
 !! Tags for compound analysis - this is what a compound actually is. We use this
 !! to research compounding patterns in the corpus.
 
-			 !! || Desriptive compounding tag || Explanation
-+Cmp/Sg      !!≈ | __@CODE@__ | Compounding using an unspecified singular stem
-+Cmp/SgNom   !!≈ | __@CODE@__ | Compounding using nominative singular
-+Cmp/SgGen   !!≈ | __@CODE@__ | Compounding using genitive singular
-+Cmp/PlGen   !!≈ | __@CODE@__ | Compounding using genitive plural
-+Cmp/Attr    !!≈ | __@CODE@__ | Compounding using attribute form
-+Cmp/eh      !!≈ | __@CODE@__ | Compound stem in __–eh__, as in ''gaameh-gåaroje'', from ''gaamege''
-+Cmp/ege     !!≈ | __@CODE@__ | Compound stem in __–ege__, as in ''gaamege-gåaroje''
-+Cmp/FinEDel !!≈ | __@CODE@__ | Deletion of final __e__, as in ''voelem-gaaroeh'', from ''voeleme''
-+Cmp/ShH     !!≈ | __@CODE@__ | Compounding using a short stem + __h__: ''–biejjh–'' (from ''biejjie''), cf ''reakedsbiejjhvadtese''
-+Cmp/Sh      !!≈ | __@CODE@__ | Compounding using a short stem: ''–biejj–'' (from ''biejjie'')
-+Cmp/SplitR  !!≈ | __@CODE@__ | This is a split compound with the other part to the right: <br/> "Arbeids- og inkluderingsdepartementet" => ''Arbeids–'' = __+Cmp/SplitR__
-+Cmp/SplitL  !!≈ | __@CODE@__ | This is a split compound with the other part to the left, this is the oposite of the previous case
-+Cmp         !!≈ | __@CODE@__ | Dynamic compound - this tag should ''always'' be part of a dynamic compound. It is important for  Apertium and the speller (to give extra weights to compounds), and useful in other cases as well.
-+Cmp/XForm   !!≈ | __@CODE@__ | Alle Cmp som ikke har en klar klassifisering
-+Cmp/AttrH   !!≈ | __@CODE@__ | Alle Cmp som har en attr-h
+			 !! |   Desriptive compounding tag | Explanation
 
-!! !!!Tags for Inflection
+!! | --- | --- 
++Cmp/Sg      !!≈ |  **@CODE@** | Compounding using an unspecified singular stem
++Cmp/SgNom   !!≈ |  **@CODE@** | Compounding using nominative singular
++Cmp/SgGen   !!≈ |  **@CODE@** | Compounding using genitive singular
++Cmp/PlGen   !!≈ |  **@CODE@** | Compounding using genitive plural
++Cmp/Attr    !!≈ |  **@CODE@** | Compounding using attribute form
++Cmp/eh      !!≈ |  **@CODE@** | Compound stem in **–eh**, as in *gaameh-gåaroje*, from *gaamege*
++Cmp/ege     !!≈ |  **@CODE@** | Compound stem in **–ege**, as in *gaamege-gåaroje*
++Cmp/FinEDel !!≈ |  **@CODE@** | Deletion of final **e**, as in *voelem-gaaroeh*, from *voeleme*
++Cmp/ShH     !!≈ |  **@CODE@** | Compounding using a short stem + **h**: *–biejjh–* (from *biejjie*), cf *reakedsbiejjhvadtese*
++Cmp/Sh      !!≈ |  **@CODE@** | Compounding using a short stem: *–biejj–* (from *biejjie*)
++Cmp/SplitR  !!≈ |  **@CODE@** | This is a split compound with the other part to the right: <br/> "Arbeids- og inkluderingsdepartementet" => *Arbeids–* = **+Cmp/SplitR**
++Cmp/SplitL  !!≈ |  **@CODE@** | This is a split compound with the other part to the left, this is the oposite of the previous case
++Cmp         !!≈ |  **@CODE@** | Dynamic compound - this tag should *always* be part of a dynamic compound. It is important for  Apertium and the speller (to give extra weights to compounds), and useful in other cases as well.
++Cmp/XForm   !!≈ |  **@CODE@** | Alle Cmp som ikke har en klar klassifisering
++Cmp/AttrH   !!≈ |  **@CODE@** | Alle Cmp som har en attr-h
 
-!! !!Tags for Case and Number Inflection
-!! !Case and number
-+Sg    !!= * __@CODE@__ = Singular
-+Pl    !!= * __@CODE@__ = Plural
-+Du    !!= * __@CODE@__ = Dual
+!! # Tags for Inflection
 
-+Nom   !!= * __@CODE@__ = Nominative
-+Acc   !!= * __@CODE@__ = Ackusative
-+Gen   !!= * __@CODE@__ = Genitive
-+Ine   !!= * __@CODE@__ = Inesive
-+Ela   !!= * __@CODE@__ = Elative
-+Ill   !!= * __@CODE@__= Illative
-+Com   !!= * __@CODE@__= Comitative
-+Ess   !!= * __@CODE@__ = Essive
+!! ## Tags for Case and Number Inflection
+!! ### Case and number
++Sg    !!= * **@CODE@** = Singular
++Pl    !!= * **@CODE@** = Plural
++Du    !!= * **@CODE@** = Dual
+
++Nom   !!= * **@CODE@** = Nominative
++Acc   !!= * **@CODE@** = Ackusative
++Gen   !!= * **@CODE@** = Genitive
++Ine   !!= * **@CODE@** = Inesive
++Ela   !!= * **@CODE@** = Elative
++Ill   !!= * **@CODE@**= Illative
++Com   !!= * **@CODE@**= Comitative
++Ess   !!= * **@CODE@** = Essive
 
 
-!! !!Px
-  +PxSg1                            !!= * __@CODE@__ =  Possessives Singular
-  +PxSg2                            !!= * __@CODE@__ =  Possessives Singular
-  +PxSg3                            !!= * __@CODE@__ =  Possessives Singular
-  +PxDu1                            !!= * __@CODE@__ =  Possessives Dual
-  +PxDu2                            !!= * __@CODE@__ =  Possessives Dual
-  +PxDu3                            !!= * __@CODE@__ =  Possessives Dual
-  +PxPl1                            !!= * __@CODE@__ =  Possessives Plural
-  +PxPl2                            !!= * __@CODE@__ =  Possessives Plural
-  +PxPl3                            !!= * __@CODE@__ =  Possessives Plural
+!! ## Px
+  +PxSg1                            !!= * **@CODE@** =  Possessives Singular
+  +PxSg2                            !!= * **@CODE@** =  Possessives Singular
+  +PxSg3                            !!= * **@CODE@** =  Possessives Singular
+  +PxDu1                            !!= * **@CODE@** =  Possessives Dual
+  +PxDu2                            !!= * **@CODE@** =  Possessives Dual
+  +PxDu3                            !!= * **@CODE@** =  Possessives Dual
+  +PxPl1                            !!= * **@CODE@** =  Possessives Plural
+  +PxPl2                            !!= * **@CODE@** =  Possessives Plural
+  +PxPl3                            !!= * **@CODE@** =  Possessives Plural
 
-  +Prs                                       !!≈ | __@CODE@__ | Presens
-  +Prt                                       !!≈ | __@CODE@__ | Preteritum
+  +Prs                                       !!≈ |  **@CODE@** | Presens
+  +Prt                                       !!≈ |  **@CODE@** | Preteritum
 
-  +Sg1                                  !!≈ | __@CODE@__ | Singular, 1.person
-  +Sg2                                  !!≈ | __@CODE@__ | Singular, 2.person
-  +Sg3                                  !!≈ | __@CODE@__ | Singular, 3.person
-  +Du1                                  !!≈ | __@CODE@__ | Dual    , 1.person
-  +Du2                                  !!≈ | __@CODE@__ | Dual    , 2.person
-  +Du3                                  !!≈ | __@CODE@__ | Dual    , 3.person
-  +Pl1                                  !!≈ | __@CODE@__ | Plural  , 1.person
-  +Pl2                                  !!≈ | __@CODE@__ | Plural  , 2.person
-  +Pl3                                  !!≈ | __@CODE@__ | Plural  , 3.person
+  +Sg1                                  !!≈ |  **@CODE@** | Singular, 1.person
+  +Sg2                                  !!≈ |  **@CODE@** | Singular, 2.person
+  +Sg3                                  !!≈ |  **@CODE@** | Singular, 3.person
+  +Du1                                  !!≈ |  **@CODE@** | Dual    , 1.person
+  +Du2                                  !!≈ |  **@CODE@** | Dual    , 2.person
+  +Du3                                  !!≈ |  **@CODE@** | Dual    , 3.person
+  +Pl1                                  !!≈ |  **@CODE@** | Plural  , 1.person
+  +Pl2                                  !!≈ |  **@CODE@** | Plural  , 2.person
+  +Pl3                                  !!≈ |  **@CODE@** | Plural  , 3.person
 
-  +Neg    !!≈ | @CODE@ | negation verb ij
-  +ConNeg !!≈ | @CODE@ | main verb complement to Neg, form identical to Imp
-  +VAbess !!≈ | @CODE@ | Verb Abessive
+  +Neg    !!≈ |  @CODE@ | negation verb ij
+  +ConNeg !!≈ |  @CODE@ | main verb complement to Neg, form identical to Imp
+  +VAbess !!≈ |  @CODE@ | Verb Abessive
 
-  +Inf    !!≈ ; @CODE@ : Infinitive and participles
-  +PrfPrc !!≈ ; @CODE@ :  Infinitive and participles
-  +PrsPrc !!≈ ; @CODE@ : Infinitive and participles
-  +Ger    !!≈ ; @CODE@ : Gerundium
-  +VGen   !!≈ ; @CODE@ : Verbgenitive
+  +Inf    !!≈ * **@CODE@**:  Infinitive and participles
+  +PrfPrc !!≈ * **@CODE@**:   Infinitive and participles
+  +PrsPrc !!≈ * **@CODE@**:  Infinitive and participles
+  +Ger    !!≈ * **@CODE@**:  Gerundium
+  +VGen   !!≈ * **@CODE@**:  Verbgenitive
 
-  +Ind   !!≈ ; @CODE@ : Indicative
-  +Imprt !!≈ ; @CODE@ : Imperative
-  +ImprtII !!≈ ; @CODE@ : Imperative, for Neg: ollem ollh ...
-  +Cond  !!≈ ; @CODE@ : Kondisjonalis, for one form: lidtjie.
+  +Ind   !!≈ * **@CODE@**:  Indicative
+  +Imprt !!≈ * **@CODE@**:  Imperative
+  +ImprtII !!≈ * **@CODE@ : Imperative, for Neg**:  ollem ollh ...
+  +Cond  !!≈ * **@CODE@ : Kondisjonalis, for one form**:  lidtjie.
          !!             To be looked at.+ lidtjim, + lidtjih
 ! +Opt (Hasselbrink 48.3.I, 48.14, 48.15, 48.21, Bergsland; )
-  +Act   !!≈ ; @CODE@ : '' -eme'', could be changed to {{+Actio}}
+  +Act   !!≈ * **@CODE@**:  *-eme*, could be changed to `+Actio`
 
-                !! !Tags for adjectives
+                !! ### Tags for adjectives
 
-  +Attr         !!≈ ; @CODE@ : Attribute form
-  +Ord          !!≈ ; @CODE@ : Ordinal number
+  +Attr         !!≈ * **@CODE@**:  Attribute form
+  +Ord          !!≈ * **@CODE@**:  Ordinal number
 
-                 !! !!Other tags
-  +ABBR          !!≈ ; @CODE@ : Abbreviation
-  +Symbol        !!≈ ; @CODE@ : Symbols in the text stream, like £, €, ©
-  +ACR           !!≈ ; @CODE@ : Acronym
-  +TV            !!≈ ; @CODE@ : Transitive verb
-  +IV            !!≈ ; @CODE@ : Intansitive verb
-  +Gram/TAbbr    !!≈ ; @CODE@ : Transitive abbreviation (it needs an argument)
-  +Gram/TNumAbbr !!≈ ; @CODE@ : Transitive abbreviation if the following
+                 !! ## Other tags
+  +ABBR          !!≈ * **@CODE@**:  Abbreviation
+  +Symbol        !!≈ * **@CODE@**:  Symbols in the text stream, like £, €, ©
+  +ACR           !!≈ * **@CODE@**:  Acronym
+  +TV            !!≈ * **@CODE@**:  Transitive verb
+  +IV            !!≈ * **@CODE@**:  Intansitive verb
+  +Gram/TAbbr    !!≈ * **@CODE@**:  Transitive abbreviation (it needs an argument)
+  +Gram/TNumAbbr !!≈ * **@CODE@**:  Transitive abbreviation if the following
                  !!             constituent is numeric
-  +Gram/TIAbbr   !!≈ ; @CODE@ : Both transitive and intransitive abbreviation
-  +Gram/IAbbr    !!≈ ; @CODE@ : Intransitive abbreviation (it takes no argument)
-  +Gram/NumNoAbbr !!≈ ; @CODE@ : Transitive abbreviations for which numerals
-  +Multi         !!≈ ; @CODE@ : Multiword phrase tag ?
-  +Guess         !!≈ ; @CODE@ : for the name guesser ?
-  +LOAN          !!≈ ; @CODE@ : ad hoc tag for development purposes ?
-  +Cmp/Hyph      !!≈ ; @CODE@ : A tag to indicate that a hyphen was used when
+  +Gram/TIAbbr   !!≈ * **@CODE@**:  Both transitive and intransitive abbreviation
+  +Gram/IAbbr    !!≈ * **@CODE@**:  Intransitive abbreviation (it takes no argument)
+  +Gram/NumNoAbbr !!≈ * **@CODE@**:  Transitive abbreviations for which numerals
+  +Multi         !!≈ * **@CODE@**:  Multiword phrase tag ?
+  +Guess         !!≈ * **@CODE@**:  for the name guesser ?
+  +LOAN          !!≈ * **@CODE@**:  ad hoc tag for development purposes ?
+  +Cmp/Hyph      !!≈ * **@CODE@**:  A tag to indicate that a hyphen was used when
                  !!             compounding?
 
-              !! !Tags for testing the frequency of certain phenomenas in our corpora
+              !! ### Tags for testing the frequency of certain phenomenas in our corpora
 
-  +Test/LysI  !!≈ ; @CODE@ : form uses i
-  +Test/MørkI !!≈ ; @CODE@ : form uses ï
-  +Test/HK    !!≈ ; @CODE@ : form uses consonant cluster hk
-  +Test/GK    !!≈ ; @CODE@ : form uses consonant cluster gk
-  +Test/JK    !!≈ ; @CODE@ : form uses consonant cluster jk
-  +Uml        !!≈ ; @CODE@ : A tag to indicate realised or potential Umlaut
-  +NoUml      !!≈ ; @CODE@ : A tag to indicate the lack of realised or potential Umlaut
+  +Test/LysI  !!≈ * **@CODE@**:  form uses i
+  +Test/MørkI !!≈ * **@CODE@**:  form uses ï
+  +Test/HK    !!≈ * **@CODE@**:  form uses consonant cluster hk
+  +Test/GK    !!≈ * **@CODE@**:  form uses consonant cluster gk
+  +Test/JK    !!≈ * **@CODE@**:  form uses consonant cluster jk
+  +Uml        !!≈ * **@CODE@**:  A tag to indicate realised or potential Umlaut
+  +NoUml      !!≈ * **@CODE@**:  A tag to indicate the lack of realised or potential Umlaut
 
-!! !Tags for punctuation
+!! ### Tags for punctuation
 
-  +CLB   !!≈ ; @CODE@ : XXX These should be documented better
-  +PUNCT !!≈ ; @CODE@ : XXX These should be documented better
-  +LEFT  !!≈ ; @CODE@ : XXX These should be documented better
-  +RIGHT !!≈ ; @CODE@ : XXX These should be documented better
-  +CLBfinal !!≈ * __@CODE@__  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
-
-
-!! !Different focus particles
-
-  +Foc        !!≈ ; @CODE@ : XXX Document better = Forsterkende particle?
-  +Foc/ge     !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
-  +Foc/gan    !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
-  +Foc/gih    !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
-  +Foc/gænnah !!≈ ; @CODE@ : XXX Document better = Forsterkende particle
-
-!! !tags for adverbs and komparerte adj
-  +Gram/Comp +Gram/Superl !!≈ ; @CODE@ : 
+  +CLB   !!≈ * **@CODE@**:  XXX These should be documented better
+  +PUNCT !!≈ * **@CODE@**:  XXX These should be documented better
+  +LEFT  !!≈ * **@CODE@**:  XXX These should be documented better
+  +RIGHT !!≈ * **@CODE@**:  XXX These should be documented better
+  +CLBfinal !!≈ * **@CODE@**  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
 
 
-!! !!Semantic tags to help disambiguation & synt. analysis:
+!! ### Different focus particles
+
+  +Foc        !!≈ * **@CODE@**:  XXX Document better = Forsterkende particle?
+  +Foc/ge     !!≈ * **@CODE@**:  XXX Document better = Forsterkende particle
+  +Foc/gan    !!≈ * **@CODE@**:  XXX Document better = Forsterkende particle
+  +Foc/gih    !!≈ * **@CODE@**:  XXX Document better = Forsterkende particle
+  +Foc/gænnah !!≈ * **@CODE@**:  XXX Document better = Forsterkende particle
+
+!! ### tags for adverbs and komparerte adj
+  +Gram/Comp +Gram/Superl !!≈ * **@CODE@**:  
+
+
+!! ## Semantic tags to help disambiguation & synt. analysis:
 
  +Sem/Act                   !!= * @CODE@ = Activity
  +Sem/Adr                   !!= * @CODE@ = Webadr
@@ -475,26 +489,26 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  +Sem/Domain_Txt            !!= * @CODE@ = 
  
  
- +MWE     !!≈ | @CODE@ | multi word expressions, goes to abbr
+ +MWE     !!≈ |  @CODE@ | multi word expressions, goes to abbr
 
 !! Use the following flag diacritics to control downcasing of derived proper
 !! nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 !! these flags. There exists a ready-made regex that will do the actual down-casing
 !! given the proper use of these flags.
 
- @P.Px.add@     !!≈ | @CODE@ | Giving possibility for Px-suffixes (all except from Nom 3.p)
- @R.Px.add@     !!≈ | @CODE@ | Requiring P.Px.add-flag for Px-suffixes (all except from Nom 3.p)
- @P.Nom3Px.add@ !!≈ | @CODE@ |  Giving possibility for Px-suffixes Nom 3.p
- @R.Nom3Px.add@ !!≈ | @CODE@ | Requiring P.Nom3Px.add flag for Px-suffixes Nom 3.p
+ @P.Px.add@     !!≈ |  @CODE@ | Giving possibility for Px-suffixes (all except from Nom 3.p)
+ @R.Px.add@     !!≈ |  @CODE@ | Requiring P.Px.add-flag for Px-suffixes (all except from Nom 3.p)
+ @P.Nom3Px.add@ !!≈ |  @CODE@ |  Giving possibility for Px-suffixes Nom 3.p
+ @R.Nom3Px.add@ !!≈ |  @CODE@ | Requiring P.Nom3Px.add flag for Px-suffixes Nom 3.p
 
- @P.Pmatch.Backtrack@ !!≈ | @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this poin in the form (to find combinations of shorter analyses that would otherwise be missed)
+ @P.Pmatch.Backtrack@ !!≈ |  @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this poin in the form (to find combinations of shorter analyses that would otherwise be missed)
 
- @D.ErrOrth.ON@      !!≈ | @CODE@  | asdf
- @C.ErrOrth@	        !!≈ | @CODE@ | asdf
- @P.ErrOrth.ON@      !!≈ | @CODE@ | asdf
+ @D.ErrOrth.ON@      !!≈ |  @CODE@  | asdf
+ @C.ErrOrth@	        !!≈ |  @CODE@ | asdf
+ @P.ErrOrth.ON@      !!≈ |  @CODE@ | asdf
 
 
-!! !!Derivation tags and derivation position tags in a derivation row
+!! ## Derivation tags and derivation position tags in a derivation row
 
 !! Derivations in the same position are mutually exclusive (can not be combined), whereas
 !! tags in different positions can be combined, so that position 1 derivations must
@@ -502,39 +516,41 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 
 ! 1              2               3                POS type
-!!                                                ||  Pos1     || Pos2      || Pos3      || POS switches (from-to)|| Explanation
-+Der1                                          !!≈ | __@CODE@__ |            |            |      | Position tag, required
-                +Der2                          !!≈ | __@CODE@__ |            |            |      | Position tag, required
-                                +Der3          !!≈ | __@CODE@__ |            |            |      | Position tag, required
-+Der/htalle                                    !!≈ | __@CODE@__ |            |            | VV   | Passive, frekeventative
-+Der/lg                                        !!≈ | __@CODE@__ |            |            | VV   | Passive
-+Der/ijes                                      !!≈ | __@CODE@__ |            |            | NA   | Nomen agentis
-+Der/ihks                                      !!≈ | __@CODE@__ |            |            | VA   | (Handlernomen- tilbøyelig til å utføre den handlingen som grunnordet angir)
-+Der/les                                       !!≈ | __@CODE@__ |            |            | VA   | Intensive
-+Der/ldihkie                                   !!≈ | __@CODE@__ |            |            | VA   |
-+Der/ldahke                                    !!≈ | __@CODE@__ |            |            | VA   | Resultatnomen (?)
-+Der/ldh                                       !!≈ | __@CODE@__ |            |            | VA   | Attributt
-+Der/ht                                        !!≈ | __@CODE@__ |            |            | VV   | Causative
-+Der/l                                         !!≈ | __@CODE@__ |            |            | VV   | Subitive
-+Der/st                                        !!≈ | __@CODE@__ |            |            | VV   | Diminutive, Subitive
-+Der/d                                         !!≈ | __@CODE@__ |            |            | VV   | Continuative, Konative, Frequentative, Refleksive, Momentan
-+Der/Car                                       !!≈ | __@CODE@__ |            |            |      | -hts, Caritive, was Der/heapmi in sme
-+Der/htj                                       !!≈ | __@CODE@__ |            |            | NN   | Dim-cont, Frequentative
-+Der/Dimin                                     !!≈ | __@CODE@__ |            |            | NN   | Diminutive
-+Der/Rec                                       !!≈ | __@CODE@__ |            |            | NN   | Forholdsformer
-+Der/laakan                                    !!≈ | __@CODE@__ |            |            | AAdv | adverb
-+Der/laaketje                                  !!≈ | __@CODE@__ |            |            | AA   | adjektiv
-+Der/Comp                                      !!≈ | __@CODE@__ |            |            | AA   | adjektiv
-+Der/Superl                                    !!≈ | __@CODE@__ |            |            | AA   | adjektiv 
-                +Der/vuota                     !!≈ |            | __@CODE@__ |            | AN   | Noun
-                +Der/adte                      !!≈ |            | __@CODE@__ |            | VV   | Frequentative, Kontinuativ
-                +Der/alla                      !!≈ |            | __@CODE@__ |            | VV   | Frequentative
-                +Der/eds                       !!≈ |            | __@CODE@__ |            | NA   | Attributt
-                                +Der/PassL     !!≈ |            |            | __@CODE@__ | VV   | long only
-                                +Der/NomAg     !!≈ |            |            | __@CODE@__ | VN   | Nomen Agentis
-                                +Der/NomAct    !!≈ |            |            | __@CODE@__ | VN   | Nomen Actionis
-                                +Der/ahtje     !!≈ |            |            | __@CODE@__ | VV   | Inchoative
-                                +Der/InchL     !!≈ |            |            | __@CODE@__ | VV   | Inchoative
+!! |    Pos1     | Pos2      | Pos3      | POS switches (from-to)| Explanation
+
+!! | --- | --- | --- | --- | --- 
++Der1                                          !!≈ |  **@CODE@** |            |            |      | Position tag, required
+                +Der2                          !!≈ |  **@CODE@** |            |            |      | Position tag, required
+                                +Der3          !!≈ |  **@CODE@** |            |            |      | Position tag, required
++Der/htalle                                    !!≈ |  **@CODE@** |            |            | VV   | Passive, frekeventative
++Der/lg                                        !!≈ |  **@CODE@** |            |            | VV   | Passive
++Der/ijes                                      !!≈ |  **@CODE@** |            |            | NA   | Nomen agentis
++Der/ihks                                      !!≈ |  **@CODE@** |            |            | VA   | (Handlernomen- tilbøyelig til å utføre den handlingen som grunnordet angir)
++Der/les                                       !!≈ |  **@CODE@** |            |            | VA   | Intensive
++Der/ldihkie                                   !!≈ |  **@CODE@** |            |            | VA   |
++Der/ldahke                                    !!≈ |  **@CODE@** |            |            | VA   | Resultatnomen (?)
++Der/ldh                                       !!≈ |  **@CODE@** |            |            | VA   | Attributt
++Der/ht                                        !!≈ |  **@CODE@** |            |            | VV   | Causative
++Der/l                                         !!≈ |  **@CODE@** |            |            | VV   | Subitive
++Der/st                                        !!≈ |  **@CODE@** |            |            | VV   | Diminutive, Subitive
++Der/d                                         !!≈ |  **@CODE@** |            |            | VV   | Continuative, Konative, Frequentative, Refleksive, Momentan
++Der/Car                                       !!≈ |  **@CODE@** |            |            |      | -hts, Caritive, was Der/heapmi in sme
++Der/htj                                       !!≈ |  **@CODE@** |            |            | NN   | Dim-cont, Frequentative
++Der/Dimin                                     !!≈ |  **@CODE@** |            |            | NN   | Diminutive
++Der/Rec                                       !!≈ |  **@CODE@** |            |            | NN   | Forholdsformer
++Der/laakan                                    !!≈ |  **@CODE@** |            |            | AAdv | adverb
++Der/laaketje                                  !!≈ |  **@CODE@** |            |            | AA   | adjektiv
++Der/Comp                                      !!≈ |  **@CODE@** |            |            | AA   | adjektiv
++Der/Superl                                    !!≈ |  **@CODE@** |            |            | AA   | adjektiv 
+                +Der/vuota                     !!≈ |             | **@CODE@** |            | AN   | Noun
+                +Der/adte                      !!≈ |             | **@CODE@** |            | VV   | Frequentative, Kontinuativ
+                +Der/alla                      !!≈ |             | **@CODE@** |            | VV   | Frequentative
+                +Der/eds                       !!≈ |             | **@CODE@** |            | NA   | Attributt
+                                +Der/PassL     !!≈ |             |            | **@CODE@** | VV   | long only
+                                +Der/NomAg     !!≈ |             |            | **@CODE@** | VN   | Nomen Agentis
+                                +Der/NomAct    !!≈ |             |            | **@CODE@** | VN   | Nomen Actionis
+                                +Der/ahtje     !!≈ |             |            | **@CODE@** | VV   | Inchoative
+                                +Der/InchL     !!≈ |             |            | **@CODE@** | VV   | Inchoative
 
 ! Utkommenterte avleiingstaggar:
 ! +Der/Caus                                    ≈  @CODE@  VV - Causative
@@ -548,22 +564,24 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !  Der#4    ''So far +Der4 is not motivated for SMA.''
 
 
-!! !Other, non-positional derivations
+!! ### Other, non-positional derivations
 
 !! All non-positional derivations should be preceded by the following tag,
 !! to make it possible to target regular expressions in all derivations in a
 !! language-independent way:
 !! just specify
-!! {{{[+Der|+Der1 .. +Der5]}}}
+!! ```[+Der](+Der1 .. +Der5)```
 !! and you are set.
-+Der !!≈ ; @CODE@ : Tag to precede any non-positional derivation
++Der !!≈ * **@CODE@**:  Tag to precede any non-positional derivation
 
-!!            || Derivation tag || POS switch || Explanation
-+Der/PassS !!≈ | @CODE@ | VV | short passive only
-+Der/A     !!≈ | @CODE@ | NA | comparation of N's
+!! |   Derivation tag | POS switch | Explanation
+
+!! | --- | --- | --- 
++Der/PassS !!≈ |  @CODE@ | VV | short passive only
++Der/A     !!≈ |  @CODE@ | NA | comparation of N's
 
 
-!! !!Tags for originating language
+!! ## Tags for originating language
 
 !! The following tags are used to guide conversion to IPA: loan words
 !! and foreign names are usually pronounced (approximately) as in the
@@ -576,12 +594,12 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !!
 !! The principle of tagging is that we only tag to the extent needed,
 !! and following a priority:
-!! # any untagged word is pronounced with SME orthographic conventions
-!! # NNO and NOB have identical pronunciation, NNO is only used if
+!! 1. any untagged word is pronounced with SME orthographic conventions
+!! 1. NNO and NOB have identical pronunciation, NNO is only used if
 !!   different in spelling from NOB
-!! # SWE has mostly the same pronunciation as NOB, and is only used
+!! 1. SWE has mostly the same pronunciation as NOB, and is only used
 !!   if different in spelling from NOB
-!! # Occasionally even SME (the default) may be tagged, to block other
+!! 1. Occasionally even SME (the default) may be tagged, to block other
 !!   languages from being specified, mainly during semi-automatic
 !!   language tagging sessions
 !!
@@ -591,140 +609,142 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! long as the IPA conversion is correct - at least some words will
 !! get the same pronunciation whether read as SME or NOB/NNO/SWE.
 
-!!            || Originating language tag || Originating language
-+OLang/SME !!≈ | __@CODE@__ | North Sámi
-+OLang/SMA !!≈ | __@CODE@__ | South Sámi
-+OLang/FIN !!≈ | __@CODE@__ | Finnish
-+OLang/SWE !!≈ | __@CODE@__ | Swedish
-+OLang/NOB !!≈ | __@CODE@__ | Norw. bokmål
-+OLang/NNO !!≈ | __@CODE@__ | Norw. nynorsk
-+OLang/ENG !!≈ | __@CODE@__ | English
-+OLang/RUS !!≈ | __@CODE@__ | Russian
-+OLang/UND !!≈ | __@CODE@__ | Undefined
+!! |   Originating language tag | Originating language
 
-!! !!Area tags
+!! | --- | --- 
++OLang/SME !!≈ |  **@CODE@** | North Sámi
++OLang/SMA !!≈ |  **@CODE@** | South Sámi
++OLang/FIN !!≈ |  **@CODE@** | Finnish
++OLang/SWE !!≈ |  **@CODE@** | Swedish
++OLang/NOB !!≈ |  **@CODE@** | Norw. bokmål
++OLang/NNO !!≈ |  **@CODE@** | Norw. nynorsk
++OLang/ENG !!≈ |  **@CODE@** | English
++OLang/RUS !!≈ |  **@CODE@** | Russian
++OLang/UND !!≈ |  **@CODE@** | Undefined
+
+!! ## Area tags
 
 +Area/SE   !!≈ * @CODE@ = In Sweden
 +Area/NO   !!≈ * @CODE@ = In Norway
 
 
 !!
-!! !!Triggers for morphophonological rules
-  X2 !!≈ ; @CODE@ : Trigger for e:0 before suffix i: manne > mannine
-  X3 !!≈ ; @CODE@ : Trigger for e->i in even syllabic verbs Du3
-  X4 !!≈ ; @CODE@ : Trigger for e->i in even syllabic verbs Du2 & Pl12
-  E2 !!≈ ; @CODE@ : insert e ! Fjern denne.
+!! ## Triggers for morphophonological rules
+  X2 !!≈ * **@CODE@ : Trigger for e:0 before suffix i**:  manne > mannine
+  X3 !!≈ * **@CODE@**:  Trigger for e->i in even syllabic verbs Du3
+  X4 !!≈ * **@CODE@**:  Trigger for e->i in even syllabic verbs Du2 & Pl12
+  E2 !!≈ * **@CODE@**:  insert e ! Fjern denne.
 
-!! !Morphophonemes and Sámi letters
+!! ### Morphophonemes and Sámi letters
 
  e9 !!≈ * @CODE@  twol rule override, so that e doesn't turn into i infront of j
  o9 !!≈ * @CODE@  twol rule override,  so that o doesn't turn into u infront of j
 
-        !! !!Symbols that need to be escaped on the lower side (towards twolc):
- »7     !!≈ ; @CODE@ : Literal »
- «7     !!≈ ; @CODE@ : Literal «
-        !! {{{
+        !! ## Symbols that need to be escaped on the lower side (towards twolc):
+ »7     !!≈ * **@CODE@**:  Literal »
+ «7     !!≈ * **@CODE@**:  Literal «
+        !! ```
  %[%>%] !!= @CODE@ - Literal >
  %[%<%] !!= @CODE@ - Literal <
-        !! }}}
+        !! ```
 !!
-!! !!Lexeme disambiguation tags
-  +Hom1          !!≈ ; @CODE@ : Homonymy
-  +Hom2          !!≈ ; @CODE@ : Homonymy
+!! ## Lexeme disambiguation tags
+  +Hom1          !!≈ * **@CODE@**:  Homonymy
+  +Hom2          !!≈ * **@CODE@**:  Homonymy
 
 !!
-!! !!Stem variant tags
-  +v1 !!≈ ; @CODE@ : variant 1
-  +v2 !!≈ ; @CODE@ : variant 2
-  +v3 !!≈ ; @CODE@ : variant 3
-  +v4 !!≈ ; @CODE@ : variant 4
-  +v5 !!≈ ; @CODE@ : variant 5
-  +v6 !!≈ ; @CODE@ : variant 6
-  +v7 !!≈ ; @CODE@ : variant 7
+!! ## Stem variant tags
+  +v1 !!≈ * **@CODE@**:  variant 1
+  +v2 !!≈ * **@CODE@**:  variant 2
+  +v3 !!≈ * **@CODE@**:  variant 3
+  +v4 !!≈ * **@CODE@**:  variant 4
+  +v5 !!≈ * **@CODE@**:  variant 5
+  +v6 !!≈ * **@CODE@**:  variant 6
+  +v7 !!≈ * **@CODE@**:  variant 7
 !!
 
 
 !! clitic boundary mark - a multichar that usually just go to zero
 |» 
 
-!! !!Umlaut and diphthong simplification triggers
+!! ## Umlaut and diphthong simplification triggers
 
-  %^DISIMP        !!≈ | @CODE@ | diphthong simplification
-  %^COMPDISIMP    !!≈ | @CODE@ | diphthong simplification in comparatives
-  %^COMPDISIMP2   !!≈ | @CODE@ | diphthong simplification in comparatives, type 2
-  %^COMPDISIMP3   !!≈ | @CODE@ | diphthong simplification
-  %^PLCDISIMP     !!≈ | @CODE@ | diphthong simplification in ACCRA-names
-  %^NOMAGieDISIMP !!≈ | @CODE@ | diphthong simplification for NomAg ie stems
-  %^1UML          !!≈ | @CODE@ | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
-  %^2UML          !!≈ | @CODE@ | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
-  %^3UML          !!≈ | @CODE@ | adj Umlaut oeh:an
-  %^3sUML         !!≈ | @CODE@ | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
-  %^3dUML         !!≈ | @CODE@ | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
-  %^iæUML         !!≈ | @CODE@ | not used
-  %^iUML          !!≈ | @CODE@ | i-uml in pret of V-I (båetedh - böötim)
-  %^PASSUML       !!≈ | @CODE@ | Short passive Umlaut Rx->R5
-  %^didhUML       !!≈ | @CODE@ | Der/d Umlaut for GUARKEDH-words
-  %^htjidhUML     !!≈ | @CODE@ | Umlaut für der/htjidh derivations
-  %^adteUML       !!≈ | @CODE@ | Umlaut für Der/adte and Der/alla derivations
-  %^aLATUS        !!≈ | @CODE@ | Latus-Umlaut for -ie stems
-  %^uLATUS        !!≈ | @CODE@ | Latus-Umlaut for -oe stems
-  %^ConsDel       !!≈ | @CODE@ | Stem consonant deletion in front of Der/PassL
-  %^ILLELA        !!≈ | @CODE@ | Stem vowel changes in Illative an Elative
-  %^PLGENPLCOM    !!≈ | @CODE@ | Stem vowel changes in final from e -> i, and withoaut -j-
-  %^COMESS        !!≈ | @CODE@ | Stem vowel changes in ACCRA-names
+  %^DISIMP        !!≈ |  @CODE@ | diphthong simplification
+  %^COMPDISIMP    !!≈ |  @CODE@ | diphthong simplification in comparatives
+  %^COMPDISIMP2   !!≈ |  @CODE@ | diphthong simplification in comparatives, type 2
+  %^COMPDISIMP3   !!≈ |  @CODE@ | diphthong simplification
+  %^PLCDISIMP     !!≈ |  @CODE@ | diphthong simplification in ACCRA-names
+  %^NOMAGieDISIMP !!≈ |  @CODE@ | diphthong simplification for NomAg ie stems
+  %^1UML          !!≈ |  @CODE@ | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
+  %^2UML          !!≈ |  @CODE@ | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
+  %^3UML          !!≈ |  @CODE@ | adj Umlaut oeh:an
+  %^3sUML         !!≈ |  @CODE@ | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
+  %^3dUML         !!≈ |  @CODE@ | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
+  %^iæUML         !!≈ |  @CODE@ | not used
+  %^iUML          !!≈ |  @CODE@ | i-uml in pret of V-I (båetedh - böötim)
+  %^PASSUML       !!≈ |  @CODE@ | Short passive Umlaut Rx->R5
+  %^didhUML       !!≈ |  @CODE@ | Der/d Umlaut for GUARKEDH-words
+  %^htjidhUML     !!≈ |  @CODE@ | Umlaut für der/htjidh derivations
+  %^adteUML       !!≈ |  @CODE@ | Umlaut für Der/adte and Der/alla derivations
+  %^aLATUS        !!≈ |  @CODE@ | Latus-Umlaut for -ie stems
+  %^uLATUS        !!≈ |  @CODE@ | Latus-Umlaut for -oe stems
+  %^ConsDel       !!≈ |  @CODE@ | Stem consonant deletion in front of Der/PassL
+  %^ILLELA        !!≈ |  @CODE@ | Stem vowel changes in Illative an Elative
+  %^PLGENPLCOM    !!≈ |  @CODE@ | Stem vowel changes in final from e -> i, and withoaut -j-
+  %^COMESS        !!≈ |  @CODE@ | Stem vowel changes in ACCRA-names
 
-  ∑        !!≈ | @CODE@ | Symbol used before # in dynamic compounds, and only there
+  ∑        !!≈ |  @CODE@ | Symbol used before # in dynamic compounds, and only there
 
 
 
-!! !!Flag diacritics
+!! ## Flag diacritics
 !! We have manually optimised the structure of our lexicon using following
 !! flag diacritics to restrict morhpological combinatorics - only allow compounds
 !! with verbs if the verb is further derived into a noun again:
- @P.NeedNoun.ON@    !!≈ | @CODE@ | (Dis)allow compounds with verbs unless nominalised
- @D.NeedNoun.ON@    !!≈ | @CODE@ | (Dis)allow compounds with verbs unless nominalised
- @C.NeedNoun@       !!≈ | @CODE@ | (Dis)allow compounds with verbs unless nominalised
+ @P.NeedNoun.ON@    !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
+ @D.NeedNoun.ON@    !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
+ @C.NeedNoun@       !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
 !!
 !! For languages that allow compounding, the following flag diacritics are needed
 !! to control position-based compounding restrictions for nominals. Their use is
 !! handled automatically if combined with +CmpN/xxx tags. If not used, they will
 !! do no harm.
- @P.CmpFrst.FALSE@ !!≈ | @CODE@ | Require that words tagged as such only appear first
- @D.CmpPref.TRUE@  !!≈ | @CODE@ | Block such words from entering ENDLEX
- @P.CmpPref.FALSE@ !!≈ | @CODE@ | Block these words from making further compounds
- @D.CmpLast.TRUE@  !!≈ | @CODE@ | Block such words from entering R
- @D.CmpNone.TRUE@  !!≈ | @CODE@ | Combines with the next tag to prohibit compounding
- @U.CmpNone.FALSE@ !!≈ | @CODE@ | Combines with the prev tag to prohibit compounding
- @U.CmpNone.TRUE@  !!≈ | @CODE@ | Combines with the two previous ones to block compounding
- @P.CmpOnly.TRUE@  !!≈ | @CODE@ | Sets a flag to indicate that the word has passed R
- @D.CmpOnly.FALSE@ !!≈ | @CODE@ | Disallow words coming directly from root.
- @U.CmpHyph.FALSE@ !!≈ | @CODE@ | Flag to control hyphenated compounds like proper nouns
- @U.CmpHyph.TRUE@  !!≈ | @CODE@ | Flag to control hyphenated compounds like proper nouns
- @C.CmpHyph@       !!≈ | @CODE@ | Flag to control hyphenated compounds like proper nouns
+ @P.CmpFrst.FALSE@ !!≈ |  @CODE@ | Require that words tagged as such only appear first
+ @D.CmpPref.TRUE@  !!≈ |  @CODE@ | Block such words from entering ENDLEX
+ @P.CmpPref.FALSE@ !!≈ |  @CODE@ | Block these words from making further compounds
+ @D.CmpLast.TRUE@  !!≈ |  @CODE@ | Block such words from entering R
+ @D.CmpNone.TRUE@  !!≈ |  @CODE@ | Combines with the next tag to prohibit compounding
+ @U.CmpNone.FALSE@ !!≈ |  @CODE@ | Combines with the prev tag to prohibit compounding
+ @U.CmpNone.TRUE@  !!≈ |  @CODE@ | Combines with the two previous ones to block compounding
+ @P.CmpOnly.TRUE@  !!≈ |  @CODE@ | Sets a flag to indicate that the word has passed R
+ @D.CmpOnly.FALSE@ !!≈ |  @CODE@ | Disallow words coming directly from root.
+ @U.CmpHyph.FALSE@ !!≈ |  @CODE@ | Flag to control hyphenated compounds like proper nouns
+ @U.CmpHyph.TRUE@  !!≈ |  @CODE@ | Flag to control hyphenated compounds like proper nouns
+ @C.CmpHyph@       !!≈ |  @CODE@ | Flag to control hyphenated compounds like proper nouns
 
 !!
 !! Use the following flag diacritics to control downcasing of derived proper
 !! nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 !! these flags. There exists a ready-made regex that will do the actual down-casing
 !! given the proper use of these flags.
- @U.Cap.Obl@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
- @U.Cap.Opt@        !!≈ | @CODE@ | Allowing downcasing of derived names: deatnulasj.
+ @U.Cap.Obl@        !!≈ |  @CODE@ | Allowing downcasing of derived names: deatnulasj.
+ @U.Cap.Opt@        !!≈ |  @CODE@ | Allowing downcasing of derived names: deatnulasj.
 !                                ! Actually, downcasing should be obligatory
 
 @R.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
 @D.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
 @C.SpellRlx@    !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
 
- @P.Pmatch.Loc@       !!≈ | @CODE@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
- @P.Pmatch.Backtrack@ !!≈ | @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
+ @P.Pmatch.Loc@       !!≈ |  @CODE@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
+ @P.Pmatch.Backtrack@ !!≈ |  @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
 
 ! ================
 ! The root lexicon
 ! ================
 
 LEXICON Root
-!! !!!Lexicon @LEXNAME@
-!! This is the beginning of everything. The __@LEXNAME@__ lexicon is reserved in the
+!! # Lexicon @LEXNAME@
+!! This is the beginning of everything. The **@LEXNAME@** lexicon is reserved in the
 !! LexC language, and must be the first lexicon defined.
 
 !! Here is the list of lexica in the sma analyser
@@ -771,7 +791,7 @@ LEXICON Acronym
 Acronym-sma ;
 Acronym-smi ;
 
-LEXICON ProperNoun   !!= * __@CODE@__
+LEXICON ProperNoun   !!= * **@CODE@**
  @U.CmpHyph.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for SMA short names - always require hyphen
  @U.CmpHyph.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names - always require hyphen
                   ProperNoun-smi        ; ! SMI proper nouns
@@ -779,14 +799,14 @@ LEXICON ProperNoun   !!= * __@CODE@__
 
 
 LEXICON ENDLEX
-!! !!!Lexicon @LEXNAME@
+!! # Lexicon @LEXNAME@
 !! And this is the @LEXNAME@ of everything:
-!! {{{
+!! ```
    @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ ENDLEX2 ; !!≈ @CODE@
-!! }}}
-!! The {{@D.CmpOnly.FALSE@}} flag diacritic is ued to disallow words tagged
+!! ```
+!! The `@D.CmpOnly.FALSE@` flag diacritic is ued to disallow words tagged
 !! with +CmpNP/Only to end here.
-!! The {{@D.NeedNoun.ON@}} flag diacritic is used to block illegal compounds.
+!! The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 LEXICON ENDLEX2
  @R.SpellRlx.ON@+Err/Spellrelax@C.SpellRlx@:@R.SpellRlx.ON@0@C.SpellRlx@ # ;

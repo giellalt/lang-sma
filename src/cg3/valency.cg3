@@ -3,7 +3,7 @@
 
 # =================================================================== #
 # =================================================================== #
-#!! !!!S O U T H   S Á M I   V A L E N C Y   A N O T A T O R          
+#!! # S O U T H   S Á M I   V A L E N C Y   A N O T A T O R          
 # =================================================================== #
 # =================================================================== #
 
@@ -25,7 +25,7 @@
 
 
 # ========== #
-#!! !!Delimiters 
+#!! ## Delimiters 
 # ========== #
 
 
@@ -34,15 +34,15 @@ DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ;
 
 
 # ============= #
-#!! !!Tags and sets 
+#!! ## Tags and sets 
 # ============= #
 
-#!! !BOS/EOS:
+#!! ### BOS/EOS:
 
 LIST BOS = (>>>) (<s>);  #!! * (>>>) (<s>)
 LIST EOS = (<<<) (</s>); #!!   (<<<) (</s>)
 
-#!! !Morphological tags
+#!! ### Morphological tags
 	
 LIST N = N ;          #!! * N 
 LIST Sg = Sg ;       #!! * Sg 
@@ -150,7 +150,7 @@ LIST COMMA = "," ;
 LIST Arab = Arab ;
 
 
-#!! !Derivation tags
+#!! ### Derivation tags
 
 LIST Der/A = Der/A ; #!! * Der/A
 LIST Der/Car = Der/Car ; #!! Der/Car
@@ -190,7 +190,7 @@ LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/Der
 LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ;
 
 
-#!! ! Semantic tags
+#!! ###  Semantic tags
 # -------------
 
 LIST Sem/Act = Sem/Act Sem/Act_Clth Sem/Act_Domain Sem/Act_Event Sem/Act_Fruit Sem/Act_Group Sem/Act_Hum_Obj Sem/Act_Obj-play Sem/Act_Plc Sem/Act_Route Sem/Act_Semcon Sem/Act_Tool-it Sem/Act_Txt ;
@@ -758,7 +758,7 @@ LIST <vuostái><RF-Acc-Any> = <vuostái><RF-Acc-Any> ; #CHECK
 
 
 
-#!! !Syntactic tags
+#!! ### Syntactic tags
 
 LIST @CNP = @CNP ;				   #!! * @CNP
 LIST @CVP = @CVP ;				   #!! @CVP
@@ -835,7 +835,7 @@ SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ;
 SET INF-SYN = SUBJ OR SPRED OR OBJ OR ADVL ;
 
 
-#!! !Titles
+#!! ### Titles
 
 
 LIST REAL-TITLE = "prof" "cand.philol" ; #!! REAL-TITLE
@@ -844,7 +844,7 @@ SET TITLE = REAL-TITLE OR OFFICE ;  #!! TITLE
 
 # SET TITLE = REAL-TITLE OR TITLE-LIKE OR PROFESSION OR OFFICE ; 
 
-#!! !Sets of morphological tags for syntactic use
+#!! ### Sets of morphological tags for syntactic use
 
 LIST CASES = Nom Acc Gen Ill Ine Ela Com Ess ; #!! CASES
 LIST ADVLCASE = Ine Ill Com Ela ; #!! ADVLCASE
@@ -880,7 +880,7 @@ SET NOT-NPMODADV-INDEF = WORD - PRE-NP-HEAD - Adv - Indef ;
 
 
 
-#!! !Noun sets
+#!! ### Noun sets
 
 SET PX = PxSg1 OR PxSg2 OR PxSg3 OR PxPl1 OR PxPl2 OR PxPl3 ;
 
@@ -922,7 +922,7 @@ SET TIME-UNIT = TIME-UNIT-MEASURE OR TIME-UNIT2 ;
 SET MEASURE = VOLUME OR WEIGHT OR LENGTH OR AMOUNT OR TEMPERATURE OR TIME-UNIT-MEASURE OR ("m2") ;
 
 
-#!! !Verb sets
+#!! ### Verb sets
 
 
  # The set REALCOPULAS is smaller than COPULAS, made for verbs with PrfPrc complements: Seammás REALCOPULAS son dovdan iežas...
@@ -971,13 +971,13 @@ LIST MOVEMENT-V = "båetedh" "feeledh" "feeredh" "gaavnedh" "girtedh" "hajkedh" 
 LIST STV = Der/Caus ;
 
 
-#!! !Adective sets
+#!! ### Adective sets
 
 LIST COM-ADJ = "latjkes" "riejries" ;
 
 LIST SPRED-ADJ = "buerie" "luste" "lustes" "nåake" ; #luste?
 
-#!! !Adverb sets
+#!! ### Adverb sets
 
 LIST GUKTIEGOSSE = ("gusnie" Adv) ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
 
@@ -1004,12 +1004,12 @@ LIST ADV-MOD-NP =  "aave" "aejvie" "dovne" "eevre" "öövre" "ov" "rikti" "ajve"
 LIST GRADE-ADV =  "aaptsah" "aaptsh" "ååpsen" "aave" "aejvie" "dovne" "eevre" "ajve" "barre"  "ov" "rikti" "gaaje" "gaajh" "joekoen" "åpmohts" "åpmoeh" "man" "mahte" "ovrehte" "varke" "varki" "seamma" "öövre" "uhtjienadtje" "sagke" ; # "ållesth" "allesth" "ovve"  "åpmehts" "aajmohts"  "raakte"  are not Adv in FST #!! GRADE-ADV
 
 
-#!! !Postposition sets
+#!! ### Postposition sets
 
 LIST ILLPO = "gåajkoe" "sontere" "vööste" ; #!! ILLPO
  
 
-#!! !BOUNDARY SETS
+#!! ### BOUNDARY SETS
 
 
 SET S-BOUNDARY = Interr OR Rel OR ("men") OR ("mohte") OR ("\;") OR (":") OR ("-") OR ("–") OR CS OR BOS OR EOS OR @CVP ; #GUKTIEGOSSE #!! S-BOUNDARY
@@ -1023,7 +1023,7 @@ SET NP-BOUNDARY = BOS OR EOS OR REALCLB OR VFIN OR Inf OR Ger OR ConNeg OR VGen 
 LIST SOMESMALLABBR = "a" "r" "c" "d" "e" "f" "f" "g" "h" "i" "l" "m" "b" "j" "s" ;
 LIST SOMECAPABBR = "A" "R" "C" "D" "E" "F" "F" "G" "H" "I" "L" "M" "B" "J" "S" ;
 
-#!! !Derivation sets
+#!! ### Derivation sets
 
 LIST V-DER = Der/d Der/ht Der/alla Der/st Der/l Der/htalle Der/lg Der/htj Der/ahtje Der/InchL Der/Caus Der/adte Der/PassL Der/PassS; #!! V-DER
 
@@ -1069,7 +1069,7 @@ SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR S
  ;
 
 #       ============== #
-#!!  !!!Valency rules
+#!! # Valency rules
 #       ============== #
 
 
