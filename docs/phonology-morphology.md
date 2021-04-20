@@ -144,7 +144,7 @@
 
 
 
-**Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V**  
+**Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V **  
 
 
 * *vååjn>eX4jibie*
