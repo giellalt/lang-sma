@@ -10,8 +10,8 @@ authors named in the AUTHORS file are available to grant other licencing
 choices.
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
-[![Build Status](https://github.com/giellalt/lang-sma/workflows/Build%20Speller%20Archives%20and%20Bundles/badge.svg)](https://github.com/giellalt/lang-sma/actions)
-[![License](https://img.shields.io/github/license/giellalt/template-lang-sma)](https://raw.githubusercontent.com/giellalt/lang-sma/develop/LICENSE)
+[![Build Status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
+[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://raw.githubusercontent.com/giellalt/lang-sma/develop/LICENSE)
 
 Install proofing tools and [keyboards](https://github.com/giellalt/keyboard-sma)
 for the South Sámi language by using the [Divvun Installer](http://divvun.no)
