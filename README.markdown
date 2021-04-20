@@ -1,6 +1,10 @@
 The South Sámi morphology and tools
 ==========================================
 
+[![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
+[![Build Status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
+[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://raw.githubusercontent.com/giellalt/lang-sma/develop/LICENSE)
+
 This repository contains finite state source files for the South Sámi language,
 for building morphological analysers, proofing tools
 and dictionaries. The data and implementation are licenced under _GNU GPL v3_
@@ -8,10 +12,6 @@ licence, also detailed in the
 [LICENCE](https://github.com/giellalt/lang-sma/blob/develop/LICENCE). The
 authors named in the AUTHORS file are available to grant other licencing
 choices.
-
-[![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
-[![Build Status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
-[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://raw.githubusercontent.com/giellalt/lang-sma/develop/LICENSE)
 
 Install proofing tools and [keyboards](https://github.com/giellalt/keyboard-sma)
 for the South Sámi language by using the [Divvun Installer](http://divvun.no)
