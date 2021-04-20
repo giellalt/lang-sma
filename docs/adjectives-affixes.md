@@ -43,36 +43,36 @@ before compiling.
 
 
 
-# LEXICON PRED_S
-The __PRED_S__ lexicon is used for adjectives Predicatives.
+ # LEXICON PRED_S
+The **PRED_S** lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>s FINAL1 ; 
 ```
 
-# LEXICON PRED_0
-The __PRED_0__ lexicon is used for adjectives Predicatives.
+ # LEXICON PRED_0
+The **PRED_0** lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom: FINAL1 ; 
 ```
 
-# LEXICON PRED_H
-The __PRED_H!!≈__ lexicon is used for adjectives Predicatives.
+ # LEXICON PRED_H
+The **PRED_H!!≈** lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>h FINAL1 ; 
 ```
 
 
 denne skal også ut ! - --> intersatn om dette er en norsk suffiks egentlig?
-# LEXICON PRED_NE_ODD
-The __PRED_NE_ODD!!≈__ lexicon is used for adjectives Predicatives.
+ # LEXICON PRED_NE_ODD
+The **PRED_NE_ODD!!≈** lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>ne FINAL1     ; 
           :n     ODDCASEOBL ; 
           :n     ODDCOMP    ; 
 ```
 
-# LEXICON PRED_N    -  GENITIV
-The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
+ # LEXICON PRED_N    -  GENITIV
+The **PRED_N!!≈** lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>n FINAL1 ; 
 
@@ -88,8 +88,8 @@ The __PRED_N!!≈__ lexicon is used for adjectives Predicatives.
 
 
 
-# LEXICON e_E_EVEN
-The __e_E_EVEN!!≈__ lexicon is used for adjectives on `–e` and `–e`  In attributes and predicatives.With EVEN-NOCOMP.
+ # LEXICON e_E_EVEN
+The **e_E_EVEN!!≈** lexicon is used for adjectives on `–e` and `–e`  In attributes and predicatives.With EVEN-NOCOMP.
 ```
        :e ATTR_0      ; 
        :e PRED_0      ; 
@@ -99,21 +99,21 @@ The __e_E_EVEN!!≈__ lexicon is used for adjectives on `–e` and `–e`  In at
        :e EVENCOMP    ; 
 ```
 
-# LEXICON e_E_EVENNOCOMP1
-The __e_E_EVENNOCOMP1!!≈__ lexicon is used for adjectives on `–e` and `–e` stem. In attributes and predicatives.With EVEN-NOCOMP.
+ # LEXICON e_E_EVENNOCOMP1
+The **e_E_EVENNOCOMP1!!≈** lexicon is used for adjectives on `–e` and `–e` stem. In attributes and predicatives.With EVEN-NOCOMP.
 
 ```
        :e ATTR_0      ; 
        :e PRED_0      ; 
   +Sg:  NIEJTESGOBL ; 
-###  +Sg:  NIEJTESGOBL ; 
+  ! +Sg:  NIEJTESGOBL ; 
   +Pl:  NIEJTE_PL   ; 
        NIEJTEREST  ; 
 ```
 
 
-# LEXICON a_A_EVEN1
-The __a_A_EVEN1!!≈__ lexicon is used for adjectives on `–a` and `–a`  In attributes and predicatives.With EVEN-COMP.
+ # LEXICON a_A_EVEN1
+The **a_A_EVEN1!!≈** lexicon is used for adjectives on `–a` and `–a`  In attributes and predicatives.With EVEN-COMP.
 ```
        :a ATTR_0     ; 
   +Sg:  MAANASGNOM ; 
@@ -121,8 +121,8 @@ The __a_A_EVEN1!!≈__ lexicon is used for adjectives on `–a` and `–a`  In a
        :a EVENCOMP   ; 
 ```
 
-# LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
-The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on `–as` and `–as`  In attributes and predicatives.With EVEN-COMP.
+ # LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
+The **as_AS_EVEN1!!≈** lexicon is used for adjectives on `–as` and `–as`  In attributes and predicatives.With EVEN-COMP.
 ```
                :a  ATTR_S   ; 
       +Sg+Nom:as FINAL1   ; 
@@ -130,8 +130,8 @@ The __as_AS_EVEN1!!≈__ lexicon is used for adjectives on `–as` and `–as`  
 ```
 
 
-# LEXICON ie_IE_EVEN1
-The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives.With EVEN-COMP.
+ # LEXICON ie_IE_EVEN1
+The **ie_IE_EVEN1!!≈** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives.With EVEN-COMP.
 ```
     :ie ATTR_0     ; 
      N_IE_FORMS ; 
@@ -139,20 +139,20 @@ The __ie_IE_EVEN1!!≈__ lexicon is used for adjectives on `–ie` and `–ie`  
 ```
 
 
-# LEXICON ie_IE_EVENNOCOMP
-The __ie_IE_EVENNOCOMP!!≈__ lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
+ # LEXICON ie_IE_EVENNOCOMP
+The **ie_IE_EVENNOCOMP!!≈** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
 ```
     :ie ATTR_0     ; 
      N_IE_FORMS ; 
 ```
 
-The __a_A_EVEN1_NOCOMP__ lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
+The **a_A_EVEN1_NOCOMP** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
 ```
        :a ATTR_0     ; 
 ```
 
-# LEXICON es_ES_EVEN
-The __es_ES_EVEN!!≈__ lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-COMP.
+ # LEXICON es_ES_EVEN
+The **es_ES_EVEN!!≈** lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-COMP.
 ```
             :e      ATTR_S       ; 
             :e      PRED_S       ; 
@@ -163,7 +163,7 @@ The __es_ES_EVEN!!≈__ lexicon is used for adjectives on `–es` and `–es`  I
 
 
 
-The __es_ES_EVENNOCOMP1__ lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-NOCOMP.
+The **es_ES_EVENNOCOMP1** lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-NOCOMP.
 
 ```
   :e  ATTR_S     ; 
@@ -172,14 +172,14 @@ The __es_ES_EVENNOCOMP1__ lexicon is used for adjectives on `–es` and `–es` 
 ```
 
 
-The __ies_IES_EVEN1__ lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-COMP.
+The **ies_IES_EVEN1** lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-COMP.
 ```
       ies_IES_EVENNOCOMP1 ; 
   :ie EVENCOMP            ; 
 ```
 
 
-The __ies_IES_EVENNOCOMP1__ lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-NOCOMP.
+The **ies_IES_EVENNOCOMP1** lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-NOCOMP.
 ```
    :ie ATTR_S    ; 
    :ie PRED_S    ; 
@@ -630,7 +630,7 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
- * __LEXICON s_H_EVENNOCOMP   __
+ * **LEXICON s_H_EVENNOCOMP   **
 
 
 
