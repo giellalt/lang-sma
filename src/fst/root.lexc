@@ -59,7 +59,6 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! ## Error (non-standard language) tags
 
 				  !! |   Error tag | Explanation
-
 !! | --- | --- 
 +Err/Orth         !!≈ |  **@CODE@** | Substandard, unormert form av et ord
 +Err/Hyph         !!≈ |  **@CODE@** | Substandard, unormert
@@ -73,7 +72,6 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! ### Usage tags
 
 				 !! |   Usage tag | Explanation
-
 !! | --- | --- 
 +Use/Marg        !!≈ |  **@CODE@** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 +Use/-Spell      !!≈ |  **@CODE@** | Excluded from speller
@@ -94,7 +92,6 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 		   !! ## Dialect tags
 
 		   !! |   Dialect tag | Explanation
-
 !! | --- | --- 
 +Dial/-S   !!≈ |  **@CODE@** | Not in the South
 +Dial/S    !!≈ |  **@CODE@** | Only in the South
@@ -227,6 +224,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
   +Pl3                                  !!≈ |  **@CODE@** | Plural  , 3.person
 
 !! ## Other verbal tags
+
 !! |             Verbal tag | Explanation
 !! |                    --- | --- 
   +Neg     !!≈ | **@CODE@** | negation verb ij
@@ -494,7 +492,8 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
  +Sem/Time_Wthr             !!≈ * @CODE@ = 
  +Sem/Domain_Txt            !!≈ * @CODE@ = 
  
- 
+!! |              Tag | Explanation
+!! |                    --- | --- 
  +MWE     !!≈ |  @CODE@ | multi word expressions, goes to abbr
 
 !! Use the following flag diacritics to control downcasing of derived proper
@@ -502,13 +501,13 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! these flags. There exists a ready-made regex that will do the actual down-casing
 !! given the proper use of these flags.
 
+!! |              Flag | Explanation
+!! |                    --- | --- 
  @P.Px.add@     !!≈ |  @CODE@ | Giving possibility for Px-suffixes (all except from Nom 3.p)
  @R.Px.add@     !!≈ |  @CODE@ | Requiring P.Px.add-flag for Px-suffixes (all except from Nom 3.p)
  @P.Nom3Px.add@ !!≈ |  @CODE@ |  Giving possibility for Px-suffixes Nom 3.p
  @R.Nom3Px.add@ !!≈ |  @CODE@ | Requiring P.Nom3Px.add flag for Px-suffixes Nom 3.p
-
  @P.Pmatch.Backtrack@ !!≈ |  @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this poin in the form (to find combinations of shorter analyses that would otherwise be missed)
-
  @D.ErrOrth.ON@      !!≈ |  @CODE@  | asdf
  @C.ErrOrth@	        !!≈ |  @CODE@ | asdf
  @P.ErrOrth.ON@      !!≈ |  @CODE@ | asdf

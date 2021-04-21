@@ -79,7 +79,6 @@
 ## Dialect tags
 
 |   Dialect tag | Explanation
-
 | --- | --- 
  |  **+Dial/-S** | Not in the South
  |  **+Dial/S** | Only in the South
