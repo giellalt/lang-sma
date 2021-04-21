@@ -54,55 +54,55 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! ### Numeral subtypes
 +Coll    !!≈ * **@CODE@** = Collective numeral
 +Arab    !!≈ * **@CODE@** = Arabic numeral
-+Rom     !!≈ * **@CODE@** =
++Rom     !!≈ * **@CODE@** = Roman numeral
 
 !! ## Error (non-standard language) tags
 
-!! |                      Error tag | Explanation
-!! |                            --- | --- 
-+Err/Orth         !!≈ |  **@CODE@** | Substandard, unormert form av et ord
-+Err/Hyph         !!≈ |  **@CODE@** | Substandard, unormert
-+Err/SpaceCmp     !!≈ |  **@CODE@** | Substandard, unormert 
-+Err/Attr         !!≈ |  **@CODE@** | Substandard, unormert Attr-form av et ord
-+Err/Lex          !!≈ |  **@CODE@** | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
-+Err/Der          !!≈ |  **@CODE@** | Errors in derivations
-+Err/Spellrelax   !!≈ |  **@CODE@** | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
-+Err/MissingSpace !!≈ |  **@CODE@** | in use ins smi lexc
+!! |                     Error tag | Explanation
+!! |                           --- | --- 
++Err/Orth         !!≈ | **@CODE@** | Substandard, unormert form av et ord
++Err/Hyph         !!≈ | **@CODE@** | Substandard, unormert
++Err/SpaceCmp     !!≈ | **@CODE@** | Substandard, unormert 
++Err/Attr         !!≈ | **@CODE@** | Substandard, unormert Attr-form av et ord
++Err/Lex          !!≈ | **@CODE@** | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
++Err/Der          !!≈ | **@CODE@** | Errors in derivations
++Err/Spellrelax   !!≈ | **@CODE@** | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
++Err/MissingSpace !!≈ | **@CODE@** | in use ins smi lexc
 
 !! ### Usage tags
 
-!! |       Usage tag | Explanation
-!! |             --- | --- 
-+Use/Marg        !!≈ |  **@CODE@** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
-+Use/-Spell      !!≈ |  **@CODE@** | Excluded from speller
-+Use/-PLX        !!≈ |  **@CODE@** | Excluded in PLX speller
-+Use/SpellNoSugg !!≈ |  **@CODE@** | Recognized but not suggested in speller
-+Use/Circ        !!≈ |  **@CODE@** | Circular path
-+Use/CircN       !!≈ |  **@CODE@** | Circular number path?
-+Use/Ped         !!≈ |  **@CODE@** | Remove from pedagogical speller
-+Use/NG          !!≈ |  **@CODE@** | Do not generate <br/> for isme-ped.fst and apertium
-+Use/MT          !!≈ |  **@CODE@** | Generate for apertium only
-+Use/NotDNorm    !!≈ |  **@CODE@** | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
-+Use/DNorm       !!≈ |  **@CODE@** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
-+Use/PMatch      !!≈ |  **@CODE@** | Do *only* include in fst's for hfst-pmatch
-+Use/-PMatch     !!≈ |  **@CODE@** | Do not include in fst's made for hfst-pmatch
-+Use/GC          !!≈ | **@CODE@**  | only retained in the HFST Grammar Checker disambiguation analyser
-+Use/-GC         !!≈ | **@CODE@**  | never retained in the HFST Grammar Checker disambiguation analyser
+!! |                    Usage tag | Explanation
+!! |                          --- | --- 
++Use/Marg        !!≈ | **@CODE@** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
++Use/-Spell      !!≈ | **@CODE@** | Excluded from speller
++Use/-PLX        !!≈ | **@CODE@** | Excluded in PLX speller
++Use/SpellNoSugg !!≈ | **@CODE@** | Recognized but not suggested in speller
++Use/Circ        !!≈ | **@CODE@** | Circular path
++Use/CircN       !!≈ | **@CODE@** | Circular number path?
++Use/Ped         !!≈ | **@CODE@** | Remove from pedagogical speller
++Use/NG          !!≈ | **@CODE@** | Do not generate <br/> for isme-ped.fst and apertium
++Use/MT          !!≈ | **@CODE@** | Generate for apertium only
++Use/NotDNorm    !!≈ | **@CODE@** | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
++Use/DNorm       !!≈ | **@CODE@** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
++Use/PMatch      !!≈ | **@CODE@** | Do *only* include in fst's for hfst-pmatch
++Use/-PMatch     !!≈ | **@CODE@** | Do not include in fst's made for hfst-pmatch
++Use/GC          !!≈ | **@CODE@** | only retained in the HFST Grammar Checker disambiguation analyser
++Use/-GC         !!≈ | **@CODE@** | never retained in the HFST Grammar Checker disambiguation analyser
 
 !! ## Dialect tags
 
-!! |             Dialect tag | Explanation
-!! |                     --- | --- 
-+Dial/-S   !!≈ |  **@CODE@** | Not in the South
-+Dial/S    !!≈ |  **@CODE@** | Only in the South
-+Dial/-N   !!≈ |  **@CODE@** | Not in the North
-+Dial/N    !!≈ |  **@CODE@** | Only in the North
-+Dial/-NOR !!≈ |  **@CODE@** | Words not in Norway
-+Dial/NOR  !!≈ |  **@CODE@** | Words only in Norway
-+Dial/-SW  !!≈ |  **@CODE@** | Words not in Sweden
-+Dial/SW   !!≈ |  **@CODE@** | Words only in Sweden
-+Dial/SH   !!≈ |  **@CODE@** | Short forms
-+Dial/L    !!≈ |  **@CODE@** | Long forms
+!! |            Dialect tag | Explanation
+!! |                    --- | --- 
++Dial/-S   !!≈ | **@CODE@** | Not in the South
++Dial/S    !!≈ | **@CODE@** | Only in the South
++Dial/-N   !!≈ | **@CODE@** | Not in the North
++Dial/N    !!≈ | **@CODE@** | Only in the North
++Dial/-NOR !!≈ | **@CODE@** | Words not in Norway
++Dial/NOR  !!≈ | **@CODE@** | Words only in Norway
++Dial/-SW  !!≈ | **@CODE@** | Words not in Sweden
++Dial/SW   !!≈ | **@CODE@** | Words only in Sweden
++Dial/SH   !!≈ | **@CODE@** | Short forms
++Dial/L    !!≈ | **@CODE@** | Long forms
 
 
 !  +Dial/OE  ! oe forms ! We assume these are lexical, and do not tag.
@@ -122,7 +122,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! are listed - unless `+CmpN/SgN` should *not* be used, for course.
 
 !! |    Normative compounding tag | Explanation
-!! |                 :----        | :---- 
+!! |                        :---- | :---- 
 +CmpN/Sg        !!≈ |  **@CODE@** | Singular
 +CmpN/SgN       !!≈ |  **@CODE@** | Singular Nominative
 +CmpN/SgG       !!≈ |  **@CODE@** | Singular Genitive
@@ -590,7 +590,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! and foreign names are usually pronounced (approximately) as in the
 !! originating (majority) language. Instead of trying to identify the
 !! correct pronunciation based on phonotactics (orthotactics actually),
-!! we tag all words that can't be correctly transcribed using the SME
+!! we tag all words that can't be correctly transcribed using the SMA
 !! transcriber with source language codes. Once tagged, it is possible
 !! to split the lexical transducer in smaller ones according to langu-
 !! age, and apply different IPA conversion to each of them.
@@ -610,7 +610,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! with as little work as possible. On the other hand, if more words
 !! are tagged than strictly needed, this should pose no problem as
 !! long as the IPA conversion is correct - at least some words will
-!! get the same pronunciation whether read as SME or NOB/NNO/SWE.
+!! get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 
 !! |   Originating language tag | Originating language
 !! | --- | --- 
@@ -671,6 +671,8 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 
 !! ## Umlaut and diphthong simplification triggers
 
+!! |                    Trigger | Explanation
+!! |                        --- | --- 
   %^DISIMP        !!≈ |  @CODE@ | diphthong simplification
   %^COMPDISIMP    !!≈ |  @CODE@ | diphthong simplification in comparatives
   %^COMPDISIMP2   !!≈ |  @CODE@ | diphthong simplification in comparatives, type 2
@@ -694,29 +696,29 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
   %^ILLELA        !!≈ |  @CODE@ | Stem vowel changes in Illative an Elative
   %^PLGENPLCOM    !!≈ |  @CODE@ | Stem vowel changes in final from e -> i, and withoaut -j-
   %^COMESS        !!≈ |  @CODE@ | Stem vowel changes in ACCRA-names
-
-  ∑        !!≈ |  @CODE@ | Symbol used before # in dynamic compounds, and only there
+  ∑               !!≈ |  @CODE@ | Symbol used before `#` and `-` in dynamic compounds, and only there. Used to block optional conversion of word boundaries to spaces for error detection in grammar checkers. That is, dynamic compounds are not allowed to be written appart for error detection, only lexicalised ones. This is done to reduce the amound of ambiguity in the raw analyses to an amount we can cope with.
 
 
 
 !! ## Flag diacritics
-!! We have manually optimised the structure of our lexicon using following
+!! We have manually optimised the structure of our lexicon using the following
 !! flag diacritics to restrict morhpological combinatorics - only allow compounds
 !! with verbs if the verb is further derived into a noun again:
 
-!! |              Tag | Explanation
-!! |                    --- | --- 
+!! |                         Flag | Explanation
+!! |                          --- | --- 
  @P.NeedNoun.ON@    !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
  @D.NeedNoun.ON@    !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
  @C.NeedNoun@       !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
-!!
+
+
 !! For languages that allow compounding, the following flag diacritics are needed
 !! to control position-based compounding restrictions for nominals. Their use is
 !! handled automatically if combined with +CmpN/xxx tags. If not used, they will
 !! do no harm.
 
-!! |              Tag | Explanation
-!! |                    --- | --- 
+!! |                        Flag | Explanation
+!! |                         --- | --- 
  @P.CmpFrst.FALSE@ !!≈ |  @CODE@ | Require that words tagged as such only appear first
  @D.CmpPref.TRUE@  !!≈ |  @CODE@ | Block such words from entering ENDLEX
  @P.CmpPref.FALSE@ !!≈ |  @CODE@ | Block these words from making further compounds
@@ -730,22 +732,26 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
  @U.CmpHyph.TRUE@  !!≈ |  @CODE@ | Flag to control hyphenated compounds like proper nouns
  @C.CmpHyph@       !!≈ |  @CODE@ | Flag to control hyphenated compounds like proper nouns
 
-!!
 !! Use the following flag diacritics to control downcasing of derived proper
 !! nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 !! these flags. There exists a ready-made regex that will do the actual down-casing
 !! given the proper use of these flags.
 
-!! |              Tag | Explanation
-!! |                    --- | --- 
+!! |                         Flag | Explanation
+!! |                          --- | --- 
  @U.Cap.Obl@        !!≈ |  @CODE@ | Allowing downcasing of derived names: deatnulasj.
  @U.Cap.Opt@        !!≈ |  @CODE@ | Allowing downcasing of derived names: deatnulasj.
 !                                ! Actually, downcasing should be obligatory
-@R.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
-@D.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
-@C.SpellRlx@    !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
- @P.Pmatch.Loc@       !!≈ |  @CODE@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
- @P.Pmatch.Backtrack@ !!≈ |  @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
+
+!! The following flag diacritics are used by the grammar checker.
+
+!! |                         Flag | Explanation
+!! |                          --- | --- 
+@R.SpellRlx.ON@      !!≈ | @CODE@ | Flag used to tag spell-relax-analysed strings (and only those).
+@D.SpellRlx.ON@      !!≈ | @CODE@ | Flag used to tag spell-relax-analysed strings (and only those).
+@C.SpellRlx@         !!≈ | @CODE@ | Flag used to tag spell-relax-analysed strings (and only those).
+@P.Pmatch.Loc@       !!≈ | @CODE@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
+@P.Pmatch.Backtrack@ !!≈ | @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
 
 ! ================
 ! The root lexicon
@@ -756,40 +762,34 @@ LEXICON Root
 !! This is the beginning of everything. The **@LEXNAME@** lexicon is reserved in the
 !! LexC language, and must be the first lexicon defined.
 
-!! Here is the list of lexica in the sma analyser
+!! Here is the list of top-level lexica in the sma analyser
 
             Prefixes     ;
 ! @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
 ! @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
-
 ! @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
-
 ! @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
-
 ! @U.Cap.Obl@ ProperNoun-sma       ; ! SMA proper nouns - always uppercase. outcommented 19.9.16
-
 ! @U.Cap.Opt@ ProperNoun-sma       ; ! SMA proper nouns - downcased for derivations. outcommented 19.9.16
-
 ! @U.Cap.Obl@ ProperNoun-smi       ; ! SMI proper nouns. outcommented 19.9.16
-
 ! @U.Cap.Opt@ ProperNoun-smi       ; ! SMI proper nouns. outcommented 19.9.16
 
-             NounRoot     ; !!≈ * @CODE@
-             Verb         ; !!≈ * @CODE@
-             Adjective    ; !!≈ * @CODE@
-             Pronoun      ; !!≈ * @CODE@
-             Adverb       ; !!≈ * @CODE@
-             Subjunction  ; !!≈ * @CODE@
-             Conjunction  ; !!≈ * @CODE@
-             Particle     ; !!≈ * @CODE@
-             Adposition   ; !!≈ * @CODE@
-             Punctuation  ; !!≈ * @CODE@
-             Symbols      ; !!≈ * @CODE@
-             Interjection ; !!≈ * @CODE@
- +Use/CircN: Numeral      ; !!≈ * @CODE@
-             Abbreviation ; !!≈ * @CODE@
-             Acronym      ; !!≈ * @CODE@
-             ProperNoun   ;
+             NounRoot     ; !!≈ * `@CODE@`
+             Verb         ; !!≈ * `@CODE@`
+             Adjective    ; !!≈ * `@CODE@`
+             Pronoun      ; !!≈ * `@CODE@`
+             Adverb       ; !!≈ * `@CODE@`
+             Subjunction  ; !!≈ * `@CODE@`
+             Conjunction  ; !!≈ * `@CODE@`
+             Particle     ; !!≈ * `@CODE@`
+             Adposition   ; !!≈ * `@CODE@`
+             Punctuation  ; !!≈ * `@CODE@`
+             Symbols      ; !!≈ * `@CODE@`
+             Interjection ; !!≈ * `@CODE@`
+ +Use/CircN: Numeral      ; !!≈ * `@CODE@`
+             Abbreviation ; !!≈ * `@CODE@`
+             Acronym      ; !!≈ * `@CODE@`
+             ProperNoun   ; !!≈ * `@CODE@`
 
 LEXICON Abbreviation
 Abbreviation-sma ;
@@ -800,7 +800,7 @@ LEXICON Acronym
 Acronym-sma ;
 Acronym-smi ;
 
-LEXICON ProperNoun   !!≈ * **@CODE@**
+LEXICON ProperNoun   ! !≈ * **@CODE@**
  @U.CmpHyph.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for SMA short names - always require hyphen
  @U.CmpHyph.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names - always require hyphen
                   ProperNoun-smi        ; ! SMI proper nouns
