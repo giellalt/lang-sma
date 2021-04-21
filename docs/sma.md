@@ -18,8 +18,8 @@
  * **+Pcle** = Particle
  * **+Num** = Numerals
  * **+TODO** = Code for items that have not been modeled yet
- * **+Logo    **
- * **+Subqst  ** for adverbs
+ * **+Logo**
+ * **+Subqst** for adverbs
  * **+Dyn** = Code dynamic acronyms
 
 ## Tags for sub-POS
@@ -100,22 +100,22 @@
 ## Normative/prescriptive compounding tags
 (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
-### The left part of a compound should be
+### The left part of a compound should be ...
 
 The default is `+CmpN/SgN`, so when nothing is specified, that
 will be used. To override that one, specify one or more of the
 following tags. `+CmpN/SgN` must be specified if also other tags
 are listed - unless `+CmpN/SgN` should *not* be used, for course.
 
-                 |   Normative compounding tag | Explanation
-                 |:----        |:--- 
+|    Normative compounding tag | Explanation
+|                 :----        | :---- 
  |  **+CmpN/Sg** | Singular
  |  **+CmpN/SgN** | Singular Nominative
  |  **+CmpN/SgG** | Singular Genitive
  |  **+CmpN/PlG** | Plural Genitive
 
 
-### The right part of a compound requires to the left
+### The right part of a compound requires to the left ...
 
 These tags overrule the regular tags defined above. One or more
 can be specified.
@@ -128,8 +128,8 @@ can be specified.
  |  **+CmpN/PlGenLeft** | "
 
 ### This part of the component can ...
-|   Normative position tag | Explanation
-| --- | --- 
+|        Normative position tag | Explanation
+|                           --- | --- 
  |  **+CmpNP/All** | ... be in all positions, **default**, this tag does not have to be written
  |  **+CmpNP/First** | ... only be first part in a compound or alone
  |  **+CmpNP/Pref** | ... only be **first** part in a compound, NEVER alone
@@ -143,8 +143,8 @@ can be specified.
 Tags for compound analysis - this is what a compound actually is. We use this
 to research compounding patterns in the corpus.
 
-|   Desriptive compounding tag | Explanation
-| --- | --- 
+| Descriptive compounding tag | Explanation
+|                       --- | --- 
  |  **+Cmp/Sg** | Compounding using an unspecified singular stem
  |  **+Cmp/SgNom** | Compounding using nominative singular
  |  **+Cmp/SgGen** | Compounding using genitive singular
@@ -163,36 +163,41 @@ to research compounding patterns in the corpus.
 
 # Tags for Inflection
 
-## Tags for Case and Number Inflection
+## Tags for Case, Number & Possessive Inflection
 ### Case and number
- * **+Sg    ** = Singular
- * **+Pl    ** = Plural
- * **+Du    ** = Dual
+ * **+Sg** = Singular
+ * **+Pl** = Plural
+ * **+Du** = Dual
 
- * **+Nom   ** = Nominative
- * **+Acc   ** = Ackusative
- * **+Gen   ** = Genitive
- * **+Ine   ** = Inesive
- * **+Ela   ** = Elative
- * **+Ill   **= Illative
- * **+Com   **= Comitative
- * **+Ess   ** = Essive
+ * **+Nom** = Nominative
+ * **+Acc** = Ackusative
+ * **+Gen** = Genitive
+ * **+Ine** = Inesive
+ * **+Ela** = Elative
+ * **+Ill**= Illative
+ * **+Com**= Comitative
+ * **+Ess** = Essive
 
 
-## Px
- * **  +PxSg1                            ** =  Possessives Singular
- * **  +PxSg2                            ** =  Possessives Singular
- * **  +PxSg3                            ** =  Possessives Singular
- * **  +PxDu1                            ** =  Possessives Dual
- * **  +PxDu2                            ** =  Possessives Dual
- * **  +PxDu3                            ** =  Possessives Dual
- * **  +PxPl1                            ** =  Possessives Plural
- * **  +PxPl2                            ** =  Possessives Plural
- * **  +PxPl3                            ** =  Possessives Plural
+## Possessive
+ * **+PxSg1** =  Possessives Singular
+ * **+PxSg2** =  Possessives Singular
+ * **+PxSg3** =  Possessives Singular
+ * **+PxDu1** =  Possessives Dual
+ * **+PxDu2** =  Possessives Dual
+ * **+PxDu3** =  Possessives Dual
+ * **+PxPl1** =  Possessives Plural
+ * **+PxPl2** =  Possessives Plural
+ * **+PxPl3** =  Possessives Plural
 
+## Tense, Person & Number
+|                                                 Tense tag | Explanation
+|                                                       --- | --- 
  |  **+Prs** | Presens
  |  **+Prt** | Preteritum
 
+|                                  Person & Number tag | Explanation
+|                                                  --- | --- 
  |  **+Sg1** | Singular, 1.person
  |  **+Sg2** | Singular, 2.person
  |  **+Sg3** | Singular, 3.person
@@ -203,24 +208,24 @@ to research compounding patterns in the corpus.
  |  **+Pl2** | Plural  , 2.person
  |  **+Pl3** | Plural  , 3.person
 
- |  +Neg | negation verb ij
- |  +ConNeg | main verb complement to Neg, form identical to Imp
- |  +VAbess | Verb Abessive
+## Other verbal tags
+|             Verbal tag | Explanation
+|                    --- | --- 
+ | **+Neg** | negation verb ij
+ | **+ConNeg** | main verb complement to Neg, form identical to Imp
+ | **+VAbess** | Verb Abessive
+ | **+Inf** | Infinitive and participles
+ | **+PrfPrc** | Infinitive and participles
+ | **+PrsPrc** | Infinitive and participles
+ | **+Ger** | Gerundium
+ | **+VGen** | Verbgenitive
+ | **+Ind** | Indicative
+ | **+Imprt** | Imperative
+ | **+ImprtII** | Imperative, for Neg:  ollem ollh ...
+ | **+Cond** | Kondisjonalis, for one form:  lidtjie. To be looked at.+ lidtjim, + lidtjih
+ | **+Act** | *-eme*, could be changed to `+Actio`
 
- * **+Inf**:  Infinitive and participles
- * **+PrfPrc**:   Infinitive and participles
- * **+PrsPrc**:  Infinitive and participles
- * **+Ger**:  Gerundium
- * **+VGen**:  Verbgenitive
-
- * **+Ind**:  Indicative
- * **+Imprt**:  Imperative
- * **+ImprtII : Imperative, for Neg**:  ollem ollh ...
- * **+Cond : Kondisjonalis, for one form**:  lidtjie.
-            To be looked at.+ lidtjim, + lidtjih
- * **+Act**:  *-eme*, could be changed to `+Actio`
-
-### Tags for adjectives
+## Tags for adjectives
 
  * **+Attr**:  Attribute form
  * **+Ord**:  Ordinal number
@@ -276,199 +281,199 @@ to research compounding patterns in the corpus.
 
 ## Semantic tags to help disambiguation & synt. analysis:
 
- *  +Sem/Act                    = Activity
- *  +Sem/Adr                    = Webadr
- *  +Sem/Amount                 = mengde eks penger og tall
- *  +Sem/Ani                    = 
- *  +Sem/Ani-fish               = fisk
- *  +Sem/Aniprod                = Animal Product
- *  +Sem/Body                   = Bodypart
- *  +Sem/Body-abstr             = sjel, ånd, jierbmi
- *  +Sem/Build                  = Building
- *  +Sem/Build-room             = room in a building, typically place to be
- *  +Sem/Buildpart              = Part of Bulding, like the closet
- *  +Sem/Cat                    = Category
- *  +Sem/Clth                   = Clothes
- *  +Sem/Clth-jewl              = Jewelery
- *  +Sem/Clthpart               = part of clothes, knapp, søm
- *  +Sem/Ctain                  = Container
- *  +Sem/Ctain-abstr            = Abstract container like bank account
- *  +Sem/Ctain-clth             = 
- *  +Sem/Curr                   = Currency like dollar, Not Money
- *  +Sem/Dance                  = Dance
- *  +Sem/Date                   = 
- *  +Sem/Dir                    = Direction like GPS-kursa
- *  +Sem/Domain                 = 
- *  +Sem/Drink                  = 
- *  +Sem/Dummytag               = 
- *  +Sem/Edu                    = 
- *  +Sem/Event                  = 
- *  +Sem/Feat                   = 
- *  +Sem/Feat-measr             = 
- *  +Sem/Feat-phys              = 
- *  +Sem/Feat-psych             = 
- *  +Sem/Fem                    = 
- *  +Sem/Food                   = mat, krydder
- *  +Sem/Food-med               = medisin eks: hodetabelett
- *  +Sem/Fruit                  = frukt,bær, salat
- *  +Sem/Furn                   = møbler
- *  +Sem/Group                  = 
- *  +Sem/Hum                    = mennesker
- *  +Sem/ID                     = 
- *  +Sem/Ideol                  = 
- *  +Sem/Lang                   = språk
- *  +Sem/Mal                    = 
- *  +Sem/Mat                    = material eks: mineral, nikkel,plast, kalvskinn
- *  +Sem/Measr                  = måttenhet ek cm,km, m minutter etc
- *  +Sem/Money                  = penger,depositum, gevinst, stipend
- *  +Sem/Obj                    = 
- *  +Sem/Obj-clo                = handduk, flagg, pledd, 
- *  +Sem/Obj-el                 = 
- *  +Sem/Obj-ling               = kort,biletter
- *  +Sem/Obj-play               = ball eks:vollyball,fotball, snøball
- *  +Sem/Obj-rope               = 
- *  +Sem/Obj-surfc              = 
- *  +Sem/Org                    = organisasjon, sammansluttning
- *  +Sem/Part                   = 
- *  +Sem/Perc-emo               = 
- *  +Sem/Perc-phys              = 
- *  +Sem/Plant                  = 
- *  +Sem/Plantpart              = 
- *  +Sem/Plc                    = 
- *  +Sem/Plc-abstr              = 
- *  +Sem/Plc-elevate            = 
- *  +Sem/Plc-line               = 
- *  +Sem/Plc-water              = 
- *  +Sem/Pos                    = 
- *  +Sem/Process                = 
- *  +Sem/Prod                   = 
- *  +Sem/Prod-audio             = 
- *  +Sem/Prod-cogn              = 
- *  +Sem/Prod-ling              = 
- *  +Sem/Prod-vis               = 
- *  +Sem/Route                  = 
- *  +Sem/Rule                   = 
- *  +Sem/Semcon                 = 
- *  +Sem/Sign                   = 
- *  +Sem/State                  = 
- *  +Sem/State-sick             = 
- *  +Sem/Substnc                = 
- *  +Sem/Sur                    = 
- *  +Sem/Time                   = 
- *  +Sem/Time-clock             = 
- *  +Sem/Tool                   = 
- *  +Sem/Tool-catch             = 
- *  +Sem/Tool-clean             = 
- *  +Sem/Tool-it                = 
- *  +Sem/Tool-music             = 
- *  +Sem/Tool-write             = 
- *  +Sem/Txt                    = tekst
- *  +Sem/Veh                    = 
- *  +Sem/Wpn                    = 
- *  +Sem/Wthr                   = 
- *  +Sem/Year                   = year (i.e. 1000 - 2999), used only for numerals
+ * +Sem/Act = Activity
+ * +Sem/Adr = Webadr
+ * +Sem/Amount = mengde eks penger og tall
+ * +Sem/Ani = 
+ * +Sem/Ani-fish = fisk
+ * +Sem/Aniprod = Animal Product
+ * +Sem/Body = Bodypart
+ * +Sem/Body-abstr = sjel, ånd, jierbmi
+ * +Sem/Build = Building
+ * +Sem/Build-room = room in a building, typically place to be
+ * +Sem/Buildpart = Part of Bulding, like the closet
+ * +Sem/Cat = Category
+ * +Sem/Clth = Clothes
+ * +Sem/Clth-jewl = Jewelery
+ * +Sem/Clthpart = part of clothes, knapp, søm
+ * +Sem/Ctain = Container
+ * +Sem/Ctain-abstr = Abstract container like bank account
+ * +Sem/Ctain-clth = 
+ * +Sem/Curr = Currency like dollar, Not Money
+ * +Sem/Dance = Dance
+ * +Sem/Date = 
+ * +Sem/Dir = Direction like GPS-kursa
+ * +Sem/Domain = 
+ * +Sem/Drink = 
+ * +Sem/Dummytag = 
+ * +Sem/Edu = 
+ * +Sem/Event = 
+ * +Sem/Feat = 
+ * +Sem/Feat-measr = 
+ * +Sem/Feat-phys = 
+ * +Sem/Feat-psych = 
+ * +Sem/Fem = 
+ * +Sem/Food = mat, krydder
+ * +Sem/Food-med = medisin eks: hodetabelett
+ * +Sem/Fruit = frukt,bær, salat
+ * +Sem/Furn = møbler
+ * +Sem/Group = 
+ * +Sem/Hum = mennesker
+ * +Sem/ID = 
+ * +Sem/Ideol = 
+ * +Sem/Lang = språk
+ * +Sem/Mal = 
+ * +Sem/Mat = material eks: mineral, nikkel,plast, kalvskinn
+ * +Sem/Measr = måttenhet ek cm,km, m minutter etc
+ * +Sem/Money = penger,depositum, gevinst, stipend
+ * +Sem/Obj = 
+ * +Sem/Obj-clo = handduk, flagg, pledd, 
+ * +Sem/Obj-el = 
+ * +Sem/Obj-ling = kort,biletter
+ * +Sem/Obj-play = ball eks:vollyball,fotball, snøball
+ * +Sem/Obj-rope = 
+ * +Sem/Obj-surfc = 
+ * +Sem/Org = organisasjon, sammansluttning
+ * +Sem/Part = 
+ * +Sem/Perc-emo = 
+ * +Sem/Perc-phys = 
+ * +Sem/Plant = 
+ * +Sem/Plantpart = 
+ * +Sem/Plc = 
+ * +Sem/Plc-abstr = 
+ * +Sem/Plc-elevate = 
+ * +Sem/Plc-line = 
+ * +Sem/Plc-water = 
+ * +Sem/Pos = 
+ * +Sem/Process = 
+ * +Sem/Prod = 
+ * +Sem/Prod-audio = 
+ * +Sem/Prod-cogn = 
+ * +Sem/Prod-ling = 
+ * +Sem/Prod-vis = 
+ * +Sem/Route = 
+ * +Sem/Rule = 
+ * +Sem/Semcon = 
+ * +Sem/Sign = 
+ * +Sem/State = 
+ * +Sem/State-sick = 
+ * +Sem/Substnc = 
+ * +Sem/Sur = 
+ * +Sem/Time = 
+ * +Sem/Time-clock = 
+ * +Sem/Tool = 
+ * +Sem/Tool-catch = 
+ * +Sem/Tool-clean = 
+ * +Sem/Tool-it = 
+ * +Sem/Tool-music = 
+ * +Sem/Tool-write = 
+ * +Sem/Txt = tekst
+ * +Sem/Veh = 
+ * +Sem/Wpn = 
+ * +Sem/Wthr = 
+ * +Sem/Year = year (i.e. 1000 - 2999), used only for numerals
 
 
 Multiple Semantic tags
 
- *  +Sem/Act_Domain             = 
- *  +Sem/Act_Fruit              = frukt og handling
- *  +Sem/Act_Plc                = handling og plass
- *  +Sem/Act_Route              = handling og vei
- *  +Sem/Act_Event              = Hendelse
- *  +Sem/Act_Tool-it            = hendelse og it verktøy
- *  +Sem/Ani_Body-abstr_Hum     = dyrekropp, abstrakt begrep på mennesker, menneske
- *  +Sem/Ani_Buildpart          = dyr og bygningsdel
- *  +Sem/Ani_Group              = gruppe med dyr
- *  +Sem/Ani_Group_Hum          = 
- *  +Sem/Ani_Hum                = 
- *  +Sem/Ani_Obj-el             = 
- *  +Sem/Ani_Plc_Txt            = 
- *  +Sem/Ani_Time               = 
- *  +Sem/Ani_Tool               = 
- *  +Sem/Ani_Veh                = dyr + kjöretöy eks hest
- *  +Sem/Aniprod_Hum            = 
- *  +Sem/Aniprod_Plc_Route      = 
- *  +Sem/Body_Food              = 
- *  +Sem/Body_Hum               = kroppsdeler, mennesker
- *  +Sem/Body_Mat               = kroppsdeler og dudtjie matriell
- *  +Sem/Body_Measr             = 
- *  +Sem/Body_Obj_Tool-catch    = 
- *  +Sem/Body_Plc               = 
- *  +Sem/Body_Plc-elevate       = 
- *  +Sem/Buildpart_Ctain_Obj    = 
- *  +Sem/Build_Clthpart         = 
- *  +Sem/Build_Edu_Org          = 
- *  +Sem/Build_Org              = 
- *  +Sem/Cat_Group_Hum_Plc      = 
- *  +Sem/Clth-jewl_Curr         = 
- *  +Sem/Clth-jewl_Curr_Obj     = 
- *  +Sem/Ctain-abstr_Org        = 
- *  +Sem/Ctain-clth_Plant       = 
- *  +Sem/Ctain-clth_Veh         = 
- *  +Sem/Ctain_Furn             = 
- *  +Sem/Ctain_Tool             = 
- *  +Sem/Curr_Obj               = 
- *  +Sem/Domain_Hum             = 
- *  +Sem/Domain_Money           = 
- *  +Sem/Drink_Plant            = 
- *  +Sem/Edu_Event              = eks: seminar, søndagsskole
- *  +Sem/Edu_Geom               = 
- *  +Sem/Edu_Hum                = 
- *  +Sem/Edu_Mat                = utbildning og mat	
- *  +Sem/Edu_Org                = 
- *  +Sem/Event_Plc-elevate      = 
- *  +Sem/Feat-measr_Plc         = 
- *  +Sem/Feat-phys_Tool-write   = 
- *  +Sem/Feat-psych_Hum         = 
- *  +Sem/Feat-psych_Plc         = 
- *  +Sem/Feat_Plant             = 
- *  +Sem/Food_Plant             = tobakk
- *  +Sem/Furn_Time              = 
- *  +Sem/Game_Obj-play          = leker eks: snøballkastning.sekkelek
- *  +Sem/Geom_Obj               = 
- *  +Sem/Group_Hum              = 
- *  +Sem/Group_Hum_Plc          = gruppe mennesker tilsammens eks: konfirmasjonsleir
- *  +Sem/Group_Hum_Plc-abstr    = 
- *  +Sem/Hum_Lang               = human and language
- *  +Sem/Hum_Lang_Plc           = eks menneske, nord/sør, lulesamisk etc.
- *  +Sem/Hum_Mat_Tool           = 
- *  +Sem/Hum_Org                = menneske og organisasjon
- *  +Sem/Hum_Veh                = 
- *  +Sem/Hum_Tool               = 
- *  +Sem/Lang_Tool              = 
- *  +Sem/Mat_Obj-clo            = 
- *  +Sem/Mat_Plant              = material, plante eks bomull
- *  +Sem/Mat_Txt                = 
- *  +Sem/Measr_Obj_Time         = 
- *  +Sem/Measr_Sign             = 
- *  +Sem/Measr_Time             = år, mnd, uke, time, minutt
- *  +Sem/Money_Obj              = 
- *  +Sem/Obj-ling_Obj-surfc     = 
- *  +Sem/Hum_Obj                = 
- *  +Sem/Obj_State              = 
- *  +Sem/Obj_Veh                = 
- *  +Sem/Org_Plc                = 
- *  +Sem/Org_Prod-audio         = 
- *  +Sem/Org_Prod-cogn          = 
- *  +Sem/Org_Prod-vis           = 
- *  +Sem/Org_Rule               = 
- *  +Sem/Org_Txt                = 
- *  +Sem/Part_Prod-cogn         = 
- *  +Sem/Plant_Plantpart        = 
- *  +Sem/Plc-abstr_Route        = 
- *  +Sem/Plc_Pos                = 
- *  +Sem/Plc_Route              = 
- *  +Sem/Plc_Substnc            = 
- *  +Sem/Plc_Substnc_Wthr       = 
- *  +Sem/Plc_Txt                = 
- *  +Sem/Plc_Wthr               = 
- *  +Sem/Prod-audio_Txt         = 
- *  +Sem/Prod-cogn_Txt          = 
- *  +Sem/Semcon_Wthr            = 
- *  +Sem/Substnc_Wthr           = 
- *  +Sem/Time_Wthr              = 
- *  +Sem/Domain_Txt             = 
+ * +Sem/Act_Domain = 
+ * +Sem/Act_Fruit = frukt og handling
+ * +Sem/Act_Plc = handling og plass
+ * +Sem/Act_Route = handling og vei
+ * +Sem/Act_Event = Hendelse
+ * +Sem/Act_Tool-it = hendelse og it verktøy
+ * +Sem/Ani_Body-abstr_Hum = dyrekropp, abstrakt begrep på mennesker, menneske
+ * +Sem/Ani_Buildpart = dyr og bygningsdel
+ * +Sem/Ani_Group = gruppe med dyr
+ * +Sem/Ani_Group_Hum = 
+ * +Sem/Ani_Hum = 
+ * +Sem/Ani_Obj-el = 
+ * +Sem/Ani_Plc_Txt = 
+ * +Sem/Ani_Time = 
+ * +Sem/Ani_Tool = 
+ * +Sem/Ani_Veh = dyr + kjöretöy eks hest
+ * +Sem/Aniprod_Hum = 
+ * +Sem/Aniprod_Plc_Route = 
+ * +Sem/Body_Food = 
+ * +Sem/Body_Hum = kroppsdeler, mennesker
+ * +Sem/Body_Mat = kroppsdeler og dudtjie matriell
+ * +Sem/Body_Measr = 
+ * +Sem/Body_Obj_Tool-catch = 
+ * +Sem/Body_Plc = 
+ * +Sem/Body_Plc-elevate = 
+ * +Sem/Buildpart_Ctain_Obj = 
+ * +Sem/Build_Clthpart = 
+ * +Sem/Build_Edu_Org = 
+ * +Sem/Build_Org = 
+ * +Sem/Cat_Group_Hum_Plc = 
+ * +Sem/Clth-jewl_Curr = 
+ * +Sem/Clth-jewl_Curr_Obj = 
+ * +Sem/Ctain-abstr_Org = 
+ * +Sem/Ctain-clth_Plant = 
+ * +Sem/Ctain-clth_Veh = 
+ * +Sem/Ctain_Furn = 
+ * +Sem/Ctain_Tool = 
+ * +Sem/Curr_Obj = 
+ * +Sem/Domain_Hum = 
+ * +Sem/Domain_Money = 
+ * +Sem/Drink_Plant = 
+ * +Sem/Edu_Event = eks: seminar, søndagsskole
+ * +Sem/Edu_Geom = 
+ * +Sem/Edu_Hum = 
+ * +Sem/Edu_Mat = utbildning og mat	
+ * +Sem/Edu_Org = 
+ * +Sem/Event_Plc-elevate = 
+ * +Sem/Feat-measr_Plc = 
+ * +Sem/Feat-phys_Tool-write = 
+ * +Sem/Feat-psych_Hum = 
+ * +Sem/Feat-psych_Plc = 
+ * +Sem/Feat_Plant = 
+ * +Sem/Food_Plant = tobakk
+ * +Sem/Furn_Time = 
+ * +Sem/Game_Obj-play = leker eks: snøballkastning.sekkelek
+ * +Sem/Geom_Obj = 
+ * +Sem/Group_Hum = 
+ * +Sem/Group_Hum_Plc = gruppe mennesker tilsammens eks: konfirmasjonsleir
+ * +Sem/Group_Hum_Plc-abstr = 
+ * +Sem/Hum_Lang = human and language
+ * +Sem/Hum_Lang_Plc = eks menneske, nord/sør, lulesamisk etc.
+ * +Sem/Hum_Mat_Tool = 
+ * +Sem/Hum_Org = menneske og organisasjon
+ * +Sem/Hum_Veh = 
+ * +Sem/Hum_Tool = 
+ * +Sem/Lang_Tool = 
+ * +Sem/Mat_Obj-clo = 
+ * +Sem/Mat_Plant = material, plante eks bomull
+ * +Sem/Mat_Txt = 
+ * +Sem/Measr_Obj_Time = 
+ * +Sem/Measr_Sign = 
+ * +Sem/Measr_Time = år, mnd, uke, time, minutt
+ * +Sem/Money_Obj = 
+ * +Sem/Obj-ling_Obj-surfc = 
+ * +Sem/Hum_Obj = 
+ * +Sem/Obj_State = 
+ * +Sem/Obj_Veh = 
+ * +Sem/Org_Plc = 
+ * +Sem/Org_Prod-audio = 
+ * +Sem/Org_Prod-cogn = 
+ * +Sem/Org_Prod-vis = 
+ * +Sem/Org_Rule = 
+ * +Sem/Org_Txt = 
+ * +Sem/Part_Prod-cogn = 
+ * +Sem/Plant_Plantpart = 
+ * +Sem/Plc-abstr_Route = 
+ * +Sem/Plc_Pos = 
+ * +Sem/Plc_Route = 
+ * +Sem/Plc_Substnc = 
+ * +Sem/Plc_Substnc_Wthr = 
+ * +Sem/Plc_Txt = 
+ * +Sem/Plc_Wthr = 
+ * +Sem/Prod-audio_Txt = 
+ * +Sem/Prod-cogn_Txt = 
+ * +Sem/Semcon_Wthr = 
+ * +Sem/Substnc_Wthr = 
+ * +Sem/Time_Wthr = 
+ * +Sem/Domain_Txt = 
 
 
  |  +MWE | multi word expressions, goes to abbr
@@ -498,11 +503,10 @@ precede position 2 derivations, and so on.
 
 
 |    Pos1     | Pos2      | Pos3      | POS switches (from-to)| Explanation
-
 | --- | --- | --- | --- | --- 
  |  **+Der1** |            |            |      | Position tag, required
- |  **+Der2** |            |            |      | Position tag, required
- |  **+Der3** |            |            |      | Position tag, required
+ |             | **+Der2** |            |      | Position tag, required
+ |             |            | **+Der3** |      | Position tag, required
  |  **+Der/htalle** |            |            | VV   | Passive, frekeventative
  |  **+Der/lg** |            |            | VV   | Passive
  |  **+Der/ijes** |            |            | NA   | Nomen agentis
@@ -613,8 +617,8 @@ get the same pronunciation whether read as SME or NOB/NNO/SWE.
  * **»7**:  Literal »
  * **«7**:  Literal «
 ```
-  %[%>%]  - Literal >
-  %[%<%]  - Literal <
+ %[%>%] - Literal >
+ %[%<%] - Literal <
 ```
 ## Lexeme disambiguation tags
  * **+Hom1**:  Homonymy
@@ -714,26 +718,26 @@ Here is the list of lexica in the sma analyser
 
 
 
- *              NounRoot     ; 
- *              Verb         ; 
- *              Adjective    ; 
- *              Pronoun      ; 
- *              Adverb       ; 
- *              Subjunction  ; 
- *              Conjunction  ; 
- *              Particle     ; 
- *              Adposition   ; 
- *              Punctuation  ; 
- *              Symbols      ; 
- *              Interjection ; 
- *  +Use/CircN: Numeral      ; 
- *              Abbreviation ; 
- *              Acronym      ; 
+ * NounRoot ;
+ * Verb ;
+ * Adjective ;
+ * Pronoun ;
+ * Adverb ;
+ * Subjunction ;
+ * Conjunction ;
+ * Particle ;
+ * Adposition ;
+ * Punctuation ;
+ * Symbols ;
+ * Interjection ;
+ * +Use/CircN: Numeral ;
+ * Abbreviation ;
+ * Acronym ;
 
 
 
 
- * **LEXICON ProperNoun   **
+ * **LEXICON ProperNoun**
 
 
 # Lexicon ENDLEX
