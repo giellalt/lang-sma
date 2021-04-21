@@ -81,10 +81,14 @@
 |   Dialect tag | Explanation
 
 | --- | --- 
- |  **+Dial/-S** | Not in the South ! se på disse i forhold til smj, som har +Dial/N for denne.
- |  **+Dial/-N** | Not in the North ! se på disse i forhold til smj, som har +Dial/s for denne.
+ |  **+Dial/-S** | Not in the South
+ |  **+Dial/S** | Only in the South
+ |  **+Dial/-N** | Not in the North
+ |  **+Dial/N** | Only in the North
  |  **+Dial/-NOR** | Words not in Norway
+ |  **+Dial/NOR** | Words only in Norway
  |  **+Dial/-SW** | Words not in Sweden
+ |  **+Dial/SW** | Words only in Sweden
  |  **+Dial/SH** | Short forms
  |  **+Dial/L** | Long forms
 
@@ -103,9 +107,8 @@ will be used. To override that one, specify one or more of the
 following tags. `+CmpN/SgN` must be specified if also other tags
 are listed - unless `+CmpN/SgN` should *not* be used, for course.
 
-|   Normative compounding tag | Explanation
-
-| --- | --- 
+                 |   Normative compounding tag | Explanation
+                 |:----        |:--- 
  |  **+CmpN/Sg** | Singular
  |  **+CmpN/SgN** | Singular Nominative
  |  **+CmpN/SgG** | Singular Genitive
@@ -118,7 +121,6 @@ These tags overrule the regular tags defined above. One or more
 can be specified.
 
 |   Normative left-governing tag | Explanation
-
 | --- | --- 
  |  **+CmpN/SgLeft** | Sg to the left
  |  **+CmpN/SgNomLeft** | etc.
@@ -127,7 +129,6 @@ can be specified.
 
 ### This part of the component can ...
 |   Normative position tag | Explanation
-
 | --- | --- 
  |  **+CmpNP/All** | ... be in all positions, **default**, this tag does not have to be written
  |  **+CmpNP/First** | ... only be first part in a compound or alone
@@ -143,7 +144,6 @@ Tags for compound analysis - this is what a compound actually is. We use this
 to research compounding patterns in the corpus.
 
 |   Desriptive compounding tag | Explanation
-
 | --- | --- 
  |  **+Cmp/Sg** | Compounding using an unspecified singular stem
  |  **+Cmp/SgNom** | Compounding using nominative singular
