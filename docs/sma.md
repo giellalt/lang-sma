@@ -73,8 +73,8 @@
  |  **+Use/DNorm** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
  |  **+Use/PMatch** | Do *only* include in fst's for hfst-pmatch
  |  **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch
- * **+Use/GC** only retained in the HFST Grammar Checker disambiguation analyser
- * **+Use/-GC** never retained in the HFST Grammar Checker disambiguation analyser
+ | **+Use/GC**  | only retained in the HFST Grammar Checker disambiguation analyser
+ | **+Use/-GC**  | never retained in the HFST Grammar Checker disambiguation analyser
 
 ## Dialect tags
 
