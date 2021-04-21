@@ -117,22 +117,22 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! ## Normative/prescriptive compounding tags
 !! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
-!! ### The left part of a compound should be
+!! ### The left part of a compound should be ...
 
 !! The default is `+CmpN/SgN`, so when nothing is specified, that
 !! will be used. To override that one, specify one or more of the
 !! following tags. `+CmpN/SgN` must be specified if also other tags
 !! are listed - unless `+CmpN/SgN` should *not* be used, for course.
 
-!!                      Normative compounding tag | Explanation
-!!                   :----        | :---- 
+!! |    Normative compounding tag | Explanation
+!! |                 :----        | :---- 
 +CmpN/Sg        !!≈ |  **@CODE@** | Singular
 +CmpN/SgN       !!≈ |  **@CODE@** | Singular Nominative
 +CmpN/SgG       !!≈ |  **@CODE@** | Singular Genitive
 +CmpN/PlG       !!≈ |  **@CODE@** | Plural Genitive
 
 
-!! ### The right part of a compound requires to the left
+!! ### The right part of a compound requires to the left ...
 
 !! These tags overrule the regular tags defined above. One or more
 !! can be specified.
@@ -145,8 +145,8 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 +CmpN/PlGenLeft !!≈ |  **@CODE@** | "
 
 !! ### This part of the component can ...
-!!          Normative position tag | Explanation
-!!                             --- | --- 
+!! |        Normative position tag | Explanation
+!! |                           --- | --- 
 +CmpNP/All       !!≈ |  **@CODE@** | ... be in all positions, **default**, this tag does not have to be written
 +CmpNP/First     !!≈ |  **@CODE@** | ... only be first part in a compound or alone
 +CmpNP/Pref      !!≈ |  **@CODE@** | ... only be **first** part in a compound, NEVER alone
@@ -160,8 +160,8 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! Tags for compound analysis - this is what a compound actually is. We use this
 !! to research compounding patterns in the corpus.
 
-			 !! |   Desriptive compounding tag | Explanation
-!! | --- | --- 
+!! | Descriptive compounding tag | Explanation
+!! |                       --- | --- 
 +Cmp/Sg      !!≈ |  **@CODE@** | Compounding using an unspecified singular stem
 +Cmp/SgNom   !!≈ |  **@CODE@** | Compounding using nominative singular
 +Cmp/SgGen   !!≈ |  **@CODE@** | Compounding using genitive singular
@@ -517,11 +517,10 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 
 ! 1              2               3                POS type
 !! |    Pos1     | Pos2      | Pos3      | POS switches (from-to)| Explanation
-
 !! | --- | --- | --- | --- | --- 
 +Der1                                          !!≈ |  **@CODE@** |            |            |      | Position tag, required
-                +Der2                          !!≈ |  **@CODE@** |            |            |      | Position tag, required
-                                +Der3          !!≈ |  **@CODE@** |            |            |      | Position tag, required
+                +Der2                          !!≈ |             | **@CODE@** |            |      | Position tag, required
+                                +Der3          !!≈ |             |            | **@CODE@** |      | Position tag, required
 +Der/htalle                                    !!≈ |  **@CODE@** |            |            | VV   | Passive, frekeventative
 +Der/lg                                        !!≈ |  **@CODE@** |            |            | VV   | Passive
 +Der/ijes                                      !!≈ |  **@CODE@** |            |            | NA   | Nomen agentis
