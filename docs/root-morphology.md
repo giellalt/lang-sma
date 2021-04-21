@@ -43,8 +43,8 @@
 
 ## Error (non-standard language) tags
 
-|   Error tag | Explanation
-| --- | --- 
+|                      Error tag | Explanation
+|                            --- | --- 
  |  **+Err/Orth** | Substandard, unormert form av et ord
  |  **+Err/Hyph** | Substandard, unormert
  |  **+Err/SpaceCmp** | Substandard, unormert 
@@ -56,8 +56,8 @@
 
 ### Usage tags
 
-|   Usage tag | Explanation
-| --- | --- 
+|       Usage tag | Explanation
+|             --- | --- 
  |  **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
  |  **+Use/-Spell** | Excluded from speller
  |  **+Use/-PLX** | Excluded in PLX speller
@@ -76,8 +76,8 @@
 
 ## Dialect tags
 
-|   Dialect tag | Explanation
-| --- | --- 
+|             Dialect tag | Explanation
+|                     --- | --- 
  |  **+Dial/-S** | Not in the South
  |  **+Dial/S** | Only in the South
  |  **+Dial/-N** | Not in the North
