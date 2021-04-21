@@ -39,55 +39,55 @@
 ### Numeral subtypes
  * **+Coll** = Collective numeral
  * **+Arab** = Arabic numeral
- * **+Rom** =
+ * **+Rom** = Roman numeral
 
 ## Error (non-standard language) tags
 
-|                      Error tag | Explanation
-|                            --- | --- 
- |  **+Err/Orth** | Substandard, unormert form av et ord
- |  **+Err/Hyph** | Substandard, unormert
- |  **+Err/SpaceCmp** | Substandard, unormert 
- |  **+Err/Attr** | Substandard, unormert Attr-form av et ord
- |  **+Err/Lex** | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
- |  **+Err/Der** | Errors in derivations
- |  **+Err/Spellrelax** | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
- |  **+Err/MissingSpace** | in use ins smi lexc
+|                     Error tag | Explanation
+|                           --- | --- 
+ | **+Err/Orth** | Substandard, unormert form av et ord
+ | **+Err/Hyph** | Substandard, unormert
+ | **+Err/SpaceCmp** | Substandard, unormert 
+ | **+Err/Attr** | Substandard, unormert Attr-form av et ord
+ | **+Err/Lex** | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
+ | **+Err/Der** | Errors in derivations
+ | **+Err/Spellrelax** | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
+ | **+Err/MissingSpace** | in use ins smi lexc
 
 ### Usage tags
 
-|       Usage tag | Explanation
-|             --- | --- 
- |  **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
- |  **+Use/-Spell** | Excluded from speller
- |  **+Use/-PLX** | Excluded in PLX speller
- |  **+Use/SpellNoSugg** | Recognized but not suggested in speller
- |  **+Use/Circ** | Circular path
- |  **+Use/CircN** | Circular number path?
- |  **+Use/Ped** | Remove from pedagogical speller
- |  **+Use/NG** | Do not generate <br/> for isme-ped.fst and apertium
- |  **+Use/MT** | Generate for apertium only
- |  **+Use/NotDNorm** | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
- |  **+Use/DNorm** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
- |  **+Use/PMatch** | Do *only* include in fst's for hfst-pmatch
- |  **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch
- | **+Use/GC**  | only retained in the HFST Grammar Checker disambiguation analyser
- | **+Use/-GC**  | never retained in the HFST Grammar Checker disambiguation analyser
+|                    Usage tag | Explanation
+|                          --- | --- 
+ | **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
+ | **+Use/-Spell** | Excluded from speller
+ | **+Use/-PLX** | Excluded in PLX speller
+ | **+Use/SpellNoSugg** | Recognized but not suggested in speller
+ | **+Use/Circ** | Circular path
+ | **+Use/CircN** | Circular number path?
+ | **+Use/Ped** | Remove from pedagogical speller
+ | **+Use/NG** | Do not generate <br/> for isme-ped.fst and apertium
+ | **+Use/MT** | Generate for apertium only
+ | **+Use/NotDNorm** | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
+ | **+Use/DNorm** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
+ | **+Use/PMatch** | Do *only* include in fst's for hfst-pmatch
+ | **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch
+ | **+Use/GC** | only retained in the HFST Grammar Checker disambiguation analyser
+ | **+Use/-GC** | never retained in the HFST Grammar Checker disambiguation analyser
 
 ## Dialect tags
 
-|             Dialect tag | Explanation
-|                     --- | --- 
- |  **+Dial/-S** | Not in the South
- |  **+Dial/S** | Only in the South
- |  **+Dial/-N** | Not in the North
- |  **+Dial/N** | Only in the North
- |  **+Dial/-NOR** | Words not in Norway
- |  **+Dial/NOR** | Words only in Norway
- |  **+Dial/-SW** | Words not in Sweden
- |  **+Dial/SW** | Words only in Sweden
- |  **+Dial/SH** | Short forms
- |  **+Dial/L** | Long forms
+|            Dialect tag | Explanation
+|                    --- | --- 
+ | **+Dial/-S** | Not in the South
+ | **+Dial/S** | Only in the South
+ | **+Dial/-N** | Not in the North
+ | **+Dial/N** | Only in the North
+ | **+Dial/-NOR** | Words not in Norway
+ | **+Dial/NOR** | Words only in Norway
+ | **+Dial/-SW** | Words not in Sweden
+ | **+Dial/SW** | Words only in Sweden
+ | **+Dial/SH** | Short forms
+ | **+Dial/L** | Long forms
 
 
 
@@ -105,7 +105,7 @@ following tags. `+CmpN/SgN` must be specified if also other tags
 are listed - unless `+CmpN/SgN` should *not* be used, for course.
 
 |    Normative compounding tag | Explanation
-|                 :----        | :---- 
+|                        :---- | :---- 
  |  **+CmpN/Sg** | Singular
  |  **+CmpN/SgN** | Singular Nominative
  |  **+CmpN/SgG** | Singular Genitive
@@ -562,7 +562,7 @@ The following tags are used to guide conversion to IPA: loan words
 and foreign names are usually pronounced (approximately) as in the
 originating (majority) language. Instead of trying to identify the
 correct pronunciation based on phonotactics (orthotactics actually),
-we tag all words that can't be correctly transcribed using the SME
+we tag all words that can't be correctly transcribed using the SMA
 transcriber with source language codes. Once tagged, it is possible
 to split the lexical transducer in smaller ones according to langu-
 age, and apply different IPA conversion to each of them.
@@ -580,7 +580,7 @@ All in all, we want to get as much correctly transcribed to IPA
 with as little work as possible. On the other hand, if more words
 are tagged than strictly needed, this should pose no problem as
 long as the IPA conversion is correct - at least some words will
-get the same pronunciation whether read as SME or NOB/NNO/SWE.
+get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 
 |   Originating language tag | Originating language
 | --- | --- 
@@ -636,6 +636,8 @@ clitic boundary mark - a multichar that usually just go to zero
 
 ## Umlaut and diphthong simplification triggers
 
+|                    Trigger | Explanation
+|                        --- | --- 
  |  %^DISIMP | diphthong simplification
  |  %^COMPDISIMP | diphthong simplification in comparatives
  |  %^COMPDISIMP2 | diphthong simplification in comparatives, type 2
@@ -659,28 +661,29 @@ clitic boundary mark - a multichar that usually just go to zero
  |  %^ILLELA | Stem vowel changes in Illative an Elative
  |  %^PLGENPLCOM | Stem vowel changes in final from e -> i, and withoaut -j-
  |  %^COMESS | Stem vowel changes in ACCRA-names
-
- |  ∑ | Symbol used before # in dynamic compounds, and only there
+ |  ∑ | Symbol used before `#` and `-` in dynamic compounds, and only there. Used to block optional conversion of word boundaries to spaces for error detection in grammar checkers. That is, dynamic compounds are not allowed to be written appart for error detection, only lexicalised ones. This is done to reduce the amound of ambiguity in the raw analyses to an amount we can cope with.
 
 
 
 ## Flag diacritics
-We have manually optimised the structure of our lexicon using following
+We have manually optimised the structure of our lexicon using the following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
 
-|              Tag | Explanation
-|                    --- | --- 
+|                         Flag | Explanation
+|                          --- | --- 
  |  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
  |  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
  |  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
+
+
 For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
 handled automatically if combined with +CmpN/xxx tags. If not used, they will
 do no harm.
 
-|              Tag | Explanation
-|                    --- | --- 
+|                        Flag | Explanation
+|                         --- | --- 
  |  @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
  |  @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
  |  @P.CmpPref.FALSE@ | Block these words from making further compounds
@@ -699,50 +702,49 @@ nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to u
 these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
 
-|              Tag | Explanation
-|                    --- | --- 
+|                         Flag | Explanation
+|                          --- | --- 
  |  @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  |  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
- * @R.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
- * @D.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
- * @C.SpellRlx@ Flag used to tag spell-relax-analysed strings (and only those).
- |  @P.Pmatch.Loc@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
- |  @P.Pmatch.Backtrack@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
+
+The following flag diacritics are used by the grammar checker.
+
+|                         Flag | Explanation
+|                          --- | --- 
+ | @R.SpellRlx.ON@ | Flag used to tag spell-relax-analysed strings (and only those).
+ | @D.SpellRlx.ON@ | Flag used to tag spell-relax-analysed strings (and only those).
+ | @C.SpellRlx@ | Flag used to tag spell-relax-analysed strings (and only those).
+ | @P.Pmatch.Loc@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
+ | @P.Pmatch.Backtrack@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
 
 
 # Lexicon Root
 This is the beginning of everything. The **Root** lexicon is reserved in the
 LexC language, and must be the first lexicon defined.
 
-Here is the list of lexica in the sma analyser
+Here is the list of top-level lexica in the sma analyser
+
+
+ * `NounRoot ;`
+ * `Verb ;`
+ * `Adjective ;`
+ * `Pronoun ;`
+ * `Adverb ;`
+ * `Subjunction ;`
+ * `Conjunction ;`
+ * `Particle ;`
+ * `Adposition ;`
+ * `Punctuation ;`
+ * `Symbols ;`
+ * `Interjection ;`
+ * `+Use/CircN: Numeral ;`
+ * `Abbreviation ;`
+ * `Acronym ;`
+ * `ProperNoun ;`
 
 
 
 
-
-
-
-
- * NounRoot ;
- * Verb ;
- * Adjective ;
- * Pronoun ;
- * Adverb ;
- * Subjunction ;
- * Conjunction ;
- * Particle ;
- * Adposition ;
- * Punctuation ;
- * Symbols ;
- * Interjection ;
- * +Use/CircN: Numeral ;
- * Abbreviation ;
- * Acronym ;
-
-
-
-
- * **LEXICON ProperNoun**
 
 
 # Lexicon ENDLEX
