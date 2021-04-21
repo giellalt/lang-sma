@@ -120,8 +120,8 @@ are listed - unless `+CmpN/SgN` should *not* be used, for course.
 These tags overrule the regular tags defined above. One or more
 can be specified.
 
-|   Normative left-governing tag | Explanation
-| --- | --- 
+| Normative left-governing tag | Explanation
+|                          --- | --- 
  |  **+CmpN/SgLeft** | Sg to the left
  |  **+CmpN/SgNomLeft** | etc.
  |  **+CmpN/SgGenLeft** | "
