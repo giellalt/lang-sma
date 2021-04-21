@@ -579,7 +579,6 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 +Der !!≈ * **@CODE@**:  Tag to precede any non-positional derivation
 
 !! |   Derivation tag | POS switch | Explanation
-
 !! | --- | --- | --- 
 +Der/PassS !!≈ |  @CODE@ | VV | short passive only
 +Der/A     !!≈ |  @CODE@ | NA | comparation of N's
@@ -614,7 +613,6 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! get the same pronunciation whether read as SME or NOB/NNO/SWE.
 
 !! |   Originating language tag | Originating language
-
 !! | --- | --- 
 +OLang/SME !!≈ |  **@CODE@** | North Sámi
 +OLang/SMA !!≈ |  **@CODE@** | South Sámi
@@ -705,6 +703,9 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! We have manually optimised the structure of our lexicon using following
 !! flag diacritics to restrict morhpological combinatorics - only allow compounds
 !! with verbs if the verb is further derived into a noun again:
+
+!! |              Tag | Explanation
+!! |                    --- | --- 
  @P.NeedNoun.ON@    !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
  @D.NeedNoun.ON@    !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
  @C.NeedNoun@       !!≈ |  @CODE@ | (Dis)allow compounds with verbs unless nominalised
@@ -713,6 +714,9 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! to control position-based compounding restrictions for nominals. Their use is
 !! handled automatically if combined with +CmpN/xxx tags. If not used, they will
 !! do no harm.
+
+!! |              Tag | Explanation
+!! |                    --- | --- 
  @P.CmpFrst.FALSE@ !!≈ |  @CODE@ | Require that words tagged as such only appear first
  @D.CmpPref.TRUE@  !!≈ |  @CODE@ | Block such words from entering ENDLEX
  @P.CmpPref.FALSE@ !!≈ |  @CODE@ | Block these words from making further compounds
@@ -731,14 +735,15 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 !! these flags. There exists a ready-made regex that will do the actual down-casing
 !! given the proper use of these flags.
+
+!! |              Tag | Explanation
+!! |                    --- | --- 
  @U.Cap.Obl@        !!≈ |  @CODE@ | Allowing downcasing of derived names: deatnulasj.
  @U.Cap.Opt@        !!≈ |  @CODE@ | Allowing downcasing of derived names: deatnulasj.
 !                                ! Actually, downcasing should be obligatory
-
 @R.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
 @D.SpellRlx.ON@ !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
 @C.SpellRlx@    !!≈ * @CODE@ Flag used to tag spell-relax-analysed strings (and only those).
-
  @P.Pmatch.Loc@       !!≈ |  @CODE@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
  @P.Pmatch.Backtrack@ !!≈ |  @CODE@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
 

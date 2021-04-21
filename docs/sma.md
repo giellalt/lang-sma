@@ -44,7 +44,6 @@
 ## Error (non-standard language) tags
 
 |   Error tag | Explanation
-
 | --- | --- 
  |  **+Err/Orth** | Substandard, unormert form av et ord
  |  **+Err/Hyph** | Substandard, unormert
@@ -58,7 +57,6 @@
 ### Usage tags
 
 |   Usage tag | Explanation
-
 | --- | --- 
  |  **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
  |  **+Use/-Spell** | Excluded from speller
@@ -209,6 +207,7 @@ to research compounding patterns in the corpus.
  |  **+Pl3** | Plural  , 3.person
 
 ## Other verbal tags
+
 |             Verbal tag | Explanation
 |                    --- | --- 
  | **+Neg** | negation verb ij
@@ -475,7 +474,8 @@ Multiple Semantic tags
  * +Sem/Time_Wthr = 
  * +Sem/Domain_Txt = 
 
-
+|              Tag | Explanation
+|                    --- | --- 
  |  +MWE | multi word expressions, goes to abbr
 
 Use the following flag diacritics to control downcasing of derived proper
@@ -483,13 +483,13 @@ nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to u
 these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
 
+|              Flag | Explanation
+|                    --- | --- 
  |  @P.Px.add@ | Giving possibility for Px-suffixes (all except from Nom 3.p)
  |  @R.Px.add@ | Requiring P.Px.add-flag for Px-suffixes (all except from Nom 3.p)
  |  @P.Nom3Px.add@ |  Giving possibility for Px-suffixes Nom 3.p
  |  @R.Nom3Px.add@ | Requiring P.Nom3Px.add flag for Px-suffixes Nom 3.p
-
  |  @P.Pmatch.Backtrack@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this poin in the form (to find combinations of shorter analyses that would otherwise be missed)
-
  |  @D.ErrOrth.ON@  | asdf
  |  @C.ErrOrth@	 | asdf
  |  @P.ErrOrth.ON@ | asdf
@@ -551,7 +551,6 @@ and you are set.
  * **+Der**:  Tag to precede any non-positional derivation
 
 |   Derivation tag | POS switch | Explanation
-
 | --- | --- | --- 
  |  +Der/PassS | VV | short passive only
  |  +Der/A | NA | comparation of N's
@@ -584,7 +583,6 @@ long as the IPA conversion is correct - at least some words will
 get the same pronunciation whether read as SME or NOB/NNO/SWE.
 
 |   Originating language tag | Originating language
-
 | --- | --- 
  |  **+OLang/SME** | North Sámi
  |  **+OLang/SMA** | South Sámi
@@ -670,6 +668,9 @@ clitic boundary mark - a multichar that usually just go to zero
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
+
+|              Tag | Explanation
+|                    --- | --- 
  |  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
  |  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
  |  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
@@ -677,6 +678,9 @@ For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
 handled automatically if combined with +CmpN/xxx tags. If not used, they will
 do no harm.
+
+|              Tag | Explanation
+|                    --- | --- 
  |  @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
  |  @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
  |  @P.CmpPref.FALSE@ | Block these words from making further compounds
@@ -694,13 +698,14 @@ Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
+
+|              Tag | Explanation
+|                    --- | --- 
  |  @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  |  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
-
  * @R.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
  * @D.SpellRlx.ON@ Flag used to tag spell-relax-analysed strings (and only those).
  * @C.SpellRlx@ Flag used to tag spell-relax-analysed strings (and only those).
-
  |  @P.Pmatch.Loc@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
  |  @P.Pmatch.Backtrack@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
 
