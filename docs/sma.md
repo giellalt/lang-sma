@@ -128,6 +128,7 @@ can be specified.
  |  **+CmpN/PlGenLeft** | "
 
 ### This part of the component can ...
+
 |        Normative position tag | Explanation
 |                           --- | --- 
  |  **+CmpNP/All** | ... be in all positions, **default**, this tag does not have to be written
