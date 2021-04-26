@@ -4222,20 +4222,20 @@ before compiling.
 
 
 
-## Delimiters 
+## Delimiters, tags and sets
 
 
-"<.>" "<!>" "<?>" "<...>" "<¶>" sent
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent
 
 
-## Tags and sets 
+### Tags 
 
-### BOS/EOS:
+#### BOS/EOS:
 
 * (>>>) (<s>)
   (<<<) (</s>)
 
-### Morphological tags
+#### Morphological tags
 
 * N 
 * Sg 
@@ -4276,7 +4276,7 @@ PxPl3
 
 
 
-### Derivation tags
+#### Derivation tags
 
 * Der/A
 Der/Car
@@ -4308,24 +4308,28 @@ Der/st
 Der/vuota 
 
 
+#### Error usage tags
 
+
+#### Other tags 
+Cmp/Hyph
 <vdic>
 
 
-
-###  Semantic tags
-
+####  Semantic tags
 
 
 
 
 
 
+#### Secondary tags
 
 
 
 
-### Syntactic tags
+
+#### Syntactic tags
 
 * @CNP
 @CVP
@@ -4337,13 +4341,16 @@ MAINV  =
 
 
 
-### Titles
+#### Titles
 
 
 REAL-TITLE
 OFFICE
 TITLE
 
+
+
+## Sets
 
 ### Sets of morphological tags for syntactic use
 
@@ -4500,6 +4507,7 @@ VERB-FORMS
 # Disambiguation rules
 
 
+BEFORE-SECTIONS
 
 
 Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes når vi får felles numeralfil fra shared)
@@ -4522,6 +4530,7 @@ Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili K
 
 
 
+SECTION
 
 
 
