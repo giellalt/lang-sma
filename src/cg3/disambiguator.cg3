@@ -33,24 +33,24 @@
 
 
 # ========== #
-#!! ## Delimiters 
+#!! ## Delimiters, tags and sets
 # ========== #
 
 
 DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ;
-	 #!! "<.>" "<!>" "<?>" "<...>" "<¶>" sent
+	 #!! DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent
 
 
 # ============= #
-#!! ## Tags and sets 
+#!! ### Tags 
 # ============= #
 
-#!! ### BOS/EOS:
+#!! #### BOS/EOS:
 
 LIST BOS = (>>>) (<s>);  #!! * (>>>) (<s>)
 LIST EOS = (<<<) (</s>); #!!   (<<<) (</s>)
 
-#!! ### Morphological tags
+#!! #### Morphological tags
 	
 LIST N = N ;          #!! * N 
 LIST Sg = Sg ;       #!! * Sg 
@@ -165,7 +165,7 @@ LIST COMMA = "," ;
 LIST Arab = Arab ;
 
 
-#!! ### Derivation tags
+#!! #### Derivation tags
 
 LIST Der/A = Der/A ; #!! * Der/A
 LIST Der/Car = Der/Car ; #!! Der/Car
@@ -196,16 +196,18 @@ LIST Der/lg = Der/lg  ; #!! Der/lg
 LIST Der/st = Der/st ; #!! Der/st
 LIST Der/vuota = Der/vuota ; #!! Der/vuota 
 
-LIST Cmp/Hyph = Cmp/Hyph ;
 
-
-LIST <vdic> = <vdic> ;				 #!! <vdic>
+#!! #### Error usage tags
 
 LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ;
 LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ;
 
+#!! #### Other tags 
+LIST Cmp/Hyph = Cmp/Hyph ; #!! Cmp/Hyph
+LIST <vdic> = <vdic> ;				 #!! <vdic>
 
-#!! ###  Semantic tags
+
+#!! ####  Semantic tags
 # -------------
 
 LIST Sem/Act = Sem/Act Sem/Act_Clth Sem/Act_Domain Sem/Act_Domain_Measr Sem/Act_Event Sem/Act_Feat Sem/Act_Feat-psych Sem/Act_Fruit Sem/Act_Group Sem/Act_Hum Sem/Act_Hum_Obj Sem/Act_Money Sem/Act_Obj Sem/Act_Obj-play Sem/Act_Org Sem/Act_Perc-emo Sem/Act_Plc Sem/Act_Prod-audio Sem/Act_Prod-vis Sem/Act_Route Sem/Act_Semcon Sem/Act_State Sem/Act_Time Sem/Act_Tool-it Sem/Act_Txt  ;
@@ -328,7 +330,7 @@ SET TIME-N = TIME-N-SET - NOT-TIME ;
 SET FIRSTNAME = Sem/Fem OR Sem/Mal ;
 SET HUMAN-INDIVIDUAL = Sem/Mal OR Sem/Fem OR Sem/Sur OR Sem/Hum ;
 
-# secondary tags
+#!! #### Secondary tags
 # --------------
 
 LIST <vdic> = <vdic> ;
@@ -337,7 +339,7 @@ LIST <copula> = <copula> ;
 
 
 
-#!! ### Syntactic tags
+#!! #### Syntactic tags
 
 LIST @CNP = @CNP ;				   #!! * @CNP
 LIST @CVP = @CVP ;				   #!! @CVP
@@ -414,7 +416,7 @@ SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ;
 SET INF-SYN = SUBJ OR SPRED OR OBJ OR ADVL ;
 
 
-#!! ### Titles
+#!! #### Titles
 
 
 LIST REAL-TITLE = "prof" "cand.philol" ; #!! REAL-TITLE
@@ -422,6 +424,9 @@ LIST OFFICE = "gånka" "profeete" ; #!! OFFICE
 SET TITLE = REAL-TITLE OR OFFICE ;  #!! TITLE
 
 # SET TITLE = REAL-TITLE OR TITLE-LIKE OR PROFESSION OR OFFICE ; 
+
+
+#!! ## Sets
 
 #!! ### Sets of morphological tags for syntactic use
 
@@ -656,7 +661,7 @@ LIST ESS-TIME-WEATHER = "maana" ;
 #       ============== #
 
 
-BEFORE-SECTIONS
+BEFORE-SECTIONS  #!! BEFORE-SECTIONS
 
 # Do not touch the speller suggestions:
 PROTECT (<spelled>) ;
@@ -714,7 +719,7 @@ ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS)(NOT 0 <vdic>)
 ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":") OR EOS)(NOT 0 <vdic>)(NOT -1 Po)  ; 
 
 
-SECTION  
+SECTION  #!! SECTION
 
 
 

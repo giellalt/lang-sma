@@ -562,6 +562,7 @@ Propernoun
 
 
 
+
  +N+Prop+Sem/Plc+Pl: NIEJTE_PL ;
 
 
