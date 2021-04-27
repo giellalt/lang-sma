@@ -1,4 +1,4 @@
-!!!Sørsamiske adjektiv, system
+# Sørsamiske adjektiv, system
 
 This document contains a linguistic description of the south saami
 adjective declension.
@@ -14,30 +14,30 @@ Adjective types (synopsis):
 * 3 a = s, suffix in a, no suffix in p
 * 4 a ≠ p, different suffixes
 
-
 Or in table format:
 
-||  ||a ||p
-| 1 | x | x
-| 2 | - | s
-| 3 | s | -
-| 4 | x | y
+|    |a |p
+| --- | --- | --- 
+|  1 | x | x
+|  2 | - | s
+|  3 | s | -
+|  4 | x | y
 
 Types, in detail, with examples
 
-!!!1: a = p
+# 1: a = p
 
-!!1a: Vowel stem in a and p, c = be
+## 1a: Vowel stem in a and p, c = be
 
-{{{
+```
     a = V, p = V, c = Vbe
     plaave måvhkah, pred : måvhkah leah plaave
     plaave, plaave ("blå")
     plaavebe  / plååvebe
     plaavemes
-}}}
+```
 
-!!1b: -s in a and p, c = be/hkåbpoe
+## 1b: -s in a and p, c = be/hkåbpoe
 
     a = s, p = s, c = suffixes (be/hkåbpoe)
 
@@ -48,11 +48,11 @@ Undergrupper:
 * Vokalstamme utan omlyd i komparativ
 * Konsonantstamme
 
-!Vokalstamme med omlyd i komparativ
+### Vokalstamme med omlyd i komparativ
 
   a = s, p = s, c = be + UML (even)
 
-{{{
+```
     söökes
     suekebe/söökebe
     söökemes
@@ -60,13 +60,13 @@ Undergrupper:
     rööpses
     ruepsebe/rööpsebe
     rööpsemes
-}}}
+```
 
-!vokalstamme med eller utan omlyd i komparativ
+### vokalstamme med eller utan omlyd i komparativ
 
   a = s, p = s, c = be (+ UML) (even)
 
-{{{
+```
     faavroes, faavroes ("vakker") - entall
     faavrebe/SUB:feevrebe
     faavremes
@@ -76,21 +76,21 @@ Undergrupper:
     leevlebe/löövlebe/*lïevlebe/lievlebe
     leevlemes/löövlemes/*lïevlemes/lyövlemes
     4 variantar, 3 utan omlyd, 1 med
-}}}
+```
 
-{{{Derived adverb:
+```Derived adverb:
 
 lyövlehke voessine vaarredh = det er tungvint å springe med sekk
 lyövlehke, lyövlehke ("tungvint", adv)
 lyövlehkåbpoe
 löövlehkommes
-}}}
+```
 
-!Vokalstamme utan omlyd i komparativ
+### Vokalstamme utan omlyd i komparativ
 
   a = s, p = s, c = be (even)
 
-{{{
+```
     giehpie/ giehpies<- geehpes
     giehpebe
     geehpemes/giehpemes  (geehpesåbpoe/geehpesommes)
@@ -115,13 +115,13 @@ löövlehkommes
     vïelkes, vïelkes ("kvit")
     vïelkebe   (Veelkesåbpoe/veelkesommes)
     vïelkemes
-}}}
+```
 
-!konsonantstamme
+### konsonantstamme
 
     c = hkåbpoe (uneven)
 
-{{{
+```
     båantoes kaarre, kaarre lea båantoes
     båantoes, båantoes ("rik")
     båantahkåbpoe
@@ -130,57 +130,57 @@ löövlehkommes
     faavroeh, faavroeh ("vakker") - flertall
     faavroehkåbpoe
     faavroehkommes
-}}}
+```
 
     a = Ø, p = Ø, c = åbpoe
 
    (a = s, p = s, c = såbpoe)
 
-{{{
+```
     geehpes, geehpes ("permanent lett" stadfestende)
     geehpesåbpoe
     geehpesommes
 
     jåalhkoes bïjle (racer bil) bïjle jåalhkoes (racerbil)
     svalkoes almetje - almetje svalkoes (durativ)(system 1) 
-}}}
+```
 
-!!1c: a = hth, p = hth, c = htåbpoe
+## 1c: a = hth, p = hth, c = htåbpoe
 
 1c: a = h, p = h, c = åbpoe streng stammedefinisjon
-{{{
+```
     bïeljehth kaarre, kaarre lea bïeljehth
     bïeljehth, bïeljehth ("døv")
     bïeljehtåbpoe
     bïeljehtommes
-}}}
+```
 
-!!1d: a = hts (s), p = hts (s), c = åbpoe
+## 1d: a = hts (s), p = hts (s), c = åbpoe
 
 * 1d: a = hts, p = hts
 * 1d: a = s, p = s, c = åbpoe
 
-{{{
+```
     bieljehts kaarre, kaarre lea bieljehts
     bieljehts, bieljehts ("med dårlig hørsel")
     bïeljehtåbpoe
     bïeljehtommes
-}}}
+```
 
-!!1e: a = n, p = n, c = kåbpoe
-{{{
+## 1e: a = n, p = n, c = kåbpoe
+```
     treaptjan vaarjoeh, vaarjoeh leah treaptjan
     treaptjan, treaptjan   ("illeluktende og skitten")
     treaptjakåbpoe
     treaptjakommes
-}}}
+```
 
-!!1f: a = oeh, p = oeh, c = oehkåbpoe
+## 1f: a = oeh, p = oeh, c = oehkåbpoe
 
 * 1f: a = oeh, p = oeh, c = oehkåbpoe
 * 1f: a = Ø, p = Ø, c = kåbpoe
 
-{{{
+```
     såvsoeh almetje, almetje lea såvsoeh
     såvsoeh, såvsoeh ("søvnig")
     såvsoehkåbpoe/såvsahkåbpoe
@@ -190,11 +190,11 @@ löövlehkommes
 
     jåalhkoeh bïjle, mov bïjle jåalhkoeh (system 1)  
     svalkoeh almetje - almetje svalkoeh (momentan)(system 1)
-}}}
+```
 
-!!1g: a = eh, p = eh (= oeh?), c = ebe
+## 1g: a = eh, p = eh (= oeh?), c = ebe
 
-{{{
+```
     salleh treavkah, dïhte salleh
     salleh, salleh ("feil")
     sallebe
@@ -206,18 +206,18 @@ löövlehkommes
     aaremes, aaregommes (Lohkede saemien s 116) 
 
     skuapmah båetskie - båetskie skuapman => h/n =system 4
-}}}
+```
 
-!!!2: a = 0, p = s, c = be + UML
+# 2: a = 0, p = s, c = be + UML
 
 Properties:
-* __a__ = V
-* __p__ = Vs
-* __c__ = UML + be
+* **a** = V
+* **p** = Vs
+* **c** = UML + be
 
-Default CONTLEX: __NULL-S-EVEN__ & __NULL-S-ODD__
+Default CONTLEX: **NULL-S-EVEN** & **NULL-S-ODD**
 
-{{{
+```
     galme gïeth, gïeth leah galmes (kalde hender)
     galme(s), galmes ("kald") ('s' er stadfestende, f.eks 'galmes gïeth',   
     stadfester at det er kalde hender, f.eks ved død)
@@ -249,16 +249,16 @@ Default CONTLEX: __NULL-S-EVEN__ & __NULL-S-ODD__
     lovve måvhkah måvhkah leah lovves ("bløt")
     lovvebe
     lovvemes
-}}}
+```
 
-!!!3: a = s, p = 0, c = be/ebe/åbpoe
-
+# 3: a = s, p = 0, c = be/ebe/åbpoe
 
 a = Vs, p = V, c = ?
 
-{{{
+```
     gaelhvies gïjre, daen gïjren gaelhvie
     gaelhvies, gaelhvie ("kjølig")
+
     
 
     låedtjies jaevrie, daen biejjien låedtjie
@@ -278,13 +278,13 @@ a = Vs, p = V, c = ?
     raeffies, raeffie ("fredelig")
     raeffebe/raeffiehkåbpoe?
     raeffemes/raeffiehkommes? 
-}}}
+```
 
-!!!4: a ≠ p, different suffixes
+# 4: a ≠ p, different suffixes
 
 a = s, p = UML + an, c = ?
 
-{{{
+```
     pliejhkies ååredæjja, dïhte dan pleajhkan daen biejjien(momentan), 
     pliejhkies også i pred.(durativ)
     pliejhkies, pleajhkan/plijhkies ("bleik")
@@ -300,39 +300,39 @@ a = s, p = UML + an, c = ?
     såebries, såabran ("valen")
     såabrahkåbpoe
     såabrahkommes
+
     
     såmskoes åejjie, manne dan såmskan daen biejjien
     såmskoes, såmskan ("ør, forvirret")
     såmskahkåbpoe
     såmskahkommes
-}}}
+```
 
 a = h, p = UML + an
-{{{
+```
     sæjngoeh vaar/joeh jih vaarjoeh sæjngan
     sæjngoeh, sæjngan ("tynnslitt")
     sæjngoeehkåbpoe
     sæjngahkommes
-}}}
+```
 
-!!!Odd-syllable adjectives
+# Odd-syllable adjectives
 
 More her
 
-!!!Sørsamiske adjektiv, paradigme
-
+# Sørsamiske adjektiv, paradigme
 
 For kvar klasse/underklasse, skriv ut eitt eksempelord i alle moglege former:
 
-{{{
+```
 Attr
 Pred
 Positiv
 Komparativ
 Superlativ
-}}}
+```
 
-{{{
+```
 SgNom
 SgAcc
 SgGen
@@ -340,10 +340,9 @@ SgGen
 PlNom
 PlAcc
 ...
-}}}
+```
 
-
-!!!Notes
+# Notes
 
 * maana > maanetje > maanetjisnie
 * maana > maaneme > maanemisnie (stamme + poss + kasus)
@@ -356,13 +355,13 @@ aehtjie > aahtjem (acc sg) > aahtjemdh (stamme + kasus + poss)
 
 subst som 1. ledd i sms - attr
 
-{{{
+```
 aehtjie
 aahtjedh
 aahtjemdh
 aahtjendh
 aahtjasadth
-}}}
+```
 
 subst-attr i sms = adj-attr for ord med liknande struktur?
 
@@ -382,7 +381,6 @@ er det slik at subst1 har ei form som er identisk med adjektiva si attributivfor
 
 * dulvie-biejjie
 * reakeds-biejjie=
-
 
 * dovtes-gierkie ->  kva er (grunnform av) dovties her?
 * dovtege = støtte   = duvtie 
