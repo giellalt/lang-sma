@@ -11,9 +11,9 @@ It is in use in a wide range of applications.
 
 # Project documentation
 
--   [Oversyn over ulike FST-ar](../sme/KompilereFST.html)
+-   [Oversyn over ulike FST-ar](../lang-sme/KompilereFST.html)
 -   [Dictionary projects](/dicts/dicts.html)
--   [ICALL](/ped/index.html)
+-   [ICALL](http://giellalt.uit.no/ped/index.html)
 -   [Machine translation](/mt/MachineTranslation.html)
     -   [Converting the fst to Apertium format](ConvertingToApertium.md)
 
@@ -26,7 +26,7 @@ It is in use in a wide range of applications.
 Discussions on issues common for Saami languages
 ================================================
 
--   [Discussions on improving our linguistic analysis](../smi/index.html)
+-   [Discussions on improving our linguistic analysis](/lang/smi/index.html)
 
 Background documentation
 ========================
@@ -53,7 +53,7 @@ Old documentation files (for reference)
 =======================================
 
 -   **[Old documentation](docu-sma-twol.md)** of the [twolc rule
-    file](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/phonology/sma-phon.twolc)
+    file](https://github.com/giellalt/lang-sma/blob/develop/src/fst/phonology.twolc)
 -   **[Old documentation](docu-sma-lex.md)** of the lexicon files
 -   [Diskusjon: Ny omlydsrekke?](umlaut-4-aaa.txt)
 -   [Old errors and bug reports](docu-sma-bugs.md)
@@ -67,16 +67,16 @@ The following documents were not linked to in earlier versions. They are probabl
 -   [Dependency tags](docu-sma-deptags.md)
 -   [Grammar tags](docu-sma-grammartags.md)
 -   [Testplan](docu-sma-testplan.md)
--   [Test diary](docu-sma-testdiary.md)
+-   [Test diary](sma-testdiary.md)
 -   [Normativity issues](normativity-issues.md)
 
 # Source files
 
-* [stems](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/morphology/stems/)
-* [affixes](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/morphology/affixes/)
-* [syntax](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/syntax/)
-* [twolc](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/phonology/sma-phon.twolc)
-* [yaml](https://gtsvn.uit.no/langtech/trunk/langs/sma/test/src/gt-norm-yamls/)
+* [stems  ](https://github.com/giellalt/lang-sma/blob/develop/src/fst/stems/)
+* [affixes](https://github.com/giellalt/lang-sma/blob/develop/src/fst/affixes/)
+* [syntax ](https://github.com/giellalt/lang-sma/blob/develop/src/cg3/)
+* [twolc  ](https://github.com/giellalt/lang-sma/blob/develop/src/fst/phonology.twolc)
+* [yaml   ](https://github.com/giellalt/lang-sma/blob/develop/test/src/gt-norm-yamls/)
 
 # Generation
 
