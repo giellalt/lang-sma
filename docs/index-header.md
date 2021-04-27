@@ -15,7 +15,7 @@ It is in use in a wide range of applications.
 -   [Dictionary projects](/dicts/dicts.html)
 -   [ICALL](/ped/index.html)
 -   [Machine translation](/mt/MachineTranslation.html)
-    -   [Converting the fst to Apertium format](ConvertingToApertium.html)
+    -   [Converting the fst to Apertium format](ConvertingToApertium.md)
 
 Discussions on issues common for Saami languages
 ================================================
@@ -25,13 +25,13 @@ Discussions on issues common for Saami languages
 Background documentation
 ========================
 
--   [Oversyn over FST-ar for sørsamisk](KompilereFST.html)
+-   [Oversyn over FST-ar for sørsamisk](KompilereFST.md)
 -   [Background information](docu-sma-background.html) on the South
     Saami project
--   [Korpusinnsamling](sma-korpus-innsamling.html)
+-   [Korpusinnsamling](sma-korpus-innsamling.md)
 -   **Linguistic description** of South Sami:
     -   [Morphophonology](docu-sma-morphophonology.html),
-    -   [Lemma homonymies and variants - tags for indentifying and sorting](lemma.html)
+    -   [Lemma homonymies and variants - tags for indentifying and sorting](lemma.md)
     -   [Lemma homonymies and variants: Main documentation in English](../common/Variation_in_lexc.html)
     -   paradigms with examples for [verbs](docu-sma-verbs.html), nouns and adjectives.
     -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
@@ -51,8 +51,8 @@ Old documentation files (for reference)
 -   **[Old documentation](docu-sma-lex.html)** of the lexicon files
 -   [Diskusjon: Ny omlydsrekke?](umlaut-4-aaa.txt)
 -   [Old errors and bug reports](docu-sma-bugs.html)
--   [Adjective meeting](adj-meeting-05-2009.html)
--   [Adjective documentation](docu-sma-adjs.html)
+-   [Adjective meeting](adj-meeting-05-2009.md)
+-   [Adjective documentation](docu-sma-adjs.md)
 
 # Source files
 
