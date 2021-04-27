@@ -18,8 +18,8 @@
  * **+Pcle    ** = Particle
  * **+Num     ** = Numerals
  * **+TODO    ** = Code for items that have not been modeled yet
- * **+Logo    **
- * **+Subq t  ** for adverbs
+ * **+Logo    ** - ?
+ * **+Subq t  ** - used for adverbs
  * **+Dyn     ** = Code dynamic acronyms
 
 ## Tags for sub-POS
