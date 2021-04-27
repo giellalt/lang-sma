@@ -17,6 +17,12 @@ It is in use in a wide range of applications.
 -   [Machine translation](/mt/MachineTranslation.html)
     -   [Converting the fst to Apertium format](ConvertingToApertium.md)
 
+# Speller status
+
+- [![Speller Accuracy Report](https://img.shields.io/badge/Speller_Accuracy-84_%25-green.svg)](speller-report.html)
+
+![Spell-checking accuracy development](https://giellalt.github.io/lang-smj/speller-report.svg)
+
 Discussions on issues common for Saami languages
 ================================================
 
