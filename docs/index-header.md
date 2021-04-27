@@ -38,7 +38,7 @@ Background documentation
 -   **Linguistic description** of South Sami:
     -   [Morphophonology](docu-sma-morphophonology.md),
     -   [Lemma homonymies and variants - tags for indentifying and sorting](lemma.md)
-    -   [Lemma homonymies and variants: Main documentation in English](../common/Variation_in_lexc.html)
+    -   [Lemma homonymies and variants: Main documentation in English](/lang/common/Variation_in_lexc.html)
     -   paradigms with examples for [verbs](docu-sma-verbs.md), nouns and adjectives.
     -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
 -   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
