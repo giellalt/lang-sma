@@ -43,13 +43,13 @@ before compiling.
 
 
 
- # LEXICON PRED_S
+ # LEXICON PRED_S 
 The **PRED_S** lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom:%>s FINAL1 ; 
 ```
 
- # LEXICON PRED_0
+ # LEXICON PRED_0 
 The **PRED_0** lexicon is used for adjectives Predicatives.
 ```
   +Sg+Nom: FINAL1 ; 
@@ -121,7 +121,7 @@ The **a_A_EVEN1!!≈** lexicon is used for adjectives on `–a` and `–a`  In a
        :a EVENCOMP   ; 
 ```
 
- # LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
+ # LEXICON a _AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
 The **as_AS_EVEN1!!≈** lexicon is used for adjectives on `–as` and `–as`  In attributes and predicatives.With EVEN-COMP.
 ```
                :a  ATTR_S   ; 
@@ -151,7 +151,7 @@ The **a_A_EVEN1_NOCOMP** lexicon is used for adjectives on `–ie` and `–ie`  
        :a ATTR_0     ; 
 ```
 
- # LEXICON es_ES_EVEN
+ # LEXICON e _ES_EVEN
 The **es_ES_EVEN!!≈** lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-COMP.
 ```
             :e      ATTR_S       ; 
