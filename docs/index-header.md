@@ -6,6 +6,7 @@
 [![Build status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
 
 This page documents the work on the **South Sámi language model**. 
+It is in use in a wide range of applications.
 
 
 # Project documentation
