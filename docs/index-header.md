@@ -15,14 +15,12 @@ It is in use in a wide range of applications.
 -   [Dictionary projects](/dicts/dicts.html)
 -   [ICALL](/ped/index.html)
 -   [Machine translation](/mt/MachineTranslation.html)
-    -   [Converting the fst to Apertium
-        format](ConvertingToApertium.html)
+    -   [Converting the fst to Apertium format](ConvertingToApertium.html)
 
 Discussions on issues common for Saami languages
 ================================================
 
--   [Discussions on improving our linguistic
-    analysis](../smi/index.html)
+-   [Discussions on improving our linguistic analysis](../smi/index.html)
 
 Background documentation
 ========================
@@ -30,27 +28,20 @@ Background documentation
 -   [Oversyn over FST-ar for sørsamisk](KompilereFST.html)
 -   [Background information](docu-sma-background.html) on the South
     Saami project
--   [New documentation](sma.html) (all-in-one)
 -   [Korpusinnsamling](sma-korpus-innsamling.html)
 -   **Linguistic description** of South Sami:
     -   [Morphophonology](docu-sma-morphophonology.html),
-    -   [Lemma homonymies and variants - tags for indentifying and
-        sorting](lemma.html)
-    -   [Lemma homonymies and variants: Main documentation in
-        English](../common/Variation_in_lexc.html)
-    -   paradigms with examples for [verbs](docu-sma-verbs.html), nouns
-        and adjectives.
-    -   See also the [OAHPA South Saami
-        grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
+    -   [Lemma homonymies and variants - tags for indentifying and sorting](lemma.html)
+    -   [Lemma homonymies and variants: Main documentation in English](../common/Variation_in_lexc.html)
+    -   paradigms with examples for [verbs](docu-sma-verbs.html), nouns and adjectives.
+    -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
 -   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
 
 Using the analysers
 ===================
 
--   In the terminal: analyse words by writing `usma`, generate with
-    `dsma`
--   For more info, see [How to use the morphological
-    parsers](/tools/docu-sme-manual.html)
+-   In the terminal: analyse words by writing `usma`, generate with `dsma`
+-   For more info, see [How to use the morphological parsers](/tools/docu-sme-manual.html)
 
 Old documentation files (for reference)
 =======================================
