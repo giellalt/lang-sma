@@ -7,18 +7,6 @@
 #
 # dir/filename.lexc => filename-dir.jspwiki
 
-JSP_PAGES=root-morphology.jspwiki       \
-		  phonology-morphology.jspwiki  \
-		  nouns-affixes.jspwiki         \
-		  propernouns-affixes.jspwiki   \
-		  adjectives-affixes.jspwiki    \
-		  verbs-affixes.jspwiki         \
-		  numerals-affixes.jspwiki      \
-		  abbreviations-affixes.jspwiki \
-		  acronyms-affixes.jspwiki      \
-		  adjectives-stems.jspwiki      \
-		  disambiguator-syntax.jspwiki
-
 MD_PAGES=root-morphology.md       \
 		  phonology-morphology.md  \
 		  nouns-affixes.md         \
