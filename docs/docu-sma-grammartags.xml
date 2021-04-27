@@ -1,614 +1,318 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Morphological tags</title>
+Overview
+========
 
-  </header>
+All the words are analysed with dictionary form + grammatical tags. Each
+tag is introduced with a "+" sign. We thus have
 
-  <body>
+bïjlem bïjle+N+Sg+Acc  
+båatam båetedh+V+IV+Ind+Prs+Sg1
 
-      <section>
-        <title>Overview</title>
+The main parts of speech (POS) for South Saami are:
 
-        <p>All the words are analysed with dictionary form + grammatical tags.
-        Each tag is introduced with a "+" sign. We thus have</p>
+Nouns, adjectives, verbs, pronouns, adverbs, particles, subjunctions,
+conjunctions, postpositions, prepositions and interjections.
 
-        <p>bïjlem bïjle+N+Sg+Acc<br />båatam båetedh+V+IV+Ind+Prs+Sg1</p>
+The nouns
+=========
 
+The string is "+N+Number+Case+Possessivesuffix+Clitic". The word form
+"nïejteme" 'my girl' is thus analysed as "nïejte+N+Sg+Nom+PxSg1".
 
-        <p>The main parts of speech (POS) for South Saami are:</p>
+Here is a list of the nominal tags, given in the same order as for the
+analysis.
 
-        <p>Nouns, adjectives, verbs, pronouns, adverbs, particles,
-        subjunctions, conjunctions, postpositions, prepositions
-        and interjections.</p>
-      </section>
+|                      |                                                                |
+|----------------------|----------------------------------------------------------------|
+| Part of speech:      |                                                                |
+| Number:              | +Sg, +Pl                                                       |
+| Case:                | +Ess +Nom +Gen +Acc +Ill +Ine +Ela +Com                        |
+| (Possessive suffix:) | +PxSg1 +PxSg2 +PxSg3 +PxDu1 +PxDu2 +PxDu3 +PxPl1 +PxPl2 +PxPl3 |
 
-      <section>
-        <title>The nouns</title>
+The adjectives
+==============
 
-        <p>The string is "+N+Number+Case+Possessivesuffix+Clitic". The word
-        form "nïejteme" 'my girl' is thus analysed as "nïejte+N+Sg+Nom+PxSg1".</p>
+Used non-attributively the adjective resembles the noun:
 
-
-        <p>Here is a list of the nominal tags, given in the same order as for
-        the analysis.</p>
-
-        <table>
-          <tr>
-            <td>Part of speech:</td>
-          </tr>
-
-          <tr>
-            <td>Number:</td>
-            <td>+Sg, +Pl</td>
-          </tr>
-
-          <tr>
-            <td>Case:</td>
-            <td>+Ess +Nom +Gen +Acc +Ill +Ine +Ela +Com</td>
-          </tr>
-
-          <tr>
-            <td>(Possessive suffix:)</td>
-            <td>+PxSg1 +PxSg2 +PxSg3 +PxDu1 +PxDu2 +PxDu3 +PxPl1 +PxPl2
-            +PxPl3</td>
-          </tr>
-
-        </table>
-      </section>
-
-      <section>
-        <title>The adjectives</title>
-
-        <p>Used non-attributively the adjective resembles the noun:</p>
-
-        <table>
-          <tr>
-            <td>Part of speech:</td>
-            <td>+A</td>
-          </tr>
-
-          <tr>
-            <td>(Grade:)</td>
-            <td>+Comp, +Superl</td>
-          </tr>
-
-          <tr>
-            <td>Number:</td>
-            <td>+Sg, +Pl</td>
-          </tr>
-
-          <tr>
-            <td>Case:</td>
-            <td>+Ess +Nom +Gen +Acc +Ill +Ine +Ela +Com</td>
-          </tr>
-
-        </table>
-
-        <p>Used attributively the adjective has a quite simple tag scheme:</p>
-
-        <table>
-          <tr>
-            <td>Part of speech:</td>
-            <td>+A</td>
-          </tr>
-
-          <tr>
-            <td>Attribute</td>
-            <td>+Attr</td>
-          </tr>
-
-        </table>
-      </section>
-
-      <section>
-        <title>The verbs</title>
-
-        <p>Finite and infinite verb forms have quite distinct paradigms.
-        Finite first:</p>
-
-        <table>
-          <tr>
-            <td> Part of speech:</td>
-            <td>+V</td>
-          </tr>
-
-          <tr>
-            <td>(Derivation)</td>
-            <td>+Der/PassL</td>
-          </tr>
-
-          <tr>
-            <td>Mood:</td>
-            <td>+Ind, +Cond, +Imprt</td>
-          </tr>
-
-          <tr>
-            <td>Tense</td>
-            <td>+Prs, +Prt</td>
-          </tr>
-
-          <tr>
-            <td>Person/Number</td>
-            <td>+Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3, +ConNeg</td>
-          </tr>
-        </table>
-
-        <p>Infinite verb forms:</p>
-
-        <table>
-          <tr>
-            <td>Part of speech:</td>
-            <td>+V</td>
-          </tr>
-
-          <tr>
-            <td>(Derivation:)</td>
-            <td>+Der/PassL</td>
-          </tr>
-
-          <tr>
-            <td>Nominal verb form</td>
-            <td>+Inf, +Ger, +PrsPrc, +PrfPrc, VGen, +VAbess</td>
-          </tr>
-        </table>
-<!--
-        <p>Other derived verb forms:</p>
-
-        <table>
-          <tr>
-            <td>Part of speech:</td>
-            <td>+V</td>
-          </tr>
-
-          <tr>
-            <td>Part of speech:</td>
-            <td>+N</td>
-          </tr>
-
-          <tr>
-            <td>Derivation</td>
-            <td>+Actor</td>
-          </tr>
-
-          <tr>
-            <td>Number</td>
-            <td>+Sg, +Pl</td>
-          </tr>
-
-          <tr>
-            <td>Case:</td>
-            <td>+Ess +Nom +Gen +Acc +Ill +Loc +Com</td>
-          </tr>
-
-          <tr>
-            <td>(Possessive suffix:)</td>
-            <td>+PxSg1 +PxSg2 +PxSg3 +PxDu1 +PxDu2 +PxDu3 +PxPl1 +PxPl2
-            +PxPl3</td>
-          </tr>
-
-         </table>
-
-        <p>Here is an example: "addit" &gt; addit+V+N+Actor+Pl+Nom</p>
--->
-<!--        <p>These tags are still not documented: +Actio +Neg +ImprtII</p> -->
-      </section>
-
-      <section>
-        <title>The pronouns</title>
-
-        <p>The personal, demonstrative and interrogative pronouns:</p>
-
-        <p>baseform+Pron+Pers+NumberPerson+Case</p>
-
-        <p>Example:</p>
-
-        <p>underlying form: manne+Pron+Pers+Sg1+Com, surface form: mannine<br />dat+Pron+Dem+Pl+Nom</p>
-
-        <p>The reflexive pronouns:</p>
-
-        <p>baseform+Pron+pronoun_type+Case(+possessive suffix)</p>
-
-        <p>Example:  underlying form: ieš+Pron+Refl+Loc+PxDu1, surface form: alddáme</p>
-      </section>
-
-      <section>
-        <title>The indeclinable words</title>
-
-        <p>These have their POS tag as their only tag:</p>
-
-        <source>underlying form: birra+Pr or birra+Po
-surface form:    birra
-</source>
-      </section>
-
-
-<!--        <section>
-          <title>2. Numerals</title>
-
-          <p>Nickel: "tallord" "tallsubstantiv" Magga 1980: Lohkosánit leat
-          ovddemusta okta, guokte, golbma, jnv. mat almmuhit dárkilis logu.
-          dasto leat sullalogu s´</p>
-        </section> -->
-
-                <section>
-          <title>Alphabetic list over the tags</title>
-          </section> 
-                    <section>
-            <title>Part of speech</title>
- 
-
-          <dl>
-            <dt>+A</dt>
-            <dd>Adjective</dd>
-
-            <dt>+Adv</dt>
-            <dd>Adverb</dd>
-
-            <dt>+CC</dt>
-            <dd>Conjunction</dd>
-
-            <dt>+CS</dt>
-            <dd>Subjunction</dd>
-
-            <dt>+Interj</dt>
-            <dd>Interjection</dd>
-
-            <dt>+N</dt>
-            <dd>Noun</dd>
-
-            <dt>+Num</dt>
-            <dd>Numeral</dd>
-
-            <dt>+Pcle</dt>
-            <dd>Particle</dd>
-
-            <dt>+Po</dt>
-            <dd>Postposition</dd>
-
-            <dt>+Pr</dt>
-            <dd>Preposition</dd>
-
-            <dt>+Pron</dt>
-            <dd>Pronoun</dd>
-
-            <dt>+V</dt>
-            <dd>Verb</dd>
-
-		  </dl>
-        </section>
-
-        <section>
-          <title>Sub-part of speech</title>
-
-          <dl>
-            <dt>+Dem</dt>
-            <dd>Demonstrative</dd>
-
-            <dt>+Indef</dt>
-            <dd>Indefinite</dd>
-
-            <dt>+Interr</dt>
-            <dd>Interrogative</dd>
-
-            <dt>+Pers</dt>
-            <dd>Person</dd>
-
-            <dt>+Prop</dt>
-            <dd>Propernoun</dd>
-
-            <dt>+Recipr</dt>
-            <dd>Reciprocal</dd>
-
-            <dt>+Refl</dt>
-            <dd>Reflexive</dd>
-
-            <dt>+Rel</dt>
-            <dd>Relative</dd>
-
-          </dl>
-        </section>
-
-        <section>
-          <title>Grammatical properties</title>
-
-          <dl>
-            <dt>+ABBR</dt>
-            <dd>Abbreviation</dd>
-
-            <dt>+ACR</dt>
-            <dd>Accronym</dd>
-
-            <dt>+Acc</dt>
-            <dd>Accusative</dd>
-
-            <dt>+Actio</dt>
-            <dd>Actio form of the verb</dd>
-
-            <dt>+Actor</dt>
-            <dd>Actor noun</dd>
-
-            <dt>+Attr</dt>
-            <dd>Attributive</dd>
-
-            <dt>+CLB</dt>
-            <dd>Clause boundary</dd>
-
-            <dt>+Card</dt>
-            <dd>Cardinal</dd>
-
-            <dt>+Cmpnd</dt>
-            <dd>Compound (inconsistent with other notation for this tag)</dd>
-
-            <dt>+Cmpnd+</dt>
-            <dd>Compound (left tag)(inconsistent with other notation for this
-            tag)</dd>
-
-            <dt>+Com</dt>
-            <dd>Comitative</dd>
-
-            <dt>+Comp</dt>
-            <dd>Comperative</dd>
-
-            <dt>+ConNeg</dt>
-            <dd>Negationform of the verb</dd>
-
-            <dt>+Cond</dt>
-            <dd>Conditional</dd>
-
-            <dt>+Du</dt>
-            <dd>Dual</dd>
-
-            <dt>+Du1</dt>
-            <dd>Dual 1. person</dd>
-
-            <dt>+Du2</dt>
-            <dd>Dual 2. person</dd>
-
-            <dt>+Du3</dt>
-            <dd>Dual 3. person</dd>
-
-            <dt>+Ess</dt>
-            <dd>Essive</dd>
-
-			<dt>+Foc/ba</dt>
-			<dd>Focusclitic (-)ba</dd> 
-			
-			<dt>+Foc/bat</dt> 
-			<dd>Focusclitic (-)bat</dd>
-			
-			<dt>+Foc/be</dt> 
-			<dd>Focusclitic (-)be</dd>
-			
-			<dt>+Foc/ge</dt> 
-			<dd>Focusclitic (-)ge</dd>
-			
-			<dt>+Foc/gen</dt> 
-			<dd>Focusclitic (-)gen</dd>
-			
-			<dt>+Foc/ges</dt> 
-			<dd>Focusclitic (-)ges</dd>
-			
-			<dt>+Foc/gis</dt> 
-			<dd>Focusclitic (-)gis</dd>
-			
-			<dt>+Foc/hal</dt> 
-			<dd>Focusclitic (-)hal</dd>
-			
-			<dt>+Foc/han</dt>
-			<dd>Focusclitic (-)han</dd>
-			
-			<dt>+Foc/naj</dt>
-			<dd>Focusclitic (-)nai</dd>
-            
-            <dt>+Foc/naj+Qst</dt>
-            <dd>Focusclitic (-)naigo</dd>
-            
-            <dt>+Foc/son</dt>
-			<dd>Focusclitic (-)son</dd>            
-
-            <dt>+Gen</dt>
-            <dd>Genitive</dd>
-
-            <dt>+Ger</dt>
-            <dd>Gerund</dd>
-
-            <dt>+Guess</dt>
-            <dd>Tag indicating form not in the lexicon !Not in use</dd>
-
-            <dt>+IV</dt>
-            <dd>Intrasitive verb</dd>
-
-            <dt>+Ill</dt>
-            <dd>Illative</dd>
-
-            <dt>+Imprt</dt>
-            <dd>Imperative</dd>
-
-            <dt>+ImprtII</dt>
-            <dd>Imperative II</dd>
-
-            <dt>+Ind</dt>
-            <dd>Indicative</dd>
-
-            <dt>+Inf</dt>
-            <dd>Infinitive</dd>
-
-            <dt>+LEFT</dt>
-            <dd>Left parenthesis</dd>
-
-            <dt>+Loc</dt>
-            <dd>Locative</dd>
-
-            <dt>+Neg</dt>
-            <dd>Negationverb</dd>
-
-            <dt>+Nom</dt>
-            <dd>Nominative</dd>
-
-            <dt>+Ord</dt>
-            <dd>Ordinal</dd>
-
-            <dt>+PUNCT</dt>
-            <dd>Punctuation other than clause boundaries<em>"/", "(", ")", "+"
-            </em></dd>
-
-            <dt>+Der/PassL, +Der/PassS</dt>
-            <dd>Long and short passive</dd>
-
-            <dt>+Pl</dt>
-            <dd>Plural</dd>
-
-            <dt>+Pl1</dt>
-            <dd>Plural 1. person</dd>
-
-            <dt>+Pl2</dt>
-            <dd>Plural 2. person</dd>
-
-            <dt>+Pl3</dt>
-            <dd>Plural 3. person</dd>
-
-            <dt>+Cmp/PlGen</dt>
-            <dd>Plural genitive compound</dd>
-
-            <dt>+Pot</dt>
-            <dd>Potential</dd>
-
-            <dt>+PrfPrc</dt>
-            <dd>Perfect participle</dd>
-
-            <dt>+Prs</dt>
-            <dd>Present tense</dd>
-
-            <dt>+PrsPrc</dt>
-            <dd>Present participle</dd>
-
-            <dt>+Prt</dt>
-            <dd>Preteritum</dd>
-
-            <dt>+PxDu1</dt>
-            <dd>Possessivesuffix dual 1. person</dd>
-
-            <dt>+PxDu2</dt>
-            <dd>Possessivesuffix dual 2. person</dd>
-
-            <dt>+PxDu3</dt>
-            <dd>Possessivesuffix dual 3. person</dd>
-
-            <dt>+PxPl1</dt>
-            <dd>Possessivesuffix plural 1. person</dd>
-
-            <dt>+PxPl2</dt>
-            <dd>Possessivesuffix plural 1. person</dd>
-
-            <dt>+PxPl3</dt>
-            <dd>Possessivesuffix plural 1. person</dd>
-
-            <dt>+PxSg1</dt>
-            <dd>Possessivesuffix singular 1. person</dd>
-
-            <dt>+PxSg2</dt>
-            <dd>Possessivesuffix singular 2. person</dd>
-
-            <dt>+PxSg3</dt>
-            <dd>Possessivesuffix singular 3. person</dd>
-
-            <dt>+Qst</dt>
-            <dd>Question clitic <em>(-)go</em></dd>
-            
-            <dt>+Qst+Foc/son</dt>
-            <dd>Question clitic <em></em></dd>
-
-            <dt>+RIGHT</dt>
-            <dd>Right parenthesis</dd>
-
-            <dt>+Sg</dt>
-            <dd>Singular</dd>
-
-            <dt>+Sg1</dt>
-            <dd>Singular 1. person</dd>
-
-            <dt>+Sg2</dt>
-            <dd>Singular 2. person</dd>
-
-            <dt>+Sg3</dt>
-            <dd>Singular 3. person</dd>
-
-            <dt>+Cmp/Sg</dt>
-            <dd>Singular compound</dd>
-
-            <dt>+Cmp/SgGen</dt>
-            <dd>Singular genitive compound</dd>
-
-            <dt>+Cmp/SgNom</dt>
-            <dd>Singular nominative compound</dd>
-
-            <dt>+Sup</dt>
-            <dd>Supinum</dd>
-
-            <dt>+Superl</dt>
-            <dd>Superlative</dd>
-
-            <dt>+TV</dt>
-            <dd>Transitive verb</dd>
-
-            <dt>+VAbess</dt>
-            <dd>Verb abessive</dd>
-
-            <dt>+VGen</dt>
-            <dd>Verb genitive</dd>
-			
-          </dl>
-        </section>
-
-        <section>
-          <title>Derivational suffix tags</title>
-<p>Forthcoming...</p>
-
-<!--
-<dl>
-            <dt>+Der/š</dt>
-            <dd>suffix</dd>
-          </dl>
-          -->
-        </section>
-<!--
-        <section>
-          <title>Semantic tags</title>
-
-          <p>These are tags used for classifying names, e.g. +Prop+Sem/Fem</p>
-
-          <dl>
-            <dt>+Sem/Ani</dt>
-            <dd>Animal name</dd>
-
-            <dt>+Sem/Fem</dt>
-            <dd>Female</dd>
-
-            <dt>+Sem/Mal</dt>
-            <dd>Male</dd>
-
-            <dt>+Sem/Obj</dt>
-            <dd>Object</dd>
-
-            <dt>+Sem/Org</dt>
-            <dd>Organisation name</dd>
-
-            <dt>+Sem/Plc</dt>
-            <dd>Place name</dd>
-
-            <dt>+Sem/Sur</dt>
-            <dd>Surname</dd>
-
-            <dt>+WEB</dt>
-            <dd>Web addresse</dd>
-          </dl>
-        </section>
-        -->
-        
-      <p class="last_modified">Last modified: $Date: 2011-08-05 01:09:26 +0200 (Fri, 05 Aug 2011) $, by
-      $Author: lene $</p>
-  </body>
-</document>
+|                 |                                         |
+|-----------------|-----------------------------------------|
+| Part of speech: | +A                                      |
+| (Grade:)        | +Comp, +Superl                          |
+| Number:         | +Sg, +Pl                                |
+| Case:           | +Ess +Nom +Gen +Acc +Ill +Ine +Ela +Com |
+
+Used attributively the adjective has a quite simple tag scheme:
+
+|                 |       |
+|-----------------|-------|
+| Part of speech: | +A    |
+| Attribute       | +Attr |
+
+The verbs
+=========
+
+Finite and infinite verb forms have quite distinct paradigms. Finite
+first:
+
+|                 |                                                       |
+|-----------------|-------------------------------------------------------|
+| Part of speech: | +V                                                    |
+| (Derivation)    | +Der/PassL                                            |
+| Mood:           | +Ind, +Cond, +Imprt                                   |
+| Tense           | +Prs, +Prt                                            |
+| Person/Number   | +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3, +ConNeg |
+
+Infinite verb forms:
+
+|                   |                                             |
+|-------------------|---------------------------------------------|
+| Part of speech:   | +V                                          |
+| (Derivation:)     | +Der/PassL                                  |
+| Nominal verb form | +Inf, +Ger, +PrsPrc, +PrfPrc, VGen, +VAbess |
+
+The pronouns
+============
+
+The personal, demonstrative and interrogative pronouns:
+
+baseform+Pron+Pers+NumberPerson+Case
+
+Example:
+
+underlying form: manne+Pron+Pers+Sg1+Com, surface form: mannine  
+dat+Pron+Dem+Pl+Nom
+
+The reflexive pronouns:
+
+baseform+Pron+pronoun\_type+Case(+possessive suffix)
+
+Example: underlying form: ieš+Pron+Refl+Loc+PxDu1, surface form: alddáme
+
+The indeclinable words
+======================
+
+These have their POS tag as their only tag:
+
+    underlying form: birra+Pr or birra+Po
+    surface form:    birra
+
+Alphabetic list over the tags
+=============================
+
+Part of speech
+==============
+
+-   **+A:**  
+    Adjective
+-   **+Adv:**  
+    Adverb
+-   **+CC:**  
+    Conjunction
+-   **+CS:**  
+    Subjunction
+-   **+Interj:**  
+    Interjection
+-   **+N:**  
+    Noun
+-   **+Num:**  
+    Numeral
+-   **+Pcle:**  
+    Particle
+-   **+Po:**  
+    Postposition
+-   **+Pr:**  
+    Preposition
+-   **+Pron:**  
+    Pronoun
+-   **+V:**  
+    Verb
+
+Sub-part of speech
+==================
+
+-   **+Dem:**  
+    Demonstrative
+-   **+Indef:**  
+    Indefinite
+-   **+Interr:**  
+    Interrogative
+-   **+Pers:**  
+    Person
+-   **+Prop:**  
+    Propernoun
+-   **+Recipr:**  
+    Reciprocal
+-   **+Refl:**  
+    Reflexive
+-   **+Rel:**  
+    Relative
+
+Grammatical properties
+======================
+
+-   **+ABBR:**  
+    Abbreviation
+-   **+ACR:**  
+    Accronym
+-   **+Acc:**  
+    Accusative
+-   **+Actio:**  
+    Actio form of the verb
+-   **+Actor:**  
+    Actor noun
+-   **+Attr:**  
+    Attributive
+-   **+CLB:**  
+    Clause boundary
+-   **+Card:**  
+    Cardinal
+-   **+Cmpnd:**  
+    Compound (inconsistent with other notation for this tag)
+-   **+Cmpnd+:**  
+    Compound (left tag)(inconsistent with other notation for this tag)
+-   **+Com:**  
+    Comitative
+-   **+Comp:**  
+    Comperative
+-   **+ConNeg:**  
+    Negationform of the verb
+-   **+Cond:**  
+    Conditional
+-   **+Du:**  
+    Dual
+-   **+Du1:**  
+    Dual 1. person
+-   **+Du2:**  
+    Dual 2. person
+-   **+Du3:**  
+    Dual 3. person
+-   **+Ess:**  
+    Essive
+-   **+Foc/ba:**  
+    Focusclitic (-)ba
+-   **+Foc/bat:**  
+    Focusclitic (-)bat
+-   **+Foc/be:**  
+    Focusclitic (-)be
+-   **+Foc/ge:**  
+    Focusclitic (-)ge
+-   **+Foc/gen:**  
+    Focusclitic (-)gen
+-   **+Foc/ges:**  
+    Focusclitic (-)ges
+-   **+Foc/gis:**  
+    Focusclitic (-)gis
+-   **+Foc/hal:**  
+    Focusclitic (-)hal
+-   **+Foc/han:**  
+    Focusclitic (-)han
+-   **+Foc/naj:**  
+    Focusclitic (-)nai
+-   **+Foc/naj+Qst:**  
+    Focusclitic (-)naigo
+-   **+Foc/son:**  
+    Focusclitic (-)son
+-   **+Gen:**  
+    Genitive
+-   **+Ger:**  
+    Gerund
+-   **+Guess:**  
+    Tag indicating form not in the lexicon !Not in use
+-   **+IV:**  
+    Intrasitive verb
+-   **+Ill:**  
+    Illative
+-   **+Imprt:**  
+    Imperative
+-   **+ImprtII:**  
+    Imperative II
+-   **+Ind:**  
+    Indicative
+-   **+Inf:**  
+    Infinitive
+-   **+LEFT:**  
+    Left parenthesis
+-   **+Loc:**  
+    Locative
+-   **+Neg:**  
+    Negationverb
+-   **+Nom:**  
+    Nominative
+-   **+Ord:**  
+    Ordinal
+-   **+PUNCT:**  
+    Punctuation other than clause boundaries*"/", "(", ")", "+"*
+-   **+Der/PassL, +Der/PassS:**  
+    Long and short passive
+-   **+Pl:**  
+    Plural
+-   **+Pl1:**  
+    Plural 1. person
+-   **+Pl2:**  
+    Plural 2. person
+-   **+Pl3:**  
+    Plural 3. person
+-   **+Cmp/PlGen:**  
+    Plural genitive compound
+-   **+Pot:**  
+    Potential
+-   **+PrfPrc:**  
+    Perfect participle
+-   **+Prs:**  
+    Present tense
+-   **+PrsPrc:**  
+    Present participle
+-   **+Prt:**  
+    Preteritum
+-   **+PxDu1:**  
+    Possessivesuffix dual 1. person
+-   **+PxDu2:**  
+    Possessivesuffix dual 2. person
+-   **+PxDu3:**  
+    Possessivesuffix dual 3. person
+-   **+PxPl1:**  
+    Possessivesuffix plural 1. person
+-   **+PxPl2:**  
+    Possessivesuffix plural 1. person
+-   **+PxPl3:**  
+    Possessivesuffix plural 1. person
+-   **+PxSg1:**  
+    Possessivesuffix singular 1. person
+-   **+PxSg2:**  
+    Possessivesuffix singular 2. person
+-   **+PxSg3:**  
+    Possessivesuffix singular 3. person
+-   **+Qst:**  
+    Question clitic *(-)go*
+-   **+Qst+Foc/son:**  
+    Question clitic
+-   **+RIGHT:**  
+    Right parenthesis
+-   **+Sg:**  
+    Singular
+-   **+Sg1:**  
+    Singular 1. person
+-   **+Sg2:**  
+    Singular 2. person
+-   **+Sg3:**  
+    Singular 3. person
+-   **+Cmp/Sg:**  
+    Singular compound
+-   **+Cmp/SgGen:**  
+    Singular genitive compound
+-   **+Cmp/SgNom:**  
+    Singular nominative compound
+-   **+Sup:**  
+    Supinum
+-   **+Superl:**  
+    Superlative
+-   **+TV:**  
+    Transitive verb
+-   **+VAbess:**  
+    Verb abessive
+-   **+VGen:**  
+    Verb genitive
+
+Derivational suffix tags
+========================
+
+Forthcoming...
