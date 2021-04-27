@@ -26,14 +26,14 @@ Background documentation
 ========================
 
 -   [Oversyn over FST-ar for sørsamisk](KompilereFST.md)
--   [Background information](docu-sma-background.html) on the South
+-   [Background information](docu-sma-background.md) on the South
     Saami project
 -   [Korpusinnsamling](sma-korpus-innsamling.md)
 -   **Linguistic description** of South Sami:
-    -   [Morphophonology](docu-sma-morphophonology.html),
+    -   [Morphophonology](docu-sma-morphophonology.md),
     -   [Lemma homonymies and variants - tags for indentifying and sorting](lemma.md)
     -   [Lemma homonymies and variants: Main documentation in English](../common/Variation_in_lexc.html)
-    -   paradigms with examples for [verbs](docu-sma-verbs.html), nouns and adjectives.
+    -   paradigms with examples for [verbs](docu-sma-verbs.md), nouns and adjectives.
     -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
 -   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
 
@@ -46,13 +46,23 @@ Using the analysers
 Old documentation files (for reference)
 =======================================
 
--   **[Old documentation](docu-sma-twol.html)** of the [twolc rule
+-   **[Old documentation](docu-sma-twol.md)** of the [twolc rule
     file](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/phonology/sma-phon.twolc)
--   **[Old documentation](docu-sma-lex.html)** of the lexicon files
+-   **[Old documentation](docu-sma-lex.md)** of the lexicon files
 -   [Diskusjon: Ny omlydsrekke?](umlaut-4-aaa.txt)
--   [Old errors and bug reports](docu-sma-bugs.html)
+-   [Old errors and bug reports](docu-sma-bugs.md)
 -   [Adjective meeting](adj-meeting-05-2009.md)
 -   [Adjective documentation](docu-sma-adjs.md)
+
+# Unlinked documentation
+
+The following documents were not linked to in earlier versions. They are probably useless by now, but linked to for now, for easy access and consideration:
+
+-   [Dependency tags](docu-sma-deptags.md)
+-   [Grammar tags](docu-sma-grammartags.md)
+-   [Testplan](docu-sma-testplan.md)
+-   [Test diary](docu-sma-testdiary.md)
+-   [Normativity issues](normativity-issues.md)
 
 # Source files
 
