@@ -6,11 +6,66 @@
 [![Build status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
 
 This page documents the work on the **South Sámi language model**. 
+It is in use in a wide range of applications.
 
 
 # Project documentation
 
-* (Add links to project specific documentation here as needed. Keep the documentation in the `docs/` directory.)
+-   [Oversyn over ulike FST-ar](../sme/KompilereFST.html)
+-   [Dictionary projects](/dicts/dicts.html)
+-   [ICALL](/ped/index.html)
+-   [Machine translation](/mt/MachineTranslation.html)
+    -   [Converting the fst to Apertium format](ConvertingToApertium.md)
+
+Discussions on issues common for Saami languages
+================================================
+
+-   [Discussions on improving our linguistic analysis](../smi/index.html)
+
+Background documentation
+========================
+
+-   [Oversyn over FST-ar for sørsamisk](KompilereFST.md)
+-   [Background information](docu-sma-background.html) on the South
+    Saami project
+-   [Korpusinnsamling](sma-korpus-innsamling.md)
+-   **Linguistic description** of South Sami:
+    -   [Morphophonology](docu-sma-morphophonology.html),
+    -   [Lemma homonymies and variants - tags for indentifying and sorting](lemma.md)
+    -   [Lemma homonymies and variants: Main documentation in English](../common/Variation_in_lexc.html)
+    -   paradigms with examples for [verbs](docu-sma-verbs.html), nouns and adjectives.
+    -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
+-   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
+
+Using the analysers
+===================
+
+-   In the terminal: analyse words by writing `usma`, generate with `dsma`
+-   For more info, see [How to use the morphological parsers](/tools/docu-sme-manual.html)
+
+Old documentation files (for reference)
+=======================================
+
+-   **[Old documentation](docu-sma-twol.html)** of the [twolc rule
+    file](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/phonology/sma-phon.twolc)
+-   **[Old documentation](docu-sma-lex.html)** of the lexicon files
+-   [Diskusjon: Ny omlydsrekke?](umlaut-4-aaa.txt)
+-   [Old errors and bug reports](docu-sma-bugs.html)
+-   [Adjective meeting](adj-meeting-05-2009.md)
+-   [Adjective documentation](docu-sma-adjs.md)
+
+# Source files
+
+* [stems](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/morphology/stems/)
+* [affixes](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/morphology/affixes/)
+* [syntax](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/syntax/)
+* [twolc](https://gtsvn.uit.no/langtech/trunk/langs/sma/src/phonology/sma-phon.twolc)
+* [yaml](https://gtsvn.uit.no/langtech/trunk/langs/sma/test/src/gt-norm-yamls/)
+
+# Generation
+
+* [paradigms](http://giellatekno.uit.no/cgi/p-sma.sma.html) /
+* [text](http://giellatekno.uit.no/cgi/d-sma.sma.html) /
 
 # In-source documentation
 
