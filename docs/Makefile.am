@@ -13,6 +13,7 @@ MD_PAGES=root-morphology.md       \
 		  propernouns-affixes.md   \
 		  adjectives-affixes.md    \
 		  verbs-affixes.md         \
+		  verbs-stems.md         \
 		  numerals-affixes.md      \
 		  abbreviations-affixes.md \
 		  acronyms-affixes.md      \
@@ -33,7 +34,6 @@ MD_PAGES=root-morphology.md       \
 # pronouns-stems.jspwiki           \
 # propernouns-stems.jspwiki        \
 # punctuation-stems.jspwiki        \
-# subjunctions-stems.jspwiki       \
-# verbs-stems.jspwiki
+# subjunctions-stems.jspwiki
 
 include $(top_srcdir)/../giella-core/am-shared/docs-dir-include.am
