@@ -70,6 +70,7 @@ The following documents were not linked to in earlier versions. They are probabl
 -   [Test diary](sma-testdiary.md)
 -   [Normativity issues](normativity-issues.md)
 
+
 # Source files
 
 * [stems  ](https://github.com/giellalt/lang-sma/blob/develop/src/fst/stems/)
