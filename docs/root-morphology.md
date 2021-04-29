@@ -18,8 +18,8 @@
  * **+Pcle** = Particle
  * **+Num** = Numerals
  * **+TODO** = Code for items that have not been modeled yet
- * **+Logo**
- * **+Subqst** for adverbs
+ * **+Logo** - ?
+ * **+Subqst** - used for adverbs
  * **+Dyn** = Code dynamic acronyms
 
 ## Tags for sub-POS
@@ -316,8 +316,8 @@ to research compounding patterns in the corpus.
  * +Sem/Food-med = Medicine; birth-control pill, asthma medicine, medicine, penicillin, vaccine/ medisin eks: hodetabelett
  * +Sem/Fruit = Fruit and fruit-like edibles/ frukt,bær, salat
  * +Sem/Furn = Furniture; throne, chair, table, altar, trampoline
- *  +Sem/Game                   = Game; biŋgo bingo, TV game, flipper, paintball, chess
- *  +Sem/Geom                   = Geometrical object; triangle, triangle, tetrahedron, asymptote, star
+ * +Sem/Game = Game; biŋgo bingo, TV game, flipper, paintball, chess
+ * +Sem/Geom = Geometrical object; triangle, triangle, tetrahedron, asymptote, star
  * +Sem/Group = Animal or Human Group; family, herd, group, indigenous people, delegation
  * +Sem/Hum = Human
  * +Sem/ID = ID
@@ -352,7 +352,7 @@ to research compounding patterns in the corpus.
  * +Sem/Prod-cogn = Cognition product; thought, decision, knowledge, lack of understanding, requirement
  * +Sem/Prod-ling = Linguistic product; message, question, agreement, translation, criticism
  * +Sem/Prod-vis = Visual product; picture, film, TV series, documentary, art
- *  +Sem/Rel                    = Relation; relation, dependency, subordination, analogy, equivalence
+ * +Sem/Rel = Relation; relation, dependency, subordination, analogy, equivalence
  * +Sem/Route = Route-like place; street, path, corridor, bridge, winter path
  * +Sem/Rule = Rule or convention; cultural tradition, abortion law, EU rule, law of cosines, fair play
  * +Sem/Semcon = Abstract semantic concept; result, objective, reason, alternative, case
