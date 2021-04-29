@@ -3350,57 +3350,32 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
+# South Saami verbal inflection sublexica
+
 This is the file for the South Saami verb inflection and derivation.
 
-# Verbal inflection sublexica
-
-Table of content for this file:
-
-* The auxiliaries
-    - The negative verb
-    - Other auxiliaries
-* Odd-syllable verbs
-    - Inflection common to all odd verbs
-* Even-syllable verbs
-    - Nominal derivation sublexica
-* Verbal affixes
-    - Finite forms
-    - Even
-        - Present
-        - Imperative
-        - Present
-    - Odd
-        - Present
-        - Past
-        - Imperative
-    - Common even-odd
-        - Present
-        - Past
 
 
-# The auxiliaries
+## The auxiliaries
 
 First we just list the auxiliaries and their inflection.
 
- * **LEXICON LEA  ** the copula
+ * **LEXICON LEA** the copula
 
 
-     - **LEXICON LEA-PRES  **
+     - **LEXICON LEA-PRES**
 
 
-     - **LEXICON LEA-PRET **
+     - **LEXICON LEA-PRET**
 
-     - **LEXICON LEA-IMP **
-
-
-
-
-## The negative verb
-
- * **LEXICON NEG  **
+     - **LEXICON LEA-IMP**
 
 
 
+
+### The negative verb
+
+ * **LEXICON NEG**
 
 
 
@@ -3409,86 +3384,89 @@ First we just list the auxiliaries and their inflection.
 
 
 
-     - **LEXICON OLLE  **
-
-
-     - **LEXICON NEGIMP  **
-
-
-     - **LEXICON IJ-PRES  **
 
 
 
+     - **LEXICON OLLE**
 
 
+     - **LEXICON NEGIMP**
 
 
-## Other auxiliaries
-
- * **LEXICON EDTJEDH  **
-
-
-
-     - **LEXICON ED-PRES  **
-
-
-
-     - **LEXICON ED-PRET **
-
-     - **LEXICON ED-IMP **
+     - **LEXICON IJ-PRES**
 
 
 
 
-# Odd-syllable verbs
+
+
+
+### Other auxiliaries
+
+ * **LEXICON EDTJEDH**
+
+
+
+     - **LEXICON ED-PRES**
+
+
+
+     - **LEXICON ED-PRET**
+
+     - **LEXICON ED-IMP**
+
+
+
+
+## Odd-syllable verbs
 
 Odd syllable verbs differ in Prt Sg3.
 This form is treated separately, and
 the rest of the paradigm is conflated.
 
 
- * **LEXICON TJOEVERIDH_IV  **
+ * **LEXICON TJOEVERIDH_IV**
 
 
 
 
 
- * **LEXICON GOLTELIDH_TV  **
+ * **LEXICON GOLTELIDH_TV**
 
- * **LEXICON AALHTEDIDH_TV  **
+ * **LEXICON AALHTEDIDH_TV**
 
- * **LEXICON GOLTELIDH_IV  **
-
-
- * **LEXICON GOLTELIDH   **, odd-syll with -adte- as Der2
+ * **LEXICON GOLTELIDH_IV**
 
 
-
-
- * **LEXICON BALVEDIDH  **
+ * **LEXICON GOLTELIDH**, odd-syll with -adte- as Der2
 
 
 
 
-
- * **LEXICON RIHPESIDH   **,  -nidh and -sidh
-
- * **LEXICON AAJVESTIDH_TV     **, for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
-
- * **LEXICON DÅAJVOEHTIDH_TV  **
+ * **LEXICON BALVEDIDH**
 
 
 
- * **LEXICON DÅAJVOEHTIDH_IV  **
 
 
- * **LEXICON DÅAJVOEHTIDH    ** for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
+ * **LEXICON RIHPESIDH**,  -nidh and -sidh
+
+ * **LEXICON AAJVESTIDH_TV**, for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2 and passive -sovvedh
+
+ * **LEXICON DÅAJVOEHTIDH_TV**
 
 
 
-## Inflection common to all odd verbs
+ * **LEXICON DÅAJVOEHTIDH_IV**
 
- * **LEXICON COMMON-ODD   **
+
+ * **LEXICON DÅAJVOEHTIDH** for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
+
+
+
+### Inflection common to all odd verbs
+
+ * **LEXICON COMMON-ODD**
 
 * Finite forms
 
@@ -3500,179 +3478,179 @@ the rest of the paradigm is conflated.
 
 
 
-# Even-syllable verbs
+## Even-syllable verbs
 
- * **LEXICON MAEHTEDH_TV  **
-
-
- * **LEXICON BÅETEDH_TV  **
-
- * **LEXICON BÅETEDH_TV_ePRET  **
-
- * **LEXICON BÅETEDH_IV  **
-
- * **LEXICON BÅETEDH_IV_ePRET  **
+ * **LEXICON MAEHTEDH_TV**
 
 
- * **LEXICON BÅETEDH   ** row A - Group I
+ * **LEXICON BÅETEDH_TV**
+
+ * **LEXICON BÅETEDH_TV_ePRET**
+
+ * **LEXICON BÅETEDH_IV**
+
+ * **LEXICON BÅETEDH_IV_ePRET**
 
 
-
- * **LEXICON BÅETEDH_NOTVGEN   ** row A - Group Ixxf
-
-
- * **LEXICON SEVTEDH   ** row A - Group I  IMPERSONALS!
+ * **LEXICON BÅETEDH** row A - Group I
 
 
 
+ * **LEXICON BÅETEDH_NOTVGEN** row A - Group Ixxf
 
- * **LEXICON ÅEREDH   ** row A - Group I   Hasselbrink: "öörim."- (Thomassen) Qvigstad: "vöörtim" 
+
+ * **LEXICON SEVTEDH** row A - Group I  IMPERSONALS!
 
 
 
 
- * **LEXICON ÅEREDH_TV   ** row A - Group I   NO -øø-UMLAUT!!!!
+ * **LEXICON ÅEREDH** row A - Group I   Hasselbrink: "öörim."- (Thomassen) Qvigstad: "vöörtim" 
+
+
+
+
+ * **LEXICON ÅEREDH_TV** row A - Group I   NO -øø-UMLAUT!!!!
 
 
 
 
 
- * **LEXICON TJEARODH_TV  **
+ * **LEXICON TJEARODH_TV**
 
 
- * **LEXICON TJEARODH_IV  **
+ * **LEXICON TJEARODH_IV**
 
 
- * **LEXICON TJEARODH   ** row C - Group II
+ * **LEXICON TJEARODH** row C - Group II
 
 
 
 
- * **LEXICON ABRODH   ** row C - Group II
+ * **LEXICON ABRODH** row C - Group II
 
 
- * **LEXICON TSEAHKODH_TV  **
+ * **LEXICON TSEAHKODH_TV**
 
- * **LEXICON TSEAHKODH_IV  **
-
-
- * **LEXICON TSEAHKODH   ** row C - Group II    these have (lexicalized) diminutives on -estit, and passives on -algidh
+ * **LEXICON TSEAHKODH_IV**
 
 
- * **LEXICON GUARKEDH_TV  **
-
- * **LEXICON GUARKEDH_IV  **
+ * **LEXICON TSEAHKODH** row C - Group II    these have (lexicalized) diminutives on -estit, and passives on -algidh
 
 
- * **LEXICON GUARKEDH   ** row B - Group III
+ * **LEXICON GUARKEDH_TV**
+
+ * **LEXICON GUARKEDH_IV**
+
+
+ * **LEXICON GUARKEDH** row B - Group III
 
 Fått tilbakemelding på denne om at "jarkah" er +Ind+Prs+Sg2, og "Jarkh!" er +Imprt. Har forelöpig satt denne inn som Err/Orth
 
 
- * **LEXICON SIJHTEDH_TV   **
+ * **LEXICON SIJHTEDH_TV**
 
 
 
- * **LEXICON TJOEHPEDH_TV  **
+ * **LEXICON TJOEHPEDH_TV**
 
- * **LEXICON GALKEDH_IV  **
+ * **LEXICON GALKEDH_IV**
 
 
 
- * **LEXICON TJOEHPEDH_IV  **
+ * **LEXICON TJOEHPEDH_IV**
 
 
- * **LEXICON TJOEHPEDH   ** row D - Group IV
+ * **LEXICON TJOEHPEDH** row D - Group IV
 
 
- * **LEXICON TJOEHPEDH_NOTVGEN  **
+ * **LEXICON TJOEHPEDH_NOTVGEN**
 
 
- * **LEXICON GALKEDH_CONT   ** row D - Group IV
+ * **LEXICON GALKEDH_CONT** row D - Group IV
 
 
 
 
- * **LEXICON BIEGKEDH   ** row D - Group IV !impersonals
+ * **LEXICON BIEGKEDH** row D - Group IV !impersonals
 
- * **LEXICON BÅÅHKEDH_TV  **
+ * **LEXICON BÅÅHKEDH_TV**
 
- * **LEXICON SÅÅJHTEDH_IV  **
+ * **LEXICON SÅÅJHTEDH_IV**
 
 
 
- * **LEXICON BÅÅHKEDH_IV  **
+ * **LEXICON BÅÅHKEDH_IV**
 
 
- * **LEXICON BÅÅHKEDH   ** row E - Group V
+ * **LEXICON BÅÅHKEDH** row E - Group V
 
- * **LEXICON SÅÅJHTEDH_CONT   ** row E - Group V
+ * **LEXICON SÅÅJHTEDH_CONT** row E - Group V
 
- * **LEXICON VÅÅJNEDH  **
+ * **LEXICON VÅÅJNEDH**
 
 
 
- * **LEXICON GÖÖLEDH_TV  **
+ * **LEXICON GÖÖLEDH_TV**
 
 
- * **LEXICON GÖÖLEDH_IV  **
+ * **LEXICON GÖÖLEDH_IV**
 
 
- * **LEXICON GÖÖLEDH   ** row F - Group VI
+ * **LEXICON GÖÖLEDH** row F - Group VI
 
 
- * **LEXICON BÖÖVTEDH   ** row F - Group VI
+ * **LEXICON BÖÖVTEDH** row F - Group VI
 
 
- * **LEXICON EEREDH_TV  **
+ * **LEXICON EEREDH_TV**
 
- * **LEXICON EEREDH_IV  **
+ * **LEXICON EEREDH_IV**
 
 
 
 
- * **LEXICON ÅARAJEHTEDH_TV  **
+ * **LEXICON ÅARAJEHTEDH_TV**
 
 
- * **LEXICON ÅARAJEHTEDH_IV  **
+ * **LEXICON ÅARAJEHTEDH_IV**
 
 
- * **LEXICON ÅARAJEHTEDH   ** row A - Group I
+ * **LEXICON ÅARAJEHTEDH** row A - Group I
 
- * **LEXICON BUARADEHTEDH  **
+ * **LEXICON BUARADEHTEDH**
 
 
- * **LEXICON GOEGKERDADTEDH_TV  **
+ * **LEXICON GOEGKERDADTEDH_TV**
 
- * **LEXICON GOEGKERDADTEDH_IV  **
+ * **LEXICON GOEGKERDADTEDH_IV**
 
 
- * **LEXICON GOEGKERDADTEDH   ** row D - Group IV
+ * **LEXICON GOEGKERDADTEDH** row D - Group IV
 
- * **LEXICON OBREDADTEDH  **
+ * **LEXICON OBREDADTEDH**
 
- * **LEXICON GÅETEDH_TV  **
+ * **LEXICON GÅETEDH_TV**
 
- * **LEXICON GÅETEDH_IV  **
+ * **LEXICON GÅETEDH_IV**
 
 
- * **LEXICON GÅETEDH   ** from Der/InchL
+ * **LEXICON GÅETEDH** from Der/InchL
 
- * **LEXICON STIEHPEGÅETEDH  **
+ * **LEXICON STIEHPEGÅETEDH**
 
 
- * **LEXICON AHTJE_TV  **
+ * **LEXICON AHTJE_TV**
 
- * **LEXICON AHTJE_IV  **
+ * **LEXICON AHTJE_IV**
 
- * **LEXICON OBRIJAHTJEDH  **
+ * **LEXICON OBRIJAHTJEDH**
 
 
- * **LEXICON AHTJE   ** row D - Group IV
+ * **LEXICON AHTJE** row D - Group IV
 
- * **LEXICON SOVVEDH **row D - Group IV
+ * **LEXICON SOVVEDH**row D - Group IV
 
- * **LEXICON IV_PASSIVE_L  ** - Passive of intransitive verbs => impersonate verbs, like "dïjvelduvvieh" = "(de sakene) ble diskutert", from "dïjveldidh" = "diskutere" (IV), only used in 3rd person Sg and Pl.
+ * **LEXICON IV_PASSIVE_L** - Passive of intransitive verbs => impersonate verbs, like "dïjvelduvvieh" = "(de sakene) ble diskutert", from "dïjveldidh" = "diskutere" (IV), only used in 3rd person Sg and Pl.
 
 
 
@@ -3685,7 +3663,7 @@ Derivations
 -----------
 
 
- * **LEXICON LGIDH  **
+ * **LEXICON LGIDH**
 
 
 
@@ -3700,39 +3678,39 @@ Nominal derivation sublexica
 
 
 
- * **LEXICON LAAHKOEH_ODD  **
+ * **LEXICON LAAHKOEH_ODD**
 
-     - **LEXICON LAAHKOEH_ÅBPOE  **
+     - **LEXICON LAAHKOEH_ÅBPOE**
 
 
-     - **LEXICON LAAHKOEH_OMMES   **
+     - **LEXICON LAAHKOEH_OMMES**
 
 
 
- * **LEXICON IGENSUFF   **
+ * **LEXICON IGENSUFF**
 
 
-# Verbal affixes
+## Verbal affixes
 
-## Finite forms
+### Finite forms
 
-### Even
+#### Even
 
-### Present
+##### Present
 
- * **LEXICON V-I-PRS-SG   ** Merge with V-EVEN-PRS if nothing special here.
+ * **LEXICON V-I-PRS-SG** Merge with V-EVEN-PRS if nothing special here.
 
- * **LEXICON V-II-PRS-SG   **
+ * **LEXICON V-II-PRS-SG**
 
- * **LEXICON V-III-PRS-SG   **
+ * **LEXICON V-III-PRS-SG**
 
- * **LEXICON VSUF-V-EVEN-PRS   **
+ * **LEXICON VSUF-V-EVEN-PRS**
 
- * **LEXICON VSUF-V-EVEN-PRS-DUPL   **
+ * **LEXICON VSUF-V-EVEN-PRS-DUPL**
 
 
 
- * **LEXICON VSUF-EVEN-PRS-DUPL   **
+ * **LEXICON VSUF-EVEN-PRS-DUPL**
 
 
 
@@ -3742,84 +3720,84 @@ Nominal derivation sublexica
 
 
 
- * **LEXICON VSUF-VI-EVEN-PRS   **
 
+ * **LEXICON VSUF-VI-EVEN-PRS**
 
-### Imperative
 
- * **LEXICON VSUF-EVEN-IMP   **
 
 
+ * **LEXICON V-IV-EVEN-PRS**
 
- * **LEXICON VSUF-II-EVEN-IMP  **
 
+##### Imperative
 
+ * **LEXICON VSUF-EVEN-IMP**
 
- * **LEXICON VSUF-III-EVEN-IMP  **
-### Present
 
 
+ * **LEXICON VSUF-II-EVEN-IMP**
 
 
- * **LEXICON V-IV-EVEN-PRS  **
 
+ * **LEXICON VSUF-III-EVEN-IMP**
 
 
 
 
+#### Ulikestavelsesverb - ODD
 
-Ulikestavelsesverb - ODD
+##### Present
 
-### Present
+ * **LEXICON VSUF-ODD-PRS**
 
- * **LEXICON VSUF-ODD-PRS  **
+     - **LEXICON V-ODD-PRS-SG**
 
-     - **LEXICON V-ODD-PRS-SG  **
+     - **LEXICON V-ODD-PRS-DUPL**
 
-     - **LEXICON V-ODD-PRS-DUPL  **
+     - **LEXICON ODD_PRS_NON_DU3**
 
-     - **LEXICON ODD_PRS_NON_DU3  **
+     - **LEXICON ODD_PRS_DU3**
 
-     - **LEXICON ODD_PRS_DU3  **
 
+##### Past
 
-### Past
+ * **LEXICON VSUF-ODD-PRT**
 
- * **LEXICON VSUF-ODD-PRT  **
+##### Imperative
 
-### Imperative
+ * **LEXICON VSUF-ODD-IMP**
 
- * **LEXICON VSUF-ODD-IMP   **
 
 
+#### Common even-odd
 
 
-## Common even-odd
+##### Present
 
+ * **LEXICON V-PRS-SG-12** Kutt denne viss ikkje ref til
 
-### Present
+ * **LEXICON V-PRS-SG-1**
 
- * **LEXICON V-PRS-SG-12   ** Kutt denne viss ikkje ref til
+ * **LEXICON V-PRS-SG-2**
 
- * **LEXICON V-PRS-SG-1  **
+ * **LEXICON V-PRS-SG-3**
 
- * **LEXICON V-PRS-SG-2  **
 
- * **LEXICON V-PRS-SG-3  **
+##### Past
 
+ * **LEXICON VSUF-PRT**
 
-### Past
 
- * **LEXICON VSUF-PRT  **
 
+ * **LEXICON VSUF-PRT-SG-12**
 
+ * **LEXICON VSUF-PRT-SG-3**
 
- * **LEXICON VSUF-PRT-SG-12  **
 
- * **LEXICON VSUF-PRT-SG-3  **
+ * **LEXICON VSUF-PRT-DUPL**
 
 
- * **LEXICON VSUF-PRT-DUPL  **
+## Flag diacritica
 
 
 
@@ -3845,48 +3823,62 @@ LEXICON V-EVEN-PRS
 
 # Verb stems
 
-
 ## Preamble: Documenting the classes
 contlex stem umlaut dict class
-**Verbklasse I**
-BÅETEDH even row A/stem vowel -ie-, class I
-SEVTEDH  even row A class I impersonals
-ÅARAJEHTEDH even row A class I derived words -ehtedh, -estedh, -iste
-BUARADEHTEDH  even row A class I derived words -ehtedh, -estedh, -iste impersonals
-GÅETEDH even row A class I derived words -gåete
-STIEHPEGÅETEDH even row A class I derived words -gåete  impersonals
-ÅEREDH  even row A class I NO -øø-UMLAUT!Verbg 1
+
+### Even stems
+
+#### Verbklasse I
+* BÅETEDH even row A/stem vowel -ie-, class I
+* SEVTEDH  even row A class I impersonals
+* ÅARAJEHTEDH even row A class I derived words -ehtedh, -estedh, -iste
+* BUARADEHTEDH  even row A class I derived words -ehtedh, -estedh, -iste impersonals
+* GÅETEDH even row A class I derived words -gåete
+* STIEHPEGÅETEDH even row A class I derived words -gåete  impersonals
+* ÅEREDH  even row A class I NO -øø-UMLAUT!Verbg 1
 
 
-**Verbklasse II**
-TJEARODH even row C class II
-TSEAHKODH even row C class II
-ABRODH  even row C - class II impersonals
-**Verbklasse III**
-GUARKEDH even row B class III
-**Verbklasse IV**
-TJOEHPEDH even row D class IV
-BIEGKEDH  even row D - class IV impersonals
-GOEGKERDADTEDH even row D class IV derived words -alledh, -adte
-OBREDADTEDH  even row D class IV derived words -alledh, -adte  impersonals
-SOVVEDH even row D class IV derived words -sovvedh, htalledh = passives
-AHTJE  row D class IV derived words -ahtje
-OBRIJAHTJEDH   row D class IV derived words -ahtje   impersonals
-**Verbklasse V**
-BÅÅHKEDH even row E class V
-VÅÅJNEDH even row E class V  passives
-**Verbklasse VI**
-GÖÖLEDH even row F class VI
-BÖÖVTEDH even row F - class VI  impersonals
-**Verbklasse ulikestava**
-GOLTELIDH odd !odd-syll with -adte- as Der2
-BALVEDIDH odd impersonals
-RIHPESIDH odd !odd-syll with -adte- as Der2 -nidh and -sidh
-DÅAJVOEHTIDH odd !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
-LGIDH odd ending -lgi
-SOVVEDH
+#### Verbklasse II
+* TJEARODH even row C class II
+* TSEAHKODH even row C class II
+* ABRODH  even row C - class II impersonals
 
-**LEXICON AUX** lemma for edtjedh, ij and lea.
+#### Verbklasse III
+* GUARKEDH even row B class III
+
+#### Verbklasse IV
+* TJOEHPEDH even row D class IV
+* BIEGKEDH  even row D - class IV impersonals
+* GOEGKERDADTEDH even row D class IV derived words -alledh, -adte
+* OBREDADTEDH  even row D class IV derived words -alledh, -adte  impersonals
+* SOVVEDH even row D class IV derived words -sovvedh, htalledh = passives
+* AHTJE  row D class IV derived words -ahtje
+* OBRIJAHTJEDH   row D class IV derived words -ahtje   impersonals
+
+#### Verbklasse V
+* BÅÅHKEDH even row E class V
+* VÅÅJNEDH even row E class V  passives
+
+#### Verbklasse VI
+* GÖÖLEDH even row F class VI
+* BÖÖVTEDH even row F - class VI  impersonals
+
+#### Verbklasse ulikestava
+* GOLTELIDH odd !odd-syll with -adte- as Der2
+* BALVEDIDH odd impersonals
+* RIHPESIDH odd !odd-syll with -adte- as Der2 -nidh and -sidh
+* DÅAJVOEHTIDH odd !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
+* LGIDH odd ending -lgi
+
+
+
+## The actual continuation lexica
+
+**LEXICON Verb** splits to AUX and Regular_verbs
+
+
+
+**LEXICON AUX** lemma for *edtjedh, ij* and *lea*, each with their own contlex in **affixes**.
 
 **LEXICON Regular_verbs** here comes the whole list, appr. 11000.
 
