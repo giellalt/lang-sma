@@ -18,8 +18,8 @@
  * **+Pcle** = Particle
  * **+Num** = Numerals
  * **+TODO** = Code for items that have not been modeled yet
- * **+Logo**
- * **+Subqst** for adverbs
+ * **+Logo** - ?
+ * **+Subqst** - used for adverbs
  * **+Dyn** = Code dynamic acronyms
 
 ## Tags for sub-POS
@@ -316,8 +316,8 @@ to research compounding patterns in the corpus.
  * +Sem/Food-med = Medicine; birth-control pill, asthma medicine, medicine, penicillin, vaccine/ medisin eks: hodetabelett
  * +Sem/Fruit = Fruit and fruit-like edibles/ frukt,bær, salat
  * +Sem/Furn = Furniture; throne, chair, table, altar, trampoline
- *  +Sem/Game                   = Game; biŋgo bingo, TV game, flipper, paintball, chess
- *  +Sem/Geom                   = Geometrical object; triangle, triangle, tetrahedron, asymptote, star
+ * +Sem/Game = Game; biŋgo bingo, TV game, flipper, paintball, chess
+ * +Sem/Geom = Geometrical object; triangle, triangle, tetrahedron, asymptote, star
  * +Sem/Group = Animal or Human Group; family, herd, group, indigenous people, delegation
  * +Sem/Hum = Human
  * +Sem/ID = ID
@@ -352,7 +352,7 @@ to research compounding patterns in the corpus.
  * +Sem/Prod-cogn = Cognition product; thought, decision, knowledge, lack of understanding, requirement
  * +Sem/Prod-ling = Linguistic product; message, question, agreement, translation, criticism
  * +Sem/Prod-vis = Visual product; picture, film, TV series, documentary, art
- *  +Sem/Rel                    = Relation; relation, dependency, subordination, analogy, equivalence
+ * +Sem/Rel = Relation; relation, dependency, subordination, analogy, equivalence
  * +Sem/Route = Route-like place; street, path, corridor, bridge, winter path
  * +Sem/Rule = Rule or convention; cultural tradition, abortion law, EU rule, law of cosines, fair play
  * +Sem/Semcon = Abstract semantic concept; result, objective, reason, alternative, case
@@ -3837,6 +3837,116 @@ LEXICON V-EVEN-PRS
   V-PRS-SG-12 ;
   V-PRS-SG-3 ;
    V-EVEN-PRS-DUPL ;
+
+
+
+
+
+
+# Verb stems
+
+
+## Preamble: Documenting the classes
+contlex stem umlaut dict class
+**Verbklasse I**
+BÅETEDH even row A/stem vowel -ie-, class I
+SEVTEDH  even row A class I impersonals
+ÅARAJEHTEDH even row A class I derived words -ehtedh, -estedh, -iste
+BUARADEHTEDH  even row A class I derived words -ehtedh, -estedh, -iste impersonals
+GÅETEDH even row A class I derived words -gåete
+STIEHPEGÅETEDH even row A class I derived words -gåete  impersonals
+ÅEREDH  even row A class I NO -øø-UMLAUT!Verbg 1
+
+
+**Verbklasse II**
+TJEARODH even row C class II
+TSEAHKODH even row C class II
+ABRODH  even row C - class II impersonals
+**Verbklasse III**
+GUARKEDH even row B class III
+**Verbklasse IV**
+TJOEHPEDH even row D class IV
+BIEGKEDH  even row D - class IV impersonals
+GOEGKERDADTEDH even row D class IV derived words -alledh, -adte
+OBREDADTEDH  even row D class IV derived words -alledh, -adte  impersonals
+SOVVEDH even row D class IV derived words -sovvedh, htalledh = passives
+AHTJE  row D class IV derived words -ahtje
+OBRIJAHTJEDH   row D class IV derived words -ahtje   impersonals
+**Verbklasse V**
+BÅÅHKEDH even row E class V
+VÅÅJNEDH even row E class V  passives
+**Verbklasse VI**
+GÖÖLEDH even row F class VI
+BÖÖVTEDH even row F - class VI  impersonals
+**Verbklasse ulikestava**
+GOLTELIDH odd !odd-syll with -adte- as Der2
+BALVEDIDH odd impersonals
+RIHPESIDH odd !odd-syll with -adte- as Der2 -nidh and -sidh
+DÅAJVOEHTIDH odd !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
+LGIDH odd ending -lgi
+SOVVEDH
+
+**LEXICON AUX** lemma for edtjedh, ij and lea.
+
+**LEXICON Regular_verbs** here comes the whole list, appr. 11000.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
