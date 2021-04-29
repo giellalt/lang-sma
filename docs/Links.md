@@ -4,6 +4,7 @@
 * [propernouns-affixes.md](propernouns-affixes.md)
 * [adjectives-affixes.md](adjectives-affixes.md)
 * [verbs-affixes.md](verbs-affixes.md)
+* [verbs-stems.md](verbs-stems.md)
 * [numerals-affixes.md](numerals-affixes.md)
 * [abbreviations-affixes.md](abbreviations-affixes.md)
 * [acronyms-affixes.md](acronyms-affixes.md)
