@@ -851,6 +851,9 @@ $(srcdir)/%-syntax.md: $(top_srcdir)/src/cg3/%.cg3
 $(srcdir)/%-morphology.md: $(top_srcdir)/src/fst/%.lexc
 	$(AM_V_AWK)"$(GAWK)" -f $(DOCC2MDWIKI) < $< > $@
 
+$(srcdir)/%.md: $(top_srcdir)/src/fst/oahpa-filer/%.lexc
+	$(AM_V_AWK)"$(GAWK)" -f $(DOCC2MDWIKI) < $< > $@
+
 $(srcdir)/%-morphology.md: $(top_srcdir)/src/fst/%.twolc
 	$(AM_V_AWK)"$(GAWK)" -f $(DOCC2MDWIKI) < $< > $@
 
@@ -895,8 +898,8 @@ generate-markdown: generated-markdowns.targets
 		$(MAKE) $(srcdir)/$$f;\
 	done
 
-$(ALL_IN_ONE): generate-markdown generated-markdowns.targets
-	$(AM_V_GEN)cat `cat generated-markdowns.targets` > $@
+$(ALLINONE_MD_PAGE): generate-markdown generated-markdowns.targets
+	$(AM_V_GEN)cat `cat generated-markdowns.targets | sed -e 's@^@$(srcdir)/@'` > $@
 
 $(LINKS): generate-markdown generated-markdowns.targets
 	$(AM_V_GEN)cat generated-markdowns.targets |\
