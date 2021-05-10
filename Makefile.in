@@ -14,10 +14,7 @@
 
 @SET_MAKE@
 
-# List all jspwiki files that should be created from source files in the
-# JSP_PAGES variable. The filename pattern is as follows:
-#
-# dir/filename.lexc => filename-dir.jspwiki
+# The generated docs are automatically detected by the automake script
 
 # *.gt.* designates the tagset being used.
 # At the end of the makefile, there is support for automatic compilation of
@@ -405,19 +402,6 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-MD_PAGES = root-morphology.md       \
-		  phonology-morphology.md  \
-		  nouns-affixes.md         \
-		  propernouns-affixes.md   \
-		  adjectives-affixes.md    \
-		  verbs-affixes.md         \
-		  verbs-stems.md         \
-		  numerals-affixes.md      \
-		  abbreviations-affixes.md \
-		  acronyms-affixes.md      \
-		  adjectives-stems.md      \
-		  disambiguator-syntax.md
-
 
 # Variables:
 ALLINONE_MD_PAGE = $(srcdir)/$(GTLANG).md
@@ -946,22 +930,6 @@ clean-local:
 	$(AM_V_at)-rm -f *-tools.md
 
 # vim: set ft=automake:
-
-#         sma-acronyms-stems.jspwiki    \
-#		  smi-propernouns-stems.jspwiki \
-# clitics-morphology.jspwiki       \
-# compounding-morphology.jspwiki   \
-# adpositions-stems.jspwiki        \
-# adverbs-stems.jspwiki            \
-# conjunctions-stems.jspwiki       \
-# interjections-stems.jspwiki      \
-# nouns-stems.jspwiki              \
-# numerals-stems.jspwiki           \
-# particles-stems.jspwiki          \
-# pronouns-stems.jspwiki           \
-# propernouns-stems.jspwiki        \
-# punctuation-stems.jspwiki        \
-# subjunctions-stems.jspwiki
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
