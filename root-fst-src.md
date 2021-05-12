@@ -44,10 +44,10 @@
 ## Error (non-standard language) tags
 
 |                     Error tag | Explanation
-|                           --- | --- 
+|                           --- | ---
  | **+Err/Orth** | Substandard, unormert form av et ord
  | **+Err/Hyph** | Substandard, unormert
- | **+Err/SpaceCmp** | Substandard, unormert 
+ | **+Err/SpaceCmp** | Substandard, unormert
  | **+Err/Attr** | Substandard, unormert Attr-form av et ord
  | **+Err/Lex** | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
  | **+Err/Der** | Errors in derivations
@@ -57,7 +57,7 @@
 ### Usage tags
 
 |                    Usage tag | Explanation
-|                          --- | --- 
+|                          --- | ---
  | **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
  | **+Use/-Spell** | Excluded from speller
  | **+Use/-PLX** | Excluded in PLX speller
@@ -67,7 +67,7 @@
  | **+Use/Ped** | Remove from pedagogical speller
  | **+Use/NG** | Do not generate <br/> for isme-ped.fst and apertium
  | **+Use/MT** | Generate for apertium only
- | **+Use/NotDNorm** | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even thugh they are decided upon by GG. Included in speller.
+ | **+Use/NotDNorm** | For (spellings of) words that do not follow the orthographic principles of sma. Divvun suggest that this shouldn't be normative, even though they are decided upon by GG. Included in speller.
  | **+Use/DNorm** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
  | **+Use/PMatch** | Do *only* include in fst's for hfst-pmatch
  | **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch
@@ -77,7 +77,7 @@
 ## Dialect tags
 
 |            Dialect tag | Explanation
-|                    --- | --- 
+|                    --- | ---
  | **+Dial/-S** | Not in the South
  | **+Dial/S** | Only in the South
  | **+Dial/-N** | Not in the North
@@ -105,7 +105,7 @@ following tags. `+CmpN/SgN` must be specified if also other tags
 are listed - unless `+CmpN/SgN` should *not* be used, for course.
 
 |    Normative compounding tag | Explanation
-|                        :---- | :---- 
+|                        :---- | :----
  |  **+CmpN/Sg** | Singular
  |  **+CmpN/SgN** | Singular Nominative
  |  **+CmpN/SgG** | Singular Genitive
@@ -118,7 +118,7 @@ These tags overrule the regular tags defined above. One or more
 can be specified.
 
 | Normative left-governing tag | Explanation
-|                          --- | --- 
+|                          --- | ---
  |  **+CmpN/SgLeft** | Sg to the left
  |  **+CmpN/SgNomLeft** | etc.
  |  **+CmpN/SgGenLeft** | "
@@ -127,7 +127,7 @@ can be specified.
 ### This part of the component can ...
 
 |        Normative position tag | Explanation
-|                           --- | --- 
+|                           --- | ---
  |  **+CmpNP/All** | ... be in all positions, **default**, this tag does not have to be written
  |  **+CmpNP/First** | ... only be first part in a compound or alone
  |  **+CmpNP/Pref** | ... only be **first** part in a compound, NEVER alone
@@ -142,7 +142,7 @@ Tags for compound analysis - this is what a compound actually is. We use this
 to research compounding patterns in the corpus.
 
 | Descriptive compounding tag | Explanation
-|                       --- | --- 
+|                       --- | ---
  |  **+Cmp/Sg** | Compounding using an unspecified singular stem
  |  **+Cmp/SgNom** | Compounding using nominative singular
  |  **+Cmp/SgGen** | Compounding using genitive singular
@@ -190,12 +190,12 @@ to research compounding patterns in the corpus.
 
 ## Tense, Person & Number
 |                                                 Tense tag | Explanation
-|                                                       --- | --- 
+|                                                       --- | ---
  |  **+Prs** | Presens
  |  **+Prt** | Preteritum
 
 |                                  Person & Number tag | Explanation
-|                                                  --- | --- 
+|                                                  --- | ---
  |  **+Sg1** | Singular, 1.person
  |  **+Sg2** | Singular, 2.person
  |  **+Sg3** | Singular, 3.person
@@ -209,7 +209,7 @@ to research compounding patterns in the corpus.
 ## Other verbal tags
 
 |             Verbal tag | Explanation
-|                    --- | --- 
+|                    --- | ---
  | **+Neg** | negation verb ij
  | **+ConNeg** | main verb complement to Neg, form identical to Imp
  | **+VAbess** | Verb Abessive
@@ -275,7 +275,7 @@ to research compounding patterns in the corpus.
  * **+Foc/gænnah**:  XXX Document better = Forsterkende particle
 
 ### tags for adverbs and komparerte adj
- * **+Gram/Comp +Gram/Superl**:  
+ * **+Gram/Comp +Gram/Superl**:
 
 
 ## Semantic tags to help disambiguation & synt. analysis:
@@ -306,7 +306,7 @@ to research compounding patterns in the corpus.
  * +Sem/Drink = Drink; tea, beer, UHT milk, soda, communion wine
  * +Sem/Dummytag = Default tag for uncategorized nouns
  * +Sem/Edu = Educational event; skiing high school skiing academy, course, music lesson, lesson, master
- * +Sem/Event = Event; wedding, meeting, competition, election, festival 
+ * +Sem/Event = Event; wedding, meeting, competition, election, festival
  * +Sem/Feat = Feature; Árvu, age difference, homosexuality, femininity, identity, congruence
  * +Sem/Feat-measr = Measurable feature; radius, diameter, volume, circumference, perimeter, frequency
  * +Sem/Feat-phys = Physiological feature; size, color, height, shape, weight, horsepower
@@ -378,7 +378,7 @@ to research compounding patterns in the corpus.
 
 Multiple Semantic tags
 
- * +Sem/Act_Domain = 
+ * +Sem/Act_Domain =
  * +Sem/Act_Fruit = frukt og handling
  * +Sem/Act_Plc = handling og plass
  * +Sem/Act_Route = handling og vei
@@ -387,98 +387,98 @@ Multiple Semantic tags
  * +Sem/Ani_Body-abstr_Hum = dyrekropp, abstrakt begrep på mennesker, menneske
  * +Sem/Ani_Buildpart = dyr og bygningsdel
  * +Sem/Ani_Group = gruppe med dyr
- * +Sem/Ani_Group_Hum = 
- * +Sem/Ani_Hum = 
- * +Sem/Ani_Obj-el = 
- * +Sem/Ani_Plc_Txt = 
- * +Sem/Ani_Time = 
- * +Sem/Ani_Tool = 
+ * +Sem/Ani_Group_Hum =
+ * +Sem/Ani_Hum =
+ * +Sem/Ani_Obj-el =
+ * +Sem/Ani_Plc_Txt =
+ * +Sem/Ani_Time =
+ * +Sem/Ani_Tool =
  * +Sem/Ani_Veh = dyr + kjöretöy eks hest
- * +Sem/Aniprod_Hum = 
- * +Sem/Aniprod_Plc_Route = 
- * +Sem/Body_Food = 
+ * +Sem/Aniprod_Hum =
+ * +Sem/Aniprod_Plc_Route =
+ * +Sem/Body_Food =
  * +Sem/Body_Hum = kroppsdeler, mennesker
  * +Sem/Body_Mat = kroppsdeler og dudtjie matriell
- * +Sem/Body_Measr = 
- * +Sem/Body_Obj_Tool-catch = 
- * +Sem/Body_Plc = 
- * +Sem/Body_Plc-elevate = 
- * +Sem/Buildpart_Ctain_Obj = 
- * +Sem/Build_Clthpart = 
- * +Sem/Build_Edu_Org = 
- * +Sem/Build_Org = 
- * +Sem/Cat_Group_Hum_Plc = 
- * +Sem/Clth-jewl_Curr = 
- * +Sem/Clth-jewl_Curr_Obj = 
- * +Sem/Ctain-abstr_Org = 
- * +Sem/Ctain-clth_Plant = 
- * +Sem/Ctain-clth_Veh = 
- * +Sem/Ctain_Furn = 
- * +Sem/Ctain_Tool = 
- * +Sem/Curr_Obj = 
- * +Sem/Domain_Hum = 
- * +Sem/Domain_Money = 
- * +Sem/Drink_Plant = 
+ * +Sem/Body_Measr =
+ * +Sem/Body_Obj_Tool-catch =
+ * +Sem/Body_Plc =
+ * +Sem/Body_Plc-elevate =
+ * +Sem/Buildpart_Ctain_Obj =
+ * +Sem/Build_Clthpart =
+ * +Sem/Build_Edu_Org =
+ * +Sem/Build_Org =
+ * +Sem/Cat_Group_Hum_Plc =
+ * +Sem/Clth-jewl_Curr =
+ * +Sem/Clth-jewl_Curr_Obj =
+ * +Sem/Ctain-abstr_Org =
+ * +Sem/Ctain-clth_Plant =
+ * +Sem/Ctain-clth_Veh =
+ * +Sem/Ctain_Furn =
+ * +Sem/Ctain_Tool =
+ * +Sem/Curr_Obj =
+ * +Sem/Domain_Hum =
+ * +Sem/Domain_Money =
+ * +Sem/Drink_Plant =
  * +Sem/Edu_Event = eks: seminar, søndagsskole
- * +Sem/Edu_Geom = 
- * +Sem/Edu_Hum = 
- * +Sem/Edu_Mat = utbildning og mat	
- * +Sem/Edu_Org = 
- * +Sem/Event_Plc-elevate = 
- * +Sem/Feat-measr_Plc = 
- * +Sem/Feat-phys_Tool-write = 
- * +Sem/Feat-psych_Hum = 
- * +Sem/Feat-psych_Plc = 
- * +Sem/Feat_Plant = 
+ * +Sem/Edu_Geom =
+ * +Sem/Edu_Hum =
+ * +Sem/Edu_Mat = utbildning og mat
+ * +Sem/Edu_Org =
+ * +Sem/Event_Plc-elevate =
+ * +Sem/Feat-measr_Plc =
+ * +Sem/Feat-phys_Tool-write =
+ * +Sem/Feat-psych_Hum =
+ * +Sem/Feat-psych_Plc =
+ * +Sem/Feat_Plant =
  * +Sem/Food_Plant = tobakk
- * +Sem/Furn_Time = 
+ * +Sem/Furn_Time =
  * +Sem/Game_Obj-play = leker eks: snøballkastning.sekkelek
- * +Sem/Geom_Obj = 
- * +Sem/Group_Hum = 
+ * +Sem/Geom_Obj =
+ * +Sem/Group_Hum =
  * +Sem/Group_Hum_Plc = gruppe mennesker tilsammens eks: konfirmasjonsleir
- * +Sem/Group_Hum_Plc-abstr = 
+ * +Sem/Group_Hum_Plc-abstr =
  * +Sem/Hum_Lang = human and language
  * +Sem/Hum_Lang_Plc = eks menneske, nord/sør, lulesamisk etc.
- * +Sem/Hum_Mat_Tool = 
+ * +Sem/Hum_Mat_Tool =
  * +Sem/Hum_Org = menneske og organisasjon
- * +Sem/Hum_Veh = 
- * +Sem/Hum_Tool = 
- * +Sem/Lang_Tool = 
- * +Sem/Mat_Obj-clo = 
+ * +Sem/Hum_Veh =
+ * +Sem/Hum_Tool =
+ * +Sem/Lang_Tool =
+ * +Sem/Mat_Obj-clo =
  * +Sem/Mat_Plant = material, plante eks bomull
- * +Sem/Mat_Txt = 
- * +Sem/Measr_Obj_Time = 
- * +Sem/Measr_Sign = 
+ * +Sem/Mat_Txt =
+ * +Sem/Measr_Obj_Time =
+ * +Sem/Measr_Sign =
  * +Sem/Measr_Time = år, mnd, uke, time, minutt
- * +Sem/Money_Obj = 
- * +Sem/Obj-ling_Obj-surfc = 
- * +Sem/Hum_Obj = 
- * +Sem/Obj_State = 
- * +Sem/Obj_Veh = 
- * +Sem/Org_Plc = 
- * +Sem/Org_Prod-audio = 
- * +Sem/Org_Prod-cogn = 
- * +Sem/Org_Prod-vis = 
- * +Sem/Org_Rule = 
- * +Sem/Org_Txt = 
- * +Sem/Part_Prod-cogn = 
- * +Sem/Plant_Plantpart = 
- * +Sem/Plc-abstr_Route = 
- * +Sem/Plc_Pos = 
- * +Sem/Plc_Route = 
- * +Sem/Plc_Substnc = 
- * +Sem/Plc_Substnc_Wthr = 
- * +Sem/Plc_Txt = 
- * +Sem/Plc_Wthr = 
- * +Sem/Prod-audio_Txt = 
- * +Sem/Prod-cogn_Txt = 
- * +Sem/Semcon_Wthr = 
- * +Sem/Substnc_Wthr = 
- * +Sem/Time_Wthr = 
- * +Sem/Domain_Txt = 
+ * +Sem/Money_Obj =
+ * +Sem/Obj-ling_Obj-surfc =
+ * +Sem/Hum_Obj =
+ * +Sem/Obj_State =
+ * +Sem/Obj_Veh =
+ * +Sem/Org_Plc =
+ * +Sem/Org_Prod-audio =
+ * +Sem/Org_Prod-cogn =
+ * +Sem/Org_Prod-vis =
+ * +Sem/Org_Rule =
+ * +Sem/Org_Txt =
+ * +Sem/Part_Prod-cogn =
+ * +Sem/Plant_Plantpart =
+ * +Sem/Plc-abstr_Route =
+ * +Sem/Plc_Pos =
+ * +Sem/Plc_Route =
+ * +Sem/Plc_Substnc =
+ * +Sem/Plc_Substnc_Wthr =
+ * +Sem/Plc_Txt =
+ * +Sem/Plc_Wthr =
+ * +Sem/Prod-audio_Txt =
+ * +Sem/Prod-cogn_Txt =
+ * +Sem/Semcon_Wthr =
+ * +Sem/Substnc_Wthr =
+ * +Sem/Time_Wthr =
+ * +Sem/Domain_Txt =
 
 |              Tag | Explanation
-|                    --- | --- 
+|                    --- | ---
  |  +MWE | multi word expressions, goes to abbr
 
 Use the following flag diacritics to control downcasing of derived proper
@@ -487,7 +487,7 @@ these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
 
 |              Flag | Explanation
-|                    --- | --- 
+|                    --- | ---
  |  @P.Px.add@ | Giving possibility for Px-suffixes (all except from Nom 3.p)
  |  @R.Px.add@ | Requiring P.Px.add-flag for Px-suffixes (all except from Nom 3.p)
  |  @P.Nom3Px.add@ |  Giving possibility for Px-suffixes Nom 3.p
@@ -506,7 +506,7 @@ precede position 2 derivations, and so on.
 
 
 |    Pos1     | Pos2      | Pos3      | POS switches (from-to)| Explanation
-| --- | --- | --- | --- | --- 
+| --- | --- | --- | --- | ---
  |  **+Der1** |            |            |      | Position tag, required
  |             | **+Der2** |            |      | Position tag, required
  |             |            | **+Der3** |      | Position tag, required
@@ -529,7 +529,7 @@ precede position 2 derivations, and so on.
  |  **+Der/laakan** |            |            | AAdv | adverb
  |  **+Der/laaketje** |            |            | AA   | adjektiv
  |  **+Der/Comp** |            |            | AA   | adjektiv
- |  **+Der/Superl** |            |            | AA   | adjektiv 
+ |  **+Der/Superl** |            |            | AA   | adjektiv
  |             | **+Der/vuota** |            | AN   | Noun
  |             | **+Der/adte** |            | VV   | Frequentative, Kontinuativ
  |             | **+Der/alla** |            | VV   | Frequentative
@@ -554,7 +554,7 @@ and you are set.
  * **+Der**:  Tag to precede any non-positional derivation
 
 |   Derivation tag | POS switch | Explanation
-| --- | --- | --- 
+| --- | --- | ---
  |  +Der/PassS | VV | short passive only
  |  +Der/A | NA | comparation of N's
 
@@ -586,7 +586,7 @@ long as the IPA conversion is correct - at least some words will
 get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 
 |   Originating language tag | Originating language
-| --- | --- 
+| --- | ---
  |  **+OLang/SME** | North Sámi
  |  **+OLang/SMA** | South Sámi
  |  **+OLang/FIN** | Finnish
@@ -640,7 +640,7 @@ clitic boundary mark - a multichar that usually just go to zero
 ## Umlaut and diphthong simplification triggers
 
 |                    Trigger | Explanation
-|                        --- | --- 
+|                        --- | ---
  |  %^DISIMP | diphthong simplification
  |  %^COMPDISIMP | diphthong simplification in comparatives
  |  %^COMPDISIMP2 | diphthong simplification in comparatives, type 2
@@ -674,7 +674,7 @@ flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
 
 |                         Flag | Explanation
-|                          --- | --- 
+|                          --- | ---
  |  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
  |  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
  |  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
@@ -686,7 +686,7 @@ handled automatically if combined with +CmpN/xxx tags. If not used, they will
 do no harm.
 
 |                        Flag | Explanation
-|                         --- | --- 
+|                         --- | ---
  |  @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
  |  @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
  |  @P.CmpPref.FALSE@ | Block these words from making further compounds
@@ -706,14 +706,14 @@ these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
 
 |                         Flag | Explanation
-|                          --- | --- 
+|                          --- | ---
  |  @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
  |  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
 
 The following flag diacritics are used by the grammar checker.
 
 |                         Flag | Explanation
-|                          --- | --- 
+|                          --- | ---
  | @R.SpellRlx.ON@ | Flag used to tag spell-relax-analysed strings (and only those).
  | @D.SpellRlx.ON@ | Flag used to tag spell-relax-analysed strings (and only those).
  | @C.SpellRlx@ | Flag used to tag spell-relax-analysed strings (and only those).
