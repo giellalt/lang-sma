@@ -5,7 +5,7 @@
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
 [![Build status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
 
-This page documents the work on the **South Sámi language model**. 
+This page documents the work on the [South Sámi language model](http://github.com/giellalt/lang-sma). 
 It is in use in a wide range of applications.
 
 
