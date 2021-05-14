@@ -43,11 +43,11 @@ It is in use in a wide range of applications.
 
 ### Source files
 
-* [stems  ](https://github.com/giellalt/lang-sma/blob/develop/src/fst/stems/)
-◊ [affixes](https://github.com/giellalt/lang-sma/blob/develop/src/fst/affixes/)
-◊ [syntax ](https://github.com/giellalt/lang-sma/blob/develop/src/cg3/)
-◊ [twolc  ](https://github.com/giellalt/lang-sma/blob/develop/src/fst/phonology.twolc)
-◊ [yaml   ](https://github.com/giellalt/lang-sma/blob/develop/test/src/gt-norm-yamls/)
+* [stems  ](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/)
+◊ [affixes](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/)
+◊ [syntax ](https://github.com/giellalt/lang-sma/blob/main/src/cg3/)
+◊ [twolc  ](https://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc)
+◊ [yaml   ](https://github.com/giellalt/lang-sma/blob/main/test/src/gt-norm-yamls/)
 
 
 ### Linguistic documentation
@@ -70,7 +70,7 @@ It is in use in a wide range of applications.
 
 ### Obsolete files
 -   **[Old documentation](docu-sma-twol.md)** of the [twolc rule
-    file](https://github.com/giellalt/lang-sma/blob/develop/src/fst/phonology.twolc)
+    file](https://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc)
 -   **[Old documentation](docu-sma-lex.md)** of the lexicon files
 -   [Diskusjon: Ny omlydsrekke?](umlaut-4-aaa.txt)
 -   [Old errors and bug reports](docu-sma-bugs.md)
