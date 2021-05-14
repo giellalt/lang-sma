@@ -6107,7 +6107,7 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
  | **+Err/Lex** | lemma med dens ordformer er utenfor normen. <br/>No normative lemma, it's grammatically correct.
  | **+Err/Der** | Errors in derivations
  | **+Err/Spellrelax** | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
- | **+Err/MissingSpace** | in use ins smi lexc
+ | **+Err/MissingSpace** | in use in smi lexc
 
 ### Usage tags
 
