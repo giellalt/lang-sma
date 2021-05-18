@@ -126,9 +126,11 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
-					filters/remove-DNorm-tags.%
+					filters/remove-DNorm-tags.% \
+					filters/remove-usage-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-			    @\"filters/remove-derivation-position-tags.$*\" \
+			    @\"filters/remove-usage-tags.$*\"               \
+			.o. @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/remove-DNorm-tags.$*\"               \
 			.o. @\"$<\"                                         \
@@ -141,9 +143,11 @@ analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.%          \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
-					filters/remove-DNorm-tags.%
+					filters/remove-DNorm-tags.% \
+					filters/remove-usage-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-			    @\"filters/remove-derivation-position-tags.$*\" \
+			    @\"filters/remove-usage-tags.$*\"               \
+			.o. @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/remove-DNorm-tags.$*\"               \
 			.o. @\"$<\"                                         \
@@ -164,9 +168,11 @@ analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 					filters/split-CmpN-tags.%                              \
 					filters/convert_to_flags-CmpNP-tags.%                  \
 					filters/split-CmpNP-tags.%                             \
-					filters/remove-DNorm-tags.%
+					filters/remove-DNorm-tags.% \
+					filters/remove-usage-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-			    @\"filters/remove-derivation-position-tags.$*\"             \
+			    @\"filters/remove-usage-tags.$*\"                           \
+			.o. @\"filters/remove-derivation-position-tags.$*\"             \
 			.o. @\"filters/block-illegal_compound-strings.$*\"              \
 			.o. @\"filters/split-CmpN-tags.$*\"                             \
 			.o. @\"filters/insert-default_left_compounding-tags.$*\"        \
@@ -188,9 +194,11 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 					 filters/remove-norm-comp-tags.xfst             \
 					 filters/remove-derivation-position-tags.xfst   \
 					 filters/remove-illegal-derivation-strings.xfst \
-					 filters/remove-DNorm-tags.xfst
+					 filters/remove-DNorm-tags.xfst \
+					filters/remove-usage-tags.xfst
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-			    @\"filters/remove-derivation-position-tags.xfst\"   \
+			    @\"filters/remove-usage-tags.xfst\"                 \
+			.o. @\"filters/remove-derivation-position-tags.xfst\"   \
 			.o. @\"filters/remove-norm-comp-tags.xfst\"             \
 			.o. @\"filters/remove-illegal-derivation-strings.xfst\" \
 			.o. @\"filters/remove-DNorm-tags.xfst\"                 \
@@ -204,9 +212,11 @@ analyser-oahpa-gt-norm.%: analyser-gt-norm.tmp.% \
 					 filters/remove-norm-comp-tags.%             \
 					 filters/remove-derivation-position-tags.%   \
 					 filters/remove-illegal-derivation-strings.% \
-					 filters/remove-DNorm-tags.%
+					 filters/remove-DNorm-tags.% \
+					 filters/remove-usage-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-			    @\"filters/remove-derivation-position-tags.$*\"   \
+			    @\"filters/remove-usage-tags.$*\"                 \
+			.o. @\"filters/remove-derivation-position-tags.$*\"   \
 			.o. @\"filters/remove-norm-comp-tags.$*\"             \
 			.o. @\"filters/remove-illegal-derivation-strings.$*\" \
 			.o. @\"filters/remove-DNorm-tags.$*\"                 \
@@ -224,12 +234,15 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 				filters/remove-derivation-position-tags.hfst         \
 				filters/rename-POS_before_Der-tags.hfst              \
 				filters/remove-word-boundary.hfst                    \
-				filters/remove-DNorm-tags.hfst						 \
+				filters/remove-DNorm-tags.hfst                       \
+				filters/remove-usage-tags.hfst                       \
+				filters/remove-usage-tags.hfst                       \
 				orthography/spellrelax-with-flagtags.compose.hfst
 	$(AM_V_HXFST)$(PRINTF) "\
 	set encode-weights ON\n\
 	read regex \
-			@\"filters/remove-derivation-position-tags.hfst\" \
+			@\"filters/remove-usage-tags.hfst\"               \
+		.o. @\"filters/remove-derivation-position-tags.hfst\" \
 		.o. @\"filters/remove-norm-comp-tags.hfst\"           \
 		.o. @\"filters/remove-dialect-tags.hfst\"             \
 		.o. @\"filters/rename-POS_before_Der-tags.hfst\"      \
@@ -252,9 +265,11 @@ analyser-pmatchdisamb-gt-desc.%: analyser-pmatchdisamb-gt-desc.tmp.% \
 					filters/remove-homonymy-tags.%           \
 					filters/remove-derivation-position-tags.% \
 					filters/rename-POS_before_Der-tags.%      \
-					filters/remove-DNorm-tags.%
+					filters/remove-DNorm-tags.% \
+					filters/remove-usage-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-				@\"filters/remove-derivation-position-tags.$*\" \
+				@\"filters/remove-usage-tags.$*\"               \
+			.o. @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-dialect-tags.$*\"             \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/remove-homonymy-tags.$*\"           \
@@ -273,15 +288,17 @@ analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 					filters/remove-orig_lang-tags.%           \
 					filters/remove-dialect-tags.%             \
 					filters/remove-norm-comp-tags.%           \
-					filters/remove-homonymy-tags.%           \
+					filters/remove-homonymy-tags.%            \
 					filters/remove-derivation-position-tags.% \
 					filters/rename-POS_before_Der-tags.%      \
-					filters/remove-DNorm-tags.%
+					filters/remove-DNorm-tags.%               \
+					filters/remove-usage-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-				@\"filters/remove-derivation-position-tags.$*\" \
+				@\"filters/remove-usage-tags.$*\"               \
+			.o. @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-dialect-tags.$*\"             \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
-			.o. @\"filters/remove-homonymy-tags.$*\"           \
+			.o. @\"filters/remove-homonymy-tags.$*\"            \
 			.o. @\"filters/remove-orig_lang-tags.$*\"           \
 			.o. @\"filters/rename-POS_before_Der-tags.$*\"      \
 			.o. @\"filters/remove-DNorm-tags.$*\"               \
@@ -296,9 +313,11 @@ define giella_generators
 generator-gt-%.$(1): generator-gt-%.tmp.$(1) \
 					 filters/remove-norm-comp-tags.$(1)           \
 					 filters/remove-derivation-position-tags.$(1) \
-					 filters/remove-DNorm-tags.$(1)
+					 filters/remove-DNorm-tags.$(1)               \
+					filters/remove-usage-tags.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
-				@\"filters/remove-derivation-position-tags.$(1)\" \
+				@\"filters/remove-usage-tags.$(1)\"               \
+			.o. @\"filters/remove-derivation-position-tags.$(1)\" \
 			.o. @\"filters/remove-norm-comp-tags.$(1)\"           \
 			.o. @\"filters/remove-DNorm-tags.$(1)\"               \
 			.o. @\"$$<\"                                          \
@@ -315,9 +334,11 @@ generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.% \
 					filters/remove-derivation-position-tags.% \
 					filters/make-optional-variant-tags.%      \
 					filters/remove-number-string-tags.%       \
-					filters/remove-DNorm-tags.%
+					filters/remove-DNorm-tags.%               \
+					filters/remove-usage-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
-				@\"filters/remove-number-string-tags.$*\"  \
+				@\"filters/remove-usage-tags.$*\"               \
+			.o. @\"filters/remove-number-string-tags.$*\"       \
 			.o. @\"filters/remove-derivation-position-tags.$*\" \
 			.o. @\"filters/remove-norm-comp-tags.$*\"           \
 			.o. @\"filters/make-optional-variant-tags.$*\"      \
