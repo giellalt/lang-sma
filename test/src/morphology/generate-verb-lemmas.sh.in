@@ -63,7 +63,7 @@ EXTEDITOR=@SEE@
 ##### --include "(pattern1|pattern2|...)"                          #####
 ##### --exclude "(pattern1|pattern2|...)"                          #####
 @GTCORE@/scripts/extract-lemmas.sh \
-    --exclude "( NEG | LEA )" \
+    --exclude "( NEG | LEA |\+Use\/MT)" \
     $source_file > $lemmas
 
 ###### Start testing: #######
