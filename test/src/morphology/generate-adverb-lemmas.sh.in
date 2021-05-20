@@ -64,7 +64,7 @@ EXTEDITOR=@SEE@
 # Hent ut lemmaer, bortsett lemmaer som krever Px eller kompareringstagg.
 # Lemmaene lagres som filtered_p-adverbs
 @GTCORE@/scripts/extract-lemmas.sh \
-	--exclude "( Px|NOTLEMMA|Adv-TODO)" \
+	--exclude "( Px|NOTLEMMA|Adv-TODO|\+Use\/MT)" \
      $source_file > $padv_lemmas
 
 # Hent ut lemmaer som krever Comp-tag. Lagres som filtered_c-adverbs
