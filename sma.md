@@ -5153,6 +5153,12 @@ before compiling.
 
 
 
+
+
+
+
+
+
   egentlig satt disse inn i noun-adv-leksikon
 om disse skal være adverb?
 
@@ -5411,6 +5417,7 @@ https://satni.uit.no/termwiki/index.php?title=Education:embetsstudium
 
 
 pp, tt, kk --> hp, ht, hk   eller bp, dt, gk?  bp, dt, gk strider i mot rettskrivingsprinsippene jfr.
+
 
 
 
