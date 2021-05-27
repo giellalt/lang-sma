@@ -3,13 +3,13 @@ The South Sámi morphology and tools
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
 [![Build Status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
-[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://raw.githubusercontent.com/giellalt/lang-sma/develop/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://raw.githubusercontent.com/giellalt/lang-sma/main/LICENSE)
 
 This repository contains finite state source files for the South Sámi language,
 for building morphological analysers, proofing tools
 and dictionaries. The data and implementation are licenced under _GNU GPL v3_
 licence, also detailed in the
-[LICENCE](https://github.com/giellalt/lang-sma/blob/develop/LICENCE). The
+[LICENSE](https://github.com/giellalt/lang-sma/blob/main/LICENSE). The
 authors named in the AUTHORS file are available to grant other licencing
 choices.
 
@@ -86,7 +86,7 @@ svn checkout https://github.com/giellalt/lang-sma.git/trunk lang-sma
 Building and installation
 -------------------------
 
-[INSTALL](https://github.com/giellalt/lang-sma/blob/develop/INSTALL)
+[INSTALL](https://github.com/giellalt/lang-sma/blob/main/INSTALL)
 describes the GNU build system in detail, but for most users it is the usual:
 
 ```sh
