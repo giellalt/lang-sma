@@ -3720,6 +3720,8 @@ Short descrioption of this lexicon, and its purpose.
 
 # South Sámi morphophonological rule set                   
 
+This file documents the [phonology.twolc file](http://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc) 
+
 
 
 
