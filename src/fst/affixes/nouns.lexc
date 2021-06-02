@@ -25,12 +25,25 @@
 
 
 LEXICON N_ODD
-!! The basic odd-syll lexicon is: @LEXNAME@
-
-!! ### Inflection for odd-syllable nouns: lexicon @LEXNAME@
-!  -----------------------------------------------------
-!
-!! Short descrioption of this lexicon, and its purpose.
+!! The default inflectional lexicon for odd-syllable nouns is **@LEXNAME@**.
+!! Words like `gierehtse` is inflected using this lexicon. Other words inflected
+!! like this are: `iehkede` (*evening*), guehpere (*nail*), tjaeleme (*writing*).
+!! Many words in this class will have vowel changes in the second syllable,
+!! between a reduced vowel in odd-syllable forms and a full vowel or diphthong
+!! in even-syllable forms, as displayed in the paradigm below. This alternation
+!! is regulated by two-level rules, but the rules require that the full
+!! vowel is spelled out in the lexical entry as follows:
+!! ```
+!! gierehtse+N+Sem/Veh:gieriehts N_ODD "pulk" ; ! gieriehtsisnie
+!! ```
+!! That is, in the stem of the entry it says `-rieht-`, where `ie` is the
+!! diphthong that is realised in even-syllable word forms. Another example
+!! word is `darjome`:
+!! ```
+!! darjome+N+Sem/Feat:darjoem N_ODD ;
+!! ```
+!! with `-oe-` as the stem vowel to get a vowel change `o` => `oe` in even-syllable
+!! word forms.
 !
                +Sg:             N_ODD_SG       ;
                +Pl:             N_ODD_PL       ;
