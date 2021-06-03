@@ -3143,14 +3143,28 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 ## Inflection for odd-syllable nouns
 
 
+The default inflectional lexicon for odd-syllable nouns is **N_ODD**.
+Words like `gierehtse` is inflected using this lexicon. Other words inflected
+like this are: `iehkede` (*evening*), guehpere (*nail*), tjaeleme (*writing*).
+Many words in this class will have vowel changes in the second syllable,
+between a reduced vowel in odd-syllable forms and a full vowel or diphthong
+in even-syllable forms, as displayed in the paradigm below. This alternation
+is regulated by two-level rules, but the rules require that the full
+vowel is spelled out in the lexical entry as follows:
+```
+gierehtse+N+Sem/Veh:gieriehts N_ODD "pulk" ; ! gieriehtsisnie
+```
+That is, in the stem of the entry it says `-rieht-`, where `ie` is the
+diphthong that is realised in even-syllable word forms. Another example
+word is `darjome`:
+```
+darjome+N+Sem/Feat:darjoem N_ODD ;
+```
+with `-oe-` as the stem vowel to get a vowel change `o` => `oe` in even-syllable
+word forms.
 
-The basic odd-syll lexicon is: N_ODD_INFL
 
-### Inflection for odd-syllable nouns: lexicon N_ODD_INFL
-Short descrioption of this lexicon, and its purpose.
-
-
-*gierehtse # Odd-syllable test examples:*
+*gierehtse (*"pulk"*) # Paradigm for odd-syllable nouns examples:*
 * *gierehtse:* `gierehtse+N+Sg+Nom`
 * *gierehtsen:* `gierehtse+N+Sg+Gen`
 * *gierehtsem:* `gierehtse+N+Sg+Acc`
@@ -4946,201 +4960,6 @@ This file is used for spellchecking, the alternative file
 This file is compiled by default, the other one is compiled by in
 langs/sma giving the command *.configure --with-oahpa*
 before compiling.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
