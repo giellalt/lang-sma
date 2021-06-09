@@ -4979,7 +4979,6 @@ before compiling.
 
 
 
-
   egentlig satt disse inn i noun-adv-leksikon
 om disse skal være adverb?
 

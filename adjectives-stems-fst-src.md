@@ -12,4 +12,3 @@ langs/sma giving the command *.configure --with-oahpa*
 before compiling.
 
 
-
