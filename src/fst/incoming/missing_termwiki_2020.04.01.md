@@ -120,62 +120,44 @@ https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:Tras-termer_46
 
 ## Låneord med trykksterk -rer fra svensk
 
-Burde bli -reere, siden lang -e- i svensk vanligvis vil bli lang -ee- i sørsamisk.
+Burde bli **-reere**, siden lang **-e-** i svensk vanligvis vil bli lang **-ee-** i sørsamisk.
+Eksempel på feil normering er:
 
-Eksempel på dette er:
-baalhkakamrere
-https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_21 !
+- baalhkakamrere [Termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_21)
 
 ## Skrivemåte for 'cancer'
 
-Bør heller bruke det samiske ordet 'mïetsk´-åedtjie'. Men om ein vil skrive cancer på samisk, held ein seg til sitatprinsippet og då burde forma  bli 'cancere'.
+Bør heller bruke det samiske ordet **mïetsk´-åedtjie** istf *cancer*. Men om ein vil skrive *cancer* på samisk, held ein seg til sitatprinsippet og då burde forma  bli **cancere**.
 
 Eksempel frå termwikien:
-gåblecancere:
-https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_17
-gealoecancere:
-https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_18
-
-
-nudelh:nudelh                      TODO ; !  https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_25
+- [gåblecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_17)
+- [gealoecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_18)
 
 ## Låneord som sluttar på -y
 
-Burde ende på -ije
+Burde ende på -ije. Eksempler er:
 
-Eksempler er:
-curry: Vi foreslår kurrije, evt. karrije fra norsk skrivemåte (jf Ove Lorentz sitt forslag om å unngå z og c)
-https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_24  ==> dette spriker mot tidligere vedtak der "e" er
+- **curry**: Vi foreslår **kurrije**, evt. **karrije** fra norsk skrivemåte (jf Ove Lorentz sitt forslag om å unngå z og c).
+  Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_24), som spriker mot tidligere vedtak
+- **jury**: Vi foreslår **jurije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.29_Matriks_9_-_Sie_1.4_Lov_og_rett_14)
+- **ecstasy**: Vi foreslår **ecstasije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_16)
 
-jury: Vi foreslår jurije
-https://satni.uit.no/termwiki/index.php? title=Servodatdieđa:1.29_Matriks_9_-_Sie_1.4_Lov_og_rett_14
+## Andre ord
 
-ecstasy: Vi foreslår ecstasije
-https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_16
-
-fiole
-her ser det ut til å mangle en v, fiovle, jfr. nevrovse, pistovle, tjovle, stovle
-https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_35
-
-rehaben
-https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_22
-- helst: rehabiliteereniktedæjja
-- om det skal forkortast: rehab-iktedæjja
-
-
-tjïeltese maaksoeh: heller tjïeltemaaksoe, evt. tjïelteladtjemaaksoe
-https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:kommunale_avgifter
-
-maadtematigke:
-Bør være matematihke
-
-https://calliidlagadus.org/do-aarjel/
-nob: matematikk
-sv: matematik
-sma: mattematihke - denne avviker jr. Lorenz låneord, men avviker også fra de øvrige:
-
-sme: matematihkka
-smj. matematijkka
-smj. matematihkka
-
-https://satni.uit.no/termwiki/index.php?title=Education:matematikk
+- **fiole**: her ser det ut til å mangle en v, fiovle, jfr. nevrovse, pistovle, tjovle, stovle.
+  Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_35)
+- **rehaben**: frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_22)
+    - helst: **rehabiliteereniktedæjja**
+    - om det skal forkortast: **rehab-iktedæjja**
+- **tjïeltese maaksoeh**: heller **tjïeltemaaksoe**, evt. **tjïelteladtjemaaksoe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:kommunale_avgifter)
+- [**nudelh**](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_25) - rimer dårleg med vanleg uttale [XXX - stemmer det?]
+- **maadtematigke**: bør være matematihke. Jf:
+    - <https://calliidlagadus.org/do-aarjel/>, der det står:
+        - nob: matematikk
+        - sv: matematik
+        - sma: mattematihke - denne avviker fra Lorenz' forslag for låneord, men avviker også fra andre samiske språk:
+        - sme: matematihkka
+        - smj. matematijkka
+        - smj. matematihkka
+    - frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Education:matematikk)
+    - Jf avsnittet om ord på **-ik(k)** lenger opp
