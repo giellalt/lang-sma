@@ -1,38 +1,39 @@
-# Gïelegaaltije
+# Til Gïelegaaltije - spørsmål om normering av ord og klassar av ord
 
-Ord som Gïelegaaltije har normert, men som på ulike måtar anten avvik frå tidlegare normeringsvedtak eller på andre måtar har fått problematiske normeringsvedtak.
+Ord som Gïelegaaltije (GG) har normert, men som på ulike måtar anten avvik frå tidlegare normeringsvedtak eller på andre måtar har fått problematiske normeringsvedtak slik Divvun ser det. Orda er for det meste henta frå Termwikien, som igjen har fått data frå GG. I dei fleste tilfella har vi lagt inn lenke til termposten eller til termsamlingar som inneheld den aktuelle termen.
 
-Vi kan gjerne bidra med reinvasking før normeringsvedtak.
+Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før normeringsvedtak.
 
-traahpe = trapp. Ikke passende som utvidet begrep som trapphus        https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Översättning_av_skyltar_etc_46
+## Konstruksjonsfeil
 
-traahpabisseme: traahpAbisseme - må bli til traahpebisseme. https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:trappevask
+- **gillejuakeldh**: Pronomen og adjektiv kan ikke settes sammen. En mulig form kan være: **unnebejoekedovveme**, unnebe=mindre/færre delt: joekedidh (da det er andre som deler opp). Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Education:fådelt_skole)
+- **gellietjuetie**: Pronomen og nummeral kan ikke settes sammen. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Omtag_m.m._2020A_23)
+- **jïjtjeteeste**: Pronomen og  substantiv kan ikke sammesettes. Øvrige "test-ord" er i første stavelse skrevet kun med "test", uten lang "e". Og låneord i andrestavelse ved sammensteninger: hvordan behandles slike? *teeste-* eller *test-*? Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._21)
+- **sjeavods-dïedte**: her føles det ut som om -voete burde vært lagt til: *sjeavodsvoetedïedte / sjeavodhvoetedïedte*.
+  Andre sammensettinger med *voete* [XXX - meiner vi samansetjingar eller avleiingar?]:
+    * gieries-voete ‘kjærlighet’
+    * væjsehke-voete ‘klokskap, visdom’
+    * jiermehts-voete ‘vettløshet, uforstand’
+  Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.31_Matriks_9_-_Sie_1.6_Domstolene_13)
 
-## Konstruksjonsfeil:
-gillejuakeldh: Pronomen og adjektiv kan ikke sammensettes. ==> en mulig form kan være: Unnebejoekedovveme, unnebe=mindre/færre delt: joekedidh (da det er andre som deler opp)https://satni.uit.no/termwiki/index.php?title=Education:fådelt_skole
-gellietjuetie: Pronomen og nummeral kan ikke sammensettes  https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Omtag_m.m._2020A_23
-jïjtjeteeste: låneord i andrestavelse. Hvordan behandle det? teeste eller test. Pronomen og  substantiv kan ikke sammesettes. Øvrige "test-ord" er i første stavelse skrevet kun med "test", uten lang "e" https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._21
+## Andre feil
 
-sjeavods-dïedte: her føles det ut som om -voete burde vært lagt til: sjeavodsvoetedïedte/ sjeavodhvoetedïedte
-se på evntuelt andre voete sammensettinger:
-* gieries-voete ‘kjærlighet’
-* væjsehke-voete ‘klokskap, visdom’
-* jiermehts-voete ‘vettløshet, uforstand’
-https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.31_Matriks_9_-_Sie_1.6_Domstolene_13.
+- traahpe = trapp. Ikke passende som utvidet begrep om trapphus. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Översättning_av_skyltar_etc_46)
+- traahpabisseme: traahp**A**bisseme - må bli til traahpebisseme. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:trappevask)
 
-# Låneordsformer:
+# Låneordsformer
 
-## Forskjell i sitatdelen av lånordet
+## Forskjell i sitatdelen av lånordet mellom Sverige og Noreg
 
 Når det gjelder låneordsformer, skal man ha parallelle sitatdeler for norsk og svensk, eller skal man basere sitatdelen på bare et av språkene?
-Jf ord på neuro- (norsk) / nevro- (svensk). Lulesamisk har normert parallelle former, med vedtak på regler for både norsk og svensk tilpassing.
+Jf ord på *neuro-* (norsk) / *nevro-* (svensk). Lulesamisk har normert parallelle former, med vedtak på regler for både norsk og svensk tilpassing.
 
-Ut frå samiske ord som 'eevre' kan det sjå ut som om nevro- skulle fungera betre på samisk enn neuro-, dvs at låneordet då får ein stavingsstruktur som ligg nære eksisterande samisk fonotaks.
+Ut frå samiske ord som *eevre* kan det sjå ut som om *nevro-* skulle fungera betre på samisk enn *neuro-*, dvs at låneordet då får ein stavingsstruktur som ligg nære eksisterande samiske ord.
 
-For andre ord er det normert slik at berre ei form er sørsamisk:
+For andre ord er det normert slik at det berre er ei form i sørsamisk:
 - sv: ekonomi
 - nob: økonomi
-- sma: ekonomije - dette er fornuftig vedtak. Dels unngår man ö/ø problemet som vi ser oppstår bl. a i bokutgivelser som ikke følger normeringsvedtak i bruken av svensk ö.
+- sma: ekonomije - dette er eit fornuftig vedtak. Ein unngår ö/ø-problemet som vi ser oppstår bl. a i bokutgivelser som ikke følger normeringsvedtak i bruken av svensk ö.
 
 
 kebab: enligt Lorentz >>> kebaabe        https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26
@@ -47,36 +48,33 @@ metadone: Enligt Lorentz >>>metadovne https://satni.uit.no/termwiki/index.php?ti
 juarnaliste:låne fra förste stavelse >>> journaliste  https://satni.uit.no/termwiki/index.php?title=Servodatdieđa
 influensa: >>>influense https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._20 !
 
-## -oid:
-Jf. tidligere vedtak: cyanijde, opioijde
+## Ord på -oid
 
-paranoide:  >>> 'paranoijde'  https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_20
+Jf. tidligere vedtak: **cyanijde**, **opioijde**. Døme
 
-opiode: Avvik fra øvrige språk. ==> norsk: opiat svensk: opioid. Engelsk: opiate. https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_24
+- **paranoide**: burde vera **paranoijde**. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_20)
+- **opiode**: avvik frå øvrige språk og tidlegare vedtak (jf over). på norsk: *opiat*, på svensk: *opioid*, på engelsk: *opiate*. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_24)
 
-## -ikk:
-Tidigere vedtag er -ihke og ikke -igke
+## ord på -ik(k)
 
-fovnetigke:    fonetihke  https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_95.
+Tidigere vedtag er *-ihke* og ikke *-igke*. Døme:
+
+- **fovnetigke**, burde vera **fonetihke**. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_95)
 
 ## Andre låneord og framande namn
 
-versailles-latjkoe:>>> bør det være genitivform? versaillesen-latjkoe  https://satni.uit.no/termwiki/index.php?title=Servodatdieđa
-
-copyright: Helt engelsk ord. Ingen tilpassing gjort. Andre samiske språk har disse formene. vuoigatvuohta=rettighet
-
-Nordsamisk: dahkkivuoigatvuohta, álggadahkkivuoigatvuohta
-Enaresamisk: rähteevuoigâdvuotâ
-https://satni.uit.no/termwiki/index.php?title=Juridihkka:%C3%A1lggadahkkivuoigatvuohta
-
-cappuccino: helt låneord uten tilpassing.  ==> dette spriker mot tidligere vedtak der "e" er lagt til i slutten av ordet som feks. CDe, skal det skrives "rett", må det tilpasses "Kappotjinoe" https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_28
-
-saerniebyrå:==>
-byrå brukt på nordsamisk: ásahus (institusjon, fra finsk asetus)/doaimmahat (som i statens vegvesen, statens kraftverk) /fitnodat (firma)/kantovra (kontor)
-byrå brukt på lulesamisk: begravelsesbyrå=hávddádimdåjmadahka
-inkassobyrå = krïebpesjimmiekontovre
-reklambyrå = reklaamekontovre
-https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:saerniebyrå
+- **versailles-latjkoe**: bør det være genitivform på første leddet? **versaillesen-latjkoe** Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa)
+- **copyright**: Helt engelsk ord. Ingen tilpassing gjort. Andre samiske språk har former basert på *vuoigatvuohta=rettighet*:
+    - Nordsamisk: dahkkivuoigatvuohta, álggadahkkivuoigatvuohta
+    - Enaresamisk: rähteevuoigâdvuotâ
+    - Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:%C3%A1lggadahkkivuoigatvuohta)
+- **cappuccino**: helt låneord uten tilpassing. Det spriker mot tidligere vedtak der "e" er lagt til i slutten av ordet, som feks. CDe [XXX - kva meiner vi her? At akronym/forkoringsord som sluttar på konsonant skal ha ein **e** etter seg?]. Skal det skrives "rett", må det tilpasses: "Kappotjinoe". Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_28)
+- **saerniebyrå**: andre ord for *byrå* brukt på sørsamisk og andre samiske språk:
+    - nordsamisk: ásahus (institusjon, fra finsk asetus)/doaimmahat (som i statens vegvesen, statens kraftverk) /fitnodat (firma)/kantovra (kontor)
+    - lulesamisk: begravelsesbyrå = hávddádimdåjmadahka
+    - inkassobyrå = krïebpesjimmiekontovre
+    - reklambyrå = reklaamekontovre
+    - Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:saerniebyrå)
 
 
 ## Avvik fra tidligere normeringer
