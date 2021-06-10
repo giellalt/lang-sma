@@ -12,11 +12,11 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
 - **gellietjuetie**: Det er lite eller ingen kildemateriale der det er sammensetniger av pronomen og nummeral. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Omtag_m.m._2020A_23)
 - **jïjtjeteeste**: Det er lite eller ingen kildemateriale der det er sammensetniger av pronomen og  substantiv. Øvrige "test-ord" er i første stavelse skrevet kun med "test", uten lang "e". Og låneord i andrestavelse ved sammensteninger: hvordan behandles slike? *teeste-* eller *test-*? Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._21)
 - **sjeavods-dïedte**: her føles det ut som om -voete burde vært lagt til: *sjeavodsvoetedïedte / sjeavodhvoetedïedte*.
+  Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.31_Matriks_9_-_Sie_1.6_Domstolene_13).
   Andre (sammensettinger med) ord avleidde med *voete* (og eit konstruert ord utan -voete- for å illustrera problemet med å ikkje ta med *-voete*):
     * *gieriesvoetesårkoe* ‘kjærlighetsorg’, ikkje **gieriessårkoe*
     * væjsehke-voete ‘klokskap, visdom’
     * jiermehts-voete ‘vettløshet, uforstand’
-  Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.31_Matriks_9_-_Sie_1.6_Domstolene_13)
 
 ## Mulige skrivefeil
 
