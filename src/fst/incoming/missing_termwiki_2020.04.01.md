@@ -128,7 +128,7 @@ Eksempel på feil normering er:
 Bør heller bruke det samiske ordet **mïetsk´-åedtjie** istf *cancer*. Men om ein vil skrive *cancer* på samisk, held ein seg til sitatprinsippet og då burde forma  bli **cancere**.
 
 Eksempel frå termwikien:
-- [gåblecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_17) (her finst *gåbloen mïetsk´-åedtjie* som ein alternativ term, burde vera einaste tilrådde)
+- [gåblecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_17) [XXX - her finst *gåbloen mïetsk´-åedtjie* som ein alternativ term, burde vera einaste tilrådde?]
 - [gealoecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_18)
 
 ## Låneord som sluttar på -y
