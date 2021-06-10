@@ -54,7 +54,7 @@ For andre ord er det normert slik at det berre er ei form i sørsamisk:
 Jf. tidligere vedtak: **cyanijde**, **opioijde**. Døme
 
 - **paranoide**: burde vera **paranoijde**. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_20)
-- **opiode**: avvik frå øvrige språk og tidlegare vedtak (jf over). på norsk: *opiat*, på svensk: *opioid*, på engelsk: *opiate*. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_24)
+- **opiode**: avvik frå øvrige språk og tidlegare vedtak (jf over). på norsk: *opiat*, på svensk: *opioid*, på engelsk: *opiate*, feil i termwikien både på norsk og svensk. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_24)
 
 ## ord på -ik(k)
 
