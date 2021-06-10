@@ -40,7 +40,7 @@ For andre ord er det normert slik at det berre er ei form i sørsamisk:
 - **kebab**: enligt Lorentz bør det vera **kebaabe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26)
 - **keramikere**: enligt Lorentz bør det vera enten **keramikkere**, **keramigkere** eller **keramihkere**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Teknihkka_industriija_duodji:keramiker) - [XXX - her er termwikien i samsvar med siste forslaget vårt, og med trad. normering - er det relevant å ta med denne?]
 - **kontoekreedite**: enligt Lorentz bør det vera **kontoekredihte**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:Lakisanat_2003_4767)
-- **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:)
+- **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:bibliotekar)
 - **bijove-aajhtere**: enligt Ove Lorentz må det bli: **biove** som i *kino* => **kinove**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_33)
 - **preentedh**: printe= låneord. Lulesamiskform er: tjáledahttet, tjáledit. Grunnord er å skrive.  Hvilken låneordsnorm er brukt her. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh) [XXX - denne må vi sjå nærmare på]
 - **diagnose**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
