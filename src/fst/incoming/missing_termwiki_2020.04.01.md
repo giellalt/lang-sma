@@ -136,7 +136,7 @@ Eksempel frå termwikien:
 Burde ende på -ije. Eksempler er:
 
 - **curry**: Vi foreslår **kurrije**, evt. **karrije** fra norsk skrivemåte (jf Ove Lorentz sitt forslag om å unngå z og c).
-  Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_24), som spriker mot tidligere vedtak
+  Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:kárri), som spriker mot tidligere vedtak
 - **jury**: Vi foreslår **jurije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.29_Matriks_9_-_Sie_1.4_Lov_og_rett_14)
 - **ecstasy**: Vi foreslår **ecstasije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_16)
 
