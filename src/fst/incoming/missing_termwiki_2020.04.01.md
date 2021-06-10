@@ -51,10 +51,9 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
 
 Andre ord på -ia, burde gå som medie: Vi anbefaler at endelsen burde være -ije, jfr. **meedije**
 
-Eksempel:
 
-- **razzia**: razzije (rassije). Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.30_Matriks_9_-_Sie_1.5_Hva_er_kriminalitet_13)
-- **maffija**: maffije. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_5)
+- **razzia**: Divvun foreslår: razzije (rassije). Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.30_Matriks_9_-_Sie_1.5_Hva_er_kriminalitet_13)
+- **maffija**: Divvun foreslår: maffije. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_5)
 
 ## Forskjell i sitatdelen av lånordet mellom Sverige og Noreg
 
