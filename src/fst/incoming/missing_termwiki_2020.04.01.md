@@ -35,66 +35,7 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
 
 # Låneordsformer
 
-## Forskjell i sitatdelen av lånordet mellom Sverige og Noreg
-
-Når det gjelder låneordsformer, skal man ha parallelle sitatdeler for norsk og svensk, eller skal man basere sitatdelen på bare et av språkene?
-Jf ord på *neuro-* (norsk) / *nevro-* (svensk). Lulesamisk har normert parallelle former, med vedtak på regler for både norsk og svensk tilpassing.
-
-Ut frå samiske ord som *eevre* kan det sjå ut som om *nevro-* skulle fungera betre på samisk enn *neuro-*, dvs at låneordet då får ein stavingsstruktur som ligg nære eksisterande samiske ord.
-
-For andre ord er det normert slik at det berre er ei form i sørsamisk:
-- sv: ekonomi
-- nob: økonomi
-- sma: ekonomije - dette er eit fornuftig vedtak. Ein unngår ö/ø-problemet som vi ser oppstår bl. a i bokutgivelser som ikke følger normeringsvedtak i bruken av svensk ö.
-
-Divvun-gruppa føreslår at ein som eit hovudprinsipp strevar etter éi felles form for både Noreg og Sverige, og dermed unngår parallelle former i dei ulike landa.
-
-## Andre ord
-
-[XXX - vi har tre bolkar med "Andre (låne)ord", dei bør samlast éin plass]
-
-- **kebab**: enligt Lorentz bør det vera **kebaabe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26)
-- **keramikere**: enligt Lorentz bør det vera enten **keramikkere**, **keramigkere** eller **keramihkere**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Teknihkka_industriija_duodji:keramiker) - [XXX - her er termwikien i samsvar med siste forslaget vårt, og med trad. normering - er det relevant å ta med denne?]
-- **kontoekreedite**: enligt Lorentz bør det vera **kontoekredihte**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:Lakisanat_2003_4767)
-- **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:bibliotekar) - [XXX - stemmer dette? Skrivemåten i termwikien samsvarar vel ganske bra med uttalen? Det er ingen lang -e- i uttalen av no/sv bibliotekar(ie), det er vel -a- som er lang?]
-- **bijove-aajhtere**: enligt Ove Lorentz må det bli: **biove** som i *kino* => **kinove**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_33)
-- **preentedh**: printe= låneord. Lulesamiskform er: tjáledahttet, tjáledit. Grunnord er å skrive.  Hvilken låneordsnorm er brukt her. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh) [XXX - denne må vi sjå nærmare på]
-- **diagnose**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
-- **krematorijume**: enlig Lorentz bør det vera **krematoriumme**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.36_hi_10._holocaust_11)
-- **metadone**: Enligt Lorentz bør det vera **metadovne**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_31)
-- **juarnaliste**: sistat i förste stavelse, bør altså vera **journaliste**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:journalist)
-- **influensa**: bør vera **influense**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._20)
-
-## Ord på -oid
-
-Jf. tidligere vedtak: **cyanijde**, **opioijde**. Døme
-
-- **paranoide**: burde vera **paranoijde**. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_20)
-- **opiode**: avvik frå øvrige språk og tidlegare vedtak (jf over). på norsk: *opiat*, på svensk: *opioid*, på engelsk: *opiate*, feil i termwikien både på norsk og svensk. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_24)
-
-## ord på -ik(k)
-
-Tidigere vedtag er *-ihke* og ikke *-igke*. Døme:
-
-- **fovnetigke**, burde vera **fonetihke**. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_95)
-
-## Andre låneord og framande namn
-
-- **versailles-latjkoe**: bør det være genitivform på første leddet? **versaillesen-latjkoe** Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:versailles-latjkoe)
-- **copyright**: Helt engelsk ord. Ingen tilpassing gjort. Andre samiske språk har former basert på *vuoigatvuohta=rettighet*:
-    - Nordsamisk: dahkkivuoigatvuohta, álggadahkkivuoigatvuohta
-    - Enaresamisk: rähteevuoigâdvuotâ
-    - Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:%C3%A1lggadahkkivuoigatvuohta)
-- **cappuccino**: helt låneord uten tilpassing. Det spriker mot tidligere vedtak der "e" er lagt til i slutten av ordet, som feks. CDe [XXX - kva meiner vi her? At akronym/forkoringsord som sluttar på konsonant skal ha ein **e** etter seg?]. Skal det skrives "rett", må det tilpasses: "Kappotjinoe". Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_28)
-- **saerniebyrå**: andre ord for *byrå* brukt på sørsamisk og andre samiske språk:
-    - nordsamisk: ásahus (institusjon, fra finsk asetus)/doaimmahat (som i statens vegvesen, statens kraftverk) /fitnodat (firma)/kantovra (kontor)
-    - lulesamisk: begravelsesbyrå = hávddádimdåjmadahka
-    - inkassobyrå = krïebpesjimmiekontovre
-    - reklambyrå = reklaamekontovre
-    - Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:saerniebyrå)
-
-
-## Avvik fra tidligere normeringer
+## Avvik fra tidligere normeringsvedtak
 
 - **nåårmeradidh**: 2 ulike saker:
     - avvik fra låneordsnormen som tilsier at første stavelse bevares (**-åå-** vs **-o-**)
@@ -114,6 +55,33 @@ Eksempel:
 
 - **razzia**: razzije (rassije). Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.30_Matriks_9_-_Sie_1.5_Hva_er_kriminalitet_13)
 - **maffija**: maffije. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_5)
+
+## Forskjell i sitatdelen av lånordet mellom Sverige og Noreg
+
+Når det gjelder låneordsformer, skal man ha parallelle sitatdeler for norsk og svensk, eller skal man basere sitatdelen på bare et av språkene?
+Jf ord på *neuro-* (norsk) / *nevro-* (svensk). Lulesamisk har normert parallelle former, med vedtak på regler for både norsk og svensk tilpassing.
+
+Ut frå samiske ord som *eevre* kan det sjå ut som om *nevro-* skulle fungera betre på samisk enn *neuro-*, dvs at låneordet då får ein stavingsstruktur som ligg nære eksisterande samiske ord.
+
+For andre ord er det normert slik at det berre er ei form i sørsamisk:
+- sv: ekonomi
+- nob: økonomi
+- sma: ekonomije - dette er eit fornuftig vedtak. Ein unngår ö/ø-problemet som vi ser oppstår bl. a i bokutgivelser som ikke følger normeringsvedtak i bruken av svensk ö.
+
+Divvun-gruppa føreslår at ein som eit hovudprinsipp strevar etter éi felles form for både Noreg og Sverige, og dermed unngår parallelle former i dei ulike landa.
+
+## Ord på -oid
+
+Jf. tidligere vedtak: **cyanijde**, **opioijde**. Døme
+
+- **paranoide**: burde vera **paranoijde**. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_20)
+- **opiode**: avvik frå øvrige språk og tidlegare vedtak (jf over). på norsk: *opiat*, på svensk: *opioid*, på engelsk: *opiate*, feil i termwikien både på norsk og svensk. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_24)
+
+## Ord på -ik(k)
+
+Tidigere vedtag er *-ihke* og ikke *-igke*. Døme:
+
+- **fovnetigke**, burde vera **fonetihke**. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_95)
 
 ## Ord på -ip(p)
 
@@ -150,6 +118,29 @@ Burde ende på -ije. Eksempler er:
 
 ## Andre ord
 
+- **kebab**: enligt Lorentz bør det vera **kebaabe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26)
+- **keramikere**: enligt Lorentz bør det vera enten **keramikkere**, **keramigkere** eller **keramihkere**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Teknihkka_industriija_duodji:keramiker). GG-vedtaket er **keramikere**, men i termwikien har dette no vorte endra til det siste forslaget (med **-hk-**).
+- **kontoekreedite**: enligt Lorentz bør det vera **kontoekredihte**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:Lakisanat_2003_4767)
+- **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:bibliotekar) - [XXX - stemmer dette? Skrivemåten i termwikien samsvarar vel ganske bra med uttalen? Det er ingen lang -e- i uttalen av no/sv bibliotekar(ie), det er vel -a- som er lang?]
+- **bijove-aajhtere**: enligt Ove Lorentz må det bli: **biove** som i *kino* => **kinove**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_33)
+- **preentedh**: printe= låneord. Lulesamiskform er: tjáledahttet, tjáledit. Grunnord er å skrive.  Hvilken låneordsnorm er brukt her. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh) [XXX - denne må vi sjå nærmare på]
+- **diagnose**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
+- **krematorijume**: enlig Lorentz bør det vera **krematoriumme**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.36_hi_10._holocaust_11)
+- **metadone**: Enligt Lorentz bør det vera **metadovne**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_31)
+- **juarnaliste**: sistat i förste stavelse, bør altså vera **journaliste**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:journalist)
+- **influensa**: bør vera **influense**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._20)
+- **versailles-latjkoe**: bør det være genitivform på første leddet? **versaillesen-latjkoe** Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:versailles-latjkoe)
+- **copyright**: Helt engelsk ord. Ingen tilpassing gjort. Andre samiske språk har former basert på *vuoigatvuohta=rettighet*:
+    - Nordsamisk: dahkkivuoigatvuohta, álggadahkkivuoigatvuohta
+    - Enaresamisk: rähteevuoigâdvuotâ
+    - Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:%C3%A1lggadahkkivuoigatvuohta)
+- **cappuccino**: helt låneord uten tilpassing. Det spriker mot tidligere vedtak der "e" er lagt til i slutten av ordet, som feks. CDe [XXX - kva meiner vi her? At akronym/forkoringsord som sluttar på konsonant skal ha ein **e** etter seg?]. Skal det skrives "rett", må det tilpasses: "Kappotjinoe". Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_28)
+- **saerniebyrå**: andre ord for *byrå* brukt på sørsamisk og andre samiske språk:
+    - nordsamisk: ásahus (institusjon, fra finsk asetus)/doaimmahat (som i statens vegvesen, statens kraftverk) /fitnodat (firma)/kantovra (kontor)
+    - lulesamisk: begravelsesbyrå = hávddádimdåjmadahka
+    - inkassobyrå = krïebpesjimmiekontovre
+    - reklambyrå = reklaamekontovre
+    - Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:saerniebyrå)
 - **fiole**: her ser det ut til å mangle en v, fiovle, jfr. nevrovse, pistovle, tjovle, stovle.
   Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_35)
 - **rehaben**: frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_22)
