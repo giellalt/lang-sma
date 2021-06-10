@@ -64,7 +64,7 @@ Tidigere vedtag er *-ihke* og ikke *-igke*. Døme:
 
 ## Andre låneord og framande namn
 
-- **versailles-latjkoe**: bør det være genitivform på første leddet? **versaillesen-latjkoe** Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa)
+- **versailles-latjkoe**: bør det være genitivform på første leddet? **versaillesen-latjkoe** Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:versailles-latjkoe)
 - **copyright**: Helt engelsk ord. Ingen tilpassing gjort. Andre samiske språk har former basert på *vuoigatvuohta=rettighet*:
     - Nordsamisk: dahkkivuoigatvuohta, álggadahkkivuoigatvuohta
     - Enaresamisk: rähteevuoigâdvuotâ
