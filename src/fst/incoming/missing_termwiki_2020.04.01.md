@@ -53,7 +53,6 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
 
 Andre ord på -ia, burde gå som medie: Vi anbefaler at endelsen burde være -ije, jfr. **meedije**
 
-
 - **razzia**: Divvun foreslår: razzije (rassije). Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.30_Matriks_9_-_Sie_1.5_Hva_er_kriminalitet_13)
 - **maffija**: Divvun foreslår: maffije. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_5)
 
@@ -135,11 +134,8 @@ Burde ende på -ije. Eksempler er:
     - Enaresamisk: rähteevuoigâdvuotâ
     - Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:%C3%A1lggadahkkivuoigatvuohta)
 - **cappuccino**: Helt låneord uten tilpassing.
-
     - endelsen må være -ove, som i *kino* => **kinove**.
-
     - cappuccinove, capputjinove, kapputjinove. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_28)
-
 - **saerniebyrå**: andre ord for *byrå* brukt på sørsamisk og andre samiske språk:
     - nordsamisk: ásahus (institusjon, fra finsk asetus)/doaimmahat (som i statens vegvesen, statens kraftverk) /fitnodat (firma)/kantovra (kontor)
     - lulesamisk: begravelsesbyrå = hávddádimdåjmadahka
