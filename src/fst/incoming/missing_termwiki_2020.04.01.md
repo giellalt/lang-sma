@@ -145,7 +145,7 @@ Burde ende på -ije. Eksempler er:
 - **fiole**: her ser det ut til å mangle en v, fiovle, jfr. nevrovse, pistovle, tjovle, stovle.
   Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_35)
 - **rehaben**: frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_22)
-    - helst: **rehabiliteereniktedæjja**
+    - helst: **rehabiliteereniktedæjja** [XXX - dette er allereie ein alternativ term i termwikien, bør det kommenterast?]
     - om det skal forkortast: **rehab-iktedæjja**
 - **tjïeltese maaksoeh**: heller **tjïeltemaaksoe**, evt. **tjïelteladtjemaaksoe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:kommunale_avgifter)
 - [**nudelh**](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_25) - rimer dårleg med vanleg uttale [XXX - stemmer det?]
