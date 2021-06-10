@@ -18,6 +18,15 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
     * jiermehts-voete ‘vettløshet, uforstand’
   Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.31_Matriks_9_-_Sie_1.6_Domstolene_13)
 
+## Mulige skrivefeil
+
+- **ööhpedimmie-moenehtse**: Dette ser ut som en skrivefeil, burde vært **ööhpehtimmiemoenehtse**.
+  Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:Don_jïh_dan_bïjre_nr:_I,_II_jïh_III_6)
+- **juvnelgamme**: skrivefeil for *juvnehtamme*?
+  I termwiki burde man bruke grunnform, anbefale ville vært grunnformen på norsk, juvnetidh er ordet for det på sørsamisk.
+  Om man likevel vil beholde den bøyde formen, burde den sørsamisk formen være: **juvnehtamme**.
+  Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:Tras-termer_46)
+
 ## Andre feil
 
 - traahpe = trapp. Ikke passende som utvidet begrep om trapphus. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Översättning_av_skyltar_etc_46)
@@ -107,16 +116,6 @@ Eksempel:
 
 Vi meiner at slike ord bør behandlast etter tidlegare vedtak om *musikk/musik*: **-hk-**, dvs **-hp-** i dette tilfellet.
 Viser også til Gïelegaaltijes eget vedtak: [prinsihpe](https://satni.uit.no/termwiki/index.php?title=Servodatdie%C4%91a:Ordliste_til_veiledning_7)
-
-## Mulige skrivefeil
-
-- **ööhpedimmie-moenehtse**: Dette ser ut som en skrivefeil, burde vært **ööhpehtimmiemoenehtse**.
-  Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:Don_jïh_dan_bïjre_nr:_I,_II_jïh_III_6)
-- **juvnelgamme**: skrivefeil for *juvnehtamme*?
-  I termwiki burde man bruke grunnform, anbefale ville vært grunnformen på norsk, juvnetidh er ordet for det på sørsamisk.
-  Om man likevel vil beholde den bøyde formen, burde den sørsamisk formen være: **juvnehtamme**.
-  Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:Tras-termer_46)
-
 
 ## Låneord med trykksterk -rer fra svensk
 
