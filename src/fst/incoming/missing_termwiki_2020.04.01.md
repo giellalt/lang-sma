@@ -30,8 +30,8 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
 ## Andre feil
 
 - **tjïeltese maaksoeh**: heller **tjïeltemaaksoe**, evt. **tjïelteladtjemaaksoe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:kommunale_avgifter)
-- traahpe = trapp. Ikke passende som utvidet begrep om trapphus. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Översättning_av_skyltar_etc_46)
-- traahpabisseme: traahp**A**bisseme - må bli til traahpebisseme. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:trappevask)
+- **traahpe** (*trapp*): ikke passende som utvidet begrep om trapphus. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Översättning_av_skyltar_etc_46)
+- **traahpabisseme**: traahp**A**bisseme - må bli til traahpebisseme. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:trappevask)
 
 # Låneordsformer
 
