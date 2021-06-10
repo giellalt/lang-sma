@@ -46,7 +46,7 @@ For andre ord er det normert slik at det berre er ei form i sørsamisk:
 - **diagnose**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
 - **krematorijume**: enlig Lorentz bør det vera **krematoriumme**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.36_hi_10._holocaust_11)
 - **metadone**: Enligt Lorentz bør det vera **metadovne**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_31)
-- **juarnaliste**: sistat i förste stavelse, bør altså vera **journaliste**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa)
+- **juarnaliste**: sistat i förste stavelse, bør altså vera **journaliste**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:journalist)
 - **influensa**: bør vera **influense**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._20)
 
 ## Ord på -oid
