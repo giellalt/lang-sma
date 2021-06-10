@@ -47,7 +47,7 @@ For andre ord er det normert slik at det berre er ei form i sørsamisk:
 - nob: økonomi
 - sma: ekonomije - dette er eit fornuftig vedtak. Ein unngår ö/ø-problemet som vi ser oppstår bl. a i bokutgivelser som ikke følger normeringsvedtak i bruken av svensk ö.
 
-[XXX - kva er det vi føreslår som prinsipp? Parallelle former? Ei form? Eller gjeld diskusjonen berre "nevro-"?]
+Divvun-gruppa føreslår at ein som eit hovudprinsipp strevar etter éi felles form for både Noreg og Sverige, og dermed unngår parallelle former i dei ulike landa.
 
 ## Andre ord
 
