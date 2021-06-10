@@ -29,6 +29,7 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
 
 ## Andre feil
 
+- **tjïeltese maaksoeh**: heller **tjïeltemaaksoe**, evt. **tjïelteladtjemaaksoe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:kommunale_avgifter)
 - traahpe = trapp. Ikke passende som utvidet begrep om trapphus. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Översättning_av_skyltar_etc_46)
 - traahpabisseme: traahp**A**bisseme - må bli til traahpebisseme. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:trappevask)
 
@@ -148,7 +149,6 @@ Burde ende på -ije. Eksempler er:
 - **rehaben**: frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_22)
     - helst: **rehabiliteereniktedæjja** [XXX - dette er allereie ein alternativ term i termwikien, bør det kommenterast?]
     - om det skal forkortast: **rehab-iktedæjja**
-- **tjïeltese maaksoeh**: heller **tjïeltemaaksoe**, evt. **tjïelteladtjemaaksoe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:kommunale_avgifter)
 - [**nudelh**](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_25) - rimer dårleg med vanleg uttale [XXX - stemmer det?]
 - **maadtematigke**: bør være matematihke. Jf:
     - <https://calliidlagadus.org/do-aarjel/>, der det står:
