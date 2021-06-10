@@ -47,6 +47,8 @@ For andre ord er det normert slik at det berre er ei form i sørsamisk:
 - nob: økonomi
 - sma: ekonomije - dette er eit fornuftig vedtak. Ein unngår ö/ø-problemet som vi ser oppstår bl. a i bokutgivelser som ikke følger normeringsvedtak i bruken av svensk ö.
 
+[XXX - kva er det vi føreslår som prinsipp? Parallelle former? Ei form? Eller gjeld diskusjonen berre "nevro-"?]
+
 ## Andre ord
 
 - **kebab**: enligt Lorentz bør det vera **kebaabe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26)
