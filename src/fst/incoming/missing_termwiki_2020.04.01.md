@@ -123,7 +123,7 @@ Eksempel på feil normering er:
 
 - baalhkakamrere [Termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_21)
 
-## Skrivemåte for 'cancer'
+## Skrivemåte for *cancer*
 
 Bør heller bruke det samiske ordet **mïetsk´-åedtjie** istf *cancer*. Men om ein vil skrive *cancer* på samisk, held ein seg til sitatprinsippet og då burde forma  bli **cancere**.
 
