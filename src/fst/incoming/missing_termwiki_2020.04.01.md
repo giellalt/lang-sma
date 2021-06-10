@@ -51,10 +51,12 @@ For andre ord er det normert slik at det berre er ei form i sørsamisk:
 
 ## Andre ord
 
+[XXX - vi har tre bolkar med "Andre (låne)ord", dei bør samlast éin plass]
+
 - **kebab**: enligt Lorentz bør det vera **kebaabe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26)
 - **keramikere**: enligt Lorentz bør det vera enten **keramikkere**, **keramigkere** eller **keramihkere**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Teknihkka_industriija_duodji:keramiker) - [XXX - her er termwikien i samsvar med siste forslaget vårt, og med trad. normering - er det relevant å ta med denne?]
 - **kontoekreedite**: enligt Lorentz bør det vera **kontoekredihte**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:Lakisanat_2003_4767)
-- **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:bibliotekar)
+- **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:bibliotekar) - [XXX - stemmer dette? Skrivemåten i termwikien samsvarar vel ganske bra med uttalen? Det er ingen lang -e- i uttalen av no/sv bibliotekar(ie), det er vel -a- som er lang?]
 - **bijove-aajhtere**: enligt Ove Lorentz må det bli: **biove** som i *kino* => **kinove**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_33)
 - **preentedh**: printe= låneord. Lulesamiskform er: tjáledahttet, tjáledit. Grunnord er å skrive.  Hvilken låneordsnorm er brukt her. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh) [XXX - denne må vi sjå nærmare på]
 - **diagnose**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
@@ -130,6 +132,8 @@ Eksempel på feil normering er:
 ## Skrivemåte for *cancer*
 
 Bør heller bruke det samiske ordet **mïetsk´-åedtjie** istf *cancer*. Men om ein vil skrive *cancer* på samisk, held ein seg til sitatprinsippet og då burde forma  bli **cancere**.
+
+[XXX - skrivemåten med *cancere* er den som er i bruk i termane i termwikien som vi viser til nedanfor - så kva er poenget vårt? At dei bør nytta samisk term?]
 
 Eksempel frå termwikien:
 - [gåblecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_17) [XXX - her finst *gåbloen mïetsk´-åedtjie* som ein alternativ term, burde vera einaste tilrådde?]
