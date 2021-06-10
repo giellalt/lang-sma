@@ -37,13 +37,13 @@ For andre ord er det normert slik at det berre er ei form i sørsamisk:
 
 ## Andre ord
 
-- **kebab**: enligt Lorentz: **kebaabe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26)
+- **kebab**: enligt Lorentz bør det vera **kebaabe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26)
 - **keramikere**: enligt Lorentz bør det vera enten **keramikkere**, **keramigkere** eller **keramihkere**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Teknihkka_industriija_duodji:keramiker)
 - **kontoekreedite**: enligt Lorentz bør det vera **kontoekredihte**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:Lakisanat_2003_4767)
 - **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:)
 - **bijove-aajhtere**: enligt Ove Lorentz må det bli: **biove** som i *kino* => **kinove**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_33)
 - **preentedh**: printe= låneord. Lulesamiskform er: tjáledahttet, tjáledit. Grunnord er å skrive.  Hvilken låneordsnorm er brukt her. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh) [XXX - denne må vi sjå nærmare på]
-- **diagnovse**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
+- **diagnose**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
 - **krematorijume**: enlig Lorentz bør det vera **krematoriumme**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.36_hi_10._holocaust_11)
 - **metadone**: Enligt Lorentz bør det vera **metadovne**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_31)
 - **juarnaliste**: sistat i förste stavelse, bør altså vera **journaliste**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa)
