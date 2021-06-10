@@ -1,4 +1,4 @@
-# Til Gïelegaaltije - spørsmål om normering av ord og klassar av ord
+# Til Gïelegaaltije - spørsmål om normering av sørsamiske ord og klassar av ord
 
 Ord som Gïelegaaltije (GG) har normert, men som på ulike måtar anten avvik frå tidlegare normeringsvedtak eller på andre måtar har fått problematiske normeringsvedtak slik Divvun ser det. Orda er for det meste henta frå Termwikien, som er GG sitt verkty for termredigering. I dei fleste tilfella har vi lagt inn lenke til termposten eller til termsamlingar som inneheld den aktuelle termen.
 
