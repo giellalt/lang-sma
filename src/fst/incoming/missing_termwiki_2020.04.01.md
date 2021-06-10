@@ -41,9 +41,8 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
     - avvik fra låneordsnormen som tilsier at første stavelse bevares (**-åå-** vs **-o-**)
     - *normere* til *normeradidh*: **-eradidh** eller **-eredh**: vi føreslår **normeeredh** (stuttare), jfr. **registreeredh**.
       Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:omtag_m.m._2020A_sept_4).
-- **preentedh**: 2 ulike saker:
-    - avvik fra låneordsnormen som tilsier at første stavelse bevares (**-ee-** vs **-i-**)
-    - printe= låneord. Lulesamiskform er: tjáledahttet, tjáledit. Grunnord er å skrive.  Hvilken låneordsnorm er brukt her. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh) 
+- **preentedh** fra norsk *å prente*:
+    - avvik fra låneordsnormen som tilsier at første stavelse bevares (**-ee-** vs **-e-**). Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh)
 - **medija**: spriker mot tidligere vedtak, bør vera **meedije**.
   Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_83). Samansette ord med **medija**:
     - **medijaguvvie**: spriker mot tidligere vedtak, bør vera **meedije-**.
@@ -101,12 +100,10 @@ Eksempel på feil normering er:
 
 ## Skrivemåte for *cancer*
 
-Bør heller bruke det samiske ordet **mïetsk´-åedtjie** istf *cancer*. Men om ein vil skrive *cancer* på samisk, held ein seg til sitatprinsippet og då burde forma  bli **cancere**.
-
-[XXX - skrivemåten med *cancere* er den som er i bruk i termane i termwikien som vi viser til nedanfor - så kva er poenget vårt? At dei bør nytta samisk term?]
+Bør heller bruke det samiske ordet **mïetsk´-åedtjie** istf *cancer*.
 
 Eksempel frå termwikien:
-- [gåblecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_17) [XXX - her finst *gåbloen mïetsk´-åedtjie* som ein alternativ term, burde vera einaste tilrådde?]
+- [gåbloecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_17)
 - [gealoecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_18)
 
 ## Låneord som sluttar på -y
@@ -122,20 +119,27 @@ Burde ende på -ije. Eksempler er:
 
 - **kebab**: enligt Lorentz bør det vera **kebaabe**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_26)
 - **keramikere**: enligt Lorentz bør det vera enten **keramikkere**, **keramigkere** eller **keramihkere**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Teknihkka_industriija_duodji:keramiker). GG-vedtaket er **keramikere**, men i termwikien har dette no vorte endra til det siste forslaget (med **-hk-**).
-- **kontoekreedite**: enligt Lorentz bør det vera **kontoekredihte**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:Lakisanat_2003_4767)
-- **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:bibliotekar) - [XXX - stemmer dette? Skrivemåten i termwikien samsvarar vel ganske bra med uttalen? Det er ingen lang -e- i uttalen av no/sv bibliotekar(ie), det er vel -a- som er lang?]
+- **kontoekreedite**: 2 ulike saker:
+    - enligt Lorentz bør det vera **kontove-** (som i *kino* => **kinove**).
+    - enligt Lorentz bør det vera *-kredihte*. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:Lakisanat_2003_4767)
+- **biblijotekaarije**: Tidligere normering av bibliotek er gærjagåetie. Gærjagåetiebarkije eller -reerije. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:bibliotekar)
 - **bijove-aajhtere**: enligt Ove Lorentz må det bli: **biove** som i *kino* => **kinove**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_33)
 - **diagnose**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
 - **krematorijume**: enlig Lorentz bør det vera **krematoriumme**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.36_hi_10._holocaust_11)
 - **metadone**: Enligt Lorentz bør det vera **metadovne**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_31)
-- **juarnaliste**: sistat i förste stavelse, bør altså vera **journaliste**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:journalist)
+- **juarnaliste**: sitat i förste stavelse, bør altså vera **journaliste**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:journalist)
 - **influensa**: bør vera **influense**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._20)
 - **versailles-latjkoe**: bør det være genitivform på første leddet? **versaillesen-latjkoe** Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:versailles-latjkoe)
-- **copyright**: Helt engelsk ord. Ingen tilpassing gjort. Andre samiske språk har former basert på *vuoigatvuohta=rettighet*:
+- **copyright**: Helt låneord uten tilpassing. Andre samiske språk har former basert på *vuoigatvuohta=rettighet*:
     - Nordsamisk: dahkkivuoigatvuohta, álggadahkkivuoigatvuohta
     - Enaresamisk: rähteevuoigâdvuotâ
     - Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:%C3%A1lggadahkkivuoigatvuohta)
-- **cappuccino**: helt låneord uten tilpassing. Det spriker mot tidligere vedtak der "e" er lagt til i slutten av ordet, som feks. CDe [XXX - kva meiner vi her? At akronym/forkoringsord som sluttar på konsonant skal ha ein **e** etter seg?]. Skal det skrives "rett", må det tilpasses: "Kappotjinoe". Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_28)
+- **cappuccino**: Helt låneord uten tilpassing.
+
+    - endelsen må være -ove, som i *kino* => **kinove**.
+
+    - cappuccinove, capputjinove, kapputjinove. Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_28)
+
 - **saerniebyrå**: andre ord for *byrå* brukt på sørsamisk og andre samiske språk:
     - nordsamisk: ásahus (institusjon, fra finsk asetus)/doaimmahat (som i statens vegvesen, statens kraftverk) /fitnodat (firma)/kantovra (kontor)
     - lulesamisk: begravelsesbyrå = hávddádimdåjmadahka
@@ -145,9 +149,9 @@ Burde ende på -ije. Eksempler er:
 - **fiole**: her ser det ut til å mangle en v, fiovle, jfr. nevrovse, pistovle, tjovle, stovle.
   Frå [Termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_35)
 - **rehaben**: frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:Översättning_av_skyltar_etc_22)
-    - helst: **rehabiliteereniktedæjja** [XXX - dette er allereie ein alternativ term i termwikien, bør det kommenterast?]
+    - helst: **rehabiliteereniktedæjja**
     - om det skal forkortast: **rehab-iktedæjja**
-- [**nudelh**](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_25) - rimer dårleg med vanleg uttale [XXX - stemmer det?]
+- [**nudelh**](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.34_matriks_9_-_sie_1.7_kultur_og_mangfold_25) - helst **nudele** (entall)
 - **maadtematigke**: bør være matematihke. Jf:
     - <https://calliidlagadus.org/do-aarjel/>, der det står:
         - nob: matematikk
