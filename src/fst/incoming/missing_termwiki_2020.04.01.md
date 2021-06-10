@@ -41,6 +41,9 @@ Dersom GG ønsker det, kan vi i framtida gjerne bidra med reinvasking før norme
     - avvik fra låneordsnormen som tilsier at første stavelse bevares (**-åå-** vs **-o-**)
     - *normere* til *normeradidh*: **-eradidh** eller **-eredh**: vi føreslår **normeeredh** (stuttare), jfr. **registreeredh**.
       Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:omtag_m.m._2020A_sept_4).
+- **preentedh**: 2 ulike saker:
+    - avvik fra låneordsnormen som tilsier at første stavelse bevares (**-ee-** vs **-i-**)
+    - printe= låneord. Lulesamiskform er: tjáledahttet, tjáledit. Grunnord er å skrive.  Hvilken låneordsnorm er brukt her. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh) 
 - **medija**: spriker mot tidligere vedtak, bør vera **meedije**.
   Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Don_jïh_dan_bïjre_I,_II,_III_2_83). Samansette ord med **medija**:
     - **medijaguvvie**: spriker mot tidligere vedtak, bør vera **meedije-**.
@@ -122,7 +125,6 @@ Burde ende på -ije. Eksempler er:
 - **kontoekreedite**: enligt Lorentz bør det vera **kontoekredihte**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Juridihkka:Lakisanat_2003_4767)
 - **biblijotekaarije**: enligt Lorentz bør det vera **biblijoteekaarije**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:bibliotekar) - [XXX - stemmer dette? Skrivemåten i termwikien samsvarar vel ganske bra med uttalen? Det er ingen lang -e- i uttalen av no/sv bibliotekar(ie), det er vel -a- som er lang?]
 - **bijove-aajhtere**: enligt Ove Lorentz må det bli: **biove** som i *kino* => **kinove**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.33_matriks_9_-_sie_1.2_ytringsfrihet_33)
-- **preentedh**: printe= låneord. Lulesamiskform er: tjáledahttet, tjáledit. Grunnord er å skrive.  Hvilken låneordsnorm er brukt her. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Dáidda_ja_girjjálašvuohta:dïedtedh) [XXX - denne må vi sjå nærmare på]
 - **diagnose**: enligt Ove Lorentz bør det vera **diagnovse**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:Corona_m.m._22)
 - **krematorijume**: enlig Lorentz bør det vera **krematoriumme**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Ođđa_sánit:1.36_hi_10._holocaust_11)
 - **metadone**: Enligt Lorentz bør det vera **metadovne**. Frå [termwikien](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.38_matriks_9_-_Sie_1.9_rus_31)
