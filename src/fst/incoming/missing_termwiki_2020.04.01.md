@@ -64,6 +64,7 @@ Jf ord på *neuro-* (norsk) / *nevro-* (svensk). Lulesamisk har normert parallel
 Ut frå samiske ord som *eevre* kan det sjå ut som om *nevro-* skulle fungera betre på samisk enn *neuro-*, dvs at låneordet då får ein stavingsstruktur som ligg nære eksisterande samiske ord.
 
 For andre ord er det normert slik at det berre er ei form i sørsamisk:
+
 - sv: ekonomi
 - nob: økonomi
 - sma: ekonomije - dette er eit fornuftig vedtak. Ein unngår ö/ø-problemet som vi ser oppstår bl. a i bokutgivelser som ikke følger normeringsvedtak i bruken av svensk ö.
@@ -102,6 +103,7 @@ Eksempel på feil normering er:
 Bør heller bruke det samiske ordet **mïetsk´-åedtjie** istf *cancer*.
 
 Eksempel frå termwikien:
+
 - [gåbloecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_17)
 - [gealoecancere](https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:1.39_matriks_9_-_Sie_1.10_alkohol_tobak_og_narkotika_18)
 
