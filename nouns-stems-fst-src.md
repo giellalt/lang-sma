@@ -23,7 +23,7 @@
 ALL nouns with PX
 
  * **LEXICON Noun ** dividing in NounNoPx, NounPx (with a P.Px.add
-              flag) and NounPxKin (with a P.Nom3Px.add flag)
+flag) and NounPxKin (with a P.Nom3Px.add flag)
 
  * **NounNoPx ;** = words in this noun lexicon do not get any possessive inflectionb
  * **@P.Px.add@ NounPx ;** = these nouns do get possessive inflection, except for 3. person nominative, which is usually only used with kinship terms (see next)
@@ -38,10 +38,10 @@ Not according to umlautsystem
 
 
 Lemma fra GG: merk DNorm
-  6 koreen
-  5 tyrkijen
- 20 Bottleneck-hypotesen       ---- dynamisk sammensetning - how?
- 17 direkte
+6 koreen
+5 tyrkijen
+20 Bottleneck-hypotesen       ---- dynamisk sammensetning - how?
+17 direkte
 
 
 
@@ -110,3 +110,5 @@ https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/nouns.lexc)</small>

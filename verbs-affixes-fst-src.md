@@ -308,9 +308,9 @@ Fått tilbakemelding på denne om at "jarkah" er +Ind+Prs+Sg2, og "Jarkh!" er +I
 
 Infinite forms
 --------------
-                 +V+IV+Act:%>eme       FINAL1        ;
-              +V+IV+PrsPrc:%>ije       FINAL1        ;
-              +V+IV+PrsPrc:%>ijes      FINAL1        ;
++V+IV+Act:%>eme       FINAL1        ;
++V+IV+PrsPrc:%>ije       FINAL1        ;
++V+IV+PrsPrc:%>ijes      FINAL1        ;
 Derivations
 -----------
 
@@ -464,10 +464,12 @@ Nominal derivation sublexica
 
 
 LEXICON V-EVEN-PRS
-  V-PRS-SG-12 ;
-  V-PRS-SG-3 ;
-   V-EVEN-PRS-DUPL ;
+V-PRS-SG-12 ;
+V-PRS-SG-3 ;
+V-EVEN-PRS-DUPL ;
 
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/verbs.lexc)</small>

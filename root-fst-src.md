@@ -237,7 +237,7 @@ to research compounding patterns in the corpus.
  * **+IV**:  Intansitive verb
  * **+Gram/TAbbr**:  Transitive abbreviation (it needs an argument)
  * **+Gram/TNumAbbr**:  Transitive abbreviation if the following
-            constituent is numeric
+constituent is numeric
  * **+Gram/TIAbbr**:  Both transitive and intransitive abbreviation
  * **+Gram/IAbbr**:  Intransitive abbreviation (it takes no argument)
  * **+Gram/NumNoAbbr**:  Transitive abbreviations for which numerals
@@ -245,7 +245,7 @@ to research compounding patterns in the corpus.
  * **+Guess**:  for the name guesser ?
  * **+LOAN**:  ad hoc tag for development purposes ?
  * **+Cmp/Hyph**:  A tag to indicate that a hyphen was used when
-            compounding?
+compounding?
 
 ### Tags for testing the frequency of certain phenomenas in our corpora
 
@@ -573,12 +573,12 @@ The principle of tagging is that we only tag to the extent needed,
 and following a priority:
 1. any untagged word is pronounced with SME orthographic conventions
 1. NNO and NOB have identical pronunciation, NNO is only used if
-  different in spelling from NOB
+different in spelling from NOB
 1. SWE has mostly the same pronunciation as NOB, and is only used
-  if different in spelling from NOB
+if different in spelling from NOB
 1. Occasionally even SME (the default) may be tagged, to block other
-  languages from being specified, mainly during semi-automatic
-  language tagging sessions
+languages from being specified, mainly during semi-automatic
+language tagging sessions
 All in all, we want to get as much correctly transcribed to IPA
 with as little work as possible. On the other hand, if more words
 are tagged than strictly needed, this should pose no problem as
@@ -759,3 +759,5 @@ The `@D.CmpOnly.FALSE@` flag diacritic is ued to disallow words tagged
 with +CmpNP/Only to end here.
 The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/root.lexc)</small>

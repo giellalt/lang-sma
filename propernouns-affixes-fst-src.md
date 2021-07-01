@@ -4,8 +4,8 @@
 ## Table of content
 * Continuation lexica
 * Personal names
-    - First names
-    - Surnames
+- First names
+- Surnames
 * Place names
 
 
@@ -318,7 +318,7 @@
 
 
 
-  OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
+OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
 
 
 
@@ -563,7 +563,7 @@ Propernoun
 
 
 
- +N+Prop+Sem/Plc+Pl: NIEJTE_PL ;
++N+Prop+Sem/Plc+Pl: NIEJTE_PL ;
 
 
 
@@ -637,3 +637,5 @@ Propernoun
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/propernouns.lexc)</small>

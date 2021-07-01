@@ -18,7 +18,7 @@
 ### BOS/EOS:
 
 * (>>>) (<s>)
-  (<<<) (</s>)
+(<<<) (</s>)
 
 ### Morphological tags
 
@@ -80,7 +80,7 @@ Der/eds
 Der/ht
 Der/htalle 
 Der/htj
- Der/ihks
+Der/ihks
 Der/ijes
 Der/l
 Der/laakan
@@ -293,3 +293,5 @@ VERB-FORMS
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/cg3/valency.cg3](http://github.com/giellalt/lang-sma/blob/main/../src/cg3/valency.cg3)</small>
