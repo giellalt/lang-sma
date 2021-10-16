@@ -419,6 +419,17 @@ SET DU-PL-V = DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;
 
 SET 1-2-V = SG1-V OR SG2-V OR DU1-V OR DU2-V OR PL1-V OR PL2-V ;
 
+LIST VNOTSG1 = Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTSG2 = Sg1 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTSG3 = Sg1 Sg2 Du1 Du2 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTDU1 = Sg1 Sg2 Sg3 Du2 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTDU2 = Sg1 Sg2 Sg3 Du1 Du3 Pl1 Pl2 Pl3 ;
+LIST VNOTDU3 = Sg1 Sg2 Sg3 Du1 Du2 Pl1 Pl2 Pl3 ;
+LIST VNOTPL1 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl2 Pl3 ;
+LIST VNOTPL2 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl3 ;
+LIST VNOTPL3 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 ;
+
+
 #!! ### Pronoun sets
 # ------------
 
@@ -604,6 +615,10 @@ SET CCCOMMA = CC OR COMMA ;
 
 #!! ### Grammarchecker sets
 
+#!! Naming convention &errorclass-errortype-wrong-correct:
+#!! So far only one errorclass: msyn.
+
+LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-agr = &msyn-agr ;
 LIST &msyn-agr = &msyn-agr ;
@@ -629,10 +644,30 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 # Add &typo error tag to unkown words that are not corrected by the speller, so that they at least get a blue underline and a message
 ADD:uncorrected-typos (&typo) (?) ;
 
-# # A simple grammar checker rule without suggestions: Ensure preceding nominal agrees with the verb
-# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Sg + Nom) (0 V) (NOT 0 Sg3);
+
+#!! VErb agreement
+
+#ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 Adv LINK 1 V + Sg1);
+ ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
+COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-other-sg1);
+COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
+#COPY:msyn-agr-other-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &msyn-agr-other-sg1);
+
+#% Manne båata.
+#$ Manne båatam.
+#$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
+#$ Tomhân mun tiäđust-uv paaččim.
+
+
+
+
+
+#!!  Ensure preceding nominal agrees with the verb
+ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (NOT -2 CC)(-1C Sg + Nom OR Pron + Sg3 + Nom) (0 V) (NOT 0 Sg3);
+COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
+COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prt &msyn-agr-other-sg3);
+
 # ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Sg1 + Nom) (0 V) (NOT 0 Sg1);
-# ## Manne båata.
 # ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Sg2 + Nom) (0 V) (NOT 0 Sg2);
 # ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Pl1 + Nom) (0 V) (NOT 0 Pl1);
 # ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Pl2 + Nom) (0 V) (NOT 0 Pl2);
