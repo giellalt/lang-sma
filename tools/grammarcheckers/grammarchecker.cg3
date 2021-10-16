@@ -604,12 +604,16 @@ SET CCCOMMA = CC OR COMMA ;
 
 #!! ### Grammarchecker sets
 
-LIST &err-agr = &err-agr ;
-LIST &err-gen-po = &err-gen-po ;
-LIST &err-no-conneg = &err-no-conneg ;
-LIST &err-orrood-inf = &err-orrood-inf ;
-LIST &err-ext-agr = &err-ext-agr ;
-LIST &err-ext-vagr = &err-ext-vagr ;
+LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
+LIST &msyn-agr = &msyn-agr ;
+LIST &msyn-agr = &msyn-agr ;
+LIST &msyn-agr = &msyn-agr ;
+LIST &msyn-agr = &msyn-agr ;
+LIST &msyn-gen-po = &msyn-gen-po ;
+LIST &msyn-no-conneg = &msyn-no-conneg ;
+LIST &msyn-orrood-inf = &msyn-orrood-inf ;
+LIST &msyn-ext-agr = &msyn-ext-agr ;
+LIST &msyn-ext-vagr = &msyn-ext-vagr ;
 
 MAPPING-PREFIX = & ;
 
@@ -626,12 +630,12 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 ADD:uncorrected-typos (&typo) (?) ;
 
 # # A simple grammar checker rule without suggestions: Ensure preceding nominal agrees with the verb
-# ADD:err-agr (&err-agr) TARGET V IF (-1C Sg + Nom) (0 V) (NOT 0 Sg3);
-# ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg1 + Nom) (0 V) (NOT 0 Sg1);
+# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Sg + Nom) (0 V) (NOT 0 Sg3);
+# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Sg1 + Nom) (0 V) (NOT 0 Sg1);
 # ## Manne båata.
-# ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg2 + Nom) (0 V) (NOT 0 Sg2);
-# ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl1 + Nom) (0 V) (NOT 0 Pl1);
-# ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl2 + Nom) (0 V) (NOT 0 Pl2);
+# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Sg2 + Nom) (0 V) (NOT 0 Sg2);
+# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Pl1 + Nom) (0 V) (NOT 0 Pl1);
+# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Pl2 + Nom) (0 V) (NOT 0 Pl2);
 
 # # And one with a suggestion where we simply change the tag Sg into Attr:
 # ADD:attr-not-pred (&attr-not-pred) TARGET (A Sg) IF (NOT 0 Attr OR Gen) (1 CC LINK *1 COMMON-N) ;
