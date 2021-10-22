@@ -325,6 +325,8 @@ PL3-V
 
 
 
+
+
 ### Pronoun sets
 
 
@@ -404,10 +406,24 @@ expression **WORD - premodifiers**.
 
 ### Grammarchecker sets
 
+Naming convention &errorclass-errortype-wrong-correct:
+So far only one errorclass: msyn.
 
 
 
 
+
+
+
+VErb agreement
+
+
+
+
+
+
+
+Ensure preceding nominal agrees with the verb
 
 
 
