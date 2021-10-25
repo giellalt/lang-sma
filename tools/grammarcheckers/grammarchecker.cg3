@@ -620,15 +620,7 @@ SET CCCOMMA = CC OR COMMA ;
 
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
-LIST &msyn-agr = &msyn-agr ;
-LIST &msyn-agr = &msyn-agr ;
-LIST &msyn-agr = &msyn-agr ;
-LIST &msyn-agr = &msyn-agr ;
-LIST &msyn-gen-po = &msyn-gen-po ;
-LIST &msyn-no-conneg = &msyn-no-conneg ;
-LIST &msyn-orrood-inf = &msyn-orrood-inf ;
-LIST &msyn-ext-agr = &msyn-ext-agr ;
-LIST &msyn-ext-vagr = &msyn-ext-vagr ;
+LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
 
 MAPPING-PREFIX = & ;
 
@@ -667,14 +659,11 @@ ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (NOT -2 CC)(-1C Sg + No
 COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
 COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prt &msyn-agr-other-sg3);
 
-# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Sg1 + Nom) (0 V) (NOT 0 Sg1);
-# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Sg2 + Nom) (0 V) (NOT 0 Sg2);
-# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Pl1 + Nom) (0 V) (NOT 0 Pl1);
-# ADD:msyn-agr (&msyn-agr) TARGET V IF (-1C Pron + Pl2 + Nom) (0 V) (NOT 0 Pl2);
 
 # # And one with a suggestion where we simply change the tag Sg into Attr:
-# ADD:attr-not-pred (&attr-not-pred) TARGET (A Sg) IF (NOT 0 Attr OR Gen) (1 CC LINK *1 COMMON-N) ;
-# COPY:attr-not-pred (Attr &SUGGEST) EXCEPT (Sg) TARGET (&attr-not-pred) ;
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (NOT 0 Attr OR Gen) (1 CC LINK *1 COMMON-N) ;
+COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom) TARGET (A &msyn-adj-pred-attr) ;
+
 # # The method is: Add &SUGGEST to a copied reading to *generate* a
 # # suggestion form from that reading. The copy should contain the error
 # # tag too – &-prefixed error tags are ignored when generating, but
