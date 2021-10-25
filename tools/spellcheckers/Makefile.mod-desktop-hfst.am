@@ -67,4 +67,65 @@ FINAL_STRING_EDITS=txt
 # - no
 WORD_REPLACEMENTS=yes
 
+### BEGIN: Local build rules: *.regex ###
+
+#editdist.default.regex: editdist-est.regex 
+#	cp $< $@
+
+# edit distance=1
+# typos related to computer keyboard:
+# substitute, transpose, add, delete
+ 
+editdist.festschrift.hfst: editdist.festschrift.regex
+	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) -S -E $(HFST_FLAGS) -i $<\
+		   --format=openfst-tropical \
+		-o $@
+
+# any accented letter
+accents.festschrift.hfst: accents.festschrift.regex 
+	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) -S -E $(HFST_FLAGS) -i $<\
+		   --format=openfst-tropical \
+		-o $@
+
+# any number of ad hoc style accented letters may be substituted
+# in addition to other edits
+editdist.all.festschrift.hfst: editdist.festschrift.hfst \
+						   strings.txt.default.hfst \
+						   accents.festschrift.hfst
+	$(AM_V_RGX2FST)printf "\
+		[ @\"accents.festschrift.hfst\"* .o. \
+			[ @\"strings.txt.default.hfst\" | @\"editdist.festschrift.hfst\" ] ]; \
+		];" \
+		| $(HFST_REGEXP2FST) -S -E $(HFST_FLAGS) \
+		   --format=openfst-tropical \
+		  -o $@
+
+words.festschrift.hfst: words.default.hfst
+	$(AM_V_CP)cp -f $< $@
+
+final_strings.all.festschrift.hfst: final_strings.txt.default.hfst
+	$(AM_V_CP)cp -f $< $@
+
+####### *.zhfst file: #######
+# Finally build the zhfst file, and make a copy in a subdir named '3', so that
+# we can test it without installing it (the '3' dir is a voikko requirement):
+sma-x-%.zhfst: $(srcdir)/index.xml \
+					 errmodel.%.hfst \
+					 $(GT_SPELLER_ACCEPTOR)
+	$(AM_V_at)rm -f $@
+	$(AM_V_at)$(MKDIR_P) build/$@
+	$(AM_V_at)rm -f build/$@/*
+	$(AM_V_at)cp $(srcdir)/index.xml build/$@/index.xml
+	$(AM_V_at)cp $(GT_SPELLER_ACCEPTOR) build/$@/$(GT_SPELLER_ACCEPTOR)
+	$(AM_V_at)cp $(GT_ERRMODELS) build/$@/$(GT_ERRMODELS)
+	$(AM_V_ZIP)cd build/$@/ && $(ZIP) $(ZIPFLAGS) ../../$@ *
+
+####### *-desktop.zhfst file: #######
+# To make life easier for CI (and possibly the build flie maintainters later),
+# create a *-desktop.zhfst file by hard-linking to *.zhfst:
+sma-x-festschrift-desktop.zhfst: sma-x-festschrift.zhfst
+	$(AM_V_GEN)ln -f $< $@
+
+#### END: Local build rules: *.regex ####
+
 # vim: set ft=automake:
