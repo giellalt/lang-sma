@@ -87,14 +87,21 @@ accents.festschrift.hfst: accents.festschrift.regex
 		   --format=openfst-tropical \
 		-o $@
 
+# edits that are so specific we may allow them to occur any number of times
+# (they will occur only once or twice anyway)
+strings.festschrift.hfst: strings.festschrift.regex 
+	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) -S $(HFST_FLAGS) -i $<\
+	   --format=openfst-tropical \
+		-o $@
+
 # any number of ad hoc style accented letters may be substituted
 # in addition to other edits
 editdist.all.festschrift.hfst: editdist.festschrift.hfst \
-						   strings.txt.default.hfst \
+						   strings.festschrift.hfst \
 						   accents.festschrift.hfst
 	$(AM_V_RGX2FST)printf "\
 		[ @\"accents.festschrift.hfst\"* .o. \
-			[ @\"strings.txt.default.hfst\" | @\"editdist.festschrift.hfst\" ] ]; \
+			[ @\"strings.festschrift.hfst\" | @\"editdist.festschrift.hfst\" ] ]; \
 		];" \
 		| $(HFST_REGEXP2FST) -S -E $(HFST_FLAGS) \
 		   --format=openfst-tropical \
@@ -109,15 +116,15 @@ final_strings.all.festschrift.hfst: final_strings.txt.default.hfst
 ####### *.zhfst file: #######
 # Finally build the zhfst file, and make a copy in a subdir named '3', so that
 # we can test it without installing it (the '3' dir is a voikko requirement):
-sma-x-%.zhfst: $(srcdir)/index.xml \
-					 errmodel.%.hfst \
+sma-x-festschrift.zhfst: $(srcdir)/index.xml \
+					 errmodel.festschrift.hfst \
 					 $(GT_SPELLER_ACCEPTOR)
 	$(AM_V_at)rm -f $@
 	$(AM_V_at)$(MKDIR_P) build/$@
 	$(AM_V_at)rm -f build/$@/*
 	$(AM_V_at)cp $(srcdir)/index.xml build/$@/index.xml
 	$(AM_V_at)cp $(GT_SPELLER_ACCEPTOR) build/$@/$(GT_SPELLER_ACCEPTOR)
-	$(AM_V_at)cp $(GT_ERRMODELS) build/$@/$(GT_ERRMODELS)
+	$(AM_V_at)cp errmodel.festschrift.hfst build/$@/$(GT_ERRMODELS)
 	$(AM_V_ZIP)cd build/$@/ && $(ZIP) $(ZIPFLAGS) ../../$@ *
 
 ####### *-desktop.zhfst file: #######

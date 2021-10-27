@@ -1,0 +1,127 @@
+# Add your error (->) correct string pairs here (not complete words, they have
+# a separate file), followed by TAB and the weight for the edit operation (->) 
+[
+# short -> long vowels:
+a  (->) {aa}::5 , # sajvi -> saajvi
+a  (->) {ae}::5 , # baktie -> baektie
+e  (->) {ie}::5 ,
+y  (->) {ie}::5 ,
+æ  (->) {ea}::5 ,
+ö  (->) {öö}::2 ,
+
+# long -> short vowels:
+{aa} (->)  a::5 ,
+{ea} (->)  æ::5 ,
+{ee} (->)  e::2 , # deepartemaangen -> departemeenten
+{ie} (->)  e::6 ,
+{ie} (->)  i::8 , # sijhtiejibie -> sïjhtijibie
+{ää} (->)  o::5 ,
+{öö} (->)  ö::5 , # øøvtiehtidh -> övtiedidh
+
+# diphthongues:
+{aa} (->) {ae}::5 ,
+{ae} (->) {aa}::5 , # aeremes -> aaremes
+{ae} (->) {ea}::4 ,
+{ae} (->) {ee}::5 , # aejhtin -> eejhtin
+{ea} (->) {ae}::4 ,
+{ea} (->) {ie}::5 ,
+{ea} (->) {ïe}::5 ,
+{ie} (->) {ea}::5 ,
+{ïe} (->) {ea}::5 ,
+{ie} (->) {ee}::5 , # Gierve -> Geerve
+{ie} (->) {ïe}::5 ,
+{ie} (->) {oe}::5 , # siejhmetji -> soejmetji
+{ua} (->) {åa}::5 , # bualta -> båalta
+{yø} (->) {yö}::1 ,
+{ää} (->) {ææ}::5 ,
+{åa} (->) {åå}::5 ,
+{åe} (->) {åa}::5 ,
+{åå} (->) {åa}::5 ,
+
+# Disyllabic vowel changes:
+{uve}  (->) {ovi}::5 ,
+{yjje} (->) {åjja}::5 , # tryjjedidh -> tråjjadidh
+{aako} (->) {ååke}::5 ,
+{erie} (->) {are}::5 ,
+
+# Quantity errors (should be covered by the regular aab=>abb rules - needed?)
+{aame} (->) {amme}::5 , # raamekåånvensjovnine -> rammekonvensjovnine
+
+# Preaspiration errors
+{apa} (->)  {ahpa}::5 , # deapadimmi -> deahpadimmie
+{ato} (->)  {ahtå}::5 , # måaratovva -> måarahtåvva
+{utt} (->) {uhtte}::5 , # loan words like instituhtte - different in Sweden?
+
+# Long vowel + consonant:
+{øøj}   (->)  {oej}::5 , # søøjmehtji -> soejmetji
+{øøp}   (->)  {åap}::5 ,
+{-øøvt} (->)  {övt}::4 ,
+{ååhp}  (->) {åahp}::5 , # tjaalegeååhpetje -> tjaalehåahpetje
+{uvk}   (->) {ovhk}::5 ,
+{ööp}   (->)  {åap}::5 ,
+
+# Consonant groups:
+{dl}   (->)  {ld}::4 ,
+{dt}   (->) {dtj}::5 ,
+{dt}   (->)  {ht}::5 , # nedtesne -> nehtesne
+{ht}   (->)  {th}::4 ,
+{htd}  (->)   {d}::5 , # øøvtiehtdidh -> övtiedidh
+{htj}  (->) {tjk}::5 , # ruhtjehke -> rutjkehke
+{jhk}  (->)  {jk}::5 ,
+{jhk}  (->)  {hk}::5 , # aajhkine -> aahkine
+{jhm}  (->)  {jm}::5 , # siejhmetji -> soejmetji
+{jht}  (->)  {jt}::5 , # sæjhtoe -> sæjtoe
+{jp}   (->) {jhp}::5 ,
+{jth}  (->) {jht}::5 , # gujth -> gujht
+{jtjs} (->) {jts}::2 , # Jijtjsasse -> Jïjtsasse
+{lk}   (->) {lhk}::5 , # doelkem -> toelhkem
+{llk}  (->)  {lk}::5 , # ballka -> balka
+{lv}   (->)  {vl}::5 , # golvoe -> govloe
+{nt}   (->) {nht}::5 , # vientebe -> vïenhtebe
+{p}    (->)  {bp}::5 , # krïepsji -> krïebpesji
+{rt}   (->) {rht}::5 , # Årromelastoeviertieh -> Årromelastoevierhtieh
+{sj}   (->)  {js}::4 ,
+{tks}  (->) {tsk}::5 , # mïetksen -> mïetsken
+{ts}   (->) {dts}::5 , # båatsode -> båadtsode
+{vk}   (->) {vhk}::5 , # måvka -> måvhkah
+{vt}   (->) {vht}::5 , # deavta -> deavhta
+
+{aadijov} (->) {adio}::5 ,
+{dti} (->) {dtsi}::5 , # giedties -> giedtsies
+
+{ege-} (->) {eh}::5 ,
+{ege} (->) {eh}::5 ,
+{eh-} (->) {e}::6 ,
+{ei} (->) {eeje}::6 , # Europeihke -> Europeejehke
+{es} (->) {ese}::5 , # byjressiebredahkh -> byjresesïebredahkh
+{filje} (->) {file}::5 , # homofilje -> homofile
+{filje} (->) {filije}::5 , # homofilje -> homofile
+{htji} (->) {htjie}::5 ,
+{hts} (->) {htes}::5 ,
+
+{iehtjie} (->) {ïehtje}::5 , # tjiehtjielisne -> tjïehtjelisnie
+{ievie} (->) {eava}::8 , # krievie -> kreava
+{ihte} (->) {itee}::5 ,
+{ijjie} (->) {æjja}::5 ,
+{ijove} (->) {io}::5 ,
+{ijovnal} (->) {ionaal}::5 ,
+{ine} (->) {ijne}::4 , # beensine -> bensijne
+
+{jele} (->) {jeele}::5 , # jisrajelehki -> israjeelehki
+
+{mang} (->) {ment}::5 , # deepartemaangen -> departementen
+{maang} (->) {ment}::5 , # deepartemaangen -> departementen
+{meter} (->) {meetere}::6 , # kilovmeter -> kilomeetere
+{mts} (->) {mtas}::5 , # damts -> damtas
+{mts} (->) {mtoes}::5 , # damtsmïerhke -> damtoesmïerhke
+{ode} (->) {ojde}::5 , # leaksode -> leaksojde
+{ovli} (->) {oli}::5 ,
+
+{Øøvro} (->) {Euro}::5 , # Øøvropesne -> Europesne
+{øøvro} (->) {euro}::5 ,
+{öbeel} (->) {ööbel}::2 , # möbeele -> mööbele
+
+{ååhke} (->) {åhka}::5 ,
+{åårgan} (->) {organ}::5   # åårganisasjovnijiste -> organisasjovnijste
+]
+;
