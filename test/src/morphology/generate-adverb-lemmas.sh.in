@@ -156,6 +156,9 @@ cat $padv_lemmas  $todo_lemmas | sort -u > $all_adv
 			# Only open the failed lemmas in see if @SEE@ is defined:
 			if [ "$EXTEDITOR" ]; then
 				$EXTEDITOR $result_file.$f.txt
+			else
+                echo "There were problem lemmas. Details in:"
+                echo "* $result_file.$f.txt    "
 			fi
 		    Fail=1
 		    echo "$f - FAIL"
