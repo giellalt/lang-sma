@@ -1172,6 +1172,10 @@ SET VERB-LEMMA = (".*"r) + V ;
 SELECT:infNotErr VERB-LEMMA + Inf - Err/Orth IF (0 VERB-LEMMA + VFIN + Err/Orth LINK NOT 0 VFIN - Err/Orth) ;
 	#$ Bøøremes jis åadtjodh saemie-laanten dåehkesne meatan.
 
+SELECT:leahSg2 Sg2 IF (0 ("lea") + Prs + Sg2)(* ("datne") + Pron + Pers + Sg2 BARRIER S-BOUNDARY);
+
+SELECT:leahPl3 Pl3 IF (0 ("lea") + Prs + Pl3)(* Pl + Nom OR Pl3 + Nom);
+
 
 #!! Selecting imperative sentence-initially with appropriate right context
 
