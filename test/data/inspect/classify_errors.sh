@@ -54,7 +54,7 @@ paste only_typos.txt only_corrects.txt \
 
 # for every kind of a typo (add_one, delete_one etc.), ... 
 
-for typo in add1 one2double del1 double2one transpose transpose1 aab2abb repetition subst1 subst1_kb_next subst_accents subst_accents_sz insert_space capitalize
+for typo in aab2abb add1 capitalize del1 double2one insert_space one2double repetition subst1 subst1_kb_next subst_accents subst_accents_sz transpose transpose1
 do
 
   # 1) create all the possible modifications of this type
