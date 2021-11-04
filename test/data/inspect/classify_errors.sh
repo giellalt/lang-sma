@@ -14,8 +14,10 @@
 #     2.3) save the #_modification_type in a file
 # 3) combine all the files to arrive at 3 columns: typo correct #modification_type(s)
 
+typos_source=../typos.txt
+
 # create the column of typos
-cat ../typos.txt \
+cat ${typos_source} \
 | sed 's/#.*$//' \
 | sed 's/!.*$//' \
 | grep -v '^$' \
@@ -24,7 +26,7 @@ cat ../typos.txt \
 > only_typos.txt
 
 # create the column of known corrects
-cat ../typos.txt \
+cat ${typos_source} \
 | sed 's/#.*$//' \
 | sed 's/!.*$//' \
 | grep -v '^$' \
