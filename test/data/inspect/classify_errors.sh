@@ -87,7 +87,7 @@ do
   # collect all the classifications
   paste tmp_errors_marked tmp2.txt \
   > tmp3
-  cp tmp3 tmp_errors_marked
+  mv -f tmp3 tmp_errors_marked
 done
 
 # remove some redundant classifications
