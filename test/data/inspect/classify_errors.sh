@@ -46,8 +46,7 @@ paste only_typos.txt only_corrects.txt \
 # prepare typos for subsequent processing:
 # add a special symbol @ to separate candidates of one typo from those of the next one
 cat only_typos.txt \
-| sed 's/$/\
-@/' \
+| sed 's/$/\n@/' \
 > typos_tmp.txt
 
 # start with tmp file for including all the errors (resulting in a table)
@@ -70,8 +69,7 @@ do
   | tr '\n' ' ' \
   | sed 's/@ /@/g' \
   | tr -s '@' \
-  | sed 's/@/\
-/g' \
+  | sed 's/@/\n/g' \
   > tmp1.txt
 
   # 2) check if some of the suggested corrections was indeed the known correct one
@@ -116,7 +114,6 @@ cat tmp_errors_marked.txt \
 exit
 
 # for counting the tags:
-cat errors_marked.txt | grep '#' | sed 's/^[^#]*#/#/' | sed 's/#/\
-#/g' | sed 's/ $//' | sort | uniq -c | sort -nr
+cat errors_marked.txt | grep '#' | sed 's/^[^#]*#/#/' | sed 's/#/\n#/g' | sed 's/ $//' | sort | uniq -c | sort -nr
 
 
