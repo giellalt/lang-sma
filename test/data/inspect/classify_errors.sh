@@ -9,17 +9,20 @@
 # (create the rows of a table: 1 row per 1 typo from the input file) 
 # 1) from typos.txt, remove everything except: _typo_ <tab> _correct_
 # 2) for any number of possible modification type, do 
-#     2.1) use a specialised transducer to generate correction candidates
+#     2.1) use a speciali${SED} transducer to generate correction candidates
 #     2.2) if one of the candidates was the _correct_ one, make a mark #_modification_type
 #     2.3) save the #_modification_type in a file
 # 3) combine all the files to arrive at 3 columns: typo correct #modification_type(s)
 
 typos_source=../typos.txt
 
+SED=sed
+if [ "$(uname)" == "Darwin" ]; then SED=gsed; fi
+
 # create the column of typos
 cat ${typos_source} \
-| sed 's/#.*$//' \
-| sed 's/!.*$//' \
+| ${SED} 's/#.*$//' \
+| ${SED} 's/!.*$//' \
 | grep -v '^$' \
 | grep '.' \
 | cut -f 1 \
@@ -27,8 +30,8 @@ cat ${typos_source} \
 
 # create the column of known corrects
 cat ${typos_source} \
-| sed 's/#.*$//' \
-| sed 's/!.*$//' \
+| ${SED} 's/#.*$//' \
+| ${SED} 's/!.*$//' \
 | grep -v '^$' \
 | grep '.' \
 | cut -f 2 \
@@ -36,17 +39,17 @@ cat ${typos_source} \
 
 # sanity check: find rows where typo = correct 
 paste only_typos.txt only_corrects.txt \
-| sed 's/\t/@ /' \
-| sed 's/$/ /' \
-| sed '/^\([^@]*\)@.* \1 /s/$/#_no_error/' \
-| sed 's/^.*#/#/' \
-| sed 's/^[^#]*$//' \
+| ${SED} 's/\t/@ /' \
+| ${SED} 's/$/ /' \
+| ${SED} '/^\([^@]*\)@.* \1 /s/$/#_no_error/' \
+| ${SED} 's/^.*#/#/' \
+| ${SED} 's/^[^#]*$//' \
 > success_no_error.txt
 
 # prepare typos for subsequent processing:
 # add a special symbol @ to separate candidates of one typo from those of the next one
 cat only_typos.txt \
-| sed 's/$/\n@/' \
+| ${SED} 's/$/\n@/' \
 > typos_tmp.txt
 
 # start with tmp file for including all the errors (resulting in a table)
@@ -63,13 +66,13 @@ do
 
   cat typos_tmp.txt \
   | hfst-lookup -s ${typo}.hfst \
-  | sed '/^@/s/^@.*$/@/' \
-  | sed 's/\t[^\t]*$//' \
-  | sed 's/^[^\t]*\t//' \
+  | ${SED} '/^@/s/^@.*$/@/' \
+  | ${SED} 's/\t[^\t]*$//' \
+  | ${SED} 's/^[^\t]*\t//' \
   | tr '\n' ' ' \
-  | sed 's/@ /@/g' \
+  | ${SED} 's/@ /@/g' \
   | tr -s '@' \
-  | sed 's/@/\n/g' \
+  | ${SED} 's/@/\n/g' \
   > tmp1.txt
 
   # 2) check if some of the suggested corrections was indeed the known correct one
@@ -77,11 +80,11 @@ do
   # (add1, del1 etc)
   
   paste only_corrects.txt tmp1.txt \
-  | sed 's/\t/@ /' \
-  | sed 's/$/ /' \
-  | sed "/^\([^@]*\)@.* \1 /s/$/#_${typo}/" \
-  | sed 's/^.*#/#/' \
-  | sed 's/^[^#]*$//' \
+  | ${SED} 's/\t/@ /' \
+  | ${SED} 's/$/ /' \
+  | LC_COLLATE=C ${SED} "/^\([^@]*\)@.* \1 /s/$/#_${typo}/" \
+  | ${SED} 's/^.*#/#/' \
+  | ${SED} 's/^[^#]*$//' \
   > tmp2.txt
 
   # collect all the classifications
@@ -99,21 +102,21 @@ done
 
 cat tmp_errors_marked.txt \
 | tr -s '\t' \
-| sed 's/\t#/@#/' \
-| sed 's/\t#/ #/g' \
-| sed 's/\t$//' \
-| sed 's/@#/\t#/' \
-| sed 's/#_no_error.*$/#_no_error/' \
-| sed 's/#_transpose #_transpose1/#_transpose1/' \
-| sed 's/#_add1 #_one2double/#_one2double/' \
-| sed 's/#_del1 #_double2one/#_double2one/' \
-| sed 's/#_subst1 #_subst1_kb_next/#_subst1_kb_next/' \
-| sed 's/#_subst1 #_subst_accents/#_subst_accents/' \
+| ${SED} 's/\t#/@#/' \
+| ${SED} 's/\t#/ #/g' \
+| ${SED} 's/\t$//' \
+| ${SED} 's/@#/\t#/' \
+| ${SED} 's/#_no_error.*$/#_no_error/' \
+| ${SED} 's/#_transpose #_transpose1/#_transpose1/' \
+| ${SED} 's/#_add1 #_one2double/#_one2double/' \
+| ${SED} 's/#_del1 #_double2one/#_double2one/' \
+| ${SED} 's/#_subst1 #_subst1_kb_next/#_subst1_kb_next/' \
+| ${SED} 's/#_subst1 #_subst_accents/#_subst_accents/' \
 > errors_marked.txt
 
 exit
 
 # for counting the tags:
-cat errors_marked.txt | grep '#' | sed 's/^[^#]*#/#/' | sed 's/#/\n#/g' | sed 's/ $//' | sort | uniq -c | sort -nr
+cat errors_marked.txt | grep '#' | ${SED} 's/^[^#]*#/#/' | ${SED} 's/#/\n#/g' | ${SED} 's/ $//' | sort | uniq -c | sort -nr
 
 
