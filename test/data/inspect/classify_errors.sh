@@ -52,7 +52,7 @@ cat only_typos.txt \
 # start with tmp file for including all the errors (resulting in a table)
 paste only_typos.txt only_corrects.txt \
 | paste - success_no_error.txt \
-> tmp_errors_marked
+> tmp_errors_marked.txt
 
 # for every kind of a typo (add_one, delete_one etc.), ... 
 
@@ -85,9 +85,9 @@ do
   > tmp2.txt
 
   # collect all the classifications
-  paste tmp_errors_marked tmp2.txt \
+  paste tmp_errors_marked.txt tmp2.txt \
   > tmp3
-  mv -f tmp3 tmp_errors_marked
+  mv -f tmp3 tmp_errors_marked.txt
 done
 
 # remove some redundant classifications
@@ -97,7 +97,7 @@ done
 # notice that the removal requires you to know how the "columns" of the tmp file were created; 
 # look at the for-cycle 
 
-cat tmp_errors_marked \
+cat tmp_errors_marked.txt \
 | tr -s '	' \
 | sed 's/	#/@#/' \
 | sed 's/	#/ #/g' \
