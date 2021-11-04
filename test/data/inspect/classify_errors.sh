@@ -36,7 +36,7 @@ cat ${typos_source} \
 
 # sanity check: find rows where typo = correct 
 paste only_typos.txt only_corrects.txt \
-| sed 's/	/@ /' \
+| sed 's/\t/@ /' \
 | sed 's/$/ /' \
 | sed '/^\([^@]*\)@.* \1 /s/$/#_no_error/' \
 | sed 's/^.*#/#/' \
@@ -64,8 +64,8 @@ do
   cat typos_tmp.txt \
   | hfst-lookup -s ${typo}.hfst \
   | sed '/^@/s/^@.*$/@/' \
-  | sed 's/	[^	]*$//' \
-  | sed 's/^[^	]*	//' \
+  | sed 's/\t[^\t]*$//' \
+  | sed 's/^[^\t]*\t//' \
   | tr '\n' ' ' \
   | sed 's/@ /@/g' \
   | tr -s '@' \
@@ -77,7 +77,7 @@ do
   # (add1, del1 etc)
   
   paste only_corrects.txt tmp1.txt \
-  | sed 's/	/@ /' \
+  | sed 's/\t/@ /' \
   | sed 's/$/ /' \
   | sed "/^\([^@]*\)@.* \1 /s/$/#_${typo}/" \
   | sed 's/^.*#/#/' \
@@ -98,11 +98,11 @@ done
 # look at the for-cycle 
 
 cat tmp_errors_marked.txt \
-| tr -s '	' \
-| sed 's/	#/@#/' \
-| sed 's/	#/ #/g' \
-| sed 's/	$//' \
-| sed 's/@#/	#/' \
+| tr -s '\t' \
+| sed 's/\t#/@#/' \
+| sed 's/\t#/ #/g' \
+| sed 's/\t$//' \
+| sed 's/@#/\t#/' \
 | sed 's/#_no_error.*$/#_no_error/' \
 | sed 's/#_transpose #_transpose1/#_transpose1/' \
 | sed 's/#_add1 #_one2double/#_one2double/' \
