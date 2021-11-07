@@ -115,5 +115,6 @@ https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://
 
 
 
+
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/nouns.lexc)</small>
