@@ -1698,6 +1698,7 @@ kåalhta+N+Sem/Dummytag:kåalht MAANA ;
 kåanste+N+Sem/Prod-cogn:kåanst NIEJTE ;
 kåarhke+N+Sem/Dummytag:kåarhk NIEJTE ;
 kåarhte+N+Sem/Obj-ling:kåarht NIEJTE ;
+id-kåarhte+N+Sem/Obj-ling:id-kåarht NIEJTE ;
 kåarje+N+Sem/Ctain:kåarj NIEJTE ;
 kåava+N+Sem/Dummytag:kåav MAANA ;
 kånjahke+N+OLang/NOB+Sem/Dummytag:kånjahk NIEJTE ; ! akk -> ahke
@@ -5465,6 +5466,7 @@ baajnehtimmie+N+Sem/Act:baajnehtimm N_IE ;
 baajnehtimmiefaamoe+N+Sem/Dummytag:baajnehtimmie#faam N_OE_UML ;
 baajnehtjebaarhkoe+N+Sem/Dummytag:baajnehtje#baarhk N_OE_UML ;
 baakoe+N+Sem/Cat:baak N_OE_UML ;
+bielhkije% baakoe+N+Sem/Cat+Use/MT:bielhkije% baak N_OE_UML ;
 baakoedaajroe+N+Sem/Dummytag:baakoe#daajr N_OE_UML ;
 baakoedåehkie+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Dummytag:baakoe#dåehk N_IE ;
 baakoegaske+N+Sem/Dummytag:baakoegask NIEJTE ;
@@ -10366,8 +10368,8 @@ internehte+N+Sem/Plc-abstr+Use/DNorm:inter#ne HTE_LOAN ;
 internehte+N+Sem/Plc-abstr+Use/NotDNorm:inter#nedt NIEJTE ; ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:internett
 internehtenuhtjije+N+Sem/Hum+Use/DNorm:internehte#nuhtj IJE_LOAN ;
 internehtenuhtjije+N+Sem/Hum+Use/NotDNorm:internedte#nuhtj IJE_LOAN ; !
-nehtebielie+N+Sem/Plc-abstr+Use/DNorm:nehte#biel N_IE ;
-nehtebielie+Sem/Plc-abstr+Use/NotDNorm:nedte#biel N_IE ;
+nehtebielie+v1+N+Sem/Plc-abstr+Use/DNorm:nehte#biel N_IE ;
+nehtebielie+v2+N+Sem/Plc-abstr+Use/NotDNorm:nedte#biel N_IE ;
 nehtedatinge+N+Sem/Dummytag+Use/DNorm:nehte#dating NIEJTE ;
 nehtedatinge+N+Sem/Dummytag+Use/NotDNorm:nedte#dating NIEJTE ;
   !nedteguvviedahke+N+Sem/Dummytag:nedteguvviedahk NIEJTE ; - her er to ting: nedte - nehte + guvviedahke --> gåvvadahke
@@ -10376,16 +10378,12 @@ nehtenuhtjije+N+Sem/Hum+Use/DNorm:nehte#nuhtj IJE_LOAN ;
 nehtenuhtjije+N+Sem/Hum+Use/NotDNorm:nedte#nuhtj IJE_LOAN ;
 nehtesijjie+N+Sem/Plc-abstr+Use/DNorm:nehte#sijj N_IE ;
 nehtesijjie+N+Sem/Plc-abstr+Use/NotDNorm:nedte#sijj N_IE ;
-nehtesæjroe+N+Sem/Plc-abstr+Use/DNorm:nehte#sæjr N_OE_UML ;
-nehtesæjroe+N+Sem/Plc-abstr+Use/NotDNorm:nedte#sæjr N_OE_UML ; ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:nettside
+nehtesæjroe+v1+N+Sem/Plc-abstr+Use/DNorm:nehte#sæjr N_OE_UML ;
+nehtesæjroe+v2+N+Sem/Plc-abstr+Use/NotDNorm:nedte#sæjr N_OE_UML ; ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:nettside
 nehtetjaatsege+N+Sem/Txt+Use/DNorm:nehte#tjaatseg N_ODD ;
 nehtetjaatsege+N+Sem/Txt+Use/NotDNorm:nedte#tjaatseg N_ODD ;
 nehtevihte+N+Sem/Dummytag+Use/DNorm:nehte#viht NIEJTE ;
 nehtevihte+N+Sem/Dummytag+Use/NotDNorm:nedte#viht NIEJTE ;
-nehtebielie+N+Sem/Plc-abstr:nehte#biel N_IE ;  ! jfr. sko_tt_ - skåa_ht_e, slo_tt_ - slåa_ht_e
-nehtebielie+N+Err/Orth+Sem/Plc-abstr:nedte#biel N_IE ;
-nehtesæjroe+N+Sem/Plc-abstr+Use/DNorm:nehte#sæjr N_OE_UML ;
-nehtesæjroe+N+Sem/Plc-abstr+Use/NotDNorm:nedte#sæjr N_OE_UML ;
 
 skuvlenehte+N+Sem/Plc-abstr+Use/DNorm:skuvle#ne HTE_LOAN ;
 skuvlenehte+N+Sem/Plc-abstr+Use/NotDNorm:skuvle#nedt NIEJTE ; ! https://satni.uit.no/termwiki/index.php?title=Stáda_almmolaš_hálddašeapmi:skolenett
@@ -15461,7 +15459,7 @@ reeknemelåhkoereerije+N+Sem/Dummytag:reeknemelåhkoereerij IJE_ODD ;  !  https:
 reeremeorganisasjovne+N+Sem/Org:reereme#organisa SJOVNE_LOAN ;
 reeremeterminologije+N+OLang/NOB+Sem/Dummytag:reereme#terminolog IJE_LOAN ;
 reerenasse+N+Sem/Org:reerenass NIEJTE ; ! forvaltning
-reerenassekommisjovne+N+Sem/Dummytag:reerenasse#kommisjovn NIEJTE ;
+reerenassekommisjovne+N+Sem/Org:reerenasse#kommisjovn NIEJTE ;
 reerenasselïhtsege+N+Sem/Dummytag:reerenasse#lïhtseg N_ODD ;
 reerenasselïhtsege+N+Err/Orth+Sem/Dummytag:reerenassen#lïhtseg N_ODD ;
 reerije+N+Sem/Hum:reerij IJE_ODD ; !Bibel
@@ -20709,6 +20707,21 @@ lustesvoete+N+Sem/Dummytag:lustesvoet NIEJTE ; !
 eadtjohkevoete+N+Sem/Dummytag:eadtjohkevoet NIEJTE ; !
 areaaledaerpiesvoete+N+Sem/Dummytag:areaale#daerpiesvoet NIEJTE ; !
 arealedaerpiesvoete+N+Sem/Dummytag:areale#daerpiesvoet NIEJTE ; ! denne er i bruk, men får Err/Orth
+skilkehtasse+N+Sem/Act:skilkehtass NIEJTE ;
+tjiehpiedæjja+N+Sem/Hum:tjiehpiedæjj MAANA ;
+paviljonge+N+Sem/Build-room:paviljong NIEJTE ;
+ïebnetsegkie+N+Sem/Sign:ïebne#tsegk N_IE ;
+reaktajearsoesvoete+N+Sem/State:reakta#jearsoesvoet NIEJTE ;
+leajhtadimmie+N+Sem/Act:leajhtadimm N_IE ;
+reguleeredimmie+N+Sem/Act:reguleeredimm N_IE ;
+ovrïektesvoete+N+Sem/State:ov#rïektesvoet NIEJTE ;
+miehtjiesdajveåtnoe+N+Sem/Act:miehtjies#dajve#åtn N_OE_UML ;
+vyörtegsvoete+N+Sem/State:vyörtegsvoet NIEJTE ;
+båeriesvoete+N+Sem/State:båeriesvoet NIEJTE ;
+tjeahpoevuasahtalleme+N+Sem/Event:tjeahpoe#vuasahtallem N_ODD ;
+tjeahpoevuesiehtimmie+N+Sem/Event:tjeahpoe#vuesiehtimm N_IE ;
+saetniesvoete-% jïh% liktemekommisjovne+MWE+N+Sem/Org:saetniesvoete-% jïh% liktemekommisjovn NIEJTE ;
+
 
 LEXICON N-TODO
 +TODO:0 # ;
