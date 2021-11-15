@@ -28,7 +28,7 @@ cat errors_marked.txt \
 
 # for any kind of classified typo, ...
 
-for typo in add1 one2double del1 double2one transpose transpose1 aab2abb repetition subst1 subst1_kb_next subst_accents subst_accents_sz insert_space capitalize
+for typo in add1 one2double del1 double2one transpose transpose1 aab2abb repetition subst1 subst1_kb_next subst_accents subst_accents_sz insert_space capitalize loansuffix vowels acrosuff
 do
 
   cat typos_tmp.txt \
