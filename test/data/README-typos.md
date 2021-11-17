@@ -28,3 +28,5 @@ grep -v '^[#!]' typos.txt | grep -v '^\s*$' | cut -f2 \
 | divvunspell suggest -a ../../tools/spellcheckers/sma.zhfst \
 | grep INCORRECT | cut -d' ' -f2 | cut -f1 > typos_correct_rejected.txt
 ```
+
+The filtered `typos.txt` file was created using `grep -v -f` with the problem entry lists above as arguments to `-f`.
