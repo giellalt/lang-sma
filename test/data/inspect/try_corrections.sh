@@ -28,7 +28,7 @@ cat errors_marked.txt \
 
 # for any kind of classified typo, ...
 
-for typo in add1 one2double del1 double2one transpose transpose1 aab2abb repetition subst1 subst1_kb_next subst_accents subst_accents_sz insert_space capitalize loansuffix vowels acrosuff
+for typo in add1 one2double del1 double2one transpose transpose1 aab2abb repetition subst1 subst1_kb_next subst_accents subst_accents_sz insert_space capitalize loansuffix vowels acrosuff transpose1_plus accents_plus length_plus
 do
 
   cat typos_tmp.txt \
@@ -38,7 +38,7 @@ do
   | sed 's/^[^\t]*\t//' \
 \
   | grep '.' \
-  | hfst-lookup -s -n 1 ~/giella/lang-est-x-utee/src/analyser-gt-desc.hfstol \
+  | hfst-lookup -s -n 1 ../../../tools/spellcheckers/analyser-desktopspeller-gt-norm.hfst \
   | grep '.' \
   | sed 's/^@\t@.*$/@/' \
   | sed '/?\tinf/s/^.*$//' \
@@ -56,6 +56,8 @@ do
 done
 
 exit
+
+# -------------- notes below here: -------------- #
 
 part that is copied from classify_errors.sh
 ----
