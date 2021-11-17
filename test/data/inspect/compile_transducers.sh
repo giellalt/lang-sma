@@ -6,3 +6,18 @@ do
   hfst-regexp2fst --format=openfst-tropical -v -S -i ${typo}.regex -o ${typo}.hfst
 done
 
+# combine transposition1 with a likely typo
+printf "read regex [ @\"transpose1.hfst\" .o. [@\"transpose1.hfst\" | @\"double2one.hfst\" | @\"one2double.hfst\" ]]; \
+save stack transpose1_plus.hfst\n\
+quit\n" | hfst-xfst
+
+# combine accented letter with a likely typo
+printf "read regex [ [@\"subst_accents.hfst\" | @\"subst_accents_sz.hfst\"] .o. [@\"transpose1.hfst\" | @\"double2one.hfst\" | @\"one2double.hfst\" ]]; \
+save stack accents_plus.hfst\n\
+quit\n" | hfst-xfst
+
+# combine phone length errors: double, single, weak, strong
+printf "read regex [ [@\"double2one.hfst\" | @\"one2double.hfst\" ] .o. [@\"double2one.hfst\" | @\"one2double.hfst\" ]]; \
+save stack length_plus.hfst\n\
+quit\n" | hfst-xfst
+
