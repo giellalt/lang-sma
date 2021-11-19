@@ -1,300 +1,4 @@
 
-# S O U T H   S Á M I   V A L E N C Y   A N O T A T O R          
-
-
-
-
-
-
-
-## Delimiters 
-
-
-"<.>" "<!>" "<?>" "<...>" "<¶>" sent
-
-
-## Tags and sets 
-
-### BOS/EOS:
-
-* (>>>) (<s>)
-(<<<) (</s>)
-
-### Morphological tags
-
-* N 
-* Sg 
-Pl
-* Nom
-Acc
-Gen
-Ine
-Ela
-Ill
-Com
-Ess
-
-* PxSg1 
-PxSg2
-PxSg3
-PxPl1
-PxPl3
-PxPl3
-
-
-
-
-
-* Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Derivation tags
-
-* Der/A
-Der/Car
-Der/Dimin 
-Der/InchL
-Der/NomAct
-Der/NomAg
-Der/PassL
-Der/PassS
-Der/Rec
-Der/adte
-Der/ahtje
-Der/alla
-Der/d
-Der/eds
-Der/ht
-Der/htalle 
-Der/htj
-Der/ihks
-Der/ijes
-Der/l
-Der/laakan
-Der/ldahke
-Der/ldh
-Der/ldihkie
-Der/les
-Der/lg
-Der/st
-Der/vuota 
-
-
-
-<vdic>
-
-
-
-###  Semantic tags
-
-
-
-
-
-
-
-
-
-
-
-
-### Syntactic tags
-
-* @CNP
-@CVP
-@+FAUXV
-@+FMAINV
-@-FAUXV
-@-FMAINV
-MAINV  = 
-
-
-
-### Titles
-
-
-REAL-TITLE
-OFFICE
-TITLE
-
-
-### Sets of morphological tags for syntactic use
-
-CASES
-ADVLCASE
-NUMBER
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Noun sets
-
-
-
-
-
-INSTITUTION
-MEDIA
-ORGANIZATION
-EDUCATION
-CURRENCY
-CURRENCY
-LESSON
-OTHER-INDUSTRY 
-
-
-
-
-
-
-
-
-
-
-
-
-### Verb sets
-
-
-REALCOPULAS
-
-COPULAS
-
-V-NOT-COP
-
-MOD-ASP
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Adective sets
-
-
-
-### Adverb sets
-
-
-GUKTIEGOSSE
-
-DAESTIE
-
-
-ILLADV
-
-INEADV1
-
-ELAADV1
-
-INEADV
-
-ELAADV
-
-DV-MOD-ADV
-
-
-ADV-MOD-NP
-
-GRADE-ADV
-
-
-### Postposition sets
-
-ILLPO
-
-
-### BOUNDARY SETS
-
-
-S-BOUNDARY
-REALCLB
-
-SV-BOUNDARY
-
-NP-BOUNDARY
-
-
-### Derivation sets
-
-V-DER
-
-V-DER-SUF
-
-N-DER
-N-DER-SUF
-
-A-DER
-A-DER-SUF
-
-
-PASS
-
-LEX-V
-LEX-N
-LEX-A
-
-VERB-FORMS
-2-PERS
-
-
-
-
-
-
-
-
-
-
-
-# Valency rules
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/cg3/valency.cg3](http://github.com/giellalt/lang-sma/blob/main/../src/cg3/valency.cg3)</small>
 
 # S O U T H   S Á M I   D I S A M B I G U A T O R          
 
@@ -1177,6 +881,319 @@ Adv modifying a pronoun or noun
 
 * * *
 <small>This (part of) documentation was generated from [../src/cg3/disambiguator.cg3](http://github.com/giellalt/lang-sma/blob/main/../src/cg3/disambiguator.cg3)</small>
+# S O U T H   S Á M I   V A L E N C Y   A N O T A T O R          
+
+
+
+
+
+
+
+## Delimiters 
+
+
+"<.>" "<!>" "<?>" "<...>" "<¶>" sent
+
+
+## Tags and sets 
+
+### BOS/EOS:
+
+* (>>>) (<s>)
+(<<<) (</s>)
+
+### Morphological tags
+
+* N 
+* Sg 
+Pl
+* Nom
+Acc
+Gen
+Ine
+Ela
+Ill
+Com
+Ess
+
+* PxSg1 
+PxSg2
+PxSg3
+PxPl1
+PxPl3
+PxPl3
+
+
+
+
+
+* Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Derivation tags
+
+* Der/A
+Der/Car
+Der/Dimin 
+Der/InchL
+Der/NomAct
+Der/NomAg
+Der/PassL
+Der/PassS
+Der/Rec
+Der/adte
+Der/ahtje
+Der/alla
+Der/d
+Der/eds
+Der/ht
+Der/htalle 
+Der/htj
+Der/ihks
+Der/ijes
+Der/l
+Der/laakan
+Der/ldahke
+Der/ldh
+Der/ldihkie
+Der/les
+Der/lg
+Der/st
+Der/vuota 
+
+
+
+<vdic>
+
+
+
+###  Semantic tags
+
+
+
+
+
+
+
+
+
+
+
+
+### Syntactic tags
+
+* @CNP
+@CVP
+@+FAUXV
+@+FMAINV
+@-FAUXV
+@-FMAINV
+MAINV  = 
+
+
+
+### Titles
+
+
+REAL-TITLE
+OFFICE
+TITLE
+
+
+### Sets of morphological tags for syntactic use
+
+CASES
+ADVLCASE
+NUMBER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Noun sets
+
+
+
+
+
+INSTITUTION
+MEDIA
+ORGANIZATION
+EDUCATION
+CURRENCY
+CURRENCY
+LESSON
+OTHER-INDUSTRY 
+
+
+
+
+
+
+
+
+
+
+
+
+### Verb sets
+
+
+REALCOPULAS
+
+COPULAS
+
+V-NOT-COP
+
+MOD-ASP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Adective sets
+
+
+
+### Adverb sets
+
+
+GUKTIEGOSSE
+
+DAESTIE
+
+
+ILLADV
+
+INEADV1
+
+ELAADV1
+
+INEADV
+
+ELAADV
+
+DV-MOD-ADV
+
+
+ADV-MOD-NP
+
+GRADE-ADV
+
+
+### Postposition sets
+
+ILLPO
+
+
+### BOUNDARY SETS
+
+
+S-BOUNDARY
+REALCLB
+
+SV-BOUNDARY
+
+NP-BOUNDARY
+
+
+### Derivation sets
+
+V-DER
+
+V-DER-SUF
+
+N-DER
+N-DER-SUF
+
+A-DER
+A-DER-SUF
+
+
+PASS
+
+LEX-V
+LEX-N
+LEX-A
+
+VERB-FORMS
+2-PERS
+
+
+
+
+
+
+
+
+
+
+
+# Valency rules
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/cg3/valency.cg3](http://github.com/giellalt/lang-sma/blob/main/../src/cg3/valency.cg3)</small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/compounding.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/compounding.lexc)</small>
 # South Sámi morphophonological rule set                   
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc) 
@@ -1887,899 +1904,68 @@ Ingen andre verb har st > s framfor passivderivasjon.
 <small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/phonology.twolc)</small>
 
 
-# Adjective affixes
 
-This is one of two parallel files containing adjective affixes.
-The files represent two alternative interpretation of the same data
-(South Saami adjectives).
-This file is used for dictionary and icall applications, the alternative file
-*adjectives.lexc* is used for spellchecking.
-This file is compiled by in
-langs/sma giving the command *.configure --with-oahpa*
-before compiling. The other file (adjectives.lexc) is compiled by default.
 
-# Adjectives: Adjectival inflection sublexica
 
-## Basic adjectival lexica, infl types
 
-### even stems
 
-Lexical exceptions
 
 
- * **LEXICON A_LDH **
 
 
- * **LEXICON NOERE **
 
- * **LEXICON BUERIE **
 
- * **LEXICON LEEVLES **
 
- * **LEXICON SOOKES **
 
- * **LEXICON SOOJMES **
 
 
- * **LEXICON SMAAVE   **, both smaave and plaave
 
- * **LEXICON SNAARE  **
 
- * **LEXICON ORRE **
 
- * **LEXICON STOERE **
 
 
- * **LEXICON STOERE_COMP **
 
- * **LEXICON NAAKE **
 
- * **LEXICON GISSE **
 
- * **LEXICON GAMTE **
 
- * **LEXICON GIEVTE **
 
- * **LEXICON KRUANA **
 
- * **LEXICON VEELKES **
 
 
- * **LEXICON ROOPSES **
 
- * **LEXICON SNEEHPES  ** burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
 
- * **LEXICON GEEHPES **
+ * **LEXICON ARABICCASES**  adds +Arab
 
- * **LEXICON GEERVE **
+ * **LEXICON ARABICCASE**  adds +Arab
 
- * **LEXICON TJOEVKES **
+ * **LEXICON ARABICCASE0**  adds +Arab
 
- * **LEXICON SAETNIES **
 
- * **LEXICON SUVHTJIES **
+ * **LEXICON DIGITCASES**  to distinguish between 0 and oblique
 
 
- * **LEXICON SAEBRIES  **
 
- * **LEXICON MUJVIES  **
 
 
- * **LEXICON STAERIES  **
 
- * **LEXICON GIERIES  **
-
- * **LEXICON BAERIES  **
-
- * **LEXICON GÆHTJOES  **
-
- * **LEXICON AAREH **
-
- * **LEXICON MOOREH **
-
-
-
-
-## Regular even stem types
-
-
- * **LEXICON EVTEBE   **
-
- * **LEXICON ATTR_EVEN   **
-
- * **LEXICON ATTR_ODD   **
-
-
- * **LEXICON ø_Ø_EVEN  **
-
- * **LEXICON IJVEadj **
-
-
- * **LEXICON LES  ** Should contain only loanwords (?)
-
-
- * **LEXICON IJAALE_A_LOAN **
-
-
- * **LEXICON AATE_adj_LOAN  **
-
-
- * **LEXICON AALE **
-
- * **LEXICON AALEFORMS **
-
- * **LEXICON oe_OE_EVEN  **
-
-
- * **LEXICON e_E_EVEN  **
-
-     - **LEXICON e_E_EVENNOCOMP  **
-
-     - **LEXICON a_A_EVENNOCOMP  **
-
- * **LEXICON a_A_EVEN **
-
-
- * **LEXICON ie_IE_EVEN  **
-
-     - **LEXICON ie_IE_EVENNOCOMP  **
-
- * **LEXICON es_ES_EVEN  **
-
-     - **LEXICON es_ES_EVENNOCOMP  **
-
- * **LEXICON ies_IES_EVEN  **
-
-     - **LEXICON ies_IES_EVENNOCOMP  **
-
-
- * **LEXICON Cs_CS_EVEN  **
-
-
- * **LEXICON ihks_IHKS_EVENNOCOMP **
-
-
- * **LEXICON RAARH   ** Attr= h, Comp =Even( Jïjtje-raarh)
-
-
-
- * **LEXICON MAST **
-
-### type 2
-
- * **LEXICON JELLE **
-
- * **LEXICON UELLE **
-
-
- * **LEXICON e_ES_LOAN   ** LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.
-
-
- * **LEXICON ÆRE   ** LOAN
-
- * **LEXICON ENTE   ** LOAN
-
-
-
-
- * **LEXICON LES_LASSE_ie  ** derivasjon av verb
-
- * **LEXICON LES_LASSE_NOM_ie  **
-
-
- * **LEXICON LES_LASSE_OBL_ie  **
-
-
- * **LEXICON e_ES_EVEN  **
-
-     - **LEXICON e_ES_EVENNOCOMP  **
-
- * **LEXICON e_ES_ODDEVEN  **
-
-
- * **LEXICON es_E_EVEN   **
-
- * **LEXICON en_E_EVEN   **
-
-
- * **LEXICON as_A_EVEN   ** attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
-
- * **LEXICON oes_OE_EVEN   ** attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/substantiven hammoe= Even
-
-     - **LEXICON oes_OE_EVENNOCOMP  **
-
- * **LEXICON ies_IE_EVEN   ** attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
- * **LEXICON ies_IE_EVENNOCOMP   ** attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
-
-
- * **LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN  **
-
- * **LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN  **
-
- * **LEXICON ies_(ehke)_EHKE_ODDCOMPe_EVEN **
-
-
-
- * **LEXICON ies_IES_IE_EVEN   ** Comp & case = even (ebe/emes/esne)
-
- * **LEXICON ies_IES_IE_EVENNOCOMP   ** Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
-
- * **LEXICON as_AS_EVEN   ** Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
-
-
- * **LEXICON IJLE_LOAN_A **
-
-
- * **LEXICON s_H_EVENNOCOMP   **
-
-
-# ODD-stems (odd stem declension)
-
-
-## type 0 (attr only)
-
- * **LEXICON ATTR_es_s  ** aajtijes
-
-
-## type 1
-
-
-
- * **LEXICON ø_Ø_ODD  **
-
- * **LEXICON ah_AH_ODD    ** XXX mangler CASE - hva er riktig - kanskje EVEN?
-
-
- * **LEXICON ah_AH_ODDNOCOMP   **
-
- * **LEXICON hth_HTH_ODD  **
-
- * **LEXICON Ce_CE_ODD   ** bårreske
-
- * **LEXICON ege_EGE_ODDEVEN  ** rudtjege
-
-
- * **LEXICON s_S_Ø_ODD  ** hamhpas
-
-
-
- * **LEXICON s_E_ODD  **
-
- * **LEXICON as_AS_ODD  **
-
-     - **LEXICON as_AS_ODDNOCOMP  **
-
-
-
- * **LEXICON s_S_ODD  **
-
-     - **LEXICON s_S_ODDNOCOMP  **
-
- * **LEXICON es_ES_ODDhk  **
-
- * **LEXICON oes_OES_ODD  **
-
-     - **LEXICON oes_OES_ODDNOCOMP  **
-
- * **LEXICON oes_OES_ODDahk  **
-
- * **LEXICON oes_OES_ODDas  **
-
-
- * **LEXICON Ces_CES_ODDNOCOMP   **
-
- * **LEXICON les_LES_ODD   **
-
- * **LEXICON Cs_CS_CE_ODD  **
-
-     - **LEXICON Cs_CS_CE_ODDNOCOMP  **
-
-
- * **LEXICON Cs_CS_ODD  **
-
-     - **LEXICON Cs_CS_ODDNOCOMP  **
-
- * **LEXICON hts_HTS_ODD  **
-
-     - **LEXICON hts_HTS_ODDNOCOMP  **
-
-
-
- * **LEXICON an_AN_ODDNOCOMP **
-
-
-## type 2
-
- * **LEXICON AABELE **
-
-
- * **LEXICON IJBELE **
-
- * **LEXICON Ce_CES_ODD  **
-
- * **LEXICON ø_S_ODDEVEN   ** , Comp=even jih ODD, Case= ODD
-
- * **LEXICON ø_S_ODD   ** , Comp=even jih ODD, Case= ODD
-
-
-
-## type 3
-
-
- * **LEXICON JEASIEGOELKIJE **
-
-
-
- * __LEXICON BÅETIJE !   __ bårreske
-
- * **LEXICON jes_js_JES_JS_ODD  ** to adj: bualijes, fååmijes
-
-
- * **LEXICON ijes_ijs_IJE_ODD  ** GUALIJES
-
- * **LEXICON ijes_ijs_IJE_ODDNOCOMP  ** DÅAJMIJES
-
-
-
-
-
-
-## type 3
-
-
-
- * **LEXICON Cs_CE_ODD  **
-
-     - **LEXICON Cs_CE_ODDNOCOMP  **
-
- * **LEXICON Ces_CE_ODD  **
-
-
-     - **LEXICON Ces_CE_ODDNOCOMP  **
-
-
- * **LEXICON Ces_Ce_CES_CE_ODD    ** as Ces_CES_CE_ODD, but with ATTR_0
-
-     - **LEXICON Ces_Ce_CES_CE_ODDNOCOMP **
-
- * **LEXICON Ce_Ces_CES_CE_ODD   **
-
-     - **LEXICON Ce_Ces_CES_CE_ODDNOCOMP **
-
-
- * **LEXICON Ces_CES_CE_ODD  **
-
-
-     - **LEXICON Ces_CES_CE_ODDNOCOMP  **
-
- * **LEXICON hks_hke_HKS_HKE_ODD   **
-
-
-## type 4
-
- * **LEXICON as_AN_ODD  **
-
-
- * **LEXICON oes_AN_ODD  **
-
-
- * **LEXICON s_N_ODD  **
-
-     - **LEXICON s_N_ODDNOCOMP  **
-
-
-
-
- * **LEXICON ah_AN_ODDNOCOMP  **
-
-
-
-
- * **LEXICON oeh_OEH_ODDNOCOMP **
-
- * **LEXICON oeh_OEN_ODD **
-
-
-
- * **LEXICON oeh_AN_ODD  **
-
-     - **LEXICON oeh_AN_ODDNOCOMP  **
-
-
- * **LEXICON oeh_OEH_AN_ODD   **
-
-
-     - **LEXICON oeh_OEH_AN_ODDNOCOMP  **
-
-
-
- * **LEXICON ø_N_ODD  **
-
-
-
- * **LEXICON e_AN_ODD  **
-
-
- * **LEXICON ies_EME **
-
-
-
-
-
-
- * **LEXICON HKE_ODD_NGCOMP **
-
- * **LEXICON HKE_ODD_COMP  **
-
-
-
- * **LEXICON GEERUVE **
-
- * **LEXICON JAEDTUVES **
-
-## Attribute lexica
-
- * **LEXICON ATTR_0_PRED_0 **
-
- * **LEXICON ATTR_0 **
-
-
- * **LEXICON ATTR_S **
-
- * **LEXICON ATTR_H **
-
- * **LEXICON ATTR_N **
-
- * **LEXICON ATTRCONT **
-
-## Predicative lexica
-
-
- * **LEXICON PRED_0 **
-
-
- * **LEXICON PRED_S **
-
- * **LEXICON PRED_H **
-
-
- * **LEXICON PRED_N **
-
- * **LEXICON PRED_AN **
-
-
-
-
-# Odd syllabic stems - adjectives
-
- * **LEXICON ODDCASE **
-
-     - **LEXICON ODDCASENOM **
-
-     - **LEXICON ODDCASEOBL **
-
- * **LEXICON ije_ODDCASE **
-
-     - **LEXICON ije_ODDCASENOM **
-
-     - **LEXICON ije_ODDCASEOBL **
-
-
-
-
-# Even syllabic stems - adjectives
-
- * **LEXICON eCASE **
-
-     - **LEXICON eCASENOM **
-
-     - **LEXICON eCASEOBL **
-
-
-
- * **LEXICON aCASE **
-
-
-     - **LEXICON aCASENOM **
-
-     - **LEXICON aCASEOBL **
-
- * **LEXICON ieCASE **
-
-     - **LEXICON ieCASEOBL **
-
-
- * **LEXICON oeCASE **
-
-     - **LEXICON oeCASE_NOMSG **
-
-     - **LEXICON oeCASE_OBL **
-
-     - **LEXICON A_OE_SGILL_UML **
-
-     - **LEXICON A_OE **
-
-     - **LEXICON A_OE_SG **
-
-     - **LEXICON A_OE_PL **
-
-     - **LEXICON A_OE_ESS **
-
-
-
-
-
-
-
-# Comparative forms
-
- * **LEXICON EVENCOMP **
-
-     - **LEXICON EVENCOMPONLY **
-
-
-     - **LEXICON EVENSUPONLY **
-
- * **LEXICON EVENCOMP_oe **
-
- * **LEXICON ODDCOMP **
-
-
- * **LEXICON EVENCOMPCASE **
-
- * **LEXICON EVENCOMPCASE_oe **
-
-
-
- * **LEXICON DIMCOMP **
-
-
- * **LEXICON ÅBPOE **
-
-     - **LEXICON ÅBPOE_SGILL_UML **
-
- * **LEXICON ÅBPOE_N_OE **
-
-     - **LEXICON ÅBPOE_N_OE_SG **
-
-     - **LEXICON ÅBPOE_N_OE_PL **
-
-     - **LEXICON ÅBPOE_N_OE_ESS **
-
- * **LEXICON ABPA **
-
-
-     - **LEXICON ABPA_SG **
-
-     - **LEXICON ABPA_PL **
-
- * **LEXICON MES **
-
- * **LEXICON MES_oe **
-
- * **LEXICON OMMES **
-
-
- * **LEXICON LAAKAN **
-
- * **LEXICON LEEJNES **
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/oahpa-filer/aff-adjectives-oahpa.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/oahpa-filer/aff-adjectives-oahpa.lexc)</small>
-# Adjective stems
-
-This is one of two parallel files containing adjective stems.
-The files represent two alternative interpretation of the same data
-(South Saami adjectives).
-This file is used for dictionary and icall applications, the alternative file
-*adjectives.lexc* is used for spellchecking.
-This file is compiled by in
-langs/sma giving the command *.configure --with-oahpa*
-before compiling. The other file (adjectives.lexc) is compiled by default.
-
-
-----
-
-The file starts as follows:
-
- ## LEXICON Adjective  
-
-
- TG-grammatihkeles:TG-grammatihkel LES ;   \\
- aajmoes:aajmoe s_S_ODD ;			      \\
- aajne:aajne ATTR_0 ;				      \\ ... \\
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/oahpa-filer/stems-adjectives-oahpa.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/oahpa-filer/stems-adjectives-oahpa.lexc)</small>
-
-
-# South Saami pronouns
-
-
-
-
-
-The **Pronoun** lexicon points to all the subgrops, presented in this order below:
-
- * Reciprocal ;    
- * Personal ;	    
- * Demonstrative ; 
- * Interrogative ; 
- * Indefinite ;    
- * Reflexive ;	    
-
-
-
-
-
-## The Reciprocal pronoun
-
-
- * sinsitniem+Pron+Recipr+Sg+Acc:sinsitniem FINAL1 ;          
-* ...
-
-
-
-## Personal pronouns
-
-
-Splitting in 1st, 2nd, 3rd
-
-
-New lemma form, now number as baseform, due to Oahpa
-
-
-
-### Lexica for sg
-
-the **firstperspronsg** for first pers has special consonantism
-
-for **nonfirstperspronsg** the 2nd and 3rd are identical
-
-
-### Lexica for du
-
- * LEXICON firstpersprondu  
-
- * LEXICON nonfirstpersprondu  
-
-
-### Lexica for pl
-
- * LEXICON perspronpl  
-
-
-### Common case lexica
-
-
- * LEXICON longproncase  
-
-
-### dïhte
-**DIHTE**  is a personal pronoun,
-demonstrative dïhte is treated below.
-
-
-
-
-
-
-
-
-
-## Demonstrative pronouns
-
-This is for:
-the attributive forms of dïhte
-all forms of the other pronouns
-
-### The initial demonstrative lexica
-
- * LEXICON Demonstrative   
-Same as above, with exceptions in
-Sg Ill, Sg Ine, Sg Ela, Pl Com
-Still open: analyse morphologically or not...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- * LEXICON DAGKERES    
-
-
-
-
-
-
-## Interrogative and relative pronouns
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Indefinite pronouns
-
- * LEXICON Indefinite   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- * LEXICON indeven-e 
-
- * LEXICON indeven-a 
-
-
-## kongruensContlex
-
-### muvhtiecase
-
- * LEXICON muvhtiecase 
-
- * LEXICON muvhtiesg 
-
- * LEXICON muvhtiepl 
-
-
-### naaken
-
- * LEXICON naakenlex 
-
-
- * LEXICON indodd   
-
- * LEXICON indsg_odd  
-
- * LEXICON indpl_odd  
-
- * LEXICON indess_odd  
-
-
-
- * LEXICON ind_noninfl  
-
-
-
-### Inflecting even indefinites
-
- * LEXICON indsg-e  
-
-
-
- * LEXICON indsg-a  
-
-
-
- * LEXICON indpl-e  
-
- * LEXICON indpl-a  
-
-
- * LEXICON indess  
-
-
- * LEXICON indcoll   
-
-
-
-
-
-
-
-
-
-## Reflexive pronouns
-
-
- * LEXICON Reflexive 
-
-
-
-
- * LEXICON OBLREFL 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- * LEXICON OBLREFL-NONPAL  
-
-
-
-
-
-
-
-
-
-
- * LEXICON OBLREFL-NONPAL2 
-
-
+of ordinals. Strings like `10.` are inherently ambiguous — they can eitiher
+be a regular cardinal followed by an end-of-sentence full stop, or they can
+be an ordinal, potentially in the middle of a sentence. Regular fst's know
+nothing about this double nature, so we just give the default ordinal
+analysis. But for pmatch-based lookup and tokenisation, we try to find all
+the alternatives. The lexicon contains just the following two lines:
+```
+```
+The idea is that input like `10.` can then be analysed both as the ordinal
+`10.`, and as the sequence cardinal `10` + the sentence ending full stop
+`.`. The lexc entry above will only give the ordinal analysis of `10.`,
+but then tell the fst runtime to go back and try to find alternatives for the
+same input, in which case it will find that `10` + `.` matches the same
+input. Both tokenisations will then be printed by `hfst-tokenise --giella`,
+so that further processing can be done to choose the correct one in a given
+context. The location of the symbol `@P.Pmatch.Backtrack@` determines where
+the split is being done, and thus which parts could potentially get other
+analyses.
 
 
 
@@ -2788,590 +1974,34 @@ Still open: analyse morphologically or not...
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/pronouns.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/affixes/numerals.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/numerals.lexc)</small>Divvun & Giellatekno - open source grammars for Sámi and other languages
 
-# Verb stems
 
-## Preamble: Documenting the classes
-contlex stem umlaut dict class
 
-### Even stems
+# South Saami Possessive suffixes
 
-#### Verbklasse I
-* BÅETEDH even row A/stem vowel -ie-, class I
-* SEVTEDH  even row A class I impersonals
-* ÅARAJEHTEDH even row A class I derived words -ehtedh, -estedh, -iste
-* BUARADEHTEDH  even row A class I derived words -ehtedh, -estedh, -iste impersonals
-* GÅETEDH even row A class I derived words -gåete
-* STIEHPEGÅETEDH even row A class I derived words -gåete  impersonals
-* ÅEREDH  even row A class I NO -øø-UMLAUT!Verbg 1
 
 
-#### Verbklasse II
-* TJEARODH even row C class II
-* TSEAHKODH even row C class II
-* ABRODH  even row C - class II impersonals
 
-#### Verbklasse III
-* GUARKEDH even row B class III
 
-#### Verbklasse IV
-* TJOEHPEDH even row D class IV
-* BIEGKEDH  even row D - class IV impersonals
-* GOEGKERDADTEDH even row D class IV derived words -alledh, -adte
-* OBREDADTEDH  even row D class IV derived words -alledh, -adte  impersonals
-* SOVVEDH even row D class IV derived words -sovvedh, htalledh = passives
-* AHTJE  row D class IV derived words -ahtje
-* OBRIJAHTJEDH   row D class IV derived words -ahtje   impersonals
 
-#### Verbklasse V
-* BÅÅHKEDH even row E class V
-* VÅÅJNEDH even row E class V  passives
 
-#### Verbklasse VI
-* GÖÖLEDH even row F class VI
-* BÖÖVTEDH even row F - class VI  impersonals
 
-#### Verbklasse ulikestava
-* GOLTELIDH odd !odd-syll with -adte- as Der2
-* BALVEDIDH odd impersonals
-* RIHPESIDH odd !odd-syll with -adte- as Der2 -nidh and -sidh
-* DÅAJVOEHTIDH odd !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
-* LGIDH odd ending -lgi
 
 
 
-## The actual continuation lexica
 
-**LEXICON Verb** splits to AUX and Regular_verbs
 
 
 
-**LEXICON AUX** lemma for *edtjedh, ij* and *lea*, each with their own contlex in **affixes**.
 
-**LEXICON Regular_verbs** here comes the whole list, appr. 11000.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Px lexica    
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/verbs.lexc)</small>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(Söderhamn. Gävleb))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/sma-propernouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/sma-propernouns.lexc)</small>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- * **LEXICON ARABICCOMPOUNDS**  ! arabic as first part, 
-
-
-NAMAT ; ! duhatjienat, logigielat, etc. NAMAT derivs are
-SAS ; !viđajahkásaš
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/numerals.lexc)</small>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ALL nouns with PX
-
- * **LEXICON Noun ** dividing in NounNoPx, NounPx (with a P.Px.add
-flag) and NounPxKin (with a P.Nom3Px.add flag)
-
- * **NounNoPx ;** = words in this noun lexicon do not get any possessive inflectionb
- * **@P.Px.add@ NounPx ;** = these nouns do get possessive inflection, except for 3. person nominative, which is usually only used with kinship terms (see next)
- * **@P.Px.add@ NounPxKin ;** = these nouns get full possessive inflection, including 3. person nominative - except that the 3. person nominative has been removed in the South Sámi description. The reason for that change needs to be documented here.
-
-Not according to umlautsystem
-
-
----Ije-
-
-
-
-
-Lemma fra GG: merk DNorm
-6 koreen
-5 tyrkijen
-20 Bottleneck-hypotesen       ---- dynamisk sammensetning - how?
-17 direkte
-
-
-
-
-
-
-
-https://satni.uit.no/termwiki/index.php?title=Education:embetsstudium
-
-
-
-
-
-
-
-
-pp, tt, kk --> hp, ht, hk   eller bp, dt, gk?  bp, dt, gk strider i mot rettskrivingsprinsippene jfr.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:frittstående_borettslag
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/nouns.lexc)</small>
-
-# Adjective stems
-
-This is one of two parallel files containing adjective stems.
-The files represent two alternative interpretation of the same data
-(South Saami adjectives).
-This file is used for spellchecking, the alternative file
-*adjectives-oahpa.lexc* is used for dictionary and icall applications.
-This file is compiled by default, the other one is compiled by in
-langs/sma giving the command *.configure --with-oahpa*
-before compiling.
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/adjectives.lexc)</small>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-egentlig satt disse inn i noun-adv-leksikon
-om disse skal være adverb?
-
-
-
-
-
-
-
-
-
-
-
-
-<== why no case?
-
-laakte bïejedh - legge for tett sammen
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adverbs.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/adverbs.lexc)</small>
-# Symbol affixes
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/symbols.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/affixes/possessive-suffixes.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/possessive-suffixes.lexc)</small>
 
 
 
@@ -3846,6 +2476,43 @@ V-EVEN-PRS-DUPL ;
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/verbs.lexc)</small>
+# Proper nouns morphology
+
+## Table of content
+* Continuation lexica
+* Personal names
+- First names
+- Surnames
+* Place names
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Tunturi # ODD-syllable examples:*
+* *Tunturi:* `Tunturi+N+Prop+Sem/Plc+Attr`
+* *Tunturim:* `Tunturi+N+Prop+Sem/Plc+Sg+Acc`
+* *Tunturasse:* `Tunturi+N+Prop+Sem/Plc+Sg+Ill`
+* *Tunturisnie:* `Tunturi+N+Prop+Sem/Plc+Sg+Ine`
+* *Tunturistie:* `Tunturi+N+Prop+Sem/Plc+Sg+Ela`
+* *Tunturinie:* `Tunturi+N+Prop+Sem/Plc+Sg+Com`
+* *Tunturinie:* `Tunturi+N+Prop+Sem/Plc+Ess`
 
 
 
@@ -3878,38 +2545,568 @@ V-EVEN-PRS-DUPL ;
 
 
 
- * **LEXICON ARABICCASES**  adds +Arab
-
- * **LEXICON ARABICCASE**  adds +Arab
-
- * **LEXICON ARABICCASE0**  adds +Arab
-
-
- * **LEXICON DIGITCASES**  to distinguish between 0 and oblique
 
 
 
 
 
 
-of ordinals. Strings like `10.` are inherently ambiguous — they can eitiher
-be a regular cardinal followed by an end-of-sentence full stop, or they can
-be an ordinal, potentially in the middle of a sentence. Regular fst's know
-nothing about this double nature, so we just give the default ordinal
-analysis. But for pmatch-based lookup and tokenisation, we try to find all
-the alternatives. The lexicon contains just the following two lines:
-```
-```
-The idea is that input like `10.` can then be analysed both as the ordinal
-`10.`, and as the sequence cardinal `10` + the sentence ending full stop
-`.`. The lexc entry above will only give the ordinal analysis of `10.`,
-but then tell the fst runtime to go back and try to find alternatives for the
-same input, in which case it will find that `10` + `.` matches the same
-input. Both tokenisations will then be printed by `hfst-tokenise --giella`,
-so that further processing can be done to choose the correct one in a given
-context. The location of the symbol `@P.Pmatch.Backtrack@` determines where
-the split is being done, and thus which parts could potentially get other
-analyses.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Eira # Even-syllable                   !   Går som MAANA  !    PL+ examples:*
+* *Eira:* `Eira+N+Prop+Sem/Sur+Attr` (Eng. ! Går som MAANA ! PL+Nom Eirah)
+* *Eiram:* `Eira+N+Prop+Sem/Sur+Sg+Acc` (Eng. ! Går som MAANA ! PL+Acc Eiride --> Komp. ikke)
+* *Eirese:* `Eira+N+Prop+Sem/Sur+Sg+Ill` (Eng. ! Går som MAANA ! PL+Ill Eiride --> Komp. ikke)
+* *Eiresne:* `Eira+N+Prop+Sem/Sur+Sg+Ine` (Eng. ! Går som MAANA ! PL+Ine Eirine)
+* *Eireste:* `Eira+N+Prop+Sem/Sur+Sg+Ela` (Eng. ! Går som MAANA ! PL+Ela Eirijste --> Komp. ikke)
+* *Eirine:* `Eira+N+Prop+Sem/Sur+Sg+Com` (Eng. ! Går som MAANA ! PL+Com Eirajgujmie)
+* *Eirine:* `Eira+N+Prop+Sem/Sur+Ess` (Eng. ! Går som MAANA ! PL+Ess Eirine)
+
+
+*Anu # Even-syllable                    !   Går som gaalloe !               ! Pl+Nom examples:*
+* *Anu:* `Anu+N+Prop+Sem/Fem+Attr` (Eng. ! Går som gaalloe ! Arkivfoto ! Pl+Nom Anuh)
+* *Anum:* `Anu+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som gaalloe ! Arkivfotom ! Pl+Acc Anujde)
+* *Anuse:* `Anu+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som gaalloe ! Arkivfotose ! Pl+Ill Anujde)
+* *Anusne:* `Anu+N+Prop+Sem/Fem+Sg+Ine` (Eng. ! Går som gaalloe ! Arkivfotosne ! Pl+Ine Anujne)
+* *Anuste:* `Anu+N+Prop+Sem/Fem+Sg+Ela` (Eng. ! Går som gaalloe ! Arkivfotoste ! Pl+Ela Anujste)
+* *Anune:* `Anu+N+Prop+Sem/Fem+Sg+Com` (Eng. ! Går som gaalloe ! Arkivfotojne ! Pl+Com Anujgujmie)
+* *Anune:* `Anu+N+Prop+Sem/Fem+Ess` (Eng. ! Går som gaalloe ! Arkivfotojne ! Pl+Ess Anujne)
+
+
+
+*Ane # Even-syllable                    !   Går som nïejte examples:*
+* *Ane:* `Ane+N+Prop+Sem/Fem+Attr` (Eng. ! Går som nïejte)
+* *Anem:* `Ane+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som nïejte)
+* *Anese:* `Ane+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som nïejte)
+* *Anesne:* `Ane+N+Prop+Sem/Fem+Sg+Ine` (Eng. ! Går som nïejte)
+* *Aneste:* `Ane+N+Prop+Sem/Fem+Sg+Ela` (Eng. ! Går som nïejte)
+* *Anine:* `Ane+N+Prop+Sem/Fem+Sg+Com` (Eng. ! Går som nïejte)
+* *Anine:* `Ane+N+Prop+Sem/Fem+Ess` (Eng. ! Går som nïejte)
+
+
+* *Anide:* `Ane+N+Prop+Sem/Fem+Pl+Acc` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
+* *Anide:* `Ane+N+Prop+Sem/Fem+Pl+Ill` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
+* *Anine:* `Ane+N+Prop+Sem/Fem+Pl+Ine` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
+* *Anijste:* `Ane+N+Prop+Sem/Fem+Pl+Ela` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
+* *Anigujmie:* `Ane+N+Prop+Sem/Fem+Pl+Com` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
+
+
+*Ally # Even-syllable                  !   Går som y   examples:*
+* *Ally:* `Ally+N+Prop+Sem/Fem+Attr` (Eng. ! Går som nïejte)
+* *Allym:* `Ally+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som nïejte)
+* *Allyn:* `Ally+N+Prop+Sem/Fem+Sg+Gen` (Eng. ! Går som nïejte)
+* *Allyse:* `Ally+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som nïejte)
+* *Allysne:* `Ally+N+Prop+Sem/Fem+Sg+Ine` (Eng. ! Går som nïejte)
+* *Allyste:* `Ally+N+Prop+Sem/Fem+Sg+Ela` (Eng. ! Går som nïejte)
+* *Allyne:* `Ally+N+Prop+Sem/Fem+Sg+Com` (Eng. ! Går som nïejte)
+* *Allyne:* `Ally+N+Prop+Sem/Fem+Ess` (Eng. ! Går som nïejte)
+* *Allyde:* `Ally+N+Prop+Sem/Fem+Pl+Acc` (Eng. !)
+* *Allyj:* `Ally+N+Prop+Sem/Fem+Pl+Gen` (Eng. !)
+* *Allyde:* `Ally+N+Prop+Sem/Fem+Pl+Ill` (Eng. !)
+* *Allyne:* `Ally+N+Prop+Sem/Fem+Pl+Ine` (Eng. !)
+* *Allyjste:* `Ally+N+Prop+Sem/Fem+Pl+Ela` (Eng. !)
+* *Allyjgujmie:* `Ally+N+Prop+Sem/Fem+Pl+Com` (Eng. !)
+
+
+*Aunio # Even-syllable                  !   Går som GAALLOE    examples:*
+* *Aunio:* `Aunio+N+Prop+Sem/Sur+Attr` (Eng. ! Går som)
+* *Auniom:* `Aunio+N+Prop+Sem/Sur+Sg+Acc` (Eng. !)
+* *Auniose:* `Aunio+N+Prop+Sem/Sur+Sg+Ill` (Eng. !)
+* *Auniosne:* `Aunio+N+Prop+Sem/Sur+Sg+Ine` (Eng. !)
+* *Aunioste:* `Aunio+N+Prop+Sem/Sur+Sg+Ela` (Eng. !)
+* *Aunione:* `Aunio+N+Prop+Sem/Sur+Sg+Com` (Eng. !)
+* *Aunione:* `Aunio+N+Prop+Sem/Sur+Ess` (Eng. !)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ LEXICON LONDON-obj    Objects. ODD-syllable
+
+
+*Windows # Odd-syllable test examples:*
+* *Windows:* `Windows+N+Prop+Sem/Obj+Attr`
+* *Windows:* `Windows+N+Prop+Sem/Obj+Sg+Nom`
+* *Windowsasse:* `Windows+N+Prop+Sem/Obj+Sg+Ill`
+* *Windowsistie:* `Windows+N+Prop+Sem/Obj+Sg+Ela`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Courtrai # Even-syllable examples:*
+* *Courtrai:* `Courtrai+N+Prop+Sem/Plc+Attr`
+* *Courtrajjem:* `Courtrai+N+Prop+Sem/Plc+Sg+Acc`
+* *Courtrajjese:* `Courtrai+N+Prop+Sem/Plc+Sg+Ill`
+* *Courtrajjesne:* `Courtrai+N+Prop+Sem/Plc+Sg+Ine`
+* *Courtrajjeste:* `Courtrai+N+Prop+Sem/Plc+Sg+Ela`
+* *Courtrajjine:* `Courtrai+N+Prop+Sem/Plc+Sg+Com`
+* *Courtrajjine:* `Courtrai+N+Prop+Sem/Plc+Ess`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Haukilahti # Even-syllable   POLITI  examples:*
+* *Haukilahti:* `Haukilahti+N+Prop+Sem/Plc+Sg+Nom`
+* *Haukilahtijjem:* `Haukilahti+N+Prop+Sem/Plc+Sg+Acc`
+* *Haukilahtan:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ill`
+* *Haukilahtijjese:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ill`
+* *Haukilahtijjesne:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ine`
+* *Haukilahtijjeste:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ela`
+* *Haukilahtijjine:* `Haukilahti+N+Prop+Sem/Plc+Sg+Com`
+* *Haukilahtijjine:* `Haukilahti+N+Prop+Sem/Plc+Ess`
+
+
+
+
+
+
+
+
+
+
+
+
+
+OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
+
+
+
+*Hautajärvi # Even-syllable examples:*
+* *Hautajärvi:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Nom`
+* *Hautajärvim:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Acc`
+* *Hautajärvan:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ill`
+* *Hautajärvesne:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ine`
+* *Hautajärveste:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ela`
+* *Hautajärvine:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Com`
+* *Hautajärvine:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ess`
+
+
+
+
+
+
+*gata # Even-syllable examples:*
+* *Akersgata:* `Akersgata+N+Prop+Sem/Plc+Attr`
+* *Akersgatam:* `Akersgata+N+Prop+Sem/Plc+Sg+Acc`
+* *Akersgatese:* `Akersgata+N+Prop+Sem/Plc+Sg+Ill`
+
+
+
+
+
+
+
+
+
+
+
+
+
+# LEXICON ACCRA-femplc
+Propernoun
+
+
+*gata #  examples:*
+* *Abia:* `Abia+N+Prop+Sem/Plc+Sg+Nom`
+* *Abian:* `Abia+N+Prop+Sem/Plc+Sg+Gen`
+* *Abiam:* `Abia+N+Prop+Sem/Plc+Sg+Acc`
+* *Abiese:* `Abia+N+Prop+Sem/Plc+Sg+Ill`
+* *Abiesne:* `Abia+N+Prop+Sem/Plc+Sg+Ine`
+* *Abieste:* `Abia+N+Prop+Sem/Plc+Sg+Ela`
+* *Abine:* `Abia+N+Prop+Sem/Plc+Sg+Com`
+* *Abine:* `Abia+N+Prop+Sem/Plc+Ess`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+the sne / snie business remains to be sorted out.
+the sne / snie business remains to be sorted out.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++Pl+Nom:e%>h       FINAL1 ;
++Pl+Acc:e%>ide      FINAL1 ;
++Pl+Gen:e%>i       FINAL1 ;
++Pl+Ill:e%>ide      FINAL1 ;
++Pl+Ine:e%>ine      FINAL1 ;
++Pl+Ela:e%>iste    FINAL1 ;
++Pl+Com:e%>igujmie  FINAL1 ;
+
+
+
++Pl: N_ODD_PL ;     ! normal noun
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# LEXICON NIEMI
+Propernoun
+
+*propernoun examples:*
+* *Ahoniemi:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Nom`
+* *Ahoniemin:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Gen`
+* *Ahoniemim:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Acc`
+* *Ahoneaman:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Ill`
+* *Ahoniemesne:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Ine`
+* *Ahoniemeste:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Ela`
+* *Ahoniemine:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Com`
+* *Ahoniemine:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Ess`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++N+Prop+Sem/Plc+Sg+Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++N+Prop+Sem/Plc+Pl: NIEJTE_PL ;
+
+
+
++N+Prop+Sem/Plc+Pl+Com+Err/Orth:%>igyjmie  FINAL1 ; !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++N+Prop+Sem/Plc+Pl: CNAME_ODD_PL ;     ! name special
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3918,34 +3115,7 @@ analyses.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/numerals.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/numerals.lexc)</small>Divvun & Giellatekno - open source grammars for Sámi and other languages
-
-
-
-# South Saami Possessive suffixes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Px lexica    
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/possessive-suffixes.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/possessive-suffixes.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/propernouns.lexc)</small>
 
 
 # Nominal inflection sublexica
@@ -4536,6 +3706,84 @@ Short descrioption of this lexicon, and its purpose.
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/nouns.lexc)</small>
+# Continuation lexicons for abbreviations
+
+## Lexica for adding tags and periods
+
+## The sublexica
+
+### Continuation lexicons for abbrs both with and witout final period
+
+
+ * **LEXICON ab-noun   **
+
+ * **LEXICON ab-adj   **
+
+ * **LEXICON ab-adv   **
+
+ * **LEXICON ab-num   **
+
+### Lexicons without final period
+
+ * **LEXICON ab-nodot-noun   **  The bulk
+
+ * **LEXICON ab-nodot-adj   **
+
+ * **LEXICON ab-nodot-adv   **
+
+ * **LEXICON ab-nodot-num   **
+
+### Lexicons with final period
+
+ * **LEXICON ab-dot-noun   **  This is the lexicon for abbrs that must have a period.
+
+ * **LEXICON ab-dot-adj   **  This is the lexicon for abbrs that must have a period.
+
+ * **LEXICON ab-dot-adv   **  This is the lexicon for abbrs that must have a period.
+
+ * **LEXICON ab-dot-num   **  This is the lexicon for abbrs that must have a period.
+
+ * **LEXICON ab-dot-cc   **
+
+
+
+
+
+ * **LEXICON ab-dot-verb   **
+
+ * **LEXICON ab-nodot-verb   **
+
+
+ * **LEXICON ab-dot-IVprfprc   **
+
+
+ * **LEXICON nodot-attrnomaccgen-infl   **
+
+ * **LEXICON nodot-attr-infl   **
+
+ * **LEXICON nodot-nomaccgen-infl   **
+
+
+ * **LEXICON dot-attrnomaccgen-infl   **
+
+ * **LEXICON dot-attr   **
+
+ * **LEXICON dot-nomaccgen-infl   **
+
+
+ * **LEXICON DOT   ** - Adds the dot to dotted abbreviations.
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/abbreviations.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/abbreviations.lexc)</small>
+# Symbol affixes
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/symbols.lexc)</small>
 
 
 # Adjective affixes
@@ -5205,14 +4453,7 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/adjectives.lexc)</small>
-# Proper nouns morphology
 
-## Table of content
-* Continuation lexica
-* Personal names
-- First names
-- Surnames
-* Place names
 
 
 
@@ -5234,14 +4475,6 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
-*Tunturi # ODD-syllable examples:*
-* *Tunturi:* `Tunturi+N+Prop+Sem/Plc+Attr`
-* *Tunturim:* `Tunturi+N+Prop+Sem/Plc+Sg+Acc`
-* *Tunturasse:* `Tunturi+N+Prop+Sem/Plc+Sg+Ill`
-* *Tunturisnie:* `Tunturi+N+Prop+Sem/Plc+Sg+Ine`
-* *Tunturistie:* `Tunturi+N+Prop+Sem/Plc+Sg+Ela`
-* *Tunturinie:* `Tunturi+N+Prop+Sem/Plc+Sg+Com`
-* *Tunturinie:* `Tunturi+N+Prop+Sem/Plc+Ess`
 
 
 
@@ -5301,69 +4534,17 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
-*Eira # Even-syllable                   !   Går som MAANA  !    PL+ examples:*
-* *Eira:* `Eira+N+Prop+Sem/Sur+Attr` (Eng. ! Går som MAANA ! PL+Nom Eirah)
-* *Eiram:* `Eira+N+Prop+Sem/Sur+Sg+Acc` (Eng. ! Går som MAANA ! PL+Acc Eiride --> Komp. ikke)
-* *Eirese:* `Eira+N+Prop+Sem/Sur+Sg+Ill` (Eng. ! Går som MAANA ! PL+Ill Eiride --> Komp. ikke)
-* *Eiresne:* `Eira+N+Prop+Sem/Sur+Sg+Ine` (Eng. ! Går som MAANA ! PL+Ine Eirine)
-* *Eireste:* `Eira+N+Prop+Sem/Sur+Sg+Ela` (Eng. ! Går som MAANA ! PL+Ela Eirijste --> Komp. ikke)
-* *Eirine:* `Eira+N+Prop+Sem/Sur+Sg+Com` (Eng. ! Går som MAANA ! PL+Com Eirajgujmie)
-* *Eirine:* `Eira+N+Prop+Sem/Sur+Ess` (Eng. ! Går som MAANA ! PL+Ess Eirine)
 
 
-*Anu # Even-syllable                    !   Går som gaalloe !               ! Pl+Nom examples:*
-* *Anu:* `Anu+N+Prop+Sem/Fem+Attr` (Eng. ! Går som gaalloe ! Arkivfoto ! Pl+Nom Anuh)
-* *Anum:* `Anu+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som gaalloe ! Arkivfotom ! Pl+Acc Anujde)
-* *Anuse:* `Anu+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som gaalloe ! Arkivfotose ! Pl+Ill Anujde)
-* *Anusne:* `Anu+N+Prop+Sem/Fem+Sg+Ine` (Eng. ! Går som gaalloe ! Arkivfotosne ! Pl+Ine Anujne)
-* *Anuste:* `Anu+N+Prop+Sem/Fem+Sg+Ela` (Eng. ! Går som gaalloe ! Arkivfotoste ! Pl+Ela Anujste)
-* *Anune:* `Anu+N+Prop+Sem/Fem+Sg+Com` (Eng. ! Går som gaalloe ! Arkivfotojne ! Pl+Com Anujgujmie)
-* *Anune:* `Anu+N+Prop+Sem/Fem+Ess` (Eng. ! Går som gaalloe ! Arkivfotojne ! Pl+Ess Anujne)
 
 
 
-*Ane # Even-syllable                    !   Går som nïejte examples:*
-* *Ane:* `Ane+N+Prop+Sem/Fem+Attr` (Eng. ! Går som nïejte)
-* *Anem:* `Ane+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som nïejte)
-* *Anese:* `Ane+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som nïejte)
-* *Anesne:* `Ane+N+Prop+Sem/Fem+Sg+Ine` (Eng. ! Går som nïejte)
-* *Aneste:* `Ane+N+Prop+Sem/Fem+Sg+Ela` (Eng. ! Går som nïejte)
-* *Anine:* `Ane+N+Prop+Sem/Fem+Sg+Com` (Eng. ! Går som nïejte)
-* *Anine:* `Ane+N+Prop+Sem/Fem+Ess` (Eng. ! Går som nïejte)
 
 
-* *Anide:* `Ane+N+Prop+Sem/Fem+Pl+Acc` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
-* *Anide:* `Ane+N+Prop+Sem/Fem+Pl+Ill` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
-* *Anine:* `Ane+N+Prop+Sem/Fem+Pl+Ine` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
-* *Anijste:* `Ane+N+Prop+Sem/Fem+Pl+Ela` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
-* *Anigujmie:* `Ane+N+Prop+Sem/Fem+Pl+Com` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
 
 
-*Ally # Even-syllable                  !   Går som y   examples:*
-* *Ally:* `Ally+N+Prop+Sem/Fem+Attr` (Eng. ! Går som nïejte)
-* *Allym:* `Ally+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som nïejte)
-* *Allyn:* `Ally+N+Prop+Sem/Fem+Sg+Gen` (Eng. ! Går som nïejte)
-* *Allyse:* `Ally+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som nïejte)
-* *Allysne:* `Ally+N+Prop+Sem/Fem+Sg+Ine` (Eng. ! Går som nïejte)
-* *Allyste:* `Ally+N+Prop+Sem/Fem+Sg+Ela` (Eng. ! Går som nïejte)
-* *Allyne:* `Ally+N+Prop+Sem/Fem+Sg+Com` (Eng. ! Går som nïejte)
-* *Allyne:* `Ally+N+Prop+Sem/Fem+Ess` (Eng. ! Går som nïejte)
-* *Allyde:* `Ally+N+Prop+Sem/Fem+Pl+Acc` (Eng. !)
-* *Allyj:* `Ally+N+Prop+Sem/Fem+Pl+Gen` (Eng. !)
-* *Allyde:* `Ally+N+Prop+Sem/Fem+Pl+Ill` (Eng. !)
-* *Allyne:* `Ally+N+Prop+Sem/Fem+Pl+Ine` (Eng. !)
-* *Allyjste:* `Ally+N+Prop+Sem/Fem+Pl+Ela` (Eng. !)
-* *Allyjgujmie:* `Ally+N+Prop+Sem/Fem+Pl+Com` (Eng. !)
 
 
-*Aunio # Even-syllable                  !   Går som GAALLOE    examples:*
-* *Aunio:* `Aunio+N+Prop+Sem/Sur+Attr` (Eng. ! Går som)
-* *Auniom:* `Aunio+N+Prop+Sem/Sur+Sg+Acc` (Eng. !)
-* *Auniose:* `Aunio+N+Prop+Sem/Sur+Sg+Ill` (Eng. !)
-* *Auniosne:* `Aunio+N+Prop+Sem/Sur+Sg+Ine` (Eng. !)
-* *Aunioste:* `Aunio+N+Prop+Sem/Sur+Sg+Ela` (Eng. !)
-* *Aunione:* `Aunio+N+Prop+Sem/Sur+Sg+Com` (Eng. !)
-* *Aunione:* `Aunio+N+Prop+Sem/Sur+Ess` (Eng. !)
 
 
 
@@ -5401,14 +4582,8 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
- LEXICON LONDON-obj    Objects. ODD-syllable
 
 
-*Windows # Odd-syllable test examples:*
-* *Windows:* `Windows+N+Prop+Sem/Obj+Attr`
-* *Windows:* `Windows+N+Prop+Sem/Obj+Sg+Nom`
-* *Windowsasse:* `Windows+N+Prop+Sem/Obj+Sg+Ill`
-* *Windowsistie:* `Windows+N+Prop+Sem/Obj+Sg+Ela`
 
 
 
@@ -5425,6 +4600,7 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
+(Söderhamn. Gävleb))
 
 
 
@@ -5446,6 +4622,8 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/sma-propernouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/sma-propernouns.lexc)</small>
 
 
 
@@ -5462,6 +4640,8 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
+egentlig satt disse inn i noun-adv-leksikon
+om disse skal være adverb?
 
 
 
@@ -5470,19 +4650,13 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
-*Courtrai # Even-syllable examples:*
-* *Courtrai:* `Courtrai+N+Prop+Sem/Plc+Attr`
-* *Courtrajjem:* `Courtrai+N+Prop+Sem/Plc+Sg+Acc`
-* *Courtrajjese:* `Courtrai+N+Prop+Sem/Plc+Sg+Ill`
-* *Courtrajjesne:* `Courtrai+N+Prop+Sem/Plc+Sg+Ine`
-* *Courtrajjeste:* `Courtrai+N+Prop+Sem/Plc+Sg+Ela`
-* *Courtrajjine:* `Courtrai+N+Prop+Sem/Plc+Sg+Com`
-* *Courtrajjine:* `Courtrai+N+Prop+Sem/Plc+Ess`
 
 
 
 
+<== why no case?
 
+laakte bïejedh - legge for tett sammen
 
 
 
@@ -5493,91 +4667,96 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adverbs.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/adverbs.lexc)</small>
 
 
+# South Saami pronouns
 
 
 
 
 
+The **Pronoun** lexicon points to all the subgrops, presented in this order below:
 
+ * Reciprocal ;    
+ * Personal ;	    
+ * Demonstrative ; 
+ * Interrogative ; 
+ * Indefinite ;    
+ * Reflexive ;	    
 
-*Haukilahti # Even-syllable   POLITI  examples:*
-* *Haukilahti:* `Haukilahti+N+Prop+Sem/Plc+Sg+Nom`
-* *Haukilahtijjem:* `Haukilahti+N+Prop+Sem/Plc+Sg+Acc`
-* *Haukilahtan:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ill`
-* *Haukilahtijjese:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ill`
-* *Haukilahtijjesne:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ine`
-* *Haukilahtijjeste:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ela`
-* *Haukilahtijjine:* `Haukilahti+N+Prop+Sem/Plc+Sg+Com`
-* *Haukilahtijjine:* `Haukilahti+N+Prop+Sem/Plc+Ess`
 
 
 
 
+## The Reciprocal pronoun
 
 
+ * sinsitniem+Pron+Recipr+Sg+Acc:sinsitniem FINAL1 ;          
+* ...
 
 
 
+## Personal pronouns
 
 
+Splitting in 1st, 2nd, 3rd
 
 
-OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
+New lemma form, now number as baseform, due to Oahpa
 
 
 
-*Hautajärvi # Even-syllable examples:*
-* *Hautajärvi:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Nom`
-* *Hautajärvim:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Acc`
-* *Hautajärvan:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ill`
-* *Hautajärvesne:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ine`
-* *Hautajärveste:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ela`
-* *Hautajärvine:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Com`
-* *Hautajärvine:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ess`
+### Lexica for sg
 
+the **firstperspronsg** for first pers has special consonantism
 
+for **nonfirstperspronsg** the 2nd and 3rd are identical
 
 
+### Lexica for du
 
+ * LEXICON firstpersprondu  
 
-*gata # Even-syllable examples:*
-* *Akersgata:* `Akersgata+N+Prop+Sem/Plc+Attr`
-* *Akersgatam:* `Akersgata+N+Prop+Sem/Plc+Sg+Acc`
-* *Akersgatese:* `Akersgata+N+Prop+Sem/Plc+Sg+Ill`
+ * LEXICON nonfirstpersprondu  
 
 
+### Lexica for pl
 
+ * LEXICON perspronpl  
 
 
+### Common case lexica
 
 
+ * LEXICON longproncase  
 
 
+### dïhte
+**DIHTE**  is a personal pronoun,
+demonstrative dïhte is treated below.
 
 
 
 
-# LEXICON ACCRA-femplc
-Propernoun
 
 
-*gata #  examples:*
-* *Abia:* `Abia+N+Prop+Sem/Plc+Sg+Nom`
-* *Abian:* `Abia+N+Prop+Sem/Plc+Sg+Gen`
-* *Abiam:* `Abia+N+Prop+Sem/Plc+Sg+Acc`
-* *Abiese:* `Abia+N+Prop+Sem/Plc+Sg+Ill`
-* *Abiesne:* `Abia+N+Prop+Sem/Plc+Sg+Ine`
-* *Abieste:* `Abia+N+Prop+Sem/Plc+Sg+Ela`
-* *Abine:* `Abia+N+Prop+Sem/Plc+Sg+Com`
-* *Abine:* `Abia+N+Prop+Sem/Plc+Ess`
 
 
 
+## Demonstrative pronouns
 
+This is for:
+the attributive forms of dïhte
+all forms of the other pronouns
 
+### The initial demonstrative lexica
 
+ * LEXICON Demonstrative   
+Same as above, with exceptions in
+Sg Ill, Sg Ine, Sg Ela, Pl Com
+Still open: analyse morphologically or not...
 
 
 
@@ -5589,20 +4768,20 @@ Propernoun
 
 
 
-the sne / snie business remains to be sorted out.
-the sne / snie business remains to be sorted out.
 
 
 
 
 
 
+ * LEXICON DAGKERES    
 
 
 
 
 
 
+## Interrogative and relative pronouns
 
 
 
@@ -5613,22 +4792,16 @@ the sne / snie business remains to be sorted out.
 
 
 
-+Pl+Nom:e%>h       FINAL1 ;
-+Pl+Acc:e%>ide      FINAL1 ;
-+Pl+Gen:e%>i       FINAL1 ;
-+Pl+Ill:e%>ide      FINAL1 ;
-+Pl+Ine:e%>ine      FINAL1 ;
-+Pl+Ela:e%>iste    FINAL1 ;
-+Pl+Com:e%>igujmie  FINAL1 ;
 
 
 
-+Pl: N_ODD_PL ;     ! normal noun
 
 
 
 
+## Indefinite pronouns
 
+ * LEXICON Indefinite   
 
 
 
@@ -5670,51 +4843,60 @@ the sne / snie business remains to be sorted out.
 
 
 
+ * LEXICON indeven-e 
 
+ * LEXICON indeven-a 
 
 
+## kongruensContlex
 
+### muvhtiecase
 
+ * LEXICON muvhtiecase 
 
+ * LEXICON muvhtiesg 
 
+ * LEXICON muvhtiepl 
 
 
+### naaken
 
+ * LEXICON naakenlex 
 
 
+ * LEXICON indodd   
 
-# LEXICON NIEMI
-Propernoun
+ * LEXICON indsg_odd  
 
-*propernoun examples:*
-* *Ahoniemi:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Nom`
-* *Ahoniemin:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Gen`
-* *Ahoniemim:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Acc`
-* *Ahoneaman:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Ill`
-* *Ahoniemesne:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Ine`
-* *Ahoniemeste:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Ela`
-* *Ahoniemine:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Com`
-* *Ahoniemine:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Ess`
+ * LEXICON indpl_odd  
 
+ * LEXICON indess_odd  
 
 
 
+ * LEXICON ind_noninfl  
 
 
 
+### Inflecting even indefinites
 
+ * LEXICON indsg-e  
 
 
 
+ * LEXICON indsg-a  
 
 
 
+ * LEXICON indpl-e  
 
+ * LEXICON indpl-a  
 
 
+ * LEXICON indess  
 
 
-+N+Prop+Sem/Plc+Sg+Ill:%>an                FINAL1 ; !SUB - is this possible? IllSg without Uml in -ie?
+ * LEXICON indcoll   
 
 
 
@@ -5724,12 +4906,15 @@ Propernoun
 
 
 
+## Reflexive pronouns
 
 
+ * LEXICON Reflexive 
 
 
 
 
+ * LEXICON OBLREFL 
 
 
 
@@ -5753,6 +4938,7 @@ Propernoun
 
 
 
+ * LEXICON OBLREFL-NONPAL  
 
 
 
@@ -5763,17 +4949,18 @@ Propernoun
 
 
 
+ * LEXICON OBLREFL-NONPAL2 
 
 
 
 
 
 
-+N+Prop+Sem/Plc+Pl: NIEJTE_PL ;
 
 
 
-+N+Prop+Sem/Plc+Pl+Com+Err/Orth:%>igyjmie  FINAL1 ; !
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/pronouns.lexc)</small>
 
 
 
@@ -5819,7 +5006,157 @@ Propernoun
 
 
 
-+N+Prop+Sem/Plc+Pl: CNAME_ODD_PL ;     ! name special
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ * **LEXICON ARABICCOMPOUNDS**  ! arabic as first part, 
+
+
+NAMAT ; ! duhatjienat, logigielat, etc. NAMAT derivs are
+SAS ; !viđajahkásaš
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/numerals.lexc)</small>
+
+# Verb stems
+
+## Preamble: Documenting the classes
+contlex stem umlaut dict class
+
+### Even stems
+
+#### Verbklasse I
+* BÅETEDH even row A/stem vowel -ie-, class I
+* SEVTEDH  even row A class I impersonals
+* ÅARAJEHTEDH even row A class I derived words -ehtedh, -estedh, -iste
+* BUARADEHTEDH  even row A class I derived words -ehtedh, -estedh, -iste impersonals
+* GÅETEDH even row A class I derived words -gåete
+* STIEHPEGÅETEDH even row A class I derived words -gåete  impersonals
+* ÅEREDH  even row A class I NO -øø-UMLAUT!Verbg 1
+
+
+#### Verbklasse II
+* TJEARODH even row C class II
+* TSEAHKODH even row C class II
+* ABRODH  even row C - class II impersonals
+
+#### Verbklasse III
+* GUARKEDH even row B class III
+
+#### Verbklasse IV
+* TJOEHPEDH even row D class IV
+* BIEGKEDH  even row D - class IV impersonals
+* GOEGKERDADTEDH even row D class IV derived words -alledh, -adte
+* OBREDADTEDH  even row D class IV derived words -alledh, -adte  impersonals
+* SOVVEDH even row D class IV derived words -sovvedh, htalledh = passives
+* AHTJE  row D class IV derived words -ahtje
+* OBRIJAHTJEDH   row D class IV derived words -ahtje   impersonals
+
+#### Verbklasse V
+* BÅÅHKEDH even row E class V
+* VÅÅJNEDH even row E class V  passives
+
+#### Verbklasse VI
+* GÖÖLEDH even row F class VI
+* BÖÖVTEDH even row F - class VI  impersonals
+
+#### Verbklasse ulikestava
+* GOLTELIDH odd !odd-syll with -adte- as Der2
+* BALVEDIDH odd impersonals
+* RIHPESIDH odd !odd-syll with -adte- as Der2 -nidh and -sidh
+* DÅAJVOEHTIDH odd !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
+* LGIDH odd ending -lgi
+
+
+
+## The actual continuation lexica
+
+**LEXICON Verb** splits to AUX and Regular_verbs
+
+
+
+**LEXICON AUX** lemma for *edtjedh, ij* and *lea*, each with their own contlex in **affixes**.
+
+**LEXICON Regular_verbs** here comes the whole list, appr. 11000.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5844,77 +5181,664 @@ Propernoun
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/propernouns.lexc)</small>
-# Continuation lexicons for abbreviations
-
-## Lexica for adding tags and periods
-
-## The sublexica
-
-### Continuation lexicons for abbrs both with and witout final period
-
-
- * **LEXICON ab-noun   **
-
- * **LEXICON ab-adj   **
-
- * **LEXICON ab-adv   **
-
- * **LEXICON ab-num   **
-
-### Lexicons without final period
-
- * **LEXICON ab-nodot-noun   **  The bulk
-
- * **LEXICON ab-nodot-adj   **
-
- * **LEXICON ab-nodot-adv   **
-
- * **LEXICON ab-nodot-num   **
-
-### Lexicons with final period
-
- * **LEXICON ab-dot-noun   **  This is the lexicon for abbrs that must have a period.
-
- * **LEXICON ab-dot-adj   **  This is the lexicon for abbrs that must have a period.
-
- * **LEXICON ab-dot-adv   **  This is the lexicon for abbrs that must have a period.
-
- * **LEXICON ab-dot-num   **  This is the lexicon for abbrs that must have a period.
-
- * **LEXICON ab-dot-cc   **
+<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/verbs.lexc)</small>
 
 
 
 
 
- * **LEXICON ab-dot-verb   **
-
- * **LEXICON ab-nodot-verb   **
 
 
- * **LEXICON ab-dot-IVprfprc   **
 
 
- * **LEXICON nodot-attrnomaccgen-infl   **
-
- * **LEXICON nodot-attr-infl   **
-
- * **LEXICON nodot-nomaccgen-infl   **
 
 
- * **LEXICON dot-attrnomaccgen-infl   **
-
- * **LEXICON dot-attr   **
-
- * **LEXICON dot-nomaccgen-infl   **
 
 
- * **LEXICON DOT   ** - Adds the dot to dotted abbreviations.
+
+
+
+
+
+
+
+
+ALL nouns with PX
+
+ * **LEXICON Noun ** dividing in NounNoPx, NounPx (with a P.Px.add
+flag) and NounPxKin (with a P.Nom3Px.add flag)
+
+ * **NounNoPx ;** = words in this noun lexicon do not get any possessive inflectionb
+ * **@P.Px.add@ NounPx ;** = these nouns do get possessive inflection, except for 3. person nominative, which is usually only used with kinship terms (see next)
+ * **@P.Px.add@ NounPxKin ;** = these nouns get full possessive inflection, including 3. person nominative - except that the 3. person nominative has been removed in the South Sámi description. The reason for that change needs to be documented here.
+
+Not according to umlautsystem
+
+
+---Ije-
+
+
+
+
+Lemma fra GG: merk DNorm
+6 koreen
+5 tyrkijen
+20 Bottleneck-hypotesen       ---- dynamisk sammensetning - how?
+17 direkte
+
+
+
+
+
+
+
+https://satni.uit.no/termwiki/index.php?title=Education:embetsstudium
+
+
+
+
+
+
+
+
+pp, tt, kk --> hp, ht, hk   eller bp, dt, gk?  bp, dt, gk strider i mot rettskrivingsprinsippene jfr.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:frittstående_borettslag
+
+
+
+
+
+
+
+
+
+
+
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/abbreviations.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/abbreviations.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/nouns.lexc)</small>
+
+# Adjective stems
+
+This is one of two parallel files containing adjective stems.
+The files represent two alternative interpretation of the same data
+(South Saami adjectives).
+This file is used for spellchecking, the alternative file
+*adjectives-oahpa.lexc* is used for dictionary and icall applications.
+This file is compiled by default, the other one is compiled by in
+langs/sma giving the command *.configure --with-oahpa*
+before compiling.
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/adjectives.lexc)</small>
+
+
+# Adjective affixes
+
+This is one of two parallel files containing adjective affixes.
+The files represent two alternative interpretation of the same data
+(South Saami adjectives).
+This file is used for dictionary and icall applications, the alternative file
+*adjectives.lexc* is used for spellchecking.
+This file is compiled by in
+langs/sma giving the command *.configure --with-oahpa*
+before compiling. The other file (adjectives.lexc) is compiled by default.
+
+# Adjectives: Adjectival inflection sublexica
+
+## Basic adjectival lexica, infl types
+
+### even stems
+
+Lexical exceptions
+
+
+ * **LEXICON A_LDH **
+
+
+ * **LEXICON NOERE **
+
+ * **LEXICON BUERIE **
+
+ * **LEXICON LEEVLES **
+
+ * **LEXICON SOOKES **
+
+ * **LEXICON SOOJMES **
+
+
+ * **LEXICON SMAAVE   **, both smaave and plaave
+
+ * **LEXICON SNAARE  **
+
+ * **LEXICON ORRE **
+
+ * **LEXICON STOERE **
+
+
+ * **LEXICON STOERE_COMP **
+
+ * **LEXICON NAAKE **
+
+ * **LEXICON GISSE **
+
+ * **LEXICON GAMTE **
+
+ * **LEXICON GIEVTE **
+
+ * **LEXICON KRUANA **
+
+ * **LEXICON VEELKES **
+
+
+ * **LEXICON ROOPSES **
+
+ * **LEXICON SNEEHPES  ** burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
+
+ * **LEXICON GEEHPES **
+
+ * **LEXICON GEERVE **
+
+ * **LEXICON TJOEVKES **
+
+ * **LEXICON SAETNIES **
+
+ * **LEXICON SUVHTJIES **
+
+
+ * **LEXICON SAEBRIES  **
+
+ * **LEXICON MUJVIES  **
+
+
+ * **LEXICON STAERIES  **
+
+ * **LEXICON GIERIES  **
+
+ * **LEXICON BAERIES  **
+
+ * **LEXICON GÆHTJOES  **
+
+ * **LEXICON AAREH **
+
+ * **LEXICON MOOREH **
+
+
+
+
+## Regular even stem types
+
+
+ * **LEXICON EVTEBE   **
+
+ * **LEXICON ATTR_EVEN   **
+
+ * **LEXICON ATTR_ODD   **
+
+
+ * **LEXICON ø_Ø_EVEN  **
+
+ * **LEXICON IJVEadj **
+
+
+ * **LEXICON LES  ** Should contain only loanwords (?)
+
+
+ * **LEXICON IJAALE_A_LOAN **
+
+
+ * **LEXICON AATE_adj_LOAN  **
+
+
+ * **LEXICON AALE **
+
+ * **LEXICON AALEFORMS **
+
+ * **LEXICON oe_OE_EVEN  **
+
+
+ * **LEXICON e_E_EVEN  **
+
+     - **LEXICON e_E_EVENNOCOMP  **
+
+     - **LEXICON a_A_EVENNOCOMP  **
+
+ * **LEXICON a_A_EVEN **
+
+
+ * **LEXICON ie_IE_EVEN  **
+
+     - **LEXICON ie_IE_EVENNOCOMP  **
+
+ * **LEXICON es_ES_EVEN  **
+
+     - **LEXICON es_ES_EVENNOCOMP  **
+
+ * **LEXICON ies_IES_EVEN  **
+
+     - **LEXICON ies_IES_EVENNOCOMP  **
+
+
+ * **LEXICON Cs_CS_EVEN  **
+
+
+ * **LEXICON ihks_IHKS_EVENNOCOMP **
+
+
+ * **LEXICON RAARH   ** Attr= h, Comp =Even( Jïjtje-raarh)
+
+
+
+ * **LEXICON MAST **
+
+### type 2
+
+ * **LEXICON JELLE **
+
+ * **LEXICON UELLE **
+
+
+ * **LEXICON e_ES_LOAN   ** LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.
+
+
+ * **LEXICON ÆRE   ** LOAN
+
+ * **LEXICON ENTE   ** LOAN
+
+
+
+
+ * **LEXICON LES_LASSE_ie  ** derivasjon av verb
+
+ * **LEXICON LES_LASSE_NOM_ie  **
+
+
+ * **LEXICON LES_LASSE_OBL_ie  **
+
+
+ * **LEXICON e_ES_EVEN  **
+
+     - **LEXICON e_ES_EVENNOCOMP  **
+
+ * **LEXICON e_ES_ODDEVEN  **
+
+
+ * **LEXICON es_E_EVEN   **
+
+ * **LEXICON en_E_EVEN   **
+
+
+ * **LEXICON as_A_EVEN   ** attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
+
+ * **LEXICON oes_OE_EVEN   ** attr= s, pred= Ø, Comp= EVEN(ebe, emes) case/substantiven hammoe= Even
+
+     - **LEXICON oes_OE_EVENNOCOMP  **
+
+ * **LEXICON ies_IE_EVEN   ** attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
+ * **LEXICON ies_IE_EVENNOCOMP   ** attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
+
+
+ * **LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN  **
+
+ * **LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN  **
+
+ * **LEXICON ies_(ehke)_EHKE_ODDCOMPe_EVEN **
+
+
+
+ * **LEXICON ies_IES_IE_EVEN   ** Comp & case = even (ebe/emes/esne)
+
+ * **LEXICON ies_IES_IE_EVENNOCOMP   ** Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
+
+ * **LEXICON as_AS_EVEN   ** Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
+
+
+ * **LEXICON IJLE_LOAN_A **
+
+
+ * **LEXICON s_H_EVENNOCOMP   **
+
+
+# ODD-stems (odd stem declension)
+
+
+## type 0 (attr only)
+
+ * **LEXICON ATTR_es_s  ** aajtijes
+
+
+## type 1
+
+
+
+ * **LEXICON ø_Ø_ODD  **
+
+ * **LEXICON ah_AH_ODD    ** XXX mangler CASE - hva er riktig - kanskje EVEN?
+
+
+ * **LEXICON ah_AH_ODDNOCOMP   **
+
+ * **LEXICON hth_HTH_ODD  **
+
+ * **LEXICON Ce_CE_ODD   ** bårreske
+
+ * **LEXICON ege_EGE_ODDEVEN  ** rudtjege
+
+
+ * **LEXICON s_S_Ø_ODD  ** hamhpas
+
+
+
+ * **LEXICON s_E_ODD  **
+
+ * **LEXICON as_AS_ODD  **
+
+     - **LEXICON as_AS_ODDNOCOMP  **
+
+
+
+ * **LEXICON s_S_ODD  **
+
+     - **LEXICON s_S_ODDNOCOMP  **
+
+ * **LEXICON es_ES_ODDhk  **
+
+ * **LEXICON oes_OES_ODD  **
+
+     - **LEXICON oes_OES_ODDNOCOMP  **
+
+ * **LEXICON oes_OES_ODDahk  **
+
+ * **LEXICON oes_OES_ODDas  **
+
+
+ * **LEXICON Ces_CES_ODDNOCOMP   **
+
+ * **LEXICON les_LES_ODD   **
+
+ * **LEXICON Cs_CS_CE_ODD  **
+
+     - **LEXICON Cs_CS_CE_ODDNOCOMP  **
+
+
+ * **LEXICON Cs_CS_ODD  **
+
+     - **LEXICON Cs_CS_ODDNOCOMP  **
+
+ * **LEXICON hts_HTS_ODD  **
+
+     - **LEXICON hts_HTS_ODDNOCOMP  **
+
+
+
+ * **LEXICON an_AN_ODDNOCOMP **
+
+
+## type 2
+
+ * **LEXICON AABELE **
+
+
+ * **LEXICON IJBELE **
+
+ * **LEXICON Ce_CES_ODD  **
+
+ * **LEXICON ø_S_ODDEVEN   ** , Comp=even jih ODD, Case= ODD
+
+ * **LEXICON ø_S_ODD   ** , Comp=even jih ODD, Case= ODD
+
+
+
+## type 3
+
+
+ * **LEXICON JEASIEGOELKIJE **
+
+
+
+ * __LEXICON BÅETIJE !   __ bårreske
+
+ * **LEXICON jes_js_JES_JS_ODD  ** to adj: bualijes, fååmijes
+
+
+ * **LEXICON ijes_ijs_IJE_ODD  ** GUALIJES
+
+ * **LEXICON ijes_ijs_IJE_ODDNOCOMP  ** DÅAJMIJES
+
+
+
+
+
+
+## type 3
+
+
+
+ * **LEXICON Cs_CE_ODD  **
+
+     - **LEXICON Cs_CE_ODDNOCOMP  **
+
+ * **LEXICON Ces_CE_ODD  **
+
+
+     - **LEXICON Ces_CE_ODDNOCOMP  **
+
+
+ * **LEXICON Ces_Ce_CES_CE_ODD    ** as Ces_CES_CE_ODD, but with ATTR_0
+
+     - **LEXICON Ces_Ce_CES_CE_ODDNOCOMP **
+
+ * **LEXICON Ce_Ces_CES_CE_ODD   **
+
+     - **LEXICON Ce_Ces_CES_CE_ODDNOCOMP **
+
+
+ * **LEXICON Ces_CES_CE_ODD  **
+
+
+     - **LEXICON Ces_CES_CE_ODDNOCOMP  **
+
+ * **LEXICON hks_hke_HKS_HKE_ODD   **
+
+
+## type 4
+
+ * **LEXICON as_AN_ODD  **
+
+
+ * **LEXICON oes_AN_ODD  **
+
+
+ * **LEXICON s_N_ODD  **
+
+     - **LEXICON s_N_ODDNOCOMP  **
+
+
+
+
+ * **LEXICON ah_AN_ODDNOCOMP  **
+
+
+
+
+ * **LEXICON oeh_OEH_ODDNOCOMP **
+
+ * **LEXICON oeh_OEN_ODD **
+
+
+
+ * **LEXICON oeh_AN_ODD  **
+
+     - **LEXICON oeh_AN_ODDNOCOMP  **
+
+
+ * **LEXICON oeh_OEH_AN_ODD   **
+
+
+     - **LEXICON oeh_OEH_AN_ODDNOCOMP  **
+
+
+
+ * **LEXICON ø_N_ODD  **
+
+
+
+ * **LEXICON e_AN_ODD  **
+
+
+ * **LEXICON ies_EME **
+
+
+
+
+
+
+ * **LEXICON HKE_ODD_NGCOMP **
+
+ * **LEXICON HKE_ODD_COMP  **
+
+
+
+ * **LEXICON GEERUVE **
+
+ * **LEXICON JAEDTUVES **
+
+## Attribute lexica
+
+ * **LEXICON ATTR_0_PRED_0 **
+
+ * **LEXICON ATTR_0 **
+
+
+ * **LEXICON ATTR_S **
+
+ * **LEXICON ATTR_H **
+
+ * **LEXICON ATTR_N **
+
+ * **LEXICON ATTRCONT **
+
+## Predicative lexica
+
+
+ * **LEXICON PRED_0 **
+
+
+ * **LEXICON PRED_S **
+
+ * **LEXICON PRED_H **
+
+
+ * **LEXICON PRED_N **
+
+ * **LEXICON PRED_AN **
+
+
+
+
+# Odd syllabic stems - adjectives
+
+ * **LEXICON ODDCASE **
+
+     - **LEXICON ODDCASENOM **
+
+     - **LEXICON ODDCASEOBL **
+
+ * **LEXICON ije_ODDCASE **
+
+     - **LEXICON ije_ODDCASENOM **
+
+     - **LEXICON ije_ODDCASEOBL **
+
+
+
+
+# Even syllabic stems - adjectives
+
+ * **LEXICON eCASE **
+
+     - **LEXICON eCASENOM **
+
+     - **LEXICON eCASEOBL **
+
+
+
+ * **LEXICON aCASE **
+
+
+     - **LEXICON aCASENOM **
+
+     - **LEXICON aCASEOBL **
+
+ * **LEXICON ieCASE **
+
+     - **LEXICON ieCASEOBL **
+
+
+ * **LEXICON oeCASE **
+
+     - **LEXICON oeCASE_NOMSG **
+
+     - **LEXICON oeCASE_OBL **
+
+     - **LEXICON A_OE_SGILL_UML **
+
+     - **LEXICON A_OE **
+
+     - **LEXICON A_OE_SG **
+
+     - **LEXICON A_OE_PL **
+
+     - **LEXICON A_OE_ESS **
 
 
 
@@ -5922,8 +5846,58 @@ Propernoun
 
 
 
+# Comparative forms
+
+ * **LEXICON EVENCOMP **
+
+     - **LEXICON EVENCOMPONLY **
 
 
+     - **LEXICON EVENSUPONLY **
+
+ * **LEXICON EVENCOMP_oe **
+
+ * **LEXICON ODDCOMP **
+
+
+ * **LEXICON EVENCOMPCASE **
+
+ * **LEXICON EVENCOMPCASE_oe **
+
+
+
+ * **LEXICON DIMCOMP **
+
+
+ * **LEXICON ÅBPOE **
+
+     - **LEXICON ÅBPOE_SGILL_UML **
+
+ * **LEXICON ÅBPOE_N_OE **
+
+     - **LEXICON ÅBPOE_N_OE_SG **
+
+     - **LEXICON ÅBPOE_N_OE_PL **
+
+     - **LEXICON ÅBPOE_N_OE_ESS **
+
+ * **LEXICON ABPA **
+
+
+     - **LEXICON ABPA_SG **
+
+     - **LEXICON ABPA_PL **
+
+ * **LEXICON MES **
+
+ * **LEXICON MES_oe **
+
+ * **LEXICON OMMES **
+
+
+ * **LEXICON LAAKAN **
+
+ * **LEXICON LEEJNES **
 
 
 
@@ -5931,7 +5905,33 @@ Propernoun
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/compounding.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/compounding.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/oahpa-filer/aff-adjectives-oahpa.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/oahpa-filer/aff-adjectives-oahpa.lexc)</small>
+# Adjective stems
+
+This is one of two parallel files containing adjective stems.
+The files represent two alternative interpretation of the same data
+(South Saami adjectives).
+This file is used for dictionary and icall applications, the alternative file
+*adjectives.lexc* is used for spellchecking.
+This file is compiled by in
+langs/sma giving the command *.configure --with-oahpa*
+before compiling. The other file (adjectives.lexc) is compiled by default.
+
+
+----
+
+The file starts as follows:
+
+ ## LEXICON Adjective  
+
+
+ TG-grammatihkeles:TG-grammatihkel LES ;   \\
+ aajmoes:aajmoe s_S_ODD ;			      \\
+ aajne:aajne ATTR_0 ;				      \\ ... \\
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/oahpa-filer/stems-adjectives-oahpa.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/oahpa-filer/stems-adjectives-oahpa.lexc)</small>
 # South Sámi morphological analyser
 
 
