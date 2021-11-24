@@ -31,6 +31,7 @@
        [ æ  "<CORR>"]::30 |
        [ ö  "<CORR>"]::30 |
        [ å  "<CORR>"]::30 |
+       [":" "<CORR>"]::30 |
        ["-" "<CORR>"]::30
       ] ,
 
@@ -471,6 +472,83 @@ z (->) "<COR>"::10 || _ ? ? z ,,
 ]
 .o.
 [ [? - "<COR>"]* "<COR>":0 "<COR>":0 "<COR>":"<CORR>" [? - "<COR>"]* ]
+]
+# Loan suffixes:
+|
+[
+[
+    [a l e]   (->) [ a a l e   "<CORR>"]::30 ,
+    [a l h]   (->) [ a a l h   "<CORR>"]::30 ,
+    [e t]     (->) [ e e t e   "<CORR>"]::30 ,
+    [e t e m] (->) [ e e t e m "<CORR>"]::30 ,
+    [i v]     (->) [ i j v e   "<CORR>"]::30 ,
+    [i v e]   (->) [ i j v e   "<CORR>"]::30 ,
+    [i v t]   (->) [ i j v e   "<CORR>"]::30 ,
+    [i v e r] (->) [ i j v h   "<CORR>"]::30 ,
+    [u t t]   (->) [ u h t e   "<CORR>"]::30 
+    || _ .#.
+]
+.o.
+[ [? - "<CORR>"]*  "<CORR>":0  [? - "<CORR>"]* ]
+]
+# Sámi suffixes:
+|
+[
+[
+    [i b i e] (->) [   e b e   "<CORR>"]::30 ,
+    [i d i e] (->) [   e d e   "<CORR>"]::30 ,
+    [e d e]   (->) [ i d i e   "<CORR>"]::30 ,
+    [e g e]   (->) [ e h k e   "<CORR>"]::30 ,
+    [i s n e] (->) [ i s n i e "<CORR>"]::30 ,
+    [e s i]   (->) [ a s s e   "<CORR>"]::30 ,
+    [a s s i] (->) [ a s s e   "<CORR>"]::30 
+    || _ .#.
+]
+.o.
+[ [? - "<CORR>"]*  "<CORR>":0  [? - "<CORR>"]* ]
+]
+# SMA vowel problems:
+|
+[
+[
+    [i j j i e]     (->) [æ j j a  "<CORR>"]::30 ,
+    [y j j e]       (->) [å j j a  "<CORR>"]::30 ,
+    [i e]           (->) [ a       "<CORR>"]::30 ,
+    [i e]           (->) [ ï e     "<CORR>"]::30 ,
+    [o a]           (->) [ å å     "<CORR>"]::30 ,
+    [o e]           (->) [ a       "<CORR>"]::30 ,
+    [o e]           (->) [ o       "<CORR>"]::30 ,
+    [ a ]           (->) [ o e     "<CORR>"]::30 ,
+    [ o ]           (->) [ o e     "<CORR>"]::30 ,
+    [ a ]           (->) [ å       "<CORR>"]::30 ,
+    [ o ]           (->) [ å       "<CORR>"]::30 ,
+    [ å ]           (->) [ o       "<CORR>"]::30 ,
+    [ u ]           (->) [ o       "<CORR>"]::30 ,
+    [ o ]           (->) [ u       "<CORR>"]::30 ,
+    [ a ]           (->) [ o       "<CORR>"]::30 ,
+    [ o ]           (->) [ a       "<CORR>"]::30 ,
+    [ e ]           (->) [ i       "<CORR>"]::30 ,
+    [ e ]           (->) [ æ       "<CORR>"]::30 ,
+    [ i ]           (->) [ e       "<CORR>"]::30 ,
+    [ u ]           (->) [ e e     "<CORR>"]::30 ,
+    [ u ]           (->) [ ö ö     "<CORR>"]::30 ,
+    [y ö|y ø]       (->) [ ö ö     "<CORR>"]::30 ,
+    [ö ö|ø ø]       (->) [ y ö     "<CORR>"]::30 ,
+    [ö ö|ø ø]       (->) [ o e     "<CORR>"]::30 ,
+    [æ|ä]           (->) [ a e     "<CORR>"]::30 ,
+    [æ|ä]           (->) [ e a     "<CORR>"]::30 ,
+    [æ|ä]           (->) [ a       "<CORR>"]::30 ,
+    [å a]           (->) [ å e     "<CORR>"]::30 ,
+    [å e]           (->) [ å a     "<CORR>"]::30 ,
+    [å a]           (->) [ å å     "<CORR>"]::30 ,
+    [å å]           (->) [ å a     "<CORR>"]::30 ,
+    [e a]           (->) [ i e     "<CORR>"]::30 ,
+    [e e]           (->) [ e       "<CORR>"]::30 ,
+    [å a]           (->) [ u a     "<CORR>"]::30 ,
+    [u a]           (->) [ å a     "<CORR>"]::30 
+]
+.o.
+[ [? - "<CORR>"]*  "<CORR>":0  [? - "<CORR>"]* ]
 ]
 #context condition and "<CORR>" deletion
 .o.
