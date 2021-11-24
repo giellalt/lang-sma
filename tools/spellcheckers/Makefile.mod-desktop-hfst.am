@@ -69,13 +69,9 @@ WORD_REPLACEMENTS=yes
 
 ### BEGIN: Local build rules: *.regex ###
 
-#editdist.default.regex: editdist-est.regex 
-#	cp $< $@
-
-# edit distance=1
+# edit distance=1+
 # typos related to computer keyboard:
 # substitute, transpose, add, delete
- 
 editdist.festschrift.hfst: editdist.festschrift.regex
 	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) -S -E $(HFST_FLAGS) -i $<\
 		   --format=openfst-tropical \
@@ -131,7 +127,7 @@ sma-x-festschrift.zhfst: $(srcdir)/index.xml \
 # To make life easier for CI (and possibly the build flie maintainters later),
 # create a *-desktop.zhfst file by hard-linking to *.zhfst:
 sma-x-festschrift-desktop.zhfst: sma-x-festschrift.zhfst
-	$(AM_V_GEN)ln -f $< $@
+	$(AM_V_GEN)cp -f $< $@
 
 #### END: Local build rules: *.regex ####
 
