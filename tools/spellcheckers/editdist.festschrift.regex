@@ -55,9 +55,10 @@
 
 
 # hyphen and colon - not linguistics, but so frequent as error source that we need them here:
-["-":0 0:"<CORR>"]::15 |
-[0:"-" 0:"<CORR>"]::45 |
-[?:":" 0:"<CORR>"]::45 |
+["-":0   0:"<CORR>"]::15 |
+[  0:"-" 0:"<CORR>"]::45 |
+[  ?:":" 0:"<CORR>"]::45 |
+[  ´:0   0:"<CORR>"]::15 |
 
 # vowels
 #
@@ -163,6 +164,7 @@
 [i   0:e 0:"<CORR>"]::10 |
 [ï   0:e 0:"<CORR>"]::15 |
 [o   0:e 0:"<CORR>"]::15 |
+[o:å 0:å 0:"<CORR>"]::15 |
 [u   0:a 0:"<CORR>"]::15 |
 [u   0:e 0:"<CORR>"]::15 |
 [y   0:ö 0:"<CORR>"]::15 |
@@ -174,6 +176,7 @@
 
 # del second vowel from double vowel or diphtong
 [a   a:0 0:"<CORR>"]::15 |
+[a:å a:0 0:"<CORR>"]::15 |
 [a   e:0 0:"<CORR>"]::15 |
 [e   a:0 0:"<CORR>"]::10 |
 [e   e:0 0:"<CORR>"]::15 |
