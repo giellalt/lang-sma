@@ -2,12 +2,19 @@
 # if the keyboard does not allow the accented letters comfortably,
 # then some ad hoc conventions are used;
 # i.e. these may be used many times inside a word
-[
-{ä} -> {æ}::1 , # Precomposed
-{ä} -> {æ}::1 , # Combining diaeresis
-{ø} -> {ö}::1 , 
-{i} -> {ï}::1 ,
-{ï} -> {i}::1 , # hyper correct
-{YY} -> {öö}::1
-];
+[?*
+  [
+   {i} -> {ï}::1 ,
+   {ï} -> {i}::1 ,
+   {ä} -> {æ}::1 ,
+   {ø} -> {ö}::1 , 
+   {I} -> {Ï}::1 ,
+   {Ï} -> {I}::1 ,
+   {Ä} -> {Æ}::1 ,
+   {Ø} -> {Ö}::1 , 
+   {Y} -> {ö}::1 ,
+   {Y} -> {Ö}::1 ,
+  ]
+?*]*
+;
 
