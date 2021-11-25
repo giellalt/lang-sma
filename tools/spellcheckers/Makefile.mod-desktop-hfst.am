@@ -96,8 +96,9 @@ editdist.all.festschrift.hfst: editdist.festschrift.hfst \
 						   strings.festschrift.hfst \
 						   accents.festschrift.hfst
 	$(AM_V_RGX2FST)printf "\
-		[ @\"accents.festschrift.hfst\"* .o. \
-			[ @\"strings.festschrift.hfst\" | @\"editdist.festschrift.hfst\" ] ]; \
+		[    @\"accents.festschrift.hfst\"  \
+		 .o. @\"strings.festschrift.hfst\"  \
+		 .o. @\"editdist.festschrift.hfst\" \
 		];" \
 		| $(HFST_REGEXP2FST) -S -E $(HFST_FLAGS) \
 		   --format=openfst-tropical \
