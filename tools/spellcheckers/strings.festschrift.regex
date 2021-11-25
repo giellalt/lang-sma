@@ -1,43 +1,6 @@
 # Add your error (->) correct string pairs here (not complete words, they have
 # a separate file), followed by TAB and the weight for the edit operation (->) 
 [
-# short -> long vowels:
-a  (->) {aa}::5 , # sajvi -> saajvi
-a  (->) {ae}::5 , # baktie -> baektie
-e  (->) {ie}::5 ,
-y  (->) {ie}::5 ,
-æ  (->) {ea}::5 ,
-ö  (->) {öö}::2 ,
-
-# long -> short vowels:
-{aa} (->)  a::5 ,
-{ea} (->)  æ::5 ,
-{ee} (->)  e::2 , # deepartemaangen -> departemeenten
-{ie} (->)  e::6 ,
-{ie} (->)  i::8 , # sijhtiejibie -> sïjhtijibie
-{ää} (->)  o::5 ,
-{öö} (->)  ö::5 , # øøvtiehtidh -> övtiedidh
-
-# diphthongues:
-{aa} (->) {ae}::5 ,
-{ae} (->) {aa}::5 , # aeremes -> aaremes
-{ae} (->) {ea}::4 ,
-{ae} (->) {ee}::5 , # aejhtin -> eejhtin
-{ea} (->) {ae}::4 ,
-{ea} (->) {ie}::5 ,
-{ea} (->) {ïe}::5 ,
-{ie} (->) {ea}::5 ,
-{ïe} (->) {ea}::5 ,
-{ie} (->) {ee}::5 , # Gierve -> Geerve
-{ie} (->) {ïe}::5 ,
-{ie} (->) {oe}::5 , # siejhmetji -> soejmetji
-{ua} (->) {åa}::5 , # bualta -> båalta
-{yø} (->) {yö}::1 ,
-{ää} (->) {ææ}::5 ,
-{åa} (->) {åå}::5 ,
-{åe} (->) {åa}::5 ,
-{åå} (->) {åa}::5 ,
-
 # Disyllabic vowel changes:
 {uve}  (->) {ovi}::5 ,
 {yjje} (->) {åjja}::5 , # tryjjedidh -> tråjjadidh
@@ -53,12 +16,7 @@ y  (->) {ie}::5 ,
 {utt} (->) {uhtte}::5 , # loan words like instituhtte - different in Sweden?
 
 # Long vowel + consonant:
-{øøj}   (->)  {oej}::5 , # søøjmehtji -> soejmetji
-{øøp}   (->)  {åap}::5 ,
-{-øøvt} (->)  {övt}::4 ,
-{ååhp}  (->) {åahp}::5 , # tjaalegeååhpetje -> tjaalehåahpetje
 {uvk}   (->) {ovhk}::5 ,
-{ööp}   (->)  {åap}::5 ,
 
 # Consonant groups:
 {dl}   (->)  {ld}::4 ,
@@ -117,11 +75,8 @@ y  (->) {ie}::5 ,
 {ode} (->) {ojde}::5 , # leaksode -> leaksojde
 {ovli} (->) {oli}::5 ,
 
-{Øøvro} (->) {Euro}::5 , # Øøvropesne -> Europesne
-{øøvro} (->) {euro}::5 ,
 {öbeel} (->) {ööbel}::2 , # möbeele -> mööbele
 
-{ååhke} (->) {åhka}::5 ,
-{åårgan} (->) {organ}::5   # åårganisasjovnijiste -> organisasjovnijste
+{ååhke} (->) {åhka}::5
 ]
 ;
