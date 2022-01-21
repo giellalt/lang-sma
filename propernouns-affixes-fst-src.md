@@ -195,7 +195,7 @@
 
 
 
- LEXICON LONDON-obj    Objects. ODD-syllable
+LEXICON LONDON-obj    Objects. ODD-syllable
 
 
 *Windows # Odd-syllable test examples:*

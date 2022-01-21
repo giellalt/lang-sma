@@ -15,12 +15,12 @@ before compiling. The other file (adjectives.lexc) is compiled by default.
 
 The file starts as follows:
 
- ## LEXICON Adjective  
+## LEXICON Adjective  
 
 
- TG-grammatihkeles:TG-grammatihkel LES ;   \\
- aajmoes:aajmoe s_S_ODD ;			      \\
- aajne:aajne ATTR_0 ;				      \\ ... \\
+TG-grammatihkeles:TG-grammatihkel LES ;   \\
+aajmoes:aajmoe s_S_ODD ;			      \\
+aajne:aajne ATTR_0 ;				      \\ ... \\
 
 
 * * *

@@ -9,12 +9,12 @@
 
 The **Pronoun** lexicon points to all the subgrops, presented in this order below:
 
- * Reciprocal ;    
- * Personal ;	    
- * Demonstrative ; 
- * Interrogative ; 
- * Indefinite ;    
- * Reflexive ;	    
+* Reciprocal ;    
+* Personal ;	    
+* Demonstrative ; 
+* Interrogative ; 
+* Indefinite ;    
+* Reflexive ;	    
 
 
 
@@ -23,7 +23,7 @@ The **Pronoun** lexicon points to all the subgrops, presented in this order belo
 ## The Reciprocal pronoun
 
 
- * sinsitniem+Pron+Recipr+Sg+Acc:sinsitniem FINAL1 ;          
+* sinsitniem+Pron+Recipr+Sg+Acc:sinsitniem FINAL1 ;          
 * ...
 
 
@@ -47,20 +47,20 @@ for **nonfirstperspronsg** the 2nd and 3rd are identical
 
 ### Lexica for du
 
- * LEXICON firstpersprondu  
+* LEXICON firstpersprondu  
 
- * LEXICON nonfirstpersprondu  
+* LEXICON nonfirstpersprondu  
 
 
 ### Lexica for pl
 
- * LEXICON perspronpl  
+* LEXICON perspronpl  
 
 
 ### Common case lexica
 
 
- * LEXICON longproncase  
+* LEXICON longproncase  
 
 
 ### dïhte
@@ -83,7 +83,7 @@ all forms of the other pronouns
 
 ### The initial demonstrative lexica
 
- * LEXICON Demonstrative   
+* LEXICON Demonstrative   
 Same as above, with exceptions in
 Sg Ill, Sg Ine, Sg Ela, Pl Com
 Still open: analyse morphologically or not...
@@ -104,7 +104,7 @@ Still open: analyse morphologically or not...
 
 
 
- * LEXICON DAGKERES    
+* LEXICON DAGKERES    
 
 
 
@@ -131,7 +131,7 @@ Still open: analyse morphologically or not...
 
 ## Indefinite pronouns
 
- * LEXICON Indefinite   
+* LEXICON Indefinite   
 
 
 
@@ -173,60 +173,60 @@ Still open: analyse morphologically or not...
 
 
 
- * LEXICON indeven-e 
+* LEXICON indeven-e 
 
- * LEXICON indeven-a 
+* LEXICON indeven-a 
 
 
 ## kongruensContlex
 
 ### muvhtiecase
 
- * LEXICON muvhtiecase 
+* LEXICON muvhtiecase 
 
- * LEXICON muvhtiesg 
+* LEXICON muvhtiesg 
 
- * LEXICON muvhtiepl 
+* LEXICON muvhtiepl 
 
 
 ### naaken
 
- * LEXICON naakenlex 
+* LEXICON naakenlex 
 
 
- * LEXICON indodd   
+* LEXICON indodd   
 
- * LEXICON indsg_odd  
+* LEXICON indsg_odd  
 
- * LEXICON indpl_odd  
+* LEXICON indpl_odd  
 
- * LEXICON indess_odd  
+* LEXICON indess_odd  
 
 
 
- * LEXICON ind_noninfl  
+* LEXICON ind_noninfl  
 
 
 
 ### Inflecting even indefinites
 
- * LEXICON indsg-e  
+* LEXICON indsg-e  
 
 
 
- * LEXICON indsg-a  
+* LEXICON indsg-a  
 
 
 
- * LEXICON indpl-e  
+* LEXICON indpl-e  
 
- * LEXICON indpl-a  
-
-
- * LEXICON indess  
+* LEXICON indpl-a  
 
 
- * LEXICON indcoll   
+* LEXICON indess  
+
+
+* LEXICON indcoll   
 
 
 
@@ -239,17 +239,12 @@ Still open: analyse morphologically or not...
 ## Reflexive pronouns
 
 
- * LEXICON Reflexive 
+* LEXICON Reflexive 
 
 
 
 
- * LEXICON OBLREFL 
-
-
-
-
-
+* LEXICON OBLREFL 
 
 
 
@@ -268,7 +263,12 @@ Still open: analyse morphologically or not...
 
 
 
- * LEXICON OBLREFL-NONPAL  
+
+
+
+
+
+* LEXICON OBLREFL-NONPAL  
 
 
 
@@ -279,7 +279,7 @@ Still open: analyse morphologically or not...
 
 
 
- * LEXICON OBLREFL-NONPAL2 
+* LEXICON OBLREFL-NONPAL2 
 
 
 

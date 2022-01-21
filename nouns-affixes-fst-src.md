@@ -462,7 +462,7 @@ umlauted ones.
 
 
 
- LEXICON EETE_LOAN    loanwords with -eete -
+LEXICON EETE_LOAN    loanwords with -eete -
 
 
 *universiteete # Even-syllable test examples:*
@@ -527,19 +527,19 @@ Short descrioption of this lexicon, and its purpose.
 
 
 
- LEXICON KONTO   Lexicon for vowel-final words with invariant stems"
+LEXICON KONTO   Lexicon for vowel-final words with invariant stems"
 ```
-  : KONTODECL ; 
+ : KONTODECL ; 
 ```
- LEXICON KONTODECL  Lexicon for vowel-final words with invariant stems"
+LEXICON KONTODECL  Lexicon for vowel-final words with invariant stems"
 ```
-                +Sg:     KONTO_SG ; 
-                +Pl:     KONTO_PL ; 
-                         EVEN_ESS ; 
-          +Cmp/SgNom:     R        ; 
-          +Cmp/SgGen:%>n  R        ; 
-          +Cmp/PlGen:%>j  R        ; 
-  +Der1+Der/Dimin+N:%»tj GÅATETJE ; 
+               +Sg:     KONTO_SG ; 
+               +Pl:     KONTO_PL ; 
+                        EVEN_ESS ; 
+         +Cmp/SgNom:     R        ; 
+         +Cmp/SgGen:%>n  R        ; 
+         +Cmp/PlGen:%>j  R        ; 
+ +Der1+Der/Dimin+N:%»tj GÅATETJE ; 
 ```
 
 
