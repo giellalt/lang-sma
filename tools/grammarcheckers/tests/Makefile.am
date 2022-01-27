@@ -12,9 +12,10 @@ TESTS=\
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
-XFAIL_TESTS=agreement.yaml
+XFAIL_TESTS=
 
 endif # WANT_GRAMCHECK
+# passes: agreement.yaml
 
 #### Do NOT edit below here: ####
 include $(top_srcdir)/../giella-core/am-shared/tools-grammarcheckers-tests-dir-include.am
