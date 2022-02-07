@@ -15,8 +15,6 @@ It is in use in a wide range of applications.
 
 ![Spell-checking accuracy development](https://giellalt.github.io/lang-smj/speller-report.svg)
 
-
-
 ## How to use the analysers
 
 -   **First aid:** In the terminal: analyse words by writing `husma`, generate with `hdsma`
