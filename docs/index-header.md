@@ -9,8 +9,6 @@ This page documents the work on the [South Sámi language model](http://github.c
 It is in use in a wide range of applications.
 
 
-
-
 ## Reports
 ### Speller status
 
