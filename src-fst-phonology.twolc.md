@@ -3,40 +3,14 @@
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc) 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Rules
 
-
 **e deletion before i-initial suffix**  
-
 
 * *manneX2ine*
 * *mann00ine*
 
-
 **Diphthong simplification ie:e**  
-
-
 
 * *dåeried%>%^DISIMPem*
 * *dåer0ed%>0em*
@@ -56,13 +30,7 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*gijmie%>%^COMPDISIMPbe* (is not standard language)
 * ★*gijmie%>0be* (is not standard language)
 
-
-
-
-
 **Diphthong simplification oe:o**  
-
-
 
 * *daaroest%>%^DISIMPem*
 * *daaro0st%>0em*
@@ -76,20 +44,13 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*gaaloehke%>%^DISIMPm* (is not standard language)
 * ★*gaaloehke%>0m* (is not standard language)
 
-
-
-
 * *jearkoe%>%^COMPDISIMPbe*
 * *jeark0e%>0be*
 
 * ★*jearkoe%>%^COMPDISIMPbe* (is not standard language)
 * ★*jearkoe%>0be* (is not standard language)
 
-
-
 **a/e alternation**  
-
-
 
 * *aatskad%>%^DISIMPem*
 * *aatsked%>0em*
@@ -103,27 +64,13 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*daktare%>%^DISIMPm* (is not standard language)
 * ★*daktare%>0m* (is not standard language)
 
-
 * *gæhtja%>%^COMPDISIMPbe*
 * *gæhtje%>0be*
 
 * ★*gæhtja%>%^COMPDISIMPbe* (is not standard language)
 * ★*gæhtja%>0be* (is not standard language)
 
-
-
-
-
-
-
-
-
-
-
-
 **a/i alternation**  
-
-
 
 * *jåhtaj%^DISIMP%>em*
 * *jåhtij0%>em*
@@ -133,21 +80,11 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 
 **a/0 alternation**  
 
-
-
-
-
-
-
-
 **Even syllabic verbs Du3 e/i alternation V**  
 
 **Proper PlGen, PlCom**  
 
-
-
 **Even syllabic verbs Du2, Du3, Pl1, Pl2 e/i class V **  
-
 
 * *vååjn>eX4jibie*
 * *vååjn>i0jibie*
@@ -166,27 +103,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 
 * ★*juht»ieje%>%^NOMAGieDISIMPm* (is not standard language)
 * ★*juht»ieje%>0m* (is not standard language)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * *kliht%^aLATUS%»tje%^DISIMP*
 * *klæhte»tje0*
@@ -242,9 +158,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * *njuesl%>%^1UMLan*
 * *njuasl%>0an*
 
-
-
-
 * *jieht%>%^1UMLa*
 * *jeaht%>0a*
 
@@ -254,10 +167,8 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * *sjiell%>%^1UMLan*
 * *sjeall%>0an*
 
-
 * *gået^aLATUS»tje^DISIMP*
 * *gåate»tje0*
-
 
 * *gælj%>%^2UMLe*
 * *gylj%>0e*
@@ -280,13 +191,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*rånhtje%>%^2UMLse* (is not standard language)
 * ★*rånhtje%>0se* (is not standard language)
 
-
-
-
-
-
-
-
 * *tjear%>%^2UMLe*
 * *tjyör%>0e*
 
@@ -305,8 +209,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*mearhtje%>%^2UMLse* (is not standard language)
 * ★*mearhtje%>0se* (is not standard language)
 
-
-
 * *haare%>%^2UMLse*
 * *hååre%>0se*
 
@@ -319,26 +221,17 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*råafe%>%^2UMLse* (is not standard language)
 * ★*råafe%>0se* (is not standard language)
 
-
-
-
 * *mïnn%>%^3sUMLa*
 * *mænn%>0a*
 
 * *jovk%>%^3sUMLa*
 * *jåvk%>0a*
 
-
-
-
-
 * *tjïel%>%^3sUMLa*
 * *tjeal%>0a*
 
 * *roeht%>%^3sUMLa*
 * *ruaht%>0a*
-
-
 
 * *mïnn%>%^3dUMLien*
 * *minn%>0ien*
@@ -349,7 +242,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * *jovk%>%^3dUMLien*
 * *juvk%>0ien*
 
-
 * *tjïek%>%^3dUMLien*
 * *tjiek%>0ien*
 
@@ -359,34 +251,17 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*dïjveld%»ovv%^3dUMLieh* (is not standard language)
 * ★*dïjveld»ovv0ieh* (is not standard language)
 
-
-
-
-
-
-
-
-
 * *jieht%>%^iUMLim*
 * *jeeht%>0im*
 
 * *tjael%>%^iUMLim*
 * *tjeel%>0im*
 
-
-
-
 * *bået%>%^iUMLim*
 * *bööt%>0im*
 
 * *vuejn%>%^iUMLim*
 * *vööjn%>0im*
-
-
-
-
-
-
 
 * *maan%^aLATUS%»tje%^DISIMP*
 * *maane»tje0*
@@ -400,8 +275,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*maan%^aLATUS%»tj%>asse* (is not standard language)
 * ★*maane»tj%>asse* (is not standard language)
 
-
-
 * *biss»%^PASSUMLedh*
 * *byss»0edh*
 
@@ -411,14 +284,11 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*sïrr»%^PASSUMLedh* (is not standard language)
 * ★*sïrr»0edh* (is not standard language)
 
-
 * *gælj»%^PASSUMLedh*
 * *gylj»0edh*
 
 * ★*gælj»%^PASSUMLedh* (is not standard language)
 * ★*gælj»0edh* (is not standard language)
-
-
 
 * *best»%^PASSUMLedh*
 * *bost»0edh*
@@ -431,8 +301,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 
 * ★*darj»%^PASSUMLedh* (is not standard language)
 * ★*darj»0edh* (is not standard language)
-
-
 
 * *juht»%^PASSUMLedh*
 * *joht»0edh*
@@ -448,9 +316,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 
 * *govl»%^PASSUMLedh*
 * *govl»0edh*
-
-
-
 
 * *viedt»%^PASSUMLedh*
 * *vyödt»0edh*
@@ -470,20 +335,17 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*bïepm»%^PASSUMLedh* (is not standard language)
 * ★*bïepm»0edh* (is not standard language)
 
-
 * *daejr»%^PASSUMLedh*
 * *dååjr»0edh*
 
 * *gaat»%^PASSUMLedh*
 * *gååt»0edh*
 
-
 * *gaat»%^PASSUMLedh*
 * *gååt»0edh*
 
 * *åest»%^PASSUMLedh*
 * *ååst»0edh*
-
 
 * *vuejn»%^PASSUMLedh*
 * *vååjn»0edh*
@@ -497,26 +359,17 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * *voessj»%^PASSUMLedh*
 * *vååssj»0edh*
 
-
-
 * *buel»%^htjidhUMLehtjidh*
 * *boel»0ehtjidh*
 
 * ★*buel»%^htjidhUMLehtjidh* (is not standard language)
 * ★*buel»0ehtjidh* (is not standard language)
 
-
 * *paek»%^htjidhUMLehtjidh*
 * *paak»0ehtjidh*
 
 * ★*paek»%^htjidhUMLehtjidh* (is not standard language)
 * ★*paek»0ehtjidh* (is not standard language)
-
-
-
-
-
-
 
 * *veaj»%^didhUMLedidh*
 * *vïej»0edidh*
@@ -530,7 +383,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*guark»%^didhUMLedidh* (is not standard language)
 * ★*guark»0edidh* (is not standard language)
 
-
 * *skælk»%^didhUMLedidh*
 * *skïlk»0edidh*
 
@@ -543,10 +395,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*plåtjk»%^didhUMLedidh* (is not standard language)
 * ★*plåtjk»0edidh* (is not standard language)
 
-
-
-
-
 * *bået»iest»%^adteUMLalledh*
 * *båat»0ast»0alledh*
 
@@ -555,7 +403,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 
 * ★*bået»iest»%^adteUMLalledh* (is not standard language)
 * ★*båat»iest»0alledh* (is not standard language)
-
 
 * *tjear»oel»%^adteUMLadtedh*
 * *tjyör»0el»0adtedh*
@@ -566,10 +413,6 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 * ★*tjear»oel»%^adteUMLadtedh* (is not standard language)
 * ★*tjyör»oel»0adtedh* (is not standard language)
 
-
-
-
-
 * *dåeriedi%>dh*
 * *dåeriedi%>dh*
 
@@ -671,16 +514,12 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-s
 
 * *gööle%>dh*
 * *gööle%>dh*
-
-
 
 Spesialregel for 'soptsesovvedh' < soptsestidh.
 Ingen andre verb har st > s framfor passivderivasjon.
 
 * *soptsest»ovvedh*
 * *soptses0»ovvedh*
-
-
 
 * *laajhna#aaltoe*
 * *laajhna-aaltoe*
@@ -693,12 +532,6 @@ Ingen andre verb har st > s framfor passivderivasjon.
 
 * ★*aerpie#eeke* (is not standard language)
 * ★*aerpie#eeke* (is not standard language)
-
-
-
-
-
-
 
 * *Aevjie#aesie*
 * *Aevjie#aesie*

@@ -1,6 +1,5 @@
 
 
-
 # Adjective affixes
 
 This is one of two parallel files containing adjective affixes.
@@ -20,9 +19,7 @@ before compiling. The other file (adjectives.lexc) is compiled by default.
 
 Lexical exceptions
 
-
 * **LEXICON A_LDH **
-
 
 * **LEXICON NOERE **
 
@@ -34,7 +31,6 @@ Lexical exceptions
 
 * **LEXICON SOOJMES **
 
-
 * **LEXICON SMAAVE   **, both smaave and plaave
 
 * **LEXICON SNAARE  **
@@ -42,7 +38,6 @@ Lexical exceptions
 * **LEXICON ORRE **
 
 * **LEXICON STOERE **
-
 
 * **LEXICON STOERE_COMP **
 
@@ -58,7 +53,6 @@ Lexical exceptions
 
 * **LEXICON VEELKES **
 
-
 * **LEXICON ROOPSES **
 
 * **LEXICON SNEEHPES  ** burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?
@@ -73,11 +67,9 @@ Lexical exceptions
 
 * **LEXICON SUVHTJIES **
 
-
 * **LEXICON SAEBRIES  **
 
 * **LEXICON MUJVIES  **
-
 
 * **LEXICON STAERIES  **
 
@@ -91,11 +83,7 @@ Lexical exceptions
 
 * **LEXICON MOOREH **
 
-
-
-
 ## Regular even stem types
-
 
 * **LEXICON EVTEBE   **
 
@@ -103,27 +91,21 @@ Lexical exceptions
 
 * **LEXICON ATTR_ODD   **
 
-
 * **LEXICON ø_Ø_EVEN  **
 
 * **LEXICON IJVEadj **
 
-
 * **LEXICON LES  ** Should contain only loanwords (?)
-
 
 * **LEXICON IJAALE_A_LOAN **
 
-
 * **LEXICON AATE_adj_LOAN  **
-
 
 * **LEXICON AALE **
 
 * **LEXICON AALEFORMS **
 
 * **LEXICON oe_OE_EVEN  **
-
 
 * **LEXICON e_E_EVEN  **
 
@@ -132,7 +114,6 @@ Lexical exceptions
     - **LEXICON a_A_EVENNOCOMP  **
 
 * **LEXICON a_A_EVEN **
-
 
 * **LEXICON ie_IE_EVEN  **
 
@@ -146,16 +127,11 @@ Lexical exceptions
 
     - **LEXICON ies_IES_EVENNOCOMP  **
 
-
 * **LEXICON Cs_CS_EVEN  **
-
 
 * **LEXICON ihks_IHKS_EVENNOCOMP **
 
-
 * **LEXICON RAARH   ** Attr= h, Comp =Even( Jïjtje-raarh)
-
-
 
 * **LEXICON MAST **
 
@@ -165,24 +141,17 @@ Lexical exceptions
 
 * **LEXICON UELLE **
 
-
 * **LEXICON e_ES_LOAN   ** LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.
-
 
 * **LEXICON ÆRE   ** LOAN
 
 * **LEXICON ENTE   ** LOAN
 
-
-
-
 * **LEXICON LES_LASSE_ie  ** derivasjon av verb
 
 * **LEXICON LES_LASSE_NOM_ie  **
 
-
 * **LEXICON LES_LASSE_OBL_ie  **
-
 
 * **LEXICON e_ES_EVEN  **
 
@@ -190,11 +159,9 @@ Lexical exceptions
 
 * **LEXICON e_ES_ODDEVEN  **
 
-
 * **LEXICON es_E_EVEN   **
 
 * **LEXICON en_E_EVEN   **
-
 
 * **LEXICON as_A_EVEN   ** attr= s, pred= e, comp=EVEN(ebe,emes), Case/Substantvien hammoe= EVEN
 
@@ -205,14 +172,11 @@ Lexical exceptions
 * **LEXICON ies_IE_EVEN   ** attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
 * **LEXICON ies_IE_EVENNOCOMP   ** attr= s, pred. = Ø, comp jih case: even (ebe/emes/esne)
 
-
 * **LEXICON ies_(ehke)_IE_EHKE_ODDCOMPe_EVEN  **
 
 * **LEXICON ies_(ehke)_IES_EHKE_ODDCOMPe_EVEN  **
 
 * **LEXICON ies_(ehke)_EHKE_ODDCOMPe_EVEN **
-
-
 
 * **LEXICON ies_IES_IE_EVEN   ** Comp & case = even (ebe/emes/esne)
 
@@ -220,29 +184,21 @@ Lexical exceptions
 
 * **LEXICON as_AS_EVEN   ** Attr=s, Pred. = s jih Ø, Comp jih caese= even (ebe/emes/esne)
 
-
 * **LEXICON IJLE_LOAN_A **
-
 
 * **LEXICON s_H_EVENNOCOMP   **
 
-
 # ODD-stems (odd stem declension)
-
 
 ## type 0 (attr only)
 
 * **LEXICON ATTR_es_s  ** aajtijes
 
-
 ## type 1
-
-
 
 * **LEXICON ø_Ø_ODD  **
 
 * **LEXICON ah_AH_ODD    ** XXX mangler CASE - hva er riktig - kanskje EVEN?
-
 
 * **LEXICON ah_AH_ODDNOCOMP   **
 
@@ -252,18 +208,13 @@ Lexical exceptions
 
 * **LEXICON ege_EGE_ODDEVEN  ** rudtjege
 
-
 * **LEXICON s_S_Ø_ODD  ** hamhpas
-
-
 
 * **LEXICON s_E_ODD  **
 
 * **LEXICON as_AS_ODD  **
 
     - **LEXICON as_AS_ODDNOCOMP  **
-
-
 
 * **LEXICON s_S_ODD  **
 
@@ -279,7 +230,6 @@ Lexical exceptions
 
 * **LEXICON oes_OES_ODDas  **
 
-
 * **LEXICON Ces_CES_ODDNOCOMP   **
 
 * **LEXICON les_LES_ODD   **
@@ -287,7 +237,6 @@ Lexical exceptions
 * **LEXICON Cs_CS_CE_ODD  **
 
     - **LEXICON Cs_CS_CE_ODDNOCOMP  **
-
 
 * **LEXICON Cs_CS_ODD  **
 
@@ -297,15 +246,11 @@ Lexical exceptions
 
     - **LEXICON hts_HTS_ODDNOCOMP  **
 
-
-
 * **LEXICON an_AN_ODDNOCOMP **
-
 
 ## type 2
 
 * **LEXICON AABELE **
-
 
 * **LEXICON IJBELE **
 
@@ -315,32 +260,19 @@ Lexical exceptions
 
 * **LEXICON ø_S_ODD   ** , Comp=even jih ODD, Case= ODD
 
-
-
 ## type 3
 
-
 * **LEXICON JEASIEGOELKIJE **
-
-
 
 * __LEXICON BÅETIJE !   __ bårreske
 
 * **LEXICON jes_js_JES_JS_ODD  ** to adj: bualijes, fååmijes
 
-
 * **LEXICON ijes_ijs_IJE_ODD  ** GUALIJES
 
 * **LEXICON ijes_ijs_IJE_ODDNOCOMP  ** DÅAJMIJES
 
-
-
-
-
-
 ## type 3
-
-
 
 * **LEXICON Cs_CE_ODD  **
 
@@ -348,9 +280,7 @@ Lexical exceptions
 
 * **LEXICON Ces_CE_ODD  **
 
-
     - **LEXICON Ces_CE_ODDNOCOMP  **
-
 
 * **LEXICON Ces_Ce_CES_CE_ODD    ** as Ces_CES_CE_ODD, but with ATTR_0
 
@@ -360,72 +290,45 @@ Lexical exceptions
 
     - **LEXICON Ce_Ces_CES_CE_ODDNOCOMP **
 
-
 * **LEXICON Ces_CES_CE_ODD  **
-
 
     - **LEXICON Ces_CES_CE_ODDNOCOMP  **
 
 * **LEXICON hks_hke_HKS_HKE_ODD   **
 
-
 ## type 4
 
 * **LEXICON as_AN_ODD  **
 
-
 * **LEXICON oes_AN_ODD  **
-
 
 * **LEXICON s_N_ODD  **
 
     - **LEXICON s_N_ODDNOCOMP  **
 
-
-
-
 * **LEXICON ah_AN_ODDNOCOMP  **
-
-
-
 
 * **LEXICON oeh_OEH_ODDNOCOMP **
 
 * **LEXICON oeh_OEN_ODD **
 
-
-
 * **LEXICON oeh_AN_ODD  **
 
     - **LEXICON oeh_AN_ODDNOCOMP  **
 
-
 * **LEXICON oeh_OEH_AN_ODD   **
-
 
     - **LEXICON oeh_OEH_AN_ODDNOCOMP  **
 
-
-
 * **LEXICON ø_N_ODD  **
-
-
 
 * **LEXICON e_AN_ODD  **
 
-
 * **LEXICON ies_EME **
-
-
-
-
-
 
 * **LEXICON HKE_ODD_NGCOMP **
 
 * **LEXICON HKE_ODD_COMP  **
-
-
 
 * **LEXICON GEERUVE **
 
@@ -437,7 +340,6 @@ Lexical exceptions
 
 * **LEXICON ATTR_0 **
 
-
 * **LEXICON ATTR_S **
 
 * **LEXICON ATTR_H **
@@ -448,21 +350,15 @@ Lexical exceptions
 
 ## Predicative lexica
 
-
 * **LEXICON PRED_0 **
-
 
 * **LEXICON PRED_S **
 
 * **LEXICON PRED_H **
 
-
 * **LEXICON PRED_N **
 
 * **LEXICON PRED_AN **
-
-
-
 
 # Odd syllabic stems - adjectives
 
@@ -478,9 +374,6 @@ Lexical exceptions
 
     - **LEXICON ije_ODDCASEOBL **
 
-
-
-
 # Even syllabic stems - adjectives
 
 * **LEXICON eCASE **
@@ -489,10 +382,7 @@ Lexical exceptions
 
     - **LEXICON eCASEOBL **
 
-
-
 * **LEXICON aCASE **
-
 
     - **LEXICON aCASENOM **
 
@@ -501,7 +391,6 @@ Lexical exceptions
 * **LEXICON ieCASE **
 
     - **LEXICON ieCASEOBL **
-
 
 * **LEXICON oeCASE **
 
@@ -519,18 +408,11 @@ Lexical exceptions
 
     - **LEXICON A_OE_ESS **
 
-
-
-
-
-
-
 # Comparative forms
 
 * **LEXICON EVENCOMP **
 
     - **LEXICON EVENCOMPONLY **
-
 
     - **LEXICON EVENSUPONLY **
 
@@ -538,15 +420,11 @@ Lexical exceptions
 
 * **LEXICON ODDCOMP **
 
-
 * **LEXICON EVENCOMPCASE **
 
 * **LEXICON EVENCOMPCASE_oe **
 
-
-
 * **LEXICON DIMCOMP **
-
 
 * **LEXICON ÅBPOE **
 
@@ -562,7 +440,6 @@ Lexical exceptions
 
 * **LEXICON ABPA **
 
-
     - **LEXICON ABPA_SG **
 
     - **LEXICON ABPA_PL **
@@ -573,15 +450,9 @@ Lexical exceptions
 
 * **LEXICON OMMES **
 
-
 * **LEXICON LAAKAN **
 
 * **LEXICON LEEJNES **
-
-
-
-
-
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/oahpa-filer/aff-adjectives-oahpa.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/oahpa-filer/aff-adjectives-oahpa.lexc)</small>

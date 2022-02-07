@@ -1,17 +1,9 @@
 
 # S O U T H   S Á M I   V A L E N C Y   A N O T A T O R          
 
-
-
-
-
-
-
 ## Delimiters 
 
-
 "<.>" "<!>" "<?>" "<...>" "<¶>" sent
-
 
 ## Tags and sets 
 
@@ -41,25 +33,7 @@ PxPl1
 PxPl3
 PxPl3
 
-
-
-
-
 * Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Derivation tags
 
@@ -92,24 +66,9 @@ Der/lg
 Der/st
 Der/vuota 
 
-
-
 <vdic>
 
-
-
 ###  Semantic tags
-
-
-
-
-
-
-
-
-
-
-
 
 ### Syntactic tags
 
@@ -121,15 +80,11 @@ Der/vuota
 @-FMAINV
 MAINV  = 
 
-
-
 ### Titles
-
 
 REAL-TITLE
 OFFICE
 TITLE
-
 
 ### Sets of morphological tags for syntactic use
 
@@ -137,25 +92,7 @@ CASES
 ADVLCASE
 NUMBER
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Noun sets
-
-
-
-
 
 INSTITUTION
 MEDIA
@@ -166,19 +103,7 @@ CURRENCY
 LESSON
 OTHER-INDUSTRY 
 
-
-
-
-
-
-
-
-
-
-
-
 ### Verb sets
-
 
 REALCOPULAS
 
@@ -188,32 +113,13 @@ V-NOT-COP
 
 MOD-ASP
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Adective sets
 
-
-
 ### Adverb sets
-
 
 GUKTIEGOSSE
 
 DAESTIE
-
 
 ILLADV
 
@@ -227,19 +133,15 @@ ELAADV
 
 DV-MOD-ADV
 
-
 ADV-MOD-NP
 
 GRADE-ADV
-
 
 ### Postposition sets
 
 ILLPO
 
-
 ### BOUNDARY SETS
-
 
 S-BOUNDARY
 REALCLB
@@ -247,7 +149,6 @@ REALCLB
 SV-BOUNDARY
 
 NP-BOUNDARY
-
 
 ### Derivation sets
 
@@ -261,7 +162,6 @@ N-DER-SUF
 A-DER
 A-DER-SUF
 
-
 PASS
 
 LEX-V
@@ -271,27 +171,7 @@ LEX-A
 VERB-FORMS
 2-PERS
 
-
-
-
-
-
-
-
-
-
-
 # Valency rules
-
-
-
-
-
-
-
-
-
-
 
 * * *
 <small>This (part of) documentation was generated from [../src/cg3/valency.cg3](http://github.com/giellalt/lang-sma/blob/main/../src/cg3/valency.cg3)</small>

@@ -1,7 +1,6 @@
 
 # South Sámi morphological analyser
 
-
 # Multichar_Symbols definitions
 
 ## Tags for POS (Part-Of-Speech, Word class)
@@ -89,11 +88,6 @@
 | **+Dial/SH** | Short forms
 | **+Dial/L** | Long forms
 
-
-
-
-
-
 ## Normative/prescriptive compounding tags
 (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
 
@@ -110,7 +104,6 @@ are listed - unless `+CmpN/SgN` should *not* be used, for course.
 |  **+CmpN/SgN** | Singular Nominative
 |  **+CmpN/SgG** | Singular Genitive
 |  **+CmpN/PlG** | Plural Genitive
-
 
 ### The right part of a compound requires to the left ...
 
@@ -135,7 +128,6 @@ can be specified.
 |  **+CmpNP/Suff** | ... only be **last** part in a compound, NEVER alone
 |  **+CmpNP/None** | ... not take part in compounds
 |  **+CmpNP/Only** | ... only be part of a compound, i.e. can never be used alone, but can appear in any position
-
 
 ## Descriptive compounding tags
 Tags for compound analysis - this is what a compound actually is. We use this
@@ -175,7 +167,6 @@ to research compounding patterns in the corpus.
 * **+Ill**= Illative
 * **+Com**= Comitative
 * **+Ess** = Essive
-
 
 ## Possessive
 * **+PxSg1** =  Possessives Singular
@@ -265,7 +256,6 @@ compounding?
 * **+RIGHT**:  XXX These should be documented better
 * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
 
-
 ### Different focus particles
 
 * **+Foc**:  XXX Document better = Forsterkende particle?
@@ -276,7 +266,6 @@ compounding?
 
 ### tags for adverbs and komparerte adj
 * **+Gram/Comp +Gram/Superl**:
-
 
 ## Semantic tags to help disambiguation & synt. analysis:
 
@@ -374,7 +363,6 @@ compounding?
 * +Sem/Wpn = Weapon; rifle, bow, sword, arrow, war axe
 * +Sem/Wthr = The Weather or the state of ground; cloudy weather, wind, driving conditions, night sunlight, rain shower
 * +Sem/Year = year (i.e. 1000 - 2999), used only for numerals
-
 
 Multiple Semantic tags
 
@@ -497,13 +485,11 @@ given the proper use of these flags.
 |  @C.ErrOrth@ | asdf
 |  @P.ErrOrth.ON@ | asdf
 
-
 ## Derivation tags and derivation position tags in a derivation row
 
 Derivations in the same position are mutually exclusive (can not be combined), whereas
 tags in different positions can be combined, so that position 1 derivations must
 precede position 2 derivations, and so on.
-
 
 |    Pos1     | Pos2      | Pos3      | POS switches (from-to)| Explanation
 | --- | --- | --- | --- | ---
@@ -540,9 +526,6 @@ precede position 2 derivations, and so on.
 |             |            | **+Der/ahtje** | VV   | Inchoative
 |             |            | **+Der/InchL** | VV   | Inchoative
 
-
-
-
 ### Other, non-positional derivations
 
 All non-positional derivations should be preceded by the following tag,
@@ -557,7 +540,6 @@ and you are set.
 | --- | --- | ---
 |  +Der/PassS | VV | short passive only
 |  +Der/A | NA | comparation of N's
-
 
 ## Tags for originating language
 
@@ -602,7 +584,6 @@ get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 * +Area/SE = In Sweden
 * +Area/NO = In Norway
 
-
 ## Triggers for morphophonological rules
 * **X2 : Trigger for e:0 before suffix i**:  manne > mannine
 * **X3**:  Trigger for e->i in even syllabic verbs Du3
@@ -633,7 +614,6 @@ get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 * **+v5**:  variant 5
 * **+v6**:  variant 6
 * **+v7**:  variant 7
-
 
 clitic boundary mark - a multichar that usually just go to zero
 
@@ -666,8 +646,6 @@ clitic boundary mark - a multichar that usually just go to zero
 |  %^COMESS | Stem vowel changes in ACCRA-names
 |  ∑ | Symbol used before `#` and `-` in dynamic compounds, and only there. Used to block optional conversion of word boundaries to spaces for error detection in grammar checkers. That is, dynamic compounds are not allowed to be written appart for error detection, only lexicalised ones. This is done to reduce the amound of ambiguity in the raw analyses to an amount we can cope with.
 
-
-
 ## Flag diacritics
 We have manually optimised the structure of our lexicon using the following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
@@ -678,7 +656,6 @@ with verbs if the verb is further derived into a noun again:
 |  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
 |  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
 |  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
-
 
 For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
@@ -720,13 +697,11 @@ The following flag diacritics are used by the grammar checker.
 | @P.Pmatch.Loc@ | Used on multi-token analyses; tell hfst-tokenise/pmatch where in the form/analysis the token should be split.
 | @P.Pmatch.Backtrack@ | Used on single-token analyses; tell hfst-tokenise/pmatch to backtrack by reanalysing the substrings before and after this point in the form (to find combinations of shorter analyses that would otherwise be missed)
 
-
 # Lexicon Root
 This is the beginning of everything. The **Root** lexicon is reserved in the
 LexC language, and must be the first lexicon defined.
 
 Here is the list of top-level lexica in the sma analyser
-
 
 * `NounRoot ;`
 * `Verb ;`
@@ -744,11 +719,6 @@ Here is the list of top-level lexica in the sma analyser
 * `Abbreviation ;`
 * `Acronym ;`
 * `ProperNoun ;`
-
-
-
-
-
 
 # Lexicon ENDLEX
 And this is the ENDLEX of everything:

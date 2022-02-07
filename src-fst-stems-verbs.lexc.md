@@ -16,7 +16,6 @@ contlex stem umlaut dict class
 * STIEHPEGÅETEDH even row A class I derived words -gåete  impersonals
 * ÅEREDH  even row A class I NO -øø-UMLAUT!Verbg 1
 
-
 #### Verbklasse II
 * TJEARODH even row C class II
 * TSEAHKODH even row C class II
@@ -49,78 +48,13 @@ contlex stem umlaut dict class
 * DÅAJVOEHTIDH odd !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
 * LGIDH odd ending -lgi
 
-
-
 ## The actual continuation lexica
 
 **LEXICON Verb** splits to AUX and Regular_verbs
 
-
-
 **LEXICON AUX** lemma for *edtjedh, ij* and *lea*, each with their own contlex in **affixes**.
 
 **LEXICON Regular_verbs** here comes the whole list, appr. 11000.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/stems/verbs.lexc)</small>

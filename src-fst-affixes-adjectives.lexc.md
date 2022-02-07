@@ -1,6 +1,5 @@
 
 
-
 # Adjective affixes
 
 This is one of two parallel files containing adjective affixes.
@@ -11,37 +10,6 @@ This file is used for spellchecking, the alternative file
 This file is compiled by default, the other one is compiled by in
 langs/sma giving the command *.configure --with-oahpa*
 before compiling.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # LEXICON PRED_S
 The **PRED_S** lexicon is used for adjectives Predicatives.
@@ -61,7 +29,6 @@ The **PRED_H!!≈** lexicon is used for adjectives Predicatives.
  +Sg+Nom:%>h FINAL1 ; 
 ```
 
-
 denne skal også ut ! - --> intersatn om dette er en norsk suffiks egentlig?
 # LEXICON PRED_NE_ODD
 The **PRED_NE_ODD!!≈** lexicon is used for adjectives Predicatives.
@@ -77,16 +44,6 @@ The **PRED_N!!≈** lexicon is used for adjectives Predicatives.
  +Sg+Nom:%>n FINAL1 ; 
 
 ```
-
-
-
-
-
-
-
-
-
-
 
 # LEXICON e_E_EVEN
 The **e_E_EVEN!!≈** lexicon is used for adjectives on `–e` and `–e`  In attributes and predicatives.With EVEN-NOCOMP.
@@ -111,7 +68,6 @@ The **e_E_EVENNOCOMP1!!≈** lexicon is used for adjectives on `–e` and `–e`
       NIEJTEREST  ; 
 ```
 
-
 # LEXICON a_A_EVEN1
 The **a_A_EVEN1!!≈** lexicon is used for adjectives on `–a` and `–a`  In attributes and predicatives.With EVEN-COMP.
 ```
@@ -129,7 +85,6 @@ The **as_AS_EVEN1!!≈** lexicon is used for adjectives on `–as` and `–as`  
   +Cmp/SgNom:as R        ; 
 ```
 
-
 # LEXICON ie_IE_EVEN1
 The **ie_IE_EVEN1!!≈** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives.With EVEN-COMP.
 ```
@@ -137,7 +92,6 @@ The **ie_IE_EVEN1!!≈** lexicon is used for adjectives on `–ie` and `–ie`  
     N_IE_FORMS ; 
    :ie EVENCOMP   ; 
 ```
-
 
 # LEXICON ie_IE_EVENNOCOMP
 The **ie_IE_EVENNOCOMP!!≈** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
@@ -159,10 +113,6 @@ The **es_ES_EVEN!!≈** lexicon is used for adjectives on `–es` and `–es`  I
            :e      EVENCOMP     ; 
 ```
 
-
-
-
-
 The **es_ES_EVENNOCOMP1** lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-NOCOMP.
 
 ```
@@ -171,26 +121,17 @@ The **es_ES_EVENNOCOMP1** lexicon is used for adjectives on `–es` and `–es` 
  :es ODDCASEOBL ; 
 ```
 
-
 The **ies_IES_EVEN1** lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-COMP.
 ```
      ies_IES_EVENNOCOMP1 ; 
  :ie EVENCOMP            ; 
 ```
 
-
 The **ies_IES_EVENNOCOMP1** lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-NOCOMP.
 ```
   :ie ATTR_S    ; 
   :ie PRED_S    ; 
 ```
-
-
-
-
-
-
-
 
 *adjectives examples:*
 * *gööktengïeleh:* `guektiengïeleh+A+Attr`
@@ -206,9 +147,6 @@ The **ies_IES_EVENNOCOMP1** lexicon is used for adjectives on `–ies` and `–i
 * *guektien-gïeleh:* `guektiengïeleh+A+Sg+Nom`
 * *guektien-gïelege:* `guektiengïeleh+A+Sg+Nom`
 
-
-
-
 # BÅERIES LEXICON BAERIES
 UNEVEN adjective, attr = pred. Comporation uneven syllable.
 Presentlly only used for "båeries" adjective.
@@ -223,7 +161,6 @@ ODD adjective, attr = pred. Comporation uneven syllable.
 ```
 ```
 
-
 # GEAREHKE LEXICON GIERIES
 Umlaut from attr--> pred. Comporation uneven syllable.
 Presentlly only used for "gieries-gearehke" adjective.
@@ -236,10 +173,6 @@ This lexicon covers the ies - ehke + umlaut change.
  +Use/NG:gearahg  ODDCOMP ; 
 ```
 
-
-
-
-
 # BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
 EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
 ```
@@ -248,34 +181,14 @@ EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
  :bööre  MES              ; 
  :buerie DIMCOMP          ; 
 
-
 ```
-
-
-
-
-
-
 
 UMLAUT 3 = e(3)-stamme  = Unødvendig lexicon
 
 UMLAUT 3 = e(3)-stamme
 
-
-
-
-
-
-
-
-
-
-
-
-
 # LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 Adjective with no comp.
-
 
 *adjectives examples:*
 * *isvelihks:* `isvelihks+A+Attr`
@@ -300,11 +213,6 @@ Adjective with no comp.
          +Use/NG:ig     N_IE_FORMS ; 
 ```
 
-
-
-
-
-
 # LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
 EVEN/ODD adjective with Comporation.
 
@@ -313,7 +221,6 @@ EVEN/ODD adjective with Comporation.
 
 # LEXICON e_ES_EVENNOCOMP2
 This is for the adjective "jaame"
-
 
 *adjectives examples:*
 * *jaame:* `jaame+A+Attr`
@@ -325,37 +232,19 @@ This is for the adjective "jaame"
     eCASEOBL ; 
 ```
 
-
-
  :e ATTR_0     ; 
  :e PRED_S     ; 
 
  :e ATTR_0     ; 
 
-
-
  :e ATTR_0     ; 
  :e PRED_S     ; 
-
-
-
-
 
           :e ATTR_0   ; 
 
-
           :e PRED_S   ; 
 
-
-
-
-
-
 +Err/Attr:e ATTR_S   ;
-
-
-
-
 
 # LEXICON ODDEVEN2
 This one gives EVEN and ODD  Comporation.
@@ -367,24 +256,6 @@ This one gives EVEN and ODD  Comporation.
  +Cmp/SgNom:es R          ; 
       +Use/NG:es ODDCOMP    ;  ! trond test, utkommentert gjev Total passes: 1140, Total fails: 61, Total: 1201
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # LEXICON es_E_EVEN3
 This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
@@ -428,19 +299,6 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
     N_IE_FORMS ; 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # UMLAUT LEXICON asATTR_anADVERB
 These 6 adjectives is in the 4. group of the southsámi adjectives, the group
 which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
@@ -461,7 +319,6 @@ This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is 
   +A:       N_OE_OBL ; 
 ```
 
-
 ```
   +A:oe  ATTR_H     ; 
 ```
@@ -470,50 +327,6 @@ This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is 
          +A:oe        ATTR_H    ; 
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # LEXICON MAST
 The **MAST** lexicon is used for adjectives on `–masten` and `masth` with an
@@ -526,7 +339,6 @@ used with the stem *masten*
              :e PRED_N      ; 
 ```
 
-
 # IJVE_LOAN_ADJ LEXICON IJVEadj
 EVEN adjective EVEN Comporation.
 Used for all loan-adjectives "ijve".
@@ -535,10 +347,6 @@ Used for all loan-adjectives "ijve".
    +Use/NG:ïjv e_E_EVEN ; 
  +Err/Orth:iv  e_E_EVEN ; 
 ```
-
-
-
-
 
 # LEXICON JELLE
 The **JELLE** lexicon is used for loanadjectives on `jelle` and `–jelle` with an
@@ -555,116 +363,9 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
  +Err/Orth:vell e_ES_LOAN ; 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * **LEXICON s_H_EVENNOCOMP   **
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 :ijl e_E_EVEN ;
-
-
-
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/adjectives.lexc)</small>

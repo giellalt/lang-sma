@@ -1,49 +1,12 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * **LEXICON ARABICCASES**  adds +Arab
 
 * **LEXICON ARABICCASE**  adds +Arab
 
 * **LEXICON ARABICCASE0**  adds +Arab
 
-
 * **LEXICON DIGITCASES**  to distinguish between 0 and oblique
-
-
-
-
-
 
 of ordinals. Strings like `10.` are inherently ambiguous — they can eitiher
 be a regular cardinal followed by an end-of-sentence full stop, or they can
@@ -63,12 +26,6 @@ so that further processing can be done to choose the correct one in a given
 context. The location of the symbol `@P.Pmatch.Backtrack@` determines where
 the split is being done, and thus which parts could potentially get other
 analyses.
-
-
-
-
-
-
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/numerals.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/numerals.lexc)</small>
