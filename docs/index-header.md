@@ -8,7 +8,6 @@
 This page documents the work on the [South Sámi language model](http://github.com/giellalt/lang-sma). 
 It is in use in a wide range of applications.
 
-
 ## Reports
 ### Speller status
 
