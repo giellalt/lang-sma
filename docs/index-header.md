@@ -42,7 +42,6 @@ It is in use in a wide range of applications.
 ◊ [twolc  ](https://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc)
 ◊ [yaml   ](https://github.com/giellalt/lang-sma/blob/main/test/src/gt-norm-yamls/)
 
-
 ### Linguistic documentation
  
 -   **Linguistic description** of South Sami:
