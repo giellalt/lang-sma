@@ -22,7 +22,6 @@ It is in use in a wide range of applications.
 -   [Generating paradigms](http://giellatekno.uit.no/cgi/p-sma.sma.html) /
 -   [Analysing text](http://giellatekno.uit.no/cgi/d-sma.sma.html) /
 
-
 ## Projects using the language model
 
 -   [Dictionary projects](/dicts/dicts.html)
