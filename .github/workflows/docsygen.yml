@@ -4,8 +4,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
-      - run: echo "$REPOSITORY_NAME"
+#      - run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
+      - run: echo "NOW=v$(date +'%Y%m%d.%H%M%S')" >> $GITHUB_ENV
+      - run: echo "Repo name: $REPOSITORY_NAME"
+      - run: echo "Now: $NOW"
       - uses: actions/checkout@v2
         with:
           repository: giellalt/giella-core
