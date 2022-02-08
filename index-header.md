@@ -29,7 +29,6 @@ It is in use in a wide range of applications.
 -   [Machine translation](/mt/MachineTranslation.html) (see also [Converting the fst to Apertium format](ConvertingToApertium.md) )
 -   [Korpusinnsamling](sma-korpus-innsamling.md)
 
-
 ## Documenting the language model
 -   [Oversyn over ulike FST-ar](../lang-sme/KompilereFST.html)
 -   [Oversyn over FST-ar for sørsamisk](KompilereFST.md)
