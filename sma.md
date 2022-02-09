@@ -4075,109 +4075,112 @@ VAbess
 
 ### Semantic tags
 
-Sem/Act
-Sem/Ani
-Sem/Atr
-Sem/Body
-Sem/Clth
-Sem/Domain
-Sem/Feat-phys
-Sem/Fem
-Sem/Group
-Sem/Lang
-Sem/Mal
-Sem/Measr
-Sem/Money
-Sem/Obj
-Sem/Obj-el
-Sem/Org
-Sem/Perc-emo
-Sem/Plc
-Sem/Sign
-Sem/State-sick
-Sem/Sur
-Sem/Time
-Sem/Txt
+- `Sem/Act       `
+- `Sem/Ani       `
+- `Sem/Atr       `
+- `Sem/Body      `
+- `Sem/Clth      `
+- `Sem/Domain    `
+- `Sem/Feat-phys `
+- `Sem/Fem       `
+- `Sem/Group     `
+- `Sem/Lang      `
+- `Sem/Mal       `
+- `Sem/Measr     `
+- `Sem/Money     `
+- `Sem/Obj       `
+- `Sem/Obj-el    `
+- `Sem/Org       `
+- `Sem/Perc-emo  `
+- `Sem/Plc       `
+- `Sem/Sign      `
+- `Sem/State-sick`
+- `Sem/Sur       `
+- `Sem/Time      `
+- `Sem/Txt       `
 
-HUMAN
+Other semantic sets:
 
-HAB-ACTOR
-HAB-ACTOR-NOT-HUMAN
-
-PROP-ATTR
-PROP-SUR
-
-TIME-N-SET
+- `PROP-ATTR          `
+- `PROP-SUR           `
+- `HUMAN              `
+- `HAB-ACTOR          `
+- `HAB-ACTOR-NOT-HUMAN`
+- `TIME-N-SET         `
 
 ###  Syntactic tags
 
-@+FAUXV
-@+FMAINV
-@-FAUXV
-@-FMAINV
-@-FSUBJ>
-@-F<OBJ
-@-FOBJ>
-@-FSPRED<OBJ
-@-F<ADVL
-@-FADVL>
-@-F<SPRED
-@-F<OPRED
-@-FSPRED>
-@-FOPRED>
-@>ADVL
-@ADVL<
-@<ADVL
-@ADVL>
-@ADVL
-@HAB>
-@<HAB
-@>N
-@Interj
-@N<
-@>A
-@P<
-@>P
-@HNOUN
-@INTERJ
-@>Num
-@Pron<
-@>Pron
-@Num<
-@OBJ
-@<OBJ
-@OBJ>
-@OPRED
-@<OPRED
-@OPRED>
-@PCLE
-@COMP-CS<
-@SPRED
-@<SPRED
-@SPRED>
-@SUBJ
-@<SUBJ
-@SUBJ>
-SUBJ
-SPRED
-OPRED
-@PPRED
-@APP
-@APP-N<
-@APP-Pron<
-@APP>Pron
-@APP-Num<
-@APP-ADVL<
-@VOC
-@CVP
-@CNP
-OBJ
-<OBJ
-OBJ>
-<OBJ-OTHERS
-OBJ>-OTHERS
-SYN-V
-@X
+- `@+FAUXV     `
+- `@+FMAINV    `
+- `@-FAUXV     `
+- `@-FMAINV    `
+- `@-FSUBJ>    `
+- `@-F<OBJ     `
+- `@-FOBJ>     `
+- `@-FSPRED<OBJ`
+- `@-F<ADVL    `
+- `@-FADVL>    `
+- `@-F<SPRED   `
+- `@-F<OPRED   `
+- `@-FSPRED>   `
+- `@-FOPRED>   `
+- `FOBJ        `
+- `FMAINV      `
+- `FAUXV       `
+- `@>ADVL      `
+- `@ADVL<      `
+- `@<ADVL      `
+- `@ADVL>      `
+- `@ADVL       `
+- `@HAB>       `
+- `@<HAB       `
+- `@HAB        `
+- `@>N         `
+- `@Interj     `
+- `@N<         `
+- `@>A         `
+- `@P<         `
+- `@>P         `
+- `@HNOUN      `
+- `@INTERJ     `
+- `@>Num       `
+- `@Pron<      `
+- `@>Pron      `
+- `@Num<       `
+- `@OBJ        `
+- `@<OBJ       `
+- `@OBJ>       `
+- `@OPRED      `
+- `@<OPRED     `
+- `@OPRED>     `
+- `@PCLE       `
+- `@COMP-CS<   `
+- `@SPRED      `
+- `@<SPRED     `
+- `@SPRED>     `
+- `@SUBJ       `
+- `@<SUBJ      `
+- `@SUBJ>      `
+- `SUBJ        `
+- `SPRED       `
+- `OPRED       `
+- `@PPRED      `
+- `@APP        `
+- `@APP-N<     `
+- `@APP-Pron<  `
+- `@APP>Pron   `
+- `@APP-Num<   `
+- `@APP-ADVL<  `
+- `@VOC        `
+- `@CVP        `
+- `@CNP        `
+- `OBJ         `
+- `<OBJ        `
+- `OBJ>        `
+- `<OBJ-OTHERS `
+- `OBJ>-OTHERS `
+- `SYN-V`
+- `@X`
 
 ## Sets containing sets of lists and tags
 
