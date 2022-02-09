@@ -730,4 +730,4 @@ with +CmpNP/Only to end here.
 The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/root.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/root.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/root.lexc)</small>

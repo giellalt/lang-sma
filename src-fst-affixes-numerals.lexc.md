@@ -28,4 +28,4 @@ the split is being done, and thus which parts could potentially get other
 analyses.
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/numerals.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/numerals.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/affixes/numerals.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/numerals.lexc)</small>

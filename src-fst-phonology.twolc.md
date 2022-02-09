@@ -538,5 +538,6 @@ Ingen andre verb har st > s framfor passivderivasjon.
 
 * ★*Aevjie#aesiede* (is not standard language)
 * ★*Aevjie-eesi0de* (is not standard language)
+
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/phonology.twolc)</small>
+<small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc)</small>

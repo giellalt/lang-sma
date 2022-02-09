@@ -58,4 +58,4 @@
 * **LEXICON DOT   ** - Adds the dot to dotted abbreviations.
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/abbreviations.lexc](http://github.com/giellalt/lang-sma/blob/main/../src/fst/affixes/abbreviations.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/affixes/abbreviations.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/abbreviations.lexc)</small>
