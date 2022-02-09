@@ -11,109 +11,111 @@ This file is compiled by default, the other one is compiled by in
 langs/sma giving the command *.configure --with-oahpa*
 before compiling.
 
-# LEXICON PRED_S
-The **PRED_S** lexicon is used for adjectives Predicatives.
+## `LEXICON PRED_S`
+The `PRED_S` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom:%>s FINAL1 ; 
 ```
 
-# LEXICON PRED_0
-The **PRED_0** lexicon is used for adjectives Predicatives.
+## `LEXICON PRED_0`
+The `PRED_0` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom: FINAL1 ; 
 ```
 
-# LEXICON PRED_H
-The **PRED_H!!≈** lexicon is used for adjectives Predicatives.
+## `LEXICON PRED_H`
+The `PRED_H` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom:%>h FINAL1 ; 
 ```
 
-denne skal også ut ! - --> intersatn om dette er en norsk suffiks egentlig?
-# LEXICON PRED_NE_ODD
-The **PRED_NE_ODD!!≈** lexicon is used for adjectives Predicatives.
+## `LEXICON PRED_NE_ODD`
+The `PRED_NE_ODD` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom:%>ne FINAL1     ; 
          :n     ODDCASEOBL ; 
          :n     ODDCOMP    ; 
 ```
 
-# LEXICON PRED_N    -  GENITIV
-The **PRED_N!!≈** lexicon is used for adjectives Predicatives.
+## `LEXICON PRED_N`
+The `PRED_N` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom:%>n FINAL1 ; 
 
 ```
 
-# LEXICON e_E_EVEN
-The **e_E_EVEN!!≈** lexicon is used for adjectives on `–e` and `–e`  In attributes and predicatives.With EVEN-NOCOMP.
+## `LEXICON e_E_EVEN`
+The `e_E_EVEN` lexicon is used for adjectives on `–e` and `–e`  In attributes and predicatives.With EVEN-NOCOMP.
 ```
-      :e ATTR_0      ; 
-      :e PRED_0      ; 
+    :e ATTR_0      ; 
+    :e PRED_0      ; 
  +Sg:  NIEJTESGOBL ; 
  +Pl:  NIEJTE_PL   ; 
-      NIEJTEREST  ; 
-      :e EVENCOMP    ; 
+       NIEJTEREST  ; 
+    :e EVENCOMP    ; 
 ```
 
-# LEXICON e_E_EVENNOCOMP1
-The **e_E_EVENNOCOMP1!!≈** lexicon is used for adjectives on `–e` and `–e` stem. In attributes and predicatives.With EVEN-NOCOMP.
+## `LEXICON e_E_EVENNOCOMP1`
+The `e_E_EVENNOCOMP1` lexicon is used for adjectives on `–e` and `–e` stem. In attributes and predicatives.With EVEN-NOCOMP.
 
 ```
-      :e ATTR_0      ; 
-      :e PRED_0      ; 
- +Sg:  NIEJTESGOBL ; 
- ! +Sg:  NIEJTESGOBL ; 
- +Pl:  NIEJTE_PL   ; 
-      NIEJTEREST  ; 
+     :e ATTR_0      ; 
+     :e PRED_0      ; 
+  +Sg:  NIEJTESGOBL ; 
+  +Pl:  NIEJTE_PL   ; 
+        NIEJTEREST  ; 
 ```
 
-# LEXICON a_A_EVEN1
-The **a_A_EVEN1!!≈** lexicon is used for adjectives on `–a` and `–a`  In attributes and predicatives.With EVEN-COMP.
+## `LEXICON a_A_EVEN1`
+The `a_A_EVEN1` lexicon is used for adjectives on `–a` and `–a`  In attributes and predicatives.With EVEN-COMP.
 ```
-      :a ATTR_0     ; 
+    :a ATTR_0     ; 
  +Sg:  MAANASGNOM ; 
-      MAANAOBL   ; 
-      :a EVENCOMP   ; 
+       MAANAOBL   ; 
+    :a EVENCOMP   ; 
 ```
 
-# LEXICON as_AS_EVEN1 ! Disse har opprinnelig vært as_a_EVEN_adjektiv
-The **as_AS_EVEN1!!≈** lexicon is used for adjectives on `–as` and `–as`  In attributes and predicatives.With EVEN-COMP.
+## `LEXICON as_AS_EVEN1`
+The `as_AS_EVEN1` lexicon is used for adjectives on `–as` and `–as`  In attributes and predicatives.With EVEN-COMP.
 ```
-              :a  ATTR_S   ; 
+            :a  ATTR_S   ; 
      +Sg+Nom:as FINAL1   ; 
   +Cmp/SgNom:as R        ; 
 ```
 
-# LEXICON ie_IE_EVEN1
-The **ie_IE_EVEN1!!≈** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives.With EVEN-COMP.
+## `LEXICON ie_IE_EVEN1`
+The `ie_IE_EVEN1` lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives.With EVEN-COMP.
 ```
-   :ie ATTR_0     ; 
-    N_IE_FORMS ; 
-   :ie EVENCOMP   ; 
-```
-
-# LEXICON ie_IE_EVENNOCOMP
-The **ie_IE_EVENNOCOMP!!≈** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
-```
-   :ie ATTR_0     ; 
-    N_IE_FORMS ; 
+ :ie ATTR_0     ; 
+     N_IE_FORMS ; 
+ :ie EVENCOMP   ; 
 ```
 
-The **a_A_EVEN1_NOCOMP** lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
+## `LEXICON ie_IE_EVENNOCOMP`
+The `ie_IE_EVENNOCOMP` lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
 ```
-      :a ATTR_0     ; 
+ :ie ATTR_0     ; 
+     N_IE_FORMS ; 
 ```
 
-# LEXICON es_ES_EVEN
-The **es_ES_EVEN!!≈** lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-COMP.
+## `LEXICON a_A_EVEN1_NOCOMP`
+The `a_A_EVEN1_NOCOMP` lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
+```
+    :a ATTR_0     ; 
+ +Sg:  MAANASGNOM ; 
+       MAANAOBL   ; 
+```
+
+## `LEXICON es_ES_EVEN`
+The `es_ES_EVEN` lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-COMP.
 ```
            :e      ATTR_S       ; 
            :e      PRED_S       ; 
            :e      EVENCOMP     ; 
 ```
 
-The **es_ES_EVENNOCOMP1** lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-NOCOMP.
+## `LEXICON es_ES_EVENNOCOMP1`
+The `es_ES_EVENNOCOMP1` lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-NOCOMP.
 
 ```
  :e  ATTR_S     ; 
@@ -121,17 +123,21 @@ The **es_ES_EVENNOCOMP1** lexicon is used for adjectives on `–es` and `–es` 
  :es ODDCASEOBL ; 
 ```
 
-The **ies_IES_EVEN1** lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-COMP.
+## `LEXICON ies_IES_EVEN1`
+The `ies_IES_EVEN1` lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-COMP.
 ```
      ies_IES_EVENNOCOMP1 ; 
  :ie EVENCOMP            ; 
 ```
 
-The **ies_IES_EVENNOCOMP1** lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-NOCOMP.
+## `LEXICON ies_IES_EVENNOCOMP1`
+The `ies_IES_EVENNOCOMP1` lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-NOCOMP.
 ```
   :ie ATTR_S    ; 
   :ie PRED_S    ; 
 ```
+
+## `LEXICON eh_EH_ODDNOCOMP1`
 
 *adjectives examples:*
 * *gööktengïeleh:* `guektiengïeleh+A+Attr`
@@ -147,22 +153,22 @@ The **ies_IES_EVENNOCOMP1** lexicon is used for adjectives on `–ies` and `–i
 * *guektien-gïeleh:* `guektiengïeleh+A+Sg+Nom`
 * *guektien-gïelege:* `guektiengïeleh+A+Sg+Nom`
 
-# BÅERIES LEXICON BAERIES
-UNEVEN adjective, attr = pred. Comporation uneven syllable.
-Presentlly only used for "båeries" adjective.
+## `LEXICON BAERIES` (BÅERIES)
+
+UNEVEN adjective, attr = pred. Comparation uneven syllable.
+Presentlly only used for the _båeries_ adjective.
 ```
   :båerie ATTR_S   ; 
   :båerie PRED_S   ; 
   :båaras ODDCOMP  ; 
 ```
 
-# ÅEHPIES LEXICON ÅEHPIES
-ODD adjective, attr = pred. Comporation uneven syllable.
-```
-```
+## LEXICON `ÅEHPIES`
+ODD adjective, attr = pred. Comparation uneven syllable.
 
-# GEAREHKE LEXICON GIERIES
-Umlaut from attr--> pred. Comporation uneven syllable.
+## `LEXICON GIERIES`
+
+Umlaut from attr to pred. Comparation uneven syllable.
 Presentlly only used for "gieries-gearehke" adjective.
 This lexicon covers the ies - ehke + umlaut change.
 ```
@@ -173,21 +179,18 @@ This lexicon covers the ies - ehke + umlaut change.
  +Use/NG:gearahg  ODDCOMP ; 
 ```
 
-# BUERIE LEXICON BUERIE_UMLAUT_IE_STAMME
-EVEN adjective with EVEN-UMLAUT Comporation for -ie-stems.
+## LEXICON `BUERIE_UMLAUT_IE_STAMME`
+EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
 ```
- :buer   ie_IE_EVENNOCOMP ; 
- :buerie EVENCOMPONLY     ; 
- :bööre  MES              ; 
- :buerie DIMCOMP          ; 
-
+                  :buer    ie_IE_EVENNOCOMP ; 
+                  :buerie  EVENCOMPONLY     ; 
+                  :bööre   MES              ; 
+                  :buerie  DIMCOMP          ; 
+ +Der1+Der/Dimin+A:buaratj ODDCOMP          ; 
+ +Der1+Der/Dimin+A:bööretj ODDCOMP          ; 
 ```
 
-UMLAUT 3 = e(3)-stamme  = Unødvendig lexicon
-
-UMLAUT 3 = e(3)-stamme
-
-# LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
+## LEXICON `ihks_IHKS_igs_IGS_EVENNOCOMP`
 Adjective with no comp.
 
 *adjectives examples:*
@@ -195,7 +198,6 @@ Adjective with no comp.
 * *isveligs:* `isvelihks+A+Attr`
 * *isvelihks:* `isvelihks+A+Sg+Nom`
 * *isveligs:* `isvelihks+A+Sg+Nom`
-
 * *isvelihke:* `isvelihks+A+Sg+Nom`
 * *isveligke:* `isvelihks+A+Sg+Nom`
 * *isveligie:* `isvelihks+A+Sg+Nom`
@@ -203,23 +205,19 @@ Adjective with no comp.
 * *isvelihke:* `isvelihke+Adv`
 
 ```
-         +Use/NG:ihk%>s ATTRCONT   ; 
-                :ig     ATTR_S     ; 
-       +Err/Orth:igks     ATTR_H     ;  onterligksh
-  +Sg+Nom+Use/NG:ihk%>s FINAL1     ; 
-  +Sg+Nom+Use/NG:ig%>s  FINAL1     ; 
-                :ihk    X_NIEJTE   ; 
-         +Use/NG:igk    X_NIEJTE   ; 
-         +Use/NG:ig     N_IE_FORMS ; 
+        +Use/NG:ihk%>s ATTRCONT   ; 
+               :ig     ATTR_S     ; 
+      +Err/Orth:igks   ATTR_H     ; , cf onterligksh
+ +Sg+Nom+Use/NG:ihk%>s FINAL1     ; 
+ +Sg+Nom+Use/NG:ig%>s  FINAL1     ; 
+               :ihk    X_NIEJTE   ; 
+        +Use/NG:igk    X_NIEJTE   ; 
+        +Use/NG:igke   PRED_0     ; 
+               :ihke   PRED_0     ; 
+        +Use/NG:ig     N_IE_FORMS ; 
 ```
 
-# LEXICON ihks_IHKS_igs_IGS_EVENNOCOMP
-EVEN/ODD adjective with Comporation.
-
-```
-```
-
-# LEXICON e_ES_EVENNOCOMP2
+## LEXICON `e_ES_EVENNOCOMP2`
 This is for the adjective "jaame"
 
 *adjectives examples:*
@@ -232,40 +230,25 @@ This is for the adjective "jaame"
     eCASEOBL ; 
 ```
 
- :e ATTR_0     ; 
- :e PRED_S     ; 
-
- :e ATTR_0     ; 
-
- :e ATTR_0     ; 
- :e PRED_S     ; 
-
-          :e ATTR_0   ; 
-
-          :e PRED_S   ; 
-
-+Err/Attr:e ATTR_S   ;
-
-# LEXICON ODDEVEN2
-This one gives EVEN and ODD  Comporation.
+## LEXICON `ODDEVEN2`
+This one gives EVEN and ODD  Comparation.
 
 ```
-
-             :es ODDCASEOBL ; 
-             :e  EVENCOMP   ; 
+           :es ODDCASEOBL ; 
+           :e  EVENCOMP   ; 
  +Cmp/SgNom:es R          ; 
-      +Use/NG:es ODDCOMP    ;  ! trond test, utkommentert gjev Total passes: 1140, Total fails: 61, Total: 1201
+    +Use/NG:es ODDCOMP    ; 
 ```
 
-# LEXICON es_E_EVEN3
-This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
+## LEXICON `es_E_EVEN3`
+This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 ```
         :e ATTR_S      ; 
         :e EVENCOMP    ; 
 ```
 
-# LEXICON as_oes_A_OE_EVEN3
-This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
+## LEXICON `as_oes_A_OE_EVEN3`
+This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 ```
       +Use/NG:a  ATTR_S      ; 
              :oe ATTR_S      ; 
@@ -273,8 +256,8 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, wh
       +Use/NG:a  EVENCOMP    ; 
 ```
 
-# LEXICON oeh_ah_OE_A_EVEN3
-This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
+## LEXICON `oeh_ah_OE_A_EVEN3`
+This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 ```
         :oe ATTR_H      ; 
  +Use/NG:a  ATTR_H      ; 
@@ -284,16 +267,16 @@ This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, wh
  +Use/NG:e  EVENCOMP    ; 
 ```
 
-# LEXICON ies_IE_EVEN3
-This one gives EVEN Comporation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
+## LEXICON `ies_IE_EVEN3`
+This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 ```
    :ie ATTR_S     ; 
     N_IE_FORMS ; 
    :ie EVENCOMP   ; 
 ```
 
-# LEXICON ies_IE_EVEN3NOCOMP
-This one gives EVEN Comporation, and -s in attributt and wowel in predikativ.
+## LEXICON `ies_IE_EVEN3NOCOMP`
+This one gives EVEN Comparation, and -s in attributt and wowel in predikativ.
 ```
    :ie ATTR_S     ; 
     N_IE_FORMS ; 
@@ -328,8 +311,8 @@ This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is 
 
 ```
 
-# LEXICON MAST
-The **MAST** lexicon is used for adjectives on `–masten` and `masth` with an
+## LEXICON `MAST`
+The `MAST` lexicon is used for adjectives on `–masten` and `masth` with an
 used with the stem *masten*
 ```
                 ATTR_S      ; 
@@ -340,7 +323,7 @@ used with the stem *masten*
 ```
 
 # IJVE_LOAN_ADJ LEXICON IJVEadj
-EVEN adjective EVEN Comporation.
+EVEN adjective EVEN Comparation.
 Used for all loan-adjectives "ijve".
 ```
           :ijv e_E_EVEN ; 
@@ -348,8 +331,8 @@ Used for all loan-adjectives "ijve".
  +Err/Orth:iv  e_E_EVEN ; 
 ```
 
-# LEXICON JELLE
-The **JELLE** lexicon is used for loanadjectives on `jelle` and `–jelle` with an
+## LEXICON `JELLE`
+The `JELLE` lexicon is used for loanadjectives on `jelle` and `–jelle` with an
 used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 ```
@@ -357,7 +340,7 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
          :jell e_ES_LOAN ; 
 ```
 
-# LEXICON UELLE
+## LEXICON `UELLE`
 ```
          :^ell e_ES_LOAN ; 
  +Err/Orth:vell e_ES_LOAN ; 

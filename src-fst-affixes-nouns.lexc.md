@@ -214,7 +214,7 @@ LEXICON EETE_LOAN    loanwords with -eete -
 * *universiteetetjem:* `universiteete+N+Der/Dimin+N+Sg+Acc`
 * *universiteetetjisnie:* `universiteete+N+Der/Dimin+N+Sg+Ine`
 
-## Inflection for NIEJTE_SG nouns: lexicon NIEJTE_SG
+## Inflection for NIEJTE_SG nouns: lexicon `NIEJTE_SG`
 Short descrioption of this lexicon, and its purpose.
 
 *vïelle # Even-syllable test examples:*
@@ -229,22 +229,18 @@ Short descrioption of this lexicon, and its purpose.
 * *vïellese:* `vïelle+N+Sg+Nom+PxSg3`
 * *vïellebe:* `vïelle+N+Sg+Nom+PxSg3`
 
-LEXICON KONTO   Lexicon for vowel-final words with invariant stems"
-```
- : KONTODECL ; 
-```
-LEXICON KONTODECL  Lexicon for vowel-final words with invariant stems"
+### `LEXICON KONTO  `
+Lexicon for vowel-final words with invariant stems"
+
 ```
                +Sg:     KONTO_SG ; 
                +Pl:     KONTO_PL ; 
                         EVEN_ESS ; 
-         +Cmp/SgNom:     R        ; 
-         +Cmp/SgGen:%>n  R        ; 
-         +Cmp/PlGen:%>j  R        ; 
+        +Cmp/SgNom:     R        ; 
+        +Cmp/SgGen:%>n  R        ; 
+        +Cmp/PlGen:%>j  R        ; 
  +Der1+Der/Dimin+N:%»tj GÅATETJE ; 
 ```
-
-## Px lexica     = Copy from Julev
 
 * * *
 
