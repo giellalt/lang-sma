@@ -167,45 +167,73 @@ LIST Arab = Arab ;
 
 #!! #### Derivation tags
 
-LIST Der/A = Der/A ; #!! * Der/A
-LIST Der/Car = Der/Car ; #!! Der/Car
-LIST Der/Dimin = Der/Dimin ; #!! Der/Dimin 
-LIST Der/InchL = Der/InchL ; #!! Der/InchL
-LIST Der/NomAct = Der/NomAct ; #!! Der/NomAct
-LIST Der/NomAg = Der/NomAg ; #!! Der/NomAg
-LIST Der/PassL = Der/PassL ; #!! Der/PassL
-LIST Der/PassS = Der/PassS ; #!! Der/PassS
-LIST Der/Rec = Der/Rec ; #!! Der/Rec
-LIST Der/adte = Der/adte ; #!! Der/adte
-LIST Der/ahtje = Der/ahtje ; #!! Der/ahtje
-LIST Der/alla = Der/alla ; #!! Der/alla
-LIST Der/d = Der/d ; #!! Der/d
-LIST Der/eds = Der/eds ; #!! Der/eds
-LIST Der/ht = Der/ht ; #!! Der/ht
-LIST Der/htalle  = Der/htalle  ; #!! Der/htalle 
-LIST Der/htj = Der/htj ; #!! Der/htj
-LIST Der/ihks = Der/ihks ; #!!  Der/ihks
-LIST Der/ijes = Der/ijes ; #!! Der/ijes
-LIST Der/l = Der/l ; #!! Der/l
-LIST Der/laakan = Der/laakan ; #!! Der/laakan
-LIST Der/ldahke = Der/ldahke ; #!! Der/ldahke
-LIST Der/ldh = Der/ldh ; #!! Der/ldh
-LIST Der/ldihkie = Der/ldihkie ; #!! Der/ldihkie
-LIST Der/les = Der/les ; #!! Der/les
-LIST Der/lg = Der/lg  ; #!! Der/lg
-LIST Der/st = Der/st ; #!! Der/st
-LIST Der/vuota = Der/vuota ; #!! Der/vuota 
+LIST Der/A       = Der/A       ; #!! - `Der/A      `
+LIST Der/Car     = Der/Car     ; #!! - `Der/Car    `
+LIST Der/Dimin   = Der/Dimin   ; #!! - `Der/Dimin  `
+LIST Der/InchL   = Der/InchL   ; #!! - `Der/InchL  `
+LIST Der/NomAct  = Der/NomAct  ; #!! - `Der/NomAct `
+LIST Der/NomAg   = Der/NomAg   ; #!! - `Der/NomAg  `
+LIST Der/PassL   = Der/PassL   ; #!! - `Der/PassL  `
+LIST Der/PassS   = Der/PassS   ; #!! - `Der/PassS  `
+LIST Der/Rec     = Der/Rec     ; #!! - `Der/Rec    `
+LIST Der/adte    = Der/adte    ; #!! - `Der/adte   `
+LIST Der/ahtje   = Der/ahtje   ; #!! - `Der/ahtje  `
+LIST Der/alla    = Der/alla    ; #!! - `Der/alla   `
+LIST Der/d       = Der/d       ; #!! - `Der/d      `
+LIST Der/eds     = Der/eds     ; #!! - `Der/eds    `
+LIST Der/ht      = Der/ht      ; #!! - `Der/ht     `
+LIST Der/htalle  = Der/htalle  ; #!! - `Der/htalle `
+LIST Der/htj     = Der/htj     ; #!! - `Der/htj    `
+LIST Der/ihks    = Der/ihks    ; #!! - `Der/ihks   `
+LIST Der/ijes    = Der/ijes    ; #!! - `Der/ijes   `
+LIST Der/l       = Der/l       ; #!! - `Der/l      `
+LIST Der/laakan  = Der/laakan  ; #!! - `Der/laakan `
+LIST Der/ldahke  = Der/ldahke  ; #!! - `Der/ldahke `
+LIST Der/ldh     = Der/ldh     ; #!! - `Der/ldh    `
+LIST Der/ldihkie = Der/ldihkie ; #!! - `Der/ldihkie`
+LIST Der/les     = Der/les     ; #!! - `Der/les    `
+LIST Der/lg      = Der/lg      ; #!! - `Der/lg     `
+LIST Der/st      = Der/st      ; #!! - `Der/st     `
+LIST Der/vuota   = Der/vuota   ; #!! - `Der/vuota  `
 
 
 #!! #### Error usage tags
 
-LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ;
-LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ;
+#!! We define two lists for `Err/xxx` tags:
 
-#!! #### Other tags 
-LIST Cmp/Hyph = Cmp/Hyph ; #!! Cmp/Hyph
-LIST <vdic> = <vdic> ;				 #!! <vdic>
+LIST Err/Orth =                  #!! - `Err/Orth`:
+                Err/Orth         #!!≈     - `@CODE@`
+                Err/Orth-a/á     #!!≈     - `@CODE@`
+                Err/Orth-nom/gen #!!≈     - `@CODE@`
+                Err/Orth-nom/acc #!!≈     - `@CODE@`
+                Err/DerSub       #!!≈     - `@CODE@`
+                Err/CmpSub       #!!≈     - `@CODE@`
+                Err/UnspaceCmp   #!!≈     - `@CODE@`
+                Err/HyphSub      #!!≈     - `@CODE@`
+                Err/SpaceCmp     #!!≈     - `@CODE@`
+                Err/Spellrelax   #!!≈     - `@CODE@`
+                err_orth_mt      #!!≈     - `@CODE@`
+                ;
+LIST Err/Orth-spes =                     #!! - `Err/Orth-spes`:
+                     Err/Orth-a/á        #!!≈     - `@CODE@`
+                     Err/Orth-nom/gen    #!!≈     - `@CODE@`
+                     Err/Orth-nom/acc    #!!≈     - `@CODE@`
+                     Err/DerSub          #!!≈     - `@CODE@`
+                     Err/CmpSub          #!!≈     - `@CODE@`
+                     Err/UnspaceCmp      #!!≈     - `@CODE@`
+                     Err/HyphSub         #!!≈     - `@CODE@`
+                     Err/SpaceCmp        #!!≈     - `@CODE@`
+                     Err/Spellrelax      #!!≈     - `@CODE@`
+                     err_orth_a_á_mt     #!!≈     - `@CODE@`
+                     err_orth_nom_acc_mt #!!≈     - `@CODE@`
+                     err_orth_nom_gen_mt #!!≈     - `@CODE@`
+                     ;
 
+#!! #### Other tags
+
+LIST Cmp/Hyph = Cmp/Hyph ; #!! - `Cmp/Hyph`
+LIST <vdic> = <vdic> ;     #!! - `<vdic>`
+# Previous doccomment: use backtics to avoid interpretation as html/xml by MR processors
 
 #!! ####  Semantic tags
 # -------------
@@ -1391,7 +1419,9 @@ MAP:InfAfterAux (@-FMAINV) TARGET Inf IF (*-1 AUX-OR-MAIN BARRIER SV-BOUNDARY);
 
 SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ;
 
-#!! ### **killifVinCohort** This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+#!! ### killifVinCohort
+#!!
+#!! This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 SELECT:killifVinCohort SYN-V IF (NOT 0 (<spelled>)) ;
 
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf  ;
