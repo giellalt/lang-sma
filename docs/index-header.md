@@ -54,7 +54,6 @@ It is in use in a wide range of applications.
 
 ## Old documentation files (for reference)
 
-
 -   [Background information](docu-sma-background.md) on the South
     Saami project
 
