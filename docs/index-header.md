@@ -52,7 +52,6 @@ It is in use in a wide range of applications.
     -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
 -   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
 
-
 ## Old documentation files (for reference)
 
 
