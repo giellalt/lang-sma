@@ -57,7 +57,6 @@ It is in use in a wide range of applications.
 -   [Background information](docu-sma-background.md) on the South
     Saami project
 
-
 ### Obsolete files
 -   **[Old documentation](docu-sma-twol.md)** of the [twolc rule
     file](https://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc)
