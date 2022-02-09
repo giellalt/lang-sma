@@ -12,3 +12,4 @@ laakte bïejedh - legge for tett sammen
 <small>This (part of) documentation was generated from [src/fst/stems/adverbs.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/adverbs.lexc)</small>
 
 ---
+

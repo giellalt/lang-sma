@@ -363,6 +363,8 @@ Adv modifying a pronoun or noun
 <small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/disambiguator.cg3)</small>
 
 ---
+
+
 # S O U T H   S Á M I   V A L E N C Y   A N O T A T O R          
 
 ## Delimiters 
@@ -576,6 +578,8 @@ VERB-FORMS
 <small>This (part of) documentation was generated from [src/cg3/valency.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/valency.cg3)</small>
 
 ---
+
+
 # South Sámi morphophonological rule set                   
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc) 
@@ -1122,6 +1126,8 @@ Ingen andre verb har st > s framfor passivderivasjon.
 
 ---
 
+
+
 ALL nouns with PX
 
 * **LEXICON Noun ** dividing in NounNoPx, NounPx (with a P.Px.add
@@ -1153,6 +1159,8 @@ https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://
 
 ---
 
+
+
 egentlig satt disse inn i noun-adv-leksikon
 om disse skal være adverb?
 
@@ -1165,6 +1173,8 @@ laakte bïejedh - legge for tett sammen
 <small>This (part of) documentation was generated from [src/fst/stems/adverbs.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/adverbs.lexc)</small>
 
 ---
+
+
 
 # South Saami pronouns
 
@@ -1291,6 +1301,8 @@ Still open: analyse morphologically or not...
 
 ---
 
+
+
 * **LEXICON ARABICCOMPOUNDS**  ! arabic as first part, 
 
 NAMAT ; ! duhatjienat, logigielat, etc. NAMAT derivs are
@@ -1302,6 +1314,8 @@ SAS ; !viđajahkásaš
 
 ---
 
+
+
 (Söderhamn. Gävleb))
 
 * * *
@@ -1309,6 +1323,8 @@ SAS ; !viđajahkásaš
 <small>This (part of) documentation was generated from [src/fst/stems/sma-propernouns.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/sma-propernouns.lexc)</small>
 
 ---
+
+
 
 # Adjective stems
 
@@ -1326,6 +1342,8 @@ before compiling.
 <small>This (part of) documentation was generated from [src/fst/stems/adjectives.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/adjectives.lexc)</small>
 
 ---
+
+
 
 # Verb stems
 
@@ -1387,7 +1405,9 @@ contlex stem umlaut dict class
 
 <small>This (part of) documentation was generated from [src/fst/stems/verbs.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/verbs.lexc)</small>
 
----Divvun & Giellatekno - open source grammars for Sámi and other languages
+---
+
+Divvun & Giellatekno - open source grammars for Sámi and other languages
 
 # South Saami Possessive suffixes
 
@@ -1398,6 +1418,8 @@ contlex stem umlaut dict class
 <small>This (part of) documentation was generated from [src/fst/affixes/possessive-suffixes.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/possessive-suffixes.lexc)</small>
 
 ---
+
+
 
 # Nominal inflection sublexica
 
@@ -1646,6 +1668,8 @@ Lexicon for vowel-final words with invariant stems"
 <small>This (part of) documentation was generated from [src/fst/affixes/nouns.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/nouns.lexc)</small>
 
 ---
+
+
 # Proper nouns morphology
 
 ## Table of content
@@ -1817,6 +1841,8 @@ Propernoun
 <small>This (part of) documentation was generated from [src/fst/affixes/propernouns.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/propernouns.lexc)</small>
 
 ---
+
+
 
 # Adjective affixes
 
@@ -2174,6 +2200,8 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 ---
 
+
+
 # South Saami verbal inflection sublexica
 
 This is the file for the South Saami verb inflection and derivation.
@@ -2476,6 +2504,8 @@ V-EVEN-PRS-DUPL ;
 <small>This (part of) documentation was generated from [src/fst/affixes/verbs.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/verbs.lexc)</small>
 
 ---
+
+
 # Symbol affixes
 
 * * *
@@ -2483,6 +2513,8 @@ V-EVEN-PRS-DUPL ;
 <small>This (part of) documentation was generated from [src/fst/affixes/symbols.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/symbols.lexc)</small>
 
 ---
+
+
 # Continuation lexicons for abbreviations
 
 ## Lexica for adding tags and periods
@@ -2546,6 +2578,8 @@ V-EVEN-PRS-DUPL ;
 <small>This (part of) documentation was generated from [src/fst/affixes/abbreviations.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/abbreviations.lexc)</small>
 
 ---
+
+
 # Adjective stems
 
 This is one of two parallel files containing adjective stems.
@@ -2572,6 +2606,8 @@ aajne:aajne ATTR_0 ;				      \\ ... \\
 <small>This (part of) documentation was generated from [src/fst/oahpa-filer/stems-adjectives-oahpa.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/oahpa-filer/stems-adjectives-oahpa.lexc)</small>
 
 ---
+
+
 
 # Adjective affixes
 
@@ -3032,6 +3068,8 @@ Lexical exceptions
 <small>This (part of) documentation was generated from [src/fst/oahpa-filer/aff-adjectives-oahpa.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/oahpa-filer/aff-adjectives-oahpa.lexc)</small>
 
 ---
+
+
 # South Sámi morphological analyser
 
 # Multichar_Symbols definitions
@@ -3768,6 +3806,8 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 ---
 
+
+
 retroflex plosive, voiceless			t`  ʈ	    0288, 648 (` = ASCII 096)
 retroflex plosive, voiced			d`	ɖ		0256, 598
 labiodental nasal					F 	ɱ		0271, 625
@@ -3933,6 +3973,8 @@ retracted tongue root			_q
 
 ---
 
+
+
 We describe here how abbreviations are in South Sámi are read out, e.g.
 for text-to-speech systems.
 
@@ -3950,6 +3992,8 @@ For example:
 <small>This (part of) documentation was generated from [src/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-sma/blob/main/src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 
 ---
+
+
 S O U T H   S A A M I   G R A M M A R   C H E C K E R
 
 # DELIMITERS
@@ -4265,39 +4309,26 @@ Ensure preceding nominal agrees with the verb
 
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-sma/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
 
----Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
+---
+
+# Grammar checker tokenisation for sma
+
+Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
+```
 $ make
 $ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
-
-Issues:
-- [X] Ambiguous input
-- Seems to work fine
-- [X] Ambiguous multiword expessions with ambiguous tokenisation
-- Seems to work – represented within lexc now; hfst-tokenise also
-supports forms on the analyses now
-- [X] Ambiguous multiword expessions need reorganising after CG
-- The module cg-mwesplit takes wordforms from readings and turns them into
-new cohorts
-- [X] Unknown words
-- The set-difference method only works for words without
-flag diacritics (even though we should be working only on the form-side?)
-and leads to binary blow-up: With only lower unknowns, we get 45M;
-lower+upper gives 67M, while no unknowns gives 27M
-- Fixed instead by treating empty analyses as unknown-tokens in
-hfst-tokenise, and outputting unmatched strings with a prefix
-- [ ] Treat input that's within superblanks as unmatched
-- probably requires a change in hfst-tokenise itself
-- [X] Try >1 space for ambiguous MWE's? – represented within lexc now
-- [ ] Try set-difference-unknowns method with regular hfst commands?
+```
 
 More usage examples:
+```
 $ echo "Juos gorreválggain lea (dárbbašlaš) deavdit gáibádusa boasttu olmmoš, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
 $ echo "(gáfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
 $ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+```
 
 Pmatch documentation:
-https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
+<https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch>
 
 Characters which have analyses in the lexicon, but can appear without spaces
 before/after, that is, with no context conditions, and adjacent to words:
@@ -4341,7 +4372,9 @@ Finally we mark as a token any sequence making up a:
 
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript](https://github.com/giellalt/lang-sma/blob/main/tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript)</small>
 
----# Tokeniser for sma
+---
+
+# Tokeniser for sma
 
 Usage:
 ```
@@ -4353,7 +4386,7 @@ $ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-des
 ```
 
 Pmatch documentation:
-https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
+<https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch>
 
 Characters which have analyses in the lexicon, but can appear without spaces
 before/after, that is, with no context conditions, and adjacent to words:
@@ -4403,3 +4436,4 @@ Finally we mark as a token any sequence making up a:
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](https://github.com/giellalt/lang-sma/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>
 
 ---
+

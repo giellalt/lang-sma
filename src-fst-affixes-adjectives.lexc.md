@@ -355,3 +355,4 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 <small>This (part of) documentation was generated from [src/fst/affixes/adjectives.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/adjectives.lexc)</small>
 
 ---
+

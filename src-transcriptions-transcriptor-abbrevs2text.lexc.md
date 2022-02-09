@@ -17,3 +17,4 @@ For example:
 <small>This (part of) documentation was generated from [src/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-sma/blob/main/src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 
 ---
+

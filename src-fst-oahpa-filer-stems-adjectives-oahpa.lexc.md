@@ -25,3 +25,4 @@ aajne:aajne ATTR_0 ;				      \\ ... \\
 <small>This (part of) documentation was generated from [src/fst/oahpa-filer/stems-adjectives-oahpa.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/oahpa-filer/stems-adjectives-oahpa.lexc)</small>
 
 ---
+
