@@ -928,7 +928,7 @@ $(foreach f,$(DOCSRC),$(eval $(call make_md_files,$(f))))
 
 # Collect all target files into one big MD file:
 $(ALLINONE_MD_PAGE): $(VPATH_MDFILES)
-	$(AM_V_GEN)echo "# $(GLANGUAGE) description \n\nAll documents in one file\n\n" \
+	$(AM_V_GEN)printf "# $(GLANGUAGE) description \n\nAll documents in one file\n\n" \
 	| cat - $(VPATH_MDFILES) > $@
 
 $(LINKS):

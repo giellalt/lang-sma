@@ -160,4 +160,7 @@ advanced tongue root				_A
 retracted tongue root			_q
 
 * * *
+
 <small>This (part of) documentation was generated from [src/phonetics/txt2ipa.xfscript](https://github.com/giellalt/lang-sma/blob/main/src/phonetics/txt2ipa.xfscript)</small>
+
+---

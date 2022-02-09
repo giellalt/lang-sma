@@ -540,4 +540,7 @@ Ingen andre verb har st > s framfor passivderivasjon.
 * ★*Aevjie-eesi0de* (is not standard language)
 
 * * *
+
 <small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc)</small>
+
+---

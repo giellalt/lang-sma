@@ -38,40 +38,69 @@ PxPl3
 
 #### Derivation tags
 
-* Der/A
-Der/Car
-Der/Dimin 
-Der/InchL
-Der/NomAct
-Der/NomAg
-Der/PassL
-Der/PassS
-Der/Rec
-Der/adte
-Der/ahtje
-Der/alla
-Der/d
-Der/eds
-Der/ht
-Der/htalle 
-Der/htj
-Der/ihks
-Der/ijes
-Der/l
-Der/laakan
-Der/ldahke
-Der/ldh
-Der/ldihkie
-Der/les
-Der/lg
-Der/st
-Der/vuota 
+- `Der/A      `
+- `Der/Car    `
+- `Der/Dimin  `
+- `Der/InchL  `
+- `Der/NomAct `
+- `Der/NomAg  `
+- `Der/PassL  `
+- `Der/PassS  `
+- `Der/Rec    `
+- `Der/adte   `
+- `Der/ahtje  `
+- `Der/alla   `
+- `Der/d      `
+- `Der/eds    `
+- `Der/ht     `
+- `Der/htalle `
+- `Der/htj    `
+- `Der/ihks   `
+- `Der/ijes   `
+- `Der/l      `
+- `Der/laakan `
+- `Der/ldahke `
+- `Der/ldh    `
+- `Der/ldihkie`
+- `Der/les    `
+- `Der/lg     `
+- `Der/st     `
+- `Der/vuota  `
 
 #### Error usage tags
 
-#### Other tags 
-Cmp/Hyph
-<vdic>
+We define two lists for `Err/xxx` tags:
+
+- `Err/Orth`:
+    - `Err/Orth #`
+    - `Err/Orth-a/á #`
+    - `Err/Orth-nom/gen #`
+    - `Err/Orth-nom/acc #`
+    - `Err/DerSub #`
+    - `Err/CmpSub #`
+    - `Err/UnspaceCmp #`
+    - `Err/HyphSub #`
+    - `Err/SpaceCmp #`
+    - `Err/Spellrelax #`
+    - `err_orth_mt #`
+- `Err/Orth-spes`:
+    - `Err/Orth-a/á #`
+    - `Err/Orth-nom/gen #`
+    - `Err/Orth-nom/acc #`
+    - `Err/DerSub #`
+    - `Err/CmpSub #`
+    - `Err/UnspaceCmp #`
+    - `Err/HyphSub #`
+    - `Err/SpaceCmp #`
+    - `Err/Spellrelax #`
+    - `err_orth_a_á_mt #`
+    - `err_orth_nom_acc_mt #`
+    - `err_orth_nom_gen_mt #`
+
+#### Other tags
+
+- `Cmp/Hyph`
+- `<vdic>`
 
 ####  Semantic tags
 
@@ -268,7 +297,8 @@ Select PrfPrc if DerNomAct
 
 Mapping verbs
 
-### **killifVinCohort** This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+### killifVinCohort
+This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 
 ## Person
 
@@ -325,4 +355,7 @@ gellie as numeral, not pronoun
 Adv modifying a pronoun or noun
 
 * * *
+
 <small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/disambiguator.cg3)</small>
+
+---

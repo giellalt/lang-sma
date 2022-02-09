@@ -3,4 +3,7 @@
 (Söderhamn. Gävleb))
 
 * * *
+
 <small>This (part of) documentation was generated from [src/fst/stems/sma-propernouns.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/sma-propernouns.lexc)</small>
+
+---

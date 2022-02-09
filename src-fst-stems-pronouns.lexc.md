@@ -120,4 +120,7 @@ Still open: analyse morphologically or not...
 * LEXICON OBLREFL-NONPAL2 
 
 * * *
+
 <small>This (part of) documentation was generated from [src/fst/stems/pronouns.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/pronouns.lexc)</small>
+
+---
