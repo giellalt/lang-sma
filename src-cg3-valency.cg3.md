@@ -3,70 +3,104 @@
 
 ## Delimiters 
 
-"<.>" "<!>" "<?>" "<...>" "<¶>" sent
+`"<.>" "<!>" "<?>" "<...>" "<¶>" sent`
 
 ## Tags and sets 
 
 ### BOS/EOS:
 
-* (>>>) (<s>)
-(<<<) (</s>)
+- `(>>>) (<s>)`
+- `(<<<) (</s>)`
 
 ### Morphological tags
 
 * N 
 * Sg 
-Pl
+* Pl
 * Nom
-Acc
-Gen
-Ine
-Ela
-Ill
-Com
-Ess
-
+* Acc
+* Gen
+* Ine
+* Ela
+* Ill
+* Com
+* Ess
 * PxSg1 
-PxSg2
-PxSg3
-PxPl1
-PxPl3
-PxPl3
+* PxSg2
+* PxSg3
+* PxPl1
+* PxPl3
+* PxPl3
+
+Number and person tags:
 
 * Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
 
 ### Derivation tags
 
-* Der/A
-Der/Car
-Der/Dimin 
-Der/InchL
-Der/NomAct
-Der/NomAg
-Der/PassL
-Der/PassS
-Der/Rec
-Der/adte
-Der/ahtje
-Der/alla
-Der/d
-Der/eds
-Der/ht
-Der/htalle 
-Der/htj
-Der/ihks
-Der/ijes
-Der/l
-Der/laakan
-Der/ldahke
-Der/ldh
-Der/ldihkie
-Der/les
-Der/lg
-Der/st
-Der/vuota 
+- `Der/A      `
+- `Der/Car    `
+- `Der/Dimin  `
+- `Der/InchL  `
+- `Der/NomAct `
+- `Der/NomAg  `
+- `Der/PassL  `
+- `Der/PassS  `
+- `Der/Rec    `
+- `Der/adte   `
+- `Der/ahtje  `
+- `Der/alla   `
+- `Der/d      `
+- `Der/eds    `
+- `Der/ht     `
+- `Der/htalle `
+- `Der/htj    `
+- `Der/ihks   `
+- `Der/ijes   `
+- `Der/l      `
+- `Der/laakan `
+- `Der/ldahke `
+- `Der/ldh    `
+- `Der/ldihkie`
+- `Der/les    `
+- `Der/lg     `
+- `Der/st     `
+- `Der/vuota  `
 
-<vdic>
+### Error usage tags
+
+We define two lists for `Err/xxx` tags:
+
+- `Err/Orth`:
+    - `Err/Orth #`
+    - `Err/Orth-a/á #`
+    - `Err/Orth-nom/gen #`
+    - `Err/Orth-nom/acc #`
+    - `Err/DerSub #`
+    - `Err/CmpSub #`
+    - `Err/UnspaceCmp #`
+    - `Err/HyphSub #`
+    - `Err/SpaceCmp #`
+    - `Err/Spellrelax #`
+    - `err_orth_mt #`
+- `Err/Orth-spes`:
+    - `Err/Orth-a/á #`
+    - `Err/Orth-nom/gen #`
+    - `Err/Orth-nom/acc #`
+    - `Err/DerSub #`
+    - `Err/CmpSub #`
+    - `Err/UnspaceCmp #`
+    - `Err/HyphSub #`
+    - `Err/SpaceCmp #`
+    - `Err/Spellrelax #`
+    - `err_orth_a_á_mt #`
+    - `err_orth_nom_acc_mt #`
+    - `err_orth_nom_gen_mt #`
+
+### Other tags
+
+- `Cmp/Hyph`
+- `<vdic>`
 
 ###  Semantic tags
 

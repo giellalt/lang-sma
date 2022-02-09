@@ -4,14 +4,14 @@
 
 ## Delimiters, tags and sets
 
-DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent
+`"<.>" "<!>" "<?>" "<...>" "<¶>" sent`
 
 ### Tags 
 
 #### BOS/EOS:
 
-* (>>>) (<s>)
-(<<<) (</s>)
+- `(>>>) (<s>)`
+- `(<<<) (</s>)`
 
 #### Morphological tags
 
