@@ -72,30 +72,30 @@ PxPl3
 We define two lists for `Err/xxx` tags:
 
 - `Err/Orth`:
-    - `Err/Orth #`
-    - `Err/Orth-a/á #`
-    - `Err/Orth-nom/gen #`
-    - `Err/Orth-nom/acc #`
-    - `Err/DerSub #`
-    - `Err/CmpSub #`
-    - `Err/UnspaceCmp #`
-    - `Err/HyphSub #`
-    - `Err/SpaceCmp #`
-    - `Err/Spellrelax #`
-    - `err_orth_mt #`
+    - `Err/Orth`
+    - `Err/Orth-a/á`
+    - `Err/Orth-nom/gen`
+    - `Err/Orth-nom/acc`
+    - `Err/DerSub`
+    - `Err/CmpSub`
+    - `Err/UnspaceCmp`
+    - `Err/HyphSub`
+    - `Err/SpaceCmp`
+    - `Err/Spellrelax`
+    - `err_orth_mt`
 - `Err/Orth-spes`:
-    - `Err/Orth-a/á #`
-    - `Err/Orth-nom/gen #`
-    - `Err/Orth-nom/acc #`
-    - `Err/DerSub #`
-    - `Err/CmpSub #`
-    - `Err/UnspaceCmp #`
-    - `Err/HyphSub #`
-    - `Err/SpaceCmp #`
-    - `Err/Spellrelax #`
-    - `err_orth_a_á_mt #`
-    - `err_orth_nom_acc_mt #`
-    - `err_orth_nom_gen_mt #`
+    - `Err/Orth-a/á`
+    - `Err/Orth-nom/gen`
+    - `Err/Orth-nom/acc`
+    - `Err/DerSub`
+    - `Err/CmpSub`
+    - `Err/UnspaceCmp`
+    - `Err/HyphSub`
+    - `Err/SpaceCmp`
+    - `Err/Spellrelax`
+    - `err_orth_a_á_mt`
+    - `err_orth_nom_acc_mt`
+    - `err_orth_nom_gen_mt`
 
 #### Other tags
 
@@ -133,13 +133,11 @@ NUMBER
 ### Noun sets
 
 INSTITUTION
-MEDIA
 ORGANIZATION
 EDUCATION
 CURRENCY
 CURRENCY
 LESSON
-OTHER-INDUSTRY 
 
 ### Verb sets
 
@@ -171,17 +169,12 @@ ELAADV
 
 DV-MOD-ADV
 
-ADV-MOD-NP
-
-GRADE-ADV
-
 ### Postposition sets
 
 ILLPO
 
 ### BOUNDARY SETS
 
-S-BOUNDARY
 REALCLB
 
 SV-BOUNDARY
@@ -352,11 +345,5 @@ Rule set taken from sme
 
 gellie as numeral, not pronoun
 
-Adv modifying a pronoun or noun
-
 * * *
-
 <small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/disambiguator.cg3)</small>
-
----
-

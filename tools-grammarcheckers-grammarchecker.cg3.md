@@ -36,7 +36,6 @@ CLB
 LEFT
 RIGHT
 WEB
-QMARK
 PPUNCT
 PUNCT
 
@@ -153,8 +152,6 @@ Other semantic sets:
 - `PROP-ATTR          `
 - `PROP-SUR           `
 - `HUMAN              `
-- `HAB-ACTOR          `
-- `HAB-ACTOR-NOT-HUMAN`
 - `TIME-N-SET         `
 
 ###  Syntactic tags
@@ -244,8 +241,6 @@ INITIAL
 ### Sets for word or not
 
 WORD
-REAL-WORD
-REAL-WORD-NOT-ABBR
 NOT-COMMA
 
 ### Case sets
@@ -311,8 +306,4 @@ VErb agreement
 Ensure preceding nominal agrees with the verb
 
 * * *
-
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-sma/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
-
----
-
