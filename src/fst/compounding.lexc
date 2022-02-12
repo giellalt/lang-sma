@@ -30,9 +30,23 @@ Noerhte- ProperNoun ; !!≈ - `@CODE@`
 
 
 LEXICON R
-!! This is for regular compounding. All entries NOT requiring a hyphen should point to this:
- 
-@P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ Rreal ; ! Flags to control compounding
+!! ## Lexicon `@LEXNAME@`
+
+!! This lexicon is the main entry for regular compounding.
+!! All entries NOT requiring a hyphen should point to it. 
+
+!! The whole content of it is a list of flag diacritics to control compounding:
+<
+"@P.CmpFrst.FALSE@" !!≈ - `@CODE@`
+"@P.CmpPref.FALSE@" !!≈ - `@CODE@`
+"@D.CmpLast.TRUE@"  !!≈ - `@CODE@`
+"@D.CmpNone.TRUE@"  !!≈ - `@CODE@`
+"@U.CmpNone.FALSE@" !!≈ - `@CODE@`
+"@P.CmpOnly.TRUE@"  !!≈ - `@CODE@`
+>
+Rreal ; !!≈ After the flags, we continue to the `@CODE@` lexicon, for the real compounding action.
+
+!! It should be noted that some of the flags above require a corresponding flag in the lexicon `ENDLEX` to work properly. 
 
 LEXICON Rreal
                                 +Cmp#:∑#                  Noun       ; ! This is the normal case.
