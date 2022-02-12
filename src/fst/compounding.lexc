@@ -49,7 +49,11 @@ Rreal ; !!≈ After the flags, we continue to the `@CODE@` lexicon, for the real
 !! It should be noted that some of the flags above require a corresponding flag in the lexicon `ENDLEX` to work properly. 
 
 LEXICON Rreal
-                                +Cmp#:∑#                  Noun       ; ! This is the normal case.
+!! ## Lexicon `@LEXNAME@`
+
+!! This is where the actual compounding happens.
+
++Cmp#:∑#                  Noun       ; ! This is the normal case.
                  @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@∑#   Verb       ; ! Flag diacr declares that the compound
                  @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@∑#   Adjective  ; ! needs a N tag later in the derivation
                        +Cmp/Hyph+Cmp#:%-∑#                Noun       ; ! These 3 cases add a hyphen, so
