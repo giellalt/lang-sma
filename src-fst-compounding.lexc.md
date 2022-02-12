@@ -19,6 +19,10 @@ After the flags, we continue to the `Rreal ;` lexicon, for the real compounding 
 
 It should be noted that some of the flags above require a corresponding flag in the lexicon `ENDLEX` to work properly. 
 
+## Lexicon `Rreal`
+
+This is where the actual compounding happens.
+
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/compounding.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/compounding.lexc)</small>
