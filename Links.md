@@ -11,6 +11,7 @@
             * [propernouns.lexc](src-fst-affixes-propernouns.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/propernouns.lexc))
             * [symbols.lexc](src-fst-affixes-symbols.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/symbols.lexc))
             * [verbs.lexc](src-fst-affixes-verbs.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/affixes/verbs.lexc))
+        * [compounding.lexc](src-fst-compounding.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/compounding.lexc))
         * `oahpa-filer/`
             * [aff-adjectives-oahpa.lexc](src-fst-oahpa-filer-aff-adjectives-oahpa.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/oahpa-filer/aff-adjectives-oahpa.lexc))
             * [stems-adjectives-oahpa.lexc](src-fst-oahpa-filer-stems-adjectives-oahpa.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/oahpa-filer/stems-adjectives-oahpa.lexc))
