@@ -614,7 +614,11 @@ get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 * **+v6**:  variant 6
 * **+v7**:  variant 7
 
-clitic boundary mark - a multichar that usually just go to zero
+## The clitic boundary mark
+
+A multichar that usually just go to zero:
+
+* **`|»`**
 
 ## Umlaut and diphthong simplification triggers
 
