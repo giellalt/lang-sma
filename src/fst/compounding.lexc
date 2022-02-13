@@ -75,10 +75,12 @@ LEXICON RNum
 !! For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon. 
 
 
-! This is for compounding with hyphen. All entries REQUIRING a hyphen should point to this:
 LEXICON RHyph
+!! ## Lexicon `@LEXNAME@`
 
-! Recursive lexicon from all classes REQUIRING a hyphen to follow.
+!! This lexicon is used for compounds requiring a hyphen before the next part.
+!! As for the regular compounds, we first add a number of flag diacritics to restrict certain combinations.
+
 ! NBNBNB! ! ! The hyphen should be added here! NOT in the other lexicons!
 
 @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RHyphReal ; ! Block certain types of compounds in spellers.
