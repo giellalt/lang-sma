@@ -72,14 +72,16 @@ LEXICON RNum
 !! ## Lexicon `@LEXNAME@`
 
       +Cmp/Hyph+Cmp#:-∑# Noun ;
-!! For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon. 
+!! For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon, since the regular `RHyph` lexicon
+!! below contains a continuation pointing back to the numerals.
 
 
 LEXICON RHyph
 !! ## Lexicon `@LEXNAME@`
 
 !! This lexicon is used for compounds requiring a hyphen before the next part.
-!! As for the regular compounds, we first add a number of flag diacritics to restrict certain combinations.
+!! As for the regular compounds, we first add a number of flag diacritics to restrict certain combinations,
+!! before we continue to the real compounding lexicon.
 
 ! NBNBNB! ! ! The hyphen should be added here! NOT in the other lexicons!
  
