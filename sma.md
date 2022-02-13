@@ -1754,12 +1754,14 @@ This is where the actual compounding happens.
 
 ## Lexicon `RNum`
 
-For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon. 
+For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon, since the regular `RHyph` lexicon
+below contains a continuation pointing back to the numerals.
 
 ## Lexicon `RHyph`
 
 This lexicon is used for compounds requiring a hyphen before the next part.
-As for the regular compounds, we first add a number of flag diacritics to restrict certain combinations.
+As for the regular compounds, we first add a number of flag diacritics to restrict certain combinations,
+before we continue to the real compounding lexicon.
 
 ## Lexicon `RHyphReal`
 
