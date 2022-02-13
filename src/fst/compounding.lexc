@@ -69,7 +69,9 @@ LEXICON Rreal
  +Cmp/SplitR+Use/SpellNoSugg+Cmp:%-                 ENDLEX     ; ! This to take care of Oahpo- ja dutkandept
 
 LEXICON RNum
-      +Cmp/Hyph+Cmp#:-∑# Noun ; ! For Num Cmp Noun, vi vil ikke ha Num Cmp Num
+!! ## Lexicon `@LEXNAME@`
+
+      +Cmp/Hyph+Cmp#:-∑# Noun ; !! For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon. 
 
 
 ! This is for compounding with hyphen. All entries REQUIRING a hyphen should point to this:
