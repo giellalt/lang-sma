@@ -92,6 +92,11 @@ LEXICON RHyph
 ! Block certain types of compounds in spellers.
 
 LEXICON RHyphReal
+!! ## Lexicon `@LEXNAME@`
+
+!! This is where the actual hyphen compounding happens.
+!! The hyphen is added here.
+
                      +Cmp/Hyph+Cmp#:%-∑#                Noun       ; ! This is the normal case.
       @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-∑# Verb       ; ! Flag diacr declares that the compound
       @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-∑# Adjective  ; ! needs a N tag later in the derivation
