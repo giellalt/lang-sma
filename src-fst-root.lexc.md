@@ -267,7 +267,9 @@ compounding?
 ### tags for adverbs and komparerte adj
 * **+Gram/Comp +Gram/Superl**:
 
-## Semantic tags to help disambiguation & synt. analysis:
+## Semantic tags
+
+Semantic tags help disambiguation and syntactic analysis. All tags used are defined and listed below. 
 
 * +Sem/Act = Activity
 * +Sem/Adr = Webadr
@@ -364,7 +366,11 @@ compounding?
 * +Sem/Wthr = The Weather or the state of ground; cloudy weather, wind, driving conditions, night sunlight, rain shower
 * +Sem/Year = year (i.e. 1000 - 2999), used only for numerals
 
-Multiple Semantic tags
+### Multiple Semantic tags
+
+Multiple semantic tags are written as one tag, with the different semantic values separated by an underline `_`.
+
+All used combinations must be declared below, and the list must be manually maintained. The tags are ordered alphabetically, both the list and the semantic values within one tag.
 
 * +Sem/Act_Domain =
 * +Sem/Act_Fruit = frukt og handling
