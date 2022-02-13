@@ -25,6 +25,15 @@ It should be noted that some of the flags above require a corresponding flag in 
 
 This is where the actual compounding happens.
 
+## Lexicon `RNum`
+
+For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon. 
+
+## Lexicon `RHyph`
+
+This lexicon is used for compounds requiring a hyphen before the next part.
+As for the regular compounds, we first add a number of flag diacritics to restrict certain combinations.
+
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/compounding.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/compounding.lexc)</small>
