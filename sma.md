@@ -3362,16 +3362,16 @@ originating (majority) language. Instead of trying to identify the
 correct pronunciation based on phonotactics (orthotactics actually),
 we tag all words that can't be correctly transcribed using the SMA
 transcriber with source language codes. Once tagged, it is possible
-to split the lexical transducer in smaller ones according to langu-
-age, and apply different IPA conversion to each of them.
+to apply different IPA conversions to each of them.
 The principle of tagging is that we only tag to the extent needed,
 and following a priority:
-1. any untagged word is pronounced with SME orthographic conventions
+
+1. any untagged word is pronounced with native orthographic conventions
 1. NNO and NOB have identical pronunciation, NNO is only used if
 different in spelling from NOB
 1. SWE has mostly the same pronunciation as NOB, and is only used
 if different in spelling from NOB
-1. Occasionally even SME (the default) may be tagged, to block other
+1. Occasionally even SMA (the default) may be tagged, to block other
 languages from being specified, mainly during semi-automatic
 language tagging sessions
 All in all, we want to get as much correctly transcribed to IPA
@@ -3429,7 +3429,7 @@ get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 
 ## The clitic boundary mark
 
-A multichar that usually just go to zero:
+A multichar that usually just goes to zero:
 
 * **`|»`**
 
