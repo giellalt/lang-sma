@@ -1726,6 +1726,8 @@ V-EVEN-PRS-DUPL ;
 ---
 
 
+South Sámi morphological analyser
+==========================================================================
 
 Prefixing and compounding
 =========================
