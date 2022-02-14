@@ -2,11 +2,11 @@
 
 # South Sámi nouns 
 
-# ALL nouns with PX
+# All nouns with possessives
 
-## **LEXICON Noun** dividing in NounNoPx, NounPx (with a P.Px.add
+## **LEXICON Noun**
+Splitting nouns in NounNoPx, NounPx (with a P.Px.add
 flag) and NounPxKin (with a P.Nom3Px.add flag)
-
 * **NounNoPx ;** = words in this noun lexicon do not get any possessive inflectionb
 * **@P.Px.add@ NounPx ;** = these nouns do get possessive inflection, except for 3. person nominative, which is usually only used with kinship terms (see next)
 * **@P.Px.add@ NounPxKin ;** = these nouns get full possessive inflection, including 3. person nominative - except that the 3. person nominative has been removed in the South Sámi description. The reason for that change needs to be documented here.
