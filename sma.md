@@ -3077,8 +3077,9 @@ compounding?
 * **+Foc/gih**:  XXX Document better = Forsterkende particle
 * **+Foc/gænnah**:  XXX Document better = Forsterkende particle
 
-### tags for adverbs and komparerte adj
-* **+Gram/Comp +Gram/Superl**:
+### Tags for adverbs and comparated adjectives
+* **+Gram/Comp**
+* **+Gram/Superl**
 
 ## Semantic tags
 
