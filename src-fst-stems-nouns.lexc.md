@@ -1,8 +1,10 @@
 
 
-ALL nouns with PX
+# South Sámi nouns 
 
-* **LEXICON Noun ** dividing in NounNoPx, NounPx (with a P.Px.add
+# ALL nouns with PX
+
+## **LEXICON Noun** dividing in NounNoPx, NounPx (with a P.Px.add
 flag) and NounPxKin (with a P.Nom3Px.add flag)
 
 * **NounNoPx ;** = words in this noun lexicon do not get any possessive inflectionb
