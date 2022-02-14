@@ -2993,6 +2993,7 @@ to research compounding patterns in the corpus.
 * **+PxPl3** =  Possessives Plural
 
 ## Tense, Person & Number
+
 |                                                 Tense tag | Explanation
 |                                                       --- | ---
 |  **+Prs** | Presens
