@@ -714,23 +714,23 @@ LexC language, and must be the first lexicon defined.
 
 Here is the list of top-level lexica in the South Sámi analyser:
 
-- `Prefixes ;`
-- `NounRoot ;`
-- `Verb ;`
-- `Adjective ;`
-- `Pronoun ;`
-- `Adverb ;`
-- `Subjunction ;`
-- `Conjunction ;`
-- `Particle ;`
-- `Adposition ;`
-- `Punctuation ;`
-- `Symbols ;`
-- `Interjection ;`
 - `Abbreviation ;`
 - `Acronym ;`
-- `ProperNoun ;`
+- `Adjective ;`
+- `Adposition ;`
+- `Adverb ;`
+- `Conjunction ;`
+- `Interjection ;`
+- `NounRoot ;`
 - `+Use/CircN: Numeral ;`
+- `Particle ;`
+- `Prefixes ;`
+- `Pronoun ;`
+- `ProperNoun ;`
+- `Punctuation ;`
+- `Subjunction ;`
+- `Symbols ;`
+- `Verb ;`
 
 # Lexicon ENDLEX
 And this is the ENDLEX of everything:
