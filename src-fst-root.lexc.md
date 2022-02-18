@@ -723,23 +723,23 @@ Here is the list of top-level lexica in the sma analyser
 stateDiagram-v2
 direction LR
 [*] --> Root
-Root --> "Prefixes ;" --> [*]
-Root --> "NounRoot ;" --> [*]
-Root --> "Verb ;" --> [*]
-Root --> "Adjective ;" --> [*]
-Root --> "Pronoun ;" --> [*]
-Root --> "Adverb ;" --> [*]
-Root --> "Subjunction ;" --> [*]
-Root --> "Conjunction ;" --> [*]
-Root --> "Particle ;" --> [*]
-Root --> "Adposition ;" --> [*]
-Root --> "Punctuation ;" --> [*]
-Root --> "Symbols ;" --> [*]
-Root --> "Interjection ;" --> [*]
-Root --> "Abbreviation ;" --> [*]
-Root --> "Acronym ;" --> [*]
-Root --> "ProperNoun ;" --> [*]
-Root --> "+Use/CircN: Numeral ;" --> [*]
+Root --> "Prefixes ;"
+Root --> "NounRoot ;"
+Root --> "Verb ;"
+Root --> "Adjective ;"
+Root --> "Pronoun ;"
+Root --> "Adverb ;"
+Root --> "Subjunction ;"
+Root --> "Conjunction ;"
+Root --> "Particle ;"
+Root --> "Adposition ;"
+Root --> "Punctuation ;"
+Root --> "Symbols ;"
+Root --> "Interjection ;"
+Root --> "Abbreviation ;"
+Root --> "Acronym ;"
+Root --> "ProperNoun ;"
+Root --> "+Use/CircN: Numeral ;"
 ```
 
 </details>
