@@ -27,209 +27,209 @@ LEXICON Root
 
 LEXICON NUMBERSECTION
                        HUNDREDSM     ; ! 200M
-             tjuetie:1 HUNDREDM      ; ! 100M
- stoereluhkie+Use/NG:1 HUNDREDM      ; ! 100M
-stoerreluhkie+Use/NG:1 HUNDREDM      ; ! 100M
+             1:tjuetie HUNDREDM      ; ! 100M
+ 1:stoereluhkie+Use/NG HUNDREDM      ; ! 100M
+1:stoerreluhkie+Use/NG HUNDREDM      ; ! 100M
                        TENSM         ; ! 20-99M
                        TEENSM        ; ! 10-19M
                        ONESM         ; ! 1-9M
                        HUNDREDST     ; ! 200000-999999
-             tjuetie:1 HUNDREDT      ; ! 100000-100999
+             1:tjuetie HUNDREDT      ; ! 100000-100999
                        TENST         ; ! 20000-99999,10000-10999
                        TEENST        ; ! 11000-19999
                        ONEST         ; ! 2000-9999
-             tåvsene:1 THOUSAND      ; ! 1000-1999
+             1:tåvsene THOUSAND      ; ! 1000-1999
                        UNDERTHOUSAND ; ! 100-999
                        TENS          ; ! 20-99
                        TEENS         ; ! 10-19
                        ONES          ; ! 1-9
 
 LEXICON HUNDREDSM
-göökte:2  CUODIM ;
-golme:3 CUODIM ;
-njieljie:4 CUODIM ; ! Google: 459
-njielje+Use/NG:4 CUODIM ;  ! Google: 218
-nieljie+Use/NG:4 CUODIM ;  ! Google:  61
- nielje+Use/NG:4 CUODIM ;  ! Google: irrelevant (20,600)
-vïjhte:5 CUODIM ;
-govhte:6 CUODIM ;
-tjïjhtje:7 CUODIM ;
-gaektsie:8 CUODIM ;
-uktsie:9 CUODIM ;
+2:göökte   CUODIM ;
+3:golme  CUODIM ;
+4:njieljie  CUODIM ; ! Google: 459
+4:njielje+Use/NG  CUODIM ;  ! Google: 218
+4:nieljie+Use/NG  CUODIM ;  ! Google:  61
+4:nielje+Use/NG  CUODIM ;  ! Google: irrelevant (20,600)
+5:vïjhte  CUODIM ;
+6:govhte  CUODIM ;
+7:tjïjhtje  CUODIM ;
+8:gaektsie  CUODIM ;
+9:uktsie  CUODIM ;
 
 LEXICON CUODIM
-tjuetie: HUNDREDM ;
-stoereluhkie: HUNDREDM ;
-stoerreluhkie: HUNDREDM ;
+:tjuetie HUNDREDM ;
+:stoereluhkie HUNDREDM ;
+:stoerreluhkie HUNDREDM ;
 
 LEXICON HUNDREDM
       TENSM ;
       TEENSM ;
-:%0   ONESM ;
-:%0%0 MILJON ;
+%0:   ONESM ;
+%0%0: MILJON ;
 
 LEXICON TEENSM
-luhkie:1 TEENM ;
+1:luhkie  TEENM ;
 
 LEXICON TEENM
-akte:1     LOHKAIM ;
-göökte:2   LOHKAIM ;
-golme:3    LOHKAIM ;
-njieljie:4 LOHKAIM ;
-njielje+Use/NG:4  LOHKAIM ;
-nieljie+Use/NG:4  LOHKAIM ;
- nielje+Use/NG:4  LOHKAIM ;
-vïjhte:5   LOHKAIM ;
-govhte:6   LOHKAIM ;
-tjïjhtje:7 LOHKAIM ;
-gaektsie:8 LOHKAIM ;
-uktsie:9   LOHKAIM ;
+1:akte      LOHKAIM ;
+2:göökte    LOHKAIM ;
+3:golme     LOHKAIM ;
+4:njieljie  LOHKAIM ;
+4:njielje+Use/NG   LOHKAIM ;
+4:nieljie+Use/NG   LOHKAIM ;
+4:nielje+Use/NG   LOHKAIM ;
+5:vïjhte    LOHKAIM ;
+6:govhte    LOHKAIM ;
+7:tjïjhtje  LOHKAIM ;
+8:gaektsie  LOHKAIM ;
+9:uktsie    LOHKAIM ;
 
 LEXICON LOHKAIM
 MILJON ;
 
 LEXICON TENSM
-luhkie:1%0 MILJON ;
-göökte:2   LUHKIEM ;
-golme:3    LUHKIEM ;
-njieljie:4 LUHKIEM ;
-njielje+Use/NG:4  LUHKIEM ;
-nieljie+Use/NG:4  LUHKIEM ;
- nielje+Use/NG:4  LUHKIEM ;
-vïjhte:5   LUHKIEM ;
-govhte:6   LUHKIEM ;
-tjïjhtje:7 LUHKIEM ;
-gaektsie:8 LUHKIEM ;
-uktsie:9   LUHKIEM ;
+1%0:luhkie MILJON ;
+2:göökte    LUHKIEM ;
+3:golme     LUHKIEM ;
+4:njieljie  LUHKIEM ;
+4:njielje+Use/NG   LUHKIEM ;
+4:nieljie+Use/NG   LUHKIEM ;
+4:nielje+Use/NG   LUHKIEM ;
+5:vïjhte    LUHKIEM ;
+6:govhte    LUHKIEM ;
+7:tjïjhtje  LUHKIEM ;
+8:gaektsie  LUHKIEM ;
+9:uktsie    LUHKIEM ;
 
 LEXICON LUHKIEM
-luhkie:%0 MILJON ;
-luhkie:   ONESM ;
+%0:luhkie  MILJON ;
+:luhkie   ONESM ;
 
 LEXICON ONESM
-akte% miljon% :1 OVERTHOUSANDS ;
-göökte:2         MILJON ;
-golme:3          MILJON ;
-njieljie:4       MILJON ;
-njielje+Use/NG:4        MILJON ;
-nieljie+Use/NG:4        MILJON ;
- nielje+Use/NG:4        MILJON ;
-vïjhte:5         MILJON ;
-govhte:6         MILJON ;
-tjïjhtje:7       MILJON ;
-gaektsie:8       MILJON ;
-uktsie:9         MILJON ;
+1:akte% miljon%   OVERTHOUSANDS ;
+2:göökte          MILJON ;
+3:golme           MILJON ;
+4:njieljie        MILJON ;
+4:njielje+Use/NG         MILJON ;
+4:nieljie+Use/NG         MILJON ;
+4:nielje+Use/NG         MILJON ;
+5:vïjhte          MILJON ;
+6:govhte          MILJON ;
+7:tjïjhtje        MILJON ;
+8:gaektsie        MILJON ;
+9:uktsie          MILJON ;
 
 LEXICON MILJON
-% miljona% : OVERTHOUSANDS ;
+:% miljona%   OVERTHOUSANDS ;
 
 ! =================
 ! Under the million
 ! =================
 
 LEXICON OVERTHOUSANDS
-HUNDREDST ;		! x00.000.000
-tjuetie:1 HUNDREDT ;	! 100.000.000
-stoereluhkie:1 HUNDREDT ;	! 100.000.000
-stoerreluhkie:1 HUNDREDT ;	! 100.000.000
-:%0 TENST ;		!  20.000.000
-:%0 TEENST ;		!  10.000.000
-:%0%0 ONEST ;		!   2.000.000
-tåvsene:%0%01 THOUSAND ;	!   1.000.000
-:%0%0%0 UNDERTHOUSAND ;
-:%0%0%0%0 TENS ;
-:%0%0%0%0 TEENS ;
-:%0%0%0%0%0 ONES ;
-:%0%0%0%0%0%0 COMMA ;	!  x000000
+                            HUNDREDST     ; ! x00.000.000
+            1:tjuetie       HUNDREDT      ; ! 100.000.000
+            1:stoereluhkie  HUNDREDT      ; ! 100.000.000
+            1:stoerreluhkie HUNDREDT      ; ! 100.000.000
+           %0:              TENST         ; !  20.000.000
+           %0:              TEENST        ; !  10.000.000
+         %0%0:              ONEST         ; !   2.000.000
+        %0%01:tåvsene       THOUSAND      ; !   1.000.000
+       %0%0%0:              UNDERTHOUSAND ;
+     %0%0%0%0:              TENS          ;
+     %0%0%0%0:              TEENS         ;
+   %0%0%0%0%0:              ONES          ;
+ %0%0%0%0%0%0:              COMMA         ; !  x000000
 
 LEXICON HUNDREDST
-göökte:2   CUODIT ;	! 200000-299999
-golme:3    CUODIT ;	! 300000-399999
-njieljie:4 CUODIT ;	! 400000-499999
-njielje+Use/NG:4  CUODIT ;
-nieljie+Use/NG:4  CUODIT ;
-nielje+Use/NG:4  CUODIT ;
-vïjhte:5   CUODIT ;	! 500000-599999
-govhte:6   CUODIT ;	! 600000-699999
-tjïjhtje:7 CUODIT ;	! 700000-799999
-gaektsie:8 CUODIT ;	! 800000-899999
-uktsie:9   CUODIT ;	! 900000-999999
+2:göökte    CUODIT ;	! 200000-299999
+3:golme     CUODIT ;	! 300000-399999
+4:njieljie  CUODIT ;	! 400000-499999
+4:njielje+Use/NG   CUODIT ;
+4:nieljie+Use/NG   CUODIT ;
+4:nielje+Use/NG   CUODIT ;
+5:vïjhte    CUODIT ;	! 500000-599999
+6:govhte    CUODIT ;	! 600000-699999
+7:tjïjhtje  CUODIT ;	! 700000-799999
+8:gaektsie  CUODIT ;	! 800000-899999
+9:uktsie    CUODIT ;	! 900000-999999
 
 LEXICON CUODIT
-tjuetie: HUNDREDT ;	! 100000-199999
-stoereluhkie+Use/NG: HUNDREDT ;	! 100000-199999
-stoerreluhkie+Use/NG: HUNDREDT ;	! 100000-199999
+:tjuetie HUNDREDT ;	! 100000-199999
+:stoereluhkie+Use/NG HUNDREDT ;	! 100000-199999
+:stoerreluhkie+Use/NG HUNDREDT ;	! 100000-199999
 
 LEXICON HUNDREDT	! X = 1-9, Y = 0-9
 TENST ;			! X2XYYY, X10YYY
 TEENST ;		! X1XYYY
-akte:%01 THOUSANDS ;
-:%0 ONEST ;		! XX0YYY
-:%0%0 THOUSANDS ;	! X00YYY
+%01:akte THOUSANDS ;
+%0: ONEST ;		! XX0YYY
+%0%0: THOUSANDS ;	! X00YYY
 
 LEXICON TEENST
-luhkie:1   TEENT ;
-luhkie:1%0 THOUSANDS ;
+1:luhkie   TEENT ;
+1%0:luhkie THOUSANDS ;
 
 LEXICON TEENT
-akte:1     LOHKAIT ;
-göökte:2   LOHKAIT ;
-golme:3    LOHKAIT ;
-njieljie:4 LOHKAIT ;
-njielje+Use/NG:4  LOHKAIT ;
-nieljie+Use/NG:4  LOHKAIT ;
-nielje+Use/NG:4  LOHKAIT ;
-vïjhte:5   LOHKAIT ;
-govhte:6   LOHKAIT ;
-tjïjhtje:7 LOHKAIT ;
-gaektsie:8 LOHKAIT ;
-uktsie:9   LOHKAIT ;
+1:akte      LOHKAIT ;
+2:göökte    LOHKAIT ;
+3:golme     LOHKAIT ;
+4:njieljie  LOHKAIT ;
+4:njielje+Use/NG   LOHKAIT ;
+4:nieljie+Use/NG   LOHKAIT ;
+4:nielje+Use/NG   LOHKAIT ;
+5:vïjhte    LOHKAIT ;
+6:govhte    LOHKAIT ;
+7:tjïjhtje  LOHKAIT ;
+8:gaektsie  LOHKAIT ;
+9:uktsie    LOHKAIT ;
 
 LEXICON LOHKAIT
 THOUSANDS ;
 
 LEXICON TENST
-göökteluhkie:2   LUHKIET ;
-golmeluhkie:3    LUHKIET ;
-njieljieluhkie:4 LUHKIET ;
-njieljeluhkie+Use/NG:4  LUHKIET ;
-nieljieluhkie+Use/NG:4  LUHKIET ;
- nieljeluhkie+Use/NG:4  LUHKIET ;
-vïjhteluhkie:5   LUHKIET ;
-govhteluhkie:6   LUHKIET ;
-tjïjhtjeluhkie:7 LUHKIET ;
-gaektsieluhkie:8 LUHKIET ;
-uktsieluhkie:9   LUHKIET ;
+2:göökteluhkie    LUHKIET ;
+3:golmeluhkie     LUHKIET ;
+4:njieljieluhkie  LUHKIET ;
+4:njieljeluhkie+Use/NG   LUHKIET ;
+4:nieljieluhkie+Use/NG   LUHKIET ;
+4:nieljeluhkie+Use/NG   LUHKIET ;
+5:vïjhteluhkie    LUHKIET ;
+6:govhteluhkie    LUHKIET ;
+7:tjïjhtjeluhkie  LUHKIET ;
+8:gaektsieluhkie  LUHKIET ;
+9:uktsieluhkie    LUHKIET ;
 
 LEXICON LUHKIET
-:%0 THOUSANDS ;
-akte:1 THOUSANDS ;
+%0: THOUSANDS ;
+1:akte  THOUSANDS ;
 ONEST ;
 
 LEXICON ONEST
-göökte:2 THOUSANDS ;
-golme:3 THOUSANDS ;
-njieljie:4 THOUSANDS ;
-njielje+Use/NG:4 THOUSANDS ;
-nieljie+Use/NG:4 THOUSANDS ;
- nielje+Use/NG:4 THOUSANDS ;
-vïjhte:5 THOUSANDS ;
-govhte:6 THOUSANDS ;
-tjïjhtje:7 THOUSANDS ;
-gaektsie:8 THOUSANDS ;
-uktsie:9 THOUSANDS ;
+2:göökte  THOUSANDS ;
+3:golme  THOUSANDS ;
+4:njieljie  THOUSANDS ;
+4:njielje+Use/NG  THOUSANDS ;
+4:nieljie+Use/NG  THOUSANDS ;
+4:nielje+Use/NG  THOUSANDS ;
+5:vïjhte  THOUSANDS ;
+6:govhte  THOUSANDS ;
+7:tjïjhtje  THOUSANDS ;
+8:gaektsie  THOUSANDS ;
+9:uktsie  THOUSANDS ;
 
 LEXICON THOUSANDS      ! x > 1
-tåvsene: THOUSAND ;
-stoerretjuetie+Use/NG: THOUSAND ;
-stoeretjuetie+Use/NG: THOUSAND ;
+:tåvsene  THOUSAND ;
+:stoerretjuetie+Use/NG THOUSAND ;
+:stoeretjuetie+Use/NG THOUSAND ;
 
 LEXICON THOUSAND
 UNDERTHOUSAND ;	   ! 1100-1999
-:%0 TENS ;	   ! 1020-1099
-:%0 TEENS ;	   ! 1010-1019
-:%0%0 ONES ;	   ! 1001-1009
-:%0%0%0 COMMA ;	   ! 1000
+%0: TENS ;	   ! 1020-1099
+%0: TEENS ;	   ! 1010-1019
+%0%0: ONES ;	   ! 1001-1009
+%0%0%0: COMMA ;	   ! 1000
 
 !===========================
 !Here starts the 999 numbers
@@ -237,95 +237,95 @@ UNDERTHOUSAND ;	   ! 1100-1999
 
 LEXICON UNDERTHOUSAND
 HUNDREDS ;
-tjuetie:1 HUNDRED ;
-stoereluhkie+Use/NG:1 HUNDRED ;
-stoerreluhkie+Use/NG:1 HUNDRED ;
-tjuatede:1  CUODAAT ;
-stoerelåhkede+Use/NG:1  CUODAAT ;
-stoerrelåhkede+Use/NG:1  CUODAAT ;
+1:tjuetie  HUNDRED ;
+1:stoereluhkie+Use/NG  HUNDRED ;
+1:stoerreluhkie+Use/NG  HUNDRED ;
+1:tjuatede   CUODAAT ;
+1:stoerelåhkede+Use/NG   CUODAAT ;
+1:stoerrelåhkede+Use/NG   CUODAAT ;
 
 LEXICON HUNDREDS
-göökte:2   CUODI ;
-golme:3    CUODI ;
-njieljie:4 CUODI ;
-njielje+Use/NG:4  CUODI ;
-nieljie+Use/NG:4  CUODI ;
-nielje+Use/NG:4  CUODI ;
-vïjhte:5   CUODI ;
-govhte:6   CUODI ;
-tjïjhtje:7 CUODI ;
-gaektsie:8 CUODI ;
-uktsie:9   CUODI ;
+2:göökte    CUODI ;
+3:golme     CUODI ;
+4:njieljie  CUODI ;
+4:njielje+Use/NG   CUODI ;
+4:nieljie+Use/NG   CUODI ;
+4:nielje+Use/NG   CUODI ;
+5:vïjhte    CUODI ;
+6:govhte    CUODI ;
+7:tjïjhtje  CUODI ;
+8:gaektsie  CUODI ;
+9:uktsie    CUODI ;
 
 LEXICON CUODI
-tjuetie:   HUNDRED ;
-stoereluhkie+Use/NG:   HUNDRED ;
-stoerreluhkie+Use/NG:   HUNDRED ;
-tjuatede:  CUODAAT ;
-stoerelåhkede+Use/NG:  CUODAAT ;
-stoerrelåhkede+Use/NG:  CUODAAT ;
+:tjuetie   HUNDRED ;
+:stoereluhkie+Use/NG   HUNDRED ;
+:stoerreluhkie+Use/NG   HUNDRED ;
+:tjuatede  CUODAAT ;
+:stoerelåhkede+Use/NG  CUODAAT ;
+:stoerrelåhkede+Use/NG  CUODAAT ;
 
 LEXICON HUNDRED
       TENS ;
       TEENS ;
-:%0   ONES ;
-:%0%0 COMMA ;
+%0:   ONES ;
+%0%0: COMMA ;
 
 LEXICON CUODAAT
-:%0%0%.    COMMA ;
+%0%0%.:    COMMA ;
 
 LEXICON TEENS
-luhkie:1 ONES ;
+1:luhkie  ONES ;
 
 
 LEXICON TENS
-luhkie:1%0 COMMA ;
-låhkede:1%0%. COMMA ;
-göökte:2 LUHKIE ;
-golme:3 LUHKIE ;
-njieljie:4 LUHKIE ;
-njielje+Use/NG:4 LUHKIE ;
-nieljie+Use/NG:4 LUHKIE ;
-nielje+Use/NG:4 LUHKIE ;
-vïjhte:5 LUHKIE ;
-govhte:6 LUHKIE ;
-tjïjhtje:7 LUHKIE ;
-gaektsie:8 LUHKIE ;
-uktsie:9 LUHKIE ;
+1%0:luhkie  COMMA ;
+1%0%.:låhkede COMMA ;
+2:göökte  LUHKIE ;
+3:golme  LUHKIE ;
+4:njieljie  LUHKIE ;
+4:njielje+Use/NG  LUHKIE ;
+4:nieljie+Use/NG  LUHKIE ;
+4:nielje+Use/NG  LUHKIE ;
+5:vïjhte  LUHKIE ;
+6:govhte  LUHKIE ;
+7:tjïjhtje  LUHKIE ;
+8:gaektsie  LUHKIE ;
+9:uktsie  LUHKIE ;
 
 LEXICON LUHKIE
- luhkie:%0   COMMA ;
-låhkede:%0%. COMMA ;
- luhkie:     ONES ;
+   %0:luhkie  COMMA ;
+ %0%.:låhkede COMMA ;
+     :luhkie  ONES  ;
 
 LEXICON ONES
 CARDINAL ;
 ORDINAL ;
 
 LEXICON CARDINAL
-          akte:1 COMMA ;
-        göökte:2 COMMA ;
-         golme:3 COMMA ;
-      njieljie:4 COMMA ;
-njielje+Use/NG:4 COMMA ;
-nieljie+Use/NG:4 COMMA ;
- nielje+Use/NG:4 COMMA ;
-        vïjhte:5 COMMA ;
-        govhte:6 COMMA ;
-      tjïjhtje:7 COMMA ;
-      gaektsie:8 COMMA ;
-        uktsie:9 COMMA ;
+ 1:akte           COMMA ;
+ 2:göökte         COMMA ;
+ 3:golme          COMMA ;
+ 4:njieljie       COMMA ;
+ 4:njielje+Use/NG COMMA ;
+ 4:nieljie+Use/NG COMMA ;
+ 4:nielje+Use/NG  COMMA ;
+ 5:vïjhte         COMMA ;
+ 6:govhte         COMMA ;
+ 7:tjïjhtje       COMMA ;
+ 8:gaektsie       COMMA ;
+ 9:uktsie         COMMA ;
 
 LEXICON ORDINAL
-   voestes:1%. COMMA ;
-    mubpie:2%. COMMA ;
-  gåalmede:3%. COMMA ;
- njealjede:4%. COMMA ;
-  vïjhtede:5%. COMMA ;
-  govhtede:6%. COMMA ;
-tjïjhtjede:7%. COMMA ;
- gaaktsede:8%. COMMA ;
-   åktsede:9%. COMMA ;
+ 1%.:voestes    COMMA ;
+ 2%.:mubpie     COMMA ;
+ 3%.:gåalmede   COMMA ;
+ 4%.:njealjede  COMMA ;
+ 5%.:vïjhtede   COMMA ;
+ 6%.:govhtede   COMMA ;
+ 7%.:tjïjhtjede COMMA ;
+ 8%.:gaaktsede  COMMA ;
+ 9%.:åktsede    COMMA ;
 
 LEXICON COMMA
  ENDLEX ;
@@ -337,11 +337,11 @@ LEXICON COMMASECTION  ! these are not spellchecked!!!
 ! % tjuohkkis% :%. Root ;
 ! % kolon% :%:     Root ;
 ! % sárggis% :%-   Root ;
- % la% :%=         Root ;
- % gráda% :%°      Root ;
- % paragráfa% :§   Root ;
+ %=:% la%          Root ;
+ %°:% gráda%       Root ;
+ §:% paragráfa%    Root ;
 ! % násti% :%*     Root ;
- % ja% :&          Root ;
+ &:% ja%           Root ;
 
 LEXICON ENDLEX
  # ;
