@@ -2,7 +2,7 @@ The South Sámi morphology and tools
 ==========================================
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
-[![Build Status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
+[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-sma/main/badge.svg)](https://github.com/giellalt/lang-sma/actions)
 [![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE)
 
 This repository contains finite state source files for the South Sámi language,
