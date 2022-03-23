@@ -2,6 +2,14 @@
 
 # South Sámi nouns 
 
+## The lexicon NounRoot
+This lexicon is the start of all noun lemmas. It splits the nouns in three
+classes as follows:
+
+- `FirstComponent ;`
+- `HyphNouns ;`
+- `Noun ;`
+
 # All nouns with possessives
 
 ## **LEXICON Noun**
