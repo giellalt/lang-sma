@@ -1422,7 +1422,7 @@ SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V 
 #!! ### killifVinCohort
 #!!
 #!! This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
-SELECT:killifVinCohort SYN-V IF (NOT 0 (<spelled>)) ;
+#SELECT:killifVinCohort SYN-V IF (NOT 0 (<spelled>)) ;
 
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf  ;
 	#$ de som ikke har annen verblesning
