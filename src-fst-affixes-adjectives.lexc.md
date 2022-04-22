@@ -139,7 +139,7 @@ The `ies_IES_EVENNOCOMP1` lexicon is used for adjectives on `–ies` and `–ies
 
 ## `LEXICON eh_EH_ODDNOCOMP1`
 
-*adjectives examples:*
+* adjectives examples:*
 * *gööktengïeleh:* `guektiengïeleh+A+Attr`
 * *göökten-gïeleh:* `guektiengïeleh+A+Attr`
 * *guektiengïeleh:* `guektiengïeleh+A+Attr`
@@ -193,7 +193,7 @@ EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
 ## LEXICON `ihks_IHKS_igs_IGS_EVENNOCOMP`
 Adjective with no comp.
 
-*adjectives examples:*
+* adjectives examples:*
 * *isvelihks:* `isvelihks+A+Attr`
 * *isveligs:* `isvelihks+A+Attr`
 * *isvelihks:* `isvelihks+A+Sg+Nom`
@@ -220,7 +220,7 @@ Adjective with no comp.
 ## LEXICON `e_ES_EVENNOCOMP2`
 This is for the adjective "jaame"
 
-*adjectives examples:*
+* adjectives examples:*
 * *jaame:* `jaame+A+Attr`
 * *jaames:* `jaame+A+Sg+Nom`
 

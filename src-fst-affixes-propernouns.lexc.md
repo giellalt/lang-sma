@@ -8,7 +8,7 @@
 - Surnames
 * Place names
 
-*Tunturi # ODD-syllable examples:*
+* Tunturi # ODD-syllable examples:*
 * *Tunturi:* `Tunturi+N+Prop+Sem/Plc+Attr`
 * *Tunturim:* `Tunturi+N+Prop+Sem/Plc+Sg+Acc`
 * *Tunturasse:* `Tunturi+N+Prop+Sem/Plc+Sg+Ill`
@@ -17,7 +17,7 @@
 * *Tunturinie:* `Tunturi+N+Prop+Sem/Plc+Sg+Com`
 * *Tunturinie:* `Tunturi+N+Prop+Sem/Plc+Ess`
 
-*Eira # Even-syllable                   !   Går som MAANA  !    PL+ examples:*
+* Eira # Even-syllable                   !   Går som MAANA  !    PL+ examples:*
 * *Eira:* `Eira+N+Prop+Sem/Sur+Attr` (Eng. ! Går som MAANA ! PL+Nom Eirah)
 * *Eiram:* `Eira+N+Prop+Sem/Sur+Sg+Acc` (Eng. ! Går som MAANA ! PL+Acc Eiride --> Komp. ikke)
 * *Eirese:* `Eira+N+Prop+Sem/Sur+Sg+Ill` (Eng. ! Går som MAANA ! PL+Ill Eiride --> Komp. ikke)
@@ -26,7 +26,7 @@
 * *Eirine:* `Eira+N+Prop+Sem/Sur+Sg+Com` (Eng. ! Går som MAANA ! PL+Com Eirajgujmie)
 * *Eirine:* `Eira+N+Prop+Sem/Sur+Ess` (Eng. ! Går som MAANA ! PL+Ess Eirine)
 
-*Anu # Even-syllable                    !   Går som gaalloe !               ! Pl+Nom examples:*
+* Anu # Even-syllable                    !   Går som gaalloe !               ! Pl+Nom examples:*
 * *Anu:* `Anu+N+Prop+Sem/Fem+Attr` (Eng. ! Går som gaalloe ! Arkivfoto ! Pl+Nom Anuh)
 * *Anum:* `Anu+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som gaalloe ! Arkivfotom ! Pl+Acc Anujde)
 * *Anuse:* `Anu+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som gaalloe ! Arkivfotose ! Pl+Ill Anujde)
@@ -35,7 +35,7 @@
 * *Anune:* `Anu+N+Prop+Sem/Fem+Sg+Com` (Eng. ! Går som gaalloe ! Arkivfotojne ! Pl+Com Anujgujmie)
 * *Anune:* `Anu+N+Prop+Sem/Fem+Ess` (Eng. ! Går som gaalloe ! Arkivfotojne ! Pl+Ess Anujne)
 
-*Ane # Even-syllable                    !   Går som nïejte examples:*
+* Ane # Even-syllable                    !   Går som nïejte examples:*
 * *Ane:* `Ane+N+Prop+Sem/Fem+Attr` (Eng. ! Går som nïejte)
 * *Anem:* `Ane+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som nïejte)
 * *Anese:* `Ane+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som nïejte)
@@ -50,7 +50,7 @@
 * *Anijste:* `Ane+N+Prop+Sem/Fem+Pl+Ela` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
 * *Anigujmie:* `Ane+N+Prop+Sem/Fem+Pl+Com` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
 
-*Ally # Even-syllable                  !   Går som y   examples:*
+* Ally # Even-syllable                  !   Går som y   examples:*
 * *Ally:* `Ally+N+Prop+Sem/Fem+Attr` (Eng. ! Går som nïejte)
 * *Allym:* `Ally+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som nïejte)
 * *Allyn:* `Ally+N+Prop+Sem/Fem+Sg+Gen` (Eng. ! Går som nïejte)
@@ -66,7 +66,7 @@
 * *Allyjste:* `Ally+N+Prop+Sem/Fem+Pl+Ela` (Eng. !)
 * *Allyjgujmie:* `Ally+N+Prop+Sem/Fem+Pl+Com` (Eng. !)
 
-*Aunio # Even-syllable                  !   Går som GAALLOE    examples:*
+* Aunio # Even-syllable                  !   Går som GAALLOE    examples:*
 * *Aunio:* `Aunio+N+Prop+Sem/Sur+Attr` (Eng. ! Går som)
 * *Auniom:* `Aunio+N+Prop+Sem/Sur+Sg+Acc` (Eng. !)
 * *Auniose:* `Aunio+N+Prop+Sem/Sur+Sg+Ill` (Eng. !)
@@ -77,13 +77,13 @@
 
 LEXICON LONDON-obj    Objects. ODD-syllable
 
-*Windows # Odd-syllable test examples:*
+* Windows # Odd-syllable test examples:*
 * *Windows:* `Windows+N+Prop+Sem/Obj+Attr`
 * *Windows:* `Windows+N+Prop+Sem/Obj+Sg+Nom`
 * *Windowsasse:* `Windows+N+Prop+Sem/Obj+Sg+Ill`
 * *Windowsistie:* `Windows+N+Prop+Sem/Obj+Sg+Ela`
 
-*Courtrai # Even-syllable examples:*
+* Courtrai # Even-syllable examples:*
 * *Courtrai:* `Courtrai+N+Prop+Sem/Plc+Attr`
 * *Courtrajjem:* `Courtrai+N+Prop+Sem/Plc+Sg+Acc`
 * *Courtrajjese:* `Courtrai+N+Prop+Sem/Plc+Sg+Ill`
@@ -92,7 +92,7 @@ LEXICON LONDON-obj    Objects. ODD-syllable
 * *Courtrajjine:* `Courtrai+N+Prop+Sem/Plc+Sg+Com`
 * *Courtrajjine:* `Courtrai+N+Prop+Sem/Plc+Ess`
 
-*Haukilahti # Even-syllable   POLITI  examples:*
+* Haukilahti # Even-syllable   POLITI  examples:*
 * *Haukilahti:* `Haukilahti+N+Prop+Sem/Plc+Sg+Nom`
 * *Haukilahtijjem:* `Haukilahti+N+Prop+Sem/Plc+Sg+Acc`
 * *Haukilahtan:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ill`
@@ -104,7 +104,7 @@ LEXICON LONDON-obj    Objects. ODD-syllable
 
 OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
 
-*Hautajärvi # Even-syllable examples:*
+* Hautajärvi # Even-syllable examples:*
 * *Hautajärvi:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Nom`
 * *Hautajärvim:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Acc`
 * *Hautajärvan:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ill`
@@ -113,7 +113,7 @@ OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
 * *Hautajärvine:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Com`
 * *Hautajärvine:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ess`
 
-*gata # Even-syllable examples:*
+* gata # Even-syllable examples:*
 * *Akersgata:* `Akersgata+N+Prop+Sem/Plc+Attr`
 * *Akersgatam:* `Akersgata+N+Prop+Sem/Plc+Sg+Acc`
 * *Akersgatese:* `Akersgata+N+Prop+Sem/Plc+Sg+Ill`
@@ -121,7 +121,7 @@ OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
 # LEXICON ACCRA-femplc
 Propernoun
 
-*gata #  examples:*
+* gata #  examples:*
 * *Abia:* `Abia+N+Prop+Sem/Plc+Sg+Nom`
 * *Abian:* `Abia+N+Prop+Sem/Plc+Sg+Gen`
 * *Abiam:* `Abia+N+Prop+Sem/Plc+Sg+Acc`
@@ -147,7 +147,7 @@ the sne / snie business remains to be sorted out.
 # LEXICON NIEMI
 Propernoun
 
-*propernoun examples:*
+* propernoun examples:*
 * *Ahoniemi:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Nom`
 * *Ahoniemin:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Gen`
 * *Ahoniemim:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Acc`

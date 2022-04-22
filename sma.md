@@ -759,7 +759,7 @@ The `ies_IES_EVENNOCOMP1` lexicon is used for adjectives on `–ies` and `–ies
 
 ## `LEXICON eh_EH_ODDNOCOMP1`
 
-*adjectives examples:*
+* adjectives examples:*
 * *gööktengïeleh:* `guektiengïeleh+A+Attr`
 * *göökten-gïeleh:* `guektiengïeleh+A+Attr`
 * *guektiengïeleh:* `guektiengïeleh+A+Attr`
@@ -813,7 +813,7 @@ EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
 ## LEXICON `ihks_IHKS_igs_IGS_EVENNOCOMP`
 Adjective with no comp.
 
-*adjectives examples:*
+* adjectives examples:*
 * *isvelihks:* `isvelihks+A+Attr`
 * *isveligs:* `isvelihks+A+Attr`
 * *isvelihks:* `isvelihks+A+Sg+Nom`
@@ -840,7 +840,7 @@ Adjective with no comp.
 ## LEXICON `e_ES_EVENNOCOMP2`
 This is for the adjective "jaame"
 
-*adjectives examples:*
+* adjectives examples:*
 * *jaame:* `jaame+A+Attr`
 * *jaames:* `jaame+A+Sg+Nom`
 
@@ -1002,7 +1002,7 @@ darjome+N+Sem/Feat:darjoem N_ODD ;
 with `-oe-` as the stem vowel to get a vowel change `o` => `oe` in even-syllable
 word forms.
 
-*gierehtse (*"pulk"*) # Paradigm for odd-syllable nouns examples:*
+* gierehtse (*"pulk"*) # Paradigm for odd-syllable nouns examples:*
 * *gierehtse:* `gierehtse+N+Sg+Nom`
 * *gierehtsen:* `gierehtse+N+Sg+Gen`
 * *gierehtsem:* `gierehtse+N+Sg+Acc`
@@ -1035,7 +1035,7 @@ word forms.
 
 LEXICON TJE_LASSJE_RESIPR
 
-*beetnege # Odd-syllable test examples:*
+* beetnege # Odd-syllable test examples:*
 * *beetnege:* `beetnege+N+Sg+Nom`
 * *beetneh:* `beetnege+N+Sg+Nom`
 * *beetnegen:* `beetnege+N+Sg+Gen`
@@ -1052,7 +1052,7 @@ LEXICON TJE_LASSJE_RESIPR
 * *beetnegigujmie:* `beetnege+N+Pl+Com`
 * *beetneginie:* `beetnege+N+Ess`
 
-*åeruve # Odd-syllable test examples:*
+* åeruve # Odd-syllable test examples:*
 * *åeruve:* `åeruve+N+Sg+Nom`
 * *åeruven:* `åeruve+N+Sg+Gen`
 * *åeruvem:* `åeruve+N+Sg+Acc`
@@ -1085,7 +1085,7 @@ LEXICON TJE_LASSJE_RESIPR
 * *åerievadtjigujmie:* `åeruve+N+Der/Dimin+N+Pl+Com`
 * *åerievadtjine:* `åeruve+N+Der/Dimin+N+Ess`
 
-*seerije # ODD-syllable test examples:*
+* seerije # ODD-syllable test examples:*
 * *seerije:* `seerije+N+Sg+Nom`
 * *seerijem:* `seerije+N+Sg+Acc`
 * *seerijen:* `seerije+N+Sg+Gen`
@@ -1093,7 +1093,7 @@ LEXICON TJE_LASSJE_RESIPR
 * *seerijisnie:* `seerije+N+Sg+Ine`
 * *seerijistie:* `seerije+N+Sg+Ela`
 
-*daktere # Odd-syllable test examples:*
+* daktere # Odd-syllable test examples:*
 * *daktere:* `daktere+N+Sg+Nom`
 * *dakteren:* `daktere+N+Sg+Gen`
 * *dakterem:* `daktere+N+Sg+Acc`
@@ -1126,19 +1126,19 @@ LEXICON TJE_LASSJE_RESIPR
 * *daktaradtjigujmie:* `daktere+N+Der/Dimin+N+Pl+Com`
 * *daktaradtjine:* `daktere+N+Der/Dimin+N+Ess`
 
-*australijeenere # Even-syllable test examples:*
+* australijeenere # Even-syllable test examples:*
 * *australijeenere:* `australijeenere+N+Sg+Nom`
 * *australijeenerem:* `australijeenere+N+Sg+Acc`
 * *australijeeneren:* `australijeenere+N+Sg+Gen`
 * *australijeenaristie:* `australijeenere+N+Sg+Ela`
 
-*sisilijaanere # Even-syllable test examples:*
+* sisilijaanere # Even-syllable test examples:*
 * *sisilijaanere:* `sisilijaanere+N+Sg+Nom`
 * *sisilijaanerem:* `sisilijaanere+N+Sg+Acc`
 * *sisilijaaneren:* `sisilijaanere+N+Sg+Gen`
 * *sisilijaanaristie:* `sisilijaanere+N+Sg+Ela`
 
-*radijaatore # Even-syllable test examples:*
+* radijaatore # Even-syllable test examples:*
 * *radijaatore:* `radijaatore+N+Sg+Nom`
 * *radijaatorem:* `radijaatore+N+Sg+Acc`
 * *radijaatoren:* `radijaatore+N+Sg+Gen`
@@ -1146,7 +1146,7 @@ LEXICON TJE_LASSJE_RESIPR
 * *radijaatoristie:* `radijaatore+N+Sg+Ela`
 * *radijaatorinie:* `radijaatore+N+Sg+Com`
 
-*pijaanove # ODD-syllable test examples:*
+* pijaanove # ODD-syllable test examples:*
 * *pijaanove:* `pijaanove+N+Sg+Nom`
 * *pijaanovem:* `pijaanove+N+Sg+Acc`
 * *pijaanoven:* `pijaanove+N+Sg+Gen`
@@ -1154,7 +1154,7 @@ LEXICON TJE_LASSJE_RESIPR
 * *pijaanovistie:* `pijaanove+N+Sg+Ela`
 * *pijaanovinie:* `pijaanove+N+Sg+Com`
 
-*administraatore# ODD-syllable test examples:*
+* administraatore# ODD-syllable test examples:*
 * *administraatore:* `administraatore+N+Sg+Nom`
 * *administraatorem:* `administraatore+N+Sg+Acc`
 * *administraatoren:* `administraatore+N+Sg+Gen`
@@ -1162,7 +1162,7 @@ LEXICON TJE_LASSJE_RESIPR
 * *administraatoristie:* `administraatore+N+Sg+Ela`
 * *administraatorinie:* `administraatore+N+Sg+Com`
 
-*faktore# Even-syllable test examples:*
+* faktore# Even-syllable test examples:*
 * *faktore:* `faktore+N+Sg+Nom`
 * *faktorem:* `faktore+N+Sg+Acc`
 * *faktoren:* `faktore+N+Sg+Gen`
@@ -1184,7 +1184,7 @@ umlauted ones.
 
 LEXICON EETE_LOAN    loanwords with -eete -
 
-*universiteete # Even-syllable test examples:*
+* universiteete # Even-syllable test examples:*
 * *universiteete:* `universiteete+N+Sg+Nom`
 * *universiteetem:* `universiteete+N+Sg+Acc`
 * *universiteetesne:* `universiteete+N+Sg+Ine`
@@ -1195,7 +1195,7 @@ LEXICON EETE_LOAN    loanwords with -eete -
 ## Inflection for NIEJTE_SG nouns: lexicon `NIEJTE_SG`
 Short descrioption of this lexicon, and its purpose.
 
-*vïelle # Even-syllable test examples:*
+* vïelle # Even-syllable test examples:*
 * *vïelle:* `vïelle+N+Sg+Nom`
 * *vïellese:* `vïelle+N+Sg+Ill`
 * *vïelline:* `vïelle+N+Sg+Com`
@@ -1248,7 +1248,7 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 - Surnames
 * Place names
 
-*Tunturi # ODD-syllable examples:*
+* Tunturi # ODD-syllable examples:*
 * *Tunturi:* `Tunturi+N+Prop+Sem/Plc+Attr`
 * *Tunturim:* `Tunturi+N+Prop+Sem/Plc+Sg+Acc`
 * *Tunturasse:* `Tunturi+N+Prop+Sem/Plc+Sg+Ill`
@@ -1257,7 +1257,7 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 * *Tunturinie:* `Tunturi+N+Prop+Sem/Plc+Sg+Com`
 * *Tunturinie:* `Tunturi+N+Prop+Sem/Plc+Ess`
 
-*Eira # Even-syllable                   !   Går som MAANA  !    PL+ examples:*
+* Eira # Even-syllable                   !   Går som MAANA  !    PL+ examples:*
 * *Eira:* `Eira+N+Prop+Sem/Sur+Attr` (Eng. ! Går som MAANA ! PL+Nom Eirah)
 * *Eiram:* `Eira+N+Prop+Sem/Sur+Sg+Acc` (Eng. ! Går som MAANA ! PL+Acc Eiride --> Komp. ikke)
 * *Eirese:* `Eira+N+Prop+Sem/Sur+Sg+Ill` (Eng. ! Går som MAANA ! PL+Ill Eiride --> Komp. ikke)
@@ -1266,7 +1266,7 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 * *Eirine:* `Eira+N+Prop+Sem/Sur+Sg+Com` (Eng. ! Går som MAANA ! PL+Com Eirajgujmie)
 * *Eirine:* `Eira+N+Prop+Sem/Sur+Ess` (Eng. ! Går som MAANA ! PL+Ess Eirine)
 
-*Anu # Even-syllable                    !   Går som gaalloe !               ! Pl+Nom examples:*
+* Anu # Even-syllable                    !   Går som gaalloe !               ! Pl+Nom examples:*
 * *Anu:* `Anu+N+Prop+Sem/Fem+Attr` (Eng. ! Går som gaalloe ! Arkivfoto ! Pl+Nom Anuh)
 * *Anum:* `Anu+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som gaalloe ! Arkivfotom ! Pl+Acc Anujde)
 * *Anuse:* `Anu+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som gaalloe ! Arkivfotose ! Pl+Ill Anujde)
@@ -1275,7 +1275,7 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 * *Anune:* `Anu+N+Prop+Sem/Fem+Sg+Com` (Eng. ! Går som gaalloe ! Arkivfotojne ! Pl+Com Anujgujmie)
 * *Anune:* `Anu+N+Prop+Sem/Fem+Ess` (Eng. ! Går som gaalloe ! Arkivfotojne ! Pl+Ess Anujne)
 
-*Ane # Even-syllable                    !   Går som nïejte examples:*
+* Ane # Even-syllable                    !   Går som nïejte examples:*
 * *Ane:* `Ane+N+Prop+Sem/Fem+Attr` (Eng. ! Går som nïejte)
 * *Anem:* `Ane+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som nïejte)
 * *Anese:* `Ane+N+Prop+Sem/Fem+Sg+Ill` (Eng. ! Går som nïejte)
@@ -1290,7 +1290,7 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 * *Anijste:* `Ane+N+Prop+Sem/Fem+Pl+Ela` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
 * *Anigujmie:* `Ane+N+Prop+Sem/Fem+Pl+Com` (Eng. ! Går som nïejte ! -> Kompilerer ikke)
 
-*Ally # Even-syllable                  !   Går som y   examples:*
+* Ally # Even-syllable                  !   Går som y   examples:*
 * *Ally:* `Ally+N+Prop+Sem/Fem+Attr` (Eng. ! Går som nïejte)
 * *Allym:* `Ally+N+Prop+Sem/Fem+Sg+Acc` (Eng. ! Går som nïejte)
 * *Allyn:* `Ally+N+Prop+Sem/Fem+Sg+Gen` (Eng. ! Går som nïejte)
@@ -1306,7 +1306,7 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 * *Allyjste:* `Ally+N+Prop+Sem/Fem+Pl+Ela` (Eng. !)
 * *Allyjgujmie:* `Ally+N+Prop+Sem/Fem+Pl+Com` (Eng. !)
 
-*Aunio # Even-syllable                  !   Går som GAALLOE    examples:*
+* Aunio # Even-syllable                  !   Går som GAALLOE    examples:*
 * *Aunio:* `Aunio+N+Prop+Sem/Sur+Attr` (Eng. ! Går som)
 * *Auniom:* `Aunio+N+Prop+Sem/Sur+Sg+Acc` (Eng. !)
 * *Auniose:* `Aunio+N+Prop+Sem/Sur+Sg+Ill` (Eng. !)
@@ -1317,13 +1317,13 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 
 LEXICON LONDON-obj    Objects. ODD-syllable
 
-*Windows # Odd-syllable test examples:*
+* Windows # Odd-syllable test examples:*
 * *Windows:* `Windows+N+Prop+Sem/Obj+Attr`
 * *Windows:* `Windows+N+Prop+Sem/Obj+Sg+Nom`
 * *Windowsasse:* `Windows+N+Prop+Sem/Obj+Sg+Ill`
 * *Windowsistie:* `Windows+N+Prop+Sem/Obj+Sg+Ela`
 
-*Courtrai # Even-syllable examples:*
+* Courtrai # Even-syllable examples:*
 * *Courtrai:* `Courtrai+N+Prop+Sem/Plc+Attr`
 * *Courtrajjem:* `Courtrai+N+Prop+Sem/Plc+Sg+Acc`
 * *Courtrajjese:* `Courtrai+N+Prop+Sem/Plc+Sg+Ill`
@@ -1332,7 +1332,7 @@ LEXICON LONDON-obj    Objects. ODD-syllable
 * *Courtrajjine:* `Courtrai+N+Prop+Sem/Plc+Sg+Com`
 * *Courtrajjine:* `Courtrai+N+Prop+Sem/Plc+Ess`
 
-*Haukilahti # Even-syllable   POLITI  examples:*
+* Haukilahti # Even-syllable   POLITI  examples:*
 * *Haukilahti:* `Haukilahti+N+Prop+Sem/Plc+Sg+Nom`
 * *Haukilahtijjem:* `Haukilahti+N+Prop+Sem/Plc+Sg+Acc`
 * *Haukilahtan:* `Haukilahti+N+Prop+Sem/Plc+Sg+Ill`
@@ -1344,7 +1344,7 @@ LEXICON LONDON-obj    Objects. ODD-syllable
 
 OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
 
-*Hautajärvi # Even-syllable examples:*
+* Hautajärvi # Even-syllable examples:*
 * *Hautajärvi:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Nom`
 * *Hautajärvim:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Acc`
 * *Hautajärvan:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ill`
@@ -1353,7 +1353,7 @@ OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
 * *Hautajärvine:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Com`
 * *Hautajärvine:* `Hautajärvi+N+Prop+Sem/Plc+Sg+Ess`
 
-*gata # Even-syllable examples:*
+* gata # Even-syllable examples:*
 * *Akersgata:* `Akersgata+N+Prop+Sem/Plc+Attr`
 * *Akersgatam:* `Akersgata+N+Prop+Sem/Plc+Sg+Acc`
 * *Akersgatese:* `Akersgata+N+Prop+Sem/Plc+Sg+Ill`
@@ -1361,7 +1361,7 @@ OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
 # LEXICON ACCRA-femplc
 Propernoun
 
-*gata #  examples:*
+* gata #  examples:*
 * *Abia:* `Abia+N+Prop+Sem/Plc+Sg+Nom`
 * *Abian:* `Abia+N+Prop+Sem/Plc+Sg+Gen`
 * *Abiam:* `Abia+N+Prop+Sem/Plc+Sg+Acc`
@@ -1387,7 +1387,7 @@ the sne / snie business remains to be sorted out.
 # LEXICON NIEMI
 Propernoun
 
-*propernoun examples:*
+* propernoun examples:*
 * *Ahoniemi:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Nom`
 * *Ahoniemin:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Gen`
 * *Ahoniemim:* `Ahoniemi+N+Prop+Sem/Plc+Sg+Acc`
@@ -2868,8 +2868,8 @@ Ingen andre verb har st > s framfor passivderivasjon.
 
 ### Usage tags
 
-|                    Usage tag | Explanation
-|                          --- | ---
+|  Usage tag | Explanation
+|        --- | ---
 | **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 | **+Use/-Spell** | Excluded from speller
 | **+Use/-PLX** | Excluded in PLX speller
@@ -2883,8 +2883,10 @@ Ingen andre verb har st > s framfor passivderivasjon.
 | **+Use/DNorm** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
 | **+Use/PMatch** | Do *only* include in fst's for hfst-pmatch
 | **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch
-| **+Use/GC** | only retained in the HFST Grammar Checker disambiguation analyser
-| **+Use/-GC** | never retained in the HFST Grammar Checker disambiguation analyser
+| **+Use/GC** | **only** retained in the HFST Grammar Checker disambiguation analyser
+| **+Use/-GC** | **never** retained in the HFST Grammar Checker disambiguation analyser
+| **+Use/TTS** | **only** retained in the HFST Text-To-Speech disambiguation analyser
+| **+Use/-TTS** | **never** retained in the HFST Text-To-Speech disambiguation analyser
 
 ## Dialect tags
 
@@ -3598,13 +3600,14 @@ laakte bïejedh - legge for tett sammen
 
 # South Sámi nouns 
 
-## The lexicon NounRoot
+## The lexicon `NounRoot`
+
 This lexicon is the start of all noun lemmas. It splits the nouns in three
 classes as follows:
 
-- `FirstComponent ;`
-- `HyphNouns ;`
-- `Noun ;`
+NounRoot --> FirstComponent
+NounRoot --> HyphNouns
+NounRoot --> Noun
 
 # All nouns with possessives
 

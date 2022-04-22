@@ -55,8 +55,8 @@
 
 ### Usage tags
 
-|                    Usage tag | Explanation
-|                          --- | ---
+|  Usage tag | Explanation
+|        --- | ---
 | **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 | **+Use/-Spell** | Excluded from speller
 | **+Use/-PLX** | Excluded in PLX speller
@@ -70,8 +70,10 @@
 | **+Use/DNorm** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
 | **+Use/PMatch** | Do *only* include in fst's for hfst-pmatch
 | **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch
-| **+Use/GC** | only retained in the HFST Grammar Checker disambiguation analyser
-| **+Use/-GC** | never retained in the HFST Grammar Checker disambiguation analyser
+| **+Use/GC** | **only** retained in the HFST Grammar Checker disambiguation analyser
+| **+Use/-GC** | **never** retained in the HFST Grammar Checker disambiguation analyser
+| **+Use/TTS** | **only** retained in the HFST Text-To-Speech disambiguation analyser
+| **+Use/-TTS** | **never** retained in the HFST Text-To-Speech disambiguation analyser
 
 ## Dialect tags
 
