@@ -581,6 +581,7 @@ get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 | --- | ---
 |  **+OLang/SME** | North Sámi
 |  **+OLang/SMA** | South Sámi
+|  **+OLang/SMJ** | Lule Sámi
 |  **+OLang/FIN** | Finnish
 |  **+OLang/SWE** | Swedish
 |  **+OLang/NOB** | Norw. bokmål
