@@ -3623,6 +3623,7 @@ Not according to umlautsystem
 ---Ije-
 
 Lemma fra GG: merk DNorm
+
 6 koreen
 5 tyrkijen
 20 Bottleneck-hypotesen       ---- dynamisk sammensetning - how?
