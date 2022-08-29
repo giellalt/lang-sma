@@ -8,11 +8,15 @@ if WANT_GRAMCHECK
 
 # List here (space separated) all yaml files to be run as part of make check:
 TESTS=\
-	agreement.yaml
-
+	agreement.yaml \
+  	SYN_Delete_akte.yaml
+  	
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=
+
+ SYN_Delete_akte.yaml  \ 
+ 
 
 endif # WANT_GRAMCHECK
 # passes: agreement.yaml
