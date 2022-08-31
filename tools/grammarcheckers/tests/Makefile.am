@@ -10,7 +10,8 @@ if WANT_GRAMCHECK
 TESTS=\
 	SYN_Delete_akte.yaml \ 
 	Syn_Attr_Pred.yaml \
-	REL_PRON_mij.yaml 
+	REL_PRON_mij.yaml \
+	Syn_Congr.yaml
   	
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
@@ -18,7 +19,8 @@ XFAIL_TESTS=
 
 	SYN_Delete_akte.yaml \ 
 	Syn_Attr_Pred.yaml \
-	REL_PRON_mij.yaml 
+	REL_PRON_mij.yaml \
+	Syn_Congr.yaml
  
  
 
