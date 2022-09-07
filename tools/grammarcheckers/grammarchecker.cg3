@@ -617,6 +617,7 @@ SET CCCOMMA = CC OR COMMA ;
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
+LIST &msyn-pass-active = &msyn-pass-active ; 
 
 MAPPING-PREFIX = & ;
 
@@ -633,7 +634,29 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 ADD:uncorrected-typos (&typo) (?) ;
 
 
-#!! VErb agreement
+
+## PASSIVE VERB should be active   
+
+ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (-1 Acc) ;    
+
+## Orre teknologije edtja saemiengïelem gorredovvedh
+
+ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc) ;    
+
+## Orre teknologije edtja gorredovvedh saemiengïelem
+
+COPY:msyn-pass-active (TV &SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pass-active) OR (IV Ex/V Ex/TV Der/PassS &msyn-pass-active) BEFORE Inf TARGET (&msyn-pass-active) ;
+
+
+## Danna ittjiv dádjaduvá majdik    ## mån ittjiv dádjaduvá majdik
+
+#$ Dat la juoga majt viertti oahppat,    #$ Jågŋå lij biebbmo valla aj juoga majt divna oasstin.
+
+
+
+
+
+#!! VERB agreement
 
 #ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 Adv LINK 1 V + Sg1);
  ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
@@ -645,6 +668,7 @@ COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-ag
 #$ Manne båatam.
 #$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
 #$ Tomhân mun tiäđust-uv paaččim.
+
 
 
 
