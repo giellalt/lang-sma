@@ -8,7 +8,7 @@ if WANT_GRAMCHECK
 
 # List here (space separated) all yaml files to be run as part of make check:
 TESTS=\
-	SYN_Delete_akte.yaml \ 
+	SYN_Delete_akte.yaml \
 	Syn_Attr_Pred.yaml \
 	REL_PRON_mij.yaml \
 	Syn_Congr.yaml \
@@ -22,7 +22,7 @@ TESTS=\
 # be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=
 
-	SYN_Delete_akte.yaml \ 
+	SYN_Delete_akte.yaml \
 	Syn_Attr_Pred.yaml \
 	REL_PRON_mij.yaml \
 	Syn_Congr.yaml \
