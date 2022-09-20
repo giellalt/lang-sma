@@ -38,7 +38,6 @@ Documentation
 Documentation can be found at:
 
 -   <https://giellalt.uit.no/lang/sma/j-sma.html>
--   [In-source documentation](doc/Links.md)
 -   <https://giellalt.uit.no/index.html> (general info)
 
 Core dependencies
