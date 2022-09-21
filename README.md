@@ -37,7 +37,7 @@ Documentation
 
 Documentation can be found at:
 
--   <https://giellalt.uit.no/lang/sma/j-sma.html>
+- [Language specific documentation](https://giellalt.github.io/lang-sma/)
 -   <https://giellalt.uit.no/index.html> (general info)
 
 Core dependencies
