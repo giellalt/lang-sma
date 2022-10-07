@@ -175,6 +175,8 @@ LIST Ord = Ord ;		   #!! Ord
 LIST Qst = Qst ;		   #!! Qst
 LIST IV = IV ; #!! IV
 LIST TV = TV ; #!! TV
+LIST Ex/A = Ex/A ; 
+LIST Ex/V = Ex/V ; 
 LIST Prt = Prt;				   #!! Prt
 LIST Prs = Prs ;			   #!! Prs
 LIST Ind = Ind ;			   #!! Ind
@@ -624,6 +626,7 @@ LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
 LIST &msyn-pass-active = &msyn-pass-active ; 
+LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
 
 MAPPING-PREFIX = & ;
 
@@ -638,6 +641,16 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 
 # Add &typo error tag to unkown words that are not corrected by the speller, so that they at least get a blue underline and a message
 ADD:uncorrected-typos (&typo) (?) ;
+
+
+
+	# Gåabpa + komparativ
+
+ADD:msyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 ("gåabpa" Sg Nom));
+
+COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);	
+	
+	## gåabpa stööremes
 
 
 	# Sååjhtedh as Adverb
