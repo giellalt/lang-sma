@@ -643,6 +643,16 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 ADD:uncorrected-typos (&typo) (?) ;
 
 
+	# attr--> pred
+
+# ADD:msyn-adjectiv-attr-pred (&msyn-adjectiv-attr-pred) TARGET (A Attr) IF (-1 ("gåabpa" Sg #Nom));
+
+#COPY:msyn-adjectiv-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr msyn-adjectiv-attr-pred) AFTER #Ex/A TARGET (msyn-adjectiv-attr-pred);	
+	
+	## beapmoeh (leah) njaelkies  ---> beapmoeh leah njaelkie
+
+
+
 
 	# Gåabpa + komparativ
 
