@@ -346,6 +346,10 @@ LIST @X = @X ;    #!! - `@X`
 
 
 
+LIST REALCOPULAS = "lea" "leah" "årrodh" "sååjhtedh" ;
+
+
+
 #!! ### Sets for Single-word sets
 
 LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
@@ -627,6 +631,7 @@ LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
 LIST &msyn-pass-active = &msyn-pass-active ; 
 LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
+LIST &msyn-adjectiv-attr-pred = &msyn-adjectiv-attr-pred ;
 
 MAPPING-PREFIX = & ;
 
@@ -643,11 +648,13 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 ADD:uncorrected-typos (&typo) (?) ;
 
 
+
+
 	# attr--> pred
 
-# ADD:msyn-adjectiv-attr-pred (&msyn-adjectiv-attr-pred) TARGET (A Attr) IF (-1 ("gåabpa" Sg #Nom));
+ADD:msyn-adjectiv-attr-pred (&msyn-adjectiv-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS)  ;
 
-#COPY:msyn-adjectiv-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr msyn-adjectiv-attr-pred) AFTER #Ex/A TARGET (msyn-adjectiv-attr-pred);	
+COPY:msyn-adjectiv-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adjectiv-attr-pred) AFTER Ex/A TARGET (&msyn-adjectiv-attr-pred);	
 	
 	## beapmoeh (leah) njaelkies  ---> beapmoeh leah njaelkie
 
@@ -681,11 +688,12 @@ COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 
 ## PASSIVE VERB should be active   
 
-ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (-1 Acc) ;    
+ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc) ;    
 
 ## Orre teknologije edtja saemiengïelem gorredovvedh
 
-ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc) ;    
+ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc LINK NEGATE 1 Inf OR VFIN) ;    
+
 
 ## Orre teknologije edtja gorredovvedh saemiengïelem
 
