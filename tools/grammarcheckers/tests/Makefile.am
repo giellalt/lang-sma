@@ -26,7 +26,7 @@ XFAIL_TESTS=\
 	Adpos_Kasus.yaml \
 	Adverb_Verb.yaml \
 	Congr_Pl.yaml \
-	Kongr_Subject_Verbal.yaml \w
+	Kongr_Subject_Verbal.yaml \
 	Neg_Congr.yaml \
 	REL_PRON_mij.yaml \
 	SYN_Delete_akte.yaml \
