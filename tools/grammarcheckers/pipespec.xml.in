@@ -1,7 +1,7 @@
 <pipespec language="@GLANG2@"
           developer="Divvun"
           copyright=""
-          version="0.1"
+          version="0.2"
           contact="Divvun feedback@divvun.no"
           default-pipe="@GLANG@gram-release"
           depversions="vislcg3 >=1.1.2.12361
@@ -33,6 +33,7 @@
     <blanktag>
       <blanktagger n="analyser-gt-whitespace.hfst"/>
     </blanktag>
+    <cg><grammar n="valency.bin"/></cg>
     <cg><grammar n="mwe-dis.bin"/></cg>
     <mwesplit/>
     <cgspell>
@@ -56,6 +57,7 @@
     <blanktag>
       <blanktagger n="analyser-gt-whitespace.hfst"/>
     </blanktag>
+    <cg><grammar n="valency.bin"/></cg>
     <cg><grammar n="mwe-dis.bin"/></cg>
     <mwesplit/>
     <cgspell>
@@ -76,6 +78,7 @@
             language="@GLANG2@"
             type="Grammar error">
     <tokenize><tokenizer n="tokeniser-gramcheck-gt-desc.pmhfst"/></tokenize>
+    <cg><grammar n="valency.cg3"/></cg>
     <cg><grammar n="mwe-dis.cg3"/></cg>
     <mwesplit/>
     <cgspell>
@@ -97,6 +100,7 @@
     <blanktag>
       <blanktagger n="analyser-gt-whitespace.hfst"/>
     </blanktag>
+    <cg><grammar n="valency.cg3"/></cg>
     <cg><grammar n="mwe-dis.cg3"/></cg>
     <mwesplit/>
     <cgspell>
