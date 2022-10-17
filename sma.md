@@ -351,7 +351,7 @@ gellie as numeral, not pronoun
 
 * * *
 <small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/disambiguator.cg3)</small>
-# S O U T H   S Á M I   V A L E N C Y   A N O T A T O R          
+# S O U T H   S Á M I   V A L E N C Y   A N N O T A T O R          
 
 ## Delimiters 
 
