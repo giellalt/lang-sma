@@ -332,6 +332,7 @@ SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V 
 LIST @X = @X ;    #!! - `@X`
 
 
+LIST <TH-Com-Any> = <TH-Com-Any> ;
 
 # ========
   SETS
@@ -657,12 +658,12 @@ COPY:msyn-adjectiv-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adjectiv-a
 	
 	# Pred ---> Attr
 
-ADD:msyn-adjectiv-pred-attr (&msyn-adjectiv-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A)  ;
+ADD:msyn-adjectiv-pred-attr (&msyn-adjectiv-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com));
 
 COPY:msyn-adjectiv-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adjectiv-pred-attr) AFTER Ex/A TARGET (&msyn-adjectiv-pred-attr);	
 
 ## Anna lea vaejkele soptsestæjja -> væjkeles soptsestæjja 
-## Piere (lea) væjkele maanajgujmie -> væjkele maanajgujmie
+#$ Piere (lea) væjkele maanajgujmie -> væjkele maanajgujmie
 
 	# Gåabpa + komparativ
 
