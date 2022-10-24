@@ -28,6 +28,7 @@ It is in use in a wide range of applications.
 -   [ICALL](http://giellalt.uit.no/ped/index.html)
 -   [Machine translation](/mt/MachineTranslation.html) (see also [Converting the fst to Apertium format](ConvertingToApertium.md) )
 -   [Korpusinnsamling](sma-korpus-innsamling.md)
+-   [Grammar checker](gramcheck/index.md)
 
 ## Documenting the language model
 -   [Oversyn over ulike FST-ar](../lang-sme/KompilereFST.html)
