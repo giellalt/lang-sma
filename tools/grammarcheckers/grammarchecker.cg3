@@ -632,7 +632,7 @@ LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
 LIST &msyn-pass-active = &msyn-pass-active ; 
 LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
-LIST &msyn-adjectiv-attr-pred = &msyn-adjectiv-attr-pred ;
+LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 
 MAPPING-PREFIX = & ;
 
@@ -650,17 +650,17 @@ ADD:uncorrected-typos (&typo) (?) ;
 
 	# attr--> pred 
 
-ADD:msyn-adjectiv-attr-pred (&msyn-adjectiv-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS)  ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS)  ;
 
-COPY:msyn-adjectiv-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adjectiv-attr-pred) AFTER Ex/A TARGET (&msyn-adjectiv-attr-pred);	
+COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) AFTER Ex/A TARGET (&msyn-adj-attr-pred);	
 
 	## beapmoeh (leah) njaelkies  ---> beapmoeh leah njaelkie
 	
 	# Pred ---> Attr
 
-ADD:msyn-adjectiv-pred-attr (&msyn-adjectiv-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com));
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com));
 
-COPY:msyn-adjectiv-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adjectiv-pred-attr) AFTER Ex/A TARGET (&msyn-adjectiv-pred-attr);	
+COPY:msyn-adj-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adj-pred-attr) AFTER Ex/A TARGET (&msyn-adj-pred-attr);	
 
 ## Anna lea vaejkele soptsestæjja -> væjkeles soptsestæjja 
 #$ Piere (lea) væjkele maanajgujmie -> væjkele maanajgujmie
