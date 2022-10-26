@@ -1,5 +1,9 @@
 Grammar checker for South Saami
 ===============================
 
-This page will contain the documentation for the South Saami grammar checker.
+Documentation forthcoming. See also the [general documentation on grammar checker development](https://giellalt.github.io/proof/gramcheck/GrammarCheckerDocumentation.html).
+
+- [Procedures for collecting test corpora](collecting-developer-texts.md)
+
+
 
