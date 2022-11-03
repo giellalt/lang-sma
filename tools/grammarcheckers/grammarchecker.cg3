@@ -654,6 +654,10 @@ LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS)(NEGATE 0 ATTR-PRED-A) ;
 
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 ATTR-PRED-A)(1 EOS) (*-1 (Neg Ind) OR REALCOPULAS BARRIER NOT-ADV-PCLE);
+
+	## ij amma vesties.
+
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (-1 CC LINK *-1 Nom BARRIER (*) - REALCOPULAS)(NEGATE 0 ATTR-PRED-A) ;
 
 	## Saemien kultuvre lea gånkaladtje jïh tjaebpies. 
