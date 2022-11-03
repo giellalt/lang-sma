@@ -654,6 +654,10 @@ LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS)(NEGATE 0 ATTR-PRED-A) ;
 
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (-1 CC LINK *-1 Nom BARRIER (*) - REALCOPULAS)(NEGATE 0 ATTR-PRED-A) ;
+
+	## Saemien kultuvre lea gånkaladtje jïh tjaebpies. 
+
 COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) AFTER Ex/A TARGET (&msyn-adj-attr-pred);	
 
 	## beapmoeh (leah) njaelkies  ---> beapmoeh leah njaelkie
