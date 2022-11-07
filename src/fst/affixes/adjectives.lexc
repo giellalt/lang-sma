@@ -1233,7 +1233,7 @@ LEXICON UELLE
 
 LEXICON e_ES_LOAN  !LOAN  - fjerna comp LA - vi kan vurdere om noen av disse bør ha komp.
             e_ES_EVENNOCOMP2 ;
- +Err/Orth:e PRED_0           ; ! forslag. OK! hvorfor det? interesant forslag, men må drøftes.For; hvis vi skal dette, betyr det at vi "godtar" at adj-systemet går fra 4-system til 2-system. Sørsamisk adj-system er i full fart fra 5 og 4-system til 2-system, men dette er ikke divvuns bord til å bestemme.
+ +Err/Orth:e PRED_0           ; ! 
 
 LEXICON ÆRE  !LOAN
          :ær e_E_EVEN ;
@@ -1244,7 +1244,7 @@ LEXICON ENTE  !LOAN
  +Err/Orth:eent e_E_EVENNOCOMP1 ;
 
 LEXICON IHKE_IHKELES_LOAN ! Should contain only loanwords (?)
-                        e_ES_EVENNOCOMP2 ;
+                                     e_ES_LOAN ;
    +Err/Lex:%>%^DISIMPeles            ATTR_0   ;
    +Sg+Nom+Err/Lex:%>%^DISIMPe        FINAL1   ;
    +Sg+Acc+Err/Lex:asse%>m            FINAL1   ;
@@ -1368,9 +1368,9 @@ LEXICON Cs_CE_ODDNOCOMP
                        ODDCASEOBL ; !LA
  +Cmp/SgNom:%^DISIMPe R          ; !LA
 
-LEXICON Ces_CE_ODD
-   Ces_CE_ODDNOCOMP ;
-   ODDCOMP          ;
+!LEXICON Ces_CE_ODD
+!   Ces_CE_ODDNOCOMP ;
+!   ODDCOMP          ;
 
 
 LEXICON Ces_CE_ODDNOCOMP
