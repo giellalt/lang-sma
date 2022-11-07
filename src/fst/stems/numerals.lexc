@@ -366,15 +366,41 @@ LEXICON 2TO9F
             gaaktsede+A+Ord:gaaktsad         ORDTAGODD-ord   ;
               åktsede+A+Ord:åktsad           ORDTAGODD-ord   ;
      åktsede+A+Ord+Err/Orth:åksad            ORDTAGODD-ord   ;
-                   gööktesh:gööktes          COLLTAG         ;
-                    golmesh:golmes           COLLTAG         ;
-                  njealjesh:njealjas         COLLTAG         ;
-                   vïjhtesh:vïjhtes          COLLTAG         ;
-                   govhtesh:govhtes          COLLTAG         ;
-                 tjïjhtjesh:tjïjhtjes        COLLTAG         ;
-                  gaaktsesh:gaaktsas         COLLTAG         ;
-                    åktsesh:åktsas           COLLTAG         ;
+     
+!legge til +Sem/Group_Hum, men hvordan gjöre dette på en smartere måte? Sjur, Lene, Trond?
+gööktesh+Sem/Group_Hum:gööktes         COLLTAG         ;
+golmesh+Sem/Group_Hum:golmes           COLLTAG         ;
+njealjesh+Sem/Group_Hum:njealjas       COLLTAG         ;
+vïjhtesh+Sem/Group_Hum:vïjhtes         COLLTAG         ;
+govhtesh+Sem/Group_Hum:govhtes         COLLTAG         ;
+tjïjhtjesh+Sem/Group_Hum:tjïjhtjes     COLLTAG         ;
+gaaktsesh+Sem/Group_Hum:gaaktsas       COLLTAG         ;
+åktsesh+Sem/Group_Hum:åktsas           COLLTAG         ;
+tjuatesh+Sem/Group_Hum:åktsas          COLLTAG         ;
 
+!legge til fra 10 etc. --> denne cmp. burde kunne gjöres dynamisk
+luhkiegööktesh+Sem/Group_Hum:gööktes         COLLTAG         ;
+luhkiegolmesh+Sem/Group_Hum:golmes           COLLTAG         ;
+luhkienjealjesh+Sem/Group_Hum:njealjas       COLLTAG         ;
+luhkievïjhtesh+Sem/Group_Hum:vïjhtes         COLLTAG         ;
+luhkiegovhtesh+Sem/Group_Hum:govhtes         COLLTAG         ;
+luhkietjïjhtjesh+Sem/Group_Hum:tjïjhtjes     COLLTAG         ;
+luhkiegaaktsesh+Sem/Group_Hum:gaaktsas       COLLTAG         ;
+luhkieåktsesh+Sem/Group_Hum:åktsas           COLLTAG         ;
+
+!legge til fra 20 etc. --> denne cmp. burde kunne gjöres dynamisk
+göökteluhkiegööktesh+Sem/Group_Hum:gööktes         COLLTAG         ;
+göökteluhkiegolmesh+Sem/Group_Hum:golmes           COLLTAG         ;
+göökteluhkienjealjesh+Sem/Group_Hum:njealjas       COLLTAG         ;
+göökteluhkievïjhtesh+Sem/Group_Hum:vïjhtes         COLLTAG         ;
+göökteluhkiegovhtesh+Sem/Group_Hum:govhtes         COLLTAG         ;
+göökteluhkietjïjhtjesh+Sem/Group_Hum:tjïjhtjes     COLLTAG         ;
+göökteluhkiegaaktsesh+Sem/Group_Hum:gaaktsas       COLLTAG         ;
+göökteluhkieåktsesh+Sem/Group_Hum:åktsas           COLLTAG         ;
+
+! !legge til fra 30 etc. --> denne cmp. burde kunne gjöres dynamisk --? 
+
+!! hva med
 
 LEXICON LUHKIE-
                       luhkie:luhkie# AKTEF         ;
@@ -391,7 +417,7 @@ LEXICON LUHKIEF
              luhkie:luhkie# AKTEF         ;
              luhkie:luhkie# 2TO9F         ;
       låhkede+A+Ord:låhkad  ORDTAGODD-ord ;
-            låhkesh:låhkas  COLLTAG       ;
+            låhkesh+Sem/Group_Hum:låhkas  COLLTAG       ;
 
 
 
@@ -410,6 +436,8 @@ gellie+Num+Pl:gell muvhtiepl ;
 !gellie+Num+Sg+Ine+Attr:gelle%>ne # ;
 !gellie+Num+Sg+Ela+Attr:gelle%>de # ;
 !gellie+Num+Pl+Nom:gellie%>h # ; ! are there other cases of Pl?
+
+!gellie+Num+Pl+Ack:gell%>ide # ; ! 
 
 
 ! A final section with some isolated numeral expresssions !
