@@ -3086,7 +3086,7 @@ compounding?
 
 ## Semantic tags
 
-Semantic tags help disambiguation and syntactic analysis. All tags used are defined and listed below. 
+Semantic tags help disambiguation and syntactic analysis. All tags used are defined and listed below.
 
 * +Sem/Act = Activity
 * +Sem/Adr = Webadr
@@ -3483,6 +3483,7 @@ with verbs if the verb is further derived into a noun again:
 |  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
 |  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
 |  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
+|  @R.ErrOrth.ON@
 
 For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
@@ -3642,6 +3643,8 @@ https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://
 ---
 
 
+
+hva med
 
 * **LEXICON ARABICCOMPOUNDS**  ! arabic as first part, 
 

@@ -1,5 +1,7 @@
 
 
+hva med
+
 * **LEXICON ARABICCOMPOUNDS**  ! arabic as first part, 
 
 NAMAT ; ! duhatjienat, logigielat, etc. NAMAT derivs are
