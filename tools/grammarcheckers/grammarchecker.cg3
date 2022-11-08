@@ -740,10 +740,11 @@ COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-ag
 
 
 #!!  Ensure preceding nominal agrees with the verb
-ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (NOT -2 CC)(-1C (N Sg Nom) OR Pron + Sg3 + Nom) (0 VFIN) (NOT 0 Sg3);
+ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (-1C (N Sg Nom) OR Pron + Sg3 + Nom LINK NEGATE *-1 CC BARRIER NOT-NPMOD - (A Sg Nom) LINK -1 (N Nom) OR (Pron Nom)) (0 VFIN) (NOT 0 Sg3);
 COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
 COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prt &msyn-agr-other-sg3);
 	#$ Jis dijjen sådtoeh goh purpure, gelkieh vyölkehke {sjïdtedh} goh lopme, jis dah rååpsehke goh skarlagene, gelkieh vyölkehke goh ålloe {sjïdtedh}.
+	#$ Jieleme jïh saemien siebriedahke {tjuerieh} nuepiem åadtjodh meatan årrodh politihkeles prosessinebåatsoen mieride Nöörjesne.
 
 
 # # And one with a suggestion where we simply change the tag Sg into Attr:
