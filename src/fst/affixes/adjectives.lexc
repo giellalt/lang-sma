@@ -482,22 +482,24 @@ LEXICON SOOKES                                                  ! disse leksikon
 
 ! UMLAUT 3 = e(3)-stamme, som får EVEN-Komparasjon
 LEXICON VEELKES                                                 ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.   ---> TWOL
-        :veelke  ATTR_S       ;
-        :veelke  PRED_S       ;
- +Use/NG:vielkie EVENCOMPONLY ;
-        :vielkie DIMCOMP      ;
- +Use/NG:veelke  MES          ;
+                :veelke  ATTR_S      ;
+        +Err/Lex:veelke  PRED_S      ;
+                :vyölkehke PRED_0    ;
+ +Use/NG+Err/Lex:vielkie EVENCOMPONLY ;
+        +Err/Lex:vielkie DIMCOMP    ;
+ +Use/NG+Err/Lex:veelke  MES        ;
                  !ODDCASE     ;
 
 ! UMLAUT 3 = e(3)-stamme
 LEXICON ROOPSES                                                  ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.   ---> TWOL
-           :rööps     es_ES_EVENNOCOMP1 ;
+  +Err/Orth:rööps     es_ES_EVENNOCOMP1 ;
   +Err/Orth:rööp     es_ES_EVENNOCOMP1 ;
-    +Use/NG:reeps     es_ES_EVENNOCOMP1 ;
-           :ruepsie   EVENCOMPONLY      ;
-           :ruepsie   DIMCOMP           ;
-           :rööpse    MES               ;
-    +Use/NG:rååpsehk  HKE_ODD_NGCOMP    ;
+  +Err/Orth+Use/NG:reeps     es_ES_EVENNOCOMP1 ;
+  +Err/Orth:ruepsie   EVENCOMPONLY      ;
+  +Err/Orth:ruepsie   DIMCOMP           ;
+  +Err/Orth:rööpse    MES               ;
+           :rååpsehke PRED_0            ;
+           :rååpsehk  HKE_ODD_NGCOMP    ;
 
 ! UMLAUT 3 = e(3)-stamme  = Unødvendig lexicon
 !LEXI SNEEHPES                                                  ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?  ---> Twol
