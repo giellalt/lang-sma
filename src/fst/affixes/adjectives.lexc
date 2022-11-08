@@ -1243,6 +1243,27 @@ LEXICON ENTE  !LOAN
          :ent  e_E_EVENNOCOMP1 ; ! eller skal det være -e-es ?
  +Err/Orth:eent e_E_EVENNOCOMP1 ;
 
+LEXICON LES ! Should contain only loanwords (?)
+            :%>%^DISIMPes       ATTR_0   ;
+   +Sg+Nom:%>%^DISIMPes       FINAL1   ;
+   +Sg+Acc:asse%>m            FINAL1   ;
+   +Sg+Gen:asse%>n            FINAL1   ;
+   +Sg+Ill:asse%>se           FINAL1   ;
+   +Sg+Ine:asse%>sne          FINAL1   ;
+   +Sg+Ela:asse%>ste          FINAL1   ;
+   +Sg+Com:ass%>ine           FINAL1   ;
+   +Pl+Nom:%>%^DISIMP%>ass%>h FINAL1   ;
+   +Pl+Acc:%>ass%>ide         FINAL1   ;
+   +Pl+Gen:%>%^DISIMP%>ass%>  IGENSUFF ;
+   +Pl+Ill:%>ass%>ide         FINAL1   ;
+   +Pl+Ine:%>ass%>ine         FINAL1   ;
+   +Pl+Ela:%>ass%>ijste       FINAL1   ;
+   +Pl+Com:%>ass%>igujmie     FINAL1   ;
+          :ass                EVEN_ESS ;
+ +Cmp/SgNom:%>%^DISIMPes       R        ;
+ +Cmp/SgGen:asse%>n            R        ;
+ +Cmp/PlGen:ass%>i             R        ;
+
 LEXICON IHKE_IHKELES_LOAN ! Should contain only loanwords (?)
                                       e_ES_LOAN ;
    +Err/Lex:%>%^DISIMPeles            ATTR_0   ;
@@ -1405,7 +1426,7 @@ LEXICON Ce_Ces_CES_CE_ODDNOCOMP
 
 LEXICON Ces_CES_CE_ODD
             :%^DISIMPe ATTR_S  ; !<=====  gir Attr -s
-!!    +Use/NG+Err/Lex:%^DISIMPe PRED_S  ; ! -s ikke -s i Pred i denne gruppen. 
+!     +Use/NG:%^DISIMPe PRED_S  ; ! -s ikke -s i Pred i denne gruppen.
                        ODDCASE ; ! tt kommentert inn
                        ODDCOMP ;
  +Cmp/SgNom:%^DISIMPe R       ;
