@@ -483,23 +483,45 @@ LEXICON SOOKES                                                  ! disse leksikon
 ! UMLAUT 3 = e(3)-stamme, som får EVEN-Komparasjon
 LEXICON VEELKES                                                 ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.   ---> TWOL
                 :veelke  ATTR_S      ;
-        +Err/Lex:veelke  PRED_S      ;
                 :vyölkehke PRED_0    ;
+                :vyölkehk  HKE_ODD_NGCOMP    ;
+        +Err/Lex:veelke  PRED_S      ;
  +Use/NG+Err/Lex:vielkie EVENCOMPONLY ;
         +Err/Lex:vielkie DIMCOMP    ;
  +Use/NG+Err/Lex:veelke  MES        ;
-                 !ODDCASE     ;
+      +Err/Orth:veelkes   ODDCOMP   ;
+                       !ODDCASE     ;
 
 ! UMLAUT 3 = e(3)-stamme
 LEXICON ROOPSES                                                  ! disse leksikonene må brytes opp. undøvendig dobbelt-leksikon.   ---> TWOL
-  +Err/Orth:rööps     es_ES_EVENNOCOMP1 ;
-  +Err/Orth:rööp     es_ES_EVENNOCOMP1 ;
-  +Err/Orth+Use/NG:reeps     es_ES_EVENNOCOMP1 ;
+           :reepses   ATTR_0            ;
+           :rööpses   ATTR_0            ;
+           :rååpsehke PRED_0            ;
+           :rååpsehk  HKE_ODD_NGCOMP    ;
   +Err/Orth:ruepsie   EVENCOMPONLY      ;
   +Err/Orth:ruepsie   DIMCOMP           ;
   +Err/Orth:rööpse    MES               ;
-           :rååpsehke PRED_0            ;
-           :rååpsehk  HKE_ODD_NGCOMP    ;
+  +Err/Orth:rööpses   ODDCOMP           ;
+  +Err/Orth:reepse    MES               ;
+  +Err/Orth:reepses   ODDCOMP           ;
+
+
+  
+LEXICON VISKES_VYSKEHKE ! inneholder også tjeehpes                                                   
+           :viskes   ATTR_0            ;
+           :vyskes   ATTR_0            ;
+           :vyskehke PRED_0            ;
+           :vyskehk  HKE_ODD_NGCOMP    ;
+  +Err/Orth:viske    MES               ;
+  +Err/Orth:vyske    MES               ;
+  +Err/Orth:viskes   ODDCOMP           ;
+  +Err/Orth:vyskes   ODDCOMP           ;
+
+
+
+
+
+
 
 ! UMLAUT 3 = e(3)-stamme  = Unødvendig lexicon
 !LEXI SNEEHPES                                                  ! burde GEEHPES -> SNEEHPES ? ikke dokumentert geehpebe. s_S_ODD  bort?  ---> Twol
