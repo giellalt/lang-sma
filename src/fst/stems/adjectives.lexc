@@ -483,7 +483,7 @@ LEXICON Adjective
 !NOUNstuaralaakasadtje+CmpN/SgN+CmpN/SgG+CmpN/PlG:stuara#laakasadtj NIEJTE ; !LA
 !Odontologihke:Odontologihk SNAME_NIEJTE-plc ; ! https://satni.uit.no/termwiki/index.php?title=Education:Det_odontologiske_fakultet
 
-TG-grammatihke+A+Err/Orth:TG-grammatihk IHKE_IHKELES_LOAN ; ! brukt, men ikke i tråd med GïeleGaaltije
+TG-grammatihke+A:TG-grammatihk IHKE_IHKELES_LOAN ; ! brukt, men ikke i tråd med GïeleGaaltije
 
 ! Riktige Lexicon til -les
 akustihke+A+OLang/NOB:akustihk IHKE_IHKELES_LOAN ;
@@ -552,7 +552,7 @@ genetihke+A+OLang/NOB:genetihk IHKE_IHKELES_LOAN ;
 geofysihke+A+OLang/NOB:geofysihk IHKE_IHKELES_LOAN ;
 geoteknihke+A+OLang/NOB:geoteknihk IHKE_IHKELES_LOAN ;
 germanistihke+A+OLang/NOB:germanistihk IHKE_IHKELES_LOAN ;
-glasitektonihkles+A+OLang/NOB:glasitektonihk IHKE_IHKELES_LOAN ;
+glasitektonihke+A+OLang/NOB:glasitektonihk IHKE_IHKELES_LOAN ;
 glossematihke+A+OLang/NOB:glossematihk IHKE_IHKELES_LOAN ;
 gouacheteknihke+A+OLang/NOB:gouache#teknihk IHKE_IHKELES_LOAN ;
 grafihke+A+OLang/NOB:grafihk IHKE_IHKELES_LOAN ;
@@ -1105,10 +1105,14 @@ dearohks+A:dearohk Cs_CE_ODD ;
 debatteknihke+A+OLang/NOB:debatt#teknihk IHKE_IHKELES_LOAN ;
 dejpeladtje+A:dejpeladtj e_E_EVENNOCOMP1 ; ! Ella H:Bull "Dejpeladtje vætnoeh jih vuekieh"
 dekaadeles+A:dekaadel LES ;
-demokraateles+A+Err/Orth+OLang/NOB:demokratel LES ; !samediggediedahus 2012
-demokraateles+A+OLang/NOB:demokraatel LES ; !samediggediedahus 2012
-demokratijes+A+Use/DNorm:demokratij ijes_ijs_IJE_ODDNOCOMP ; ! https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:demokratiske
-demokratijes+A+Use/NotDNorm:demokratisk e_E_EVEN ; ! https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:demokratiske
+
+demokraatijes+A+Use/DNorm:demokraatij ijes_ijs_IJE_ODDNOCOMP ; ! 
+demokraatijes+A+Use/NotDNorm:demokratij ijes_ijs_IJE_ODDNOCOMP ; ! 
+demokraatijes+A+Use/NotDNorm+OLang/NOB:demokratel LES ; !samediggediedahus 2012
+demokraatijes+A+OLang/NOB:demokraatel LES ; !samediggediedahus 2012
+
+demokraatijes+A+Use/NotDNorm:demokratisk e_E_EVEN ; ! https://satni.uit.no/termwiki/index.php?title=Servodatdieđa:demokratiske
+
 demokratiske+A:demokratisk e_E_EVEN ;
 demovnen+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:demovne ATTR_N ;
 dentaale+A+OLang/NOB:denta AALE ;
@@ -1137,7 +1141,13 @@ dihkies+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:dihkie ATTR_S ; !Pred=Substantiv +Innesiv= 
 !dijnegapts+A:dijnegapt s_H_EVENNOCOMP ;
 dijnegapts+A:dijnegapt s_H_EVENNOCOMP ;
 dioptrihke+A+OLang/NOB:di^op^trihk IHKE_IHKELES_LOAN ;
-diplomatijes+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:diplomatihkel LES ;
+
+diplomaatijes+A+Use/DNorm:diplomaatij ijes_ijs_IJE_ODDNOCOMP ; !
+diplomaatijes+A+A+Use/NotDNorm:diplomatihkel LES ; 
+diplomaatijes+A+Use/NotDNorm:diplomatij ijes_ijs_IJE_ODDNOCOMP ; ! 
+diplomaatijes+A+Use/NotDNorm+OLang/NOB:diplomatel LES ; !samediggediedahus 2012
+diplomaatijes+A+Use/NotDNorm:diplomaatel LES ; !samediggediedahus 2012
+
 diskutaabele+A+OLang/NOB:diskut AABELE ;
 dispeles+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:dispel Ces_CES_CE_ODD ; !??-st.
 disponijbele+A+OLang/NOB:dispon IJBELE ;
@@ -1342,8 +1352,8 @@ etiovpijen+A+OLang/NOB:etiovpije ATTR_N ;
 etiske+A:etisk e_E_EVEN ;
 etniske+A:etnisk e_E_EVEN ;
 eugenihke+A+OLang/NOB:eugenihk IHKE_IHKELES_LOAN ;
-eurovpe:eurovp e_ES_LOAN ; 
-eurovpe+A+OLang/NOB+Err/Orth:eurohpe ATTR_N ;
+eurovpe+A:eurovp e_ES_LOAN ; 
+eurovpe+A+Err/Orth:eurohpe ATTR_N ;
 europeejehke+A+OLang/NOB:europeejehk Ce_CE_ODDNOCOMP ;
 eventuelle+A+OLang/NOB:eventu UELLE ;
 evte+A:evt e_E_EVEN ;
@@ -1915,12 +1925,17 @@ gïelegeograafeles+A+OLang/NOB:gïele#geograafel LES ; !samediggediedahus 2012
 gïeleh+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïel eh_EH_ODDNOCOMP1 ;
 gïeleh+A+Err/Orth:gïeleldh A_LDH ; !samediggediedahus 2012
 gïelehtadtje+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïelehtadtje PRED_0 ;
-gïelemaehteles+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïele#maehtiel Ces_CE_ODD ; !Ces_Ce_CES_CE_ODD ;
-gïelepolitihke+A:gïele#politihkel Ces_CES_CE_ODD ; ! Err/Orth - Dette er ikke vedtatt i GG- Err/orth alle disse -les - politihke/politihken
-gïelesosiologeles+A+OLang/NOB+Err/Lex:gïele#sosiologel LES ; !samediggediedahus 2012    ! merk denne betydning : «intenst» og «augmentativt» (en som er mye sosiolog av seg) kan man legge til en -les, lassj, jfr. «saemielassje». = riktignok sposiologisk, mrn feil type sosiologisk å bruke i den setningen de har brukt her.  + feil tilpassing av : rota er -log, (sosiolog) som er vedtatt av Gg som -lååge, deretter kan man avlede videre til -les (intens og augmentativ)
+gïelemaehteles+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïele#maehtiel Ces_CE_ODD ; 
+
+gïelepolitihke+A:gïele#politihk IHKE_IHKELES_LOAN ;  ! 
+
+gïelesosiolåågeles+A:gïele#sosiolåågel LES ;
+gïelesosiolåågeles+A+Err/Lex:gïele#sosiologel LES ; !samediggediedahus 2012    ! merk denne betydning : «intenst» og «augmentativt» (en som er mye sosiolog av seg) kan man legge til en -les, lassj, jfr. «saemielassje». = riktignok sposiologisk, mrn feil type sosiologisk å bruke i den setningen de har brukt her.  + feil tilpassing av : rota er -log, (sosiolog) som er vedtatt av Gg som -lååge, deretter kan man avlede videre til -les (intens og augmentativ)
+
 gïelesosiologijes+A+OLang/NOB:gïele#sosiologij ijes_ijs_IJE_ODD ; ! Avledet av sosiologije + fölger samme mönster som jassijes/-jassije - sosiologije (sosiologi) + -s =sosiologijes(attr) = sosiologisk
 gïeleteknologeles+A+OLang/NOB+Err/Lex:gïele#teknologel LES ; ! merk betydning ovenfor. !samediggediedahus 2012
 gïeleteknologijes+A+OLang/NOB:gïele#teknologij ijes_ijs_IJE_ODD ;
+
 gïemhpe+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:gïemhp e_ES_ODDEVEN2 ; ! attr=gïemhpe (durativ-s) og pred=gïemhpes ! e(2)-st. system2
 gïemhpe+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/NG:gïemhpe ATTR_S ;
 gïemhpe+A+Err/Orth:giemp es_ES_EVENNOCOMP1 ;
@@ -2476,7 +2491,7 @@ konvensjonelle+A+OLang/NOB:konvensjonell e_ES_LOAN ;
 koreean+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:koree^a ATTR_N ;
 kosmetihke+A+OLang/NOB:kosmetihk IHKE_IHKELES_LOAN  ;
 !!!!!!!!!!!identihkeles+A+OLang/NOB:identihkel LES ;
-kosmopolihteles+A+OLang/NOB:kosmopoliht IHKE_IHKELES_LOAN  ;
+kosmopolihte+A+OLang/NOB:kosmopoliht IHKE_IHKELES_LOAN  ;
 kostarican+A+OLang/NOB:kostarica ATTR_N ;
 kraajhpijes+A:kraajhpij ijes_ijs_IJE_ODD ;
 kraameske+A:kraamesk Ce_CE_ODDNOCOMP ;
@@ -2716,7 +2731,7 @@ luvkeds+A:luvkied Cs_CS_ODD ; ! COMP+IE luvkiedabpa
 luvregs+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:luvreg Cs_CE_ODD ;
 lyjhkede+A:lyjhkede ATTR_0 ; !
 lyjhkedihks+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:lyjhked ihks_IHKS_igs_IGS_EVENNOCOMP ; !lyjhkedidh
-lyrihke+A+Err/Orth:lyrihk IHKE_IHKELES_LOAN ;
+lyrihke+A:lyrihk IHKE_IHKELES_LOAN ;
 lyöhtehke+A:lyöhtehk Ce_CE_ODD ;
 lyövles+A:lyövl es_ES_EVEN ;
 låabpah+A:låabpa ATTR_H ; !'
@@ -2839,7 +2854,7 @@ manchuvrijen+A+OLang/NOB:manchuvrije ATTR_N ;
 mandsjuvrijen+A+OLang/NOB:mandsjuvrije ATTR_N ;
 mannoes+A:manno es_ES_EVENNOCOMP1 ; !LA LMM+ mannoes monnehke mynnehke mennebe
 mannoes+A:menne EVENCOMP ; !LA LMM+ mannoes monnehke mynnehke mennebe
-mantihke+A+Err/Orth:mantihk IHKE_IHKELES_LOAN ;
+mantihke+A:mantihk IHKE_IHKELES_LOAN ;
 manuelle+A+OLang/NOB:manu UELLE ;
 marginaale+A+OLang/NOB:margina AALE ;
 marhkehtje+A:marhkehtj Ce_CE_ODDNOCOMP ;
@@ -3500,8 +3515,9 @@ pronominaale+A+OLang/NOB:pronomina AALE ;
 pronominelle+A+OLang/NOB:pronominell e_ES_LOAN ;
 propagandeles+A+OLang/NOB:propagandel LES ;
 propedeutihke+A+OLang/NOB:propedeutihk IHKE_IHKELES_LOAN ;
+
+proporsjonaale+A+OLang/NOB:proporsjona AALE ;
 proporsjonaale+A+Err/Orth+OLang/NOB:proporsjovna AALE ;
-proporsjonaale+A+OLang/NOB:propora AALE ;
 prosessuelle+A+OLang/NOB:prosessu UELLE ;
 protestantiske+A:protestantisk e_E_EVEN ;
 provinsijelle+A+OLang/NOB:provinsi JELLE ;
@@ -3596,7 +3612,9 @@ reavkoeh+A:reavkoe ATTR_H ;
 rebellen+A+OLang/NOB:rebelle ATTR_N ;
 redaksjonelle+A+Err/Orth+OLang/NOB:redaksjovnell e_ES_LOAN ;
 redaksjonelle+A+OLang/NOB:redaksjonell e_ES_LOAN ;
+
 reegkes+A:reegke s_S_ODD ; !-reegkesåbpoe e-e
+
 reegkesgïeleh+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:reegkesgïel eh_EH_ODDNOCOMP1 ;
 reejne+A:reejn e_ES_ODDEVEN2 ;
 reejnes+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:raajne EVENCOMP ;
@@ -3698,8 +3716,9 @@ rårhvoeh+A:rårhvoehk oeCe_OECE_ODD ; !
 råtjkoeh+A:råtjk oeh_OEH_ODD1 ;
 råådtege+A:råådteg Ce_CE_ODDNOCOMP ;
 
-råågkehke+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:råågkehke PRED_0 ; ! pred, også ryögkehke
-ryögkehke+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth:ryögkehke PRED_0 ; ! pred, også ryögkehke
+råågkehke+A:råågkehk Ce_CE_ODDNOCOMP ; ! KBLM: ryögkehke tjovve = opplagt også brukt som attributt + muntlig materiale bekrefter også dette. 
+ryögkehke+A:ryögkehk Ce_CE_ODDNOCOMP ; 
+
 rååjnehke+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:rååjnehke PRED_0 ; ! pred
 rååpehke+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:rååpehke PRED_0 ; 
 
@@ -4236,7 +4255,7 @@ soemenugrijen+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:soemenugrije ATTR_N ;
 soerhtehke+A:soerhtehk Ce_CE_ODD ;
 soevedihks+A:soeved ihks_IHKS_igs_IGS_EVENNOCOMP ; !soevedidh
 soeves+A:soeve s_S_ODD ; !-soevesåbpoe - er røykfylt/skitten+ soevine
-sofistihke+A+Err/Orth:sofistihk IHKE_IHKELES_LOAN ;
+sofistihke+A:sofistihk IHKE_IHKELES_LOAN ;
 sojjehtimmes+A:sojjehtimme ATTR_S ;
 sojjehtje+A:sojjehtj Ce_CE_ODDNOCOMP ;
 !!sokratihke+A+OLang/NOB+Err/Orth:sokratihkel LES ; ! sokrates - sokratisk? -
@@ -4321,7 +4340,7 @@ statihke+A+Err/Orth:statihk IHKE_IHKELES_LOAN ;
 
 statiske+A:statisk e_E_EVEN ;
 
-statistihke+A:statistihkel LES ;
+statistihke+A:statistihk IHKE_IHKELES_LOAN ;
 
 stavnijs+A:stavnijs ATTR_0 ; !SOUTH komp+A:stavnijabpa ! -jes også? komp. stavnijabpa
 steadtjah:steadtj ahATTR_anADVERB ; !
@@ -4552,7 +4571,7 @@ teoretihke+A:teoretihk e_E_EVENNOCOMP1 ; ! https://satni.uit.no/termwiki/index.p
 teoretihke+A:teoretihk IHKE_IHKELES_LOAN;
 termihke+A+OLang/NOB:termihk IHKE_IHKELES_LOAN;
 terminaale+A+OLang/NOB:termina AALE ;
-termodynamihke+A+OLang/NOB:termodynamihkel LES ;
+termodynamihke+A:termodynamihk IHKE_IHKELES_LOAN;
 territorijaale+A+OLang/NOB:territori IJAALE_A_LOAN ;
 tertijaale+A+OLang/NOB:terti IJAALE_A_LOAN ;
 tertijæære+A+Err/Orth+OLang/NOB:tertiæ ÆRE ;
@@ -4771,12 +4790,12 @@ traeptjies+A:traeptjie ATTR_S ;
 !traeptsies+A:traepts SAETNIES4 ;
 traeptsies+A:traeptsie ATTR_S ;
 trafihke+A+OLang/NOB:trafihk IHKE_IHKELES_LOAN;
-!!!!!!tragihke+A+OLang/NOB+Err/Orth:tragihk IHKE_IHKELES_LOAN; !Feil
+!!!!!!tragihke+A+OLang/NOB+Err/Orth:tragihk IHKE_IHKELES_LOAN ;
 !!!!!tragikomihkeles+A+OLang/NOB+Err/Orth:tragikomihk IHKE_IHKELES_LOAN; !feil
 tramstah+CmpN/SgN+CmpN/SgG+CmpN/PlG:tramst ahATTR_anADVERB ; ! !SOUTH
 transendentaale+A+Err/Orth+OLang/NOB:tran^scendenta AALE ;
 transendentaale+A+OLang/NOB:tran^sendenta AALE ;
-transformasjonsgrammatihke+A+OLang/NOB:transformasjons^grammatihkel LES ;
+transformasjonsgrammatihke+A:transformasjons^grammatihk IHKE_IHKELES_LOAN ;
 transitïjve+A+OLang/NOB:transit IJVEadj ; !
 kontrastïjve+A+OLang/NOB:kontrast IJVEadj ;
 transparente+A+OLang/NOB:transpar ENTE ;
