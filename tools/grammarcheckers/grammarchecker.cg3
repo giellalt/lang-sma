@@ -748,7 +748,10 @@ COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prt &msyn-ag
 
 
 # # And one with a suggestion where we simply change the tag Sg into Attr:
-ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (NOT 0 Attr OR Gen) (1 CC LINK *1 COMMON-N BARRIER NOT-Attr) ;
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (NOT 0 Attr OR Gen) (1 CC LINK 1 Attr LINK *1 COMMON-N BARRIER NOT-Attr) ;
+
+	#$ Searomh öövre {rååpsehke} jïh snohke-tjalke njaelmeste garkese
+	
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET (A &msyn-adj-pred-attr) ;
 
 # # The method is: Add &SUGGEST to a copied reading to *generate* a
