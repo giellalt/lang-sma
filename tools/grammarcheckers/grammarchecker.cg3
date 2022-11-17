@@ -147,6 +147,8 @@ LIST Nom = Nom ; #!! Nom
 LIST Acc = Acc ; #!! Acc
 LIST Gen = Gen ; #!! Gen
 LIST Ill = Ill ; #!! Ill
+LIST Ela = Ela ; #!! Ela
+LIST Ine = Ine ; #!! Ine
 LIST Loc = Loc ; #!! Loc
 LIST Com = Com ; #!! Com
 LIST Ess = Ess ; #!! Ess
@@ -633,6 +635,7 @@ LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
 LIST &msyn-pass-active = &msyn-pass-active ; 
 LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
+LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
 
 MAPPING-PREFIX = & ;
 
@@ -665,6 +668,12 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (-1 CC LINK *-1 
 COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) AFTER Ex/A TARGET (&msyn-adj-attr-pred);	
 
 	## beapmoeh (leah) njaelkies  ---> beapmoeh leah njaelkie
+	
+	# Attr --> Pred Ess
+	
+ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (1 EOS)(*-1 (N Acc) OR (A Arab) BARRIER NOT-NPMOD - Ela LINK *-1 (V Imprt) LINK 0 Sg2 OR Du2 OR Pl2) ;
+COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER Ex/A TARGET (&msyn-adj-attr-ess);	
+	## Klaeredh 28 rovhtijste {viskes}.
 	
 	# Pred ---> Attr
 
