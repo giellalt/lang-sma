@@ -655,7 +655,9 @@ ADD:uncorrected-typos (&typo) (?) ;
 	
 LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS)(NEGATE 0 ATTR-PRED-A)(NOT 1 N) ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS - Ela)(NEGATE 0 ATTR-PRED-A)(NOT 1 N) ;
+
+	## Man stoere brööke-biehkie haemeste viskes?
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 ATTR-PRED-A)(1 EOS) (*-1 (Neg Ind) OR REALCOPULAS BARRIER NOT-ADV-PCLE);
 
