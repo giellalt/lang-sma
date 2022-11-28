@@ -38,6 +38,7 @@ RIGHT
 WEB
 PPUNCT
 PUNCT
+MWE
 
 COMMA
 ¶
@@ -64,6 +65,8 @@ Nom
 Acc
 Gen
 Ill
+Ela
+Ine
 Loc
 Com
 Ess

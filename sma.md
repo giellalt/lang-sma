@@ -3577,6 +3577,8 @@ This file is compiled by default, the other one is compiled by in
 langs/sma giving the command *.configure --with-oahpa*
 before compiling.
 
+etnihke+A+OLang/NOB:etnihke IHKE_IHKELES_LOAN ; !samediggediedahus 2012 - etnisk - etnisiteete+les
+
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/stems/adjectives.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/adjectives.lexc)</small>
@@ -4085,6 +4087,7 @@ RIGHT
 WEB
 PPUNCT
 PUNCT
+MWE
 
 COMMA
 ¶
@@ -4111,6 +4114,8 @@ Nom
 Acc
 Gen
 Ill
+Ela
+Ine
 Loc
 Com
 Ess
