@@ -64,8 +64,6 @@ Nom
 Acc
 Gen
 Ill
-Ela
-Ine
 Loc
 Com
 Ess
