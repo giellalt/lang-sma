@@ -118,6 +118,7 @@ LIST WEB = WEB ;	    #!! WEB
 LIST QMARK = """ ; # "  #!! QMARK
 LIST PPUNCT = PUNCT ;   #!! PPUNCT
 SET PUNCT = PPUNCT - QMARK ;  #!! PUNCT
+LIST MWE = MWE			#!! MWE
 
 LIST COMMA = "," ;  #!! COMMA
 LIST ¶ = ¶;   #!! ¶
@@ -873,3 +874,13 @@ COPY:Err/Orth-any (&SUGGEST) EXCEPT Err/Orth-any TARGET Err/Orth-any + (&typo) ;
 # Local Variables:
 # cg-pre-pipe: "sh modes/smegram7-cg.mode"
 # End:
+
+	# ====================== #
+		AFTER-SECTIONS
+	# ====================== #
+
+	# Tag removal rules to prepare for generation
+
+SUBSTITUTE (MWE) (*) TARGET MWE ;
+	## Guollefestivála geassemánus ja Riddu Riđđu suoidnemánus.
+
