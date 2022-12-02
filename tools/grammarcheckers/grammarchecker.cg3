@@ -657,15 +657,15 @@ ADD:uncorrected-typos (&typo) (?) ;
 	
 LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS - Ela)(NEGATE 0 ATTR-PRED-A)(NOT 1 N) ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS - Ela)(NEGATE 0 ATTR-PRED-A OR A + Sg + Nom)(NOT 1 N) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 ATTR-PRED-A)(1 EOS) (*-1 (Neg Ind) OR REALCOPULAS BARRIER NOT-ADV-PCLE);
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 ATTR-PRED-A OR A + Sg + Nom)(1 EOS) (*-1 (Neg Ind) OR REALCOPULAS BARRIER NOT-ADV-PCLE);
 
 	## ij amma vesties.
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (-1 CC LINK *-1 Nom BARRIER (*) - REALCOPULAS)(NEGATE 0 ATTR-PRED-A) ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (-1 CC LINK *-1 Nom BARRIER (*) - REALCOPULAS)(NEGATE 0 ATTR-PRED-A OR A + Sg + Nom) ;
 
 	## Saemien kultuvre lea gånkaladtje jïh tjaebpies. 
 
@@ -681,7 +681,7 @@ COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER
 	
 	# Pred ---> Attr
 
-ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))(NEGATE 0 ATTR-PRED-A);
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))(NEGATE 0 ATTR-PRED-A OR Attr);
 
 COPY:msyn-adj-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adj-pred-attr) AFTER Ex/A TARGET (&msyn-adj-pred-attr);	
 
