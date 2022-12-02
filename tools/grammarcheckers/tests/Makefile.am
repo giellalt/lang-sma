@@ -32,7 +32,7 @@ TESTS=\
 	msyn_Syn_Prep_Congr.yaml \
 	msyn_Syn_gaaabpa_Comp.yaml \
 	msyn_TALLORD.yaml \
-	msyn_pass_lgidh_sidh_Ack_Nom.yaml \
+	msyn_pass_lgidh_sidh_Ack_Nom.yaml
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
