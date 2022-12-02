@@ -722,12 +722,22 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFi
 
 ADD:msyn-Neg-ConNeg-Congr-DuPl (&msyn-Neg-ConNeg-Congr-DuPl) TARGET ("ij") + DU-PL-V IF (1 (Prt ConNeg) + DU-PL-V) ;
 
-COPY:msyn-Neg-ConNeg-Congr-DuPl (Du1 &SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (-1 Du1);
-COPY:msyn-Neg-ConNeg-Congr-DuPl (Du2 &SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du1 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (-1 Du2);
-COPY:msyn-Neg-ConNeg-Congr-DuPl (Du3 &SUGGEST) EXCEPT (Du1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (-1 Du3);
-COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl1 &SUGGEST) EXCEPT (Pl3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl2 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (-1 Pl1);
-COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl2 &SUGGEST) EXCEPT (Pl3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl1 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (-1 Pl2);
-COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl3 &SUGGEST) EXCEPT (Pl1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl2 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (-1 Pl3);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Du1 &SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du1);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Du2 &SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du1 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du2);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Du3 &SUGGEST) EXCEPT (Du1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du3);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl1 &SUGGEST) EXCEPT (Pl3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl2 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Pl1);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl2 &SUGGEST) EXCEPT (Pl3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl1 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Pl2);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl3 &SUGGEST) EXCEPT (Pl1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl2 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Pl3);
+
+	# congruence between ij and Prt ConNeg (Singularis)
+
+ADD:msyn-Neg-ConNeg-Congr-SgPl (&msyn-Neg-ConNeg-Congr-SgPl) TARGET ("ij") + SG-V IF (1 (Prt ConNeg) + DU-PL-V) ;
+	## ij lin > ean lin
+	
+COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du2 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl3);
+COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl2 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du1 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl2);
+COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl1 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du2 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl1);
+
 
 ## PASSIVE VERB should be active   
 
