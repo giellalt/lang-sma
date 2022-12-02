@@ -637,6 +637,7 @@ LIST &msyn-pass-active = &msyn-pass-active ;
 LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
+LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 
 MAPPING-PREFIX = & ;
 
@@ -710,6 +711,12 @@ COPY:msyn-sååjhtoe-VFinitt (Pl1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 COPY:msyn-sååjhtoe-VFinitt (Pl2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl2) ;
 COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl3) ;
 
+	# ij as Adverb
+
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS (-1 ("ij" Neg) + $$ALL-PERS) ;
+
+COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
+	## Ean {edtjien} månnoeh datnem sturredh.
 
 ## PASSIVE VERB should be active   
 
@@ -730,6 +737,7 @@ COPY:msyn-pass-active (TV &SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pas
 #$ Dat la juoga majt viertti oahppat,    #$ Jågŋå lij biebbmo valla aj juoga majt divna oasstin.
 
 
+# !! 
 
 
 
