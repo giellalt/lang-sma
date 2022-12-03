@@ -41,7 +41,6 @@ XFAIL_TESTS=\
 	Adverb_Verb.yaml \
 	Congr_Pl.yaml \
 	Kongr_Subject_Verbal.yaml \
-	Neg_Congr.yaml \
 	msyn_REL_PRON_mij.yaml \
 	msyn_SYN_Delete_akte.yaml \
 	msyn_Syn_Attr_Pred.yaml \
