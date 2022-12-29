@@ -335,7 +335,10 @@ SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V 
 LIST @X = @X ;    #!! - `@X`
 
 
-LIST <TH-Com-Any> = <TH-Com-Any> ;
+# SECONDARY TAGS 
+
+LIST <TH-Com-Any> = <TH-Com-Any> ; 
+LIST <AttrPred> = <AttrPred> ;
 
 # ========
   SETS
@@ -368,6 +371,8 @@ LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ; #!! WORD
 # SET REAL-WORD = WORD - Num - Ord ; #!! REAL-WORD
 SET REAL-WORD-NOT-ABBR = WORD - Num - Ord - (ABBR N) ; # This is former REALWORD-NOTABBR #!! REAL-WORD-NOT-ABBR
 SET NOT-COMMA = WORD - COMMA ;  #!! NOT-COMMA
+
+
 
 
 #!! ### Case sets
@@ -660,14 +665,14 @@ ADD:uncorrected-typos (&typo) (?) ;
 LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
-	(*-1 Nom BARRIER (*) - REALCOPULAS - Ela)
-	(NEGATE 0 ATTR-PRED-A OR A + Sg + Nom OR A-ATTR-ONLY)
+	(*-1 Nom BARRIER (*) - REALCOPULAS - Ela - Adv) 
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY)
 	(NOT 1 N) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
-	(NEGATE 0 ATTR-PRED-A OR A + Sg + Nom OR A-ATTR-ONLY)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY)
 	(1 EOS)
 	(*-1 (Neg Ind) OR REALCOPULAS BARRIER NOT-ADV-PCLE);
 
@@ -675,14 +680,15 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(-1 CC LINK *-1 Nom BARRIER (*) - REALCOPULAS)
-	(NEGATE 0 ATTR-PRED-A OR A + Sg + Nom OR A-ATTR-ONLY)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY)
 	(NOT 1 N);
 
 	## Saemien kultuvre lea gånkaladtje jïh tjaebpies. 
 
 COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) AFTER Ex/A TARGET (&msyn-adj-attr-pred);	
 
-	## beapmoeh (leah) njaelkies  ---> beapmoeh leah njaelkie
+	## beapmoeh leah njaelkies  ---> beapmoeh leah njaelkie
+	## laante dan tjaebpies vååjnoe --> Laante dan tjaebpie vååjnoe
 	
 	# Attr --> Pred Ess
 	
@@ -692,7 +698,7 @@ COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER
 	
 	# Pred ---> Attr
 
-ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))(NEGATE 0 ATTR-PRED-A OR Attr);
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))(NEGATE 0 <AttrPred> OR Attr);
 
 COPY:msyn-adj-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adj-pred-attr) AFTER Ex/A TARGET (&msyn-adj-pred-attr);	
 
