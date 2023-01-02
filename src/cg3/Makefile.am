@@ -8,7 +8,7 @@
 
 #############################################
 #### Add language-specific sources here: ####
-GT_CG_LOCAL_SRCS=korp.cg3
+GT_CG_LOCAL_SRCS=valency.cg3 korp.cg3
 
 #############################################################
 #### Add language-specific targets to be installed here: ####
@@ -31,6 +31,13 @@ else
 %.cg3:
 	$(AM_V_GEN)echo "! missing dependency $@" > $@
 endif
+
+%-postspell.cg3: %.cg3
+	$(AM_V_GEN)$(SED) -e 's/^# Error tags$$/&\n\nLIST <spelled> = <spelled> ;/' \
+		-e 's/^SUBSTITUTE \(.*\);/SUBSTITUTE \1 (0 <spelled>)  ;/' \
+		< $< > $@
+
+GT_CG_LOCAL_SRCS+=valency-postspell.cg3
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
