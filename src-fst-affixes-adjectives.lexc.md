@@ -190,6 +190,8 @@ EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
  +Der1+Der/Dimin+A:bööretj ODDCOMP          ; 
 ```
 
+UMLAUT 3 = e(3)-stamme
+
 ## LEXICON `ihks_IHKS_igs_IGS_EVENNOCOMP`
 Adjective with no comp.
 
