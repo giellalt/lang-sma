@@ -736,10 +736,22 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFi
 	## Ean {edtjien} månnoeh datnem sturredh.
 	## Mohte eakan {edtjigan} juakadidh.
 	
+	# ConNeg formen i preteritum burde samsvare i person med negasjonsverb
+	
+SET SG-PERS = Sg1 OR Sg2 OR Sg3 ;
+	
+ADD:msyn-ConNegPrt-congruence (&msyn-ConNegPrt-congruence) TARGET (Prt ConNeg) + $$SG-PERS IF (-1 ("ij" Neg) - $$SG-PERS) ;	
+	## Jis ij {lih} dagkere almetjedabtoe, dellie ij limh enne daajreme mejtie almetjidie golvesovvibie.
+	
+COPY:msyn-ConNegPrt-congruence (Sg1 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-congruence) OR (Sg3 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg1);
+COPY:msyn-ConNegPrt-congruence (Sg2 &SUGGEST) EXCEPT (Sg1 &msyn-ConNegPrt-congruence) OR (Sg3 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg2);
+COPY:msyn-ConNegPrt-congruence (Sg3 &SUGGEST) EXCEPT (Sg1 &msyn-ConNegPrt-congruence) OR (Sg2 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg3);	
+	
+	
 	# tempus from finite form that should be ConNeg gets transferred to ij 
 	
-ADD:msyn-Neg-Prs-Prt (&msyn-Neg-Prs-Prt) TARGET (Neg Ind Prs) + $$ALL-PERS (1 (Ind Prt) + $$ALL-PERS) ;
-	## Mohte {eakan} edtjigan juakadidh.
+ADD:msyn-Neg-Prs-Prt (&msyn-Neg-Prs-Prt) TARGET (Neg Ind Prs) + $$ALL-PERS (1 (Ind Prt) + $$ALL-PERS LINK NOT 0 ("lea")) ;
+	## Mohte eakan edtjigan juakadidh.
 
 COPY:msyn-Neg-Prs-Prt (Prt &SUGGEST) EXCEPT (Prs &msyn-Neg-Prs-Prt) BEFORE ALL-PERS TARGET (&msyn-Neg-Prs-Prt);
 	
