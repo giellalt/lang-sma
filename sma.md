@@ -4177,30 +4177,6 @@ VAbess
 
 ### Semantic tags
 
-- `Sem/Act       `
-- `Sem/Ani       `
-- `Sem/Atr       `
-- `Sem/Body      `
-- `Sem/Clth      `
-- `Sem/Domain    `
-- `Sem/Feat-phys `
-- `Sem/Fem       `
-- `Sem/Group     `
-- `Sem/Lang      `
-- `Sem/Mal       `
-- `Sem/Measr     `
-- `Sem/Money     `
-- `Sem/Obj       `
-- `Sem/Obj-el    `
-- `Sem/Org       `
-- `Sem/Perc-emo  `
-- `Sem/Plc       `
-- `Sem/Sign      `
-- `Sem/State-sick`
-- `Sem/Sur       `
-- `Sem/Time      `
-- `Sem/Txt       `
-
 Other semantic sets:
 
 - `PROP-ATTR          `
