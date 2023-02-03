@@ -304,6 +304,8 @@ expression **WORD - premodifiers**.
 Naming convention &errorclass-errortype-wrong-correct:
 So far only one errorclass: msyn.
 
+RULE SECTION
+
 VERB agreement
 
 Ensure preceding nominal agrees with the verb
