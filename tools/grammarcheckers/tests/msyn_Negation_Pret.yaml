@@ -11,14 +11,14 @@ Config:
 # Foreign language errors = ∞
 
 Tests:
-#Neg-Pret - Feiltyp: Pret: Nektingsverbet er feil og ConNeg er samme form: 
+#Neg-Pret - Feiltyp: Pret: Nektingsverbet er feil og ConNeg er samme form:
 
   - "Skuvlejaepie lij govhte askh, {jih}${jïh} {ij}£{ibie} limh gåetesne mearan skuvlesne."
   - "{Ean}£{Eakan} ligan dah gåetesne, mohte hæhtjosne vaeresne."
   - "Mijjem altese vuajneres tjelmiejgujmie steeri {jih}${jïh} {buerkesti}${buerkiesti} jaememen {jih}${jïh}raavhkedimmien {bijre}${bïjre} jis {ij}£{ibie} limh {giemhpes}${gïemhpes} {jih}${jïh} jupmielasse {jaahkoles}£{jaahkole}."
   - "Men dellie hov {gaajhkh dovnh}£{gaajhkesh dovnesh} akten tjåangkesne {ij}£{ibie} limh gujht dellie oktegh utan dellie hov gaajhkh dovnh {gaajhkh dovnh}£{gaajhkesh dovnesh} aktene {tjåangkesen}${tjåangksne} tjoerimh gujht bööhkesjidh?"
   - "{Jih}${Jïh} jillhts {ij}£{ibie} limh mijjieh dillie seamma veljesne jielieminie guktie daelie, dle mijjen {jåvlemojhtsh}${jåvlemojhtesh} lijhke {jijnjem}${jïjnjem} aavoem buektieh."
-  - " {Jih}${Jïh} dellie {ij}£{ibie} limh vissjeme gænnah, mijjen maadtoej jielemevuekieh {giehtjedidh}${gïehtjedidh} {jih}${jïh} mojhtelidh guktie leah buektiehtamme tjåetskemes, garre {eatnamistie}£{eatnamisnie} veasodh."
+  - "{Jih}${Jïh} dellie {ij}£{ibie} limh vissjeme gænnah, mijjen maadtoej jielemevuekieh {giehtjedidh}${gïehtjedidh} {jih}${jïh} mojhtelidh guktie leah buektiehtamme tjåetskemes, garre {eatnamistie}£{eatnamisnie} veasodh."
   - "Jis ij {lih}£{lij} {dagkere}£{dagkeres} almetjedabtoe, dellie {ij}£{ibie} limh {enne}${enneh} daajreme mejtie almetjidie golvesovvibie."
   - "Jeenjemesh gïeh {maōrigïelem}${maorigïelem} meehtin lin dillie båarasåbpoe goh vïjhteluhkien jaepien båeries, jïh englaanten gïele aarkgïeline jeenjemesh maōrifuelhkieh utnin, mohte {ij}£{eah} lin gaajhkesh."
   - "Learohkh dan ïpmerijhken bååhperostin guktie mahte jiermiehtovvin, juktie {ij}£{eah} lin jiermieh åådtjeme destie mij laejpiejgujmie sjïdti juktie dej dan garre vaajmoeh."
@@ -55,7 +55,7 @@ Tests:
   - "Goh saemien radijovem {gihtjibie}${gihtjijibie} guktie nimhtie, dle jiehtieh {ij}£{eah} lin {enne}${annje} nuekies beetnegh."
   - "Dan {baeltelen}${baaltelen} gujht {ij}¥{ean} lin naan joekehth almetjh jallh {almtjetjierth}${almtjetjïerth}."
   - "Jis gie lij maahteme tjirkedh edtji {{dihte}${dïhte}}£{dam} {{managierte}${maanagïerte}}£{maanagïertem} golme jaepieh juhtedh, dellie {ij}£{ean} limen jueresne orreme mejtie edtjimen maanide vaeltedh {destie}£{dehtie} daaroen {managierteste}${maanagïerteste}, Anne-Lise {sopteste}${soptseste}."
-          
+
 
 
  # - "Vienhtem {ij}£{ean} lin dej jaahkoe skuvlem jijtje stuvredh."
@@ -78,7 +78,7 @@ Tests:
 
 # Nektingsverbet = feil - conneg er riktig: 
 
-#   #FeiltypeD: [ij Lim],
+  #FeiltypeD: [ij Lim],
 #by the preterite negative auxiliary inflected for person + the preterite connegative lih
 #of 'to be' 
 
@@ -88,10 +88,11 @@ Tests:
 #  #FeiltypeE:[eedtjem lih], or by the negative auxiliary in the present tense inflected for
 #person + the preterite connegative lih of 'to be'
 
-
-
-#  - "Dah leah dagkeres aeblehts fueregh idtjin maam {sïjhtien}£{sïjhth} darjodh"  - "Ijje, ean {edtjien}£{edtjh} juakadidh, gustie dagkeres åssjalommesh dutnjan båetieh?"
  
+# Typisk feil er: Nektingsverb + også "nektingsformen av hovedverbet" som skulle stått i finitt form, bøyes  etter person: 
+  - "Dah leah dagkeres aeblehts fueregh idtjin maam {sïjhtien}£{sïjhth} darjodh"  
+  - "Ijje, ean {edtjien}£{edtjh} juakadidh, gustie dagkeres åssjalommesh dutnjan båetieh?"
+  - "Idtjin dah {meehtin}£{maehtieh} baajedh staaloem årrodh, sïjhtin barre nolledidh." 
 
 # #FeiltypeF:[im lih]).
 
@@ -99,13 +100,20 @@ Tests:
 # ih lih --> ih lij 
 # ij lij --> ij lij 
 
-  # feiltypeG
- # - "Mohte {eakan}£{idtjigan} {edtjigan}£{edtjh} juakadidh."
+# MB! 
 
+
+  # feiltypeG:  Nektingsverbet er i presens og "Nektingsformen av hovedverbet" står som nektignsverb i preteritum!
+  - "Mohte {eakan}£{idtjigan} {edtjigan}£{edtjh} juakadidh."
+  - "eedtjem lih" 
+  - "eedtjh lih"
+  - "eedtji lih"  
+
+# Feiltype H
+  - "Ij {leah}£{lea} maa dov naan johte"
+  - "{Ij}£{Eah} leah dov naan måvhkah"
+  
 ## Correct Use
 
  # - "Rakele veanhta eakan {lægan}£{leah} munnjan sygkelem åasteme gænnah."
 #  - "Ean {lean}£{leah} månnoeh oktegh daesnie."
-  
-
-  
