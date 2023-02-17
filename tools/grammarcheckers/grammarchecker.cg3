@@ -818,7 +818,7 @@ COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 
 	# ij as Adverb
 
-ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS (-1 ("ij" Neg) + $$ALL-PERS) ;
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS (-1 ("ij" Prs Neg) + $$ALL-PERS) ;
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl3 &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
 	## Ean {edtjien} månnoeh datnem sturredh.
@@ -828,14 +828,39 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFi
 	
 SET SG-PERS = Sg1 OR Sg2 OR Sg3 ;
 	
-ADD:msyn-ConNegPrt-congruence (&msyn-ConNegPrt-congruence) TARGET (Prt ConNeg) + $$SG-PERS IF (-1 ("ij" Neg) - $$SG-PERS) ;	
+ADD:msyn-ConNegPrt-congruence (&msyn-ConNegPrt-congruence) TARGET (Prt ConNeg) + $$SG-PERS IF (-1 ("ij" Prs Neg) - $$SG-PERS) ;	
 	## Jis ij {lih} dagkere almetjedabtoe, dellie ij limh enne daajreme mejtie almetjidie golvesovvibie.
 	
 COPY:msyn-ConNegPrt-congruence (Sg1 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-congruence) OR (Sg3 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg1);
 COPY:msyn-ConNegPrt-congruence (Sg2 &SUGGEST) EXCEPT (Sg1 &msyn-ConNegPrt-congruence) OR (Sg3 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg2);
 COPY:msyn-ConNegPrt-congruence (Sg3 &SUGGEST) EXCEPT (Sg1 &msyn-ConNegPrt-congruence) OR (Sg2 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg3);	
+
+	## eedtjem/idtjim lih > im lim (kongruens)
+	#MAJA SJEKK
 	
+SET ALLE-PERS-NOTSG2 = Sg1 OR Sg3 OR Du1 OR Du2 OR Du3 OR Pl1 OR Pl2 OR Pl3 ;
+
+ADD:msyn-ConNegPrt-lih-congruence (&msyn-ConNegPrt-lih-congruence) TARGET ("lea" Prt Sg2 ConNeg) IF (-1 ("ij" Prt Neg) + ALLE-PERS-NOTSG2) ;
 	
+	## eedtjem/idtjim lih ConNeg
+	
+COPY:msyn-ConNegPrt-lih-congruence (Sg1 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Sg1); 
+COPY:msyn-ConNegPrt-lih-congruence (Sg3 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Sg3);
+COPY:msyn-ConNegPrt-lih-congruence (Du1 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Du1);
+COPY:msyn-ConNegPrt-lih-congruence (Du2 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Du2);
+COPY:msyn-ConNegPrt-lih-congruence (Du3 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Du3);
+COPY:msyn-ConNegPrt-lih-congruence (Pl1 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Pl1);
+COPY:msyn-ConNegPrt-lih-congruence (Pl2 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Pl2);
+COPY:msyn-ConNegPrt-lih-congruence (Pl3 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Pl3);
+
+	## eedtjem/idtjim lih Neg
+	
+ADD:msyn-NegPrt-lih-congruence (&msyn-NegPrt-lih-congruence) TARGET ("ij" Neg Prt Ind) IF (1 ("lea" Sg2 Prt ConNeg)) ;
+	## eedtjem/idtjim lih > im lim (kongruens)
+
+
+
+
 	# tempus from finite form that should be ConNeg gets transferred to ij 
 	
 ADD:msyn-Neg-Prs-Prt (&msyn-Neg-Prs-Prt) TARGET (Neg Ind Prs) + $$ALL-PERS (1 (Ind Prt) + $$ALL-PERS LINK NOT 0 ("lea")) ;
@@ -845,7 +870,7 @@ COPY:msyn-Neg-Prs-Prt (Prt &SUGGEST) EXCEPT (Prs &msyn-Neg-Prs-Prt) BEFORE ALL-P
 	
 	# congruence between ij and Prt ConNeg (Dualis og Pluralis)
 
-ADD:msyn-Neg-ConNeg-Congr-DuPl (&msyn-Neg-ConNeg-Congr-DuPl) TARGET ("ij") + DU-PL-V OR ("ij" Sg3) IF (1 (Prt ConNeg) + DU-PL-V) ;
+ADD:msyn-Neg-ConNeg-Congr-DuPl (&msyn-Neg-ConNeg-Congr-DuPl) TARGET ("ij" Prs) + DU-PL-V OR ("ij" Prs Sg3) IF (1 (Prt ConNeg) + DU-PL-V) ;
 	## Jis gie lij maahteme tjirkedh edtji dihte maanagierte golme jaepieh juhtedh, dellie {ij} limen jueresne orreme mejtie edtjimen maanide vaeltedh destie daaroen maanagierteste, Anne-Lise sopteste.
 	
 COPY:msyn-Neg-ConNeg-Congr-DuPl (Du1 &SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du1);
