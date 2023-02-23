@@ -1197,11 +1197,12 @@ ADD:uncorrected-typos (&typo) (?) ;
 LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
-	(*-1 Nom BARRIER (*) - REALCOPULAS - Ela - Adv) 
+	(*-1 Nom OR COPULAS OR (V Neg) BARRIER (*) - REALCOPULAS - Ela - Adv) 
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY)
 	(NOT 1 N) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
+	## Ij amma vesties
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY)
