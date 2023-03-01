@@ -1178,6 +1178,7 @@ LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 MAPPING-PREFIX = & ;
 
 
+
 #!! RULE SECTION
 
 SECTION
@@ -1205,6 +1206,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	## Ij amma vesties
 	
 	## "Attributt blir bare brukt når det står foran et noun- Denne regelen forteller at attributt blir feil, når vi har en subjektskandidat foran eller et kopula eller en negasjonsverb og hvis det ikke står et substantiv etterpå."  
+	
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY)
@@ -1232,9 +1234,19 @@ COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) 
 	
 	# Attr --> Pred Ess
 	
+	
 ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (1 EOS)(*-1 (N Acc) OR (A Arab) BARRIER NOT-NPMOD - Ela LINK *-1 (V Imprt) LINK 0 Sg2 OR Du2 OR Pl2) ;
 COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER Ex/A TARGET (&msyn-adj-attr-ess);	
 	## Klaeredh 28 rovhtijste {viskes}.
+
+    # Attr --> Adv 
+
+ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 (Ind Prs Sg3)) ; 
+
+COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-adv) TARGET (&msyn-adj-attr-adv) ; 
+ 
+
+     ## Viskes jïh rööpses klaerieh jijhtieh jïh laante dan tjaebpies vååjnoe
 	
 	# Pred ---> Attr
 
