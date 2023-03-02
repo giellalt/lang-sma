@@ -1221,6 +1221,15 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(NOT 1 N);
 
 	## Saemien kultuvre lea gånkaladtje jïh tjaebpies. 
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
+	(1 CC LINK 1 (A Sg Nom)) 
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY)
+	(NOT 1 N);
+	
+	## rööpses jallh plaaves viskes jallh kruana oransje jallh tjoevke-rööpses
+	
+	#Denne regelen retter attributt til predikativ når det er en konjunksjon som følger etter adjektivet og etter konjunksjonen er det en predikativ adjektivform. 
 	
 	# FS-valency	
 	
