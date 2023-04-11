@@ -1001,8 +1001,9 @@ SELECT:Adv ILLADV - Err/Orth-spes (1 MOVEMENT-V) ;
 
 SELECT:AdvFoc Adv - Err/Orth-spes (0 (Foc/ge)) ;
 
-SELECT:AifGrade A - Err/Orth-spes (0 N LINK -1 GRADE-ADV) ;
+SELECT:AifGrade A - Err/Orth-spes (0 N LINK -1 GRADE-ADV)(NEGATE 0 PrsPrc) ;
 	#$ Joekoen bïjvele lea jïh guakedh.
+	#GRAM
 
 
 #!! ### Adjective or Indef
@@ -1340,9 +1341,10 @@ SELECT:Nom Nom - Err/Orth-spes (0 A OR N LINK 1 COPULAS)(*-1 Nom BARRIER NOT-NPM
 	#$ Datne buerebe lohkije sjidth jis eadtjohke leerehth.
 
 SELECT:Nom Nom - Err/Orth-spes (0 A OR N LINK -1 ("dan") OR ("man") OR GRADE-ADV LINK -1 N + Nom)(1 N LINK NOT 0 Nom) ;
-SELECT:Nom Nom (0 A OR N LINK -1 N + Nom)(1 N LINK NOT 0 Nom)(NOT 0 Adv) ;
+SELECT:Nom Nom (0 A OR N LINK -1 N + Nom)(1 N LINK NOT 0 Nom)(NOT 0 Adv OR PrsPrc) ;
 	#$ Ditnie-barkoe dan søøjmes Læjsese, idtji man jijnjem hinnh darjodh.
 	#$ Nïejte daelie tjaelieminie.
+	#GRAM
 
 SELECT:NumAttr Num + Attr + Ine IF (1 Ine) ;
 	#$ Dïhte tjidtjie gonnoeh aehtjine årroeminie aktene voenesne man nomme Jorpejaevrie.
@@ -1646,8 +1648,8 @@ SELECT:gåetie (N Ill) - Err/Orth-spes (0 ("gåetie") LINK *0 ("tjaangedh") BARR
 
 SELECT:NumN N - Err/Orth-spes (0 A LINK -1 Num OR ("jïjnje")) ;
 SELECT:NnotA N - Err/Orth-spes (0 A LINK NOT 0 Nom + Sg OR Attr) ;
-SELECT:AnotN A - Err/Orth-spes (0 N LINK -1 ADV-MOD-ADJ) ;
-
+SELECT:AnotN A - Err/Orth-spes (0 N LINK -1 ADV-MOD-ADJ)(NEGATE 0 PrsPrc) ;
+	#GRAM
 
 
 #!! ## N or V
@@ -1817,7 +1819,7 @@ REMOVE:Inf_Not_Sg2_ProDrop (V TV Der1 Der/d Ind Prs Sg2) IF (NEGATE *-1 Pron + S
 REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NEGATE *-1 Pron + Pl2 + Nom);
 
 SELECT:PrsPrc PrsPrc - Err/Orth-spes IF (0 A + Nom LINK 1 N) ;
-REMOVE:PrsPrc PrsPrc IF (0 N + Nom LINK NOT 1 N) ;
+#REMOVE:PrsPrc PrsPrc IF (0 N + Nom LINK NOT 1 N) ; #GRAM
 REMOVE:PrsPrc PrsPrc IF (0 N + Nom LINK -1 BOS OR CS)(NOT 1 N + Nom LINK 1 VFIN) ;
 	#$ Varke akte doekije baaktoe båata gihtjie mejtie sijhtieh tjoevkesem åestedh.
 	#$ Juktie Jaavoeladtje iktesth jaavoe jeahta gosse doekije oksese båata jïh sæjhta maam akt doekedh.

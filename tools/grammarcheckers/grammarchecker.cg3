@@ -1260,7 +1260,7 @@ COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv &SUGGEST) EXCEPT (A Attr &ms
 	
 	# Pred ---> Attr
 
-ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))(NEGATE 0 <AttrPred> OR Attr OR Adv OR Ord OR PrsPrc);
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))(NEGATE 0 <AttrPred> OR Attr OR Adv OR Ord OR PrsPrc OR ("båetije"));
 
 COPY:msyn-adj-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adj-pred-attr) AFTER Ex/A TARGET (&msyn-adj-pred-attr);	
 
