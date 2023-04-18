@@ -1935,8 +1935,9 @@ SELECT:rel Rel (0 ("guhte") LINK *-1 VFIN)(*1 VFIN) ;
 
 # verb lemmas
 
-SELECT:notErr VERB-LEMMA - Err/Orth-spes IF (0 VERB-LEMMA + Err/Orth) ;
+SELECT:notErr VERB-LEMMA - Err/Orth-spes IF (0 VERB-LEMMA + Err/Orth)(NEGATE 0 N) ;
 	#$ Veanhta påajhkh eeremes lyjhkieh niejth mej guhkies tjaebpies voepth. # veanhtedh vs vïenhtedh
+	#$GRAM
 
 # bïssedh OR bissedh
 SELECT:LEXbissedh ("bissedh") IF (0 ("bïssedh")) (-1 ("dålle")) ;
