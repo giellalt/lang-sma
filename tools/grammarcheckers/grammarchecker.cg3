@@ -1351,7 +1351,7 @@ COPY:msyn-Neg-Prs-Prt (Prt &SUGGEST) EXCEPT (Prs &msyn-Neg-Prs-Prt) BEFORE ALL-P
 	
 	# congruence between ij and Prt ConNeg (Dualis og Pluralis)
 
-ADD:msyn-Neg-ConNeg-Congr-DuPl (&msyn-Neg-ConNeg-Congr-DuPl) TARGET ("ij" Prs) + DU-PL-V OR ("ij" Prs Sg3) IF (1 (Prt ConNeg) + DU-PL-V) ;
+ADD:msyn-Neg-ConNeg-Congr-DuPl (&msyn-Neg-ConNeg-Congr-DuPl) TARGET ("ij" Prs) + DU-PL-V OR ("ij" Prs Sg3) IF (1 (Prt ConNeg) + DU-PL-V)(0 $$ALL-PERS LINK NEGATE 1 $$ALL-PERS) ;
 	## Jis gie lij maahteme tjirkedh edtji dihte maanagierte golme jaepieh juhtedh, dellie {ij} limen jueresne orreme mejtie edtjimen maanide vaeltedh destie daaroen maanagierteste, Anne-Lise sopteste.
 	
 COPY:msyn-Neg-ConNeg-Congr-DuPl (Du1 &SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du1);
