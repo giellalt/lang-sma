@@ -850,6 +850,14 @@ REMOVE:dïhtePl3 Pl3 (0 ("dïhte" Pers Sg3 Gen) LINK *-1 Sg + Nom BARRIER V OR N
 
 REMOVE:3Logo Logo + Pl3 IF (NOT *-1 Pl3);
 
+	# sijjieh Logo vs. siijjie Nom vs. sijjieh Pron Logo Pl3 Nom
+	# -----------------------------------------------------------
+
+LIST SHARP-N = "aaksjoe" "nejpie" "saakoeh" "tsurre" "tsuhrre" "tsööre" "tsårra, tsarra" "tsurrie" "tjihtje" "tjihtege" "taannga" ;
+	
+SELECT ("sijjieh" Pron) + $$PERS-TAG IF (*-1 VFIN + $$PERS-TAG BARRIER NOT-ADV)(NEGATE *0 SHARP-N);
+
+
 SELECT Attr - Err/Orth-spes IF (0 (Pron Indef) LINK NOT 0 Gen)(*1 N BARRIER NOT-A);
 
 SELECT PXSG - Err/Orth-spes IF (-1 SG + Pers) ;
