@@ -1261,11 +1261,16 @@ COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv &SUGGEST) EXCEPT (A Attr &ms
      ## tjaebpies --> tjaebpieslaakan 
 	
 	# Pred ---> Attr
+	
+LIST LO-PO = "bæjngoelisnie" ;
+LIST LO-ADV = "bæjngoelisnie" ;
 
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) 
 (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))
 (NEGATE 0 <TH-Inf> LINK *1 (N Acc) BARRIER NOT-NPMOD LINK *1 (TV Inf) BARRIER NOT-ADV-PCLE)
-(NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR ("båetije") OR ("åejvie"));
+(NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR ("båetije") OR ("åejvie"))
+(NEGATE *1 Sem/Plc + Ine OR Sem/Plc + Ela OR LO-ADV OR LO-PO BARRIER NOT-NPMOD)
+(NEGATE 2 LO-PO);
 	#$ Lea aelhkie bïjlem vuejedh.
 	# åejvie typical for compounds
 
