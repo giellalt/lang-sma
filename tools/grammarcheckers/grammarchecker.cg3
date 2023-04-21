@@ -1268,9 +1268,9 @@ LIST LO-ADV = "bæjngoelisnie" ;
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) 
 (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))
 (NEGATE 0 <TH-Inf> LINK *1 (N Acc) BARRIER NOT-NPMOD LINK *1 (TV Inf) BARRIER NOT-ADV-PCLE)
-(NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR ("båetije") OR ("åejvie"))
-(NEGATE *1 Sem/Plc + Ine OR Sem/Plc + Ela OR LO-ADV OR LO-PO BARRIER NOT-NPMOD)
-(NEGATE 2 LO-PO);
+(NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR (N Sg Nom) OR ("båetije") OR ("åejvie"))
+(NEGATE *1 Sem/Plc + Ine OR Sem/Plc + Ela OR LO-ADV OR LO-PO BARRIER NOT-NPMOD LINK 1 EOS OR CC OR CS OR Rel LINK NEGATE *-1 VFIN - COPULAS BARRIER CS OR Rel)
+(NEGATE 2 LO-PO LINK 1 EOS OR CC OR CS OR Rel LINK NEGATE *-1 VFIN - COPULAS BARRIER CS OR Rel);
 	#$ Lea aelhkie bïjlem vuejedh.
 	# åejvie typical for compounds
 
