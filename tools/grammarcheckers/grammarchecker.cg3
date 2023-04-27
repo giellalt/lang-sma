@@ -1252,7 +1252,7 @@ COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER
 
     # Attr --> Adv 
 
-ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 (Ind Prs Sg3) - COPULAS) ; 
+ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 (Ind Prs Sg3) - COPULAS)(NEGATE 0 Adv) ; 
 
 COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-adv) TARGET (&msyn-adj-attr-adv) ; 
  
