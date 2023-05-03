@@ -1200,7 +1200,7 @@ LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab)
-	(NEGATE *1 N BARRIER (*) - (A Attr))(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N) ;
+	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
 	## Ij amma vesties
