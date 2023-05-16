@@ -1288,7 +1288,7 @@ COPY:msyn-adj-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adj-pred-attr) 
 
 	# Gåabpa + komparativ
 
-ADD:msyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 ("gåabpa" Sg Nom));
+ADD:xmsyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 ("gåabpa" Sg Nom));
 
 COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);	
 	
@@ -1296,7 +1296,7 @@ COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-
 
 	# Sååjhtedh as Adverb
 
-ADD:msyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET ("sååjhtedh" Ind Prs Sg3) (1 VFIN - Sg3) ;
+ADD:xmsyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET ("sååjhtedh" Ind Prs Sg3) (1 VFIN - Sg3) ;
 
 	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
 	
@@ -1387,7 +1387,7 @@ COPY:msyn-Neg-ConNeg-Congr-SgPl (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Cong
 
 # ij leah dov naan/rööpses/vielie måvhkah -> ij --> eah 
 
-ADD:msyn-number_congruence-subj-copula-hab (&msyn-number_congruence-subj-copula-hab) TARGET ("ij" Prs Sg3) IF (1 ConNeg LINK 1 (Pron Pers Gen) LINK *1 (N Pl Nom) 
+ADD:xmsyn-number_congruence-subj-copula-hab (&msyn-number_congruence-subj-copula-hab) TARGET ("ij" Prs Sg3) IF (1 ConNeg LINK 1 (Pron Pers Gen) LINK *1 (N Pl Nom) 
 BARRIER NOT-NPMODADV) (*0 (Pron Pers Gen) OR (N Gen) + Sem/Hum BARRIER S-BOUNDARY) ;
 
 
@@ -1397,11 +1397,11 @@ subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ;
 
 ## PASSIVE VERB should be active   
 
-ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc) ;    
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc) ;    
 
 ## Orre teknologije edtja saemiengïelem gorredovvedh
 
-ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc LINK NEGATE 1 Inf OR VFIN) ;    
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc LINK NEGATE 1 Inf OR VFIN) ;    
 
 
 ## Orre teknologije edtja gorredovvedh saemiengïelem
@@ -1420,8 +1420,8 @@ COPY:msyn-pass-active (TV &SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pas
 
 #!! VERB agreement
 
-#ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 Adv LINK 1 V + Sg1);
- ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
+#ADD:xmsyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 Adv LINK 1 V + Sg1);
+ ADD:xmsyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
  
 COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-other-sg1);
 COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
@@ -1438,7 +1438,7 @@ COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-ag
 
 
 #!!  Ensure preceding nominal agrees with the verb
-ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (-1C (N Sg Nom) OR Pron + Sg3 + Nom LINK NEGATE *-1 CC BARRIER NOT-NPMOD - (A Sg Nom) LINK -1 (N Nom) OR (Pron Nom)) (0 VFIN) (NOT 0 Sg3 OR (N Sg Acc) OR (N Sg Gen));
+ADD:xmsyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (-1C (N Sg Nom) OR Pron + Sg3 + Nom LINK NEGATE *-1 CC BARRIER NOT-NPMOD - (A Sg Nom) LINK -1 (N Nom) OR (Pron Nom)) (0 VFIN) (NOT 0 Sg3 OR (N Sg Acc) OR (N Sg Gen));
 
 COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
 COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prt &msyn-agr-other-sg3);
