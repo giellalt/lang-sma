@@ -1199,7 +1199,7 @@ LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
-	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
 	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
@@ -1209,7 +1209,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
-	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
 	(1 EOS)
 	(*-1 (Neg Ind) OR REALCOPULAS BARRIER NOT-ADV-PCLE)
 	(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N);
@@ -1218,7 +1218,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(-1 CC LINK *-1 Nom BARRIER (*) - REALCOPULAS)
-	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
 	(NOT 1 N)
 	(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N);
 
@@ -1226,7 +1226,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(1 CC LINK 1 (A Sg Nom) LINK NOT 0 Attr) 
-	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
 	(NOT 1 N);
 	
 	## rööpses jallh plaaves viskes jallh kruana oransje jallh tjoevke-rööpses
@@ -1311,9 +1311,9 @@ COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 
 	# ij as Adverb
 
-ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS (-1 ("ij" Prs Neg) + $$ALL-PERS)(NEGATE 0 ConNeg) ;
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 ("ij" Neg) + $$ALL-PERS BARRIER NOT-ADV-PCLE LINK 0 Prs OR Prt)(NEGATE 0 ConNeg) ;
 
-COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl3 &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
+COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Inf &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
 	## Ean {edtjien} månnoeh datnem sturredh.
 	## Mohte eakan {edtjigan} juakadidh.
 	
@@ -1321,7 +1321,7 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFi
 	
 SET SG-PERS = Sg1 OR Sg2 OR Sg3 ;
 	
-ADD:msyn-ConNegPrt-congruence (&msyn-ConNegPrt-congruence) TARGET (Prt ConNeg) + $$SG-PERS IF (-1 ("ij" Prs Neg) - $$SG-PERS) ;	
+ADD:msyn-ConNegPrt-congruence (&msyn-ConNegPrt-congruence) TARGET (Prt ConNeg) + $$SG-PERS IF (*-1 ("ij" Prs Neg) - $$SG-PERS BARRIER NOT-ADV-PCLE) ;	
 	## Jis ij {lih} dagkere almetjedabtoe, dellie ij limh enne daajreme mejtie almetjidie golvesovvibie.
 	
 COPY:msyn-ConNegPrt-congruence (Sg1 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-congruence) OR (Sg3 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg1);
