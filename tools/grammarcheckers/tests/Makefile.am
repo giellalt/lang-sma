@@ -22,7 +22,6 @@ TESTS=\
 	msyn_Negation_Pret.yaml                     \
 	msyn_Passiv.yaml                            \
 	msyn_Predikativ_Infinitiv_konstruksjon.yaml \
-	msyn_Pret_Nekting.yaml                      \
 	msyn_REL_PRON_mij.yaml                      \
 	msyn_SYN_Delete_akte.yaml                   \
 	msyn_Syn_Attr_Pred.yaml                     \
@@ -50,7 +49,6 @@ XFAIL_TESTS=\
 	msyn_Negation_Pret.yaml                     \
 	msyn_Passiv.yaml                            \
 	msyn_Predikativ_Infinitiv_konstruksjon.yaml \
-	msyn_Pret_Nekting.yaml                      \
 	msyn_REL_PRON_mij.yaml                      \
 	msyn_SYN_Delete_akte.yaml                   \
 	msyn_Syn_Attr_Pred.yaml                     \
