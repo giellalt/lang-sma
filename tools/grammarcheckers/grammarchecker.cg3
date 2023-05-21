@@ -1259,7 +1259,7 @@ COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER
 
     # Attr --> Adv 
 
-ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 (Ind Prs Sg3) - COPULAS)(NEGATE 0 Adv) ; 
+ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 (Ind Prs Sg3) - COPULAS LINK NOT 0 N)(NEGATE 0 Adv) ; 
 
 COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-adv) TARGET (&msyn-adj-attr-adv) ; 
  
@@ -1275,7 +1275,7 @@ LIST LO-ADV = "bæjngoelisnie" ;
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) 
 (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))
 (NEGATE 0 <TH-Inf> LINK *1 (N Acc) BARRIER NOT-NPMOD LINK *1 (TV Inf) BARRIER NOT-ADV-PCLE)
-(NEGATE 0 <TH-Inf> LINK *1 (N Ine) + Sem/Plc OR (N Ine) + Sem/Build OR (N Ela) + Sem/Build BARRIER NOT-NPMOD LINK *1 Inf BARRIER NOT-ADV-PCLE)
+(NEGATE 0 <TH-Inf> LINK *1 (N Ine) + Sem/Plc OR (N Ine) + Sem/Build OR (N Ela) + Sem/Build OR (N Com) BARRIER NOT-NPMOD LINK *1 Inf BARRIER NOT-ADV-PCLE)
 (NEGATE 0 <TH-Inf> LINK *1 Gen BARRIER NOT-NPMOD LINK 1 Po LINK *1 Inf BARRIER NOT-ADV-PCLE)
 (NEGATE *1 Adv OR Ine OR Po BARRIER NOT-ADV - Gen - CC LINK 1 COPULAS)
 (NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR (N Sg Nom) OR ("båetije") OR ("åejvie") OR VFIN)
