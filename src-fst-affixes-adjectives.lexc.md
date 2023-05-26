@@ -182,12 +182,11 @@ This lexicon covers the ies - ehke + umlaut change.
 ## LEXICON `BUERIE_UMLAUT_IE_STAMME`
 EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
 ```
-                  :buer    ie_IE_EVENNOCOMP ; 
-                  :buerie  EVENCOMPONLY     ; 
-                  :bööre   MES              ; 
-                  :buerie  DIMCOMP          ; 
- +Der1+Der/Dimin+A:buaratj ODDCOMP          ; 
- +Der1+Der/Dimin+A:bööretj ODDCOMP          ; 
+                          :buer    ie_IE_EVENNOCOMP ; 
+                          :buerie  EVENCOMPONLY     ; 
+                          :bööre   MES              ; 
+         +Der1+Der/Dimin+A:buaratj ODDCOMP          ; 
+         +Der1+Der/Dimin+A:bööretj ODDCOMP          ; 
 ```
 
 Sjekk opp denne! 
