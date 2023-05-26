@@ -1193,18 +1193,28 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 # Add &typo error tag to unkown words that are not corrected by the speller, so that they at least get a blue underline and a message
 ADD:uncorrected-typos (&typo) (?) ;
 
+	# attr--> pred pl
+
+ADD:msyn-adj-attr-predpl (&msyn-adj-attr-predpl) TARGET (A Attr) IF
+	(*-1 (Pl Nom) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
+	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N)(NEGATE 1 Num) ;
+
+COPY:msyn-adj-attr-pred (A Pl Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-predpl) OR (A Attr &msyn-adj-attr-predpl) AFTER Ex/A TARGET (&msyn-adj-attr-predpl);
+
 	# attr--> pred 
 	
 LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
-	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR (&msyn-adj-attr-predpl))
 	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N)(NEGATE 1 Num) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
 	## Ij amma vesties
-	
+
+
 	## "Attributt blir bare brukt når det står foran et noun- Denne regelen forteller at attributt blir feil, når vi har en subjektskandidat foran eller et kopula eller en negasjonsverb og hvis det ikke står et substantiv etterpå."  
 	
 
