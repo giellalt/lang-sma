@@ -1209,7 +1209,7 @@ LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR (&msyn-adj-attr-predpl))
-	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N)(NEGATE 1 Num) ;
+	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N)(NEGATE 1 CC LINK 1C Adv)(NEGATE 1 Num) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
 	## Ij amma vesties
@@ -1270,6 +1270,8 @@ COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER
     # Attr --> Adv 
 
 ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 (Ind Prs Sg3) - COPULAS LINK NOT 0 N)(NEGATE 0 Adv) ; 
+
+ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 CC LINK 1C Adv)(NEGATE 0 Adv) ; 
 
 COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-adv) TARGET (&msyn-adj-attr-adv) ; 
  
