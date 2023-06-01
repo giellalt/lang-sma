@@ -4441,6 +4441,8 @@ We define two lists for `Err/xxx` tags:
 - `Cmp/Hyph`
 - `<vdic>`
 
+### Other secondary tags
+
 ####  Semantic tags
 
 #### Secondary tags
