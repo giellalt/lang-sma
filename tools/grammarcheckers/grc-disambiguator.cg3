@@ -1222,9 +1222,6 @@ SECTION  #!! SECTION
 #D# REMOVE:Nregex SUB:1 N-DER (0/* N-DER-SUF) ;	
 
 
-REMOVE:testA A-DER (0 LEX-A);
-REMOVE:testV4 V-DER (0 LEX-V) ;  ## should be restriction
-REMOVE:testN N-DER (0 LEX-N) ;
 REMOVE:laakan Der/laakan (0 LEX-ADV) ;
 
 
@@ -1645,7 +1642,7 @@ SELECT:VPl3 Pl3 - Err/Orth-spes (0 VFIN LINK 1 Num - ("akte") LINK 0 Nom)(NEGATE
 SELECT:VPl3 Pl3 - Err/Orth-spes (-1 COMMA LINK *-1 VFIN BARRIER S-BOUNDARY OR Rel LINK *-1 Rel BARRIER VFIN LINK -1 N + Pl + Nom) ;
 	#$ Lohkehtæjjah gieh daaroen- jih saemiengielem øøhpehtieh, leah nåakebh.
 
-IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA OR ConNeg) (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX BARRIER V); 
+IFF:IsItConNeg ConNeg (*-1 Neg BARRIER  CC OR COMMA OR ConNeg) (NEGATE 0 N - ("åerie") LINK *1 ConNeg BARRIER V) (NEGATE 0 Inf LINK *-1 AUX - Neg BARRIER V); 
 	## Göökte ålmah ligan beetnegh lööneme ålmeste gie beetnegh löönehtalli.
 	## NEGATE: Laavloejigan jih tuhtjigan luste, jih gosse idtjigan åerieh jallh byøpmedh, die heehkigan jih beenghkigan dam baeniem guktie dihte gåetie edtja stoerre jih tjeekeds SJIDTEDH.
 	#% Ij leah luhpie skaajhvoeh årrodh daesnie!
