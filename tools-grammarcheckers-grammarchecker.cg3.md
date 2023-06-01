@@ -124,6 +124,8 @@ VAbess
 
 ### Sets for explicit error analysis from the morphological analyser:
 
+### Other secondary tags
+
 ### Semantic tags
 
 Other semantic sets:
