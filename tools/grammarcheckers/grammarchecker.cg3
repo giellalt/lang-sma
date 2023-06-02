@@ -208,6 +208,9 @@ LIST Actio = Actio ;		   #!! Actio
 LIST VAbess = VAbess ;		   #!! VAbess
 
 
+LIST Der/Comp = Der/Comp ; 
+
+
 
 #!! ### Sets for explicit error analysis from the morphological analyser:
 
@@ -1258,7 +1261,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1
 	
 	# Inf-valency
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(NOT 1 Attr)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
 	## Munnjien lea nuekies geehpes tjaaleme gærjah lohkedh. 
 	
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) LINK NOT 0 N LINK 1 EOS);
@@ -1277,7 +1280,7 @@ COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER
 
     # Attr --> Adv 
 
-ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 (Ind Prs Sg3) - COPULAS LINK NOT 0 N)(NEGATE 0 Adv OR Ord) ; 
+ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) - Der/Comp IF (1 (Ind Prs Sg3) - COPULAS LINK NOT 0 N OR Ord)(NEGATE 0 Adv OR Ord) ; 
 
 ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 CC LINK 1C Adv)(NEGATE 0 Adv OR Ord) ; 
 
