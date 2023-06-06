@@ -1177,6 +1177,7 @@ SET CCCOMMA = CC OR COMMA ;
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
+LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-pass-active = &msyn-pass-active ; 
 LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
@@ -1246,14 +1247,18 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	## Saemien kultuvre lea gånkaladtje jïh tjaebpies. 
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
-	(1 CC LINK 1 (A Sg Nom) LINK NOT 0 Attr) 
+	(1 CC LINK 1 (A Sg Nom) OR &msyn-adj-attr-pred LINK NOT 0 Attr) 
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
-	(NOT 1 N);
-	
+	(NOT 1 N);	
 	## rööpses jallh plaaves viskes jallh kruana oransje jallh tjoevke-rööpses
 	
 	#Denne regelen retter attributt til predikativ når det er en konjunksjon som følger etter adjektivet og etter konjunksjonen er det en predikativ adjektivform. 
-	
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
+	(1 COMMA LINK 1 (A Sg Nom) OR &msyn-adj-attr-pred LINK 1 CC LINK 1 (A Sg Nom))
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
+	(NOT 1 N);
+		
 	# FS-valency	
 	
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(1 (N Nom) OR (Cmp/SplitR));  	
@@ -1299,7 +1304,7 @@ SET SEM-ADVERBIAL = Sem/Plc OR Sem/Build OR Sem/Cat ;
 
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A LINK NOT 0 Inf OR VFIN) 
 (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))
-(NEGATE 0 <TH-Inf> LINK *1 (N Acc) BARRIER NOT-NPMOD LINK *1 (TV Inf) BARRIER NOT-ADV-PCLE)
+(NEGATE 0 <TH-Inf> LINK *1 (N Acc) OR (N Nom) + Pl BARRIER NOT-NPMOD LINK *1 (TV Inf) BARRIER NOT-ADV-PCLE)
 (NEGATE 0 <TH-Inf> LINK *1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL BARRIER NOT-NPMOD LINK *1 Inf BARRIER NOT-ADV-PCLE)
 (NEGATE 0 <TH-Inf> LINK *1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL BARRIER NOT-NPMOD LINK 1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL LINK *1 Inf BARRIER NOT-ADV-PCLE)
 (NEGATE 0 <TH-Inf> LINK *1 Gen BARRIER NOT-NPMOD LINK 1 Po LINK *1 Inf BARRIER NOT-ADV-PCLE)
