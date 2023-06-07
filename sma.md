@@ -805,8 +805,8 @@ EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
                           :buer    ie_IE_EVENNOCOMP ; 
                           :buerie  EVENCOMPONLY     ; 
                           :bööre   MES              ; 
-         +Der1+Der/Dimin+A:buaratj ODDCOMP          ; 
-         +Der1+Der/Dimin+A:bööretj ODDCOMP          ; 
+         +Der1+Der/Dimin+A:buaratj diminODDCOMP          ; 
+         +Der1+Der/Dimin+A:bööretj diminODDCOMP          ; 
 ```
 
 Sjekk opp denne! 
