@@ -68,9 +68,12 @@ EXTEDITOR=@SEE@
 	--exclude "(CmpN/Only| R | Rreal |\+Gen\+|\+Der\+|\+CmpN\/Suff|\+Use\/MT)" \
 	$source_file > $lemmas
 
-@GTCORE@/scripts/extract-lemmas.sh \
-	--include "(CmpN/Only| R | Rreal )" \
-	$source_file > $comp_lemmas
+#@GTCORE@/scripts/extract-lemmas.sh \
+#	--include "(CmpN/Only| R | Rreal )" \
+#	$source_file > $comp_lemmas
+
+grep ' R.*€' $source_file  | cut -d '€' -f2 > testcmplemma.txt
+grep ' R.*€' $source_file  | cut -d '+' -f1 > $comp_lemmas
 
 ###### Start testing: #######
 transducer_found=0
@@ -125,20 +128,18 @@ for f in $fsttype; do
 
 ###### Test compounds: #######
 		# Test nouns that only can generate as compounds:
-		sed 's/$/+N+Cmp\/SgNom+Cmp#gåetie+N+Sg+Nom/' $comp_lemmas \
+		sed 's/$/+N+Cmp\/SgNom+Cmp\/Hyph+Cmp#gåetie+N+Sg+Nom/' $comp_lemmas \
 			| $lookup_tool $generator_file.$suffix \
-			| cut -f2 | sed 's/gåetie$//' \
-			| grep -v '^$' >> $generated_lemmas.$f.txt
-#           | grep -v '^$' > $generated_comp_lemmas.$f.txt
+			| grep "\-" | cut -f2| cut -d "-" -f1 > $generated_comp_lemmas.$f.txt
 
 ###### Collect results, and generate debug info if FAIL: #######
         # Sort and compare original input with resulting output - the diff is
         # used to generate lemmas which are opened in SEE:
         sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
-#        sort -u -o $generated_comp_lemmas.$f.txt $generated_comp_lemmas.$f.txt 
+        sort -u -o $generated_comp_lemmas.$f.txt $generated_comp_lemmas.$f.txt 
         comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
-        comm -23 $comp_lemmas $generated_lemmas.$f.txt \
-#        comm -23 $comp_lemmas $generated_comp_lemmas.$f.txt \
+#        comm -23 $comp_lemmas $generated_lemmas.$f.txt \
+        comm -23 testcmplemma.txt $generated_comp_lemmas.$f.txt \
                 >> $result_file.$f.txt
 
         # Open the diff file in SubEthaEdit (if there is a diff):
@@ -183,4 +184,4 @@ if [ $transducer_found -eq 0 ]; then
 fi
 
 # When done, remove the generated data file:
-rm -f $lemmas $comp_lemmas $generated_lemmas* $generated_comp_lemmas*
+#rm -f $lemmas $comp_lemmas $generated_lemmas* $generated_comp_lemmas*
