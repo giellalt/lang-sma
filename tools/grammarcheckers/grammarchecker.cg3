@@ -664,6 +664,8 @@ LIST <vuhtii><TH-ahte> = <vuhtii><TH-ahte> ; #CHECK
 LIST <vuhtii><TH-Acc-Any> = <vuhtii><TH-Acc-Any> ; #CHECK
 LIST <vuostá> = <vuostá> ; #CHECK
 LIST <vuostái><RF-Acc-Any> = <vuostái><RF-Acc-Any> ; #CHECK
+LIST <utnedh><TH-Inf> = <utnedh><TH-Inf> ;
+LIST <utnedh><TH-PrfPrc> = <utnedh><TH-PrfPrc> ;
 
 
 #!! ### Other secondary tags
@@ -1309,6 +1311,9 @@ ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER 
 (NEGATE 0 <TH-Inf> LINK *1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL BARRIER NOT-NPMOD LINK *1 Inf BARRIER NOT-ADV-PCLE)
 (NEGATE 0 <TH-Inf> LINK *1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL BARRIER NOT-NPMOD LINK 1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL LINK *1 Inf BARRIER NOT-ADV-PCLE)
 (NEGATE 0 <TH-Inf> LINK *1 Gen BARRIER NOT-NPMOD LINK 1 Po LINK *1 Inf BARRIER NOT-ADV-PCLE)
+(NEGATE 0 <TH-FS> LINK 1 (N Nom) OR (Pron Nom) LINK *1 VFIN BARRIER NOT-ADV-PCLE - Ill - Ela - Ine)
+(NEGATE 0  <utnedh><TH-Inf> LINK -1 ("utnedh") OR ("åtna" N Sg Nom) LINK *2 Inf BARRIER S-BOUNDARY OR CS)
+(NEGATE 0  <utnedh><TH-PrfPrc> LINK -1 ("utnedh") OR ("åtna" N Sg Nom) LINK *2 PrfPrc BARRIER S-BOUNDARY OR CS)
 (NEGATE *1 Adv OR Ine OR Po BARRIER NOT-ADV - Gen - CC LINK 1 COPULAS)
 (NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR (N Sg Nom) OR ("båetije") OR ("åejvie") OR VFIN)
 (NEGATE *1 Sem/Plc + Ine OR Sem/Plc + Ela OR Sem/Build + Ine OR Sem/Build + Ela OR LO-ADV OR LO-PO BARRIER NOT-NPMOD LINK 1 EOS OR CC OR CS OR Rel LINK NEGATE *-1 VFIN - COPULAS BARRIER CS OR Rel)
