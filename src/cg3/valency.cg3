@@ -788,7 +788,8 @@ LIST <vuhtii><TH-ahte> = <vuhtii><TH-ahte> ; #CHECK
 LIST <vuhtii><TH-Acc-Any> = <vuhtii><TH-Acc-Any> ; #CHECK
 LIST <vuostá> = <vuostá> ; #CHECK
 LIST <vuostái><RF-Acc-Any> = <vuostái><RF-Acc-Any> ; #CHECK
-
+LIST <utnedh><TH-Inf> = <utnedh><TH-Inf> ;
+LIST <utnedh><TH-PrfPrc> = <utnedh><TH-PrfPrc> ;
 
 
 
@@ -1119,6 +1120,7 @@ LIST TH-RO-ESS-V = "utnedh" ;
 	
 SUBSTITUTE (V) (V <TH-Acc-Any><RO-Ess-Any>) TARGET TH-RO-ESS-V - Der/PassL - Der/PassS;
     ## Dam åtnam bïjline.
+    
 
 
 
@@ -1131,14 +1133,26 @@ SUBSTITUTE (A) (A <TH-Com-Any>) TARGET TH-COM-A ;
 	## Piere væjkele jïh sjïehtele maanajgujmie.
 	
 
-LIST TH-FS-A = "madtjeles" "geerjene" "aavosne" "håjnan" "måeresne" ;
+LIST TH-FS-A = "madtjeles" "geerjene" "aavosne" "håjnan" "luste" "lustes" "måeresne" ;
 
 SUBSTITUTE (A) (A <TH-FS>) TARGET TH-FS-A ;
 
 	## Manne joekoen madtjeles Laanteburrie- jïh beapmoedepartemeente (LBD) daelie sæjhta vuertedh goske dïhte saemien laakemoenehtse sov barkoem dorjeme jïh sov juvnehtimmiejgujmie båateme, jïh aaj departemeente jeahta dah sijhtieh moenehtsen jarkelimmieraeriestimmieh båatsoelaakeste vuarjasjidh, saemiedigkieraerie Silje Karine Muotka jeahta.
 
 
-LIST TH-INF-A = "aelhkies" "aelpies" "buerie" "faepeles" "dovres" "hijven" "luste" "lustes" "nåake" "njaelkies" "nuekies" "ovrovne" "sjïehteles" "vihkeles" "væjkeles" ;
+LIST TH-INF-A = "aelhkies" "aelpies" "buerie" "faepeles" "dovres" "hijven" "luste" "lustes" "nåake" "njaelkies" "nuekies" "ovrovne" "sjïehteles" "vaejvie" "vihkeles" "væjkeles" ;
 
 SUBSTITUTE (A) (A <TH-Inf>) TARGET TH-INF-A ;
 	## Lea aelhkie bïjlem vuejedh.
+
+
+
+LIST UTNEDH-INF-A = "buerie" "hijven" "luste" "lustes" "nåake" "sjïehteles" "vihkeles" "vaejvie" "væjkeles" ;
+
+	
+SUBSTITUTE (A) (A <utnedh><TH-Inf>) TARGET UTNEDH-INF-A - Der/PassL - Der/PassS;
+
+LIST UTNEDH-PRFPRC-A = "buerie" "hijven" "luste" "lustes" "nåake" "sjïehteles" "vihkeles" "vaejvie" "væjkeles" ;
+
+SUBSTITUTE (A) (A <utnedh><TH-PrfPrc>) TARGET UTNEDH-PRFPRC-A - Der/PassL - Der/PassS;
+    ##  åtna luste almetjidie vihth nollelamme
