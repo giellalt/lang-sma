@@ -1,8 +1,13 @@
 1) Slå på grammarcheck:
 
 ./configure --enable-tokenisers --enable-grammarchecker
+./configure --enable-tokenisers --enable-grammarchecker && make -j
 
-2) slå av grammarcheck: ./configure
+
+2) slå av grammarcheck: 
+./configure
+./configure && make -j
+
 
 3) Får hele paradigmen for f.eks et adjektiv "buerie" eller et verb "aajhtsedh" :
 
@@ -12,6 +17,7 @@ sh devtools/verb_minip.sh aajhtsedh
 4) For å søke etter et bestemt mønster i noen mapper:
  
 grep buerie test/src/gt-norm-yamls/*
+
 
  
 I vedlagte liste er det adjektiver lemmaform i første kolonne og i andre kolonne: +Sg+Nom
