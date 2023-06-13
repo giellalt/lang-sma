@@ -209,6 +209,7 @@ LIST VAbess = VAbess ;		   #!! VAbess
 
 
 LIST Der/Comp = Der/Comp ; 
+LIST Der/Superl = Der/Superl ; 
 
 
 
@@ -1258,17 +1259,17 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(1 COMMA LINK 1 (A Sg Nom) OR &msyn-adj-attr-pred LINK 1 CC LINK 1 (A Sg Nom))
-	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR Der/Comp OR Der/Superl)
 	(NOT 1 N);
 		
 	# FS-valency	
 	
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(1 (N Nom) OR (Cmp/SplitR));  	
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(1 (N Nom) OR (Cmp/SplitR) LINK *1 VFIN OR Inf OR PrfPrc)(NEGATE 0 Der/Comp OR Der/Superl);  	
 	## Manne joekoen madtjeles Laanteburrie- jïh beapmoedepartemeente (LBD) daelie sæjhta vuertedh goske dïhte saemien laakemoenehtse sov barkoem dorjeme jïh sov juvnehtimmiejgujmie båateme, jïh aaj departemeente jeahta dah sijhtieh moenehtsen jarkelimmieraeriestimmieh båatsoelaakeste vuarjasjidh, saemiedigkieraerie Silje Karine Muotka jeahta.
 	
 	# Inf-valency
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(NOT 1 Attr)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(NEGATE 0  Der/Comp)(NOT 1 Attr)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
 	## Munnjien lea nuekies geehpes tjaaleme gærjah lohkedh. 
 	
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) LINK NOT 0 N LINK 1 EOS);
