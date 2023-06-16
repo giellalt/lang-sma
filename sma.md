@@ -3623,6 +3623,7 @@ flag) and NounPxKin (with a P.Nom3Px.add flag)
 * **@P.Px.add@ NounPxKin ;** = these nouns get full possessive inflection, including 3. person nominative - except that the 3. person nominative has been removed in the South Sámi description. The reason for that change needs to be documented here.
 
 https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:frittstående_borettslag
+
 https://satni.uit.no/termwiki/index.php?title=Education:embetsstudium
 Not according to umlautsystem
 
