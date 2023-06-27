@@ -27,5 +27,10 @@ cut -d '!' -f1 src/fst/stems/adjectives.lexc |grep 'es\+.* ;' |egrep -v '(oes\+|
 
 
 cut -d '!' -f1 src/fst/stems/nouns.lexc |grep ' IJE_LOAN ' | grep -v Err | cut -d '+' -f1 | rev | sort |rev|sed 's/$/+N+Sg+Ill/' |hdsmaNorm | cut -f2
+
+
+Oversette felt 1 og sett bak :
+
+ sed -e 's/^\([^[:space:]]*\)\([[:space:]]*\)\([^:]*\):/\1\2\3:\1/' lemmaer_fra_nobsma_mangler_i_lexc.txt
  
  
