@@ -22,6 +22,7 @@ flag) and NounPxKin (with a P.Nom3Px.add flag)
 https://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:borettslaghttps://satni.uit.no/termwiki/index.php?title=Huksenteknihkka:frittstående_borettslag
 
 https://satni.uit.no/termwiki/index.php?title=Education:embetsstudium
+
 Not according to umlautsystem
 
 ---Ije-
