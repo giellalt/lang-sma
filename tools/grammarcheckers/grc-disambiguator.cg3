@@ -2054,8 +2054,7 @@ IFF:JisPcle ("jis" Pcle) (-1 N OR Pron OR TIME) (NEGATE -1 ("buerie") OR ("luste
 
 
 # select A Attr if the word is directly followed by another noun. Probably needs a barrier to avoid merging two N's that just happen to be colocated, and where the first one is ambiguous with an A Attr reading.
-SELECT:AdjAttrBeforeNoun (A Attr) IF ( 1C N - Prop )(NOT 0 ("hijven")) ;
-REMOVE:hijven Attr (0 ("hijven")) ; # Attr?
+SELECT:AdjAttrBeforeNoun (A Attr) IF (1C N - Prop)(NOT 0 ("hijven")) ;
 
 
 # Select the Inessive reading of an unambiguous noun in front of a location verb:
