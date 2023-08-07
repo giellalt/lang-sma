@@ -1272,7 +1272,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(NEGATE 0  Der/Comp)(NOT 1 Attr)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
 	## Munnjien lea nuekies geehpes tjaaleme gærjah lohkedh. 
 	
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) LINK NOT 0 N LINK 1 EOS);
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) - ("sjïdtedh") LINK NOT 0 N LINK 1 EOS);
 
 COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) OR (A Attr &msyn-adj-attr-pred) AFTER Ex/A TARGET (&msyn-adj-attr-pred);	
 
@@ -1283,6 +1283,9 @@ COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) 
 	
 	
 ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (1 EOS)(*-1 (N Acc) OR (A Arab) BARRIER NOT-NPMOD - Ela LINK *-1 (V Imprt) LINK 0 Sg2 OR Du2 OR Pl2) ;
+
+ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) + ("sjïdtedh") LINK NOT 0 N LINK 1 EOS);
+
 COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER Ex/A TARGET (&msyn-adj-attr-ess);	
 	## Klaeredh 28 rovhtijste {viskes}.
 
