@@ -1210,11 +1210,11 @@ ADD:uncorrected-typos (&typo) (?) ;
 	# attr--> pred pl
 
 ADD:msyn-adj-attr-predpl (&msyn-adj-attr-predpl) TARGET (A Attr) IF
-	(*-1 (Pl Nom) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
+	(*-1 (Pl Nom) OR (Pers Pl3 Nom) OR (Pers Pl1 Nom) OR (Pers Pl2 Nom) OR (Pers Du3 Nom) OR (Pers Du1 Nom) OR (Pers Du2 Nom) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
 	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N)(NEGATE 1 Num) ;
 
-COPY:msyn-adj-attr-pred (A Pl Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-predpl) OR (A Attr &msyn-adj-attr-predpl) AFTER Ex/A TARGET (&msyn-adj-attr-predpl);
+COPY:msyn-adj-attr-predpl (A Pl Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-predpl) OR (A Attr &msyn-adj-attr-predpl) AFTER Ex/A TARGET (&msyn-adj-attr-predpl);
 
 	# attr--> pred 
 	
