@@ -52,6 +52,7 @@ It is in use in a wide range of applications.
     -   paradigms with examples for [verbs](docu-sma-verbs.md), nouns and adjectives.
     -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
 -   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
+- [Syntaks-testmateriale](syntaks-testing.md)
 
 ## Old documentation files (for reference)
 
