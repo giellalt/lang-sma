@@ -1437,9 +1437,6 @@ LEXICON Cs_CE_ODDNOCOMP
                        ODDCASEOBL ; !LA
  +Cmp/SgNom:%^DISIMPe R          ; !LA
 
-LEXICON Ces_CE_ODD
-   Ces_CE_ODDNOCOMP ;
-   ODDCOMP          ;
 
 
 LEXICON Ces_CE_ODDNOCOMP
@@ -1449,10 +1446,10 @@ LEXICON Ces_CE_ODDNOCOMP
  +Cmp/SgNom:%^DISIMPe R      ;
 
 
-LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
-                   Ces_Ce_CES_CE_ODDNOCOMP ;
-                   ODDCOMP                 ;
- +Err/Orth:%^DISIMP ODDCOMP                 ;
+!LEXICON Ces_Ce_CES_CE_ODD   !as Ces_CES_CE_ODD, but with ATTR_0
+!                   Ces_Ce_CES_CE_ODDNOCOMP ;
+!                   ODDCOMP                 ;
+! +Err/Orth:%^DISIMP ODDCOMP                 ;
 
 LEXICON Ces_Ce_CES_CE_ODDNOCOMP
  +Use/NG:%^DISIMPe ATTR_0 ;
@@ -1481,6 +1478,11 @@ LEXICON Ces_CES_CE_ODD
     +Err/Orth:%^DISIMP  ODDCOMP ;
 !   ass NIEJTE ;! <-- EVEN CASE!
 
+
+! LEXICON Ces_CE_ODD
+!    Ces_CE_ODDNOCOMP ;
+!    ODDCOMP          ;
+! 
 
 LEXICON Ces_CES_CE_ODDNOCOMP
             :%^DISIMPe ATTR_S     ;
