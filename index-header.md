@@ -54,6 +54,10 @@ It is in use in a wide range of applications.
 -   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
 - [Syntaks-testmateriale](syntaks-testing.md)
 
+- Word frequency lists
+	- [South Saami lemma frequency list](sma_lemma.freq.md)
+	- [South Saami wordform frequency list](sma_wf.freq.md)
+
 ## Old documentation files (for reference)
 
 -   [Background information](docu-sma-background.md) on the South
