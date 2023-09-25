@@ -573,10 +573,11 @@ SET VFIN-NOT-NEG = VFIN - Neg ;
 SET NOT-NP = VFIN-NOT-NEG OR ConNeg OR Inf OR Pcle OR Interj OR CS ;
  # The set NP-BOUNDARY is bigger. 
 
-LIST INFV = "aavoedidh" "aelkedh" "buektiehtidh" "lyjhkedh" ; # These are often followed by an infitive.
-LIST ILLV = "båetedh" "juhtedh" "ringkedh" ;
+LIST STRICT-TV = "gïehtjedh" ; # These takes accusative instead of illative.
+LIST INFV = "aatedh" "aavoedidh" "aelkedh" "buektiehtidh" "bööredh" "daarpesjidh" "dasselidh" "hïnnedh" "luhpiedidh" "lyjhkedh" "pryövedh" "vuelkedh" ; # These are often followed by an infitive.
+LIST ILLV = "båetedh" "juhtedh" "mojjehtidh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" "gïehtelidh" "tjïskesidh" "soptsestidh" "vuejedh" "barkedh" "gåaradidh" "aelkedh" "aelkiestidh" ;
-LIST ESSV = "barkedh" "" ;
+LIST ESSV = "barkedh" "gåhtjodh" ;
 LIST OPRED-V = "tuhtjedh" "utnedh" ;
 
 LIST MOVEMENT-V = "båetedh" "feeledh" "feeredh" "gaavnedh" "girtedh" "hajkedh" "njaakedh" "roehtedh" "skodtedh" "sygkeldidh" "tjoejkedh" "vaarredh" "vaedtsedh" "voejedh" "vuejedh" "vuelkedh" ;
@@ -954,7 +955,7 @@ REMOVE:laake Gen IF (0 ("laake" Err/Orth) LINK 0 Adv) ;
 	#$ lustes laakan
 
 SELECT:adv-mod Adv (0 ADV-MOD-ADV LINK 1 Adv) ;
-SELECT:adv-mod Adv (0 ADV-MOD-ADJ LINK *1 A BARRIER WORD - Pcle) ;
+SELECT:adv-mod Adv (0 ADV-MOD-ADJ LINK *1 A BARRIER WORD - Pcle)(NOT 0 Dem) ;
 	#$ Njieskiehtimmie lij gaajh hijven.
 
 	
@@ -979,9 +980,10 @@ SELECT:veeleAdv Adv IF (0 ("veele") LINK -1 Nom) ;
 
 SELECT Adv (0 ("daesnie") OR ("desnie") OR ("duesnie") OR ("dusnie")) ;
 
-SELECT Adv (0 ("dan") OR ("man") LINK 1 A OR ("gellie")) ;
+SELECT Adv (0 ("dan") OR ("man") LINK 1 A OR ("gellie") LINK NOT 1 N) ;
 SELECT Indef (0 ("jïjnje") LINK -1 ("dan") OR ("man")) ;
 	#$ Ih dån datne man jijnjem dellie guarkah.
+SELECT Indef (0 ("seamma") LINK 1 ("saaht")) ;
 
 
 SELECT:AAcc A (0 A + Acc LINK 1 N + Acc) ;
@@ -1074,7 +1076,9 @@ SECTION
 # =====
 
 REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER NOT-NPMOD);
+REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 A + $$NUMBER + $$CASES BARRIER NOT-NPMOD);
 REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 N + $$NUMBER + $$CASES BARRIER WORD - A); #OBS Denne burde fungere med WORD - Attr 
+REMOVE:NotPersWhenDem Pers IF (0 Dem + $$NUMBER + $$CASES LINK *1 A + $$NUMBER + $$CASES BARRIER WORD - A); #OBS Denne burde fungere med WORD - Attr 
 	#$ Pluppe tjuara dam rovnegs tjoevkem vuartasjidh guktie buelieminie.
 
 REMOVE:DemWhenPers Dem IF (0 Pers + Gen LINK 1 Po) ;
@@ -1124,7 +1128,7 @@ SELECT:Indef Indef (0 ("mij") LINK -1 Neg) ;
 SELECT:Indef Indef (0 ("mij") LINK *-1 COPULAS BARRIER SV-BOUNDARY LINK -1 Neg) ;
 	#$ ij leah dan gåvva maam daan bïjre gaavnedh.
 
-SELECT:Indef Indef (0 Rel LINK 1 ("gænnah")) ;
+SELECT:Indef Indef (0 Rel LINK 1 ("gænnah") OR ("gan")) ;
 REMOVE:Indef Indef (0 Rel LINK NOT -1 Neg) ;
 
 SELECT:InterrNotRel Interr (0 Rel LINK NEGATE *-1 Interr)(*1 ("?")) ; 
@@ -1137,8 +1141,10 @@ SELECT:RelGen (Rel Gen) (*-1 VFIN BARRIER S-BOUNDARY)(*1 N BARRIER NOT-NPMOD);
 SELECT:RelGen (Rel Gen) (1 N OR Pers)(1 N) ;
 	#$ Gaahtoe man nomme Pusi.
 
+SELECT:Relnotmah Rel (0 ("mah") LINK 1 Pl + Nom OR Pl3 + Nom LINK NOT 1 EOS) ;
+	#$ Ammol tjïjhkerdem foepedi jïh eelki tjïjhkerdidh mah dah jis bovtsh.
 
-
+SELECT:mahA A (0 N + Pl LINK -1 ("mah")) ;
 
 #!! ### Adverbs
 #!! Selecting adverbs in local contexts
@@ -1163,7 +1169,7 @@ SELECT:aarehkeAdv Adv IF (0 ("aarehke") LINK 1 Sem/Time) ;
 SELECT:Sem/TimeN N (0 Sem/Time LINK -1 ("aarehke") OR ("mubpie")) ;
 	#$ Dallahmasten vaedtsieh åarajidh guktie maehtieh aarehke aereden tjuedtjielidh.
 
-SELECT:Adv Adv (0 ("gåessie") LINK 1 ("gænnah")) ;
+SELECT:Adv Adv (0 ("gåessie") LINK 1 ("gænnah") OR ("gan")) ;
 
 
 #!! ### Verbs
@@ -1334,7 +1340,7 @@ SELECT:Nom Nom (0 A OR N LINK 1 COPULAS)(*-1 Nom BARRIER NOT-NPMODADV) ;
 	#$ Datne buerebe lohkije sjidth jis eadtjohke leerehth.
 
 SELECT:Nom Nom (0 A OR N LINK -1 ("dan") OR ("man") OR GRADE-ADV LINK -1 N + Nom)(1 N LINK NOT 0 Nom) ;
-SELECT:Nom Nom (0 A OR N LINK -1 N + Nom)(1 N LINK NOT 0 Nom)(NOT 0 Adv) ;
+SELECT:Nom Nom (0 A OR N LINK -1 N + Nom)(1 N LINK NOT 0 Nom)(NOT 0 Adv OR REAL-V) ;
 	#$ Ditnie-barkoe dan søøjmes Læjsese, idtji man jijnjem hinnh darjodh.
 	#$ Nïejte daelie tjaelieminie.
 
@@ -1355,7 +1361,7 @@ SECTION
 
 #!! Mapping verbs
 
-MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV)(NOT 0 COPULAS) ;    
+MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV LINK NOT 0 Adv)(NOT 0 COPULAS) ;    
 	#$ Lustes tjoejkedh.
 MAP @<SUBJ TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr)) ;
 	#$ Lustes aate tjoejkedh.
@@ -1524,7 +1530,7 @@ SELECT:NPlAcc Acc (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK *1 COPULAS BARRI
 SELECT:NPlAcc Acc (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK 1 ADVLCASE + Sg LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
 	#$ Manne gærjide gåetesne lohkem.
 
-SELECT:NPlIll (N Pl Ill) (0 (N Pl Acc)) (NOT *1 V-TRANS BARRIER NOT-ADV) ;
+SELECT:NPlIll  Ill (0 N + Acc) (NEGATE *0 V-TRANS BARRIER SV-BOUNDARY) ;
 # ..., mejtie juridigkesne veadtjaldahkesne staatide, jih deklarasjovnide.
 
 
@@ -1659,7 +1665,7 @@ SELECT:NObj N (0 VFIN LINK 1 V-TRANS) ;
 SELECT:NomA N + Nom (0 VFIN	LINK 1 A + Nom) ;
 	#$ Aereden soejkesje gaervies.
 
-SELECT:Vfin VFIN (0 (N Gen) LINK 1 S-BOUNDARY)(NEGATE -1 Pr)(NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE -1 Attr);
+SELECT:Vfin VFIN (0 (N Gen) LINK 1 S-BOUNDARY OR Adv)(NEGATE -1 Pr)(NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE -1 Attr);
 	## Tjidtjie diekie juhtieji goh aehtjine pruvri.
 
 SELECT:N Gen (0 (Du1) LINK -1 Attr)  ;
@@ -1723,8 +1729,8 @@ SELECT:Ill Ill (*0 ILLV BARRIER S-BOUNDARY OR ILLADV) ;
 
 #!! Essive
 
-REMOVE:EssIfEssV Ine IF (*1 ESSV BARRIER S-BOUNDARY)(0 Sem/Hum OR Der/NomAg) ;
-REMOVE:EssIfEssV Com IF (*1 ESSV BARRIER S-BOUNDARY)(0 Sem/Hum OR Der/NomAg) ;
+REMOVE:EssIfEssV Ine IF (*1 ESSV BARRIER SV-BOUNDARY)(0 Ess) ;
+REMOVE:EssIfEssV Com IF (*1 ESSV BARRIER SV-BOUNDARY)(0 Ess) ;
 
 SELECT:Ess Ess IF (0 ESS-TIME-WEATHER LINK 1 VFIN OR ("dle")) ;
 	#$ Maanine dle leerebe guktie soptsestidh.
