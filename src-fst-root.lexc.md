@@ -589,6 +589,7 @@ get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 |  **+OLang/ENG** | English
 |  **+OLang/RUS** | Russian
 |  **+OLang/UND** | Undefined
+* +OLang/PARA - parallelle navn, navnet skal ikke overføres til andre samisk språk
 
 ## Area tags
 
