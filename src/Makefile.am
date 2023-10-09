@@ -112,6 +112,8 @@ generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 endif
 
 # Xerox & Foma:
+analyser-raw-gt-desc.xfst\
+analyser-raw-gt-desc.foma:\
 analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 				filters/remove-test-tags.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex \
@@ -123,6 +125,9 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 		 quit\n" | $(XFST_TOOL)
 
 # We need to add processing of language-specific tags in the analysers:
+analyser-gt-desc.hfst\
+analyser-gt-desc.foma\
+analyser-gt-desc.hfst: \
 analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
@@ -140,6 +145,9 @@ analyser-gt-desc.%: analyser-gt-desc.tmp.%                    \
 		 quit\n" | $(XFST_TOOL)
 
 # We need to add processing of language-specific tags in the analysers:
+analyser-dict-gt-desc.hfst\
+analyser-dict-gt-desc.foma\
+analyser-dict-gt-desc.xfst:\
 analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.%          \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
@@ -158,6 +166,8 @@ analyser-dict-gt-desc.%: analyser-dict-gt-desc.tmp.%          \
 
 
 # ... and also to the normative analysers:
+analyser-gt-norm.hfst\
+analyser-gt-norm.foma:\
 analyser-gt-norm.%: analyser-gt-norm.tmp.% \
 					filters/remove-derivation-position-tags.%              \
 					filters/remove-illegal-derivation-strings-flagbased.%  \
@@ -208,6 +218,9 @@ analyser-gt-norm.xfst: analyser-gt-norm.tmp.xfst \
 		 quit\n" | $(XFST) $(VERBOSITY)
 
 # ... and also in the Oahpa analyser:
+analyser-oahpa-gt-norm.hfst\
+analyser-oahpa-gt-norm.foma\
+analyser-oahpa-gt-norm.xfst:\
 analyser-oahpa-gt-norm.%: analyser-gt-norm.tmp.% \
 					 filters/remove-norm-comp-tags.%             \
 					 filters/remove-derivation-position-tags.%   \
@@ -258,6 +271,9 @@ analyser-gramcheck-gt-desc.hfst: analyser-gramcheck-gt-desc.tmp.hfst \
 
 # The pmatch disamb analyser. Filtering should be identical to the general
 # disamb analyser below. Special target needed because of the filename.
+analyser-pmatchdisamb-gt-desc.hfst\
+analyser-pmatchdisamb-gt-desc.foma\
+analyser-pmatchdisamb-gt-desc.xfst:\
 analyser-pmatchdisamb-gt-desc.%: analyser-pmatchdisamb-gt-desc.tmp.% \
 					filters/remove-orig_lang-tags.%           \
 					filters/remove-dialect-tags.%             \
@@ -284,6 +300,9 @@ analyser-pmatchdisamb-gt-desc.%: analyser-pmatchdisamb-gt-desc.tmp.% \
 
 # ... as well as in the XEROX/FOMA disambiguation analyser
 # (remove the Err/SpaceCmp thing here):
+analyser-disamb-gt-desc.hfst\
+analyser-disamb-gt-desc.foma\
+analyser-disamb-gt-desc.xfst:\
 analyser-disamb-gt-desc.%: analyser-disamb-gt-desc.tmp.% \
 					filters/remove-orig_lang-tags.%           \
 					filters/remove-dialect-tags.%             \
@@ -329,6 +348,9 @@ endef
 $(foreach fst,hfst xfst foma,$(eval $(call giella_generators,$(fst))))
 
 # Dict-fst local modifications and language-specific changes:
+generator-dict-gt-norm.hfst\
+generator-dict-gt-norm.foma\
+generator-dict-gt-norm.xfst:\
 generator-dict-gt-norm.%: generator-dict-gt-norm.tmp.% \
 					filters/remove-norm-comp-tags.%           \
 					filters/remove-derivation-position-tags.% \
