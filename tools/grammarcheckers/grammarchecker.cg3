@@ -1187,6 +1187,12 @@ LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-attr-predpl = &msyn-adj-attr-predpl ;
 LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
 LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
+LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
+
+LIST &SUGGESTWF = &SUGGESTWF ; #Suggestion from the speller
+LIST &DELETE = &DELETE ;
+LIST &LINK = &LINK ;
+
 
 
 MAPPING-PREFIX = & ;
@@ -1498,6 +1504,23 @@ ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (NOT 0 Attr OR
 	#$ Searomh öövre {rååpsehke} jïh snohke-tjalke njaelmeste garkese
 	
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET (A &msyn-adj-pred-attr) ;
+
+
+
+
+	# syntactic errors
+	# ----------------
+
+	# Redundant adverbs in phrasal verbs of Norwegian
+
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("våålese")) (-1 ("tjaeledh")) ;
+	## tjaelieh våålese! 
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (-1 ("tjuedtjielidh")) ;
+	## tjuedtjelh bæjjese! 
+	## vaeltieh dejtie bïssedh!
+
+COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
+
 
 # # The method is: Add &SUGGEST to a copied reading to *generate* a
 # # suggestion form from that reading. The copy should contain the error
