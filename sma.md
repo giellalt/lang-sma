@@ -2869,8 +2869,8 @@ Ingen andre verb har st > s framfor passivderivasjon.
 
 ### Usage tags
 
-|  Usage tag | Explanation
-|        --- | ---
+|                    Usage tag | Explanation
+|                          --- | ---
 | **+Use/Marg** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 | **+Use/-Spell** | Excluded from speller
 | **+Use/-PLX** | Excluded in PLX speller
@@ -2886,8 +2886,8 @@ Ingen andre verb har st > s framfor passivderivasjon.
 | **+Use/-PMatch** | Do not include in fst's made for hfst-pmatch
 | **+Use/GC** | **only** retained in the HFST Grammar Checker disambiguation analyser
 | **+Use/-GC** | **never** retained in the HFST Grammar Checker disambiguation analyser
-* **+Use/TTS** – **only** retained in the HFST Text-To-Speech disambiguation tokeniser
-* **+Use/-TTS** – **never** retained in the HFST Text-To-Speech disambiguation tokeniser
+| **+Use/TTS** | **only** retained in the HFST Text-To-Speech disambiguation tokeniser
+| **+Use/-TTS** | **never** retained in the HFST Text-To-Speech disambiguation tokeniser
 
 ## Dialect tags
 
@@ -3391,19 +3391,19 @@ are tagged than strictly needed, this should pose no problem as
 long as the IPA conversion is correct - at least some words will
 get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 
-|   Originating language tag | Originating language
-| --- | ---
-|  **+OLang/SME** | North Sámi
-|  **+OLang/SMA** | South Sámi
-|  **+OLang/SMJ** | Lule Sámi
-|  **+OLang/FIN** | Finnish
-|  **+OLang/SWE** | Swedish
-|  **+OLang/NOB** | Norw. bokmål
-|  **+OLang/NNO** | Norw. nynorsk
-|  **+OLang/ENG** | English
-|  **+OLang/RUS** | Russian
-|  **+OLang/UND** | Undefined
-* +OLang/PARA - parallelle navn, navnet skal ikke overføres til andre samisk språk
+| Originating language tag | Originating language
+| ------------------------ | -----------
+ |  **+OLang/SME** | North Sámi
+ |  **+OLang/SMA** | South Sámi
+ |  **+OLang/SMJ** | Lule Sámi
+ |  **+OLang/FIN** | Finnish
+ |  **+OLang/SWE** | Swedish
+ |  **+OLang/NOB** | Norw. bokmål
+ |  **+OLang/NNO** | Norw. nynorsk
+ |  **+OLang/ENG** | English
+ |  **+OLang/RUS** | Russian
+ |  **+OLang/UND** | Undefined
+|  **+OLang/PARA** | parallelle navn, navnet skal ikke overføres til andre samisk språk
 
 ## Area tags
 
@@ -3541,7 +3541,7 @@ Here is the list of top-level lexica in the South Sámi analyser:
 - `Conjunction ;`
 - `Interjection ;`
 - `NounRoot ;`
-- `+Use/CircN: Numeral ;`
+- `Numeral ;`
 - `Particle ;`
 - `Prefixes ;`
 - `Pronoun ;`
