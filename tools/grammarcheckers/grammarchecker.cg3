@@ -210,6 +210,7 @@ LIST VAbess = VAbess ;		   #!! VAbess
 
 LIST Der/Comp = Der/Comp ; 
 LIST Der/Superl = Der/Superl ; 
+LIST Der/NomAct = Der/NomAct ;
 
 
 
@@ -1188,6 +1189,7 @@ LIST &msyn-adj-attr-predpl = &msyn-adj-attr-predpl ;
 LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
 LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
+LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
 
 LIST &SUGGESTWF = &SUGGESTWF ; #Suggestion from the speller
 LIST &DELETE = &DELETE ;
@@ -1511,7 +1513,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 	# syntactic errors
 	# ----------------
 
-	# Redundant adverbs in phrasal verbs of Norwegian
+	# Redundant adverbs in phrasal verbs of Norwegian 2->1
 
 ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("våålese")) (-1 ("tjaeledh")) ;
 	## tjaelieh våålese! 
@@ -1520,6 +1522,34 @@ ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF 
 	## vaeltieh dejtie bïssedh!
 
 COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
+
+	# Phrasal verbs in Norwegian with a lexical equivalent in South Sámi 2->1
+
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 ("våålese")) (1 ("båetedh")) (*0 Nom + Sem/Money OR Sem/Amount);
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 ("våålese")) (-1 ("båetedh")) ;
+	## Maaksoeh tjuerieh våålese båetedh. > Maaksoeh tjuerieh aelpiedovvedh. 
+	#$ Mijjen 133.000 årrojigujmie dle ibie buektehth {våålese båetedh} akten laanten gaskemedtien gaåjkoe, goh Åarjel-Trööndelagen fylhkentjïelte maahta sov 300.000 årrojigujmie.
+	#$ Maahtah våålese båetedh, riepie jeehti, juktie daelie lea gaajhki kreeki gaskem raeffie.
+	#$ Båetieh våålese, riepie gåtjkoeji, die edtjh maam akt rovnegem åadtjodh govledh.
+	
+	# Phrasal verbs in Norwegian are not idiomatic in South Sámi 2->2
+ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (1 ("vaeltedh"))(NEGATE -1 Acc LINK NOT 0 Sem/Semcon) ;
+ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET ("vaeltedh") IF (-1 ("bæjjese") LINK NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Der/NomAct);
+
+COPY:xsyn-phrasal-verb-phrasal-verb ("buektedh" &SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb) ;
+
+COPY:xsyn-phrasal-verb-phrasal-verb ("åvtese" &SUGGEST) EXCEPT ("bæjjese" &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb) ;
+	## Dej jeanatjommes båarasommes maanajgujmie dah geerve almetjh maehtieh bæjjese vaeltedh dam maam jiïtje vuejnieh , maanajgujmie dan bïjre soptsestidh jïh dejgujmie digkiedidh.
+	#$ Manne vaaltam dam bæjjese.
+	# bæjjese vaeltedh = ta opp
+	# bæjjese vaeltedh -> åvtese buektedh
+	
+LIST PHRASAL-ADV = PHRASAL-ADV ;
+LIST PHRASAL-V = PHRASAL-V ;
+    
+ADDRELATIONS (PHRASAL-V) (PHRASAL-ADV) &syn-phrasal-verb-phrasal-verb TO (*0 Adv BARRIER (*) - Pcle) ;
+
+ADD:phrasal-v  (&LINK)  TARGET (*) IF (r:PHRASAL-ADV (&syn-phrasal-verb-phrasal-verb));
 
 
 # # The method is: Add &SUGGEST to a copied reading to *generate* a
