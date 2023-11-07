@@ -1518,9 +1518,12 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 
 ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("våålese")) (-1 ("tjaeledh")) ;
 	## tjaelieh våålese! 
-ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (-1 ("tjuedtjielidh")) ;
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (*0 ("tjuedtjielidh") OR ("fulkedh") BARRIER (*) - Pcle) ;
 	## tjuedtjelh bæjjese! 
 	## vaeltieh dejtie bïssedh!
+	
+	## Gyhtjelassh goh guktie daate tsiehkie meehti dan stoerre sjïdtedh åvtelen gïetesovvi, jïh guktie byögkeles instaansh systematihkeles eah leah sijjen barkoem dorjeme juktie daaresjimmie-aamhtesh {bæjjese} fulkedh, Mikkelsen jeahta.
+
 
 COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
 
@@ -1537,6 +1540,9 @@ ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv)
 ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (1 ("vaeltedh") OR ("bïejedh"))(NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Sem/Prod-audio) ;
 ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET ("vaeltedh") OR ("bïejedh") IF (-1 ("bæjjese") LINK NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Der/NomAct OR Sem/Prod-audio);
 
+ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (*0 ("bigkedh") BARRIER (*) - Pcle) ;
+	## Saemiedigkie sæjhta viehkiehtidh dam lïhkes mearoegaedtievïnhtseveahkam	{bæjjese bigkedh} 	dejnie mearoesaemien årromedajvine, jïh dåarjoem prioriterede noere göölijidie mah voestes aejkien vïnhtsem åestieh.   ----- --> {Tseegkedh} 
+
 	# baantese bïejedh - må stå før # åvtese buektedh
 COPY:xsyn-phrasal-verb-phrasal-verb ("bïejedh" &SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(-1 ("bæjjese") LINK -1 Acc LINK 0 Sem/Prod-audio) ;
 
@@ -1551,6 +1557,10 @@ COPY:xsyn-phrasal-verb-phrasal-verb ("åvtese" &SUGGEST) EXCEPT ("bæjjese" &syn
 	#$ Manne vaaltam dam bæjjese.
 	# bæjjese vaeltedh = ta opp
 	# bæjjese vaeltedh -> åvtese buektedh
+
+
+
+
 	
 LIST PHRASAL-ADV = PHRASAL-ADV ;
 LIST PHRASAL-V = PHRASAL-V ;
