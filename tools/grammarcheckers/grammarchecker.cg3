@@ -1515,7 +1515,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 	# ----------------
 
 	# Redundant adverbs in phrasal verbs of Norwegian 2->1
-
+	# -----------------------------------------------------
 ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("våålese")) (-1 ("tjaeledh")) ;
 	## tjaelieh våålese! 
 ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (*0 ("tjuedtjielidh") OR ("fulkedh") BARRIER (*) - Pcle) ;
@@ -1524,31 +1524,49 @@ ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF 
 	
 	## Gyhtjelassh goh guktie daate tsiehkie meehti dan stoerre sjïdtedh åvtelen gïetesovvi, jïh guktie byögkeles instaansh systematihkeles eah leah sijjen barkoem dorjeme juktie daaresjimmie-aamhtesh {bæjjese} fulkedh, Mikkelsen jeahta.
 
-
 COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
 
 	# Phrasal verbs in Norwegian with a lexical equivalent in South Sámi 2->1
-
-ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 ("våålese")) (1 ("båetedh")) (*0 Nom + Sem/Money OR Sem/Amount);
-ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 ("våålese")) (-1 ("båetedh")) ;
+	# -------------------------------------------------------------------------
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 ("våålese")) (*0  ("båetedh") BARRIER (*) - Pcle) (*0 Nom + Sem/Money OR Sem/Amount);
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 ("båetedh")) (*0 ("våålese") BARRIER (*) - Pcle) ;
 	## Maaksoeh tjuerieh våålese båetedh. > Maaksoeh tjuerieh aelpiedovvedh. 
 	#$ Mijjen 133.000 årrojigujmie dle ibie buektehth {våålese båetedh} akten laanten gaskemedtien gaåjkoe, goh Åarjel-Trööndelagen fylhkentjïelte maahta sov 300.000 årrojigujmie.
 	#$ Maahtah våålese båetedh, riepie jeehti, juktie daelie lea gaajhki kreeki gaskem raeffie.
 	#$ Båetieh våålese, riepie gåtjkoeji, die edtjh maam akt rovnegem åadtjodh govledh.
 	
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 ("bæjjese")) (*0 ("bigkedh") BARRIER (*) - Pcle) ;
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 ("bigkedh")) (*0 ("bæjjese") BARRIER (*) - Pcle) ;
+	## Saemiedigkie sæjhta viehkiehtidh dam lïhkes mearoegaedtievïnhtseveahkam	{bæjjese bigkedh} 	dejnie mearoesaemien årromedajvine, jïh dåarjoem prioriterede noere göölijidie mah voestes aejkien vïnhtsem åestieh.   ----- --> {Tseegkedh} 
+	
+	# --------
+	
+COPY:xsyn-phrasal-verb-lexical-verb (&DELETE) EXCEPT (&syn-phrasal-verb-lexical-verb) TARGET (Adv &syn-phrasal-verb-lexical-verb) ;
+
+
+COPY:xsyn-phrasal-verb-lexical-verb ("tseegkedh" &SUGGEST) EXCEPT ("bigkedh" &syn-phrasal-verb-lexical-verb) TARGET ("bigkedh" V &syn-phrasal-verb-lexical-verb);
+
+COPY:xsyn-phrasal-verb-phrasal-verb ("tjuerieh" &SUGGEST) EXCEPT ("båetedh" &syn-phrasal-verb-lexical-verb) TARGET ("båetedh" V &syn-phrasal-verb-lexical-verb) ;
+
+	
 	# Phrasal verbs in Norwegian are not idiomatic in South Sámi 2->2
+	# -------------------------------------------------------------------------
 ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (1 ("vaeltedh") OR ("bïejedh"))(NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Sem/Prod-audio) ;
 ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET ("vaeltedh") OR ("bïejedh") IF (-1 ("bæjjese") LINK NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Der/NomAct OR Sem/Prod-audio);
 
-ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (*0 ("bigkedh") BARRIER (*) - Pcle) ;
-	## Saemiedigkie sæjhta viehkiehtidh dam lïhkes mearoegaedtievïnhtseveahkam	{bæjjese bigkedh} 	dejnie mearoesaemien årromedajvine, jïh dåarjoem prioriterede noere göölijidie mah voestes aejkien vïnhtsem åestieh.   ----- --> {Tseegkedh} 
 
-	# baantese bïejedh - må stå før # åvtese buektedh
+	# phrasal verbs with bæjese
+	# - - - - - - - - - - - - -
 COPY:xsyn-phrasal-verb-phrasal-verb ("bïejedh" &SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(-1 ("bæjjese") LINK -1 Acc LINK 0 Sem/Prod-audio) ;
 
 COPY:xsyn-phrasal-verb-phrasal-verb ("baante" N Sg Ill &SUGGEST) EXCEPT ("bæjjese" Adv &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(-1 Acc LINK 0 Sem/Prod-audio) ;
+	# baantese bïejedh - må stå før # åvtese buektedh
+
+	
+#COPY:xsyn-phrasal-verb-phrasal-verb ("tseegkedh" &SUGGEST) EXCEPT ("bigkedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(*0 ("bæjjese") BARRIER (*) - Pcle) ;
 
 	# åvtese buektedh
+	# - - - - - - - - -
 COPY:xsyn-phrasal-verb-phrasal-verb ("buektedh" &SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) OR ("bïejedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(NEGATE 0 &SUGGEST) ;
 
 COPY:xsyn-phrasal-verb-phrasal-verb ("åvtese" &SUGGEST) EXCEPT ("bæjjese" &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(NEGATE 0 &SUGGEST) ;
