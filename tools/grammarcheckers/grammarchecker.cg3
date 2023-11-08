@@ -1519,11 +1519,13 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 	# -----------------------------------------------------
 ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("våålese")) (-1 ("tjaeledh")) ;
 	## tjaelieh våålese! 
-ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (*0 ("tjuedtjielidh") OR ("fulkedh") BARRIER (*) - Pcle) ;
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 ("tjuedtjielidh") OR ("fulkedh")) (*0 ("bæjjese") BARRIER (*) - Pcle) ;
 	## tjuedtjelh bæjjese! 
 	## vaeltieh dejtie bïssedh!
 	
 	## Gyhtjelassh goh guktie daate tsiehkie meehti dan stoerre sjïdtedh åvtelen gïetesovvi, jïh guktie byögkeles instaansh systematihkeles eah leah sijjen barkoem dorjeme juktie daaresjimmie-aamhtesh {bæjjese} fulkedh, Mikkelsen jeahta.
+
+ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-adv-phrasal-verb) BARRIER (*) - Pcle)
 
 COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
 
