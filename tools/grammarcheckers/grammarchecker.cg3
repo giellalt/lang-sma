@@ -1517,7 +1517,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 
 	# Redundant adverbs in phrasal verbs of Norwegian 2->1
 	# -----------------------------------------------------
-ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("våålese")) (-1 ("tjaeledh")) ;
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("våålese")) (*0  ("tjaeledh") BARRIER (*) - Pcle) ;
 	## tjaelieh våålese! 
 ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 ("tjuedtjielidh") OR ("fulkedh")) (*0 ("bæjjese") BARRIER (*) - Pcle) ;
 	## tjuedtjelh bæjjese! 
