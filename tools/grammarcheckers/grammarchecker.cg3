@@ -1190,6 +1190,7 @@ LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
 LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
 LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
+LIST &syn-phrasal-verb-lexical-verb = &syn-phrasal-verb-lexical-verb ;
 
 LIST &SUGGEST = &SUGGEST ;
 LIST &SUGGESTWF = &SUGGESTWF ; #Suggestion from the speller
@@ -1540,6 +1541,8 @@ ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) I
 	## Saemiedigkie sæjhta viehkiehtidh dam lïhkes mearoegaedtievïnhtseveahkam	{bæjjese bigkedh} 	dejnie mearoesaemien årromedajvine, jïh dåarjoem prioriterede noere göölijidie mah voestes aejkien vïnhtsem åestieh.   ----- --> {Tseegkedh} 
 	
 	# --------
+
+ADDRELATION (DELETE1) (V &syn-phrasal-verb-lexical-verb) TO (*0 Adv + &syn-phrasal-verb-lexical-verb BARRIER (*) - Pcle);
 	
 COPY:xsyn-phrasal-verb-lexical-verb (&DELETE) EXCEPT (&syn-phrasal-verb-lexical-verb) TARGET (Adv &syn-phrasal-verb-lexical-verb) ;
 
