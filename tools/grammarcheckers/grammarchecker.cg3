@@ -1363,6 +1363,17 @@ COPY:msyn-sååjhtoe-VFinitt (Pl1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 COPY:msyn-sååjhtoe-VFinitt (Pl2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl2) ;
 COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl3) ;
 
+	## Negasjon
+	
+	# PrsPrc > ConNeg
+
+ADD:xmsyn-PrsPrc-ConNeg (&msyn-PrsPrc-ConNeg) TARGET (V PrsPrc) (*-1 ("ij" Neg) + ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE OR ConNeg)(NEGATE 0 ConNeg)(NEGATE *1 ConNeg) ;
+
+COPY:msyn-PrsPrc-ConNeg (ConNeg &SUGGEST) EXCEPT (PrsPrc &msyn-PrsPrc-ConNeg) TARGET (&msyn-PrsPrc-ConNeg) ;
+	## Gosse seejh, ih {båetije} sjædtoem seejh, mohte ohtje gerniem hov seejh, veajhta-gerniem jallh jeatjah gerniem.
+	## Juktie Jupmele ij leah {båetije} veartenem, man bïjre soptsestibie, eengkeli åalan vadteme.
+	#$ Daesnie naan vuesiehtimmieh guktie maahta praedtiem heerredidh: Aellieh jielije tjoevkesem {nåhtedh} jallh geehth olles tjoevkesesteerije maehtieh bueledh.
+
 	# ij as Adverb - congruence between Neg and VFIN
 
 ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 ("ij" Neg) + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc LINK 0 Prs OR Prt)(NEGATE 0 ConNeg) ;
