@@ -1427,7 +1427,7 @@ COPY:msyn-NegPrt-lih-congruence (Prs &SUGGEST) EXCEPT (Prt &msyn-NegPrt-lih-cong
 
 
 
-	# tempus from finite form that should be ConNeg gets transferred to ij 
+	# MAIN VERBS: tempus from finite form that should be ConNeg gets transferred to ij 
 	
 ADD:msyn-Neg-Prs-Prt (&msyn-Neg-Prs-Prt) TARGET (Neg Ind Prs) + $$ALL-PERS (1 (Ind Prt) + $$ALL-PERS LINK NOT 0 ("lea")) ;
 	## Mohte eakan edtjigan juakadidh.
@@ -1446,7 +1446,7 @@ COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl1 &SUGGEST) EXCEPT (Pl3 &msyn-Neg-ConNeg-Cong
 COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl2 &SUGGEST) EXCEPT (Pl3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Pl2);
 COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl3 &SUGGEST) EXCEPT (Pl1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl2 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Pl3);
 
-	# congruence between ij and Prt ConNeg (Singularis)
+	# NEG: congruence between ij and Prt ConNeg (Singularis)
 
 ADD:msyn-Neg-ConNeg-Congr-SgPl (&msyn-Neg-ConNeg-Congr-SgPl) TARGET ("ij") + SG-V IF (1 (Prt ConNeg) + DU-PL-V) ;
 	## ij lin > ean lin
@@ -1455,6 +1455,15 @@ COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Cong
 COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl2 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du1 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl2);
 COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl1 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du2 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl1);
 COPY:msyn-Neg-ConNeg-Congr-SgPl (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du2 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl3)(*-1 ("guktie") OR (Nom Du3) BARRIER (*) - (Pron Pers Pl3 Nom) - (Pron Dem Pl Nom) - (Rel Pl Nom));
+
+	# NEG: Neg.Prt Copula.ConNeg.Prt eller Prs > Neg.Prs Copula.ConNeg.Prt
+	
+ADD:xmsyn-NegPrt-NegPrs (&msyn-NegPrt-NegPrs) TARGET (Neg Prt) IF (1 ("lea" ConNeg)) ;
+	## Idtji lij man gåågkehke
+	## Jih dej beeli goh saemieh idtjin lih annje aalkeme tjaeledh, dellie soetestimmie lij aajne vuekie mijjen maahtoe, histovrije jih aerpievierhtieh vijriebasse vedtedh. 
+
+COPY:xmsyn-NegPrt-NegPrs (Prs &SUGGEST) EXCEPT (Prt) BEFORE ALL-PERS TARGET (&msyn-NegPrt-NegPrs);
+
 
 # Congruence between subject and verb in habitive constructions 
 
@@ -1465,7 +1474,8 @@ BARRIER NOT-NPMODADV) (*0 (Pron Pers Gen) OR (N Gen) + Sem/Hum BARRIER S-BOUNDAR
 
 
 COPY:msyn-number_congruence-subj-copula-hab (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-number_congruence-
-subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ;  
+subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ; 
+
 
 
 ## PASSIVE VERB should be active   
