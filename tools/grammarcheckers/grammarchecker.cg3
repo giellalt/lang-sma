@@ -1187,6 +1187,7 @@ LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-attr-predpl = &msyn-adj-attr-predpl ;
 LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
+LIST &msyn-Neg-Pl3-ConNeg = &msyn-Neg-Pl3-ConNeg ;
 LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
 LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
@@ -1320,7 +1321,7 @@ ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) - Der/Comp IF (1 (Ind
 
 ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 CC LINK 1C Adv)(NEGATE 0 Adv OR Ord) ; 
 
-COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-adv) TARGET (&msyn-adj-attr-adv) ; 
+COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-adv) TARGET (&msyn-adj-attr-adv) ;  
      ## Viskes jïh rööpses klaerieh jijhtieh jïh laante dan tjaebpies vååjnoe
      ## tjaebpies --> tjaebpieslaakan 
 	
@@ -1395,6 +1396,14 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFi
 	## Ean {edtjien} månnoeh datnem sturredh.
 	## Mohte eakan {edtjigan} juakadidh.
 	## Jis datne aktem sijjem faalen mij ij {sjeahta}  dov voestes vaajtellämman mij syökemisnie lea, datne maahtah jis faalaldahkem meatah jallh ijje, veeljedh aajmone vuerpesne tjåadtjodh.
+	
+	# Neg Pl3 > ConNeg
+
+ADD:msyn-Neg-Pl3-ConNeg (&msyn-Neg-Pl3-ConNeg) TARGET (Ind Prs Pl3) IF (NEGATE 0 (ConNeg))(*-1 ("ij" Neg Prs) BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc) ;
+
+COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3-ConNeg) TARGET (&msyn-Neg-Pl3-ConNeg) ;
+	## Ij Piere gænnah tjöönieh?
+	## Ij gænnah tjöönieh?
 	
 	# ij as Adverb + leam
 
