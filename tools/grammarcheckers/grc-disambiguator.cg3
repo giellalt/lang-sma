@@ -1903,7 +1903,7 @@ SELECT:Pl3WhenPlSubj (V Pl3) - Err/Orth-spes IF ((*-1 (N Pl Nom) OR (Num Sg Nom)
 	#$ Maam dah daelvege darjoeh?
 
 #SELECT:Pl3WhenSubjCC (V Pl3) IF (-1 (N Sg Nom) LINK -1 CC)(0 ("lea" V));
-REMOVE:Pl3 (V Pl3) (NEGATE *0 Nom BARRIER S-BOUNDARY) ;
+REMOVE:Pl3 (V Pl3) (NEGATE *0 Nom BARRIER S-BOUNDARY)(NEGATE 0 Err/Orth - Pl3) ;
 SELECT:Sg3WhenRelSg (V Sg3) ((-1 (Rel Sg Nom)) OR (-1 CC LINK *-1C (V Sg3) BARRIER S-BOUNDARY OR V));
 #SELECT:Sg3WhenSg3toLeft (V Sg3) (-1 CC LINK *-1C (V Sg3) BARRIER S-BOUNDARY OR V);
 
