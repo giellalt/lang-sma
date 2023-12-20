@@ -40,6 +40,7 @@ error model and should be tested separately — thus also two different download
 Documentation
 -------------
 
+
 Documentation can be found at:
 
 - [Language specific documentation](https://giellalt.github.io/lang-sma/)
