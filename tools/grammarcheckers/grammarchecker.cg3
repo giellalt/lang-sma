@@ -1232,8 +1232,8 @@ COPY:msyn-adj-attr-predpl (A Pl Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred
 LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
-	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
-	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR (&msyn-adj-attr-predpl))
+	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR (&msyn-adj-attr-predpl) OR Err/Lex)
 	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc - ("(") - (\?))
 	(NEGATE 1 COMMA LINK 1 (Prop N))(NEGATE 1 CC OR COMMA LINK 1 (A Attr) LINK *1 N)(NEGATE 1 CC LINK 1C Adv)(NEGATE 1 Num) ;
 
@@ -1503,11 +1503,10 @@ subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ;
 
 ## PASSIVE VERB should be active   
 
-ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc) ;    
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc)(NEGATE 0 PrfPrc LINK 1 N) ;    
+	## Orre teknologije edtja saemiengïelem gorredovvedh
 
-## Orre teknologije edtja saemiengïelem gorredovvedh
-
-ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc LINK NEGATE 1 Inf OR VFIN) ;    
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc LINK NEGATE 1 Inf OR VFIN)(NEGATE 0 PrfPrc LINK 1 N) ;    
 
 
 ## Orre teknologije edtja gorredovvedh saemiengïelem
