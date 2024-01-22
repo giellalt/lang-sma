@@ -17,28 +17,14 @@
 
 #########################################################
 ############## BEGIN: Local modifications ###############
+
 # List any local filter regex files here:
 GIELLA_FILTER_LOCAL_REGEX_SRCS=\
-					block-illegal_compound-strings.regex              \
-					change-optionally-word_boundary_to_hyphen.regex	  \
-					convert_to_flags-CmpNP-tags.regex                 \
-					downcase_UCletters.regex                          \
-					insert-default-compounding-tags.regex             \
-					insert-default_left_compounding-tags.regex        \
-					remove-DNorm-tags.regex                           \
-					remove-Dial_L-strings.regex                       \
-					remove-Dial_SH-strings.regex                      \
-					remove-derivation-position-tags.regex             \
-					remove-homonymy-tags.regex                        \
-					remove-illegal-derivation-strings-flagbased.regex \
-					remove-illegal-derivation-strings.regex           \
-					remove-norm-comp-tags.regex                       \
-					remove-rel_focus-strings.regex                    \
-					remove-test-tags.regex                            \
-					rename-POS_before_Der-tags.regex                  \
-					split-CmpN-tags.regex                             \
-					split-CmpNP-tags.regex                            \
-					remove-dynamic_compound-char.regex
+					downcase_UCletters.regex\
+					remove-derivation-position-tags.regex \
+					remove-DNorm-tags.regex \
+					remove-norm-comp-tags.regex \
+					rename-POS_before_Der-tags.regex
 
 # List any local filter xfscript files here:
 GIELLA_FILTER_LOCAL_XFSCRIPT_SRCS=
@@ -61,7 +47,6 @@ GIELLA_FILTER_LOCAL_GENERATED_LEXC_SRCS=
 EXTRA_SRCS=
 
 ########## Add local build rules below here: ############
-all-local:
 
 ############### END: Local modifications ################
 #########################################################
