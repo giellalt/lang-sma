@@ -15,7 +15,7 @@ etnihke+A+OLang/NOB:etnihke IHKE_IHKELES_LOAN ; !samediggediedahus 2012 - etnisk
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/adjectives.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/stems/adjectives.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/adjectives.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/adjectives.lexc)</small>
 
 ---
 
