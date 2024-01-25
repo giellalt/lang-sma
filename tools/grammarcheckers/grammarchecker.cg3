@@ -1305,12 +1305,12 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 		
 	# FS-valency	
 	
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(1 (N Nom) OR (Cmp/SplitR) LINK *1 VFIN OR Inf OR PrfPrc)(NEGATE 0 Der/Comp OR Der/Superl);  	
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(1 (N Nom) OR (Cmp/SplitR) LINK *1 VFIN OR Inf OR PrfPrc)(NEGATE 0 Der/Comp OR Der/Superl OR Ord);  	
 	## Manne joekoen madtjeles Laanteburrie- jïh beapmoedepartemeente (LBD) daelie sæjhta vuertedh goske dïhte saemien laakemoenehtse sov barkoem dorjeme jïh sov juvnehtimmiejgujmie båateme, jïh aaj departemeente jeahta dah sijhtieh moenehtsen jarkelimmieraeriestimmieh båatsoelaakeste vuarjasjidh, saemiedigkieraerie Silje Karine Muotka jeahta.
 	
 	# Inf-valency
 
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(NEGATE 0  Der/Comp)(NOT 1 Attr)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(NEGATE 0 Der/Comp OR Ord)(NOT 1 Attr)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
 	## Munnjien lea nuekies geehpes tjaaleme gærjah lohkedh. 
 	
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) - ("sjïdtedh") LINK NOT 0 N LINK 1 EOS);
@@ -1323,9 +1323,10 @@ COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) 
 	# Attr --> Pred Ess
 	
 	
-ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (1 EOS)(*-1 (N Acc) OR (A Arab) BARRIER NOT-NPMOD - Ela LINK *-1 (V Imprt) LINK 0 Sg2 OR Du2 OR Pl2) ;
+ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (1 EOS)(*-1 (N Acc) OR (A Arab) BARRIER NOT-NPMOD - Ela LINK *-1 (V Imprt) LINK 0 Sg2 OR Du2 OR Pl2)(NEGATE 0 Ord) ;
 
-ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 ("sjïdtedh" Inf) OR ("sjïdtedh" Sg3) LINK NEGATE 0 N LINK 1 EOS);
+ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 ("sjïdtedh" Inf) OR ("sjïdtedh" Sg3) LINK NEGATE 0 N LINK 1 EOS)(NEGATE 0 Ord);
+	#$sme Juovlamánu 7.
 
 COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER Ex/A TARGET (&msyn-adj-attr-ess);	
 	## Klaeredh 28 rovhtijste {viskes}.
@@ -1338,7 +1339,7 @@ LIST MOM-ADJ = "nåejsie" "måerie" "aavoe" "vyörtegs" ;
 	# om dyr og mennesker
 	
 	
-ADD:msyn-adj-attr-ine (&msyn-adj-attr-ine) TARGET (A Attr) IF (0 MOM-ADJ)(NEGATE 0 (A <AttrPred>))(NEGATE 1 N)(*-1 (N Nom) + Sem/Hum OR (Pron Coll) OR (Pron Pers Nom)) ;
+ADD:msyn-adj-attr-ine (&msyn-adj-attr-ine) TARGET (A Attr) IF (0 MOM-ADJ)(NEGATE 0 (A <AttrPred>))(NEGATE 1 N)(*-1 (N Nom) + Sem/Hum OR (Pron Coll) OR (Pron Pers Nom))(NEGATE 0 Ord) ;
 
 COPY:msyn-adj-attr-ine (A Sg Ine &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ine) AFTER Ex/A TARGET (&msyn-adj-attr-ine);	
 	## Jupmelen tjelmine gaajhkesh seamma vyörtegs.
