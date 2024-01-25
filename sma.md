@@ -4173,6 +4173,37 @@ Sup
 Actio
 VAbess
 
+#### Derivation tags
+
+- `Der/A      `
+- `Der/Car    `
+- `Der/Dimin  `
+- `Der/InchL  `
+- `Der/NomAct `
+- `Der/NomAg  `
+- `Der/PassL  `
+- `Der/PassS  `
+- `Der/Rec    `
+- `Der/adte   `
+- `Der/ahtje  `
+- `Der/alla   `
+- `Der/d      `
+- `Der/eds    `
+- `Der/ht     `
+- `Der/htalle `
+- `Der/htj    `
+- `Der/ihks   `
+- `Der/ijes   `
+- `Der/l      `
+- `Der/laakan `
+- `Der/ldahke `
+- `Der/ldh    `
+- `Der/ldihkie`
+- `Der/les    `
+- `Der/lg     `
+- `Der/st     `
+- `Der/vuota  
+
 ### Sets for explicit error analysis from the morphological analyser:
 
 ### Other secondary tags
