@@ -208,9 +208,39 @@ LIST Actio = Actio ;		   #!! Actio
 LIST VAbess = VAbess ;		   #!! VAbess
 
 
+#!! #### Derivation tags
+
+LIST Der/A       = Der/A       ; #!! - `Der/A      `
+LIST Der/Car     = Der/Car     ; #!! - `Der/Car    `
+LIST Der/Dimin   = Der/Dimin   ; #!! - `Der/Dimin  `
+LIST Der/InchL   = Der/InchL   ; #!! - `Der/InchL  `
+LIST Der/NomAct  = Der/NomAct  ; #!! - `Der/NomAct `
+LIST Der/NomAg   = Der/NomAg   ; #!! - `Der/NomAg  `
+LIST Der/PassL   = Der/PassL   ; #!! - `Der/PassL  `
+LIST Der/PassS   = Der/PassS   ; #!! - `Der/PassS  `
+LIST Der/Rec     = Der/Rec     ; #!! - `Der/Rec    `
+LIST Der/adte    = Der/adte    ; #!! - `Der/adte   `
+LIST Der/ahtje   = Der/ahtje   ; #!! - `Der/ahtje  `
+LIST Der/alla    = Der/alla    ; #!! - `Der/alla   `
+LIST Der/d       = Der/d       ; #!! - `Der/d      `
+LIST Der/eds     = Der/eds     ; #!! - `Der/eds    `
+LIST Der/ht      = Der/ht      ; #!! - `Der/ht     `
+LIST Der/htalle  = Der/htalle  ; #!! - `Der/htalle `
+LIST Der/htj     = Der/htj     ; #!! - `Der/htj    `
+LIST Der/ihks    = Der/ihks    ; #!! - `Der/ihks   `
+LIST Der/ijes    = Der/ijes    ; #!! - `Der/ijes   `
+LIST Der/l       = Der/l       ; #!! - `Der/l      `
+LIST Der/laakan  = Der/laakan  ; #!! - `Der/laakan `
+LIST Der/ldahke  = Der/ldahke  ; #!! - `Der/ldahke `
+LIST Der/ldh     = Der/ldh     ; #!! - `Der/ldh    `
+LIST Der/ldihkie = Der/ldihkie ; #!! - `Der/ldihkie`
+LIST Der/les     = Der/les     ; #!! - `Der/les    `
+LIST Der/lg      = Der/lg      ; #!! - `Der/lg     `
+LIST Der/st      = Der/st      ; #!! - `Der/st     `
+LIST Der/vuota   = Der/vuota   ; #!! - `Der/vuota  
 LIST Der/Comp = Der/Comp ; 
 LIST Der/Superl = Der/Superl ; 
-LIST Der/NomAct = Der/NomAct ;
+LIST Der/Pass = Der/PassL Der/PassS ;
 
 
 
@@ -1503,11 +1533,12 @@ subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ;
 
 ## PASSIVE VERB should be active   
 
-ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc)(NEGATE 0 PrfPrc LINK 1 N) ;    
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc)(NEGATE 0 PrfPrc LINK 1 N)(NEGATE 0 TV - Der/Pass) ;    
 	## Orre teknologije edtja saemiengïelem gorredovvedh
 
-ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc LINK NEGATE 1 Inf OR VFIN)(NEGATE 0 PrfPrc LINK 1 N) ;    
-
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1C Acc LINK NEGATE 1 Inf OR VFIN)(NEGATE 0 PrfPrc LINK 1 N)(NEGATE 0 TV - Der/Pass) ; 
+	#$sme Dasa lassin giella oahpahuvvo {maid} ruovttuguovllu olggobealde Oulus 
+	#$sme Ja ale {doalvo} min sisa.
 
 ## Orre teknologije edtja gorredovvedh saemiengïelem
 
