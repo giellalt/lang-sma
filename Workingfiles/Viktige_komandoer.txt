@@ -20,21 +20,25 @@ grep buerie test/src/gt-norm-yamls/*
 
 
  
-I vedlagte liste er det adjektiver lemmaform i første kolonne og i andre kolonne: +Sg+Nom
+5) I vedlagte liste er det adjektiver lemmaform i første kolonne og i andre kolonne: +Sg+Nom
  
  
-cut -d '!' -f1 src/fst/stems/adjectives.lexc |grep 'es\+.* ;' |egrep -v '(oes\+|hkes\+)' |egrep -v '(LOAN| LES|IJE|IES|Ce_CE|AABELE|ÆRE|FINAL1|IHKS|ELE|ATTR| MES|TODO)' |grep -v Err |cut -d '+' -f1 |sort -u |rev | sort | rev |sed 's/$/+A+Sg+Nom/' |hdsmaNorm |sed 's/\+A\+Sg\+Nom//' |grep -v '-' |cut -f1,2 |uniq > adjektiver_check.txt
+5.1) cut -d '!' -f1 src/fst/stems/adjectives.lexc |grep 'es\+.* ;' |egrep -v '(oes\+|hkes\+)' |egrep -v '(LOAN| LES|IJE|IES|Ce_CE|AABELE|ÆRE|FINAL1|IHKS|ELE|ATTR| MES|TODO)' |grep -v Err |cut -d '+' -f1 |sort -u |rev | sort | rev |sed 's/$/+A+Sg+Nom/' |hdsmaNorm |sed 's/\+A\+Sg\+Nom//' |grep -v '-' |cut -f1,2 |uniq > adjektiver_check.txt
 
 
-cut -d '!' -f1 src/fst/stems/nouns.lexc |grep ' IJE_LOAN ' | grep -v Err | cut -d '+' -f1 | rev | sort |rev|sed 's/$/+N+Sg+Ill/' |hdsmaNorm | cut -f2
+5.2) cut -d '!' -f1 src/fst/stems/nouns.lexc |grep ' IJE_LOAN ' | grep -v Err | cut -d '+' -f1 | rev | sort |rev|sed 's/$/+N+Sg+Ill/' |hdsmaNorm | cut -f2
 
 
-Oversette felt 1 og sett bak :
+6) Oversette felt 1 og sett bak :
 
  sed -e 's/^\([^[:space:]]*\)\([[:space:]]*\)\([^:]*\):/\1\2\3:\1/' lemmaer_fra_nobsma_mangler_i_lexc.txt
  
  
-Söke etter et bestemt mönster:  
+7) Söke etter et bestemt mönster:  
  grep -i "" *.txt
+ 
+8) Å lege til rette lemmaer for innsjekking i noun:
+ 
+ sed -i -e 's@^.*$@&+N+Sem/Dummytag:& LEXICON ;@' FILNAVN
  
  
