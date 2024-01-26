@@ -1642,7 +1642,7 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 	# -----------------------------------------------------
 	
 LIST DOWN-ADV-sma = "våålese" ;
-LIST DOWN-ADV-smj = "våålese" ;
+LIST DOWN-ADV-smj = "vuolus" ;
 LIST DOWN-ADV-sme = "vulos" ;
 LIST DOWN-ADV-smn = "vuálus" ;
 SET DOWN-ADV = DOWN-ADV-sma OR DOWN-ADV-smj OR DOWN-ADV-sme OR DOWN-ADV-smn ;
@@ -1650,7 +1650,7 @@ SET DOWN-ADV = DOWN-ADV-sma OR DOWN-ADV-smj OR DOWN-ADV-sme OR DOWN-ADV-smn ;
 LIST UP-ADV-sma = "bæjjese" ;
 LIST UP-ADV-smj = "bajás" ;
 LIST UP-ADV-sme = "bajás" ;
-LIST UP-ADV-smn = "bajás" ;
+LIST UP-ADV-smn = "pajas" ;
 SET UP-ADV = UP-ADV-sma OR UP-ADV-smj OR UP-ADV-sme OR UP-ADV-smn ;
 
 
@@ -1660,11 +1660,23 @@ LIST WRITE-V-sme = "čállit" ;
 LIST WRITE-V-smn = "čäälliđ" ;
 SET WRITE-V = WRITE-V-sma OR WRITE-V-smj OR WRITE-V-sme OR WRITE-V-smn ;
 
+LIST COME-V-sma = "båetedh" ;
+LIST COME-V-smj = "boahtet" ;
+LIST COME-V-sme = "boahtit" ;
+LIST COME-V-smn = "puáttiđ" ;
+SET COME-V = COME-V-sma OR COME-V-smj OR COME-V-sme OR COME-V-smn ;
+
+LIST BUILD-V-sma = "bigkedh" ;
+LIST BUILD-V-smj = "tsieggit" ;
+LIST BUILD-V-sme = "hukset" ;
+LIST BUILD-V-smn = "huksiđ" ;
+SET BUILD-V = BUILD-V-sma OR BUILD-V-smj OR BUILD-V-sme OR BUILD-V-smn ;
+
 
 LIST STAND-UP-V-sma = "tjuedtjielidh" ;
-LIST STAND-UP-V-smj = "tjuedtjielidh" ;
-LIST STAND-UP-V-sme = "tjuedtjielidh" ;
-LIST STAND-UP-V-smn = "tjuedtjielidh" ;
+LIST STAND-UP-V-smj = "tjuodtjelit" ;
+LIST STAND-UP-V-sme = "čuožžilit" ;
+LIST STAND-UP-V-smn = "čyežžiliđ" ;
 SET STAND-UP-V = STAND-UP-V-sma OR STAND-UP-V-smj OR STAND-UP-V-sme OR STAND-UP-V-smn ;
 
 ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  WRITE-V BARRIER (*) - Pcle) ;
@@ -1681,15 +1693,15 @@ COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb
 
 	# Phrasal verbs in Norwegian with a lexical equivalent in South Sámi 2->1
 	# -------------------------------------------------------------------------
-ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 ("våålese")) (*0  ("båetedh") BARRIER (*) - Pcle) (*0 Nom + Sem/Money OR Sem/Amount);
-ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 ("båetedh")) (*0 ("våålese") BARRIER (*) - Pcle) ;
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  COME-V BARRIER (*) - Pcle) (*0 Nom + Sem/Money OR Sem/Amount);
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 COME-V) (*0 DOWN-ADV BARRIER (*) - Pcle) ;
 	## Maaksoeh tjuerieh våålese båetedh. > Maaksoeh tjuerieh aelpiedovvedh. 
 	#$ Mijjen 133.000 årrojigujmie dle ibie buektehth {våålese båetedh} akten laanten gaskemedtien gaåjkoe, goh Åarjel-Trööndelagen fylhkentjïelte maahta sov 300.000 årrojigujmie.
 	#$ Maahtah våålese båetedh, riepie jeehti, juktie daelie lea gaajhki kreeki gaskem raeffie.
 	#$ Båetieh våålese, riepie gåtjkoeji, die edtjh maam akt rovnegem åadtjodh govledh.
 	
-ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 ("bæjjese")) (*0 ("bigkedh") BARRIER (*) - Pcle) ;
-ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 ("bigkedh")) (*0 ("bæjjese") BARRIER (*) - Pcle) ;
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 UP-ADV) (*0 ("bigkedh") BARRIER (*) - Pcle) ;
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 BUILD-V) (*0 UP-ADV BARRIER (*) - Pcle) ;
 	## Saemiedigkie sæjhta viehkiehtidh dam lïhkes mearoegaedtievïnhtseveahkam	{bæjjese bigkedh} 	dejnie mearoesaemien årromedajvine, jïh dåarjoem prioriterede noere göölijidie mah voestes aejkien vïnhtsem åestieh.   ----- --> {Tseegkedh} 
 	
 	# --------
@@ -1706,8 +1718,20 @@ COPY:xsyn-phrasal-verb-phrasal-verb ("tjuerieh" &SUGGEST) EXCEPT ("båetedh" &sy
 	
 	# Phrasal verbs in Norwegian are not idiomatic in South Sámi 2->2
 	# -------------------------------------------------------------------------
-ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 ("bæjjese")) (1 ("vaeltedh") OR ("bïejedh"))(NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Sem/Prod-audio) ;
-ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET ("vaeltedh") OR ("bïejedh") IF (-1 ("bæjjese") LINK NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Der/NomAct OR Sem/Prod-audio);
+LIST TAKE-V-sma = "vaeltedh" ;
+LIST TAKE-V-smj = "válldet" ;
+LIST TAKE-V-sme = "váldit" ;
+LIST TAKE-V-smn = "väldiđ" ;
+SET TAKE-V = TAKE-V-sma OR TAKE-V-smj OR TAKE-V-sme OR TAKE-V-smn ;
+
+LIST PUT-V-sma = "bïejedh" ;
+LIST PUT-V-smj = "biedjat" ;
+LIST PUT-V-sme = "bidjat" ;
+LIST PUT-V-smn = "pieijâđ" ;
+SET PUT-V = PUT-V-sma OR PUT-V-smj OR PUT-V-sme OR PUT-V-smn ;
+
+ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 UP-ADV) (1 TAKE-V OR PUT-V)(NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Sem/Prod-audio) ;
+ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET TAKE-V OR PUT-V IF (-1 UP-ADV LINK NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Der/NomAct OR Sem/Prod-audio);
 
 
 	# phrasal verbs with bæjese
