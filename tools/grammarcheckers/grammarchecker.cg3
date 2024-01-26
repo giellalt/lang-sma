@@ -1313,7 +1313,14 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1
 ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(NEGATE 0 Der/Comp OR Ord)(NOT 1 Attr)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
 	## Munnjien lea nuekies geehpes tjaaleme gærjah lohkedh. 
 	
-ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) - ("sjïdtedh") LINK NOT 0 N LINK 1 EOS);
+LIST BECOME-sma = "sjïdtedh" ;
+LIST BECOME-sme = "šaddat" ;
+LIST BECOME-smj = "sjaddat" ;
+LIST BECOME-smn = "šoddâđ" ;
+SET BECOME = BECOME-sma OR BECOME-sme OR BECOME-smj OR BECOME-smn ;
+
+	
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) - BECOME LINK NOT 0 N LINK 1 EOS);
 
 COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) OR (A Attr &msyn-adj-attr-pred) AFTER Ex/A TARGET (&msyn-adj-attr-pred);	
 
@@ -1325,7 +1332,7 @@ COPY:msyn-adj-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) 
 	
 ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (1 EOS)(*-1 (N Acc) OR (A Arab) BARRIER NOT-NPMOD - Ela LINK *-1 (V Imprt) LINK 0 Sg2 OR Du2 OR Pl2)(NEGATE 0 Ord) ;
 
-ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 ("sjïdtedh" Inf) OR ("sjïdtedh" Sg3) LINK NEGATE 0 N LINK 1 EOS)(NEGATE 0 Ord);
+ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 BECOME + Inf OR BECOME + Sg3 LINK NEGATE 0 N LINK 1 EOS)(NEGATE 0 Ord);
 	#$sme Juovlamánu 7.
 
 COPY:msyn-adj-attr-ess (A Ess &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER Ex/A TARGET (&msyn-adj-attr-ess);	
@@ -1386,16 +1393,29 @@ COPY:msyn-adj-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adj-pred-attr) 
 #$ Piere (lea) væjkele maanajgujmie -> væjkele maanajgujmie
 
 	# Gåabpa + komparativ
+	
+LIST WHICH-OF-TWO-sma = "gåabpa" ;
+LIST WHICH-OF-TWO-sme = "goabbá" ;
+LIST WHICH-OF-TWO-smj = "goappátja" ;
+LIST WHICH-OF-TWO-smn = "kuábbáš" ;
+SET WHICH-OF-TWO = WHICH-OF-TWO-sma OR WHICH-OF-TWO-sme OR WHICH-OF-TWO-smj OR WHICH-OF-TWO-smn ;
 
-ADD:xmsyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 ("gåabpa" Sg Nom));
+ADD:xmsyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 WHICH-OF-TWO + (Sg Nom));
 
 COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);	
 	
 	## gåabpa stööremes
 
 	# Sååjhtedh as Adverb
+	
+LIST MAYBE-V-smj = "soajttet" ;
+LIST MAYBE-V-sma = "sååjhtedh" ;
+LIST MAYBE-V-sme = "soaitit" ;
+LIST MAYBE-V-smn = "sättiđ" ;
+SET MAYBE-V = MAYBE-V-smj OR MAYBE-V-sma OR MAYBE-V-sme OR MAYBE-V-smn ;
 
-ADD:xmsyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET ("sååjhtedh" Ind Prs Sg3) (1 VFIN - Sg3) ;
+
+ADD:xmsyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET MAYBE-V + (Ind Prs Sg3) (1 VFIN - Sg3) ;
 
 	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
 	
@@ -1411,8 +1431,15 @@ COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 	## Negasjon
 	
 	# PrsPrc > ConNeg
+	
+LIST NEG-V-smj = "ij" ;
+LIST NEG-V-sme = "ii" ;
+LIST NEG-V-sma = "ij" ;
+LIST NEG-V-smn = "ij" ;
+SET NEG-V = NEG-V-smj OR NEG-V-sme OR NEG-V-sma OR NEG-V-smn ;
 
-#ADD:xmsyn-PrsPrc-ConNeg (&msyn-PrsPrc-ConNeg) TARGET (V PrsPrc) (*-1 ("ij" Neg) + ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE OR ConNeg)(NEGATE 0 ConNeg)(NEGATE *1 ConNeg) ;
+
+#ADD:xmsyn-PrsPrc-ConNeg (&msyn-PrsPrc-ConNeg) TARGET (V PrsPrc) (*-1 NEG-V + Neg + ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE OR ConNeg)(NEGATE 0 ConNeg)(NEGATE *1 ConNeg) ;
 
 #COPY:msyn-PrsPrc-ConNeg (ConNeg &SUGGEST) EXCEPT (PrsPrc &msyn-PrsPrc-ConNeg) TARGET (&msyn-PrsPrc-ConNeg) ;
 	#$ Gosse seejh, ih {båetije} sjædtoem seejh, mohte ohtje gerniem hov seejh, veajhta-gerniem jallh jeatjah gerniem. 
@@ -1421,7 +1448,7 @@ COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 
 	# ij as Adverb - congruence between Neg and VFIN
 
-ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 ("ij" Neg) + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg) ;
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 NEG-V + Neg + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg) ;
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Inf &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
 	## Ean månnoeh miehtsesne {minnien} lustestallemen vuj haarjanimmien gaavhtan.
@@ -1431,7 +1458,7 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFi
 	
 	# Neg Pl3 > ConNeg
 
-ADD:msyn-Neg-Pl3-ConNeg (&msyn-Neg-Pl3-ConNeg) TARGET (Ind Prs Pl3) IF (NEGATE 0 (ConNeg))(*-1 ("ij" Neg Prs) BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc) ;
+ADD:msyn-Neg-Pl3-ConNeg (&msyn-Neg-Pl3-ConNeg) TARGET (Ind Prs Pl3) IF (NEGATE 0 (ConNeg))(*-1 NEG-V + Neg + Prs BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc) ;
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3-ConNeg) TARGET (&msyn-Neg-Pl3-ConNeg) ;
 	## Ij Piere gænnah tjöönieh?
@@ -1439,7 +1466,7 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3
 	
 	# ij as Adverb + leam
 
-ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1) (*-1 ("ij" Neg Sg3) - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc LINK 0 Prs OR Prt) ;
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1) (*-1 NEG-V + Neg + Sg3 - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc LINK 0 Prs OR Prt) ;
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
 	## Ij leam desnie.
@@ -1448,7 +1475,7 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFi
 	
 SET SG-PERS = Sg1 OR Sg2 OR Sg3 ;
 	
-ADD:msyn-ConNegPrt-congruence (&msyn-ConNegPrt-congruence) TARGET (Prt ConNeg) + $$SG-PERS IF (*-1 ("ij" Prs Neg) - $$SG-PERS BARRIER NOT-ADV-PCLE) ;	
+ADD:msyn-ConNegPrt-congruence (&msyn-ConNegPrt-congruence) TARGET (Prt ConNeg) + $$SG-PERS IF (*-1 NEG-V + Neg + Prs - $$SG-PERS BARRIER NOT-ADV-PCLE) ;	
 	## Jis ij {lih} dagkere almetjedabtoe, dellie ij limh enne daajreme mejtie almetjidie golvesovvibie.
 	
 COPY:msyn-ConNegPrt-congruence (Sg1 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-congruence) OR (Sg3 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg1);
@@ -1460,7 +1487,14 @@ COPY:msyn-ConNegPrt-congruence (Sg3 &SUGGEST) EXCEPT (Sg1 &msyn-ConNegPrt-congru
 	
 SET ALLE-PERS-NOTSG2 = Sg1 OR Sg3 OR Du1 OR Du2 OR Du3 OR Pl1 OR Pl2 OR Pl3 ;
 
-ADD:msyn-ConNegPrt-lih-congruence (&msyn-ConNegPrt-lih-congruence) TARGET ("lea" Prt Sg2 ConNeg) IF (-1 ("ij" Prt Neg) + ALLE-PERS-NOTSG2) ;
+LIST BE-smj = "liehket" ;
+LIST BE-sma = "leah" "lea" ;
+LIST BE-sme = "leat" ;
+LIST BE-smn = "leđe" ;
+SET BE = BE-smj OR BE-sma OR BE-sme OR BE-smn ;
+
+
+ADD:msyn-ConNegPrt-lih-congruence (&msyn-ConNegPrt-lih-congruence) TARGET BE + (Prt Sg2 ConNeg) IF (-1 NEG-V + Neg + Prt + ALLE-PERS-NOTSG2) ;
 	
 	## eedtjem/idtjim lih ConNeg
 	
@@ -1475,7 +1509,7 @@ COPY:msyn-ConNegPrt-lih-congruence (Pl3 &SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-li
 
 	## eedtjem/idtjim lih Neg
 	
-ADD:msyn-NegPrt-lih-congruence (&msyn-NegPrt-lih-congruence) TARGET ("ij" Neg Prt Ind) IF (1 ("lea" Sg2 Prt ConNeg)) ;
+ADD:msyn-NegPrt-lih-congruence (&msyn-NegPrt-lih-congruence) TARGET NEG-V + Neg + Prt + Ind IF (1 BE + (Sg2 Prt ConNeg)) ;
 	## eedtjem/idtjim lih > im lim (kongruens)
 COPY:msyn-NegPrt-lih-congruence (Prs &SUGGEST) EXCEPT (Prt &msyn-NegPrt-lih-congruence) AFTER Ind TARGET (&msyn-NegPrt-lih-congruence) ;
 
@@ -1483,14 +1517,14 @@ COPY:msyn-NegPrt-lih-congruence (Prs &SUGGEST) EXCEPT (Prt &msyn-NegPrt-lih-cong
 
 	# MAIN VERBS: tempus from finite form that should be ConNeg gets transferred to ij 
 	
-ADD:msyn-Neg-Prs-Prt (&msyn-Neg-Prs-Prt) TARGET (Neg Ind Prs) + $$ALL-PERS (1 (Ind Prt) + $$ALL-PERS LINK NOT 0 ("lea")) ;
+ADD:msyn-Neg-Prs-Prt (&msyn-Neg-Prs-Prt) TARGET (Neg Ind Prs) + $$ALL-PERS (1 (Ind Prt) + $$ALL-PERS LINK NOT 0 BE) ;
 	## Mohte eakan edtjigan juakadidh.
 
 COPY:msyn-Neg-Prs-Prt (Prt &SUGGEST) EXCEPT (Prs &msyn-Neg-Prs-Prt) BEFORE ALL-PERS TARGET (&msyn-Neg-Prs-Prt);
 	
 	# congruence between ij and Prt ConNeg (Dualis og Pluralis)
 
-ADD:msyn-Neg-ConNeg-Congr-DuPl (&msyn-Neg-ConNeg-Congr-DuPl) TARGET ("ij" Prs) + DU-PL-V OR ("ij" Prs Sg3) IF (1 (Prt ConNeg) + DU-PL-V)(0 $$ALL-PERS LINK NEGATE 1 $$ALL-PERS) ;
+ADD:msyn-Neg-ConNeg-Congr-DuPl (&msyn-Neg-ConNeg-Congr-DuPl) TARGET NEG-V + Neg + Prs + DU-PL-V OR NEG-V + Neg + Prs + Sg3 IF (1 (Prt ConNeg) + DU-PL-V)(0 $$ALL-PERS LINK NEGATE 1 $$ALL-PERS) ;
 	## Jis gie lij maahteme tjirkedh edtji dihte maanagierte golme jaepieh juhtedh, dellie {ij} limen jueresne orreme mejtie edtjimen maanide vaeltedh destie daaroen maanagierteste, Anne-Lise sopteste.
 	
 COPY:msyn-Neg-ConNeg-Congr-DuPl (Du1 &SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du1);
@@ -1502,7 +1536,7 @@ COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl3 &SUGGEST) EXCEPT (Pl1 &msyn-Neg-ConNeg-Cong
 
 	# NEG: congruence between ij and Prt ConNeg (Singularis)
 
-ADD:msyn-Neg-ConNeg-Congr-SgPl (&msyn-Neg-ConNeg-Congr-SgPl) TARGET ("ij") + SG-V IF (1 (Prt ConNeg) + DU-PL-V) ;
+ADD:msyn-Neg-ConNeg-Congr-SgPl (&msyn-Neg-ConNeg-Congr-SgPl) TARGET NEG-V + Neg + SG-V IF (1 (Prt ConNeg) + DU-PL-V) ;
 	## ij lin > ean lin
 	
 COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du2 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl3)(NEGATE -1 Nom LINK 0 Du1 OR Du2 OR Du3)(NEGATE -1 (Rel Pl Nom) LINK *-1 ("guktie") BARRIER (*) - (Pron Pers Pl3 Nom) - (Pron Dem Pl Nom));
@@ -1512,7 +1546,7 @@ COPY:msyn-Neg-ConNeg-Congr-SgPl (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Cong
 
 	# NEG: Neg.Prt Copula.ConNeg.Prt eller Prs > Neg.Prs Copula.ConNeg.Prt
 	
-ADD:xmsyn-NegPrt-NegPrs (&msyn-NegPrt-NegPrs) TARGET (Neg Prt) IF (1 ("lea" ConNeg)) ;
+ADD:xmsyn-NegPrt-NegPrs (&msyn-NegPrt-NegPrs) TARGET (Neg Prt) IF (1 BE + ConNeg) ;
 	## Idtji lij man gåågkehke
 	## Jih dej beeli goh saemieh idtjin lih annje aalkeme tjaeledh, dellie soetestimmie lij aajne vuekie mijjen maahtoe, histovrije jih aerpievierhtieh vijriebasse vedtedh. 
 
@@ -1523,7 +1557,7 @@ COPY:xmsyn-NegPrt-NegPrs (Prs &SUGGEST) EXCEPT (Prt) BEFORE ALL-PERS TARGET (&ms
 
 # ij leah dov naan/rööpses/vielie måvhkah -> ij --> eah 
 
-ADD:xmsyn-number_congruence-subj-copula-hab (&msyn-number_congruence-subj-copula-hab) TARGET ("ij" Prs Sg3) IF (1 ConNeg LINK 1 (Pron Pers Gen) LINK *1 (N Pl Nom) 
+ADD:xmsyn-number_congruence-subj-copula-hab (&msyn-number_congruence-subj-copula-hab) TARGET NEG-V + Neg + Prs + Sg3 IF (1 ConNeg LINK 1 (Pron Pers Gen) LINK *1 (N Pl Nom) 
 BARRIER NOT-NPMODADV) (*0 (Pron Pers Gen) OR (N Gen) + Sem/Hum BARRIER S-BOUNDARY) ;
 
 
@@ -1572,7 +1606,12 @@ COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-ag
 
 
 
+LIST ONE-smn = "oovtâ" ;
+LIST ONE-sme = "okta" ;
+LIST ONE-sma = "akte" ;
+LIST ONE-smj = "akta" ;
 
+SET ONE = ONE-smn OR ONE-sme OR ONE-sma OR ONE-smj ;   
 
 #!!  Ensure preceding nominal agrees with the verb
 ADD:xmsyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (-1C (N Sg Nom) OR Pron + Sg3 + Nom LINK NEGATE *-1 CC BARRIER NOT-NPMOD - (A Sg Nom) LINK -1 (N Nom) OR (Pron Nom)) (0 VFIN) (NOT 0 Sg3 OR (N Sg Acc) OR (N Sg Gen))(NEGATE *1 (N Pl Nom) BARRIER NOT-ADV-PCLE - Attr - (Num Sg Nom))(NEGATE *1 Num - ONE);
@@ -1601,9 +1640,36 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 
 	# Redundant adverbs in phrasal verbs of Norwegian 2->1
 	# -----------------------------------------------------
-ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 ("våålese")) (*0  ("tjaeledh") BARRIER (*) - Pcle) ;
+	
+LIST DOWN-ADV-sma = "våålese" ;
+LIST DOWN-ADV-smj = "våålese" ;
+LIST DOWN-ADV-sme = "vulos" ;
+LIST DOWN-ADV-smn = "vuálus" ;
+SET DOWN-ADV = DOWN-ADV-sma OR DOWN-ADV-smj OR DOWN-ADV-sme OR DOWN-ADV-smn ;
+
+LIST UP-ADV-sma = "bæjjese" ;
+LIST UP-ADV-smj = "bajás" ;
+LIST UP-ADV-sme = "bajás" ;
+LIST UP-ADV-smn = "bajás" ;
+SET UP-ADV = UP-ADV-sma OR UP-ADV-smj OR UP-ADV-sme OR UP-ADV-smn ;
+
+
+LIST WRITE-V-sma = "tjaeledh" ;
+LIST WRITE-V-smj = "tjállet" ;
+LIST WRITE-V-sme = "čállit" ;
+LIST WRITE-V-smn = "čäälliđ" ;
+SET WRITE-V = WRITE-V-sma OR WRITE-V-smj OR WRITE-V-sme OR WRITE-V-smn ;
+
+
+LIST STAND-UP-V-sma = "tjuedtjielidh" ;
+LIST STAND-UP-V-smj = "tjuedtjielidh" ;
+LIST STAND-UP-V-sme = "tjuedtjielidh" ;
+LIST STAND-UP-V-smn = "tjuedtjielidh" ;
+SET STAND-UP-V = STAND-UP-V-sma OR STAND-UP-V-smj OR STAND-UP-V-sme OR STAND-UP-V-smn ;
+
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  WRITE-V BARRIER (*) - Pcle) ;
 	## tjaelieh våålese! 
-ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 ("tjuedtjielidh") OR ("fulkedh")) (*0 ("bæjjese") BARRIER (*) - Pcle) ;
+ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 STAND-UP-V OR ("fulkedh")) (*0 UP-ADV BARRIER (*) - Pcle) ;
 	## tjuedtjelh bæjjese! 
 	## vaeltieh dejtie bïssedh!
 	
