@@ -1,4 +1,4 @@
-# South Sami description 
+# South Sámi description 
 
 All documents in one file
 
