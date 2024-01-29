@@ -21,7 +21,7 @@ CLEAN_FILES+=
 #### Build rules - add targets and their build rules below:
 
 # We want to rename the POS tags in front of derivations:
-analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
+.generated/analyser-mt-gt-desc.hfst: .generated/analyser-mt-gt-desc.tmp.hfst \
 			$(top_builddir)/src/fst/filters/remove-norm-comp-tags.hfst           \
 			$(top_builddir)/src/fst/filters/remove-dialect-tags.hfst             \
 			$(top_builddir)/src/fst/filters/remove-test-tags.hfst                \
@@ -79,7 +79,7 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 		> $@
 
 # And also for the North generator (removing SH):
-generator-mt-gt-norm_North.hfst: generator-mt-gt-norm.tmp.hfst \
+.generated/generator-mt-gt-norm_North.hfst: .generated/generator-mt-gt-norm.tmp.hfst \
 			$(top_builddir)/src/fst/filters/remove-norm-comp-tags.hfst           \
 			$(top_builddir)/src/fst/filters/remove-Dial_SH-strings.hfst          \
 			$(top_builddir)/src/fst/filters/remove-dialect-tags.hfst             \

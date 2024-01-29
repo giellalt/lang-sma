@@ -51,9 +51,9 @@ functions-mt-gt.cg3: $(topsrcdir)/src/cg3/functions.cg3
 endif
 
 # We want to make semantic tags optional for the apertium-targeted analyser:
-analyser-mt-gt-desc.%.hfst: analyser-mt-gt-desc.%.tmp.hfst \
+.generated/analyser-mt-gt-desc.%.hfst: .generated/analyser-mt-gt-desc.%.tmp.hfst \
 			$(top_builddir)/src/fst/filters/make-optional-semantic-tags.hfst \
-			$/top_builddir)/src/fst/orthography/spellrelax.compose.hfst
+			$(top_builddir)/src/fst/orthography/spellrelax.compose.hfst
 	$(AM_V_FST2FST)$(HFST_FST2FST) $(HFSTFLAGS) $(HFST_FORMAT) $< -o $<.tmp
 	$(AM_V_RGX2FST)$(PRINTF) "\
 		@\"$(top_builddir)/src/fst/filters/make-optional-semantic-tags.hfst\" \
@@ -68,7 +68,7 @@ analyser-mt-gt-desc.%.hfst: analyser-mt-gt-desc.%.tmp.hfst \
 	$(AM_V_at)rm -f $<.tmp
 
 # Relabel Giella tags to Apertium tags - generator, step 1:
-generator-mt-apertium-norm_North.tmp1.hfst: \
+.generated/generator-mt-apertium-norm_North.tmp1.hfst: \
 			../generator-mt-gt-norm_North.hfst \
 			tagsets/apertium.relabel
 	$(AM_V_HSUBST)$(HFST_SUBSTITUTE) $(HFSTFLAGS) -i $< \
@@ -78,8 +78,8 @@ generator-mt-apertium-norm_North.tmp1.hfst: \
 
 # Relabel Giella tags to Apertium tags - generator, step 2c:
 # * general tag change regex file ONLY
-generator-mt-apertium-norm_North.%.hfst: \
-			generator-mt-apertium-norm_North.%1.hfst \
+.generated/generator-mt-apertium-norm_North.%.hfst: \
+			.generated/generator-mt-apertium-norm_North.%1.hfst \
 			tagsets/modify-tags.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 		@\"tagsets/modify-tags.hfst\".i \
@@ -88,5 +88,5 @@ generator-mt-apertium-norm_North.%.hfst: \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		-o $@
 
-apertium-$(GTLANG).$(GTLANG)_North.RL.att.gz: generator-mt-apertium-norm_North.att.gz
+.generated/apertium-$(GTLANG).$(GTLANG)_North.RL.att.gz: .generated/generator-mt-apertium-norm_North.att.gz
 	$(AM_V_CP)cp -f $< $@
