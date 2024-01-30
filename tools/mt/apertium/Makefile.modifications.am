@@ -70,7 +70,8 @@ endif
 # Relabel Giella tags to Apertium tags - generator, step 1:
 .generated/generator-mt-apertium-norm_North.tmp1.hfst: \
 			../generator-mt-gt-norm_North.hfst \
-			tagsets/apertium.relabel
+			tagsets/apertium.relabel \
+			$(GENDIR)
 	$(AM_V_HSUBST)$(HFST_SUBSTITUTE) $(HFSTFLAGS) -i $< \
 		-F tagsets/apertium.relabel \
 		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
