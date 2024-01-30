@@ -17,3 +17,20 @@ For å söke syntaksfeil:
 uit-mac-1062:lang-sma mka055$ see src/fst/
 
 lim in: lexicon.tmp.lexc
+
+
+Kommando for morfologisk, valens,  og syntaksanalyse (når du ikke haer modes): 
+
+echo "Naakede destie mij saemien kultuvre- jïh sjugniedihks jielemem buerkeste lea dïhte daamtaj lea eevtjeme aktede nænnoes idealismeste jïh bielelen profesjonelle gïehtelimmie." | tools/grammarcheckers/modes/trace-smagram9-cg.mode | vislcg3 --trace -g '/Users/lwi001/lang-smj/tools/grammarcheckers/./grammarchecker.cg3' | divvun-suggest -g '/Users/lwi001/lang-smj/tools/grammarcheckers/generator-gramcheck-gt-norm.hfstol' -m '/Users/lwi001/lang-smj/tools/grammarcheckers/errors.xml' -l smj | less -R
+
+
+
+Kompilere modes: 
+
+uit-mac-1062:grammarcheckers mka055$ make dev
+
+
+"Maja inviterte meg til bursdag osv." - se artikkel: tokenisering - sammensetting. -  Er dette et punktum? 
+
+
+2) Samle på sammensetnings-feil" - sammensetningsord som skrives som ett ord, men som er feilskrevet som to ord."
