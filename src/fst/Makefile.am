@@ -310,7 +310,7 @@ endif
 
 # We need to add processing of language-specific tags in the generator:
 define giella_generators
-.generated/generator-gt-%.$(1): .genereated/generator-gt-%.tmp.$(1) \
+.generated/generator-gt-%.$(1): .generated/generator-gt-%.tmp.$(1) \
 					 filters/remove-norm-comp-tags.$(1)           \
 					 filters/remove-derivation-position-tags.$(1) \
 					 filters/remove-DNorm-tags.$(1)               \
