@@ -1,6 +1,6 @@
 # -*- cg-pre-pipe: "hfst-tokenise -g ../../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmhfst" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2017 UiT The arctic University of Norway
+# Copyright © 2000-2024 UiT The arctic University of Norway
 # http://giellatekno.uit.no & http://divvun.no
 #
 # This program is free software; you can redistribute and/or modify
@@ -18,7 +18,7 @@
 # ==================================================================== #
 # ====================================================================
 
-#  Sámi language technology 2000-2023, UiT The Arctic University of Norway #
+#  Sámi language technology 2000-2024, UiT The Arctic University of Norway #
 
 # ---------------------- #
 #   Development setup:   #
@@ -942,6 +942,7 @@ LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ; #!! WORD
 # SET REAL-WORD = WORD - Num - Ord ; #!! REAL-WORD
 SET REAL-WORD-NOT-ABBR = WORD - Num - Ord - (ABBR N) ; # This is former REALWORD-NOTABBR #!! REAL-WORD-NOT-ABBR
 SET NOT-COMMA = WORD - COMMA ;  #!! NOT-COMMA
+LIST ? = ? ;
 
 
 
@@ -1253,7 +1254,7 @@ ADD:uncorrected-typos (&typo) (?) ;
 ADD:msyn-adj-attr-predpl (&msyn-adj-attr-predpl) TARGET (A Attr) IF
 	(*-1 (Pl Nom) OR (Pers Pl3 Nom) OR (Pers Pl1 Nom) OR (Pers Pl2 Nom) OR (Pers Du3 Nom) OR (Pers Du1 Nom) OR (Pers Du2 Nom) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
-	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N)(NEGATE 1 Num) ;
+	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N)(NEGATE 1 Num OR (?)) ;
 
 COPY:msyn-adj-attr-predpl (A Pl Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-predpl) OR (A Attr &msyn-adj-attr-predpl) AFTER Ex/A TARGET (&msyn-adj-attr-predpl);
 
@@ -1265,7 +1266,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela)
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR (&msyn-adj-attr-predpl) OR Err/Lex)
 	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc - ("(") - (\?))
-	(NEGATE 1 COMMA LINK 1 (Prop N))(NEGATE 1 CC OR COMMA LINK 1 (A Attr) LINK *1 N)(NEGATE 1 CC LINK 1C Adv)(NEGATE 1 Num) ;
+	(NEGATE 1 COMMA LINK 1 (Prop N))(NEGATE 1 CC OR COMMA LINK 1 (A Attr) LINK *1 N)(NEGATE 1 CC LINK 1C Adv)(NEGATE 1 Num OR (?)) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
 	## Ij amma vesties
@@ -1371,7 +1372,7 @@ LIST LO-ADV = "bæjngoelisnie" ;
 SET SEM-ADVERBIAL = Sem/Plc OR Sem/Build OR Sem/Cat ;
 
 
-ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A LINK NOT 0 Inf OR VFIN) 
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A LINK NOT 0 Inf OR VFIN OR PrfPrc OR Ger) 
 (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))
 (NEGATE 0 <TH-Inf> LINK *1 (N Acc) OR (N Nom) + Pl BARRIER NOT-NPMOD LINK *1 (TV Inf) BARRIER NOT-ADV-PCLE)
 (NEGATE 0 <TH-Inf> LINK *1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL BARRIER NOT-NPMOD LINK *1 Inf BARRIER NOT-ADV-PCLE)
@@ -1448,7 +1449,7 @@ SET NEG-V = NEG-V-smj OR NEG-V-sme OR NEG-V-sma OR NEG-V-smn ;
 
 	# ij as Adverb - congruence between Neg and VFIN
 
-ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 NEG-V + Neg + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg) ;
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 NEG-V + Neg + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg)(NEGATE 0 Inf LINK -1 <TH-Inf>) ;
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Inf &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
 	## Ean månnoeh miehtsesne {minnien} lustestallemen vuj haarjanimmien gaavhtan.
@@ -1458,7 +1459,7 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFi
 	
 	# Neg Pl3 > ConNeg
 
-ADD:msyn-Neg-Pl3-ConNeg (&msyn-Neg-Pl3-ConNeg) TARGET (Ind Prs Pl3) IF (NEGATE 0 (ConNeg))(*-1 NEG-V + Neg + Prs BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc) ;
+ADD:msyn-Neg-Pl3-ConNeg (&msyn-Neg-Pl3-ConNeg) TARGET (Ind Prs Pl3) IF (NEGATE 0 (ConNeg))(*-1 NEG-V + Neg + Prs BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc OR Rel) ;
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3-ConNeg) TARGET (&msyn-Neg-Pl3-ConNeg) ;
 	## Ij Piere gænnah tjöönieh?
