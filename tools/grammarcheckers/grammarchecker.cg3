@@ -1254,7 +1254,7 @@ ADD:uncorrected-typos (&typo) (?) ;
 ADD:msyn-adj-attr-predpl (&msyn-adj-attr-predpl) TARGET (A Attr) IF
 	(*-1 (Pl Nom) OR (Pers Pl3 Nom) OR (Pers Pl1 Nom) OR (Pers Pl2 Nom) OR (Pers Du3 Nom) OR (Pers Du1 Nom) OR (Pers Du2 Nom) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
-	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N)(NEGATE 1 Num OR (?)) ;
+	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) OR PrfPrc LINK *1 N)(NEGATE 1 Num OR (?)) ;
 
 COPY:msyn-adj-attr-predpl (A Pl Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-predpl) OR (A Attr &msyn-adj-attr-predpl) AFTER Ex/A TARGET (&msyn-adj-attr-predpl);
 
@@ -1266,7 +1266,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela)
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR (&msyn-adj-attr-predpl) OR Err/Lex)
 	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc - ("(") - (\?))
-	(NEGATE 1 COMMA LINK 1 (Prop N))(NEGATE 1 CC OR COMMA LINK 1 (A Attr) LINK *1 N)(NEGATE 1 CC LINK 1C Adv)(NEGATE 1 Num OR (?)) ;
+	(NEGATE 1 COMMA LINK 1 (Prop N))(NEGATE 1 CC OR COMMA LINK 1 (A Attr) OR PrfPrc LINK *1 N)(NEGATE 1 CC LINK 1C Adv)(NEGATE 1 Num OR (?)) ;
 
 	## Man stoere brööke-biehkie haemeste viskes?
 	## Ij amma vesties
@@ -1279,7 +1279,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
 	(1 EOS)
 	(*-1 (Neg Ind) OR REALCOPULAS BARRIER NOT-ADV-PCLE)
-	(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N);
+	(NEGATE 1 CC LINK 1 (A Attr) OR PrfPrc LINK *1 N);
 
 	## ij amma vesties.
 
@@ -1287,7 +1287,7 @@ ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
 	(-1 CC LINK *-1 Nom BARRIER (*) - REALCOPULAS)
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
 	(NOT 1 N)
-	(NEGATE 1 CC LINK 1 (A Attr) LINK *1 N);
+	(NEGATE 1 CC LINK 1 (A Attr) OR PrfPrc LINK *1 N);
 
 	## Saemien kultuvre lea gånkaladtje jïh tjaebpies. 
 
@@ -1371,6 +1371,11 @@ LIST LO-ADV = "bæjngoelisnie" ;
 
 SET SEM-ADVERBIAL = Sem/Plc OR Sem/Build OR Sem/Cat ;
 
+LIST CONGR-A-sma = "buorre" ; #MAJA
+LIST CONGR-A-sme = "buorre" ;
+LIST CONGR-A-smj = "buorre" ;
+LIST CONGR-A-smn = "siämmáš" ;
+SET CONGR-A = CONGR-A-sma OR CONGR-A-sme OR CONGR-A-smj OR CONGR-A-smn ;
 
 ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A LINK NOT 0 Inf OR VFIN OR PrfPrc OR Ger) 
 (NEGATE 0 <TH-Com-Any> LINK 1 (N Com))
@@ -1381,8 +1386,9 @@ ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER 
 (NEGATE 0 <TH-FS> LINK 1 (N Nom) OR (Pron Nom) LINK *1 VFIN BARRIER NOT-ADV-PCLE - Ill - Ela - Ine)
 (NEGATE 0  <utnedh><TH-Inf> LINK -1 ("utnedh") OR ("åtna" N Sg Nom) LINK *2 Inf BARRIER S-BOUNDARY OR CS)
 (NEGATE 0  <utnedh><TH-PrfPrc> LINK -1 ("utnedh") OR ("åtna" N Sg Nom) LINK *2 PrfPrc BARRIER S-BOUNDARY OR CS)
+(NEGATE 0 ("<.*-Loc-.*>"r) LINK 1 Loc)
 (NEGATE *1 Adv OR Ine OR Po BARRIER NOT-ADV - Gen - CC LINK 1 COPULAS)
-(NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR (N Sg Nom) OR ("båetije") OR ("åejvie") OR VFIN)
+(NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR (N Sg Nom) OR ("båetije") OR ("åejvie") OR VFIN OR CONGR-A)
 (NEGATE *1 Sem/Plc + Ine OR Sem/Plc + Ela OR Sem/Build + Ine OR Sem/Build + Ela OR LO-ADV OR LO-PO BARRIER NOT-NPMOD LINK 1 EOS OR CC OR CS OR Rel LINK NEGATE *-1 VFIN - COPULAS BARRIER CS OR Rel)
 (NEGATE 2 LO-PO LINK 1 EOS OR CC OR CS OR Rel LINK NEGATE *-1 VFIN - COPULAS BARRIER CS OR Rel);
 	#$ Lea aelhkie bïjlem vuejedh.
@@ -1569,10 +1575,10 @@ subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ;
 
 ## PASSIVE VERB should be active   
 
-ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc)(NEGATE 0 PrfPrc LINK 1 N)(NEGATE 0 TV - Der/Pass) ;    
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc LINK NOT 0 Nom OR Sem/Time OR Sem/Plc)(NEGATE 0 PrfPrc LINK 1 N)(NEGATE 0 TV - Der/Pass OR Pron) ;    
 	## Orre teknologije edtja saemiengïelem gorredovvedh
 
-ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1C Acc LINK NEGATE 1 Inf OR VFIN)(NEGATE 0 PrfPrc LINK 1 N)(NEGATE 0 TV - Der/Pass) ; 
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1C Acc LINK NOT 0 Nom OR Sem/Time OR Sem/Plc LINK NEGATE 1 Inf OR VFIN)(NEGATE 0 PrfPrc LINK 1 N)(NEGATE 0 TV - Der/Pass OR Pron) ; 
 	#$sme Dasa lassin giella oahpahuvvo {maid} ruovttuguovllu olggobealde Oulus 
 	#$sme Ja ale {doalvo} min sisa.
 
