@@ -31,8 +31,11 @@ checked_lemmas=checked_lemmas.txt
 ##### --include "(pattern1|pattern2|...)"                          #####
 ##### --exclude "(pattern1|pattern2|...)"                          #####
 @GTCORE@/scripts/extract-lemmas.sh \
-    --exclude "(CmpN/Only|ShCmp|\+Cmp\/SplitR| Rreal | R | Rnoun |\+V\+|NOT-TO-LEMMATEST)" \
+    --exclude "(CmpN/Only|ShCmp|\+Cmp\/SplitR| Rreal | R | Rnoun |\+V\+|NOT-TO-LEMMATEST|Use\/MT| ab-dot-| Ij \;|Use\/\-Spell|\+Err\/)" \
     $source_files > $lemmas
+@GTCORE@/scripts/extract-lemmas.sh \
+    --include "( ab-dot-)" \
+    $source_files | sed 's/$/\./' | sed 's/\.\.$/\./' >> $lemmas
 
 ####### Start testing: #######
 
