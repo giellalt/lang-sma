@@ -39,7 +39,7 @@ generated_files/smi-$(GTLANG)-abbreviations.lexc: \
 
 generated_files/smi-$(GTLANG)-acronyms.lexc: \
 		$(gt_SHARED_smi)/src/fst/stems/smi-acronyms.lexc \
-		$(srcdir)/stems/$(GTLANG)-acronyms.lexc
+		$(srcdir)/stems/$(GTLANG)-acronyms.lexc \
 		$(top_srcdir)/src/fst/scripts/smi-$(GTLANG)-conversion.pl
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_V_GEN)cp -f $(srcdir)/stems/$(GTLANG)-acronyms.lexc $@
