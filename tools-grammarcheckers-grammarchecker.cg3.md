@@ -320,4 +320,5 @@ VERB agreement
 Ensure preceding nominal agrees with the verb
 
 * * *
+
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-sma/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>

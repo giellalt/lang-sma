@@ -1,6 +1,10 @@
-# South Sámi description 
+# South Sámi language model documentation
 
-All documents in one file
+All doc-comment documentation in one large file.
+
+---
+
+# src-cg3-disambiguator.cg3.md 
 
 
 
@@ -350,7 +354,14 @@ Rule set taken from sme
 gellie as numeral, not pronoun
 
 * * *
+
 <small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/disambiguator.cg3)</small>
+
+---
+
+# src-cg3-valency.cg3.md 
+
+
 # S O U T H   S Á M I   V A L E N C Y   A N N O T A T O R          
 
 ## Delimiters 
@@ -553,7 +564,14 @@ VERB-FORMS
 # Valency rules
 
 * * *
+
 <small>This (part of) documentation was generated from [src/cg3/valency.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/valency.cg3)</small>
+
+---
+
+# src-fst-morphology-affixes-abbreviations.lexc.md 
+
+
 # Continuation lexicons for abbreviations
 
 ## Lexica for adding tags and periods
@@ -617,6 +635,8 @@ VERB-FORMS
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/abbreviations.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/abbreviations.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-adjectives.lexc.md 
 
 
 
@@ -977,6 +997,8 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 ---
 
+# src-fst-morphology-affixes-nouns.lexc.md 
+
 
 
 # Nominal inflection sublexica
@@ -1227,6 +1249,8 @@ Lexicon for vowel-final words with invariant stems"
 
 ---
 
+# src-fst-morphology-affixes-possessive-suffixes.lexc.md 
+
 Divvun & Giellatekno - open source grammars for Sámi and other languages
 
 # South Saami Possessive suffixes
@@ -1238,6 +1262,8 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/possessive-suffixes.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/possessive-suffixes.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-propernouns.lexc.md 
 
 
 # Proper nouns morphology
@@ -1412,6 +1438,8 @@ Propernoun
 
 ---
 
+# src-fst-morphology-affixes-symbols.lexc.md 
+
 
 # Symbol affixes
 
@@ -1420,6 +1448,8 @@ Propernoun
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/symbols.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/symbols.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-verbs.lexc.md 
 
 
 
@@ -1726,6 +1756,8 @@ V-EVEN-PRS-DUPL ;
 
 ---
 
+# src-fst-morphology-compounding.lexc.md 
+
 
 South Sámi morphological analyser
 ==========================================================================
@@ -1774,6 +1806,8 @@ The hyphen is added here.
 <small>This (part of) documentation was generated from [src/fst/morphology/compounding.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/compounding.lexc)</small>
 
 ---
+
+# src-fst-morphology-phonology.twolc.md 
 
 
 # South Sámi morphophonological rule set                   
@@ -2321,6 +2355,8 @@ Ingen andre verb har st > s framfor passivderivasjon.
 <small>This (part of) documentation was generated from [src/fst/morphology/phonology.twolc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/phonology.twolc)</small>
 
 ---
+
+# src-fst-morphology-root.lexc.md 
 
 
 # South Sámi morphological analyser
@@ -3076,6 +3112,8 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 ---
 
+# src-fst-morphology-stems-adjectives.lexc.md 
+
 
 
 # Adjective stems
@@ -3097,6 +3135,8 @@ etnihke+A+OLang/NOB:etnihke IHKE_IHKELES_LOAN ; !samediggediedahus 2012 - etnisk
 
 ---
 
+# src-fst-morphology-stems-adverbs.lexc.md 
+
 
 
 egentlig satt disse inn i noun-adv-leksikon
@@ -3111,6 +3151,8 @@ laakte bïejedh - legge for tett sammen
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/adverbs.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/adverbs.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-nouns.lexc.md 
 
 
 
@@ -3156,6 +3198,8 @@ pp, tt, kk --> hp, ht, hk   eller bp, dt, gk?  bp, dt, gk strider i mot rettskri
 
 ---
 
+# src-fst-morphology-stems-numerals.lexc.md 
+
 
 
 hva med
@@ -3170,6 +3214,8 @@ SAS ; !viđajahkásaš
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/numerals.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/numerals.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-pronouns.lexc.md 
 
 
 
@@ -3298,6 +3344,8 @@ Still open: analyse morphologically or not...
 
 ---
 
+# src-fst-morphology-stems-sma-propernouns.lexc.md 
+
 
 
 (Söderhamn. Gävleb))
@@ -3307,6 +3355,8 @@ Still open: analyse morphologically or not...
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/sma-propernouns.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/sma-propernouns.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-verbs.lexc.md 
 
 
 
@@ -3371,6 +3421,8 @@ contlex stem umlaut dict class
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/verbs.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/verbs.lexc)</small>
 
 ---
+
+# src-fst-oahpa-filer-aff-adjectives-oahpa.lexc.md 
 
 
 
@@ -3834,6 +3886,8 @@ Lexical exceptions
 
 ---
 
+# src-fst-oahpa-filer-stems-adjectives-oahpa.lexc.md 
+
 
 # Adjective stems
 
@@ -3861,6 +3915,8 @@ aajne:aajne ATTR_0 ;				      \\ ... \\
 <small>This (part of) documentation was generated from [src/fst/oahpa-filer/stems-adjectives-oahpa.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/oahpa-filer/stems-adjectives-oahpa.lexc)</small>
 
 ---
+
+# src-fst-phonetics-txt2ipa.xfscript.md 
 
 
 
@@ -4029,6 +4085,8 @@ retracted tongue root			_q
 
 ---
 
+# src-fst-transcriptions-transcriptor-abbrevs2text.lexc.md 
+
 
 
 We describe here how abbreviations are in South Sámi are read out, e.g.
@@ -4048,6 +4106,8 @@ For example:
 <small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 
 ---
+
+# tools-grammarcheckers-grammarchecker.cg3.md 
 
 
 S O U T H   S A A M I   G R A M M A R   C H E C K E R
@@ -4371,7 +4431,14 @@ VERB agreement
 Ensure preceding nominal agrees with the verb
 
 * * *
+
 <small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-sma/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
+
+---
+
+# tools-grammarcheckers-grc-disambiguator.cg3.md 
+
+
 
 # S O U T H   S Á M I   D I S A M B I G U A T O R          
 
@@ -4721,7 +4788,14 @@ Rule set taken from sme
 gellie as numeral, not pronoun
 
 * * *
-<small>This (part of) documentation was generated from [tools/grammarcheckers/grc-disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/tools/grammarcheckers/grc-disambiguator.cg3)</small># Tokeniser for sma
+
+<small>This (part of) documentation was generated from [tools/grammarcheckers/grc-disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/tools/grammarcheckers/grc-disambiguator.cg3)</small>
+
+---
+
+# tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.md 
+
+# Tokeniser for sma
 
 Usage:
 ```
@@ -4783,6 +4857,8 @@ Finally we mark as a token any sequence making up a:
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](https://github.com/giellalt/lang-sma/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>
 
 ---
+
+# tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.md 
 
 # Grammar checker tokenisation for sma
 
@@ -4847,6 +4923,8 @@ Finally we mark as a token any sequence making up a:
 
 ---
 
+# tools-tokenisers-tokeniser-tts-cggt-desc.pmscript.md 
+
 # TTS tokenisation for smj
 
 Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
@@ -4908,6 +4986,3 @@ Needs hfst-tokenise to output things differently depending on the tag they get
 * * *
 
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-tts-cggt-desc.pmscript](https://github.com/giellalt/lang-sma/blob/main/tools/tokenisers/tokeniser-tts-cggt-desc.pmscript)</small>
-
----
-
