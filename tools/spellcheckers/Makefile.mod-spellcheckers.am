@@ -11,7 +11,7 @@
 #	build rules
 
 # Language specific processing of speller fst's:
-generator-speller-gt-norm.%: analyser-speller-gt-norm.tmp.%    \
+generator-speller-gt-norm.%: .generated/generator-speller-gt-norm.tmp.%    \
 		$(top_builddir)/src/fst/filters/remove-rel_focus-strings.% \
 		$(top_builddir)/src/fst/filters/remove-homonymy-tags.%     \
 		$(top_builddir)/src/fst/filters/remove-test-tags.%
@@ -24,7 +24,7 @@ generator-speller-gt-norm.%: analyser-speller-gt-norm.tmp.%    \
 		save stack $@\n\
 		quit\n" | $(XFST_TOOL)
 
-analyser-speller-gt-norm.%: analyser-speller-gt-norm.tmp.%  \
+analyser-speller-gt-norm.%: .generated/generator-speller-gt-norm.tmp.%  \
 		$(top_builddir)/src/fst/filters/remove-rel_focus-strings.% \
 		$(top_builddir)/src/fst/filters/remove-homonymy-tags.%     \
 		$(top_builddir)/src/filters/remove-test-tags.%         \
