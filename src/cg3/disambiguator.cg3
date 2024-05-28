@@ -646,7 +646,7 @@ LIST V-DER-SUF = (".*didh"r) (".*htidh"r)  (".*alledh"r) (".*stidh"r) (".*ehtedh
 LIST N-DER = Der/NomAct Der/NomAg Der/Dimin Der/vuota ; #!! N-DER
 LIST N-DER-SUF = (".*immie"r) (".*me"r) (".*æjja"r) (".*ije"r) (".*tje"r)  (".*voete"r) ; #!! N-DER-SUF
 
-LIST A-DER = Der/ldihkie Der/ijes Der/ihks Der/les Der/ldahke Der/ldh  ; #!! A-DER
+LIST A-DER = Der/ldihkie Der/ijes Der/ihks Der/les Der/ldahke Der/ldh ; #!! A-DER
 LIST A-DER-SUF = (".*ldihkie"r) (".*ijes"r) (".*ihks"r) (".*les"r) (".*ldahke"r) (".*ldh"r) (".*laakan"r) ; #!! A-DER-SUF
 
 
@@ -2021,6 +2021,14 @@ SELECT:N_Adv Adv (0 ("iehkeden") LINK 1 ("dellie")) ;
 SELECT:N A + Nom (0 N + Nom OR VFIN LINK 1 ("sjïdtedh")) ;
 	#$ Gosse aalka sjuevnjede sjïdtedh akte krokodilla baaktoe båata.
 REMOVE:N N + Ine (0 A + Ine OR A + Ess LINK *1 ("årrodh")) ;
+	
+
+SELECT SEMTAGS + N (0C N) ;
+SELECT SUB:1 SEMTAGS + (cmp_attr) ; #For Apertium
+SELECT SUB:1 SEMTAGS + (n) ; #For Apertium
+SELECT SUB:2 SEMTAGS + (n) ; #For Apertium
+SELECT (cog) OR (top) OR (ant) ; #For Apertium
+
 	
 	# SAFE RULES
 	# ----------
