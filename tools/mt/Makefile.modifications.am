@@ -50,7 +50,7 @@ CLEAN_FILES+=
 		-o $@
 
 # And also for the South generator (removing L):
-generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
+.generated/generator-mt-gt-norm.hfst: .generated/generator-mt-gt-norm.tmp.hfst \
 			$(top_builddir)/src/fst/filters/remove-norm-comp-tags.hfst           \
 			$(top_builddir)/src/fst/filters/remove-Dial_L-strings.hfst          \
 			$(top_builddir)/src/fst/filters/remove-dialect-tags.hfst             \
