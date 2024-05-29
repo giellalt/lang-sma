@@ -26,13 +26,13 @@ source_file=${srcdir}/../stems/${POS}.lexc
 generator_file=./../../generator-gt-norm
 
 ### out ###
-padv_lemmas=./filtered_p-adverbs
-cadv_lemmas=./filtered_c-adverbs
-sadv_lemmas=./filtered_s-adverbs
-todo_lemmas=./filtered_t-adverbs
-all_adv=./all_adverbs
-generated_lemmas=./generated-adverbs
-result_file=./missing_adverb_lemmas
+padv_lemmas=./filtered_p-${POS}
+cadv_lemmas=./filtered_c-${POS}
+sadv_lemmas=./filtered_s-${POS}
+todo_lemmas=./filtered_t-${POS}
+all_adv=./all_${POS}
+generated_lemmas=./generated-${POS}
+result_file=./missing_${POS}_lemmas
 
 
 # FAIL if source file does not exist:
