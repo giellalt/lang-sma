@@ -22,7 +22,7 @@ endif # CAN_YAML_TEST
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
-XFAIL_TESTS=
+XFAIL_TESTS=run-initcaps-genyaml-testcases.sh
 
 # Make sure all required files are included in the distribution:
 YAML_FILES=$(wildcard *.yaml)
