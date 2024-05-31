@@ -50,7 +50,7 @@ analyser-mt-gt-desc.hfst: .generated/analyser-mt-gt-desc.tmp.hfst \
 		-o $@
 
 # And also for the South generator (removing L):
-.generated/generator-mt-gt-norm.hfst: .generated/generator-mt-gt-norm.tmp.hfst \
+generator-mt-gt-norm.hfst: .generated/generator-mt-gt-norm.tmp.hfst \
 			$(top_builddir)/src/fst/filters/remove-norm-comp-tags.hfst           \
 			$(top_builddir)/src/fst/filters/remove-Dial_L-strings.hfst          \
 			$(top_builddir)/src/fst/filters/remove-dialect-tags.hfst             \
@@ -79,7 +79,7 @@ analyser-mt-gt-desc.hfst: .generated/analyser-mt-gt-desc.tmp.hfst \
 		> $@
 
 # And also for the North generator (removing SH):
-.generated/generator-mt-gt-norm_North.hfst: .generated/generator-mt-gt-norm.tmp.hfst \
+generator-mt-gt-norm_North.hfst: .generated/generator-mt-gt-norm.tmp.hfst \
 			$(top_builddir)/src/fst/filters/remove-norm-comp-tags.hfst           \
 			$(top_builddir)/src/fst/filters/remove-Dial_SH-strings.hfst          \
 			$(top_builddir)/src/fst/filters/remove-dialect-tags.hfst             \
