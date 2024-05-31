@@ -3157,7 +3157,7 @@ laakte bïejedh - legge for tett sammen
 
 
 # South Sámi nouns 
-## The lexicon `NounRoot`
+# The lexicon `NounRoot`
 
 This lexicon is the start of all noun lemmas. It splits the nouns in three
 classes as follows:
@@ -3168,7 +3168,7 @@ NounRoot --> Noun
 
 # All nouns with possessives
 
-## **LEXICON Noun**
+# **LEXICON Noun**
 Splitting nouns in NounNoPx, NounPx (with a P.Px.add
 flag) and NounPxKin (with a P.Nom3Px.add flag)
 * **NounNoPx ;** = words in this noun lexicon do not get any possessive inflectionb
