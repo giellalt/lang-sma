@@ -1038,8 +1038,12 @@ SELECT:NomWhenAttr Nom (0 SPRED-ADJ + Nom LINK 1 ADVLCASE LINK *1 Inf BARRIER S-
 
 SELECT:NomWhenAttr Nom (0 SPRED-ADJ + Nom LINK 1 CS OR COPULAS)(*-1 BOS BARRIER WORD) ;
 	#$ Nåake gosse mijjen skuvlesne dagkeres jåasoeh learohkh!
+
+REMOVE:AttrBeforeProp Attr - Prop (1 Prop) ;
+
 	
-SELECT:AttrNotNom Attr (0 (Pron Interr Sg Nom) OR (A Sg Nom))((*1C N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK *1 (A Attr) BARRIER WORD LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv)))
+SELECT:AttrNotNom Attr (0 (Pron Interr Sg Nom) OR (A Sg Nom))
+((*1C N - Prop BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK *1 (A Attr) BARRIER WORD LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv)))
 (NEGATE 0 SPRED-ADJ + Nom LINK 1 Ill LINK *1 Inf BARRIER S-BOUNDARY OR V)(NEGATE 0 Nom LINK -1 ("dan") OR ("man")) 
 ;
 	## ...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
@@ -1132,6 +1136,7 @@ SELECT:Indef Indef (0 ("mij") LINK *-1 COPULAS BARRIER SV-BOUNDARY LINK -1 Neg) 
 
 SELECT:Indef Indef (0 Rel LINK 1 ("gænnah") OR ("gan")) ;
 SELECT:Indef Indef (0 Rel LINK -1 ("fïere")) ;
+SELECT:Indef Indef (0 Rel + Attr LINK 1 N) ;
 
 REMOVE:Indef Indef (0 Rel LINK NOT -1 Neg) ;
 
@@ -1270,7 +1275,7 @@ REMOVE:V VFIN IF (0 A + Nom LINK -1 ("dan")) ;
 #!! Select Inf
 SELECT:inf Inf IF (0 Pl2 LINK -1 ("guktie") LINK -1 VFIN) ;
 	## Maanine dle leerebe guktie soptsestidh.
-
+SELECT:inf Inf IF (0 Pl2 LINK NOT *-1 Pers + Pl2) ;
 
 	#!! ## Mapping rules
 	# -------------------
@@ -1344,7 +1349,7 @@ SELECT:Nom Nom (0 A OR N LINK 1 COPULAS)(*-1 Nom BARRIER NOT-NPMODADV) ;
 	#$ Datne buerebe lohkije sjidth jis eadtjohke leerehth.
 
 SELECT:Nom Nom (0 A OR N LINK -1 ("dan") OR ("man") OR GRADE-ADV LINK -1 N + Nom)(1 N LINK NOT 0 Nom) ;
-SELECT:Nom Nom (0 A OR N LINK -1 N + Nom)(1 N LINK NOT 0 Nom)(NOT 0 Adv OR REAL-V) ;
+#SELECT:Nom Nom (0 A OR N LINK -1 N + Nom)(1 N LINK NOT 0 Nom)(NOT 0 Adv OR REAL-V) ;
 	#$ Ditnie-barkoe dan søøjmes Læjsese, idtji man jijnjem hinnh darjodh.
 	#$ Nïejte daelie tjaelieminie.
 
@@ -2012,7 +2017,7 @@ REMOVE:olkese ("olke") IF (0 Adv) ;
 REMOVE:v V IF (0 N + ADVLCASE LINK 1 PrfPrc OR Inf)(*-1 AUX BARRIER SV-BOUNDARY) ; 
 
 
-SELECT:N_Adv Adv (0 ("mænngan") OR ("dallamasten") LINK 1 ("gosse") OR CS) ;
+SELECT:N_Adv Adv (0 ("mænngan") OR ("dallamasten") LINK *1 ("gosse") OR CS BARRIER WORD) ;
 SELECT:N_Adv Adv (0 ("mænngan") OR ("åvteli") LINK -1 ("guhkiem")) ;
 SELECT:Adv Adv (0 ("guhkiem") LINK 1 ("mænngan")) ;
 SELECT:Adv Adv (0 ("guhkiem") LINK *1 IV BARRIER SV-BOUNDARY) ;
