@@ -470,13 +470,13 @@ SET REALWORD-NOTABBR = WORD - Num - Ord - ABBR ;
 LIST NOT-ADV-INT-PCLE = N A Num Pron A V CC CS ;
 
 SET NOT-A = WORD - A ;
-SET NOT-ATTR = WORD - (A Attr) ;
+SET NOT-ATTR = WORD - A + Attr ;
 SET NOT-ADV = WORD - Adv ;
 SET NOT-ADV-PCLE = NOT-ADV - Pcle ;
 
 SET NP-HEAD = Num OR N OR Pron ;
 
-SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr) OR (Pron Pers Gen) OR (Pron Logo Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Indef) OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr OR ("gånka") ;
+SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR A + Attr OR (ABBR Attr) OR (Pron Pers Gen) OR (Pron Logo Gen) OR (N Gen) OR Num OR (Cmpnd) OR CC OR (Pron Dem) OR (Pron Refl Gen) OR Pron + Indef OR (PrfPrc @>N) OR (PrfPrc @>N) OR (PrsPrc) OR (A Ord) OR Attr OR ("gånka") ;
          # The strict version of items that can only be premodifiers, not parts of the predicate - copied from sme-dis.rle
          
 
@@ -846,7 +846,7 @@ REMOVE:dïhtePl3 Pl3 (0 ("dïhte" Pers Sg3 Gen) LINK *-1 Sg + Nom BARRIER V OR N
 
 REMOVE:3Logo Logo + Pl3 IF (NOT *-1 Pl3);
 
-SELECT Attr IF (0 (Pron Indef) LINK NOT 0 Gen)(*1 N BARRIER NOT-A);
+SELECT Attr IF (0 Pron + Indef LINK NOT 0 Gen)(*1 N BARRIER NOT-A);
 
 SELECT PXSG IF (-1 SG + Pers) ;
 SELECT PXDU IF (-1 DU + Pers) ;
@@ -917,7 +917,7 @@ REMOVE:Vgen VGen (0 NOT-VGEN) ;
 #!! ### Postpositions
 #!! Selecting postpositions when preceded by genitives, etc.
 
-REMOVE:tjïrrh (N Pl) (0 ("tjïrrh" Po)) ;
+REMOVE:tjïrrh N + Pl (0 ("tjïrrh" Po)) ;
 REMOVE:tjïrrh (V) (0 ("tjïrrh" Po) LINK *-1 Gen BARRIER NOT-NPMOD LINK NOT 0 TIME) ;
 	## Bïegke vaarjoej tjïrrh bïegkedi.
 REMOVE:gujmie (N Sg Nom) (0 ("gujmie" Po) LINK -1 GUJMIE) ;
@@ -1030,7 +1030,7 @@ SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NOT-NPMODADV-INDEF)  ;
 	## Daaj baakoejgujmie edtjede jisrajelehkidie bueriesjugiehtidh.
 	## Akte mubpie lea slaameme jallh slaameminie, båeries povlijtigkerh jis vienhtieh edtja maehtedh gaajhkem dam orrestehtedh, jih dellie traakestieh, sinsitniem dej seamma baakoejgujmie diblieh mejtie leah daah minngemes tjijhtje-gaektsie- jallh uktsieluhkie jaepieh klajkehtamme barre ov goh dihte dle ihkuven saatna.
 
-SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR (A Attr)) ;
+SELECT:DemAttr (Dem Attr)(0 ("dagkeres") OR ("magkeres") LINK 1 N OR A + Attr) ;
 
 SELECT:NomWhenAttr Nom (0 SPRED-ADJ + Nom LINK 1 ADVLCASE LINK *1 Inf BARRIER S-BOUNDARY OR V)(*-1 BOS OR COMMA BARRIER NOT-ADV) ;
 	#$ Buerebe Læjsese guvvieh darjodh.
@@ -1043,7 +1043,7 @@ REMOVE:AttrBeforeProp Attr - Prop (1 Prop) ;
 
 	
 SELECT:AttrNotNom Attr (0 (Pron Interr Sg Nom) OR (A Sg Nom))
-((*1C N - Prop BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK *1 (A Attr) BARRIER WORD LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv)))
+((*1C N - Prop BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK *1 A + Attr BARRIER WORD LINK 1 N LINK NOT 0 COPULAS) OR (1 ("laakan" Adv)))
 (NEGATE 0 SPRED-ADJ + Nom LINK 1 Ill LINK *1 Inf BARRIER S-BOUNDARY OR V)(NEGATE 0 Nom LINK -1 ("dan") OR ("man")) 
 ;
 	## ...dah almetji reaktah galka gaajhkh almetji bijre årrodh seamma magkeres naelie, naehkieklaerie,...
@@ -1117,11 +1117,11 @@ SELECT:PronPers Pron + Gen (0 Pron LINK 1C Po) ; #dan åvteste is mostly Dem, re
 #!! ### Adjective or not
 
 #vi har en select jallh CC lenger opp, dvs at disse reglene ikke er i bruk
-REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 N OR (Cmpnd))(*1 N BARRIER NOT-NPMODADV) ;
+REMOVE:jallh A + Pl (0 ("jallh" CC))(-1 N OR (Cmpnd))(*1 N BARRIER NOT-NPMODADV) ;
 	## Mohte ohtsedibie amma treavkah jallh tjielhketjem jih minnibie doh deavabaahkoeh gierestallibie.
-REMOVE:jallh (A Pl) (0 ("jallh" CC) LINK 1 Neg LINK 1 S-BOUNDARY OR ConNeg LINK NOT 0 Pl3) ;
+REMOVE:jallh A + Pl (0 ("jallh" CC) LINK 1 Neg LINK 1 S-BOUNDARY OR ConNeg LINK NOT 0 Pl3) ;
 	## Jeenjh gujht saemieh gieh man akth åvteste eah saemesth jallh eah doesth saemiestidh jallts saemien hïjven guarkah.
-REMOVE:jallh (A Pl) (0 ("jallh" CC))(-1 FORMS)(1 FORMS) ;
+REMOVE:jallh A + Pl (0 ("jallh" CC))(-1 FORMS)(1 FORMS) ;
 	## Dagkeri tjoeverieh joekoen veaksehke juelkieh, mohte disse lissine tjoevere abpe almetje joekoen voerkes jallh fahkoes årrodh.
 SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR COMMA) ;
 	## Helena, jallh Aili man dan aaj nomme, lea saemien maadtoste.
@@ -1372,7 +1372,7 @@ SECTION
 
 MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV LINK NOT 0 Adv)(NOT 0 COPULAS) ;    
 	#$ Lustes tjoejkedh.
-MAP @<SUBJ TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 (A Attr)) ;
+MAP @<SUBJ TARGET Inf IF (*-1 (N Nom) BARRIER NOT-ADV LINK -1 A + Attr) ;
 	#$ Lustes aate tjoejkedh.
 	
 MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER REAL-V LINK -1 COPULAS)(1 EOS) ;
@@ -1502,10 +1502,10 @@ SELECT:GenIfLeaNom Gen (1 ("lea" V) LINK 0 Pl3 OR Sg3 LINK *1 (N Nom) BARRIER NO
 SELECT:AccIfSVOV (Acc Sg) IF (*-1C INFV BARRIER NOT-NPMOD)(1C V); # consider VFIN for INFV
 	## Jis sååjhtoe ålkoelaantesne gogka akth dienesjidh dellie barkosne tjuara aelkedh dam laanten gïelem soptsestidh.
 
-SELECT:Ess Ess (0 (N Com) LINK 1 OPRED-V)(-1 Acc) ;
+SELECT:Ess Ess (0 N + Com LINK 1 OPRED-V)(-1 Acc) ;
 	#$ Stoerejïevegem maehtebe vaeltedh jïh dam råafojne utnedh.
 	
-SELECT:Ess Ess (0 (N Com) LINK -1 (V <TH-Acc-Any><RO-Ess-Any>) LINK -1 Acc) ;
+SELECT:Ess Ess (0 N + Com LINK -1 (V <TH-Acc-Any><RO-Ess-Any>) LINK -1 Acc) ;
 	## Dam åtnam bïjline.
 
 SELECT:Com Com (0 Ess + Sem/Veh LINK 1 MOVEMENT-V) ;
@@ -1526,10 +1526,12 @@ REMOVE:SgIll Ill (0 Adv LINK 1 FMAINV LINK NOT 0 MOVEMENT-V) ;
 	#$ varki gåatan bïesem jïh aaj mov daelvie-dogkesh gåatan fihkem.
 
 	
-SELECT:IneIfEss/Com (N Pl Ine) (0 (N Ess) OR (N Sg Com)) (1 ("viedtedh" V* TV Der1 Der/ldahke N Sg Ine) OR ("vïedteldahke" N Sg Ine)) ;
+SELECT:IneIfEss/Com Ine (0 N + Ess OR N + Com) (1 ("viedtedh" V* TV Der1 Der/ldahke N Sg Ine) OR ("vïedteldahke" N Sg Ine)) ;
 # Njolkedassh ålmine veadtaldahkesne
 
-REMOVE:EssIfCom/Ine (N Ess) (0 (N Sg Com) OR (N Pl Ine)) (*-1 (Pron Sg Com) OR (Pron Pl Ine) BARRIER NOT-NPMOD OR S-BOUNDARY) ;
+SELECT:IneIfEss/Com (N Pl Ine) (0 (N Ess) OR (N Sg Com)) (-1 ("ovmessie")) ;
+
+REMOVE:EssIfCom/Ine Ess (0 Sg + Com OR Pl + Ine) (*-1 Pron + Com OR Pron + Ine BARRIER NOT-NPMOD OR S-BOUNDARY) ;
 # dajnie barkoeplaanine
 
 SELECT:NPlAcc Acc (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
@@ -1603,7 +1605,7 @@ IFF:JisPcle ("jis" Pcle) (-1 N OR Pron OR TIME) (NEGATE -1 ("buerie") OR ("luste
 
 
 # select A Attr if the word is directly followed by another noun. Probably needs a barrier to avoid merging two N's that just happen to be colocated, and where the first one is ambiguous with an A Attr reading.
-SELECT:AdjAttrBeforeNoun (A Attr) IF ( 1C N - Prop )(NOT 0 ("hijven")) ;
+SELECT:AdjAttrBeforeNoun A + Attr IF ( 1C N - Prop )(NOT 0 ("hijven")) ;
 REMOVE:hijven Attr (0 ("hijven")) ; # Attr?
 
 
@@ -1623,9 +1625,9 @@ REMOVE:AdvNotA_Cop A (0 Adv)(-1C V LINK NOT 0 COPULAS)(NEGATE 1 A OR N) ;
 
 SELECT:ANom A + Nom (0 Adv)(1 COPULAS) ;
 
-SELECT:AAttr (A Attr) ((*1C N - Prop BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv)))(NOT 0 N) ;
+SELECT:AAttr A + Attr ((*1C N - Prop BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 A + Attr LINK 1 N) OR (1 ("laakan" Adv)))(NOT 0 N) ;
 	## Gïjre lea sjïdteme daelvien männgan goh lea nåake gåatome jïh jïjnjh juvrh orreme.
-REMOVE:NotAAttr (A Attr) (NOT 1 N OR A LINK NEGATE 0 CC OR COMMA LINK 1 Attr) ;
+REMOVE:NotAAttr A + Attr (NOT 1 N OR A LINK NEGATE 0 CC OR COMMA LINK 1 Attr) ;
 	## Laedtieh gietskiebasse saemielaantese båetieh bene Aslak tuhtjie dajve gujht stoerre gåabpatjahkide.
 	## Dam maam dorje lea gaerhtelesvoeten jïh riektesvoeten mietie, jïh altese stillemh leah stynkehke jïh ihkuvasse tjåadtjoeh.
 	## Datne edtjh dov elkiejgujmie, dov måarine jïh dov mænnjajgujmie vïnhtsese tjaangedh, jïh fïerhten jielijijstie, urries jïh minngels, edtjh akth paarrh vïnhtsese vaedtsiehtidh, båetieh datnine ektine jieledh.
@@ -1662,7 +1664,7 @@ SELECT:AnotN A (0 N LINK -1 ADV-MOD-ADJ) ;
 #!! ## N or V
 
 # "<aejkien>" N Sg Gen  V IV Ind Prs Du1 @+FMAINV 
-REMOVE:aejkie1 VFIN (0 ("aejkie" Gen))((-1 ("naan") OR (Indef Gen) OR ("aerebi") OR (Num Gen) OR Ord) OR (1 VFIN));
+REMOVE:aejkie1 VFIN (0 ("aejkie" Gen))((-1 ("naan") OR (Indef Gen) OR ("aerebi") OR Num + Gen OR Ord) OR (1 VFIN));
 	## Guktie don øvteben aejkien soptsestim, gielemoenehtasse lea ussjedeminie daan jaepien barkedh guktie dihte gielebarkoe edtja juhtedh.
 
 #REMOVE:aejkie2 VFIN (0 ("aejkie" Gen) LINK 1 VFIN);
@@ -1680,11 +1682,11 @@ SELECT:Vfin VFIN (0 (N Gen) LINK 1 S-BOUNDARY OR Adv)(NEGATE -1 Pr)(NEGATE *-1 V
 SELECT:N Gen (0 (Du1) LINK -1 Attr)  ;
 
 	
-SELECT:golme (Num Gen)(0 ("golme"))(1 (N Gen)) ;
+SELECT:golme Num + Gen (0 ("golme"))(1 (N Gen)) ;
 	## Jih die libriem dijpebe, gulhkine tjaeliestibie golmen aejkien jih doeltehtibie.	
 
 
-SELECT:NumElaIll (Num Sg Ela Attr) IF (1 (N Ela)) (2 (Num Ill) OR (Ord Sg Ill) ) ;
+SELECT:NumElaIll Num + Ela + Attr IF (1 N + Ela) (2 Num + Ill OR Ord + Ill ) ;
 	## Mohte ij mij gænnah aktehte biejjeste måbpan maehtieh varhtodh.
 
 #"<aktehte>"
@@ -1703,7 +1705,7 @@ SELECT:GerNotNomAct Ger (NEGATE *-1 V BARRIER S-BOUNDARY)(0 (Der/NomAct) LINK 1 
 
 #!! Adj or Indef
 
-SELECT:AdjNotIndef (A Pl) (0 (Indef))(*1 (N Pl) BARRIER S-BOUNDARY) ;
+SELECT:AdjNotIndef A + Pl (0 (Indef))(*1 N + Pl BARRIER S-BOUNDARY) ;
 	## Gïjre lea sjïdteme daelvien männgan goh lea nåake gåatome jïh jïjnjh juvrh orreme.
 REMOVE:AdjBeforeV A (NEGATE 0 Nom)(1 MAINV) ;
 	## Mov aehtjie jijnjem maahta. 
@@ -1745,11 +1747,11 @@ SELECT:Ess Ess IF (0 ESS-TIME-WEATHER LINK 1 VFIN OR ("dle")) ;
 	#$ Maanine dle leerebe guktie soptsestidh.
 
 #!! Comitative
-SELECT:ektine (N Com) OR (Pron Com) OR (A Com) (*-1 ("ektine") BARRIER NOT-NPMOD) ;
+SELECT:ektine N + Com OR Pron + Com OR A + Com (*-1 ("ektine") BARRIER NOT-NPMOD) ;
 	## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
-SELECT:ektine (N Com) OR (Pron Com) OR (A Com) (*1 ("ektine") BARRIER S-BOUNDARY) ;	
+SELECT:ektine N + Com OR Pron + Com OR A + Com (*1 ("ektine") BARRIER S-BOUNDARY) ;	
 	## Giejnie leah skuvlesne ektine?
-SELECT:gonnoeh (N Com)  (-1 ("gonnoeh")) ;
+SELECT:gonnoeh N + Com  (-1 ("gonnoeh")) ;
 	#$ Dïhte tjidtjie gonnoeh aehtjine årroeminie aktene voenesne man nomme Jorpejaevrie.
 
 
@@ -1779,13 +1781,13 @@ SELECT:ComMat Com IF (0 Ine + Sem/Mat LINK 1 ("rïesedh") OR ("rïeseldidh")) ;
 
 
 #!! Accusative or illative
-SELECT:AccNotIll (N Acc) (0 (N Ill) LINK *1 STV BARRIER NOT-ADV) ;
+SELECT:AccNotIll (N Acc) (0 N + Ill LINK *1 STV BARRIER NOT-ADV) ;
 	## Mov aaj aehtjie gie båanta. Dihte fievsesne fierhten biejjien, govside båhtja, jih gaajhkide juvride biepmedahta.
 
 #!! Indef or Adv
-SELECT:IndefNotAdv (Pron Indef)  (0 Adv) ((*1C A OR N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv))) ;
+SELECT:IndefNotAdv Pron + Indef  (0 Adv) ((*1C A OR N BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 A + Attr LINK 1 N) OR (1 ("laakan" Adv))) ;
     ## ..., gaajhkh dovnesh seamma vihkeles jih vihkeles ektesne barkedh abpevoetesne.
-SELECT:AdvNotIndef Adv IF (0 (Pron Indef)) (1 S-BOUNDARY);
+SELECT:AdvNotIndef Adv IF (0 Pron + Indef) (1 S-BOUNDARY);
 	## ..., reerenassen ulmie dajvesne seamma goh daaletje aalkoebarkoe jih proposisjovnh...
 
 #!! special lemmas
@@ -1802,7 +1804,7 @@ REMOVE:almetje2 ("elmie") IF (0 ("almetje"));
 
 REMOVE:gyhtjelasse ("gæhtjodh") IF (0 ("gyhtjelasse"));
 
-SELECT:nomme ("nomme" N) IF (0 ("nomme" Num)) ((*-1 (A Attr) OR (Pron Attr) BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 (A Attr) LINK 1 N) OR (1 ("laakan" Adv)));
+SELECT:nomme ("nomme" N) IF (0 ("nomme" Num)) ((*-1 A + Attr OR Pron + Attr BARRIER NOT-NPMOD OR CC OR Pron LINK NOT -1 COMMA) OR (1 CC LINK 1 A + Attr LINK 1 N) OR (1 ("laakan" Adv)));
      ## Die maa onterligksh nommh, ...
 SELECT:Jupmele ("Jupmele") IF (0 ("jupmele"));
 
