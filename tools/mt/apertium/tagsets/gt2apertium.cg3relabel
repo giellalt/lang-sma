@@ -38,6 +38,7 @@ LIST was_punct = quot punct ("-" "–" guio);
 MAP (PUNCT) was_punct ;
 LIST was_clb = cm sent;
 MAP (CLB) was_clb;
+MAP (Sem/Plc) (top) OR (sem_plc);
 
 MAP (LEFT) (lquot) ;
 MAP (RIGHT) (rquot) ;
@@ -321,7 +322,6 @@ MAP (Sem/Perc-emo) (sem_perc-emo) ;
 MAP (Sem/Perc-phys) (sem_perc-phys) ;
 MAP (Sem/Plant) (sem_plant) ;
 MAP (Sem/Plantpart) (sem_plantpart) ;
-MAP (Sem/Plc) (top) OR (sem_plc);
 MAP (Sem/Plc-abstr) (sem_plc-abstr) ;
 MAP (Sem/Plc-elevate) (sem_plc-elevate) ;
 MAP (Sem/Plc-line) (sem_plc-line) ;
