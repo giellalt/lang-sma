@@ -1769,14 +1769,20 @@ LEXICON SNAME_MAANA-LOAN ! as MAANA, but with Prop tag
                         +N+Prop+Sem/Plc+Attr:a         FINAL1   ;
 
 
-LEXICON SNAME_MAANA_PLUR ! as MAANA, but with Prop tag
-@U.Cap.Obl@ SNAME_MAANA_PLUR_INFL ;
-LEXICON SNAME_MAANA_PLUR_INFL ! as MAANA, but with Prop tag
- +N+Prop+Sem/Plc+Pl:     MAANA_PL ;
-+N+Prop+Sem/Plc+Cmp/PlGen:a%>j RHyph    ;
-    +N+Prop+Sem/Plc:     EVEN_ESS ;
-!+N+Prop+Sem/Plc+Attr:a%>h FINAL1 ;
+LEXICON SNAME_MAANA_PLUR-plc ! as MAANA, but with Prop tag
++N+Prop+Sem/Plc:  SNAME_MAANA_PLUR_FLAG ;
 
+
+LEXICON SNAME_MAANA_PLUR-org ! as MAANA, but with Prop tag
++N+Prop+Sem/Org:  SNAME_MAANA_PLUR_FLAG ;
+
+LEXICON SNAME_MAANA_PLUR_FLAG
+@U.Cap.Obl@ SNAME_MAANA_PLUR_INFL ;
+
+LEXICON SNAME_MAANA_PLUR_INFL ! as MAANA, but with Prop tag
+ +Pl:     MAANA_PL ;
+ +Cmp/PlGen:a%>j RHyph    ;
+        EVEN_ESS ;
 
 
 LEXICON JÆLLAN ! as MAANA, but with Prop tag
