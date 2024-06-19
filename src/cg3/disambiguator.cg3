@@ -579,7 +579,7 @@ LIST INFV = "aatedh" "aavoedidh" "aelkedh" "buektiehtidh" "bööredh" "daarpesji
 LIST ILLV = "båetedh" "juhtedh" "mojjehtidh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" "gïehtelidh" "tjïskesidh" "soptsestidh" "vuejedh" "gåaradidh" "aelkedh" "aelkiestidh" ;
 LIST ESSV = "barkedh" "gåhtjodh" "sjïdtedh" "tjoevkedh" ;
-LIST COMN = "gihtjedimmie" "aajkoe" ;
+LIST COMN = "aajkoe" "barkoe" "gihtjedimmie" ;
 LIST INEN = "dotkeme" ;
 LIST OPRED-V = "tuhtjedh" ; # "utnedh" ;
 
@@ -1657,6 +1657,8 @@ REMOVE:IllNotNom Nom (0 ILLADV)(1 VFIN) ;
 	## Dah aaj naan aejkien diekie båetieh, mohte eeremes tjidtjie dihte dahkoe vualka.
 	## Dahkoe lin aaj sijhteme edtjin naan noere saemieh aaj båetedh.
 
+SELECT:AnotN A (0 ("båetije") + Gen LINK 1 Sem/Time + Gen) ;
+SELECT:N N (-1 ("båetije") + Gen) (0 Sem/Time + Gen) ;
 
 SELECT:gåetie N + Ill (0 ("gåetie") LINK *0 ("tjaangedh") BARRIER SV-BOUNDARY) ;
 
@@ -2218,6 +2220,7 @@ REMOVE:errsub2 $$WORDLEMMA + Err/Orth-spes (0 $$WORDLEMMA - Err/Orth-spes ) ; # 
 ADD:sme (<sma>) TARGET WORD ;
 ADD:sme (<sma>) TARGET PUNCT ;
 
+REMOVE:errsub Err/Orth  ; # Apertium
 
 # Not in use:
 #"<lea>" - ikke reell
