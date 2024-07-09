@@ -998,6 +998,8 @@ SELECT:Adv GRADE-ADV (1 A LINK 0 Attr OR Nom) ;
 	#$ Akte snjearafuelhkie gaadtan saadtesovvi, båeries bovtsh sinsitnien tjåervine gïebredin jïh akte gaajh stoerre gaajtoe lij gemkiehtamme tsåekesne.
 
 SELECT:Adv ILLADV (1 MOVEMENT-V) ;
+SELECT:Adv ILLADV (0 N) ;
+
 	#$ Njulhtjestalla goh maanetje jïh varki tjoevere deavam våålese roehtedh maanaj gåajkoe jïh dej ektesne paradijsem njålhtjodh.
 
 
@@ -1248,8 +1250,9 @@ SELECT:imprt Imprt ((-1 CLB) OR (*-1 BOS BARRIER WORD))(1 ("amma")) ;
 REMOVE VFIN IF (0 N + Ela)((-1 MOVEMENT-V) OR (1 MOVEMENT-V));
 	#$ Læjsa bøøti skuvleste roehten. 
 
-REMOVE:vfin VFIN IF (0 N)(*1C VFIN BARRIER S-BOUNDARY OR CC OR COMMA OR ("dellie"))(NOT 0 AUX LINK *1 Inf Or PrfPrc);
+#REMOVE:vfin VFIN IF (0 N)(*1C VFIN BARRIER S-BOUNDARY OR CC OR COMMA OR ("dellie"))(NOT 0 AUX LINK *1 Inf Or PrfPrc);
 	#% Gosse datne edtjh gaaltijh nuhtjedh, tjoerh daejredh gusnie gaaltijh gaavnh jïh guktie edtjh gaaltijidie reaktoelaakan nuhtjedh.
+	#% Raerielïhtsege Olsen tjïerteste dah leah veeljeme lidteratuvrem båarasåbpoe maanide.
 
 
 REMOVE:V VFIN IF (0 N + Nom)(*-1 CC BARRIER NOT-A LINK -1C N + Nom) ;
@@ -1345,7 +1348,8 @@ SELECT:Attr Attr (0 VFIN) (1 N LINK *1 VFIN BARRIER S-BOUNDARY) ;
 SELECT:Attr Attr (0 A LINK 1 N LINK 1 COPULAS)(-1 Nom) ;
 	#$ Datne buerebe lohkije sjidth jis eadtjohke leerehth.
 
-REMOVE:VFIN VFIN (0 N) (-1 Attr LINK *-1 VFIN BARRIER S-BOUNDARY) ;
+#REMOVE:VFIN VFIN (0 N) (-1 Attr LINK *-1 VFIN BARRIER S-BOUNDARY OR COMMA) ;
+	#% Amma dejtie vytnesjæjjide nænnoestehtedh mah sijhtieh sov kåanstevætnoem evtiedidh akten jieliemasse mestie dïenestem åådtje, Muotka tjïerteste.
 
 SELECT:vaaneAdv Adv (0 ("vaane") LINK 1 ("sjïdtedh"))(NOT -1 Gen) ;
 	#$ Bræjhta vaane sjïdteme skovteretjoejem govledh jïh healhkoe, gosse skovtere sjååve.
