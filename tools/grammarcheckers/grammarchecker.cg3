@@ -1254,7 +1254,7 @@ ADD:uncorrected-typos (&typo) (?) ;
 ADD:msyn-adj-attr-predpl (&msyn-adj-attr-predpl) TARGET (A Attr) IF
 	(*-1 (Pl Nom) OR (Pers Pl3 Nom) OR (Pers Pl1 Nom) OR (Pers Pl2 Nom) OR (Pers Du3 Nom) OR (Pers Du1 Nom) OR (Pers Du2 Nom) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
 	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
-	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) OR PrfPrc LINK *1 N)(NEGATE 1 Num OR (?)) ;
+	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) OR PrfPrc LINK *1 N)(NEGATE 1 Num OR (?))(NEGATE 1 (V Sg3)) ;
 
 COPY:msyn-adj-attr-predpl (A Pl Nom &SUGGEST) EXCEPT (A Attr &msyn-adj-attr-predpl) OR (A Attr &msyn-adj-attr-predpl) AFTER Ex/A TARGET (&msyn-adj-attr-predpl);
 
@@ -1568,8 +1568,7 @@ ADD:xmsyn-number_congruence-subj-copula-hab (&msyn-number_congruence-subj-copula
 BARRIER NOT-NPMODADV) (*0 (Pron Pers Gen) OR (N Gen) + Sem/Hum BARRIER S-BOUNDARY) ;
 
 
-COPY:msyn-number_congruence-subj-copula-hab (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-number_congruence-
-subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ; 
+COPY:msyn-number_congruence-subj-copula-hab (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-number_congruence-subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ; 
 
 
 
