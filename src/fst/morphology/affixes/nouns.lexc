@@ -1436,6 +1436,8 @@ LEXICON IJDE_LOAN
 
 LEXICON EKTE_LOAN
            +Err/Orth:eekt X_NIEJTE ; ! ikke les
+           +Err/Orth:eekt  N_ODD_LOAN ; ! 
+           +Err/Orth:ekt  N_ODD_LOAN ; ! 
                     :ekt  X_NIEJTE ; ! ikke les
    +Cmp/SgNom+Use/NG:ekt  R      ; !prosjekt-
 
@@ -1611,10 +1613,11 @@ LEXICON EESE_LOAN
                    :es X_NIEJTE ; !  hypoteese
  +Cmp/SgNom+Use/NG:s  R      ; ! hypotes-
 
-
 LEXICON EEME_LOAN
     +Err/Orth:m  X_NIEJTE ; ! nasjovnale
                    :em X_NIEJTE ; ! 
+    +Err/Orth:m  N_ODD_LOAN ; ! 
+    +Err/Orth:em  N_ODD_LOAN ; ! 
  +Cmp/SgNom+Use/NG:m  R      ; ! problem-
 
 LEXICON GRAMME_LOAN
@@ -1651,15 +1654,15 @@ LEXICON X_NIEJTEnotODD ! bare former som ikke er i ODD
     +Ess:%>ine FINAL1 ;
 
 LEXICON N_ODDonlyDIFT ! bare former som får diftong
-           +Ill:%>asse          FINAL1 ;
-           +Ine:%>isnie         FINAL1 ;
-           +Ela:%>istie         FINAL1 ;
-           +Com:%>inie          FINAL1 ;
-          +Acc:%>idie            FINAL1 ;
-          +Ill:%>idie            FINAL1 ;
-          +Ine:%>inie            FINAL1 ;
-          +Ela:%>ijstie          FINAL1 ;
-          +Ess:%>inie FINAL1 ;
+        +Sg+Ill:%>asse          FINAL1 ;
+        +Sg+Ine:%>isnie         FINAL1 ;
+        +Sg+Ela:%>istie         FINAL1 ;
+        +Sg+Com:%>inie          FINAL1 ;
+        +Pl+Acc:%>idie            FINAL1 ;
+        +Pl+Ill:%>idie            FINAL1 ;
+        +Pl+Ine:%>inie            FINAL1 ;
+        +Pl+Ela:%>ijstie          FINAL1 ;
+           +Ess:%>inie FINAL1 ;
 
 
 LEXICON NIEJTE_SG
