@@ -68,9 +68,10 @@ endif
 	$(AM_V_at)rm -f $<.tmp
 
 # re-apply extra hyphen weight just in case and for foma
-.generated/generator-mt-apertium-norm.tmp.hfst: \
-			.generated/generator-mt-apertium-norm.tmp1.hfst
-	$(AM_V_HREWGT)$(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
+.generated/generator-mt-apertium-norm.hfst: \
+			.generated/generator-mt-apertium-norm.tmp.hfst
+	$(AM_V_REWEIGHT)$(HFST_FST2FST) $(HFSTFLAGS) -t $< \
+		| $(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
 		-S '-' -a 10 --arcs-only -i $< -o $@
 
 # Relabel Giella tags to Apertium tags - generator, step 1:
@@ -81,9 +82,14 @@ endif
 	$(AM_V_HSUBST)$(HFST_SUBSTITUTE) $(HFSTFLAGS) -i $< \
 		-F tagsets/apertium.relabel \
 		| $(HFST_FST2FST) $(HFSTFLAGS) -t \
-		| $(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
-			-S '-' -a 10 --arcs-only \
 		-o $@
+
+.generated/generator-mt-apertium-norm_North.hfst: \
+			.generated/generator-mt-apertium-norm_North.tmp.hfst
+	$(AM_V_REWEIGHT)$(HFST_FST2FST) $(HFSTFLAGS) -t $< \
+		| $(HFST_REWEIGHT) $(MORE_VERBOSITY) $(HFST_FLAGS) \
+		-S '-' -a 10 --arcs-only -i $< -o $@
+
 
 # Relabel Giella tags to Apertium tags - generator, step 2c:
 # * general tag change regex file ONLY
