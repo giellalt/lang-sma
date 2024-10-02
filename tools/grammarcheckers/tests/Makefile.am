@@ -16,7 +16,6 @@ TESTS=\
 	Kongr_Subject_Verbal-FAIL.yaml \
 	Kongr_Subject_Verbal-PASS.yaml \
 	Trans_Intrans_Object-FAIL.yaml \
-	agreement-FAIL.yaml \
 	agreement-PASS.yaml \
 	candidates-msyn-adj-attr-pred-FAIL.yaml \
 	candidates-msyn-adj-attr-pred-PASS.yaml \
@@ -61,7 +60,6 @@ XFAIL_TESTS=\
 	Elativ_Genitiv_Draft-FAIL.yaml \
 	Kongr_Subject_Verbal-FAIL.yaml \
 	Trans_Intrans_Object-FAIL.yaml \
-	agreement-FAIL.yaml \
 	candidates-msyn-adj-attr-pred-FAIL.yaml \
 	candidates-msyn-adj-pred-attr-FAIL.yaml \
 	candidates-msyn-agr-other-sg1-FAIL.yaml \
