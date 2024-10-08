@@ -7,6 +7,10 @@ cat src/fst/morphology/root.lexc |cut -d '!' -f1 |cut -d ':' -f1 |sed 's/+/¢+/g
 
 echo 'Have a look at these:'
 
+echo 'Checking for double + :'
+cat src/fst/morphology/stems/*lexc src/fst/morphology/affixes/*lexc |cut -d '!' -f1 |grep '++'
+
+
 comm -23 lexctags roottags 
 echo 'Checking for double semicolon in stem files:'
 cat src/fst/morphology/stems/*lexc |cut -d '!' -f1 |grep ';.*;'
@@ -16,6 +20,9 @@ cat src/fst/morphology/stems/*lexc |cut -d '!' -f1 |grep '\+Der/.*;' |egrep -v '
 
 echo 'Checking for double Sem-tags:'
 cat src/fst/morphology/stems/*lexc |cut -d '!' -f1 |grep '+Sem.*+Sem' 
+
+echo 'Checking for whitespace without % on left side:'
+cat src/fst/morphology/stems/*lexc |cut -d '!' -f1 | cut -d ';' -f1 | cut -d '"' -f1 | tr -s ' ' |sed 's/^ //' | grep -v '^<' |sed 's/% /%/g' |grep ' .*:' 
 
 
 
