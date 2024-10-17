@@ -4114,7 +4114,17 @@ For example:
 * esim.:esimerkki # ; 
 * esim.:esimerkiksi # ; 
 
-Kopi fra smj
+Kopi fra smj : samme navn som denne fila: 
+
+SMJ NOAB ! Abbreviations that are not treated as abbreviations
+at the end of the sentence
+= * **esim.:esimerkiksi # ; ** contains abbreviations who are transitive in front of numerals
+= * **esim.:esimerkiksi # ; ** contains transitive abbreviations
+= * **esim.:esimerkiksi # ; ** su, dii
+============ SMI abbrevisations: ============
+smi_ITRAB
+smi_TRAB
+smi_TRNUMAB
 
 * * *
 
