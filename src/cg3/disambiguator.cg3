@@ -242,7 +242,7 @@ LIST <vdic> = <vdic> ;     #!! - `<vdic>`
 LIST Sem/Act = Sem/Act Sem/Act_Clth Sem/Act_Domain Sem/Act_Domain_Measr Sem/Act_Event Sem/Act_Feat Sem/Act_Feat-psych Sem/Act_Fruit Sem/Act_Group Sem/Act_Hum Sem/Act_Hum_Obj Sem/Act_Money Sem/Act_Obj Sem/Act_Obj-play Sem/Act_Org Sem/Act_Perc-emo Sem/Act_Plc Sem/Act_Prod-audio Sem/Act_Prod-vis Sem/Act_Route Sem/Act_Semcon Sem/Act_State Sem/Act_Time Sem/Act_Tool-it Sem/Act_Txt  ;
 LIST Sem/Adr = Sem/Adr ;
 LIST Sem/Amount = Sem/Amount Sem/Amount_Build Sem/Amount_Semcon ;
-LIST Sem/Ani = SSem/Ani Sem/Ani_Body Sem/Ani_Body-abstr_Hum Sem/Ani_Build Sem/Ani_Build_Hum_Txt Sem/Ani_Buildpart Sem/Ani_Cat Sem/Ani_Clth Sem/Ani_Feat_Hum Sem/Ani_Feat_Plant Sem/Ani_Food Sem/Ani_Group Sem/Ani_Group_Hum Sem/Ani_Group_Prod-vis Sem/Ani_Hum Sem/Ani_Hum_Plc Sem/Ani_Hum_Time Sem/Ani_Obj Sem/Ani_Obj-el Sem/Ani_Org Sem/Ani_Plc Sem/Ani_Plc_Txt Sem/Ani_State Sem/Ani_Substnc Sem/Ani_Time Sem/Ani_Tool Sem/Ani_Veh  ;
+LIST Sem/Ani = Sem/Ani Sem/Ani_Body Sem/Ani_Body-abstr_Hum Sem/Ani_Build Sem/Ani_Build_Hum_Txt Sem/Ani_Buildpart Sem/Ani_Cat Sem/Ani_Clth Sem/Ani_Feat_Hum Sem/Ani_Feat_Plant Sem/Ani_Food Sem/Ani_Group Sem/Ani_Group_Hum Sem/Ani_Group_Prod-vis Sem/Ani_Hum Sem/Ani_Hum_Plc Sem/Ani_Hum_Time Sem/Ani_Obj Sem/Ani_Obj-el Sem/Ani_Org Sem/Ani_Plc Sem/Ani_Plc_Txt Sem/Ani_State Sem/Ani_Substnc Sem/Ani_Time Sem/Ani_Tool Sem/Ani_Veh  ;
 LIST Sem/Ani-bird = Sem/Ani-bird ; 
 LIST Sem/Ani-fish = Sem/Ani-fish ;
 LIST Sem/Ani-insect = Sem/Ani-insect ;
@@ -603,7 +603,7 @@ LIST DAESNIE = "daesnie" "desnie" "duesnie" "dusnie" "åvtesne" "sjisjnjielisnie
 LIST DAESTIE = "daestie" "destie" "duestie" "dustie" "åvteste" "sjisjnjielistie" "dustie" "miehtjielistie" "dubpielistie" "jilliebistie" "luvlielistie" "ålkoelistie" "gustie" "luvliegistie" "åarjalistie" "minngielistie" "bijjielistie" "sisnjielistie" "åarjielistie" "åerjielistie" "vuelielistie" "debpielistie" "duebpielistie" "åarjelistie" "noerhtelistie" "jillielistie" "luvliebistie" "vueliebistie" ; #!! DAESTIE
 
 
-LIST ILLADV = "bæjjese" "davvese" "daase" "dahkoe" "diekie" "doekoe" "dohkoe" "gåatan" "jallese" "mænngese" "noerhtese" "olkese" "vueliebasse" "våålese" "åarjese" "åvtese" ; #!! ILLADV
+LIST ILLADV = "bæjjese" "davvese" "daase" "dahkoe" "diekie" "doekoe" "dohkoe" "gåatan" "gåetide" "jallese" "mænngese" "noerhtese" "olkese" "vueliebasse" "våålese" "åarjese" "åvtese" ; #!! ILLADV
 
 LIST INEADV1 =  "daebpene" "debpene" "duebpene" "dubpene" "daagkoe" "dagkoe" "doegkoe" "dogkoe" "daajkoe" "dajkoe" "doejkoe" "dojkoe" ; #!! INEADV1
 
@@ -863,7 +863,7 @@ SELECT:R_Nom_ABBR_Prop Attr IF (0 ABBR + Attr OR Prop + Attr)(1 Sem/Sur) ;
 SELECT:R_Nom_ABBR_Prop Attr IF (0C ABBR + Attr OR Prop + Attr) ; 
 REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR) ;
 	## Trond Trosterud
-REMOVE:Ani_Attr Attr IF (0 (Prop Sem/Ani)) ;
+REMOVE:Ani_Attr Attr IF (0 Prop + Sem/Ani) ;
 
 LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "á" "æ" "ø" "å" "ö" "ä" "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "Á" "Æ" "Ø" "Å" "Ö" "Ä" ; #!! INITIAL
 LIST NOT-SUR = "Galilea" "Judea"  "Karasjok" "Noerhte-Trøndelag" "Saemie" "Trøndelag"  "Tromsø" "Vuaktere" ;
@@ -940,7 +940,7 @@ SELECT:PoGenb Po (-1 Gen) ;
 #!! ### Particles and adverbs
 
 REMOVE:Pcle2 Adv IF (-2 BOS)(-1 Adv OR Ine)(0 Pcle);
-REMOVE:AttrAdv Adv IF (0 N LINK -1 Attr - Prop) (NEGATE 0 ("vihth")) ;
+REMOVE:AttrAdv Adv IF (0 N LINK -1C Attr - Prop) (NEGATE 0 ("vihth")) ;
 	
 SELECT:vaejtie Pcle (0 ("vaejtie") LINK *-1 BOS BARRIER WORD)(1 Pers) ;
 	#$ Vaejtie mijjieh, gaajhkesh låhkesh, maehtebe leessemebïjlesne åeredh?
@@ -1007,6 +1007,10 @@ SELECT:AdvFoc Adv (0 (Foc/ge)) ;
 
 SELECT:AifGrade A (0 N LINK -1 GRADE-ADV) ;
 	#$ Joekoen bïjvele lea jïh guakedh.
+
+SELECT:AifCoor A (0 N LINK -1 CC LINK -1 A) ;
+SELECT:AifCoor A (0 N LINK 1 CC LINK 1 A) ;
+	#$ Men bïjvele jïh njaelkies ...
 
 
 #!! ### Adjective or Indef
@@ -1119,6 +1123,8 @@ SELECT:PronPers Pron + Gen (0 Pron LINK 1C Po) ; #dan åvteste is mostly Dem, re
 	## Johan jih aahkam joekoen gaskese dan åvteste satnem veelji.
 #REMOVE:PcleNotPron ("dån" Pcle) (0 Pron + Gen LINK 1 Po) ; # trengs ikke
 #REMOVE:AttrNotGen Attr (0 Pron + Gen LINK 1 Po) ; # trengs ikke
+SELECT:NGen  N + Gen (0 Sem/Ani LINK 1 Sem/Body) ;
+	#$ Pluppe vïenhti tjetskien siejpiegietjiem vööjni.
 
 
 #!! ### Adjective or not
@@ -1134,6 +1140,10 @@ SELECT:jallh (CC) (0 ("jallh"))(-1 BOS OR COMMA)(NEGATE 1 CC OR Pl3 OR Ine OR CO
 	## Helena, jallh Aili man dan aaj nomme, lea saemien maadtoste.
 SELECT:Acase $$CASES (0 A LINK -1 Dem + $$CASES)(NEGATE 0 Attr) ;
 	#$ Im dom guhkebem vielie vuejnieh.
+
+SELECT:manA A + Nom (-1 ("man")) ;
+	#$ Jemmede man sjuevnjede!
+
 
 #!! Rel or Interr OR Indef
 
@@ -1211,7 +1221,7 @@ REMOVE:PrtInNeg Prs IF (0 Neg)(*1C ConNeg + Prt BARRIER NOT-ADV);
 REMOVE:PrsInNeg Prt IF (0 Neg)(*1C ConNeg BARRIER NOT-ADV LINK NOT 0 Prt);
 
 SELECT:PersonInNeg $$PERS-TAG (0 Neg + Prt)(*1C $$PERS-TAG + ConNeg BARRIER NOT-ADV);
-REMOVE:NegPrt (Neg Prt)(NEGATE 1 ("lea") + ConNeg + Prt) ;
+REMOVE:NegPrt (Neg Prt)(NEGATE 1 REALCOPULAS + ConNeg + Prt) ;
 ## this is for removing the 'ij' etc. 
 	## Ij lin gujht daarah altese vielie jienebh biejjieh daesnie.
 
@@ -1222,9 +1232,9 @@ SET VERB-LEMMA = (".*"r) + V ;
 SELECT:infNotErr VERB-LEMMA + Inf - Err/Orth IF (0 VERB-LEMMA + VFIN + Err/Orth LINK NOT 0 VFIN - Err/Orth) ;
 	#$ Bøøremes jis åadtjodh saemie-laanten dåehkesne meatan.
 
-SELECT:leahSg2 Sg2 IF (0 ("lea") + Prs + Sg2)(* ("datne") + Pron + Pers + Sg2 BARRIER S-BOUNDARY);
+SELECT:leahSg2 Sg2 IF (0 REALCOPULAS + Prs + Sg2)(* ("datne") + Pron + Pers + Sg2 BARRIER S-BOUNDARY);
 
-SELECT:leahPl3 Pl3 IF (0 ("lea") + Prs + Pl3)(* Pl + Nom OR Pl3 + Nom);
+SELECT:leahPl3 Pl3 IF (0 REALCOPULAS + Prs + Pl3)(* Pl + Nom OR Pl3 + Nom);
 
 
 #!! Selecting imperative sentence-initially with appropriate right context
@@ -1232,7 +1242,7 @@ SELECT:leahPl3 Pl3 IF (0 ("lea") + Prs + Pl3)(* Pl + Nom OR Pl3 + Nom);
 #REMOVE:NotImpIfWord Imp IF (*-1 NOT-ADV-INT-PCLE BARRIER CS OR CC);
 #REMOVE:NotIndIfImpAndExcl Ind IF (NEGATE *-1 Neg)(0 Imp)(*1 ("excl") BARRIER Ind);
 
-SELECT:Imprta Imprt (*-1 BOS OR (":") OR Interj BARRIER WORD)(0 2-PERS)(NEGATE *1 2-PERS + Pers + Nom BARRIER S-BOUNDARY) ;
+SELECT:Imprta Imprt (*-1 BOS OR (":") OR Interj BARRIER WORD)(0 2-PERS)(NOT 0 N)(NEGATE *1 2-PERS + Pers + Nom BARRIER S-BOUNDARY) ;
 	## Utnieh hijven.
 	#$ Govlede!
 SELECT:Imprtb Imprt (-1 BOS OR (":") OR Interj)(1 COMMA) ;
@@ -1283,7 +1293,12 @@ REMOVE:V VFIN IF (0 A + Nom LINK -1 ("dan")) ;
 #!! Select Inf
 SELECT:inf Inf IF (0 Pl2 LINK -1 ("guktie") LINK -1 VFIN) ;
 	## Maanine dle leerebe guktie soptsestidh.
-SELECT:inf Inf IF (0 Pl2 LINK NOT *-1 Pers + Pl2) ;
+#SELECT:inf Inf IF (0 Pl2 LINK NOT *-1 Pers + Pl2) ;
+SELECT:inf Inf IF (*-1 VFIN BARRIER S-BOUNDARY) ;
+	#$ Lasth eah jaksh gahtjedh eannan tjuatsa.
+
+SELECT:inf Inf IF (*-1 ("buerie") + Superl BARRIER S-BOUNDARY) ;
+	#$ Bööremes voepth tjelmiej uvte utnedh.
 
 	#!! ## Mapping rules
 	# -------------------
@@ -1370,7 +1385,7 @@ SELECT:NumAttr Num + Attr + Ine IF (1 Ine) ;
 
 #!! Select PrfPrc if DerNomAct
 
-#SELECT: PrfPrc (*-1 ("lea") BARRIER V OR S-BOUNDARY) ;
+#SELECT: PrfPrc (*-1 REALCOPULAS BARRIER V OR S-BOUNDARY) ;
 SELECT:PrfPrs_DerNomAct PrfPrc (0 (Der/NomAct) LINK *-1 S-BOUNDARY BARRIER V)(NEGATE *1 REAL-V BARRIER S-BOUNDARY) ;
 	## Disse maahtam tjaeledh gosse sijhtem, jih aaj lohkedh gosse båarasåbpoe  sjidteme.
 	## Manne aktem gärjam man nomme jupmele-vaerie lohkeme.
@@ -1460,22 +1475,32 @@ SELECT:VSg2IfPersSg2a V + Sg2 (NOT 0 N) ((*-1 Pers + Nom + Sg2 OR Rel + Sg + Nom
 SELECT:Pl3WhenPlSubj V + Pl3 IF ((*-1 N + Pl + Nom OR (Num Sg Nom) OR (Pers Nom Pl3) BARRIER Sg2 OR S-BOUNDARY) OR (-1 N + Sg + Nom LINK -1 CC))(0 VFIN);
 	#$ Maam dah daelvege darjoeh?
 
-#SELECT:Pl3WhenSubjCC V + Pl3 IF (-1 N + Sg + Nom LINK -1 CC)(0 ("lea" V));
-REMOVE:Pl3 V + Pl3 (NEGATE *0 Nom BARRIER S-BOUNDARY) ;
+#SELECT:Pl3WhenSubjCC V + Pl3 IF (-1 N + Sg + Nom LINK -1 CC)(0 REALCOPULAS);
+#REMOVE:Pl3 V + Pl3 (NEGATE *0 Nom BARRIER S-BOUNDARY) ;
 SELECT:Sg3WhenRelSg V + Sg3 ((-1 Rel + Sg + Nom) OR (-1 CC LINK *-1C V + Sg3 BARRIER S-BOUNDARY OR V));
 #SELECT:Sg3WhenSg3toLeft V + Sg3 (-1 CC LINK *-1C V + Sg3 BARRIER S-BOUNDARY OR V);
+SELECT:Sg3WhenSgtoLeft V + Sg3 (-1 N + Sg + Nom);
+	#$ Pluppe ohtsede maam akt mij tjaahpesje.
 
 
 #!! Select Inf If Infv
 
 SELECT:InfIfInfv V + Inf IF (*-1 INFV OR AUX BARRIER V) ; 
-	# Manne båatam sagke buerebe datneste jieledh, Karijuse.
+	#$ Manne båatam sagke buerebe datneste jieledh, Karijuse.
+
+SELECT:VFIN VFIN IF (0 INFV OR AUX LINK *1 Inf BARRIER NOT-ADV-PCLE) ; 
+	#$ Pryövoeh åeredh, vuertieminie edtja löödtjedh.
 	
 SELECT:AUXIfInf AUX IF (*1 Inf BARRIER V)(NEGATE 0 A) ;
-	##Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, jih dellie maam akt bøøti ussjedidh.
+	## Klaasen tjirrh olkese goevli doj veelkes baeniej gåajkoe, jih dellie maam akt bøøti ussjedidh.
 
-SELECT:PrfPrcIfLea PrfPrc (*-1 ("lea") OR (",") OR CC BARRIER V);
+SELECT:PrfPrcIfLea PrfPrc (*-1 REALCOPULAS OR (",") OR CC BARRIER V);
 	## Gïjre lea sjïdteme daelvien männgan goh lea nåake gåatome jïh jïjnjh juvrh orreme.
+
+SELECT:PrfPrcIfLea PrfPrc OR VFIN (0 TV LINK *-1 N + Acc BARRIER NOT-ADV-PCLE) ;
+	#$ Mah datne nænnoeslaakan gåetiem tseegkeme,
+	#$ Tjeapoeh-lijniem eejnegen åtnam.
+
 
 SELECT:PlIfPlSubj Pl3 IF (*-1 Pl + Nom BARRIER NOT-ADV OR COMMA);
 	## Jijnjesh leah sijhteminie edtjibie gieline barkedh, maehtibie tjåahkoeh, seeminarh øørnedh gusnie åadtjoejibie gaavnedidh jih rååresjadtedh.
@@ -1505,7 +1530,7 @@ REMOVE:PropAttr Prop + Attr IF (NOT 1 Prop);
 #SELECT:GenToAdp Gen IF (1 Adp); #NOTUSED # check this
 #REMOVE:NotNomToAdp Nom IF (1 Adp); #NOTUSED # check this
 
-SELECT:GenIfLeaNom Gen (1 ("lea" V) LINK 0 Pl3 OR Sg3 LINK *1 N + Nom BARRIER NOT-NPMOD) ; 
+SELECT:GenIfLeaNom Gen (1 REALCOPULAS LINK 0 Pl3 OR Sg3 LINK *1 N + Nom BARRIER NOT-NPMOD) ; 
 	# Dan lin baenieh njaelmesne.
 
 SELECT:AccIfSVOV (Acc Sg) IF (*-1C INFV BARRIER NOT-NPMOD)(1C V); # consider VFIN for INFV
@@ -1534,14 +1559,24 @@ REMOVE:SgGen Gen (0 Ill + Sg LINK 1 FMAINV) ;
 REMOVE:SgIll Ill (0 Adv LINK 1 FMAINV LINK NOT 0 MOVEMENT-V) ;
 	#$ varki gåatan bïesem jïh aaj mov daelvie-dogkesh gåatan fihkem.
 
+SELECT:NomifLeaADV Nom (1 REALCOPULAS LINK 0 Pl3 OR Sg3) (-1 DAESNIE) ; 
+	#$ Tjetskie jïh Sluemege Pluppen luvnie derhviegåetesne, desnie suaja lea.
+
+SELECT:NomifVFIN Nom + Pl (*1 VFIN + Pl3 BARRIER NOT-ADV-PCLE) ; 
+	#$ Goeksegh jïjjege buelieh.
+
 	
 SELECT:IneIfEss/Com Ine (0 N + Ess OR N + Com) (1 ("viedtedh" V* TV Der1 Der/ldahke N Sg Ine) OR ("vïedteldahke" N Sg Ine)) ;
-# Njolkedassh ålmine veadtaldahkesne
+	# Njolkedassh ålmine veadtaldahkesne
 
 SELECT:IneIfEss/Com N + Pl + Ine (0 Ess OR Sg + Com) (-1 ("ovmessie")) ;
 
+SELECT:IneIfPlc Pl + Ine (0 Sem/Plc) (*1 ("gaavnedh") BARRIER SV-BOUNDARY) ;
+	#$ Bïevline tjeehpes muerjieh gaavnem...
+
+
 REMOVE:EssIfCom/Ine Ess (0 Sg + Com OR Pl + Ine) (*-1 Pron + Com OR Pron + Ine BARRIER NOT-NPMOD OR S-BOUNDARY) ;
-# dajnie barkoeplaanine
+	# dajnie barkoeplaanine
 
 SELECT:NPlAcc Acc (0 Pl + Acc OR Pron + Pl OR Pron + Pl3 LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
 SELECT:NPlAcc Acc (0 Pl + Acc OR Pron + Pl OR Pron + Pl3 LINK *1 COPULAS BARRIER NOT-ADV LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
@@ -1557,7 +1592,7 @@ SELECT:NPlIll  Ill (0 N + Acc) (NEGATE *0 V-TRANS BARRIER SV-BOUNDARY) ;
 
 #!! ### Verb or Noun
 
-SELECT:PlNomObj N + Pl + Nom IF (0 V + Pl3) (NEGATE *0 VFIN BARRIER NOT-NPMOD OR S-BOUNDARY) ;
+#SELECT:PlNomObj N + Pl + Nom IF (0 V + Pl3) (NEGATE *0 VFIN BARRIER NOT-NPMOD OR S-BOUNDARY) ;
 #...Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki
 
 REMOVE:NotNomIfInf N + Pl + Nom IF (0 Inf)(*-1 Ind or Imp LINK *-1 Nom);
@@ -1841,7 +1876,7 @@ REMOVE:Pl2_Not_Inf Inf IF (0 (V TV Ind Prt Pl2))(*-1 Pron + Pl2 + Nom BARRIER VF
 
 # Even stronger. No pro-drop. ## WARNING! This is probably too strong.
 REMOVE:Inf_Not_Sg2_ProDrop (V TV Der1 Der/d Ind Prs Sg2) IF (NEGATE *-1 Pron + Sg2 + Nom);
-REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NEGATE *-1 Pron + Pl2 + Nom);
+#REMOVE:Inf_Not_Pl2_ProDrop (V TV Ind Prt Pl2) IF (NEGATE *-1 Pron + Pl2 + Nom);
 
 SELECT:PrsPrc PrsPrc IF (0 A + Nom LINK 1 N) ;
 REMOVE:PrsPrc PrsPrc IF (0 N + Nom LINK NOT 1 N) ;
@@ -1959,7 +1994,7 @@ SELECT:rel Rel (0 ("guhte") LINK *-1 VFIN)(*1 VFIN) ;
 
 # verb lemmas
 
-SELECT:notErr VERB-LEMMA - Err/Orth IF (0 VERB-LEMMA + Err/Orth) ;
+REMOVE:Err VERB-LEMMA + Err/Orth IF (0 VERB-LEMMA - Err/Orth) ;
 	#$ Veanhta påajhkh eeremes lyjhkieh niejth mej guhkies tjaebpies voepth. # veanhtedh vs vïenhtedh
 
 # bïssedh OR bissedh
@@ -1978,6 +2013,12 @@ REMOVE:LEXböötedh ("böötedh") IF (0 ("båetedh")) (NEGATE *-1 Acc OR Nom + P
 	#$ Ealla lij desnie boelhketjem goh lohkehtæjja-skuvleste bøøti. 
 
 
+# "gåatodh" OR "gaatodh"
+SELECT:LEXgåatodh ("gåatodh") IF (0 ("gaatodh")) (*0 Sem/Ani + Nom) ;
+SELECT:LEXgaatodh ("gaatodh") IF (0 ("gåatodh")) (*0 ("biejjie") + Nom) ;
+	#$ Biejjie gååte.
+
+
 # "gïesedh" OR "giesedh"
 SELECT:LEXgiesedh ("giesedh") IF (0 ("gïesedh")) (-1 ("bijjelen")) ;
 	#$ Jaavoeladtje jïh Ijjeladtje bïllijieh, jïh gajpem jïh tjohpem tjelmiej bijjelen giesieh.
@@ -1987,6 +2028,10 @@ SELECT:LEXgiesedh ("giesedh") IF (0 ("gïesedh")) (-1 ("bijjelen")) ;
 REMOVE:govledhIV  IV IF (0 ("govledh") + Imprt) ;
 REMOVE:govledhIV IV IF (0 ("govledh") LINK *-1C Acc OR ("sïjhtedh") BARRIER S-BOUNDARY OR V - AUX) ;
 	#$ Sijhti aaj bieljide dompesjidh juktie idtji maam vielie dan bijre sijhth govledh.
+
+
+SELECT:LEXlutnjestidh ("lutnjestidh") IF (0 ("lutnjiestidh")) ;
+SELECT:LEXsvïhtjedh ("svïhtjedh") IF (0 ("svihtjedh")) ;
 
 
 # "löökedh" OR "luekedh"
@@ -2051,6 +2096,8 @@ SELECT:N A + Nom (0 N + Nom OR VFIN LINK 1 ("sjïdtedh")) ;
 	#$ Gosse aalka sjuevnjede sjïdtedh akte krokodilla baaktoe båata.
 REMOVE:N N + Ine (0 A + Ine OR A + Ess LINK *1 ("årrodh")) ;
 	
+REMOVE:APl A + Pl (0 A + Sg) ;
+	#$ Man sjeavehth dle sjïdti!
 
 SELECT SEMTAGS + N (0C N) ;
 SELECT SUB:1 SEMTAGS + (cmp_attr) ; #For Apertium
