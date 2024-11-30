@@ -688,6 +688,9 @@ SET PLACE = GEOGRAPHICAL-PLACE OR POLITICAL-PLACE OR GENERAL-PLACE OR ROUTE OR S
 
 LIST ESS-TIME-WEATHER = "maana" ;
 
+LIST WORDLEMMA = (".*"r) ;
+
+
 #       ============== #
 #!! # Disambiguation rules
 #       ============== #
@@ -1144,6 +1147,8 @@ SELECT:Acase $$CASES (0 A LINK -1 Dem + $$CASES)(NEGATE 0 Attr) ;
 SELECT:manA A + Nom (-1 ("man")) ;
 	#$ Jemmede man sjuevnjede!
 
+SELECT:CopA $$WORDLEMMA + A + Nom (0 $$WORDLEMMA + Adv LINK *-1 REALCOPULAS BARRIER NOT-ADV-PCLE - ("dïhte")) (1 EOS) ;
+	#$ jeahta ij leah daerpies.
 
 #!! Rel or Interr OR Indef
 
@@ -2072,6 +2077,10 @@ SELECT:PlN PL-NOUN IF (0 SG-NOUN + Pl) ;
 
 SELECT ("årromesijjie") ; # vs "årromesijje"
 
+SELECT:LEXbæhta ("bæhta") IF (0 ("bihtie") LINK *1 N + Ela) ;
+	#$ jïh tjuvtjehti dan jåvleneekese gusnie vååjni ohtje gåmmeben healmeste.
+
+
 SELECT:LEXgïele1 ("gïele") IF (0 ("gielie")) (*0 JIEHTEDH BARRIER SV-BOUNDARY) ;
 SELECT:LEXgïele2 ("gïele") IF (0 ("gielie")) (-1 ("ålkoelaante") + Gen) ;
 
@@ -2091,6 +2100,8 @@ SELECT:Adv Adv (0 ("hijven") LINK -1 ("tuhtjedh") OR ("dan")) ;
 
 SELECT:N_Adv Adv (0 ("iehkeden") LINK 1 ("dellie")) ;
 
+SELECT:N_Adv N (0 Adv LINK -1 ("dan")) ;
+	#$ Akten aejkien lij akte gåmma gïe gilledi jïh nahkesti dan iehkeden.
 
 SELECT:N A + Nom (0 N + Nom OR VFIN LINK 1 ("sjïdtedh")) ;
 	#$ Gosse aalka sjuevnjede sjïdtedh akte krokodilla baaktoe båata.
@@ -2260,7 +2271,6 @@ SELECT (cog) OR (top) OR (ant) ; #For Apertium
 AFTER-SECTIONS              #
 # ======================================== #
 
-LIST WORDLEMMA = (".*"r) ;
 
 REMOVE SUB:1 (Cmp/SgNom) (0/* (Cmp/Attr)) ;	
 REMOVE SUB:1 (Cmp/SgGen) (0/* (Cmp/SgNom)) ;	
