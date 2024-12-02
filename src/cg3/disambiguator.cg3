@@ -575,7 +575,7 @@ SET NOT-NP = VFIN-NOT-NEG OR ConNeg OR Inf OR Pcle OR Interj OR CS ;
  # The set NP-BOUNDARY is bigger. 
 
 LIST STRICT-TV = "gïehtjedh" ; # These takes accusative instead of illative.
-LIST INFV = "aatedh" "aavoedidh" "aelkedh" "buektiehtidh" "bööredh" "daarpesjidh" "dasselidh" "hïnnedh" "luhpiedidh" "lyjhkedh" "pryövedh" "vuelkedh" ; # These are often followed by an infitive.
+LIST INFV = "aatedh" "aavoedidh" "aelkedh" "pruvhkedh" "buektiehtidh" "bööredh" "daarpesjidh" "dasselidh" "hïnnedh" "luhpiedidh" "lyjhkedh" "pryövedh" "vuelkedh" ; # These are often followed by an infitive.
 LIST ILLV = "båetedh" "juhtedh" "mojjehtidh" "ringkedh" ;
 LIST COMV = "budtedh" "pruvredh" "gïehtelidh" "tjïskesidh" "soptsestidh" "vuejedh" "gåaradidh" "aelkedh" "aelkiestidh" ;
 LIST ESSV = "barkedh" "gåhtjodh" "sjïdtedh" "tjoevkedh" ;
@@ -862,6 +862,9 @@ SELECT PXPL IF (-1 PL + Pers) ;
 
 #!! ### Proper nouns
 
+REMOVE:PropPl Prop + $$WORDLEMMA (0 N + $$WORDLEMMA + Pl) ;
+	#$ Staaloeh fuahpan sjidtieh gosse aejhtsieh giesie joe båetiemisnie.
+
 SELECT:R_Nom_ABBR_Prop Attr IF (0 ABBR + Attr OR Prop + Attr)(1 Sem/Sur) ;
 SELECT:R_Nom_ABBR_Prop Attr IF (0C ABBR + Attr OR Prop + Attr) ; 
 REMOVE:R_Attr_ABBR Attr IF (0 ABBR + Nom)(NOT 1 Prop OR ABBR) ;
@@ -870,6 +873,10 @@ REMOVE:Ani_Attr Attr IF (0 Prop + Sem/Ani) ;
 
 LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "á" "æ" "ø" "å" "ö" "ä" "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "Á" "Æ" "Ø" "Å" "Ö" "Ä" ; #!! INITIAL
 LIST NOT-SUR = "Galilea" "Judea"  "Karasjok" "Noerhte-Trøndelag" "Saemie" "Trøndelag"  "Tromsø" "Vuaktere" ;
+
+
+REMOVE:PropGen Prop + Gen (0 Prop + Ill LINK 1 N) ;
+	#$ Saaran gærja – biejjeste beajjan.
 
 
 REMOVE:PlcSur Sem/Sur IF (0 NOT-SUR OR Ine) ;
@@ -982,6 +989,11 @@ SELECT:båadtsodeAdv Adv IF (0 ("båadtsode") LINK 0 ("båatsoe") + Err/Orth) ;
 
 SELECT:vihthAdv Adv IF (0 ("vihth")) ;	#is vihte possible in plural?
 
+SELECT:jååktanAdv Adv IF (0 ("jååktan")) ;	#"jååktan" Err/Orth
+	#$ Jåktan
+
+SELECT:giesegiAdv Adv IF (0 ("giesegi")) ;	#gïesegh+N+Pl+Gen
+
 
 SELECT:veeleAdv Adv IF (0 ("veele") LINK -1 Nom) ;
 	#$ manne veele måjhtam ihke ikth hov baenide skubpi.
@@ -992,6 +1004,10 @@ SELECT Adv (0 ("dan") OR ("man") LINK 1 A OR ("gellie") LINK NOT 1 N) ;
 SELECT Indef (0 ("jïjnje") LINK -1 ("dan") OR ("man")) ;
 	#$ Ih dån datne man jijnjem dellie guarkah.
 SELECT Indef (0 ("seamma") LINK 1 ("saaht")) ;
+
+SELECT Indef + Ill (0 Indef LINK 1 N + Ill) ;
+REMOVE Indef + Ill (0 Indef LINK NOT 1 N + Ill) ;
+	#$ Mov aaj vielle man nomme Jeense.
 
 
 SELECT:AAcc A (0 A + Acc LINK 1 N + Acc) ;
@@ -1045,6 +1061,11 @@ SELECT:DemCom (Dem Com) (*1 (N Pl Com) BARRIER NOT-NPMODADV-INDEF)  ;
 	## Akte mubpie lea slaameme jallh slaameminie, båeries povlijtigkerh jis vienhtieh edtja maehtedh gaajhkem dam orrestehtedh, jih dellie traakestieh, sinsitniem dej seamma baakoejgujmie diblieh mejtie leah daah minngemes tjijhtje-gaektsie- jallh uktsieluhkie jaepieh klajkehtamme barre ov goh dihte dle ihkuven saatna.
 
 SELECT:DemAttr Dem + Attr (0 ("dagkeres") OR ("magkeres") LINK 1 N OR A + Attr) ;
+
+SELECT:gaajhkeDem  Dem  (0 ("gaajhke") + Pl LINK 1 N + Pl) ;
+SELECT:gaajhkeDem  Dem  (0 ("gaajhke") + Sg LINK 1 N + Sg) ;
+	#$ Skåajjesne årroeminie jïh gaajhkh sijjieh leah dejtie åehpies.
+
 
 SELECT:NomWhenAttr Nom (0 SPRED-ADJ + Nom LINK 1 ADVLCASE LINK *1 Inf BARRIER S-BOUNDARY OR V)(*-1 BOS OR COMMA BARRIER NOT-ADV) ;
 	#$ Buerebe Læjsese guvvieh darjodh.
@@ -1564,6 +1585,11 @@ REMOVE:SgGen Gen (0 Ill + Sg LINK 1 FMAINV) ;
 REMOVE:SgIll Ill (0 Adv LINK 1 FMAINV LINK NOT 0 MOVEMENT-V) ;
 	#$ varki gåatan bïesem jïh aaj mov daelvie-dogkesh gåatan fihkem.
 
+SELECT:Ill Ill (0 Acc LINK 1 A LINK 1 EOS) ;
+	#$ varki gåatan bïesem jïh aaj mov daelvie-dogkesh gåatan fihkem.
+
+
+
 SELECT:NomifLeaADV Nom (1 REALCOPULAS LINK 0 Pl3 OR Sg3) (-1 DAESNIE) ; 
 	#$ Tjetskie jïh Sluemege Pluppen luvnie derhviegåetesne, desnie suaja lea.
 
@@ -1611,6 +1637,9 @@ REMOVE:gïele Sg2 (0 ("gïele") LINK -1 Num OR Indef) ;
 	## Nøørjesne aaj jeatjah gïelh juktie leah jeenjh sïjsejuhtijh gieh jïjtsh ietniengïelem soptsestieh.
 REMOVE:gïele VGen (0 ("gïele") LINK NEGATE -1 MAINV) ;
 	## Jih dihte mij, destie jienehke guessie gielesne, guktie vihth dan tseahkan båetibie, tjoeveribie barre vaajtelidh, mijjen noerh åadtjoeh jih sijhtieh guessie gielh lieredh guktie buektiehtieh ohtsedidh dah gielen roehtsh jih åadtjodh daejredh guktie dam aaj almetjh aerebi soptsestin.
+
+SELECT:pruvriV V (0 ("pruvredh") LINK 0 ("pruvre") LINK *-1 ILLADV BARRIER S-BOUNDARY) ;
+
 
 # Dem
 
@@ -1683,6 +1712,9 @@ REMOVE:NotAAttr A + Attr (NOT 1 N OR A LINK NEGATE 0 CC OR COMMA LINK 1 Attr) ;
 	
 SELECT:Nom N + Nom (0 ("ånnetje") LINK 1 COMMA)(*-1 BOS BARRIER WORD) ;
 	#$ Ånnetje, dej sirrie-kåahpide deavhteme.
+
+SELECT:A_notAdv A + Nom (0 Adv LINK *-1 N + Nom BARRIER NOT-ADV-PCLE)(NEGATE 1 REAL-V) ;
+	#% Gïjrege sagki buerebe, dellie staaloe domtoe goh eevre noere.
 	
 	
 #!! ## Grammatisk ord eller N eller A
@@ -1764,9 +1796,11 @@ REMOVE:AdjBeforeV A (NEGATE 0 Nom)(1 MAINV) ;
 #!! Num
 
 SELECT:NumAndNum Num IF (-1 CC)(*-2C Num BARRIER V);
-SELECT:NumAndNumIne (Num Ine) (0 ("akte") LINK *1 N + Ine BARRIER NOT-NPMOD);
 SELECT:NumAndOrdNum (Ord Nom)(0 Num LINK 1 N);
 	## Manne skuvlesne vijhtede klaassesne.
+
+SELECT:akteNotPl Num + Com (0 ("akte") + Sg LINK *1 N + Com BARRIER NOT-A) ;
+SELECT:akteNotPl N + Com (0 Pl LINK -1 ("akte") + Sg) ;
 
 # Putative contract verb
 
@@ -2283,7 +2317,7 @@ REMOVE:errsub2 $$WORDLEMMA + Err/Orth-spes (0 $$WORDLEMMA - Err/Orth-spes ) ; # 
 ADD:sme (<sma>) TARGET WORD ;
 ADD:sme (<sma>) TARGET PUNCT ;
 
-REMOVE:errsub Err/Orth  ; # Apertium
+REMOVE:errorth Err/Orth  ; # Apertium
 
 # Not in use:
 #"<lea>" - ikke reell
