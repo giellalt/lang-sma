@@ -12,5 +12,5 @@ do
     rev | \
     sort -u | \
     rev | \
-    awk '{print $1":"$1" TODO ;"}' > $i-missing.txt
+    awk '{print $0":"$0" TODO ;"}' > $i-missing.txt
 done
