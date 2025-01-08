@@ -1,4 +1,20 @@
 #!/usr/bin/env python3
+"""Convert a list of words to a dictionary XML file.
+
+Instructions:
+
+1. run python3 -m venv venv
+2. source venv/bin/activate
+3. pip install lxml
+4. python make_dict.py
+
+This will create files like S-smamul.xml, V-smamul.xml, A-smamul.xml, and Phrase-smamul.xml.
+
+To create missing files, run:
+./make_missing.sh
+
+This will create files like S-missing.txt, V-missing.txt, A-missing.txt, and Phrase-missing.txt.
+"""
 
 from pathlib import Path
 from lxml import etree  # type: ignore
