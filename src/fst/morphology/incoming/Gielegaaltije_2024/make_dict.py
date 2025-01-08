@@ -53,7 +53,7 @@ def make_dict_entries(groups):
                             l_ref = etree.SubElement(translation_group, "l_ref")
                             l_ref_pos = "Phrase" if " " in remaining_lemma else pos
                             l_ref.text = f"{remaining_lemma.replace(' ', '_')}_{l_ref_pos.lower()}"
-                        translation_group.set("lang", language)
+                        translation_group.set("{http://www.w3.org/XML/1998/namespace}lang", get_real_language(language))
                         translation = etree.SubElement(translation_group, "t")
                         translation.set("pos", this_pos)
                         translation.text = comma_part.strip()
@@ -89,6 +89,20 @@ def get_real_pos(group):
             return "Phrase"
         case _:
             raise SystemExit(f"unknown pos: {group}")
+
+
+def get_real_language(original_lang_code):
+    match original_lang_code:
+        case "nb":
+            return "nob"
+        case "sv":
+            return "swe"
+        case "lat":
+            return "lat"
+        case "eng":
+            return "eng"
+        case _:
+            raise SystemExit(f"unknown language: {original_lang_code}")
 
 
 def extract_language_parts(line: str):
