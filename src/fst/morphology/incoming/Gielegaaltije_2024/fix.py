@@ -41,10 +41,12 @@ def create_sma_groups(parts):
 
 
 def handle_line(line):
-    for dict_entry in make_dict_entries(make_language_groups(reversed(line.split()))):
+    for pos, dict_entry in make_dict_entries(
+        make_language_groups(reversed(line.split()))
+    ):
         orig = etree.SubElement(dict_entry, "orig")
         orig.text = line.strip()
-        yield dict_entry
+        yield pos, dict_entry
 
 
 def make_dict_entries(groups):
@@ -77,7 +79,7 @@ def make_dict_entries(groups):
                         translation = etree.SubElement(translation_group, "t")
                         translation.set("pos", this_pos)
                         translation.text = comma_part.strip()
-            yield dict_entry
+            yield this_pos, dict_entry
 
 
 def handle_sma(parts):
@@ -103,16 +105,18 @@ def get_real_pos(group):
 
 
 def main():
-    root_entry = etree.Element("r")
+    dicts = {}
     for nr, line in enumerate(
         Path("MISSING_List_24.txt").read_text().splitlines(), start=1
     ):
         if line.startswith("•"):
-            for dict_entry in handle_line(line.replace("•", "").strip()):
-                root_entry.append(dict_entry)
-    Path("output.xml").write_text(
-        etree.tostring(root_entry, pretty_print=True, encoding="unicode")
-    )
+            for pos, dict_entry in handle_line(line.replace("•", "").strip()):
+                dicts.setdefault(pos, etree.Element("r")).append(dict_entry)
+
+    for pos in dicts:
+        Path(f"{pos}-smamul.xml").write_text(
+            etree.tostring(dicts[pos], pretty_print=True, encoding="unicode")
+        )
 
 
 if __name__ == "__main__":
