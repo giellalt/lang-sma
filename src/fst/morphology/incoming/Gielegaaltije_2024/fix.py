@@ -54,7 +54,7 @@ def make_dict_entries(groups):
         if "sma" in groups:
             del groups["sma"]
 
-        for lemma in lemmas:
+        for lemma in sorted(lemmas):
             this_pos = "Phrase" if " " in lemma else pos
             dict_entry = etree.Element("e")
             lemma_group = etree.SubElement(dict_entry, "lg")
