@@ -77,8 +77,8 @@ def handle_sma(sma_text: str):
     }
 
 
-def get_real_pos(group):
-    match group:
+def get_real_pos(original_pos):
+    match original_pos:
         case "S":
             return "N"
         case "V":
@@ -88,7 +88,7 @@ def get_real_pos(group):
         case "MWE":
             return "Phrase"
         case _:
-            raise SystemExit(f"unknown pos: {group}")
+            raise SystemExit(f"unknown pos: {original_pos}")
 
 
 def get_real_language(original_lang_code):
