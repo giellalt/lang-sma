@@ -106,9 +106,7 @@ def get_real_pos(group):
 
 def main():
     dicts = {}
-    for nr, line in enumerate(
-        Path("MISSING_List_24.txt").read_text().splitlines(), start=1
-    ):
+    for line in Path("MISSING_List_24.txt").read_text().splitlines():
         if line.startswith("•"):
             for pos, dict_entry in handle_line(line.replace("•", "").strip()):
                 dicts.setdefault(pos, etree.Element("r")).append(dict_entry)
