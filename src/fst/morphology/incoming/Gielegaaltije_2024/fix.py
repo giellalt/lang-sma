@@ -45,7 +45,7 @@ def make_dict_entries(groups):
 
 
 def handle_sma(sma_text: str):
-    type_patterns = r"(.*?)\((attr|pred)\)"
+    type_patterns = r"(.*?)\((attr|pred|transitiv|passiv)\)"
     types = re.findall(type_patterns, sma_text)
 
     if not types:
