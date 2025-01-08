@@ -2,10 +2,14 @@
 
 from collections import defaultdict
 from pathlib import Path
-from lxml import etree
+from lxml import etree  # type: ignore
 
 
-def create_groups(parts):
+def is_pos(part):
+    return any(part.startswith(pos) for pos in ["(S)", "(V)", "(A)", "(MWE)"])
+
+
+def make_language_groups(parts):
     groups = defaultdict(list)
     for part in parts:
         if part.startswith("("):
@@ -14,8 +18,10 @@ def create_groups(parts):
                 raise SystemExit(part, part.replace(",", ""))
             if part in ["(sv)", "(nb)", "(lat)", "(eng)"]:
                 group = part
-            else:
+            elif is_pos(part):
                 group = "sma"
+                groups[group].append(part)
+            else:
                 groups[group].append(part)
         else:
             groups[group].append(part.lower())
@@ -26,11 +32,8 @@ def create_groups(parts):
 def create_sma_groups(parts):
     groups = defaultdict(list)
     for part in parts:
-        if part.startswith("("):
-            part = part.replace(",", "")
-            if "," in part:
-                raise SystemExit(part, part.replace(",", ""))
-            group = part
+        if is_pos(part):
+            group = part.replace(",", "")
         else:
             groups[group].append(part.lower())
 
@@ -38,49 +41,79 @@ def create_sma_groups(parts):
 
 
 def handle_line(line):
-    groups = create_groups(reversed(line.split()))
-    handle_groups(groups)
+    for dict_entry in make_dict_entries(make_language_groups(reversed(line.split()))):
+        orig = etree.SubElement(dict_entry, "orig")
+        orig.text = line.strip()
+        yield dict_entry
 
 
-def handle_groups(groups):
-    dict_entry = etree.Element("e")
-    handle_sma(groups["sma"])
-    del groups["sma"]
-    for group, parts in groups.items():
-        print(group, " ".join(reversed(parts)))
-    print()
+def make_dict_entries(groups):
+    for pos, lemmas in handle_sma(groups["sma"]):
+        if "sma" in groups:
+            del groups["sma"]
+
+        for lemma in lemmas:
+            this_pos = "Phrase" if " " in lemma else pos
+            dict_entry = etree.Element("e")
+            lemma_group = etree.SubElement(dict_entry, "lg")
+            lemma_element = etree.SubElement(lemma_group, "l")
+            lemma_element.text = lemma
+            lemma_element.set("pos", this_pos)
+
+            for group, parts in groups.items():
+                text = " ".join(reversed(parts))
+                for comma_part in text.split(","):
+                    if comma_part.strip():
+                        translation_group = etree.SubElement(dict_entry, "tg")
+                        for remaining_lemma in [
+                            this_lemma
+                            for this_lemma in lemmas
+                            if this_lemma != lemma_element.text
+                        ]:
+                            l_ref = etree.SubElement(translation_group, "l_ref")
+                            l_ref_pos = "Phrase" if " " in remaining_lemma else pos
+                            l_ref.text = f"{remaining_lemma.replace(' ', '_')}_{l_ref_pos.lower()}"
+                        translation_group.set("lang", group[1:-1])
+                        translation = etree.SubElement(translation_group, "t")
+                        translation.set("pos", this_pos)
+                        translation.text = comma_part.strip()
+            yield dict_entry
 
 
 def handle_sma(parts):
-    lemma_groups = []
-    print(" ".join(reversed(parts)))
-    groups = create_sma_groups(parts)
-    for group, parts in groups.items():
-        lemma_group = etree.Element("lg")
-        lemma_group.text = " ".join(reversed(parts))
-        match group:
-            case "(S)":
-                lemma_group.set("pos", "N")
-            case "(V)":
-                lemma_group.set("pos", "V")
-            case "(Adj)":
-                lemma_group.set("pos", "A")
-            case "(attr)":
-                lemma_group.set("pos", "A")
-            case "(MWH)":
-                lemma_group.set("pos", "Phrase")
-            case _:
-                raise SystemExit(f"unknown pos: {group}")
-        print(group, " ".join(reversed(parts)))
-    print()
-    return lemma_groups
+    for group, parts in create_sma_groups(parts).items():
+        text = " ".join(reversed(parts))
+        yield get_real_pos(group), {
+            comma_part.strip() for comma_part in text.split(",") if comma_part.strip()
+        }
 
 
-for nr, line in enumerate(
-    Path("MISSING_List_24.txt").read_text().splitlines(), start=1
-):
-    if line.startswith("•"):
-        try:
-            handle_line(line.replace("•", "").strip())
-        except UnboundLocalError:
-            raise SystemExit(f"UnboundLocalError {nr}: {line}")
+def get_real_pos(group):
+    match group:
+        case "(S)":
+            return "N"
+        case "(V)":
+            return "V"
+        case "(A)":
+            return "A"
+        case "(MWE)":
+            return "Phrase"
+        case _:
+            raise SystemExit(f"unknown pos: {group}")
+
+
+def main():
+    root_entry = etree.Element("r")
+    for nr, line in enumerate(
+        Path("MISSING_List_24.txt").read_text().splitlines(), start=1
+    ):
+        if line.startswith("•"):
+            for dict_entry in handle_line(line.replace("•", "").strip()):
+                root_entry.append(dict_entry)
+    Path("output.xml").write_text(
+        etree.tostring(root_entry, pretty_print=True, encoding="unicode")
+    )
+
+
+if __name__ == "__main__":
+    main()
