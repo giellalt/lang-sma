@@ -6,12 +6,16 @@ cat src/fst/morphology/clitics.lexc src/fst/morphology/compounding.lexc  src/fst
 cat src/fst/morphology/root.lexc |cut -d '!' -f1 |cut -d ':' -f1 |sed 's/+/¢+/g'|sed 's/@/¢@/g' |tr '¢' '\n' | egrep '(\+|@)' |tr -d ' ' | tr -d '\t'|sort -u > roottags
 
 echo 'Have a look at these:'
+comm -23 lexctags roottags |grep -v '%/'
 
 echo 'Checking for double + :'
 cat src/fst/morphology/stems/*lexc src/fst/morphology/affixes/*lexc |cut -d '!' -f1 |grep '++'
 
 
-comm -23 lexctags roottags 
+echo 'Checking for double :'
+cat src/fst/morphology/stems/*lexc src/fst/morphology/affixes/*lexc |cut -d '!' -f1 |grep ':[^ %]*:' | grep -v '%:'
+
+
 echo 'Checking for double semicolon in stem files:'
 cat src/fst/morphology/stems/*lexc |cut -d '!' -f1 |grep ';.*;'
 
