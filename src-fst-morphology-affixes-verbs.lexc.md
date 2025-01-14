@@ -48,6 +48,8 @@ the rest of the paradigm is conflated.
 
 * **LEXICON AALHTEDIDH_TV**
 
+* **LEXICON AALHTEDIDH_IV**
+
 * **LEXICON GOLTELIDH_IV**
 
 * **LEXICON GOLTELIDH**, odd-syll with -adte- as Der2

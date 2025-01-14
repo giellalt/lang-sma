@@ -831,6 +831,8 @@ EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
 
 Sjekk opp denne! 
 
++Err/Orth:s   ODDCASEOBL ; ! LA la til -s
+
 ## LEXICON `ihks_IHKS_igs_IGS_EVENNOCOMP`
 Adjective with no comp.
 
@@ -1500,6 +1502,8 @@ the rest of the paradigm is conflated.
 * **LEXICON GOLTELIDH_TV**
 
 * **LEXICON AALHTEDIDH_TV**
+
+* **LEXICON AALHTEDIDH_IV**
 
 * **LEXICON GOLTELIDH_IV**
 
@@ -3085,6 +3089,19 @@ The following flag diacritics are used by the grammar checker.
 |  @U.number.eight@ | Flag used to give arabic numerals in smj different cases ;
 |  @U.number.nine@ | Flag used to give arabic numerals in smj different cases ;
 |  @U.number.zero@ | Flag used to give arabic numerals in smj different cases ;
+|  @U.number.ten@ | Flag used to give arabic numerals in smj different cases ;
+|  @U.number.zero@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.one@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.two@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.three@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.four@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.five@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.six@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.seven@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.eight@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.nine@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.ten@ | Flag used to give arabic numerals in smj different cases ;
+|  @P.number.zero@ | Flag used to give arabic numerals in smj different cases ;
 
 # Lexicon Root
 This is the beginning of everything. The **Root** lexicon is reserved in the

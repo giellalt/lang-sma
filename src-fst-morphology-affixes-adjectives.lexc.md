@@ -191,6 +191,8 @@ EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
 
 Sjekk opp denne! 
 
++Err/Orth:s   ODDCASEOBL ; ! LA la til -s
+
 ## LEXICON `ihks_IHKS_igs_IGS_EVENNOCOMP`
 Adjective with no comp.
 
