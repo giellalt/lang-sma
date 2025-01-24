@@ -46,17 +46,21 @@ def make_dict_entries(groups):
             for language, parts in groups.items():
                 for comma_part in parts:
                     if comma_part.strip():
-                        translation_group = etree.SubElement(dict_entry, "tg")
+                        meaning_group = etree.SubElement(dict_entry, "mg")
+                        translation_group = etree.SubElement(meaning_group, "tg")
+                        translation = etree.SubElement(translation_group, "t")
+                        translation.set("pos", this_pos)
+                        translation.text = comma_part.strip()
                         for remaining_lemma in [
                             this_lemma for this_lemma in lemmas if this_lemma != lemma
                         ]:
                             l_ref = etree.SubElement(translation_group, "l_ref")
                             l_ref_pos = "Phrase" if " " in remaining_lemma else pos
                             l_ref.text = f"{remaining_lemma.replace(' ', '_')}_{l_ref_pos.lower()}"
-                        translation_group.set("{http://www.w3.org/XML/1998/namespace}lang", get_real_language(language))
-                        translation = etree.SubElement(translation_group, "t")
-                        translation.set("pos", this_pos)
-                        translation.text = comma_part.strip()
+                        translation_group.set(
+                            "{http://www.w3.org/XML/1998/namespace}lang",
+                            get_real_language(language),
+                        )
             yield this_pos, dict_entry
 
 
