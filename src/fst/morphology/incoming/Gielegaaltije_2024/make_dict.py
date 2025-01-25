@@ -138,9 +138,6 @@ def main():
     for line in lines:
         result = extract_language_parts(line)
         for pos, dict_entry in make_dict_entries(result):
-            orig = etree.SubElement(dict_entry, "orig")
-            orig.text = line.strip()
-
             dicts.setdefault(pos, etree.Element("r")).append(dict_entry)
 
     for pos in dicts:
