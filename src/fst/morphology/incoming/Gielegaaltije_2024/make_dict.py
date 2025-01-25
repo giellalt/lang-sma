@@ -49,8 +49,9 @@ def make_dict_entries(groups):
                         meaning_group = etree.SubElement(dict_entry, "mg")
                         translation_group = etree.SubElement(meaning_group, "tg")
                         translation = etree.SubElement(translation_group, "t")
-                        translation.set("pos", this_pos)
-                        translation.text = comma_part.strip()
+                        text = comma_part.strip()
+                        translation.text = text
+                        translation.set("pos", "Phrase" if " " in text else pos)
                         for remaining_lemma in [
                             this_lemma for this_lemma in lemmas if this_lemma != lemma
                         ]:
