@@ -1,0 +1,174 @@
+#!/bin/bash
+# test/src/morphology/generate-propernoun-lemmas.sh.  Generated from generate-propernoun-lemmas.sh.in by configure.
+
+# Automake interprets the exit status as follows:
+# - an exit status of 0 will denote a success
+# - an exit status of 77 a skipped test
+# - an exit status of 99 a hard error
+# - any other exit status will denote a failure.
+
+# To run this test script only, do:
+#
+# make check TESTS=generate-propernoun-lemmas.sh
+
+# Dette skriptet tester at alle lemmaene i
+# $GTHOME/langs/sma/src/morphology/generated_files/smi-sma-propernouns.lexc kan
+# genereres. De som ikke kan genereres, kopieres til missingProperLemmas.txt
+
+###### Variables: #######
+POS=propernouns
+### in ###
+source_file=./../../../src/fst/morphology/generated_files/smi-sma-${POS}.lexc
+generator_file=./../../../src/fst/generator-gt-norm
+analyser_file=./../../../src/fst/analyser-gt-norm
+
+### out ###
+# Temporary files:
+lemmas=./filtered-${POS}.txt
+attr_lemmas=./filtered-attr-${POS}.txt
+# Result files, will get filename suffix programmatically further down:
+generated_lemmas=./generated-${POS}
+generated_attr_lemmas=./generated-attr-${POS}
+missing_file=missing_${POS}_lemmas
+ana_missing_file=analysed_missing_${POS}_lemmas
+gen_missing_file=generated_missing_${POS}_lemmas
+
+# SKIP if source file does not exist (works with both single and
+# multiple files):
+if [ ! `ls -1 $source_file 2>/dev/null | wc -l ` -gt 0 ]; then
+    echo
+    echo "*** Warning: Source file(s) $source_file not found."
+    echo
+    exit 77
+fi
+
+# Use autotools mechanisms to only run the configured fst types in the tests:
+fsttype=
+fsttype="$fsttype hfst"
+#fsttype="$fsttype xfst"
+
+# Exit if both hfst and xerox have been shut off:
+if test -z "$fsttype"; then
+    echo "All transducer types have been shut off at configure time."
+    echo "Nothing to test. Skipping."
+    exit 77
+fi
+
+# Get external Mac editor for viewing failed results from configure:
+EXTEDITOR=/usr/local/bin/see
+
+##### Extract lemmas - add additional egrep pattern as parameters: #####
+##### --include "(pattern1|pattern2|...)"                          #####
+##### --exclude "(pattern1|pattern2|...)"                          #####
+# Extract all lemmas except hardcoded Attr:
+/Users/mka055/langtech/GitHub/giellalt/lang-sma/./../giella-core/scripts/extract-lemmas.sh \
+	--exclude "(Attr| FirstTag|\+Use\/MT)" \
+	$source_file > $lemmas
+
+# Extract all hardcoded Attr:
+/Users/mka055/langtech/GitHub/giellalt/lang-sma/./../giella-core/scripts/extract-lemmas.sh \
+	--include "(Attr)" \
+	$source_file > $attr_lemmas
+
+###### Start testing: #######
+transducer_found=0
+Fail=0
+
+# The script tests both Xerox and Hfst transducers if available:
+for f in $fsttype; do
+    if [ $f == "xfst" ]; then
+        lookup_tool="false -flags mbTT"
+        suffix="xfst"
+        # Does lookup support -q / quiet mode?
+        lookup_quiet=$($lookup_tool -q 2>&1 | grep USAGES)
+        if ! [[ $lookup_quiet == *"USAGES"* ]] ; then
+            # it does support quiet mode, add the -q flag:
+            lookup_tool="false -q -flags mbTT"
+        fi
+    elif [ $f == "hfst" ]; then
+        lookup_tool="/usr/local/bin/hfst-optimized-lookup -q"
+        suffix="hfstol"
+    else
+        Fail=1
+        printf "ERROR: Unknown fst type! "
+        echo "$f - FAIL"
+        continue
+    fi
+    if [ -f "$generator_file.$suffix" ]; then
+        let "transducer_found += 1"
+
+###### Test non-comopunds: #######
+        # generate propers in singular, extract the resulting generated lemma,
+        # store it:
+		sed 's/$/+N+Prop+Sg+Nom/'   $lemmas \
+			| $lookup_tool $generator_file.$suffix \
+			| fgrep -v "+?" | grep -v "^$" | cut -f2 \
+            > $generated_lemmas.$f.txt
+
+        # Generate nouns, extract those that do not generate in singular,
+        # and try to generate them in plural:
+        sed 's/$/+N+Prop+Sg+Nom/' $lemmas \
+			| $lookup_tool $generator_file.$suffix \
+			| fgrep "+?" | cut -d "+" -f1 \
+			| sed 's/$/+N+Prop+Pl+Nom/' \
+			| $lookup_tool $generator_file.$suffix \
+			| fgrep -v "+?" | grep -v "^$" | cut -f2 \
+			>> $generated_lemmas.$f.txt
+
+# Sorter og gjer unike alle genererte lemma:
+		sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+
+# Generer lemmaene med +Attr
+		sed 's/$/+N+Prop+Attr/' $attr_lemmas \
+			| $lookup_tool $generator_file.$suffix | grep -v "\?" | cut -f2 \
+			| grep -v "^$" | sort -u > $generated_attr_lemmas.$f.txt  
+
+
+# Sammenlikne lemmaer med genereringa
+		comm -23 $lemmas $generated_lemmas.$f.txt > $missing_file.$f.txt
+		comm -23 $attr_lemmas $generated_attr_lemmas.$f.txt \
+		      >> $missing_file.$f.txt
+		sort -u -o $missing_file.$f.txt $missing_file.$f.txt
+
+		# if at least one word is found, the test failed, and the list of failed
+		# lemmas is opened in SubEthaEdit:
+		if [ -s $missing_file.$f.txt ]; then
+
+# Analyser lemmaer som ikke lar seg generere, for debugging
+            $lookup_tool $analyser_file.$suffix < $missing_file.$f.txt \
+                > $ana_missing_file.$f.txt
+            sed 's/$/+N+Prop+Sg+Nom/' < $missing_file.$f.txt \
+                | $lookup_tool $generator_file.$suffix \
+                > $gen_missing_file.$f.txt
+
+			# Only open the failed lemmas in see if /usr/local/bin/see is defined:
+			if [ "$EXTEDITOR" ]; then
+#				$EXTEDITOR $missing_file.$f.txt
+#				$EXTEDITOR $ana_missing_file.$f.txt
+				$EXTEDITOR $gen_missing_file.$f.txt
+            else
+                echo "There were problem lemmas. Details in:"
+                echo "* $missing_file.$f.txt    "
+                echo "* $ana_missing_file.$f.txt"
+                echo "* $gen_missing_file.$f.txt"
+			fi
+		    Fail=1
+		    echo "$f - FAIL"
+		    continue
+		fi
+	    echo "$f - PASS"
+	fi
+done
+
+# At least one of the Xerox or HFST tests failed:
+if [ "$Fail" = "1" ]; then
+	exit 1
+fi
+
+if [ $transducer_found -eq 0 ]; then
+    echo No transducer found
+    exit 1
+fi
+
+# When done, remove the generated data file:
+rm -f $lemmas $attr_lemmas $generated_lemmas.* $generated_attr_lemmas.*
