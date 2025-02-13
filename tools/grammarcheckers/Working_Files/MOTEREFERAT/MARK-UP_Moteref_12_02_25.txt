@@ -1,0 +1,50 @@
+- Mark-up-möte med Linda
+- Liste-arbeid - låneordstilpasninger - nye lånemönster; byrå, cappucino + lemmaliste
+- Börre og Flammi om lemmaliste-arbeid og script
+- Nett-tröbbel/-oppkobling med Safari og FireFox - Orakel og Börre 
+- Abstract - poster, presentasjon - til Dieđavahkku -  med alle 
+
+Todo:
+- Følge opp artikkelen med Katri og Thomas
+- Mark-up-möte med Linda
+
+
+
+
+
+
+MARK-UP: 
+
+
+
+Skriv inn denne i hvilket som helst terminal-vindu:
+
+
+for i in $GTLANGS/corpus-sma-orig $GTLANGS/corpus-sma-orig-x-closed
+do
+find $i -name '*.correct.txt'
+done
+
+
+Gp ovenfra: 
+
+skriv see + filnavnet f.eks: /Users/mka055/langtech/GitHub/giellalt/corpus-sma-orig/facta/other_files/samisk_skolehistorie_oarjelsaemiej_maanagierte.correct.txt
+
+
+SØK på 
+
+£ = Pund = grammatiske konstruksjoner - pund
+¥ = Yen
+¢ = Cent
+€ = Euro
+
+
+
+forskjellige funksjonelle annotasjoner:
+
+subj_verb_kongr # det burde være kongruens mellom subjekt og finitt verb (enten vanlig finitt verb eller negasjonsverb)
+
+spesifikt for negasjon:
+
+mainv_neg_conneg_kongr # mainverb kongruerer med subjekt mens det egentlig burde være conneg
+cop_neg_conneg_prt_kongr # det burde være kongruens i preteritum mellom neg og conneg av kopula
