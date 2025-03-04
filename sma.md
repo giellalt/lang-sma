@@ -3211,14 +3211,14 @@ https://satni.uit.no/termwiki/index.php?title=Education:embetsstudium
 
 Not according to umlautsystem
 
-Lemma fra GG: merk DNorm
-
-pp, tt, kk --> hp, ht, hk   eller bp, dt, gk?  bp, dt, gk strider i mot rettskrivingsprinsippene jfr.
-
 6 koreen
 5 tyrkijen
 20 Bottleneck-hypotesen       ---- dynamisk sammensetning - how?
 17 direkte
+
+Lemma fra GG: merk DNorm
+
+pp, tt, kk --> hp, ht, hk   eller bp, dt, gk?  bp, dt, gk strider i mot rettskrivingsprinsippene jfr.
 
 * * *
 
