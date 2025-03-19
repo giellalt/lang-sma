@@ -1635,7 +1635,10 @@ COPY:syn-number_congruence-subj-verb (Pl3 SUGGEST) EXCEPT (Du1 &syn-number_congr
 ADD:xsyn-number_congruence-subj-verb (&syn-number_congruence-subj-verb) TARGET (V Ind Prs Pl3) IF (*-1 (Pron Pers Sg3 Nom) OR (Pron Logo Sg3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
 
 
-ADD:xsyn-number_congruence-subj-verb (&syn-number_congruence-subj-verb) TARGET (V Ind Prs Pl3) IF (*-1 (N Sg Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom)); 
+ADD:xsyn-number_congruence-subj-verb (&syn-number_congruence-subj-verb) TARGET (V Ind Prs Pl3) IF (*-1C (N Sg Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom));
+	#$ [ Im ] manne is daelie mujhtieh rikti mah kraesieh men jijnje kraesieh hov dejpeli provhkimh aaj voessjedh jih gosse vaerhkieb utnieh jih dejnie låetjedh. 
+	
+	 
 
 COPY:syn-number_congruence-subj-verb (Sg3 SUGGEST) EXCEPT (Pl3 &syn-number_congruence-subj-verb) TARGET (Pl3 &syn-number_congruence-subj-verb) ; 
 
