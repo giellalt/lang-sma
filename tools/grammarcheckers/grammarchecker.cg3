@@ -1218,6 +1218,8 @@ LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
 LIST &msyn-adj-attr-predpl = &msyn-adj-attr-predpl ;
 LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
+LIST &msyn-demphrase-congruence-plnom = &msyn-demphrase-congruence-plnom ;
+LIST &msyn-demphrase-congruence-plill = &msyn-demphrase-congruence-plill ;
 LIST &msyn-Neg-Pl3-ConNeg = &msyn-Neg-Pl3-ConNeg ;
 LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
@@ -1435,6 +1437,32 @@ COPY:msyn-sååjhtoe-VFinitt (Pl1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 COPY:msyn-sååjhtoe-VFinitt (Pl2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl2) ;
 COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl3) ;
 
+	## Noun phrase internal congruence
+	
+	# nom pl
+	
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(1 N);
+
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (N Pl Nom) IF (-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom));
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plnom) TO (-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom)) ;	
+	## Daesnie lea jïjnje almetjh.
+	
+COPY:msyn-demphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) ;
+
+	# pl ill
+	
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(1 (N Pl Ill));
+
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (N Pl Ill) IF (-1 (Dem &msyn-demphrase-congruence-plill));
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plill) TO (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill)) ;
+	
+	## Seabradahken dåarjoe maanasåjhtose edtja gaajhkh maanide båetedh. 
+	
+COPY:msyn-demphrase-congruence-plill (Ill SUGGEST) EXCEPT Nom TARGET (Dem &msyn-demphrase-congruence-plill) ;	
+	
+
 	## Negasjon
 	
 	# PrsPrc > ConNeg
@@ -1637,6 +1665,7 @@ ADD:xsyn-number_congruence-subj-verb (&syn-number_congruence-subj-verb) TARGET (
 
 ADD:xsyn-number_congruence-subj-verb (&syn-number_congruence-subj-verb) TARGET (V Ind Prs Pl3) IF (*-1C (N Sg Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom));
 	#$ [ Im ] manne is daelie mujhtieh rikti mah kraesieh men jijnje kraesieh hov dejpeli provhkimh aaj voessjedh jih gosse vaerhkieb utnieh jih dejnie låetjedh. 
+	## Mubpien stuhtjesne dennie kapihtelisnie leam dam saemien gïelebuerkiestimmiem gïehtjedamme jïh dejtie stuhtjide destie tjöönghkeme mejtie lïhke mov ïebne {leah}.
 	
 	 
 
