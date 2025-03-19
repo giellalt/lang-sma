@@ -1307,7 +1307,8 @@ LIST SHARP-N = "aaksjoe" "nejpie" "saakoeh" "tsurre" "tsuhrre" "tsööre" "tsår
 SELECT ("sijjieh" Pron) + $$PERS-TAG IF (*-1 VFIN + $$PERS-TAG BARRIER NOT-ADV)(NEGATE *0 SHARP-N);
 
 
-SELECT Attr - Err/Orth-spes IF (0 (Pron Indef) LINK NOT 0 Gen)(*1 N BARRIER NOT-A);
+SELECT Attr - Err/Orth-spes IF (0 (Pron Indef) LINK NOT 0 Gen)(*1 N BARRIER NOT-A)(NEGATE 0 ("jïjnje"));
+	#$ Daesnie lea {jïjnje} almetjh.
 
 SELECT PXSG - Err/Orth-spes IF (-1 SG + Pers) ;
 SELECT PXDU - Err/Orth-spes IF (-1 DU + Pers) ;
