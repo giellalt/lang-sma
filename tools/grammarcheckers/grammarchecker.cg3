@@ -1455,7 +1455,7 @@ SET NEG-V = NEG-V-smj OR NEG-V-sme OR NEG-V-sma OR NEG-V-smn ;
 
 	# ij as Adverb - congruence between Neg and VFIN
 
-ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 NEG-V + Neg + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg)(NEGATE 0 Inf LINK -1 <TH-Inf>) ;
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 NEG-V + Neg + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg)(NEGATE 0 Inf LINK -1 <TH-Inf>)(NEGATE 0 Neg) ;
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Inf &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
 	## Ean månnoeh miehtsesne {minnien} lustestallemen vuj haarjanimmien gaavhtan.
@@ -1475,7 +1475,7 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3
 
 ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1) (*-1 NEG-V + Neg + Sg3 - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc LINK 0 Prs OR Prt) ;
 
-COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
+COPY:msyn-Neg-VFinitt-ConNeg (ConNeg &SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) ;
 	## Ij leam desnie.
 	
 	# ConNeg formen i preteritum burde samsvare i person med negasjonsverb
