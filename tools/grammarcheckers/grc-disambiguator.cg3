@@ -1388,7 +1388,6 @@ REMOVE:gujmieCom ("gujmie") (0 Pl + Com) ;
 SELECT:PoGena Po - Err/Orth-spes (0 Pr)(-1 Gen) ;
 	#$ Minngemes dellie ebrievaarjoeh gaeblien nualan rijtieh.
 REMOVE:Pr Pr (NEGATE *1 N BARRIER NOT-NPMOD) ;
-REMOVE:PoGenb Po (NEGATE -1 Gen) ;
 SELECT:PoGenb Po - Err/Orth-spes (-1 Gen) ;
 	#$ Minngemes dellie ebrievaarjoeh gaeblien nualan rijtieh.
 
@@ -1522,7 +1521,7 @@ SELECT:Dem Dem - Err/Orth-spes (0 Indef LINK NEGATE *1 N BARRIER NOT-NPMOD) ;
 
 SELECT:nommeN N - Err/Orth-spes (0 ("nomme") LINK -1 Gen OR Prop) ;	
 
-SELECT:NObj N - Err/Orth-spes (0 Nom + Pl LINK 1 V-TRANS)(NEGATE 0 AUX) ;
+SELECT:NObj N - Err/Orth-spes (0 Nom + Pl LINK 1 V-TRANS)(NEGATE 0 AUX OR Inf) ;
 	#$ Dellie datne tsiehkieh åehpiedehtieh dov jïjtjedh baakoejgujmie.
 
 SELECT:Ncoor $$CASES (0C N LINK *-1 CC BARRIER NOT-A LINK -1 $$CASES) ;
@@ -2173,8 +2172,6 @@ SELECT:NumAndOrdNum (Ord Nom) - Err/Orth-spes (0 Num LINK 1 N);
 
 
 #!! Adv or Po/Pr
-SELECT:AdvNotPo Adv - Err/Orth-spes (0 Po)(NEGATE -1 Gen) ;
-	## Desnie lim dam mietskem jaepien 1941, vaaksjoeminie ektine mov gåmmine, Henny Bergsland, mij vuelieh tjeeli mejtie Jonetta joejki.
 REMOVE:PoNotAdv Adv (0 Po)(-1 Gen) ;
 SELECT:PcleNotPron ("dån" Adv) - Err/Orth-spes (0 (Pron Gen) LINK 1 A OR V OR Pcle OR Coll OR Adv) (NEGATE 1 Po OR Ord) ;
 	## Mujhtedh vielle, gosse månnoeh dan jijnjh gåahtah jih karamellh biejjegi byøpmedien...
