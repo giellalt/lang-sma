@@ -1213,6 +1213,7 @@ LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
+LIST &msyn-hab-nom-gen = &msyn-hab-nom-gen ;
 LIST &msyn-pass-active = &msyn-pass-active ; 
 LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
 LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
@@ -1411,9 +1412,28 @@ SET WHICH-OF-TWO = WHICH-OF-TWO-sma OR WHICH-OF-TWO-sme OR WHICH-OF-TWO-smj OR W
 
 ADD:xmsyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 WHICH-OF-TWO + (Sg Nom));
 
-COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);	
-	
+COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);		
 	## gåabpa stööremes
+
+	# Acc > Gen Po
+	# ------------	
+	
+LIST NUMBER = Sg Pl ;
+
+ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NEGATE 1 Gen)(NEGATE -1 Pr);
+
+COPY:msyn-po-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER OR ALL-PERS TARGET (&msyn-po-acc-gen);		
+	## Janne  åådtje munnjien {dam}£{infl,pron,sgacc-sggen|dan} {bijre}${vowc,i-ï|bïjre} {mængan}${conc,n-nn|mænngan} {sopsestidh}${conc,ps-pts|soptsestidh}.
+	
+
+	# Habitive constructions
+	# -----------------------		
+ADD:xmsyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N OR Pron)(1 ("lea" Pl3) LINK 1 (N Pl Nom) OR (Pron Pl Nom));
+ADD:xmsyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N OR Pron)(1 ("lea" Sg3) LINK 1 (N Sg Nom) OR (Pron Sg Nom));	
+
+
+COPY:msyn-hab-nom-gen (Gen &SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBER TARGET (&msyn-hab-nom-gen);
+	## {Gaajhkesh}£{infl,pron,nom-gen|Gaajhkesi} leah reaktah årromesæjjan.
 
 	# Sååjhtedh as Adverb
 	
@@ -1423,11 +1443,9 @@ LIST MAYBE-V-sme = "soaitit" ;
 LIST MAYBE-V-smn = "sättiđ" ;
 SET MAYBE-V = MAYBE-V-smj OR MAYBE-V-sma OR MAYBE-V-sme OR MAYBE-V-smn ;
 
-
-ADD:xmsyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET MAYBE-V + (Ind Prs Sg3) (1 VFIN - Sg3) ;
-
+ADD:xmsyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET MAYBE-V + (Ind Prs Sg3)  (*1 VFIN - Sg3 BARRIER (*) - Pcle - Adv) ;
 	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
-	
+		
 COPY:msyn-sååjhtoe-VFinitt (Sg1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg1) ;
 COPY:msyn-sååjhtoe-VFinitt (Sg2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg2) ;
 COPY:msyn-sååjhtoe-VFinitt (Du1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du1) ;
@@ -1438,6 +1456,21 @@ COPY:msyn-sååjhtoe-VFinitt (Pl2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl3) ;
 
 	## Noun phrase internal congruence
+	
+	
+	# AUX + VFIN > AUX + Inf
+	
+LIST AUX = "maehtedh" ;
+
+
+ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (*-1 AUX + (Ind Prs Sg3) BARRIER (*) - Pcle - Adv) ;
+	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+	
+ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv) ;
+
+COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) TARGET (&msyn-aux-vfin-inf) ;
+	## Mijjieh {sijhtebe}${verb,ascii|sïjhtebe} jeatjah goh {dihte}${dem,ascii|dïhte} gie {maanan}£{infl,noun,sggen-sgacc|maanam} syjhtedh maahta {eejteghmaaksoem}${noun,con|eejhteghmaaksoem} {åådtje}£{inf-after-aux,infl,verb,prssg3-inf|åadtjodh}.
+
 	
 	# nom pl
 	
@@ -1672,11 +1705,17 @@ ADD:xsyn-number_congruence-subj-verb (&syn-number_congruence-subj-verb) TARGET (
 COPY:syn-number_congruence-subj-verb (Sg3 SUGGEST) EXCEPT (Pl3 &syn-number_congruence-subj-verb) TARGET (Pl3 &syn-number_congruence-subj-verb) ; 
 
 
-# OR MO-MANge LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR COMMA OR CS OR (Adv Subqst) OR (Pron Rel Sg) OR (Adv Sem/Time) OR THEN-CS-ADV  BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom))(NEGATE 0 (Pl3))(NEGATE *1 (Pers Nom) - Sg3 BARRIER NOT-ADV-PCLE)(NEGATE 0 (N Pl Nom) LINK *1 VFIN BARRIER NOT-ADV-PCLE)(NEGATE 0 PrfPrc LINK *1 <LastCohortOfParagraph>  LINK NEGATE -1 (".") OR ("?") OR ("!"));
-	## Almetje gïelem {lierieh}£{infl,verb,subj_verb_kongr,prspl3-prssg3|leara} maanine, noerine jïh dovne easkah geerve almetjinie.
-	## Almetje jïh juvre gïelem {lierieh}£{infl,verb,subj_verb_kongr,prspl3-prssg3|leara} maanine, noerine jïh dovne easkah geerve almetjinie.
-	## Dellie maana gielide {iemie-laakan}£{cmp,1-2|iemielaakan} {lierieh}£{infl,verb,subj_verb_kongr,prspl3-prssg3|leara}.
-	## Almetje aaj gïelem iemie-laakan {lierieh}£{infl,verb,subj_verb_kongr,prspl3-prssg3|leara} voelpigujmie ektesne, vg mearan maanagïertesne, stååkedimmesne jallh eejehts-sijjesne.
+	# Sg3 > Pl3
+ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
+
+
+ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc)); 
+	## Ovjaksoe lea neerrehtimmie – almetjh heaptoejgujmie {edtja}£{subj-verb-kongr,verb,prssg3-prspl3|edtjieh} nuepieh utnedh meatan årrodh ellies {vyøhkesadtememem}${x,mix|vyöhkesjadtemem}.
+	
+	 
+
+COPY:syn-number_congruence-subj-verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3 &syn-number_congruence-subj-verb-sg3-pl3) TARGET (Sg3 &syn-number_congruence-subj-verb-sg3-pl3) ; 
+
 
 
 ## PASSIVE VERB should be active   
