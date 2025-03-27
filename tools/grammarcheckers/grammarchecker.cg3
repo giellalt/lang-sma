@@ -1226,6 +1226,8 @@ LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
 LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
 LIST &syn-phrasal-verb-lexical-verb = &syn-phrasal-verb-lexical-verb ;
+LIST &syn-redun-before-guktie = &syn-redun-before-guktie ;
+LIST &syn-wo-verb_advl-advl_verb = &syn-wo-verb_advl-advl_verb ;
 
 LIST &SUGGEST = &SUGGEST ;
 LIST &SUGGESTWF = &SUGGESTWF ; #Suggestion from the speller
@@ -1917,6 +1919,31 @@ LIST PHRASAL-V = PHRASAL-V ;
 ADDRELATIONS (PHRASAL-V) (PHRASAL-ADV) &syn-phrasal-verb-phrasal-verb TO (*0 Adv BARRIER (*) - Pcle) ;
 
 ADD:phrasal-v  (&LINK)  TARGET (*) IF (r:PHRASAL-ADV (&syn-phrasal-verb-phrasal-verb));
+
+
+	# redundnat words
+	
+ADD:xsyn-redun-before-guktie (&syn-redun-before-guktie) TARGET ("guktie") IF (-1 ("mah") OR ("nov")) ;
+
+ADD:xsyn-redun-before-guktie (&syn-redun-before-guktie) TARGET ("mah") OR ("nov") IF (1 ("guktie")) ;	
+	## ïh daej baakoejgujmie aatskadægan soptsestallemem mij faala buerie guvviem, mah guktie saemieh jïjtjh gïehtjedieh miehtsiem.
+	## Nov guktie aaj jïjnjebidie Saepmesne.
+	
+ADDRELATION (DELETE1) ("guktie" &syn-redun-before-guktie) TO (-1 &syn-redun-before-guktie) ;	
+
+	# word order
+	# ----------
+
+ADD:xsyn-wo-verb_advl-advl_verb (&syn-wo-verb_advl-advl_verb) TARGET (V) IF (1 Sem/Plc LINK 0 Ine OR Ela OR Ill) ;
+
+ADD:xsyn-verb_advl-advl_verb (&syn-wo-verb_advl-advl_verb) TARGET Sem/Plc IF (0 Ine OR Ela OR Ill)(-1 V) ;
+
+ADDRELATION ($2 RIGHT) (V &syn-wo-verb_advl-advl_verb) TO (1 (N &syn-wo-verb_advl-advl_verb)) ;	
+
+
+	## {Nov}¥{redun|} guktie aaj {jïjnjebh}£{case,pron,plnom-plill|jïjnjebidie} {almetjh}¥{redun|} Saepmesne, dah guaktah lægan jielemevåaromem jïh jearsoesvoetem {{åådtjeme {miehtsesne}${conc,hts-htj|miehtjesne}}£{infl,case,noun,sgine-sgela|miehtjeste}}¥{wo|miehtjeste åådtjeme}.
+	
+	# dah guaktah lægan jielemevåaromem jïh jearsoesvoetem åådtjeme miehtjesne.
 
 
 # # The method is: Add &SUGGEST to a copied reading to *generate* a
