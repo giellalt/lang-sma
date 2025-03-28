@@ -1226,6 +1226,7 @@ LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
 LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
 LIST &syn-phrasal-verb-lexical-verb = &syn-phrasal-verb-lexical-verb ;
+LIST &msyn-po-acc-gen = &msyn-po-acc-gen ;
 LIST &syn-redun-before-guktie = &syn-redun-before-guktie ;
 LIST &syn-wo-verb_advl-advl_verb = &syn-wo-verb_advl-advl_verb ;
 
@@ -1427,8 +1428,13 @@ LIST NUMBER = Sg Pl ;
 
 ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
 
-COPY:msyn-po-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER OR ALL-PERS TARGET (&msyn-po-acc-gen);		
+ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (Dem Acc) IF (1 &msyn-po-acc-gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+
+ADDRELATION ($2 LEFT) (N &msyn-po-acc-gen) TO (-1 (Dem &msyn-po-acc-gen)) ;
+
+COPY:msyn-po-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER OR ALL-PERS TARGET (&msyn-po-acc-gen);	
 	## Janne  åådtje munnjien {dam}£{infl,pron,sgacc-sggen|dan} {bijre}${vowc,i-ï|bïjre} {mængan}${conc,n-nn|mænngan} {sopsestidh}${conc,ps-pts|soptsestidh}.
+	## Gosse ussjedibie ööhpehtimmien bïjre {dejtie skyllijemaanide}£{noun,case,placc-plgen|dej skyllijemaanaj bïjre ussjedibie.
 	
 
 	# Habitive constructions
@@ -1490,18 +1496,6 @@ ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plnom) TO (-1 (Dem &msyn-demph
 	
 COPY:msyn-demphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) ;
 
-	# pl ill
-	
-ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(1 (N Pl Ill));
-
-ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (N Pl Ill) IF (-1 (Dem &msyn-demphrase-congruence-plill));
-
-ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plill) TO (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill)) ;
-	
-	## Seabradahken dåarjoe maanasåjhtose edtja gaajhkh maanide båetedh. 
-	
-COPY:msyn-demphrase-congruence-plill (Ill SUGGEST) EXCEPT Nom TARGET (Dem &msyn-demphrase-congruence-plill) ;	
-	
 
 	## Negasjon
 	
