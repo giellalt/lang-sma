@@ -25,10 +25,7 @@ https://satni.uit.no/termwiki/index.php?title=Education:embetsstudium
 
 Not according to umlautsystem
 
-6 koreen
-5 tyrkijen
 20 Bottleneck-hypotesen       ---- dynamisk sammensetning - how?
-17 direkte
 
 Lemma fra GG: merk DNorm
 
