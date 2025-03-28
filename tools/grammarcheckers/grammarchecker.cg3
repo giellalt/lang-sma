@@ -1254,6 +1254,9 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 # Add &typo error tag to unkown words that are not corrected by the speller, so that they at least get a blue underline and a message
 ADD:uncorrected-typos (&typo) (?) ;
 
+	# Adjective rules
+	# ---------------
+
 	# attr--> pred pl
 
 ADD:msyn-adj-attr-predpl (&msyn-adj-attr-predpl) TARGET (A Attr) IF
@@ -1422,7 +1425,7 @@ COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-
 	
 LIST NUMBER = Sg Pl ;
 
-ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NEGATE 1 Gen)(NEGATE -1 Pr);
+ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
 
 COPY:msyn-po-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER OR ALL-PERS TARGET (&msyn-po-acc-gen);		
 	## Janne  åådtje munnjien {dam}£{infl,pron,sgacc-sggen|dan} {bijre}${vowc,i-ï|bïjre} {mængan}${conc,n-nn|mænngan} {sopsestidh}${conc,ps-pts|soptsestidh}.
@@ -1438,6 +1441,7 @@ COPY:msyn-hab-nom-gen (Gen &SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBE
 	## {Gaajhkesh}£{infl,pron,nom-gen|Gaajhkesi} leah reaktah årromesæjjan.
 
 	# Sååjhtedh as Adverb
+	# -------------------
 	
 LIST MAYBE-V-smj = "soajttet" ;
 LIST MAYBE-V-sma = "sååjhtedh" ;
@@ -1461,6 +1465,7 @@ COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 	
 	
 	# AUX + VFIN > AUX + Inf
+	# ----------------------
 	
 LIST AUX = "maehtedh" ;
 
@@ -1474,7 +1479,7 @@ COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) TA
 	## Mijjieh {sijhtebe}${verb,ascii|sïjhtebe} jeatjah goh {dihte}${dem,ascii|dïhte} gie {maanan}£{infl,noun,sggen-sgacc|maanam} syjhtedh maahta {eejteghmaaksoem}${noun,con|eejhteghmaaksoem} {åådtje}£{inf-after-aux,infl,verb,prssg3-inf|åadtjodh}.
 
 	
-	# nom pl
+	# pl nom
 	
 ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(1 N);
 
@@ -1638,7 +1643,7 @@ COPY:msyn-number_congruence-subj-copula-hab (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-num
 # subject verb agreement
 
 	 # Prs Du1 > Prs Pl3
-	 
+	 # -----------------
 
 ADD:xsyn-number_congruence-subj-verb (&syn-number_congruence-subj-verb) TARGET (Ind Prs Du1) IF (*-1 (N Pl Nom) OR (Pron Pl Nom) OR (Pron Pl3 Nom) BARRIER NOT-ADV-PCLE - Ine OR (Adv Subqst));
 
@@ -1695,6 +1700,7 @@ COPY:syn-number_congruence-subj-verb (Pl3 SUGGEST) EXCEPT (Du1 &syn-number_congr
 #	## 
 
 	# Pl3 > Sg3
+	# ---------
 ADD:xsyn-number_congruence-subj-verb (&syn-number_congruence-subj-verb) TARGET (V Ind Prs Pl3) IF (*-1 (Pron Pers Sg3 Nom) OR (Pron Logo Sg3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
 
 
@@ -1708,6 +1714,7 @@ COPY:syn-number_congruence-subj-verb (Sg3 SUGGEST) EXCEPT (Pl3 &syn-number_congr
 
 
 	# Sg3 > Pl3
+	# ---------
 ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
 
 
@@ -1936,12 +1943,16 @@ ADDRELATION (DELETE1) ("guktie" &syn-redun-before-guktie) TO (-1 &syn-redun-befo
 
 ADD:xsyn-wo-verb_advl-advl_verb (&syn-wo-verb_advl-advl_verb) TARGET (V) IF (1 Sem/Plc LINK 0 Ine OR Ela OR Ill) ;
 
-ADD:xsyn-verb_advl-advl_verb (&syn-wo-verb_advl-advl_verb) TARGET Sem/Plc IF (0 Ine OR Ela OR Ill)(-1 V) ;
+ADD:xsyn-verb_advl-advl_verb (&syn-wo-verb_advl-advl_verb DELETE) TARGET Sem/Plc IF (0 Ine OR Ela OR Ill)(-1 V) ;
 
-ADDRELATION ($2 RIGHT) (V &syn-wo-verb_advl-advl_verb) TO (1 (N &syn-wo-verb_advl-advl_verb)) ;	
+#ADDRELATION (DELETE) (V &syn-wo-verb_advl-advl_verb) TO (1 (N &syn-wo-verb_advl-advl_verb)) ;
 
-
-	## {Nov}¥{redun|} guktie aaj {jïjnjebh}£{case,pron,plnom-plill|jïjnjebidie} {almetjh}¥{redun|} Saepmesne, dah guaktah lægan jielemevåaromem jïh jearsoesvoetem {{åådtjeme {miehtsesne}${conc,hts-htj|miehtjesne}}£{infl,case,noun,sgine-sgela|miehtjeste}}¥{wo|miehtjeste åådtjeme}.
+#COPYCOHORT:syn-wo-verb_advl-advl_verb (&ADDED co&syn-wo-verb_advl-advl_verb) EXCEPT (DELETE &syn-wo-verb_advl-advl_verb) TARGET (N &syn-wo-verb_advl-advl_verb) TO BEFORE (V &syn-wo-verb_advl-advl_verb) ; 
+     
+#ADDRELATION:syn-wo-verb_advl-advl_verb ($3 LEFT) (*) TO (jC1 (*) LINK -1 (&ADDED)) ;
+	
+	## dah guaktah lægan jielemevåaromem jïh jearsoesvoetem åådtjeme miehtjesne.
+	#$CORRECT: dah guaktah lægan jielemevåaromem jïh jearsoesvoetem miehtjeste åådtjeme.
 	
 	# dah guaktah lægan jielemevåaromem jïh jearsoesvoetem åådtjeme miehtjesne.
 
