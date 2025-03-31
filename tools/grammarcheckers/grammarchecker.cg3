@@ -1221,6 +1221,8 @@ LIST &msyn-adj-attr-predpl = &msyn-adj-attr-predpl ;
 LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
 LIST &msyn-demphrase-congruence-plnom = &msyn-demphrase-congruence-plnom ;
 LIST &msyn-demphrase-congruence-plill = &msyn-demphrase-congruence-plill ;
+LIST &msyn-demphrase-congruence-plcom = &msyn-demphrase-congruence-plcom ;
+LIST &msyn-demphrase-congruence-plela = &msyn-demphrase-congruence-plela ;
 LIST &msyn-Neg-Pl3-ConNeg = &msyn-Neg-Pl3-ConNeg ;
 LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
@@ -1487,14 +1489,76 @@ COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) TA
 	
 	# pl nom
 	
-ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(1 N);
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(*1 (N Pl Nom) BARRIER (*) - (Dem Nom) LINK NEGATE 0 (N Sg Nom));
+
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Pl Nom) IF (-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plnom)) (1 (N Pl Nom));
 
 ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (N Pl Nom) IF (-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom));
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plnom) TO (-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom)) ;	
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plnom) TO (-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) LINK -1 (Indef &msyn-demphrase-congruence-plnom)) ;
 	## Daesnie lea jïjnje almetjh.
+	#$ Tjåanghkan maahta jiehtedh daate tjïelkes-timmie gaajhkide veerbide mah gååvnesieh, men ij leah tjïelkestimmie mannasinie dahgååvnesieh.
 	
 COPY:msyn-demphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) ;
+
+	#$ Naakenh roehtside morfeemh leah lissiehtamme göökte daltesinie. (Subj + ADVL)
+	
+	# pl ill
+	# ------
+
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(*1 (N Pl Ill) OR (N Pl Acc) BARRIER (*) - (Dem Nom));
+
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plill)) (1 (N Pl Ill) OR (N Pl Acc));
+
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (N Pl Ill) OR (N Pl Acc) IF (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill));
+
+
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plill) TO (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill)) ;
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plill) TO (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) LINK -1 (Indef &msyn-demphrase-congruence-plill)) ;	
+	## Provresalmetjidie mejtie fuehpesne hijven naemhtie ånnetji raaffalgovvedh jïh gaajhkh åssjalommesidie provren bïjre luejhtedh jïh ussjedidh mannasinie sinsitnine pruvrijægan.
+	## Læstoeh gaajhkh daah dåehkide jïh dej kandidath gååvnese www.svenskakyrkan.se/kyrkoval.
+	
+COPY:msyn-demphrase-congruence (Pl Ill SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) ;
+
+	# pl ine
+	# ------
+
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(1 (N Pl Ine));
+
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (N Pl Ine) IF (-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline));
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-pline) TO (-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline)) ;	
+	## Dïhte gaajhkh lehkine mïnni.
+	
+COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline) ;
+
+	# pl ela
+	# ------
+
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(1 (N Pl Ela));
+
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela));
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plela) TO (-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela)) ;	
+	## gaajhkh lehkeste hov bovtsh böötin.
+	
+COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) ;
+
+	# pl com
+	# ------
+
+ADD:msyn-demphrase-congruence-plcom (&msyn-demphrase-congruence-plcom) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(1 (N Pl Com));
+
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plcom) TARGET (N Pl Com) IF (-1 (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom));
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plcom) TO (-1 (Com &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom)) ;	
+	## Gaajhkh nïejtigujmie soptsetim.
+	
+COPY:msyn-demphrase-congruence-plcom (Pl Gen SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom) ;
+
+
 
 
 	## Negasjon
@@ -1709,10 +1773,10 @@ COPY:syn-number_congruence-subj-verb (Sg3 SUGGEST) EXCEPT (Pl3 &syn-number_congr
 
 	# Sg3 > Pl3
 	# ---------
-ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
+ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
 
 
-ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc)); 
+ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom)); 
 	## Ovjaksoe lea neerrehtimmie – almetjh heaptoejgujmie {edtja}£{subj-verb-kongr,verb,prssg3-prspl3|edtjieh} nuepieh utnedh meatan årrodh ellies {vyøhkesadtememem}${x,mix|vyöhkesjadtemem}.
 	
 	 
