@@ -1459,6 +1459,9 @@ ADD:xmsyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N OR Pron)(1 ("lea"
 
 COPY:msyn-hab-nom-gen (Gen &SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBER TARGET (&msyn-hab-nom-gen);
 	## {Gaajhkesh}£{infl,pron,nom-gen|Gaajhkesi} leah reaktah årromesæjjan.
+	
+	# Finite vs. non-finite verbs
+	# ============================
 
 	# Sååjhtedh as Adverb
 	# -------------------
@@ -1487,12 +1490,28 @@ COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 	# AUX + VFIN > AUX + Inf
 	# ----------------------
 	
-LIST AUX = "maehtedh" ;
+LIST AUX = "aelkedh" "båetedh" "edtjedh" "fihkedh" "maehtedh" "provhkedh" "sïjhtedh" "sjïdtedh" "åadtjodh" "galkedh" "tjoeredh" ;
 
+
+ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) OR (V Ind Pl3) IF (*-1 AUX + (Ind Prs Sg3) OR AUX + (Ind Prs Pl3) BARRIER (*) - Pcle - Adv) ;
+	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+	## Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
+	## Nimhtie aaj vihkele saemieh maehtieh åadtjoeh gïehtjedimmiejgujmie gïehtelidh.	
+	
+ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv) ;
+
+COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) TARGET (Sg3 &msyn-aux-vfin-inf) ;
+COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-aux-vfin-inf) TARGET (Pl3 &msyn-aux-vfin-inf) ;
+	## Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
+	
+	# Inf > Pl3
+	# ----------------------
+	
 
 ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (*-1 AUX + (Ind Prs Sg3) BARRIER (*) - Pcle - Adv) ;
 	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
-	## Mijjieh {sijhtebe}${verb,ascii|sïjhtebe} jeatjah goh {dihte}${dem,ascii|dïhte} gie {maanan}£{infl,noun,sggen-sgacc|maanam} syjhtedh maahta {eejteghmaaksoem}${noun,con|eejhteghmaaksoem} {åådtje}£{aux-vfin-inf,infl,verb,prssg3-inf|åadtjodh}.
+	## Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
+	
 	
 ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv) ;
 
@@ -1752,7 +1771,7 @@ COPY:syn-number_congruence-subj-verb-pl3-sg3 (Sg3 SUGGEST) EXCEPT (Pl3 &syn-numb
 ADD:xsyn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg2-pl3) TARGET (V Ind Prs Sg2) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR (Pers Sg2) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE); 
 	## Gåessie båetije laake tseegkesovvedh saemiej reaktaj bïjre dellie saemieh tjoeverh daam dåhkasjehtedh.
 
-COPY:syn-number_congruence-subj-verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) TARGET (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) ; 
+COPY:syn-number_congruence-subj-verb-sg2-pl3 (Pl3 SUGGEST) EXCEPT (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) TARGET (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) ; 
 
 	# Sg3 > Pl3
 	# ---------
@@ -1766,6 +1785,19 @@ ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-s
 	 
 
 COPY:syn-number_congruence-subj-verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3 &syn-number_congruence-subj-verb-sg3-pl3) TARGET (Sg3 &syn-number_congruence-subj-verb-sg3-pl3) ; 
+
+
+	# Inf > Pl3
+	# ---------
+ADD:xsyn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Ind Inf) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
+
+
+ADD:xsyn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *-1 (Pron Pers Sg3) OR VFIN BARRIER NOT-ADV-PCLE); 
+	## maahta vadtasovvedh dejtie guhtide geerve gïeline gïehtelidh.
+	
+	 
+
+COPY:syn-number_congruence-subj-verb-inf-pl3 (Prs Pl3 SUGGEST) EXCEPT (Inf &syn-number_congruence-subj-verb-inf-pl3) TARGET (Inf &syn-number_congruence-subj-verb-Inf-pl3) ; 
 
 
 
