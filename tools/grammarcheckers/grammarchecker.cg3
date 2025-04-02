@@ -1422,13 +1422,22 @@ ADD:xmsyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom)
 
 COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);		
 	## gåabpa stööremes
+	
+	
+	# Com before ektine
+	# -----------------
+	
+ADD:xmsyn-ektine-gen-com (&msyn-ektine-gen-com) TARGET (N Gen) IF (1 ("ektine"))(NEGATE -1 Pr);
+	## dejstie bieliejaepien tjåanghkosne eejhtegi ektine
+	
+COPY:msyn-ektine-gen-com (Com &SUGGEST) EXCEPT (Gen &msyn-ektine-gen-com) TARGET (&msyn-ektine-gen-com);
 
 	# Acc > Gen Po
 	# ------------	
 	
 LIST NUMBER = Sg Pl ;
 
-ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NOT 0 ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
 
 ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (Dem Acc) IF (1 &msyn-po-acc-gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
 
@@ -1480,6 +1489,7 @@ LIST AUX = "maehtedh" ;
 
 ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (*-1 AUX + (Ind Prs Sg3) BARRIER (*) - Pcle - Adv) ;
 	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+	## Mijjieh {sijhtebe}${verb,ascii|sïjhtebe} jeatjah goh {dihte}${dem,ascii|dïhte} gie {maanan}£{infl,noun,sggen-sgacc|maanam} syjhtedh maahta {eejteghmaaksoem}${noun,con|eejhteghmaaksoem} {åådtje}£{aux-vfin-inf,infl,verb,prssg3-inf|åadtjodh}.
 	
 ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv) ;
 
