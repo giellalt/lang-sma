@@ -1521,16 +1521,17 @@ COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) TA
 	
 	# pl nom
 	
-ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(*1 (N Pl Nom) BARRIER (*) - (Dem Nom) LINK NEGATE 0 (N Sg Nom));
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(*1 (N Pl Nom) BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Nom));
 
-ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Pl Nom) IF (-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plnom)) (1 (N Pl Nom));
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Pl Nom) IF (*-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr) (1 (N Pl Nom));
 
-ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (N Pl Nom) IF (-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom));
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (N Pl Nom) IF (*-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr);
 
-ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plnom) TO (-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom)) ;	
-ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plnom) TO (-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) LINK -1 (Indef &msyn-demphrase-congruence-plnom)) ;
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plnom) TO (*-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr) ;	
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plnom) TO (*-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr LINK -1 (Indef &msyn-demphrase-congruence-plnom)) ;
 	## Daesnie lea jïjnje almetjh.
 	#$ Tjåanghkan maahta jiehtedh daate tjïelkes-timmie gaajhkide veerbide mah gååvnesieh, men ij leah tjïelkestimmie mannasinie dahgååvnesieh.
+	## Dïhte audiovisueelle tjåanghkoeh dah leah jienebh enn 7 miljovnh spealadimmietæjmoeh.
 	
 COPY:msyn-demphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) ;
 
