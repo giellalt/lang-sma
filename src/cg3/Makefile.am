@@ -11,8 +11,7 @@ SUBDIRS=. test
 
 #############################################
 #### Add language-specific sources here: ####
-GT_CG_LOCAL_SRCS=valency.cg3 \
-				 korp.cg3
+GT_CG_LOCAL_SRCS=valency.cg3
 
 #############################################################
 #### Add language-specific targets to be installed here: ####
@@ -42,7 +41,7 @@ endif
 
 ####### Other targets: ###########
 clean-local:
-	-rm -f *.bin functions.cg3 dependency.cg3 korp.cg3
+	-rm -f *.bin functions.cg3 dependency.cg3
 
 ####### Build rules via include: ########
 
