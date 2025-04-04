@@ -1522,6 +1522,53 @@ ADD:xmsyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *
 
 COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) TARGET (&msyn-aux-vfin-inf) ;
 	## Mijjieh {sijhtebe}${verb,ascii|sïjhtebe} jeatjah goh {dihte}${dem,ascii|dïhte} gie {maanan}£{infl,noun,sggen-sgacc|maanam} syjhtedh maahta {eejteghmaaksoem}${noun,con|eejhteghmaaksoem} {åådtje}£{inf-after-aux,infl,verb,prssg3-inf|åadtjodh}.
+	
+	# Numphrase
+	# =========
+
+	
+	# pl nom
+	# ------
+	
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N Sg Nom) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 (N Pl Nom));
+	
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (Num Nom) - ("akte")  IF (*1 (N &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
+
+ADD:msyn-numphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Dem Pl Nom) IF (*1 (Num &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-plnom) TO (*-1 (Num &msyn-numphrase-congruence-plnom)) ;	
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plnom) TO (*-1 (Num &msyn-numphrase-congruence-plnom) LINK *-1 (Dem &msyn-numphrase-congruence-plnom)) ;
+	
+COPY:msyn-numphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (N Nom &msyn-numphrase-congruence-plnom) ;
+
+	## Gærjagåetien tjåanghkosne 20 miljovnh aamhtese gååvnesieh. > 20 miljovnh aamhtesh gååvnesieh
+	
+	# sg ine
+	# ---------
+	
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (N Pl Ine) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 (N Pl Nom));
+
+COPY:msyn-numphrase-congruence-sgine (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sgine) ;
+	
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Num Nom) - ("akte")  IF (*1 (N &msyn-numphrase-congruence-sgine) BARRIER NOT-Attr - ("millijovne" Nom));
+
+COPY:msyn-numphrase-congruence-sgine (Sg Ine Attr SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sgine) ;
+
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Dem Pl Nom) OR (Dem Pl Gen) OR (Indef Pl Nom) OR (Indef Pl Gen) IF (*1 (Num &msyn-numphrase-congruence-sgine) BARRIER NOT-Attr - ("millijovne" Nom));
+
+COPY:msyn-numphrase-congruence-sgine (Pl Ine SUGGEST) EXCEPT (Pl Nom) OR (Pl Gen) TARGET (Dem Pl Nom &msyn-numphrase-congruence-sgine) OR (Dem Pl Gen &msyn-numphrase-congruence-sgine) OR (Indef Pl Nom &msyn-numphrase-congruence-sgine) OR (Indef Pl Gen &msyn-numphrase-congruence-sgine) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-numphrase-congruence-sgine)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-numphrase-congruence-sgine) LINK *-1 (Dem &msyn-numphrase-congruence-sgine) OR (Indef &msyn-numphrase-congruence-sgine)) ;
+
+	## Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh. > gaajhkine golmene laantesne gååvnesidh.
+	
+	
+		
+	# Demphrase
+	# =========
 
 	
 	# pl nom
@@ -1611,7 +1658,6 @@ ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plcom) TO (-1 (Com &msyn-demph
 	## Gaajhkh nïejtigujmie soptsetim.
 	
 COPY:msyn-demphrase-congruence-plcom (Pl Gen SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom) ;
-
 
 
 
