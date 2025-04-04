@@ -1566,7 +1566,29 @@ ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-nump
 	## Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh. > gaajhkine golmene laantesne gååvnesidh.
 	
 	
-		
+	# sg gen
+	# ------	
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (N Sg Gen) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 (N Pl Nom));
+
+#COPY:msyn-numphrase-congruence-sggen (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sggen) ;
+	
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) - ("akte")  IF (*1 (N &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom));
+
+COPY:msyn-numphrase-congruence-sggen (Sg Gen SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sggen) ;
+
+#ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Dem Pl Nom) OR (Dem Pl Gen) OR (Indef Pl Nom) OR (Indef Pl Gen) IF (*1 (Num &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom));
+
+#COPY:msyn-numphrase-congruence-sggen (Pl Ine SUGGEST) EXCEPT (Pl Nom) OR (Pl Gen) TARGET (Dem Pl Nom &msyn-numphrase-congruence-sggen) OR (Dem Pl Gen &msyn-numphrase-congruence-sggen) OR (Indef Pl Nom &msyn-numphrase-congruence-sggen) OR (Indef Pl Gen &msyn-numphrase-congruence-sggen) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sggen) TO (*-1 (Num &msyn-numphrase-congruence-sggen)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sggen) TO (*-1 (Num &msyn-numphrase-congruence-sggen) LINK *-1 (Dem &msyn-numphrase-congruence-sggen) OR (Indef &msyn-numphrase-congruence-sggen)) ;
+	
+	## Nasjovnegærjagåetie lea akte staaten reereme. > akten staaten
+
+	## Maanah leah gaektsie, govhte jïh golme jaepien båeries > gaektsien, govhten jïh golmen jaepien
+	
+	
 	# Demphrase
 	# =========
 
