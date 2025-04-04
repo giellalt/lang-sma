@@ -1889,8 +1889,17 @@ ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (NOT 0 Attr OR
 	
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET (A &msyn-adj-pred-attr) ;
 
+	# valency errors
+	# ---------------
+	
+	# gaavnedidh + Sem/Hum Com
+	
+	
+ADD:msyn-val-gaavnedidh-com (&msyn-val-gaavnedidh-com) TARGET (N Sg Acc) IF (0 Sem/Hum OR Sem/Ani)(*0 ("gaavnedidh") OR ("gaavnedh" Der/d) BARRIER NOT-NPMOD)(NEGATE 0 Com);
 
+COPY:msyn-val-gaavnedidh-com (Com &SUGGEST) EXCEPT (Acc &msyn-val-gaavnedidh-com) TARGET (Acc &msyn-val-gaavnedidh-com) ;
 
+	## Gyrhkesjimmesne viehkiem åadtjoejibie mijjen jielemem guarkedh jïh Jupmelem gaavnedidh.
 
 	# syntactic errors
 	# ----------------
