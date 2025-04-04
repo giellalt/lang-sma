@@ -1889,6 +1889,15 @@ ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (NOT 0 Attr OR
 	
 COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET (A &msyn-adj-pred-attr) ;
 
+	# Rel mij > gie
+	# -------------
+
+ADD:msyn-rel-mij-gie (&msyn-rel-mij-gie) TARGET ("mij") IF (*-1 (Pron Pers) OR N + Sem/Hum OR ("satne" Sg3) BARRIER S-BOUNDARY);
+
+COPY:msyn-rel-mij-gie ("gie" &SUGGEST) EXCEPT ("mij" &msyn-rel-mij-gie) BEFORE Pron TARGET ("mij" &msyn-rel-mij-gie) ;
+
+	## Njammehtimmieviehkie daam nedtetjaalegem dorjeme dutnjien mij njammehth maahtoeh jïh raerieh vedtedh njammehtimmien bïjre.
+
 	# valency errors
 	# ---------------
 	
