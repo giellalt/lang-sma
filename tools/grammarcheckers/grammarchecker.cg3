@@ -950,7 +950,7 @@ LIST ? = ? ;
 #!! ### Case sets
 # ---------
 
-LIST ADVLCASE = Ill Loc Com Ess ; #!! ADLVCASE
+LIST ADVLCASE = Ill Ine Ela Com Ess ; #!! ADLVCASE
 
 LIST CASE-AGREEMENT = Nom Acc Gen (Pl Ill) Loc Com Ess ; #!! CASE-AGREEMENT
 LIST CASE = Nom Acc Gen Ill Loc Com Ess ; #!! CASE
@@ -1811,7 +1811,7 @@ COPY:syn-number_congruence-subj-verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3 &syn-numb
 
 	# Inf > Pl3
 	# ---------
-ADD:xsyn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Ind Inf) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
+ADD:xsyn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*-1 (Pron Pers Pl3 Nom) OR (Rel Pl Nom) OR (Indef Pl Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - ADVLCASE - (N Acc) - Attr LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
 
 
 ADD:xsyn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *-1 (Pron Pers Sg3) OR VFIN BARRIER NOT-ADV-PCLE); 
@@ -1819,7 +1819,7 @@ ADD:xsyn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-i
 	
 	 
 
-COPY:syn-number_congruence-subj-verb-inf-pl3 (Prs Pl3 SUGGEST) EXCEPT (Inf &syn-number_congruence-subj-verb-inf-pl3) TARGET (Inf &syn-number_congruence-subj-verb-Inf-pl3) ; 
+COPY:syn-number_congruence-subj-verb-inf-pl3 (Ind Prs Pl3 SUGGEST) EXCEPT (Inf &syn-number_congruence-subj-verb-inf-pl3) TARGET (Inf &syn-number_congruence-subj-verb-inf-pl3) ; 
 
 
 
