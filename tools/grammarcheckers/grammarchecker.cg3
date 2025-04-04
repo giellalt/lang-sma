@@ -1442,13 +1442,18 @@ LIST NUMBER = Sg Pl ;
 
 ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NOT 0 ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
 
+ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 CC LINK 1 Gen OR &msyn-po-acc-gen LINK 1 Po LINK NOT 0 ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+
+
 ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (Dem Acc) IF (1 &msyn-po-acc-gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+
 
 ADDRELATION ($2 LEFT) (N &msyn-po-acc-gen) TO (-1 (Dem &msyn-po-acc-gen)) ;
 
 COPY:msyn-po-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER OR ALL-PERS TARGET (&msyn-po-acc-gen);	
 	## Janne  åådtje munnjien {dam}£{infl,pron,sgacc-sggen|dan} {bijre}${vowc,i-ï|bïjre} {mængan}${conc,n-nn|mænngan} {sopsestidh}${conc,ps-pts|soptsestidh}.
 	## Gosse ussjedibie ööhpehtimmien bïjre {dejtie skyllijemaanide}£{noun,case,placc-plgen|dej skyllijemaanaj bïjre ussjedibie.
+	## Badth gosse naemhtie almetjigujmie gaavnedibie mijakt orre, sinsitniem jïh jïjtse bïjre lïerebe. > sinsitninen jïh jïjtse bïjre lïerebe. 
 	
 
 	# Habitive constructions
