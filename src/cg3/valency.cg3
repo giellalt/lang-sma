@@ -1120,8 +1120,23 @@ LIST TH-RO-ESS-V = "utnedh" ;
 	
 SUBSTITUTE (V) (V <TH-Acc-Any><RO-Ess-Any>) TARGET TH-RO-ESS-V - Der/PassL - Der/PassS;
     ## Dam åtnam bïjline.
-    
 
+
+LIST TH-ILL-HUM-V = "jaehkedh" ;
+    
+SUBSTITUTE (V) (V <TH-Ill-Hum>) TARGET TH-ILL-HUM-V - Der/PassL - Der/PassS;
+	## 
+	
+LIST TH-ILL-ANY-V = "geehtedh" ;
+    
+SUBSTITUTE (V) (V <TH-Ill-Any>) TARGET TH-ILL-ANY-V - Der/PassL - Der/PassS;
+	## bïenjeste geehtedh
+
+
+LIST TH-ACC-V = "geehtedh" "jaehkedh" ;
+    
+SUBSTITUTE (V) (V <TH-Acc-Any>) TARGET TH-ACC-V - Der/PassL - Der/PassS;
+	## maanam geehtedh
 
 
 # Adjective valency
