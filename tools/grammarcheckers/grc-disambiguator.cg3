@@ -1590,7 +1590,6 @@ SELECT:Indef Indef - Err/Orth-spes (0 ("mij") LINK *-1 COPULAS BARRIER SV-BOUNDA
 	#$ ij leah dan gåvva maam daan bïjre gaavnedh.
 
 SELECT:Indef Indef - Err/Orth-spes (0 Rel LINK 1 ("gænnah")) ;
-REMOVE:Indef Indef (0 Rel LINK NOT -1 Neg) ;
 
 SELECT:InterrNotRel Interr - Err/Orth-spes (0 Rel LINK NEGATE *-1 Interr)(*1 ("?")) ; 
 REMOVE:RelNotInterr Interr (0 Rel LINK -1 WORD LINK NOT 0 Interj OR CC OR CS) ;
@@ -1984,7 +1983,7 @@ SELECT:IneIfEss/Com (N Pl Ine) - Err/Orth-spes (0 (N Ess) OR (N Sg Com)) (1 ("vi
 REMOVE:EssIfCom/Ine (N Ess) (0 (N Sg Com) OR (N Pl Ine)) (*-1 (Pron Sg Com) OR (Pron Pl Ine) BARRIER NOT-NPMOD OR S-BOUNDARY) ;
 # dajnie barkoeplaanine
 
-SELECT:NPlAcc Acc - Err/Orth-spes (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
+SELECT:NPlAcc Acc - Err/Orth-spes (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh") OR (<TH-Ill-Hum>) OR (<TH-Ill-Any>)) ;
 SELECT:NPlAcc Acc - Err/Orth-spes (0 (N Pl Acc) OR Pron + Pl OR Pron + Pl3 LINK *1 COPULAS BARRIER NOT-ADV LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
 	#$ “Nåå, skodtede amma voesside tsagkedh", aehtjie maanide stillie.
 		#$ akte dejstie njielje jaevrijste dennie tjieltesne mejtie leah deememe.
