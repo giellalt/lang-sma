@@ -1531,7 +1531,6 @@ COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-aux-vfin-inf) OR
 	
 	# Numphrase
 	# =========
-
 	
 	# pl nom
 	# ------
@@ -1551,7 +1550,7 @@ COPY:msyn-numphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (N Nom &m
 	## Gærjagåetien tjåanghkosne 20 miljovnh aamhtese gååvnesieh. > 20 miljovnh aamhtesh gååvnesieh
 	
 	# sg ine
-	# ---------
+	# ------
 	
 ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (N Pl Ine) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 (N Pl Nom));
 
