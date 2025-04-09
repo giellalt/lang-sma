@@ -1499,13 +1499,13 @@ COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt
 LIST AUX = "aelkedh" "båetedh" "edtjedh" "fihkedh" "maehtedh" "provhkedh" "sïjhtedh" "sjïdtedh" "åadtjodh" "galkedh" "tjoeredh" ;
 
 
-ADD:msyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) OR (V Ind Pl3) IF (*-1 AUX + (Ind Prs Sg3) OR AUX + (Ind Prs Pl3) BARRIER (*) - Pcle - Adv LINK NEGATE *-1 Rel BARRIER S-BOUNDARY OR VFIN)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
+ADD:msyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) OR (V Ind Pl3) IF (*-1 AUX + (Ind Prs Sg3) OR AUX + (Ind Prs Pl3) BARRIER (*) - Pcle - Adv LINK NEGATE *-1 Rel OR CS BARRIER S-BOUNDARY OR VFIN)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
 	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
 	## Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
 	## Nimhtie aaj vihkele saemieh maehtieh åadtjoeh gïehtjedimmiejgujmie gïehtelidh.
 	#$ Akte ålma mij jïjnjem daan bïjre maahta {lea} Ingvald Jåma Fosenistie.
 	
-ADD:msyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
+ADD:msyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv LINK NEGATE *-1 Rel OR CS BARRIER S-BOUNDARY OR VFIN)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
 
 
 COPY:msyn-aux-vfin-inf ("årrodh" V IV Inf &SUGGEST) EXCEPT ("lea" V IV Ind Prs Sg3 &msyn-aux-vfin-inf) OR ("lea" V IV Ind Prt Sg3 &msyn-aux-vfin-inf) TARGET ("lea" Sg3 &msyn-aux-vfin-inf) ;
