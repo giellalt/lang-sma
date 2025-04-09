@@ -1535,9 +1535,9 @@ COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-aux-vfin-inf) OR
 	# pl nom
 	# ------
 	
-ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N Sg Nom) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year)(NEGATE 0 (N Pl Nom));
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N Sg Nom) IF (*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom));
 	
-ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (Num Nom) - ("akte")  IF (*1 (N &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
 
 ADD:msyn-numphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Dem Pl Nom) IF (*1 (Num &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
 
@@ -1552,11 +1552,11 @@ COPY:msyn-numphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (N Nom &m
 	# sg ine
 	# ------
 	
-ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (N Pl Ine) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year)(NEGATE 0 (N Pl Nom));
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (N Pl Ine) IF (*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom));
 
 COPY:msyn-numphrase-congruence-sgine (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sgine) ;
 	
-ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Num Nom) - ("akte")  IF (*1 (N &msyn-numphrase-congruence-sgine) BARRIER NOT-Attr - ("millijovne" Nom));
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-sgine) BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 Sem/Year OR Sem/Date);
 
 COPY:msyn-numphrase-congruence-sgine (Sg Ine Attr SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sgine) ;
 
@@ -1573,13 +1573,13 @@ ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-nump
 	
 	# sg gen
 	# ------	
-ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (N Sg Gen) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year)(NEGATE 0 (N Pl Nom));
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (N Sg Gen) IF (*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom));
 
 #COPY:msyn-numphrase-congruence-sggen (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sggen) ;
 	
-ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) - ("akte")  IF (*1 (N &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom));
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 Sem/Year OR Sem/Date);
 
-ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) - ("akte")  IF (1 CC OR COMMA LINK 1 (Num &msyn-numphrase-congruence-sggen) LINK *1 (N &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom));
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) - ("akte") - ("1")  IF (1 CC OR COMMA LINK 1 (Num &msyn-numphrase-congruence-sggen) LINK *1 (N &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom));
 
 COPY:msyn-numphrase-congruence-sggen (Sg Gen SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sggen) ;
 
@@ -1950,7 +1950,7 @@ LIST ONE-smj = "akta" ;
 SET ONE = ONE-smn OR ONE-sme OR ONE-sma OR ONE-smj ;   
 
 #!!  Ensure preceding nominal agrees with the verb
-ADD:xmsyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (-1C (N Sg Nom) - Err/Orth - <spelled> OR Pron + Sg3 + Nom LINK NEGATE *-1 CC BARRIER NOT-NPMOD - (A Sg Nom) LINK -1 (N Nom) OR (Pron Nom)) (0 VFIN) (NOT 0 Sg3 OR (N Sg Acc) OR (N Sg Gen))(NEGATE *1 (N Pl Nom) BARRIER NOT-ADV-PCLE - Attr - (Num Sg Nom))(NEGATE *1 Num - ONE);
+ADD:xmsyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (-1C (N Sg Nom) - Err/Orth - <spelled> OR Pron + Sg3 + Nom LINK NEGATE *-1 CC BARRIER NOT-NPMOD - (A Sg Nom) LINK -1 (N Nom) OR (Pron Nom)) (0 VFIN) (NOT 0 Sg3 OR (N Sg Acc) OR (N Sg Gen))(NEGATE *1 (N Pl Nom) BARRIER NOT-ADV-PCLE - Attr - (Num Sg Nom))(NEGATE *1 Num - ONE)(0C V);
 	#$ Alfabehtas {leat} golbma lassebustáva.
 
 COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
@@ -1971,12 +1971,14 @@ COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARG
 	# Rel mij > gie
 	# -------------
 
-ADD:msyn-rel-mij-gie (&msyn-rel-mij-gie) TARGET ("mij") IF (*-1 (Pron Pers) OR N + Sem/Hum OR ("satne" Sg3) BARRIER S-BOUNDARY)(NEGATE 0 Indef);
+ADD:msyn-rel-mij-gie (&msyn-rel-mij-gie) TARGET ("mij") IF (*-1 (Pron Pers) OR N + Sem/Hum OR ("satne" Sg3) BARRIER S-BOUNDARY)(NEGATE 0 Indef)(NEGATE *-1 (V <TH-FS-Qpron>) BARRIER S-BOUNDARY OR VFIN);
 
 COPY:msyn-rel-mij-gie ("gie" &SUGGEST) EXCEPT ("mij" &msyn-rel-mij-gie) BEFORE Pron TARGET ("mij" &msyn-rel-mij-gie) ;
 
 	## Njammehtimmieviehkie daam nedtetjaalegem dorjeme dutnjien mij njammehth maahtoeh jïh raerieh vedtedh njammehtimmien bïjre.
 	#$ Im maa manne {maam} dah sajvojde jaehkieh Lfr daelie lea maa upplyste tijje, jïh daelie amma kristendomme lea amma mijjide bijjeLls ij amma dah amma naan faamoe utnieh amma mijjen bijjelen.
+	#$ Soptsesth learohkigujmie man åvteste gïehtjedimmiem tjaeledh, jïh maam gïehtjedimmie mïeteste.
+
 
 	# valency errors
 	# ---------------
