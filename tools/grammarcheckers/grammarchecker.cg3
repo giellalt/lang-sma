@@ -1867,8 +1867,9 @@ COPY:syn-number_congruence-subj-verb-pl3-sg3 (Sg3 SUGGEST) EXCEPT (Pl3 &syn-numb
 	# Sg2 > Pl3
 	# ---------
 
-ADD:xsyn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg2-pl3) TARGET (V Ind Prs Sg2) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR (Pers Sg2) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE); 
+ADD:xsyn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg2-pl3) TARGET (V Ind Prs Sg2) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR (Pers Sg2) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 Inf LINK *-1 AUX BARRIER S-BOUNDARY OR VFIN); 
 	## Gåessie båetije laake tseegkesovvedh saemiej reaktaj bïjre dellie saemieh tjoeverh daam dåhkasjehtedh.
+	#$ 
 
 COPY:syn-number_congruence-subj-verb-sg2-pl3 (Pl3 SUGGEST) EXCEPT (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) TARGET (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) ; 
 
@@ -1930,17 +1931,13 @@ COPY:msyn-pass-active (TV &SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pas
 
 #!! VERB agreement
 
-#ADD:xmsyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 Adv LINK 1 V + Sg1);
- ADD:xmsyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
+ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET (V Ind) IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom LINK NEGATE -1 CC LINK -1 (N Nom) OR (Pron Pers Nom))(0C V)(NOT 0 Sg1 OR N);
  
 COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-other-sg1);
 COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
-#COPY:msyn-agr-other-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &msyn-agr-other-sg1);
-
-#% Manne båata.
-#$ Manne båatam.
-#$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
-#$ Tomhân mun tiäđust-uv paaččim.
+	#$ Gosse åehpiedahtam guktie dah göökte dåehkieh vaestiedamme dellie manne {goerh}, grafihke guvvieh jïh teekstem nuhtjeme."
+	## Manne lohkedh.
+	#$ Jïh daennie soptsesisnie åadtjoeh govledh mij heannadi goh Lasse jïh manne {edtjimen} mïnnedh sarvh vuetjedh.
 
 
 
@@ -2139,11 +2136,14 @@ ADDRELATION (DELETE1) ("guktie" &syn-redun-before-guktie) TO (-1 &syn-redun-befo
 	# goh nom > ess
 	# - - - - - - - 
 
-ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET ("goh") IF (*1 (N Nom) - <spelled> BARRIER NOT-Attr LINK NEGATE 1 VFIN) ;
+ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET ("goh") IF (-1 <TH-Acc-Any><RO-Ess-Any> OR <RO-Ess-Any>)(*1 (N Nom) - <spelled> BARRIER NOT-Attr LINK NEGATE 1 VFIN) ;
+
+ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET ("goh") IF (-1 ("seamma"))(*1 (N Nom) - <spelled> BARRIER NOT-Attr LINK NEGATE 1 VFIN) ;
 
 ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET (N Nom) IF (*-1 ("goh" &syn-goh_nom-ess) BARRIER NOT-Attr) ;	
 	## Desnie aaj daerpies gïelem provhkedh goh dïrrege gosse jeatja faagh ööhpehtidh.
 	## åadtjodh goh voestes gïele gosse skuvlesne aelkieh.
+	#$ Jïh daennie soptsesisnie åadtjoeh govledh mij heannadi goh Lasse jïh manne edtjimen mïnnedh sarvh vuetjedh.
 	
 COPY:syn-goh_nom-ess (Ess &SUGGEST) EXCEPT (Sg Nom &syn-goh_nom-ess) OR (Pl Nom &syn-goh_nom-ess) TARGET (N &syn-goh_nom-ess) ;	
 
