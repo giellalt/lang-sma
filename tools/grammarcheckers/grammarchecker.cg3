@@ -1535,7 +1535,7 @@ COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-aux-vfin-inf) OR
 	# pl nom
 	# ------
 	
-ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N Sg Nom) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 (N Pl Nom));
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N Sg Nom) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year)(NEGATE 0 (N Pl Nom));
 	
 ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (Num Nom) - ("akte")  IF (*1 (N &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
 
@@ -1552,7 +1552,7 @@ COPY:msyn-numphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (N Nom &m
 	# sg ine
 	# ------
 	
-ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (N Pl Ine) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 (N Pl Nom));
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (N Pl Ine) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year)(NEGATE 0 (N Pl Nom));
 
 COPY:msyn-numphrase-congruence-sgine (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sgine) ;
 	
@@ -1573,7 +1573,7 @@ ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-nump
 	
 	# sg gen
 	# ------	
-ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (N Sg Gen) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom))(NEGATE 0 (N Pl Nom));
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (N Sg Gen) IF (*-1 (Num Nom) - ("akte") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year)(NEGATE 0 (N Pl Nom));
 
 #COPY:msyn-numphrase-congruence-sggen (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sggen) ;
 	
@@ -1867,9 +1867,9 @@ COPY:syn-number_congruence-subj-verb-pl3-sg3 (Sg3 SUGGEST) EXCEPT (Pl3 &syn-numb
 	# Sg2 > Pl3
 	# ---------
 
-ADD:xsyn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg2-pl3) TARGET (V Ind Prs Sg2) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR (Pers Sg2) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 Inf LINK *-1 AUX BARRIER S-BOUNDARY OR VFIN); 
+ADD:syn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg2-pl3) TARGET (V Ind Prs Sg2) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR (Pers Sg2) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 Inf LINK *-1 AUX BARRIER S-BOUNDARY OR VFIN); 
 	## Gåessie båetije laake tseegkesovvedh saemiej reaktaj bïjre dellie saemieh tjoeverh daam dåhkasjehtedh.
-	#$ 
+	#$ Jïh daennie soptsesisnie åadtjoeh govledh mij heannadi goh Lasse jïh manne edtjimen mïnnedh sarvh vuetjedh.
 
 COPY:syn-number_congruence-subj-verb-sg2-pl3 (Pl3 SUGGEST) EXCEPT (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) TARGET (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) ; 
 
@@ -2009,7 +2009,7 @@ LIST UP-ADV-smn = "pajas" ;
 SET UP-ADV = UP-ADV-sma OR UP-ADV-smj OR UP-ADV-sme OR UP-ADV-smn ;
 
 
-LIST WRITE-V-sma = "tjaeledh" ;
+LIST WRITE-V-sma = "tjaeledh" "tjaalasovvedh" ;
 LIST WRITE-V-smj = "tjállet" ;
 LIST WRITE-V-sme = "čállit" ;
 LIST WRITE-V-smn = "čäälliđ" ;
@@ -2034,17 +2034,21 @@ LIST STAND-UP-V-sme = "čuožžilit" ;
 LIST STAND-UP-V-smn = "čyežžiliđ" ;
 SET STAND-UP-V = STAND-UP-V-sma OR STAND-UP-V-smj OR STAND-UP-V-sme OR STAND-UP-V-smn ;
 
-ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  WRITE-V BARRIER (*) - Pcle) ;
-	## tjaelieh våålese! 
-ADD:xsyn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 STAND-UP-V OR ("fulkedh")) (*0 UP-ADV BARRIER (*) - Pcle) ;
+
+ADD:syn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 STAND-UP-V OR ("fulkedh")) (*0 UP-ADV BARRIER (*) - Pcle) ;
 	## tjuedtjelh bæjjese! 
 	## vaeltieh dejtie bïssedh!
 	
+ADD:syn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 WRITE-V OR ("fulkedh")) (*0 DOWN-ADV BARRIER (*) - Pcle) ;
+
+ADD:syn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  WRITE-V BARRIER (*) - Pcle) ;
+	## tjaelieh våålese! 
+	
 	## Gyhtjelassh goh guktie daate tsiehkie meehti dan stoerre sjïdtedh åvtelen gïetesovvi, jïh guktie byögkeles instaansh systematihkeles eah leah sijjen barkoem dorjeme juktie daaresjimmie-aamhtesh {bæjjese} fulkedh, Mikkelsen jeahta.
 
-ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-adv-phrasal-verb) BARRIER (*) - Pcle) ;
+ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-adv-phrasal-verb)) ;
 
-COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
+#COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
 
 	# Phrasal verbs in Norwegian with a lexical equivalent in South Sámi 2->1
 	# -------------------------------------------------------------------------
