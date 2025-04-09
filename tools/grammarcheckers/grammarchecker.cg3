@@ -1508,11 +1508,11 @@ ADD:msyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) OR (V Ind Pl3) IF 
 ADD:msyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
 
 
-COPY:msyn-aux-vfin-inf ("årrodh" V IV Inf &SUGGEST) EXCEPT ("lea" V IV Ind Prs Sg3 &msyn-aux-vfin-inf) TARGET ("lea" Sg3 &msyn-aux-vfin-inf) ;
-COPY:msyn-aux-vfin-inf ("årrodh" V IV Inf &SUGGEST) EXCEPT ("lea" V IV Ind Prs Pl3 &msyn-aux-vfin-inf) TARGET ("lea" Pl3 &msyn-aux-vfin-inf) ;
+COPY:msyn-aux-vfin-inf ("årrodh" V IV Inf &SUGGEST) EXCEPT ("lea" V IV Ind Prs Sg3 &msyn-aux-vfin-inf) OR ("lea" V IV Ind Prt Sg3 &msyn-aux-vfin-inf) TARGET ("lea" Sg3 &msyn-aux-vfin-inf) ;
+COPY:msyn-aux-vfin-inf ("årrodh" V IV Inf &SUGGEST) EXCEPT ("lea" V IV Ind Prs Pl3 &msyn-aux-vfin-inf) OR ("lea" V IV Ind Prt Pl3 &msyn-aux-vfin-inf) TARGET ("lea" Pl3 &msyn-aux-vfin-inf) ;
 
-COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) TARGET (Sg3 &msyn-aux-vfin-inf) IF (NEGATE 0 ("lea")) ;
-COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-aux-vfin-inf) TARGET (Pl3 &msyn-aux-vfin-inf) (NEGATE 0 ("lea"));
+COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) OR (Ind Prt Sg3 &msyn-aux-vfin-inf) TARGET (Sg3 &msyn-aux-vfin-inf) IF (NEGATE 0 ("lea")) ;
+COPY:msyn-aux-vfin-inf (Inf &SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-aux-vfin-inf) OR (Ind Prt Pl3 &msyn-aux-vfin-inf) TARGET (Pl3 &msyn-aux-vfin-inf) (NEGATE 0 ("lea"));
 	## Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
 	
 	# Inf > Pl3
