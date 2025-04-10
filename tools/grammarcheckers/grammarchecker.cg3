@@ -1539,11 +1539,12 @@ ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N
 	
 ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
 
-ADD:msyn-numphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Dem Pl Nom) IF (*1 (Num &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (Dem Pl Nom) IF (*1 (Num &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom));
 
 
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-plnom) TO (*-1 (Dem &msyn-numphrase-congruence-plnom)) ;
+ 
 ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-plnom) TO (*-1 (Num &msyn-numphrase-congruence-plnom)) ;	
-ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plnom) TO (*-1 (Num &msyn-numphrase-congruence-plnom) LINK *-1 (Dem &msyn-numphrase-congruence-plnom)) ;
 	
 COPY:msyn-numphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (N Nom &msyn-numphrase-congruence-plnom) ;
 
@@ -1604,7 +1605,7 @@ ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sggen) TO (*-1 (Num &msyn-nump
 	# pl nom
 	# ------
 	
-ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(*1 (N Pl Nom) BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Nom));
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(*1 (N Pl Nom) BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Nom))(NEGATE 0 ("dïhte") LINK 1 (Dem Pl Nom));
 
 ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Pl Nom) IF (*-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr) (1 (N Pl Nom));
 
