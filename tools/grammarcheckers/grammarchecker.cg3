@@ -1684,14 +1684,16 @@ COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Pl Nom) TARGET (De
 	# pl ela
 	# ------
 
-ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(1 (N Pl Ela));
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) OR (Pron Sg Ine Attr) IF (0 Dem OR Indef)(*1 (N Pl Ela) BARRIER (*) - Attr);
+	## 	Dah aamhtesh dennie Sveerjen tjåanghkojste ij åadtjoeh dejtie gåatan löönedh. > dehtie
 
-ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela));
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) BARRIER (*) - Attr);
 
-ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plela) TO (-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela)) ;	
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plela) TO (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela)) ;	
 	## gaajhkh lehkeste hov bovtsh böötin.
 	
-COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) ;
+COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Sg Ine Attr) TARGET (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) ;
 
 	# pl com
 	# ------
@@ -1704,6 +1706,7 @@ ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plcom) TO (-1 (Com &msyn-demph
 	## Gaajhkh nïejtigujmie soptsetim.
 	
 COPY:msyn-demphrase-congruence-plcom (Pl Gen SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom) ;
+
 
 
 
