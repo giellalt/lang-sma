@@ -1681,14 +1681,20 @@ COPY:msyn-demphrase-congruence (Pl Ill SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msy
 	# pl ine
 	# ------
 
-ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(1 (N Pl Ine));
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(*1 (N Pl Ine) OR (N Sg Ine) BARRIER (*) - Attr);
 
-ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (N Pl Ine) IF (-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline));
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (N Pl Ine) OR (N Sg Ine) IF (*-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline) BARRIER (*) - Attr);
 
-ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-pline) TO (-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline)) ;	
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-pline) TO (*-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline)) ;	
 	## Dïhte gaajhkh lehkine mïnni.
 	
+	# Dem error
+	
 COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline) ;
+
+	# Noun error
+	
+COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Sg Ine) TARGET (Sg N &msyn-demphrase-congruence-pline) ;
 
 	# pl ela
 	# ------
