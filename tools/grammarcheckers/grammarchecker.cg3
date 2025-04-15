@@ -1639,16 +1639,25 @@ COPY:msyn-demphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (Dem &msy
 	# pl acc
 	# ------
 	
-ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef)(*1 (N Pl Acc) BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Acc));
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef)(*1 (N Pl Acc) OR (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Acc));
 
-ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Pl Acc) IF (*-1 (Pron Dem Pl Acc &msyn-demphrase-congruence-placc) BARRIER NOT-Attr) (1 (N Pl Acc));
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Pl Acc) IF (0 Dem OR Indef)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr);
 
-ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (N Pl Acc) IF (*-1 (Dem &msyn-demphrase-congruence-placc) OR (Indef &msyn-demphrase-congruence-placc) BARRIER NOT-Attr);
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Pl Acc) IF (*-1 (Pron Dem Pl Acc &msyn-demphrase-congruence-placc) BARRIER NOT-Attr) (1 (N Pl Acc) OR (N Sg Acc));
+
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (N Pl Acc) OR (N Sg Acc) IF (*-1 (Dem &msyn-demphrase-congruence-placc) OR (Indef &msyn-demphrase-congruence-placc) BARRIER NOT-Attr);
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-placc) TO (*-1 (Dem &msyn-demphrase-congruence-placc) OR (Indef &msyn-demphrase-congruence-placc) BARRIER NOT-Attr) ;	
 ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plnom) TO (*-1 (Dem &msyn-demphrase-congruence-placc) OR (Indef &msyn-demphrase-congruence-placc) BARRIER NOT-Attr LINK -1 (Indef &msyn-demphrase-congruence-placc)) ;
-	
-COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (Acc Dem &msyn-demphrase-congruence-placc) OR (Acc Indef &msyn-demphrase-congruence-placc) ;
+
+	# dem error	
+COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (Sg Acc Dem &msyn-demphrase-congruence-placc) OR (Sg Acc Indef &msyn-demphrase-congruence-placc) ;
+
+	# noun error
+COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (N Sg Acc &msyn-demphrase-congruence-placc) ;
+
+
+	## Gærjagåetie dejtie almetjivåarhkoem vaarjele, eeremes leah Astrid Lindgren, August Strindberg jïh Dag Hammarsköld. > dejtie almetjivåarhkojde
 
 	
 	# pl ill
@@ -1694,6 +1703,8 @@ ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plela) TO (*-1 (Dem &msyn-demp
 	## gaajhkh lehkeste hov bovtsh böötin.
 	
 COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Sg Ine Attr) TARGET (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) ;
+
+	## Jienebh dejstie aamhtesidie jeatjahligke buvresne/våarhkosne vöörhkeme, daan åvteste tjuara dejtie åvtelen dængkodh. > dejstie aamhtesijstie
 
 	# pl com
 	# ------
