@@ -1696,13 +1696,15 @@ COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Pl Nom) TARGET (De
 	
 COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Sg Ine) TARGET (Sg N &msyn-demphrase-congruence-pline) ;
 
+	## Daej lissine gellie jeatjah barkijh, dovne ekonovmh, kanslijebarkijh, bievniehtæjjah jïh juristh. > daejnie lissine
+
 	# pl ela
 	# ------
 
 ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) OR (Pron Sg Ine Attr) IF (0 Dem OR Indef)(*1 (N Pl Ela) BARRIER (*) - Attr);
 	## 	Dah aamhtesh dennie Sveerjen tjåanghkojste ij åadtjoeh dejtie gåatan löönedh. > dehtie
 
-ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) BARRIER (*) - Attr);
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) BARRIER (*) - Attr);
 
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plela) TO (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela)) ;	
