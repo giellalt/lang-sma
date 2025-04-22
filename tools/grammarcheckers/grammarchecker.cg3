@@ -1615,12 +1615,15 @@ ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sggen) TO (*-1 (Num &msyn-nump
 	
 	# Demphrase
 	# =========
+	
+LIST SG-INDEF-PRON = "muvhte" ;
+	## Plaerine våhkoen gyrhkesjimmide gaavnh  mij gyrhkesjimmide muvhth gærhkojne dov årromesijjesne gaavnh. > muvhtene gærhkosne
 
 	
 	# pl nom
 	# ------
 	
-ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef)(*1 (N Pl Nom) - ABBR - Prop BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Nom))(NEGATE 0 ("dïhte") LINK 1 (Dem Pl Nom));
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Nom) - ABBR - Prop BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Nom))(NEGATE 0 ("dïhte") LINK 1 (Dem Pl Nom));
 
 ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Pl Nom) IF (*-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr) (1 (N Pl Nom))(NEGATE 0 ABBR OR Prop);
 
@@ -1639,9 +1642,9 @@ COPY:msyn-demphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (Dem &msy
 	# pl acc
 	# ------
 	
-ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef)(*1 (N Pl Acc) OR (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Acc));
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Acc) OR (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Acc));
 
-ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Pl Acc) IF (0 Dem OR Indef)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr);
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Pl Acc) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr);
 
 ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Pl Acc) IF (*-1 (Pron Dem Pl Acc &msyn-demphrase-congruence-placc) BARRIER NOT-Attr) (1 (N Pl Acc) OR (N Sg Acc));
 
@@ -1663,7 +1666,7 @@ COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (N 
 	# pl ill
 	# ------
 
-ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(*1 (N Pl Ill) OR (N Pl Acc) BARRIER (*) - (Dem Nom));
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ill) OR (N Pl Acc) BARRIER (*) - (Dem Nom));
 
 ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plill)) (1 (N Pl Ill) OR (N Pl Acc));
 
@@ -1681,7 +1684,7 @@ COPY:msyn-demphrase-congruence (Pl Ill SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msy
 	# pl ine
 	# ------
 
-ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(*1 (N Pl Ine) OR (N Sg Ine) BARRIER (*) - Attr);
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ine) OR (N Sg Ine) BARRIER (*) - Attr);
 
 ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (N Pl Ine) OR (N Sg Ine) IF (*-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline) BARRIER (*) - Attr);
 
@@ -1701,7 +1704,7 @@ COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Sg Ine) TARGET (Sg
 	# pl ela
 	# ------
 
-ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) OR (Pron Sg Ine Attr) IF (0 Dem OR Indef)(*1 (N Pl Ela) BARRIER (*) - Attr);
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) OR (Pron Sg Ine Attr) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ela) BARRIER (*) - Attr);
 	## 	Dah aamhtesh dennie Sveerjen tjåanghkojste ij åadtjoeh dejtie gåatan löönedh. > dehtie
 
 ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) BARRIER (*) - Attr);
@@ -1720,7 +1723,7 @@ COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Sg Ine
 	# pl com
 	# ------
 
-ADD:msyn-demphrase-congruence-plcom (&msyn-demphrase-congruence-plcom) TARGET (Pron Pl Nom) IF (0 Dem OR Indef)(1 (N Pl Com));
+ADD:msyn-demphrase-congruence-plcom (&msyn-demphrase-congruence-plcom) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(1 (N Pl Com));
 
 ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plcom) TARGET (N Pl Com) IF (-1 (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom));
 
