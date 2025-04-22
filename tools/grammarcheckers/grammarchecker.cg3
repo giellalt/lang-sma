@@ -1431,7 +1431,7 @@ COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-
 	# Com before ektine
 	# -----------------
 	
-ADD:xmsyn-ektine-gen-com (&msyn-ektine-gen-com) TARGET (N Gen) IF (1 ("ektine"))(NEGATE -1 Pr);
+ADD:msyn-ektine-gen-com (&msyn-ektine-gen-com) TARGET (N Gen) IF (1 ("ektine"))(NEGATE -1 Pr);
 	## dejstie bieliejaepien tjåanghkosne eejhtegi ektine
 	## Daate konvensjovne lea tjaalasovveme saemiej ektine 
 	## Staath edtjieh, gosse daerpies, saemiedigkiej ektine barkedh.
@@ -1443,12 +1443,12 @@ COPY:msyn-ektine-gen-com (Com &SUGGEST) EXCEPT (Gen &msyn-ektine-gen-com) TARGET
 	
 LIST NUMBER = Sg Pl ;
 
-ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NOT 0 Adv OR ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+ADD:msyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NOT 0 Adv OR ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
 
-ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 CC LINK 1 Gen OR &msyn-po-acc-gen LINK 1 Po LINK NOT 0 ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+ADD:msyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 CC LINK 1 Gen OR &msyn-po-acc-gen LINK 1 Po LINK NOT 0 ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
 
 
-ADD:xmsyn-po-acc-gen (&msyn-po-acc-gen) TARGET (Dem Acc) IF (1 &msyn-po-acc-gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+ADD:msyn-po-acc-gen (&msyn-po-acc-gen) TARGET (Dem Acc) IF (1 &msyn-po-acc-gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
 
 
 ADDRELATION ($2 LEFT) (N &msyn-po-acc-gen) TO (-1 (Dem &msyn-po-acc-gen)) ;
@@ -1461,9 +1461,9 @@ COPY:msyn-po-acc-gen (Gen &SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER 
 
 	# Habitive constructions
 	# -----------------------		
-ADD:xmsyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Pl3) LINK 1 (N Pl Nom) - <spelled> - Err/Spellrelax OR (Pron Pl Nom))(NEGATE -1 (V <TH-FS>));
+ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Pl3) LINK 1 (N Pl Nom) - <spelled> - Err/Spellrelax OR (Pron Pl Nom))(NEGATE -1 (V <TH-FS>));
 
-ADD:xmsyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Sg3) LINK 1 (N Sg Nom) - <spelled> - Err/Spellrelax OR (Pron Sg Nom) LINK NOT 0 Adv)(NEGATE -1 (V <TH-FS>));	
+ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Sg3) LINK 1 (N Sg Nom) - <spelled> - Err/Spellrelax OR (Pron Sg Nom) LINK NOT 0 Adv)(NEGATE -1 (V <TH-FS>));	
 
 
 COPY:msyn-hab-nom-gen (Gen &SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBER TARGET (&msyn-hab-nom-gen);
@@ -1481,7 +1481,7 @@ LIST MAYBE-V-sme = "soaitit" ;
 LIST MAYBE-V-smn = "sättiđ" ;
 SET MAYBE-V = MAYBE-V-smj OR MAYBE-V-sma OR MAYBE-V-sme OR MAYBE-V-smn ;
 
-ADD:xmsyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET MAYBE-V + (Ind Prs Sg3)  (*1 VFIN - Sg3 BARRIER (*) - Pcle - Adv) ;
+ADD:msyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET MAYBE-V + (Ind Prs Sg3)  (*1 VFIN - Sg3 BARRIER (*) - Pcle - Adv) ;
 	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
 		
 COPY:msyn-sååjhtoe-VFinitt (Sg1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg1) ;
@@ -1853,18 +1853,18 @@ COPY:msyn-Neg-ConNeg-Congr-SgPl (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Cong
 
 	# NEG: Neg.Prt Copula.ConNeg.Prt eller Prs > Neg.Prs Copula.ConNeg.Prt
 	
-ADD:xmsyn-NegPrt-NegPrs (&msyn-NegPrt-NegPrs) TARGET (Neg Prt) IF (1 BE + ConNeg) ;
+ADD:msyn-NegPrt-NegPrs (&msyn-NegPrt-NegPrs) TARGET (Neg Prt) IF (1 BE + ConNeg) ;
 	## Idtji lij man gåågkehke
 	## Jih dej beeli goh saemieh idtjin lih annje aalkeme tjaeledh, dellie soetestimmie lij aajne vuekie mijjen maahtoe, histovrije jih aerpievierhtieh vijriebasse vedtedh. 
 
-COPY:xmsyn-NegPrt-NegPrs (Prs &SUGGEST) EXCEPT (Prt) BEFORE ALL-PERS TARGET (&msyn-NegPrt-NegPrs);
+COPY:msyn-NegPrt-NegPrs (Prs &SUGGEST) EXCEPT (Prt) BEFORE ALL-PERS TARGET (&msyn-NegPrt-NegPrs);
 
 
 # Congruence between subject and verb in habitive constructions 
 
 # ij leah dov naan/rööpses/vielie måvhkah -> ij --> eah 
 
-ADD:xmsyn-number_congruence-subj-copula-hab (&msyn-number_congruence-subj-copula-hab) TARGET NEG-V + Neg + Prs + Sg3 IF (1 ConNeg LINK 1 (Pron Pers Gen) LINK *1 (N Pl Nom) 
+ADD:msyn-number_congruence-subj-copula-hab (&msyn-number_congruence-subj-copula-hab) TARGET NEG-V + Neg + Prs + Sg3 IF (1 ConNeg LINK 1 (Pron Pers Gen) LINK *1 (N Pl Nom) 
 BARRIER NOT-NPMODADV) (*0 (Pron Pers Gen) OR (N Gen) + Sem/Hum BARRIER S-BOUNDARY) ;
 
 
@@ -1877,10 +1877,10 @@ COPY:msyn-number_congruence-subj-copula-hab (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-num
 	 # Prs Du1 > Prs Pl3
 	 # -----------------
 
-ADD:xsyn-number_congruence-subj-verb-du1-pl3 (&syn-number_congruence-subj-verb-du1-pl3) TARGET (Ind Prs Du1) IF (*-1 (N Pl Nom) OR (Pron Pl Nom) OR (Pron Pl3 Nom) BARRIER NOT-ADV-PCLE - Ine OR (Adv Subqst));
+ADD:syn-number_congruence-subj-verb-du1-pl3 (&syn-number_congruence-subj-verb-du1-pl3) TARGET (Ind Prs Du1) IF (*-1 (N Pl Nom) OR (Pron Pl Nom) OR (Pron Pl3 Nom) BARRIER NOT-ADV-PCLE - Ine OR (Adv Subqst));
 
 COPY:syn-number_congruence-subj-verb-du1-pl3 (Pl3 SUGGEST) EXCEPT (Du1 &syn-number_congruence-subj-verb-du1-pl3) TARGET (Du1 &syn-number_congruence-subj-verb-du1-pl3) ; 
-	## Lea goh {numtie}${adv,conc|numhtie} ahte {dihte}${dem,ascii|dïhte} saemien blogge ij {govnes}${verb,mix|gååvnesh} {dannasinnie}${adv,con|dannasinie} goh dan vaenieh almetjh mah {sijhtien}£{verb,subj_verb_kongr,prsdu1-prspl3,tense|sijhtieh} lohkedh?
+	## Lea goh numhtie ahte dïhte saemien blogge ij gååvnesh dannasinie goh dan vaenieh almetjh mah {sijhtien}£{verb,subj_verb_kongr,prsdu1-prspl3,tense|sijhtieh} lohkedh?
 	## Luste lea vuejnedh guktie dah gïeline berkien. {verb,subj_verb_kongr,prsdu1-prspl3,tense|berkieh}!
 
 
@@ -1895,10 +1895,10 @@ COPY:syn-number_congruence-subj-verb-du1-pl3 (Pl3 SUGGEST) EXCEPT (Du1 &syn-numb
 
 	# Pl3 > Sg3
 	# ---------
-ADD:xsyn-number_congruence-subj-verb-pl3-sg3 (&syn-number_congruence-subj-verb-pl3-sg3) TARGET (V Ind Prs Pl3) IF (*-1 (Pron Pers Sg3 Nom) OR (Pron Logo Sg3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
+ADD:syn-number_congruence-subj-verb-pl3-sg3 (&syn-number_congruence-subj-verb-pl3-sg3) TARGET (V Ind Prs Pl3) IF (*-1 (Pron Pers Sg3 Nom) OR (Pron Logo Sg3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
 
 
-ADD:xsyn-number_congruence-subj-verb-pl3-sg3 (&syn-number_congruence-subj-verb-pl3-sg3) TARGET (V Ind Prs Pl3) IF (*-1C (N Sg Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom))
+ADD:syn-number_congruence-subj-verb-pl3-sg3 (&syn-number_congruence-subj-verb-pl3-sg3) TARGET (V Ind Prs Pl3) IF (*-1C (N Sg Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom))
 (NEGATE 0 <TH-FS> LINK *1 (N Pl Nom) BARRIER NOT-NPMOD - Dem - ("dïhte") LINK *1 VFIN);
 	#$ [ Im ] manne is daelie mujhtieh rikti mah kraesieh men jijnje kraesieh hov dejpeli provhkimh aaj voessjedh jih gosse vaerhkieb utnieh jih dejnie låetjedh. 
 	## Mubpien stuhtjesne dennie kapihtelisnie leam dam saemien gïelebuerkiestimmiem gïehtjedamme jïh dejtie stuhtjide destie tjöönghkeme mejtie lïhke mov ïebne {leah}.
@@ -1922,12 +1922,12 @@ COPY:syn-number_congruence-subj-verb-sg2-pl3 (Pl3 SUGGEST) EXCEPT (Sg2 &syn-numb
 	
 LIST JIEHTEDH = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "praahkedh" "stilledh" "tjaalasovvedh" "tjåarvodh" "onterdidh" "ussjedidh" "vaestiedidh" ;
 
-ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) - <spelled> BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) - <spelled> BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
 
 
-ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR ("dle") LINK NEGATE 0 (N Sg Nom) OR <spelled>)(NEGATE *-1 (Pron Pers Sg3) BARRIER NOT-ADV-PCLE); 
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR ("dle") LINK NEGATE 0 (N Sg Nom) OR <spelled>)(NEGATE *-1 (Pron Pers Sg3) BARRIER NOT-ADV-PCLE); 
 
-ADD:xsyn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR ("dle") LINK NOT 0 (N Sg Nom) OR <spelled> LINK NEGATE *-1 Rel OR Interr OR ("mejtie"))(NEGATE *-1 (Pron Pers Sg3) BARRIER NOT-ADV-PCLE)(NEGATE *1 ("?")); 
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR ("dle") LINK NOT 0 (N Sg Nom) OR <spelled> LINK NEGATE *-1 Rel OR Interr OR ("mejtie"))(NEGATE *-1 (Pron Pers Sg3) BARRIER NOT-ADV-PCLE)(NEGATE *1 ("?")); 
 	## Ovjaksoe lea neerrehtimmie – almetjh heaptoejgujmie {edtja}£{subj-verb-kongr,verb,prssg3-prspl3|edtjieh} nuepieh utnedh meatan årrodh ellies {vyøhkesadtememem}${x,mix|vyöhkesjadtemem}.
 	## Gïeline ektine lea barkoeh mah båatsoebårran veadtaldihkie, saemide joekoen dovrehke.
 	
@@ -1938,10 +1938,10 @@ COPY:syn-number_congruence-subj-verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3 &syn-numb
 
 	# Inf > Pl3
 	# ---------
-ADD:xsyn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*-1 (Pron Pers Pl3 Nom) OR (Rel Pl Nom) OR (Indef Pl Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - ADVLCASE - (N Acc) - Attr LINK NOT 0 (N Sg Nom) LINK NEGATE *-1 VFIN + COPULAS OR VFIN + AUX BARRIER S-BOUNDARY)(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
+ADD:syn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*-1 (Pron Pers Pl3 Nom) OR (Rel Pl Nom) OR (Indef Pl Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - ADVLCASE - (N Acc) - Attr LINK NOT 0 (N Sg Nom) LINK NEGATE *-1 VFIN + COPULAS OR VFIN + AUX BARRIER S-BOUNDARY)(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
 
 
-ADD:xsyn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *-1 (Pron Pers Sg3) OR VFIN BARRIER NOT-ADV-PCLE); 
+ADD:syn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *-1 (Pron Pers Sg3) OR VFIN BARRIER NOT-ADV-PCLE); 
 	## maahta vadtasovvedh dejtie guhtide geerve gïeline gïehtelidh.
 	
 	 
@@ -1975,7 +1975,7 @@ COPY:msyn-pass-active (TV &SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pas
 
 #!! VERB agreement
 
-ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET (V Ind) IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom LINK NEGATE -1 CC LINK -1 (N Nom) OR (Pron Pers Nom))(0C V)(NOT 0 Sg1 OR N);
+ADD:xmsyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET (V Ind) IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom LINK NEGATE -1 CC LINK -1 (N Nom) OR (Pron Pers Nom))(0C V)(NOT 0 Sg1 OR N);
  
 COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-other-sg1);
 COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
@@ -2098,14 +2098,14 @@ ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-a
 
 	# Phrasal verbs in Norwegian with a lexical equivalent in South Sámi 2->1
 	# -------------------------------------------------------------------------
-ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  COME-V BARRIER (*) - Pcle) (*0 Nom + Sem/Money OR Sem/Amount);
+ADD:syn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  COME-V BARRIER (*) - Pcle) (*0 Nom + Sem/Money OR Sem/Amount);
 ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 COME-V) (*0 DOWN-ADV BARRIER (*) - Pcle) ;
 	## Maaksoeh tjuerieh våålese båetedh. > Maaksoeh tjuerieh aelpiedovvedh. 
 	#$ Mijjen 133.000 årrojigujmie dle ibie buektehth {våålese båetedh} akten laanten gaskemedtien gaåjkoe, goh Åarjel-Trööndelagen fylhkentjïelte maahta sov 300.000 årrojigujmie.
 	#$ Maahtah våålese båetedh, riepie jeehti, juktie daelie lea gaajhki kreeki gaskem raeffie.
 	#$ Båetieh våålese, riepie gåtjkoeji, die edtjh maam akt rovnegem åadtjodh govledh.
 	
-ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 UP-ADV) (*0 ("bigkedh") BARRIER (*) - Pcle) ;
+ADD:syn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 UP-ADV) (*0 ("bigkedh") BARRIER (*) - Pcle) ;
 ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 BUILD-V) (*0 UP-ADV BARRIER (*) - Pcle) ;
 	## Saemiedigkie sæjhta viehkiehtidh dam lïhkes mearoegaedtievïnhtseveahkam	{bæjjese bigkedh} 	dejnie mearoesaemien årromedajvine, jïh dåarjoem prioriterede noere göölijidie mah voestes aejkien vïnhtsem åestieh.   ----- --> {Tseegkedh} 
 	
@@ -2135,15 +2135,15 @@ LIST PUT-V-sme = "bidjat" ;
 LIST PUT-V-smn = "pieijâđ" ;
 SET PUT-V = PUT-V-sma OR PUT-V-smj OR PUT-V-sme OR PUT-V-smn ;
 
-ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 UP-ADV) (1 TAKE-V OR PUT-V)(NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Sem/Prod-audio) ;
-ADD:xsyn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET TAKE-V OR PUT-V IF (-1 UP-ADV LINK NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Der/NomAct OR Sem/Prod-audio);
+ADD:syn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 UP-ADV) (1 TAKE-V OR PUT-V)(NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Sem/Prod-audio) ;
+ADD:syn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET TAKE-V OR PUT-V IF (-1 UP-ADV LINK NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Der/NomAct OR Sem/Prod-audio);
 
 
 	# phrasal verbs with bæjese
 	# - - - - - - - - - - - - -
-COPY:xsyn-phrasal-verb-phrasal-verb ("bïejedh" &SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(-1 ("bæjjese") LINK -1 Acc LINK 0 Sem/Prod-audio) ;
+COPY:syn-phrasal-verb-phrasal-verb ("bïejedh" &SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(-1 ("bæjjese") LINK -1 Acc LINK 0 Sem/Prod-audio) ;
 
-COPY:xsyn-phrasal-verb-phrasal-verb ("baante" N Sg Ill &SUGGEST) EXCEPT ("bæjjese" Adv &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(-1 Acc LINK 0 Sem/Prod-audio) ;
+COPY:syn-phrasal-verb-phrasal-verb ("baante" N Sg Ill &SUGGEST) EXCEPT ("bæjjese" Adv &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(-1 Acc LINK 0 Sem/Prod-audio) ;
 	# baantese bïejedh - må stå før # åvtese buektedh
 
 	
@@ -2151,9 +2151,9 @@ COPY:xsyn-phrasal-verb-phrasal-verb ("baante" N Sg Ill &SUGGEST) EXCEPT ("bæjje
 
 	# åvtese buektedh
 	# - - - - - - - - -
-COPY:xsyn-phrasal-verb-phrasal-verb ("buektedh" &SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) OR ("bïejedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(NEGATE 0 &SUGGEST) ;
+COPY:syn-phrasal-verb-phrasal-verb ("buektedh" &SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) OR ("bïejedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(NEGATE 0 &SUGGEST) ;
 
-COPY:xsyn-phrasal-verb-phrasal-verb ("åvtese" &SUGGEST) EXCEPT ("bæjjese" &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(NEGATE 0 &SUGGEST) ;
+COPY:syn-phrasal-verb-phrasal-verb ("åvtese" &SUGGEST) EXCEPT ("bæjjese" &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(NEGATE 0 &SUGGEST) ;
 	## Dej jeanatjommes båarasommes maanajgujmie dah geerve almetjh maehtieh {bæjjese vaeltedh} dam maam jiïtje vuejnieh , maanajgujmie dan bïjre soptsestidh jïh dejgujmie digkiedidh.
 	## Ij leah naaken dejstie laavenjassijste buektiehtamme addisjovnine jallh subtraksjovnine , mejtie lea {bæjjese bïejeme} laavenjassh , jallh laavenjassh aktene kontekstesne.
 	#$ Manne vaaltam dam bæjjese.
