@@ -1618,6 +1618,7 @@ ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sggen) TO (*-1 (Num &msyn-nump
 	
 LIST SG-INDEF-PRON = "muvhte" ;
 	## Plaerine våhkoen gyrhkesjimmide gaavnh  mij gyrhkesjimmide muvhth gærhkojne dov årromesijjesne gaavnh. > muvhtene gærhkosne
+	## Diakovnine åålmegisnie barkh, muvhth gærhkoen institusjovnesne jallh internasjonaale barkosne.
 
 	
 	# pl nom
@@ -1684,9 +1685,9 @@ COPY:msyn-demphrase-congruence (Pl Ill SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msy
 	# pl ine
 	# ------
 
-ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ine) OR (N Sg Ine) BARRIER (*) - Attr);
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ine) OR (N Sg Ine) BARRIER (*) - Attr - Gen);
 
-ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (N Pl Ine) OR (N Sg Ine) IF (*-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline) BARRIER (*) - Attr);
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (N Pl Ine) OR (N Sg Ine) IF (*-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline) BARRIER (*) - Attr - Gen  );
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-pline) TO (*-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline)) ;	
 	## Dïhte gaajhkh lehkine mïnni.
