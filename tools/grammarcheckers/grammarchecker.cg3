@@ -2326,7 +2326,7 @@ COPY:Err/Orth-any (&SUGGEST) EXCEPT Err/Orth-any TARGET Err/Orth-any + (&typo) ;
 # 'husket' → 'hukset'                     # <speller>
 
 # Local Variables:
-# cg-pre-pipe: "bash modes/smagram-dev9-cg.mode"
+# cg-pre-pipe: "bash -o pipefail modes/smagram-dev9-cg.mode"
 # cg-post-pipe: "divvun-suggest -g generator-gramcheck-gt-norm.hfstol -m errors.xml -l sma"
 # End:
 
