@@ -2209,8 +2209,8 @@ ADD:xsyn-verb_advl-advl_verb (&syn-wo-verb_advl-advl_verb DELETE) TARGET Sem/Plc
 
 ADDRELATION (DELETE) (V &syn-wo-verb_advl-advl_verb) TO (1 (N &syn-wo-verb_advl-advl_verb)) ;
 
-COPYCOHORT:syn-wo-verb_advl-advl_verb (&ADDED co&syn-wo-verb_advl-advl_verb) EXCEPT (DELETE &syn-wo-verb_advl-advl_verb) TARGET (N &syn-wo-verb_advl-advl_verb) - (&ADDED) TO BEFORE (V &syn-wo-verb_advl-advl_verb) ; 
-     
+COPYCOHORT:syn-wo-verb_advl-advl_verb (&ADDED co&syn-wo-verb_advl-advl_verb) EXCEPT (DELETE &syn-wo-verb_advl-advl_verb) TARGET (N &syn-wo-verb_advl-advl_verb) - (&ADDED) TO BEFORE (*-1 V + &syn-wo-verb_advl-advl_verb);
+
 #ADDRELATION:syn-wo-verb_advl-advl_verb ($3 LEFT) (*) TO (jC1 (*) LINK -1 (&ADDED)) ;
 	
 	## dah guaktah lægan jielemevåaromem jïh jearsoesvoetem åådtjeme miehtjesne.
