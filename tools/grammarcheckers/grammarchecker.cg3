@@ -1,4 +1,3 @@
-# -*- cg-pre-pipe: "hfst-tokenise -g ../../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmhfst" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
 # Copyright © 2000-2025 UiT The arctic University of Norway
 # http://giellatekno.uit.no & http://divvun.no
@@ -2326,10 +2325,9 @@ COPY:Err/Orth-any (&SUGGEST) EXCEPT Err/Orth-any TARGET Err/Orth-any + (&typo) ;
 # 'buorrre' → 'buorre'                    # <speller>
 # 'husket' → 'hukset'                     # <speller>
 
-	
-# (setq cg-pre-pipe "./my-cg-post.mode")
 # Local Variables:
-# cg-pre-pipe: "sh modes/smegram7-cg.mode"
+# cg-pre-pipe: "bash modes/smagram-dev9-cg.mode"
+# cg-post-pipe: "divvun-suggest -g generator-gramcheck-gt-norm.hfstol -m errors.xml -l sma"
 # End:
 
 	# ====================== #
