@@ -352,6 +352,7 @@ Semantic tags help disambiguation and syntactic analysis. All tags used are defi
 * +Sem/Rule = Rule or convention; cultural tradition, abortion law, EU rule, law of cosines, fair play
 * +Sem/Semcon = Abstract semantic concept; result, objective, reason, alternative, case
 * +Sem/Sign = Sign (e.g. numbers, punctuation); ID number, ČSV letters, quotation mark, hieroglyph, symbol
+* +Sem/Sport = 
 * +Sem/State = State; hurry, captivity, anarchy, biodiversity, chaos
 * +Sem/State-sick = Illness; allergy, cold, autism, dementia, somnambulism
 * +Sem/Substnc = Substance; Water, sand, air, smoke, carbohydrate, vitamin, dust
