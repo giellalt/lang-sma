@@ -1668,18 +1668,24 @@ COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (N 
 
 ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ill) OR (N Pl Acc) BARRIER (*) - (Dem Nom));
 
-ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plill)) (1 (N Pl Ill) OR (N Pl Acc));
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plill)) (*1 (N Pl Ill) OR (N Pl Acc) BARRIER (*) - Attr - Gen);
 
-ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (N Pl Ill) OR (N Pl Acc) IF (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill));
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (N Pl Ill) OR (N Pl Acc) IF (*-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) BARRIER (*) - Attr - Gen);
 
 
 
-ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plill) TO (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill)) ;
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plill) TO (*-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill)) ;
 ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plill) TO (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) LINK -1 (Indef &msyn-demphrase-congruence-plill)) ;	
 	## Provresalmetjidie mejtie fuehpesne hijven naemhtie ånnetji raaffalgovvedh jïh gaajhkh åssjalommesidie provren bïjre luejhtedh jïh ussjedidh mannasinie sinsitnine pruvrijægan.
 	## Læstoeh gaajhkh daah dåehkide jïh dej kandidath gååvnese www.svenskakyrkan.se/kyrkoval.
 	
-COPY:msyn-demphrase-congruence (Pl Ill SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) ;
+	# Dem error
+	
+COPY:msyn-demphrase-congruence-plill (Pl Ill SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) ;
+
+	# Noun error
+	
+COPY:msyn-demphrase-congruence-plill (Pl Ill SUGGEST) EXCEPT (Sg Ill) TARGET (Sg N &msyn-demphrase-congruence-plill) ;
 
 	# pl ine
 	# ------
