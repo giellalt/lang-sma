@@ -1225,6 +1225,10 @@ LIST &msyn-demphrase-congruence-plela = &msyn-demphrase-congruence-plela ;
 LIST &msyn-numphrase-congruence-plnom = &msyn-numphrase-congruence-plnom ;
 LIST &msyn-numphrase-congruence-sgine = &msyn-numphrase-congruence-sgine ;
 LIST &msyn-numphrase-congruence-sggen = &msyn-numphrase-congruence-sggen ;
+LIST &msyn-numphrase-congruence-sgela = &msyn-numphrase-congruence-sgela ;
+LIST &msyn-numphrase-congruence-sgcom = &msyn-numphrase-congruence-sgcom ;
+LIST &msyn-numphrase-congruence-sgill = &msyn-numphrase-congruence-sgill ;
+LIST &msyn-numphrase-congruence-sgacc = &msyn-numphrase-congruence-sgacc ;
 LIST &msyn-Neg-Pl3-ConNeg = &msyn-Neg-Pl3-ConNeg ;
 LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
@@ -1565,15 +1569,21 @@ COPY:msyn-numphrase-congruence-plnom (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (N 
 	
 	# sg ine
 	# ------
-	
+
+	# incorrect noun	
 ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Pl Ine) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+	# correct noun, wrong numeral
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Sg Ine) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") - Ine BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
 
 COPY:msyn-numphrase-congruence-sgine (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sgine) ;
 	
+	# numeral
 ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-sgine) OR NUMUNIT + &msyn-numphrase-congruence-sgine BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
 
 COPY:msyn-numphrase-congruence-sgine (Sg Ine Attr SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sgine) ;
 
+	# demonstrative
 ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Dem Pl Nom) OR (Dem Pl Gen) OR (Indef Pl Nom) OR (Indef Pl Gen) IF (*1 (Num &msyn-numphrase-congruence-sgine) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
 
 COPY:msyn-numphrase-congruence-sgine (Pl Ine SUGGEST) EXCEPT (Pl Nom) OR (Pl Gen) TARGET (Dem Pl Nom &msyn-numphrase-congruence-sgine) OR (Dem Pl Gen &msyn-numphrase-congruence-sgine) OR (Indef Pl Nom &msyn-numphrase-congruence-sgine) OR (Indef Pl Gen &msyn-numphrase-congruence-sgine) ;
@@ -1583,6 +1593,33 @@ ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-nump
 ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-numphrase-congruence-sgine) LINK *-1 (Dem &msyn-numphrase-congruence-sgine) OR (Indef &msyn-numphrase-congruence-sgine)) ;
 
 	## Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh. > gaajhkine golmene laantesne gååvnesidh.
+	
+	# sg ela
+	# ------
+
+	# incorrect noun	
+ADD:msyn-numphrase-congruence-sgela (&msyn-numphrase-congruence-sgela) TARGET (Pl Ela) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+	# correct noun, wrong numeral
+ADD:msyn-numphrase-congruence-sgela (&msyn-numphrase-congruence-sgela) TARGET (Sg Ela) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") - Ela BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+COPY:msyn-numphrase-congruence-sgela (Sg Ela SUGGEST) EXCEPT (Pl Ela) TARGET (N Ela &msyn-numphrase-congruence-sgela) ;
+	
+	# numeral
+ADD:msyn-numphrase-congruence-sgela (&msyn-numphrase-congruence-sgela) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-sgela) OR NUMUNIT + &msyn-numphrase-congruence-sgela BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
+
+COPY:msyn-numphrase-congruence-sgela (Sg Ela Attr SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sgela) ;
+
+	# demonstrative
+ADD:msyn-numphrase-congruence-sgela (&msyn-numphrase-congruence-sgela) TARGET (Dem Pl Nom) OR (Dem Pl Gen) OR (Indef Pl Nom) OR (Indef Pl Gen) IF (*1 (Num &msyn-numphrase-congruence-sgela) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+COPY:msyn-numphrase-congruence-sgela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Pl Gen) TARGET (Dem Pl Nom &msyn-numphrase-congruence-sgela) OR (Dem Pl Gen &msyn-numphrase-congruence-sgela) OR (Indef Pl Nom &msyn-numphrase-congruence-sgela) OR (Indef Pl Gen &msyn-numphrase-congruence-sgela) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgela) TO (*-1 (Num &msyn-numphrase-congruence-sgela)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgela) TO (*-1 (Num &msyn-numphrase-congruence-sgela) LINK *-1 (Dem &msyn-numphrase-congruence-sgine) OR (Indef &msyn-numphrase-congruence-sgela)) ;
+
+	## 
 	
 	
 	# sg gen
