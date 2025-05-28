@@ -1222,6 +1222,8 @@ LIST &msyn-demphrase-congruence-plnom = &msyn-demphrase-congruence-plnom ;
 LIST &msyn-demphrase-congruence-plill = &msyn-demphrase-congruence-plill ;
 LIST &msyn-demphrase-congruence-plcom = &msyn-demphrase-congruence-plcom ;
 LIST &msyn-demphrase-congruence-plela = &msyn-demphrase-congruence-plela ;
+LIST &msyn-demphrase-congruence-plgen = &msyn-demphrase-congruence-plgen ;
+
 LIST &msyn-numphrase-congruence-plnom = &msyn-numphrase-congruence-plnom ;
 LIST &msyn-numphrase-congruence-sgine = &msyn-numphrase-congruence-sgine ;
 LIST &msyn-numphrase-congruence-sggen = &msyn-numphrase-congruence-sggen ;
@@ -1774,6 +1776,21 @@ ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plcom) TO (-1 (Com &msyn-demph
 	## Gaajhkh nïejtigujmie soptsetim.
 	
 COPY:msyn-demphrase-congruence-plcom (Pl Gen SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom) ;
+
+
+	# pl gen
+	# ------
+
+	# Dem
+ADD:msyn-demphrase-congruence-plgen (&msyn-demphrase-congruence-plgen) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Gen) BARRIER (*) - (Dem Gen) - (Indef Gen));
+
+	# Noun
+ADD:msyn-demphrase-congruence-plgen (&msyn-demphrase-congruence-plgen) TARGET (N Pl Gen) IF (*-1 (Dem &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) BARRIER (*) - (Dem Gen) - (Indef Gen));
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plgen) TO (*-1 (Gen &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) BARRIER (*) - (Dem Gen) - (Indef Gen)) ;	
+	## Gaajhkh dej nåejtiej bïjre.
+	
+COPY:msyn-demphrase-congruence-plgen (Pl Gen SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) ;
 
 
 
