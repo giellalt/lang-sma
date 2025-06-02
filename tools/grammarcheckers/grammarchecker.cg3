@@ -1233,6 +1233,7 @@ LIST &msyn-numphrase-congruence-sgill = &msyn-numphrase-congruence-sgill ;
 LIST &msyn-numphrase-congruence-sgacc = &msyn-numphrase-congruence-sgacc ;
 LIST &msyn-Neg-Pl3-ConNeg = &msyn-Neg-Pl3-ConNeg ;
 LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
+LIST &syn-remove-akte = &syn-remove-akte ;
 LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
 LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
 LIST &syn-phrasal-verb-lexical-verb = &syn-phrasal-verb-lexical-verb ;
@@ -1623,15 +1624,38 @@ ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgela) TO (*-1 (Num &msyn-nump
 
 	## 
 	
+	# sg acc
+	# ------	
+	
+	# Noun error akte included
+ADD:msyn-numphrase-congruence-sgacc (&msyn-numphrase-congruence-sgacc) TARGET (N Sg Acc) IF (*-1 (Num Gen) BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year OR Sem/Date OR (A Arab Ord Attr))(NEGATE 0 (N Gen) OR ABBR OR Prop)(NEGATE *1 (N Gen) BARRIER (*) - Attr - Gen);
+		
+	# akte included
+ADD:msyn-numphrase-congruence-sgacc (&msyn-numphrase-congruence-sgacc) TARGET (Num Nom) OR (Num Gen) IF (*1 (N &msyn-numphrase-congruence-sgacc) - ABBR - Prop BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
+
+ADD:msyn-numphrase-congruence-sgacc (&msyn-numphrase-congruence-sgacc) TARGET (Num Nom) - Sem/Date OR (Num Gen) IF (1 CC OR COMMA LINK 1 (Num &msyn-numphrase-congruence-sgacc) LINK *1 (N &msyn-numphrase-congruence-sgacc) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+COPY:msyn-numphrase-congruence-sggen (Sg Acc SUGGEST) EXCEPT (Sg Nom) OR (Sg Gen) TARGET (Num Sg &msyn-numphrase-congruence-sgacc) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgacc) TO (*-1 (Num &msyn-numphrase-congruence-sgacc)) ;
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgacc) TO (*-1 (Num &msyn-numphrase-congruence-sgacc) LINK *-1 (Num &msyn-numphrase-congruence-sgacc)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgacc) TO (*-1 (Num &msyn-numphrase-congruence-sgacc) LINK *-1 (Dem &msyn-numphrase-congruence-sgacc) OR (Indef &msyn-numphrase-congruence-sgacc)) ;
+	
+	
 	
 	# sg gen
 	# ------	
-ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (N Sg Gen) IF (*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year OR Sem/Date OR (A Arab Ord Attr))(NEGATE 0 (N Pl Nom) OR ABBR OR Prop)(NEGATE *1 (N Nom) BARRIER (*) - Attr - Gen);
+	
+	# Noun error akte included
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (N Sg Gen) IF (*-1 (Num Nom) BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year OR Sem/Date OR (A Arab Ord Attr))(NEGATE 0 (N Pl Nom) OR ABBR OR Prop)(NEGATE *1 (N Nom) BARRIER (*) - Attr - Gen);
 	#$ Goerehtimmiedåehkesne 18 saemien soptsestæjjah aalterisnie 18 jïh 56 jaepieh, jïh referaansedåehkesne {4 voestes gïelen} soptsestæjjah, aalterisnie 44 - 72 jaepieh.
+	
 
 #COPY:msyn-numphrase-congruence-sggen (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sggen) ;
 	
-ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-sggen) - ABBR - Prop BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
+	# akte included
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) IF (*1 (N &msyn-numphrase-congruence-sggen) - ABBR - Prop BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
 
 ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) - ("akte") - ("1") - Sem/Date IF (1 CC OR COMMA LINK 1 (Num &msyn-numphrase-congruence-sggen) LINK *1 (N &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
 
@@ -1700,6 +1724,27 @@ COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (N 
 
 
 	## Gærjagåetie dejtie almetjivåarhkoem vaarjele, eeremes leah Astrid Lindgren, August Strindberg jïh Dag Hammarsköld. > dejtie almetjivåarhkojde
+	
+	# sg acc
+	# ------
+	
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Nom) OR (Pron Attr) - Acc IF (0 Dem OR Indef)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr);
+
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef)(*1 (N Sg Nom) BARRIER (*) - (Dem Nom) - Attr);
+
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (*-1 (Pron Dem &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) (1 (N Sg Acc));
+
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (N Sg Acc) OR (N Sg Nom) IF (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr);
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-sgacc) TO (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) ;	
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-sgacc) TO (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr LINK -1 (Indef &msyn-demphrase-congruence-sgacc)) ;
+
+	# dem error	
+COPY:msyn-demphrase-congruence-sgacc (Sg Acc SUGGEST) EXCEPT (Attr) TARGET (Attr Dem &msyn-demphrase-congruence-sgacc) OR (Attr Indef &msyn-demphrase-congruence-placc) ;
+
+	# noun error
+COPY:msyn-demphrase-congruence-sgacc (Sg Acc SUGGEST) EXCEPT (Sg Nom) TARGET (N Sg Nom &msyn-demphrase-congruence-sgacc) ;
+
 
 	
 	# pl ill
@@ -1749,16 +1794,26 @@ COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Sg Ine) TARGET (Sg
 	# pl ela
 	# ------
 
+	# pronoun error
+	
 ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) OR (Pron Sg Ine Attr) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ela) BARRIER (*) - Attr);
 	## 	Dah aamhtesh dennie Sveerjen tjåanghkojste ij åadtjoeh dejtie gåatan löönedh. > dehtie
 
 ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) BARRIER (*) - Attr);
 
+	# noun error
+	
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Ela) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Sg Gen) BARRIER (*) - Attr LINK NEGATE *1 (N Ela) BARRIER NOT-NPMOD - Adv);
+	
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Sg Gen) IF (*-1 (Dem Pl Ela) OR (Indef Pl Ela) BARRIER (*) - Attr LINK NEGATE *1 (N Ela) BARRIER NOT-NPMOD - Adv);
+	#$ Daate lea akte dejstie {Saemiedigkien} raaktan stoerre dïedtijste: barkedh ihke båatsoe hijven mieriekrïevenassh åtna mij evtiedimmiem jïh monnehkevoetem gorrede guhkiebasse.
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plela) TO (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela)) ;	
 	## gaajhkh lehkeste hov bovtsh böötin.
 	
-COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Sg Ine Attr) TARGET (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) ;
+COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Sg Ine Attr) TARGET (Dem Nom &msyn-demphrase-congruence-plela) OR (Indef Nom &msyn-demphrase-congruence-plela) OR (Dem Ine &msyn-demphrase-congruence-plela) OR (Indef Ine &msyn-demphrase-congruence-plela) ;
+
+COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-demphrase-congruence-plela) ;
 
 	## Jienebh dejstie aamhtesidie jeatjahligke buvresne/våarhkosne vöörhkeme, daan åvteste tjuara dejtie åvtelen dængkodh. > dejstie aamhtesijstie
 	
@@ -1930,6 +1985,25 @@ BARRIER NOT-NPMODADV) (*0 (Pron Pers Gen) OR (N Gen) + Sem/Hum BARRIER S-BOUNDAR
 
 COPY:msyn-number_congruence-subj-copula-hab (Pl3 SUGGEST) EXCEPT (Sg3 &msyn-number_congruence-subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ; 
 
+
+	# no akte
+	# -------
+	
+LIST MEASR-ADV = "jeenemes" "unnemes" "barre" "ajve" ;
+
+ADD:syn-remove-akte (&syn-remove-akte) TARGET ("akte") IF (*1 N BARRIER NOT-NPMOD LINK NOT 0 Ela OR Sem/Measr)(NEGATE -1 CC OR COMMA LINK -1 Num)(NEGATE 1 CC OR COMMA LINK 1 Num)(NEGATE 1 Ela OR Sem/Measr)(NEGATE -1 MEASR-ADV);
+
+ADD:syn-remove-akte (&syn-remove-akte) TARGET N IF (*-1 ("akte" &syn-remove-akte) BARRIER NOT-NPMOD);
+	#$ Daate lea akte dejstie Saemiedigkien raaktan stoerre dïedtijste: barkedh ihke båatsoe hijven mieriekrïevenassh åtna mij evtiedimmiem jïh monnehkevoetem gorrede guhkiebasse.
+	#$ Saemiedigkiepresidente Aili Keskitalo lea  aalkoealmetji tjirkije Arktiske dajven åvteste, jïh akte dejstie åvtehkijstie stuvremedåehkesne.
+	#$ Akte dejstie gaavnojste mij mijjem ierieli lea akte sjïelesijjieh akten stoerre saalvegierkien lïhke, gusnie akte duvrien åejjienskuvhrie lij bïejesovveme aktene raejkesne gierkien nualan.
+	## Saemien fealadasse lea tjïelkestamme goh fealadasse gusnie saemien kultuvrebiehkieh leah akte vihkeles bielie gïehtelimmeste.
+	#$ Saemien fealadasse lea tjïelkestamme goh fealadasse gusnie saemien kultuvrebiehkieh leah akte vihkeles gïehtelimmeste.
+	#$ Akte dejstie lij Daniel Mortensson, akte gïevre åvtehke dovne båatsoen jïh politihken sisnjeli.
+	#$ Minngemosth sïjhtem bååstede vuartasjidh dïsse mij sæjhta aajmene tjåadtjodh goh akte dejstie tjaebpemes mojhtesijstie saemien siebriedahkese daan jaepien.
+
+
+ADDRELATION (DELETE1) (N &syn-remove-akte) TO (*-1 ("akte" &syn-remove-akte)) ;
 
 
 # subject verb agreement
