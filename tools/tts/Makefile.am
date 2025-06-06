@@ -25,7 +25,9 @@ GIELLA_ANL_REMOVE_TRANSCRIPTORS=
 
 # If there are additional, language specific files used in the GC archive,
 # specify here:
-LOCAL_ANL_ZIP_FILES=generated-remove-lexicalised-compounds.bin
+LOCAL_ANL_ZIP_FILES=generated-remove-lexicalised-compounds.bin \
+					acro2text.hfstol \
+					text2phontext.hfstol
 
 #### BEGIN: Local build targets: ####
 
