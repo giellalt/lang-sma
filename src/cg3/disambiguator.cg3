@@ -1,3 +1,7 @@
+# Divvun & Giellatekno - open source grammars for Sámi and other languages
+# Copyright © 2000-2025 The University of Tromsø & the Norwegian Sámi Parliament
+# http://giellatekno.uit.no & http://divvun.no
+
 # -*- cg-pre-pipe: "$GTHOME/giella-core/scripts/preprocess --abbr=$GTHOME/langs/sma/tools/preprocess/abbr.txt | hfst-optimised-lookup  $GTHOME/langs/sma/src/analyser-disamb-gt-desc.hfstol | $GTHOME/giella-core/scripts/lookup2cg" -*-
 
 # Distributed under the terms of the GNU General Public License version 2 
@@ -739,9 +743,12 @@ SELECT:Arab1 Arab + Nom (0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
 #SELECT:ArabNomPlc Arab + Nom (-1 Sem/Plc)(NEGATE 1 Po) ;
 
+SELECT:ArabNom Arab + Gen (-1 ("tsåahka"))(NEGATE 1 Po);
+	## Mijjien girtie tsåahka 7 dan iehkeden jåhta.
+ 
 SELECT:Arab Arab IF (NOT 0 Ord OR Prop) ; # In Apertium we get analysis both with and without the tag.
 
-REMOVE:diNom Coll (-1 ("dii") OR ("diibmu")) ;
+REMOVE:diNom Coll (-1 ("dii") OR ("tsåahka")) ;
 
 
 #!! Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
@@ -971,7 +978,8 @@ SELECT:goh Pcle (0 ("goh") LINK -1 Neg) ;
 REMOVE:laake Gen IF (0 ("laake") + Err/Orth LINK 0 Adv) ;
 	#$ lustes laakan
 
-SELECT:adv-mod Adv (0 ADV-MOD-ADV LINK 1 Adv) ;
+SELECT:adv-mod Adv (0 ADV-MOD-ADV LINK 1 Adv LINK NOT 0 N) ;
+	#$ Mijjien girtie tsåahka 7 dan iehkeden jåhta.
 SELECT:adv-mod Adv (0 ADV-MOD-ADJ LINK *1 A BARRIER WORD - Pcle)(NOT 0 Dem) ;
 	#$ Njieskiehtimmie lij gaajh hijven.
 
