@@ -1991,7 +1991,8 @@ COPY:msyn-number_congruence-subj-copula-hab (Pl3 SUGGEST) EXCEPT (Sg3 &msyn-numb
 	
 LIST MEASR-ADV = "jeenemes" "unnemes" "barre" "ajve" ;
 
-ADD:syn-remove-akte (&syn-remove-akte) TARGET ("akte") IF (*1 N BARRIER NOT-NPMOD LINK NOT 0 Ela OR Sem/Measr)(NEGATE -1 CC OR COMMA LINK -1 Num)(NEGATE 1 CC OR COMMA LINK 1 Num)(NEGATE 1 Ela OR Sem/Measr)(NEGATE -1 MEASR-ADV);
+ADD:syn-remove-akte (&syn-remove-akte) TARGET ("akte") IF (*1 N BARRIER NOT-NPMOD LINK NOT 0 Ela OR Sem/Measr)(NEGATE -1 CC OR COMMA LINK -1 Num)(NEGATE 1 CC OR COMMA LINK 1 Num)(NEGATE 1 Ela OR Sem/Measr)(NEGATE -1 MEASR-ADV)(NEGATE *1 Ord BARRIER S-BOUNDARY);
+	#$ Goh tjidtjebe barkoste båata dellie vuajna gøøkte raejkieh dennie oksesne, akte stoerre, dihte mubpie onne.
 
 ADD:syn-remove-akte (&syn-remove-akte) TARGET N IF (*-1 ("akte" &syn-remove-akte) BARRIER NOT-NPMOD);
 	#$ Daate lea akte dejstie Saemiedigkien raaktan stoerre dïedtijste: barkedh ihke båatsoe hijven mieriekrïevenassh åtna mij evtiedimmiem jïh monnehkevoetem gorrede guhkiebasse.
