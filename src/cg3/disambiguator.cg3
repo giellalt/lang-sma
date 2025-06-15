@@ -780,6 +780,18 @@ SECTION  #!! SECTION
 
 #D# REMOVE:Nregex SUB:1 N-DER (0/* N-DER-SUF) ;	
 
+
+LIST VDER-ONE = Der/ht  Der/Caus Der/st Der/d Der/l ;
+
+LIST VDER-TWO =  Der/alla Der/halla ; 
+
+LIST VDER-LAST = Der/NomAct Der/NomAg Der/InchL ;
+
+#!! * **derHderAlla, derAlla, derH, derST** chosses longest Der/tag
+REMOVE:DerDer1 VDER-ONE IF (0 VDER-TWO) ;
+REMOVE:DerDer2 VDER-ONE OR VDER-TWO IF (0 VDER-LAST - VDER-ONE - VDER-TWO) ;
+
+
 REMOVE:Der/NomAct Der/NomAct (0 PrfPrc LINK 0 Der/PassL) ;
 REMOVE:testA A-DER (0 LEX-A);
 REMOVE:testV4 V-DER (0 LEX-V) ;  ## should be restriction
