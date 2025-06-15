@@ -229,6 +229,8 @@ SECTION
 
 Removing non-lexicalised forms when lexicalised 
 
+* **derHderAlla, derAlla, derH, derST** chosses longest Der/tag
+
 ### Numerals and ACR
 
 ### Numerals in QPs
