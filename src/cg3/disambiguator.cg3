@@ -743,12 +743,13 @@ SELECT:Arab1 Arab + Nom (0 ("1")) ;
 	#$ a) Álgogursa 1 sámegielas
 #SELECT:ArabNomPlc Arab + Nom (-1 Sem/Plc)(NEGATE 1 Po) ;
 
-SELECT:ArabNom Arab + Gen (-1 ("tsåahka"))(NEGATE 1 Po);
+SELECT:ArabNom Arab + Nom (-1 ("tsåahka"))(NEGATE 1 Po);
 	## Mijjien girtie tsåahka 7 dan iehkeden jåhta.
+	# på sørsamisk er det  tall i nominativ ved klokkeslett
  
 SELECT:Arab Arab IF (NOT 0 Ord OR Prop) ; # In Apertium we get analysis both with and without the tag.
 
-REMOVE:diNom Coll (-1 ("dii") OR ("tsåahka")) ;
+REMOVE:diNom Coll (-1 ("ts") OR ("tsåahka")) ;
 
 
 #!! Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
@@ -1490,6 +1491,12 @@ MAP:VGen (@<ADVL) TARGET VGen (-1 MOVEMENT-V) ;
 MAP:VGen (@<ADVL) TARGET VGen (0C VGen LINK -1 REAL-V) ;
 MAP:VGen (@ADVL>) TARGET VGen (0C VGen LINK 1 REAL-V) ;
 	# 
+	
+MAP:tsaahkaadvl> (@ADVL>) TARGET ("tsåahka") OR ("ts") (1 Num LINK *1 FMAINV BARRIER S-BOUNDARY) ;
+	## Mijjien girtie tsåahka 7 dan iehkeden jåhta.
+
+MAP:n< (@N<) TARGET  Num + Nom  (-1 ("tsåahka") OR ("ts")) ;
+	# this rule is here (early) because the numeral in nominative gets analyzed as a subject otherwise
 
 MAP (@+FMAINV) TARGET VFIN (0C VFIN)  ;
 
