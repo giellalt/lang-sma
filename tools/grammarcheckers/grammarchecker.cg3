@@ -2066,6 +2066,11 @@ ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg
 	## Ovjaksoe lea neerrehtimmie – almetjh heaptoejgujmie {edtja}£{subj-verb-kongr,verb,prssg3-prspl3|edtjieh} nuepieh utnedh meatan årrodh ellies {vyøhkesadtememem}${x,mix|vyöhkesjadtemem}.
 	## Gïeline ektine lea barkoeh mah båatsoebårran veadtaldihkie, saemide joekoen dovrehke.
 	
+	# Rel inbetween
+	
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 Ger OR PrfPrc BARRIER ADVLCASE OR Adv LINK *-1 ("gie" Pron Rel Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 	
+	## Almetjh gieh daesnie barkeminie lea tryjjes.
+	
 	 
 
 COPY:syn-number_congruence-subj-verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3 &syn-number_congruence-subj-verb-sg3-pl3) TARGET (Sg3 &syn-number_congruence-subj-verb-sg3-pl3) ; 
