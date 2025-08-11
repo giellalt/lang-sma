@@ -2622,7 +2622,7 @@ compounding?
 * **+CLB**:  XXX These should be documented better
 * **+PUNCT**:  XXX These should be documented better
 * **+LEFT**:  XXX These should be documented better
-* **+RIGHT**:  XXX These should be documented better
+* **+RIGHT +MIDDLE**:  XXX These should be documented better
 * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
 
 ### Different focus particles
