@@ -4,24 +4,24 @@ All doc-comment documentation in one large file.
 
 ---
 
-# src-cg3-disambiguator.cg3.md 
+## src-cg3-disambiguator.cg3.md 
 
 
 
-# S O U T H   S Á M I   D I S A M B I G U A T O R          
+## S O U T H   S Á M I   D I S A M B I G U A T O R          
 
-## Delimiters, tags and sets
+### Delimiters, tags and sets
 
 `"<.>" "<!>" "<?>" "<...>" "<¶>" sent`
 
-### Tags 
+#### Tags 
 
-#### BOS/EOS:
+##### BOS/EOS:
 
 - `(>>>) (<s>)`
 - `(<<<) (</s>)`
 
-#### Morphological tags
+##### Morphological tags
 
 * N 
 * Sg 
@@ -41,6 +41,363 @@ PxSg3
 PxPl1
 PxPl3
 PxPl3
+
+* Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
+
+##### Derivation tags
+
+- `Der/A      `
+- `Der/Car    `
+- `Der/Dimin  `
+- `Der/InchL  `
+- `Der/NomAct `
+- `Der/NomAg  `
+- `Der/PassL  `
+- `Der/PassS  `
+- `Der/Rec    `
+- `Der/adte   `
+- `Der/ahtje  `
+- `Der/alla   `
+- `Der/d      `
+- `Der/eds    `
+- `Der/ht     `
+- `Der/htalle `
+- `Der/htj    `
+- `Der/ihks   `
+- `Der/ijes   `
+- `Der/l      `
+- `Der/laakan `
+- `Der/ldahke `
+- `Der/ldh    `
+- `Der/ldihkie`
+- `Der/les    `
+- `Der/lg     `
+- `Der/st     `
+- `Der/vuota  `
+
+##### Error usage tags
+
+We define two lists for `Err/xxx` tags:
+
+- `Err/Orth`:
+    - `Err/Orth`
+    - `Err/Orth-a/á`
+    - `Err/Orth-nom/gen`
+    - `Err/Orth-nom/acc`
+    - `Err/DerSub`
+    - `Err/CmpSub`
+    - `Err/UnspaceCmp`
+    - `Err/HyphSub`
+    - `Err/SpaceCmp`
+    - `Err/Spellrelax`
+    - `err_orth_mt`
+- `Err/Orth-spes`:
+    - `Err/Orth-a/á`
+    - `Err/Orth-nom/gen`
+    - `Err/Orth-nom/acc`
+    - `Err/DerSub`
+    - `Err/CmpSub`
+    - `Err/UnspaceCmp`
+    - `Err/HyphSub`
+    - `Err/SpaceCmp`
+    - `Err/Spellrelax`
+    - `err_orth_a_á_mt`
+    - `err_orth_nom_acc_mt`
+    - `err_orth_nom_gen_mt`
+
+##### Other tags
+
+- `Cmp/Hyph`
+- `<vdic>`
+
+#####  Semantic tags
+
+##### Secondary tags
+
+##### Syntactic tags
+
+* @CNP
+@CVP
+@+FAUXV
+@+FMAINV
+@-FAUXV
+@-FMAINV
+MAINV  = 
+
+##### Titles
+
+REAL-TITLE
+OFFICE
+TITLE
+
+### Sets
+
+#### Sets of morphological tags for syntactic use
+
+CASES
+ADVLCASE
+NUMBER
+
+#### Noun sets
+
+INSTITUTION
+ORGANIZATION
+EDUCATION
+CURRENCY
+CURRENCY
+LESSON
+
+#### Verb sets
+
+REALCOPULAS
+
+COPULAS
+
+V-NOT-COP
+
+MOD-ASP
+
+#### Adjective sets
+
+#### Adverb sets
+
+GUKTIEGOSSE
+
+DAESTIE
+
+ILLADV
+
+INEADV1
+
+ELAADV1
+
+INEADV
+
+ELAADV
+
+DV-MOD-ADV
+
+#### Postposition sets
+
+ILLPO
+
+#### BOUNDARY SETS
+
+REALCLB
+
+SV-BOUNDARY
+
+NP-BOUNDARY
+
+#### Derivation sets
+
+V-DER
+
+V-DER-SUF
+
+N-DER
+N-DER-SUF
+
+A-DER
+A-DER-SUF
+
+PASS
+
+LEX-V
+LEX-N
+LEX-A
+LEX-ADV
+
+VERB-FORMS
+2-PERS
+
+## Disambiguation rules
+
+BEFORE-SECTIONS
+
+Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes når vi får felles numeralfil fra shared)
+
+### Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
+
+### Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
+
+Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
+
+SECTION
+
+### Cycle 0 (Early rules)
+
+Removing non-lexicalised forms when lexicalised 
+
+* **derHderAlla, derAlla, derH, derST** chosses longest Der/tag
+
+#### Numerals and ACR
+
+#### Numerals in QPs
+
+#### CC og not (spesifikke regler lenger ned)
+
+#### Interj
+
+#### Possessive suffix
+
+REmove Px if not family
+
+#### Pronouns
+
+#### Proper nouns
+
+INITIAL
+
+#### Verbs
+
+#### Postpositions
+Selecting postpositions when preceded by genitives, etc.
+
+#### Particles and adverbs
+
+#### Adjective or Indef
+
+#### Demonstratives
+
+#### Genitive
+
+#### Adjective or not
+
+Rel or Interr OR Indef
+
+#### Adverbs
+Selecting adverbs in local contexts
+
+#### Verbs
+Selecting verbs in local contexts, based upon agreement patterns
+
+Selecting imperative sentence-initially with appropriate right context
+
+Remove verb readings
+
+Select Inf
+
+### Mapping rules
+
+#### CC- and CS-Mapping
+
+* **COMPCS**  @COMP-CS< to Adv or A after goh etc.
+
+### CNP mapping
+
+Mapping CNP to CC and CS.
+
+### CVP Mapping
+
+Mapping @CVP to all CS
+
+Attributes or not
+
+### PrfPrc
+
+Select PrfPrc if DerNomAct
+
+Mapping verbs
+
+#### killifVinCohort
+This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
+
+### Person
+
+leah Prs Sg2 = Pl3
+
+Select Inf If Infv
+
+### Span sentences
+
+#### Nomen
+
+Remove Prop Attr if not 1 Prop 
+
+#### Verb or Noun
+
+### CC and CS or Adv
+
+### Adj or Adv
+
+### Grammatisk ord eller N eller A
+
+### N or V
+
+Ger or Der/NomAct
+
+Adj or Indef
+
+Num
+
+Adv or Po/Pr
+
+Illative or genetive
+
+Essive
+
+Comitative
+
+Accusative or illative
+
+Indef or Adv
+
+special lemmas
+
+Adverb context prefers Adv
+
+Verb person vs. Inf -- moved here in order to have the pronouns disambiguated first.
+
+## Proper nouns
+
+Rule set taken from sme
+
+gellie as numeral, not pronoun
+
+* * *
+
+<small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/disambiguator.cg3)</small>
+
+---
+
+## src-cg3-valency.cg3.md 
+
+
+## S O U T H   S Á M I   V A L E N C Y   A N N O T A T O R          
+
+### Delimiters 
+
+`"<.>" "<!>" "<?>" "<...>" "<¶>" sent`
+
+### Tags and sets 
+
+#### BOS/EOS:
+
+- `(>>>) (<s>)`
+- `(<<<) (</s>)`
+
+#### Morphological tags
+
+* N 
+* Sg 
+* Pl
+* Nom
+* Acc
+* Gen
+* Ine
+* Ela
+* Ill
+* Com
+* Ess
+* PxSg1 
+* PxSg2
+* PxSg3
+* PxPl1
+* PxPl3
+* PxPl3
+
+Number and person tags:
 
 * Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
 
@@ -112,8 +469,6 @@ We define two lists for `Err/xxx` tags:
 
 ####  Semantic tags
 
-#### Secondary tags
-
 #### Syntactic tags
 
 * @CNP
@@ -130,15 +485,13 @@ REAL-TITLE
 OFFICE
 TITLE
 
-## Sets
-
-### Sets of morphological tags for syntactic use
+#### Sets of morphological tags for syntactic use
 
 CASES
 ADVLCASE
 NUMBER
 
-### Noun sets
+#### Noun sets
 
 INSTITUTION
 ORGANIZATION
@@ -147,7 +500,7 @@ CURRENCY
 CURRENCY
 LESSON
 
-### Verb sets
+#### Verb sets
 
 REALCOPULAS
 
@@ -157,9 +510,9 @@ V-NOT-COP
 
 MOD-ASP
 
-### Adjective sets
+#### Adective sets
 
-### Adverb sets
+#### Adverb sets
 
 GUKTIEGOSSE
 
@@ -177,11 +530,11 @@ ELAADV
 
 DV-MOD-ADV
 
-### Postposition sets
+#### Postposition sets
 
 ILLPO
 
-### BOUNDARY SETS
+#### BOUNDARY SETS
 
 REALCLB
 
@@ -189,360 +542,7 @@ SV-BOUNDARY
 
 NP-BOUNDARY
 
-### Derivation sets
-
-V-DER
-
-V-DER-SUF
-
-N-DER
-N-DER-SUF
-
-A-DER
-A-DER-SUF
-
-PASS
-
-LEX-V
-LEX-N
-LEX-A
-LEX-ADV
-
-VERB-FORMS
-2-PERS
-
-# Disambiguation rules
-
-BEFORE-SECTIONS
-
-Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes når vi får felles numeralfil fra shared)
-
-## Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
-
-## Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
-
-Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
-
-SECTION
-
-## Cycle 0 (Early rules)
-
-Removing non-lexicalised forms when lexicalised 
-
-* **derHderAlla, derAlla, derH, derST** chosses longest Der/tag
-
-### Numerals and ACR
-
-### Numerals in QPs
-
-### CC og not (spesifikke regler lenger ned)
-
-### Interj
-
-### Possessive suffix
-
-REmove Px if not family
-
-### Pronouns
-
-### Proper nouns
-
-INITIAL
-
-### Verbs
-
-### Postpositions
-Selecting postpositions when preceded by genitives, etc.
-
-### Particles and adverbs
-
-### Adjective or Indef
-
-### Demonstratives
-
-### Genitive
-
-### Adjective or not
-
-Rel or Interr OR Indef
-
-### Adverbs
-Selecting adverbs in local contexts
-
-### Verbs
-Selecting verbs in local contexts, based upon agreement patterns
-
-Selecting imperative sentence-initially with appropriate right context
-
-Remove verb readings
-
-Select Inf
-
-## Mapping rules
-
-### CC- and CS-Mapping
-
-* **COMPCS**  @COMP-CS< to Adv or A after goh etc.
-
-## CNP mapping
-
-Mapping CNP to CC and CS.
-
-## CVP Mapping
-
-Mapping @CVP to all CS
-
-Attributes or not
-
-## PrfPrc
-
-Select PrfPrc if DerNomAct
-
-Mapping verbs
-
-### killifVinCohort
-This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
-
-## Person
-
-leah Prs Sg2 = Pl3
-
-Select Inf If Infv
-
-## Span sentences
-
-### Nomen
-
-Remove Prop Attr if not 1 Prop 
-
-### Verb or Noun
-
-## CC and CS or Adv
-
-## Adj or Adv
-
-## Grammatisk ord eller N eller A
-
-## N or V
-
-Ger or Der/NomAct
-
-Adj or Indef
-
-Num
-
-Adv or Po/Pr
-
-Illative or genetive
-
-Essive
-
-Comitative
-
-Accusative or illative
-
-Indef or Adv
-
-special lemmas
-
-Adverb context prefers Adv
-
-Verb person vs. Inf -- moved here in order to have the pronouns disambiguated first.
-
-# Proper nouns
-
-Rule set taken from sme
-
-gellie as numeral, not pronoun
-
-* * *
-
-<small>This (part of) documentation was generated from [src/cg3/disambiguator.cg3](https://github.com/giellalt/lang-sma/blob/main/src/cg3/disambiguator.cg3)</small>
-
----
-
-# src-cg3-valency.cg3.md 
-
-
-# S O U T H   S Á M I   V A L E N C Y   A N N O T A T O R          
-
-## Delimiters 
-
-`"<.>" "<!>" "<?>" "<...>" "<¶>" sent`
-
-## Tags and sets 
-
-### BOS/EOS:
-
-- `(>>>) (<s>)`
-- `(<<<) (</s>)`
-
-### Morphological tags
-
-* N 
-* Sg 
-* Pl
-* Nom
-* Acc
-* Gen
-* Ine
-* Ela
-* Ill
-* Com
-* Ess
-* PxSg1 
-* PxSg2
-* PxSg3
-* PxPl1
-* PxPl3
-* PxPl3
-
-Number and person tags:
-
-* Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
-
-### Derivation tags
-
-- `Der/A      `
-- `Der/Car    `
-- `Der/Dimin  `
-- `Der/InchL  `
-- `Der/NomAct `
-- `Der/NomAg  `
-- `Der/PassL  `
-- `Der/PassS  `
-- `Der/Rec    `
-- `Der/adte   `
-- `Der/ahtje  `
-- `Der/alla   `
-- `Der/d      `
-- `Der/eds    `
-- `Der/ht     `
-- `Der/htalle `
-- `Der/htj    `
-- `Der/ihks   `
-- `Der/ijes   `
-- `Der/l      `
-- `Der/laakan `
-- `Der/ldahke `
-- `Der/ldh    `
-- `Der/ldihkie`
-- `Der/les    `
-- `Der/lg     `
-- `Der/st     `
-- `Der/vuota  `
-
-### Error usage tags
-
-We define two lists for `Err/xxx` tags:
-
-- `Err/Orth`:
-    - `Err/Orth`
-    - `Err/Orth-a/á`
-    - `Err/Orth-nom/gen`
-    - `Err/Orth-nom/acc`
-    - `Err/DerSub`
-    - `Err/CmpSub`
-    - `Err/UnspaceCmp`
-    - `Err/HyphSub`
-    - `Err/SpaceCmp`
-    - `Err/Spellrelax`
-    - `err_orth_mt`
-- `Err/Orth-spes`:
-    - `Err/Orth-a/á`
-    - `Err/Orth-nom/gen`
-    - `Err/Orth-nom/acc`
-    - `Err/DerSub`
-    - `Err/CmpSub`
-    - `Err/UnspaceCmp`
-    - `Err/HyphSub`
-    - `Err/SpaceCmp`
-    - `Err/Spellrelax`
-    - `err_orth_a_á_mt`
-    - `err_orth_nom_acc_mt`
-    - `err_orth_nom_gen_mt`
-
-### Other tags
-
-- `Cmp/Hyph`
-- `<vdic>`
-
-###  Semantic tags
-
-### Syntactic tags
-
-* @CNP
-@CVP
-@+FAUXV
-@+FMAINV
-@-FAUXV
-@-FMAINV
-MAINV  = 
-
-### Titles
-
-REAL-TITLE
-OFFICE
-TITLE
-
-### Sets of morphological tags for syntactic use
-
-CASES
-ADVLCASE
-NUMBER
-
-### Noun sets
-
-INSTITUTION
-ORGANIZATION
-EDUCATION
-CURRENCY
-CURRENCY
-LESSON
-
-### Verb sets
-
-REALCOPULAS
-
-COPULAS
-
-V-NOT-COP
-
-MOD-ASP
-
-### Adective sets
-
-### Adverb sets
-
-GUKTIEGOSSE
-
-DAESTIE
-
-ILLADV
-
-INEADV1
-
-ELAADV1
-
-INEADV
-
-ELAADV
-
-DV-MOD-ADV
-
-### Postposition sets
-
-ILLPO
-
-### BOUNDARY SETS
-
-REALCLB
-
-SV-BOUNDARY
-
-NP-BOUNDARY
-
-### Derivation sets
+#### Derivation sets
 
 V-DER
 
@@ -563,7 +563,7 @@ LEX-A
 VERB-FORMS
 2-PERS
 
-# Valency rules
+## Valency rules
 
 * * *
 
@@ -571,16 +571,16 @@ VERB-FORMS
 
 ---
 
-# src-fst-morphology-affixes-abbreviations.lexc.md 
+## src-fst-morphology-affixes-abbreviations.lexc.md 
 
 
-# Continuation lexicons for abbreviations
+## Continuation lexicons for abbreviations
 
-## Lexica for adding tags and periods
+### Lexica for adding tags and periods
 
-## The sublexica
+### The sublexica
 
-### Continuation lexicons for abbrs both with and witout final period
+#### Continuation lexicons for abbrs both with and witout final period
 
 * **LEXICON ab-noun   **
 
@@ -590,7 +590,7 @@ VERB-FORMS
 
 * **LEXICON ab-num   **
 
-### Lexicons without final period
+#### Lexicons without final period
 
 * **LEXICON ab-nodot-noun   **  The bulk
 
@@ -600,7 +600,7 @@ VERB-FORMS
 
 * **LEXICON ab-nodot-num   **
 
-### Lexicons with final period
+#### Lexicons with final period
 
 * **LEXICON ab-dot-noun   **  This is the lexicon for abbrs that must have a period.
 
@@ -638,11 +638,11 @@ VERB-FORMS
 
 ---
 
-# src-fst-morphology-affixes-adjectives.lexc.md 
+## src-fst-morphology-affixes-adjectives.lexc.md 
 
 
 
-# Adjective affixes
+## Adjective affixes
 
 This is one of two parallel files containing adjective affixes.
 The files represent two alternative interpretation of the same data
@@ -653,25 +653,25 @@ This file is compiled by default, the other one is compiled by in
 langs/sma giving the command *.configure --with-oahpa*
 before compiling.
 
-## `LEXICON PRED_S`
+### `LEXICON PRED_S`
 The `PRED_S` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom:%>s FINAL1 ; 
 ```
 
-## `LEXICON PRED_0`
+### `LEXICON PRED_0`
 The `PRED_0` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom: FINAL1 ; 
 ```
 
-## `LEXICON PRED_H`
+### `LEXICON PRED_H`
 The `PRED_H` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom:%>h FINAL1 ; 
 ```
 
-## `LEXICON PRED_NE_ODD`
+### `LEXICON PRED_NE_ODD`
 The `PRED_NE_ODD` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom:%>ne FINAL1     ; 
@@ -679,14 +679,14 @@ The `PRED_NE_ODD` lexicon is used for adjectives Predicatives.
          :n     ODDCOMP    ; 
 ```
 
-## `LEXICON PRED_N`
+### `LEXICON PRED_N`
 The `PRED_N` lexicon is used for adjectives Predicatives.
 ```
  +Sg+Nom:%>n FINAL1 ; 
 
 ```
 
-## `LEXICON e_E_EVEN`
+### `LEXICON e_E_EVEN`
 The `e_E_EVEN` lexicon is used for adjectives on `–e` and `–e`  In attributes and predicatives.With EVEN-NOCOMP.
 ```
     :e ATTR_0      ; 
@@ -697,7 +697,7 @@ The `e_E_EVEN` lexicon is used for adjectives on `–e` and `–e`  In attribute
     :e EVENCOMP    ; 
 ```
 
-## `LEXICON e_E_EVENNOCOMP1`
+### `LEXICON e_E_EVENNOCOMP1`
 The `e_E_EVENNOCOMP1` lexicon is used for adjectives on `–e` and `–e` stem. In attributes and predicatives.With EVEN-NOCOMP.
 
 ```
@@ -708,7 +708,7 @@ The `e_E_EVENNOCOMP1` lexicon is used for adjectives on `–e` and `–e` stem. 
         NIEJTEREST  ; 
 ```
 
-## `LEXICON a_A_EVEN1`
+### `LEXICON a_A_EVEN1`
 The `a_A_EVEN1` lexicon is used for adjectives on `–a` and `–a`  In attributes and predicatives.With EVEN-COMP.
 ```
     :a ATTR_0     ; 
@@ -717,7 +717,7 @@ The `a_A_EVEN1` lexicon is used for adjectives on `–a` and `–a`  In attribut
     :a EVENCOMP   ; 
 ```
 
-## `LEXICON as_AS_EVEN1`
+### `LEXICON as_AS_EVEN1`
 The `as_AS_EVEN1` lexicon is used for adjectives on `–as` and `–as`  In attributes and predicatives.With EVEN-COMP.
 ```
             :a  ATTR_S   ; 
@@ -725,7 +725,7 @@ The `as_AS_EVEN1` lexicon is used for adjectives on `–as` and `–as`  In attr
   +Cmp/SgNom:as R        ; 
 ```
 
-## `LEXICON ie_IE_EVEN1`
+### `LEXICON ie_IE_EVEN1`
 The `ie_IE_EVEN1` lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives.With EVEN-COMP.
 ```
  :ie ATTR_0     ; 
@@ -733,14 +733,14 @@ The `ie_IE_EVEN1` lexicon is used for adjectives on `–ie` and `–ie`  In attr
  :ie EVENCOMP   ; 
 ```
 
-## `LEXICON ie_IE_EVENNOCOMP`
+### `LEXICON ie_IE_EVENNOCOMP`
 The `ie_IE_EVENNOCOMP` lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
 ```
  :ie ATTR_0     ; 
      N_IE_FORMS ; 
 ```
 
-## `LEXICON a_A_EVEN1_NOCOMP`
+### `LEXICON a_A_EVEN1_NOCOMP`
 The `a_A_EVEN1_NOCOMP` lexicon is used for adjectives on `–ie` and `–ie`  In attributes and predicatives. With EVEN-COMP.
 ```
     :a ATTR_0     ; 
@@ -748,7 +748,7 @@ The `a_A_EVEN1_NOCOMP` lexicon is used for adjectives on `–ie` and `–ie`  In
        MAANAOBL   ; 
 ```
 
-## `LEXICON es_ES_EVEN`
+### `LEXICON es_ES_EVEN`
 The `es_ES_EVEN` lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-COMP.
 ```
            :e      ATTR_S       ; 
@@ -756,7 +756,7 @@ The `es_ES_EVEN` lexicon is used for adjectives on `–es` and `–es`  In attri
            :e      EVENCOMP     ; 
 ```
 
-## `LEXICON es_ES_EVENNOCOMP1`
+### `LEXICON es_ES_EVENNOCOMP1`
 The `es_ES_EVENNOCOMP1` lexicon is used for adjectives on `–es` and `–es`  In attributes and predicatives. With EVEN-NOCOMP.
 
 ```
@@ -765,21 +765,21 @@ The `es_ES_EVENNOCOMP1` lexicon is used for adjectives on `–es` and `–es`  I
  :es ODDCASEOBL ; 
 ```
 
-## `LEXICON ies_IES_EVEN1`
+### `LEXICON ies_IES_EVEN1`
 The `ies_IES_EVEN1` lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-COMP.
 ```
      ies_IES_EVENNOCOMP1 ; 
  :ie EVENCOMP            ; 
 ```
 
-## `LEXICON ies_IES_EVENNOCOMP1`
+### `LEXICON ies_IES_EVENNOCOMP1`
 The `ies_IES_EVENNOCOMP1` lexicon is used for adjectives on `–ies` and `–ies`  In attributes and predicatives. With EVEN-NOCOMP.
 ```
   :ie ATTR_S    ; 
   :ie PRED_S    ; 
 ```
 
-## `LEXICON eh_EH_ODDNOCOMP1`
+### `LEXICON eh_EH_ODDNOCOMP1`
 
 * adjectives examples:*
 * *gööktengïeleh:* `guektiengïeleh+A+Attr`
@@ -795,7 +795,7 @@ The `ies_IES_EVENNOCOMP1` lexicon is used for adjectives on `–ies` and `–ies
 * *guektien-gïeleh:* `guektiengïeleh+A+Sg+Nom`
 * *guektien-gïelege:* `guektiengïeleh+A+Sg+Nom`
 
-## `LEXICON BAERIES` (BÅERIES)
+### `LEXICON BAERIES` (BÅERIES)
 
 UNEVEN adjective, attr = pred. Comparation uneven syllable.
 Presentlly only used for the _båeries_ adjective.
@@ -805,10 +805,10 @@ Presentlly only used for the _båeries_ adjective.
   :båaras ODDCOMP  ; 
 ```
 
-## LEXICON `ÅEHPIES`
+### LEXICON `ÅEHPIES`
 ODD adjective, attr = pred. Comparation uneven syllable.
 
-## `LEXICON GIERIES`
+### `LEXICON GIERIES`
 
 Umlaut from attr to pred. Comparation uneven syllable.
 Presentlly only used for "gieries-gearehke" adjective.
@@ -821,7 +821,7 @@ This lexicon covers the ies - ehke + umlaut change.
  +Use/NG:gearahg  ODDCOMP ; 
 ```
 
-## LEXICON `BUERIE_UMLAUT_IE_STAMME`
+### LEXICON `BUERIE_UMLAUT_IE_STAMME`
 EVEN adjective with EVEN-UMLAUT Comparation for -ie-stems.
 ```
                           :buer    ie_IE_EVENNOCOMP ; 
@@ -835,7 +835,7 @@ Sjekk opp denne!
 
 +Err/Orth:s   ODDCASEOBL ; ! LA la til -s
 
-## LEXICON `ihks_IHKS_igs_IGS_EVENNOCOMP`
+### LEXICON `ihks_IHKS_igs_IGS_EVENNOCOMP`
 Adjective with no comp.
 
 * adjectives examples:*
@@ -862,7 +862,7 @@ Adjective with no comp.
         +Use/NG:ig     N_IE_FORMS ; 
 ```
 
-## LEXICON `e_ES_EVENNOCOMP2`
+### LEXICON `e_ES_EVENNOCOMP2`
 This is for the adjective "jaame"
 
 * adjectives examples:*
@@ -875,7 +875,7 @@ This is for the adjective "jaame"
     eCASEOBL ; 
 ```
 
-## LEXICON `ODDEVEN2`
+### LEXICON `ODDEVEN2`
 This one gives EVEN and ODD  Comparation.
 
 ```
@@ -885,14 +885,14 @@ This one gives EVEN and ODD  Comparation.
     +Use/NG:es ODDCOMP    ; 
 ```
 
-## LEXICON `es_E_EVEN3`
+### LEXICON `es_E_EVEN3`
 This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 ```
         :e ATTR_S      ; 
         :e EVENCOMP    ; 
 ```
 
-## LEXICON `as_oes_A_OE_EVEN3`
+### LEXICON `as_oes_A_OE_EVEN3`
 This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 ```
       +Use/NG:a  ATTR_S      ; 
@@ -901,7 +901,7 @@ This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, wh
       +Use/NG:a  EVENCOMP    ; 
 ```
 
-## LEXICON `oeh_ah_OE_A_EVEN3`
+### LEXICON `oeh_ah_OE_A_EVEN3`
 This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 ```
         :oe ATTR_H      ; 
@@ -912,7 +912,7 @@ This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, wh
  +Use/NG:e  EVENCOMP    ; 
 ```
 
-## LEXICON `ies_IE_EVEN3`
+### LEXICON `ies_IE_EVEN3`
 This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, which gives EVEN-COMP.
 ```
    :ie ATTR_S     ; 
@@ -920,14 +920,14 @@ This one gives EVEN Comparation, and -s in attributt and wowel in predikativ, wh
    :ie EVENCOMP   ; 
 ```
 
-## LEXICON `ies_IE_EVEN3NOCOMP`
+### LEXICON `ies_IE_EVEN3NOCOMP`
 This one gives EVEN Comparation, and -s in attributt and wowel in predikativ.
 ```
    :ie ATTR_S     ; 
     N_IE_FORMS ; 
 ```
 
-# UMLAUT LEXICON asATTR_anADVERB
+## UMLAUT LEXICON asATTR_anADVERB
 These 6 adjectives is in the 4. group of the southsámi adjectives, the group
 which contains all umlaut-adjectives. Theese adjectives whivh have -as  as
 attributeform and an as predicativeform, is south-southsámi adjectives, and
@@ -938,7 +938,7 @@ small undergruppe of the 4.group
   +A:a  ATTR_S   ; 
 ```
 
-# UMLAUT LEXICON oesATTR
+## UMLAUT LEXICON oesATTR
 Theese 5 adjectives is in the 4. group of the southsámi adjectives, The group which contains all
 umlaut-adjectives. Theese adjectives which have -oes  as attributeform and -an as predicativeform, is north-southsámi adjectives, and they dont have any comparation.
 This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is a small undergruppe of the 4.group
@@ -956,7 +956,7 @@ This group which covers the ies -> an/ as-> an and oes-> an + umlaut change, is 
 
 ```
 
-## LEXICON `MAST`
+### LEXICON `MAST`
 The `MAST` lexicon is used for adjectives on `–masten` and `masth` with an
 used with the stem *masten*
 ```
@@ -967,7 +967,7 @@ used with the stem *masten*
              :e PRED_N      ; 
 ```
 
-# IJVE_LOAN_ADJ LEXICON IJVEadj
+## IJVE_LOAN_ADJ LEXICON IJVEadj
 EVEN adjective EVEN Comparation.
 Used for all loan-adjectives "ijve".
 ```
@@ -976,7 +976,7 @@ Used for all loan-adjectives "ijve".
  +Err/Orth:iv  e_E_EVEN ; 
 ```
 
-## LEXICON `JELLE`
+### LEXICON `JELLE`
 The `JELLE` lexicon is used for loanadjectives on `jelle` and `–jelle` with an
 used with the stem *jelle* This one should be 'jeelle'? SGM?
 
@@ -985,7 +985,7 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
          :jell e_ES_LOAN ; 
 ```
 
-## LEXICON `UELLE`
+### LEXICON `UELLE`
 ```
          :^ell e_ES_LOAN ; 
  +Err/Orth:vell e_ES_LOAN ; 
@@ -1001,13 +1001,13 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 ---
 
-# src-fst-morphology-affixes-nouns.lexc.md 
+## src-fst-morphology-affixes-nouns.lexc.md 
 
 
 
-# Nominal inflection sublexica
+## Nominal inflection sublexica
 
-## Inflection for odd-syllable nouns
+### Inflection for odd-syllable nouns
 
 The default inflectional lexicon for odd-syllable nouns is **N_ODD**.
 Words like `gierehtse` is inflected using this lexicon. Other words inflected
@@ -1197,7 +1197,7 @@ LEXICON TJE_LASSJE_RESIPR
 * *faktoristie:* `faktore+N+Sg+Ela`
 * *faktorinie:* `faktore+N+Sg+Com`
 
-## Inflection for nouns ending in oe
+### Inflection for nouns ending in oe
 
 The oe with umlaut generate the uml-ones
 and have the non-uml ones as +Use/NG.
@@ -1219,7 +1219,7 @@ LEXICON EETE_LOAN    loanwords with -eete -
 * *universiteetetjem:* `universiteete+N+Der/Dimin+N+Sg+Acc`
 * *universiteetetjisnie:* `universiteete+N+Der/Dimin+N+Sg+Ine`
 
-## Inflection for NIEJTE_SG nouns: lexicon `NIEJTE_SG`
+### Inflection for NIEJTE_SG nouns: lexicon `NIEJTE_SG`
 Short descrioption of this lexicon, and its purpose.
 
 * vïelle # Even-syllable test examples:*
@@ -1234,7 +1234,7 @@ Short descrioption of this lexicon, and its purpose.
 * *vïellese:* `vïelle+N+Sg+Nom+PxSg3`
 * *vïellebe:* `vïelle+N+Sg+Nom+PxSg3`
 
-### `LEXICON KONTO  `
+#### `LEXICON KONTO  `
 Lexicon for vowel-final words with invariant stems"
 
 ```
@@ -1253,13 +1253,13 @@ Lexicon for vowel-final words with invariant stems"
 
 ---
 
-# src-fst-morphology-affixes-possessive-suffixes.lexc.md 
+## src-fst-morphology-affixes-possessive-suffixes.lexc.md 
 
 Divvun & Giellatekno - open source grammars for Sámi and other languages
 
-# South Saami Possessive suffixes
+## South Saami Possessive suffixes
 
-## Px lexica    
+### Px lexica    
 
 * * *
 
@@ -1267,12 +1267,12 @@ Divvun & Giellatekno - open source grammars for Sámi and other languages
 
 ---
 
-# src-fst-morphology-affixes-propernouns.lexc.md 
+## src-fst-morphology-affixes-propernouns.lexc.md 
 
 
-# Proper nouns morphology
+## Proper nouns morphology
 
-## Table of content
+### Table of content
 * Continuation lexica
 * Personal names
 - First names
@@ -1389,7 +1389,7 @@ OBS! Egentlig Mâki og Järvi kan egentlig slås sammen! - MAJA
 * *Akersgatam:* `Akersgata+N+Prop+Sem/Plc+Sg+Acc`
 * *Akersgatese:* `Akersgata+N+Prop+Sem/Plc+Sg+Ill`
 
-# LEXICON ACCRA-femplc
+## LEXICON ACCRA-femplc
 Propernoun
 
 * gata #  examples:*
@@ -1415,7 +1415,7 @@ the sne / snie business remains to be sorted out.
 
 +Pl: N_ODD_PL ;     ! normal noun
 
-# LEXICON NIEMI
+## LEXICON NIEMI
 Propernoun
 
 * propernoun examples:*
@@ -1442,10 +1442,10 @@ Propernoun
 
 ---
 
-# src-fst-morphology-affixes-symbols.lexc.md 
+## src-fst-morphology-affixes-symbols.lexc.md 
 
 
-# Symbol affixes
+## Symbol affixes
 
 * * *
 
@@ -1453,15 +1453,15 @@ Propernoun
 
 ---
 
-# src-fst-morphology-affixes-verbs.lexc.md 
+## src-fst-morphology-affixes-verbs.lexc.md 
 
 
 
-# South Saami verbal inflection sublexica
+## South Saami verbal inflection sublexica
 
 This is the file for the South Saami verb inflection and derivation.
 
-## The auxiliaries
+### The auxiliaries
 
 First we just list the auxiliaries and their inflection.
 
@@ -1473,7 +1473,7 @@ First we just list the auxiliaries and their inflection.
 
     - **LEXICON LEA-IMP**
 
-### The negative verb
+#### The negative verb
 
 * **LEXICON NEG**
 
@@ -1483,7 +1483,7 @@ First we just list the auxiliaries and their inflection.
 
     - **LEXICON IJ-PRES**
 
-### Other auxiliaries
+#### Other auxiliaries
 
 * **LEXICON EDTJEDH**
 
@@ -1493,7 +1493,7 @@ First we just list the auxiliaries and their inflection.
 
     - **LEXICON ED-IMP**
 
-## Odd-syllable verbs
+### Odd-syllable verbs
 
 Odd syllable verbs differ in Prt Sg3.
 This form is treated separately, and
@@ -1523,7 +1523,7 @@ the rest of the paradigm is conflated.
 
 * **LEXICON DÅAJVOEHTIDH** for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
 
-### Inflection common to all odd verbs
+#### Inflection common to all odd verbs
 
 * **LEXICON COMMON-ODD**
 
@@ -1533,7 +1533,7 @@ the rest of the paradigm is conflated.
 
 * Derivations
 
-## Even-syllable verbs
+### Even-syllable verbs
 
 * **LEXICON MAEHTEDH_TV**
 
@@ -1673,13 +1673,13 @@ Nominal derivation sublexica
 
 * **LEXICON IGENSUFF**
 
-## Verbal affixes
+### Verbal affixes
 
-### Finite forms
+#### Finite forms
 
-#### Even
+##### Even
 
-##### Present
+###### Present
 
 * **LEXICON V-I-PRS-SG** Merge with V-EVEN-PRS if nothing special here.
 
@@ -1697,7 +1697,7 @@ Nominal derivation sublexica
 
 * **LEXICON V-IV-EVEN-PRS**
 
-##### Imperative
+###### Imperative
 
 * **LEXICON VSUF-EVEN-IMP**
 
@@ -1705,9 +1705,9 @@ Nominal derivation sublexica
 
 * **LEXICON VSUF-III-EVEN-IMP**
 
-#### Ulikestavelsesverb - ODD
+##### Ulikestavelsesverb - ODD
 
-##### Present
+###### Present
 
 * **LEXICON VSUF-ODD-PRS**
 
@@ -1719,17 +1719,17 @@ Nominal derivation sublexica
 
     - **LEXICON ODD_PRS_DU3**
 
-##### Past
+###### Past
 
 * **LEXICON VSUF-ODD-PRT**
 
-##### Imperative
+###### Imperative
 
 * **LEXICON VSUF-ODD-IMP**
 
-#### Common even-odd
+##### Common even-odd
 
-##### Present
+###### Present
 
 * **LEXICON V-PRS-SG-12** Kutt denne viss ikkje ref til
 
@@ -1739,7 +1739,7 @@ Nominal derivation sublexica
 
 * **LEXICON V-PRS-SG-3**
 
-##### Past
+###### Past
 
 * **LEXICON VSUF-PRT**
 
@@ -1749,7 +1749,7 @@ Nominal derivation sublexica
 
 * **LEXICON VSUF-PRT-DUPL**
 
-## Flag diacritica
+### Flag diacritica
 
 LEXICON V-EVEN-PRS
 V-PRS-SG-12 ;
@@ -1762,7 +1762,7 @@ V-EVEN-PRS-DUPL ;
 
 ---
 
-# src-fst-morphology-compounding.lexc.md 
+## src-fst-morphology-compounding.lexc.md 
 
 
 South Sámi morphological analyser
@@ -1771,12 +1771,12 @@ South Sámi morphological analyser
 Prefixing and compounding
 =========================
 
-## Lexicon `Prefixes`
+### Lexicon `Prefixes`
 
 It contains only one entry:
 - `Noerhte- ProperNoun ;`
 
-## Lexicon `R`
+### Lexicon `R`
 
 This lexicon is the main entry for regular compounding.
 All entries NOT requiring a hyphen should point to it. 
@@ -1787,22 +1787,22 @@ After the flags, we continue to the `Rreal ;` lexicon, for the real compounding 
 
 It should be noted that some of the flags above require a corresponding flag in the lexicon `ENDLEX` to work properly. 
 
-## Lexicon `Rreal`
+### Lexicon `Rreal`
 
 This is where the actual compounding happens.
 
-## Lexicon `RNum`
+### Lexicon `RNum`
 
 For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon, since the regular `RHyph` lexicon
 below contains a continuation pointing back to the numerals.
 
-## Lexicon `RHyph`
+### Lexicon `RHyph`
 
 This lexicon is used for compounds requiring a hyphen before the next part.
 As for the regular compounds, we first add a number of flag diacritics to restrict certain combinations,
 before we continue to the real compounding lexicon.
 
-## Lexicon `RHyphReal`
+### Lexicon `RHyphReal`
 
 This is where the actual hyphen compounding happens.
 The hyphen is added here.
@@ -1813,14 +1813,14 @@ The hyphen is added here.
 
 ---
 
-# src-fst-morphology-phonology.twolc.md 
+## src-fst-morphology-phonology.twolc.md 
 
 
-# South Sámi morphophonological rule set                   
+## South Sámi morphophonological rule set                   
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc) 
 
-# Rules
+## Rules
 
 **e deletion before i-initial suffix**  
 
@@ -2362,14 +2362,14 @@ Ingen andre verb har st > s framfor passivderivasjon.
 
 ---
 
-# src-fst-morphology-root.lexc.md 
+## src-fst-morphology-root.lexc.md 
 
 
-# South Sámi morphological analyser
+## South Sámi morphological analyser
 
-# Multichar_Symbols definitions
+## Multichar_Symbols definitions
 
-## Tags for POS (Part-Of-Speech, Word class)
+### Tags for POS (Part-Of-Speech, Word class)
 * **+N** = Noun
 * **+A** = Adjective
 * **+Adv** = Adverb
@@ -2387,12 +2387,12 @@ Ingen andre verb har st > s framfor passivderivasjon.
 * **+Subqst** - used for adverbs
 * **+Dyn** = Code dynamic acronyms
 
-## Tags for sub-POS
+### Tags for sub-POS
 
-### Proper nouns
+#### Proper nouns
 * **+Prop** =
 
-### Pronoun subtypes
+#### Pronoun subtypes
 * **+Pers** = Personal
 * **+Dem** = Demonstrative
 * **+Interr** = Interrogative
@@ -2401,12 +2401,12 @@ Ingen andre verb har st > s framfor passivderivasjon.
 * **+Rel** = Relative
 * **+Indef** = Indefinite
 
-### Numeral subtypes
+#### Numeral subtypes
 * **+Coll** = Collective numeral
 * **+Arab** = Arabic numeral
 * **+Rom** = Roman numeral
 
-## Error (non-standard language) tags
+### Error (non-standard language) tags
 
 |                     Error tag | Explanation
 |                           --- | ---
@@ -2419,7 +2419,7 @@ Ingen andre verb har st > s framfor passivderivasjon.
 | **+Err/Spellrelax** | Used to tag spellrelaxed typos (tag is inserted via flag diacritics)
 | **+Err/MissingSpace** | in use in smi lexc
 
-### Usage tags
+#### Usage tags
 
 |                    Usage tag | Explanation
 |                          --- | ---
@@ -2441,7 +2441,7 @@ Ingen andre verb har st > s framfor passivderivasjon.
 | **+Use/TTS** | **only** retained in the HFST Text-To-Speech disambiguation tokeniser
 | **+Use/-TTS** | **never** retained in the HFST Text-To-Speech disambiguation tokeniser
 
-## Dialect tags
+### Dialect tags
 
 |            Dialect tag | Explanation
 |                    --- | ---
@@ -2456,10 +2456,13 @@ Ingen andre verb har st > s framfor passivderivasjon.
 | **+Dial/SH** | Short forms
 | **+Dial/L** | Long forms
 
-## Normative/prescriptive compounding tags
-(to govern compound behaviour for the speller, ie what a compound SHOULD BE)
+### Compounding tags
+We use normative compounding tags to govern compound behaviour for the speller,
+ie what a compound **should be**. We use descriptive compounding tags to describe
+what a compound actually is. These two sets can be combined in the grammar
+checker to identify and correct compounding errors.
 
-### The left part of a compound should be ...
+#### Normative: the left part of a compound should be ...
 
 The default is `+CmpN/SgN`, so when nothing is specified, that
 will be used. To override that one, specify one or more of the
@@ -2473,7 +2476,7 @@ are listed - unless `+CmpN/SgN` should *not* be used, for course.
 |  **+CmpN/SgG** | Singular Genitive
 |  **+CmpN/PlG** | Plural Genitive
 
-### The right part of a compound requires to the left ...
+#### Normative: the right part of a compound requires to the left ...
 
 These tags overrule the regular tags defined above. One or more
 can be specified.
@@ -2485,7 +2488,7 @@ can be specified.
 |  **+CmpN/SgGenLeft** | Sg Gen to the left
 |  **+CmpN/PlGenLeft** | Pl Gen to the left
 
-### This part of the component can ...
+#### Normative: this part of the component can ...
 
 |        Normative position tag | Explanation
 |                           --- | ---
@@ -2497,7 +2500,7 @@ can be specified.
 |  **+CmpNP/None** | ... not take part in compounds
 |  **+CmpNP/Only** | ... only be part of a compound, i.e. can never be used alone, but can appear in any position
 
-## Descriptive compounding tags
+#### Descriptive compounding tags
 Tags for compound analysis - this is what a compound actually is. We use this
 to research compounding patterns in the corpus.
 
@@ -2519,10 +2522,10 @@ to research compounding patterns in the corpus.
 |  **+Cmp/XForm** | Alle Cmp som ikke har en klar klassifisering
 |  **+Cmp/AttrH** | Alle Cmp som har en attr-h
 
-# Tags for Inflection
+## Tags for Inflection
 
-## Tags for Case, Number & Possessive Inflection
-### Case and number
+### Tags for Case, Number & Possessive Inflection
+#### Case and number
 * **+Sg** = Singular
 * **+Pl** = Plural
 * **+Du** = Dual
@@ -2536,7 +2539,7 @@ to research compounding patterns in the corpus.
 * **+Com**= Comitative
 * **+Ess** = Essive
 
-## Possessive
+### Possessive
 * **+PxSg1** =  Possessives Singular
 * **+PxSg2** =  Possessives Singular
 * **+PxSg3** =  Possessives Singular
@@ -2547,7 +2550,7 @@ to research compounding patterns in the corpus.
 * **+PxPl2** =  Possessives Plural
 * **+PxPl3** =  Possessives Plural
 
-## Tense, Person & Number
+### Tense, Person & Number
 
 |                                                 Tense tag | Explanation
 |                                                       --- | ---
@@ -2566,7 +2569,7 @@ to research compounding patterns in the corpus.
 |  **+Pl2** | Plural  , 2.person
 |  **+Pl3** | Plural  , 3.person
 
-## Other verbal tags
+### Other verbal tags
 
 |             Verbal tag | Explanation
 |                    --- | ---
@@ -2584,12 +2587,12 @@ to research compounding patterns in the corpus.
 | **+Cond** | Kondisjonalis, for one form:  lidtjie. To be looked at.+ lidtjim, + lidtjih
 | **+Act** | *-eme*, could be changed to `+Actio`
 
-## Tags for adjectives
+### Tags for adjectives
 
 * **+Attr**:  Attribute form
 * **+Ord**:  Ordinal number
 
-## Other tags
+### Other tags
 * **+ABBR**:  Abbreviation
 * **+Symbol**:  Symbols in the text stream, like £, €, ©
 * **+ACR**:  Acronym
@@ -2607,7 +2610,7 @@ constituent is numeric
 * **+Cmp/Hyph**:  A tag to indicate that a hyphen was used when
 compounding?
 
-### Tags for testing the frequency of certain phenomenas in our corpora
+#### Tags for testing the frequency of certain phenomenas in our corpora
 
 * **+Test/LysI**:  form uses i
 * **+Test/MørkI**:  form uses ï
@@ -2617,7 +2620,7 @@ compounding?
 * **+Uml**:  A tag to indicate realised or potential Umlaut
 * **+NoUml**:  A tag to indicate the lack of realised or potential Umlaut
 
-### Tags for punctuation
+#### Tags for punctuation
 
 * **+CLB**:  XXX These should be documented better
 * **+PUNCT**:  XXX These should be documented better
@@ -2625,7 +2628,7 @@ compounding?
 * **+RIGHT +MIDDLE**:  XXX These should be documented better
 * **+CLBfinal**  Sentence final abbreviated expression ending in full stop, so that the full stop is ambiguous
 
-### Different focus particles
+#### Different focus particles
 
 * **+Foc**:  XXX Document better = Forsterkende particle?
 * **+Foc/ge**:  XXX Document better = Forsterkende particle
@@ -2633,11 +2636,11 @@ compounding?
 * **+Foc/gih**:  XXX Document better = Forsterkende particle
 * **+Foc/gænnah**:  XXX Document better = Forsterkende particle
 
-### Tags for adverbs and comparated adjectives
+#### Tags for adverbs and comparated adjectives
 * **+Gram/Comp**
 * **+Gram/Superl**
 
-## Semantic tags
+### Semantic tags
 
 Semantic tags help disambiguation and syntactic analysis. All tags used are defined and listed below.
 
@@ -2737,7 +2740,7 @@ Semantic tags help disambiguation and syntactic analysis. All tags used are defi
 * +Sem/Wthr = The Weather or the state of ground; cloudy weather, wind, driving conditions, night sunlight, rain shower
 * +Sem/Year = year (i.e. 1000 - 2999), used only for numerals
 
-### Multiple Semantic tags
+#### Multiple Semantic tags
 
 Multiple semantic tags are written as one tag, with the different semantic values separated by an underline `_`.
 
@@ -2862,7 +2865,7 @@ given the proper use of these flags.
 |  @C.ErrOrth@ | asdf
 |  @P.ErrOrth.ON@ | asdf
 
-## Derivation tags and derivation position tags in a derivation row
+### Derivation tags and derivation position tags in a derivation row
 
 Derivations in the same position are mutually exclusive (can not be combined), whereas
 tags in different positions can be combined, so that position 1 derivations must
@@ -2903,7 +2906,7 @@ precede position 2 derivations, and so on.
 |             |            | **+Der/ahtje** | VV   | Inchoative
 |             |            | **+Der/InchL** | VV   | Inchoative
 
-### Other, non-positional derivations
+#### Other, non-positional derivations
 
 All non-positional derivations should be preceded by the following tag,
 to make it possible to target regular expressions in all derivations in a
@@ -2918,7 +2921,7 @@ and you are set.
 |  +Der/PassS | VV | short passive only
 |  +Der/A | NA | comparation of N's
 
-## Tags for originating language
+### Tags for originating language
 
 The following tags are used to guide conversion to IPA: loan words
 and foreign names are usually pronounced (approximately) as in the
@@ -2959,33 +2962,33 @@ get the same pronunciation whether read as SMA or NOB/NNO/SWE.
  |  **+OLang/UND** | Undefined
 |  **+OLang/PARA** | parallelle navn, navnet skal ikke overføres til andre samisk språk
 
-## Area tags
+### Area tags
 
 * +Area/SE = In Sweden
 * +Area/NO = In Norway
 
-## Triggers for morphophonological rules
+### Triggers for morphophonological rules
 * **X2 : Trigger for e:0 before suffix i**:  manne > mannine
 * **X3**:  Trigger for e->i in even syllabic verbs Du3
 * **X4**:  Trigger for e->i in even syllabic verbs Du2 & Pl12
 * **E2**:  insert e ! Fjern denne.
 
-### Morphophonemes and Sámi letters
+#### Morphophonemes and Sámi letters
 
 * e9  twol rule override, so that e doesn't turn into i infront of j
 * o9  twol rule override,  so that o doesn't turn into u infront of j
 
-## Symbols that need to be escaped on the lower side (towards twolc):
+### Symbols that need to be escaped on the lower side (towards twolc):
 * **»7**: Literal »
 * **«7**: Literal «
 * **%[%>%]**: Literal >
 * **%[%<%]**: Literal <
 
-## Lexeme disambiguation tags
+### Lexeme disambiguation tags
 * **+Hom1**:  Homonymy
 * **+Hom2**:  Homonymy
 
-## Stem variant tags
+### Stem variant tags
 * **+v1**:  variant 1
 * **+v2**:  variant 2
 * **+v3**:  variant 3
@@ -2994,13 +2997,13 @@ get the same pronunciation whether read as SMA or NOB/NNO/SWE.
 * **+v6**:  variant 6
 * **+v7**:  variant 7
 
-## The clitic boundary mark
+### The clitic boundary mark
 
 A multichar that usually just goes to zero:
 
 * **`|»`**
 
-## Umlaut and diphthong simplification triggers
+### Umlaut and diphthong simplification triggers
 
 |                    Trigger | Explanation
 |                        --- | ---
@@ -3029,7 +3032,7 @@ A multichar that usually just goes to zero:
 |  %^COMESS | Stem vowel changes in ACCRA-names
 |  ∑ | Symbol used before `#` and `-` in dynamic compounds, and only there. Used to block optional conversion of word boundaries to spaces for error detection in grammar checkers. That is, dynamic compounds are not allowed to be written appart for error detection, only lexicalised ones. This is done to reduce the amound of ambiguity in the raw analyses to an amount we can cope with.
 
-## Flag diacritics
+### Flag diacritics
 We have manually optimised the structure of our lexicon using the following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
@@ -3107,7 +3110,7 @@ The following flag diacritics are used by the grammar checker.
 |  @P.number.ten@ | Flag used to give arabic numerals in smj different cases ;
 |  @P.number.zero@ | Flag used to give arabic numerals in smj different cases ;
 
-# Lexicon Root
+## Lexicon Root
 This is the beginning of everything. The **Root** lexicon is reserved in the
 LexC language, and must be the first lexicon defined.
 
@@ -3131,7 +3134,7 @@ Here is the list of top-level lexica in the South Sámi analyser:
 - `Symbols ;`
 - `Verb ;`
 
-# Lexicon ENDLEX
+## Lexicon ENDLEX
 And this is the ENDLEX of everything:
 ```
 @D.CmpOnly.FALSE@@D.CmpPref.TRUE@@D.NeedNoun.ON@ ENDLEX2 ;
@@ -3146,11 +3149,11 @@ The `@D.NeedNoun.ON@` flag diacritic is used to block illegal compounds.
 
 ---
 
-# src-fst-morphology-stems-adjectives.lexc.md 
+## src-fst-morphology-stems-adjectives.lexc.md 
 
 
 
-# Adjective stems
+## Adjective stems
 
 This is one of two parallel files containing adjective stems.
 The files represent two alternative interpretation of the same data
@@ -3169,7 +3172,7 @@ etnihke+A+OLang/NOB:etnihke IHKE_IHKELES_LOAN ; !samediggediedahus 2012 - etnisk
 
 ---
 
-# src-fst-morphology-stems-adverbs.lexc.md 
+## src-fst-morphology-stems-adverbs.lexc.md 
 
 
 
@@ -3186,12 +3189,12 @@ laakte bïejedh - legge for tett sammen
 
 ---
 
-# src-fst-morphology-stems-nouns.lexc.md 
+## src-fst-morphology-stems-nouns.lexc.md 
 
 
 
-# South Sámi nouns 
-# The lexicon `NounRoot`
+## South Sámi nouns 
+## The lexicon `NounRoot`
 
 This lexicon is the start of all noun lemmas. It splits the nouns in three
 classes as follows:
@@ -3200,9 +3203,9 @@ NounRoot --> FirstComponent
 NounRoot --> HyphNouns
 NounRoot --> Noun
 
-# All nouns with possessives
+## All nouns with possessives
 
-# **LEXICON Noun**
+## **LEXICON Noun**
 Splitting nouns in NounNoPx, NounPx (with a P.Px.add
 flag) and NounPxKin (with a P.Nom3Px.add flag)
 * **NounNoPx ;** = words in this noun lexicon do not get any possessive inflectionb
@@ -3227,7 +3230,7 @@ pp, tt, kk --> hp, ht, hk   eller bp, dt, gk?  bp, dt, gk strider i mot rettskri
 
 ---
 
-# src-fst-morphology-stems-numerals.lexc.md 
+## src-fst-morphology-stems-numerals.lexc.md 
 
 
 
@@ -3244,11 +3247,11 @@ SAS ; !viđajahkásaš
 
 ---
 
-# src-fst-morphology-stems-pronouns.lexc.md 
+## src-fst-morphology-stems-pronouns.lexc.md 
 
 
 
-# South Saami pronouns
+## South Saami pronouns
 
 The **Pronoun** lexicon points to all the subgrops, presented in this order below:
 
@@ -3259,48 +3262,48 @@ The **Pronoun** lexicon points to all the subgrops, presented in this order belo
 * Indefinite ;    
 * Reflexive ;	    
 
-## The Reciprocal pronoun
+### The Reciprocal pronoun
 
 * sinsitniem+Pron+Recipr+Sg+Acc:sinsitniem FINAL1 ;          
 * ...
 
-## Personal pronouns
+### Personal pronouns
 
 Splitting in 1st, 2nd, 3rd
 
 New lemma form, now number as baseform, due to Oahpa
 
-### Lexica for sg
+#### Lexica for sg
 
 the **firstperspronsg** for first pers has special consonantism
 
 for **nonfirstperspronsg** the 2nd and 3rd are identical
 
-### Lexica for du
+#### Lexica for du
 
 * LEXICON firstpersprondu  
 
 * LEXICON nonfirstpersprondu  
 
-### Lexica for pl
+#### Lexica for pl
 
 * LEXICON perspronpl  
 
-### Common case lexica
+#### Common case lexica
 
 * LEXICON longproncase  
 
-### dïhte
+#### dïhte
 **DIHTE**  is a personal pronoun,
 demonstrative dïhte is treated below.
 
-## Demonstrative pronouns
+### Demonstrative pronouns
 
 This is for:
 the attributive forms of dïhte
 all forms of the other pronouns
 
-### The initial demonstrative lexica
+#### The initial demonstrative lexica
 
 * LEXICON Demonstrative   
 Same as above, with exceptions in
@@ -3309,9 +3312,9 @@ Still open: analyse morphologically or not...
 
 * LEXICON DAGKERES    
 
-## Interrogative and relative pronouns
+### Interrogative and relative pronouns
 
-## Indefinite pronouns
+### Indefinite pronouns
 
 * LEXICON Indefinite   
 
@@ -3319,9 +3322,9 @@ Still open: analyse morphologically or not...
 
 * LEXICON indeven-a 
 
-## kongruensContlex
+### kongruensContlex
 
-### muvhtiecase
+#### muvhtiecase
 
 * LEXICON muvhtiecase 
 
@@ -3329,7 +3332,7 @@ Still open: analyse morphologically or not...
 
 * LEXICON muvhtiepl 
 
-### naaken
+#### naaken
 
 * LEXICON naakenlex 
 
@@ -3343,7 +3346,7 @@ Still open: analyse morphologically or not...
 
 * LEXICON ind_noninfl  
 
-### Inflecting even indefinites
+#### Inflecting even indefinites
 
 * LEXICON indsg-e  
 
@@ -3357,7 +3360,7 @@ Still open: analyse morphologically or not...
 
 * LEXICON indcoll   
 
-## Reflexive pronouns
+### Reflexive pronouns
 
 * LEXICON Reflexive 
 
@@ -3373,7 +3376,7 @@ Still open: analyse morphologically or not...
 
 ---
 
-# src-fst-morphology-stems-sma-propernouns.lexc.md 
+## src-fst-morphology-stems-sma-propernouns.lexc.md 
 
 
 
@@ -3385,18 +3388,18 @@ Still open: analyse morphologically or not...
 
 ---
 
-# src-fst-morphology-stems-verbs.lexc.md 
+## src-fst-morphology-stems-verbs.lexc.md 
 
 
 
-# Verb stems
+## Verb stems
 
-## Preamble: Documenting the classes
+### Preamble: Documenting the classes
 contlex stem umlaut dict class
 
-### Even stems
+#### Even stems
 
-#### Verbklasse I
+##### Verbklasse I
 * BÅETEDH even row A/stem vowel -ie-, class I
 * SEVTEDH  even row A class I impersonals
 * ÅARAJEHTEDH even row A class I derived words -ehtedh, -estedh, -iste
@@ -3405,15 +3408,15 @@ contlex stem umlaut dict class
 * STIEHPEGÅETEDH even row A class I derived words -gåete  impersonals
 * ÅEREDH  even row A class I NO -øø-UMLAUT!Verbg 1
 
-#### Verbklasse II
+##### Verbklasse II
 * TJEARODH even row C class II
 * TSEAHKODH even row C class II
 * ABRODH  even row C - class II impersonals
 
-#### Verbklasse III
+##### Verbklasse III
 * GUARKEDH even row B class III
 
-#### Verbklasse IV
+##### Verbklasse IV
 * TJOEHPEDH even row D class IV
 * BIEGKEDH  even row D - class IV impersonals
 * GOEGKERDADTEDH even row D class IV derived words -alledh, -adte
@@ -3422,22 +3425,22 @@ contlex stem umlaut dict class
 * AHTJE  row D class IV derived words -ahtje
 * OBRIJAHTJEDH   row D class IV derived words -ahtje   impersonals
 
-#### Verbklasse V
+##### Verbklasse V
 * BÅÅHKEDH even row E class V
 * VÅÅJNEDH even row E class V  passives
 
-#### Verbklasse VI
+##### Verbklasse VI
 * GÖÖLEDH even row F class VI
 * BÖÖVTEDH even row F - class VI  impersonals
 
-#### Verbklasse ulikestava
+##### Verbklasse ulikestava
 * GOLTELIDH odd !odd-syll with -adte- as Der2
 * BALVEDIDH odd impersonals
 * RIHPESIDH odd !odd-syll with -adte- as Der2 -nidh and -sidh
 * DÅAJVOEHTIDH odd !for stems ending -t-: dåajvoeht-, odd-syll with -alle- as Der2
 * LGIDH odd ending -lgi
 
-## The actual continuation lexica
+### The actual continuation lexica
 
 **LEXICON Verb** splits to AUX and Regular_verbs
 
@@ -3451,11 +3454,11 @@ contlex stem umlaut dict class
 
 ---
 
-# src-fst-oahpa-filer-aff-adjectives-oahpa.lexc.md 
+## src-fst-oahpa-filer-aff-adjectives-oahpa.lexc.md 
 
 
 
-# Adjective affixes
+## Adjective affixes
 
 This is one of two parallel files containing adjective affixes.
 The files represent two alternative interpretation of the same data
@@ -3466,11 +3469,11 @@ This file is compiled by in
 langs/sma giving the command *.configure --with-oahpa*
 before compiling. The other file (adjectives.lexc) is compiled by default.
 
-# Adjectives: Adjectival inflection sublexica
+## Adjectives: Adjectival inflection sublexica
 
-## Basic adjectival lexica, infl types
+### Basic adjectival lexica, infl types
 
-### even stems
+#### even stems
 
 Lexical exceptions
 
@@ -3538,7 +3541,7 @@ Lexical exceptions
 
 * **LEXICON MOOREH **
 
-## Regular even stem types
+### Regular even stem types
 
 * **LEXICON EVTEBE   **
 
@@ -3590,7 +3593,7 @@ Lexical exceptions
 
 * **LEXICON MAST **
 
-### type 2
+#### type 2
 
 * **LEXICON JELLE **
 
@@ -3643,13 +3646,13 @@ Lexical exceptions
 
 * **LEXICON s_H_EVENNOCOMP   **
 
-# ODD-stems (odd stem declension)
+## ODD-stems (odd stem declension)
 
-## type 0 (attr only)
+### type 0 (attr only)
 
 * **LEXICON ATTR_es_s  ** aajtijes
 
-## type 1
+### type 1
 
 * **LEXICON ø_Ø_ODD  **
 
@@ -3703,7 +3706,7 @@ Lexical exceptions
 
 * **LEXICON an_AN_ODDNOCOMP **
 
-## type 2
+### type 2
 
 * **LEXICON AABELE **
 
@@ -3715,7 +3718,7 @@ Lexical exceptions
 
 * **LEXICON ø_S_ODD   ** , Comp=even jih ODD, Case= ODD
 
-## type 3
+### type 3
 
 * **LEXICON JEASIEGOELKIJE **
 
@@ -3727,7 +3730,7 @@ Lexical exceptions
 
 * **LEXICON ijes_ijs_IJE_ODDNOCOMP  ** DÅAJMIJES
 
-## type 3
+### type 3
 
 * **LEXICON Cs_CE_ODD  **
 
@@ -3751,7 +3754,7 @@ Lexical exceptions
 
 * **LEXICON hks_hke_HKS_HKE_ODD   **
 
-## type 4
+### type 4
 
 * **LEXICON as_AN_ODD  **
 
@@ -3789,7 +3792,7 @@ Lexical exceptions
 
 * **LEXICON JAEDTUVES **
 
-## Attribute lexica
+### Attribute lexica
 
 * **LEXICON ATTR_0_PRED_0 **
 
@@ -3803,7 +3806,7 @@ Lexical exceptions
 
 * **LEXICON ATTRCONT **
 
-## Predicative lexica
+### Predicative lexica
 
 * **LEXICON PRED_0 **
 
@@ -3815,7 +3818,7 @@ Lexical exceptions
 
 * **LEXICON PRED_AN **
 
-# Odd syllabic stems - adjectives
+## Odd syllabic stems - adjectives
 
 * **LEXICON ODDCASE **
 
@@ -3829,7 +3832,7 @@ Lexical exceptions
 
     - **LEXICON ije_ODDCASEOBL **
 
-# Even syllabic stems - adjectives
+## Even syllabic stems - adjectives
 
 * **LEXICON eCASE **
 
@@ -3863,7 +3866,7 @@ Lexical exceptions
 
     - **LEXICON A_OE_ESS **
 
-# Comparative forms
+## Comparative forms
 
 * **LEXICON EVENCOMP **
 
@@ -3915,10 +3918,10 @@ Lexical exceptions
 
 ---
 
-# src-fst-oahpa-filer-stems-adjectives-oahpa.lexc.md 
+## src-fst-oahpa-filer-stems-adjectives-oahpa.lexc.md 
 
 
-# Adjective stems
+## Adjective stems
 
 This is one of two parallel files containing adjective stems.
 The files represent two alternative interpretation of the same data
@@ -3933,7 +3936,7 @@ before compiling. The other file (adjectives.lexc) is compiled by default.
 
 The file starts as follows:
 
-## LEXICON Adjective  
+### LEXICON Adjective  
 
 TG-grammatihkeles:TG-grammatihkel LES ;   \\
 aajmoes:aajmoe s_S_ODD ;			      \\
@@ -3945,7 +3948,7 @@ aajne:aajne ATTR_0 ;				      \\ ... \\
 
 ---
 
-# src-fst-phonetics-txt2ipa.xfscript.md 
+## src-fst-phonetics-txt2ipa.xfscript.md 
 
 
 
@@ -4114,7 +4117,7 @@ retracted tongue root			_q
 
 ---
 
-# src-fst-transcriptions-transcriptor-abbrevs2text.lexc.md 
+## src-fst-transcriptions-transcriptor-abbrevs2text.lexc.md 
 
 
 
@@ -4148,7 +4151,7 @@ smi_TRNUMAB
 
 ---
 
-# src-fst-transcriptions-transcriptor-symbols2text.lexc.md 
+## src-fst-transcriptions-transcriptor-symbols2text.lexc.md 
 
 
 
@@ -4171,26 +4174,26 @@ Smileys
 
 ---
 
-# tools-grammarcheckers-grammarchecker.cg3.md 
+## tools-grammarcheckers-grammarchecker.cg3.md 
 
 
 S O U T H   S A A M I   G R A M M A R   C H E C K E R
 
-# DELIMITERS
+## DELIMITERS
 
-# TAGS AND SETS
+## TAGS AND SETS
 
-## Tags
+### Tags
 
 This section lists all the tags inherited from the fst, and used as tags
 in the syntactic analysis. The next section, **Sets**, contains sets defined
 on the basis of the tags listed here, those set names are not visible in the output.
 
-### Beginning and end of sentence
+#### Beginning and end of sentence
 BOS
 EOS
 
-### Parts of speech tags
+#### Parts of speech tags
 
 N
 A
@@ -4218,7 +4221,7 @@ MWE
 COMMA
 ¶
 
-### Tags for POS sub-categories
+#### Tags for POS sub-categories
 
 Pers
 Dem
@@ -4234,7 +4237,7 @@ Allegro
 Arab
 Romertall
 
-### Tags for morphosyntactic properties
+#### Tags for morphosyntactic properties
 
 Nom
 Acc
@@ -4297,7 +4300,7 @@ Sup
 Actio
 VAbess
 
-#### Derivation tags
+##### Derivation tags
 
 - `Der/A      `
 - `Der/Car    `
@@ -4328,11 +4331,11 @@ VAbess
 - `Der/st     `
 - `Der/vuota  
 
-### Sets for explicit error analysis from the morphological analyser:
+#### Sets for explicit error analysis from the morphological analyser:
 
-### Other secondary tags
+#### Other secondary tags
 
-### Semantic tags
+#### Semantic tags
 
 Other semantic sets:
 
@@ -4341,7 +4344,7 @@ Other semantic sets:
 - `HUMAN              `
 - `TIME-N-SET         `
 
-###  Syntactic tags
+####  Syntactic tags
 
 - `@+FAUXV     `
 - `@+FMAINV    `
@@ -4415,22 +4418,22 @@ Other semantic sets:
 - `SYN-V`
 - `@X`
 
-## Sets containing sets of lists and tags
+### Sets containing sets of lists and tags
 
 This part of the file lists a large number of sets based partly upon the tags defined above, and
 partly upon lexemes drawn from the lexicon.
 See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
 
-### Sets for Single-word sets
+#### Sets for Single-word sets
 
 INITIAL
 
-### Sets for word or not
+#### Sets for word or not
 
 WORD
 NOT-COMMA
 
-### Case sets
+#### Case sets
 
 ADLVCASE
 
@@ -4441,11 +4444,11 @@ NOT-NOM
 NOT-GEN
 NOT-ACC
 
-### Verb sets
+#### Verb sets
 
 NOT-V
 
-### Sets for finiteness and mood
+#### Sets for finiteness and mood
 
 REAL-NEG
 
@@ -4453,7 +4456,7 @@ MOOD-V
 
 NOT-PRFPRC
 
-### Sets for person
+#### Sets for person
 
 SG1-V
 SG2-V
@@ -4465,25 +4468,25 @@ PL1-V
 PL2-V
 PL3-V
 
-### Pronoun sets
+#### Pronoun sets
 
-### Adjectival sets and their complements
+#### Adjectival sets and their complements
 
-### Adverbial sets and their complements
+#### Adverbial sets and their complements
 
-### Sets of elements with common syntactic behaviour
+#### Sets of elements with common syntactic behaviour
 
-### NP sets defined according to their morphosyntactic features
+#### NP sets defined according to their morphosyntactic features
 
-### The PRE-NP-HEAD family of sets
+#### The PRE-NP-HEAD family of sets
 
 These sets model noun phrases (NPs). The idea is to first define whatever can
 occur in front of the head of the NP, and thereafter negate that with the
 expression **WORD - premodifiers**.
 
-### Border sets and their complements
+#### Border sets and their complements
 
-### Grammarchecker sets
+#### Grammarchecker sets
 
 Naming convention &errorclass-errortype-wrong-correct:
 So far only one errorclass: msyn.
@@ -4500,24 +4503,24 @@ Ensure preceding nominal agrees with the verb
 
 ---
 
-# tools-grammarcheckers-grc-disambiguator.cg3.md 
+## tools-grammarcheckers-grc-disambiguator.cg3.md 
 
 
 
-# S O U T H   S Á M I   D I S A M B I G U A T O R          
+## S O U T H   S Á M I   D I S A M B I G U A T O R          
 
-## Delimiters, tags and sets
+### Delimiters, tags and sets
 
 `"<.>" "<!>" "<?>" "<...>" "<¶>" sent`
 
-### Tags 
+#### Tags 
 
-#### BOS/EOS:
+##### BOS/EOS:
 
 - `(>>>) (<s>)`
 - `(<<<) (</s>)`
 
-#### Morphological tags
+##### Morphological tags
 
 * N 
 * Sg 
@@ -4540,7 +4543,7 @@ PxPl3
 
 * Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
 
-#### Derivation tags
+##### Derivation tags
 
 - `Der/A      `
 - `Der/Car    `
@@ -4571,7 +4574,7 @@ PxPl3
 - `Der/st     `
 - `Der/vuota  `
 
-#### Error usage tags
+##### Error usage tags
 
 We define two lists for `Err/xxx` tags:
 
@@ -4601,18 +4604,18 @@ We define two lists for `Err/xxx` tags:
     - `err_orth_nom_acc_mt`
     - `err_orth_nom_gen_mt`
 
-#### Other tags
+##### Other tags
 
 - `Cmp/Hyph`
 - `<vdic>`
 
-### Other secondary tags
+#### Other secondary tags
 
-####  Semantic tags
+#####  Semantic tags
 
-#### Secondary tags
+##### Secondary tags
 
-#### Syntactic tags
+##### Syntactic tags
 
 * @CNP
 @CVP
@@ -4622,21 +4625,21 @@ We define two lists for `Err/xxx` tags:
 @-FMAINV
 MAINV  = 
 
-#### Titles
+##### Titles
 
 REAL-TITLE
 OFFICE
 TITLE
 
-## Sets
+### Sets
 
-### Sets of morphological tags for syntactic use
+#### Sets of morphological tags for syntactic use
 
 CASES
 ADVLCASE
 NUMBER
 
-### Noun sets
+#### Noun sets
 
 INSTITUTION
 ORGANIZATION
@@ -4645,7 +4648,7 @@ CURRENCY
 CURRENCY
 LESSON
 
-### Verb sets
+#### Verb sets
 
 REALCOPULAS
 
@@ -4655,9 +4658,9 @@ V-NOT-COP
 
 MOD-ASP
 
-### Adjective sets
+#### Adjective sets
 
-### Adverb sets
+#### Adverb sets
 
 GUKTIEGOSSE
 
@@ -4675,11 +4678,11 @@ ELAADV
 
 DV-MOD-ADV
 
-### Postposition sets
+#### Postposition sets
 
 ILLPO
 
-### BOUNDARY SETS
+#### BOUNDARY SETS
 
 REALCLB
 
@@ -4687,7 +4690,7 @@ SV-BOUNDARY
 
 NP-BOUNDARY
 
-### Derivation sets
+#### Derivation sets
 
 V-DER
 
@@ -4709,63 +4712,63 @@ LEX-ADV
 VERB-FORMS
 2-PERS
 
-# Disambiguation rules
+## Disambiguation rules
 
 BEFORE-SECTIONS
 
 Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes når vi får felles numeralfil fra shared)
 
-## Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
+### Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
 
-## Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
+### Guessing: Rule for adding Adv Sem/Adr as a tag to readings which looks addresses
 
 Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
 
 SECTION
 
-## Cycle 0 (Early rules)
+### Cycle 0 (Early rules)
 
 Removing non-lexicalised forms when lexicalised 
 
-### Numerals and ACR
+#### Numerals and ACR
 
-### Numerals in QPs
+#### Numerals in QPs
 
-### CC og not (spesifikke regler lenger ned)
+#### CC og not (spesifikke regler lenger ned)
 
-### Interj
+#### Interj
 
-### Possessive suffix
+#### Possessive suffix
 
 REmove Px if not family
 
-### Pronouns
+#### Pronouns
 
-### Proper nouns
+#### Proper nouns
 
 INITIAL
 
-### Verbs
+#### Verbs
 
-### Postpositions
+#### Postpositions
 Selecting postpositions when preceded by genitives, etc.
 
-### Particles and adverbs
+#### Particles and adverbs
 
-### Adjective or Indef
+#### Adjective or Indef
 
-### Demonstratives
+#### Demonstratives
 
-### Genitive
+#### Genitive
 
-### Adjective or not
+#### Adjective or not
 
 Rel or Interr OR Indef
 
-### Adverbs
+#### Adverbs
 Selecting adverbs in local contexts
 
-### Verbs
+#### Verbs
 Selecting verbs in local contexts, based upon agreement patterns
 
 Selecting imperative sentence-initially with appropriate right context
@@ -4774,52 +4777,52 @@ Remove verb readings
 
 Select Inf
 
-## Mapping rules
+### Mapping rules
 
-### CC- and CS-Mapping
+#### CC- and CS-Mapping
 
 * **COMPCS**  @COMP-CS< to Adv or A after goh etc.
 
-## CNP mapping
+### CNP mapping
 
 Mapping CNP to CC and CS.
 
-## CVP Mapping
+### CVP Mapping
 
 Mapping @CVP to all CS
 
 Attributes or not
 
-## PrfPrc
+### PrfPrc
 
 Select PrfPrc if DerNomAct
 
 Mapping verbs
 
-### killifVinCohort
+#### killifVinCohort
 This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 
-## Person
+### Person
 
 leah Prs Sg2 = Pl3
 
 Select Inf If Infv
 
-## Span sentences
+### Span sentences
 
-### Nomen
+#### Nomen
 
 Remove Prop Attr if not 1 Prop 
 
-### Verb or Noun
+#### Verb or Noun
 
-## CC and CS or Adv
+### CC and CS or Adv
 
-## Adj or Adv
+### Adj or Adv
 
-## Grammatisk ord eller N eller A
+### Grammatisk ord eller N eller A
 
-## N or V
+### N or V
 
 Ger or Der/NomAct
 
@@ -4845,7 +4848,7 @@ Adverb context prefers Adv
 
 Verb person vs. Inf -- moved here in order to have the pronouns disambiguated first.
 
-# Proper nouns
+## Proper nouns
 
 Rule set taken from sme
 
@@ -4857,9 +4860,9 @@ gellie as numeral, not pronoun
 
 ---
 
-# tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.md 
+## tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.md 
 
-# Tokeniser for sma
+## Tokeniser for sma
 
 Usage:
 ```
@@ -4903,7 +4906,7 @@ ASCII digits
 so far:
 * U+F0B7 for "x in box"
 
-## Unknown handling
+### Unknown handling
 Unknowns are tagged ?? and treated specially with `hfst-tokenise`
 hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
 remove empty analyses from other readings. Empty readings are also
@@ -4922,9 +4925,9 @@ Finally we mark as a token any sequence making up a:
 
 ---
 
-# tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.md 
+## tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.md 
 
-# Grammar checker tokenisation for sma
+## Grammar checker tokenisation for sma
 
 Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
@@ -4987,9 +4990,9 @@ Finally we mark as a token any sequence making up a:
 
 ---
 
-# tools-tokenisers-tokeniser-tts-cggt-desc.pmscript.md 
+## tools-tokenisers-tokeniser-tts-cggt-desc.pmscript.md 
 
-# TTS tokenisation for smj
+## TTS tokenisation for smj
 
 Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
