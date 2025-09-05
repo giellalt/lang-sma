@@ -113,10 +113,13 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 
 
 
-!! ## Normative/prescriptive compounding tags
-!! (to govern compound behaviour for the speller, ie what a compound SHOULD BE)
+!! ## Compounding tags
+!! We use normative compounding tags to govern compound behaviour for the speller,
+!! ie what a compound **should be**. We use descriptive compounding tags to describe
+!! what a compound actually is. These two sets can be combined in the grammar
+!! checker to identify and correct compounding errors.
 
-!! ### The left part of a compound should be ...
+!! ### Normative: the left part of a compound should be ...
 
 !! The default is `+CmpN/SgN`, so when nothing is specified, that
 !! will be used. To override that one, specify one or more of the
@@ -131,7 +134,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 +CmpN/PlG       !!≈ |  **@CODE@** | Plural Genitive
 
 
-!! ### The right part of a compound requires to the left ...
+!! ### Normative: the right part of a compound requires to the left ...
 
 !! These tags overrule the regular tags defined above. One or more
 !! can be specified.
@@ -143,7 +146,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 +CmpN/SgGenLeft !!≈ |  **@CODE@** | Sg Gen to the left
 +CmpN/PlGenLeft !!≈ |  **@CODE@** | Pl Gen to the left
 
-!! ### This part of the component can ...
+!! ### Normative: this part of the component can ...
 
 !! |        Normative position tag | Explanation
 !! |                           --- | ---
@@ -156,7 +159,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 +CmpNP/Only      !!≈ |  **@CODE@** | ... only be part of a compound, i.e. can never be used alone, but can appear in any position
 
 
-!! ## Descriptive compounding tags
+!! ### Descriptive compounding tags
 !! Tags for compound analysis - this is what a compound actually is. We use this
 !! to research compounding patterns in the corpus.
 
