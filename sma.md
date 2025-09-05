@@ -2481,9 +2481,9 @@ can be specified.
 | Normative left-governing tag | Explanation
 |                          --- | ---
 |  **+CmpN/SgLeft** | Sg to the left
-|  **+CmpN/SgNomLeft** | etc.
-|  **+CmpN/SgGenLeft** | "
-|  **+CmpN/PlGenLeft** | "
+|  **+CmpN/SgNomLeft** | Sg Nom to the left
+|  **+CmpN/SgGenLeft** | Sg Gen to the left
+|  **+CmpN/PlGenLeft** | Pl Gen to the left
 
 ### This part of the component can ...
 
