@@ -176,6 +176,14 @@ LEXICON TJE_LASSJE_RESIPR
 * *pijaanovistie:* `pijaanove+N+Sg+Ela`
 * *pijaanovinie:* `pijaanove+N+Sg+Com`
 
+* eurove # ODD-syllable test examples:*
+* *eurove:* `eurove+N+Sg+Nom`
+* *eurovem:* `eurove+N+Sg+Acc`
+* *euroven:* `eurove+N+Sg+Gen`
+* *eurovevisnie:* `eurove+N+Sg+Ine`
+* *eurovevistie:* `eurove+N+Sg+Ela`
+* *eurovevinie:* `eurove+N+Sg+Com`
+
 * administraatore# ODD-syllable test examples:*
 * *administraatore:* `administraatore+N+Sg+Nom`
 * *administraatorem:* `administraatore+N+Sg+Acc`
