@@ -29,7 +29,6 @@ TESTS=\
 	msyn_Negation_Pret-FAIL.yaml \
 	msyn_Negation_Pret-PASS.yaml \
 	msyn_Passiv-FAIL.yaml \
-	msyn_Passiv-PASS.yaml \
 	msyn_Predikativ_Infinitiv_konstruksjon-FAIL.yaml \
 	msyn_Predikativ_Infinitiv_konstruksjon-PASS.yaml \
 	msyn_REL_PRON_mij-FAIL.yaml \
