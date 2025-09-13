@@ -479,10 +479,13 @@ All used combinations must be declared below, and the list must be manually main
 * +Sem/Time_Wthr =
 * +Sem/Domain_Txt =
 
+### Other tags
+
 |              Tag | Explanation
 |                    --- | ---
 |  +MWE | multi word expressions, goes to abbr
-* **+Span** - used for numerical expressions denoting spans or intervals, like 5-10, 2012-2015, etc
+|  +Span | used for numerical expressions denoting spans or intervals, like 5-10, 2012-2015, etc
+
 Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 these flags. There exists a ready-made regex that will do the actual down-casing
