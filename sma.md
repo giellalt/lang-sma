@@ -2760,6 +2760,7 @@ All used combinations must be declared below, and the list must be manually main
 * +Sem/Act_Route = handling og vei
 * +Sem/Act_Event = Hendelse
 * +Sem/Act_Tool-it = hendelse og it verktøy
+* +Sem/Ani_Body = eks. dødt hode på rein
 * +Sem/Ani_Body-abstr_Hum = dyrekropp, abstrakt begrep på mennesker, menneske
 * +Sem/Ani_Buildpart = dyr og bygningsdel
 * +Sem/Ani_Group = gruppe med dyr
