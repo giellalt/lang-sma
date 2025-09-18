@@ -11,41 +11,50 @@ TESTS=\
 	Adpos_Kasus-FAIL.yaml \
 	Adverb_Verb-FAIL.yaml \
 	Adverb_Verb-PASS.yaml \
-	Congr_Pl-FAIL.yaml \
-	Elativ_Genitiv_Draft-FAIL.yaml \
-	Kongr_Subject_Verbal-FAIL.yaml \
-	Kongr_Subject_Verbal-PASS.yaml \
-	Trans_Intrans_Object-FAIL.yaml \
 	agreement-PASS.yaml \
 	candidates-msyn-adj-attr-pred-FAIL.yaml \
 	candidates-msyn-adj-attr-pred-PASS.yaml \
 	candidates-msyn-adj-pred-attr-FAIL.yaml \
 	candidates-msyn-adj-pred-attr-PASS.yaml \
 	candidates-msyn-agr-other-sg1-FAIL.yaml \
+	candidates-msyn-agr-other-sg1-PASS.yaml \
 	candidates-msyn-pass-active-FAIL.yaml \
 	candidates-msyn-pass-active-PASS.yaml \
+	Congr_Pl-FAIL.yaml \
+	Elativ_Genitiv_Draft-FAIL.yaml \
+	Kongr_Subject_Verbal-FAIL.yaml \
+	Kongr_Subject_Verbal-PASS.yaml \
 	msyn_KasusValens-FAIL.yaml \
 	msyn_KasusValens-PASS.yaml \
 	msyn_Negation_Pret-FAIL.yaml \
 	msyn_Negation_Pret-PASS.yaml \
+	msyn_pass_lgidh_sidh_Ack_Nom-FAIL.yaml \
+	msyn_pass_lgidh_sidh_Ack_Nom-PASS.yaml \
 	msyn_Passiv-FAIL.yaml \
 	msyn_Predikativ_Infinitiv_konstruksjon-FAIL.yaml \
 	msyn_Predikativ_Infinitiv_konstruksjon-PASS.yaml \
 	msyn_REL_PRON_mij-FAIL.yaml \
-	msyn_SYN_Delete_akte-FAIL.yaml \
-	msyn_SYN_Delete_akte-PASS.yaml \
 	msyn_Syn_Attr_Pred-FAIL.yaml \
 	msyn_Syn_Attr_Pred-PASS.yaml \
 	msyn_Syn_Congr-FAIL.yaml \
+	msyn_SYN_Delete_akte-FAIL.yaml \
+	msyn_SYN_Delete_akte-PASS.yaml \
+	msyn_Syn_gaaabpa_Comp-PASS.yaml \
 	msyn_Syn_Pred_Attr-FAIL.yaml \
 	msyn_Syn_Pred_Attr-PASS.yaml \
 	msyn_Syn_Prep_Congr-FAIL.yaml \
-	msyn_Syn_gaaabpa_Comp-PASS.yaml \
 	msyn_TALLORD-FAIL.yaml \
-	msyn_pass_lgidh_sidh_Ack_Nom-FAIL.yaml \
-	msyn_pass_lgidh_sidh_Ack_Nom-PASS.yaml \
+	msyn-agr-other-sg1-PASS.yaml \
+	msyn-aux-vfin-inf-PASS.yaml \
+	msyn-demphrase-congruence-plnom-PASS.yaml \
+	msyn-Neg-VFinitt-ConNeg-PASS.yaml \
+	msyn-numphrase-congruence-plnom-PASS.yaml \
+	msyn-numphrase-congruence-sggen-PASS.yaml \
+	msyn-rel-mij-gie-PASS.yaml \
 	syn-delete-adv-phrasal-verb-FAIL.yaml \
 	syn-delete-adv-phrasal-verb-PASS.yaml \
+	syn-wo-verb_advl-advl_verb-FAIL.yaml \
+	Trans_Intrans_Object-FAIL.yaml \
 	various-PASS.yaml
 
 # List tests that are presently (expected) failures here, ie things that should
@@ -53,27 +62,28 @@ TESTS=\
 XFAIL_TESTS=\
 	Adpos_Kasus-FAIL.yaml \
 	Adverb_Verb-FAIL.yaml \
-	Congr_Pl-FAIL.yaml \
-	Elativ_Genitiv_Draft-FAIL.yaml \
-	Kongr_Subject_Verbal-FAIL.yaml \
-	Trans_Intrans_Object-FAIL.yaml \
 	candidates-msyn-adj-attr-pred-FAIL.yaml \
 	candidates-msyn-adj-pred-attr-FAIL.yaml \
 	candidates-msyn-agr-other-sg1-FAIL.yaml \
 	candidates-msyn-pass-active-FAIL.yaml \
+	Congr_Pl-FAIL.yaml \
+	Elativ_Genitiv_Draft-FAIL.yaml \
+	Kongr_Subject_Verbal-FAIL.yaml \
 	msyn_KasusValens-FAIL.yaml \
 	msyn_Negation_Pret-FAIL.yaml \
+	msyn_pass_lgidh_sidh_Ack_Nom-FAIL.yaml \
 	msyn_Passiv-FAIL.yaml \
 	msyn_Predikativ_Infinitiv_konstruksjon-FAIL.yaml \
 	msyn_REL_PRON_mij-FAIL.yaml \
-	msyn_SYN_Delete_akte-FAIL.yaml \
 	msyn_Syn_Attr_Pred-FAIL.yaml \
 	msyn_Syn_Congr-FAIL.yaml \
+	msyn_SYN_Delete_akte-FAIL.yaml \
 	msyn_Syn_Pred_Attr-FAIL.yaml \
 	msyn_Syn_Prep_Congr-FAIL.yaml \
 	msyn_TALLORD-FAIL.yaml \
-	msyn_pass_lgidh_sidh_Ack_Nom-FAIL.yaml \
-	syn-delete-adv-phrasal-verb-FAIL.yaml
+	syn-delete-adv-phrasal-verb-FAIL.yaml \
+	syn-wo-verb_advl-advl_verb-FAIL.yaml \
+	Trans_Intrans_Object-FAIL.yaml
 
 endif # WANT_GRAMCHECK
 
