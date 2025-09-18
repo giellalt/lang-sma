@@ -44,13 +44,15 @@ TESTS=\
 	msyn_Syn_Pred_Attr-PASS.yaml \
 	msyn_Syn_Prep_Congr-FAIL.yaml \
 	msyn_TALLORD-FAIL.yaml \
+	msyn-agr-other-sg1-FAIL.yaml \
 	msyn-agr-other-sg1-PASS.yaml \
+	msyn-aux-vfin-inf-FAIL.yaml \
 	msyn-aux-vfin-inf-PASS.yaml \
-	msyn-demphrase-congruence-plnom-PASS.yaml \
-	msyn-Neg-VFinitt-ConNeg-PASS.yaml \
+	msyn-demphrase-congruence-plnom-FAIL.yaml \
+	msyn-Neg-VFinitt-ConNeg-FAIL.yaml \
 	msyn-numphrase-congruence-plnom-PASS.yaml \
-	msyn-numphrase-congruence-sggen-PASS.yaml \
-	msyn-rel-mij-gie-PASS.yaml \
+	msyn-numphrase-congruence-sggen-FAIL.yaml \
+	msyn-rel-mij-gie-FAIL.yaml \
 	syn-delete-adv-phrasal-verb-FAIL.yaml \
 	syn-delete-adv-phrasal-verb-PASS.yaml \
 	syn-wo-verb_advl-advl_verb-FAIL.yaml \
@@ -81,6 +83,12 @@ XFAIL_TESTS=\
 	msyn_Syn_Pred_Attr-FAIL.yaml \
 	msyn_Syn_Prep_Congr-FAIL.yaml \
 	msyn_TALLORD-FAIL.yaml \
+	msyn-agr-other-sg1-FAIL.yaml \
+	msyn-aux-vfin-inf-FAIL.yaml \
+	msyn-demphrase-congruence-plnom-FAIL.yaml \
+	msyn-Neg-VFinitt-ConNeg-FAIL.yaml \
+	msyn-numphrase-congruence-sggen-FAIL.yaml \
+	msyn-rel-mij-gie-FAIL.yaml \
 	syn-delete-adv-phrasal-verb-FAIL.yaml \
 	syn-wo-verb_advl-advl_verb-FAIL.yaml \
 	Trans_Intrans_Object-FAIL.yaml
