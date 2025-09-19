@@ -27,11 +27,6 @@ LOCAL_GC_ZIP_FILES=after-speller-disambiguator.bin \
 					valency-postspell.bin \
 				   grammarchecker-release.bin
 
-# Build .drb file when divvun-runtime is available
-if HAVE_DIVVUN_RUNTIME
-all-local: $(GIELLA_GC_DRBDISTRO)
-endif
-
 #### BEGIN: Local build targets: ####
 
 grammarchecker-release.cg3: $(srcdir)/grammarchecker.cg3 \
