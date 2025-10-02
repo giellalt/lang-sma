@@ -353,6 +353,8 @@ Verb person vs. Inf -- moved here in order to have the pronouns disambiguated fi
 
 Rule set taken from sme
 
+* **PropAttr1** Selects Attr if you are Sem/Fem OR Sem/Mal, Sem/Sur or INITIAL and to your right is Prop which is Sem/Fem OR Sem/Mal or Sem/Sur 
+
 gellie as numeral, not pronoun
 
 * * *
