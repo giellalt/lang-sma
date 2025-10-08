@@ -61,7 +61,7 @@ while(<>) {
 
 	# Substitutions due to orthographic differences between SMA and SME:
 #	s/t:(.*)h /t:$1d9 /g ;
-	s/#/^/g ;  # Endra alle smi-# til ^, slik at vi kan la alle andre # bli til bindestrek
+	s/([^ ])#([^ ])/$1^$2/g ;  # Endra alle smi-# til ^, slik at vi kan la alle andre # bli til bindestrek, men ikkje når # er leksikonnamnet, dvs slutt på ordet/analysen
 
 	# j->i || Vow i .* : .* Vow _ ; Heaika:Heajka -> Heaika:Heaika. But Majken 	
 #   s/([ÁAEIOUaáeiou])i(.*):(.*)([ÁAEIOUaáeiou])j/$1i$2:$3$4i/g ;
