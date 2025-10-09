@@ -753,15 +753,26 @@ REMOVE:diNom Coll (-1 ("ts") OR ("tsåahka")) ;
 
 
 #!! Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
-LIST JIEHTEDH = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "praahkedh" "stilledh" "tjaalasovvedh" "tjåarvodh" "onterdidh" "ussjedidh" "vaestiedidh" ;
+LIST JIEHTEDH = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "låasedh" "praahkedh" "sjoehkesjidh" "stilledh" "tjaalasovvedh" "tjïertestidh" "tjåarvodh" "onterdidh" "ussjedidh" "vaestiedidh" ;
 
-ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WORD)((1 N + Nom) OR (1 Attr LINK 1 N + Nom)) ; 
+ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WORD)((1 (N Nom) OR (Pron Pers Nom) OR (Pron Logo Nom))  OR (1 Attr LINK 1 N + Nom)) ; 
 	#$ «Manne dan aavosne juhkoe giesie lea,» tjidtjebe jeahta.
 	
-ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS)(NOT 0 <vdic>) (-1 N + Nom LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
+ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS)(NOT 0 <vdic>) (-1 N Nom) OR (Pron Pers Nom) OR (Pron Logo Nom) LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
 	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
 
 ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":") OR EOS)(NOT 0 <vdic>)(NOT -1 Po)  ; 
+	## ”Ean månnoeh miehtjesne mïnnh lustestallemen jallh haarjanimmien gaavhtan, mohte juktie daarpesjien dam”, buerkiestægan.
+
+#ADD:muitalit <vdic> TARGET MUITALIT (0 REAL-V LINK -1 COMMA) ((*1 HUMAN-INDIVIDUAL + Nom OR Sem/Org + Nom OR org + Nom OR PROFESSION + Nom OR Prop + Sem/Plc + Nom BARRIER SV-BOUNDARY) OR (1 Gen LINK 1 HUMAN-INDIVIDUAL + Nom OR Sem/Org + Nom OR org + Nom OR PROFESSION + Nom) OR (1 Gen LINK 1 Gen LINK 1 HUMAN-INDIVIDUAL + Nom) OR (1 Attr LINK 1 HUMAN-INDIVIDUAL + Nom OR PROFESSION + Nom OR Prop + Sem/Plc + Nom)) ; # BARRIER NOT-A LINK *1 EOC BARRIER WORD - Prop) ;
+	#$ Dál fertejit stuoridit, muitala beaivválaš jođiheaddji Eva Nordfjell.
+	#$ Sii leat áŋgiruššan fágalaš sisdoaluiguin, dadjá Sámi Allaskuvlla rektor Gunvor Guttorm.
+	#$ Mun jáhkán dat šaddá áibbas buorre, dadjá Deanu Mohtorsearvvi jođiheaddji Morten Blien loahpas.
+	#$ Muhto eai buohkat gal čađahan, dadjá sihkkelgilvvu, jođiheaddji Marianne Balto.
+	
+#ADD:muitalit <vdic> TARGET MUITALIT (0 REAL-V LINK 1 EOC) (-1 HUMAN-INDIVIDUAL + Nom OR PROFESSION + Nom OR Prop + Sem/Plc + Nom LINK *-1 COMMA BARRIER REAL-V OR S-BOUNDARY) ; 
+	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
+
 
 
 SECTION  #!! SECTION
