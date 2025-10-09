@@ -755,10 +755,11 @@ REMOVE:diNom Coll (-1 ("ts") OR ("tsåahka")) ;
 #!! Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
 LIST JIEHTEDH = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "låasedh" "praahkedh" "sjoehkesjidh" "stilledh" "tjaalasovvedh" "tjïertestidh" "tjåarvodh" "onterdidh" "ussjedidh" "vaestiedidh" ;
 
-ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WORD)((1 (N Nom) OR (Pron Pers Nom) OR (Pron Logo Nom))  OR (1 Attr LINK 1 N + Nom)) ; 
+ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WORD)(1 (N Nom) OR (Pron Pers Nom) OR (Pron Logo Nom));
+ADD:jiehtedh1 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK *-1 COMMA BARRIER WORD) (1 Attr LINK 1 N + Nom) ; 
 	#$ «Manne dan aavosne juhkoe giesie lea,» tjidtjebe jeahta.
 	
-ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS)(NOT 0 <vdic>) (-1 N Nom) OR (Pron Pers Nom) OR (Pron Logo Nom) LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
+ADD:jiehtedh2 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 EOS)(NOT 0 <vdic>) (-1 (N Nom) OR (Pron Pers Nom) OR (Pron Logo Nom) LINK *-1 COMMA BARRIER VFIN OR S-BOUNDARY) ; 
 	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
 
 ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":") OR EOS)(NOT 0 <vdic>)(NOT -1 Po)  ; 
