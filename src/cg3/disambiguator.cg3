@@ -1072,6 +1072,14 @@ SELECT:jijnjeIndef Indef  (0 ("jïjnje") LINK 1 N OR REAL-V OR EOS) ;
 SELECT:jijnjeIndef Indef  (0 ("jïjnje") + Pl) ;
 
 
+#!! ### First names (Surnames)
+
+#!! * **PropAttr1** Selects Attr if you are Sem/Fem OR Sem/Mal, Sem/Sur or INITIAL and to your right is Prop which is Sem/Fem OR Sem/Mal or Sem/Sur 
+SELECT:PropAttr1 Attr IF (0 Sem/Fem OR Sem/Mal OR Sem/Sur OR INITIAL - Ine) (*1C Prop BARRIER REAL-WORD-NOT-ABBR OR COMMA OR PUNCT LINK 0 Sem/Sur OR Sem/Fem OR Sem/Mal OR ("von")) (NEGATE 1 Sem/Plc + Ill OR Sem/Plc + Ine LINK -2 VFIN + Sg3) ; 
+	# taken from sme/src/disambiguator.cg3
+	# has to be early
+
+
 #!! ### Demonstratives
 
 
@@ -2017,10 +2025,6 @@ REMOVE:Prop (Prop Pl Nom) IF (-1 BOS)(NEGATE *1 V + Pl3 BARRIER S-BOUNDARY);	   
   	## Sámi allaskuvla láhčá diliid dulkoma joatkkaoahppofáldahkii, mii oaivvilduvvo olbmuide, geat dovdet dearvvašvuođa- ja sosiálasuorggi, ja maiddái MBD ovddasvástádussuorggi.
   
 SELECT:Pluppe ("Pluppe") IF (0 ("Plupp")) ; 
-
-#!! * **PropAttr1** Selects Attr if you are Sem/Fem OR Sem/Mal, Sem/Sur or INITIAL and to your right is Prop which is Sem/Fem OR Sem/Mal or Sem/Sur 
-SELECT:PropAttr1 Attr IF (0 Sem/Fem OR Sem/Mal OR Sem/Sur OR INITIAL - Ine) (*1C Prop BARRIER REAL-WORD-NOT-ABBR OR COMMA OR PUNCT LINK 0 Sem/Sur OR Sem/Fem OR Sem/Mal OR ("von")) (NEGATE 1 Sem/Plc + Ill OR Sem/Plc + Ine LINK -2 VFIN + Sg3) ; 
-	# taken from sme/src/disambiguator.cg3
 
 	# Removing proper nouns that are lookalikes
 	# - - - - - - - - - - - - - - - - - - - - -
