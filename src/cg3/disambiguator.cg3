@@ -1502,10 +1502,11 @@ MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
 
 MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NEGATE *1 Inf OR PrfPrc BARRIER S-BOUNDARY)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
 
-MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
+MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*1 VFIN BARRIER S-BOUNDARY LINK 0 AUX)(NEGATE 0 N LINK -1 BOS) ;
+	#$ Goerehtalleme edtja daajroem vedtedh guktie noere saemieh sijjen psykiske healsoem dååjroeh jïh mah vaarjelimmiefaktovrh jïh vaahrafaktovrh noerh dååjroeh.
 MAP:InfinMainv (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*-1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
 MAP:ConNegMainv (@-FMAINV) TARGET ConNeg IF (*-1 Neg BARRIER S-BOUNDARY) ;
-MAP:GerMainv (@-FMAINV) TARGET Ger OR PrfPrc  ;
+MAP:GerMainv (@-FMAINV) TARGET Ger OR PrfPrc IF (1 EOS) ;
 	#$ Luste tjoejkedh.
 	#$ Idtji maam sijhth jiehtedh mearan Tåamma desnie.
 MAP:InfMainv (@-FMAINV) TARGET Inf ;
@@ -1530,8 +1531,9 @@ MAP:InfCoor (@-FMAINV) TARGET Inf IF (*-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -
 	#$ Stoerejïevegem maehtebe vaeltedh jïh dam råafojne utnedh.
 
 
-MAP:OnlyPrfPrc (@-FMAINV) TARGET PrfPrc IF (NEGATE *-1 VFIN BARRIER BOS) ;
+MAP:OnlyPrfPrc (@-FMAINV) TARGET PrfPrc IF (NEGATE *-1 VFIN BARRIER BOS)(NEGATE 0 (N Sg Nom) LINK *1 (V Sg3) BARRIER NOT-ADV)(NEGATE 0 (N Sg Nom) LINK 1 CC LINK *1 (N Sg Nom) BARRIER NOT-NPMOD LINK *1 (V Sg3) BARRIER NOT-ADV) ;
 	#$ Dellie giesie-eejehtimmie nåhkeme.
+	#$ {Gööleme} jïh maeksemebarkoe lea dej guaktaj jielemevåarome. Eajsa jïh Inger Anne lægan gellien jaepien Mierojaevrien gaedtiebealesne orreme, naan gille mïjlh Goevtegeajnoen noerhtelen. 
 
 	
 MAP:InfAfterAux (@-FMAINV) TARGET Inf IF (*-1 AUX-OR-MAIN BARRIER SV-BOUNDARY);
@@ -1545,9 +1547,9 @@ SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR V + @>N OR V +
 #!! This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 SELECT:killifVinCohort SYN-V IF (NOT 0 (<spelled>)) ;
 
-MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf  ;
+MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (NEGATE 0 (N Sg Nom) LINK *1 (V Sg3) BARRIER NOT-ADV)(NEGATE 0 (N Sg Nom) LINK 1 CC LINK *1 (N Sg Nom) BARRIER NOT-NPMOD LINK *1 (V Sg3) BARRIER NOT-ADV) ;
 	#$ de som ikke har annen verblesning
-
+	#$ {Gööleme} jïh maeksemebarkoe lea dej guaktaj jielemevåarome. Eajsa jïh Inger Anne lægan gellien jaepien Mierojaevrien gaedtiebealesne orreme, naan gille mïjlh Goevtegeajnoen noerhtelen.
 
 #!! ## Person
 
