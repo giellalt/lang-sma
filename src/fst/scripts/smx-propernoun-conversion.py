@@ -14,7 +14,7 @@ for line in sys.stdin:
             continue
     if not inprops:
         continue
-    if "OLang/SME" in line:
+    if "OLang/SMA" in line:
         continue
     if "Err/Orth" in line:
         continue
