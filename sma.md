@@ -258,6 +258,10 @@ Selecting postpositions when preceded by genitives, etc.
 
 #### Adjective or Indef
 
+#### First names (Surnames)
+
+* **PropAttr1** Selects Attr if you are Sem/Fem OR Sem/Mal, Sem/Sur or INITIAL and to your right is Prop which is Sem/Fem OR Sem/Mal or Sem/Sur 
+
 #### Demonstratives
 
 #### Genitive
@@ -352,8 +356,6 @@ Verb person vs. Inf -- moved here in order to have the pronouns disambiguated fi
 ## Proper nouns
 
 Rule set taken from sme
-
-* **PropAttr1** Selects Attr if you are Sem/Fem OR Sem/Mal, Sem/Sur or INITIAL and to your right is Prop which is Sem/Fem OR Sem/Mal or Sem/Sur 
 
 gellie as numeral, not pronoun
 
