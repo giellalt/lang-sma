@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
 [![Build Status](https://builds.giellalt.org/api/badge/lang-sma?label=CI)](https://builds.giellalt.org/pipelines/lang-sma/builds/latest)
+[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/__GLOTTOLOG_ID__)
 
 This page documents the work on the [South Sámi language model](http://github.com/giellalt/lang-sma). 
 It is in use in a wide range of applications.
