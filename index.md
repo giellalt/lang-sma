@@ -4,10 +4,12 @@
 ![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fgh-pages%2Flemmacount.json)
 [![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
-[![Build Status](https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/lang-sma/main/badge.svg)](https://github.com/giellalt/lang-sma/actions)
+[![Build Status](https://builds.giellalt.org/api/badge/lang-sma?label=CI)](https://builds.giellalt.org/pipelines/lang-sma/builds/latest)
+[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/sout2674)
 
 This page documents the work on the [South Sámi language model](http://github.com/giellalt/lang-sma). 
 It is in use in a wide range of applications.
+
 
 ## Reports
 ### Speller status
