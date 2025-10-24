@@ -2,16 +2,18 @@
 
 <div class="twocolumn map" markdown="1">
 
+{% include_relative language-map.md %}
+
+<div class="badges" markdown="1">
 [![Maturity](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fgh-pages%2Fmaturity.json)](https://giellalt.github.io/MaturityClassification.html) <br/>
 ![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fgh-pages%2Flemmacount.json) <br/>
 [![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE) <br/>
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues) <br/>
 [![Build Status](https://builds.giellalt.org/api/badge/lang-sma?label=CI)](https://builds.giellalt.org/pipelines/lang-sma/builds/latest) <br/>
 [![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/sout2674)
+</div>
 
 Center location data taken from [Glottolog](https://glottolog.org/). Area extent is local data. Both can be adjusted if wrong - file a pull request!
-
-{% include_relative language-map.md %}
 
 </div>
 
