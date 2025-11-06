@@ -2052,6 +2052,16 @@ ADD:syn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg
 
 COPY:syn-number_congruence-subj-verb-sg2-pl3 (Pl3 SUGGEST) EXCEPT (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) TARGET (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) ; 
 
+	# Sg3 > Sg2
+	# ---------
+
+ADD:syn-number_congruence-subj-verb-sg3-sg2 (&syn-number_congruence-subj-verb-sg3-sg2) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 Inf LINK *-1 AUX BARRIER S-BOUNDARY OR VFIN); 
+	## Mannasinie datne {båata}£{verb,subj_verb_kongr,prssg3-prssg2|båatah} mijjen geajnoem vuejien gosse mijjieh edtjibie skuvlese.
+
+ADD:syn-number_congruence-subj-verb-sg3-sg2 (&syn-number_congruence-subj-verb-sg3-sg2) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR ("dle") LINK NEGATE 0 (N Sg Nom))(NEGATE *-1 (Pron Pers Sg3) BARRIER NOT-ADV-PCLE); 
+
+COPY:syn-number_congruence-subj-verb-sg3-sg2 (Sg2 SUGGEST) EXCEPT (Sg3 &syn-number_congruence-subj-verb-sg3-sg2) TARGET (Sg3 &syn-number_congruence-subj-verb-sg3-sg2) ; 
+
 	# Sg3 > Pl3
 	# ---------
 	
