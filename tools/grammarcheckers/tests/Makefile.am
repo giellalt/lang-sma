@@ -22,7 +22,6 @@ TESTS=\
 	candidates-msyn-pass-active-PASS.yaml \
 	Congr_Pl-FAIL.yaml \
 	Elativ_Genitiv_Draft-FAIL.yaml \
-	Kongr_Subject_Verbal-FAIL.yaml \
 	Kongr_Subject_Verbal-PASS.yaml \
 	msyn_KasusValens-FAIL.yaml \
 	msyn_KasusValens-PASS.yaml \
@@ -70,7 +69,6 @@ XFAIL_TESTS=\
 	candidates-msyn-pass-active-FAIL.yaml \
 	Congr_Pl-FAIL.yaml \
 	Elativ_Genitiv_Draft-FAIL.yaml \
-	Kongr_Subject_Verbal-FAIL.yaml \
 	msyn_KasusValens-FAIL.yaml \
 	msyn_Negation_Pret-FAIL.yaml \
 	msyn_pass_lgidh_sidh_Ack_Nom-FAIL.yaml \
