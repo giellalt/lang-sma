@@ -1487,7 +1487,7 @@ LIST MAYBE-V-sme = "soaitit" ;
 LIST MAYBE-V-smn = "sättiđ" ;
 SET MAYBE-V = MAYBE-V-smj OR MAYBE-V-sma OR MAYBE-V-sme OR MAYBE-V-smn ;
 
-ADD:msyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET MAYBE-V + (Ind Prs Sg3)  (*1 VFIN - Sg3 BARRIER (*) - Pcle - Adv) ;
+ADD:msyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET MAYBE-V + (Ind Prs Sg3)  (*1 VFIN - Sg3 BARRIER (*) - Pcle - Adv LINK NOT *1 Inf BARRIER (*) - Pcle - Adv) ;
 	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
 		
 COPY:msyn-sååjhtoe-VFinitt (Sg1 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg1) ;
