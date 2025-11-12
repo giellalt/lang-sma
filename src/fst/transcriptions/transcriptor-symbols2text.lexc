@@ -12,32 +12,35 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@uit.no or feedback@divvun.no
 
-! This file contains mapping from abbreviations and some acronyms to full
-! forms for e.g. text-to-speech purposes. This is a supplement to the analyser;
-! the analyser must tag the strings as +ABBR or similar for the transcriptions
-! to work.
-
 ! ========================================================================== !
-! !!            !!!Lule Sami abbreviations                               !
+! !! # South Sámi abbreviations
 ! ========================================================================== !
 
-!! We describe here how abbreviations in Lule Sami are read out, e.g.
+!! This file contains mappings from abbreviations and some acronyms to full
+!! forms for text-to-speech purposes. This is a supplement to the analyser;
+!! the analyser must tag the strings as +ABBR or similar for the transcriptions
+!! to work. The resulting full form must be lemmas known to the analyser,
+!! for further processing.
+
+!! We describe here how abbreviations in South Sámi are read out,
 !! for text-to-speech systems.
+
+! The transcriptions below are mostly in North Sámi, replace with whatever
+! is suitable for your language. Expand the list as necessary.
 
 LEXICON Root
 
 ! ============ Symbols: ============
+!! The file contains:
 
-! Frå giella-shared/all-langs/src/fst/stems/symbols.lexc:
-
-!! Miscellaneous symbols
-  §:paragráffa # ;
- §§:paragráffa # ;
+!! - miscellaneous symbols
+  §:paragráfa  # ;
+ §§:paragráfat # ;
   ¥:yen        # ;
   $:dollar     # ; ! _$	dOllA:R
   €:euro       # ;
   £:pund       # ;
- %%:prosænnta  # ; ! %	pR'u:s'Ent	$max3
+ %%:proseanta  # ; ! %	pR'u:s'Ent	$max3
 ! ®:dollar     # ;
 ! ©:dollar     # ;
 ! √:dollar     # ;
@@ -52,81 +55,79 @@ LEXICON Root
 ! ●:dollar     # ;
 ! −:dollar     # ;
 ! ¬:dollar     # ;
- %@:sejbak-a   # ; ! @	sejbak-A: //
+! %@:sejbak-a  # ; ! @	sejbak-A: //
 
-!! Smileys
+!! - smileys
  %:-):smil # ;
   %:):smil # ;
- %:-|:smil # ;
-  %:|:smil # ;
- %:-(:smil # ;
-  %:(:smil # ;
+!%:-|:smil # ;
+! %:|:smil # ;
+!%:-(:smil # ;
+! %:(:smil # ;
 
-! Frå giella-shared/all-langs/src/fst/stems/punctuation.lexc:
+!! - Clause boundary symbols
+   ,:rihkku          # ;
+   .:čuokkis         # ;
+  ..:guokte% čuoggá  # ;
+ ...:golbma% čuoggá  # ;
+   …:golbma% čuoggá  # ;
+  %::duppalčuokkis   # ;
+  %;:beallečuokkis   # ;
+  %!:čuorvvasmearka  # ;
+!  |:sárggissáhtso   # ;
+   ?:gažaldatmearka  # ;
 
-!! * Clause boundary symbols
-   ,:tsiehkes        # ; ! _,	tsiehkes //
-   .:tjuokkes        # ; ! _.	tjuokkes //
-  ..:guokta% tjuoggá # ;
- ...:gålmmå% tjuoggá # ;
-  %::gerdaktjuokkes  # ;
-  %;:bielletjuokkes  # ;
-  %!:tjuorvasmærkka  # ;
-   |:sárggissáhtso   # ;
-   ?:gatjálvismærkka # ; ! _?	gatjAlvism&rkka //
-
-   …:gålmmå% tjuoggá # ;
 !  ¿:¿               # ;
 !  ¬:¬               # ;
 !  ¥:¥               # ;
 
-!! * Single punctuation marks
+!! - Single punctuation marks
 
 !  •:•      # ;
 !  ●:●      # ;
 !  ·:·      # ;
 !  ·:·      # ;
-   -:sáhtso # ; ! _-	sA:htso //
-  --:ájádussáhtso # ; ! double hyphen
-   –:ájádussáhtso # ; ! endash
-   —:ájádussáhtso # ; ! emdash
-   ―:ájádussáhtso # ; ! horizontal bar (U+2015)
+   -:goallossáhcu # ; ! vanleg bindestrek
+   –:jurddasáhcu  # ; ! endash
+! --:ájádussáhtso # ; ! double hyphen
+!  —:ájádussáhtso # ; ! emdash
+!  ―:ájádussáhtso # ; ! horizontal bar (U+2015)
    −:minus        # ; ! minus sign (U+2212)
-   _:vuollesáhtso # ;
-   =:jæbddásasjmærkka # ;
-   ≈:≈       # ;
+!  _:vuollesáhtso # ;
+!  =:jæbddásasjmærkka # ;
+!  ≈:≈       # ;
    &:ja      # ;
-  %":sitáhttamærkka     # ;
-   ':apostråvffå      # ;
-   *:násste      # ; ! nA:sste // not sure
+  %":sitáhtamearka  # ;
+   ':apostrofa      # ; ! Reset syntax colouring
+!  *:násste      # ; ! nA:sste // not sure
    +:plussa      # ;
-   ±:±      # ;
- +/-:+/-    # ;
-   `:aksænntamærkka # ;
-   ´:aksænntamærkka # ;
-   /:vinjoksáhtso   # ;
-   \:snjaktjesáhtso # ;
-   ~:bárrosáhtso # ;
-   ‐:sáhtso # ;
+!  ±:±           # ;
+!+/-:+/-         # ;
+   `:gravismearka # ;
+   ´:akseantamearka # ;
+   /:finju-% dahjege% njagusáhcu # ;
+!  \:snjaktjesáhtso # ;
+!  ~:bárrosáhtso # ;
+!  ‐:sáhtso # ;
    °:gráda  # ;
-   ^:cirkumflæksa # ; ! ^	sIRku-mflEks
+!  ^:cirkumflæksa # ; ! ^	sIRku-mflEks
 
-!! * Paired punctuation marks
+!! - Paired punctuation marks
 
-  «:sitáhttamærkka # ;
-  »:sitáhttamærkka # ;
-  “:sitáhttamærkka # ;
-  ”:sitáhttamærkka # ;
-  ‘:sitáhttamærkka # ;
-  ’:sitáhttamærkka # ;
-  „:sitáhttamærkka # ;
-  ‹:sitáhttamærkka # ;
-  ›:sitáhttamærkka # ;
-  (:parantiessa # ; ! _(	parantiessa // parantessa in SWE
-  ):parantiessa # ; ! _)	parantiessa // (NOR) /parantessa (SWE)
-  [:ruohkkeparantiesse           # ; ! _[	v'EnstRa||h'A:ke:paRaNt'e:s
-  ]:ruohkkeparantiesse           # ; ! _]	h'YyRa||h'A:ke:paRaNt'e:s
-  {:bárroparantiessa           # ;
-  }:bárroparantiessa           # ;
- %<:gårotjiehkaparantiessa     # ;
- %>:oalgestjiehkaparantiessa   # ;
+  «:aisttonmearka # ;
+  »:aisttonmearka # ;
+  “:aisttonmearka # ;
+  ”:aisttonmearka # ;
+  ‘:aisttonmearka # ;
+  ’:aisttonmearka # ;
+  „:aisttonmearka # ;
+  ‹:aisttonmearka # ;
+  ›:aisttonmearka # ;
+  (:dávgeruohtu   # ;
+  ):dávgeruohtu   # ;
+  [:roahkkeruohtu # ;
+  ]:roahkkeruohtu # ;
+  {:bárroruohtu   # ;
+  }:bárroruohtu   # ;
+ %<:čiehkaruohtu  # ;
+ %>:čiehkaruohtu  # ;
