@@ -125,6 +125,13 @@ LEXICON Root
  @U.MONTH.12@+Use/NG:Javle-asken% @U.MONTH.12@       31DAYS ;
  @U.MONTH.12@+Use/NG:Jåvle-maanoen% @U.MONTH.12@     31DAYS ;
 
+                       ONEST         ; ! 2000-9999
+             1:tåvsene THOUSAND      ; ! 1000-1999
+                       UNDERTHOUSAND ; ! 100-999
+                       TENS          ; ! 20-99
+                       TEENS         ; ! 10-19
+                       ONES          ; ! 1-9
+
 LEXICON 31DAYS
  31:golmeluhkievoestes B      ;
                        30DAYS ;
@@ -202,3 +209,143 @@ LEXICON MONTH
 LEXICON X
   %.: # ;
 !     # ; ! sloppy punctuation
+
+LEXICON ONEST
+2:göökte  THOUSANDS ;
+3:golme  THOUSANDS ;
+4:njieljie  THOUSANDS ;
+4:njielje+Use/NG  THOUSANDS ;
+4:nieljie+Use/NG  THOUSANDS ;
+4:nielje+Use/NG  THOUSANDS ;
+5:vïjhte  THOUSANDS ;
+6:govhte  THOUSANDS ;
+7:tjïjhtje  THOUSANDS ;
+8:gaektsie  THOUSANDS ;
+9:uktsie  THOUSANDS ;
+
+LEXICON THOUSANDS      ! x > 1
+:tåvsene  THOUSAND ;
+:stoerretjuetie+Use/NG THOUSAND ;
+:stoeretjuetie+Use/NG THOUSAND ;
+
+LEXICON THOUSAND
+UNDERTHOUSAND ;    ! 1100-1999
+%0: TENS ;         ! 1020-1099
+%0: TEENS ;        ! 1010-1019
+%0%0: ONES ;       ! 1001-1009
+%0%0%0: COMMA ;    ! 1000
+
+!===========================
+!Here starts the 999 numbers
+!===========================
+
+LEXICON UNDERTHOUSAND
+HUNDREDS ;
+1:tjuetie  HUNDRED ;
+1:stoereluhkie+Use/NG  HUNDRED ;
+1:stoerreluhkie+Use/NG  HUNDRED ;
+1:tjuatede   CUODAAT ;
+1:stoerelåhkede+Use/NG   CUODAAT ;
+1:stoerrelåhkede+Use/NG   CUODAAT ;
+
+
+LEXICON HUNDREDS
+2:göökte    CUODI ;
+3:golme     CUODI ;
+4:njieljie  CUODI ;
+4:njielje+Use/NG   CUODI ;
+4:nieljie+Use/NG   CUODI ;
+4:nielje+Use/NG   CUODI ;
+5:vïjhte    CUODI ;
+6:govhte    CUODI ;
+7:tjïjhtje  CUODI ;
+8:gaektsie  CUODI ;
+9:uktsie    CUODI ;
+
+LEXICON CUODI
+:tjuetie   HUNDRED ;
+:stoereluhkie+Use/NG   HUNDRED ;
+:stoerreluhkie+Use/NG   HUNDRED ;
+:tjuatede  CUODAAT ;
+:stoerelåhkede+Use/NG  CUODAAT ;
+:stoerrelåhkede+Use/NG  CUODAAT ;
+
+LEXICON HUNDRED
+      TENS ;
+      TEENS ;
+%0:   ONES ;
+%0%0: COMMA ;
+
+LEXICON CUODAAT
+%0%0%.:    COMMA ;
+
+LEXICON TEENS
+1:luhkie  ONES ;
+
+
+LEXICON TENS
+1%0:luhkie  COMMA ;
+1%0%.:låhkede COMMA ;
+2:göökte  LUHKIE ;
+3:golme  LUHKIE ;
+4:njieljie  LUHKIE ;
+4:njielje+Use/NG  LUHKIE ;
+4:nieljie+Use/NG  LUHKIE ;
+4:nielje+Use/NG  LUHKIE ;
+5:vïjhte  LUHKIE ;
+6:govhte  LUHKIE ;
+7:tjïjhtje  LUHKIE ;
+8:gaektsie  LUHKIE ;
+9:uktsie  LUHKIE ;
+
+LEXICON LUHKIE
+   %0:luhkie  COMMA ;
+ %0%.:låhkede COMMA ;
+     :luhkie  ONES  ;
+
+LEXICON ONES
+CARDINAL ;
+ORDINAL ;
+LEXICON CARDINAL
+ 1:akte           COMMA ;
+ 2:göökte         COMMA ;
+ 3:golme          COMMA ;
+ 4:njieljie       COMMA ;
+ 4:njielje+Use/NG COMMA ;
+ 4:nieljie+Use/NG COMMA ;
+ 4:nielje+Use/NG  COMMA ;
+ 5:vïjhte         COMMA ;
+ 6:govhte         COMMA ;
+ 7:tjïjhtje       COMMA ;
+ 8:gaektsie       COMMA ;
+ 9:uktsie         COMMA ;
+
+LEXICON ORDINAL
+ 1%.:voestes    COMMA ;
+ 2%.:mubpie     COMMA ;
+ 3%.:gåalmede   COMMA ;
+ 4%.:njealjede  COMMA ;
+ 5%.:vïjhtede   COMMA ;
+ 6%.:govhtede   COMMA ;
+ 7%.:tjïjhtjede COMMA ;
+ 8%.:gaaktsede  COMMA ;
+ 9%.:åktsede    COMMA ;
+
+LEXICON COMMA
+ ENDLEX ;
+ COMMASECTION ;
+
+LEXICON COMMASECTION  ! these are not spellchecked!!!
+                  ENDLEX ;
+! % komma% :,      Root ;
+! % tjuohkkis% :%. Root ;
+! % kolon% :%:     Root ;
+! % sárggis% :%-   Root ;
+ %=:% la%          Root ;
+ %°:% gráda%       Root ;
+ §:% paragráfa%    Root ;
+! % násti% :%*     Root ;
+ &:% ja%           Root ;
+
+LEXICON ENDLEX
+ # ;
