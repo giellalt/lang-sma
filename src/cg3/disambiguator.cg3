@@ -138,6 +138,8 @@ LIST Subqst = Subqst ;
 LIST QMARK = """ ; # ADD " FOR SYNTAX COLOURING.
 LIST PPUNCT = PUNCT ;
 SET PUNCT = PPUNCT - QMARK ;
+LIST Der/Comp = Der/Comp ;
+LIST Der/Superl = Der/Superl ;
 LIST Comp = Der/Comp Gram/Comp ;
 LIST Superl = Der/Superl Gram/Superl ;
 
@@ -773,6 +775,13 @@ ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":") OR EOS)(NOT 
 	
 #ADD:muitalit <vdic> TARGET MUITALIT (0 REAL-V LINK 1 EOC) (-1 HUMAN-INDIVIDUAL + Nom OR PROFESSION + Nom OR Prop + Sem/Plc + Nom LINK *-1 COMMA BARRIER REAL-V OR S-BOUNDARY) ; 
 	#$ Mii sávvat sutnje bures boahtin, rektor Gunvor Guttorm cealká.
+	
+	
+	# adjektiver som blir human
+	# -------------------------
+	
+SUBSTITUTE ("jïjnje" Ex/A) ("jïjnje" Sem/Hum Ex/A) TARGET Der/Comp OR Der/Superl ;
+	## 
 
 
 
@@ -1729,8 +1738,9 @@ SELECT:CCdovne Adv IF (0 ("dovne"))(1 N OR A OR Pron LINK *1 ("jïh" CC)) ;
 #REMOVE:CsIfNotFuncword Pcle (NEGATE *-1 NOT-ADV-INT-PCLE)(0 CS) ; #NOTUSED
 	# Jaa, jis damth seekere .....	 # GoNotCs (above) takes this sentence instead.
 	
-REMOVE:NotCsIfCc CS ((-1 CC OR ("mij" Nom)) OR (NEGATE -1 WORD))(0 Adv) ;
-	# Jih dellie jeehti...
+REMOVE:NotCsIfCc CS ((-1 CC OR ("mij" Nom)) OR (NEGATE -1 WORD))(0 Adv)(NEGATE 0 ("guktie")) ;
+	## Jih dellie jeehti...
+	#$ Guktie aaj jïjnjebh Saepmesne, dah guaktah lægan jielemevåaromem jïh jearsoesvoetem miehtjeste åådtjeme.
 
 #REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
 
@@ -2163,7 +2173,8 @@ SELECT:V_TV V-TRANS IF (0 IV - COPULAS LINK 1 EOS)(-1 Acc)(NOT 0 ("böötedh")) 
 #REMOVE:AdvSubqst Adv + Subqst + (Foc/Neg-ge) ; #((0 Foc/Neg-ge OR Foc/Pos-ge) OR (-1 ("nu")) OR (0 ("man"))) ;	
 #REMOVE:AdvSubqst Adv + Subqst + (Foc/Pos-ge) ; 
 
-SELECT:AdvSubqst Adv + Subqst IF (NEGATE 0 Pron)(NEGATE 0 Sem/Sur LINK -1 ABBR OR Sem/Mal OR Sem/Fem) ;	
+SELECT:AdvSubqst Adv + Subqst IF (NEGATE 0 Pron)(NEGATE 0 Sem/Sur LINK -1 ABBR OR Sem/Mal OR Sem/Fem)(NEGATE 0 ("guktie") LINK 1 ("aaj") LINK NEGATE *1 ("?")) ;
+	#$ {Guktie} aaj jïjnjebh Saepmesne, dah guaktah lægan jielemevåaromem jïh jearsoesvoetem miehtjeste åådtjeme.	
 SELECT:AdvSubqst Adv + Subqst IF (0 Pron LINK 1 A + Attr OR A + Nom) ;	
 
 
