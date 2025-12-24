@@ -1423,9 +1423,10 @@ MAP (@CVP) TARGET CC (1 CS);
 MAP (@CNP) TARGET CC ;
 
 
-SELECT @CVP IF (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
+SELECT @CVP IF (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Subqst);
+	#$ Dovne Æjsa jïh Inger Anne lægan maanabaeleste joe miehtjesne barkeme, jïh lïereme guktie edtja desnie bearkadidh, jïh guktie maahta miehtjeste bueriebistie tjöönghkedh. 
 SELECT @CVP IF (-1 BOS OR COMMA OR (";")) (NOT 0 Subqst) ;
-SELECT @CVP IF (*-1 REAL-V BARRIER S-BOUNDARY)(*1 REAL-V BARRIER S-BOUNDARY)(NEGATE -1 Inf LINK 2 Inf) ;
+SELECT @CVP IF (*-1 REAL-V BARRIER S-BOUNDARY)(*1 REAL-V BARRIER S-BOUNDARY)(NEGATE -1 Inf LINK 2 Inf)(NEGATE 0 Subqst) ;
 
 
 
@@ -1793,8 +1794,9 @@ SELECT:A_notAdv A + Nom (0 Adv LINK *-1 N + Nom BARRIER NOT-ADV-PCLE)(NEGATE 1 R
 REMOVE:daelie N (0 ("daelie" Nom) LINK 1 Nom) ;
 	## Daelie Tåamma riejries dåakteren luvnie. 
 
-SELECT:CCCS CC OR CS (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY);
+SELECT:CCCS CC OR CS (*-1 VFIN BARRIER S-BOUNDARY)(*1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Subqst);
 	## Tåamma gylje juktie bååktjehke dorje.
+	#$ Dovne Æjsa jïh Inger Anne lægan maanabaeleste joe miehtjesne barkeme, jïh lïereme guktie edtja desnie bearkadidh, jïh guktie maahta miehtjeste bueriebistie tjöönghkedh. 
 
 
 REMOVE:IllNotVfin VFIN (0 ILLADV)(1 VFIN) ;
