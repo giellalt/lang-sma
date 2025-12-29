@@ -783,6 +783,14 @@ ADD:jiehtedh3 <vdic> TARGET VFIN OR PrfPrc (0 JIEHTEDH LINK 1 (":") OR EOS)(NOT 
 SUBSTITUTE ("jïjnje" Ex/A) ("jïjnje" Sem/Hum Ex/A) TARGET Der/Comp OR Der/Superl ;
 	## 
 
+#!! ## N or V
+
+# "<aejkien>" N Sg Gen  V IV Ind Prs Du1 @+FMAINV 
+REMOVE:aejkie1 VFIN (0 ("aejkie" Gen))((-1 ("naan") OR Indef + Gen OR ("aerebi") OR Num + Gen OR Ord) OR (1 VFIN));
+	## Guktie don øvteben aejkien soptsestim, gielemoenehtasse lea ussjedeminie daan jaepien barkedh guktie dihte gielebarkoe edtja juhtedh.
+
+#REMOVE:aejkie2 VFIN (0 ("aejkie" Gen) LINK 1 VFIN);
+	## Naan aejkien leah kruana jih jeatjebh aejkien provne.
 
 
 SECTION  #!! SECTION
@@ -1816,13 +1824,6 @@ SELECT:AnotN A (0 N LINK -1 ADV-MOD-ADJ) ;
 
 
 #!! ## N or V
-
-# "<aejkien>" N Sg Gen  V IV Ind Prs Du1 @+FMAINV 
-REMOVE:aejkie1 VFIN (0 ("aejkie" Gen))((-1 ("naan") OR Indef + Gen OR ("aerebi") OR Num + Gen OR Ord) OR (1 VFIN));
-	## Guktie don øvteben aejkien soptsestim, gielemoenehtasse lea ussjedeminie daan jaepien barkedh guktie dihte gielebarkoe edtja juhtedh.
-
-#REMOVE:aejkie2 VFIN (0 ("aejkie" Gen) LINK 1 VFIN);
-	## Naan aejkien leah kruana jih jeatjebh aejkien provne.
 
 SELECT:NObj N (0 VFIN LINK 1 V-TRANS) ;
 	#$ Dah tjuerieh vïedtjem tseegkedh guktie dah fïereguhten tjiehtjelem åadtjoeh.
