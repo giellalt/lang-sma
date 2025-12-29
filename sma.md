@@ -223,6 +223,8 @@ Rule for adding Sem/Date as a tag to readings which looks like dates (fjernes n√
 
 Rules for adding <vdic> to verbs denoting verbal actions like: ... jeahta Aili Kestkitalo.
 
+### N or V
+
 SECTION
 
 ### Cycle 0 (Early rules)
