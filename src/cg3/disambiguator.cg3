@@ -546,7 +546,7 @@ SET MEASURE = VOLUME OR WEIGHT OR LENGTH OR AMOUNT OR TEMPERATURE OR TIME-UNIT-M
 
 
  # The set REALCOPULAS is smaller than COPULAS, made for verbs with PrfPrc complements: Seammás REALCOPULAS son dovdan iežas...
-LIST REALCOPULAS = "lea" ; #!! REALCOPULAS
+LIST REALCOPULAS = "lea" "årrodh" ; #!! REALCOPULAS
 
 # The set COPULAS is for predicative constructions
 SET COPULAS = REALCOPULAS OR ("sjïdtedh") OR ("årrodh") ; #!! COPULAS
@@ -1427,6 +1427,14 @@ MAP (@CVP) TARGET CS ;
 	
 MAP (@CVP) TARGET CC (0 ("mohte") OR ("men")) ;
 MAP (@CVP) TARGET CC (1 CS);
+
+MAP (@CVP) TARGET CC (*1 VFIN BARRIER NOT-ADV-PCLE - @>P - Po LINK NOT 0 VFIN);
+	## Ij maehtieh jïjtsh daeverh laehpedh, {jïh} ij åadtjoeh miehtjesne mïnnedh dan tïjjen gosse  daerpies, saemiej vuekiej mietie.
+	#$ Dovne Æjsa jïh Inger Anne lægan maanabaeleste joe miehtjesne barkeme, jïh lïereme guktie edtja desnie bearkadidh, jïh guktie maahta miehtjeste bueriebistie tjöönghkedh.
+	
+MAP (@CVP) TARGET CC (*1 ADVLCASE OR Po OR Adv BARRIER NOT-ADV-PCLE - @>P - Po LINK *1 ("lea") + VFIN BARRIER S-BOUNDARY)(-1 COMMA LINK *-1 VFIN);	
+	## Inger Anne gïetigujmie vuesehte man onn’ohtje lij goh satne voestes aejkien aehtjiebinie ektesne lij viermieh jadtehteminie, jïh eevre dan mænngan viermieh vaaksjodh lea biehkie sov jieliemisnie.
+	#$ Mænngan jïjtsh maanah åadtjoejigan, dellie lægan veele gïehtjedamme ahte maanah aaj galkin lïeredh ovmessie barkoem mij lea miehtjesne, jïh nimhtie aaj maahtoem mij daase govlesåvva.
 
 MAP (@CNP) TARGET CC ;
 
