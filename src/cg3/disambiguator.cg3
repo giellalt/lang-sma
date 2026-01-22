@@ -1505,34 +1505,6 @@ MAP @<SUBJ TARGET Inf IF (*-1 N + Nom BARRIER NOT-ADV LINK -1 A + Attr) ;
 MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER REAL-V LINK -1 COPULAS)(1 EOS) ;
 	#$ Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
 
-
-MAP:AInf (@-FMAINV) TARGET Inf IF (*-1 A + Nom BARRIER S-BOUNDARY OR V LINK *-1 BOS BARRIER NOT-ADV)(NEGATE 0 AUX) ;
-	#$ Geerve nimhtie taali jih baakoejgujmie ryøknedh.
-
-
-MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 REAL-V BARRIER S-BOUNDARY OR COMMA) ;
-MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC OR COMMA) OR (-1 PrfPrc)) ;
-
-MAP:+FAUXVNeg (@+FAUXV) TARGET Neg (NEGATE 0 A LINK 1 CC LINK 1 A) ;
-
-MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
-
-MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 REAL-V BARRIER S-BOUNDARY OR CC OR COMMA) ;
-MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NEGATE *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
-MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg) ;
-MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR COMMA OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom) ;
-	#% Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
-
-MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Inf LINK *-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf)(NOT 0 INF-SYN)(NEGATE *-1 A + Nom BARRIER S-BOUNDARY OR V LINK *-1 BOS BARRIER NOT-ADV) ;
-	#% Geerve nimhtie taali jih baakoejgujmie ryøknedh.
-
-
-MAP (@+FMAINV) TARGET VFIN IF (0 <vdic>)  ;
-MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
-
-MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NEGATE *1 Inf OR PrfPrc BARRIER S-BOUNDARY)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
-
-
 # --------------------------------------------------------	
 # This part is from sme and needs to be checked bit by bit
 
@@ -2211,6 +2183,31 @@ MAP:SUBJ>Inf (@SUBJ>) TARGET Inf (*1 Neg + VFIN BARRIER (*) - COMMA LINK 1 ConNe
 # here is the end of the part copied from sme
 # -------------------------------------------
 
+MAP:AInf (@-FMAINV) TARGET Inf IF (*-1 A + Nom BARRIER S-BOUNDARY OR V LINK *-1 BOS BARRIER NOT-ADV)(NEGATE 0 AUX) ;
+	#$ Geerve nimhtie taali jih baakoejgujmie ryøknedh.
+
+
+MAP (@+FAUXV) TARGET VFIN (0 Neg OR MOD-ASP) (*1 REAL-V BARRIER S-BOUNDARY OR COMMA) ;
+MAP (@+FAUXV) TARGET VFIN (0 COPULAS) ((*1 PrfPrc OR Ger BARRIER S-BOUNDARY OR CC OR COMMA) OR (-1 PrfPrc)) ;
+
+MAP:+FAUXVNeg (@+FAUXV) TARGET Neg (NEGATE 0 A LINK 1 CC LINK 1 A) ;
+
+MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
+
+MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 REAL-V BARRIER S-BOUNDARY OR CC OR COMMA) ;
+MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NEGATE *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
+MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg) ;
+MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR COMMA OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom) ;
+	#% Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
+
+MAP (@+FMAINV) TARGET VFIN IF (NOT 0 AUX) (NEGATE *-1 VFIN BARRIER S-BOUNDARY)(NEGATE 0 Inf LINK *-1 @CVP BARRIER VFIN OR S-BOUNDARY LINK -1 Inf)(NOT 0 INF-SYN)(NEGATE *-1 A + Nom BARRIER S-BOUNDARY OR V LINK *-1 BOS BARRIER NOT-ADV) ;
+	#% Geerve nimhtie taali jih baakoejgujmie ryøknedh.
+
+
+MAP (@+FMAINV) TARGET VFIN IF (0 <vdic>)  ;
+MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
+
+MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NEGATE *1 Inf OR PrfPrc BARRIER S-BOUNDARY)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
 
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*1 VFIN BARRIER S-BOUNDARY LINK 0 AUX)(NEGATE 0 N LINK -1 BOS) ;
 	#$ Goerehtalleme edtja daajroem vedtedh guktie noere saemieh sijjen psykiske healsoem dååjroeh jïh mah vaarjelimmiefaktovrh jïh vaahrafaktovrh noerh dååjroeh.
