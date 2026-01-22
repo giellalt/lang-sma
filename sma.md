@@ -306,6 +306,9 @@ Select PrfPrc if DerNomAct
 
 Mapping verbs
 
+#### (@A<)  target Inf 	
+* **AInf** Inf 	
+
 * **SUBJ>Inf**
 
 #### killifVinCohort
