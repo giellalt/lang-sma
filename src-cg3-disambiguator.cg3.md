@@ -298,6 +298,8 @@ Select PrfPrc if DerNomAct
 
 Mapping verbs
 
+* **SUBJ>Inf**
+
 ### killifVinCohort
 This rule removes all other readings, if there is a mapped V reading in the same cohort. Every case which this goes wrong, should be fixed in mapping rules or previous disrules.
 
