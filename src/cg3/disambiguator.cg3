@@ -1,5 +1,5 @@
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2025 The University of Tromsø & the Norwegian Sámi Parliament
+# Copyright © 2000-2026 The University of Tromsø & the Norwegian Sámi Parliament
 # http://giellatekno.uit.no & http://divvun.no
 
 # -*- cg-pre-pipe: "$GTHOME/giella-core/scripts/preprocess --abbr=$GTHOME/langs/sma/tools/preprocess/abbr.txt | hfst-optimised-lookup  $GTHOME/langs/sma/src/analyser-disamb-gt-desc.hfstol | $GTHOME/giella-core/scripts/lookup2cg" -*-
@@ -626,6 +626,10 @@ LIST ADV-MOD-NP =  "aave" "aejvie" "dovne" "eevre" "öövre" "ov" "rikti" "ajve"
 
 LIST GRADE-ADV =  "aaptsah" "aaptsh" "ååpsen" "aave" "aejvie" "dovne" "eevre" "ajve" "barre"  "ov" "rikti" "gaaje" "gaajh" "joekoen" "åpmohts" "åpmoeh" "man" "mahte" "ovrehte" "varke" "varki" "seamma" "öövre" "uhtjienadtje" "sagke" ; # "ållesth" "allesth" "ovve"  "åpmehts" "aajmohts"  "raakte"  are not Adv in FST #!! GRADE-ADV
 
+
+LIST HAB-CASE = Loc (<smj> Ine) (<sje> Ine) (<sma> Gen) ;
+SET HAB-ACTOR-ALL = Sem/Hum OR Sem/Org OR Sem/Ani OR ("gii") OR Indef OR Coll OR ("dat") OR Rel  ;
+SET HAB-ACTOR = HAB-ACTOR-ALL - ("cihca") - ("riika") ; 
 
 #!! ### Postposition sets
 
@@ -1532,11 +1536,16 @@ MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NEGATE *1 Inf OR PrfPrc BARRIER S-BOUN
 # --------------------------------------------------------	
 # This part is from sme and needs to be checked bit by bit
 
-##!! ### (@A<)  target Inf 	
-##!! * **AInf** Inf 	
-#MAP:A<Inf (@A<) TARGET Inf ((*-1 A + Nom OR A + Ess BARRIER NOT-ADV LINK *-1 COPULAS BARRIER SV-BOUNDARY LINK *-1 NP-HEAD-NOM BARRIER S-BOUNDARY) OR (*-1 A + Nom OR A + Ess BARRIER NOT-ADV LINK *-1 COPULAS BARRIER SV-BOUNDARY LINK 1 NP-HEAD-NOM OR Prop) OR (*-1 ("vejolaš") OR ("lossat") OR ("álki") OR ("buorre") BARRIER NOT-ADV LINK *-1 COPULAS BARRIER VFIN OR FMAINV LINK *-1 HAB-ACTOR BARRIER SV-BOUNDARY OR N)) ;	
-#	#$ Dološ olbmot ledje hui čeahpit dulkot nieguid.
-#
+#!! ### (@A<)  target Inf 	
+#!! * **AInf** Inf 	
+MAP:A<Inf (@A<) TARGET Inf ((*-1 A + Nom OR A + Ess BARRIER NOT-ADV - ADVLCASE LINK *-1 BOS BARRIER (*) - Adv - ADVLCASE) OR (*-1 ("vihkeles") OR ("væjkeles") OR ("aelhkies") OR ("buerie") BARRIER NOT-ADV - ADVLCASE LINK *-1 BOS BARRIER (*) - (Sg3 Nom))) ;	
+#(*-1 A + Nom OR A + Ess BARRIER NOT-ADV LINK *-1 COPULAS BARRIER SV-BOUNDARY LINK 1 NP-HEAD-NOM OR Prop) 
+	## Lyövlehke gåetesne barkedh.
+	## aelhkie badth åarjelsaemiengïelem lïeredh.
+	## Vihkele lopmem baeledh.
+	## Satne væjkele daaroengïeleste toelhkestidh.
+	#$ Dološ olbmot ledje hui čeahpit dulkot nieguid.
+
 #MAP:A<Inf (@A<) TARGET Inf (-1 A + Nom OR A + Ess LINK *-1 Qst BARRIER SV-BOUNDARY LINK -1 COPULAS) ; 
 #	#$ Leat go son doarvái čeahppi atnit dan vejolašvuođa?
 #
