@@ -1528,6 +1528,681 @@ MAP (@-FMAINV) TARGET PrfPrc IF (0 <vdic>)  ;
 
 MAP (@+FMAINV) TARGET VFIN IF (0 AUX LINK NEGATE *1 Inf OR PrfPrc BARRIER S-BOUNDARY)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
 
+
+# --------------------------------------------------------	
+# This part is from sme and needs to be checked bit by bit
+
+##!! ### (@A<)  target Inf 	
+##!! * **AInf** Inf 	
+#MAP:A<Inf (@A<) TARGET Inf ((*-1 A + Nom OR A + Ess BARRIER NOT-ADV LINK *-1 COPULAS BARRIER SV-BOUNDARY LINK *-1 NP-HEAD-NOM BARRIER S-BOUNDARY) OR (*-1 A + Nom OR A + Ess BARRIER NOT-ADV LINK *-1 COPULAS BARRIER SV-BOUNDARY LINK 1 NP-HEAD-NOM OR Prop) OR (*-1 ("vejolaš") OR ("lossat") OR ("álki") OR ("buorre") BARRIER NOT-ADV LINK *-1 COPULAS BARRIER VFIN OR FMAINV LINK *-1 HAB-ACTOR BARRIER SV-BOUNDARY OR N)) ;	
+#	#$ Dološ olbmot ledje hui čeahpit dulkot nieguid.
+#
+#MAP:A<Inf (@A<) TARGET Inf (-1 A + Nom OR A + Ess LINK *-1 Qst BARRIER SV-BOUNDARY LINK -1 COPULAS) ; 
+#	#$ Leat go son doarvái čeahppi atnit dan vejolašvuođa?
+#
+##!! * **r368**	
+#MAP:r368 (@A<) TARGET Inf (-1 NP-HEAD-ACC LINK -1 (A Nom) LINK *-1 ("leat") BARRIER NOT-ADV-PCLE LINK *-1 NP-HEAD-NOM BARRIER VFIN-NOT-AUX OR S-BOUNDARY);	
+#
+##MAP:dehalas (@A<) TARGET Inf (-1 DEHALAS + Nom OR ("mielas") + Nom) ;
+#MAP:dehalas (@A<) TARGET Inf + TRANS-V (-1 Acc LINK -1 DEHALAS + Nom) ;
+#MAP:dehalas (@A<) TARGET Inf (-1 A + Nom LINK *-1 BOS BARRIER WORD) ;
+#MAP:dehalasCoord (@A<) TARGET Inf (-1 CC LINK -1 (@A<)) ;
+#	#$ Dehálaš bargat dásseárvoáššiiguin.
+#	#$ Váttis dievdoolbmuid oažžut bargat dásseárvoáššiiguin.
+#	#$ Áŋgirat juoiggadit ja čuojahit rumbbuid.
+#
+#
+##!! ### (@<SUBJ)  target Inf
+#
+##!!	* **SUBJInf** infinitive 
+##	'lea suohtas oahppat'
+#MAP:<SUBJInf1 (@<SUBJ) TARGET Inf (NEGATE 0 AUX LINK 1 Inf)(*-1 A BARRIER WORD - Ill - Adv LINK *-1 COPULAS BARRIER NOT-ADV LINK NEGATE *-1 Nom BARRIER S-BOUNDARY)(NEGATE -1 ("mielas") LINK -1 COPULAS);
+#	#$ Mu mielas lea suohtas oahppat sámegiela.
+#	#$ Ja ii leatge buorre sutnje orrut suhkkes vuvddiid siste, gos lea liegga ilbmi.
+#	#$ Danne go mii orrut tunealla lahka, de lea álki isidii vuodjit tunealla go manná girdišilljui. 
+#MAP:<SUBJInf1b (@<SUBJ) TARGET Inf (NEGATE 0 AUX LINK 1 Inf)(*-1 A BARRIER WORD - Ill - Adv LINK -1 Adv LINK -1 COPULAS LINK NEGATE *-1 Nom BARRIER S-BOUNDARY);
+#	#$ Dárbbašlaš lea dikšut jávrriid ovdal go lea ekonomalaččat veara bivdit.
+#
+#MAP:<SUBJInf1 (@<SUBJ) TARGET Inf (NEGATE 0 AUX LINK 1 Inf)(-1 Acc - MIELLA LINK *-1 (A Nom) BARRIER WORD - Ill - Adv LINK *-1 COPULAS BARRIER NOT-ADV LINK NEGATE *-1 Nom BARRIER S-BOUNDARY);
+#	#$ Raporttas galgá gozihanlávdegoddi čilget gozihandoaimmas, árvvoštallat stivrra jahkemuitalusa ja dilálašvuođaid maid dat siskkilda, ja árvvoštallat mo dát láhka doaibmá ja leago sávahahtti dan nuppástuhttit. 
+#
+#
+##	álki lea vánddardit
+##!! * **<SUBJInf2**
+#MAP:<SUBJInf2 (@<SUBJ) TARGET Inf (NEGATE 0 AUX LINK 1 Inf)((*-1 ("leat") BARRIER NOT-ADV-PCLE LINK -1 A LINK *-1 BOC BARRIER NOT-ADV) OR (-1 Adv LINK -1 ("leat") LINK -1 A LINK *-1 BOC BARRIER NOT-ADV));	
+#	#$ Vearrámus lea go nu váttis lea oažžut eret dan gova, lohká nisu, gii ii hálit namas aviisii. 
+#	#$ Man álki livččii de vánddardit. # her  'de' brukt som Pcle 
+#
+##!! * **r354**
+#MAP:r354 (@<SUBJ) TARGET Inf (NEGATE 0 AUX LINK 1 Inf)(-1 ADVLCASE LINK *-1 A BARRIER NOT-ADV LINK *-1 COPULAS BARRIER NOT-ADV LINK NEGATE *-1 Nom BARRIER S-BOUNDARY);
+#
+##	govt lei vuodjit
+##!! * **<SUBJInf3**
+#MAP:<SUBJInf3 (@<SUBJ) TARGET Inf (-1 COPULAS LINK -1 Adv LINK -1 BOS)(NEGATE *1 REAL-V) ;	
+#	#$ Govt lei vuodjit Olmmáivákkis deike?
+#
+##	lea suohtas beassat	
+##!! * **<SUBJInf4**
+#MAP:<SUBJInf4 (@<SUBJ) TARGET Inf (NEGATE -1 AUX)(*-1 A OR Sem/Perc-emo BARRIER NOT-ADV LINK NOT 0 MIELLA + Nom LINK *-1 COPULAS BARRIER NOT-NPMODADV LINK NEGATE *-1 Nom BARRIER S-BOUNDARY)(NEGATE -1 ("mielas") LINK -1 COPULAS) ;	
+#	#$ Mu mielas lea suohtas beassat johtit riikkas riikii ja báikkis báikái. 
+#	#$ Lea nana vásáhus vuodjit geainnu, erenoamážit go lea fiinna dálki.
+#	#% Mus lea miella máhccat ruoktot Deanu gildii.
+#
+##	mii ávkkiid lea min doppe johtit
+##!! * **<SUBJInf5**
+#MAP:<SUBJInf5 (@<SUBJ) TARGET Inf (*-1 ("leat") BARRIER AUX LINK -1 (N Pl Acc) LINK -1 ("mii") OR ("gii") LINK 0 (Interr Sg Nom) LINK *-1 BOC BARRIER WORD);	
+#	#$ Mii ávkkiid lea min doppe johtit?
+#
+##	bargu lei váldit
+##!! * **<SUBJInf6**
+#MAP:<SUBJInf6 (@<SUBJ) TARGET Inf ((*-1 COPULAS BARRIER NOT-ADV-PCLE LINK -1 Ess LINK *-1 BOS BARRIER V) OR (-1 Ess - Actio LINK *-1 COPULAS BARRIER NOT-ADV-PCLE LINK *-1 BOC OR COMMA BARRIER NOT-ADV))(NEGATE -1 (N Ess) LINK *-1 ("šaddat") BARRIER NOT-A) ; # (NEGATE *1 REAL-V) ;
+#	#$ Sin bargun lei váldit fáŋgan Gonagasa.
+#	#% Sutnje dát lei dušše váivves geatnegasvuohta, man šattai eadnin bargat nieiddas buorrin.
+#
+#	vuolgit lea suohtas
+#!! * **SUBJ>Inf**
+MAP:SUBJ>Inf (@SUBJ>) TARGET Inf (*1 Neg + VFIN BARRIER (*) - COMMA LINK 1 ConNeg + COPULAS LINK *1 A BARRIER NOT-ADV);
+	#$ Vuelkedh ij leah luste.
+
+##!! ### (@<SPRED)  target Inf
+#
+##!!	* **SPREDInf** infinitive, oaidnit dego
+#MAP:<SPREDoaidnit (@<SPRED) TARGET Inf (0 ("oaidnit") LINK *-1 ("leat") BARRIER NOT-ADV-PCLE LINK *-1 (N Nom) BARRIER WORD - ADVLCASE - Adv)(*1 ("dego") OR go BARRIER SV-BOUNDARY)  ; 
+#	#$ Njunni lei oaidnit dego unna buđehaš.
+#
+##!!	* **SUBJInf** infinitive 
+##	ulbmil lea oahppat
+#MAP:<SUBJInf (@<SUBJ) TARGET Inf (*-1 ("leat") BARRIER NOT-ADV-PCLE LINK *-1 (N Nom) BARRIER WORD - ADVLCASE - Adv)  ;
+#	#$ Gurssa ulbmil lea oahppat goarrut Ivgu gávtti.
+#	#$ Dan ulbmil das lea nannet oktavuođa ja mearridit vejolaš ovttasbargosurggiid mat leat ealáhusa oasálaččaide ávkin.
+#
+#MAP:<SUBJInfcoor1 (@<SUBJ) TARGET Inf (0 ("oažžut") LINK -1 JA/DAHJE OR COMMA LINK *-1 Inf LINK *-1 ("oažžut" @<SUBJ))(*1 Inf)  ;
+#	#$ Dávjá váhnemat eai dušše gallestallan mánáid, muhto oahpaheaddji, ee. lei earánin oažžut su dulkot eiseválddiid breavaid ja oažžut veahki vástidit dáid.
+#MAP:<SUBJInfcoor2 (@<SUBJ) TARGET Inf (-1 JA/DAHJE OR COMMA LINK *-1 (Inf @<SUBJ) BARRIER SV-BOUNDARY)  ;
+#	#$ Ulbmil čoahkkimiiguin lea oažžut buoret oktavuođa EU:i, ovddidit sámepolitihka luondduvalljodatgeavaheami, davviguovlluid ovdánahttinplánaid, Davviriikkalaš sámekonvenšuvnna ja ruoššabeale sámiid dilálašvuođa ja riektadili ektui.
+#
+##!!	* **NInf** Inf 		
+#MAP:N<Infmuitalit (@N<) TARGET Inf (-1 (N Loc) LINK *-1 ("muitalit") BARRIER FMAINV);	
+#	#$ Dás son muitala iežas vásáhusaid birra Cizáš mánáidgárddis Oslos ja muđuid rahčamušain oažžut mánáguovtto guovttegielalažžan.
+#
+#
+##!! ### (@<ADVL)  target Inf, Actio Ess
+#
+##!!	* **ADVLActioEss** Actio Ess 
+##	fitnat doppe oahppamen
+#MAP:<ADVLActioEss (@<ADVL) TARGET (Actio Ess)(*-1 ("fitnat") OR ("mannat") BARRIER S-BOUNDARY OR MAIN-V OR Nom); 
+#	#$ Skuvlavázzit leat fitnan Sihčajávrris oahppamen mot sáhttá birget luonddus.
+#
+#
+#MAP:<OBJessInf (@<OBJ) TARGET Inf (-1 DEHALAS + Ess LINK *-1 ("atnit") BARRIER NOT-ADV-PCLE) ; 
+#	#$ Sámediggi bealistis anii dehálažžan oažžut čađahuvvot eará láhkarievdadusaid.
+#
+##!! * **+FAUXVboahtit** boahtit as AUX      
+#MAP:+FAUXVboahtit (@+FAUXV) TARGET ("boahtit") + VFIN-NOT-IMPRT (*1 Inf BARRIER NOT-ADV-PCLE)(NEGATE 0 ("boahtit") LINK *1 Nom OR Ess BARRIER NOT-ADV-PCLE) ;
+#	#$ Na geasset go bođii diehtit ahte ii beasa skuvlii?
+#
+##!! * **+FAUXVboahtit**  boahtit coming before the mainverb
+#MAP:+FAUXVboahtit (@+FAUXV) TARGET VFIN-NOT-IMPRT + ("boahtit") (NOT 0 Imprt LINK *1 AUX + Inf OR PERCEPTION-V + Inf OR MOVEMENT-V + Inf BARRIER NOT-ADV) ;
+#	#$ Nuppi bealis lea vejolaš bidjat ráji oarjelii dainna lágiin ahte caggá Sirgása bohccuid beassamis Gjerdalenii, mii boahtá šaddat Hápmirii mávssolaš guohtunguovlun boahtteáiggis.
+#	#$ Jus dulvvi niegadat, de boađát gullat unohis šlárvaságaid.
+#
+##!! * **-FAUXVboahtit** boahtit as AUX      
+#MAP:-FAUXVboahtit (@-FAUXV) TARGET ("boahtit") + ConNeg (*1 Inf BARRIER NOT-ADV-PCLE)(NEGATE 0 ("boahtit") LINK *1 Nom OR Ess BARRIER NOT-ADV-PCLE) ;
+#	#$ Dál eat boađe nu vánddardit guovllus
+#
+#
+##!!	* **ADVLInf** Inf 
+##	vulggii baikit (add Der/Pass to the rule?)
+#MAP:<ADVLInf (@<ADVL) TARGET Inf - ("leat") (*-1 MOVEMENT-V - AUX OR ("atnit") OR ("geavahit") OR ("hástalit") OR ("jorgalit") OR ("bidjat") OR ("movttiidahttit") OR ("guođđit") OR ("báhcit") OR ("bisánit") OR ("čohkánit") OR ("gieldit") + Der/Pass OR ("čohkkedit") BARRIER S-BOUNDARY OR COMMA OR REAL-V OR Ess LINK NOT 0 OLLU OR AUX OR SUBJ OR OBJ OR FAUXV)(NEGATE -1 CC)(NEGATE 0 AUX OR PERCEPTION-V OR ("diehtit") LINK *-1 ("boahtit") BARRIER NOT-ADV-PCLE)(NEGATE 0 Adv); 
+#	#$ Stálus bođii baikahoahppu, ja son guđii seahka ja vulggii baikit. 
+#	#$ Boađe mu lusa geahččat ođđa govaid! 
+#	#$ Boađe sisa gáfe juhkat. 
+#	#$ Viečča vieljat boradit!
+#	#$ Sii bisánedje vuordit.
+#
+#MAP:<ADVLInf (@<ADVL) TARGET Inf + TRANS-V (-1 Acc LINK -1 ("váldit") LINK *-1 BOS BARRIER WORD)(NEGATE 0 Adv)(*1 Acc BARRIER NOT-NPMOD); 
+#MAP:<ADVLInf (@<ADVL) TARGET Inf + TRANS-V (-1 Ess LINK -1 Acc LINK -1 ("váldit") LINK *-1 BOS BARRIER WORD)(NEGATE 0 Adv)(*1 Acc BARRIER NOT-NPMOD); 
+#	#$ Váldán advokáhta čielggadit iežas vuoigatvuođaid  ❡ .
+#	#$ Váldán advokáhta veahkkin oažžut vástádusa gielddas  ❡ .
+#	#% Dáhtut go min gaikut dan eret?
+#
+##!!	* **ADVLInf** Inf 
+##	vulggii baikit
+#MAP:-f<ADVLInf (@-F<ADVL) TARGET Inf - ("leat") (*-1 MOVEMENT-V - AUX OR ("atnit") OR ("geavahit") OR ("bidjat") OR ("movttiidahttit") OR ("guođđit") BARRIER S-BOUNDARY OR COMMA OR REAL-V OR Ess LINK 0 SUBJ OR OBJ)(NEGATE -1 CC)(NEGATE 0 AUX OR PERCEPTION-V OR ("diehtit") LINK *-1 ("boahtit") BARRIER NOT-ADV-PCLE)(NEGATE -1 ("boahtit")); 
+#	#$ Lea erenoamáš dehálaš movttiidahttit sámegielat doaktáriid bargat gielddain.
+#
+#
+##!!	* **ADVLInf** Inf
+#MAP:<ADVLInf (@<ADVL) TARGET Inf (-1 ADVLCASE - Ess LINK -1 REAL-V - AUX - @>N)(NEGATE 0 ("leat")) ;
+#	#$ Veahkehit miljovdnabeliin bosádit heakka ásaheapmái.
+#	#% – Ii sáhte guođohemiin eastadit goaskinvahágiid. 
+#	#% Finnmárkkuopmodat sáhttá dárkileappot albmaduvvon guovlluide mearridit gáržžádusaid.
+#
+#
+##!!	* **ADVLInf** Inf in questions
+#MAP:<ADVLInf (@<ADVL) TARGET Inf (-1 Nom LINK *-1 MOVEMENT-V BARRIER NOT-PCLE LINK -1 BOC)(NEGATE 0 ("leat")) ;
+#	#$ Manaigo Biret-Elle viežžat boastta? 
+#
+##!!	* **r360x**
+#MAP:r360x (@<ADVL) TARGET Inf IF (-1 ADVLCASE LINK NOT 0 NP-HEAD-NOM LINK *-1 NOT-AUX-V BARRIER NOT-NPMOD LINK NOT 0 TRANS-V OR @>N)(NEGATE 0 ("leat"))(*-2 VFIN BARRIER S-BOUNDARY);
+#
+#MAP:veahkkiF<ADVL (@-F<ADVL) TARGET Inf (-1 ("veahkki" Acc) LINK -1 (TV Inf @<SUBJ)) ;
+#
+#
+#MAP:veahkki<ADVL (@<ADVL) TARGET Inf IF (-1 (".*veahkki"r) + Acc OR Sem/Money + Acc LINK *-1 NOT-AUX-V + TRANS-V BARRIER NOT-NPMOD)(NEGATE 0 ("leat")) ;
+#MAP:veahkki<ADVL (@<ADVL) TARGET Inf IF (-1 Loc LINK -1 (".*veahkki"r) + Acc OR Sem/Money + Acc LINK *-1 NOT-AUX-V + TRANS-V BARRIER NOT-NPMOD)(NEGATE 0 ("leat")) ;
+#MAP:veahkki<ADVL (@<ADVL) TARGET Inf IF (*-1 ("veahkki") OR Sem/Money OR ("gelbbolašvuohta") OR ("vejolašvuohta") OR ("ágga") BARRIER NOT-ADV-PCLE)(NEGATE 0 ("leat")); #(NEGATE *-1 AUX BARRIER SV-BOUNDARY OR FMAINV) ;
+#	#$ Dat lei earánin oažžut dulkot eiseválddiid breavaid ja oažžut veahki vástidit dáid.
+#	#$ Sámegieloahput mat addet sámegielgelbbolašvuođa lohkagoahtit sámegiela dahje eará oahpuid bachelordásis.
+#	#$ Sii sáhttet ohcat doarjaga Gáivuona suohkanis searvat gursii.
+#
+##	lea dálki vuolgit
+##!!	* **<ADVLInf**
+#MAP:<ADVLInf (@<ADVL) TARGET Inf (-1 (N Nom) LINK NOT 0 GEN-CONCEPT OR MIELLA OR (A Nom) OR Inf OR (Der/NomAct) OR REAL-V OR Px + Nom LINK *-1 ("leat") BARRIER SV-BOUNDARY)(NEGATE 0 ("leat")) ;
+#	#$ Odne lea goalki, nu ahte lea buorre dálki vuolgit fávlái.
+#	#$ Dán golbmasis ii leat ruhta oastit bileahta.  
+#	#$ Mus lea biergu vuoššat. 
+#	#$ Mus livčče guolit viežžat.  # Nickel s. 471
+#	#$ Son ii áiggo gal dadjat ledje go Álttás dohkálaš ákkat hilgut doarjagiid.
+#
+##!!	* **InfdAdvl**
+#MAP:InfdAdvl (@<ADVL) TARGET Inf (-1 (N Nom) LINK NOT 0 GEN-CONCEPT OR MIELLA OR (A Nom) OR Inf OR (Der/NomAct) OR REAL-V OR Px + Nom LINK *-1 CC BARRIER NOT-NPMODADV LINK -1 (N Nom) LINK *-1 COPULAS BARRIER NOT-NPMOD)(NEGATE 0 ("leat")) ;
+#
+##!!	* **InfADVL**	
+#MAP:InfADVL (@<ADVL) TARGET Inf (-1 (N Nom) LINK NOT 0 GEN-CONCEPT OR MIELLA OR (A Nom) OR Inf OR (Der/NomAct) OR REAL-V OR Px + Nom LINK *-1 ("leat") BARRIER NOT-NPMOD)(0 TRANS-V LINK NEGATE *1 Acc BARRIER NOT-NPMOD)(NEGATE 0 ("leat")) ;
+#
+#
+##!!	* **CoorInfADVL**	
+#MAP:CoorInfADVL (@<ADVL) TARGET Inf (-1 @CNP LINK -1 Inf + @<ADVL) ;
+#	#$ Ledje 14 olbmo dan čoahkkimis, ja leat bidjan olu bargonávccaid maŋemus vahkuid iskat ja suokkardit gos sis leat boasttuvuođat dáhpáhuvvan, ja sis ledje buorit vástádusa
+#
+#
+##!!	* **FADVLInf** Inf 		
+#MAP:F<ADVLInfReksj1 (@-F<ADVL) TARGET Inf ((*-1 REKS-V BARRIER NOT-ADV LINK NOT 0 PrfPrc LINK -1 COPULAS) OR  (0 TRANS-V LINK -1 Acc LINK *-1 REKS-V BARRIER NOT-ADV LINK NOT 0 PrfPrc LINK -1 COPULAS)) ; 
+#
+#
+##!! ### @-F<OBJ  target Inf 
+#
+##!!	* **FOBJInf** Inf 
+#MAP:-F<OBJInf (@-F<OBJ) TARGET Inf ((-1 TRANS-V + Inf LINK NOT 0 AUX LINK -1 ("leat")) OR (-1 TRANS-V + Inf LINK NOT 0 AUX LINK -1 MIELLA LINK *-1 ("leat") BARRIER NOT-ADV-PCLE) OR (-1 Acc LINK -1 TRANS-V + Inf LINK NOT 0 AUX LINK -1 ("leat") LINK -1 MIELLA OR GEN-CONCEPT) OR (-1 TRANS-V + Inf LINK NOT 0 AUX LINK -1 Ess LINK *-1 OPRED-V BARRIER NOT-ADV-PCLE)) ;
+#	#$ Gurssa ulbmil lea oahppat goarrut Ivgu gávtti.
+#	#$ Ulbmil lea oažžut nuppi boagustit.
+#
+#MAP:-F<OBJInf (@-F<OBJ) TARGET Inf ((-1 TRANS-V + Inf LINK 0 SUBJ OR SPRED) OR (-1 Acc LINK -1 TRANS-V + Inf LINK 0 SUBJ OR SPRED)) ;
+#
+#	#$ Giellatekno bargá dahkat dákkár prográmmaid olámuddui sámegielaide, ja maiddái dahkat álkibun eará vehádatgielaide ráhkadit dákkár prográmmaid.
+#
+#MAP:-F<OBJInf4 (@-F<OBJ) TARGET Inf (*-1 TRANS-V + Inf BARRIER NOT-ADV-PCLE LINK -1 Acc LINK NOT 0 TIME OR Rel LINK *-1 TRANS-V BARRIER SV-BOUNDARY OR AUX LINK NOT 0 AUX OR Adv OR N LINK NOT 0C Ger OR Imprt)(NEGATE 0 Pl3 LINK *-1 TRANS-V LINK 0 (Pl Nom)) ; 
+#
+#
+#
+##!! ### (@N<)  target Inf, Actio Ess
+#
+##!!	* **NInf** Inf 		
+#MAP:N<Inf1 (@N<) TARGET Inf (-1 MIELLA + Nom OR MIELLA + Ess LINK NOT 0 PrfPrc LINK *-1 ("leat") OR ("čađahit") OR ("ollašuvvat") BARRIER VFIN OR FMAINV LINK *-1 NP-HEAD-NOM OR PRESENT-MARKER OR PAST-MARKER OR Loc OR S-BOUNDARY OR COMMA OR BOS BARRIER VFIN-NOT-AUX OR S-BOUNDARY)(NEGATE 0 TRANS-V LINK -1 NP-HEAD-NOM LINK NOT 0 GEN-CONCEPT LINK *-1 COPULAS BARRIER NOT-NPMOD LINK -1 Loc LINK 0 HUMAN OR Pers LINK *-1 BOS BARRIER NOT-NPMOD);	
+#	#$ Dál lea Bireha vuorru geahččat sávzzaid.
+#	#$ Sis lea nana árbevierru veahkehit ieš iežas persovnnalaš fierpmádagaid vehkiin.
+#	#$ Lea geatnegasvuohta ovddidit buot mánáid beroštumiid servodagas.
+#	#$ Soai goappašagat leaba ilus ja mannaba dállui, lea áigi borrat juoidá.
+#
+#MAP:HLN<Infheadliner (@N<) TARGET Inf (-1 MIELLA) (*1 HEADLINEMARK) (NEGATE 0 TRANS-V LINK -1 NP-HEAD-NOM LINK NOT 0 GEN-CONCEPT LINK *-1 COPULAS BARRIER NOT-NPMOD LINK -1 Loc LINK 0 HUMAN OR Pers LINK *-1 BOS BARRIER NOT-NPMOD);	
+#	#$ Stuora gudni oažžut dán bálkkašumi ❡ .
+#
+#
+##!!	* **N<Inf2**	
+#MAP:N<Inf2 (@N<) TARGET Inf (-1 NP-HEAD-ACC LINK -1 MIELLA + Nom LINK NOT 0 REAL-V LINK *-1 ("leat") BARRIER REAL-V LINK *-1 NP-HEAD-NOM OR PRESENT-MARKER OR PAST-MARKER OR Loc BARRIER VFIN-NOT-AUX OR S-BOUNDARY);	
+#	#$ Dus ii leat lohpi dan dahkat!	
+#
+##!!	* **N<Inf2Gen**	
+#MAP:N<Inf2Gen (@N<) TARGET Inf (-1 NP-HEAD-ACC LINK -1 Gen LINK -1 MIELLA + Nom LINK NOT 0 REAL-V LINK *-1 ("leat") BARRIER REAL-V LINK *-1 NP-HEAD-NOM OR PRESENT-MARKER OR PAST-MARKER OR Loc BARRIER VFIN-NOT-AUX OR S-BOUNDARY);	
+#	#$ Divššohasas lea vuoigatvuohta iežas journála geahččat oktan mildosiiguin.
+#
+##!!	* **N<Inf3**
+#MAP:N<Inf3 (@N<) TARGET Inf (-1 MIELLA + Acc LINK *-1 TRANS-V BARRIER Acc OR REAL-V OR SV-BOUNDARY LINK NOT 0 AUX) ; 	
+#	#$ Suohkanat addet váhnemiidda vejolašvuođa bidjat mánáideaset dakkár skuvllaide.
+#	#$ Máŋgga sámi guovllus eiseválddit eai váldán ovddasvástádusa lágidit bálvalusaid.	
+#
+##!!	* **N<Inf4**
+#MAP:N<Inf4 (@N<) TARGET Inf (-1 MIELLA + Nom LINK -1 BOS) ; 	
+#	#$ Riekti oassálastit luondduriggodagaid hálddašeamis sáhttá čađahuvvot dakko bokte ahte Sámediggi nammada áirasiid oktasaš stivrenorgánaide, nu movt Finnmárkoopmodahkii ja guovllu boraspirelávdegottiide.	
+#
+##!! * **N<Infcoor**
+#MAP:N<Infcoor (@N<) TARGET Inf (-1 JA/DAHJE LINK *-1 (@N<) BARRIER REAL-V) ; 
+#	#$ Dus lea vuoigatvuohta oažžut oahpahusa mearriduvvon oahppoplána mielde, muhto dus lea seammás geatnegasvuohta oassálastit aktiivvalaččat ulbmiliid juksamii ja oassálastit iežat oahppanbarggu plánemii ja árvvoštallamii.
+#
+#
+##!!	* **N<Inf2**	
+#MAP:N<Inf (@<ADVL) TARGET Inf (-1 NP-HEAD-ACC + MIELLA LINK NEGATE -1 AUX) ;	 # for å få supinum i smj, er ikke helt sikker..
+#	#$ Sámediggi áigu oččodit sámi mánáide individuála vuoigatvuođa oažžut sámi mánáidgárdefálaldaga.
+#	#% Dat gohčoduvvo vahátjávkadeapmin (skadefelling), ja dasa galgá sierralobi ohcat.
+#
+#
+##!! ### (@<ADVL)  target Inf, Actio Ess
+#
+#LIST NOT-ADVL-V = "jáhkkit" "hárjánit" "nákcet" ;
+#
+##!!	* **ADVLInf** Inf 		
+#MAP:<ADVLInfReksj1 (@<ADVL) TARGET Inf ((*-1 REKS-V - NOT-ADVL-V BARRIER NOT-ADV OR Subqst LINK NOT 0 FAUXV) OR (-1 REAL-V + IV - AUX - NOT-ADVL-V LINK NOT 0 FAUXV) OR (0 TRANS-V LINK -1 Acc LINK -1 REKS-V - NOT-ADVL-V LINK NOT 0 FAUXV)) ; 
+#	#$ Go beassážiid leat čáppa dálkkit ja beaivvádat, de olbmot liikojit čuoigat meahcis dahje vuodjit mohtorgielkkáin. 
+#	#$ Go áŋgiruššá oažžut sámi mánáidgárdefálaldaga maiddái dáža mánáide, de nannešii dat maiddái sámi mánáid iešdovddu.
+#
+##!!	* **<ADVLInfReksj2**
+#MAP:<ADVLInfReksj2 (@<ADVL) TARGET Inf (-1 CC LINK *-1 Inf BARRIER REAL-V LINK *-1 REKS-V - ("jáhkkit") BARRIER NOT-ADV LINK *-1 Nom BARRIER S-BOUNDARY);
+#	#$ Go beassážiid leat čáppa dálkkit ja beaivvádat, de olbmot liikojit čuoigat meahcis dahje vuodjit mohtorgielkkáin. 
+#
+##!!	* **<ADVLInfReksj3**
+#MAP:<ADVLInfReksj3 (@<ADVL) TARGET Inf (-1 Acc LINK NOT 0 HUMAN LINK *-1 REKS-V - ("jáhkkit") BARRIER NOT-NPMOD) ; 
+#	#$ Son lea dakkár mii ii beroš lága čuovvut!
+#
+##!! * **ADVLActioEss** Inf 		
+#MAP:<ADVLActioEss (@<ADVL) TARGET (Actio Ess)(*-1 ("oidnot") OR ("gullot") BARRIER NOT-ADV-PCLE) ;
+#	#$ Olbmáguovttos jurddašišgođiiga: - Movt dat galgá leat go ii oidno goassege máksimen ja vuovdi cealká ahte lea jo máksojuvvon.
+#
+##MAP:TEST (@<OBJ) TARGET Inf IF (*-1 VFIN LINK 0 FMAINV) ; 
+#
+##!! ### (@<OBJ)  target Inf, Actio Ess, PrfPrc 
+#
+##!!	* **ADVLInf** bargat 		
+#MAP:<ADVLInf1 (@<ADVL) TARGET Inf (*-1 ("bargat") BARRIER SV-BOUNDARY OR AUX OR Acc OR CC OR COMMA LINK NOT 0 AUX OR Adv OR Acc LINK NOT 0C Ger)(NEGATE 0 Pl3 LINK *-1 TRANS-V LINK 0 (Pl Nom))(NEGATE -1 CC LINK -1 Inf LINK -1 AUX)(NEGATE 0 Inf LINK *-1 AUX BARRIER REAL-V) ; 
+#
+#
+##!!	* **OBJInf** Inf 		
+#MAP:<OBJInf1 (@<OBJ) TARGET Inf (*-1 TRANS-V BARRIER NOT-ADV-PCLE OR COMMA LINK NOT 0 AUX OR Adv OR Acc LINK NOT 0C Ger)(NEGATE 0 Pl3 LINK *-1 TRANS-V LINK 0 (Pl Nom))(NEGATE -1 CC LINK -1 Inf LINK -1 AUX)(NEGATE 0 Inf LINK *-1 AUX BARRIER REAL-V) ; 
+#	#$ Mun hálidan oahppat goarrut gávtti.
+#	#$ Oahpa goarrut gávtti.
+#	#$ Go ollet Sáhpánvári ala, de muitte čuovvolit bálgá mii manná olgeš guvlui.
+#	#$ Anán buorebun odne vuolgit go ihttážii vuordit. 
+#	#$ Duosttan go dahkat dan?
+#	#$ Olbmot dattetge dinejedje veaháš go vuvde dujiid, eaige dárbbašan oastit ávdnasiid duddjomii.
+#	#$ Oahpa goarrut gávtti ja gođđit ránu.
+#	#% Áigugo fas skuvlii álgit?
+#
+#MAP:<OBJInf1 (@<OBJ) TARGET Inf (-1 Nom LINK *-1 TRANS-V BARRIER NOT-NPMODADV OR @CVP LINK NOT 0 AUX OR Adv OR Acc LINK NOT 0C Ger) ; 
+#	#$ Raporttas bokte dáhttu bargojoavku čalmmustahttit Sámedikki.
+#	#$ Dan maŋŋá duste maiddái eará dearvvašvuođabargit hállat dan birra.
+#
+##!!	* **OBJInf** Inf 		
+#MAP:<OBJInfforanVFIN (@OBJ>) TARGET Inf (1 TRANS-V + VFIN)(-1 BOC) ; 
+#	#$ Galgabehtet muitit, ahte báhčit oažžu dáppe meahcis...
+#
+#
+##!!	* **<OBJInf2**
+#MAP:<OBJInf2 (@<OBJ) TARGET Inf + IV (*-1 HAB-ACTOR + Acc BARRIER REAL-V OR S-BOUNDARY LINK *-1 TRANS-V BARRIER NOT-NPMODADV LINK NOT 0 (A Attr) OR MOD-ASP OR Neg OR COPULAS LINK *-1 Nom)(NEGATE *-1 CC BARRIER VFIN LINK *-1 Inf BARRIER VFIN LINK *-1 AUX BARRIER NOT-ADV-PCLE LINK 0 VFIN)(NEGATE 0 Inf LINK *-1 MOD-ASP OR Neg OR COPULAS BARRIER REAL-V);
+#	#$ Mánnávuođas son vásihii dulvademiid ja eará luonddubillistemiid mat leat ožžon su čállit divttaid. 
+#	#$ Mun háliidan mánnán boahtit ruoktot! 
+#
+#	# The last constraint is for elliptic phrases.
+#
+##!!	* **<OBJInf3**
+#MAP:<OBJInf3 (@<OBJ) TARGET Inf (*-1 HAB-ACTOR + Acc OR ("dat") + Acc BARRIER NOT-A-ADV LINK *-1 TRANS-V BARRIER NOT-NPMOD OR @CVP LINK NOT 0 AUX OR (A Attr) LINK 0 VFIN OR Inf)(NEGATE *-1 CC BARRIER VFIN LINK *-1 Inf BARRIER VFIN LINK *-1 AUX BARRIER NOT-ADV-PCLE LINK 0 VFIN);
+#	#$ Dáhto mánát boahtit ruoktot! 
+#
+##!!	* **1** maps <OBJ to Inf if -1 TV etc.
+#MAP:1 (@<OBJ) TARGET Inf (*-1 TRANS-V BARRIER SV-BOUNDARY OR AUX OR Acc OR COMMA LINK NOT 0 AUX LINK 0 PrfPrc OR ConNeg LINK -1 Neg OR COPULAS) ; 
+#
+##!!	* **<OBJInf4**
+#MAP:<OBJInf4 (@<OBJ) TARGET Inf (-1 Acc LINK NOT 0 TIME OR Rel LINK *-1 TRANS-V BARRIER SV-BOUNDARY OR AUX LINK NOT 0 AUX OR Adv OR N LINK NOT 0C Ger OR Imprt)(NEGATE 0 Pl3 LINK *-1 TRANS-V - DADJAT LINK 0 (Pl Nom)) ; 
+#	#$ Eadni oahpaha nieidasis beaskka goarrut.
+#
+#
+#MAP:<OBJInfAux (@<OBJ) TARGET Inf (-1 Acc LINK NOT 0 TIME OR Rel LINK *-1 TRANS-V BARRIER SV-BOUNDARY OR AUX LINK NOT 0 AUX - ("sihtat") OR Adv OR N LINK NOT 0C Ger OR Imprt)(NEGATE 0 Pl3 LINK *-1 TRANS-V LINK 0 (Pl Nom)) ; 
+#	#$ Soai siđaiga dávjá Liná lohkat jitnosit go sis lei lohkanhárjehallan.
+#
+## Coordination
+##!!	* **<OBJInfCoord1**
+#MAP:<OBJInfCoord1 (@<OBJ) TARGET Inf (*-1 CC BARRIER NOT-ADV LINK *-1 Inf BARRIER REAL-V LINK *-1 NOT-AUX-V BARRIER NOT-ADV LINK NOT 0 Imprt OR AUX) ; 
+## LINK *-1 Nom BARRIER S-BOUNDARY);
+#	#$ Son boahtá stálljii ja veahkeha čorget ja biebmat heasttaid.
+#	#$ Mun hálidan oahppat goarrut gávtti ja gođđit ránu.
+#
+##MAP:<OBJInfCoord3 (@<OBJ) TARGET Inf (*-1 CC BARRIER NOT-ADV LINK *-1 (Inf @<OBJ) BARRIER REAL-V)(NEGATE 0 VFIN + AUX LINK *1 Inf BARRIER SV-BOUNDARY)  ; 
+#MAP:<OBJInfCoord3 (@<OBJ) TARGET Inf (*-1 CC OR COMMA BARRIER SV-BOUNDARY OR REAL-V LINK *-1 (Inf @<OBJ) BARRIER SV-BOUNDARY OR REAL-V)(NEGATE 0 VFIN + AUX LINK *1 Inf BARRIER SV-BOUNDARY)  ; 
+#	#$ Giellatekno bargá dahkat dákkár prográmmaid olámuddui sámegielaide, ja maiddái dahkat álkibun eará vehádatgielaide ráhkadit dákkár prográmmaid.
+#	
+#	#$ Go skuvla nogai sullii geassemánu 1. beaivve, de barge internáhttaoahpaheaddjit ijat beaivái láhkket ohppiid bevddiid, oljet láhttiid ja rádjat buot skuvlastohpogálvvuid ja dávviriid keallirlatnjii.
+#
+#
+##!!	* **<OBJInfCoord2**
+#MAP:<OBJInfCoord2 (@<OBJ) TARGET Inf (-1 CC LINK *-1 Inf BARRIER REAL-V LINK *-1 NOT-AUX-V BARRIER NOT-ADV LINK 0 Imprt OR AUX LINK *-1 BOC BARRIER WORD);
+#	#$ Oahpa goarrut gávtti ja gođđit ránu.	  
+#
+##!! * **OBJActioEss** Inf 		
+#MAP:<OBJActioEss1 (@<OBJ) TARGET (Actio Ess) (*-1 Acc BARRIER NOT-ADV-PCLE LINK NOT 0 TIME LINK *-1 TRANS-V + PERCEPTION-V OR DADJAT BARRIER SV-BOUNDARY OR AUX LINK NOT 0 AUX OR Adv OR N LINK NOT 0C Ger OR Imprt);
+#	#$ De oinnii olbmá čohkkámin tuolloviesus.
+#
+##!!	* **<OBJActioEss2**
+#MAP:<OBJActioEss2 (@<OBJ) TARGET (Actio Ess)(*-1 HAB-ACTOR + Acc OR Sem/Hum + Acc BARRIER NOT-ADV-PCLE LINK *-1 TRANS-V + PERCEPTION-V OR DADJAT BARRIER SV-BOUNDARY)(NEGATE 0 AUX LINK 1 Inf);
+#	#$ Oađidettiin gullen olbmo boahtimin.
+#
+##!! * **OBJPrfPrc** PrfPrc 			
+##MAP:<OBJPrfPrc1 (@<OBJ) TARGET PrfPrc IF ((*-1 Acc BARRIER NOT-ADV LINK *-1 VERBAL-ACTIVITY-V OR PERCEPTION-V BARRIER NOT-NPMODADV) OR (*-1 Acc BARRIER NOT-ADV LINK -1 Nom LINK *-1 VERBAL-ACTIVITY-V OR PERCEPTION-V BARRIER NOT-NPMODADV));	
+#MAP:<OBJPrfPrc1 (@<OBJ) TARGET PrfPrc IF ((*-1 Acc BARRIER NOT-ADV LINK *-1 VERBAL-ACTIVITY-V OR PERCEPTION-V OR DADJAT BARRIER SV-BOUNDARY) OR (*-1 Acc BARRIER NOT-ADV LINK -1 Nom LINK *-1 VERBAL-ACTIVITY-V OR PERCEPTION-V OR DADJAT BARRIER NOT-NPMODADV));	
+#	#$ Sii lohket fatnasa gopmánan.
+#	#$ Olbmot muitaledje juo du vuolgán.   
+#
+#MAP:<OBJPrfPrcLoc (@<OBJ) TARGET PrfPrc IF (-1 Loc + Sem/Org LINK *-1 DADJAT BARRIER SV-BOUNDARY);		
+#	#$ NSR Lulli-Sámi sámediggeáirras, Jarle Jonassen, lohká sin iežaset bellodagas diehtán ahte Sámeálbmotfoandda ruđat ledje sihkkaraston stáhtaobligašuvdnan ja dan bokte leat ožžon reanttuid Sámediggái.
+#
+#MAP:<OBJPrfPrcCoor (@<OBJ) TARGET PrfPrc IF (-1 CC LINK -1 (PrfPrc @<OBJ) );	
+#
+#
+##!!	* **<OBJPrfPrc2**	
+#MAP:<OBJPrfPrc2 (@<OBJ) TARGET PrfPrc IF (*-1 Acc BARRIER NOT-ADV LINK -1 Acc LINK *-1 VERBAL-ACTIVITY-V BARRIER NOT-NPMODADV)(0 TRANS-V);
+#	#$ Son logai oappás dan bargan.
+#
+#
+#
+#
+#MAP:<OBJ (@<OBJ) TARGET Inf IF (*-1 CC BARRIER NOT-ADV LINK *-1 (V @<OBJ) BARRIER REAL-V OR SV-BOUNDARY) ;	
+#	#$ Tretnes mielas lea áibbas endorii go Bargiidbellodaga parlamenttalaš jođiheaddji ja nubbinjođiheaddji Helga Pedersen čuoččuhii NRK Sámi Radios Bargiidbellodaga bargan eanemusat sámeáššiiguin ja nu mahkáš leat njunnošis sámeáššiin.
+#
+#
+#
+##!! ### (@+FMAINV) and (@+FAUXV) and (@-FAUXV)
+#
+##!! * **+FMAINVaux** AUX-OR-MAIN verbs     
+#MAP:+FMAINVaux (@+FMAINV) TARGET VFIN IF (0 AUX-OR-MAIN + TV LINK NOT 0 ("áigut") LINK *1 HAB-ACTOR + Acc BARRIER NP-BOUNDARY LINK 1 Inf + IV) ;
+#	#$ Mun háliidan mánnán boahtit ruoktot!
+#	#$ Ruoŧa hállehus háliida min veahkehit. (ii galgga deaivat dan)
+#
+##!! * **+FAUXVcop** AUX  COPULAS     
+#MAP:+FAUXVcop (@+FAUXV) TARGET COPULAS + Cond (*1 Inf BARRIER SV-BOUNDARY OR AUX OR MIELLA OR DEHALAS LINK NOT 0 ADVL OR OBJ) (NEGATE 0 ("šaddat") LINK *1 Nom OR Ess BARRIER NOT-ADV-PCLE LINK NOT 1 Inf) ;
+#
+#
+#
+##!! * **+FMAINVcop** COPULAS verbs     
+#MAP:+FMAINVcop (@+FMAINV) TARGET VFIN + COPULAS (*1 Nom OR Ess BARRIER NOT-ADV-PCLE LINK NOT 0 (Actio Ess) LINK 1 Inf)(NEGATE 0 ("šaddat") LINK *1 (N Ess) BARRIER NOT-A LINK 1 Inf) ;
+#MAP:+FMAINVcop (@-FMAINV) TARGET PrfPrc + COPULAS (*1 Nom OR Ess BARRIER NOT-ADV-PCLE LINK NOT 0 (Actio Ess) LINK 1 Inf);
+#	#$ Lei váttis vuodjit odne.
+#	#$ Leamaš váttis ipmirdit dan.
+#	#% Sutnje dát lei dušše váivves geatnegasvuohta, man šattai eadnin bargat nieiddas buorrin.
+#
+##!! * **+FAUXVaux** AUX  verbs     
+#MAP:+FAUXVaux (@+FAUXV) TARGET AUX + VFIN-NOT-IMPRT (NEGATE 0 ("leat"))(*1 Inf BARRIER SV-BOUNDARY OR AUX LINK NOT 0 ADVL OR OBJ) (NEGATE 0 ("šaddat") LINK *1 Nom OR Ess BARRIER NOT-ADV-PCLE LINK NOT 1 Inf) ;
+#	#$ Máhtte áigu heaitit vuola juhkamis.
+#	#$ Dalle galget miesit leat merkejuvvon eaiggáda merkii.  
+#	#$ Don šattat vel joksat Sirpmás gohcciid.  
+#	#$ Mu mielas lea suohtas beassat johtit riikkas riikii ja báikkis báikái.
+#	#$ Sutnje dát lei dušše váivves geatnegasvuohta, man šattai eadnin bargat nieiddas buorrin.
+#
+#
+##!! * **-FAUXVaux** AUX verbs     
+#MAP:-FAUXVaux (@-FAUXV) TARGET AUX + Inf (NOT -1 HAB-ACTOR + Loc)(*-1 AUX BARRIER REAL-V OR S-BOUNDARY)(*1 Inf BARRIER REAL-V OR S-BOUNDARY OR (A Nom) OR MIELLA OR (N Ess) OR (A Ess)) ;
+#MAP:-FAUXVaux (@-FAUXV) TARGET REAL-COPULAS + Inf (NOT -1 HAB-ACTOR + Loc)(*-1 AUX BARRIER REAL-V OR S-BOUNDARY)(*1 PrfPrc - @>N BARRIER REAL-V OR S-BOUNDARY OR (A Nom) OR MIELLA) ;
+#	#$ Don fertet máhttit čilget niegu veardádusaid, ovdalgo sáhtát dan dieđu ipmirdit.
+#	#$ Dalle galget miesit leat merkejuvvon eaiggáda merkii.  
+#	#$ Čuollun sáhttá leat dušše okta fierbmi gurgaluvvon.
+#	#% Min ulbmil lea ahte galgá leat vejolaš eallit mielkebuvttadandietnasiin fylkkas, deattasta Tretnes.
+#
+##!! * **+FMAINVcopInfconstr** leat before Inf     
+#MAP:+FMAINVcopInfconstr (@+FMAINV) TARGET ("leat") + VFIN (NEGATE *-1 PrfPrc OR (Actio Ess) BARRIER SV-BOUNDARY OR COMMA)(*1 Inf BARRIER REAL-V) ;	
+#	#$ Mis lea cahkkehit dola.  
+#	#$ Govt lei vuodjit...
+#	#$ Gean vuorru lea dál bálkestit birccu?  
+#
+#
+##  __+FMAINVcopInfconstr2__  leat before Inf     
+##MAP:+FMAINVcopInfconstr (@+FMAINV) TARGET ("leat") + VFIN (-1 HAB-ACTOR + Loc)(1 Inf LINK *1 Acc BARRIER NOT-NPMOD); # perhaps no need for this?
+#
+##!! * **+FMAINVCop**  copulas even if PrfPrc coming after
+#MAP:+FMAINVCop (@+FMAINV) TARGET VFIN-NOT-IMPRT + COPULAS (*1 Nom BARRIER PrfPrc OR (Actio Ess) LINK *1 COMMA OR CS BARRIER VFIN LINK *1 COPULAS + PrfPrc BARRIER VFIN OR Nom OR S-BOUNDARY OR LEFT) ;	
+#	#$ Eará guovlluin gos leat vel unnit sámit go Finnmárkkus, leamaš dákkár ákkain vel stuorát deaddu almmolaš ságastallamis.
+#
+#
+##!! * **+FAUXVCop**  copulas coming before the mainverb
+#MAP:+FAUXVCop (@+FAUXV) TARGET VFIN-NOT-IMPRT + COPULAS (*1 PrfPrc OR (Actio Ess) BARRIER VFIN OR S-BOUNDARY OR (PUNCT LEFT) LINK NOT 0 (@>N) LINK NOT -1 (Num Nom)) ;	
+#	#$ Son lea leamaš oahpaheaddji maŋimuš 15-20 jagi, sihke mánáidskuvllas ja joatkkaskuvllas.
+#	#% Mun, Johanas, lean dat guhte lean gullan ja oaidnán buot dán .
+#	#% Eará guovlluin gos leat vel unnit sámit go Finnmárkkus, leamaš dákkár ákkain vel stuorát deaddu almmolaš ságastallamis.
+#
+#
+##!! * **+FAUXVCop**  copulas coming before the mainverb, relative clause inbetween
+#MAP:+FAUXVCop (@+FAUXV) TARGET VFIN-NOT-IMPRT + COPULAS (*1 Rel LINK 1 ("leat") + VFIN LINK *1 PrfPrc LINK *1 PrfPrc BARRIER VFIN OR S-BOUNDARY OR (PUNCT LEFT) OR CC LINK NOT 0 (@>N) LINK NOT -1 (Num Nom));	
+#	#$ Muhtin biirres leat gávcci 12 áirasis leamaš nissonolbmot, ja eará biirres leat buohkat geat leat válljejuvvon leamaš dievddut.
+#	#% Guoskevaš eiseválddiin lea maid váidinvuoigatvuohta ođđa dieđuid vuođul mat leat boahtán maŋŋá vuosttaldanáigemeari.
+#
+#	
+##!! * **+FMAINVcopMannan**  leat before mannan TIME     
+#MAP:+FMAINVcopMannan (@+FMAINV) TARGET ("leat") + VFIN (*1 ("mannat" PrfPrc) BARRIER SV-BOUNDARY OR REAL-V LINK 1 TIME);
+#	#$ Mu oambealli lei dáppe mannan čavčča maid.
+#
+##!! * **+FMAINVHabconstr**  in habitive constructions    
+#MAP:+FMAINVHabconstr (@+FMAINV) TARGET ("leat" Pl3) OR ("leat" Sg3) (-1 HAB-ACTOR + Loc);
+#MAP:+FMAINVHabconstr (@-FMAINV) TARGET ("leat" PrfPrc) (-1 HAB-ACTOR + Loc);
+#	#$ Áhkus leat sávzzat.
+#	#$ Áhkus leamaš sávzzat.
+#	#$ Sus leat hervejuvvon gálssohat main heaŋgájit diehpit.
+#	#$ Mearrasámiinge ledje ovdal moadde dábmojuvvon bohcco maid guođohedje, muhto dat jávke loahpas siseatnama sámiid bohccuid sisa. 
+#	#$ Eŋgelis lei gollemihttosoabbi gávpoga ja dan poarttaid ja muvrraid mihtideami várás .
+#
+##!! * **+FMAINVCoopCoord** coordination  
+#MAP:+FMAINVCoopCoord (@+FMAINV) TARGET ("leat" Du3) OR ("leat" Pl3) (*1 (N Nom) OR (A Nom) OR (Num Nom) BARRIER NOT-NPMODADV LINK *-1 VFIN LINK -1 NP-HEAD-NOM OR HAB-ACTOR + Loc OR TIME OR TIME-MARKER OR DOPPE)(NEGATE *1 N OR A LINK *1 (Actio Ess) OR PrfPrc BARRIER VFIN OR SV-BOUNDARY);
+#	#$ Nemi ja Pondus leaba sárgojuvvon hámit.
+#
+##!! * **+FAUXVleat**  
+#MAP:+FAUXVleat (@+FAUXV) TARGET ("leat") + VFIN-NOT-IMPRT ((*1 PrfPrc - @>N OR (Actio Ess) BARRIER SV-BOUNDARY OR REAL-V OR (PUNCT LEFT) LINK NOT -1 Num LINK NEGATE 2 (N Nom) LINK *-1 VFIN LINK -1 Nom OR HAB-ACTOR + Loc) OR (1 ("nu") LINK 1 MOVT))(NEGATE *1 ("mannat" PrfPrc) BARRIER SV-BOUNDARY OR REAL-V LINK 1 TIME);
+#	#$ Sápmelaččat ledje orron dáin guovlluin 1600-logu birrasiin.
+#	#$ Mun ledjen borramin.	
+#	#% Ja soames báikkiin lea smávva sieđga, muhto jos eai leat goikesieđggat, de lea headju buollit, muhto go leat goikan sieđggat seahká, de lea buorre buollit.
+#
+##!! * **+FMAINVAux1**  
+#MAP:+FMAINVAux1 (@+FMAINV) TARGET VFIN + AUX-OR-MAIN (NEGATE *1 Inf BARRIER S-BOUNDARY);
+#	#$ Maid Máret áiggui goarrumis?
+#
+##!! * **-FMAINVAux2**  
+#MAP:-FMAINVAux2 (@-FMAINV) TARGET ConNeg + ("leat") (*1 (N Nom) BARRIER NOT-NPMOD LINK NOT 0 PrfPrc LINK *-1 REAL-NEG LINK -1 Nom OR HAB-ACTOR + Loc);
+#	#$ Muhto dus ii leat riekti dearpat su beare dan dihte.
+#		
+##!! * **+FAUXVCop**  copulas coming after the mainverb
+#MAP:+FAUXVCop (@+FAUXV) TARGET VFIN-NOT-IMPRT + COPULAS (*-1 PrfPrc OR (Actio Ess) BARRIER NOT-ADV-PCLE LINK NOT 0 SYN-V OR (@>N) OR (N Nom))
+# ;
+#	#$ Ja boahtán ledje su gudnejahttit.
+# 	#% Lonohallan lea čatnon Barents regiovdnii, dát mearkkaša ahte lonohallan lea Ruššii.		
+#  
+#    
+##!! * **+FMAINVCop**  copulas 	
+#MAP:+FMAINVCop (@+FMAINV) TARGET VFIN + COPULAS (NEGATE *-1 Inf OR PrfPrc OR (Actio Ess) BARRIER VFIN OR S-BOUNDARY)(NEGATE *1 Inf OR PrfPrc - @>N OR (Actio Ess) BARRIER VFIN OR S-BOUNDARY OR (PUNCT LEFT));	
+#	#$ Mun lean Romssas. 
+#
+#    
+##!! * **+FMAINV**  to the remaining finite verbs which are not AUX    
+#MAP:+FMAINV (@+FMAINV) TARGET VFIN-NOT-AUX (NOT 0 V + OBJ OR V + SUBJ OR V + ADVL OR (V @>N) OR (V @N<))(NEGATE *0 VFIN-NOT-AUX OR @+FMAINV BARRIER S-BOUNDARY OR COMMA OR LEFT OR RIGHT) (NEGATE *-1 (V @>N) BARRIER NOT-A OR LEFT) 
+#(NEGATE *-1 REAL-V - @>N BARRIER S-BOUNDARY OR COMMA OR LEFT)
+#(NEGATE *1 VFIN OR PrfPrc - @>N BARRIER S-BOUNDARY OR COMMA OR RIGHT)(NEGATE 0 Inf LINK -1 CC LINK *-1 Inf BARRIER REAL-V LINK -1 AUX) ;
+#	#$ Boađe boahtte vahku.
+#	#$ Son lea oappáin náitalan.
+#	#$ Mánná čohkána láhttái.
+#	#$ Son gii oažžu lobi, galgá vuostáiváldit goartta dahje sullasačča, mii čájeha ahte sus lea lohpi.
+#	#$ Ovdal go čielggadan dan lagabui,...
+#	#$ Gal mun birgen, Gállá dajai, go manadettiin deaddilii uvssa gitta.
+#	#$ Norggas gávdnat boazodoalu Finnmárkkus davvin gitta Hedemárkui lullin.
+#	#% Mun lean ráhkkásisttán ožžon cummá.
+#
+#MAP:+FMAINV (@+FMAINV) TARGET VFIN-NOT-AUX (NOT 0 V + OBJ OR V + SUBJ OR V + ADVL OR (V @>N) OR (V @N<))(0 Pl3 LINK -1 Nom + Pl OR Nom + Pl3) ;
+#	#$ Eai dat hála dáppe sámegiela dat hállet dušše dárogiela (LIA)
+# 	#$ dat bohte dat bohte dat bohte dalle Ruŧŧii dat bohte soađi áigge . (LIA)
+#
+#MAP:+FMAINVinfv (@+FMAINV) TARGET VFIN-NOT-AUX + INF-V (1 Inf) ;
+#	#$ Liná liikui sárgut ja tennjet.
+#
+#MAP:+FMAINVC (@+FMAINV) TARGET VFIN-NOT-AUX IF (NOT 0 V + OBJ OR V + SUBJ OR V + ADVL OR (V @>N) OR (V @N<)) (0C VFIN) ;
+#
+#MAP:+FMAINVObjV_a (@+FMAINV) TARGET VFIN-NOT-AUX + TRANS-V (NOT 0 V + OBJ OR V + SUBJ OR V + ADVL OR (V @>N) OR (V @N<) OR Ill)(1 V + OBJ);
+#MAP:+FMAINVObjV_b (@+FMAINV) TARGET VFIN-NOT-AUX + TRANS-V (NOT 0 V + OBJ OR V + SUBJ OR V + ADVL OR (V @>N) OR (V @N<) OR Ill)(1 Acc LINK 1 TRANS-V + OBJ) ;
+#	#$ Dii oahppabehtet lohkat ja čállit sámegillii.
+#
+##!! * **+FMAINV**  to finite verb after mainverb
+#MAP:+FMAINVafterInf (@+FMAINV) TARGET VFIN-NOT-AUX + INF-V (NOT 0 V + OBJ OR V + SUBJ OR V + ADVL OR (V @>N) OR (V @N<)) (-1 (V @OBJ>) LINK -1 BOC) ;
+#	#$ Galgabehtet muitit, ahte báhčit oažžu dáppe meahcis...
+#
+## Mapping both verbs in a rel bisetning even if no comma
+#MAP:+FMAINVRel1 (@+FMAINV) TARGET VFIN-NOT-AUX (NOT 0 V + OBJ OR V + SUBJ OR V + ADVL OR (V @>N) OR (V @N<) OR Adv) (*-1 Rel BARRIER SV-BOUNDARY LINK NEGATE *-1 VFIN BARRIER S-BOUNDARY) ;
+#MAP:+FMAINVRel2 (@+FMAINV) TARGET VFIN-NOT-AUX (NOT 0 V + OBJ OR V + SUBJ OR V + ADVL OR (V @>N) OR (V @N<) OR Adv OR N) (*-1 FMAINV BARRIER REAL-V LINK *-1 Rel BARRIER SV-BOUNDARY LINK NEGATE *-1 VFIN) ;
+#	#$ Áldu mii dálvvi miehtá njamaha miesi gohčoduvvo čearpmateadni.
+#
+#MAP:+FMAINV (@+FMAINV) TARGET VFIN-NOT-AUX (NOT 0 SYN-V) (*-1 (N Nom) OR (Pron Nom) BARRIER NOT-ADV-PCLE LINK NOT 0 Inf LINK NEGATE *-1 REAL-V - @>N BARRIER S-BOUNDARY OR COMMA)(NEGATE *1 VFIN OR PrfPrc - @>N BARRIER S-BOUNDARY OR COMMA) ;
+#
+#MAP:-FMAINV (@-FMAINV) TARGET PrfPrc (NOT 0 SYN-V) (*-1 FAUXV BARRIER REAL-V OR S-BOUNDARY)(NEGATE 0 AUX LINK *1 Inf BARRIER REAL-V OR S-BOUNDARY) ;
+#	#$ Čuollun sáhttá leat dušše okta fierbmi gurgaluvvon.
+#
+#MAP:-FMAINV (@-FMAINV) TARGET PrfPrc (NOT 0 SYN-V) (*-1 MOVT BARRIER REAL-V OR S-BOUNDARY LINK -1 ("nu") LINK -1 FAUXV)(NEGATE 0 AUX LINK *1 Inf BARRIER REAL-V OR S-BOUNDARY) ;
+#
+#
+#MAP:+FMAINV (@+FMAINV) TARGET VFIN-NOT-AUX + Imprt (NOT 0 SYN-V) (*-1 BOC BARRIER NOT-ADV)(NEGATE 1 Inf LINK NOT -1 INF-V)(NEGATE 0 Attr LINK *1 (N Nom) BARRIER NOT-A) ;
+#
+#MAP:+FMAINV (@+FMAINV) TARGET AUX + VFIN (NEGATE *1 Inf OR PrfPrc - @>N OR (Actio Ess)) ;
+#	#$ Mearrasápmelaččat ledje áŋgiris ja oahppan bivdit.
+#	
+#
+#
+#MAP:+FMAINV (@+FMAINV) TARGET VFIN-NOT-AUX + Pl3 (NOT 0 SYN-V)(*1 NP-HEAD-PL-NOM BARRIER NOT-NPMODADV) ;
+#
+#MAP:+FMAINVQst (@+FMAINV) TARGET VFIN-NOT-AUX (NOT 0 SYN-V)(*-1 BOS BARRIER WORD)(1 go + Qst) ;
+#
+#
+#MAP:+FMAINV (@+FMAINV) TARGET VFIN-NOT-AUX + Sg3 (NOT 0 SYN-V)(NEGATE *-1 REAL-V - @>N BARRIER S-BOUNDARY OR COMMA)(*1 NP-HEAD-SG-NOM BARRIER NOT-NPMOD-ACC-ADV LINK NOT 1 VFIN + Sg3) ;
+#	#$ Loahpas jearai Johttisámelisttu Anders Somby jr. sudnos njuolga háliida go čearru gulahallat, juo dahje ii.
+#	#% Ádjá viessu lea guokte miilla bajábeal márkana.
+#
+#
+#MAP:+FMAINV (@+FMAINV) TARGET VFIN-NOT-AUX + 1-2-V OR VFIN-NOT-AUX + Sg3 (NOT 0 SYN-V)(*-1 BOC BARRIER REAL-V)(NEGATE 0 N LINK -1 Dem)(NEGATE 0 N LINK *-1 COMMA OR @CNP BARRIER NOT-A-ADV LINK -1 N)(NEGATE 0 Pl LINK *1 VFIN + Pl3 BARRIER REAL-V OR S-BOUNDARY OR COMMA)(NEGATE *1 VFIN OR PrfPrc - @>N BARRIER S-BOUNDARY OR COMMA)(NEGATE 0 Inf LINK -1 CC LINK *-1 Inf BARRIER REAL-V LINK -1 AUX)  ;
+#
+#MAP:-FMAINVfragment (@-FMAINV) TARGET PrfPrc (NOT 0 SYN-V) (-1 Adv LINK -1 BOS) (1 Ess OR ADVLCASE LINK NEGATE 1 WORD) ;
+#	#$ Guhká bargan journalistan.
+#
+#
+##!! ### (@-FMAINV) and (@-FAUXV)
+#
+##!! * **-FAUXVConNegCop**  to ConNeg COPULAS   
+#MAP:-FAUXVConNegCop (@-FAUXV) TARGET ConNeg + COPULAS (*-1 REAL-NEG BARRIER REAL-V)(*1 PrfPrc OR (Actio Ess) BARRIER REAL-V OR S-BOUNDARY);
+#	#$ Muhto juos Kristus ii leat bajásčuožžilan, ..
+#
+##!! * **-FAUXVConNegAux**  to ConNeg AUX-OR-MAIN   
+#MAP:-FAUXVConNegAux (@-FAUXV) TARGET ConNeg + AUX-OR-MAIN (*-1 REAL-NEG BARRIER REAL-V)(*1 Inf OR PrfPrc BARRIER REAL-V OR S-BOUNDARY LINK NOT 0 OBJ);
+#	#$ Eai guovttis ge nagot loktet dan geađggi.
+#	#$ In sáhte olles gáhku borrat. 
+#	#$ Daid ii galgga suovvat bargat joavdelasaid.
+#	#$ Ii daid galgga joavdelasaid bargat suovvat.
+#	#% – Ii son fal siđa munno boahtit , dajai Mattias
+#
+##!! * **-FAUXVConNegAux**  to ConNeg AUX   
+#MAP:-FAUXVConNegAux (@-FAUXV) TARGET ConNeg + AUX - ("leat") (*-1 REAL-NEG BARRIER S-BOUNDARY OR ConNeg)((*1 Inf BARRIER REAL-V OR S-BOUNDARY OR Attr LINK NOT 0 OBJ) OR (0 TRANS-V LINK *-1 Acc BARRIER NOT-NPMOD LINK *1 Inf BARRIER REAL-V OR S-BOUNDARY OR Attr LINK NOT 0 OBJ));
+#	#$ Ii sáhte suohtastallat.
+#	#$ Ii sáhte dieđusge dušše suohtastallat.
+#	#$ Eat mii sáhte vuolgit.
+#	#$ In sáhte gáhku borrat.
+#	#% It don leat mus goahtemuorran orron.
+#	#% – Ii son fal siđa munno boahtit , dajai Mattias
+#	
+#
+#
+#MAP:-FAUXVConNegAuxNeg (@-FAUXV) TARGET ConNeg + AUX - ("leat") (*-1 REAL-NEG BARRIER S-BOUNDARY OR ConNeg)(1 Ind + Neg LINK *1 Inf BARRIER REAL-V OR S-BOUNDARY);	
+#	#$ Lean diŋgaohcci ja in háliit in minuhta ge duššái golahit.
+#
+##!! * **-FMAINVConNeg**  to ConNeg   
+#MAP:-FMAINVConNeg (@-FMAINV) TARGET ConNeg (*-1 ConNeg BARRIER REAL-V OR S-BOUNDARY)(NEGATE *1 Inf OR PrfPrc OR (Actio Ess) BARRIER REAL-V OR S-BOUNDARY)(NEGATE **1 Adv BARRIER REAL-V OR S-BOUNDARY LINK 1 Inf)(NEGATE 0 Inf LINK -1 REAL-NEG LINK -1 ConNeg LINK -1 REAL-NEG) ;
+#	#$ Ii son liikon dohko.
+#	#$ Sieiddi bálvalemiin sturron eallu gohčoduvvui bálvvoseallun, mii sáhtii jávkat, go oamasteaddji jámii dahje go sieidi ii bálvaluvvon.
+#	#$ Iigo dutnje šat boađe áviisa?
+#	#% Ja go álget johttágoahtit, de eai oaččo ealuid čoahkkái, ja go ožžot, de lea nu arvi ja muohtti, ahte leat visot nu njuoskasat.
+#
+#MAP:-FMAINVConNegCoor (@-FAUXV) TARGET (Prs ConNeg) + AUX (-1 ("ja" CC) OR ("dahje" CC) LINK **-1 ConNeg LINK -1 Neg)(*1 Inf BARRIER REAL-V OR S-BOUNDARY)(NEGATE 0 VFIN);
+#	#$ Bearehan dal son ii geige vel gieđa ja váldde maiddái eallima muoras ja bora ja beasa nu eallit agálaččat.
+#	#% Olmmoš gean lusa stállu lea vuolgán, ii oaččo šat ráfi ja ferte vuolgit olggos fággádallat suinna.
+#
+#
+#MAP:-FMAINVConNegCoor (@-FMAINV) TARGET (Prs ConNeg) (-1 ("ja" CC) OR ("dahje" CC) LINK **-1 ConNeg BARRIER VFIN LINK *-1 Neg)(NEGATE 0 VFIN);
+#	#$ Bearehan dal son ii geige vel gieđa ja váldde maiddái eallima muoras ja bora ja beasa nu eallit agálaččat.
+#	#% Olmmoš gean lusa stállu lea vuolgán, ii oaččo šat ráfi ja ferte vuolgit olggos fággádallat suinna.
+#	#% Ánne ii lean guhkes áigái leamaš ná buohcci, lei nu illáveaje ja šliettas, ii veadján maidege.
+#
+#
+##!! * **-FMAINVConNeg**  to ConNeg
+##MAP:-FMAINVConNeg (@-FMAINV) TARGET ConNeg (*-1 REAL-COPULAS + VFIN OR ("orrut") + VFIN OR Neg BARRIER SV-BOUNDARY)(NEGATE *-1C PrfPrc BARRIER REAL-V OR N); 
+#MAP:-FMAINVConNeg (@-FMAINV) TARGET ConNeg (*-1 REAL-NEG BARRIER SV-BOUNDARY OR ConNeg)(NEGATE 0 AUX LINK *-1 PrfPrc BARRIER REAL-V)(NEGATE 0 AUX LINK 1 Inf)(NEGATE 0 Inf LINK -1 REAL-NEG LINK -1 ConNeg LINK -1 REAL-NEG) ; 
+#	#$ Ii okta ge geahččalan eará sivaid ohcat.
+#	#% It don leat mus goahtemuorran orron.
+#	#% De ledje baicca eatnašat dan dilis ahte eai máhttán stávetge.
+#
+##!! * **-FMAINVConNeg**  to ConNeg Aux after PrfPrc
+#MAP:-FAUXVConNeg (@-FAUXV) TARGET ConNeg + AUX (*-1 PrfPrc BARRIER REAL-V OR SV-BOUNDARY LINK *-1 REAL-NEG BARRIER NOT-ADV-PCLE)(NEGATE *1 REAL-V BARRIER NOT-ADV-PCLE)(NEGATE 1 Nom); 
+#	#$ Ii dal láhppán gal leat. 
+#	#% Ii ge ságastallan leat vejolaš jus eai leat journalisttat geat máhttet sámegiela bures.
+#
+##!! * **-FMAINVConNegCop**  to ConNeg COPULAS   
+#MAP:-FMAINVConNegCop (@-FMAINV) TARGET ConNeg + COPULAS (*-1 REAL-NEG BARRIER REAL-V)(NEGATE *1 PrfPrc OR Inf OR (Actio Ess) BARRIER REAL-V OR S-BOUNDARY OR Nom);
+#	#$ Ii lean šat nu álki vuovdit.
+#
+#
+##MAP:ConNegCop (@-FMAINV) TARGET ConNeg (*-1 REAL-NEG BARRIER S-BOUNDARY OR ConNeg)(0 ("leat"))(1 (A Nom));
+#	#$ Ii ge almmolaš sámi ságastallan leat vejolaš jus eai leat journalisttat geat máhttet sámegiela bures.
+#
+#
+##!! * **-FAUXVPrfPrcAux**  to PrfPrc AUX  before Inf or Actio Ess
+#MAP:-FAUXVPrfPrcAux (@-FAUXV) TARGET PrfPrc + AUX (1 Inf OR (Actio Ess)LINK 0 ("leat"))(*-1 ("leat") BARRIER NOT-ADV-PCLE) (NEGATE 0 AUX-OR-MAIN LINK *1 Acc BARRIER NOT-ADV-PCLE LINK 1 Inf + OBJ);	
+#MAP:-FAUXVPrfPrcAux (@-FAUXV) TARGET PrfPrc + AUX (*1 Inf OR (Actio Ess) BARRIER SV-BOUNDARY OR (N Ess) OR (A Ess) LINK NOT 0 ("leat"))(*-1 ("leat") BARRIER NOT-ADV-PCLE) (NEGATE 0 AUX-OR-MAIN LINK *1 Acc BARRIER NOT-ADV-PCLE LINK 1 Inf + OBJ);	
+#	#$ In leat sáhttán gáhku borrat dan rájes.
+#	#% Jus lean váiban dahje ferten lihkkat árrat, de manan nohkkat oalle árrat.
+#	#% Mii leat geahčadan doaimma dál ja sii geat leat álgán dan ohppui leat ovttaoaivilis.
+#
+##!! * **-FMAINVPrfPrc**  to PrfPrc 
+#MAP:-FMAINVPrfPrc (@-FMAINV) TARGET PrfPrc (*-1 REAL-COPULAS + VFIN OR ("orrut") + VFIN OR Neg BARRIER S-BOUNDARY)
+##(NEGATE *-1C PrfPrc BARRIER REAL-V OR N)
+#(NEGATE -1 PrfPrc); 
+#	#$ Muhto boanddat leat goikadan ollu jekkiid ja gilván daidda rásiid.
+#	#$ Mu mielas lea suohtas oahppat sámegiela.
+#	#$ Ja Biret-Elle lea easka skuvllas geargan.
+#	#$ Máŋgasat leat maid vásihan, ahte sii leat bártidan.
+#	#$ In leat leamaš mielde gáhku láibume ovdal.  
+#	#$ Moanaid guovlluin gos lavdnji lea leamaš adnon boaldámuššan lea buot lavdnji dál čuhppon.
+#	#$ Oahppit leat lohkan ollu girjjiid.
+#	#$ Lean mun gal oaidnán čakčaseavdnjadiin dola rievdamiin čázi alde Deanus.
+#
+##!! * **-FMAINVPrfPrcEss**  to PrfPrc before Ess
+#MAP:-FMAINVPrfPrcEss (@-FMAINV) TARGET PrfPrc IF (*-1 REAL-COPULAS OR ("orrut") BARRIER PrfPrc OR (Actio Ess))(NEGATE 0 AUX LINK *1 Inf BARRIER S-BOUNDARY)(1 Ess);
+#	#$ Moanaid guovlluin gos lavdnji lea leamaš adnon boaldámuššan lea buot lavdnji dál čuhppon.
+#
+##!! * **-FMAINVPrfPrcleat**  to PrfPrc leat
+#MAP:-FMAINVPrfPrcleat (@-FMAINV) TARGET ("leat" PrfPrc) ; 
+#	#$ Ránus lea álo leamaš buorre haddi.
+#
+##!! * **-FMAINVPrfPrcafterAuxAux**  to PrfPrc after two Auxs
+#MAP:-FMAINVPrfPrcafterAuxAux (@-FMAINV) TARGET PrfPrc (*-1 REAL-COPULAS OR ("orrut") BARRIER SV-BOUNDARY LINK *-1 Neg BARRIER NOT-ADV); 
+#	#$ Olbmot eai orron čadnon dušše iežaset mearragáddái bivdit. 
+#	
+##!! * **-FMAINVPrfPrccoord**  to PrfPrc coordination	
+#MAP:-FMAINVPrfPrccoord (@-FMAINV) TARGET PrfPrc (*-1 CC BARRIER REAL-V OR S-BOUNDARY LINK *-1 PrfPrc - @>N BARRIER REAL-V OR S-BOUNDARY LINK *-1 REAL-COPULAS OR ("orrut") BARRIER NOT-ADV-PCLE)(NEGATE 0 VFIN + AUX LINK *1 Inf BARRIER NOT-ADV-PCLE);
+#	#$ ... dákkár orgánii leat boahtán dahje ovddiduvvon.
+#	#$ Sápmelaččat ledje dohkkehuvvon Norgga álgoálbmogin ovdalgo konvenšuvnna ledje šiehtadan gárvásii ja dasa vuolláičállán.
+#	#%  Jus lean váiban dahje ferten lihkkat árrat, de manan nohkkat oalle árrat.
+#
+##!! * **-FMAINVPrfPrccoord**  to PrfPrc coordination	
+#MAP:-FMAINVPrfPrccoord (@-FMAINV) TARGET PrfPrc (-1 CC LINK -1 @-FMAINV) ;
+#	#$ Son lei vuolggahan mu dán máilbmái dáhpedorpmis geainna nu, riegádahttán ja guoddán mu heakkastis vahágis, biebman ja bivttastan dalle go muittii.
+#
+##!! * **-FMAINVPrfbeforeAux**  to PrfPrc before the Aux	
+#MAP:-FMAINVPrfbeforeAux (@-FMAINV) TARGET PrfPrc (*1 REAL-COPULAS + FAUXV BARRIER NOT-ADV-PCLE LINK NEGATE *1 PrfPrc OR (Actio Ess) BARRIER NOT-ADV-PCLE)(NEGATE -1 BOC LINK 1 Der/Pass LINK 1 ("leat") LINK *2 NP-HEAD-NOM BARRIER NOT-NP);     
+#	#$ Ja boahtán ledje su gudnejahttit.
+#
+##!! * **-FMAINVPrfafterMan**  to PrfPrc before the Aux	
+#MAP:-FMAINVPrfafterMan (@-FMAINV) TARGET PrfPrc (-1 ("man"))(*1 ("leat") BARRIER REAL-V);     
+#	#$ Dattetge duvdet min sámepolitihkkarat iežaset buorren ovdamearkan álgoálbmotservvodagas , dasa ahte man lihkostuvvan min Sámi ovttasbargu stáhta eiseválddiiguin lea leamaš.
+#
+#MAP:-FMAINV (@-FMAINV) TARGET ("beaivádit" PrfPrc)(1 Sem/Date) ;
+#
+##MAP:<OBJPrfPrc3 (@<OBJ) TARGET PrfPrc IF (*-1 TRANS-V - AUX BARRIER SV-BOUNDARY)(NEGATE 0 Ess LINK *-1 OPRED-V);
+#	#$ Ii lean gal mihkkege heahtediliid, muhto lei čielggas ahte muhtumat dovde dorvvohisvuođa ja dovde okto báhcán.
+#	#% go oaidná biebman boahtá divrras šaddat.
+#
+##!! * **-FMAINVInf**  to Inf
+#MAP:-FMAINVInf (@-FMAINV) TARGET Inf (NOT 0 FAUXV)(NEGATE 0 A LINK *-1 COPULAS BARRIER REAL-V OR (N Nom) OR ADVLCASE OR MIELLA OR (A Nom))(NEGATE 0 (Pl Nom) LINK *1 VFIN + Pl3 OR VFIN + Du3 BARRIER NOT-NPMODADV OR COMMA)(NEGATE 0 N LINK -1 Gen LINK -1 CC LINK -1 N)(NEGATE -1 COMMA LINK -1 V + Pl3)(NEGATE 0 Pl3 LINK -1 Nom + Pl OR Nom + Pl3)(NEGATE 0 A LINK *-1 CC BARRIER S-BOUNDARY LINK -1 A) ;
+#	#% Eai dat hála dáppe sámegiela dat hállet dušše dárogiela (LIA)
+#	#% Dat lea jáhkkemeahttun ja nu máilmmi surgat, olmmoš illá jáhkká maid oaidná.
+
+# here is the end of the part copied from sme
+# -------------------------------------------
+
+
 MAP (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*1 VFIN BARRIER S-BOUNDARY LINK 0 AUX)(NEGATE 0 N LINK -1 BOS) ;
 	#$ Goerehtalleme edtja daajroem vedtedh guktie noere saemieh sijjen psykiske healsoem dååjroeh jïh mah vaarjelimmiefaktovrh jïh vaahrafaktovrh noerh dååjroeh.
 MAP:InfinMainv (@-FMAINV) TARGET Ger OR PrfPrc OR Inf IF (*-1 VFIN BARRIER S-BOUNDARY LINK 0 AUX) ;
@@ -1535,6 +2210,8 @@ MAP:ConNegMainv (@-FMAINV) TARGET ConNeg IF (*-1 Neg BARRIER S-BOUNDARY) ;
 MAP:GerMainv (@-FMAINV) TARGET Ger OR PrfPrc IF (1 EOS) ;
 	#$ Luste tjoejkedh.
 	#$ Idtji maam sijhth jiehtedh mearan Tåamma desnie.
+
+
 MAP:InfMainv (@-FMAINV) TARGET Inf ;
 
 MAP:VGen (@<ADVL) TARGET VGen (-1 MOVEMENT-V) ;
@@ -2467,5 +3144,3 @@ REMOVE:errorth Err/Orth  ; # Apertium
 #MAP (@COMP-CS<) TARGET N (*-1 ("goh") BARRIER S-BOUNDARY );
 #MAP (@COMP-CS<) TARGET NP-MEMBER IF (*-1 ("goh" CS) BARRIER NOT-NP LINK NOT -1 VFIN OR CC)(0 Nom OR ADVLCASE)(NEGATE 0 Attr OR TITLE LINK 1 N OR A)(NEGATE *-1 (@COMP-CS<) BARRIER S-BOUNDARY);
 	## 
-
- 
