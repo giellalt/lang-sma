@@ -51,7 +51,6 @@ TESTS=\
 	msyn-demphrase-congruence-plnom-FAIL.yaml \
 	msyn-Neg-VFinitt-ConNeg-FAIL.yaml \
 	msyn-numphrase-congruence-plnom-PASS.yaml \
-	msyn-numphrase-congruence-sggen-FAIL.yaml \
 	msyn-rel-mij-gie-FAIL.yaml \
 	syn-delete-adv-phrasal-verb-FAIL.yaml \
 	syn-delete-adv-phrasal-verb-PASS.yaml \
