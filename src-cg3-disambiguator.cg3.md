@@ -342,6 +342,8 @@ Essive
 
 Comitative
 
+* **SgCom and Ess** removes Sg Com and Ess when BIEHKIE
+
 Accusative or illative
 
 Indef or Adv
