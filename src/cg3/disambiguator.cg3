@@ -700,6 +700,8 @@ LIST ESS-TIME-WEATHER = "maana" ;
 
 LIST WORDLEMMA = (".*"r) ;
 
+LIST BIEHKIE = "biehkie" ;
+
 
 #       ============== #
 #!! # Disambiguation rules
@@ -2379,6 +2381,7 @@ SELECT:IneIfPlc Pl + Ine (0 Sem/Plc) (*1 ("gaavnedh") BARRIER SV-BOUNDARY) ;
 
 REMOVE:EssIfCom/Ine Ess (0 Sg + Com OR Pl + Ine) (*-1 Pron + Com OR Pron + Ine BARRIER NOT-NPMOD OR S-BOUNDARY) ;
 	# dajnie barkoeplaanine
+	
 
 SELECT:NPlAcc Acc (0 Pl + Acc OR Pron + Pl OR Pron + Pl3 LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
 SELECT:NPlAcc Acc (0 Pl + Acc OR Pron + Pl OR Pron + Pl3 LINK *1 COPULAS BARRIER NOT-ADV LINK *1 V-TRANS BARRIER NOT-ADV LINK NOT 0 ("böötedh")) ;
@@ -2610,6 +2613,15 @@ SELECT:ektine N + Com OR Pron + Com OR A + Com (*1 ("ektine") BARRIER S-BOUNDARY
 SELECT:gonnoeh N + Com  (-1 ("gonnoeh")) ;
 	#$ Dïhte tjidtjie gonnoeh aehtjine årroeminie aktene voenesne man nomme Jorpejaevrie.
 
+
+#!! * **SgCom and Ess** removes Sg Com and Ess when BIEHKIE
+REMOVE:SgComOREss (Sg Com) OR (Ess)  IF (*-1 BIEHKIE BARRIER NOT-NPMOD OR Num)(0 (Pl Ine));
+	#$ 
+#REMOVE:SgCom2 (Sg Com)  IF (*-1 OASSI BARRIER S-BOUNDARY OR Loc)(0 (Pl Loc) - SG-WORD );
+#	#$ Osiin gelbbolašvuođaguovddážiidda juolluduvvon ruđain sáhttá maid ruhtadit sadjásašgoluid hospiterema oktavuođas dahje lassigoluid, mat Kárášjogas / Leavnnjas šaddet joatkkaoahpus.
+#	#$ Nuba áddjá árvala ahte eiseválddit galggaše bálkáhit baicce vuorrolohkkiid, vai rehkenasto vuorruid mearri maiddái, iige dušše dat mearri guliin mii goddo deanus.
+#REMOVE:SgCom3 (Sg Com)  IF (-1 Sem/Plc + Gen LINK -1 PROSEANTA)(0 (Pl Loc) - SG-WORD) ;
+#	#$ Dutkamušat čájehit ahte olles 60 proseantta Norgga studeanttain eai birge ruđalaččat jus eai bargga seammás go studerejit.
 
 
 REMOVE:ComIfComV Ine (*0 COMV BARRIER S-BOUNDARY) ;
