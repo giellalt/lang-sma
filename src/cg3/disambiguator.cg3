@@ -169,6 +169,7 @@ LIST CLB = CLB ;
 LIST LEFT = LEFT ;
 LIST RIGHT = RIGHT ;
 LIST COMMA = "," ;
+LIST CITATION = "«" "“" "\"" "„" "‟" "'" "‹" "‘" "‚" "‛" "❛" "❝" "❮" "〝" "〟" "»" "“" "\"" "'" "›" "’" "❜" "❞" "❯" "〞" "＂" "”" ; 
 LIST Arab = Arab ;
 
 
@@ -1422,6 +1423,50 @@ MAP (@CNP) TARGET CC (-1 $$CASES LINK 2 $$CASES) ;
 MAP (@CNP) TARGET CC (-1C Inf LINK 2C Inf) ;
 MAP (@CNP) TARGET CC (*-1C Pl + Gen BARRIER WORD)(1 (Pl Com)) ;
 
+#!! ## CC and CS or Adv (have to be before CVP rules)
+
+SELECT:GoNotCs ("goh" Pcle) (-1 Neg OR ConNeg OR ("sån")); 
+	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
+	## Dallah goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. # CS
+
+SELECT:GoNotCs ("goh" Pcle) (1 ("!") OR ("?")); 	
+	## Saemienskåvlosne dan luste goh!
+	
+SELECT:GoNotCs ("goh" Pcle) (*1 <vdic> BARRIER (*) - COMMA - CITATION); 	
+	## ”Ij leah daate dåajmijes vuekie saemiej gaskemsh, tsumhtsieh jïh lïpkh laehpedh jeatjah almetjidie jïh juvri byjreskasse goh, ” tjïertestægan.
+
+REMOVE:GoAdv CS IF (0 ("goh"))(*1 EOS BARRIER V);
+	     ## Tjuajka goh gaajege.
+	     ## Dïhte sagki stuerebe enn goh dïhte.
+
+REMOVE:GoCS Adv IF (0 ("goh" CS));
+	    ## Goh aahka noere lij, dellie derhviegåetesne årroeji.
+
+REMOVE:CSNotVfin CS IF (NEGATE *-1 VFIN OR ("jis" CS))(0 ("dellie") OR ("dle"));
+	##
+
+REMOVE:NotNomIfCs N + Nom (0 CS)(1 N + Nom) ;
+	# Guktie vielle Baktuse, giehtelh maa!
+
+
+SELECT:CCdovne Adv IF (0 ("dovne"))(1 N OR A OR Pron LINK *1 ("jïh" CC)) ;
+	## … almetjistie gieh maehtieh saemien dovne tjaaleldh jïh njaalmeldh barkoesijjide tjïeltesne.
+	
+#REMOVE:CsIfNotFuncword Pcle (NEGATE *-1 NOT-ADV-INT-PCLE)(0 CS) ; #NOTUSED
+	# Jaa, jis damth seekere .....	 # GoNotCs (above) takes this sentence instead.
+	
+REMOVE:NotCsIfCc CS ((-1 CC OR ("mij" Nom)) OR (NEGATE -1 WORD))(0 Adv)(NEGATE 0 ("guktie")) ;
+	## Jih dellie jeehti...
+	#$ Guktie aaj jïjnjebh Saepmesne, dah guaktah lægan jielemevåaromem jïh jearsoesvoetem miehtjeste åådtjeme.
+
+#REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
+
+SELECT:JisCS ("jis" CS) (-1 BOS) ;
+	## Jis manne båatam satne mænna gåatan.
+
+IFF:JisPcle ("jis" Pcle) (-1 N OR Pron OR TIME) (NEGATE -1 ("buerie") OR ("luste") OR ("seamma") OR ("juktie") OR ("nuelie") OR ("gaevhtie") OR ("dovne")) ;
+	## Daah gärhkoeh hov seamma laaketje sijjine jis vuartasje guktie byjreske dej bïjre lea. Daate akte vihkeles dirrege jis edtja saemien kultuvrem, gielem jih ektievuekiejielemem nænnoestidh jih vååjnesisnie darjodh. Tjaaleme nännoestimmie nimhtems ierine saemiestimmie galka saemien gielesne årrodh ahte nännoestimmiem maehtien saemien gielese njaelmeste jarkoestidh reerenasseste jis dihte aajne daam säjhta. Tjilkeme dovne raereste akth vielie luhpiedimmiem buerie ektievuekie ståvroen jih pleenumen gaskoeh seamma goh tjelten laakesne nuepiem bååstide vaeltedh lihtsegijstie jis majoriteete jeatjhligkie pleenumisnie sjädta.(does NOT work here)
+
 
 #!! ## CVP Mapping
 
@@ -2200,6 +2245,11 @@ MAP:+FAUXVNeg (@+FAUXV) TARGET Neg (NEGATE 0 A LINK 1 CC LINK 1 A) ;
 MAP (@+FMAINV) TARGET VFIN (NOT 0 COPULAS) (1 VGen);
 
 MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 REAL-V BARRIER S-BOUNDARY OR CC OR COMMA) ;
+
+MAP (@+FAUXV) TARGET VFIN (0 AUX LINK NOT 0 COPULAS) (*1 N BARRIER NOT-NPMOD LINK 1 CC LINK *1 REAL-V BARRIER S-BOUNDARY OR CC OR COMMA) ;
+	## Dej beeli {maehtiejigan} vïnhtsem jïh viermide jaevriebealese laehpedh, jïh idtjigan strerkesth galkin skilkesovvedh jallh gaarvanidh.
+
+
 MAP (@+FMAINV) TARGET VFIN (0 COPULAS)(NEGATE *1 PrfPrc OR Ger BARRIER S-BOUNDARY OR COMMA)(NEGATE *-1 @+FAUXV OR @-FAUXV BARRIER S-BOUNDARY) ;
 MAP (@+FAUXV) TARGET VFIN (0 MOD-ASP OR Neg) ;
 MAP (@-FAUXV) TARGET AUX (0 Inf OR ConNeg)(*1 Inf BARRIER S-BOUNDARY OR COMMA OR CC)(NEGATE 0 COPULAS LINK 1 A + Nom) ;
@@ -2416,45 +2466,6 @@ SELECT:pruvriV V (0 ("pruvredh") LINK 0 ("pruvre") LINK *-1 ILLADV BARRIER S-BOU
 
 
 # Dem
-
-	
-#!! ## CC and CS or Adv
-
-IFF:GoNotCs ("goh" Pcle) (-1 Neg OR ConNeg OR ("sån")); 
-	## Ih goh måjhtijh ahte månnoeh daesnie sagke seadtoesåbpoe årroen. # Pcle
-	## Dallah goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. # CS
-
-REMOVE:GoAdv CS IF (0 ("goh"))(*1 EOS BARRIER V);
-	     ## Tjuajka goh gaajege.
-	     ## Dïhte sagki stuerebe enn goh dïhte.
-
-REMOVE:GoCS Adv IF (0 ("goh" CS));
-	    ## Goh aahka noere lij, dellie derhviegåetesne årroeji.
-
-REMOVE:CSNotVfin CS IF (NEGATE *-1 VFIN OR ("jis" CS))(0 ("dellie") OR ("dle"));
-	##
-
-REMOVE:NotNomIfCs N + Nom (0 CS)(1 N + Nom) ;
-	# Guktie vielle Baktuse, giehtelh maa!
-
-
-SELECT:CCdovne Adv IF (0 ("dovne"))(1 N OR A OR Pron LINK *1 ("jïh" CC)) ;
-	## … almetjistie gieh maehtieh saemien dovne tjaaleldh jïh njaalmeldh barkoesijjide tjïeltesne.
-	
-#REMOVE:CsIfNotFuncword Pcle (NEGATE *-1 NOT-ADV-INT-PCLE)(0 CS) ; #NOTUSED
-	# Jaa, jis damth seekere .....	 # GoNotCs (above) takes this sentence instead.
-	
-REMOVE:NotCsIfCc CS ((-1 CC OR ("mij" Nom)) OR (NEGATE -1 WORD))(0 Adv)(NEGATE 0 ("guktie")) ;
-	## Jih dellie jeehti...
-	#$ Guktie aaj jïjnjebh Saepmesne, dah guaktah lægan jielemevåaromem jïh jearsoesvoetem miehtjeste åådtjeme.
-
-#REMOVE:NotCsIfBOS CS (NEGATE -1 WORD)(0 Adv) ;
-
-SELECT:JisCS ("jis" CS) (-1 BOS) ;
-	## Jis manne båatam satne mænna gåatan.
-
-IFF:JisPcle ("jis" Pcle) (-1 N OR Pron OR TIME) (NEGATE -1 ("buerie") OR ("luste") OR ("seamma") OR ("juktie") OR ("nuelie") OR ("gaevhtie") OR ("dovne")) ;
-	## Daah gärhkoeh hov seamma laaketje sijjine jis vuartasje guktie byjreske dej bïjre lea. Daate akte vihkeles dirrege jis edtja saemien kultuvrem, gielem jih ektievuekiejielemem nænnoestidh jih vååjnesisnie darjodh. Tjaaleme nännoestimmie nimhtems ierine saemiestimmie galka saemien gielesne årrodh ahte nännoestimmiem maehtien saemien gielese njaelmeste jarkoestidh reerenasseste jis dihte aajne daam säjhta. Tjilkeme dovne raereste akth vielie luhpiedimmiem buerie ektievuekie ståvroen jih pleenumen gaskoeh seamma goh tjelten laakesne nuepiem bååstide vaeltedh lihtsegijstie jis majoriteete jeatjhligkie pleenumisnie sjädta.(does NOT work here)
 
 
 # select A Attr if the word is directly followed by another noun. Probably needs a barrier to avoid merging two N's that just happen to be colocated, and where the first one is ambiguous with an A Attr reading.
