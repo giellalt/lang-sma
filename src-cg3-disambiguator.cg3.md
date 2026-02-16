@@ -286,6 +286,8 @@ Select Inf
 
 Mapping CNP to CC and CS.
 
+## CC and CS or Adv (have to be before CVP rules)
+
 ## CVP Mapping
 
 Mapping @CVP to all CS
@@ -319,8 +321,6 @@ Select Inf If Infv
 Remove Prop Attr if not 1 Prop 
 
 ### Verb or Noun
-
-## CC and CS or Adv
 
 ## Adj or Adv
 
