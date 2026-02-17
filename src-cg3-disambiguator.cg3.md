@@ -282,6 +282,8 @@ Select Inf
 
 * **COMPCS**  @COMP-CS< to Adv or A after goh etc.
 
+* **CSasCNPCVP** Map some CSs both @CNP @CVP
+
 ## CNP mapping
 
 Mapping CNP to CC and CS.
