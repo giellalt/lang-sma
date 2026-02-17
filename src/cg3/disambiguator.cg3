@@ -1556,12 +1556,15 @@ SECTION
 #!! Mapping verbs
 
 MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV LINK NOT 0 Adv)(NOT 0 COPULAS) ;    
-	#$ Lustes tjoejkedh.
+	#$ Luste tjoejkedh.
 MAP @<SUBJ TARGET Inf IF (*-1 N + Nom BARRIER NOT-ADV LINK -1 A + Attr) ;
 	#$ Lustes aate tjoejkedh.
 	
 MAP @<SUBJ TARGET Inf IF (*-1 A + Nom BARRIER REAL-V LINK -1 COPULAS)(1 EOS) ;
 	#$ Askesne ij leah aelhkie hïjven våarhkoeh gaavnedh.
+	
+MAP:Inf<Spred (@<SPRED) TARGET Inf IF (*1 EOS OR Rel OR CS OR (Adv Subqst) BARRIER (*) - COMMA)(*-1 COPULAS + VFIN BARRIER SV-BOUNDARY OR COMMA OR CC LINK *-1 (N Sg Nom));
+	#$ Darjomes gosse miehtjesne barka, hov lea stråmhpoeh tjoehpedidh, guktie stuerebe moerh buerebe sjidtieh, juktie dejstie dållenmoerijste tjoehpestibie, olles barre stromhpestahkh sjïdth.
 
 # --------------------------------------------------------	
 # This part is from sme and needs to be checked bit by bit
