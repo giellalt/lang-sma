@@ -571,6 +571,9 @@ LIST V-TRANS = (V TV) (Der/ht V)  (Der/Caus V) ;
 
 SET VFIN = Ind OR Imprt ;
 
+SET VFIN-NOT-IMPRT = VFIN - Imprt ; #!! VFIN-NOT-IMPRT
+
+
 SET VFIN-NOT-AUX = VFIN - AUX ;
 
 SET V-MAIN = V - COPULAS - Neg - MOD-ASP ;
@@ -1297,6 +1300,12 @@ SELECT:Sem/TimeN N (0 Sem/Time LINK -1 ("aarehke") OR ("mubpie")) ;
 SELECT:Adv Adv (0 ("gåessie") LINK 1 ("gænnah") OR ("gan")) ;
 REMOVE:Adv N (0 ("åvteli") LINK NOT 1 N) ;
 
+
+SELECT:Advjoekoen Adv (0 ("joekoen")) (-1 ADVLCASE LINK NEGATE *-1 COPULAS BARRIER S-BOUNDARY OR VFIN)(1 EOS OR COMMA) ;
+	## Gaarmanæjja Goh lilje haerjeme-kraesiej gaskem naemhtie mov mïelehke nïejtijste joekoen.
+	## Aaj galka jeanojde johkide gïehtjedidh, luspine joekoen, galka vaaljedehtedh jïh gierkieh baavhkodh, guktie tjaetsiem galkehte guktie guelie baahtsa voejedalledh.
+	
+
 #!! ### Verbs
 #!! Selecting verbs in local contexts, based upon agreement patterns
 
@@ -2000,7 +2009,9 @@ MAP:SUBJ>Inf (@SUBJ>) TARGET Inf (1 COPULAS + VFIN)(*2 A OR (N Sg Nom) BARRIER N
 #
 #
 ##!! * **+FAUXVCop**  copulas coming before the mainverb
-#MAP:+FAUXVCop (@+FAUXV) TARGET VFIN-NOT-IMPRT + COPULAS (*1 PrfPrc OR (Actio Ess) BARRIER VFIN OR S-BOUNDARY OR (PUNCT LEFT) LINK NOT 0 (@>N) LINK NOT -1 (Num Nom)) ;	
+MAP:+FAUXVCop (@+FAUXV) TARGET VFIN-NOT-IMPRT + COPULAS (*1 PrfPrc OR (Actio Ess) BARRIER VFIN OR S-BOUNDARY OR (PUNCT LEFT) LINK NOT 0 (@>N) LINK NOT -1 (Num Nom)) ;
+
+	
 #	#$ Son lea leamaš oahpaheaddji maŋimuš 15-20 jagi, sihke mánáidskuvllas ja joatkkaskuvllas.
 #	#% Mun, Johanas, lean dat guhte lean gullan ja oaidnán buot dán .
 #	#% Eará guovlluin gos leat vel unnit sámit go Finnmárkkus, leamaš dákkár ákkain vel stuorát deaddu almmolaš ságastallamis.
