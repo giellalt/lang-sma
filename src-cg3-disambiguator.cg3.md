@@ -149,6 +149,8 @@ V-NOT-COP
 
 MOD-ASP
 
+VFIN-NOT-IMPRT
+
 ### Adjective sets
 
 ### Adverb sets
