@@ -604,6 +604,9 @@ LIST COM-ADJ = "latjkes" "riejries" ;
 
 LIST SPRED-ADJ = "buerie" "luste" "lustes" "nåake" ; #luste?
 
+LIST DAERPIES = "daerpies" "vihkeles" ;
+
+
 #!! ### Adverb sets
 
 LIST GUKTIEGOSSE = ("gusnie" Adv) ("guktie" Adv) ("gosse" Adv) ("gåessie" Adv) ("gogkoe" Adv) ("gogka" Adv) ("gustie" Adv) ("gåabpelen" Adv) ("gåabpoeh" Adv) ("gåabpah" Adv) ("gåabph" Adv) ("gubpene" Adv) ("gubpede" Adv) ("gubpelde" Adv) ("gumhtie" Adv) ("mannemes" Adv) "magkeres" "magkere" "guktems" "gumhtems" "gumhteme" ("mijladtje" Adv) ("man" Adv) "mannasinie" ("mejnie" Adv) ("mennie" Adv) ("mestie" Adv);
@@ -1569,8 +1572,9 @@ SECTION
 
 #!! Mapping verbs
 
-MAP @<SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV LINK NOT 0 Adv)(NOT 0 COPULAS) ;    
-	#$ Luste tjoejkedh.
+MAP:smaCopDropSubj @SUBJ TARGET Inf IF (*-1 (A Nom) BARRIER NOT-ADV - Pcle LINK NOT 0 Adv - DAERPIES)(NOT 0 COPULAS) ;    
+	## Luste tjoejkedh.
+	## Juktie daerpies hov vuejedh, ihke vïnhtse, viermieh, beapmoe jïh jïjjedimmiedaeverh tjoeverigan buektedh.
 MAP @<SUBJ TARGET Inf IF (*-1 N + Nom BARRIER NOT-ADV LINK -1 A + Attr) ;
 	#$ Lustes aate tjoejkedh.
 	
@@ -2507,10 +2511,10 @@ REMOVE:hijven Attr (0 ("hijven")) ; # Attr?
 
 #!! ## Adj or Adv
 
-LIST DAERPIES = "daerpies" "vihkeles" ;
-
 SELECT:daerpies A (0 DAERPIES LINK -1 COPULAS LINK *1 Inf BARRIER SV-BOUNDARY) ;
-
+SELECT:daerpies A (0 DAERPIES LINK *-1 BOS BARRIER (*) - CS - CC - CITATION) (*1 Inf BARRIER SV-BOUNDARY) ;
+	## Juktie daerpies hov vuejedh, ihke vïnhtse, viermieh, beapmoe jïh jïjjedimmiedaeverh tjoeverigan buektedh.
+	
 REMOVE:AdvNotA A (0 Adv)((1C V OR (A Sg Nom) LINK NOT 0 COPULAS) OR (1 Ela LINK *1 V BARRIER NOT-ADV)) ;
 	## Minngemes aejkien goh dam heannedi lij 1988.
 	## Manne båatam sagke buerebe datneste jieledh, Karijuse.
