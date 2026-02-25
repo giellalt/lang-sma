@@ -65,6 +65,7 @@ define ht [..] -> h  || Vow [l|n|r]  _ t  (s) Vow ;
 define unvoice d -> t , g -> k || Syll _ Vow  ;
 define finalaa a -> 0 || a _ .#. ;
 define 1sylle ä -> e || .#. Cns* _ Cns ;
+define uumlaut ü -> u ;
 
 echo << Compile... >>
 
@@ -89,6 +90,7 @@ read regex [ ieuml
 .o. unvoice
 .o. finalaa
 .o. 1sylle
+.o. uumlaut
 ] ;
 
 save hasselbrink2sma.hfst
