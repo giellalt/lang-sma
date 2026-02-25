@@ -1,0 +1,100 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+
+! To compile, do:
+
+! make
+
+! The command in the makefile is:
+! hfst-xfst -F hasselbrink2sma.xfscript
+
+! ======
+! Conversion from Hasselbrink to modern orthography
+! =======
+
+echo <<defining Cns and Vow...>>
+
+define Vow       [ a | á | e | ë | é | i | o | u | y | æ | ø | å | ä | ö | 
+                   A | Á | E | Ë | É | I | O | U | Y | Æ | Ø | Å | Ä | Ö | 
+é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý 
+É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
+
+! Hasselbrink lemmata:
+! a, ä, å, b, d, e, é, f, g, h, i, f, j, k, 1, m, n, ŋ, o, ö, ø, p, q, r, s, t,
+! Þ, u, ü, v, y
+
+define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | ñ | ń | 
+             B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ | Ñ | Ń |
+             p | q | r | s | š | t | ŧ | v | w | x | z | ž | þ   
+             P | Q | R | S | Š | T | Ŧ | V | W | X | Z | Ž | Þ | ' ] ; 
+
+define Sgm [Cns | Vow ] ;
+define Syll Cns* Vow+ Cns* ;
+
+echo << Rules >>
+
+define ieuml i ë -> ï e || _ [0|Sgm+] [\i] e  ;
+define euml ë -> e ;
+define iuml ï -> i || _ e Sgm+ i e .#. ;
+define paldel ' -> 0 || Cns _ Vow ;
+define shortaa a -> 0 || Syll Cns a _ Cns .#. ;
+define dipht o å -> å e , u o -> o e , e ä -> e a || .#. Cns* _  ; # aa > ae ???
+define ppttkk p p -> h p, t t -> h t, k k -> h k || Vow _ Vow ;
+define hts [..] -> h  || Vow  _ t s Vow ;
+define ttj t t j -> h t j || Vow _ Vow ;
+define dj d -> t || [Vow|.#.] _ j Vow ;
+define mb m b -> m h p  || Vow _ Vow ;
+define jg j g -> j k || Vow _ Vow ;     # g'ïjgedh=gïjkedh
+define ng ŋ -> n g ;
+define hke k k -> h k || Vow _ e .#. ;
+define voicedgeminate b b -> b p , d d -> d t, g g -> g k || Vow _ Vow ;  
+define uo u o -> o e ;
+define ht [..] -> h  || Vow [l|n|r]  _ t  (s) Vow ;
+define unvoice d -> t , g -> k || Syll _ Vow  ;
+define finalaa a -> 0 || a _ .#. ;
+define 1sylle ä -> e || .#. Cns* _ Cns ;
+
+echo << Compile... >>
+
+
+read regex [ ieuml
+.o. euml
+.o. iuml
+.o. paldel
+.o. shortaa
+.o. dipht
+.o. ppttkk
+.o. hts
+.o. ttj
+.o. dj
+.o. mb
+.o. jg
+.o. ng
+.o. hke
+.o. voicedgeminate
+.o. uo
+.o. ht
+.o. unvoice
+.o. finalaa
+.o. 1sylle
+] ;
+
+save hasselbrink2sma.hfst
+
+echo << ... fertig >>
+
+
+
+
