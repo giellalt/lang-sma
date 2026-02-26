@@ -46,6 +46,7 @@ define Syll Cns* Vow+ Cns* ;
 echo << Rules >>
 
 define ieuml i ë -> ï e || _ [0|Sgm+] [\i] e  ;
+define ueogua ö -> e, ä -> a || u _ Cns ;
 define euml ë -> e ;
 define iuml ï -> i || _ e Sgm+ i e .#. ;
 define paldel ' -> 0 || Cns _ Vow ;
@@ -60,17 +61,23 @@ define jg j g -> j k || Vow _ Vow ;     # g'ïjgedh=gïjkedh
 define ng ŋ -> n g ;
 define hke k k -> h k || Vow _ e .#. ;
 define voicedgeminate b b -> b p , d d -> d t, g g -> g k || Vow _ Vow ;  
-define uo u o -> o e ;
+define uo2oe u o -> o e ;
 define ht [..] -> h  || Vow [l|n|r]  _ t  (s) Vow ;
 define unvoice d -> t , g -> k || Syll _ Vow  ;
 define finalaa a -> 0 || a _ .#. ;
+define palatalae2ae [ ä -> æ || ' _ ];
 define 1sylle ä -> e || .#. Cns* _ Cns ;
+define aaumlaut2ee [ä ä -> e e || ' _ ] ;
+define udots2y [' ü -> y ] ;
+define udots2uumlaut ü -> u ;
 define uumlaut ü -> u ;
+define frontae a -> e || a _ Cns+ [i|'] e ; ! aa → ae foran ie og ˈe
 
 echo << Compile... >>
 
 
 read regex [ ieuml
+.o. ueogua
 .o. euml
 .o. iuml
 .o. paldel
@@ -85,12 +92,17 @@ read regex [ ieuml
 .o. ng
 .o. hke
 .o. voicedgeminate
-.o. uo
+.o. uo2oe
 .o. ht
 .o. unvoice
 .o. finalaa
+.o. palatalae2ae
 .o. 1sylle
+.o. aaumlaut2ee
+.o. udots2y
+.o. udots2uumlaut
 .o. uumlaut
+.o. frontae
 ] ;
 
 save hasselbrink2sma.hfst
