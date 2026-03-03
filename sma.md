@@ -1202,9 +1202,9 @@ LEXICON TJE_LASSJE_RESIPR
 * *eurove:* `eurove+N+Sg+Nom`
 * *eurovem:* `eurove+N+Sg+Acc`
 * *euroven:* `eurove+N+Sg+Gen`
-* *eurovevisnie:* `eurove+N+Sg+Ine`
-* *eurovevistie:* `eurove+N+Sg+Ela`
-* *eurovevinie:* `eurove+N+Sg+Com`
+* *eurovisnie:* `eurove+N+Sg+Ine`
+* *eurovistie:* `eurove+N+Sg+Ela`
+* *eurovinie:* `eurove+N+Sg+Com`
 
 * administraatore# ODD-syllable test examples:*
 * *administraatore:* `administraatore+N+Sg+Nom`
