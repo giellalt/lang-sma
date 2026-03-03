@@ -54,9 +54,8 @@ fi
 # Use autotools mechanisms to only run the configured fst types in the tests:
 fsttype=
 @CAN_HFST_TRUE@fsttype="$fsttype hfst"
-@CAN_XFST_TRUE@fsttype="$fsttype xfst"
 
-# Exit if both hfst and xerox have been shut off:
+# Exit if hfst has been shut off:
 if test -z "$fsttype" ; then
     echo "All transducer types have been shut off at configure time."
     echo "Nothing to test. Skipping."
@@ -100,16 +99,7 @@ Fail=0
 
 # The script tests both Xerox and Hfst transducers if available:
 for f in $fsttype; do
-    if [ $f == "xfst" ]; then
-        lookup_tool="@LOOKUP@ -flags mbTT"
-        suffix="xfst"
-        # Does lookup support -q / quiet mode?
-        lookup_quiet=$($lookup_tool -q 2>&1 | grep USAGES)
-        if ! [[ $lookup_quiet == *"USAGES"* ]] ; then
-            # it does support quiet mode, add the -q flag:
-            lookup_tool="@LOOKUP@ -q -flags mbTT"
-        fi
-    elif [ $f == "hfst" ]; then
+    if [ $f == "hfst" ]; then
         lookup_tool="@HFST_OPTIMIZED_LOOKUP@ -q"
         suffix="hfstol"
     else
