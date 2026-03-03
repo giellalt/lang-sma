@@ -6,9 +6,9 @@
 This lexicon is the start of all noun lemmas. It splits the nouns in three
 classes as follows:
 
-NounRoot --> FirstComponent
-NounRoot --> HyphNouns
-NounRoot --> Noun
+NounRoot --> FirstComponent !NOTLEMMA
+NounRoot --> HyphNouns !NOTLEMMA
+NounRoot --> Noun !NOTLEMMA
 
 # All nouns with possessives
 
