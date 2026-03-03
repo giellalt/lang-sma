@@ -50,7 +50,9 @@ define ueogua ö -> e, ä -> a || u _ Cns ;
 define euml ë -> e ;
 define iuml ï -> i || _ e Sgm+ i e .#. ;
 define shortaa a -> 0 || Syll Cns a _ Cns .#. ;
+define endodh u -> o || _ d h .#. ;
 define dipht o å -> å e , u o -> o e , e ä -> e a || .#. Cns* _  ; # aa > ae ???
+define diphtåa2s å e -> å a || .#. Cns* _ Cns+ [a+|oe|o|e] Cns* .#. ;
 define ppttkk p p -> h p, t t -> h t, k k -> h k || Vow _ (') Vow ;
 define ts2hts [..] -> h  || Vow  _ t s Vow ;
 define rk2rhk [..] -> h || Vow r _ k Vow ;
@@ -59,7 +61,7 @@ define dj d -> t || [Vow|.#.] _ j Vow ;
 define mb m b -> m h p  || Vow _ Vow ;
 define jg j g -> j k || Vow _ Vow ;     # g'ïjgedh=gïjkedh
 define hke k k -> h k || Vow _ [' e|e] .#. ;
-define voicedgeminate b b -> b p , d d -> d t, g g -> g k || Vow _ (') Vow ;  
+define voicedgeminate b b -> b p , d d -> d t, g g -> g k || Vow _ (') Cns* Vow ;  
 define uo2oe u o -> o e ;
 define ht [..] -> h  || Vow [l|n|r]  _ t  (s) Vow ;
 define unvoice d -> t , g -> k || .#. Syll _ (') Vow  ;
@@ -85,7 +87,9 @@ read regex [ ieuml
 .o. euml
 .o. iuml
 .o. shortaa
+.o. endodh
 .o. dipht
+.o. diphtåa2s
 .o. ppttkk
 .o. ts2hts
 .o. rk2rhk
