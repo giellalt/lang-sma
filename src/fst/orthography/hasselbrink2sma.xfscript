@@ -51,20 +51,20 @@ define euml ë -> e ;
 define iuml ï -> i || _ e Sgm+ i e .#. ;
 define shortaa a -> 0 || Syll Cns a _ Cns .#. ;
 define endodh u -> o || _ d h .#. ;
-define dipht o å -> å e , u o -> o e , e ä -> e a || .#. Cns* _  ; # aa > ae ???
-define diphtåa2s å e -> å a || .#. Cns* _ Cns+ [a+|oe|o|e] Cns* .#. ;
-define ppttkk p p -> h p, t t -> h t, k k -> h k || Vow _ (') Vow ;
+define dipht o å -> å e , u o -> o e , e ä -> e a || Cns* _  ; # aa > ae ???
+define diphtåa2s å e -> å a || .#. Cns* _ Cns+ [a+|o e|o|e] (l) .#. ;
+define ppttkk p p -> h p, t t -> h t, k k -> h k || Vow _ Cns* (') Vow ;
 define ts2hts [..] -> h  || Vow  _ t s Vow ;
 define rk2rhk [..] -> h || Vow r _ k Vow ;
 define ttj t t j -> h t j || Vow _ Vow ;
-define dj d -> t || [Vow|.#.] _ j Vow ;
+define dj d -> t || [Vow|.#.] Cns* _ j Vow ;
 define mb m b -> m h p  || Vow _ Vow ;
 define jg j g -> j k || Vow _ Vow ;     # g'ïjgedh=gïjkedh
 define hke k k -> h k || Vow _ [' e|e] .#. ;
 define voicedgeminate b b -> b p , d d -> d t, g g -> g k || Vow _ (') Cns* Vow ;  
-define uo2oe u o -> o e ;
 define ht [..] -> h  || Vow [l|n|r]  _ t  (s) Vow ;
-define unvoice d -> t , g -> k || .#. Syll _ (') Vow  ;
+define unvoice d -> t , g -> k || .#. Syll _ (') (s) Vow  ;
+define unvoiceend d -> t , g -> k, b -> p || Vow+ Cns* _ Vow+ (n) .#. ;
 define finalaa a -> 0 || a _ .#. ;
 define palatalae2ae [ ä -> æ || ' _ ];
 define 1sylle ä -> e || .#. Cns* _ Cns ;
@@ -72,6 +72,9 @@ define aaumlaut2ee [ä ä -> e e || ' _ ] ;
 define udots2y [' ü -> y ] ;
 define udots2uumlaut ü -> u ;
 define uumlaut ü -> u ;
+define u2o u -> o || .#. Cns* _ v Cns* Cns* e ;
+define y2u y -> u || _ v ;
+define y2i y -> i || _ j ;
 define frontae a -> e || a _ Cns+ [i|'] e ; ! aa → ae foran ie og ˈe
 define bdgnas2ptknas b m -> p m , d n -> t n ; 
 define paloeoe [ ' ö ö -> y ö ] ;
@@ -99,9 +102,9 @@ read regex [ ieuml
 .o. jg
 .o. hke
 .o. voicedgeminate
-.o. uo2oe
 .o. ht
 .o. unvoice
+.o. unvoiceend
 .o. finalaa
 .o. palatalae2ae
 .o. 1sylle
@@ -109,6 +112,9 @@ read regex [ ieuml
 .o. udots2y
 .o. udots2uumlaut
 .o. uumlaut
+.o. u2o
+.o. y2u
+.o. y2i
 .o. frontae
 .o. bdgnas2ptknas
 .o. paloeoe
