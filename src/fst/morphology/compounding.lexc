@@ -55,11 +55,13 @@ LEXICON Rreal
 !! This is where the actual compounding happens.
 
 +Cmp#:∑#                  Noun       ; ! This is the normal case.
++Cmp#:∑#                  NounAdjAdv   ; ! loanwords that can be both N and A
                  @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@∑#   Verb       ; ! Flag diacr declares that the compound
                  @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@∑#   Adjective  ; ! needs a N tag later in the derivation
                        +Cmp/Hyph+Cmp#:%-∑#                Noun       ; ! These 3 cases add a hyphen, so
         @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-∑# Verb       ; ! Sem-julggaštus and maana-gåetie
         @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-∑# Adjective  ; ! are allowed.
+                       +Cmp/Hyph+Cmp#:%-∑#                NounAdjAdv ; ! loanwords that can be both N and A
 
                        +Cmp/Hyph+Cmp#:%-∑#                HyphNouns  ; ! Go to nouns requiring hyphens, like -tv- and -cd-
                        +Cmp/Hyph+Cmp#:%-∑#                Acronym    ; ! maana-tv, "lomme-cd-spelar"
@@ -101,6 +103,7 @@ LEXICON RHyphReal
 !! The hyphen is added here.
 
                      +Cmp/Hyph+Cmp#:%-∑#                Noun       ; ! This is the normal case.
+                     +Cmp/Hyph+Cmp#:%-∑#                NounAdjAdv   ; ! loanwords that can be both N and A
       @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-∑# Verb       ; ! Flag diacr declares that the compound
       @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-∑# Adjective  ; ! needs a N tag later in the derivation
 
