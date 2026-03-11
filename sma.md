@@ -3228,9 +3228,9 @@ laakte bïejedh - legge for tett sammen
 This lexicon is the start of all noun lemmas. It splits the nouns in three
 classes as follows:
 
-NounRoot --> FirstComponent !NOTLEMMA
-NounRoot --> HyphNouns !NOTLEMMA
-NounRoot --> Noun !NOTLEMMA
+NounRoot --> ; !NOTLEMMA
+NounRoot --> ; !NOTLEMMA
+NounRoot --> ; !NOTLEMMA
 
 ## All nouns with possessives
 
