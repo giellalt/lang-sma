@@ -52,6 +52,9 @@ msyn-adj-attr-predpl = Adjektijve pluraale predikatijvehammosne.
 
 msyn-adj-attr-ess = Adjektijve predikatijve essijvehammosne.
     .desc = Adjektijvehammoe {$1} ij substantijven uvte tjåadtjoeh, guktie byöroe predikatijve essijvehammosne tjåadtjodh?
+    
+msyn-adj-attr-ine = Adjektijve predikatijve inessijvehammosne.
+    .desc = Adjektijvehammoe {$1} ij substantijven uvte tjåadtjoeh, guktie byöroe predikatijve inessijvehammosne tjåadtjodh?
 
 msyn-adj-attr-adv = Adjektijve byöroe advïerpine årrodh?
     .desc = {$1} lea adjektivehammoe, mohte byöroe advïerpine årrodh.
