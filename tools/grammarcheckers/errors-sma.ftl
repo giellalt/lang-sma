@@ -76,7 +76,76 @@ msyn-NegPrt-lih-congruence = Mïste nyöjhkemisnie
 
 msyn-Neg-VFinitt-ConNeg = Mïste nyöjhkemisnie
     .desc = Hammoe {$1} nyöjhkemevïerpen mænngan byöroe nyöjhkemehammosne årrodh.
+    
+msyn-demphrase-congruence-plcom = båajhtoeh demonstratijve jallh substantijve !!M
+    .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
+    
+msyn-demphrase-congruence-plela = båajhtoeh demonstratijve jallh substantijve !!M
+    .desc = {$1} byöroe elatijve pluralisnie tjåadtjodh.
+    
+msyn-demphrase-congruence-plgen = båajhtoeh demonstratijve jallh substantijve !!M
+    .desc = {$1} byöroe genitijve pluralisnie tjåadtjodh.
+    
+msyn-demphrase-congruence-plill = båajhtoeh demonstratijve jallh substantijve !!M
+    .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
+    
+msyn-demphrase-congruence-plnom = båajhtoeh demonstratijve jallh substantijve !!M
+    .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
 
+msyn-numphrase-congruence-plnom = båajhtoeh numeraale jallh substantijve !!M
+    .desc = {$1} byöroe 
+    
+msyn-numphrase-congruence-sgacc = båajhtoeh numeraale jallh substantijve !!M
+    .desc = {$1} byöroe 
+    
+msyn-numphrase-congruence-sgcom = båajhtoeh numeraale jallh substantijve !!M
+    .desc = {$1} byöroe 
+    
+msyn-numphrase-congruence-sgela = båajhtoeh numeraale jallh substantijve !!M
+    .desc = {$1} byöroe 
+    
+msyn-numphrase-congruence-sggen = båajhtoeh numeraale jallh substantijve !!M
+    .desc = {$1} byöroe 
+
+msyn-numphrase-congruence-sgill = båajhtoeh numeraale jallh substantijve !!M
+    .desc = {$1} byöroe 
+    
+msyn-numphrase-congruence-sgine = båajhtoeh numeraale jallh substantijve !!M
+    .desc = {$1} byöroe 
+    
+msyn-gåabpa-sup-komp =  komparatijve byöroe superlatijve !!M
+    .desc = 
+    
+msyn-hab-nom-gen = !!M
+    .desc = 
+    
+msyn-Neg-Pl3-ConNeg = !!M
+    .desc = 
+
+msyn-po-acc-gen =  !!M
+    .desc = 
+    
+syn-delete-adv-phrasal-verb = !!M
+    .desc = 
+    
+syn-goh_nom-ess = !!M
+    .desc = 
+
+syn-phrasal-verb-lexical-verb = !!M
+    .desc = 
+    
+syn-phrasal-verb-phrasal-verb = !!M
+    .desc = 
+
+syn-redun-before-guktie =  !!M
+    .desc = 
+    
+syn-remove-akte = !!M
+    .desc = 
+    
+syn-wo-verb_advl-advl_verb = !!M
+    .desc = 
+    
 msyn-pass-active = 
     .desc = Hammoe {$1}
 
