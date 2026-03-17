@@ -877,7 +877,10 @@ REMOVE:R_ACR ACR (0 CC);
 #!! ### CC og not (spesifikke regler lenger ned)
 SELECT:jallh CC (0 ("jallh")) ; #jallh can also be A Pl Nom, but not likely, look for examples with this analysis, if they exist
 
-SELECT:AdvSubqst Adv + Subqst (0 ("gosse") LINK *1 (N Nom) OR (A Nom) BARRIER S-BOUNDARY OR VFIN OR Inf) ;
+SELECT:gosseCS CS (0 ("gosse") LINK *1 VFIN BARRIER S-BOUNDARY LINK *1 COMMA OR ("dellie")) ;
+	## 
+
+SELECT:AdvSubqst Adv + Subqst (0 ("gosse") LINK *1 (N Nom) OR (A Nom) BARRIER S-BOUNDARY OR VFIN OR Inf LINK NEGATE 1 VFIN) ;
 	## Daenjaepien leah jijtje åådtjeme veeljedh mejnie giehtelidh gosse gietevætnoe.
 	## Tïjjen gosse daerpies.
 
