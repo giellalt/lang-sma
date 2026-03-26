@@ -43,6 +43,10 @@ It is in use in a wide range of applications.
 -   [Korpusinnsamling](sma-korpus-innsamling.md)
 -   [Grammar checker](gramcheck/index.md)
 
+## Testing
+
+- [Speller accuracy report (for developers)](typosreport/index.html)
+
 ## Documenting the language model
 -   [Oversyn over ulike FST-ar](../lang-sme/KompilereFST.html)
 -   [Oversyn over FST-ar for sørsamisk](KompilereFST.md)
