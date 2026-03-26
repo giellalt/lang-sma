@@ -38,13 +38,14 @@ define Vow       [ a | á | e | ë | é | i | o | u | y | æ | ø | å | ä | ö
 define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | ñ | ń | 
              B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ | Ñ | Ń |
              p | q | r | s | š | t | ŧ | v | w | x | z | ž | þ   
-             P | Q | R | S | Š | T | Ŧ | V | W | X | Z | Ž | Þ | ' ] ; 
+             P | Q | R | S | Š | T | Ŧ | V | W | X | Z | Ž | Þ | ' | ´ ] ; 
 
 define Sgm [Cns | Vow ] ;
 define Syll Cns* Vow+ Cns* ;
 
 echo << Rules >>
 
+define onepal ´ -> ' ;
 define ieuml i ë -> ï e || _ [0|Sgm+] [\i] e  ;
 define ueogua ö -> e, ä -> a || u _ Cns ;
 define euml ë -> e ;
@@ -85,7 +86,8 @@ define sj2s š -> s ;
 echo << Compile... >>
 
 
-read regex [ ieuml
+read regex [ onepal
+.o. ieuml
 .o. ueogua
 .o. euml
 .o. iuml
