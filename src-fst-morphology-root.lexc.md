@@ -771,6 +771,7 @@ Here is the list of top-level lexica in the South Sámi analyser:
 - `Subjunction ;`
 - `Symbols ;`
 - `Verb ;`
+- `NounAdjAdv ;`
 
 # Lexicon ENDLEX
 And this is the ENDLEX of everything:

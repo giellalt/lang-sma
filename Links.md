@@ -7,6 +7,7 @@
             * `affixes/`
                 * [abbreviations.lexc](src-fst-morphology-affixes-abbreviations.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/abbreviations.lexc))
                 * [adjectives.lexc](src-fst-morphology-affixes-adjectives.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/adjectives.lexc))
+                * [noun-adj-adv.lexc](src-fst-morphology-affixes-noun-adj-adv.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/noun-adj-adv.lexc))
                 * [nouns.lexc](src-fst-morphology-affixes-nouns.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/nouns.lexc))
                 * [possessive-suffixes.lexc](src-fst-morphology-affixes-possessive-suffixes.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/possessive-suffixes.lexc))
                 * [propernouns.lexc](src-fst-morphology-affixes-propernouns.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/propernouns.lexc))
@@ -18,6 +19,7 @@
             * `stems/`
                 * [adjectives.lexc](src-fst-morphology-stems-adjectives.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/adjectives.lexc))
                 * [adverbs.lexc](src-fst-morphology-stems-adverbs.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/adverbs.lexc))
+                * [noun-adj-adv.lexc](src-fst-morphology-stems-noun-adj-adv.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/noun-adj-adv.lexc))
                 * [nouns.lexc](src-fst-morphology-stems-nouns.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/nouns.lexc))
                 * [numerals.lexc](src-fst-morphology-stems-numerals.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/numerals.lexc))
                 * [pronouns.lexc](src-fst-morphology-stems-pronouns.lexc.html) ([src](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/pronouns.lexc))

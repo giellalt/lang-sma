@@ -1018,6 +1018,21 @@ used with the stem *jelle* This one should be 'jeelle'? SGM?
 
 ---
 
+## src-fst-morphology-affixes-noun-adj-adv.lexc.md 
+
+
+
+## Common noun and adjective affixes for loanwords
+
+This file contains affixes for loanwords that are used both for nouns and adjectives, 
+such as -ant- in "antihke".
+
+* * *
+
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/noun-adj-adv.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/affixes/noun-adj-adv.lexc)</small>
+
+---
+
 ## src-fst-morphology-affixes-nouns.lexc.md 
 
 
@@ -3162,6 +3177,7 @@ Here is the list of top-level lexica in the South Sámi analyser:
 - `Subjunction ;`
 - `Symbols ;`
 - `Verb ;`
+- `NounAdjAdv ;`
 
 ## Lexicon ENDLEX
 And this is the ENDLEX of everything:
@@ -3193,8 +3209,6 @@ This file is compiled by default, the other one is compiled by in
 langs/sma giving the command *.configure --with-oahpa*
 before compiling.
 
-etnihke+A+OLang/NOB:etnihke IHKE_IHKELES_LOAN ; !samediggediedahus 2012 - etnisk - etnisiteete+les
-
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/adjectives.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/adjectives.lexc)</small>
@@ -3215,6 +3229,21 @@ laakte bïejedh - legge for tett sammen
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/adverbs.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/adverbs.lexc)</small>
+
+---
+
+## src-fst-morphology-stems-noun-adj-adv.lexc.md 
+
+
+
+## Adjective stems
+
+This file contains common stem entries that are used both as nouns and adjectives, 
+such as "antihke".
+
+* * *
+
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/noun-adj-adv.lexc](https://github.com/giellalt/lang-sma/blob/main/src/fst/morphology/stems/noun-adj-adv.lexc)</small>
 
 ---
 
