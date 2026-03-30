@@ -2103,6 +2103,14 @@ ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (
 
 COPY:msyn-pass-active (TV SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pass-active) OR (IV Ex/V Ex/TV Der/PassS &msyn-pass-active) AFTER V TARGET (&msyn-pass-active) ;
 
+# ------------------------------------------------------------------
+# Special case: incorrect lexeme "tjïelkesidh" should be "tjïelkestidh"
+# Mark the word and generate a suggestion for the corrected form
+#
+ADD:msyn-tjielkesidh (&msyn-tjielkesidh) TARGET ("tjïelkesidh" V TV) ;
+COPY:msyn-tjielkesidh ("tjïelkestidh" SUGGEST) EXCEPT ("tjïelkesidh") TARGET (&msyn-tjielkesidh) ;
+# ------------------------------------------------------------------
+
 
 ## Danna ittjiv dádjaduvá majdik    ## mån ittjiv dádjaduvá majdik
 
