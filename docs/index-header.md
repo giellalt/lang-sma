@@ -22,12 +22,6 @@ This page documents the work on the [South Sámi language model](http://github.c
 It is in use in a wide range of applications.
 
 
-## Reports
-### Speller status
-
-[![Speller Accuracy Report](https://img.shields.io/badge/Speller_Accuracy-84_%25-green.svg)](speller-report.html)
-
-![Spell-checking accuracy development](https://giellalt.github.io/lang-smj/speller-report.svg)
 
 ## How to use the analysers
 
@@ -44,9 +38,8 @@ It is in use in a wide range of applications.
 -   [Korpusinnsamling](sma-korpus-innsamling.md)
 -   [Grammar checker](gramcheck/index.md)
 
-## Testing
 
-- [Speller accuracy report (for developers)](typosreport/index.html)
+
 
 ## Documenting the language model
 -   [Oversyn over ulike FST-ar](../lang-sme/KompilereFST.html)
@@ -89,6 +82,8 @@ It is in use in a wide range of applications.
 -   [Old errors and bug reports](docu-sma-bugs.md)
 -   [Adjective meeting](adj-meeting-05-2009.md)
 -   [Adjective documentation](docu-sma-adjs.md)
+-   [Old speller status report](old-speller-status.md
+
 
 ### Unlinked documentation
 
