@@ -22,9 +22,7 @@ endif # WANT_GENERATION
 XFAIL_TESTS=generate-adjective-paradigm.sh \
 			generate-noun-paradigm.sh \
 			generate-verb-paradigm.sh \
-			generate-noun-lemmas.sh \
-			generate-verb-lemmas.sh \
-			generate-propernoun-lemmas.sh
+			generate-noun-lemmas.sh
 
 include $(top_srcdir)/../giella-core/am-shared/devtest-include.am
 include $(top_srcdir)/../giella-core/am-shared/src-fst-morphology-test-include.am
