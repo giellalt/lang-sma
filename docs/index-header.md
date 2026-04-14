@@ -32,7 +32,7 @@ It is in use in a wide range of applications.
 
 ## Projects using the language model
 
--   [Dictionary projects](/dicts/dicts.html)
+-   [Dictionary projects](/dicts/)
 -   [ICALL](http://giellalt.uit.no/ped/index.html)
 -   [Machine translation](/mt/MachineTranslation.html) (see also [Converting the fst to Apertium format](ConvertingToApertium.md) )
 -   [Korpusinnsamling](sma-korpus-innsamling.md)
