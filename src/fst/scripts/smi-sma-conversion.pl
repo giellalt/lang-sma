@@ -40,31 +40,6 @@ while(<>) {
 	s/t9 /t /g ;
 	s/t9d/td/g ;
 	s/z9 /z /g ;
-<<<<<<< HEAD:src/scripts/smi-sma-conversion.pl
-
-	s/b9-/b-/g ;
-	s/d9-/d-/g ;
-	s/e9-/e-/g ;
-	s/g9-/g-/g ;
-	s/h9-/h-/g ;
-	s/j9-/j-/g ;
-	s/k9-/k-/g ;
-	s/m9-/m-/g ;
-	s/n9-/n-/g ;
-	s/o9-/o-/g ;
-	s/p9-/p-/g ;
-	s/r9-/r-/g ;
-	s/s9-/s-/g ;
-	s/t9-/t-/g ;
-	s/z9-/z-/g ;
-
-
-
-	# Substitutions due to orthographic differences between SMA and SME:
-#	s/t:(.*)h /t:$1d9 /g ;
-	s/#/^/g ;  # Endra alle smi-# til ^, slik at vi kan la alle andre # bli til bindestrek
-
-=======
 
 	s/b9-/b-/g ;
 	s/d9-/d-/g ;
@@ -88,7 +63,6 @@ while(<>) {
 #	s/t:(.*)h /t:$1d9 /g ;
 	s/([^ ])#([^ ])/$1^$2/g ;  # Endra alle smi-# til ^, slik at vi kan la alle andre # bli til bindestrek, men ikkje når # er leksikonnamnet, dvs slutt på ordet/analysen
 
->>>>>>> upstream/main:src/fst/scripts/smi-sma-conversion.pl
 	# j->i || Vow i .* : .* Vow _ ; Heaika:Heajka -> Heaika:Heaika. But Majken 	
 #   s/([ÁAEIOUaáeiou])i(.*):(.*)([ÁAEIOUaáeiou])j/$1i$2:$3$4i/g ;
 	s/([ÁAEIOUaáeiou])i([^j].*):(.*)([ÁAEIOUaáeiou])j([^ÁAEIOUaáeiou])/$1i$2:$3$4i$5/g ;

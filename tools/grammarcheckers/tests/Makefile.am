@@ -8,19 +8,6 @@ if WANT_GRAMCHECK
 
 # List here (space separated) all yaml files to be run as part of make check:
 TESTS=\
-<<<<<<< HEAD
-	Adpos_Kasus.yaml \
-	Adverb_Verb.yaml \
-	Congr_Pl.yaml \
-	Kongr_Subject_Verbal.yaml \
-	Neg_Congr.yaml \
-	REL_PRON_mij.yaml \
-	SYN_Delete_akte.yaml \
-	Syn_Attr_Pred.yaml \
-	Syn_Congr.yaml \
-	Syn_Prep_Congr.yaml \
-	Syn_gaaabpa_Comp.yaml
-=======
 	Adpos_Kasus-FAIL.yaml \
 	Adverb_Verb-FAIL.yaml \
 	Adverb_Verb-PASS.yaml \
@@ -70,31 +57,10 @@ TESTS=\
 	syn-wo-verb_advl-advl_verb-FAIL.yaml \
 	Trans_Intrans_Object-FAIL.yaml \
 	various-PASS.yaml
->>>>>>> upstream/main
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=\
-<<<<<<< HEAD
-	Adpos_Kasus.yaml \
-	Adverb_Verb.yaml \
-	Congr_Pl.yaml \
-	Kongr_Subject_Verbal.yaml \
-	Neg_Congr.yaml \
-	REL_PRON_mij.yaml \
-	SYN_Delete_akte.yaml \
-	Syn_Attr_Pred.yaml \
-	Syn_Congr.yaml \
-	Syn_Prep_Congr.yaml
-
-
-
-endif # WANT_GRAMCHECK
-# passes: agreement.yaml
-
-#### Do NOT edit below here: ####
-include $(top_srcdir)/../giella-core/am-shared/tools-grammarcheckers-tests-dir-include.am
-=======
 	Adpos_Kasus-FAIL.yaml \
 	Adverb_Verb-FAIL.yaml \
 	candidates-msyn-adj-attr-pred-FAIL.yaml \
@@ -131,4 +97,3 @@ endif # WANT_GRAMCHECK
 #### Do NOT edit below here: ####
 include $(top_srcdir)/../giella-core/am-shared/tools-grammarcheckers-tests-dir-include.am
 include $(top_srcdir)/../giella-core/am-shared/devtest-include.am
->>>>>>> upstream/main

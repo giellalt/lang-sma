@@ -17,7 +17,4 @@ endif # WANT_PHONETIC
 
 #### Do NOT edit below here: ####
 include $(top_srcdir)/../giella-core/am-shared/src-phonetics-tests-dir-include.am
-<<<<<<< HEAD:src/phonetics/tests/Makefile.am
-=======
 include $(top_srcdir)/../giella-core/am-shared/devtest-include.am
->>>>>>> upstream/main:src/fst/phonetics/tests/Makefile.am
