@@ -56,6 +56,7 @@ define dipht o å -> å e , u o -> o e , e ä -> e a || Cns* _  ; # aa > ae ???
 define diphtåa2s å e -> å a || .#. Cns* _ Cns+ [a+|o e|o|e] (l) .#. ;
 define ppttkk p p -> h p, t t -> h t, k k -> h k || Vow _ Cns* (') Vow ;
 define ts2hts [..] -> h  || Vow  _ t s Vow ;
+define lpalh2lhk ' -> h || l _ k ;
 define rk2rhk [..] -> h || Vow r _ k Vow ;
 define ttj t t j -> h t j || Vow _ Vow ;
 define dj d -> t || [Vow|.#.] Cns* _ j Vow ;
@@ -66,7 +67,7 @@ define voicedgeminate b b -> b p , d d -> d t, g g -> g k || Vow _ (') Cns* Vow 
 define ht [..] -> h  || Vow [l|n|r]  _ t  (s) Vow ;
 define unvoice d -> t , g -> k || .#. Syll _ (') (s) Vow  ;
 define unvoiceend d -> t , g -> k, b -> p || Vow+ Cns* _ Vow+ (n) .#. ;
-define finalaa a -> 0 || a _ .#. ;
+define diphaea ä a -> a e ;
 define palatalae2ae [ ä -> æ || ' _ ];
 define 1sylle ä -> e || .#. Cns* _ Cns ;
 define aaumlaut2ee [ä ä -> e e || ' _ ] ;
@@ -82,7 +83,14 @@ define paloeoe [ ' ö ö -> y ö ] ;
 define paldel ' -> 0 || Cns _ Vow ;
 define ng ŋ -> n g ;
 define sj2s š -> s ;
-
+define restae ä -> æ ;
+define prefix [..] -> # || [ M i e l 
+                           | g l å e d t 
+			   | h u s ' ]
+			   _ Cns ;
+define finalaa a -> 0 || .#. [Cns* Vow+ Cns+
+             |Cns* Vow+ Cns+ Vow+ Cns+ Vow+ Cns+
+	     |Cns* Vow+ Cns+ Vow+ Cns+ Vow+ Cns+ Vow+ Cns+ Vow+ Cns+] a _ [#|.#.|Cns] ;
 echo << Compile... >>
 
 
@@ -97,6 +105,7 @@ read regex [ onepal
 .o. diphtåa2s
 .o. ppttkk
 .o. ts2hts
+.o. lpalh2lhk
 .o. rk2rhk
 .o. ttj
 .o. dj
@@ -107,7 +116,7 @@ read regex [ onepal
 .o. ht
 .o. unvoice
 .o. unvoiceend
-.o. finalaa
+.o. diphaea
 .o. palatalae2ae
 .o. 1sylle
 .o. aaumlaut2ee
@@ -123,6 +132,9 @@ read regex [ onepal
 .o. paldel
 .o. ng
 .o. sj2s
+.o. restae
+.o. prefix
+.o. finalaa
 ] ;
 
 save hasselbrink2sma.hfst
