@@ -1,0 +1,11 @@
+name: Send Zulip message
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
+jobs:
+  zulip:
+    uses: giellalt/.github/.github/workflows/zulip.yml@main
+    secrets: inherit

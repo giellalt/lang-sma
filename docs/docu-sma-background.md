@@ -54,3 +54,14 @@ Phase 2: The South Saami spell checker project
 The main focus of the Divvun 2 project was the construction and release
 of a South Saami spellchecker. The spellchecker was released in december
 2010.
+
+# Update from Nov 4, 2021
+
+Sørsamiske feil som dominerer:
+
+- suffiksfeil
+- vokalfeil (omlyd)
+- preaspirasjon/geminerte plosivar
+- fotstruktur (vokalar som for likestava når det er trestava)
+- to eller fleire feil
+- låneordstilpassing (særleg vokallengde)

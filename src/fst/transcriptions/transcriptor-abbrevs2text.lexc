@@ -1,0 +1,669 @@
+! Divvun & Giellatekno - open source grammars for South Sámi language
+! Copyright © 2021 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@uit.no or feedback@divvun.no
+
+! This file contains mapping from abbreviations and some acronyms to full
+! forms for e.g. text-to-speech purposes. This is a supplement to the analyser;
+! the analyser must tag the strings as +ABBR or similar for the transcriptions
+! to work.
+
+! ========================================================================== !
+! !!            !!!South Sámi abbreviations                               !
+! ========================================================================== !
+
+!! We describe here how abbreviations are in South Sámi are read out, e.g.
+!! for text-to-speech systems.
+
+LEXICON Root
+!! For example:
+
+s.:syntynyt # ;  !!= * @CODE@
+os.:omaa% sukua # ;  !!= * @CODE@
+v.:vuosi # ;  !!= * @CODE@
+v.:vuonna # ;  !!= * @CODE@
+esim.:esimerkki # ; !!= * @CODE@
+esim.:esimerkiksi # ; !!= * @CODE@
+
+<<<<<<< HEAD:src/transcriptions/transcriptor-abbrevs2text.lexc
+
+=======
+2-st.:gööktestavvele # ; ! ab-dot-noun-itrab =  dot=  skal være punktum. 
+3-st.:golmestavvele # ; ! ab-dot-noun-itrab =  dot=  skal være punktum. 
+ 
+
+j.j.:jïh% jåarke # ; !MWE-uttrykk_ legges inn i lexc-koden og legge til at denne bare brukes i talesyntese.
+
+!j.j+N+Sem/Cat+Err/Orth:j.% j ab-dot-noun-itrab ;
+
+!S%:t:S%:t # ;! ab-nodot-noun-itrab =  nodot= ingen punktum etter lemma på venstreside. 
+
+b%:n:biejjien # ;
+
+bj.:biejjie # ; 
+!
+!d.d.:d.d # ;
+
+r.:reakasovvme # ;
+
+s.:sealadamme # ;
+
+!dat.:dat # ;
+!
+!do.:do # ;
+!
+!dus.:dus # ;
+!
+!g.b:g.b # ;
+!
+!gl.rs.:gl.rs # ;
+!
+!j.i.:j.i # ;
+
+j.n.v.:jïh% nimhtie% vijriebasse # ; 
+
+!n.j.:n.j # ;
+!u.b.:u.b # ;
+jnv.:jïh% nimhtie% vijriebasse # ;
+
+
+
+kapp.:kapihtele # ;
+konv.:konvensjovne # ;
+
+! ABBR for tid
+b:biejjie # ; 
+ts:tsåahka # ; ! tsåahka 
+min.:minuhte # ;
+sek.:sekunde # ;
+
+
+!
+v.g.:vuesiehtimmien% gaavhtan #; 
+
+v.g:vuesiehtimmien% gaavhtan # ; 
+
+
+!al+N:al ab-noun-trab ;
+arkijveaamhtesnr:arkijveaamhtesnummere # ;
+arkijvenr:arkijvenummere # ;
+bs.:bs #;
+bv.:bv # ;
+e.e.: # ; ! eret eret - sme?
+
+! ABBR for offentlig byråkrati 
+Oth:Oth # ; ! søk opp!
+Oth.prop.:Oth.prop # ; ! h?
+Oth.prp.:Oth.prp # ; ! ab-dot-noun-trnumab ;
+!
+St.% bïevn.% nr:Stoeredigkiebïevnesenummere # ;
+St.bïevn.nr:Stoeredigkiebïevnesenummere # ;
+
+UiT:uv% ij% teeje # ;
+NRK:ænn% ærr% kååje # ;
+!
+tell.:tellefovne # ; !tellefovne
+!åss.:åss # ;
+!
+
+! ABBR for Bibel - sjekk opp
+
+Aejv+N+Sem/Txt:Aejv # ;
+Volv+N+Sem/Txt:Volv # ;
+Daan+N+Sem/Txt:Daan # ;
+Duap+N+Sem/Txt:Duap # ;
+Gånk+N+Sem/Txt:Gånka # ;
+Hosj+N+Sem/Txt:Hosj # ;
+Jaah+N+Sem/Txt:Jaahke # ;
+Jo-el+N+Sem/Txt:Jo-el # ;
+Jååv+N+Sem/Txt:Jååvva # ;
+Jååh+N+Sem/Txt:Jååhha # ;
+Josj+N+Sem/Txt:Josj # ;
+Meeht+N+Sem/Txt:Meehte # ;
+Maah+N+Sem/Txt:Maah # ;
+Mujh+N+Sem/Txt:Mujh # ;
+Pïeh+N+Sem/Txt:Pïehtere # ;
+Rudt+N+Sem/Txt:Rudte #;
+Saak+N+Sem/Txt:Saake # ;
+Saalm+N+Sem/Txt:Saalm # ;
+Vijs+N+Sem/Txt:Vijs # ;
+
+
+
+!! Kopi fra smj : samme navn som denne fila: 
+
+!kilomeetere, kw, meter, kg. osv få inn tekst fra smj--> oversett til sma 
+
+!1.aman.:voestes% amanuænssa # ; ! 1.amanuensis
+1p.:voestes% persovne # ;
+2p.:mubpie% persovne # ;
+3p.:gåalmede% persovne # ;
+
+!A.:alás # ; 
+!A.:amperra # ;
+!AN:Aktidum% nasjåvnå # ;
+!C:coulomb # ;
+DK:Danmaarhke # ;
+DKK:daanske% kråvna # ;
+dkr:daanske% kråvna # ;
+FI:Soeme # ;
+FIM:soemen% maarhke # ;
+
+!Fahr.:gráda% Fahrenhájtta # ;!OBS
+!Gastrolab.:gastrolaboratåvrrå # ; ! Org Gastrolaboratoria
+!ID.:identifikasjåvnnå # ;
+!ILO-konv.:ILO-konvesjåvnnå # ;
+!J:joule # ;
+!K:Kelvin # ;!temperatuvrra  
+!Kr.m.:Kristusa% maŋŋela # ;
+!Kr.å.:Kristusa% åvddåla # ;
+!L:lulás # ;
+!MB:megabájtta # ;!obs 
+!MHz:megahærttsa # ;
+!MW:megaváhtta # ;
+!Mhz:megahertz  # ;
+!N:newton # ;
+N:nöörje # ;
+NO:Nöörje # ;
+NOK:nöörjen% kråvna # ;
+!O:oarjás # ;
+!OS:oasossiebrre # ;
+OT:Orre% Testamente # ;
+SE:Sveerje  # ;
+SEK:svïenske% kråvna # ;
+St.:stasjovne # ;
+!V:voaltta # ;!OBSflertall, som min? 
+!VU:Vuodna # ;
+!    W:vaatte # ; !obs moattelåhko?  
+abe.:abesijve # ;
+abess.:abesijve # ;
+abl.:ablatijve # ;
+ablat.:ablatijve # ;
+abstr.:abstraakte # ;
+!ack.avtl.:akkusatijva% avtalåhko # ;
+ade.:adessijve # ;
+adess.:adessijve # ;
+adj.:adjektijve # ;
+adr.:adresse # ;
+adv.:advïerpe # ;
+akk.:akkusatijve # ;
+!akk.avtl.:akkusatijva% avtalåhko # ;
+akk/gen.:akkusatijve/genitijve # ;
+anat.:anatomije # ;
+arkeol.:arkeologije # ;
+art.:artihkele # ;
+ass.:assistente # ; ! 
+astr.:astronomije # ;
+attr.:attributijve # ;
+!avtl.:avtalåhko # ;
+!b.:biejvve # ;
+b.:bielie # ;
+!bba.:bårråmbassti # ;
+biol.:biologije # ;
+bot.:botanihke # ;
+!bsg.:bihtámsámegiella # ;
+bto.:brutto # ;
+bto:brutto # ;
+!buoht.:buohtastahttet # ;
+!buojk.:buojkulvis # ;
+!bådd.:båddåsasj # ;
+!c/o:care% of # ; !obs
+!ca.:birrusin # ;
+cal:kalorije # ;
+!cd:candela # ;!OBS 
+cg:centigramme # ;
+cl:centilijhtere # ;
+cm.:centimeetere # ;
+!d.d.:duola% degu # ;
+!d.j.:dat% javllá # ;
+!d.m.:dahkamusá% milta # ;
+
+dB:desibelle # ;
+dem.:demonstratijve # ;
+dep.:departemente # ;
+Dep.:departemente # ; !
+dept.:departemente # ;
+dg.:daaroengïele # ;
+dg:desigramme # ;
+dim.:diminutijve # ;
+dir.:direktööre # ;
+
+
+dl:desilijhtere # ; !obs skal desilijttar også med?
+dm:desimeetere  # ;
+!dnr:diarienummar # ;
+dr.:dåaktere  # ;
+
+!drsg.:dárjjesámegiella # ;
+!dual.:guovtelåhko # ; ! dualis
+!duod.:duodastus # ;
+!dáb.:dábálasj # ;
+!dåjm.:dåjmadiddje # ;
+
+ekon.:ekonomije # ;
+elat.:elatijve # ;
+ess.:essijve # ;
+euf.:eufemissme # ;
+fig.:figuvre # ;
+fil.:filosofije # ;
+fonet.:fonetihke # ;
+frg.:fraanskegïele  # ;
+!g.:gahttun  # ;
+!g.:giella # ;
+!g.:gæjnno # ;
+g:gramme # ;
+gasb.:gaskebiejjie # ;
+!gasbådd.:gasskabåddåsasj # ;
+!gasm.:gasskamærrásasj # ;
+!ge.:gehtja  # ;
+geogr.:geografije  # ;
+geol.:geologije # ;
+geom.:geometrije # ;
+!guovtl.:guovtelåhko # ;
+!gåv.:gåvvididdje # ;
+!gåv.:gåvvå  # ;
+!gåv.:gåvvår # ;
+guv.:guvvie # ;
+h:tæjmoe # ;
+hg:hektogramme # ;
+hl:hektolijhtere # ;
+j.d.:jïh% dagkere # ;
+j.v.:jïh% vielie # ;
+!j.n.v.:ja% nåv% vil # ;
+!j.v.å.:ja% vil% ålop # ;
+!j:jahke # ;
+jnr:journalnummere # ;
+!joark.:joarkkem # ;
+!jr:juniåvrrå # ;
+jsg.:julevsaemiengïele # ;
+jur.:juridihke # ;
+!jáhk.:jáhkkudahka # ;
+kB:kilobaajte # ;
+kJ:kilojåvle # ;
+kV:kilovåalte # ;
+kVA:kilovoltampeere # ;
+kW:kilovahte # ;
+!kWh:kilowattijmma # ;
+kand.:kandidaate # ;
+kap.:kapihtele # ;
+kat.:katalååge   # ;
+kat:katolihke # ;
+kcal:kilokalorije  # ;
+!kg.:tjiloj # ;
+kg:kilogramme # ;
+!kg:tjiloj # ;
+kl.:klåahke # ;
+kl.:klaasse  # ;
+!km/h:kilomiehttera% tijman # ;
+km:kilomeetere # ;
+korr.:korrektuvre  # ;
+kr.:kråvnna # ; !obs
+kr:kråvnna  # ; !obs
+l:lijhter # ;
+lab.:laboratovre # ;
+latg.:latijnegïele # ;
+lingv.:lingvistihke # ;
+log.:logaritme # ;
+log.:logihke # ;
+!lád.:lasseárvvodivut # ;
+lok.:lokatijve  # ; ! lokatiiva
+m.:meetere # ;
+m.m.b.:meetere% mearoen% bijjelen # ;
+m:meetere # ;
+mV:millivolte # ;
+mW:millivahte # ;
+!mat.:matematihkka # ; ! matematihkka
+!matem.:matematihkalasj # ; ! matematihkalaš
+!mdkr:millijárdda% kråvnå # ;
+med.:medisijne # ;
+mg:milligramme # ;
+min:minuhte # ;
+miner.:mineralogije # ;
+!mk:márkki # ;
+ml:millilijhtere # ;
+mm:millimeetere # ;
+mnkr:millijovne% kråvnah # ; ! OBS - flertalls-leksikon
+!moatl.:moattelåhko  # ;
+mob.:mobijle # ;
+mus.:musihke # ; ! musihkka
+m²:kvadratmeetere # ;
+!n.g.:nåv% gåhtjoduvvam # ;
+nom.:nomme # ;
+neg.:negasjovne # ;
+neg.:negatijve # ;
+nkr:nöörjen% kråvna # ;
+nom.:nominatijve # ;
+nr.:nummere # ;
+nsg.:noerhtesaemiengïele # ;
+!nto:netto  # ;!obs
+!oa.:oahppe  # ;
+åsg.:åarjelsaemiengïele # ;
+par.:paragraffe # ;
+part.:partihkele # ; ! 
+partit.:partitijve # ; ! 
+pass.:passijve # ;
+ped.:pedagogihke # ; ! pedagååge, pedagogihke, pedagåågeladtje
+perf.:perfekte # ;
+!perf.part.:perfe% partisihppa # ;
+
+pos.:positijve # ;
+poss.:possessijve  # ;
+pred.:predikatijve # ;
+prep.:preposisjovne # ;
+pres.:presense # ;
+pret.:preterihte # ;
+proc.:prosente # ;
+!   pron.:pronomene # ;  OBS! Sjekk opp
+prop.:proposisjovne # ;
+prs.:presense # ;
+prt.:preterihte # ;
+ps.:saalme  # ;
+pst.:prosente # ;
+r.:reakadamme # ;
+ref.:referanse # ;
+reg.:registere # ; ! re+gi-ste-re = 1+3 stavelse
+regnr:registarnummar # ;
+relat:relatijve # ;
+relig.:religijovne # ;
+res.:resolusjovne  # ;
+!rádd.:ráddidus # ;
+!rámg.:rámátgiella # ;
+!s.m.:såbadime% milta # ;
+s:sekunde  # ;
+!sadj.:sadjásasj # ;
+sek.:sekunde # ;
+!sg.:avtalåhko # ;
+sg.:saemiengïele # ;
+!sg1.:avtalågo% vuostasj% persåvnnå # ;
+!sg2.:avtalågo% nuppát% persåvnnå # ;
+!sg3.:avtalågo% goalmát% persåvnnå # ;
+
+!skand.:Skandinávva  # ;
+!skand.:skandinávalasj # ;
+skr:sveerjen% kråvna # ;
+sma:åarjelsaemiengïele # ;
+sme:noerhtesaemiengïele # ;
+smj:julevsaemiengïele # ;
+smn:anaarsaemiengïele  # ;
+sms:skåaltesaemiengïele  # ; !obs 
+spg.:spánskagiella  # ;
+stasj.:stasjovne # ;
+stip.:stipendiaate # ;
+stud.:studente # ;
+subj.:subjekte # ;
+subst.:substantijve # ;
+suomg.:soemengïele  # ;
+sup.:supijne # ;
+!svdg.:svierigadárogiella # ;
+t:tæjmoe # ;
+tab.:tabelle # ;
+!tba.:tiedjabassti # ;
+tekn.:teknihkke # ;
+tel.:tellefovne # ;
+tel:tellefovne # ; ! Used also without dots
+!temp.:temporálla # ; ! temporála
+!tfn:telefåvnnånummar # ;
+b.b.:båetijen% bielesne # ;
+tkr:tåvsene% kråvna # ;
+tlf.:tellefovne # ;
+!tlf:telefåvnnå # ; ! Also used without dot
+!trans.:transitijvva # ;
+!u.:ulmusj # ;
+!usg.:ubbmemsámegiella # ;
+!v.:vahkko # ;
+!vdg.:vuonadárogiella # ;
+!vdg:varrudahka # ;
+!vu.:virggeulmusj # ;
+!vuodl.:vuodolåhko # ;
+!vásst.:vásstádus # ;
+!x°C:gráda% Celsius # ;
+!°F:gráda% Fahrenhájtta # ;!OBS
+!ÅT:Ådå% Testamænnta # ;
+!ájl.:ájllek # ;
+!åm.:åvddåmärkka # ;
+!åm.d.:åvddåmerka% diehti # ;
+!år.:årudahka # ;
+!åss.:åssudahka # ;
+!imp.:imperatijvva # ;
+!ind.:indikatijvva # ;
+!inf.:infinitijvva # ;
+!ine.:inesijvva # ;
+!iness.:inessijvva # ;
+!intr.:intransitijvva # ;
+!min.:minuhtta # ;
+!mill% kr.:millijåvnå% kråvnå # ;
+!mill.% kr.:millijåvnå% kråvnå # ;
+!mill.:millijåvnnå # ;
+!no.:vuonadárogiella # ;
+!mill.kr.:millijåvnå% kråvnå  # ;
+!
+!1.Joh.:Johannesa% vuostasj% girjje # ; ! Johannes
+!1.Kor.:Paulusa% vuostasj% girjje% Korinta% ristagisájda # ; ! Paulusa girji kolossalaččaid
+!1.Pet.:Petrusa% vuostasj% girjje # ; ! Paulusa girji Timoteusii
+!1.Tess.:Paulusa% vuostasj% girjje% Tessalonike% ristagisájda  # ; ! Paulusa girji tessalonikalaččaide	sma
+!1.Tim.:Paulusa% vuostasj% girjje% Timoteosij # ; ! Paulusa girji Timoteusii
+!2.Joh.:Johannesa% nuppát% girjje # ; ! Johannes
+!2.Kor.:Paulusa% nuppát% girjje% Korinta% ristagisájda # ; ! Paulusa girji kolossalaččaid
+!2.Pet.:Petrusa% nuppát% girjje # ; ! Paulusa girji Timoteusii
+!2.Tess.:Paulusa% nuppát% girjje% Tessalonike% ristagisájda  # ; ! Paulusa girji tessalonikalaččaide	sma
+!2.Tim.:Paulusa% nuppát% girjje% Timoteosij # ; ! Paulusa girji Timoteusii
+!3.Joh.:Johannesa% goalmát% girjje # ; ! Johannes
+!Apd.:Apoasstalijdago # ;
+!Ef.:Paulusa% girjje% Efesus% ristagisájda # ;
+!Fil.:Paulusa% girjje% Filippi% ristagisájda # ;
+!Filem.:Paulusa% girjje% Filemonaj # ; ! Paulusa girji Timoteusii
+!Gal.:Paulusa% girjje% Galatia% ristagisájda # ;
+!Hebr.:Girjje% hebreagijda # ; ! Paulusa girji Timoteusii
+!Jak.:Jakoba% girjje # ;
+!Jak.:Jakoba% girjje # ; ! Jakoba girji	sma:Jaah
+!Joh.:Johannesa% evangiella # ; ! Johannes
+!Johs.:Johannesa% girjje # ; ! Johannes
+!Kol.:Paulusa% girjje% Kolossaia% ristagisájda # ; ! Paulusa girji korintalaččaide
+!Kor.:Paulusa% girjje% Korinta% ristagisájda # ; ! Paulusa girji kolossalaččaid
+!Luk.:Lukasa% evangiella # ; ! Lukas
+Mark.:Marhkosen% vaentjele # ; ! Markusa evangelium	sma
+!Matt.:Matteusa% evangiella # ; ! Matteusa evangelium	sma:Meeht
+!Pet.:Petrusa% girjje # ; ! Paulusa girji Timoteusii
+!Rom.:Paulusa% girjje% Roma% ristagisájda # ; ! Girje romalaččaide
+!Tess.:Paulusa% girjje% Tessalonike% ristagisájda # ;
+!Tim.:Paulusa% girjje% Timoteosij # ; ! Paulusa girji Timoteusii
+!Tit.:Paulusa% girjje% Titusij # ; ! Paulusa girji Titusii
+!
+!bsg.:bihtánsámegiella # ;
+!buojk.:buojkulvis # ;
+dat.:datijve # ;
+!dus.:datum% ut% supra# ;
+ger.:gerundiume # ;
+j.n.v.:jïh% nimhtie% vijriebasse # ;
+jnv.:jïh% nimhtie% vijriebasse # ;
+!jná.:ja% nav% ájn # ;
+lp.:laktepartihkele # ;
+sd.bïevn.:stoerredigkiebïevnese # ;
+!å.Kr.:åvddål% Kristus # ; !
+!åKr.:åvddål% Kristus # ;
+!vol.:volijmma # ;
+!vol.:volumma # ;
+!
+!! SMJ NOAB ! Abbreviations that are not treated as abbreviations
+!! at the end of the sentence
+!
+!!! This class contains homonyms, which are both intransitive
+!!! abbreviations and normal words. The abbreviation usage
+!!! is less common and thus only the occurences in the middle of
+!!! the sentnece (when next word has small letters) can be
+!!! considered as true cases.
+!du.:dualis # ;
+!gen.:genitijvva # ;
+!jur.:juridihkalasj # ;
+!
+!! SMJ TRNUMAB !!= * **@CODE@** contains abbreviations who are transitive in front of numerals
+!!! For abbrs for which numerals are complements, but other
+!!! words not necessarily are. This group treats arabic numerals as
+!!! if it were transitive but letters as if it were intransitive.
+!
+!
+!! SMJ TRAB  !!= * **@CODE@** contains transitive abbreviations
+!
+!!! This lexicon is for abbrs that always have a constituent following it
+!mán.:mánnodahka # ;
+!dij.:dijstáhka # ;
+!gas.:gasskavahkko # ; 
+!duo.:duorastahka # ;
+!bie.:bierjjedahka # ;
+!láv.:lávvodahka # ;
+!såd.:sådnåbiejvve # ;
+!ájl.:ájllek # ;
+!
+!ådå.:ådåjakmánno # ;
+!guo.:guovvamánno # ;
+!snju.:snjuktjamánno # ;
+!sjnju.:sjnjuktjamánno # ;
+!vuo.:vuoratjismánno # ;
+!moa.:moarmesmánno # ;
+!bieh.:biehtsemánno # ;
+!sjnji.:sjnjilltjamánno # ;
+!snji.:snjilltjamánno # ;
+!bår.:bårggemánno # ;
+!rag.:ragátmánno # ;
+!gål.:gålgådismánno  # ;
+!bas.:basádismánno # ;
+!jav.:javllamánno # ;
+!m.:mánno # ;
+!
+!åss.:åssudahka # ;
+!sadj.:sadjásasj # ;
+!
+!
+!! SMJ NUMNOAB !!= * **@CODE@** su, dii
+!
+!!! This class contains homonyms, which are both abbrs for
+!!! which numerals are complements and normal words. The abbreviation usage
+!!! is less common and thus only the occurences in the middle of
+!!! the sentence can be considered as true cases.
+!
+!! ============ SMI abbrevisations: ============
+!
+!! smi_ITRAB
+!
+!H.K.H.:Hans/hennes% kongelige% høyhet # ; ! Hans/hennes kongelige høyhet
+!H.M.:Hans/hennes% majestet # ; ! Hans/hennes majestet
+!Innst.:innstilling # ; ! Innstilling
+!Kommunenr.:kommunenummer # ;
+!Ot.% prop.:odelstingsproposisjon # ;
+!Ot.% prp.:odelstingsproposisjon # ;
+!Ot.:odelsting # ;
+!Ot.prop.% nr.:odelstingsproposisjon% nummer # ; ! Odelstingsproposisjon nummer
+!Ot.prop.:odelstingsproposisjon # ;
+!Ot.prop.nr.:odelstingsproposisjon% nummer # ; ! Odelstingsproposisjon nummer
+!Ot.prp.% nr.:odelstingsproposisjon% nummer # ;
+!Ot.prp.:odelstingsproposisjon # ;
+!Ot.prp.nr.:odelstingsproposisjon% nummer # ; ! Odelstingsproposisjon nummer
+!Postnr.:postnummer # ;
+!adm.:administrativ # ; ! nob but used in all texts
+!avd.:avdeling # ;
+!avd.dir.:avdelings% direktør # ;
+!bd.:bind # ;
+!bet.:betalt # ;
+!bnr.:bruksnummer # ;
+!cc.:kopi% til # ;
+!cf..:cost% and% freight #  ;
+!cos:cosinus # ;
+!div..:diverse #  ;
+!ex.fac.:examen% facultatum # ;
+!fnr.:fødselsnummer # ;
+!fr.:frøken # ;
+!gnr.:gårdsnummer # ;
+!gt.:det% gamle% testamentet # ;
+!h&m:hennes% og% mauritz # ;
+!ib:sæmmi% sajen # ; !
+!ibid:sæmmi% sajen # ; !
+!ill.:illustasjon # ;
+!inkl.:inklusive # ;
+!jnr.:journalnummer # ;
+!kto:konto # ;
+!ktonr:kontonummer # ;
+!m.fl.:med% flere # ;
+!mag.art.:magister% artium # ;
+!mb.:megabyte # ;
+!mr.:mister # ;
+!mrd.:milliard # ;
+!mrs.:fru # ;
+!ms.:miss # ;
+!od.prp.:odelstingsproposisjon # ;
+!off.:offentlig # ;
+!ordf.:ordfører # ; ! ordførar
+!org.:organisasjon # ;
+!org.nr.:organisasjonsnummer # ;
+!ot.% prop.:odelstingsproposisjon # ;
+!ot.% prp.:odelstingsproposisjon # ;
+!ot.prop.:odelstingsproposisjon # ;
+!ot.prp.:odelstingsproposisjon # ;
+postp.:påastenummere # ;
+!priv.:privat # ;
+!psyk.:psykisk # ;
+!saksnr.:saksnummer # ; ! for all lgs
+sign.:signatuvre # ;
+siviling.:sivilingenijööre # ;
+spes.ped.:spesialpedagogihke # ; ! spesiála
+st.% meld.:stortingsmelding # ; ! "st. meld" i bruk som sitat i samisk tektst
+st.% nr.:stasjon% nummere # ;
+!st.% tid.% nr.:stasjon% tid% nummer% # ;
+!st.% tid.:stasjon% tid # ;
+!st.:stasjon # ;
+!st.meld.% nr.:stortingsmelding% nummer # ;
+st.meld.:stoerredigkebïevnese # ;
+!st.meld.nr.:stortingsmelding% nummer # ;
+!st.nr.:stasjonsnummer # ;
+!st.prp.% nr.:stortingsproposisjon% nummer # ; ! Stortingsproposisjon nummer
+!st.prp.:stortingsproposisjon # ; ! Skal vera st.prp. jf http://www.korrekturavdelingen.no/Forkortelser/Forkortelser_s.htm
+!st.prp.:stortingsproposisjon # ; ! Stortingsproposisjon
+!st.prp.nr.:stortingsproposisjon% nummer # ; ! Stortingsproposisjon nummer
+stud.jur.:juridihkestudente # ;
+stud.mag.:magisterestudente # ;
+stud.med.:medisijnestudente # ;
+stud.med.vet.:medisijneveterinæærestudente # ;
+stud.philol.:filologijestudente # ;
+stud.theol.:teologijestudente # ;
+vit.ass.:vitenskapelig% assistent # ;
+!vol.:volum # ;
+!
+!! smi_TRAB
+!
+!! smi_TRNUMAB
+!i:akta # ;
+!xii:lågenanguokta # ;
+!xiii:lågenangålmmå # ;
+!xiv:lågenanniellja # ;
+!xix:lågenanaktse # ;
+!xv:lågenanvihtta # ;
+!xvi:lågenanguhtta # ;
+!xvii:lågenangietjav # ;
+!xviii:lågenangáktsa # ;
+!xxi:guoktalåkakta # ;
+!xxii:guoktalåkguokta # ;
+!xxiii:guoktalåkgålmmå # ;
+!xxiv:guoktalåkniellja # ;
+!xxix:guoktalåkaktse # ;
+!xxv:guoktalåkvihtta # ;
+!xxvi:guoktalåkguhtta # ;
+!xxvii:guoktalåkgietjav # ;
+!xxviii:guoktalåkgáktsa # ;
+!vii:gietjav # ;
+!viii:gáktsa # ;
+!iii:gålmmå # ;
+!ix:aktse # ;
+!
+!
+!
+!
+!
+>>>>>>> upstream/main:src/fst/transcriptions/transcriptor-abbrevs2text.lexc

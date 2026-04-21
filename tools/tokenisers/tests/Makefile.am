@@ -17,3 +17,7 @@ endif # WANT_TOKENISERS
 
 #### Do NOT edit below here: ####
 include $(top_srcdir)/../giella-core/am-shared/tools-tokenisers-tests-dir-include.am
+<<<<<<< HEAD
+=======
+include $(top_srcdir)/../giella-core/am-shared/devtest-include.am
+>>>>>>> upstream/main

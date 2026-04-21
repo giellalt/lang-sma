@@ -1,5 +1,14 @@
-name = "South Sami"
-version = "4.3.0"
+# Name of the speller package in various languages.
+# The default is English + autonym:
+[speller.name]
+en = "South Sámi spellchecker"
+sma = "Autonym spellchecker"
+
+# Description of the speller package in various languages.
+# The default is English + autonym:
+[speller.description]
+en = "A spellchecker for South Sámi, made by members of the language community, and by the Divvun and Giellatekno groups at UiT The Arctic University of Norway"
+sma = "TRANSLATE: A spellchecker for South Sámi, made by members of the language community, and by the Divvun and Giellatekno groups at UiT The Arctic University of Norway"
 
 [macos]
 system_pkg_id = "no.divvun.MacDivvun.sma"
@@ -11,3 +20,18 @@ legacy_product_codes = [
     { value = "51852B34-FDAC-5748-B467-CF731D711EE0", kind = "nsis" }
 ]
 extra_locales = { sma-SE = "sma", sma-NO = "sma" }
+[package.speller]
+name = "South Sámi"
+version = "4.6.2"
+
+[package.grammar]
+name = "South Sámi"
+version = "1.0.0"
+
+[package.tts-textproc]
+name = "South Sámi"
+version = "0.1.0"
+
+[package.hyphenator]
+name = "South Sámi"
+version = "0.1.0"

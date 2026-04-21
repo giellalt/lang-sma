@@ -15,14 +15,13 @@ top_srcdir=@top_srcdir@
 top_builddir=@top_builddir@
 abs_top_builddir=@abs_top_builddir@
 giella_core=@GIELLA_CORE@
-corpusdir=$top_srcdir/test/data
+corpusdir=$top_srcdir/tools/analysers/test/
 
 # File variables:
 abbr_file=$top_builddir/tools/tokenisers/abbr.txt
-source_corpus=analysis_check_corpus
+source_corpus=corpus
 corpus_file=$corpusdir/$source_corpus.txt
-
-analyser=$top_builddir/src/analyser-disamb-gt-desc
+analyser=$top_builddir/src/fst/analyser-disamb-gt-desc
 tokeniser=$top_builddir/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst
 mwe_dis=$top_srcdir/tools/tokenisers/mwe-dis.cg3
 disambiguator=$top_builddir/src/cg3/disambiguator.bin
@@ -52,7 +51,6 @@ difftool=@DIFFTOOL@
 # Use autotools mechanisms to only run the configured fst types in the tests:
 fsttype=
 @CAN_HFST_TRUE@fsttype="$fsttype hfst"
-@CAN_XFST_TRUE@fsttype="$fsttype xfst"
 @CAN_FOMA_TRUE@fsttype="$fsttype foma"
 
 # Use autotools mechanisms to check for hfst-tokenise:
@@ -70,7 +68,7 @@ can_gramcheck=x
 scriptname=$0
 
 # move into devtools dir in the build dir:
-cd $abs_top_builddir/devtools
+pushd $abs_top_builddir/devtools || exit 1
 
 function print_usage() {
     echo "Usage: $0 OPTION [MORE OPTIONS...]"
@@ -78,7 +76,7 @@ function print_usage() {
     echo "Check whether there are regressions in the analysis output by"
     echo "analysing a corpus in several ways and comparing to the previous"
     echo "version. The input corpus used is found in"
-    echo "\$GIELLA_LANG/test/data/analysis_check_corpus.txt. The previous"
+    echo "\$GIELLA_LANG/$corpus_file. The previous"
     echo "analyses under version controll are stored in the same directory."
     echo
     echo "You need to specify at least one of the diff options."
@@ -245,9 +243,9 @@ function open_diffs() {
     diff_file=$1
     if test ! -f $corpusdir/$diff_file.goldst.txt; then
         echo "First time run!"
-        echo "Adding $corpusdir/$diff_file.goldst.txt to svn"
+        echo "Adding $corpusdir/$diff_file.goldst.txt to git"
         cp $diff_file.txt $corpusdir/$diff_file.goldst.txt
-        svn add --force $corpusdir/$diff_file.goldst.txt
+        git add --force $corpusdir/$diff_file.goldst.txt
     else
       if cmp --silent $corpusdir/$diff_file.goldst.txt $diff_file.txt ; then
         echo "$diff_file.txt and $corpusdir/$diff_file.goldst.txt are identical"
@@ -426,3 +424,5 @@ done
 if test "x$old_new_xerox_diff" = "xyes" ; then
    $difftool $morpha_corpus.xfst.txt $morpha_corpus.htokoldcomp.txt
 fi
+
+popd || exit 1

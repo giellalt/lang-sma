@@ -6,4 +6,42 @@ https://giellalt.uit.no/proof/spelling/testdoc/error-markup.html
 
 Kommandoer: 
 
+<<<<<<< HEAD
 echo "setning" | tools/grammarcheckers/modes/trace-smagram-dev.mode | less
+=======
+echo "setning" | tools/grammarcheckers/modes/trace-smagram-dev.mode | less
+
+echo "Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh." | tools/grammarcheckers/modes/trace-smagram-dev.mode | less
+
+
+
+For å söke syntaksfeil: 
+
+uit-mac-1062:lang-sma mka055$ see src/fst/
+
+lim in: lexicon.tmp.lexc
+
+
+Kommando for morfologisk, valens,  og syntaksanalyse (når du ikke haer modes): 
+
+echo "Naakede destie mij saemien kultuvre- jïh sjugniedihks jielemem buerkeste lea dïhte daamtaj lea eevtjeme aktede nænnoes idealismeste jïh bielelen profesjonelle gïehtelimmie." | tools/grammarcheckers/modes/trace-smagram9-cg.mode | vislcg3 --trace -g '/Users/lwi001/lang-smj/tools/grammarcheckers/./grammarchecker.cg3' | divvun-suggest -g '/Users/lwi001/lang-smj/tools/grammarcheckers/generator-gramcheck-gt-norm.hfstol' -m '/Users/lwi001/lang-smj/tools/grammarcheckers/errors.xml' -l smj | less -R
+
+
+
+Kompilere modes: 
+
+uit-mac-1062:grammarcheckers mka055$ make dev
+
+
+"Maja inviterte meg til bursdag osv." - se artikkel: tokenisering - sammensetting. -  Er dette et punktum? 
+
+
+2) Samle på sammensetnings-feil" - sammensetningsord som skrives som ett ord, men som er feilskrevet som to ord."
+
+
+3) 
+
+Njoktjen 16. b. orre raerieh böötin dutnjien mij lea sovhtine, Gaajhkesh dovnesh symptomigujmie faahketji voejngehtasseinfeksjovnese edtjieh gåetesne årrodh, Almetjehealsoeinstituhte orre, orrestamme raerine tjaala.
+
+cat /Users/mka055/uit-mac-1334:lang-sma lwi001$ cat /Users/lwi001/corpus-sma-orig/news/other_files/nrk-koronavirusinfo.txt | tools/grammarcheckers/modes/trace-smagram9-cg.mode | vislcg3 --trace -g '/Users/lwi001/lang-smj/tools/grammarcheckers/./grammarchecker.cg3' | divvun-suggest -g '/Users/lwi001/lang-smj/tools/grammarcheckers/generator-gramcheck-gt-norm.hfstol' -m '/Users/lwi001/lang-smj/tools/grammarcheckers/errors.xml' -l smj | less -R
+>>>>>>> upstream/main

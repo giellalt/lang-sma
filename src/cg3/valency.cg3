@@ -6,6 +6,7 @@
 #!! # S O U T H   S Á M I   V A L E N C Y   A N N O T A T O R          
 # =================================================================== #
 # =================================================================== #
+#  Sámi language technology 2000-2023, UiT The Arctic University of Norway #
 
             # =========================================== #
             #            Short table of contents          #
@@ -220,6 +221,7 @@ LIST Err/Orth-spes =                     #!! - `Err/Orth-spes`:
 LIST Cmp/Hyph = Cmp/Hyph ; #!! - `Cmp/Hyph`
 LIST <vdic> = <vdic> ;     #!! - `<vdic>`
 # Previous doccomment: use backtics to avoid interpretation as html/xml by MR processors
+LIST <spelled> = <spelled> ;
 
 
 #!! ###  Semantic tags
@@ -786,7 +788,8 @@ LIST <vuhtii><TH-ahte> = <vuhtii><TH-ahte> ; #CHECK
 LIST <vuhtii><TH-Acc-Any> = <vuhtii><TH-Acc-Any> ; #CHECK
 LIST <vuostá> = <vuostá> ; #CHECK
 LIST <vuostái><RF-Acc-Any> = <vuostái><RF-Acc-Any> ; #CHECK
-
+LIST <utnedh><TH-Inf> = <utnedh><TH-Inf> ;
+LIST <utnedh><TH-PrfPrc> = <utnedh><TH-PrfPrc> ;
 
 
 
@@ -1112,14 +1115,76 @@ BEFORE-SECTIONS
 
 SECTION  
 
+LIST RO-ESS-V = "sjïdtedh" ;
+	
+SUBSTITUTE (V) (V <RO-Ess-Any>) TARGET RO-ESS-V - Der/PassL - Der/PassS;
+    ## 
 
-LIST TH-RO-ESS-V = "utnedh" ;
+
+LIST TH-RO-ESS-V = "åadtjodh" "provkedh" "utnedh" ;
 	
 SUBSTITUTE (V) (V <TH-Acc-Any><RO-Ess-Any>) TARGET TH-RO-ESS-V - Der/PassL - Der/PassS;
     ## Dam åtnam bïjline.
 
 
+LIST TH-ILL-HUM-V = "jaehkedh" ;
+    
+SUBSTITUTE (V) (V <TH-Ill-Hum>) TARGET TH-ILL-HUM-V - Der/PassL - Der/PassS;
+	## 
+	
+LIST TH-ILL-ANY-V = "geehtedh" ;
+    
+SUBSTITUTE (V) (V <TH-Ill-Any>) TARGET TH-ILL-ANY-V - Der/PassL - Der/PassS;
+	## bïenjeste geehtedh
+
+
+LIST TH-ACC-V = "geehtedh" "jaehkedh" ;
+    
+SUBSTITUTE (V) (V <TH-Acc-Any>) TARGET TH-ACC-V - Der/PassL - Der/PassS;
+	## maanam geehtedh
+	
+LIST TH-FS-V = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "praahkedh" "stilledh" "tjaalasovvedh" "tjåarvodh" "onterdidh" "ussjedidh" "vaestiedidh" "vïenhtedh" ;
+
+
+SUBSTITUTE (V) (V <TH-FS>) TARGET TH-FS-V - Der/PassL - Der/PassS;
+	## Dab kanne bööreme lij daaroen jiehtedh guhte daelie daej aejkie hov jiehtieh dihte dalhkesh lea gujht faali almetjidiejïh dab gadtsedh.
+	
+	
+LIST TH-FS-QPRON-V = "gihtjedh" "soptsestidh" ; 
+
+SUBSTITUTE (V) (V <TH-FS-Qpron>) TARGET TH-FS-QPRON-V; 
+	## Soptsesth learohkigujmie man åvteste gïehtjedimmiem tjaeledh, jïh maam gïehtjedimmie mïeteste.
+	
+
+# Adjective valency
+# ------------------
+
 LIST TH-COM-A = "væjkele" "sjïehtele" ;
 
 SUBSTITUTE (A) (A <TH-Com-Any>) TARGET TH-COM-A ;
 	## Piere væjkele jïh sjïehtele maanajgujmie.
+	
+
+LIST TH-FS-A = "madtjeles" "geerjene" "aavosne" "håjnan" "luste" "lustes" "måeresne" ;
+
+SUBSTITUTE (A) (A <TH-FS>) TARGET TH-FS-A ;
+
+	## Manne joekoen madtjeles Laanteburrie- jïh beapmoedepartemeente (LBD) daelie sæjhta vuertedh goske dïhte saemien laakemoenehtse sov barkoem dorjeme jïh sov juvnehtimmiejgujmie båateme, jïh aaj departemeente jeahta dah sijhtieh moenehtsen jarkelimmieraeriestimmieh båatsoelaakeste vuarjasjidh, saemiedigkieraerie Silje Karine Muotka jeahta.
+
+
+LIST TH-INF-A = "aelhkies" "aelpies" "buerie" "faepeles" "dovres" "hijven" "luste" "lustes" "nåake" "njaelkies" "nuekies" "ovrovne" "sjïehteles" "vaejvie" "vihkeles" "væjkeles" ;
+
+SUBSTITUTE (A) (A <TH-Inf>) TARGET TH-INF-A ;
+	## Lea aelhkie bïjlem vuejedh.
+
+
+
+LIST UTNEDH-INF-A = "buerie" "hijven" "luste" "lustes" "nåake" "sjïehteles" "vihkeles" "vaejvie" "væjkeles" ;
+
+	
+SUBSTITUTE (A) (A <utnedh><TH-Inf>) TARGET UTNEDH-INF-A - Der/PassL - Der/PassS;
+
+LIST UTNEDH-PRFPRC-A = "buerie" "hijven" "luste" "lustes" "nåake" "sjïehteles" "vihkeles" "vaejvie" "væjkeles" ;
+
+SUBSTITUTE (A) (A <utnedh><TH-PrfPrc>) TARGET UTNEDH-PRFPRC-A - Der/PassL - Der/PassS;
+    ##  åtna luste almetjidie vihth nollelamme

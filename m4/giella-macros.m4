@@ -29,6 +29,29 @@
 ################################################################################
 # Define functions for checking paths and the GIELLA core environment:
 ################################################################################
+
+# Colourised versions of autoconf messaging... add some checks here if it looks
+# too bad in logs and stuffs
+# we allow some CI builds to blatantly ignore errors but if users use this 
+# feature they are on their own
+
+AC_ARG_ENABLE([configure-errors],
+              [AS_HELP_STRING([--disable-configure-errors].
+                              [disables fatal errors in configure script @<:@default=enabled@:>@])],
+                              [enable_configure_errors=$enableval],
+                              [enable_configure_errors=yes])
+
+AC_DEFUN([gt_MSG_ERROR],
+         [AS_IF([test x$enable_configure_errors != xno],
+                [_red=`tput setaf 1`
+                 _reset=`tput sgr0`
+                 AC_MSG_ERROR([$_red $1 $_reset])],
+                [AC_MSG_NOTICE([ignored error: $1])])])
+AC_DEFUN([gt_MSG_WARN],
+         [_yellow=`tput setaf 3`
+          _reset=`tput sgr0`
+          AC_MSG_WARN([$_yellow $1 $_reset])])
+
 AC_DEFUN([gt_PROG_SCRIPTS_PATHS],
 [
 
@@ -57,23 +80,11 @@ Could not set GIELLA_CORE and thus not find required scripts in:
        $PATH
 
        Please do the following:
-       1. svn co https://github.com/giellalt/giella-core.git/trunk
-       2. then either:
-         a: cd giella-core && ./autogen.sh && ./configure && make
+       0. cd ..
+       1. git clone https://github.com/giellalt/giella-core.git # or similar using svn
+       2. cd giella-core && ./autogen.sh && ./configure && make
 
-          or:
-         b: add the following to your ~/.bash_profile or ~/.profile:
-
-       export \$GIELLA_CORE=/path/to/giella-core/checkout/dir
-
-       (replace the path with the real path from 1. above)
-
-          or:
-         c: run configure as follows
-
-       ./configure --with-giella-core=/path/to/giella-core/checkout/dir
-
-       (replace the path with the real path from 1. above)
+       Then retry this script.
 "
 
 AC_MSG_CHECKING([whether we can set GIELLA_CORE])
@@ -91,15 +102,16 @@ AS_IF([test "x$with_giella_core" != "xfalse" -a \
         AS_IF([pkg-config --exists giella-core], [
             GIELLA_CORE=$(pkg-config --variable=dir giella-core)
         ], [
-            AC_MSG_ERROR([${_giella_core_not_found_message}])
+            gt_MSG_ERROR([${_giella_core_not_found_message}])
         ])
     ])
 ])
 AC_MSG_RESULT([$GIELLA_CORE])
 
-### This is the version of the Giella Core that we require. Update as needed.
-### It is possible to specify also subversion revision: 0.1.2-12345
-_giella_core_min_version=0.15.0
+###############################################################
+### This is the version of the Giella Core that we require. ###
+### UPDATE AS NEEDED.
+_giella_core_min_version=1.10.3
 
 # GIELLA_CORE/GTCORE env. variable, required by the infrastructure to find scripts:
 AC_ARG_VAR([GIELLA_CORE], [directory for the Giella infra core scripts and other required resources])
@@ -116,10 +128,10 @@ The giella-core is too old, we require at least $_giella_core_min_version.
 *** ==> PLEASE ENTER THE FOLLOWING COMMANDS: <== ***
 
 cd $GTCORE
-svn up
-./autogen.sh # required only the first time
-./configure  # required only the first time
+git pull --rebase # or: 'svn up' if you are using svn
 make
+
+Then retry.
 "
 
 # Identify the version of giella-core:
@@ -128,7 +140,7 @@ AC_PATH_PROG([GIELLA_CORE_VERSION], [gt-version.sh], [no],
 AC_MSG_CHECKING([the version of the Giella Core])
 AS_IF([test "x${GIELLA_CORE_VERSION}" != xno],
         [_giella_core_version=$( "${GIELLA_CORE_VERSION}" )],
-        [AC_MSG_ERROR([gt-version.sh could not be found, installation is incomplete!])
+        [gt_MSG_ERROR([gt-version.sh could not be found, installation is incomplete!])
     ])
 AC_MSG_RESULT([$_giella_core_version])
 
@@ -137,143 +149,23 @@ AC_MSG_CHECKING([whether the Giella Core version is at least $_giella_core_min_v
 AX_COMPARE_VERSION([$_giella_core_version], [ge], [$_giella_core_min_version],
                    [giella_core_version_ok=yes], [giella_core_version_ok=no])
 AS_IF([test "x${giella_core_version_ok}" != xno], [AC_MSG_RESULT([$giella_core_version_ok])],
-[AC_MSG_ERROR([$giella_core_too_old_message])])
-
-################################
-### Giella-shared dir:
-################
-# 1. check --with-giella-shared option
-# 2. check env GIELLA_SHARED, then GIELLA_HOME, then GTHOME, then GTCORE
-# 3. check using pkg-config
-# 4. error if not found
-
-AC_ARG_WITH([giella-shared],
-            [AS_HELP_STRING([--with-giella-shared=DIRECTORY],
-                            [search giella-shared data in DIRECTORY @<:@default=PATH@:>@])],
-            [with_giella_shared=$withval],
-            [with_giella_shared=false])
-
-AC_MSG_CHECKING([whether we can set GIELLA_SHARED])
-# --with-giella-shared overrides everything:
-AS_IF([test "x$with_giella_shared" != "xfalse" -a \
-    -d "$with_giella_shared"/all_langs ], [
-    GIELLA_SHARED="$with_giella_shared"
-    ], [
-    # Check in the parent directory:
-    AS_IF([test -d "$THIS_TOP_SRC_DIR"/../giella-shared/all_langs ], [
-        GIELLA_SHARED="$THIS_TOP_SRC_DIR"/../giella-shared
-    ], [
-        AS_IF([pkg-config --exists giella-common], [
-            GIELLA_SHARED="$(pkg-config --variable=dir giella-common)"
-        ],
-        [
-     AC_MSG_WARN([Could not find giella-common data dir to set GIELLA_SHARED])
-        ])
-    ])
-])
-AC_MSG_RESULT([$GIELLA_SHARED])
-
-### This is the version of the Giella Shared that we require. Update as needed.
-### It is possible to specify also subversion revision: 0.1.2-12345
-_giella_shared_min_version=0.2.0
-
-# GIELLA_SHARED is required by the infrastructure to find shared data:
-AC_ARG_VAR([GIELLA_SHARED], [directory for giella shared data, like proper nouns and regexes])
-
-##### Check the version of giella-shared, and stop with error message if too old:
-# This is the error message:
-giella_shared_too_old_message="
-
-The giella-shared is too old, we require at least $_giella_shared_min_version.
-
-*** ==> PLEASE ENTER THE FOLLOWING COMMANDS: <== ***
-
-cd $GIELLA_SHARED
-svn up
-./autogen.sh # required only the first time
-./configure  # required only the first time
-make
-"
-
-# Identify the version of giella-shared:
-AC_MSG_CHECKING([the version of Giella Shared])
-_giella_shared_version=$( pkg-config --modversion "$GIELLA_SHARED"/giella-common.pc )
-
-# Check whether a version info string was found:
-case "$_giella_shared_version" in    # branch to the first pattern
-  "")
-    _giella_shared_version_found=no  # do this if empty string
-    ;;                               # end of this case branch
-  *[!0-9.]*)                         # pattern = anything containing a non-digit
-    _giella_shared_version_found=no  # do this if the pattern triggered
-    ;;                               # end of this case branch
-  *)                                 # pattern = anything (else)
-    _giella_shared_version_found=yes # do this when matching a version string
-    ;;                               # end of this case branch
-esac
-
-# If not, recheck using standard pkg-config locations:
-AS_IF([test "x$_giella_shared_version_found" = xno ], [
-    _giella_shared_version=$( pkg-config --modversion giella-common )
-], [test "x$_giella_shared_version_found" = xyes ], [
-    true
-], [AC_MSG_WARN([Could not identify version of giella-common shared data])])
-
-AC_MSG_RESULT([$_giella_shared_version])
-
-AC_MSG_CHECKING([whether the version of Giella Shared is at least $_giella_shared_min_version])
-# Compare it to the required version, and error out if too old:
-AX_COMPARE_VERSION([$_giella_shared_version], [ge], [$_giella_shared_min_version],
-                   [giella_shared_version_ok=yes], [giella_shared_version_ok=no])
-AS_IF([test "x${giella_shared_version_ok}" != xno], [AC_MSG_RESULT([$giella_shared_version_ok])],
-[AC_MSG_WARN([$giella_shared_too_old_message])])
-
-
-################################
-### Giella-libs dir:
-################
-# 1. check --with-giella-libs option
-# 2. check env GIELLA_LIBS, then GIELLA_HOME, then GTHOME
-# 3. empty if not found
-
-AC_ARG_WITH([giella-libs],
-            [AS_HELP_STRING([--with-giella-libs=DIRECTORY],
-                            [search giella-libs data in DIRECTORY @<:@default=PATH@:>@])],
-            [with_giella_libs=$withval],
-            [with_giella_libs=false])
-
-AC_MSG_CHECKING([whether we can set GIELLA_LIBS])
-# --with-giella-libs overrides everything:
-AS_IF([test "x$with_giella_libs" != "xfalse" -a \
-          -d "$with_giella_libs" ], [
-    GIELLA_LIBS=$with_giella_libs
-    ],[
-    # GIELLA_LIBS is the env. variable for this dir:
-    AS_IF([test "x$GIELLA_LIBS" != "x" -a \
-              -d "$GIELLA_LIBS"], [], [
-        # GIELLA_HOME is the new GTHOME:
-        AS_IF([test "x$GIELLA_HOME" != "x" -a \
-                  -d "$GIELLA_HOME/giella-libs" ], [
-            GIELLA_LIBS=$GIELLA_HOME/giella-libs
-        ], [
-            # GTHOME for backwards compatibility - it is deprecated:
-            AS_IF([test "x$GTHOME" != "x" -a \
-                      -d "$GTHOME/giella-libs" ], [
-                GIELLA_LIBS=$GTHOME/giella-libs
-            ], [
-                GIELLA_LIBS=no
-            ])
-        ])
-    ])
-])
-AC_MSG_RESULT([$GIELLA_LIBS])
-
-# GIELLA_LIBS is needed for speller builds, but if not found, we'll try to fetch over the net:
-AC_ARG_VAR([GIELLA_LIBS], [directory containing precompiled libraries for proofing tools])
+[gt_MSG_ERROR([$giella_core_too_old_message])])
 
 ################################
 ### Some software that we either depend on or we need for certain functionality:
 ################
+
+# check on python and pipx regardless of stuff...
+AM_PATH_PYTHON([3.5],, [:])
+AC_PATH_PROG([PIPX], [pipx], [false])
+AS_IF([test x$PIPX = xfalse],
+      [gt_MSG_WARN([we recommend using pipx for python stuffs
+       on debian/ubuntu run: sudo apt update
+            sudo apt install pipx
+            pipx ensurepath
+       on mac (brew) run: brew install pipx
+            pipx ensurepath
+       on other systems, install pipx and run: pipx ensurepath])])
 
 ################ Weighted fst's ################
 AC_PATH_PROG([BC], [bc], [false], [$PATH$PATH_SEPARATOR$with_bc])
@@ -285,25 +177,14 @@ AC_ARG_ENABLE([yamltests],
               [enable_yamltests=$enableval],
               [enable_yamltests=check])
 
-AS_IF([test "x$enable_yamltests" = "xcheck"],
-     [AM_PATH_PYTHON([3.5],, [:])
-     AX_PYTHON_MODULE(yaml)
-     AC_MSG_CHECKING([whether to enable yaml-based test])
-     AS_IF([test "$PYTHON" = ":"],
-           [enable_yamltests=no
-            new_enough_python_available=no
-            AC_MSG_RESULT([no, python is missing or old])
-            ],
-           [AS_IF([test "x$HAVE_PYMOD_YAML" != "xyes"],
-                  [enable_yamltests=no
-                   new_enough_python_available=yes
-                   AC_MSG_RESULT([no, yaml is missing])
-                   ],
-                  [enable_yamltests=yes
-                   new_enough_python_available=yes
-                   AC_MSG_RESULT([yes])])])])
+AC_PATH_PROGS([GTMORPHTEST], [gtmorphtest morph-test2], [false])
+AM_CONDITIONAL([CAN_YAML_TEST], [test "x$GTMORPHTEST" != xfalse])
+AS_IF([test x$GTMORPHTEST = xfalse],
+      [gt_MSG_ERROR([gtmorphtest or morph-test2 is needed for YAML testings
+        pipx install git+https://github.com/divvun/morph-test
+        
+        Alternatively, install morph-test2, see https://github.com/divvun/morph-test-rs])])
 
-AM_CONDITIONAL([CAN_YAML_TEST], [test "x$enable_yamltests" != xno])
 
 ################ Generated documentation ################
 # Check for awk with required feature:
@@ -312,16 +193,27 @@ AC_CACHE_CHECK([for awk that supports gensub], [ac_cv_path_GAWK],
     [[awkout=`$ac_path_GAWK 'BEGIN{gensub(/a/,"b","g");}'; exvalue=$?; echo $exvalue`
       test "x$awkout" = x0 \
       && ac_cv_path_GAWK=$ac_path_GAWK ac_path_GAWK_found=:]],
-    [AC_MSG_ERROR([could not find awk that supports gensub - please install GNU awk. hint: sudo port install gawk])])])
+    [gt_MSG_ERROR([could not find awk that supports gensub - please install GNU awk. hint: sudo port install gawk])])])
 AC_SUBST([GAWK], [$ac_cv_path_GAWK])
+
 # Check for sed with required feature:
 AC_CACHE_CHECK([for sed that supports newlines and pipes], [ac_cv_path_SED],
-  [AC_PATH_PROGS_FEATURE_CHECK([SED], [sed gsed gnused],
+  [AC_PATH_PROGS_FEATURE_CHECK([SED], [gnused gsed sed],
               [[m4out=`echo aaa | $ac_path_SED 's/a/\n/g' | wc -l | tr -d '[:space:] '`
                 test "x$m4out" = x4\
       && ac_cv_path_SED=$ac_path_SED ac_path_SED_found=:]],
-    [AC_MSG_ERROR([could not find sed that supports stuff - please install GNU sed. hint: sudo port install gsed./c])])])
+    [gt_MSG_ERROR([could not find sed that supports newlines - please install GNU sed. Hint: sudo port install gsed./c])])])
 AC_SUBST([SED], [$ac_cv_path_SED])
+
+# Check for uconv for some automated unicode recoding
+AC_PATH_PROG([UCONV], [uconv], [false])
+AS_IF([test x$UCONV = xfalse], 
+      [gt_MSG_ERROR([needs uconv for unicode support
+       uconv is a part of ICU 
+       on debian/ubuntu: apt install icu-devtools
+       on macports: port install icu
+       on macbrew: brew install icu4c (and follow instructions)
+       ])])
 
 # Check for Forrest:
 AC_ARG_WITH([forrest],
@@ -351,14 +243,37 @@ AC_ARG_WITH([npm],
             [with_npm=no])
 AC_PATH_PROG([NPM], [npm], [], [$PATH$PATH_SEPARATOR$with_npm])
 AC_PATH_PROG([R], [R], [], [$PATH$PATH_SEPARATOR$with_R])
+# Check for the actual divvunspell and accuracy commands:
 AC_ARG_WITH([divvunspell],
             [AS_HELP_STRING([--with-divvunspell=DIRECTORY],
                             [search divvunspell in DIRECTORY @<:@default=PATH@:>@])],
             [with_divvunspell=$withval],
             [with_divvunspell=no])
-AC_PATH_PROG([DIVVUN_ACCURACY], [accuracy], [], [$PATH$PATH_SEPARATOR$with_divvunspell])
+AC_PATH_PROG([DIVVUNSPELL], [divvunspell], [false],
+             [$PATH$PATH_SEPARATOR$with_divvunspell])
+# Make sure that divvunspell is new enough:
+AS_IF([test "x$DIVVUNSPELL" != xfalse], [
+_divvunspell_min_version=m4_default([$1], [1.0.0-beta.11])
+AC_MSG_CHECKING([whether divvunspell is at least $_divvunspell_min_version])
+_divvunspell_version=$( ${DIVVUNSPELL} --version 2>&1 | cut -d' ' -f2 )
+AX_COMPARE_VERSION([$_divvunspell_version], [ge], [$_divvunspell_min_version],
+                   [divvunspell_version_ok=yes
+                    AC_MSG_RESULT([yes - $_divvunspell_version])
+                   ], [divvunspell_version_ok=no
+                    gt_MSG_ERROR([no - $_divvunspell_version, please update])
+                   ])
+])
 
-
+# Check for opennmt for neural models
+AC_ARG_WITH([opennmt-py],
+            [AS_HELP_STRING([--with-opennmt-py=DIRECTORY],
+                            [search opennmt in DIRECTORY @<:@default=PATH@:>@])],
+            [with_opennmtpy=$withval],
+            [with_opennmtpy=no])
+AC_PATH_PROG([ONMT_BUILD_VOCAB], [onmt_build_vocab], [false],
+             [$PATH$PATH_SEPARATOR$with_opennmtpy])
+AC_PATH_PROG([ONMT_TRAIN], [onmt_train], [false],
+             [$PATH$PATH_SEPARATOR$with_opennmtpy])
 
 ################ can rsync oxt template? ################
 AC_PATH_PROG([RSYNC], [rsync], [no], [$PATH$PATH_SEPARATOR$with_rsync])
@@ -398,31 +313,24 @@ AM_CONDITIONAL([CAN_MERGE], [test "x$can_merge" != xno ])
 AC_CANONICAL_HOST
 # Check for which host we are on and setup a few things
 # specifically based on the host
-# This is the minimum GNU Make version required (except on OSX):
+# This is the minimum GNU Make version required
 _GNU_make_min_version=m4_default([$1], [3.82])
 
-# Then we check against different hosts:
-case $host_os in
-  darwin* )
-        # Do nothing for mac: the included make is fine
-        true
-        ;;
-    *)
-        # Default Case: in all other cases check that we are using GNU make
-        # and that it is new enough:
-        AX_CHECK_GNU_MAKE()
-        AC_MSG_CHECKING([whether GNU make is at least $_GNU_make_min_version])
-        AX_COMPARE_VERSION([$ax_check_gnu_make_version], [ge],
-                           [$_GNU_make_min_version],
-                   [
-                    AC_MSG_RESULT([yes])
-                    # Reset the MAKE variable, to ensure we're using GNU make:
-                    MAKE=$_cv_gnu_make_command
-                   ],
-                   [AC_MSG_ERROR([GNU Make too old ($ax_check_gnu_make_version), please install at least $_GNU_make_min_version])
-                   ])
-        ;;
-esac
+AX_CHECK_GNU_MAKE(,
+                  [gt_MSG_WARN([GNU make will be required])])
+AC_MSG_CHECKING([whether GNU make is at least $_GNU_make_min_version])
+AX_COMPARE_VERSION([$ax_check_gnu_make_version], [ge],
+                   [$_GNU_make_min_version],
+           [
+            AC_MSG_RESULT([yes])
+            # Reset the MAKE variable, to ensure we're using GNU make:
+            MAKE=$_cv_gnu_make_command
+           ],
+           [AC_MSG_RESULT([no])
+            gt_MSG_WARN([GNU Make too old ($ax_check_gnu_make_version), please install at least $_GNU_make_min_version])
+            gt_need_gnu_make=yes
+           ])
+
 ################ END of GNU Make check ################
 
 # We need special treatment of Java paths in Cygwin:
@@ -444,35 +352,23 @@ AC_PATH_PROG([SEE], [see], [], [$PATH$PATH_SEPARATOR$with_see])
 # Check for grammar checker validation tool:
 AC_PATH_PROG([DIVVUN_VALIDATE_SUGGEST], [divvun-validate-suggest], [no], [$PATH$PATH_SEPARATOR$with_divvun_validate_suggest])
 # Check for grammar checker (for self-test)
-AC_PATH_PROG([DIVVUN_CHECKER], [divvun-checker], [no], [$PATH$PATH_SEPARATOR$with_divvun_validate_suggest])
+AC_PATH_PROG([DIVVUN_CHECKER], [divvun-checker], [no], [$PATH$PATH_SEPARATOR$with_divvun_checker])
 
+# Check for divvun-runtime:
+AC_PATH_PROG([DIVVUN_RUNTIME], [divvun-runtime], [false], [$PATH$PATH_SEPARATOR$with_divvun_runtime])
+
+# Enable .drb support if divvun-runtime is available
+AM_CONDITIONAL([HAVE_DIVVUN_RUNTIME], [test x$DIVVUN_RUNTIME != xfalse])
+
+AC_PATH_PROG([HEAD], [head], [cat])
+AC_ARG_WITH([log-viewer],
+            [AS_HELP_STRING([--with-log-viewer=VIEWER],
+                            [open test logs in VIEWER @<:@default=head@:>@])],
+            [with_log_viewer=$withval],
+            [with_log_viewer=$ac_cv_path_HEAD])
+AC_SUBST([LOG_VIEWER], [$with_log_viewer])
 ]) # gt_PROG_SCRIPTS_PATHS
 
-################################################################################
-# Define functions for checking the availability of the Xerox tools:
-################################################################################
-AC_DEFUN([gt_PROG_XFST],
-[AC_ARG_WITH([xfst],
-            [AS_HELP_STRING([--with-xfst=DIRECTORY],
-                            [search xfst in DIRECTORY @<:@default=PATH@:>@])],
-            [with_xfst=$withval],
-            [with_xfst=$DEFAULT_XFST])
-AC_PATH_PROG([PRINTF], [printf], [echo -n])
-AC_PATH_PROG([XFST], [xfst], [false], [$PATH$PATH_SEPARATOR$with_xfst])
-AC_PATH_PROG([TWOLC], [twolc], [false], [$PATH$PATH_SEPARATOR$with_xfst])
-AC_PATH_PROG([LEXC], [lexc], [false], [$PATH$PATH_SEPARATOR$with_xfst])
-AC_PATH_PROG([LOOKUP], [lookup], [false], [$PATH$PATH_SEPARATOR$with_xfst])
-AC_MSG_CHECKING([whether to enable xfst building])
-AS_IF([test x$with_xfst != xno], [
-    AS_IF([test "x$XFST"   != xfalse -a \
-                "x$TWOLC"  != xfalse -a \
-                "x$LEXC"   != xfalse -a \
-                "x$LOOKUP" != xfalse  ], [gt_prog_xfst=yes],
-          [gt_prog_xfst=no])
-], [gt_prog_xfst=no])
-AC_MSG_RESULT([$gt_prog_xfst])
-AM_CONDITIONAL([CAN_XFST], [test "x$gt_prog_xfst" != xno])
-]) # gt_PROG_XFST
 
 ################################################################################
 # Define functions for checking the availability of Voikko tools:
@@ -539,7 +435,7 @@ AC_MSG_RESULT([$gt_prog_foma])
 AS_IF([test x$gt_prog_foma = xyes \
       -a "x$(grep 'GT_PHONOLOGY_MAIN' ${srcdir}/src/fst/Makefile*.am \
       	| grep 'twolc')" != "x" ],
-      [AC_MSG_ERROR([You only have Foma, or you requested to use Foma, but \
+      [gt_MSG_ERROR([You only have Foma, or you requested to use Foma, but \
 your main phonology file is a twolc file, which Foma can not compile. You need \
 to use either Hfst or the Xerox FSM tools when compiling transducers for \
 $GLANG ($GLANGUAGE).
@@ -579,6 +475,9 @@ AC_MSG_CHECKING([whether we can enable vislcg3 targets])
 AS_IF([test "x$gt_prog_vislcg3" != xno], [AC_MSG_RESULT([yes])],
       [AC_MSG_RESULT([no])])
 AM_CONDITIONAL([CAN_VISLCG], [test "x$gt_prog_vislcg3" != xno])
+PKG_CHECK_MODULES([CG3], [cg3 > 1.4.0], [vislcg_filters=true],
+                  [vislcg_filters=false])
+AM_CONDITIONAL([HAVE_VISLCG_FILTER], [test "x$vislcg_filters" = xtrue])
 ]) # gt_PROG_VISLCG3
 
 ################################################################################
@@ -690,7 +589,7 @@ enableval=''
 
 AC_ARG_ENABLE([all_tools],
 			  [AS_HELP_STRING([--enable-all-tools],
-			  [build all tools (excluding unstable or experimental tools, which must be explicitly enabled with --enable-dialects, --enable-glossers, --enable-phonetic, --enable-downcaseerror, --enable-L2, --enable-pattern-hyphenators, --enable-fomaspeller, --enable-vfstspeller) @<:@default=no@:>@])],
+			  [build all tools (excluding unstable or experimental tools, which must be explicitly enabled with --enable-dialects, --enable-glossers, --enable-phonetic, --enable-downcaseerror, --enable-L2, --enable-pattern-hyphenators, --enable-fomaspeller) @<:@default=no@:>@])],
 			  [enable_all_tools=$enableval],
 			  [enable_all_tools=no])
 enableval=''
@@ -721,6 +620,15 @@ AS_IF([test "x$enable_ci" = "xyes" -a "x$enableval" = "x"], [enable_generators=n
 AM_CONDITIONAL([WANT_GENERATION], [test "x$enable_generators" != xno])
 enableval=''
 
+# Enable TTS text processing - default is 'no' (via $enable_all_tools)
+AC_ARG_ENABLE([tts],
+              [AS_HELP_STRING([--enable-tts],
+                              [enable tts transcriptors @<:@default=no@:>@])],
+              [enable_tts=$enableval],
+              [enable_tts=$enable_all_tools])
+AM_CONDITIONAL([WANT_TTS], [test "x$enable_tts" != xno])
+enableval=''
+
 # Enable glossing morphological analysers - default is 'no'
 AC_ARG_ENABLE([glossers],
               [AS_HELP_STRING([--enable-glossers],
@@ -738,6 +646,7 @@ AC_ARG_ENABLE([transcriptors],
               [enable_transcriptors=$enableval],
               [enable_transcriptors=yes])
 AS_IF([test "x$enable_ci" = "xyes" -a "x$enableval" = "x"], [enable_transcriptors=no])
+AS_IF([test "x$enable_tts" != xno],[enable_transcriptors=yes])
 AM_CONDITIONAL([WANT_TRANSCRIPTORS], [test "x$enable_transcriptors" != xno])
 enableval=''
 
@@ -749,7 +658,7 @@ AC_ARG_ENABLE([syntax],
               [enable_syntax=yes])
 AS_IF([test "x$enable_syntax" = "xyes" -a "x$gt_prog_vislcg3" = "xno"],
              [enable_syntax=no
-              AC_MSG_ERROR([vislcg3 tools missing or too old, please install or disable syntax tools!])])
+              gt_MSG_ERROR([vislcg3 tools missing or too old, please install or disable syntax tools!])])
 AS_IF([test "x$enable_ci" = "xyes" -a "x$enableval" = "x"], [enable_syntax=no])
 AM_CONDITIONAL([WANT_SYNTAX], [test "x$enable_syntax" != xno])
 enableval=''
@@ -763,16 +672,74 @@ AC_ARG_ENABLE([grammarchecker],
               [enable_grammarchecker=$enable_all_tools])
 AS_IF([test "x$enable_grammarchecker" = "xyes" -a "x$gt_prog_vislcg3" = "xno"],
       [enable_grammarchecker=no
-       AC_MSG_ERROR([vislcg3 missing or too old - required for the grammar checker])],
+       gt_MSG_ERROR([vislcg3 missing or too old - required for the grammar checker])],
       [AS_IF([test "x$enable_grammarchecker" = "xyes" -a "x$DIVVUN_VALIDATE_SUGGEST" = "xno"],
           [enable_grammarchecker=no
-           AC_MSG_ERROR([divvun-validate-suggest required for building grammar checkers])])]
+           gt_MSG_ERROR([divvun-validate-suggest required for building grammar checkers])])]
       [AS_IF([test "x$enable_grammarchecker" = "xyes" -a "x$DIVVUN_CHECKER" = "xno"],
           [enable_grammarchecker=no
-           AC_MSG_ERROR([divvun-checker required for testing grammar checkers])])])
+           gt_MSG_ERROR([divvun-checker required for testing grammar checkers])])])
 AS_IF([test "x$enable_ci" = "xyes" -a "x$enableval" = "x"], [enable_grammarchecker=no])
 AM_CONDITIONAL([WANT_GRAMCHECK], [test "x$enable_grammarchecker" != xno])
 enableval=''
+################ gtgramtool for grammarchecking ################
+AC_PATH_PROG([GTGRAMTOOL], [gtgramtool], [false])
+AS_IF([test "x$enable_grammarchecker" != "xno"],
+    AC_MSG_CHECKING([whether we have gtgramtool])
+    AS_IF([test x$GTGRAMTOOL = xfalse],
+    [gt_MSG_ERROR([gtgramtool is needed for --enable grammarchecker.
+        on debian/ubuntu: sudo apt update; sudo apt install pipx; pipx ensurepath
+        on macbrew: brew install pipx; pipx ensurepath
+        then: pipx install git+https://github.com/divvun/giellaltgramtools
+      ])]),
+    AC_MSG_RESULT([yes]))
+_gtgramtool_min_version=1.9.0
+gtgramtool_too_old_message="gtgramtool needs to be updated.
+    If you installed it with pipx, run:
+        pipx upgrade GiellaLTGramTools"
+AC_MSG_CHECKING([the version of gtgramtool])
+AS_IF([test "x${GTGRAMTOOL}" != xno],
+        [_gtgramtool_version=$( "${GTGRAMTOOL}" --version | sed -e 's/^.*version //')],
+        [_gtgramtool_version=0])
+AC_MSG_RESULT([$_gtgramtool_version])
+AC_MSG_CHECKING([whether the gtgramtool version is at least $_gtgramtool_min_version])
+AX_COMPARE_VERSION([$_gtgramtool_version], [ge], [$_gtgramtool_min_version],
+                   [gtgramtool_version_ok=yes], [gtgramtool_version_ok=no])
+AC_MSG_RESULT([$gtgramtool_version_ok])
+AS_IF([test "x$enable_grammarchecker" != "xno"], 
+    AS_IF([test "x${gtgramtool_version_ok}" != xno],,
+          [gt_MSG_ERROR([$gtgramtool_too_old_message])]))
+################ gtlextools for lexcy checking ################
+AC_PATH_PROG([GTLEMMATEST], [gtlemmatest], [false])
+AC_PATH_PROG([GTSPELLTEST], [gtspelltest], [false])
+AC_PATH_PROG([GTPARADIGMTEST], [gtparadigmtest], [false])
+AC_PATH_PROG([GTMULTICHARTEST], [gtmultichartest], [false])
+AC_MSG_CHECKING([if gtlextools is usable])
+AS_IF([test x$GTLEMMATEST = xfalse],
+      [gt_MSG_ERROR([gtlextools is needed for many tests
+        pipx install git+https://github.com/divvun/giellaltlextools
+      ])],
+      AC_MSG_RESULT([yes]))
+_gtlextools_min_version=0.6.4
+gtlextools_too_old_message="gtlextools needs to be updated.
+    If you installed it with pipx, run:
+        pipx upgrade GiellaLTLexTools"
+AC_MSG_CHECKING([if gtlextools is up-to-date])
+AS_IF([test x$GTMULTICHARTEST = xfalse],
+      [gt_MSG_ERROR([gtlextools is too old and missing some stuff, do:
+        pipx upgrade giellaltlextools
+      ])],
+      AC_MSG_RESULT([yes]))
+AS_IF([test "x${GTLEMMATEST}" != xno],
+        [_gtlextools_version=$( "${GTLEMMATEST}" --version | sed -e 's/^.*gtlemmatest //')],
+        [_gtlextools_version=0])
+AC_MSG_CHECKING([whether the gtlextools version is at least $_gtlextools_min_version])
+AX_COMPARE_VERSION([$_gtlextools_version], [ge], [$_gtlextools_min_version],
+                   [gtlextools_version_ok=yes], [gtlextools_version_ok=no])
+AS_IF([test "x${gtlextools_version_ok}" != xno],
+      [AC_MSG_RESULT([yes: $_gtlextools_version])],
+      [gt_MSG_ERROR([$gtlextools_too_old_message])])
+
 
 # Enable all spellers - default is 'no'
 AC_ARG_ENABLE([spellers],
@@ -782,21 +749,8 @@ AC_ARG_ENABLE([spellers],
               [enable_spellers=$enable_all_tools])
 AS_IF([test "x$enable_grammarchecker" != xno],[enable_spellers=yes])
 AS_IF([test "x$enable_spellers" != xno -a "x$BC" = xfalse],
-      [AC_MSG_ERROR([counting statistics for spell-checkers requires bc, install or disable spellers])])
+      [gt_MSG_ERROR([counting statistics for spell-checkers requires bc, install or disable spellers])])
 AM_CONDITIONAL([WANT_SPELLERS], [test "x$enable_spellers" != xno])
-
-# Enable hfst desktop spellers - default is 'yes' (but dependent on
-# --enable-spellers)
-AC_ARG_ENABLE([hfst-desktop-spellers],
-              [AS_HELP_STRING([--enable-hfst-desktop-spellers],
-                              [build hfst desktop spellers (dependent on --enable-spellers) @<:@default=yes@:>@])],
-              [enable_desktop_hfstspellers=$enableval],
-              [enable_desktop_hfstspellers=yes])
-AS_IF([test "x$enable_spellers" = xno -o "x$gt_prog_hfst" = xno], [enable_desktop_hfstspellers=no],
-      [AS_IF([test "x$ZIP" = "xfalse"],
-             [enable_desktop_hfstspellers=no
-              AC_MSG_ERROR([zip missing - required for desktop zhfst spellers])])])
-AM_CONDITIONAL([WANT_HFST_DESKTOP_SPELLER], [test "x$enable_desktop_hfstspellers" != xno])
 
 # Enable minimised fst-spellers by default:
 AC_ARG_ENABLE([minimised-spellers],
@@ -819,7 +773,7 @@ AC_ARG_ENABLE([fomaspeller],
 AS_IF([test "x$enable_fomaspeller" = "xyes" -a "x$gt_prog_hfst" != xno],
       [AS_IF([test "x$GZIP" = "xfalse"],
              [enable_fomaspeller=no
-              AC_MSG_ERROR([gzip missing - required for foma spellers])])])
+              gt_MSG_ERROR([gzip missing - required for foma spellers])])])
 AM_CONDITIONAL([CAN_FOMA_SPELLER], [test "x$enable_fomaspeller" != xno])
 
 # Enable hfst mobile spellers - default is 'no' (dependent on --enable-spellers)
@@ -831,18 +785,17 @@ AC_ARG_ENABLE([hfst-mobile-speller],
 AS_IF([test "x$enable_spellers" = xno -o "x$gt_prog_hfst" = xno], [enable_mobile_hfstspeller=no],
       [AS_IF([test "x$XZ" = "xfalse"],
              [enable_mobile_hfstspeller=no
-              AC_MSG_ERROR([xz is missing - required for mobile zhfst spellers])])])
+              gt_MSG_ERROR([xz is missing - required for mobile zhfst spellers])])])
 AM_CONDITIONAL([WANT_HFST_MOBILE_SPELLER], [test "x$enable_mobile_hfstspeller" != xno])
 
-# Enable Vfst-based spellers - default is no
-AC_ARG_ENABLE([vfstspeller],
-              [AS_HELP_STRING([--enable-vfstspeller],
-                              [build vfst speller (dependent on --enable-hfst-mobile-speller) @<:@default=no@:>@])],
-              [enable_vfstspeller=$enableval],
-              [enable_vfstspeller=no])
-AS_IF([test "x$enable_vfstspeller" = "xyes" -a "x$enable_mobile_hfstspeller" = xno],
-              [enable_vfstspeller=no])
-AM_CONDITIONAL([WANT_VFST_SPELLER], [test "x$enable_vfstspeller" != xno])
+AC_ARG_ENABLE([neural-speller],
+              [AS_HELP_STRING([--enable-neural-speller],
+                              [build neural speller with opennmt-py @<:@default=no@:>@])],
+              [enable_neural_speller=$enableval],
+              [enable_neural_speller=no])
+AS_IF([test "x$enable_neural_speller" = xyes -a x$ONMT_TRAIN = xno],
+      [gt_MSG_ERROR([onmt_train is required for --enable-neural-speller: use pip install opennmt-py])])
+AM_CONDITIONAL([WANT_NEURAL_SPELLERS], [test "x$enable_neural_speller" != xno])
 
 ## Disable Hunspell production by default:
 #AC_ARG_ENABLE([hunspell],
@@ -861,7 +814,7 @@ AC_ARG_ENABLE([pattern-hyphenators],
               [enable_pattern_hyphenators=no])
 AS_IF([test "x$enable_pattern_hyphenators" = "xyes" -a "x$PATGEN" = "xfalse"],
       [enable_pattern_hyphenators=no
-       AC_MSG_ERROR([patgen required for building pattern hyphenators])])
+       gt_MSG_ERROR([patgen required for building pattern hyphenators])])
 
 # Enable fst hyphenator - default is 'no'
 AC_ARG_ENABLE([fst-hyphenator],
@@ -901,8 +854,8 @@ AC_ARG_ENABLE([L2],
               [enable_L2=no])
 AS_IF([test x$enable_oahpa = xno], [enable_L2=no],
     [AS_IF([test x$enable_L2 != xno -a \
-      "$(find ${srcdir}/src -name "*-L2.*" | head -n 1)" = "" ],
-      [AC_MSG_ERROR([You asked for the L2 analyser, but no L2 files were found])])])
+      "$(find ${srcdir}/src/fst -name "*-L2.*" | head -n 1)" = "" ],
+      [gt_MSG_ERROR([You asked for the L2 analyser, but no L2 files were found])])])
 AM_CONDITIONAL([WANT_L2], [test "x$enable_L2" != xno])
 
 # Enable downcasing error fst's for Oahpa:
@@ -919,7 +872,8 @@ AC_ARG_ENABLE([phonetic],
               [AS_HELP_STRING([--enable-phonetic],
                               [enable phonetic transducers @<:@default=no@:>@])],
               [enable_phonetic=$enableval],
-              [enable_phonetic=no])
+              [enable_phonetic=$enable_all_tools])
+AS_IF([test "x$enable_tts" != xno],[enable_phonetic=yes])
 AM_CONDITIONAL([WANT_PHONETIC], [test "x$enable_phonetic" != xno])
 
 # Enable Apertium transducers - default is 'no'
@@ -930,10 +884,10 @@ AC_ARG_ENABLE([apertium],
               [enable_apertium=$enable_all_tools])
 AS_IF([test "x$enable_apertium" = "xyes" -a "x$new_enough_python_available" = "xno"],
       [enable_apertium=no
-       AC_MSG_ERROR([Python3 missing or too old, Python 3.5 or newer required])])
+       gt_MSG_ERROR([Python3 missing or too old, Python 3.5 or newer required])])
 AS_IF([test "x$enable_apertium" = "xyes" -a "x$CG_RELABEL" = "xno"],
       [enable_apertium=no
-       AC_MSG_ERROR([Apertium enabled but cg-relabel not found. Please install Vislcg3.])])
+       gt_MSG_ERROR([Apertium enabled but cg-relabel not found. Please install Vislcg3.])])
 AM_CONDITIONAL([WANT_APERTIUM], [test "x$enable_apertium" != xno])
 
 # Enable CG-based MT - default is 'no'
@@ -943,9 +897,9 @@ AC_ARG_ENABLE([cgmt],
               [enable_cgmt=$enableval],
               [enable_cgmt=no])
 AS_IF([test "x$enable_cgmt" = "xyes" -a "x$GTPRIV" = "x"],
-      [AC_MSG_ERROR([\$\$GTPRIV not set! CG-based MT requires access to closed-source tools in GTPRIV])])
+      [gt_MSG_ERROR([\$\$GTPRIV not set! CG-based MT requires access to closed-source tools in GTPRIV])])
 AS_IF([test x$enable_tokenisers = xno -a x$enable_cgmt = xyes],
-    [AC_MSG_ERROR([You need to enable tokenisers to build CG-based MT])])
+    [gt_MSG_ERROR([You need to enable tokenisers to build CG-based MT])])
 AM_CONDITIONAL([CAN_CGMT], [test "x$enable_cgmt" != xno])
 
 # Enable building of abbr.txt:
@@ -955,12 +909,22 @@ AC_ARG_ENABLE([abbr],
               [enable_abbr=$enableval],
               [enable_abbr=no])
 AS_IF([test x$enable_abbr != xno -a \
-    "$(find ${srcdir}/src/fst/stems/ -name "abbreviations.lexc" | head -n 1)" = "" ],
-    [AC_MSG_ERROR([You asked for abbr.txt generation, but have no file \
-src/fst/stems/abbreviations.lexc])])
+    "$(find ${srcdir}/src/fst/morphology/stems -name "abbreviations.lexc" | head -n 1)" = "" ],
+    [gt_MSG_ERROR([You asked for abbr.txt generation, but have no file \
+src/fst/morphology/stems/abbreviations.lexc])])
 AS_IF([test x$enable_abbr = xyes -a x$enable_generators = xno],
-    [AC_MSG_ERROR([You need to enable generators to build the abbr file])])
+    [gt_MSG_ERROR([You need to enable generators to build the abbr file])])
 AM_CONDITIONAL([WANT_ABBR], [test "x$enable_abbr" != xno])
+
+# Enable emojis in various stuffs - default is 'no' (because slow)
+AC_ARG_ENABLE([emoji],
+              [AS_HELP_STRING([--enable-emoji],
+                              [enable emoji @<:@default=no@:>@])],
+              [enable_emoji=$enableval],
+              [enable_emoji=no])
+AS_IF([test x$enable_emoji = xyes -a x$enable_transcriptors = xno],
+    [gt_MSG_ERROR([You need to enable transcriptors to build emojis for spellers])])
+AM_CONDITIONAL([WANT_EMOJIS], [test "x$enable_emoji" != xno])
 
 # Enable building tokenisers - default is 'no'
 AC_ARG_ENABLE([tokenisers],
@@ -969,7 +933,7 @@ AC_ARG_ENABLE([tokenisers],
               [enable_tokenisers=$enableval],
               [enable_tokenisers=$enable_all_tools])
 AS_IF([test x$enable_tokenisers = xyes -a x$enable_analysers = xno],
-    [AC_MSG_ERROR([You need to enable analysers to build tokenisers])])
+    [gt_MSG_ERROR([You need to enable analysers to build tokenisers])])
 AM_CONDITIONAL([WANT_TOKENISERS], [test "x$enable_tokenisers" != xno])
 
 # Enable analyser tool - default is 'no' (via $enable_all_tools)
@@ -980,9 +944,9 @@ AC_ARG_ENABLE([analyser-tool],
               [enable_analyser_tool=$enable_all_tools])
 AS_IF([test "x$enable_analyser_tool" = "xyes" -a "x$gt_prog_vislcg3" = "xno"],
       [enable_analyser_tool=no
-       AC_MSG_ERROR([vislcg3 missing or too old - required for the analyser tool])])
+       gt_MSG_ERROR([vislcg3 missing or too old - required for the analyser tool])])
 AS_IF([test x$enable_tokenisers = xno -a x$enable_analyser_tool = xyes],
-    [AC_MSG_ERROR([You need to enable tokenisers to build the analyser tool])])
+    [gt_MSG_ERROR([You need to enable tokenisers to build the analyser tool])])
 AM_CONDITIONAL([WANT_ANL_TOOL], [test "x$enable_analyser_tool" != xno])
 
 # Enable building morphers - default is 'no'
@@ -1001,10 +965,18 @@ AC_ARG_ENABLE([dialects],
               [enable_dialects=no])
 AS_IF([test "x$enable_dialects" = "xyes" -a "x$DIALECTS" = "x"],
       [enable_dialects=no
-       AC_MSG_ERROR([You have not defined any dialects. Please see the documentation.])])
+       gt_MSG_ERROR([You have not defined any dialects. Please see the documentation.])])
 AM_CONDITIONAL([WANT_DIALECTS], [test "x$enable_dialects" != xno])
 
-# Enable dialect-specific analysers and tools, such as spellers:
+# Enable alternative orthographies, OFF by default, even when defined:
+AC_ARG_ENABLE([altorths],
+              [AS_HELP_STRING([--enable-altorths],
+                              [build tools for alternative orthographies @<:@default=no@:>@])],
+              [enable_altorths=$enableval],
+              [enable_altorths=no])
+AM_CONDITIONAL([WANT_ALT_ORTHS], [test "x$enable_altorths" != xno])
+
+# Enable custom fst's:
 AC_ARG_ENABLE([custom-fsts],
               [AS_HELP_STRING([--enable-custom-fsts],
                               [build custom fst’s @<:@default=no@:>@])],
@@ -1012,21 +984,12 @@ AC_ARG_ENABLE([custom-fsts],
               [enable_custom_fsts=$DEFAULT_CUSTOM_FSTS])
 AM_CONDITIONAL([WANT_CUSTOM_FSTS], [test "x$enable_custom_fsts" != xno])
 
-# Enable TTS transcriptors - default is 'no' (via $enable_all_tools)
-AC_ARG_ENABLE([tts],
-              [AS_HELP_STRING([--enable-tts],
-                              [enable tts transcriptors @<:@default=no@:>@])],
-              [enable_tts=$enableval],
-              [enable_tts=$enable_all_tools])
-AS_IF([test x$enable_tts = xyes -a x$enable_transcriptors = xno],
-    [AC_MSG_ERROR([You need to enable transcriptors to build tts])])
-AS_IF([test x$enable_tts = xyes -a x$enable_phonetic = xno],
-    [AC_MSG_ERROR([You need to enable phonetic to build tts])])
-AS_IF([test x$enable_tts = xyes -a x$enable_tokenisers = xno],
-    [AC_MSG_ERROR([You need to enable phonetic to build tts])])
-AM_CONDITIONAL([WANT_TTS], [test "x$enable_tts" != xno])
-enableval=''
-
+AC_ARG_ENABLE([slow-tests],
+              [AS_HELP_STRING([--enable-slow-tests],
+                              [run slow tests in check @<:@default=no@:>@])],
+              [enable_slow_tests=$enableval],
+              [enable_slow_tests=no])
+AM_CONDITIONAL([WANT_SLOW_TESTS], [test "x$enable_slow_tests" != xno])
 
 ]) # gt_ENABLE_TARGETS
 
@@ -1059,7 +1022,7 @@ AS_IF([test x$with_shared_$1 != xfalse], [
             ],
             [
                 gt_SHARED_$1=false
-                AC_MSG_WARN([Could not find $2 data dir to set $1])
+                gt_MSG_WARN([Could not find $2 data dir to set $1])
                 gt_SHARED_FAILS="$2"
             ])
         ])
@@ -1067,6 +1030,32 @@ AS_IF([test x$with_shared_$1 != xfalse], [
 AC_MSG_RESULT([$gt_SHARED_$1])
 AC_ARG_VAR([gt_SHARED_$1], [directory for shared $1 data])
 ]) # gt_USE_SHARED
+
+################################################################################
+# Define function to require version for shared targets
+################################################################################
+# Usage: gt_USE_SHARED(NAME, SHARED REPONAME, [PKG-CONFIG NAME], VERSION)
+# where, NAME is used as the variable name: gt_SHARED_$NAME, and
+#        REPONAME is used as directory name and pkg-config name
+#        PKG-CONFIG NAME is pkg-config name of dependency if different from $2
+#        VERSION is pkg-config atleast version spec
+
+AC_DEFUN([gt_NEED_SHARED],[
+gt_USE_SHARED([$1])
+THIS_TOP_SRC_DIR=$BUILD_DIR_PATH/$MYSRCDIR
+_gt_shared_$1_min_version=$4
+_gt_pkg_name=m4_default([$3], [$2])
+AS_IF([test -d "$THIS_TOP_SRC_DIR"/../$2],
+      [flub=$PKG_CONFIG_PATH
+       export PKG_CONFIG_PATH=$THIS_TOP_SRC_DIR/../$2:$PKG_CONFIG_PATH
+       PKG_CHECK_MODULES([SHARED_STUFF], [$_gt_pkg_name >= $_gt_shared_$1_min_version],
+             [AC_MSG_NOTICE([NB using $2 in $THIS_TOP_SRC_DIR/../$2])],
+             [gt_MSG_ERROR([$2 needs to be updated, cd ../$2 and git pull and build])])
+       export PKG_CONFIG_PATH=$flub],
+      [PKG_CHECK_MODULES([SHARED_STUFF], [$_gt_pkg_name >= $_gt_shared_$1_min_version],
+             [AC_MSG_RESULT([NB using system $2])],
+             [gt_MSG_ERROR([$3 needs to be updated and installed])])])
+]) # gt_NEED_SHARED
 
 ################################################################################
 # Define function to print the configure footer
@@ -1098,19 +1087,17 @@ cat<<EOF
   * hyphenators:
     * fst hyphenator enabled: $enable_fst_hyphenator
     * pattern hyphenator enabled (requires fst hyph): $enable_fst_hyphenator
-  * spellers (zhfst files) enabled: $enable_spellers
-    * desktop spellers:
-      * installable packages enabled: $enable_desktop_hfstspellers
-      * foma speller enabled: $enable_fomaspeller
-    * mobile spellers (off by default, even with spellers enabled):
-      * hfst speller enabled: $enable_mobile_hfstspeller
-      * vfst speller enabled: $enable_vfstspeller
+  * spellers:
+    * zhfst desktop speller enabled: $enable_spellers
+    * foma speller enabled: $enable_fomaspeller
+    * mobile speller enabled: $enable_mobile_hfstspeller
+    * neural speller enabled: $enable_neural_speller
   * grammar checker enabled: $enable_grammarchecker
 
 -- Building $PACKAGE_STRING (more specialised build targets listed above):
 
   -- Fst build tools: Xerox, Hfst or Foma - at least one must be installed
-  * build Xerox fst’s: $gt_prog_xfst (default: $DEFAULT_XFST)
+  * build Xerox fst’s: discontinued 2025
   * build HFST fst’s: $gt_prog_hfst (default: $DEFAULT_HFST)
   * build Foma fst’s: $gt_prog_foma (default: $DEFAULT_FOMA)
 
@@ -1128,16 +1115,19 @@ To build, test and install:
     make
     make check
     make install
+The developers’ version of the test suite is available under:
+    make devtest
+this version does not halt on errors and should be useful when fixing bugs
 EOF
 AS_IF([test x$gt_prog_xslt = xno -a \
-      "$(find ${srcdir}/src/fst/stems -name "*.xml" | head -n 1)" != "" ],
-      [AC_MSG_WARN([You have XML source files, but XML transformation to LexC is
+      "$(find ${srcdir}/src/fst/morphology/stems -name "*.xml" | head -n 1)" != "" ],
+      [gt_MSG_WARN([You have XML source files, but XML transformation to LexC is
 disabled. Please check the output of configure to locate any problems. The LexC
 files will still compile though.
 ])])
 
 AS_IF([test x$can_local_sync = xno -a x$can_wget_giella_libs = xno],
-      [AC_MSG_WARN([Could not find GIELLA_LIBS, rsync or wget - speller installers will not be built, only zhfst files.])])
+      [gt_MSG_WARN([Could not find GIELLA_LIBS, rsync or wget - speller installers will not be built, only zhfst files.])])
 
 AS_IF([test x$can_wget_giella_libs = xyes],
       [AC_MSG_NOTICE([Could not find GIELLA_LIBS, but found wget - speller installers will be built, but requires a live Internet connection.])])
@@ -1150,18 +1140,8 @@ AS_IF([test "x$fallback_to_hfst" != x ],
 AS_IF([test "x$fallback_to_foma" != x ],
       [AC_MSG_NOTICE([$fallback_to_foma])])
 
-dnl stick important warnings to bottom
-dnl YAML test warning:
-AS_IF([test "x$enable_yamltests" = "xno"],
-      [AC_MSG_WARN([YAML testing could not be automatically enabled. To enable it, on MacOSX please do:
-
-sudo port install python35 py35-pip
-sudo pip-3.5 install PyYAML
-
-On other systems, install python 3.5+ and the corresponding py-yaml using suitable tools for those systems.])])
-
 AS_IF([test "x$gt_SHARED_FAILS" != "x"],
-      [AC_MSG_WARN([This language depends on $gt_SHARED_FAILS which is missing, some parts of language models may be missing.
+      [gt_MSG_WARN([This language depends on $gt_SHARED_FAILS which is missing, some parts of language models may be missing.
 
 to get missing components fetch and build https://github.com/giellalt/$gt_SHARED_FAILS:
 
@@ -1169,5 +1149,33 @@ cd ..
 git clone git@github.com:giellalt/$gt_SHARED_FAILS
 cd $gt_SHARED_FAILS
 ./autogen.sh && ./configure && make])])
+AS_IF([test "x$gt_need_gnu_make" = xyes],
+      [tput setaf 1
+       AC_MSG_ERROR([GNU make 4+ is required to build giellalt:
+
+if you are using a MacOS and homebrew do:
+    brew install make
+and setup following the instructions given or at https://formulae.brew.sh/formula/make:
+    PATH="\$HOMEBREW_PREFIX/opt/make/libexec/gnubin:\$PATH"
+into your .zshrc or .bashrc.
+
+if you are using a MacOS and macports do:
+    sudo port install gmake
+and setup following instructions given:
+    PATH="/opt/local/libexec/gnubin:\$PATH"
+See https://github.com/giellalt/giella-core/issues/79 for background and further instructions
+
+If you updated gnu make but still get this error–the PATH setting has probably not worked;
+    make --version
+should print something like:
+    GNU Make 4.4.1
+if it shows you:
+    GNU Make 3.81
+it means that it uses Apple's make version. (sometimes restart after changing zshrc or bashrc can help)
+])
+       tput sgr0])
+AS_IF([test x$enable_configure_errors = xno],
+      [AC_MSG_NOTICE([THIS BUILD HAS CONFIGURE ERRORS DISABLED AND YOU MAY NOT REPORT BUGS ABOUT IT])])
 ]) # gt_PRINT_FOOTER
+
 # vim: set ft=config:

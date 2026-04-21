@@ -1,4 +1,4 @@
-# An alternative to grammarchecker.cg3 that just does spelling.
+# Trying to disambiguate spelling suggestions. Used to be an alternative to grammarchecker.cg3 that just does spelling.
 
 MAPPING-PREFIX = & ;
 DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" "<\n\n>" ;
@@ -7,10 +7,9 @@ DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" "<\n\n>" ;
 #LIST Ela = Ela ;
 LIST Case = Ela Ine Acc ;
 
-ADD:spelled (&typo &SUGGESTWF) (<spelled>) ;
+# NB: We do *not* add the mapping tag &SUGGESTWF here, but in grammarchecker.cg3 instead, since we want to be able to ADD more than one &tag to the same reading in grammarchecker.cg3
+# ADD:spelled (&typo &SUGGESTWF) (<spelled>) ;
 
-ADD:Err/Orth (&typo) (Err/Orth) (NOT 0 (*) - (Err/Orth)) ;
-COPY:Err/Orth (&SUGGEST) EXCEPT (Ex/N Ex/V Ex/A Ex/IV Ex/TV Err/Orth) TARGET (Err/Orth &typo) ;
 
 REMOVE:MinusEla (Attr) + Case - (Ela) IF (1C (N Ela));
 	## Mohte ij mij gænnah aktehte biejjeste måbpan maehtieh varhtodh.

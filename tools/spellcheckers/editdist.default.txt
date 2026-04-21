@@ -1,35 +1,4 @@
 ## Inclusions: this is the real alphabet definition:
-A
-B
-C
-D
-E
-F
-G
-H
-I
-Ï
-J
-K
-L
-M
-N
-O
-P
-R
-S
-T
-U
-V
-W
-X
-Y
-Z
-Ä
-Ö
-Æ
-Ø
-Å
 a
 b
 c
@@ -62,25 +31,31 @@ z
 ø
 å
 -	50
-.
 :
 
 ## Transition pairs + weight - section separator:
 @@
 
 ## Transition pair specifications + weight:
-a	e	4
-i	ï	0.1
+a	e	3
+a	o	3
+b	p	4
+d	t	4
+e	a	3
+e	i	4
+i	ï	0
 ï	i	2
 i	æ	4
 o	å	5
-o	u	7
-p	b	7
+o	u	4
+p	b	4
+u	å	3
+u	e	4
 æ	a	4
 æ	i	4
 ä	a	4
-ä	æ	1
-ø	ö	1
+ä	æ	0
+ø	ö	0
 å	o	4
 -	:	2
 
@@ -94,3 +69,4 @@ e,a	a,e	4
 a,e	e,a	4
 d,l	l,d	4
 s,j	j,s	4
+h,j	j,h	2

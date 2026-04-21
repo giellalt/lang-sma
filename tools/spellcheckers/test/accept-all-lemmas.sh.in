@@ -1,0 +1,54 @@
+#!/bin/bash
+# test script for speller accepting all lemmas
+#
+# change settings here:
+source_files="@abs_top_srcdir@/src/fst/morphology/stems/*.lexc
+    @abs_top_builddir@/src/fst/morphology/generated_files/smi-sma-a[bc]*.lexc
+    @abs_top_builddir@/src/fst/morphology/generated_files/smi-sma-proper*.lexc"
+speller_dir=@abs_builddir@/../
+# advanced settings
+exclusions="--exclude (ab-dot-|\sIj\s;|\sSCND\s|\sTHRD\s|\sFRTH\s|\sDYN_ACRO_cons\s|\sDYN_ACRO_vow\s|mij%\sgih)"
+GIELLA_LANG=@GTLANG2@
+speller_dir=@abs_builddir@/../
+speller_archive=$speller_dir/$GIELLA_LANG.zhfst
+
+# avoid changing common scripting stuff here
+. "$GIELLA_CORE/scripts/termcolors.bash"
+genscript=@GTSPELLTEST@
+divvunspell=@DIVVUNSPELL@
+
+# ensure this is proper run from make check or otherwise set up
+if test -z "$srcdir" ; then
+    printf "%sfail%s %s needs to run from make check or set srcdir=.\n" "$red" \
+        "$reset" "$0"
+    exit 1
+fi
+if ! test -f "$genscript" ; then
+    printf "%sskip%s missing generator script %s\n" "$light_blue" "$reset" \
+        "$genscript"
+    exit 77
+fi
+if ! test -f "$divvunspell" ; then
+    printf "%sskip%s missing divvunspell\n" "$light_blue" "$reset"
+    exit 77
+fi
+for f in $source_files ; do
+    if ! test -f "$f" ; then
+        printf "%sfail%s no lexc files matching %s\n" "$red" "$reset" "$f"
+        exit 1
+    fi
+done
+
+"$genscript" -z "$speller_archive" \
+    -D "$divvunspell" \
+    $exclusions \
+    $source_files
+
+rv=$?
+if test $rv = 77 ; then
+    printf "%sskipped%s\n" "$light_blue" "$reset"
+    exit 77
+elif test $rv -ge 1 ; then
+    printf "%sfailed%s\n" "$red" "$reset"
+    exit 1
+fi

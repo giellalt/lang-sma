@@ -2,13 +2,16 @@
 ## Copyright: Sámediggi/Divvun/UiT
 ## Licence: GPL v3+
 
+# build before test
+SUBDIRS=. test
+
 ##################################################################
 #### BEGIN: Add local processing instructions BELOW this line ####
 ##################################################################
 
 #############################################
 #### Add language-specific sources here: ####
-GT_CG_LOCAL_SRCS=korp.cg3
+GT_CG_LOCAL_SRCS=valency.cg3
 
 #############################################################
 #### Add language-specific targets to be installed here: ####
@@ -38,8 +41,9 @@ endif
 
 ####### Other targets: ###########
 clean-local:
-	-rm -f *.bin functions.cg3 dependency.cg3 korp.cg3
+	-rm -f *.bin functions.cg3 dependency.cg3
 
 ####### Build rules via include: ########
 
 include $(top_srcdir)/../giella-core/am-shared/src-syntax-dir-include.am
+include $(top_srcdir)/../giella-core/am-shared/devtest-include.am

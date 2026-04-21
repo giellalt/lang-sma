@@ -2,7 +2,7 @@
 ## Copyright: Sámediggi/Divvun/UiT
 ## Licence: GPL v3+
 
-SUBDIRS = .
+SUBDIRS = . test
 
 ####### Source file names: ########
 # NB! If any of the filenames below are changed, then remember to also update
@@ -25,3 +25,4 @@ LOCAL_ANL_ZIP_FILES=
 
 #### Do NOT edit below here: ####
 include $(top_srcdir)/../giella-core/am-shared/tools-analysers-dir-include.am
+include $(top_srcdir)/../giella-core/am-shared/devtest-include.am

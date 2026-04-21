@@ -32,12 +32,200 @@ Jis Saemiedigkien stoerretjåanghkoe edtja dam sjyöhtehke aamhtesem gïetedidh 
  
 * Eksempler burde helst være ekte hele setninger fra korp
 * så teste i terminalen med følgende kommando:
+<<<<<<< HEAD
 
 echo "setning" | tools/grammarcheckers/modes/trace-smagram-dev.mode | less
 
 * Barrierer: f.eks. NOT-A = (*)
 
+=======
+echo "setning" | tools/grammarcheckers/modes/trace-smagram-dev.mode | less
+* Barrierer: f.eks. NOT-A = (*)
+>>>>>>> upstream/main
 * <TH-Com-Any>
 
 
 "Piere væjkele jïh sjïehtele maanajgujmie."
+<<<<<<< HEAD
+=======
+
+
+
+
+Motereferat fra 8/11/2022
+
+
+legg til i lexc:
+
+1) oransje 
+
+2) gå igjennom tab og sette inn
+
+3) sjyöhtehle + alle farger = sjekk opp disse systemtatisk
+
+4) etnihkee 
+
+5) pedagogleles - pedagåågles /pedagogihke 
+
+6) saemien = ikke som Sg.Nom - bare attr. 
+
+7) monnehke
+
+
+Viktige kommandoer:
+  
+  Kjöre test med denne: 
+gramcheck-test.py Syn_Pred_Attr.yaml 
+
+
+8) negation- test: bare skriv ordet som er feil og ikke begge (ij lin) -(eah lin) - merk bare *ij -til *eah
+
+
+Motereferat 2.desemeber 2022: 
+
+Jobbet med CG-regler:  
+
+
+1) legg til i lexicon: Rakele
+
+2) Skrive regel for Con-neg: Ean edtjh 
+
+
+Regler: 
+
+1)
+jeg ikke -  im båetieh
+jeg ikke (pret)- idtjim båetieh
+
+
+2) - kopula - er ikke/ var ikke
+
+er ikke - jeg er ikke - im leah desnie
+var ikke - jeg var ikke  - im lim desnie
+                           ih lih
+                           ij lij 
+                           
+                           ij limen - ean limen 
+                           ij liden - idien liden
+                           ij ligan - eakan lægan
+                           
+                           ij limh - ibie limh
+                           ij lidh - idie lidh
+                           ij lin - eah lin 
+                           
+                           
+VIKTIGE NOTATER i chatmøte med Linda:
+
+5.12.2022
+
+"¥" bruker vi bare når vi flytter på ord eller når vi tar noe bort eller legger noe til, eller når vi fjerner mellomrom med sammensatte ord. - ren syntaks 
+
+"£" - er morfosyntaks - i samisk er jo det meste morfosyntaks
+
+
+8.12: artikkel
+
+MOTEREDERAT fra: 9.desember 2022
+
+Legg til
+
+gåabpege
+gåabpegen
+
+Disambiguator-fila: 
+
+SELECT:1337 
+REMOVE: 
+
+Grammarvheckerfila: 
+
+ADD
+COPY
+
+
+17:02.2023: 
+
+Lexicon: 
+
+
+1)  nuekies / nuekie =prediaktiv + adv.
+
+
+2) monnehke vs. nænnoes - må være attr ved cmp. 
+
+Linda Wiechetek: "<nuekies>"
+"nuekies" Adv <W:0.0> <sma> ADD:2187:sme
+; "nuekies" A Attr <W:0.0> REMOVE:1607:AdvNotA
+
+Linda Wiechetek: "<monnehkevoete>"
+"monnehke" Ex/A Ex/Attr Der/vuota N Sg Nom <W:0.0> <sma> ADD:2187:sme
+; "voete" N Sem/Dummytag Sg Nom <W:0.0>
+; "monnehke" A Cmp/Attr Cmp <W:0.0> REMOVE:2004:longest-match
+
+3) gå igjennom fp - merke opp i yaml-filer + sjekk ev. også i lexicon
+
+4) 
+
+Kommando: 
+
+echo "Manne joekoen madtjeles Laanteburrie- jïh beapmoedepartemeente (LBD) daelie sæjhta vuertedh goske dïhte saemien laakemoenehtse sov barkoem dorjeme jïh sov juvnehtimmiejgujmie båateme, jïh aaj departemeente jeahta dah sijhtieh moenehtsen jarkelimmieraeriestimmieh båatsoelaakeste vuarjasjidh, saemiedigkieraerie Silje Karine Muotka jeahta." | tools/grammarcheckers/modes/trace-smagram-dev.mode | less
+
+
+
+
+Mote Linda 17/02-2023
+
+lekse.:
+
+samle setninger til yaml-tester
+leite etter fp
+
+1) Kjøre yaml test med gramcheck-test.py
+
+2) Lete etter "FAIL fp"
+
+3) Sjekke om de burde merkes opp i yaml fila
+
+Kommando for å kjöre hele yaml-tester: 
+ gramcheck-test.py msyn_Syn_Attr_Pred.yaml 
+
+4) Modeskommando: 
+
+ "Manne joekoen madtjeles Laanteburrie- jïh beapmoedepartemeente (LBD) daelie sæjhta vuertedh goske dïhte saemien laakemoenehtse sov barkoem dorjeme jïh sov juvnehtimmiejgujmie båateme, jïh aaj departemeente jeahta dah sijhtieh moenehtsen jarkelimmieraeriestimmieh båatsoelaakeste vuarjasjidh, saemiedigkieraerie Silje Karine Muotka jeahta." | tools/grammarcheckers/modes/trace-smagram-dev.mode | less
+ 
+ 
+ 
+ MOTE med Linda: 27/03/2023
+ 
+ 
+adjektiv-systemet er under sterk endring, fra 4 klasser til 2 klasser (Trosterud/Kappfjellundersökelsen) - også negation (artikkel)
+
+Grammarchecker skal hindre disse språkendringene - 
+
+Det er dette denne artikkelen skal handle om. 
+
+
+
+Linda Wiechetek: \cite[p.24]{Sammallahti-1998b}
+
+Linda Wiechetek: \cite{Sammallahti-1998b}
+
+Linda Wiechetek: sma.correct-no-gs-2023-03-06.txt
+
+Linda Wiechetek: du kan lete etter "msyn-adj-pred-attr"
+
+Linda Wiechetek: freecorpus/goldstandard/converted/sma/ficti/other_files/sorsamisk-valprogram.correct.txt.xml
+
+Linda Wiechetek: freecorpus/orig/sma/ficti/other_files/sorsamisk-valprogram.correct.txt
+
+Linda Wiechetek: ta bort goldstandard/converted og skrive orig
+
+Linda Wiechetek: og ta bort .xml
+
+
+Divvun-uke
+Mote med Linda: mark-up + artikkel 
+Startet opp arbeidet med å legge til tekst til recording
+
+ 
+>>>>>>> upstream/main

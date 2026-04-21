@@ -12,9 +12,10 @@ REGEX_SRCS=modify-tags.regex
 
 # cleaning
 clean-local:
-	-rm -f *.hfst *.relabel *tags.txt
+	-rm -f *.hfst *tags.txt
 
 ##########################################
 # General build rules included from here:#
 
 include $(top_srcdir)/../giella-core/am-shared/tools-mt-apertium-tagsets-dir-include.am
+include $(top_srcdir)/../giella-core/am-shared/devtest-include.am

@@ -1,0 +1,1188 @@
+# Divvun & Giellatekno - open source grammars for Sámi and other languages
+# Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+# http://giellatekno.uit.no & http://divvun.no
+#
+# This program is free software; you can redistribute and/or modify
+# this file under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version. The GNU General Public License
+# is found at http://www.gnu.org/licenses/gpl.html. It is
+# also available in the file $GTHOME/LICENSE.txt.
+#
+# Other licensing options are available upon request, please contact
+# giellatekno@uit.no or feedback@divvun.no
+
+# typos.txt
+# This file contains common typos and their corrections separated by
+# a <tab> character, optionally followed by a comment. That is, the
+# format is: three columns, separated by TAB:
+#
+# Column 1: error word/typo
+# Column 2: correction
+# Column 3: Comment, starting with # or !
+#
+# Example:
+#
+# leif	feil	# This is just an example
+#
+# Corrections that consist of two or more parts are not splitted
+# further in the preprocessor, because there is no way of knowing
+# whether the token is multipart expression or not.
+# Beware of removing sentence delimiters (.!?) in correction, since
+# they may indicate sentence boundaries.
+#
+#
+mnngan	mænngan	#_add1
+ryökneme-buerkestimmine	ryöknemebuerkiestimmine
+tjaalegeååhpetje	tjaalehåahpetje
+nueleln	nuelesne
+njieljehts	njealjehts
+edtjægan	edtjigan
+dïenere	deanere
+Jupmelistie	Jupmielistie	#_add1
+Romsen	Romsan	#_subst1
+Saemidigkie	Saemiedigkie	#_add1
+Snåasan	Snåasen	#_subst1
+Voestemes	Voestes
+Zealaantesnie	Zealaantesne	#_del1 #_accents_plus
+adjektiv	adjektijve	#_loansuffix
+adjektivi	adjektijvi	#_add1
+aeriebistie	aarebistie
+attributte	attribuhte
+barkieh	berkieh	#_subst1
+gaajhk	gaajhke	#_add1
+eatname	eatneme	#_subst1
+eatnamem	eatnemem	#_subst1
+eatnamen	eatnemen	#_subst1
+edtjibie	edtjebe	#_samisuffix
+edtjibie	edtjijibie
+edtjidie	edtjede	#_samisuffix
+bøøremeslaakan	bööremeslaakan	#_subst_accents #_accents_plus
+eevtiedidh	evtiedidh	#_double2one #_vowels #_transpose1_plus #_accents_plus
+evtietidh	evtiedidh	#_subst1
+fejjen	feejjen	#_one2double #_transpose1_plus #_accents_plus
+gaskoe	gaskoeh	#_add1
+gellesh	gallesh	#_subst1
+gierve	gïerve	#_subst_accents #_vowels
+jienedidh	jieniedidh	#_add1
+jieleminie	jielieminie	#_add1
+daltesne	daltesisnie
+jienedidh	jieniedidh	#_add1
+ennh	enn	#_del1
+institusjovh	institusjovnh	#_add1
+gaskenasjovnale	gaskenasjonaale
+gaajhksidie	gaajhkesidie	#_add1
+dööpmestovline	dåapmoestovline
+Europeihke	Europeejehke
+dotnoeh	dåtnoeh	#_vowels
+alkosne	aalkosne	#_one2double #_accents_plus
+jeatjaj	jeatjah	#_subst1_kb_next
+gujth	gujht	#_transpose1 #_accents_plus
+gåerede	gåarede	#_subst1 #_vowels
+gåeti	gåetie	#_add1
+hïjven	hijven	#_subst_accents
+gååvnesje	gååvnese	#_del1
+jälloem	jalloem	#_vowels #_accents_plus
+jæhta	jeahta	#_vowels #_accents_plus
+kapittelisnie	kapihtelisnie
+kriepesje	krïebpesje
+krïepesh	krïebpesjh
+gielemoenehtasse	gïelemoenehtse
+learohkese	learoehkasse
+learohkijstie	learoehkijstie	#_add1 #_vowels
+Monnoeh	Månnoeh	#_vowels #_accents_plus
+veartnisnie	veartanisnie	#_add1
+learohkide	learoehkidie
+heevehtslidteraturh	heevehtslitteratuvrh
+lidteraturen	litteratuvren
+# kultuvrellen	kulturellen	#_del1 # correction not accepted
+juridijhken	juridihken	#_del1
+joektehts	joekehts	#_del1
+lidteraturh	litteratuvrh
+gåeredh	gåaredh	#_subst1 #_vowels
+dååhkesjahteme	dåhkasjahteme
+aamhtsegietedallemenjoelkedassh	aamhtesegïetedallemenjoelkedassh
+aelkiehte	aelkehte	#_del1 #_accents_plus
+aavoedem	aavodem	#_del1 #_vowels #_transpose1_plus #_accents_plus
+dååhkesjahtedh	dåhkasjehtedh
+Sáemiedägkan	Saemiedægkan
+diskriminereme	diskrimineereme	#_one2double #_accents_plus
+darjomesoejkesen	darjomesoejkesjen	#_add1
+learohkidie	learoehkidie	#_add1 #_vowels
+daalhksh	daalhkesh	#_add1
+buektiedidh	buektiehtidh
+barkojse	barkose	#_del1
+maab	maam
+sjeahtasovveme	sjïehtesovvedh
+miete	mietie	#_add1
+jællose	jallose	#_vowels #_accents_plus
+krïepesj	krïebpesjh
+krïepesjidh	krïebpesjidh	#_add1
+njaalmeld	njaalmeldh	#_add1
+nåeke	nåake	#_subst1 #_vowels
+provgrammesne	programmesne	#_del1
+profete	profeete	#_one2double #_accents_plus
+profeth	profeeth	#_one2double #_accents_plus
+reaktajde	reaktojde	#_subst1 #_vowels
+jælloe	jalloe	#_vowels #_accents_plus
+rijries	riejries	#_add1
+sattne	satne	#_double2one #_transpose1_plus #_accents_plus
+siebredahke	sïebredahke	#_subst_accents #_vowels
+siebredahke	seabradahke
+siebredahkese	sïebredahkese	#_subst_accents #_vowels
+siebredahkesne	sïebredahkesne	#_subst_accents #_vowels
+siemes	sïemes	#_subst_accents #_vowels
+sjïdtieh	sjidtieh	#_subst1
+soevmien	såevmien	#_vowels
+ruhtjehke	rutjkehke
+sïjhtieh	sijhtieh	#_subst1
+påajhkh	påajkh	#_del1 #_transpose1_plus
+mojhtsh	mojhtesh	#_add1
+tjaaleld	tjaaleldh	#_add1
+tjielke	tjïelke	#_subst_accents #_vowels
+tjielte	tjïelte	#_subst_accents #_vowels
+tjielten	tjïelten	#_subst_accents #_vowels
+tjieltesne	tjïeltesne	#_subst_accents #_vowels
+tjielth	tjïelth	#_subst_accents #_vowels
+tjielth	tjïelth	#_subst_accents #_vowels
+tjielti	tjïelti	#_subst1 #_vowels
+tjieltide	tjïeltide	#_subst1 #_vowels
+tjieltine	tjïeltine	#_subst1 #_vowels
+vaadta	vadta	#_double2one #_transpose1_plus #_accents_plus
+vaadteme	vadteme	#_double2one #_transpose1_plus #_accents_plus
+veardenen	veartenen	#_subst1
+vijregåbpoe	vijriegåbpoe	#_add1
+vierhtiehtidh	vierhtiedidh
+åatjoem	åadtjoem	#_add1
+kåånvensjovnine	konvensjovnine
+veadtjaldahkesne	veadtaldahkesne	#_del1
+veadaldahkesne	veadtaldahkesne	#_add1
+Njolkedassh	Njoelkedassh	#_add1 #_vowels #_accents_plus
+reaktisne	reaktesne	#_subst1 #_vowels
+Reakhtah	Reaktah	#_del1
+provkin	provhkin	#_add1
+daltine	daltesinie
+reaktavååjnoe	reaktavåajnoe	#_vowels
+kåånvensjovnesne	konvensjovnesne
+gaavtan	gaavhtan	#_add1
+alkoealmetjh	aalkoealmetjh	#_one2double #_accents_plus
+onterligksh	onterligs
+veasoejikan	veasoejigan	#_subst1
+åssjalomme	åssjalommes	#_add1
+lenkestidh	lenkiestidh	#_add1
+vienhtibie	vïenhtebe
+karamelh	karamellh	#_one2double #_accents_plus
+fuerehki	fueregi
+våhkoetjåangkojde	våhkoetjåanghkojde	#_add1
+åssjalommese	åssjalommes	#_del1 #_transpose1_plus
+Åvlavuelien	Ovlevuelien
+Årromelastoeviertieh	Årromelastoevierhtieh	#_add1
+Båeth	Båetieh
+öövtiedidh	övtiedidh	#_double2one #_transpose1_plus #_accents_plus
+öövtiedimmie	övtiedimmie	#_double2one #_transpose1_plus #_accents_plus
+øøvtiedidh	övtiedidh
+Noerhte-Trøøndelaagen	Noerhte-Tröndelaagen	#_accents_plus
+Noerhte-Trøøndelaage	Noerhte-Tröndelaage	#_accents_plus
+sjeavohts	sjeavohth
+sjaangerine	sjangerinie
+siebredahke	sïebredahke	#_subst_accents #_vowels
+gierve	gïerve	#_subst_accents #_vowels
+næmhtie	naemhtie	#_vowels #_accents_plus
+gaajhk	gaajhkh	#_add1
+fylkhesne	fylhkesne	#_transpose1 #_accents_plus
+saemma	seamma	#_transpose1 #_transpose1_plus #_accents_plus
+regijovnalen	regionaalen
+lihkebe	lïhkebe	#_subst_accents
+eatnemisnie	eatnamisnie	#_subst1
+danbien	daanbien	#_one2double #_accents_plus
+båetibie	båetebe	#_samisuffix
+eatnemasse	eatnamasse	#_subst1
+måvka	måvhkah
+mubpeden	mubpien
+substantiv	substantijve	#_loansuffix
+attributivt	attributijve	#_loansuffix
+predikativt	predikatijve	#_loansuffix
+uvre	eevre	#_vowels #_accents_plus
+uvre	öövre	#_vowels #_accents_plus
+åarjelhsaemien	åarjelsaemien	#_del1
+daejribie	daejrebe	#_samisuffix
+daejribie	daejriejibie
+maehtibie	maehtiejibie
+Daejribie	Daejrebe	#_samisuffix
+Daejribie	Daejriejibie
+daen	daan	#_subst1
+maehtie	maehtieh	#_add1
+voestemes	voestes
+siebredahkem	sïebredahkem	#_subst_accents #_vowels
+voejedallie	voejedaellie	#_add1
+na	naa	#_one2double #_accents_plus
+bæjngolsvaarjoe	bæjngoldsvaarjoe	#_add1
+soeke	soekse	#_add1
+adjektivh	adjektijvh	#_add1
+attributt	attribuhte	#_loansuffix
+åvtohke	åvtehke	#_subst1
+tryjjedidh	tråjjadidh	#_vowels #_accents_plus
+fearkasidh	færkasidh
+jyörtedh	jöörtedh	#_vowels #_accents_plus
+tjuevtjiedidh	tjuvtjiedidh	#_del1
+kroehkememaasjina	kroehkemasjijne
+tjæjodh	tjæjnodh	#_add1
+spaaneshræhkere	spaaneserehkere
+jeeste	jeestere
+eksamene	eksaamene	#_one2double #_accents_plus
+tseegksovvedh	tseegkesovvedh	#_add1
+aimetjh	almetjh
+åårganiste	organiste
+åårganisasjovnijiste	organisasjovnijste
+ällasovveme	ællasovveme	#_subst_accents #_accents_plus
+veartenistie	veartanistie	#_subst1
+gïknjelsovvedh	gïknjeldovvedh	#_subst1_kb_next
+adjektiver	adjektijvh	#_loansuffix
+attributivesne	attributijvesne	#_add1
+hoteellesne	hotellesne	#_double2one #_vowels #_transpose1_plus #_accents_plus
+gåetiessijjie	gåetiesijjie	#_double2one #_transpose1_plus #_accents_plus
+gïlmetahke	gilmehtahke
+jovkemsh	jovkemes
+risnjedh	risjnedh	#_transpose1 #_accents_plus
+nåaledh	nåalodh	#_subst1
+bovtsealmetj	bovtsealmetje	#_add1
+beensine	bensijne
+kilovmeter	kilomeetere
+sjaampove	sjampove	#_double2one #_transpose1_plus #_accents_plus
+viere	vïere	#_subst_accents #_vowels
+bearkoehkrovhte	bearkoekrovhte	#_del1
+ballka	balka	#_double2one #_transpose1_plus #_accents_plus
+baktie	baektie	#_add1
+båirhketje	bïrhketje
+muarjettjh	muarjetjh	#_double2one #_transpose1_plus #_accents_plus
+gåårtjene	gåårtenje	#_transpose1_plus
+gaertijes	gaertjies	#_transpose1 #_accents_plus
+gaajhkesjidh	gajhkesjidh	#_double2one #_transpose1_plus #_accents_plus
+daajrehtakkedh	daajrehtalledh
+batnadidh	batnanidh
+klientjiedidh	klienjiedidh	#_del1
+sinsitnie	sinsitnien	#_add1
+registreresovveme	registreeresovveme	#_one2double #_transpose1_plus #_accents_plus
+sinsitniejgujmie	sinsitnine
+revisorem	revijsorem	#_add1
+teellerhke	tallerhke
+regijovnaleministere	regionaaleministere
+raadijovaaktijve	radioaktijve
+povlitigken	politihken
+kravies	kraevies	#_add1
+giedties	giedtsies	#_add1
+öövtebe	övtebe	#_double2one #_transpose1_plus #_accents_plus
+beavleos	beavloes	#_transpose1 #_accents_plus
+jihteles	jihtseles	#_add1
+soentere	sontere	#_del1 #_vowels
+åarjelhsaemide	åarjelsaemide	#_del1
+sijhtibie	sïjhtijibie
+sijhtibie	sïjhtebe
+attrib	attr
+mænngide	minngede
+aadtjegkh	aadtjegh	#_del1
+Aadtjegkh	Aadtjegh	#_del1
+ööhpedimmie	ööhpehtimmie
+adtjegh	aadtjegh	#_one2double #_accents_plus
+tjaahkan	tjahkan	#_double2one #_transpose1_plus #_accents_plus
+stierkebe	stïerhkebe
+ræhpie	rehpie
+lierie	leara
+sjuevnede	sjuevnjede	#_add1
+sjuevneds	sjuevnjeds	#_add1
+sg	sg.
+siejhmetji	soejmetji
+TV-esne	TV:sne	#_acrosuff
+TV’esne	TV:sne
+Bull’en	Bullen	#_del1
+Komparativ	Komparatijve	#_loansuffix
+Jupmelasse	Jupmielasse	#_add1
+Attributt	Attribuhte	#_loansuffix
+komparativ	komparatijve	#_loansuffix
+govlibie	govlebe	#_samisuffix
+jijtjehke	jïjtjehke	#_subst_accents
+jijnjebh	jïjnjebh	#_subst_accents
+jijnh	jïjnjh
+vearolde	vearelde	#_subst1
+jijtjemsh	jïjtjemsh	#_subst_accents
+aalkuvesne	aalkovisnie
+jillhts	jïlhts	#_accents_plus
+gaajhksh	gaajhkesh	#_add1
+Gaajhksh	Gaajhkesh	#_add1
+sijjiesadtje	sæjjasadtje	#_vowels #_accents_plus
+sijjiesadtjh	sæjjasadtjh	#_vowels #_accents_plus
+samien	saemien	#_add1
+skaepiehtidh	skaepiedidh
+sæjhtoe	sæjtoe	#_del1
+siebredahken	sïebredahken	#_subst_accents #_vowels
+tjåanghkanidh	tjåanghkenidh	#_subst1
+aahtjebem	aehtjebem	#_subst1
+vihkelommes	vihkielommes	#_add1
+museemh	museeumh	#_add1
+tjovere	tjoevere	#_add1 #_vowels
+såangedidh	såångedidh	#_vowels #_accents_plus
+museeme	museeume	#_add1
+sopteste	soptseste	#_add1
+veenemes	vaenemes	#_subst1
+veadaldihkie	veadtaldihkie	#_add1
+øvteben	övteben	#_subst_accents
+åarjelhsaemiej	åarjelsaemiej	#_del1
+åarjelhsaemien	åarjelsaemien	#_del1
+iktsth	iktegisth
+mubpehte	mubpede
+iedtjeldahta	ïedtjeldahta	#_subst_accents #_vowels
+soejmehtji	soejmetji	#_del1
+kapittelisnie	kapihtelisnie
+jielemisnie	jieliemisnie	#_add1
+siebredahkem	sïebredahkem	#_subst_accents #_vowels
+åarjelhsaemieh	åarjelsaemieh	#_del1
+jielemasse	jieliemasse	#_add1
+kultuvrasse	kultuvrese
+jijnjesh	jïjnjesh	#_subst_accents
+prediaktivt	predikatijve
+faalaldahke	faaleldahke	#_subst1
+faalaldahkem	faaleldahkem	#_subst1
+ööhpehtimieprovgramme	ööhpehtimmieprogramme
+ööhpehtimieprovgrammen	ööhpehtimmieprogrammen
+Ööpetimmie	Ööhpehtimmie
+ööpetimmie	ööhpehtimmie
+Ööhpetimmie	Ööhpehtimmie	#_add1
+jienedamme	jieniedamme	#_add1
+edtjidien	edtjeden
+byjressiebredahkh	byjresesïebredahkh
+ööhpetimmie	ööhpehtimmie	#_add1
+provgrammem	programmem	#_del1
+instutisjovnh	institusjovnh	#_transpose
+jielemidie	jieliemidie	#_add1
+jeatjatehtedh	jeatjahtehtedh	#_add1
+Superlativ	Superlatijve	#_loansuffix
+haestemidie	haestiemidie	#_add1
+gaajhkeside	gaajhkesidie	#_add1
+vierremes	vïerremes	#_subst_accents #_vowels #_accents_plus
+Åarjelhsaemien	Åarjelsaemien	#_del1
+Åvtohkh	Åvtehkh	#_subst1
+kultuvrisnie	kultuvresne
+Gellesh	Gallesh	#_subst1
+fierhtene	fïerhtene	#_subst_accents #_vowels
+sjugnedamme	sjugniedamme	#_add1
+krovnah	kråvnah	#_vowels
+jïenebh	jienebh	#_subst_accents
+giempes	gïemhpes
+Tjåangkan	Tjåanghkan	#_add1
+Dotnoeh	Dåtnoeh	#_vowels
+evtietæmman	evtiedæmman	#_subst1
+evtietimmie	evtiedimmie	#_subst1
+eatnami	eatnemi	#_subst1
+gieleh	gïelh
+voelhkehti	voelkehti	#_del1
+åvtohkem	åvtehkem	#_subst1
+lijhkieåvtohke	lijkieåvtehke
+åvtohken	åvtehken	#_subst1
+åvtohkedaltese	åvtehkedaltese	#_subst1
+staateåvtohke	staateåvtehke	#_subst1
+skåvloeåvtohke	skåvloeåvtehke	#_subst1
+skåvloebiejjen	skåvloebiejjien	#_add1
+saemiengieIeåvtohke	saemiengïeleåvtehke
+leeneåvtohken	leeneåvtehken	#_subst1
+leenenåvtohke	leeneåvtehke
+kontovreåvtohke	kontovreåvtehke	#_subst1
+Staateåvtohke	Staateåvtehke	#_subst1
+øøvtiehtdidh	övtiedidh
+øøvtiedimmiem	övtiedimmiem
+øøvtiedieh	övtiedieh
+øøvtietdidh	övtiedidh
+vith	viht	#_transpose1 #_accents_plus
+satna	satne	#_subst1
+øøvtiehtidh	övtiedidh
+øøvtiedæmman	övtiedæmman
+voesteskonsuvlentine	voesteskonsuleentine
+øøvtiedimmien	övtiedimmien
+øøvtiebasse	övtiebasse
+øøvtiedimmesne	övtiedimmesne
+gieleøøvtiedimmimesne	gïeleövtiedimmesne
+gieleøøvtiedimmesne	gïeleövtiedimmesne
+øøvtiedamme	övtiedamme
+øøvtede	övtede	#_accents_plus
+ööhpehtimmiesne	ööhpehtimmesne	#_del1 #_accents_plus
+kråehpesne	kråahpesne	#_subst1 #_vowels
+kråehpem	kråahpem	#_subst1 #_vowels
+kråehpe	kråahpe	#_subst1 #_vowels
+kultuvreevtietæmman	kultuvreevtiedæmman	#_subst1
+sosiokultuvrelle	sosiokulturelle	#_del1
+kultuvrelle	kulturelle	#_del1
+kultuvreövtiedimmese	kultuvreövtiedæmman
+NSR-e	NSR	#_insert_space #_acrosuff
+Oslovesne	Oslovisnie
+jijnjemes	jïjnjemes	#_subst_accents
+vyösoejibie	veasoejibie
+vuejnibie	vuejnebe	#_samisuffix
+Teel	Tel.
+NSR-n	NSR:n	#_subst1 #_acrosuff
+Filipe	Filip	#_del1
+Heermese	Hermes
+tjuvtjehte	tjuvtjede
+aalkuveste	aalkovistie
+gaajhksh	gaajhkesh	#_add1
+siebredahkh	sïebredahkh	#_subst_accents #_vowels
+mïnnieh	minnieh	#_subst1
+aanje	annje	#_aab2abb #_length_plus
+ålmege	åålmege	#_one2double #_accents_plus
+tjïltide	tjïeltide	#_add1
+veartenasse	veartanasse	#_subst1
+veantoe	veanhtoe	#_add1
+orrije	orreje	#_subst1 #_vowels #_accents_plus
+tjaeleldh	tjaaleldh	#_subst1
+svarkedlh	svarkeldh	#_transpose1 #_accents_plus
+åvtohkh	åvtehkh	#_subst1
+byöribie	byörebe	#_samisuffix
+paartijjh	partijh	#_length_plus
+meankielin	meänkielin	#_subst1
+Gierve	Geerve	#_subst1 #_vowels #_accents_plus
+IN-n	IN:n	#_subst1 #_acrosuff
+juhtiej	juhti
+bijjiebass	bijjiebasse	#_add1
+TV-em	TV:m	#_acrosuff
+TV-e	TV	#_insert_space #_acrosuff
+NSR-se	NSR:se	#_subst1 #_acrosuff
+Maajh-jaevresne	Maajehjaevresne
+Messiase	Messias	#_del1
+gieleøøhpehtæmman	gïeleööhpehtæmman	#_subst_accents #_accents_plus
+edtjiejibie	edtjijibie	#_del1 #_accents_plus
+Jillieskovle	Jïlleskuvle
+dåajvohtamme	dåajvoehtamme	#_add1 #_vowels #_accents_plus
+dejmetje	dæjmetje	#_vowels
+Aellidie	Aellede	#_samisuffix
+ektesvuekiebarkoe	ektievuekiebarkoe
+dååhkasjehteme	dåhkasjehteme	#_double2one #_transpose1_plus #_accents_plus
+dåeresth	dåaresth	#_subst1 #_vowels
+dååhkasjehtedh	dåhkasjehtedh	#_double2one #_transpose1_plus #_accents_plus
+båatsoejielemasse	båatsoejieliemasse	#_add1
+EN-n	EN:n	#_subst1 #_acrosuff
+tjåanghkanamme	tjåanghkenamme	#_subst1
+Raavrvijhkesne	Raavrhvijhkesne	#_add1
+Oslovesne	Oslosne
+guarka	guarkoe	#_vowels
+Frovde	Frode	#_del1
+digks	dihkies
+NRK-en	NRK:n	#_acrosuff
+tjåanghkani	tjåanghkeni	#_subst1
+Jillhts	Jïlhts	#_accents_plus
+jilhts	jïlhts	#_subst_accents
+øøhpehtæmman	ööhpehtæmman	#_subst_accents #_accents_plus
+tsiengelen	garretsïengelen
+nännostamme	nænnoestamme
+nænnostidh	nænnoestidh	#_add1 #_vowels #_accents_plus
+njolkedassem	njoelkedassem	#_add1 #_vowels #_accents_plus
+mïetksen	mïetsken	#_transpose1 #_accents_plus
+Ibsene	Ibsen	#_del1 #_transpose1_plus
+jijtsissie	jïjsissie
+baakotje	bååketje
+gijhtem	gæjhtam
+eatname	eatneme	#_subst1
+samarier	samaarijh
+fariseerh	farisæjjerh
+Daalaj	Dalai
+Daalaj	Dalai
+nasjovnale	nasjonaale
+regijonale	regionaale
+regijonalh	regionaalh
+provgramme	programme	#_del1
+vååjnodh	vååjnedh	#_subst1
+identitet	identiteete	#_loansuffix
+ideentitetese	identiteetese	#_accents_plus #_length_plus
+ideentitetem	identiteetem	#_accents_plus #_length_plus
+ideentihtetem	identiteetem
+dajvistie	dajvijste
+soejkesijnie	soejkesjinie	#_transpose1 #_accents_plus
+krïepsji	krïebpesji
+evtietimmiesoejkesjem	evtiedimmiesoejkesje
+aastoe	astoe	#_double2one #_transpose1_plus #_accents_plus
+luehpiedimmie	luhpiedimmie	#_del1
+fylkentjïeltigujmie	fylhketjïeltigujmie
+evtete	evtede	#_subst1
+maahte	mahte	#_double2one #_transpose1_plus #_accents_plus
+gaajhkes	gaajhkesh	#_add1
+föörkestahta	föörhkestahta	#_add1
+Noovrlaanten	Nordlaanten
+Kultuvrasse	Kultuvrese
+vuaptastehte	vuaptastahta
+verremes	veerremes	#_one2double #_transpose1_plus #_accents_plus
+reekteshte	reekteste	#_del1
+Juvdase	Judas
+sierrenohke	sïerrenohke	#_subst_accents #_vowels #_accents_plus
+åehpenidh	åahpenidh	#_subst1 #_vowels
+vååjnoem	vååjnem	#_del1
+Ööhpetimmie	Ööhpehtimmie	#_add1
+tsevtsiedidh	tsevtsiehtidh
+våaromisnie	våaroemisnie	#_add1 #_vowels
+beajeme	bïejeme
+aktehte	aktede
+aarkbeajjetjen	aarkebeajjetjen	#_add1
+sjaangerinie	sjangerinie	#_double2one #_transpose1_plus #_accents_plus
+sjaangeri	sjangeri	#_double2one #_transpose1_plus #_accents_plus
+govlibie	govlebe	#_samisuffix
+Meessija	Messija	#_double2one #_vowels #_transpose1_plus #_accents_plus
+aimetje	almetje
+jijjeh	jïjjh
+Laevas	Leavas	#_transpose1 #_accents_plus
+njolkedassh	njoelkedassh	#_add1 #_vowels #_accents_plus
+naasjovnalen	nasjonaalen
+monnoeh	månnoeh	#_vowels #_accents_plus
+Eatnamevierhtieh	Eatnemevierhtieh	#_subst1
+gaika	galka
+skovlesne	skuvlesne	#_subst1 #_vowels
+dramah	draamah	#_one2double #_accents_plus
+Leevangeren	Levangeren	#_double2one #_vowels #_transpose1_plus #_accents_plus
+Kaapitele	Kapihtele
+såårkosne	sårkosne	#_double2one #_transpose1_plus #_accents_plus
+båavteres	bååvteres	#_vowels #_accents_plus
+vååhkose	våhkose	#_double2one #_transpose1_plus #_accents_plus
+tjåhkojne	tjåanghkojne
+tjïjhtjhede	tjïjhtjede	#_del1
+kåvrede	kåvrehte
+stïnkestidh	stinkestidh	#_subst1
+faakhetji	faahketji	#_transpose1 #_transpose1_plus #_accents_plus
+dåejmijes	dåajmijes	#_subst1 #_vowels
+gallaname	gallanamme	#_one2double #_transpose1_plus #_accents_plus
+øøkonomije	ekonomije
+öökonomijen	ekonomijen
+aarmohks	aarmogs
+tjïrkedh	tjirkedh	#_subst_accents
+raerestibie	raeriestibie	#_add1
+snåarkedh	snjåarkedh	#_add1
+tjoejhkehtidh	tjoejkehtidh	#_del1
+duj	doj	#_subst1 #_vowels
+ööhpehtimmieprovgramme	ööhpehtimmieprogramme	#_del1
+identitetem	identiteetem	#_one2double #_loansuffix #_accents_plus
+honorare	honoraare	#_one2double #_accents_plus
+namtegh	namhtegh	#_add1
+medijah	meediah
+medija	meedia
+påajhki	pååjki
+honorarese	honoraarese	#_one2double #_accents_plus
+dïhre	dïere
+universitetesne	universiteetesne	#_one2double #_accents_plus
+digitale	digitaale	#_one2double #_loansuffix #_accents_plus
+fejjen	feejjen	#_one2double #_transpose1_plus #_accents_plus
+barkofaagi	barkoefaagi	#_add1 #_vowels #_accents_plus
+Galile´an	Galilean	#_del1
+Galile´ese	Galileese	#_del1
+Galile´esne	Galileesne	#_del1
+Galile´este	Galileeste	#_del1
+Noerhte-Trøøndelaagesne	Noerhte-Tröndelaagesne	#_accents_plus
+miljovnh	millijovnh
+Provsjekte	Prosjekte	#_del1
+provsjektem	prosjektem	#_del1
+relijovnen	religijovnen
+Tråentesne	Tråantesne	#_subst1 #_vowels
+båestede	bååstede
+ektesvuekiebarkoem	ektievuekiebarkoem
+gåeredi	gåaradi
+guhtjelassh	gyhtjelassh	#_subst1_kb_next
+guhtjelassine	gyhtjelassine	#_subst1_kb_next
+govlidie	govlede	#_samisuffix
+galkieh	gelkieh	#_subst1
+muv	mov	#_subst1 #_vowels
+dååpmegh	dååpmehkh
+internasjovne	internasjonaale
+gåjkoe	gåajkoe	#_add1
+nænnostamme	nænnoestamme	#_add1 #_vowels #_accents_plus
+rovnigs	rovnegs	#_subst1 #_vowels
+maanajgïertefaalaldahkem	maanajgïertefaaleldahkem	#_subst1
+learohkinie	learoehkinie	#_add1 #_vowels
+kruvnh	krovnh	#_subst1 #_vowels
+jähta	jeahta	#_vowels #_accents_plus
+jinjh	jïjnjh
+altse	altese	#_add1
+almetjide	almetjidie	#_add1
+gaatesjïelth	gaatesjïlhth
+jijtjh-reereme	jïjtjereereme
+jeatjahdehtedh	jeatjahtehtedh	#_subst1
+faalaldahkide	faaleldahkide	#_subst1
+systeme	systeeme	#_one2double #_accents_plus
+systemem	systeemem	#_one2double #_accents_plus
+systemen	systeemen	#_one2double #_accents_plus
+dååpmegh	dååpmehkh
+krievie	kreava
+dååpmege	dååpmehke	#_samisuffix
+indijanerh	indijaanerh	#_one2double #_accents_plus
+jåerhkeskuvlesne	jåarhkeskuvlesne	#_subst1 #_vowels
+båssede	bossede	#_subst1 #_vowels #_accents_plus
+byøribie	byörebe
+Snåesesne	Snåasesne	#_subst1 #_vowels
+Nejla	Næjla	#_vowels
+baarre	barre	#_double2one #_transpose1_plus #_accents_plus
+geaseminie	giesieminie
+faalaldahkh	faaleldahkh	#_subst1
+jïtse	jïjtse	#_add1
+ﬁerhten	fïerhten
+ejvieboelhkh	åejvieboelhkh	#_add1
+Edtjibie	Edtjijibie
+fylhkentjïelht	fylhkentjïelth	#_transpose1 #_accents_plus
+bïejieh	biejieh	#_subst1
+vïenhtieh	vienhtieh	#_subst1
+daarjoeh	darjoeh	#_double2one #_transpose1_plus #_accents_plus
+tjoerbe	tjoerebe	#_add1 #_accents_plus
+båajhtoelaakan	båajhtoehlaakan	#_add1
+eadtjoelaakan	eadtjoeslaakan	#_add1
+geesjeli-laakan	geesjelelaakan
+eadtjoke	eadtjohke	#_add1
+jeatjlaakan	jeatjahlaakan
+jiermeslaakan	jïermijeslaakan
+tjabpies	tjaebpies	#_add1
+tjabpieslaakan	tjaebpieslaakan	#_add1
+joekehtlaakan	joekehtslaakan	#_add1
+staerievoeten	staeriesvoeten	#_add1
+nahkerisisnie	nahkarisnie
+vaerriejægan	vaarrijægan
+Aleksandri´este	Aleksandrieste	#_del1
+Antioki´esne	Antiokiesne	#_del1
+Antioki´este	Antiokieste	#_del1
+Arabi´este	Araabieste
+Are´opagosen	Areopagosen	#_del1
+Arimate´este	Arimateeste	#_del1
+Arkela´ose	Arkelaos
+Avi´asse	Aviese
+tsueptsie	tsåeptsie
+möbeele	mööbele	#_accents_plus #_length_plus
+hepsehtalla	hapsahtalla
+Bartime´use	Bartimeus
+Ba´al	Baal	#_del1
+Betani´a	Betania	#_del1
+Betani´an	Betanian	#_del1
+Betani´ese	Betaniese	#_del1
+Betani´esne	Betaniesne	#_del1
+Betani´este	Betanieste	#_del1
+Be´elsebulen	Beelsebulen	#_del1
+Bityni´esne	Bityniesne	#_del1
+Cæsare´an	Cæsarean	#_del1
+Cæsare´ese	Cæsareese	#_del1
+Dani´ele	Daniel
+Dani´elem	Danielem	#_del1
+Dani´elese	Danielese	#_del1
+Dani´eleste	Danieleste	#_del1
+Eli´e	Elie	#_del1
+Eli´en	Elien	#_del1
+Eli´esere	Elieser
+Emma´use	Emmaus
+Evodi´ese	Euodiese
+Fara´ose	Faraose	#_del1
+Farise´erij	Fariseejeri
+Frygi´estie	Frygieste
+Gabri´ele	Gabriel
+Galati´esne	Galatiesne	#_del1
+Galile´am	Galileam	#_del1
+Galile´an	Galilean	#_del1
+Galile´ese	Galileese	#_del1
+Galile´esne	Galileesne	#_del1
+Galile´este	Galileeste	#_del1
+Gamali´ele	Gamaliel
+Herodi´a	Herodia	#_del1
+Herodi´an	Herodian	#_del1
+Herodi´ase	Herodiese
+Herodi´asen	Herodiasen	#_del1
+Ikoni´onesne	Ikonionesne	#_del1
+Immanu´ele	Immanuel
+Jo´ele	Joel
+Jude´an	Judean	#_del1
+Kafarna´ume	Kafarnaum
+Kafarna´umen	Kafarnaumen	#_del1
+Kafarna´umese	Kafarnaumasse
+Kanani´osen	Kananeusen
+Kappadoki´esne	Kappadokiesne	#_del1
+Kappadoki´este	Kappadokieste	#_del1
+Kiliki´este	Kilikieste	#_del1
+Klo´esen	Kloesen	#_del1
+Laodike´an	Laodikean	#_del1
+Matte´usem	Matteusem	#_del1
+Mesopotami´estie	Mesopotamieste
+Mo´aben	Moaben	#_del1
+Mo´abese	Moabese	#_del1
+Mo´abeste	Moabeste	#_del1
+Na´ine	Naine	#_del1
+No´a	Noa	#_del1
+No´an	Noan	#_del1
+No´ese	Noese	#_del1
+No´omi	Noomi	#_del1
+Pamfyli´estie	Pamfylieste
+Sakke´use	Sakkeus
+Samari´a	Samaria	#_del1
+Samari´an	Samarian	#_del1
+Samari´ese	Samariese	#_del1
+Samari´esne	Samariesne	#_del1
+Samu´ele	Samuel
+Samu´elem	Samuelem	#_del1
+Samu´elese	Samuelasse
+Sa´ule	Saul
+Sa´ulese	Saulese	#_del1
+Sime´one	Simeon
+Si´one	Sion
+Si´onen	Sionen	#_del1
+Si´onisnie	Sionisnie	#_del1
+Si´onistie	Sionistie	#_del1
+Timote´osese	Timoteusasse
+Ussi´a	Ussia	#_del1
+doen´aajmoe	doenaajmoe	#_del1
+doen´aajmoeh	doenaajmoeh	#_del1
+doen´aajmojsne	doenaajmosne
+doen´aajmosne	doenaajmosne	#_del1
+eti´opeladtje	etiopialadtje
+fara´om	Faraom
+fara´on	Faraon
+farise´ere	fariseejere
+farise´erem	fariseejerem
+farise´erese	fariseejerasse
+farise´erh	fariseejerh
+farise´eri	fariseejeri
+farise´erijste	fariseejerijstie
+galile´aladtjh	galilealadtjh	#_del1
+mede´erh	medeejerh
+parte´erh	parteerh	#_del1
+sadduke´erh	saddukeejerh
+sadduke´eridie	saddukeejeridie
+tjidtj´aahkan	tjidtjaahkan	#_del1
+golvoe	govloe	#_transpose1 #_accents_plus
+veanta	veanhta	#_add1
+håajkestieh	håajhkestieh	#_add1
+seassoh	seassoeh	#_add1 #_vowels #_accents_plus
+orretjaalmege	orretjalmege	#_double2one #_transpose1_plus #_accents_plus
+jabjoe	jabjoeh	#_add1
+girten	girtien	#_add1
+Geajnoebarkij	Geajnoebarkijh	#_add1
+Idji	Idtji	#_add1
+Jabjoekaarre	Jabjoehkaarre	#_add1
+Jalh	Jallh	#_one2double #_accents_plus
+jijnjn	jïjnjh
+julkie	juelkie	#_add1
+laavjoejim	laavloejim
+mielhke	mielhkie	#_add1
+nyjsenæjaj	nyjsenæjjaj	#_one2double #_accents_plus
+saernijgujnie	saerniejgujmie
+tjidtje	tjidtjie	#_add1
+tjiedtjie	tjidtjie	#_del1 #_accents_plus
+tjiehtjielisne	tjïehtjelisnie
+tjåadtjoemine	tjåadtjoeminie	#_add1
+vaadtsem	vaadtseme	#_add1
+vedtsi	veedtsi	#_one2double #_accents_plus
+vuartesh	vuartesjh	#_add1
+vuartesjim	vuartasjim	#_subst1
+vøøseme	vyöseme	#_vowels
+pruvhkibie	pruvhkijibie
+gaertenisnie	gaertienisnie	#_add1
+edtjiegan	edtjijægan
+leaksode	leaksojde	#_add1
+aajkohkese	aajkoehkasse
+måaratovva	måarahtåvva
+sajvi	saajvi	#_one2double #_accents_plus
+vaadtsetje	vaadtsehtje	#_add1
+domtieh	domtoeh	#_subst1_kb_next
+svihtjeti	svihtjehti	#_add1
+alkoelistie	aalkoelistie	#_one2double #_accents_plus
+Skaavhtjoeh	Skaavtjoeh	#_del1
+tsegkedh	tseegkedh	#_one2double #_accents_plus
+jienebidie	jieniebidie	#_add1
+stinks	stinkes	#_add1
+gaajhkijstie	gaajhkijste	#_del1 #_accents_plus
+laehkesne	lehkesne	#_del1
+soelhkedehtedh	soelkedehtedh	#_del1
+sijht	sïjhth
+hepsem	hepsiem	#_add1
+snurhken	snurken	#_del1
+tjåangkose	tjåanghkose	#_add1
+Jeens	Jeense	#_add1
+raajpesem	raajhpesem	#_add1
+bijvelammes	bïjvelommes
+Aelege	Aejlege	#_add1
+satnam	saatnam	#_one2double #_accents_plus
+njååvke	njååvhke	#_add1
+siehjme	sïejhme	#_accents_plus
+gavnedh	gaavnedh	#_one2double #_accents_plus
+Tjoverim	Tjoeverim	#_add1 #_vowels
+Onterdam	Onterdim	#_subst1
+låångkh	långkh	#_double2one #_transpose1_plus #_accents_plus
+girten	girtien	#_add1
+Vuartsjh	Vuartesjh	#_add1
+Vedtsi	Veedtsi	#_one2double #_accents_plus
+aejhtedi	aejhtieji
+billejim	bïllijim
+biejesovva	bïejesåvva
+geajnone	geajnojne	#_add1
+vuejibie	vuejiejibie
+vuajneji	vuejnieji
+seamme	seamma	#_subst1
+vaksjodh	vaaksjodh	#_one2double #_accents_plus
+gåebpegh	gåabpegh	#_subst1 #_vowels
+naahkesti	nahkesti	#_double2one #_transpose1_plus #_accents_plus
+njåaltjoeji	njålhtjoeji
+nolleskovvedh	nållaskovvedh
+jijteli	jïjhteli
+jiejhteli	jïjhteli
+vissjetovveminie	vïssjehtovveminie
+Jijtjsasse	Jïjtsasse
+munniedamme	munnedamme	#_del1 #_accents_plus
+søøjmehtji	soejmetji
+gåatoemen	gåatomen	#_del1 #_vowels #_transpose1_plus
+Eatname-faagen	Eatneme-faagen	#_subst1
+jeensetjem	Jeensetjem	#_capitalize
+uvre	eevre	#_vowels #_accents_plus
+uvre	öövre	#_vowels #_accents_plus
+vijriesåbpoe	vijriehkåbpoe
+sjyøhtehke	sjyöhtehke	#_subst_accents
+ruhtjehke	rotjkede
+øvtebe	övtebe	#_subst_accents
+åahpanidh	åahpenidh	#_subst1
+ovmesi	ummese
+máhte	mahte
+jeatjadehtedh	jeatjahtehtedh
+tijma	tæjmoe
+krïepesjh	krïebpesjh	#_add1
+Tongaste	Tongeste	#_subst1
+Røørovsi	Röörovsi
+muv	mov	#_subst1 #_vowels
+jib	jïh
+jeatjhlaaketje	jeatjahlaaketje	#_add1
+govlibh	govlimh
+bæjjesvorti	bæjjesvåårti	#_accents_plus
+NSR-en	NSR:n	#_acrosuff
+Härrá	Hearra
+sijhtiejibie	sïjhtijibie
+paartijje	partije	#_length_plus
+paarlamente	parlamente	#_double2one #_transpose1_plus #_accents_plus
+njolkedasse	njoelkedasse	#_add1 #_vowels #_accents_plus
+guarkoem	guarkam	#_vowels
+elektronijhken	elektronihken	#_del1
+edjta	edtja	#_transpose1 #_accents_plus
+drøøhnege	trööhnege
+doelkem	toelhkem
+viehken	viehkien	#_add1
+uvtiedidh	evtiedidh	#_subst1 #_accents_plus
+njolhtjestalla	njulhtjestalla	#_subst1 #_vowels #_accents_plus
+luejtedh	luejhtedh	#_add1
+kunne	kaanne
+miljardh	millijardh
+jienemes	jeenemes	#_subst1 #_vowels #_accents_plus
+histovrijesne	histovrijisnie
+gåmmoem	gåmmam	#_vowels #_accents_plus
+gänna	gænnah
+gelliegïeleldh	gelliengïeleh
+gååvnesie	gååvnese	#_del1 #_accents_plus
+gååvnesie	gååvnesi	#_del1 #_accents_plus
+europeijen	Europan
+Vaangbergen	Vangbergen	#_double2one #_transpose1_plus #_accents_plus
+Uvre	Eevre
+Uvre	Öövre
+TV-en	TV:n	#_acrosuff
+Ruvne	Rune	#_del1
+Goevtegæjnosne	Goevtegeajnosne	#_vowels #_accents_plus
+Fága	Faage
+heevehts-lidteraturh	heevehtslitteratuvre
+gaalhkeme	galhkeme	#_double2one #_transpose1_plus #_accents_plus
+doedtkeme	dotkeme
+povlijtigken	politihken
+skuvla	skuvle	#_subst1
+tseegksovveme	tseegkesovveme	#_add1
+tfn	tlf
+son	sån	#_vowels
+mujhtibie	mujhtebe	#_samisuffix
+mujhtijibie	mujhtiejibie	#_add1
+muhtese	muhteste	#_add1
+minnibie	mïnnijibie
+minnibie	mïnnebe
+mielde	meatan
+mielde	mealtan
+lohketæjjide	lohkehtæjjide	#_add1
+lissene	lissine	#_subst1 #_vowels #_accents_plus
+lihpedh	lïhpedh	#_subst_accents
+kriepesjidh	krïbpesjidh
+soptsetidh	soptsestidh	#_add1
+kraehpie	kraejhpie	#_add1
+stierke	stïerke	#_subst_accents #_vowels
+jáhke	johke
+vyøhkesadtedh	vyöhkesjadtedh
+vijrebasse	vijriebasse	#_add1
+Læsja	Læjsa	#_transpose1 #_accents_plus
+Öökonomijen	Ekonomijen
+Voesteges	Voestes
+daagk	daagkoe
+daagk	daagka	#_add1
+Learoejilleskåvloe	Learoejïlleskåvloe	#_subst_accents #_accents_plus
+vyøhkesadtedh	vyöhkesjadtedh
+såajhta	sååjhtoe
+sámi	saemien
+stádan	staaren
+gukte	guktie	#_add1
+jus	jis	#_subst1_kb_next
+jijtjebem	jeatjebem
+jielehke	jealehke
+guhtik	guhte
+jallhts	jalhts	#_double2one #_transpose1_plus #_accents_plus
+åvtoehkidie	åvtehkidie	#_del1
+europan	Europan	#_capitalize
+vyøhkesadtedh	vyöhkesjadtedh
+sïevede	sïevehte
+jeatjhligkie	jeatjahligke
+gierestallibie	gïerestallebe
+jeatjadimmieh	jeatjahtehtemh
+doetkeme	dotkeme	#_del1 #_vowels
+deej	dej	#_double2one #_vowels #_transpose1_plus #_accents_plus
+eektede	ektede	#_double2one #_vowels #_transpose1_plus #_accents_plus
+Lejsa	Læjsa	#_vowels
+båatsode	båadtsode	#_add1
+birra	bïjre
+Åerjelhsaemien	Åarjelsaemien
+åarjelh	åarjel	#_del1
+varkie	varki	#_del1 #_accents_plus
+utniej	utni
+utniej	utnije	#_transpose1 #_accents_plus
+vearoeldasse	vearaldasse	#_vowels #_accents_plus
+veaksehkåbpoe	veaksahkåbpoe	#_subst1
+tjuodtjelij	tjuedtjieli
+aassjoestem	aassjostem	#_del1 #_vowels #_accents_plus
+ööpehtimmieprogramminie	ööhpehtimmieprogrammine
+ööpehtimmieprogrammeLearohkh	ööhpehtimmieprogrammelearohkh
+ööhpetæmman	ööhpehtæmman	#_add1
+Båetidie	Båetede	#_samisuffix
+aehtj	aehtjie
+Øøvropesne	Europesne
+vientebe	vïenhtebe
+vedth	vedtieh
+vearoeldasse	vearaldasse	#_vowels #_accents_plus
+tseegkesuvvi	tseegkesovvi	#_subst1 #_vowels #_accents_plus
+jortese	jortege
+skaajmosne	skaajmesisnie
+jeatjide	jeatjabidie
+konferensese	konferansese	#_subst1
+oadtju	åådtje
+jallelen	jalle
+jallelen	jalloe
+eadtjoehtidh	ïedtjeldehtedh
+biejvij	biejjiej
+almejth	almetjh	#_transpose1 #_accents_plus
+aktak	akte
+ahkh	aahkah
+moenehtassh	moenehtsasse
+darpasjibie	daarpesjibie
+darpasjamme	daarpesjamme
+daroen	daaroen	#_one2double #_accents_plus
+darjosovvme	dorjesovveme
+deapadimmi	deahpadimmie
+dasnie	daesnie	#_add1
+darpsjh	daarpesjh
+darpies	daerpies	#_add1
+deapadidh	deahpadidh	#_add1
+dannasninie	dannasinie	#_del1 #_transpose1_plus
+dannasnine	dannasinie
+dannasinnie	dannasinie	#_double2one #_transpose1_plus #_accents_plus
+dannasine	dannasinie	#_add1
+darjomoemash	darjomes
+darjomessisjjiem	darjomesijjiem
+damtieh	demtieh	#_subst1
+damteti	daamhtah
+damteti	daamhtaj
+damteti	daamtaj
+damteti	daamhtaj
+damteti	daamtaj
+damtam	damtem	#_subst1
+darjose	dorjese
+darjedh	darjodh	#_subst1
+damtaj	daamtaj	#_one2double #_accents_plus
+damts	damtoes
+damts	damtas	#_add1
+dabts	dabtoes
+darjoehteminie	darjohteminie	#_del1 #_vowels
+damtsmïerhke	damtoesmïerhke
+damtsmïerhke	damtasmïerhke	#_add1
+deavtam	deavhtam	#_add1
+deavta	deavhta	#_add1
+deahkahkidie	deakahkidie	#_del1
+darjomesidie	darjoemasside
+# darjomesi	darjoemasse # corr not ok
+darjomesgelliesvoete	darjomesgellievoete	#_del1
+darjomassi	darjoemasse
+darjojste	darjoemistie
+# darjoemesLeeneståvroe	darjomeleeneståvroe # corr not ok
+defintijve	definitijve	#_add1
+deetektive	detektijve
+deerjene	dearjan
+# deepartemente	departemente	#_double2one #_vowels #_transpose1_plus #_accents_plus
+deepartemaangijste	departementijste
+deepartemaangeste	departementeste
+deepartemaangen	departementen
+deepartemaangem	departementem
+deepartemaange	departemente
+deemovkratije	demokratije
+deemokratijen	demokratijen	#_double2one #_vowels #_transpose1_plus #_accents_plus
+deemokraatereaktah	demokraatereaktah	#_double2one #_vowels #_transpose1_plus #_accents_plus
+deemenseskiemtjesåjhtose	demenseskïemtjesåjhtoe
+deelagasjovnen	delegasjovnen
+dearpies	daerpies	#_transpose1 #_accents_plus
+darjoemssijjiej	darjomesijjiej	#_transpose1_plus
+darjoemessijjieh	darjomesijjieh	#_accents_plus
+darjoemen	darjomen	#_del1 #_vowels #_transpose1_plus
+darjoemedåarjoen	darjomedåarjoen	#_del1 #_vowels #_transpose1_plus
+deejrieh	deejrih	#_del1 #_accents_plus
+deejribh	deejrimh
+buelih	bueliejih
+buekteth	buektehth	#_add1
+buekhtiehtamme	buektiehtamme	#_del1
+buekhtehth	buektehth	#_del1
+buektiehtie	buektiehtieh	#_add1
+buekehti	buektiehti
+bukata	buakta	#_transpose1 #_accents_plus
+buhtjemine	buhtjieminie
+buerkestieh	buerkiestieh	#_add1
+bualta	båalta	#_vowels
+aalkoe-almejth	aalkoe-almetjh	#_transpose1 #_transpose1_plus #_accents_plus
+aalkoealmetjie	aalkoealmetje	#_del1 #_accents_plus
+aajuohke	aajkohke
+aaksjone	aaksjojne	#_add1
+bualtajehtin	båaltajehtin	#_vowels
+bualtajehti 	båaltajehti	#_vowels
+bualtajehtieh	båaltajehtieh	#_vowels
+bualtajahteme	båaltajahteme	#_vowels
+bualtajahta	båaltajahta	#_vowels
+båastide	bååstede
+båatedh	båetedh	#_subst1 #_vowels
+båatame	båateme	#_subst1
+båatsoburrese	båatsoebårran
+byöpemedin	byöpmedin	#_del1 #_transpose1_plus
+byöpedidh	byöpmedidh	#_add1
+byrese	byjrese	#_add1
+byjvele	bïjvele
+båajhtoe	båajhtoeh	#_add1
+båajhta	båajhtah	#_add1
+barnieh	baernieh	#_add1
+alkovistie	aalkoevistie	#_accents_plus
+ajjese	aajjese	#_one2double #_transpose1_plus #_accents_plus
+ajjen	aajjan
+aervedieh	aerviedieh	#_add1
+aervedibie	aerviedibie	#_add1
+aervedebe	aerviedibie
+alkhkie	aelhkie
+alhkie	aelhkie	#_add1
+aelkie	aelhkie	#_add1
+alkuvesne	aalkoevisnie
+aeriebiste	aarebistie
+aeriebi	aarebi
+aeremes	aaremes	#_subst1
+aevkies	aevhkies	#_add1
+aejhtin	eejhtin	#_subst1
+aerpievuektijste	aerpievuekijste	#_del1
+aelhkis	aelhkies	#_add1
+aelkidien	aelkeden
+aellidie	aellede	#_samisuffix
+aelpiesåbpoe	aelpebe
+aelpesåbpoe	aelpebe
+aejtemen	aejhtemen	#_add1
+aejkohkadtjh	aajkoehkadtjh
+aehtjibasse	aehtjiebasse	#_add1
+aajtnoes	åtnoes
+aadventese	adventese	#_double2one #_transpose1_plus #_accents_plus
+aahkh	aahkah	#_add1
+aahth	ahte
+aajhtsah	aajhtsh	#_del1
+aajkahke	aajkohke	#_subst1 #_vowels #_accents_plus
+aajhkine	aahkine	#_del1
+aahtijste	aehtjijste
+snjitke	snjitjke	#_add1
+sitjke	skitjke	#_add1
+Vøøjnieh	Vööjnin
+Wikipedijan	Wikipedijen	#_subst1
+Wikipedij:ese	Wikipedijasse
+Wienenesne	Wienesne	#_repetition
+Wien:esne	Wienesne	#_del1
+Væssbualehk	Væssjbualehke
+Væhtjed	Væhtjedh	#_add1
+Vueltsjerisnie	Vualtjarisnie
+Vueltjerisne	Vualtjarisnie
+Vualtjierisnie	Vualtjarisnie	#_vowels
+Vualtjerisnie	Vualtjarisnie	#_subst1
+Vuartasæjjaj	Vuartasjæjjaj	#_add1 #_transpose1_plus
+Vuejnidie	Vuejniejidie
+Vuejnidie	Vuejnede	#_samisuffix
+Vuesehtimmien	Vuesiehtimmien	#_add1
+Viehties	Vihties	#_del1 #_accents_plus
+Vienthtieh	Vienhtieh	#_del1 #_transpose1_plus
+Vientebe	Vïenhtebe
+Vielljas	Vïellesne
+Vielja	Vïelle
+Vyøhkesadtibie	Vyöhkesjadtebe
+Vyøhkesadteme	Vyöhkesjadteme
+Vyøhkesadtedh	Vyöhkesjadtedh
+pruvkieh	pruvhkieh	#_add1
+pruvkeme	provhkeme
+pruvkedh	provhkedh
+pryövodh	pryövedh	#_subst1
+pryövieh	pryövoeh	#_subst1_kb_next
+pryövie	pryövoe	#_subst1_kb_next
+pryöveoj	pryövemi
+pryöevedh	pryövedh	#_del1 #_transpose1_plus
+pruevvesne	pruvvesne	#_del1
+provtokollen	protokollen	#_del1
+provkieh	pruvhkieh
+provhkidien	provhkeden
+provhkidie	provhkede	#_samisuffix
+provhkibie	provhkebe	#_samisuffix
+provhka	pråvhka	#_vowels
+pruvse	bruvse	#_subst1
+påeskine	påaskine	#_subst1 #_vowels
+påeskide	påaskide	#_subst1 #_vowels
+påejke	påajke	#_subst1 #_vowels
+raadjosne	radiosne
+pøøtieh	böötin
+påarhte	båarhte	#_subst1
+raamekåånvensjovnine	rammekonvensjovnine
+raamekånvensjovnen	rammekonvensjovnen
+raamekånvensjovnem	rammekonvensjovnem
+prøøvedh	pryövedh	#_vowels
+påajhkigujmie	påajkigujmie	#_del1
+påajhkem	påajkem	#_del1
+raajpese	raajhpese	#_add1
+Aankaredesne	Ankaredesne	#_del1
+stueredidh	stueriedidh	#_add1
+Ljsa	Læjsa	#_add1
+gnnah	gænnah	#_add1
+Ljsan	Læjsan	#_add1
+Ljsam	Læjsam	#_add1
+Ljsese	Læjsese	#_add1
+adtjoeh	åadtjoeh	#_add1
+vteste	åvteste	#_add1
+sjhta	sæjhta	#_add1
+arjelhsaemien	åarjelsaemien
+grjah	gærjah	#_add1
+nnetji	ånnetji	#_add1
+adtjoejibie	åadtjoejibie	#_add1
+adtjodh	åadtjodh	#_add1
+dab	dam
+grjam	gærjam	#_add1
+Hovav	Hov
+Dhte	Dïhte	#_add1
+jwatjah	jeatjah	#_subst1_kb_next
+rektes	reektehts
+ssjalommesh	åssjalommesh	#_add1
+jh	jïh	#_add1
+sjdta	sjædta	#_add1
+jeanasommes	jeenemes
+bYYti	bööti
+Kaapitele	Kapihtele
+sæjroesne	sæjrosne	#_del1 #_vowels
+redaktörese	redaktöörese	#_one2double #_accents_plus
+bïevesh	bïevnesh	#_add1
+daejribie	daejriejibie
+maehtibie	maehtiejibie
+heamtuvrh	heamturh	#_del1
+baannane	banaane
+sjyötehke	sjyöhtehke	#_add1
+grjah	gærjah	#_add1
+nnetji	ånnetji	#_add1
+eevtiedidh	evtiedidh	#_double2one #_vowels #_transpose1_plus #_accents_plus
+vøønhtse	vöönhtse	#_subst_accents #_accents_plus
+sirve	sïrve	#_subst_accents
+rijhkeraerie	rïjhkeraerie	#_subst1
+siebredahke	sïebredahke	#_subst_accents #_vowels
+keramikere	keramihkere	#_add1
+faarmestidh	faerhmiestidh
+histovrikere	historihkere
+eatname	eatneme	#_subst1
+# barkoebielienkrirrie	barkijebielienkrirrie # Jamfør dette ordet i nouns.lexc, sjølv om det er kommentert ut
+biene	bïenje

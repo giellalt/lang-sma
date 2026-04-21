@@ -1,6 +1,5 @@
-# -*- cg-pre-pipe: "hfst-tokenise -g ../../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmhfst" -*-
 # Divvun & Giellatekno - open source grammars for Sámi and other languages
-# Copyright © 2000-2017 UiT The arctic University of Norway
+# Copyright © 2000-2026 UiT The Arctic University of Norway
 # http://giellatekno.uit.no & http://divvun.no
 #
 # This program is free software; you can redistribute and/or modify
@@ -18,7 +17,7 @@
 # ==================================================================== #
 # ====================================================================
 
-#  Sámi language technology 2000-2017, UiT The arctic University of Norway #
+#  Sámi language technology 2000-2026, UiT The Arctic University of Norway #
 
 # ---------------------- #
 #   Development setup:   #
@@ -118,6 +117,7 @@ LIST WEB = WEB ;	    #!! WEB
 LIST QMARK = """ ; # "  #!! QMARK
 LIST PPUNCT = PUNCT ;   #!! PPUNCT
 SET PUNCT = PPUNCT - QMARK ;  #!! PUNCT
+LIST MWE = MWE ;	    #!! MWE
 
 LIST COMMA = "," ;  #!! COMMA
 LIST ¶ = ¶;   #!! ¶
@@ -147,6 +147,8 @@ LIST Nom = Nom ; #!! Nom
 LIST Acc = Acc ; #!! Acc
 LIST Gen = Gen ; #!! Gen
 LIST Ill = Ill ; #!! Ill
+LIST Ela = Ela ; #!! Ela
+LIST Ine = Ine ; #!! Ine
 LIST Loc = Loc ; #!! Loc
 LIST Com = Com ; #!! Com
 LIST Ess = Ess ; #!! Ess
@@ -205,6 +207,41 @@ LIST Actio = Actio ;		   #!! Actio
 LIST VAbess = VAbess ;		   #!! VAbess
 
 
+#!! #### Derivation tags
+
+LIST Der/A       = Der/A       ; #!! - `Der/A      `
+LIST Der/Car     = Der/Car     ; #!! - `Der/Car    `
+LIST Der/Dimin   = Der/Dimin   ; #!! - `Der/Dimin  `
+LIST Der/InchL   = Der/InchL   ; #!! - `Der/InchL  `
+LIST Der/NomAct  = Der/NomAct  ; #!! - `Der/NomAct `
+LIST Der/NomAg   = Der/NomAg   ; #!! - `Der/NomAg  `
+LIST Der/PassL   = Der/PassL   ; #!! - `Der/PassL  `
+LIST Der/PassS   = Der/PassS   ; #!! - `Der/PassS  `
+LIST Der/Rec     = Der/Rec     ; #!! - `Der/Rec    `
+LIST Der/adte    = Der/adte    ; #!! - `Der/adte   `
+LIST Der/ahtje   = Der/ahtje   ; #!! - `Der/ahtje  `
+LIST Der/alla    = Der/alla    ; #!! - `Der/alla   `
+LIST Der/d       = Der/d       ; #!! - `Der/d      `
+LIST Der/eds     = Der/eds     ; #!! - `Der/eds    `
+LIST Der/ht      = Der/ht      ; #!! - `Der/ht     `
+LIST Der/htalle  = Der/htalle  ; #!! - `Der/htalle `
+LIST Der/htj     = Der/htj     ; #!! - `Der/htj    `
+LIST Der/ihks    = Der/ihks    ; #!! - `Der/ihks   `
+LIST Der/ijes    = Der/ijes    ; #!! - `Der/ijes   `
+LIST Der/l       = Der/l       ; #!! - `Der/l      `
+LIST Der/laakan  = Der/laakan  ; #!! - `Der/laakan `
+LIST Der/ldahke  = Der/ldahke  ; #!! - `Der/ldahke `
+LIST Der/ldh     = Der/ldh     ; #!! - `Der/ldh    `
+LIST Der/ldihkie = Der/ldihkie ; #!! - `Der/ldihkie`
+LIST Der/les     = Der/les     ; #!! - `Der/les    `
+LIST Der/lg      = Der/lg      ; #!! - `Der/lg     `
+LIST Der/st      = Der/st      ; #!! - `Der/st     `
+LIST Der/vuota   = Der/vuota   ; #!! - `Der/vuota  
+LIST Der/Comp = Der/Comp ; 
+LIST Der/Superl = Der/Superl ; 
+LIST Der/Pass = Der/PassL Der/PassS ;
+
+
 
 #!! ### Sets for explicit error analysis from the morphological analyser:
 
@@ -217,33 +254,567 @@ LIST Err/Spellrelax = Err/Spellrelax ;
 LIST Err/Orth-any = Err/Orth Err/Attr Err/Lex Err/Der Err/Spellrelax ;
 
 
+# Secondary tags
+# --------------
 
+LIST <0> = <0> ;
+LIST <AG-Acc-Ani> = <AG-Acc-Ani> ; #CHECK
+LIST <AG-Acc-Ani><PR-Acc-Any> = <AG-Acc-Ani><PR-Acc-Any> ; #CHECK
+LIST <AG-Acc-Ani><TH-Acc-Any> = <AG-Acc-Ani><TH-Acc-Any> ; #CHECK
+LIST <AG-Ill-Ani><TH-Acc-Any> = <AG-Ill-Ani><TH-Acc-Any> ; #CHECK
+LIST <AG-Acc-Ani><PA-Acc-Any> = <AG-Acc-Ani><PA-Acc-Any> ; #CHECK
+LIST <AG-Ill-Ani><PA-Acc-Any> = <AG-Ill-Ani><PA-Acc-Any> ; #CHECK
+LIST <AG-Acc-Ani><PR-Acc-Any> = <AG-Acc-Ani><PR-Acc-Any> ; #CHECK
+LIST <AG-Ill-Ani><PR-Acc-Any> = <AG-Ill-Ani><PR-Acc-Any> ; #CHECK
+LIST <AG-Acc-Ani><TH-Inf> = <AG-Acc-Ani><TH-Inf> ; #CHECK
+LIST <AG-Ill-Ani><TH-Inf> = <AG-Ill-Ani><TH-Inf> ; #CHECK
+LIST <AG-Com-Ani> = <AG-Com-Ani> ; #CHECK
+LIST <AG-Ill-Ani><PR-Acc-Any> = <AG-Ill-Ani><PR-Acc-Any> ; #CHECK
+LIST <AG-Ill-Any> = <AG-Ill-Any> ; #CHECK
+LIST <AG-Loc-Any> = <AG-Loc-Any> ; #CHECK
+LIST <AG-Nom-Abs><TH-Ill-Abs> = <AG-Nom-Abs><TH-Ill-Abs> ; #CHECK
+LIST <AG-Nom-Abs><TH-Ill-Plc> = <AG-Nom-Abs><TH-Ill-Plc> ; #CHECK
+LIST <AG-Nom-Ani> = <AG-Nom-Ani> ; #CHECK
+LIST <AG-Nom-Any> = <AG-Nom-Any> ; #CHECK
+LIST <AT-Abe-Any> = <AT-Abe-Any> ; #CHECK
+LIST <AT-Ess-Any> = <AT-Ess-Any> ; #CHECK
+LIST <AT-Nom-Any> = <AT-Nom-Any> ; #CHECK
+LIST <AT-Nom-Adj><EX-Ill-Ani> = <AT-Nom-Adj><EX-Ill-Ani> ; #CHECK
+LIST <AT-Loc-Mat> = <AT-Loc-Mat> ; #CHECK
+LIST <TH-Nom-Obj><RE-Ill-Ani> = <TH-Nom-Obj><RE-Ill-Ani> ; #CHECK
+LIST <AktioEss> = <AktioEss> ; #CHECK
+LIST <BE-Acc-Ani> = <BE-Acc-Ani> ; #CHECK
+LIST <BE-Acc-Hum><LO-Loc-Pos> = <BE-Acc-Hum><LO-Loc-Pos> ; #CHECK
+LIST <BE-Acc-Ani><RO-Ess-Any> = <BE-Acc-Ani><RO-Ess-Any> ; #CHECK
+LIST <BE-Acc-Ani><TH-ahte> = <BE-Acc-Ani><TH-ahte> ; #CHECK
+LIST <BE-Acc-Ani><TH-Com-*Ani> = <BE-Acc-Ani><TH-Com-*Ani> ; #CHECK
+LIST <BE-Acc-Ani><TH-Ill-*Ani> = <BE-Acc-Ani><TH-Ill-*Ani> ; #CHECK
+LIST <BE-Acc-Ani><TH-Loc-Any> = <BE-Acc-Ani><TH-Loc-Any> ; #CHECK
+LIST <BE-Acc-Ani><PU-Ill-*Ani> = <BE-Acc-Ani><PU-Ill-*Ani> ; #CHECK
+LIST <BE-Acc-Any> = <BE-Acc-Any> ; #CHECK
+LIST <BE-Acc-Any><PU-Inf> = <BE-Acc-Any><PU-Inf> ; #CHECK
+LIST <BE-Acc-Any><vuostá> = <BE-Acc-Any><vuostá> ; #CHECK
+LIST <BE-Ill-Ani> = <BE-Ill-Ani> ; #CHECK
+LIST <BE-Ill-Any> = <BE-Ill-Any> ; #CHECK
+LIST <BE-Ill-Ani><PU-Ess-Any> = <BE-Ill-Ani><PU-Ess-Any> ; #CHECK
+LIST <BE-Ill-Ani><TH-Inf> = <BE-Ill-Ani><TH-Inf> ; #CHECK
+LIST <BE-Ill-Ani><veahkkin> = <BE-Ill-Ani><veahkkin> ; #CHECK
+LIST <BE-Loc-Any><vára> = <BE-Loc-Any><vára> ; #CHECK
+LIST <BE-ala-Ani> = <BE-ala-Ani> ; #CHECK
+LIST <BE-ovddas-Ani> = <BE-ovddas-Ani> ; #CHECK
+LIST <BE-ovdii-Ani> = <BE-ovdii-Ani> ; #CHECK
+LIST <CO-Acc-Ani> = <CO-Acc-Ani> ; #CHECK
+LIST <CO-Com-Ani> = <CO-Com-Ani> ; #CHECK
+LIST <CO-Com-Hum> = <CO-Com-Hum> ; #CHECK
+LIST <CO-mielde-Ani> = <CO-mielde-Ani> ; #CHECK
+LIST <CO-Com-Ani><RS-Loc-Any> = <CO-Com-Ani><RS-Loc-Any> ; #CHECK
+LIST <CO-Com-Ani><TH-Loc-Any> = <CO-Com-Ani><TH-Loc-Any> ; #CHECK
+LIST <CO-Ill-Any> = <CO-Ill-Any> ; #CHECK
+LIST <CO-gaskkas-Any> = <CO-gaskkas-Any> ;  #CHECK
+LIST <CO-vuostá-Any> = <CO-vuostá-Any> ; #CHECK
+LIST <DE-Ill-Any> = <DE-Ill-Any> ; #CHECK
+LIST <DE-Ill-*Ani> = <DE-Ill-*Ani> ; #CHECK
+LIST <DE-Ill-Plc> = <DE-Ill-Plc> ; #CHECK
+LIST <DE-Ill-Plc><PU-Inf> = <DE-Ill-Plc><PU-Inf> ; #CHECK
+LIST <DE-Ill-Time> = <DE-Ill-Time> ; #CHECK
+LIST <DE-lusa-Ani> = <DE-lusa-Ani> ; #CHECK
+LIST <DE-sisa-Build> = <DE-sisa-Build> ; #CHECK
+LIST <EX-Acc-Any> = <EX-Acc-Any> ; #CHECK
+LIST <EX-Acc-Ani> = <EX-Acc-Ani> ; #CHECK
+LIST <EX-Acc-Ani><CO-vuostá-Any> = <EX-Acc-Ani><CO-vuostá-Any> ; #CHECK
+LIST <EX-Com-Any> = <EX-Com-Any> ; #CHECK
+LIST <EX-Ill-Ani> = <EX-Ill-Ani> ; #CHECK
+LIST <EX-Acc-Ani><TH-ahte> = <EX-Acc-Ani><TH-ahte> ; #CHECK
+LIST <EX-Acc-Ani><TH-Inf> = <EX-Acc-Ani><TH-Inf> ; #CHECK
+LIST <EX-Ill-Ani><TH-ahte> = <EX-Ill-Ani><TH-ahte> ; #CHECK
+LIST <EX-Ill-Ani><TH-Acc-Any> = <EX-Ill-Ani><TH-Acc-Any> ; #CHECK
+LIST <EX-Ill-Ani><TH-Nom-Adj> = <EX-Ill-Ani><TH-Nom-Adj> ; #CHECK
+LIST <EX-Acc-Ani><LO-Loc-Plc> = <EX-Acc-Ani><LO-Loc-Plc> ; #CHECK
+LIST <EX-Acc-Ani><DE-Ill-Plc> = <EX-Acc-Ani><DE-Ill-Plc> ; #CHECK
+LIST <EX-Acc-Ani><TH-Ill-Any> = <EX-Acc-Ani><TH-Ill-Any> ; #CHECK
+LIST <EX-Acc-Ani><TH-Loc-Any> = <EX-Acc-Ani><TH-Loc-Any> ; #CHECK
+LIST <EX-Loc-Any> = <EX-Loc-Any> ; #CHECK
+LIST <EX-Nom-Time> = <EX-Nom-Time> ; #CHECK
+LIST <EX-Nom-Ani> = <EX-Nom-Ani> ; #CHECK
+LIST <ID-Nom-Any> = <ID-Nom-Any> ; #CHECK
+LIST <IN-Acc-Any> = <IN-Acc-Any> ; #CHECK
+LIST <IN-Acc-Any><MA-Ess-Any> = <IN-Acc-Any><MA-Ess-Any> ; #CHECK
+LIST <IN-Acc-Any><PU-Ill-Any> = <IN-Acc-Any><PU-Ill-Any> ; #CHECK
+LIST <IN-Acc-Lang> = <IN-Acc-Lang> ; #CHECK
+LIST <IN-Acc-Veh> = <IN-Acc-Veh> ; #CHECK
+LIST <IN-Acc-Veh><DE-Ill-Any> = <IN-Acc-Veh><DE-Ill-Any> ; #CHECK
+LIST <IN-Acc-Veh><SO-Loc-Any><DE-Ill-Any> = <IN-Acc-Veh><SO-Loc-Any><DE-Ill-Any> ; #CHECK
+LIST <IN-Com-Any> = <IN-Com-Any> ; #CHECK
+LIST <IN-Com-Lang> = <IN-Com-Lang> ; #CHECK
+LIST <IN-Com-Veh> = <IN-Com-Veh> ; #CHECK
+LIST <IN-Ill-Lang> = <IN-Ill-Lang> ; #CHECK
+LIST <Inf> = <Inf> ; #CHECK
+LIST <LO-Acc-Plc> = <LO-Acc-Plc> ; #CHECK
+LIST <LO-Acc-Time> = <LO-Acc-Time> ; #CHECK
+LIST <LO-Adv-Time> = <LO-Adv-Time> ; #CHECK
+LIST <LO-Com-Ani> = <LO-Com-Ani> ; #CHECK
+LIST <LO-Ill-Any> = <LO-Ill-Any> ; #CHECK
+LIST <LO-Ill-Body> = <LO-Ill-Body> ; #CHECK
+LIST <LO-Ill-Plc> = <LO-Ill-Plc> ; #CHECK
+LIST <LO-Ill-Time> = <LO-Ill-Time> ; #CHECK
+LIST <LO-Nom-Any><TH-Acc-Any> = <LO-Nom-Any><TH-Acc-Any> ; #CHECK
+LIST <LO-Loc-Any> = <LO-Loc-Any> ; #CHECK
+LIST <LO-Loc-Any><gitta> = <LO-Loc-Any><gitta> ; #CHECK
+LIST <LO-Loc-Any><guossis> = <LO-Loc-Any><guossis> ; #CHECK
+LIST <guossái> = <guossái> ; #CHECK
+LIST <LO-Loc-Org> = <LO-Loc-Org> ; #CHECK
+LIST <LO-Loc-Plc> = <LO-Loc-Plc> ; #CHECK
+LIST <LO-Loc-Time> = <LO-Loc-Time> ; #CHECK
+LIST <LO-ala-Plc> = <LO-ala-Plc> ; #CHECK
+LIST <LO-luhtte-Any> = <LO-luhtte-Any> ; #CHECK
+LIST <LO-maŋŋil-Time> = <LO-maŋŋil-Time> ; #CHECK
+LIST <MA-Adv-Manner> = <MA-Adv-Manner> ; #CHECK
+LIST <MA-mielde-Any> = <MA-mielde-Any> ; #CHECK
+LIST <TH-Nom-*Ani><MA-Adv-Manner> = <TH-Nom-*Ani><MA-Adv-Manner> ; #CHECK
+LIST <MA-Com-*Plc> = <MA-Com-*Plc> ; #CHECK
+LIST <MA-Com-Any> = <MA-Com-Any> ; #CHECK
+LIST <MA-Ess-Adj> = <MA-Ess-Adj> ; #CHECK
+LIST <OR-Loc-Any> = <OR-Loc-Any> ; #CHECK
+LIST <OR-Loc-Mat><PR-Nom-Any> = <OR-Loc-Mat><PR-Nom-Any> ; #CHECK
+LIST <PR-Nom-Any> = <PR-Nom-Any> ; #CHECK
+LIST <PA-Acc-*Ani><BE-Ill-Ani> = <PA-Acc-*Ani><BE-Ill-Ani> ; #CHECK
+LIST <PA-Acc-*Ani><DE-Ill-Any> = <PA-Acc-*Ani><DE-Ill-Any> ;
+LIST <PA-Acc-Ani> = <PA-Acc-Ani> ; #CHECK
+LIST <PA-Acc-Ani><LO-Ill-Body> = <PA-Acc-Ani><LO-Ill-Body> ; #CHECK
+LIST <PA-Acc-Ani><LO-Loc-Body> = <PA-Acc-Ani><LO-Loc-Body> ; #CHECK
+LIST <PA-Acc-Ani><PU-Ill-Any> = <PA-Acc-Ani><PU-Ill-Any> ; #CHECK
+LIST <PA-Acc-Ani><PU-Inf> = <PA-Acc-Ani><PU-Inf> ; #CHECK
+LIST <PA-Acc-Ani><jámas> = <PA-Acc-Ani><jámas> ; #CHECK
+LIST <PA-Acc-Any><TH-Inf> = <PA-Acc-Any><TH-Inf> ; #CHECK
+LIST <PA-Acc-Any> = <PA-Acc-Any> ; #CHECK
+LIST <PA-Acc-Any><atnui> = <PA-Acc-Any><atnui> ; #CHECK
+LIST <PA-Acc-Any><eret> = <PA-Acc-Any><eret> ; #CHECK
+LIST <PA-Acc-Any><CO-gaskka-Any> = <PA-Acc-Any><CO-gaskka-Any> ; #CHECK
+LIST <PA-Acc-Any><DE-Ill-Any> = <PA-Acc-Any><DE-Ill-Any> ; #CHECK
+LIST <PA-Acc-Any><IN-Com-*Ani> = <PA-Acc-Any><IN-Com-*Ani> ; #CHECK
+LIST <PA-Acc-Any><LO-Ill-Any> = <PA-Acc-Any><LO-Ill-Any> ; #CHECK
+LIST <PA-Acc-Any><LO-Loc-Any> = <PA-Acc-Any><LO-Loc-Any> ; #CHECK
+LIST <PA-Acc-Any><PA-Com-Any> = <PA-Acc-Any><PA-Com-Any> ; #CHECK
+LIST <PA-Acc-Any><PR-Ess-Any> = <PA-Acc-Any><PR-Ess-Any> ; #CHECK
+LIST <PA-Acc-Any><PR-Ill-*Ani> = <PA-Acc-Any><PR-Ill-*Ani> ; #CHECK
+LIST <PA-Acc-Any><PU-Ill-Any> = <PA-Acc-Any><PU-Ill-Any> ; #CHECK
+LIST <PA-Acc-Any><RF-Ill-Any> = <PA-Acc-Any><RF-Ill-Any> ; #CHECK
+LIST <PA-Acc-Any><RF-Loc-Any> = <PA-Acc-Any><RF-Loc-Any> ; #CHECK
+LIST <PA-Acc-Any><RF-ektui-Any> = <PA-Acc-Any><RF-ektui-Any> ; #CHECK
+LIST <PA-Acc-Any><RF-mielde-Any> = <PA-Acc-Any><RF-mielde-Any> ; #CHECK
+LIST <PA-Acc-Any><RF-vuostá-Any> = <PA-Acc-Any><RF-vuostá-Any> ; #CHECK
+LIST <PA-Acc-Any><RF-vuođul-Any> = <PA-Acc-Any><RF-vuođul-Any> ; #CHECK
+LIST <PA-Acc-Any><RF-váste-Any> = <PA-Acc-Any><RF-váste-Any> ; #CHECK
+LIST <PA-Acc-Any><RO-Ess-Any> = <PA-Acc-Any><RO-Ess-Any> ; #CHECK
+LIST <PA-Acc-Any><SO-Loc-Any> = <PA-Acc-Any><SO-Loc-Any> ; #CHECK
+LIST <PA-Acc-Any><SO-Loc-Any><DE-Ill-Any> = <PA-Acc-Any><SO-Loc-Any><DE-Ill-Any> ; #CHECK
+LIST <BE-Acc-Any><TH-AktioLoc> = <BE-Acc-Any><TH-AktioLoc> ; #CHECK
+LIST <BE-Acc-Ani><TH-AktioEss> = <BE-Acc-Ani><TH-AktioEss> ; #CHECK
+LIST <BE-Acc-Ani><TH-Inf> = <BE-Acc-Ani><TH-Inf> ; #CHECK
+LIST <PA-Acc-Any><TH-Com-Any> = <PA-Acc-Any><TH-Com-Any> ; #CHECK
+LIST <PA-Acc-Ani><TH-Ill-Any> = <PA-Acc-Ani><TH-Ill-Any> ; #CHECK
+LIST <PA-Acc-Ani><TH-Inf> = <PA-Acc-Ani><TH-Inf> ; #CHECK
+LIST <PA-Acc-Any><XT-Com-Measure> = <PA-Acc-Any><XT-Com-Measure> ; #CHECK
+LIST <PA-Acc-Any><gitta> = <PA-Acc-Any><gitta> ; #CHECK
+LIST <PA-Acc-Any><PU-Inf> = <PA-Acc-Any><PU-Inf> ; #CHECK
+LIST <PA-Acc-Any><ráiggil> = <PA-Acc-Any><ráiggil> ; #CHECK
+LIST <PA-Acc-Body> = <PA-Acc-Body> ; #CHECK
+LIST <PA-Acc-Food> = <PA-Acc-Food> ; #CHECK
+LIST <PA-Acc-BessetN> = <PA-Acc-BessetN> ; #CHECK
+LIST <PA-Acc-Hum> = <PA-Acc-Hum> ; #CHECK
+LIST <PA-Acc-ieš><LO-Ill-Any> = <PA-Acc-ieš><LO-Ill-Any> ; #CHECK
+LIST <PA-Acc-Substnc> = <PA-Acc-Substnc> ; #CHECK
+LIST <PA-Acc-Veh> = <PA-Acc-Veh> ; #CHECK
+LIST <PA-Acc-boktitN> = <PA-Acc-boktitN> ; #CHECK
+LIST <PA-Com-Any> = <PA-Com-Any> ; #CHECK
+LIST <PA-Ill-*Ani> = <PA-Ill-*Ani> ; #CHECK
+LIST <PA-Ill-Ani><LO-Ill-Body> = <PA-Ill-Ani><LO-Ill-Body> ; #CHECK
+LIST <PA-Ill-Ani><TH-Acc-*Ani> = <PA-Ill-Ani><TH-Acc-*Ani> ; #CHECK
+LIST <PA-Ill-Ani><TH-Inf> = <PA-Ill-Ani><TH-Inf> ; #CHECK
+LIST <PA-Loc-Ani><LO-Acc-Body> = <PA-Loc-Ani><LO-Acc-Body> ; #CHECK
+LIST <PA-Loc-Ani><PU-Inf> = <PA-Loc-Ani><PU-Inf> ; #CHECK
+LIST <PA-Loc-Food> = <PA-Loc-Food> ; #CHECK
+LIST <PA-Nom-Ani> = <PA-Nom-Ani> ; #CHECK
+LIST <PA-Nom-Any> = <PA-Nom-Any> ; #CHECK
+LIST <PA-gaskkas-Any> = <PA-gaskkas-Any> ; #CHECK
+LIST <TH-Nom-Any><RO-Ess-Any><EX-Ill-Any> = <TH-Nom-Any><RO-Ess-Any><EX-Ill-Any> ; #CHECK
+LIST <TH-Acc-Ani><DE-Ill-*Ani> = <TH-Acc-Ani><DE-Ill-*Ani> ; #CHECK
+LIST <TH-Acc-Any><EX-Loc-Ani> = <TH-Acc-Any><EX-Loc-Ani> ; #CHECK
+LIST <TH-Acc-Any><LO-birra-Any> = <TH-Acc-Any><LO-birra-Any> ; #CHECK
+LIST <TH-Acc-vuođđu><LO-Loc-Any> = <TH-Acc-vuođđu><LO-Loc-Any> ; #CHECK
+LIST <TH-Acc-Any><IN-Com-Veh> = <TH-Acc-Any><IN-Com-Veh> ; #CHECK
+LIST <TH-Acc-Any><XT-Ill-Money> = <TH-Acc-Any><XT-Ill-Money> ; #CHECK
+LIST <TH-Acc-Any><XT-Loc-Money> = <TH-Acc-Any><XT-Loc-Money> ; #CHECK
+LIST <TH-Acc-Any><ala> = <TH-Acc-Any><ala> ; #CHECK
+LIST <TH-Acc-Any><birra> = <TH-Acc-Any><birra> ; #CHECK
+LIST <TH-Acc-Any><rastá> = <TH-Acc-Any><rastá> ; #CHECK
+LIST <TH-Acc-Any><RF-Ill-Any> = <TH-Acc-Any><RF-Ill-Any> ; #CHECK
+LIST <TH-haga-Any> = <TH-haga-Any> ; #CHECK
+LIST <TH-Nom-*Ani> = <TH-Nom-*Ani> ; #CHECK
+LIST <TH-Nom-Any> = <TH-Nom-Any> ; #CHECK
+LIST <TH-Nom-Time> = <TH-Nom-Time> ; #CHECK
+LIST <TH-Acc-Any><fárrui> = <TH-Acc-Any><fárrui> ; #CHECK
+LIST <TH-Acc-Any><gitta> = <TH-Acc-Any><gitta> ; #CHECK
+LIST <TH-Nom-Any><PO-Ill-Any> = <TH-Nom-Any><PO-Ill-Any> ; #CHECK
+LIST <PO-Gen-Hum> = <PO-Gen-Hum> ; #CHECK
+LIST <PO-Ill-Any> = <PO-Ill-Any> ; #CHECK
+LIST <PO-Loc-Hum> = <PO-Loc-Hum> ; #CHECK
+LIST <PR-Acc-Any> = <PR-Acc-Any> ; #CHECK
+LIST <PR-Acc-Txt><LO-Ill-Txt> = <PR-Acc-Txt><LO-Ill-Txt> ;
+LIST <PR-Acc-Any><bajás> = <PR-Acc-Any><bajás> ; #CHECK
+LIST <PR-Acc-Any><BE-Ill-Any> = <PR-Acc-Any><BE-Ill-Any> ; #CHECK
+LIST <PR-Acc-Any><LO-Ill-*Ani> = <PR-Acc-Any><LO-Ill-*Ani> ; #CHECK
+LIST <PR-Acc-Any><MA-Ess-Any> = <PR-Acc-Any><MA-Ess-Any> ; #CHECK
+LIST <PR-Acc-Any><MA-Acc-Adj> = <PR-Acc-Any><MA-Acc-Adj> ; #CHECK
+LIST <PR-Acc-Any><OR-Loc-Mat> = <PR-Acc-Any><OR-Loc-Mat> ; #CHECK
+LIST <PR-Acc-Any><OR-Loc-Any> = <PR-Acc-Any><OR-Loc-Any> ; #CHECK
+LIST <PR-Ess-Any> = <PR-Ess-Any> ; #CHECK
+LIST <PR-Ess-Any><BE-Ill-Ani> = <PR-Ess-Any><BE-Ill-Ani> ; #CHECK
+LIST <PR-Ill-Any> = <PR-Ill-Any> ; #CHECK
+LIST <PT-Gen-Plc> = <PT-Gen-Plc> ; #CHECK
+LIST <PT-Gen-Plc><DE-Ill-Any> = <PT-Gen-Plc><DE-Ill-Any> ; #CHECK
+LIST <PT-bokte-Plc> = <PT-bokte-Plc> ; #CHECK
+LIST <PT-meaddel-Plc> = <PT-meaddel-Plc> ; #CHECK
+LIST <PT-čađa-Plc> = <PT-čađa-Plc> ; #CHECK
+LIST <PT-rastá-Plc> = <PT-rastá-Plc> ; #CHECK
+LIST <PU-AktioEss> = <PU-AktioEss> ; #CHECK
+LIST <PU-Ill-*Ani> = <PU-Ill-*Ani> ; #CHECK
+LIST <PU-Inf> = <PU-Inf> ; #CHECK
+LIST <PV-Loc-Any> = <PV-Loc-Any> ; #CHECK
+LIST <RE-Acc-Ani> = <RE-Acc-Ani> ; #CHECK
+LIST <RE-Acc-Ani><TH-ahte> = <RE-Acc-Ani><TH-ahte> ; #CHECK
+LIST <RE-Acc-Ani><TH-Ill-Any> = <RE-Acc-Ani><TH-Ill-Any> ; #CHECK
+LIST <RE-Acc-Ani><TH-Inf> = <RE-Acc-Ani><TH-Inf> ; #CHECK
+LIST <RE-Acc-Ani><TH-AktioLoc> = <RE-Acc-Ani><TH-AktioLoc> ; #CHECK
+LIST <RE-Com-Ani> = <RE-Com-Ani> ; #CHECK
+LIST <RE-Com-ieš> = <RE-Com-ieš> ; #CHECK
+LIST <RE-Ill-Ani> = <RE-Ill-Ani> ; #CHECK
+LIST <RE-Ill-Ani><TH-Acc-*Ani> = <RE-Ill-Ani><TH-Acc-*Ani> ; #CHECK
+LIST <RE-Ill-Ani><TH-FS> = <RE-Ill-Ani><TH-FS> ; #CHECK
+LIST <RE-Ill-Ani><TH-ahte> = <RE-Ill-Ani><TH-ahte> ; #CHECK
+LIST <RE-Ill-Any><TH-Acc-Any><namman> = <RE-Ill-Any><TH-Acc-Any><namman> ; 
+LIST <RE-Ill-ieš> = <RE-Ill-ieš> ; #CHECK
+LIST <RE-Loc-Ani> = <RE-Loc-Ani> ; #CHECK
+LIST <RE-Loc-Ani><TH-FS-Qst> = <RE-Loc-Ani><TH-FS-Qst> ; #CHECK
+LIST <RE-Loc-Ani><TH-FS-Qpron> = <RE-Loc-Ani><TH-FS-Qpron> ; #CHECK
+LIST <RE-Loc-Ani><TH-ahte> = <RE-Loc-Ani><TH-ahte> ; #CHECK
+LIST <RF-Ill-Any> = <RF-Ill-Any> ; #CHECK
+LIST <RF-Loc-Any> = <RF-Loc-Any> ; #CHECK
+LIST <RO-Ess-Any> = <RO-Ess-Any> ; #CHECK
+LIST <RO-Ess-Any><PU-Ill-Act> = <RO-Ess-Any><PU-Ill-Act> ; #CHECK
+LIST <RO-Ill-Any> = <RO-Ill-Any> ; #CHECK
+LIST <RS-Acc-Reason> = <RS-Acc-Reason> ; #CHECK
+LIST <RS-Acc-*Ani> = <RS-Acc-*Ani> ; #CHECK
+LIST <RS-Com-Any> = <RS-Com-Any> ; #CHECK
+LIST <RS-Com-Clth> = <RS-Com-Clth> ; #CHECK
+LIST <RS-Com-Impers> = <RS-Com-Impers> ; #CHECK
+LIST <RS-Ill-Any> = <RS-Ill-Any> ; #CHECK
+LIST <RS-Loc-Any> = <RS-Loc-Any> ; #CHECK
+LIST <RS-dihte-Any> = <RS-dihte-Any> ; #CHECK
+LIST <RS-geažil-Any> = <RS-geažil-Any> ; #CHECK
+LIST <RS-go> = <RS-go> ; #CHECK
+LIST <RS-ovddas-Any> = <RS-ovddas-Any> ; #CHECK
+LIST <SO-Loc-Any> = <SO-Loc-Any> ; #CHECK
+LIST <SO-Loc-*Ani> = <SO-Loc-*Ani> ; #CHECK
+LIST <SO-Loc-Any><DE-Ill-Any> = <SO-Loc-Any><DE-Ill-Any> ; #CHECK
+LIST <SO-Loc-*Ani><DE-Ill-*Ani> = <SO-Loc-*Ani><DE-Ill-*Ani> ; #CHECK
+LIST <SO-Loc-Time><DE-Ill-Time> = <SO-Loc-Time><DE-Ill-Time> ; #CHECK
+LIST <SO-Loc-Lang><DE-Ill-Lang> = <SO-Loc-Lang><DE-Ill-Lang> ; #CHECK
+LIST <SO-luhtte-Ani> = <SO-luhtte-Ani> ; #CHECK
+LIST <TH-Acc-*Ani> = <TH-Acc-*Ani> ; #CHECK
+LIST <TH-Acc-*Ani><BE-Ill-Ani> = <TH-Acc-*Ani><BE-Ill-Ani> ; #CHECK
+LIST <TH-Acc-*Ani><BE-Loc-Ani> = <TH-Acc-*Ani><BE-Loc-Ani> ; #CHECK
+LIST <TH-Acc-*Ani><RE-Loc-Ani> = <TH-Acc-*Ani><RE-Loc-Ani> ; #CHECK
+LIST <TH-Acc-*Plc> = <TH-Acc-*Plc> ; #CHECK
+LIST <TH-Acc-Any> = <TH-Acc-Any> ; #CHECK
+LIST <TH-Acc-Ani> = <TH-Acc-Ani> ; #CHECK
+LIST <TH-Acc-Any><TH-Inf> = <TH-Acc-Any><TH-Inf> ; #CHECK
+LIST <TH-Acc-Any><bajil> = <TH-Acc-Any><bajil> ; #CHECK
+LIST <TH-Acc-Any><CO-Com-Ani> = <TH-Acc-Any><CO-Com-Ani> ; #CHECK
+LIST <TH-Acc-Any><CO-vuostá-Any> = <TH-Acc-Any><CO-vuostá-Any> ; #CHECK
+LIST <TH-Acc-Any><DE-Ill-Any> = <TH-Acc-Any><DE-Ill-Any> ; #CHECK
+LIST <TH-Acc-Any><DE-Ill-*Ani> = <TH-Acc-Any><DE-Ill-*Ani> ; #CHECK
+LIST <TH-Acc-Any><DE-Ill-Lang> = <TH-Acc-Any><DE-Ill-Lang> ; #CHECK
+LIST <TH-Acc-Any><DE-Ill-Time> = <TH-Acc-Any><DE-Ill-Time> ; #CHECK
+LIST <TH-Acc-Any><EX-Ill-Any> = <TH-Acc-Any><EX-Ill-Any> ; #CHECK
+LIST <TH-Acc-Any><IN-Com-*Ani> = <TH-Acc-Any><IN-Com-*Ani> ; #CHECK
+LIST <TH-Acc-Any><IN-Com-Money> = <TH-Acc-Any><IN-Com-Money> ; #CHECK
+LIST <TH-Acc-Any><IN-bokte-Money> = <TH-Acc-Any><IN-bokte-Money> ; #CHECK
+LIST <TH-Acc-Any><LO-Ill-*Ani> = <TH-Acc-Any><LO-Ill-*Ani> ; #CHECK
+LIST <TH-Acc-Any><LO-Loc-Any> = <TH-Acc-Any><LO-Loc-Any> ; #CHECK
+LIST <TH-Acc-Any><LO-ala-Any> = <TH-Acc-Any><LO-ala-Any> ; #CHECK
+LIST <TH-Acc-Any><MA-Ess-Any> = <TH-Acc-Any><MA-Ess-Any> ; #CHECK
+LIST <TH-Acc-Any><OR-Loc-Any> = <TH-Acc-Any><OR-Loc-Any> ; #CHECK
+LIST <TH-Acc-Any><OR-Loc-Any><RE-Ill-Any> = <TH-Acc-Any><OR-Loc-Any><RE-Ill-Any> ; #CHECK
+LIST <TH-Acc-Any><PU-Ill-Any> = <TH-Acc-Any><PU-Ill-Any> ; #CHECK
+LIST <TH-Acc-Any><PU-Inf> = <TH-Acc-Any><PU-Inf> ; #CHECK
+LIST <TH-Acc-Any><RE-Com-Ani> = <TH-Acc-Any><RE-Com-Ani> ; #CHECK
+LIST <TH-Acc-Any><RE-Loc-Ani> = <TH-Acc-Any><RE-Loc-Ani> ; #CHECK
+LIST <TH-Acc-Any><RF-Com-Any> = <TH-Acc-Any><RF-Com-Any> ; #CHECK
+LIST <TH-Acc-Any><RF-Loc-*Plc> = <TH-Acc-Any><RF-Loc-*Plc> ; #CHECK
+LIST <TH-Acc-Any><RF-vuostá-Any> = <TH-Acc-Any><RF-vuostá-Any> ; #CHECK
+LIST <TH-Acc-Any><RF-vuostái-Any> = <TH-Acc-Any><RF-vuostái-Any> ; #CHECK
+LIST <TH-Acc-Any><RO-Ess-Adj> = <TH-Acc-Any><RO-Ess-Adj> ; #CHECK
+LIST <TH-Acc-Any><RO-Ess-Any> = <TH-Acc-Any><RO-Ess-Any> ; #CHECK
+LIST <TH-Inf><RO-Ess-Any> = <TH-Inf><RO-Ess-Any> ; #CHECK
+LIST <TH-Acc-Any><RO-Ill-Any> = <TH-Acc-Any><RO-Ill-Any> ; #CHECK
+LIST <TH-Acc-Any><RS-Loc-Any> = <TH-Acc-Any><RS-Loc-Any> ; #CHECK
+LIST <TH-Acc-Any><RS-ovddas-Any> = <TH-Acc-Any><RS-ovddas-Any> ; #CHECK
+LIST <TH-Acc-Any><SO-Loc-Any> = <TH-Acc-Any><SO-Loc-Any> ; #CHECK
+LIST <TH-Acc-Any><SO-Loc-Any><DE-Ill-Any> = <TH-Acc-Any><SO-Loc-Any><DE-Ill-Any> ; #CHECK
+LIST <TH-Acc-Any><SO-Loc-*Ani><DE-Ill-*Ani> = <TH-Acc-*Ani><SO-Loc-Any><DE-Ill-*Ani> ; #CHECK
+LIST <TH-Acc-Any><SO-Loc-Lang> = <TH-Acc-Any><SO-Loc-Lang> ; #CHECK
+LIST <TH-Acc-Any><SO-Loc-Lang><DE-Ill-Lang> = <TH-Acc-Any><SO-Loc-Lang><DE-Ill-Lang> ; #CHECK
+LIST <TH-Acc-Any><TH-AktioEss> = <TH-Acc-Any><TH-AktioEss> ; #CHECK
+LIST <TH-Acc-Any><TH-PrfPrc> = <TH-Acc-Any><TH-PrfPrc> ; #CHECK
+LIST <TH-Acc-Any><TH-Com-Any> = <TH-Acc-Any><TH-Com-Any> ; #CHECK
+LIST <TH-Acc-Any><XT-Com-Measure> = <TH-Acc-Any><XT-Com-Measure> ; #CHECK
+LIST <TH-Acc-Any><XT-Ill-Freq> = <TH-Acc-Any><XT-Ill-Freq> ; #CHECK
+LIST <TH-Acc-Any><badjelii> = <TH-Acc-Any><badjelii> ; #CHECK
+LIST <TH-Acc-Any><bajás> = <TH-Acc-Any><bajás> ; #CHECK
+LIST <TH-Acc-Any><doibmii> = <TH-Acc-Any><doibmii> ; #CHECK
+LIST <TH-Acc-Any><eret> = <TH-Acc-Any><eret> ; #CHECK
+LIST <TH-Acc-Any><fápmui> = <TH-Acc-Any><fápmui> ; #CHECK
+LIST <TH-Acc-Any><johtui> = <TH-Acc-Any><johtui> ; #CHECK
+LIST <TH-Acc-Any><mátkái> = <TH-Acc-Any><mátkái> ; #CHECK
+LIST <TH-Acc-Any><mielde> = <TH-Acc-Any><mielde> ; #CHECK
+LIST <TH-Acc-Any><oktii> = <TH-Acc-Any><oktii> ; #CHECK
+LIST <TH-Acc-Any><ovdan> = <TH-Acc-Any><ovdan> ; #CHECK
+LIST <TH-Acc-Any><ruovttoluotta> = <TH-Acc-Any><ruovttoluotta> ; #CHECK
+LIST <TH-Acc-Any><sisa> = <TH-Acc-Any><sisa> ; #CHECK
+LIST <TH-Acc-Any><sisa><LO-Ill-Any> = <TH-Acc-Any><sisa><LO-Ill-Any> ; #CHECK
+LIST <TH-Acc-Any><MA-Ill-áigi> = <TH-Acc-Any><MA-Ill-áigi> ; #CHECK
+LIST <TH-Acc-Any><MA-Ill-háldu> = <TH-Acc-Any><MA-Ill-háldu> ; #CHECK
+LIST <TH-Acc-Body> = <TH-Acc-Body> ; #CHECK
+LIST <TH-Acc-Obj> = <TH-Acc-Obj> ; #CHECK
+LIST <TH-Acc-Dance> = <TH-Acc-Dance> ; #CHECK
+LIST <TH-Acc-Edu> = <TH-Acc-Edu> ; #CHECK
+LIST <TH-Acc-Hum><eret> = <TH-Acc-Hum><eret> ; #CHECK
+LIST <TH-Acc-Impers> = <TH-Acc-Impers> ; #CHECK
+LIST <TH-Acc-Money> = <TH-Acc-Money> ; #CHECK
+LIST <TH-Acc-Obj><CO-Com-Ani> = <TH-Acc-Obj><CO-Com-Ani> ; #CHECK
+LIST <TH-Acc-Obj><XT-Acc-Measure> = <TH-Acc-Obj><XT-Acc-Measure> ; #CHECK
+LIST <TH-AktioEss> = <TH-AktioEss> ; #CHECK
+LIST <TH-AktioCom> = <TH-AktioCom> ; #CHECK
+LIST <TH-AktioLoc> = <TH-AktioLoc> ; #CHECK
+LIST <TH-AktioLoc><RF-Loc-Any> = <TH-AktioLoc><RF-Loc-Any> ; #CHECK
+LIST <TH-Com-*Ani> = <TH-Com-*Ani> ; #CHECK
+LIST <TH-Com-Any> = <TH-Com-Any> ; #CHECK
+LIST <TH-Com-Impers> = <TH-Com-Impers> ; #CHECK
+LIST <TH-Ess-Ani> = <TH-Ess-Ani> ; #CHECK
+LIST <TH-Ess-Wthr> = <TH-Ess-Wthr> ; #CHECK
+LIST <TH-FS> = <TH-FS> ; #CHECK
+LIST <TH-FS-Qst> = <TH-FS-Qst> ; #CHECK
+LIST <TH-FS-Qpron> = <TH-FS-Qpron> ; #CHECK
+LIST <TH-gaskkas-Any> = <TH-gaskkas-Any> ;  #CHECK
+LIST <TH-Ill-Any> = <TH-Ill-Any> ; #CHECK
+LIST <TH-Ill-Obj> = <TH-Ill-Obj> ; #CHECK
+LIST <TH-Inf> = <TH-Inf> ; #CHECK
+LIST <TH-Inf><RE-Ill-Any> = <TH-Inf><RE-Ill-Any> ; #CHECK
+LIST <TH-Loc-Any> = <TH-Loc-Any> ; #CHECK
+LIST <TH-Loc-Concept> = <TH-Loc-Concept> ; #CHECK
+LIST <TH-Loc-Event> = <TH-Loc-Event> ; #CHECK
+LIST <TH-Loc-Plc> = <TH-Loc-Plc> ; #CHECK
+LIST <TH-Loc-Txt> = <TH-Loc-Txt> ; #CHECK
+LIST <LO-Loc-johtu><DE-Ill-Plc> = <LO-Loc-johtu><DE-Ill-Plc> ; #CHECK
+LIST <TH-Nom-Any> = <TH-Nom-Any> ; #CHECK
+LIST <TH-Nom-Any><XT-Acc-Measure> = <TH-Nom-Any><XT-Acc-Measure> ; #CHECK
+LIST <TH-Nom-*Ani><PR-Ess-Any> = <TH-Nom-*Ani><PR-Ess-Any> ; #CHECK
+LIST <TH-ahte> = <TH-ahte> ; #CHECK
+LIST <TH-ahte><RE-Ill-Any> = <TH-ahte><RE-Ill-Any> ; #CHECK
+LIST <TH-ahte><ovdan> = <TH-ahte><ovdan> ; #CHECK
+LIST <TH-ala-*Plc> = <TH-ala-*Plc> ; #CHECK
+LIST <TH-alde-Any> = <TH-alde-Any> ; #CHECK
+LIST <TH-badjel-Ani> = <TH-badjel-Ani> ; #CHECK
+LIST <TH-badjel-Any> = <TH-badjel-Any> ; #CHECK
+LIST <TH-beale-Any> = <TH-beale-Any> ; #CHECK
+LIST <TH-birra-Any> = <TH-birra-Any> ; #CHECK
+LIST <TH-birra-Any><CO-Com-Ani> = <TH-birra-Any><CO-Com-Ani> ; #CHECK
+LIST <TH-birra-Any><RE-Com-Ani> = <TH-birra-Any><RE-Com-Ani> ; #CHECK
+LIST <TH-birra-Any><RE-Acc-Any> = <TH-birra-Any><RE-Acc-Any> ; #CHECK
+LIST <TH-go> = <TH-go> ; #CHECK
+LIST <TH-jus> = <TH-jus> ; #CHECK
+LIST <TH-hárrái-Any> = <TH-hárrái-Any> ; #CHECK
+LIST <TH-lusa-Any> = <TH-lusa-Any> ; #CHECK
+LIST <TH-maŋis-Ani> = <TH-maŋis-Ani> ; #CHECK
+LIST <TH-maŋŋái-*Plc> = <TH-maŋŋái-*Plc> ; #CHECK
+LIST <TH-ovddas-Any> = <TH-ovddas-Any> ; #CHECK
+LIST <TH-ovddas-Any><RE-Ill-Any> = <TH-ovddas-Any><RE-Ill-Any> ; #CHECK
+LIST <TH-Ill-*Plc> = <TH-Ill-*Plc> ; #CHECK
+LIST <TH-PrfPrc> = <TH-PrfPrc> ; #CHECK
+LIST <TH-vuostá-Ani> = <TH-vuostá-Ani> ; #CHECK
+LIST <XT-Acc-Measure> = <XT-Acc-Measure> ; #CHECK
+LIST <TH-Nom-Any><XT-Acc-Money> = <TH-Nom-Any><XT-Acc-Money> ; #CHECK
+LIST <XT-Acc-Money><RE-Ill-Any> = <XT-Acc-Money><RE-Ill-Any> ; #CHECK
+LIST <XT-Acc-Money><TH-ovddas-Any> = <XT-Acc-Money><TH-ovddas-Any> ; #CHECK
+LIST <XT-Acc-Money><TH-ovddas-Any><RE-Ill-Any> = <XT-Acc-Money><TH-ovddas-Any><RE-Ill-Any> ; #CHECK
+LIST <XT-Acc-Time> = <XT-Acc-Time> ; #CHECK
+LIST <XT-Adv-Xt> = <XT-Adv-Xt> ; #CHECK
+LIST <XT-Gen-Measr> = <XT-Gen-Measr> ; #CHECK
+LIST <XT-Com-Measure> = <XT-Com-Measure> ; #CHECK
+LIST <XT-Com-Money> = <XT-Com-Money> ; #CHECK
+LIST <XT-Com-Time> = <XT-Com-Time> ; #CHECK
+LIST <XT-Ill-Money> = <XT-Ill-Money> ; #CHECK
+LIST <XT-Ill-Freq> = <XT-Ill-Freq> ; #CHECK
+LIST <XT-Loc-Money> = <XT-Loc-Money> ; #CHECK
+LIST <TH-Acc-Any><árvvus> = <TH-Acc-Any><árvvus> ; #CHECK
+LIST <árvvus> = <árvvus> ; #CHECK
+LIST <ala> = <ala> ; #CHECK
+LIST <atnui> = <atnui> ; #CHECK
+LIST <badjel> = <badjel> ; #CHECK
+LIST <bajás> = <bajás> ; #CHECK
+LIST <birra> = <birra> ; #CHECK
+LIST <dušše><TH-Inf> = <dušše><TH-Inf> ; #CHECK
+LIST <eret> = <eret> ; #CHECK
+LIST <eret><AktioLoc> = <eret><AktioLoc> ; #CHECK
+LIST <OR-eret-Plc> = <OR-eret-Plc> ; #CHECK
+LIST <OR-Loc-HumGroup> = <OR-Loc-HumGroup> ; #CHECK
+LIST <fárrui> = <fárrui> ; #CHECK
+LIST <gitta> = <gitta> ; #CHECK
+LIST <guossis> = <guossis> ; #CHECK
+LIST <heaggabeallái> = <heaggabeallái> ; #CHECK
+LIST <iežas> = <iežas> ; #CHECK
+LIST <johtui> = <johtui> ; #CHECK
+LIST <johtui><DE-Ill-Plc> = <johtui><DE-Ill-Plc> ; #CHECK
+LIST <jámas> = <jámas> ; #CHECK
+LIST <mátkái> = <mátkái> ; #CHECK
+LIST <mátkái><DE-Ill-Plc> = <mátkái><DE-Ill-Plc> ; #CHECK
+LIST <mielde> = <mielde> ; #CHECK
+LIST <oktii> = <oktii> ; #CHECK
+LIST <oktii><RF-Com-Any> = <oktii><RF-Com-Any> ; #CHECK
+LIST <olggos> = <olggos> ; #CHECK
+LIST <ovttas> = <ovttas> ; #CHECK
+LIST <ovttas><CO-Com-Ani> = <ovttas><CO-Com-Ani> ; #CHECK
+LIST <rabas> = <rabas> ; #CHECK
+LIST <rasta> = <rasta> ; #CHECK
+LIST <sisa> = <sisa> ; #CHECK
+LIST <vára> = <vára> ; #CHECK
+LIST <veahkkin> = <veahkkin> ; #CHECK
+LIST <vuhtii> = <vuhtii> ; #CHECK
+LIST <vuhtii><TH-ahte> = <vuhtii><TH-ahte> ; #CHECK
+LIST <vuhtii><TH-Acc-Any> = <vuhtii><TH-Acc-Any> ; #CHECK
+LIST <vuostá> = <vuostá> ; #CHECK
+LIST <vuostái><RF-Acc-Any> = <vuostái><RF-Acc-Any> ; #CHECK
+LIST <utnedh><TH-Inf> = <utnedh><TH-Inf> ;
+LIST <utnedh><TH-PrfPrc> = <utnedh><TH-PrfPrc> ;
+
+
+#!! ### Other secondary tags
+
+# Secondary tags
+# --------------
+
+LIST <spelled> = <spelled> ;
 
 #!! ### Semantic tags
 
-LIST Sem/Act = Sem/Act ;				    #!! - `Sem/Act       `
-LIST Sem/Ani = Sem/Ani ;				    #!! - `Sem/Ani       `
-LIST Sem/Atr = Sem/Atr ;				    #!! - `Sem/Atr       `
-LIST Sem/Body = Sem/Body ;				    #!! - `Sem/Body      `
-LIST Sem/Clth = Sem/Clth ;				    #!! - `Sem/Clth      `
-LIST Sem/Domain = Sem/Domain ;			    #!! - `Sem/Domain    `
-LIST Sem/Feat-phys = Sem/Feat-phys ;	    #!! - `Sem/Feat-phys `
-LIST Sem/Fem = Sem/Fem ;				    #!! - `Sem/Fem       `
-LIST Sem/Group = Sem/Group ;			    #!! - `Sem/Group     `
-LIST Sem/Lang = Sem/Lang ;				    #!! - `Sem/Lang      `
-LIST Sem/Mal = Sem/Mal ;				    #!! - `Sem/Mal       `
-LIST Sem/Measr = Sem/Measr ;			    #!! - `Sem/Measr     `
-LIST Sem/Money = Sem/Money ;			    #!! - `Sem/Money     `
-LIST Sem/Obj = Sem/Obj ;				    #!! - `Sem/Obj       `
-LIST Sem/Obj-el = Sem/Obj-el ;			    #!! - `Sem/Obj-el    `
-LIST Sem/Org = Sem/Org ;				    #!! - `Sem/Org       `
-LIST Sem/Perc-emo = Sem/Perc-emo ;		    #!! - `Sem/Perc-emo  `
-LIST Sem/Plc = Sem/Plc ;				    #!! - `Sem/Plc       `
-LIST Sem/Sign = Sem/Sign ;				    #!! - `Sem/Sign      `
-LIST Sem/State-sick = Sem/State-lang-sick ; #!! - `Sem/State-sick`
-LIST Sem/Sur = Sem/Sur ;				    #!! - `Sem/Sur       `
-LIST Sem/Time = Sem/Time ;				    #!! - `Sem/Time      `
-LIST Sem/Txt = Sem/Txt ;				    #!! - `Sem/Txt       `
+# Semantic tags
+# -------------
+
+LIST Sem/Act = Sem/Act Sem/Act_Group Sem/Act_Plc Sem/Act_Route Sem/Act_Tool-it; #Activity #Ollet guhká dainna X-Com (Veaigin bisánasttii Ristenge geahččat, man guhkás Lemet-gázzi juo ledje ollen dainna divvunbargguin.) # bargu
+LIST Sem/Adr = Sem/Adr ;
+LIST Sem/Amount = Sem/Amount Sem/Amount_Build Sem/Amount_Semcon;
+LIST Sem/Ani = Sem/Ani Sem/Ani-fish Sem/Ani_Build_Hum_Txt Sem/Ani_Buildpart Sem/Ani_Group Sem/Ani_Group_Hum Sem/Ani_Hum Sem/Ani_Hum_Plc Sem/Ani_Hum_Time Sem/Ani_Body-abstr_Hum Sem/Ani_Plc Sem/Ani_Plc_Txt Sem/Ani_Time Sem/Ani_Veh ; #Animal #bivdit X-Loc veahki.
+LIST Sem/Ani-fish = Sem/Ani-fish ;
+LIST Sem/Aniprod = Sem/Aniprod Sem/Aniprod_Hum
+Sem/Aniprod_Obj-clo Sem/Aniprod_Perc-phys Sem/Aniprod_Plc ;
+LIST Sem/Body = Sem/Body Sem/Body_Body-abstr Sem/Body_Clth Sem/Body_Food Sem/Body_Group_Hum Sem/Body_Group_Hum_Time Sem/Body_Hum Sem/Body_Mat Sem/Body_Measr Sem/Body_Obj_Tool-catch Sem/Body_Plc Sem/Body_Time ; #Body #Buohkat ceggejedje gieđa. Mon gal attán dutnje bealji vuollái. Go duos dás speččohallá bahtii de gal buollá bargomokta! Čuolda basttii sus alemii.
+LIST Sem/Body-abstr = Sem/Ani_Body-abstr_Hum Sem/Body-abstr Sem/Body-abstr_Prod-audio_Semcon Sem/Body_Body-abstr ; # jierbmi, siellu, ...
+LIST Sem/Build = Sem/Amount_Build Sem/Ani_Build Sem/Ani_Build_Hum_Txt Sem/Build Sem/Build_Buildpart Sem/Build_Clthpart Sem/Build_Edu_Org Sem/Build_Event_Org Sem/Build_Obj Sem/Build_Org Sem/Build_Route ; #Build #Sem #Syn: hukset X deike
+LIST Sem/Build-room = Sem/Build-room ;
+LIST Sem/Buildpart = Sem/Ani_Buildpart Sem/Buildpart Sem/Buildpart_Plc Sem/Build_Buildpart ; #Building part, e.g. room #Sem:+con,+count,-mova #Syn: mannat X sisa
+LIST Sem/Cat = Sem/Cat ;
+LIST Sem/Clth = Sem/Body_Clth Sem/Clth Sem/Clth_Hum ; #Clothes #Sem #bidjat X ala/badjelii.
+LIST Sem/Clth-jewl = Sem/Clth-jewl Sem/Clth-jewl_Curr Sem/Clth-jewl_Curr_Obj Sem/Clth-jewl_Fruit Sem/Clth-jewl_Money Sem/Clth-jewl_Plant Sem/Org_Clth-jewl ; #Clothes jewelry #Synt: bidjat X ala. *bidjat X badjelii.
+LIST Sem/Clthpart  = Sem/Build_Clthpart Sem/Clthpart  ;
+LIST Sem/Ctain = Sem/Ctain Sem/Ctain_Feat-phys Sem/Ctain_Furn Sem/Ctain_Plc Sem/Ctain_Tool Sem/Ctain_Tool-measr ; #Container #Sem:+mova #Syn: bidjat juoidá X sisa
+LIST Sem/Ctain-abstr = Sem/Ctain-abstr Sem/Ctain-abstr_Org ;
+LIST Sem/Curr = Sem/Clth-jewl_Curr Sem/Curr Sem/Curr_Org; #Syn: Mun mávssan dasa 100 X. Dat máksá 100 X.
+LIST Sem/Date = Sem/Date ;
+LIST Sem/Dance = Sem/Dance Sem/Dance_Org Sem/Dance_Prod-audio ; #Ollugat dánso swinga lávddi ovddabeale.
+LIST Sem/Dir = Sem/Dir ;
+LIST Sem/Domain = Sem/Domain Sem/Domain_Food-med Sem/Domain_Prod-audio;
+LIST Sem/Drink = Sem/Drink ;
+LIST Sem/Edu = Sem/Build_Edu_Org Sem/Edu Sem/Edu_Event Sem/Edu_Group_Hum Sem/Edu_Hum Sem/Edu_Mat Sem/Edu_Org ; # vázzit X-Acc. addit X-Acc. X:s lea beroštupmi.
+LIST Sem/Event = Sem/Build_Event_Org Sem/Edu_Event Sem/Event Sem/Event_Food Sem/Event_Hum Sem/Event_Plc Sem/Event_Plc-elevate Sem/Event_Time ; # X maŋŋel mun ferten vuolgit. X:s leat ollu olbmot. *Lean leamaš doppe X:Gen.
+#LIST Sem/Feat-cogn = Sem/Feat-cogn ; # oaidnu, oamedovdu, viissisvuohta
+LIST Sem/Feat = Sem/Feat Sem/Feat_Plant ; #many -vuohta and -dat nouns
+LIST Sem/Feat-measr = Sem/Feat-measr ;
+LIST Sem/Feat-phys = Sem/Ctain_Feat-phys Sem/Feat-phys Sem/Feat-phys_Tool-write Sem/Feat-phys_Veh Sem/Feat-phys_Wthr ;
+LIST Sem/Feat-psych = Sem/Body-abstr_Feat-psych Sem/Feat-psych Sem/Feat-psych_Hum ; #not touchable, not countable ("beroštupmi" "gáđašvuohta" "mokta" "sáhkkiivuohta") - Mus lea X,  Son lea X-adj persovdna # muitu
+LIST Sem/Fem = Sem/Fem ;
+LIST Sem/Food = Sem/Body_Food Sem/Event_Food Sem/Food Sem/Food_Perc-phys Sem/Food_Plant ; #Syn: bassit/borrat/sohpat X-Acc. mon im læk borram dam guolest. mun boran iđitbiepmu. mus lea iđitbiebmu fárus. birgui borastuvvat
+LIST Sem/Food-med = Sem/Domain_Food-med Sem/Food-med ;
+LIST Sem/Fruit = Sem/Fruit Sem/Fruit_Plant ;
+LIST Sem/Furn = Sem/Ctain_Furn Sem/Furn Sem/Food_Obj-surfc; #Syn: bidjat X vissui: čohkkedit X ala
+LIST Sem/Game = Sem/Game Sem/Game_Obj-play ;
+LIST Sem/Geom = Sem/Geom Sem/Geom_Obj ;
+LIST Sem/Group = Sem/Act_Group Sem/Ani_Group Sem/Ani_Group_Hum Sem/Body_Group_Hum Sem/Body_Group_Hum_Time Sem/Edu_Group_Hum Sem/Group Sem/Group_Hum Sem/Group_Hum_Org Sem/Group_Hum_Plc Sem/Group_Hum_Prod-vis Sem/Group_Org Sem/Group_Sign Sem/Group_Txt ; #Bárdni lea riggámus sogas. -Plc
+LIST Sem/Hum = Sem/Ani_Body-abstr_Hum Sem/Ani_Build_Hum_Txt Sem/Ani_Group_Hum Sem/Ani_Hum Sem/Ani_Hum_Plc Sem/Ani_Hum_Time Sem/Aniprod_Hum Sem/Body_Group_Hum Sem/Body_Hum Sem/Clth_Hum Sem/Edu_Group_Hum Sem/Event_Hum Sem/Feat-psych_Hum Sem/Group_Hum Sem/Body_Group_Hum_Time Sem/Group_Hum_Org Sem/Group_Hum_Plc Sem/Group_Hum_Prod-vis Sem/Hum Sem/Hum_Lang Sem/Hum_Lang_Plc Sem/Hum_Lang_Time Sem/Hum_Obj Sem/Hum_Org Sem/Hum_Plant Sem/Hum_Plc Sem/Hum_Sign Sem/Hum_Tool Sem/Hum_Veh Sem/Hum_Wthr ; #Human
+#LIST Sem/Hum-kin = Sem/Hum-kin ; #Human kinship
+LIST Sem/Hum-abstr = Sem/Hum-abstr ;
+LIST Sem/Hum-prof = Sem/Hum-prof ;
+LIST Sem/ID = Sem/ID ;
+LIST Sem/Ideol = Sem/Ideol ;
+LIST Sem/Lang = Sem/Hum_Lang Sem/Lang Sem/Lang_Tool ; #Syn: hállat X:illatiiva. Son hállá X:Acc. Jorgalan dán X:lokatiiva Y:illatiiva.
+LIST Sem/Mal = Sem/Mal ;
+LIST Sem/Mat = Sem/Body_Mat Sem/Edu_Mat Sem/Mat Sem/Mat_Plant Sem/Mat_Txt ; # Material #Sem: cannot pass through it without destroying it, ráhkadit juoidá X:s. Niibi lea X-Loc-Sg. #Dán báhkis šaddá čáppa gohppu.
+LIST Sem/Measr = Sem/Body_Measr Sem/Measr Sem/Measr_Sign Sem/Measr_Time ; # Lea lassánan 100 X-Loc.
+LIST Sem/Money = Sem/Clth-jewl_Money Sem/Money Sem/Money_Obj Sem/Money_Part Sem/Money_Txt ; #Mun mávssán X. Mii ávžžuhit vuovdit alimus X-Ill (haddái). ruhtadit doaibmabušeahtain. vuovdit/bidjat ruđast - selge for penger
+LIST Sem/Obj = Sem/Body_Obj_Tool-catch Sem/Clth-jewl_Curr_Obj Sem/Geom_Obj Sem/Hum_Obj Sem/Money_Obj Sem/Obj Sem/Obj_Semcon Sem/Obj_State Sem/Obj_Veh ; # concrete object, movable #Syn: Mun guoskkán X-Acc. Dá livčče dutnje X-Nom (sabehat). čievččastit geađggi johkii
+#LIST Sem/Obj-com = Sem/Obj-com ; #communication object #hálan telefuvnnas/e-poasttas #sádden X bokte
+LIST Sem/Obj-clo = Sem/Aniprod_Obj-clo Sem/Obj-clo ; #bidjat juoidá Obj-clo sisa
+LIST Sem/Obj-el = Sem/Obj-el ; # moveable, countable, touchable, electrical objects that can be turned on and of,  mus lea X alde, mun bijan X ala
+LIST Sem/Obj-ling = Sem/Obj-ling Sem/Obj-ling_Obj-surfc ;
+LIST Sem/Obj-play = Sem/Game_Obj-play Sem/Obj-play_Sport ;
+LIST Sem/Obj-rope = Sem/Obj-rope ;
+LIST Sem/Obj-surfc = Sem/Obj-surfc Sem/Obj-ling_Obj-surfc Sem/Food_Obj-surfc ;
+LIST Sem/Org = Sem/Build_Edu_Org Sem/Build_Event_Org Sem/Build_Org Sem/Ctain-abstr_Org Sem/Curr_Org Sem/Dance_Org Sem/Edu_Org Sem/Group_Hum_Org Sem/Group_Org Sem/Hum_Org Sem/Org Sem/Org_Clth-jewl Sem/Org_Prod-cogn Sem/Org_Rule Sem/Org_Txt Sem/Org_Veh ;
+LIST Sem/Part = Sem/Part Sem/Money_Part Sem/Part_Prod-cogn ; # bealli, oassi
+LIST Sem/Perc-emo = Sem/Perc-emo Sem/Perc-emo_Wthr ; #Sem not touchable, not countable ("ballu" "suhttu" "vaši") -  Mun dovddan garra X. Mun lean X+Loc # moraš
+LIST Sem/Perc-phys = Sem/Aniprod_Perc-phys Sem/Food_Perc-phys Sem/Perc-phys Sem/Perc-emo_Wthr ; # anistupmi, oaidnu
+LIST Sem/Plant = Sem/Clth-jewl_Plant Sem/Ctain-clth_Plant Sem/Feat_Plant Sem/Food_Plant Sem/Fruit_Plant Sem/Hum_Plant Sem/Mat_Plant Sem/Plant Sem/Plant_Plantpart Sem/Plant_Tool Sem/Plant_Tool-measr ; #čáhccet X-Acc #X-Nom šaddet
+LIST Sem/Plantpart = Sem/Plant_Plantpart Sem/Plantpart ; #čáhccet X-Acc #X-Nom šaddet
+LIST Sem/Plc = Sem/Act_Plc Sem/Ani_Hum_Plc Sem/Ani_Plc Sem/Ani_Plc_Txt Sem/Aniprod_Plc Sem/Body_Plc Sem/Buildpart_Plc Sem/Ctain_Plc Sem/Event_Plc Sem/Event_Plc-elevate Sem/Feat-psych_Plc Sem/Group_Hum_Plc Sem/Hum_Lang_Plc Sem/Hum_Plc Sem/Plc Sem/Plc_Pos Sem/Plc_Route Sem/Plc_Semcon Sem/Plc_State Sem/Plc_Substnc Sem/Plc_Substnc_Wthr Sem/Plc_Time Sem/Plc_Tool-catch Sem/Plc_Wthr;
+LIST Sem/Plc-abstr = Sem/Plc-abstr Sem/Plc-abstr_Rel_State Sem/Plc-abstr_Route ;
+LIST Sem/Plc-elevate = Sem/Plc-elevate ;
+LIST Sem/Plc-line = Sem/Plc-line ;
+LIST Sem/Plc-water = Sem/Plc-water ;
+LIST Sem/Pos = Sem/Plc_Pos Sem/Pos ; #Social position (job etc.)
+LIST Sem/Prod = Sem/Prod ; #jáhkku
+LIST Sem/Prod-audio = Sem/Body-abstr_Prod-audio_Semcon Sem/Dance_Prod-audio Sem/Domain_Prod-audio Sem/Prod-audio Sem/Prod-audio_Txt ; #attáldat
+LIST Sem/Prod-cogn = Sem/Org_Prod-cogn Sem/Part_Prod-cogn Sem/Prod-cogn Sem/Prod-cogn_Txt ; # muittuhus, ipmárdus, jáhkku, osku, vuordámuš, viisodat? diehtu?
+LIST Sem/Prod-ling = Sem/Prod-ling ;
+LIST Sem/Prod-vis = Sem/Group_Hum_Prod-vis Sem/Prod-vis ;
+LIST Sem/Rel = Sem/Plc-abstr_Rel_State Sem/Rel ;
+LIST Sem/Route = Sem/Act_Route Sem/Build_Route Sem/Plc-abstr_Route Sem/Plc_Route Sem/Route ;
+LIST Sem/Rule = Sem/Org_Rule Sem/Rule ;
+LIST Sem/Semcon = Sem/Amount_Semcon Sem/Body-abstr_Prod-audio_Semcon Sem/Obj_Semcon Sem/Plc_Semcon Sem/Semcon Sem/Semcon_Txt ; # semantic concept
+LIST Sem/Sign = Sem/Group_Sign Sem/Hum_Sign Sem/Measr_Sign Sem/Obj_Sign Sem/Sign ;
+LIST Sem/Sport = Sem/Obj-play_Sport Sem/Sport ;
+LIST Sem/State = Sem/Plc-abstr_Rel_State Sem/Plc_State Sem/State Sem/Obj_State ; # lihkku, ipmilbalolašvuohta, mokta, váivi, váttisvuohta
+LIST Sem/State-sick = Sem/State-sick Sem/State-sick_Substnc ;
+LIST Sem/Substnc = Sem/Plc_Substnc Sem/Plc_Substnc_Wthr Sem/State-sick_Substnc Sem/Substnc Sem/Substnc_Wthr ; #Sem: can pass through it without destroying it
+LIST Sem/Time = Sem/Ani_Hum_Time Sem/Ani_Time Sem/Body_Time Sem/Body_Group_Hum_Time Sem/Event_Time Sem/Hum_Lang_Time Sem/Measr_Time Sem/Measr_Obj_Time Sem/Plc_Time Sem/Time Sem/Time_Wthr Sem/Time-clock;
+LIST Sem/Time-clock = Sem/Time-clock ;
+LIST Sem/Tool = Sem/Ctain_Tool Sem/Hum_Tool Sem/Lang_Tool Sem/Plant_Tool Sem/Tool ;
+LIST Sem/Tool-catch = Sem/Body_Obj_Tool-catch Sem/Plc_Tool-catch Sem/Tool-catch ;
+LIST Sem/Tool-clean = Sem/Tool-clean ;
+LIST Sem/Tool-it = Sem/Tool-it ;
+LIST Sem/Tool-measr = Sem/Ctain_Tool-measr Sem/Plant_Tool-measr Sem/Tool-measr ;
+LIST Sem/Tool-music = Sem/Tool-music ;
+LIST Sem/Tool-write = Sem/Feat-phys_Tool-write Sem/Tool-write ;
+LIST Sem/Txt = Sem/Ani_Build_Hum_Txt Sem/Ani_Plc_Txt Sem/Group_Txt Sem/Mat_Txt Sem/Money_Txt Sem/Org_Txt Sem/Prod-audio_Txt Sem/Prod-cogn_Txt Sem/Semcon_Txt Sem/Txt ; #Syn: Čále dearvvuođaidat guossegirjámet! # das čuožžu
+LIST Sem/Veh = Sem/Ani_Veh Sem/Ctain-clth_Veh Sem/Feat-phys_Veh Sem/Hum_Veh Sem/Obj_Veh Sem/Org_Veh Sem/Veh ;	#Syn: Vuolggán X:Com
+#LIST Sem/Veh-cntain = Sem/Veh-cntain ; #Manan X sisa. #vuolggán X:Com.
+LIST Sem/Wthr = Sem/Feat-phys_Wthr Sem/Hum_Wthr Sem/Perc-emo_Wthr Sem/Plc_Substnc_Wthr Sem/Plc_Wthr Sem/Substnc_Wthr Sem/Time_Wthr Sem/Wthr ; #Sem: Birget X:Ess. jietna gullui X-Loc (balvvas). Olgun/Odne lea + Wthr-Nom. ?Man ollu lea Wthr-Nom? Wthr-Gen maŋŋel boahtá X. Makkár lea dálki/siivu? #Ex: árvi, borga, muohtá, čoaskadálki, baján, bievla, bodnejiekŋa, bivdodálki, gasis, guoldu
+LIST Sem/Wpn = Sem/Wpn ; #oaggut oaggunstákkuin, goddit X+Com
+LIST Sem/Year = Sem/Year ;
+
+LIST Sem/Dummytag = Sem/Dummytag ;
+
+
+
 
 #!! Other semantic sets:
 
@@ -332,7 +903,10 @@ SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V 
 LIST @X = @X ;    #!! - `@X`
 
 
-LIST <TH-Com-Any> = <TH-Com-Any> ;
+# SECONDARY TAGS 
+
+LIST <TH-Com-Any> = <TH-Com-Any> ; 
+LIST <AttrPred> = <AttrPred> ;
 
 # ========
   SETS
@@ -348,6 +922,8 @@ LIST <TH-Com-Any> = <TH-Com-Any> ;
 
 
 LIST REALCOPULAS = "lea" "leah" "årrodh" "sååjhtedh" ;
+
+LIST COPULAS = "lea" "leah" "sååjhtedh" ;
 
 
 
@@ -365,12 +941,15 @@ LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ; #!! WORD
 # SET REAL-WORD = WORD - Num - Ord ; #!! REAL-WORD
 SET REAL-WORD-NOT-ABBR = WORD - Num - Ord - (ABBR N) ; # This is former REALWORD-NOTABBR #!! REAL-WORD-NOT-ABBR
 SET NOT-COMMA = WORD - COMMA ;  #!! NOT-COMMA
+LIST ? = ? ;
+
+
 
 
 #!! ### Case sets
 # ---------
 
-LIST ADVLCASE = Ill Loc Com Ess ; #!! ADLVCASE
+LIST ADVLCASE = Ill Ine Ela Com Ess ; #!! ADLVCASE
 
 LIST CASE-AGREEMENT = Nom Acc Gen (Pl Ill) Loc Com Ess ; #!! CASE-AGREEMENT
 LIST CASE = Nom Acc Gen Ill Loc Com Ess ; #!! CASE
@@ -498,11 +1077,13 @@ SET A-CASE = A - Attr - Adv ;
 
 LIST A-CC = A CC ;
 
-SET NOT-A = WORD - A ; # This is former NOT-ADJ
+SET NOT-A = (*) - A ; # This is former NOT-ADJ
 SET NOT-A-COMMA = WORD - A - COMMA ;
-SET NOT-Attr = WORD - Attr ;
+SET NOT-Attr = (*) - Attr ;
 SET NOT-A-PCLE = WORD - A - Pcle ;
-SET NOT-A-CC = WORD - A-CC ;
+SET NOT-A-CC = (*) - A-CC ;
+
+LIST A-ATTR-ONLY = "ektenes" "ektie" "ektiedimmes" "ekuadovre" "elyjsijumen" "elyjsion" "elyjsiumen" "englaanten" "eskies" "etiovpijen" "evtiedimmes" "faageldh" "faagerestiedæjja" "faali" "faelhkies" "faeties" "fæjhrah" "færhpah" "fealadadteme" "fealadimmes" "feavseres" "feejjene" "fielhpies" "fïerhtenbeajjetje" "fïerhtenjaapetje" "fijin" "fïjnehtimmes" "filippïjne" "finlaanten" "flearoeh" "fraekies" "fuehpies" "fuersies" "gaagkes" "gaagnes" "gaahpoeh" "gåajah" "gaajhkenjevlien" "gaajhkesåårts" "gaajvoeh" "gaalkes" "gåalmeds" "gåangkels" "gaarngoeh" "gaarnjoeh" "gåårveldihkie" "gaasnjah" "gaasnjoeh" "gaavnedimmes" "gaavneds" "gaavnehtallemes" "gaavnehtimmes" "gåavtoeh" "gåavvoeh" "gabdeles" "gabonen" "gadtjeldh" "gadtjes" "gadtsemes" "gåehtsuve" "gaejvies" "gaektjies" "gaertjies-gaertjebe" "gaetnies" "gaetskies" "gahkes" "gæjkeds" "gæjmah" "gæjmas" "gæjmoeh" "gæjmoes" "gæjrah" "gakngah" "gålhkoeh" "galhkuve" "gallas" "gælloeh" "gambijen" "gamhkoeh" "gamkehts" "gapmah" "gåpmoeh" "gaptjeldihkie" "gaptjes" "garrah" "gårraldihkie" "gårroeh" "gaskemes" "gaskestallemes" "gåvloes" "gavsoeh" "geahpeds" "geahpegs" "geajhkoeh" "geamtah" "gearts" "geeruve" "geljies-geljebe" "gelliengïerts" "gelliesåarts" "gerperes" "ghanan" "gïehtelimmes" "gïehtjedimmes" "gielies" "gïepmeles" "gïerts" "gieruve" "gïesemes" "gïetedallemes" "gïetsedimmes" "gïetskes" "gihtseles" "gihtsies" "gijmies" "gïjreldihkie" "gilkuve" "gïllemes" "girmes" "globalen" "godteds" "goerehtallemes" "goerehtimmes" "göölemes" "gorkeldh" "gorredimmes" "grenaadan" "guarvah" "guatemaalan" "guavvah" "guektiengïerts" "guektiensearroeh" "gunkies" "gurruve" "gylleldihkie" "haabjah" "haaksoeh" "håalemes" "haaljoeh" "haaptjah" "haavhkes" "haavhkoeh" "håavkoeh" "haeltjies" "haenies" "haerries" "haitin" "hajnas" "håjnoes" "harhtsoeh" "hårhvoeh" "harvah" "hårvoeh" "hatsves" "heajmenes" "hearremeigkes" "hearremeligkes" "hearremes" "heavoes" "heblies" "hebraen" "heejle" "heevehtallemes" "heevehtimmes" "hellasen" "hiefies" "hiellies" "hielsies" "hietievoere" "hievies" "hijven" "hïrmes" "hollaanten" "hompeles" "honduvrasen" "huavkah" "huhtemes" "hujnies" "hyölpeldh" "iehkeds" "iehtsemes" "iemies" "ïervemes" "ihkuve" "iktedimmes" "illedihkie" "illeldihkie" "indijen" "indoeurohpen" "indoneesijen" "iraaken" "iraanen" "islaamen" "islaanten" "israelen" "israjelen" "itaalijen" "jåabpoeh" "jaahtens" "jååktetje" "jåampoeh" "jaapanen" "jaapetje" "jåasa" "jaaskoeh" "jabjah" "jabjemes" "jaehkemes" "jåhteldh" "jahtsaldihkie" "jamaican" "jamhkoes" "japtjah" "japtsah" "jarhpoeh" "jatnoeh" "jatnoes" "jåvle-eejehtallemes" "jearkoe" "jeatjah" "jeatjahtehtemes" "jeenje-jeenjebe" "jemhkelds" "jemhkeles" "jemhkels" "jesuitten" "jiegkuve" "jïengeds" "jijhtuve" "jïjneldh" "jïjnje-jïjnjebe" "jïjtje-raarehke" "jïjtjebearkadæjja" "jïjtjehke" "jïrrehts" "joejkemes" "joekehts" "joekeldh" "jordaanijen" "jovhkemes" "jovje-rööpses" "juakaldihkie" "juamah" "juampah" "juasah" "jugoslaavijen" "juhtemes" "julevsaemien" "julmies" "julskies" "jyseldihkie" "kalifornijen" "kambodsjan" "kampuchean" "kamputjean" "kappverden" "kashmijren" "kaudervellen" "kenyan" "kinan" "klæjjah" "klæmhpah" "klæmhpoeh" "klåptjoeh" "kleenghks" "klissieh" "klyjhpeldihkie" "kolombijen" "koreean" "kostarican" "kraamhkah" "kraamhkas" "kraamhkoeh" "kraavhkeds" "kråavvoeh" "kråevvies" "kråhtjoeh" "krakngah" "krakngoeh" "kråkngoeh" "krætnoeh" "krisneldh" "kroenes" "kuban" "kuwaiten" "kyjprosen" "låabpah" "låabpoes" "laaffas" "lååjkes" "låajmoeh" "låaptjoeh" "laares" "laarkes" "laavkemes" "laavlojes" "laehkeds" "laehkies" "laejhkies" "laejhtemes" "låepiehtimmes" "lahkes" "læjhkede" "laktjes" "lålloeh" "lanhkoeh" "lårhvoeh" "låssas" "læsseds" "lastes" "latijnen" "latinameerihken" "latvijen" "leagrah" "leagroeh" "leapmah" "leapmoeh" "leekedimmes" "leekemes" "libeerijen" "libyan" "lïemkes" "lïenjeds" "lïerehtallemes" "lïerehtimmmes" "liesmies" "lïevhkes" "lijbanonen" "lijhkeds" "lijnies" "lijrehtimmes" "lissehts" "litauenen" "lohkehtallemes" "lohkehtimmes" "lohkemes" "lööfh" "löökehtje" "lööneldh" "löönemes" "löönes" "lopmijes" "luejhtemes" "lyjhkede" "maadthööhpehtimmes" "maajeööhpehtimmes" "måajkoes" "maajnehke" "måalaldihkie" "maales" "måalloeh" "maanavaarjelimmes" "maarhkoesaemien" "maaskes" "måasoes" "madtsah" "måedtiesåårts" "maejnies" "måeries" "måhtsoeh" "mæjjah" "mæjtsah" "malaawin" "malaysijen" "maldijvijen" "maltan" "manchuvrijen" "mandsjuvrijen" "marhtjah" "mårhtjah" "marngah" "marokkon" "marteres" "masteldh" "mauretaanijen" "meadtohks" "mealtjoeh" "mearhkeldh" "mearoegöölemes" "meartsah" "meksemes" "meksikon" "mexicon" "mïektjeldh" "mieriedimmes" "minngebe" "minngeds" "minngeld" "moenjeh" "monacon" "mongolijen" "moraalen" "mualhvah" "muavjah" "muhtsies" "mujhtemes" "mujvies" "mulskies" "nåågkeldihkie" "nåajjoeh" "nåajsoeh" "nåarvoeh" "naaskah" "naaskoeh" "nahkere" "najvah" "næjvoeh" "næksoeh" "naljah" "nåljoeh" "nåljoehbieles" "nåljoehbielies" "namibijen" "nassoeh" "naurun" "neahkah" "neahkoeh" "nepaalen" "nicaraguan" "nidties" "nïehkes" "nigeerijen" "nijjerdihkie" "nipkemes" "njåajjah" "njaalmeldh" "njåarah" "njåavvoeh" "njadkes" "njadtsah" "njadtsoeh" "njåellies" "njahpedihkie" "njæjjoeh" "njåltoeh" "njåvvah" "njåvvoeh" "njeeruve" "njerries" "njieljien-joelkege" "njieljien-raadtege" "njïlleds" "njoetemes" "njuavvah" "noerhteldh" "noerhtesaemien" "nöörjen" "nuantah" "nuepies" "numeerijen" "nyjsenes" "ohkenes" "ohtsemes" "omaanen" "onne-unnebe" "ööhpehtallemes" "ööhpehtimmes" "ööhpehts" "opmeds" "orientaalen" "ovmese" "ovmissie" "ovtetje" "övtiedimmes" "påavroeh" "pakistaanen" "palestijnen" "palestïjnen" "panaman" "paraguayan" "persijen" "peruan" "plåjnah" "plåjnoeh" "plænhtjah" "pleahkah" "pleangoeh" "plearoeh" "pleasoeh" "plïereh" "plïeres" "plievvies" "pluejjies" "portugalen" "povlenen" "pratjkoeh" "preanghkah" "preussenen" "printeldihkie" "pröösenahke" "pruvnieldihkie" "puavrah" "puertorican" "pythagovrasen" "qutaaren" "raagkah" "råajhkoeh" "raajmes" "raajreles" "råapoeh" "råaptoeh" "råarhvoeh" "råentjies" "raerhkemes" "råetnjies" "råffoeh" "ræjhkoes" "rånhtjoeh" "ranjkes" "rarhmah" "rærvah" "rærvoeh" "reakeds" "reangah" "reangoeh" "reavkah" "reavkoeh" "rebellen" "reepenjes" "reeremes" "reesemes" "rïejhpegidtes" "riejnies" "rïrreldh" "romanijen" "rovkijs" "ruaptah" "ruarhvah" "runhtjieldihkie" "russlaanten" "rwandan" "såahtan" "såajjoeh" "såameldh" "såångedimmes" "såarhtes" "saasne" "sæbjoeh" "sachsen" "såebries" "saejnedh" "saejries" "saemien" "saemiestæjja" "saetnies" "sagkes" "sæhpoeh" "sæjjasadtje" "sæjkah" "saksen" "salsoeh" "salvadovren" "samhtjas" "samkas" "samskoes" "såmskoes" "saptjah" "saptjas" "saptjoeh" "sarhkah" "sarhkes" "sarhpah" "saudi-araabijen" "savsah" "seamma" "seammaplieres" "seammaplïeres" "seammoeh" "searroeh" "seatadimmes" "senegaalen" "serbijen" "sibijren" "sicilijen" "sïedtjes" "sillere" "singaleesen" "sisnjelds" "sisnjeles" "sisnjemes" "sisnjemos" "sjalsjoeh" "sjïdteldihkie" "sjïehtedimmes" "sjïeledimmes" "sjïgneds" "sjilkehtallemes" "sjilkehtimmes" "sjisjnjemes" "sjisjnjes" "sjolkeldh" "sjuaksjah" "sjuejmieh" "sjuvveds" "skåabpoes" "skaadtjoeh" "skåalvoeh" "skaamoehtimmie" "skåapmoeh" "skaavhtes" "skaglah" "skagloeh" "skåhpoeh" "skahtjah" "skæjhkah" "skæjhkoeh" "skajjehks" "skalnjah" "skålnjah" "skåmhpoeh" "skandinaavijen" "skarhkoeh" "skavhrah" "skeajah" "skealhkoeh" "skealka" "skealmoeh" "skealtoeh" "skearhpoeh" "skiebtjies" "skiemtjies" "skoepenimmie" "skompeles" "skottlaanten" "skråajhvoeh" "skraevvies" "skråevvies" "skramhkas" "skråmhkoes" "skreejrehtallemes" "skreejrehtimmes" "skualah" "skuallah" "skuekierdihkie" "slaamedimmie" "slaapkoeh" "slåapohtimmie" "slaaptjah" "slaaptjoeh" "slaarvestallemes" "slaarvestimmes" "slaarvoeh" "slaave" "slåavoehtimmie" "slaavvah" "slahkoeh" "slajvah" "slåmpoeh" "slænnjoeh" "slapmoeh" "slavvoeh" "sleadtjoeh" "sleagrah" "sleagroeh" "sleantjah" "sleatjijs" "sleatjoeh" "sleatsijs" "sleavnah" "sleavnoeh" "sleavvoeh" "sleehpeldihkie" "sleejes" "slobpedimmes" "slovaakijen" "sluekties" "sluvkes" "sluvvies" "småekies" "smeelnjeh" "smïerkes" "smohkes" "smuahkah" "snåalah" "snaaskoeh" "snajvah" "snartjas" "snarvah" "snarvoeh" "snavrah" "snearvoeh" "snjædtjah" "snjædtjoeh" "snjadtsah" "snjadtsoeh" "snjæjhtjah" "snjallah" "snjalloeh" "snjaltje" "snjuammah" "snuagkoeh" "soegkes" "soelijs" "soelkeds" "soelkehtallemes" "soelkehtimmes" "soemenugrijen" "sojjehtimmes" "somaalijen" "soptsestallemes" "soptsestimmes" "soptsestims" "sovhtes" "sovmehtje" "spåavhroeh" "spåeries" "spranjkes" "sprankes" "spuarjah" "srilankan" "staavlah" "staavloeh" "stabnjah" "staentierdimmes" "staeries" "stæhtjah" "stajjah" "stajjoeh" "stanghkoeh" "stavnijs" "steadtjah" "stoere-stoerebe" "stoere-stuerebe" "stogkes" "stråadtsoeh" "straanjes" "straatnjah" "straatnjoeh" "stråenghkies" "streavere" "struadtsah" "stuarijs" "suajjah" "suehpeds" "suehpiedimmie" "sueleds" "suepies" "sumtjies" "suvhtjies" "svaanhtjoeh" "svæjmeds" "svælnjah" "svælnjoeh" "sveekes" "sveerjen" "svïegkes" "svïerjen" "svihtjije" "svöörjen" "symbovlen" "tåapoeh" "tåssoeh" "tjåadtjoeh" "tjåadtjoehtæjja" "tjåågkeds" "tjåågkes" "tjaajah" "tjaaladihkie" "tjaalaldihkie" "tjaaleldh" "tjaales" "tjåaloehtjelmieh" "tjåarhtjah" "tjåarves" "tjaejieh" "tjåenghkies" "tjåerviebielies" "tjaetsiejovkemes" "tjakngah" "tjålhpoeh" "tjalhvas" "tjallah" "tjanghkes" "tjankedh" "tjarhtoeh" "tjåvhtjes" "tjåvroeh" "tjavvoeh" "tjåvvoeh" "tjealloeh" "tjeapohks" "tjeatseldh" "tjeavrah" "tjelmiebieles" "tjïelhkes" "tjïellegïmmes" "tjïjhtjenlaaves" "tjïltere" "tjimkes" "tjirries" "tjohpehtimmie" "tjolhkeldihkie" "tjööjes" "tjovkes" "tjualah" "tjuarhtjah" "tjuatseldh" "tjuekies" "tjueries" "tjuvlies" "traeptjies" "traeptsies" "tramstah" "tråmstah" "treaptjoeh" "trieptjies" "tsåågkes" "tsaapedimmes" "tsaapehtimmes" "tsaapemes" "tsåatkes" "tsaepemes" "tsagkemes" "tsibpeldihkie" "tsoepkeldh" "tsokngeldh" "ugandan" "ulmies" "umhkies" "ummese" "vaagkerebeeles" "vaajes" "vaajhkoes" "våalah" "vaaloeh" "vaaltsoeh" "vååreds" "vaarjelimmes" "våaromes" "vååvne" "vaenies" "våhkes" "vajmoeh" "væjrah" "væjreres" "valkeds" "valkeldh" "vælnjoeh" "værtoes" "væssjojes" "vætnjah" "vætnjoeh" "veadtaldihkie" "vealah" "vealoeh" "veanas" "veannjoeh" "vearhkas" "veasomes" "veekes" "veeljemes" "velvies" "vervies" "vïedteldihkie" "viedtemes" "viehkies" "vïenes" "vierhtiedimmes" "vierteds" "vilhties" "vïlles" "vilnjies" "vintsies" "vïskesissie" "voereds" "voernges" "voessjemes" "voetjes" "vohketje" "vöörhkemes" "vuajahtallemes" "vuajneres" "vuarhkas" "vuarteds" "vuasahtallemes" "vuejiehtimmes" "vuepties" "vuereds" "vueries" "vuerjies" "vuesiehtimmes" "vuesmies" "vuesvies" "vyjrehemmie" "vyjrhaemie" "vyjrhemmie" "vylles" "yölelh" ;
 
  # and many others
 
@@ -630,77 +1211,905 @@ SET CCCOMMA = CC OR COMMA ;
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
+LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
+LIST &msyn-hab-nom-gen = &msyn-hab-nom-gen ;
 LIST &msyn-pass-active = &msyn-pass-active ; 
 LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
-LIST &msyn-adjectiv-attr-pred = &msyn-adjectiv-attr-pred ;
+LIST &msyn-adj-attr-pred = &msyn-adj-attr-pred ;
+LIST &msyn-adj-attr-predpl = &msyn-adj-attr-predpl ;
+LIST &msyn-adj-attr-ess = &msyn-adj-attr-ess ;
+LIST &msyn-demphrase-congruence-plnom = &msyn-demphrase-congruence-plnom ;
+LIST &msyn-demphrase-congruence-plill = &msyn-demphrase-congruence-plill ;
+LIST &msyn-demphrase-congruence-plcom = &msyn-demphrase-congruence-plcom ;
+LIST &msyn-demphrase-congruence-plela = &msyn-demphrase-congruence-plela ;
+LIST &msyn-demphrase-congruence-plgen = &msyn-demphrase-congruence-plgen ;
+
+LIST &msyn-numphrase-congruence-plnom = &msyn-numphrase-congruence-plnom ;
+LIST &msyn-numphrase-congruence-sgine = &msyn-numphrase-congruence-sgine ;
+LIST &msyn-numphrase-congruence-sggen = &msyn-numphrase-congruence-sggen ;
+LIST &msyn-numphrase-congruence-sgela = &msyn-numphrase-congruence-sgela ;
+LIST &msyn-numphrase-congruence-sgcom = &msyn-numphrase-congruence-sgcom ;
+LIST &msyn-numphrase-congruence-sgill = &msyn-numphrase-congruence-sgill ;
+LIST &msyn-numphrase-congruence-sgacc = &msyn-numphrase-congruence-sgacc ;
+LIST &msyn-Neg-Pl3-ConNeg = &msyn-Neg-Pl3-ConNeg ;
+LIST &msyn-Neg-VFinitt-ConNeg = &msyn-Neg-VFinitt-ConNeg ;
+LIST &syn-remove-akte = &syn-remove-akte ;
+LIST &syn-delete-adv-phrasal-verb = &syn-delete-adv-phrasal-verb ;
+LIST &syn-phrasal-verb-phrasal-verb  = &syn-phrasal-verb-phrasal-verb ;
+LIST &syn-phrasal-verb-lexical-verb = &syn-phrasal-verb-lexical-verb ;
+LIST &msyn-po-acc-gen = &msyn-po-acc-gen ;
+LIST &syn-redun-before-guktie = &syn-redun-before-guktie ;
+LIST &syn-goh_nom-ess = &syn-goh_nom-ess ;
+LIST &syn-wo-verb_advl-advl_verb = &syn-wo-verb_advl-advl_verb ;
+
+LIST SUGGEST = SUGGEST ;
+LIST SUGGESTWF = SUGGESTWF ; #Suggestion from the speller
+LIST &DELETE = &DELETE ;
+LIST COERROR = COERROR ;
+
+
 
 MAPPING-PREFIX = & ;
 
+
+
+#!! RULE SECTION
+
 SECTION
 
-# Speller suggestions rule – add &SUGGESTWF to any spelling suggestion
+# Speller suggestions rule – add SUGGESTWF to any spelling suggestion
 # that we actually want to suggest to the user.
 # The simplest is to just add it to all spelled words:
-ADD:spell-it-all (&typo &SUGGESTWF) (<spelled>) ;
+ADD:spell-it-all (&typo SUGGESTWF) (<spelled>) ;
 # But perhaps you want to only suggest spellings of words that are not inside "quotes":
-ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK 2 QMARK);
+ADD:spell-conservatively (&typo SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK 2 QMARK);
 
 # Add &typo error tag to unkown words that are not corrected by the speller, so that they at least get a blue underline and a message
 ADD:uncorrected-typos (&typo) (?) ;
 
+	# Adjective rules
+	# ---------------
+
+	# attr--> pred pl
+
+ADD:msyn-adj-attr-predpl (&msyn-adj-attr-predpl) TARGET (A Attr) IF
+	(*-1 (Pl Nom) OR (Pers Pl3 Nom) OR (Pers Pl1 Nom) OR (Pers Pl2 Nom) OR (Pers Du3 Nom) OR (Pers Du1 Nom) OR (Pers Du2 Nom) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela) 
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
+	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc)(NEGATE 1 CC LINK 1 (A Attr) OR PrfPrc LINK *1 N)(NEGATE 1 Num OR (?))(NEGATE 1 (V Sg3)) ;
+
+COPY:msyn-adj-attr-predpl (A Pl Nom SUGGEST) EXCEPT (A Attr &msyn-adj-attr-predpl) OR (A Attr &msyn-adj-attr-predpl) AFTER Ex/A TARGET (&msyn-adj-attr-predpl);
+
 	# attr--> pred 
+	
+LIST ATTR-PRED-A = (".*sisse"r) (".*ladtje"r) ;
 
-ADD:msyn-adjectiv-attr-pred (&msyn-adjectiv-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS)  ;
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
+	(*-1 Nom OR COPULAS OR (V Neg) BARRIER NOT-ADV-PCLE - REALCOPULAS - Ela)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR (&msyn-adj-attr-predpl) OR Err/Lex)
+	(NEGATE *1 N BARRIER (*) - (A Attr) - (A <AttrPred>) - PrfPrc - ("(") - (\?))
+	(NEGATE 1 COMMA LINK 1 (Prop N))(NEGATE 1 CC OR COMMA LINK 1 (A Attr) OR PrfPrc LINK *1 N)(NEGATE 1 CC LINK 1C Adv)(NEGATE 1 Num OR (?)) ;
 
-COPY:msyn-adjectiv-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adjectiv-attr-pred) AFTER Ex/A TARGET (&msyn-adjectiv-attr-pred);	
+	## Man stoere brööke-biehkie haemeste viskes?
+	## Ij amma vesties
 
-	## beapmoeh (leah) njaelkies  ---> beapmoeh leah njaelkie
+
+	## "Attributt blir bare brukt når det står foran et noun- Denne regelen forteller at attributt blir feil, når vi har en subjektskandidat foran eller et kopula eller en negasjonsverb og hvis det ikke står et substantiv etterpå."  
+	
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
+	(1 EOS)
+	(*-1 (Neg Ind) OR REALCOPULAS BARRIER NOT-ADV-PCLE)
+	(NEGATE 1 CC LINK 1 (A Attr) OR PrfPrc LINK *1 N);
+
+	## ij amma vesties.
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
+	(-1 CC LINK *-1 Nom BARRIER (*) - REALCOPULAS)
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
+	(NOT 1 N)
+	(NEGATE 1 CC LINK 1 (A Attr) OR PrfPrc LINK *1 N);
+
+	## Saemien kultuvre lea gånkaladtje jïh tjaebpies. 
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
+	(1 CC LINK 1 (A Sg Nom) OR &msyn-adj-attr-pred LINK NOT 0 Attr) 
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen))
+	(NOT 1 N);	
+	## rööpses jallh plaaves viskes jallh kruana oransje jallh tjoevke-rööpses
+	
+	#Denne regelen retter attributt til predikativ når det er en konjunksjon som følger etter adjektivet og etter konjunksjonen er det en predikativ adjektivform. 
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF
+	(1 COMMA LINK 1 (A Sg Nom) OR &msyn-adj-attr-pred LINK 1 CC LINK 1 (A Sg Nom))
+	(NEGATE 0 <AttrPred> OR A + Sg + Nom OR A-ATTR-ONLY OR Arab OR (N Sg Gen) OR Der/Comp OR Der/Superl)
+	(NOT 1 N);
+		
+	# FS-valency	
+	
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-FS>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(1 (N Nom) OR (Cmp/SplitR) LINK *1 VFIN OR Inf OR PrfPrc)(NEGATE 0 Der/Comp OR Der/Superl OR Ord);  	
+	## Manne joekoen madtjeles Laanteburrie- jïh beapmoedepartemeente (LBD) daelie sæjhta vuertedh goske dïhte saemien laakemoenehtse sov barkoem dorjeme jïh sov juvnehtimmiejgujmie båateme, jïh aaj departemeente jeahta dah sijhtieh moenehtsen jarkelimmieraeriestimmieh båatsoelaakeste vuarjasjidh, saemiedigkieraerie Silje Karine Muotka jeahta.
+	
+	# Inf-valency
+
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (0 <TH-Inf>) (*-1 (Pron Nom) OR (N Nom) OR COPULAS BARRIER NOT-ADV-PCLE - A)(NEGATE 0 Der/Comp OR Ord)(NOT 1 Attr)(*1 Acc OR (N Pl Nom) BARRIER NOT-NPMOD - (A <AttrPred>) - PrfPrc LINK 1 (TV Inf));	
+	## Munnjien lea nuekies geehpes tjaaleme gærjah lohkedh. 
+	
+LIST BECOME-sma = "sjïdtedh" ;
+LIST BECOME-sme = "šaddat" ;
+LIST BECOME-smj = "sjaddat" ;
+LIST BECOME-smn = "šoddâđ" ;
+SET BECOME = BECOME-sma OR BECOME-sme OR BECOME-smj OR BECOME-smn ;
+
+	
+ADD:msyn-adj-attr-pred (&msyn-adj-attr-pred) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 (V Inf) - BECOME LINK NOT 0 N LINK 1 EOS);
+
+COPY:msyn-adj-attr-pred (A Sg Nom SUGGEST) EXCEPT (A Attr &msyn-adj-attr-pred) OR (A Attr &msyn-adj-attr-pred) AFTER Ex/A TARGET (&msyn-adj-attr-pred);	
+
+	## beapmoeh leah njaelkies  ---> beapmoeh leah njaelkie
+	## laante dan tjaebpies vååjnoe --> Laante dan tjaebpie vååjnoe
+	
+	# Attr --> Pred Ess
+	
+	
+ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (1 EOS)(*-1 (N Acc) OR (A Arab) BARRIER NOT-NPMOD - Ela LINK *-1 (V Imprt) LINK 0 Sg2 OR Du2 OR Pl2)(NEGATE 0 Ord) ;
+
+ADD:msyn-adj-attr-ess (&msyn-adj-attr-ess) TARGET (A Attr) IF (NEGATE 0 (A <AttrPred>))(1 BECOME + Inf OR BECOME + Sg3 LINK NEGATE 0 N LINK 1 EOS)(NEGATE 0 Ord);
+	#$sme Juovlamánu 7.
+
+COPY:msyn-adj-attr-ess (A Ess SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ess) AFTER Ex/A TARGET (&msyn-adj-attr-ess);	
+	## Klaeredh 28 rovhtijste {viskes}.
+	## Gosse dihte båantas saemie {giefies} sjidti.
+
+
+	# Attr --> Pred Ine (momentane)
+	
+LIST MOM-ADJ = "nåejsie" "måerie" "aavoe" "vyörtegs" ;
+	# om dyr og mennesker
+	
+	
+ADD:msyn-adj-attr-ine (&msyn-adj-attr-ine) TARGET (A Attr) IF (0 MOM-ADJ)(NEGATE 0 (A <AttrPred>))(NEGATE 1 N)(*-1 (N Nom) + Sem/Hum OR (Pron Coll) OR (Pron Pers Nom))(NEGATE 0 Ord) ;
+
+COPY:msyn-adj-attr-ine (A Sg Ine SUGGEST) EXCEPT (A Attr &msyn-adj-attr-ine) AFTER Ex/A TARGET (&msyn-adj-attr-ine);	
+	## Jupmelen tjelmine gaajhkesh seamma vyörtegs.
+
+
+
+    # Attr --> Adv 
+
+ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) - Der/Comp IF (1 (Ind Prs Sg3) - COPULAS LINK NOT 0 N - Err/Orth OR Ord)(NEGATE 0 Adv OR Ord) ; 
+
+ADD:msyn-adj-attr-adv (&msyn-adj-attr-adv) TARGET (A Attr) IF (1 CC LINK 1C Adv)(NEGATE 0 Adv OR Ord) ; 
+
+COPY:msyn-adj-attr-adv (Ex/A Ex/Attr Der/laakan Adv SUGGEST) EXCEPT (A Attr &msyn-adj-attr-adv) TARGET (&msyn-adj-attr-adv) ;  
+     ## Viskes jïh rööpses klaerieh jijhtieh jïh laante dan tjaebpies vååjnoe
+     ## tjaebpies --> tjaebpieslaakan 
 	
 	# Pred ---> Attr
+	
+LIST LO-PO = "bæjngoelisnie" ;
+LIST LO-ADV = "bæjngoelisnie" ;
 
-ADD:msyn-adjectiv-pred-attr (&msyn-adjectiv-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com));
+SET SEM-ADVERBIAL = Sem/Plc OR Sem/Build OR Sem/Cat ;
 
-COPY:msyn-adjectiv-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adjectiv-pred-attr) AFTER Ex/A TARGET (&msyn-adjectiv-pred-attr);	
+LIST CONGR-A-sma = "buorre" ; #MAJA
+LIST CONGR-A-sme = "buorre" ;
+LIST CONGR-A-smj = "buorre" ;
+LIST CONGR-A-smn = "siämmáš" ;
+SET CONGR-A = CONGR-A-sma OR CONGR-A-sme OR CONGR-A-smj OR CONGR-A-smn ;
+
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A LINK NOT 0 Inf OR VFIN OR PrfPrc OR Ger) 
+(NEGATE 0 <TH-Com-Any> LINK 1 (N Com))
+(NEGATE 0 <TH-Inf> LINK *1 (N Acc) OR (N Nom) + Pl BARRIER NOT-NPMOD LINK *1 (TV Inf) BARRIER NOT-ADV-PCLE)
+(NEGATE 0 <TH-Inf> LINK *1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL BARRIER NOT-NPMOD LINK *1 Inf BARRIER NOT-ADV-PCLE)
+(NEGATE 0 <TH-Inf> LINK *1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL BARRIER NOT-NPMOD LINK 1 (N Ine) + SEM-ADVERBIAL OR (N Ela) + SEM-ADVERBIAL OR (N Com) OR (N Ill) + SEM-ADVERBIAL LINK *1 Inf BARRIER NOT-ADV-PCLE)
+(NEGATE 0 <TH-Inf> LINK *1 Gen BARRIER NOT-NPMOD LINK 1 Po LINK *1 Inf BARRIER NOT-ADV-PCLE)
+(NEGATE 0 <TH-FS> LINK 1 (N Nom) OR (Pron Nom) LINK *1 VFIN BARRIER NOT-ADV-PCLE - Ill - Ela - Ine)
+(NEGATE 0  <utnedh><TH-Inf> LINK -1 ("utnedh") OR ("åtna" N Sg Nom) LINK *2 Inf BARRIER S-BOUNDARY OR CS)
+(NEGATE 0  <utnedh><TH-PrfPrc> LINK -1 ("utnedh") OR ("åtna" N Sg Nom) LINK *2 PrfPrc BARRIER S-BOUNDARY OR CS)
+(NEGATE 0 ("<.*-Loc-.*>"r) LINK 1 Loc)
+(NEGATE *1 Adv OR Ine OR Po BARRIER NOT-ADV - Gen - CC LINK 1 COPULAS)
+(NEGATE 0 <AttrPred> OR Attr OR (Pron Dem) OR Adv OR Ord OR PrsPrc OR (N Sg Nom) OR ("båetije") OR ("åejvie") OR VFIN OR CONGR-A)
+(NEGATE *1 Sem/Plc + Ine OR Sem/Plc + Ela OR Sem/Build + Ine OR Sem/Build + Ela OR LO-ADV OR LO-PO BARRIER NOT-NPMOD LINK 1 EOS OR CC OR CS OR Rel LINK NEGATE *-1 VFIN - COPULAS BARRIER CS OR Rel)
+(NEGATE 2 LO-PO LINK 1 EOS OR CC OR CS OR Rel LINK NEGATE *-1 VFIN - COPULAS BARRIER CS OR Rel);
+	#$ Lea aelhkie bïjlem vuejedh.
+	# åejvie typical for compounds
+
+COPY:msyn-adj-pred-attr (A Attr SUGGEST) EXCEPT (A Sg Nom &msyn-adj-pred-attr) AFTER Ex/A TARGET (&msyn-adj-pred-attr);	
 
 ## Anna lea vaejkele soptsestæjja -> væjkeles soptsestæjja 
 #$ Piere (lea) væjkele maanajgujmie -> væjkele maanajgujmie
 
 	# Gåabpa + komparativ
-
-ADD:msyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 ("gåabpa" Sg Nom));
-
-COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);	
 	
+LIST WHICH-OF-TWO-sma = "gåabpa" ;
+LIST WHICH-OF-TWO-sme = "goabbá" ;
+LIST WHICH-OF-TWO-smj = "goappátja" ;
+LIST WHICH-OF-TWO-smn = "kuábbáš" ;
+SET WHICH-OF-TWO = WHICH-OF-TWO-sma OR WHICH-OF-TWO-sme OR WHICH-OF-TWO-smj OR WHICH-OF-TWO-smn ;
+
+ADD:xmsyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 WHICH-OF-TWO + (Sg Nom));
+
+COPY:msyn-gåabpa-sup-komp (Der/Comp SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);		
 	## gåabpa stööremes
+	
+	
+	# Com before ektine
+	# -----------------
+	
+ADD:msyn-ektine-gen-com (&msyn-ektine-gen-com) TARGET (N Gen) IF (1 ("ektine"))(NEGATE -1 Pr);
+	## dejstie bieliejaepien tjåanghkosne eejhtegi ektine
+	## Daate konvensjovne lea tjaalasovveme saemiej ektine 
+	## Staath edtjieh, gosse daerpies, saemiedigkiej ektine barkedh.
+	
+COPY:msyn-ektine-gen-com (Com SUGGEST) EXCEPT (Gen &msyn-ektine-gen-com) TARGET (&msyn-ektine-gen-com);
+
+	# Acc > Gen Po
+	# ------------	
+	
+LIST NUMBER = Sg Pl ;
+
+ADD:msyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 Po LINK NOT 0 Adv OR ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+
+ADD:msyn-po-acc-gen (&msyn-po-acc-gen) TARGET (N Acc) OR (Pron Acc) IF (1 CC LINK 1 Gen OR &msyn-po-acc-gen LINK 1 Po LINK NOT 0 ("ektine") LINK NEGATE 1 Gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+
+
+ADD:msyn-po-acc-gen (&msyn-po-acc-gen) TARGET (Dem Acc) IF (1 &msyn-po-acc-gen)(NEGATE -1 Pr)(NEGATE 0 Gen);
+
+
+ADDRELATION ($2 LEFT) (N &msyn-po-acc-gen) TO (-1 (Dem &msyn-po-acc-gen)) ;
+
+COPY:msyn-po-acc-gen (Gen SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER OR ALL-PERS TARGET (&msyn-po-acc-gen);	
+	## Janne  åådtje munnjien {dam}£{infl,pron,sgacc-sggen|dan} {bijre}${vowc,i-ï|bïjre} {mængan}${conc,n-nn|mænngan} {sopsestidh}${conc,ps-pts|soptsestidh}.
+	## Gosse ussjedibie ööhpehtimmien bïjre {dejtie skyllijemaanide}£{noun,case,placc-plgen|dej skyllijemaanaj bïjre ussjedibie.
+	## Badth gosse naemhtie almetjigujmie gaavnedibie mijakt orre, sinsitniem jïh jïjtse bïjre lïerebe. > sinsitninen jïh jïjtse bïjre lïerebe. 
+	
+
+	# Habitive constructions
+	# -----------------------		
+ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Pl3) LINK 1 (N Pl Nom) - <spelled> - Err/Spellrelax OR (Pron Pl Nom))(NEGATE -1 (V <TH-FS>));
+
+ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Sg3) LINK 1 (N Sg Nom) - <spelled> - Err/Spellrelax OR (Pron Sg Nom) LINK NOT 0 Adv)(NEGATE -1 (V <TH-FS>));	
+
+
+COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBER TARGET (&msyn-hab-nom-gen);
+	## {Gaajhkesh}£{infl,pron,nom-gen|Gaajhkesi} leah reaktah årromesæjjan.
+	
+	# Finite vs. non-finite verbs
+	# ============================
 
 	# Sååjhtedh as Adverb
-
-ADD:msyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET ("sååjhtedh" Ind Prs Sg3) (1 VFIN - Sg3) ;
-
-	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+	# -------------------
 	
-COPY:msyn-sååjhtoe-VFinitt (Sg1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg1) ;
-COPY:msyn-sååjhtoe-VFinitt (Sg2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg2) ;
-COPY:msyn-sååjhtoe-VFinitt (Du1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du1) ;
-COPY:msyn-sååjhtoe-VFinitt (Du2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du2) ;
-COPY:msyn-sååjhtoe-VFinitt (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du3) ;
-COPY:msyn-sååjhtoe-VFinitt (Pl1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl1) ;
-COPY:msyn-sååjhtoe-VFinitt (Pl2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl2) ;
-COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl3) ;
+LIST MAYBE-V-smj = "soajttet" ;
+LIST MAYBE-V-sma = "sååjhtedh" ;
+LIST MAYBE-V-sme = "soaitit" ;
+LIST MAYBE-V-smn = "sättiđ" ;
+SET MAYBE-V = MAYBE-V-smj OR MAYBE-V-sma OR MAYBE-V-sme OR MAYBE-V-smn ;
+
+ADD:msyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET MAYBE-V + (Ind Prs Sg3)  (*1 VFIN - Sg3 BARRIER (*) - Pcle - Adv) ;
+	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+		
+COPY:msyn-sååjhtoe-VFinitt (Sg1 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg1) ;
+COPY:msyn-sååjhtoe-VFinitt (Sg2 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg2) ;
+COPY:msyn-sååjhtoe-VFinitt (Du1 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du1) ;
+COPY:msyn-sååjhtoe-VFinitt (Du2 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du2) ;
+COPY:msyn-sååjhtoe-VFinitt (Du3 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du3) ;
+COPY:msyn-sååjhtoe-VFinitt (Pl1 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl1) ;
+COPY:msyn-sååjhtoe-VFinitt (Pl2 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl2) ;
+COPY:msyn-sååjhtoe-VFinitt (Pl3 SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl3) ;
+
+	## Noun phrase internal congruence
+	
+	
+	# AUX + VFIN > AUX + Inf
+	# ----------------------
+	
+LIST AUX = "aelkedh" "båetedh" "edtjedh" "fihkedh" "maehtedh" "provhkedh" "sïjhtedh" "sjïdtedh" "åadtjodh" "galkedh" "tjoeredh" ;
+
+
+ADD:msyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) OR (V Ind Pl3) IF (*-1 AUX + (Ind Prs Sg3) OR AUX + (Ind Prs Pl3) BARRIER (*) - Pcle - Adv LINK NEGATE *-1 Rel OR CS BARRIER S-BOUNDARY OR VFIN)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
+	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+	## Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
+	## Nimhtie aaj vihkele saemieh maehtieh åadtjoeh gïehtjedimmiejgujmie gïehtelidh.
+	#$ Akte ålma mij jïjnjem daan bïjre maahta {lea} Ingvald Jåma Fosenistie.
+	
+ADD:msyn-aux-vfin-inf (&msyn-aux-vfin-inf) TARGET (V Ind Sg3) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv LINK NEGATE *-1 Rel OR CS BARRIER S-BOUNDARY OR VFIN)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
+
+
+COPY:msyn-aux-vfin-inf ("årrodh" V IV Inf SUGGEST) EXCEPT ("lea" V IV Ind Prs Sg3 &msyn-aux-vfin-inf) OR ("lea" V IV Ind Prt Sg3 &msyn-aux-vfin-inf) TARGET ("lea" Sg3 &msyn-aux-vfin-inf) ;
+COPY:msyn-aux-vfin-inf ("årrodh" V IV Inf SUGGEST) EXCEPT ("lea" V IV Ind Prs Pl3 &msyn-aux-vfin-inf) OR ("lea" V IV Ind Prt Pl3 &msyn-aux-vfin-inf) TARGET ("lea" Pl3 &msyn-aux-vfin-inf) ;
+
+COPY:msyn-aux-vfin-inf (Inf SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-vfin-inf) OR (Ind Prt Sg3 &msyn-aux-vfin-inf) TARGET (Sg3 &msyn-aux-vfin-inf) IF (NEGATE 0 ("lea")) ;
+COPY:msyn-aux-vfin-inf (Inf SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-aux-vfin-inf) OR (Ind Prt Pl3 &msyn-aux-vfin-inf) TARGET (Pl3 &msyn-aux-vfin-inf) (NEGATE 0 ("lea"));
+	## Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
+	
+	# Inf > Pl3
+	# ----------------------
+	
+
+#ADD:xmsyn-aux-inf-pl3 (&msyn-aux-inf-pl3) TARGET (V Inf) IF (*-1 AUX + (Ind Prs Sg3) BARRIER (*) - Pcle - Adv)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
+#	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+#	## Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
+#	
+#	
+#ADD:xmsyn-aux-inf-pl3 (&msyn-aux-inf-pl3) TARGET (V Inf) IF (-1 Acc LINK *-1 AUX + Sg3 BARRIER (*) - Pcle - Adv)(NEGATE 0 ("ij") OR Adv OR Po OR Pr OR Num OR N OR Ord) ;
+#
+#COPY:msyn-aux-inf-pl3 (Inf SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-inf-pl3) OR (Ind Prt Sg3 &msyn-aux-inf-pl3)  TARGET (&msyn-aux-inf-pl3) ;
+#	## Mijjieh {sijhtebe}${verb,ascii|sïjhtebe} jeatjah goh {dihte}${dem,ascii|dïhte} gie {maanan}£{infl,noun,sggen-sgacc|maanam} syjhtedh maahta {eejteghmaaksoem}${noun,con|eejhteghmaaksoem} {åådtje}£{inf-after-aux,infl,verb,prssg3-inf|åadtjodh}.
+	
+	# Numphrase
+	# =========
+	
+LIST NUMUNIT = "millijovne" "mill" "milj" "miljo" "millijarde" ; # MAJA "mrd" "millijåvnnå" "tuvsán" "tjuohte" ;
+
+
+	
+	# pl nom
+	# ------
+	
+	
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N Sg Nom) IF (*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom));
+
+# millijåvnnå FROM smj
+
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET NUMUNIT + (Sg Nom) IF (-1 Num) (1 (N Sg Gen) OR (N Pl Nom) OR (N &msyn-numphrase-congruence-plnom)) 
+(NEGATE -1 ("akte")) 
+(NEGATE 0 ABBR) ;
+	
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (Dem Pl Nom) IF (*1 (Num &msyn-numphrase-congruence-plnom) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-plnom) TO (*-1 (Dem &msyn-numphrase-congruence-plnom)) ;
+ 
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-plnom) TO (*-1 (Num &msyn-numphrase-congruence-plnom)) ;	
+	
+COPY:msyn-numphrase-congruence-plnom (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (N Nom &msyn-numphrase-congruence-plnom) ;
+
+	## Gærjagåetien tjåanghkosne 20 miljovnh aamhtese gååvnesieh. > 20 miljovnh aamhtesh gååvnesieh
+	
+	# sg ine
+	# ------
+
+	# incorrect noun	
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Pl Ine) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+	# correct noun, wrong numeral
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Sg Ine) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") - Ine BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+COPY:msyn-numphrase-congruence-sgine (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sgine) ;
+	
+	# numeral
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-sgine) OR NUMUNIT + &msyn-numphrase-congruence-sgine BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
+
+COPY:msyn-numphrase-congruence-sgine (Sg Ine Attr SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sgine) ;
+
+	# demonstrative
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Dem Pl Nom) OR (Dem Pl Gen) OR (Indef Pl Nom) OR (Indef Pl Gen) IF (*1 (Num &msyn-numphrase-congruence-sgine) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+COPY:msyn-numphrase-congruence-sgine (Pl Ine SUGGEST) EXCEPT (Pl Nom) OR (Pl Gen) TARGET (Dem Pl Nom &msyn-numphrase-congruence-sgine) OR (Dem Pl Gen &msyn-numphrase-congruence-sgine) OR (Indef Pl Nom &msyn-numphrase-congruence-sgine) OR (Indef Pl Gen &msyn-numphrase-congruence-sgine) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-numphrase-congruence-sgine)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-numphrase-congruence-sgine) LINK *-1 (Dem &msyn-numphrase-congruence-sgine) OR (Indef &msyn-numphrase-congruence-sgine)) ;
+
+	## Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh. > gaajhkine golmene laantesne gååvnesidh.
+	
+	# sg ela
+	# ------
+
+	# incorrect noun	
+ADD:msyn-numphrase-congruence-sgela (&msyn-numphrase-congruence-sgela) TARGET (Pl Ela) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+	# correct noun, wrong numeral
+ADD:msyn-numphrase-congruence-sgela (&msyn-numphrase-congruence-sgela) TARGET (Sg Ela) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") - Ela BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+COPY:msyn-numphrase-congruence-sgela (Sg Ela SUGGEST) EXCEPT (Pl Ela) TARGET (N Ela &msyn-numphrase-congruence-sgela) ;
+	
+	# numeral
+ADD:msyn-numphrase-congruence-sgela (&msyn-numphrase-congruence-sgela) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-sgela) OR NUMUNIT + &msyn-numphrase-congruence-sgela BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
+
+COPY:msyn-numphrase-congruence-sgela (Sg Ela Attr SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sgela) ;
+
+	# demonstrative
+ADD:msyn-numphrase-congruence-sgela (&msyn-numphrase-congruence-sgela) TARGET (Dem Pl Nom) OR (Dem Pl Gen) OR (Indef Pl Nom) OR (Indef Pl Gen) IF (*1 (Num &msyn-numphrase-congruence-sgela) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+COPY:msyn-numphrase-congruence-sgela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Pl Gen) TARGET (Dem Pl Nom &msyn-numphrase-congruence-sgela) OR (Dem Pl Gen &msyn-numphrase-congruence-sgela) OR (Indef Pl Nom &msyn-numphrase-congruence-sgela) OR (Indef Pl Gen &msyn-numphrase-congruence-sgela) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgela) TO (*-1 (Num &msyn-numphrase-congruence-sgela)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgela) TO (*-1 (Num &msyn-numphrase-congruence-sgela) LINK *-1 (Dem &msyn-numphrase-congruence-sgine) OR (Indef &msyn-numphrase-congruence-sgela)) ;
+
+	## 
+	
+	# sg acc
+	# ------	
+	
+	# Noun error akte included
+ADD:msyn-numphrase-congruence-sgacc (&msyn-numphrase-congruence-sgacc) TARGET (N Sg Acc) IF (*-1 (Num Gen) BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year OR Sem/Date OR (A Arab Ord Attr))(NEGATE 0 (N Gen) OR ABBR OR Prop)(NEGATE *1 (N Gen) BARRIER (*) - Attr - Gen);
+		
+	# akte included
+ADD:msyn-numphrase-congruence-sgacc (&msyn-numphrase-congruence-sgacc) TARGET (Num Nom) OR (Num Gen) IF (*1 (N &msyn-numphrase-congruence-sgacc) - ABBR - Prop BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
+
+ADD:msyn-numphrase-congruence-sgacc (&msyn-numphrase-congruence-sgacc) TARGET (Num Nom) - Sem/Date OR (Num Gen) IF (1 CC OR COMMA LINK 1 (Num &msyn-numphrase-congruence-sgacc) LINK *1 (N &msyn-numphrase-congruence-sgacc) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+COPY:msyn-numphrase-congruence-sggen (Sg Acc SUGGEST) EXCEPT (Sg Nom) OR (Sg Gen) TARGET (Num Sg &msyn-numphrase-congruence-sgacc) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgacc) TO (*-1 (Num &msyn-numphrase-congruence-sgacc)) ;
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgacc) TO (*-1 (Num &msyn-numphrase-congruence-sgacc) LINK *-1 (Num &msyn-numphrase-congruence-sgacc)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgacc) TO (*-1 (Num &msyn-numphrase-congruence-sgacc) LINK *-1 (Dem &msyn-numphrase-congruence-sgacc) OR (Indef &msyn-numphrase-congruence-sgacc)) ;
+	
+	
+	
+	# sg gen
+	# ------	
+	
+	# Noun error akte included
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (N Sg Gen) IF (*-1 (Num Nom) BARRIER NOT-Attr - ("millijovne" Nom) LINK NEGATE 0 Sem/Year OR Sem/Date OR (A Arab Ord Attr))(NEGATE 0 (N Pl Nom) OR ABBR OR Prop)(NEGATE *1 (N Nom) BARRIER (*) - Attr - Gen);
+	#$ Goerehtimmiedåehkesne 18 saemien soptsestæjjah aalterisnie 18 jïh 56 jaepieh, jïh referaansedåehkesne {4 voestes gïelen} soptsestæjjah, aalterisnie 44 - 72 jaepieh.
+	
+
+#COPY:msyn-numphrase-congruence-sggen (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sggen) ;
+	
+	# akte included
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) IF (*1 (N &msyn-numphrase-congruence-sggen) - ABBR - Prop BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
+
+ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Num Nom) - ("akte") - ("1") - Sem/Date IF (1 CC OR COMMA LINK 1 (Num &msyn-numphrase-congruence-sggen) LINK *1 (N &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+COPY:msyn-numphrase-congruence-sggen (Sg Gen SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sggen) ;
+
+#ADD:msyn-numphrase-congruence-sggen (&msyn-numphrase-congruence-sggen) TARGET (Dem Pl Nom) OR (Dem Pl Gen) OR (Indef Pl Nom) OR (Indef Pl Gen) IF (*1 (Num &msyn-numphrase-congruence-sggen) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+#COPY:msyn-numphrase-congruence-sggen (Pl Ine SUGGEST) EXCEPT (Pl Nom) OR (Pl Gen) TARGET (Dem Pl Nom &msyn-numphrase-congruence-sggen) OR (Dem Pl Gen &msyn-numphrase-congruence-sggen) OR (Indef Pl Nom &msyn-numphrase-congruence-sggen) OR (Indef Pl Gen &msyn-numphrase-congruence-sggen) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sggen) TO (*-1 (Num &msyn-numphrase-congruence-sggen)) ;
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sggen) TO (*-1 (Num &msyn-numphrase-congruence-sggen) LINK *-1 (Num &msyn-numphrase-congruence-sggen)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sggen) TO (*-1 (Num &msyn-numphrase-congruence-sggen) LINK *-1 (Dem &msyn-numphrase-congruence-sggen) OR (Indef &msyn-numphrase-congruence-sggen)) ;
+	
+	## Nasjovnegærjagåetie lea akte staaten reereme. > akten staaten
+
+	## Maanah leah gaektsie, govhte jïh golme jaepien båeries > gaektsien, govhten jïh golmen jaepien
+	
+	
+	# Demphrase
+	# =========
+	
+LIST SG-INDEF-PRON = "muvhte" ;
+	## Plaerine våhkoen gyrhkesjimmide gaavnh  mij gyrhkesjimmide muvhth gærhkojne dov årromesijjesne gaavnh. > muvhtene gærhkosne
+	## Diakovnine åålmegisnie barkh, muvhth gærhkoen institusjovnesne jallh internasjonaale barkosne.
+
+	
+	# pl nom
+	# ------
+	
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Sg Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Nom) - ABBR - Prop BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Nom))(NEGATE 0 ("dïhte") LINK 1 (Dem Pl Nom));
+
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (Pron Pl Nom) IF (*-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr) (1 (N Pl Nom))(NEGATE 0 ABBR OR Prop);
+
+ADD:msyn-demphrase-congruence-plnom (&msyn-demphrase-congruence-plnom) TARGET (N Pl Nom) IF (*-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr);
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plnom) TO (*-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr) ;	
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plnom) TO (*-1 (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) BARRIER NOT-Attr LINK -1 (Indef &msyn-demphrase-congruence-plnom)) ;
+	## Daesnie lea jïjnje almetjh.
+	#$ Tjåanghkan maahta jiehtedh daate tjïelkes-timmie gaajhkide veerbide mah gååvnesieh, men ij leah tjïelkestimmie mannasinie dahgååvnesieh.
+	## Dïhte audiovisueelle tjåanghkoeh dah leah jienebh enn 7 miljovnh spealadimmietæjmoeh.
+
+COPY:msyn-demphrase-congruence (Pl Nom SUGGEST) EXCEPT (Sg Nom) OR Err/Orth-any TARGET (Dem &msyn-demphrase-congruence-plnom) OR (Indef &msyn-demphrase-congruence-plnom) ;
+	## Jijnje båeries almetjh hov jiehtieh jaa, men die dellie idtjimh goh daejrieh mejtie den suhkere vihkien bijre. > Jïjnjh båeries almetjh
+	#$ Naakenh roehtside morfeemh leah lissiehtamme göökte daltesinie. (Subj + ADVL)
+
+	# pl acc
+	# ------
+	
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Acc) OR (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr LINK NEGATE 0 (N Sg Acc));
+
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Pl Acc) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr);
+
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (Pron Pl Acc) IF (*-1 (Pron Dem Pl Acc &msyn-demphrase-congruence-placc) BARRIER NOT-Attr) (1 (N Pl Acc) OR (N Sg Acc));
+
+ADD:msyn-demphrase-congruence-placc (&msyn-demphrase-congruence-placc) TARGET (N Pl Acc) OR (N Sg Acc) IF (*-1 (Dem &msyn-demphrase-congruence-placc) OR (Indef &msyn-demphrase-congruence-placc) BARRIER NOT-Attr);
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-placc) TO (*-1 (Dem &msyn-demphrase-congruence-placc) OR (Indef &msyn-demphrase-congruence-placc) BARRIER NOT-Attr) ;	
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plnom) TO (*-1 (Dem &msyn-demphrase-congruence-placc) OR (Indef &msyn-demphrase-congruence-placc) BARRIER NOT-Attr LINK -1 (Indef &msyn-demphrase-congruence-placc)) ;
+
+	# dem error	
+COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (Sg Acc Dem &msyn-demphrase-congruence-placc) OR (Sg Acc Indef &msyn-demphrase-congruence-placc) ;
+
+	# noun error
+COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (N Sg Acc &msyn-demphrase-congruence-placc) ;
+
+
+	## Gærjagåetie dejtie almetjivåarhkoem vaarjele, eeremes leah Astrid Lindgren, August Strindberg jïh Dag Hammarsköld. > dejtie almetjivåarhkojde
+	
+	# sg acc
+	# ------
+	
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Nom) OR (Pron Attr) - Acc IF (0 Dem OR Indef)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr);
+
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef)(*1 (N Sg Nom) BARRIER (*) - (Dem Nom) - Attr);
+
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (*-1 (Pron Dem &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) (1 (N Sg Acc));
+
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (N Sg Acc) OR (N Sg Nom) IF (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr);
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-sgacc) TO (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) ;	
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-sgacc) TO (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr LINK -1 (Indef &msyn-demphrase-congruence-sgacc)) ;
+
+	# dem error	
+COPY:msyn-demphrase-congruence-sgacc (Sg Acc SUGGEST) EXCEPT (Attr) TARGET (Attr Dem &msyn-demphrase-congruence-sgacc) OR (Attr Indef &msyn-demphrase-congruence-placc) ;
+
+	# noun error
+COPY:msyn-demphrase-congruence-sgacc (Sg Acc SUGGEST) EXCEPT (Sg Nom) TARGET (N Sg Nom &msyn-demphrase-congruence-sgacc) ;
+
+
+	
+	# pl ill
+	# ------
+
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ill) OR (N Pl Acc) BARRIER (*) - (Dem Nom));
+
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (Pron Pl Nom) IF (-1 (Pron Dem Pl Nom &msyn-demphrase-congruence-plill)) (*1 (N Pl Ill) OR (N Pl Acc) BARRIER (*) - Attr - Gen);
+
+ADD:msyn-demphrase-congruence-plill (&msyn-demphrase-congruence-plill) TARGET (N Pl Ill) OR (N Pl Acc) IF (*-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) BARRIER (*) - Attr - Gen);
+
+
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plill) TO (*-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill)) ;
+ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-plill) TO (-1 (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) LINK -1 (Indef &msyn-demphrase-congruence-plill)) ;	
+	## Provresalmetjidie mejtie fuehpesne hijven naemhtie ånnetji raaffalgovvedh jïh gaajhkh åssjalommesidie provren bïjre luejhtedh jïh ussjedidh mannasinie sinsitnine pruvrijægan.
+	## Læstoeh gaajhkh daah dåehkide jïh dej kandidath gååvnese www.svenskakyrkan.se/kyrkoval.
+	
+	# Dem error
+	
+COPY:msyn-demphrase-congruence-plill (Pl Ill SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plill) OR (Indef &msyn-demphrase-congruence-plill) ;
+
+	# Noun error
+	
+COPY:msyn-demphrase-congruence-plill (Pl Ill SUGGEST) EXCEPT (Sg Ill) TARGET (Sg N &msyn-demphrase-congruence-plill) ;
+
+	# pl ine
+	# ------
+
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ine) OR (N Sg Ine) BARRIER (*) - Attr - Gen);
+
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-pline) TARGET (N Pl Ine) OR (N Sg Ine) IF (*-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline) BARRIER (*) - Attr - Gen  );
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-pline) TO (*-1 (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline)) ;	
+	## Dïhte gaajhkh lehkine mïnni.
+	
+	# Dem error
+	
+COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-pline) OR (Indef &msyn-demphrase-congruence-pline) ;
+
+	# Noun error
+	
+COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Sg Ine) TARGET (Sg N &msyn-demphrase-congruence-pline) ;
+
+	## Daej lissine gellie jeatjah barkijh, dovne ekonovmh, kanslijebarkijh, bievniehtæjjah jïh juristh. > daejnie lissine
+
+	# pl ela
+	# ------
+
+	# pronoun error
+	
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) OR (Pron Sg Ine Attr) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ela) BARRIER (*) - Attr);
+	## 	Dah aamhtesh dennie Sveerjen tjåanghkojste ij åadtjoeh dejtie gåatan löönedh. > dehtie
+
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) BARRIER (*) - Attr);
+
+	# noun error
+	
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Ela) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Sg Gen) BARRIER (*) - Attr LINK NEGATE *1 (N Ela) BARRIER NOT-NPMOD - Adv);
+	
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Sg Gen) IF (*-1 (Dem Pl Ela) OR (Indef Pl Ela) BARRIER (*) - Attr LINK NEGATE *1 (N Ela) BARRIER NOT-NPMOD - Adv);
+	#$ Daate lea akte dejstie {Saemiedigkien} raaktan stoerre dïedtijste: barkedh ihke båatsoe hijven mieriekrïevenassh åtna mij evtiedimmiem jïh monnehkevoetem gorrede guhkiebasse.
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plela) TO (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela)) ;	
+	## gaajhkh lehkeste hov bovtsh böötin.
+	
+COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Sg Ine Attr) TARGET (Dem Nom &msyn-demphrase-congruence-plela) OR (Indef Nom &msyn-demphrase-congruence-plela) OR (Dem Ine &msyn-demphrase-congruence-plela) OR (Indef Ine &msyn-demphrase-congruence-plela) ;
+
+COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-demphrase-congruence-plela) ;
+
+	## Jienebh dejstie aamhtesidie jeatjahligke buvresne/våarhkosne vöörhkeme, daan åvteste tjuara dejtie åvtelen dængkodh. > dejstie aamhtesijstie
+	
+	
+	## Plaerine våhkoen gyrhkesjimmide gaavnh mij gyrhkesjimmide muvhth gærhkojne dov årromesijjesne. > muvhtene gærhkosne  or muvhtine gærhkojne??
+
+	# pl com
+	# ------
+
+ADD:msyn-demphrase-congruence-plcom (&msyn-demphrase-congruence-plcom) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(1 (N Pl Com));
+
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plcom) TARGET (N Pl Com) IF (-1 (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom));
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plcom) TO (-1 (Com &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom)) ;	
+	## Gaajhkh nïejtigujmie soptsetim.
+	
+COPY:msyn-demphrase-congruence-plcom (Pl Gen SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom) ;
+
+
+	# pl gen
+	# ------
+
+	# Dem
+ADD:msyn-demphrase-congruence-plgen (&msyn-demphrase-congruence-plgen) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Gen) BARRIER (*) - (Dem Gen) - (Indef Gen));
+
+	# Noun
+ADD:msyn-demphrase-congruence-plgen (&msyn-demphrase-congruence-plgen) TARGET (N Pl Gen) IF (*-1 (Dem &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) BARRIER (*) - (Dem Gen) - (Indef Gen));
+
+ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plgen) TO (*-1 (Gen &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) BARRIER (*) - (Dem Gen) - (Indef Gen)) ;	
+	## Gaajhkh dej nåejtiej bïjre.
+	
+COPY:msyn-demphrase-congruence-plgen (Pl Gen SUGGEST) EXCEPT (Pl Nom) TARGET (Dem &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) ;
+
+
+
+
+	## Negasjon
+	
+	# PrsPrc > ConNeg
+	
+LIST NEG-V-smj = "ij" ;
+LIST NEG-V-sme = "ii" ;
+LIST NEG-V-sma = "ij" ;
+LIST NEG-V-smn = "ij" ;
+SET NEG-V = NEG-V-smj OR NEG-V-sme OR NEG-V-sma OR NEG-V-smn ;
+
+
+#ADD:xmsyn-PrsPrc-ConNeg (&msyn-PrsPrc-ConNeg) TARGET (V PrsPrc) (*-1 NEG-V + Neg + ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE OR ConNeg)(NEGATE 0 ConNeg)(NEGATE *1 ConNeg) ;
+
+#COPY:msyn-PrsPrc-ConNeg (ConNeg SUGGEST) EXCEPT (PrsPrc &msyn-PrsPrc-ConNeg) TARGET (&msyn-PrsPrc-ConNeg) ;
+	#$ Gosse seejh, ih {båetije} sjædtoem seejh, mohte ohtje gerniem hov seejh, veajhta-gerniem jallh jeatjah gerniem. 
+	#$ Juktie Jupmele ij leah {båetije} veartenem, man bïjre soptsestibie, eengkeli åalan vadteme.
+	#$ Daesnie naan vuesiehtimmieh guktie maahta praedtiem heerredidh: Aellieh {jielije} tjoevkesem {nåhtedh} jallh geehth olles tjoevkesesteerije maehtieh bueledh.
+
+	# ij as Adverb - congruence between Neg and VFIN
+
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 NEG-V + Neg + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg)(NEGATE 0 Inf LINK -1 <TH-Inf>)(NEGATE 0 Neg) ;
+
+COPY:msyn-Neg-VFinitt-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Inf &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
+	## Ean månnoeh miehtsesne {minnien} lustestallemen vuj haarjanimmien gaavhtan.
+	## Ean {edtjien} månnoeh datnem sturredh.
+	## Mohte eakan {edtjigan} juakadidh.
+	## Jis datne aktem sijjem faalen mij ij {sjeahta}  dov voestes vaajtellämman mij syökemisnie lea, datne maahtah jis faalaldahkem meatah jallh ijje, veeljedh aajmone vuerpesne tjåadtjodh.
+	
+	# Neg Pl3 > ConNeg
+
+ADD:msyn-Neg-Pl3-ConNeg (&msyn-Neg-Pl3-ConNeg) TARGET (Ind Prs Pl3) IF (NEGATE 0 (ConNeg))(*-1 NEG-V + Neg + Prs BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc OR Rel) ;
+
+COPY:msyn-Neg-VFinitt-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3-ConNeg) TARGET (&msyn-Neg-Pl3-ConNeg) ;
+	## Ij Piere gænnah tjöönieh?
+	## Ij gænnah tjöönieh?
+	
+	# ij as Adverb + leam
+
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1) (*-1 NEG-V + Neg + Sg3 - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc LINK 0 Prs OR Prt) ;
+
+COPY:msyn-Neg-VFinitt-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) ;
+	## Ij leam desnie.
+	
+	# ConNeg formen i preteritum burde samsvare i person med negasjonsverb
+	
+SET SG-PERS = Sg1 OR Sg2 OR Sg3 ;
+	
+ADD:msyn-ConNegPrt-congruence (&msyn-ConNegPrt-congruence) TARGET (Prt ConNeg) + $$SG-PERS IF (*-1 NEG-V + Neg + Prs - $$SG-PERS BARRIER NOT-ADV-PCLE) ;	
+	## Jis ij {lih} dagkere almetjedabtoe, dellie ij limh enne daajreme mejtie almetjidie golvesovvibie.
+	
+COPY:msyn-ConNegPrt-congruence (Sg1 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-congruence) OR (Sg3 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg1);
+COPY:msyn-ConNegPrt-congruence (Sg2 SUGGEST) EXCEPT (Sg1 &msyn-ConNegPrt-congruence) OR (Sg3 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg2);
+COPY:msyn-ConNegPrt-congruence (Sg3 SUGGEST) EXCEPT (Sg1 &msyn-ConNegPrt-congruence) OR (Sg2 &msyn-ConNegPrt-congruence) TARGET (&msyn-ConNegPrt-congruence) IF (-1 Sg3);	
+
+	## eedtjem/idtjim lih > im lim (kongruens)
+	#MAJA SJEKK
+	
+SET ALLE-PERS-NOTSG2 = Sg1 OR Sg3 OR Du1 OR Du2 OR Du3 OR Pl1 OR Pl2 OR Pl3 ;
+
+LIST BE-smj = "liehket" ;
+LIST BE-sma = "leah" "lea" ;
+LIST BE-sme = "leat" ;
+LIST BE-smn = "leđe" ;
+SET BE = BE-smj OR BE-sma OR BE-sme OR BE-smn ;
+
+
+ADD:msyn-ConNegPrt-lih-congruence (&msyn-ConNegPrt-lih-congruence) TARGET BE + (Prt Sg2 ConNeg) IF (-1 NEG-V + Neg + Prt + ALLE-PERS-NOTSG2) ;
+	
+	## eedtjem/idtjim lih ConNeg
+	
+COPY:msyn-ConNegPrt-lih-congruence (Sg1 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Sg1); 
+COPY:msyn-ConNegPrt-lih-congruence (Sg3 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Sg3);
+COPY:msyn-ConNegPrt-lih-congruence (Du1 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Du1);
+COPY:msyn-ConNegPrt-lih-congruence (Du2 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Du2);
+COPY:msyn-ConNegPrt-lih-congruence (Du3 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Du3);
+COPY:msyn-ConNegPrt-lih-congruence (Pl1 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Pl1);
+COPY:msyn-ConNegPrt-lih-congruence (Pl2 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Pl2);
+COPY:msyn-ConNegPrt-lih-congruence (Pl3 SUGGEST) EXCEPT (Sg2 &msyn-ConNegPrt-lih-congruence) TARGET (&msyn-ConNegPrt-lih-congruence) IF (-1 Pl3);
+
+	## eedtjem/idtjim lih Neg
+	
+ADD:msyn-NegPrt-lih-congruence (&msyn-NegPrt-lih-congruence) TARGET NEG-V + Neg + Prt + Ind IF (1 BE + (Sg2 Prt ConNeg)) ;
+	## eedtjem/idtjim lih > im lim (kongruens)
+COPY:msyn-NegPrt-lih-congruence (Prs SUGGEST) EXCEPT (Prt &msyn-NegPrt-lih-congruence) AFTER Ind TARGET (&msyn-NegPrt-lih-congruence) ;
+
+
+
+	# MAIN VERBS: tempus from finite form that should be ConNeg gets transferred to ij 
+	
+ADD:msyn-Neg-Prs-Prt (&msyn-Neg-Prs-Prt) TARGET (Neg Ind Prs) + $$ALL-PERS (1 (Ind Prt) + $$ALL-PERS LINK NOT 0 BE) ;
+	## Mohte eakan edtjigan juakadidh.
+
+COPY:msyn-Neg-Prs-Prt (Prt SUGGEST) EXCEPT (Prs &msyn-Neg-Prs-Prt) BEFORE ALL-PERS TARGET (&msyn-Neg-Prs-Prt);
+	
+	# congruence between ij and Prt ConNeg (Dualis og Pluralis)
+
+ADD:msyn-Neg-ConNeg-Congr-DuPl (&msyn-Neg-ConNeg-Congr-DuPl) TARGET NEG-V + Neg + Prs + DU-PL-V OR NEG-V + Neg + Prs + Sg3 IF (1 (Prt ConNeg) + DU-PL-V)(0 $$ALL-PERS LINK NEGATE 1 $$ALL-PERS) ;
+	## Jis gie lij maahteme tjirkedh edtji dihte maanagierte golme jaepieh juhtedh, dellie {ij} limen jueresne orreme mejtie edtjimen maanide vaeltedh destie daaroen maanagierteste, Anne-Lise sopteste.
+	
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Du1 SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du1);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Du2 SUGGEST) EXCEPT (Du3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du2);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Du3 SUGGEST) EXCEPT (Du1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Du2 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Du3);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl1 SUGGEST) EXCEPT (Pl3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl2 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Pl1);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl2 SUGGEST) EXCEPT (Pl3 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Pl2);
+COPY:msyn-Neg-ConNeg-Congr-DuPl (Pl3 SUGGEST) EXCEPT (Pl1 &msyn-Neg-ConNeg-Congr-DuPl) OR (Pl2 &msyn-Neg-ConNeg-Congr-DuPl) OR (Sg3 &msyn-Neg-ConNeg-Congr-DuPl) TARGET (&msyn-Neg-ConNeg-Congr-DuPl) (1 Pl3);
+
+	# NEG: congruence between ij and Prt ConNeg (Singularis)
+
+ADD:msyn-Neg-ConNeg-Congr-SgPl (&msyn-Neg-ConNeg-Congr-SgPl) TARGET NEG-V + Neg + SG-V IF (1 (Prt ConNeg) + DU-PL-V) ;
+	## ij lin > ean lin
+	
+COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl3 SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du2 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl3)(NEGATE -1 Nom LINK 0 Du1 OR Du2 OR Du3)(NEGATE -1 (Rel Pl Nom) LINK *-1 ("guktie") BARRIER (*) - (Pron Pers Pl3 Nom) - (Pron Dem Pl Nom));
+COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl2 SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du1 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl2);
+COPY:msyn-Neg-ConNeg-Congr-SgPl (Pl1 SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du2 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl1);
+COPY:msyn-Neg-ConNeg-Congr-SgPl (Du3 SUGGEST) EXCEPT (Sg3 &msyn-Neg-ConNeg-Congr-SgPl) OR (Du2 &msyn-Neg-ConNeg-Congr-SgPl) TARGET (&msyn-Neg-ConNeg-Congr-SgPl) (1 Pl3)(*-1 ("guktie") OR (Nom Du3) BARRIER (*) - (Pron Pers Pl3 Nom) - (Pron Dem Pl Nom) - (Rel Pl Nom));
+
+	# NEG: Neg.Prt Copula.ConNeg.Prt eller Prs > Neg.Prs Copula.ConNeg.Prt
+	
+ADD:msyn-NegPrt-NegPrs (&msyn-NegPrt-NegPrs) TARGET (Neg Prt) IF (1 BE + ConNeg) ;
+	## Idtji lij man gåågkehke
+	## Jih dej beeli goh saemieh idtjin lih annje aalkeme tjaeledh, dellie soetestimmie lij aajne vuekie mijjen maahtoe, histovrije jih aerpievierhtieh vijriebasse vedtedh. 
+
+COPY:msyn-NegPrt-NegPrs (Prs SUGGEST) EXCEPT (Prt) BEFORE ALL-PERS TARGET (&msyn-NegPrt-NegPrs);
+
+
+# Congruence between subject and verb in habitive constructions 
+
+# ij leah dov naan/rööpses/vielie måvhkah -> ij --> eah 
+
+ADD:msyn-number_congruence-subj-copula-hab (&msyn-number_congruence-subj-copula-hab) TARGET NEG-V + Neg + Prs + Sg3 IF (1 ConNeg LINK 1 (Pron Pers Gen) LINK *1 (N Pl Nom) 
+BARRIER NOT-NPMODADV) (*0 (Pron Pers Gen) OR (N Gen) + Sem/Hum BARRIER S-BOUNDARY) ;
+
+
+COPY:msyn-number_congruence-subj-copula-hab (Pl3 SUGGEST) EXCEPT (Sg3 &msyn-number_congruence-subj-copula-hab) TARGET (&msyn-number_congruence-subj-copula-hab) ; 
+
+
+	# no akte
+	# -------
+	
+LIST MEASR-ADV = "jeenemes" "unnemes" "barre" "ajve" ;
+
+ADD:syn-remove-akte (&syn-remove-akte) TARGET ("akte") IF (*1 N BARRIER NOT-NPMOD LINK NOT 0 Ela OR Sem/Measr)(NEGATE -1 CC OR COMMA LINK -1 Num)(NEGATE 1 CC OR COMMA LINK 1 Num)(NEGATE 1 Ela OR Sem/Measr)(NEGATE -1 MEASR-ADV)(NEGATE *1 Ord BARRIER S-BOUNDARY);
+	#$ Goh tjidtjebe barkoste båata dellie vuajna gøøkte raejkieh dennie oksesne, akte stoerre, dihte mubpie onne.
+
+ADD:syn-remove-akte (&syn-remove-akte) TARGET N IF (*-1 ("akte" &syn-remove-akte) BARRIER NOT-NPMOD);
+	#$ Daate lea akte dejstie Saemiedigkien raaktan stoerre dïedtijste: barkedh ihke båatsoe hijven mieriekrïevenassh åtna mij evtiedimmiem jïh monnehkevoetem gorrede guhkiebasse.
+	#$ Saemiedigkiepresidente Aili Keskitalo lea  aalkoealmetji tjirkije Arktiske dajven åvteste, jïh akte dejstie åvtehkijstie stuvremedåehkesne.
+	#$ Akte dejstie gaavnojste mij mijjem ierieli lea akte sjïelesijjieh akten stoerre saalvegierkien lïhke, gusnie akte duvrien åejjienskuvhrie lij bïejesovveme aktene raejkesne gierkien nualan.
+	## Saemien fealadasse lea tjïelkestamme goh fealadasse gusnie saemien kultuvrebiehkieh leah akte vihkeles bielie gïehtelimmeste.
+	#$ Saemien fealadasse lea tjïelkestamme goh fealadasse gusnie saemien kultuvrebiehkieh leah akte vihkeles gïehtelimmeste.
+	#$ Akte dejstie lij Daniel Mortensson, akte gïevre åvtehke dovne båatsoen jïh politihken sisnjeli.
+	#$ Minngemosth sïjhtem bååstede vuartasjidh dïsse mij sæjhta aajmene tjåadtjodh goh akte dejstie tjaebpemes mojhtesijstie saemien siebriedahkese daan jaepien.
+
+
+ADDRELATION (DELETE1) (N &syn-remove-akte) TO (*-1 ("akte" &syn-remove-akte)) ;
+
+
+# subject verb agreement
+
+	 # Prs Du1 > Prs Pl3
+	 # -----------------
+
+ADD:syn-number_congruence-subj-verb-du1-pl3 (&syn-number_congruence-subj-verb-du1-pl3) TARGET (Ind Prs Du1) IF (*-1 (N Pl Nom) OR (Pron Pl Nom) OR (Pron Pl3 Nom) BARRIER NOT-ADV-PCLE - Ine OR (Adv Subqst));
+
+COPY:syn-number_congruence-subj-verb-du1-pl3 (Pl3 SUGGEST) EXCEPT (Du1 &syn-number_congruence-subj-verb-du1-pl3) TARGET (Du1 &syn-number_congruence-subj-verb-du1-pl3) ; 
+	## Lea goh numhtie ahte dïhte saemien blogge ij gååvnesh dannasinie goh dan vaenieh almetjh mah {sijhtien}£{verb,subj_verb_kongr,prsdu1-prspl3,tense|sijhtieh} lohkedh?
+	## Luste lea vuejnedh guktie dah gïeline berkien. {verb,subj_verb_kongr,prsdu1-prspl3,tense|berkieh}!
+
+
+
+
+
+
+#(V Ind Prs) - ConNeg OR (V Ind Prt) - ConNeg OR (V Cond) OR (V Neg Ind) OR IT-EVEN-VERBS + Inf OR UT-VERBS + VFIN IF
+
+
+
+
+	# Pl3 > Sg3
+	# ---------
+ADD:syn-number_congruence-subj-verb-pl3-sg3 (&syn-number_congruence-subj-verb-pl3-sg3) TARGET (V Ind Prs Pl3) IF (*-1 (Pron Pers Sg3 Nom) OR (Pron Logo Sg3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom)); # LINK NOT 0 @COMP-CS< LINK *-1 BOS OR (":") OR (";") OR ("/") OR ("–") OR COMMA OR CS OR CC OR (Adv Subqst) OR (Pron Rel Sg) BARRIER NOT-ADV-PCLE)(NEGATE 0 Sg3 OR &real OR (N Sg) - Px OR Adv)(NEGATE *-1 (V Sg3) BARRIER NOT-ADV-PCLE - BECAUSE-WHEN - (Sg3 Nom) - (N Sg Nom));
+
+
+ADD:syn-number_congruence-subj-verb-pl3-sg3 (&syn-number_congruence-subj-verb-pl3-sg3) TARGET (V Ind Prs Pl3) IF (*-1C (N Sg Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE -1 CC LINK -1 (N Nom))
+(NEGATE 0 <TH-FS> LINK *1 (N Pl Nom) BARRIER NOT-NPMOD - Dem - ("dïhte") LINK *1 VFIN);
+	#$ [ Im ] manne is daelie mujhtieh rikti mah kraesieh men jijnje kraesieh hov dejpeli provhkimh aaj voessjedh jih gosse vaerhkieb utnieh jih dejnie låetjedh. 
+	## Mubpien stuhtjesne dennie kapihtelisnie leam dam saemien gïelebuerkiestimmiem gïehtjedamme jïh dejtie stuhtjide destie tjöönghkeme mejtie lïhke mov ïebne {leah}.
+	
+	 
+
+COPY:syn-number_congruence-subj-verb-pl3-sg3 (Sg3 SUGGEST) EXCEPT (Pl3 &syn-number_congruence-subj-verb-pl3-sg3) TARGET (Pl3 &syn-number_congruence-subj-verb-pl3-sg3) ; 
+
+
+	# Sg2 > Pl3
+	# ---------
+
+ADD:syn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg2-pl3) TARGET (V Ind Prs Sg2) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR (Pers Sg2) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 Inf LINK *-1 AUX BARRIER S-BOUNDARY OR VFIN); 
+	## Gåessie båetije laake tseegkesovvedh saemiej reaktaj bïjre dellie saemieh tjoeverh daam dåhkasjehtedh.
+	#$ Jïh daennie soptsesisnie åadtjoeh govledh mij heannadi goh Lasse jïh manne edtjimen mïnnedh sarvh vuetjedh.
+
+COPY:syn-number_congruence-subj-verb-sg2-pl3 (Pl3 SUGGEST) EXCEPT (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) TARGET (Sg2 &syn-number_congruence-subj-verb-sg2-pl3) ; 
+
+	# Sg3 > Pl3
+	# ---------
+	
+LIST JIEHTEDH = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "praahkedh" "stilledh" "tjaalasovvedh" "tjåarvodh" "onterdidh" "ussjedidh" "vaestiedidh" ;
+
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) - <spelled> BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
+
+
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR ("dle") LINK NEGATE 0 (N Sg Nom) OR <spelled>)(NEGATE *-1 (Pron Pers Sg3) BARRIER NOT-ADV-PCLE); 
+
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR ("dle") LINK NOT 0 (N Sg Nom) OR <spelled> LINK NEGATE *-1 Rel OR Interr OR ("mejtie"))(NEGATE *-1 (Pron Pers Sg3) BARRIER NOT-ADV-PCLE)(NEGATE *1 ("?")); 
+	## Ovjaksoe lea neerrehtimmie – almetjh heaptoejgujmie {edtja}£{subj-verb-kongr,verb,prssg3-prspl3|edtjieh} nuepieh utnedh meatan årrodh ellies {vyøhkesadtememem}${x,mix|vyöhkesjadtemem}.
+	## Gïeline ektine lea barkoeh mah båatsoebårran veadtaldihkie, saemide joekoen dovrehke.
+	
+	# Rel inbetween
+	
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 Ger OR PrfPrc BARRIER ADVLCASE OR Adv LINK *-1 ("gie" Pron Rel Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 	
+	## Almetjh gieh daesnie barkeminie lea tryjjes.
+	
+	 
+
+COPY:syn-number_congruence-subj-verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3 &syn-number_congruence-subj-verb-sg3-pl3) TARGET (Sg3 &syn-number_congruence-subj-verb-sg3-pl3) ; 
+
+
+	# Inf > Pl3
+	# ---------
+ADD:syn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*-1 (Pron Pers Pl3 Nom) OR (Rel Pl Nom) OR (Indef Pl Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - ADVLCASE - (N Acc) - Attr LINK NOT 0 (N Sg Nom) LINK NEGATE *-1 VFIN + COPULAS OR VFIN + AUX BARRIER S-BOUNDARY)(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
+
+
+ADD:syn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *-1 (Pron Pers Sg3) OR VFIN BARRIER NOT-ADV-PCLE); 
+	## maahta vadtasovvedh dejtie guhtide geerve gïeline gïehtelidh.
+	
+	 
+
+COPY:syn-number_congruence-subj-verb-inf-pl3 (Ind Prs Pl3 SUGGEST) EXCEPT (Inf &syn-number_congruence-subj-verb-inf-pl3) TARGET (Inf &syn-number_congruence-subj-verb-inf-pl3) ; 
+
 
 
 ## PASSIVE VERB should be active   
 
-ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc) ;    
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc LINK NOT 0 Nom OR Sem/Time OR Sem/Plc)(NEGATE 0 PrfPrc LINK 1 N)(NEGATE 0 TV - Der/Pass OR Pron) ;    
+	## Orre teknologije edtja saemiengïelem gorredovvedh
 
-## Orre teknologije edtja saemiengïelem gorredovvedh
-
-ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc LINK NEGATE 1 Inf OR VFIN) ;    
-
+ADD:xmsyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1C Acc LINK NOT 0 Nom OR Sem/Time OR Sem/Plc LINK NEGATE 1 Inf OR VFIN)(NEGATE 0 PrfPrc LINK 1 N)(NEGATE 0 TV - Der/Pass OR Pron) ; 
+	#$sme Dasa lassin giella oahpahuvvo {maid} ruovttuguovllu olggobealde Oulus 
+	#$sme Ja ale {doalvo} min sisa.
 
 ## Orre teknologije edtja gorredovvedh saemiengïelem
 
-COPY:msyn-pass-active (TV &SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pass-active) OR (IV Ex/V Ex/TV Der/PassS &msyn-pass-active) AFTER V TARGET (&msyn-pass-active) ;
+COPY:msyn-pass-active (TV SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pass-active) OR (IV Ex/V Ex/TV Der/PassS &msyn-pass-active) AFTER V TARGET (&msyn-pass-active) ;
+
+# ------------------------------------------------------------------
+# Special case: incorrect lexeme "tjïelkesidh" should be "tjïelkestidh"
+# Mark the word and generate a suggestion for the corrected form
+#
+ADD:msyn-tjielkesidh (&msyn-tjielkesidh) TARGET ("tjïelkesidh" V TV) ;
+COPY:msyn-tjielkesidh ("tjïelkestidh" SUGGEST) EXCEPT ("tjïelkesidh") TARGET (&msyn-tjielkesidh) ;
+# ------------------------------------------------------------------
 
 
 ## Danna ittjiv dádjaduvá majdik    ## mån ittjiv dádjaduvá majdik
@@ -708,49 +2117,268 @@ COPY:msyn-pass-active (TV &SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pas
 #$ Dat la juoga majt viertti oahppat,    #$ Jågŋå lij biebbmo valla aj juoga majt divna oasstin.
 
 
+# !! 
 
 
 
 #!! VERB agreement
 
-#ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 Adv LINK 1 V + Sg1);
- ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
-COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-other-sg1);
-COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
-#COPY:msyn-agr-other-sg1 (Ind Prt Sg1 &SUGGEST) EXCEPT (Actio Num) TARGET (V  &msyn-agr-other-sg1);
-
-#% Manne båata.
-#$ Manne båatam.
-#$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
-#$ Tomhân mun tiäđust-uv paaččim.
+ADD:xmsyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET (V Ind) IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom LINK NEGATE -1 CC LINK -1 (N Nom) OR (Pron Pers Nom))(0C V)(NOT 0 Sg1 OR N);
+ 
+COPY:msyn-agr-other-sg1 (Sg1 SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prt &msyn-agr-other-sg1);
+COPY:msyn-agr-other-sg1 (Sg1 SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-agr-other-sg1);
+	#$ Gosse åehpiedahtam guktie dah göökte dåehkieh vaestiedamme dellie manne {goerh}, grafihke guvvieh jïh teekstem nuhtjeme."
+	## Manne lohkedh.
+	#$ Jïh daennie soptsesisnie åadtjoeh govledh mij heannadi goh Lasse jïh manne {edtjimen} mïnnedh sarvh vuetjedh.
 
 
 
 
+LIST ONE-smn = "ohtâ" ;
+LIST ONE-sme = "okta" ;
+LIST ONE-sma = "akte" ;
+LIST ONE-smj = "akta" ;
 
+SET ONE = ONE-smn OR ONE-sme OR ONE-sma OR ONE-smj ;   
 
 #!!  Ensure preceding nominal agrees with the verb
-ADD:msyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (NOT -2 CC)(-1C Sg + Nom OR Pron + Sg3 + Nom) (0 V) (NOT 0 Sg3);
-COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
-COPY:msyn-agr-other-sg1 (Sg3 &SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prt &msyn-agr-other-sg3);
+ADD:xmsyn-agr-other-sg3 (&msyn-agr-other-sg3) TARGET V IF (-1C (N Sg Nom) - Err/Orth - <spelled> OR Pron + Sg3 + Nom LINK NEGATE *-1 CC BARRIER NOT-NPMOD - (A Sg Nom) LINK -1 (N Nom) OR (Pron Nom)) (0 VFIN) (NOT 0 Sg3 OR (N Sg Acc) OR (N Sg Gen))(NEGATE *1 (N Pl Nom) BARRIER NOT-ADV-PCLE - Attr - (Num Sg Nom))(NEGATE *1 Num - ONE)(0C V);
+	#$ Alfabehtas {leat} golbma lassebustáva.
+
+COPY:msyn-agr-other-sg1 (Sg3 SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prs &msyn-agr-other-sg3);
+COPY:msyn-agr-other-sg1 (Sg3 SUGGEST) EXCEPT VNOTSG3 TARGET (V Ind Prt &msyn-agr-other-sg3);
+
+	#$ Jis dijjen sådtoeh goh purpure, gelkieh vyölkehke {sjïdtedh} goh lopme, jis dah rååpsehke goh skarlagene, gelkieh vyölkehke goh ålloe {sjïdtedh}.
+	#$ Jieleme jïh saemien siebriedahke {tjuerieh} nuepiem åadtjodh meatan årrodh politihkeles prosessinebåatsoen mieride Nöörjesne.
+	#$ Vienhtem ij lin dej jaahkoe {skuvlem} jijtje stuvredh.
 
 
 # # And one with a suggestion where we simply change the tag Sg into Attr:
-ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (NOT 0 Attr OR Gen) (1 CC LINK *1 COMMON-N) ;
-COPY:msyn-adj-pred-attr (Attr &SUGGEST) EXCEPT (Sg Nom) TARGET (A &msyn-adj-pred-attr) ;
+ADD:msyn-adj-pred-attr (&msyn-adj-pred-attr) TARGET (A Sg Nom) IF (NOT 0 Attr OR Gen) (1 CC LINK 1 Attr - <AttrPred> LINK *1 COMMON-N BARRIER NOT-Attr) ;
 
-# # The method is: Add &SUGGEST to a copied reading to *generate* a
+	#$ Searomh öövre {rååpsehke} jïh snohke-tjalke njaelmeste garkese
+	
+COPY:msyn-adj-pred-attr (Attr SUGGEST) EXCEPT (Sg Nom &msyn-adj-pred-attr) TARGET (A &msyn-adj-pred-attr) ;
+
+	# Rel mij > gie
+	# -------------
+
+ADD:msyn-rel-mij-gie (&msyn-rel-mij-gie) TARGET ("mij") IF (*-1 (Pron Pers) OR N + Sem/Hum OR ("satne" Sg3) BARRIER S-BOUNDARY)(NEGATE 0 Indef)(NEGATE *-1 (V <TH-FS-Qpron>) BARRIER S-BOUNDARY OR VFIN);
+
+COPY:msyn-rel-mij-gie ("gie" SUGGEST) EXCEPT ("mij" &msyn-rel-mij-gie) BEFORE Pron TARGET ("mij" &msyn-rel-mij-gie) ;
+
+	## Njammehtimmieviehkie daam nedtetjaalegem dorjeme dutnjien mij njammehth maahtoeh jïh raerieh vedtedh njammehtimmien bïjre.
+	#$ Im maa manne {maam} dah sajvojde jaehkieh Lfr daelie lea maa upplyste tijje, jïh daelie amma kristendomme lea amma mijjide bijjeLls ij amma dah amma naan faamoe utnieh amma mijjen bijjelen.
+	#$ Soptsesth learohkigujmie man åvteste gïehtjedimmiem tjaeledh, jïh maam gïehtjedimmie mïeteste.
+
+
+	# valency errors
+	# ---------------
+	
+	# gaavnedidh + Sem/Hum Com
+	
+	
+ADD:msyn-val-gaavnedidh-com (&msyn-val-gaavnedidh-com) TARGET (N Sg Acc) IF (0 Sem/Hum OR Sem/Ani)(*0 ("gaavnedidh") OR ("gaavnedh" Der/d) BARRIER NOT-NPMOD)(NEGATE 0 Com);
+
+COPY:msyn-val-gaavnedidh-com (Com SUGGEST) EXCEPT (Acc &msyn-val-gaavnedidh-com) TARGET (Acc &msyn-val-gaavnedidh-com) ;
+
+	## Gyrhkesjimmesne viehkiem åadtjoejibie mijjen jielemem guarkedh jïh Jupmelem gaavnedidh.
+
+	# syntactic errors
+	# ----------------
+
+	# Redundant adverbs in phrasal verbs of Norwegian 2->1
+	# -----------------------------------------------------
+	
+LIST DOWN-ADV-sma = "våålese" ;
+LIST DOWN-ADV-smj = "vuolus" ;
+LIST DOWN-ADV-sme = "vulos" ;
+LIST DOWN-ADV-smn = "vuálus" "vuálos";
+SET DOWN-ADV = DOWN-ADV-sma OR DOWN-ADV-smj OR DOWN-ADV-sme OR DOWN-ADV-smn ;
+
+LIST UP-ADV-sma = "bæjjese" ;
+LIST UP-ADV-smj = "bajás" ;
+LIST UP-ADV-sme = "bajás" ;
+LIST UP-ADV-smn = "pajas" ;
+SET UP-ADV = UP-ADV-sma OR UP-ADV-smj OR UP-ADV-sme OR UP-ADV-smn ;
+
+
+LIST WRITE-V-sma = "tjaeledh" "tjaalasovvedh" ;
+LIST WRITE-V-smj = "tjállet" ;
+LIST WRITE-V-sme = "čállit" ;
+LIST WRITE-V-smn = "čäälliđ" ;
+SET WRITE-V = WRITE-V-sma OR WRITE-V-smj OR WRITE-V-sme OR WRITE-V-smn ;
+
+LIST COME-V-sma = "båetedh" ;
+LIST COME-V-smj = "boahtet" ;
+LIST COME-V-sme = "boahtit" ;
+LIST COME-V-smn = "puáttiđ" ;
+SET COME-V = COME-V-sma OR COME-V-smj OR COME-V-sme OR COME-V-smn ;
+
+LIST BUILD-V-sma = "bigkedh" ;
+LIST BUILD-V-smj = "tsieggit" ;
+LIST BUILD-V-sme = "hukset" ;
+LIST BUILD-V-smn = "huksiđ" ;
+SET BUILD-V = BUILD-V-sma OR BUILD-V-smj OR BUILD-V-sme OR BUILD-V-smn ;
+
+
+LIST STAND-UP-V-sma = "tjuedtjielidh" ;
+LIST STAND-UP-V-smj = "tjuodtjelit" ;
+LIST STAND-UP-V-sme = "čuožžilit" ;
+LIST STAND-UP-V-smn = "čyežžiliđ" ;
+SET STAND-UP-V = STAND-UP-V-sma OR STAND-UP-V-smj OR STAND-UP-V-sme OR STAND-UP-V-smn ;
+
+
+ADD:syn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 STAND-UP-V OR ("fulkedh")) (*0 UP-ADV BARRIER (*) - Pcle) ;
+	## tjuedtjelh bæjjese! 
+	## vaeltieh dejtie bïssedh!
+	
+ADD:syn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (V) IF (0 WRITE-V OR ("fulkedh")) (*0 DOWN-ADV BARRIER (*) - Pcle) ;
+
+ADD:syn-delete-adv-phrasal-verb (&syn-delete-adv-phrasal-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  WRITE-V BARRIER (*) - Pcle) ;
+	## tjaelieh våålese! 
+	
+	## Gyhtjelassh goh guktie daate tsiehkie meehti dan stoerre sjïdtedh åvtelen gïetesovvi, jïh guktie byögkeles instaansh systematihkeles eah leah sijjen barkoem dorjeme juktie daaresjimmie-aamhtesh {bæjjese} fulkedh, Mikkelsen jeahta.
+
+ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-adv-phrasal-verb)) ;
+
+#COPY:xsyn-delete-adv-phrasal-verb (&DELETE) EXCEPT (&syn-delete-adv-phrasal-verb) TARGET (Adv &syn-delete-adv-phrasal-verb) ;
+
+	# Phrasal verbs in Norwegian with a lexical equivalent in South Sámi 2->1
+	# -------------------------------------------------------------------------
+ADD:syn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  COME-V BARRIER (*) - Pcle) (*0 Nom + Sem/Money OR Sem/Amount);
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 COME-V) (*0 DOWN-ADV BARRIER (*) - Pcle) ;
+	## Maaksoeh tjuerieh våålese båetedh. > Maaksoeh tjuerieh aelpiedovvedh. 
+	#$ Mijjen 133.000 årrojigujmie dle ibie buektehth {våålese båetedh} akten laanten gaskemedtien gaåjkoe, goh Åarjel-Trööndelagen fylhkentjïelte maahta sov 300.000 årrojigujmie.
+	#$ Maahtah våålese båetedh, riepie jeehti, juktie daelie lea gaajhki kreeki gaskem raeffie.
+	#$ Båetieh våålese, riepie gåtjkoeji, die edtjh maam akt rovnegem åadtjodh govledh.
+	
+ADD:syn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 UP-ADV) (*0 ("bigkedh") BARRIER (*) - Pcle) ;
+ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 BUILD-V) (*0 UP-ADV BARRIER (*) - Pcle) ;
+	## Saemiedigkie sæjhta viehkiehtidh dam lïhkes mearoegaedtievïnhtseveahkam	{bæjjese bigkedh} 	dejnie mearoesaemien årromedajvine, jïh dåarjoem prioriterede noere göölijidie mah voestes aejkien vïnhtsem åestieh.   ----- --> {Tseegkedh} 
+	
+	# --------
+
+ADDRELATION (DELETE1) (V &syn-phrasal-verb-lexical-verb) TO (*0 Adv + &syn-phrasal-verb-lexical-verb BARRIER (*) - Pcle);
+	
+COPY:xsyn-phrasal-verb-lexical-verb (&DELETE) EXCEPT (&syn-phrasal-verb-lexical-verb) TARGET (Adv &syn-phrasal-verb-lexical-verb) ;
+
+
+COPY:xsyn-phrasal-verb-lexical-verb ("tseegkedh" SUGGEST) EXCEPT ("bigkedh" &syn-phrasal-verb-lexical-verb) TARGET ("bigkedh" V &syn-phrasal-verb-lexical-verb);
+
+COPY:xsyn-phrasal-verb-phrasal-verb ("tjuerieh" SUGGEST) EXCEPT ("båetedh" &syn-phrasal-verb-lexical-verb) TARGET ("båetedh" V &syn-phrasal-verb-lexical-verb) ;
+
+	
+	# Phrasal verbs in Norwegian are not idiomatic in South Sámi 2->2
+	# -------------------------------------------------------------------------
+LIST TAKE-V-sma = "vaeltedh" ;
+LIST TAKE-V-smj = "válldet" ;
+LIST TAKE-V-sme = "váldit" ;
+LIST TAKE-V-smn = "väldiđ" ;
+SET TAKE-V = TAKE-V-sma OR TAKE-V-smj OR TAKE-V-sme OR TAKE-V-smn ;
+
+LIST PUT-V-sma = "bïejedh" ;
+LIST PUT-V-smj = "biedjat" ;
+LIST PUT-V-sme = "bidjat" ;
+LIST PUT-V-smn = "pieijâđ" ;
+SET PUT-V = PUT-V-sma OR PUT-V-smj OR PUT-V-sme OR PUT-V-smn ;
+
+ADD:syn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET (Adv) IF (0 UP-ADV) (1 TAKE-V OR PUT-V)(NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Sem/Prod-audio) ;
+ADD:syn-phrasal-verb-phrasal-verb (&syn-phrasal-verb-phrasal-verb) TARGET TAKE-V OR PUT-V IF (-1 UP-ADV LINK NEGATE -1 Acc LINK NOT 0 Sem/Semcon OR Der/NomAct OR Sem/Prod-audio);
+
+
+	# phrasal verbs with bæjese
+	# - - - - - - - - - - - - -
+COPY:syn-phrasal-verb-phrasal-verb ("bïejedh" SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(-1 ("bæjjese") LINK -1 Acc LINK 0 Sem/Prod-audio) ;
+
+COPY:syn-phrasal-verb-phrasal-verb ("baante" N Sg Ill SUGGEST) EXCEPT ("bæjjese" Adv &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(-1 Acc LINK 0 Sem/Prod-audio) ;
+	# baantese bïejedh - må stå før # åvtese buektedh
+
+	
+#COPY:xsyn-phrasal-verb-phrasal-verb ("tseegkedh" SUGGEST) EXCEPT ("bigkedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(*0 ("bæjjese") BARRIER (*) - Pcle) ;
+
+	# åvtese buektedh
+	# - - - - - - - - -
+COPY:syn-phrasal-verb-phrasal-verb ("buektedh" SUGGEST) EXCEPT ("vaeltedh" &syn-phrasal-verb-phrasal-verb) OR ("bïejedh" &syn-phrasal-verb-phrasal-verb) TARGET (V &syn-phrasal-verb-phrasal-verb)(NEGATE 0 SUGGEST) ;
+
+COPY:syn-phrasal-verb-phrasal-verb ("åvtese" SUGGEST) EXCEPT ("bæjjese" &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(NEGATE 0 SUGGEST) ;
+	## Dej jeanatjommes båarasommes maanajgujmie dah geerve almetjh maehtieh {bæjjese vaeltedh} dam maam jiïtje vuejnieh , maanajgujmie dan bïjre soptsestidh jïh dejgujmie digkiedidh.
+	## Ij leah naaken dejstie laavenjassijste buektiehtamme addisjovnine jallh subtraksjovnine , mejtie lea {bæjjese bïejeme} laavenjassh , jallh laavenjassh aktene kontekstesne.
+	#$ Manne vaaltam dam bæjjese.
+	# bæjjese vaeltedh = ta opp
+	# bæjjese vaeltedh -> åvtese buektedh
+
+
+
+
+	
+LIST PHRASAL-ADV = PHRASAL-ADV ;
+LIST PHRASAL-V = PHRASAL-V ;
+    
+ADDRELATIONS (PHRASAL-V) (PHRASAL-ADV) &syn-phrasal-verb-phrasal-verb TO (*0 Adv BARRIER (*) - Pcle) ;
+
+ADD:phrasal-v  (COERROR)  TARGET (*) IF (r:PHRASAL-ADV (&syn-phrasal-verb-phrasal-verb));
+
+
+	# redundant words
+	# ---------------
+	
+ADD:xsyn-redun-before-guktie (&syn-redun-before-guktie) TARGET ("guktie") IF (-1 ("mah") OR ("nov")) ;
+
+ADD:xsyn-redun-before-guktie (&syn-redun-before-guktie) TARGET ("mah") OR ("nov") IF (1 ("guktie")) ;	
+	## ïh daej baakoejgujmie aatskadægan soptsestallemem mij faala buerie guvviem, mah guktie saemieh jïjtjh gïehtjedieh miehtsiem.
+	## Nov guktie aaj jïjnjebidie Saepmesne.
+	
+ADDRELATION (DELETE1) ("guktie" &syn-redun-before-guktie) TO (-1 &syn-redun-before-guktie) ;
+
+	# goh nom > ess
+	# - - - - - - - 
+
+ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET ("goh") IF (-1 <TH-Acc-Any><RO-Ess-Any> OR <RO-Ess-Any>)(*1 (N Nom) - <spelled> BARRIER NOT-Attr LINK NEGATE 1 VFIN) ;
+
+ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET ("goh") IF (-1 ("seamma"))(*1 (N Nom) - <spelled> BARRIER NOT-Attr LINK NEGATE 1 VFIN) ;
+
+ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET (N Nom) IF (*-1 ("goh" &syn-goh_nom-ess) BARRIER NOT-Attr) ;	
+	## Desnie aaj daerpies gïelem provhkedh goh dïrrege gosse jeatja faagh ööhpehtidh.
+	## åadtjodh goh voestes gïele gosse skuvlesne aelkieh.
+	#$ Jïh daennie soptsesisnie åadtjoeh govledh mij heannadi goh Lasse jïh manne edtjimen mïnnedh sarvh vuetjedh.
+	
+COPY:syn-goh_nom-ess (Ess SUGGEST) EXCEPT (Sg Nom &syn-goh_nom-ess) OR (Pl Nom &syn-goh_nom-ess) TARGET (N &syn-goh_nom-ess) ;	
+
+ADDRELATION (DELETE1) (&syn-goh_nom-ess) TO (*-1 ("goh" &syn-goh_nom-ess)) ; #KEVIN
+
+	# word order
+	# ----------
+
+ADD:xsyn-wo-verb_advl-advl_verb (&syn-wo-verb_advl-advl_verb) TARGET (VFIN) IF (1 Sem/Plc LINK 0 Ine OR Ela OR Ill)(NEGATE 0 AUX) ;
+
+ADD:xsyn-verb_advl-advl_verb (&syn-wo-verb_advl-advl_verb DELETE) TARGET Sem/Plc IF (0 Ine OR Ela OR Ill)(-1 VFIN + &syn-wo-verb_advl-advl_verb - AUX) ;
+
+ADDRELATION (DELETE) (V &syn-wo-verb_advl-advl_verb) TO (1 (N &syn-wo-verb_advl-advl_verb)) ;
+
+COPYCOHORT:syn-wo-verb_advl-advl_verb (ADDED co&syn-wo-verb_advl-advl_verb) EXCEPT (DELETE &syn-wo-verb_advl-advl_verb) TARGET (N &syn-wo-verb_advl-advl_verb) - (ADDED) TO BEFORE (*-1 V + &syn-wo-verb_advl-advl_verb);
+
+#ADDRELATION:syn-wo-verb_advl-advl_verb ($3 LEFT) (*) TO (jC1 (*) LINK -1 (ADDED)) ;
+	
+	## dah guaktah lægan jielemevåaromem jïh jearsoesvoetem åådtjeme miehtjesne.
+	#$CORRECT: dah guaktah lægan jielemevåaromem jïh jearsoesvoetem miehtjeste åådtjeme.
+	#$ Nimhtie seamma soptsese maahta sijjeste sæjjan joekehtadtedh.
+	
+	# dah guaktah lægan jielemevåaromem jïh jearsoesvoetem åådtjeme miehtjesne.
+
+
+# # The method is: Add SUGGEST to a copied reading to *generate* a
 # # suggestion form from that reading. The copy should contain the error
 # # tag too – &-prefixed error tags are ignored when generating, but
 # # used to create human-readable messages.
 
 # Simple punctuation rules showing how to change the lemma in the suggestions:
 ADD:use-guillemets (&guillemets) TARGET ("""); #"
-COPY:left-guillemet ("«" &SUGGEST) EXCEPT (""") TARGET (&guillemets) ;
-COPY:right-guillemet ("»" &SUGGEST) EXCEPT (""") TARGET (&guillemets) ;
+COPY:left-guillemet ("«" SUGGEST) EXCEPT (""") TARGET (&guillemets) ;
+COPY:right-guillemet ("»" SUGGEST) EXCEPT (""") TARGET (&guillemets) ;
 
 ADD:use-ellipsis (&ellipsis) TARGET ("...");
-COPY:use-ellipsis ("…" &SUGGEST) EXCEPT ("...") TARGET (&ellipsis) ;
+COPY:use-ellipsis ("…" SUGGEST) EXCEPT ("...") TARGET (&ellipsis) ;
 
     # Spacing errors
     # --------------
@@ -781,30 +2409,30 @@ TEMPLATE nextWordCrossSent = (1 (*))  OR (0  (<<<) LINK *1>  (>>>) BARRIER (>>>)
 
 ## ( áddejumi
 ADD:space-after-paren-beg      (&space-after-paren-beg)       TARGET (<spaceAfterParenBeg>) ;
-ADD:space-after-paren-beg-link (&space-after-paren-beg &LINK) TARGET (*) IF (-1 (<spaceAfterParenBeg>) ) ;
-ADDRELATION:space-after-paren-beg-rel (RIGHT) (&space-after-paren-beg) TO (1 (&LINK) LINK 0 (&space-after-paren-beg)) ;
-COPY:space-after-paren-beg-sugg ("<$1$2>"v &SUGGESTWF) TARGET ("<(.*)>"r &space-after-paren-beg) IF (1 ("<(.*)>"r)) (NOT 0 (&LINK)) ;
+ADD:space-after-paren-beg-link (&space-after-paren-beg COERROR) TARGET (*) IF (-1 (<spaceAfterParenBeg>) ) ;
+ADDRELATION:space-after-paren-beg-rel (RIGHT) (&space-after-paren-beg) TO (1 (COERROR) LINK 0 (&space-after-paren-beg)) ;
+COPY:space-after-paren-beg-sugg ("<$1$2>"v SUGGESTWF) TARGET ("<(.*)>"r &space-after-paren-beg) IF (1 ("<(.*)>"r)) (NOT 0 (COERROR)) ;
 
 ## áddejumi )
 ADD:space-before-paren-end      (&space-before-paren-end)       TARGET (<spaceBeforeParenEnd>);
-ADD:space-before-paren-end-link (&space-before-paren-end &LINK) TARGET (*) IF (1 (<spaceBeforeParenEnd>) );
-ADDRELATION:space-before-paren-end-rel (LEFT) (&space-before-paren-end) TO (-1 (&LINK) LINK 0 (&space-before-paren-end) );
-COPY:space-before-paren-end-sugg ("<$2$1>"v &SUGGESTWF) TARGET ("<(.*)>"r &space-before-paren-end) IF (-1 ("<(.*)>"r)) (NOT 0 (&LINK)) ;
+ADD:space-before-paren-end-link (&space-before-paren-end COERROR) TARGET (*) IF (1 (<spaceBeforeParenEnd>) );
+ADDRELATION:space-before-paren-end-rel (LEFT) (&space-before-paren-end) TO (-1 (COERROR) LINK 0 (&space-before-paren-end) );
+COPY:space-before-paren-end-sugg ("<$2$1>"v SUGGESTWF) TARGET ("<(.*)>"r &space-before-paren-end) IF (-1 ("<(.*)>"r)) (NOT 0 (COERROR)) ;
 
 ## Son gii njeaidá skáluid šaddá eret vuolgit . De galgá fas cegget skáluid ja álgit gaikut.
 ADD:space-before-punct-mark      (&space-before-punct-mark)       TARGET (<SpaceBeforePunctMark>);
-ADD:space-before-punct-mark-link (&space-before-punct-mark &LINK) TARGET (*) IF (1 (<SpaceBeforePunctMark>) );
-ADDRELATION:space-before-punct-mark-rel (LEFT) (&space-before-punct-mark) TO (-1 (&LINK) LINK 0 (&space-before-punct-mark) );
-COPY:space-before-punct-mark-sugg ("<$2$1>"v &SUGGESTWF) TARGET ("<(.*)>"r &space-before-punct-mark) IF (-1 ("<(.*)>"r)) (NOT 0 (&LINK)) ;
+ADD:space-before-punct-mark-link (&space-before-punct-mark COERROR) TARGET (*) IF (1 (<SpaceBeforePunctMark>) );
+ADDRELATION:space-before-punct-mark-rel (LEFT) (&space-before-punct-mark) TO (-1 (COERROR) LINK 0 (&space-before-punct-mark) );
+COPY:space-before-punct-mark-sugg ("<$2$1>"v SUGGESTWF) TARGET ("<(.*)>"r &space-before-punct-mark) IF (-1 ("<(.*)>"r)) (NOT 0 (COERROR)) ;
 
 ## vuosttu  ceggejit
 ## álgit gaikut.  Stoagus joatká
 ## maid lea bargu.  – Mun barggan
 ADD:double-space-before (&double-space-before)     (<doubleSpaceBefore>);
-ADD:double-space-before-link (&double-space-before &LINK) TARGET (*) IF (T:nextWordCrossSent LINK 0 (<doubleSpaceBefore>)) ;
+ADD:double-space-before-link (&double-space-before COERROR) TARGET (*) IF (T:nextWordCrossSent LINK 0 (<doubleSpaceBefore>)) ;
 ADDRELATION:double-space-before-rel ($2) (*) FROM (T:nextWordCrossSent LINK 0 (<doubleSpaceBefore>)) ;
-ADDRELATION:double-space-before-rel (LEFT) (&LINK) FROM (T:nextWordCrossSent LINK 0 (<doubleSpaceBefore>)) ;
-COPY:double-space-before ("<$2 $1>"v &SUGGESTWF) TARGET ("<(.*)>"r &double-space-before) IF (T:prevWordCrossSent LINK 0 ("<(.*)>"r)) (NOT 0 (&LINK)) ;
+ADDRELATION:double-space-before-rel (LEFT) (COERROR) FROM (T:nextWordCrossSent LINK 0 (<doubleSpaceBefore>)) ;
+COPY:double-space-before (VSTR:"<$2\ $1>"S SUGGESTWF) TARGET ("<(.*)>"r &double-space-before) IF (T:prevWordCrossSent LINK 0 ("<(.*)>"r)) (NOT 0 (COERROR)) ;
 
 # Test sentence: 'Sanner,gii ráđđehusas.gii lávvardaga?Bonju dán!Lassin.'
 ## Sanner,gii                       - works
@@ -812,14 +2440,17 @@ COPY:double-space-before ("<$2 $1>"v &SUGGESTWF) TARGET ("<(.*)>"r &double-space
 ## lávvardaga?Bonju                 - does not work
 ## ráidovázzimis!Lassin             - does not work
 # 1. Add error tag on punctuation
-ADD:no-space-after-punct      (&no-space-after-punct-mark)       TARGET (<NoSpaceAfterPunctMark>) IF (T:nextWordCrossSent);
-# 2. Add error tag + &LINK on the following word (part 1 of extending the blue underline to the following word):
-ADD:no-space-after-punct-link (&no-space-after-punct-mark &LINK) TARGET (*) IF (T:prevWordCrossSent LINK 0 (<NoSpaceAfterPunctMark>));
+ADD:no-space-after-punct      (&no-space-after-punct-mark)       TARGET (<NoSpaceAfterPunctMark>) IF (T:nextWordCrossSent)(NEGATE 0 ( "." CLB) OR ( "?" CLB) OR ( "!" CLB) OR ( "," CLB) LINK *1> ("»") OR (""") OR ("'"))(NEGATE 0 ( "?" CLB) OR ( "!" CLB) LINK *1> ( "?" CLB) OR ( "!" CLB))(NEGATE 0 (")") LINK -1 ABBR)(NEGATE 0 ABBR LINK 1 (")")) ;
+
+# 2. Add error tag + COERROR on the following word (part 1 of extending the blue underline to the following word):
+ADD:no-space-after-punct-link (&no-space-after-punct-mark COERROR) TARGET (*) IF (T:prevWordCrossSent LINK 0 (&no-space-after-punct-mark) LINK NOT 0 (COERROR))(NEGATE 1 (Num Arab Sg) OR (Num Sem/ID) LINK -1 (";") LINK -1 (Num Arab Sg) LINK *-1 ("ahki") BARRIER (*) - (Num Arab Sg) - (Num Sem/ID) - (";"))(NEGATE 0 (Num Arab Sg) OR (Num Sem/ID) LINK -1 (";") LINK -1 (Num Arab Sg) OR (Num Sem/ID) LINK -1 ("ahki"))(NEGATE 0 COMMA LINK -1 (ABBR Gram/IAbbr))(NEGATE 0 ("!") LINK 1 ("!"))(NEGATE 0 COMMA LINK 1 ("." CLB))(NEGATE 0 ( "." CLB) OR ( "?" CLB) OR ( "!" CLB) OR ( "," CLB) LINK *1> ("»") OR (""") OR ("'"))(NEGATE 0 ( "?" CLB) OR ( "!" CLB) LINK *1> ( "?" CLB) OR ( "!" CLB))(NEGATE 0 (")") LINK -1 ABBR)(NEGATE 0 ABBR LINK 1 (")")) ;
+	#$ Bene gåabph lea gaajhkh mov maahtoe minneme?!
+
 # 3. Add RIGHT relation on the punctuation (part 2 of extending the blue underline to the following word,
 #    also ensures that the correction will replace the word, not be appended to it):
-ADDRELATION:no-space-after-punct-rel (RIGHT) (&LINK) FROM (T:prevWordCrossSent LINK 0 (<NoSpaceAfterPunctMark>)) ;
+ADDRELATION:no-space-after-punct-rel (RIGHT) (COERROR) FROM (T:prevWordCrossSent LINK 0 (<NoSpaceAfterPunctMark>)) ;
 # 4. Add suggestions
-COPY:no-space-after-punct-sugg ("<$1 $2>"v &SUGGESTWF) TARGET ("<(.*)>"r &no-space-after-punct-mark) IF (T:nextWordCrossSent LINK 0 ("<(.*)>"r)) (NOT 0 (&LINK));
+COPY:no-space-after-punct-sugg ("<$1 $2>"v SUGGESTWF) TARGET ("<(.*)>"r &no-space-after-punct-mark) IF (T:nextWordCrossSent LINK 0 ("<(.*)>"r)) (NOT 0 (COERROR));
 
     # style error
     # -----------
@@ -833,7 +2464,7 @@ COPY:no-space-after-punct-sugg ("<$1 $2>"v &SUGGESTWF) TARGET ("<(.*)>"r &no-spa
 
 # Correct anything that is Err/xxx tagged:
 ADD:Err/Orth-any (&typo) Err/Orth-any (NOT 0 (*) - Err/Orth-any) ;
-COPY:Err/Orth-any (&SUGGEST) EXCEPT Err/Orth-any TARGET Err/Orth-any + (&typo) ;
+COPY:Err/Orth-any (SUGGEST) EXCEPT Err/Orth-any TARGET Err/Orth-any + (&typo) ;
 # Some regression tests:
 # 'sátnejodiheaddji' → 'sátnejođiheaddji' # Simple Err/Orth
 # 'stnejodiheaddji' → 'sátnejođiheaddji'  # simple <speller>
@@ -842,8 +2473,17 @@ COPY:Err/Orth-any (&SUGGEST) EXCEPT Err/Orth-any TARGET Err/Orth-any + (&typo) ;
 # 'buorrre' → 'buorre'                    # <speller>
 # 'husket' → 'hukset'                     # <speller>
 
-	
-# (setq cg-pre-pipe "./my-cg-post.mode")
 # Local Variables:
-# cg-pre-pipe: "sh modes/smegram7-cg.mode"
+# cg-pre-pipe: "bash -o pipefail modes/smagram-dev9-cg.mode"
+# cg-post-pipe: "divvun-suggest -g generator-gramcheck-gt-norm.hfstol -m errors.xml -l sma"
 # End:
+
+	# ====================== #
+		AFTER-SECTIONS
+	# ====================== #
+
+	# Tag removal rules to prepare for generation
+
+SUBSTITUTE (MWE) (*) TARGET MWE ;
+	## Guollefestivála geassemánus ja Riddu Riđđu suoidnemánus.
+

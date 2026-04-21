@@ -1,19 +1,27 @@
 # South Sámi documentation
 
-[![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
-[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE)
-[![Issues](https://img.shields.io/github/issues/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
-[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-sma/main/badge.svg)](https://github.com/giellalt/lang-sma/actions)
+<div class="twocolumn map" markdown="1">
+
+{% include_relative language-map.md %}
+
+<div class="badges" markdown="1">
+[![Maturity](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fmain%2Fdocs%2Fbadgedata%2Ffst-maturity.json)](https://giellalt.github.io/MaturityClassification.html) <br/>
+![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fmain%2Fdocs%2Fbadgedata%2Ffst-lemmacount.json) <br/>
+[![Speller suggestion quality](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-suggestions.json)](typosreport/) <br/>
+[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE) <br/>
+[![Issues](https://img.shields.io/github/issues/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues) <br/>
+[![Build Status](https://builds.giellalt.org/api/badge/lang-sma?label=CI)](https://builds.giellalt.org/pipelines/lang-sma/builds/latest) <br/>
+[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/sout2674)
+</div>
+
+Center location data taken from [Glottolog](https://glottolog.org/). Area extent is local data. Both can be adjusted if wrong - file a pull request!
+
+</div>
 
 This page documents the work on the [South Sámi language model](http://github.com/giellalt/lang-sma). 
 It is in use in a wide range of applications.
 
-## Reports
-### Speller status
 
-[![Speller Accuracy Report](https://img.shields.io/badge/Speller_Accuracy-84_%25-green.svg)](speller-report.html)
-
-![Spell-checking accuracy development](https://giellalt.github.io/lang-smj/speller-report.svg)
 
 ## How to use the analysers
 
@@ -24,11 +32,14 @@ It is in use in a wide range of applications.
 
 ## Projects using the language model
 
--   [Dictionary projects](/dicts/dicts.html)
+-   [Dictionary projects](/dicts/)
 -   [ICALL](http://giellalt.uit.no/ped/index.html)
 -   [Machine translation](/mt/MachineTranslation.html) (see also [Converting the fst to Apertium format](ConvertingToApertium.md) )
 -   [Korpusinnsamling](sma-korpus-innsamling.md)
 -   [Grammar checker](gramcheck/index.md)
+
+
+
 
 ## Documenting the language model
 -   [Oversyn over ulike FST-ar](../lang-sme/KompilereFST.html)
@@ -52,6 +63,11 @@ It is in use in a wide range of applications.
     -   paradigms with examples for [verbs](docu-sma-verbs.md), nouns and adjectives.
     -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
 -   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
+- [Syntaks-testmateriale](syntaks-testing.md)
+
+- Word frequency lists
+	- [South Saami lemma frequency list](sma_lemma.freq.md)
+	- [South Saami wordform frequency list](sma_wf.freq.md)
 
 ## Old documentation files (for reference)
 
@@ -66,6 +82,8 @@ It is in use in a wide range of applications.
 -   [Old errors and bug reports](docu-sma-bugs.md)
 -   [Adjective meeting](adj-meeting-05-2009.md)
 -   [Adjective documentation](docu-sma-adjs.md)
+-   [Old speller status report](old-speller-status.md
+
 
 ### Unlinked documentation
 
