@@ -98,7 +98,8 @@ define nodipht     [..] -> %^ || Cns Vow            _ VowNot2ndVow ,
                                  Cns VowNotAEIOUÅ   _ vE , 
                                  Cns VowNotYØ       _ vØ , 
                                  Cns VowNotÅ        _ vÅ ;
-define jhtje        [..] -> %^ || Vow j h           _ t j e ;  ! tjïjh^tje, to be generalised!!
+define jhtje        [..] -> %^ || Vow
+                                    [l|m|n|r|v|j] h _ t j Vow ;  ! tjïjh^tje, to be generalised!!
 define sj           [..] -> %^ || Vow               _  s j Vow ;
 define tjts         [..] -> %^ || Vow               _  t [j|s] Vow ;
 define unvoiced     [..] -> %^ || Vow (Cns) h       _ [ n | m | l | j | r | v ] Vow ;
@@ -108,13 +109,13 @@ define palatal      [..] -> %^ || Vow (Cns) n       _ n [j|g] ,
                                   Vow (Cns) l       _ l j ,
                                   Vow (Cns) r       _ r j ,
                                   Vow (Cns) t       _ t j ;                                  
-define konset       [..] -> %^ || Vow Cns*          _ k [r|l|v|j] Vow ; 
-define s2cns        [..] -> %^ || Vow [Cns - t]     _ s Cnss Vow ; ! máj-stet,
-define 4cns         [..] -> %^ || Vow  Cns Cns  Cns _  Cns Vow ;
-define 3cns         [..] -> %^ || Vow  Cns Cns      _  Cns Vow ;
+define konset       [..] -> %^ || Vow Cns* Cnss     _ (s) [p|t|k] [r|l|v|j] Vow ; 
+define s2cns        [..] -> %^ || Vow [Cns - t]     _ s [p|t|k] Vow ; ! máj-stet,
+define 4cns         [..] -> %^ || Vow  Cns Cns Cnss _ (s) Cns Vow ;
+define 3cns         [..] -> %^ || Vow  Cns Cnss     _ (s) Cns Vow ;
 define s3cns        [..] -> %^ || Vow  Cns Cns      _  s j Vow ;
 define t2cns        [..] -> %^ || Vow  Cns          _  t [j|s] Vow ;
-define 2cns         [..] -> %^ || Vow  Cns          _  Cns Vow ; ! et-te
+define 2cns         [..] -> %^ || Vow  Cnss         _  (s) Cns Vow ; ! et-te
 define sjcns        [..] -> %^ || Vow  Cns          _  s j Vow ; ! et-sje
 define 1cns         [..] -> %^ || Vow               _  Cns Vow ; ! e-te
 
