@@ -10,27 +10,51 @@
 ! also available in the file $GTHOME/LICENSE.txt.
 !
 ! Other licensing options are available upon request, please contact
-! giellatekno@hum.uit.no or feedback@divvun.no
+! giellatekno@uit.no or feedback@divvun.no
 
-! ========================================================================== !
-!                     South Sámi morphological analyser                      !
-! ========================================================================== !
+! ==========================================================================
+!!                    South Sámi morphological analyser
+!! ==========================================================================
 
 
-! Prefixing and compounding
-! =========================
+!! Prefixing and compounding
+!! =========================
 
 LEXICON Prefixes
-Noerhte-:Noerhte- ProperNoun ;
+!! ## Lexicon `@LEXNAME@`
+
+!! It contains only one entry:
+Noerhte- ProperNoun ; !!≈ - `@CODE@`
 
 !ov Adjective ; this renders in ovovmessie
 
-! This is for regular compounding. All entries NOT requiring a hyphen should point to this:
+
 LEXICON R
- @P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ Rreal ; ! Flags to control compounding
+!! ## Lexicon `@LEXNAME@`
+
+!! This lexicon is the main entry for regular compounding.
+!! All entries NOT requiring a hyphen should point to it. 
+
+!! The whole content of it is a list of flag diacritics to control compounding.
+
+<
+ "@P.CmpFrst.FALSE@"
+ "@P.CmpPref.FALSE@" 
+ "@D.CmpLast.TRUE@"  
+ "@D.CmpNone.TRUE@"  
+ "@U.CmpNone.FALSE@" 
+ "@P.CmpOnly.TRUE@"
+>
+Rreal ; !!≈ After the flags, we continue to the `@CODE@` lexicon, for the real compounding action.
+
+!! It should be noted that some of the flags above require a corresponding flag in the lexicon `ENDLEX` to work properly. 
 
 LEXICON Rreal
-                                +Cmp#:∑#                  Noun       ; ! This is the normal case.
+!! ## Lexicon `@LEXNAME@`
+
+!! This is where the actual compounding happens.
+
++Cmp#:∑#                  Noun       ; ! This is the normal case.
                  @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@∑#   Verb       ; ! Flag diacr declares that the compound
                  @P.NeedNoun.ON@+Cmp#:@P.NeedNoun.ON@∑#   Adjective  ; ! needs a N tag later in the derivation
                        +Cmp/Hyph+Cmp#:%-∑#                Noun       ; ! These 3 cases add a hyphen, so
@@ -46,15 +70,36 @@ LEXICON Rreal
  +Cmp/SplitR+Use/SpellNoSugg+Cmp:%-                 ENDLEX     ; ! This to take care of Oahpo- ja dutkandept
 
 LEXICON RNum
-      +Cmp/Hyph+Cmp#:-∑# Noun ; ! For Num Cmp Noun, vi vil ikke ha Num Cmp Num
+!! ## Lexicon `@LEXNAME@`
+
+      +Cmp/Hyph+Cmp#:-∑# Noun ;
+!! For compounds of the type `Num+Noun`. We can’t allow `Num+Num`, thus we use a separate compounding lexicon, since the regular `RHyph` lexicon
+!! below contains a continuation pointing back to the numerals.
 
 
-! This is for compounding with hyphen. All entries REQUIRING a hyphen should point to this:
-LEXICON RHyph ! Recursive lexicon from all classes REQUIRING a hyphen to follow.
-              ! NBNBNB!!! The hyphen should be added here! NOT in the other lexicons!
-@P.CmpFrst.FALSE@@P.CmpPref.FALSE@@D.CmpLast.TRUE@@D.CmpNone.TRUE@@U.CmpNone.FALSE@@P.CmpOnly.TRUE@ RHyphReal ; ! Block certain types of compounds in spellers.
+LEXICON RHyph
+!! ## Lexicon `@LEXNAME@`
+
+!! This lexicon is used for compounds requiring a hyphen before the next part.
+!! As for the regular compounds, we first add a number of flag diacritics to restrict certain combinations,
+!! before we continue to the real compounding lexicon.
+
+! NBNBNB! ! ! The hyphen should be added here! NOT in the other lexicons!
+ 
+< "@P.CmpFrst.FALSE@"
+  "@P.CmpPref.FALSE@"
+  "@D.CmpLast.TRUE@"
+  "@D.CmpNone.TRUE@"
+  "@U.CmpNone.FALSE@"
+  "@P.CmpOnly.TRUE@" > RHyphReal ;
+! Block certain types of compounds in spellers.
 
 LEXICON RHyphReal
+!! ## Lexicon `@LEXNAME@`
+
+!! This is where the actual hyphen compounding happens.
+!! The hyphen is added here.
+
                      +Cmp/Hyph+Cmp#:%-∑#                Noun       ; ! This is the normal case.
       @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-∑# Verb       ; ! Flag diacr declares that the compound
       @P.NeedNoun.ON@+Cmp/Hyph+Cmp#:@P.NeedNoun.ON@%-∑# Adjective  ; ! needs a N tag later in the derivation

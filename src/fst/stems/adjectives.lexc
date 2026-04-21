@@ -8,7 +8,7 @@
 ! is found at http://www.gnu.org/licenses/gpl.html. It is
 ! also available in the file $GTHOME/LICENSE.txt.
 ! Other licensing options are available upon request, please contact
-! giellatekno@hum.uit.no or feedback@divvun.no
+! giellatekno@uit.no or feedback@divvun.no
 
 ! barkanamhtah:barkanamhtah
 
@@ -22,6 +22,9 @@
 !! This file is compiled by default, the other one is compiled by in
 !! langs/sma giving the command *.configure --with-oahpa*
 !! before compiling.
+
+LEXICON A-TODO
++TODO:0 # ;
 
 LEXICON Adjective
 ! Dan biejjien lij tjåetskeme
@@ -1027,6 +1030,8 @@ diskutaabele+A+OLang/NOB:diskut AABELE ;
 dispeles+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:dispel Ces_CES_CE_ODD ; !??-st.
 disponijbele+A+OLang/NOB:dispon IJBELE ;
 ditransitïjve+A+OLang/NOB:di^transit IJVEadj ; !
+kvalitatïjve+A+OLang/NOB:kvalitat IJVEadj ; !
+kvantitatïjve+A+OLang/NOB:kvantitat IJVEadj ; !
 doekemes+A:doekemes ATTR_0 ;
 doekems+A:doekem ATTR_S ;
 doeltemes+A:doeltemes ATTR_0 ;
@@ -1154,6 +1159,7 @@ ekolåågeles+A+Err/Orth+OLang/NOB:ökologel LES ;
 ekolåågeles+A+Err/Orth+OLang/NOB:ökolåågel LES ;
 ekolåågeles+A+OLang/NOB:ekolåågel LES ;
 ekonomeles+A+OLang/NOB:ekonomel LES ;
+akademeles+A+OLang/NOB:akademel LES ;
 ekonomihke+A+OLang/NOB:ekonomihk e_ES_LOAN ;
 ekonomihke+A+OLang/NOB+Err/Orth:ekonomihkel LES ;
 ekonomihke+A+OLang/NOB+Err/Orth:ökonomihk e_ES_LOAN ;
@@ -1291,8 +1297,13 @@ fijin+A:fiji ATTR_N ;
 filippïjne+A+OLang/NOB:filippïjne ATTR_0 ;
 finansijelle+A+OLang/NOB:finansi JELLE ;
 finihte+A+OLang/NOB+Sem/Cat+Use/DNorm:finiht e_E_EVEN ;
+infinihte+A+OLang/NOB+Sem/Cat+Use/DNorm:infiniht e_E_EVEN ;
+definihte+A+OLang/NOB+Sem/Cat+Use/DNorm:definiht e_E_EVEN ;
+indefinihte+A+OLang/NOB+Sem/Cat+Use/DNorm:indefiniht e_E_EVEN ;
 finihte+A+OLang/NOB+Sem/Cat+Use/NotDNorm:finidt e_E_EVEN ;
+definihte+A+OLang/NOB+Sem/Cat+Use/NotDNorm:definidt e_E_EVEN ;
 finitte+A+OLang/NOB:finitt e_E_EVEN ; ! XXX
+definitte+A+OLang/NOB:definitt e_E_EVEN ; ! XXX
 finlaanten+A+OLang/NOB:finlaante ATTR_N ; !XXX
 flearoeh+A:flearoe ATTR_H ; ! an=adverb, oeh=også predikativ?
 !fleavma ATTR_S ; ! Eller denne oppføringen?+A:!fleavma ATTR_S ; ! Eller denne oppføringen?
@@ -2005,6 +2016,7 @@ illeldihkie+A:illeldihkie ATTR_0 ;
 iltjeres+A:iltjer Ces_CE_ODD ; !vilter
 immaterijelle+A:immateri JELLE ; !Korpus
 imperfektijve+A:imperfektijv e_E_EVENNOCOMP1 ;
+demonstratijve+A:demonstratijv e_E_EVENNOCOMP1 ;
 implisitte+A+OLang/NOB:implisitt e_E_EVEN ; !
 !indianske+A:indianske NIEJTE ;
 indifferente+A+OLang/NOB:indiffer ENTE ;
@@ -2347,6 +2359,7 @@ konvensjonelle+A+Err/Orth+OLang/NOB:konvensjovnell e_ES_LOAN ;
 konvensjonelle+A+OLang/NOB:konvensjonell e_ES_LOAN ;
 koreean+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:koree^a ATTR_N ;
 kosmetihkeles+A+OLang/NOB:kosmetihkel LES ;
+identihkeles+A+OLang/NOB:identihkel LES ;
 kosmopolihteles+A+OLang/NOB:kosmopolihtel LES ;
 kostarican+A+OLang/NOB:kostarica ATTR_N ;
 kraajhpijes+A:kraajhpij ijes_ijs_IJE_ODD ;
@@ -2553,6 +2566,8 @@ loemteske+A:loemtesk Ce_CE_ODDNOCOMP ;
 loengedh+A:loengedh PRED_0 "vill, løsaktig" ;
 loeves+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:loev es_ES_EVEN ;
 logihkeles+A+OLang/NOB:logihkel LES ;
+histovreles+A+OLang/NOB:histovrel LES ;
+gïelehistovreles+A+OLang/NOB:gïele#histovrel LES ;
 logistihkeles+A+OLang/NOB:logistihkel LES ;
 lohkehtallemes+A:lohkehtalleme ATTR_S ;
 lohkehtimmes+A:lohkehtimme ATTR_S ;
@@ -2902,6 +2917,7 @@ mïrhke+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:mïrhk e_E_EVEN ; ! e(1)-st.
 mïrhkekruana+A:mïrhke KRUANA2 ; !
 mïrhkelaaketje+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:mïrhke#laaketj Ce_CE_ODDNOCOMP ;
 mïrhkeplaave+A:mïrhke#plaav e_ES_ODDEVEN2 ;
+giesieplaave+A:giesie#plaav e_ES_ODDEVEN2 ;
 mïrhkerööpses+A:mïrhke# ROOPSES ;
 mïrhkeveelkes+A:mïrhke# VEELKES ;
 mööreh+A+OLang/NOB:möör AAREH ; !XXX norm? -möörehkåbpoe s.27. Don jih dan bïjre +"..dïhte
@@ -3167,6 +3183,7 @@ opposisjonelle+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth+OLang/NOB:opposisjovnell e_
 opposisjonelle+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:opposisjonell e_ES_LOAN ;
 optihkeles+A+OLang/NOB:optihkel LES ;
 oratovreles+A+OLang/NOB:oratovrel LES ;
+futuvreles+A+OLang/NOB:futuvrel LES ;
 orgaaneles+A+OLang/NOB:orgaanel LES ; !organiske
 orientaalen+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:orientaale ATTR_N ;
 originaale+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:origina AALE ;
@@ -3819,6 +3836,7 @@ skajjehks+A:skajjehks ATTR_0 ;
 skajkoeh+A:skajk oeh_OEH_ODD1 ; ! LMM+ bare attr
 skalnjah:skalnj ahATTR_anADVERB ; !
 skandinaavijen+A+OLang/NOB:skandinaavije ATTR_N ;
+skandinaavijen+A+OLang/NOB+Err/Orth:skandinavije ATTR_N ;
 skandinavistihkeles+A+OLang/NOB:skandinavistihkel LES ;
 skarhkoeh+A:skarhkoe ATTR_H ; ! an=adverb, oeh=også predikativ?
 skarrehtje+A:skarrehtj Ce_CE_ODDNOCOMP ;
@@ -4116,6 +4134,7 @@ sosialpolitihke+A+OLang/NOB+Err/Orth:sosial#politihkel LES ;
 sosijaale+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+OLang/NOB:sosi IJAALE_A_LOAN ;
 sosiokulturelle+A+Err/Orth+OLang/NOB:sosiokultuvrell e_ES_LOAN ;
 sosiokulturelle+A+OLang/NOB:sosiokulturell e_ES_LOAN ;
+etnolingvistihkeles+A+OLang/NOB:etnolingvistihkel LES ;
 sosiolingvistihkeles+A+OLang/NOB:sosiolingvistihkel LES ;
 sosiolingvistiske+A:sosiolingvistisk e_E_EVEN ;
 sosiologeles+A+OLang/NOB+Err/Lex:sosiologel LES ; !samediggediedahus 2012
@@ -4634,6 +4653,7 @@ transendentaale+A+Err/Orth+OLang/NOB:tran^scendenta AALE ;
 transendentaale+A+OLang/NOB:tran^sendenta AALE ;
 transformasjonsgrammatihkeles+A+OLang/NOB:transformasjons^grammatihkel LES ;
 transitïjve+A+OLang/NOB:transit IJVEadj ; !
+kontrastïjve+A+OLang/NOB:kontrast IJVEadj ; 
 transparente+A+OLang/NOB:transpar ENTE ;
 transportteknihkeles+A+OLang/NOB:transport#teknihkel LES ;
 treahtehks+A:treahtehk Cs_CE_ODD ;
@@ -4645,6 +4665,7 @@ treavehke+A:treavahk Ce_CE_ODD ;
 trieptjies+A:trieptjie ATTR_S ;
 trivijelle+A+OLang/NOB:trivi JELLE ;
 tropihkeles+A+OLang/NOB:tropihkel LES ;
+tungusiske+A:tungusisk e_E_EVEN ;
 tropiske+A:tropisk e_E_EVEN ;
 trovkes+A:trovk es_ES_EVEN ;
 trovkes+A:trovkehk HKE_ODD_COMP ;
@@ -5058,8 +5079,8 @@ zoofysihkeles+A+OLang/NOB:zoofysihkel LES ;
 ïlvelihks+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:ïlvel ihks_IHKS_igs_IGS_EVENNOCOMP ;
 ïpmeres+A:ïpmer Ces_CES_CE_ODD ;
 ïpmeres+A:ïpmeres ATTR_0 ;
-ïskeres+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:ysker Ces_CES_ODD ;
-ïskeres+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:ïsker Ces_CES_ODD ; !ïskerabpa/råbpoe
+ïskeres+v2+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:ysker Ces_CES_ODD ;
+ïskeres+v1+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:ïsker Ces_CES_ODD ; !ïskerabpa/råbpoe
 ïskeres+A+CmpN/SgN+CmpN/SgG+CmpN/PlG+Err/Orth:iesker Ces_CES_ODD ;
 !österrijhkiske+A:österrijhkisk e_E_EVEN ;
 övte+A:övt e_E_EVEN ;
@@ -5071,5 +5092,52 @@ zoofysihkeles+A+OLang/NOB:zoofysihkel LES ;
 ööjeldihks+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:ööjeld ihks_IHKS_igs_IGS_EVENNOCOMP ; !(Åajaldehtedh 4-syll)
 ööreles+A+CmpN/SgN+CmpN/SgG+CmpN/PlG:öörel Ces_CES_CE_ODD ;
 
-LEXICON A-TODO
-+TODO:0 # ;
+! Frå sme science via logalaš > logeles
+
+analogeles+A+OLang/NOB:analogel LES ;
+anatomeles+A+OLang/NOB:anatomel LES ;
+antropologeles+A+OLang/NOB:antropologel LES ;
+biras-psykologeles+A+OLang/NOB:biras-psykologel LES ;
+datateknologeles+A+OLang/NOB:datateknologel LES ;
+epidemiologeles+A+OLang/NOB:epidemiologel LES ;
+epistemologeles+A+OLang/NOB:epistemologel LES ;
+etnoekologeles+A+OLang/NOB:etnoekologel LES ;
+etnologeles+A+OLang/NOB:etnologel LES ;
+etologeles+A+OLang/NOB:etologel LES ;
+etymologeles+A+OLang/NOB:etymologel LES ;
+fenomenologeles+A+OLang/NOB:fenomenologel LES ;
+fonologeles+A+OLang/NOB:fonologel LES ;
+fysiologeles+A+OLang/NOB:fysiologel LES ;
+geologeles+A+OLang/NOB:geologel LES ;
+gïeleekologeles+A+OLang/NOB:gïeleekologel LES ;
+gïeleideologeles+A+OLang/NOB:gïeleideologel LES ;
+gïeletypologeles+A+OLang/NOB:gïeletypologel LES ;
+ideologeles+A+OLang/NOB:ideologel LES ;
+ij-psykologeles+A+OLang/NOB:ij-psykologel LES ;
+ij-terminologeles+A+OLang/NOB:ij-terminologel LES ;
+individuellepsykologeles+A+OLang/NOB:individuellepsykologel LES ;
+kronologeles+A+OLang/NOB:kronologel LES ;
+kulturekologeles+A+OLang/NOB:kulturekologel LES ;
+lappologeles+A+OLang/NOB:lappologel LES ;
+logeles+A+OLang/NOB:logel LES ;
+meteorologeles+A+OLang/NOB:meteorologel LES ;
+metodologeles+A+OLang/NOB:metodologel LES ;
+morfofonologeles+A+OLang/NOB:morfofonologel LES ;
+morfologeles+A+OLang/NOB:morfologel LES ;
+mytologeles+A+OLang/NOB:mytologel LES ;
+narratologeles+A+OLang/NOB:narratologel LES ;
+neurologeles+A+OLang/NOB:neurologel LES ;
+ontologeles+A+OLang/NOB:ontologel LES ;
+pedagogeles-psykologeles+A+OLang/NOB:pedagogeles-psykologel LES ;
+psykososiologeles+A+OLang/NOB:psykososiologel LES ;
+registerepidemiologeles+A+OLang/NOB:registerepidemiologel LES ;
+baakoetypologeles+A+OLang/NOB:baakoetypologel LES ;
+semiologeles+A+OLang/NOB:semiologel LES ;
+sosialekologeles+A+OLang/NOB:sosialekologel LES ;
+sosialpsykologeles+A+OLang/NOB:sosialpsykologel LES ;
+sosiopsykologeles+A+OLang/NOB:sosiopsykologel LES ;
+syntakseles+A+OLang/NOB:syntaksel LES ;
+teknologeles-ekonomeles+A+OLang/NOB:teknologeles-ekonomel LES ;
+terminologeles+A+OLang/NOB:terminologel LES ;
+typologeles+A+OLang/NOB:typologel LES ;
+

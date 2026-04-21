@@ -11,7 +11,7 @@
 # also available in the file $GTHOME/LICENSE.txt.
 #
 # Other licensing options are available upon request, please contact
-# giellatekno@hum.uit.no or divvun@hum.uit.no
+# giellatekno@uit.no or feedback@divvun.no
 
 # ==================================================================== #
 #!!       S O U T H   S A A M I   G R A M M A R   C H E C K E R
@@ -175,6 +175,8 @@ LIST Ord = Ord ;		   #!! Ord
 LIST Qst = Qst ;		   #!! Qst
 LIST IV = IV ; #!! IV
 LIST TV = TV ; #!! TV
+LIST Ex/A = Ex/A ; 
+LIST Ex/V = Ex/V ; 
 LIST Prt = Prt;				   #!! Prt
 LIST Prs = Prs ;			   #!! Prs
 LIST Ind = Ind ;			   #!! Ind
@@ -219,121 +221,118 @@ LIST Err/Orth-any = Err/Orth Err/Attr Err/Lex Err/Der Err/Spellrelax ;
 
 #!! ### Semantic tags
 
-LIST Sem/Act = Sem/Act ;				    #!! Sem/Act
-LIST Sem/Ani = Sem/Ani ;				    #!! Sem/Ani
-LIST Sem/Atr = Sem/Atr ;				    #!! Sem/Atr
-LIST Sem/Body = Sem/Body ;				    #!! Sem/Body
-LIST Sem/Clth = Sem/Clth ;				    #!! Sem/Clth
-LIST Sem/Domain = Sem/Domain ;			    #!! Sem/Domain
-LIST Sem/Feat-phys = Sem/Feat-phys ;	    #!! Sem/Feat-phys
-LIST Sem/Fem = Sem/Fem ;				    #!! Sem/Fem
-LIST Sem/Group = Sem/Group ;			    #!! Sem/Group
-LIST Sem/Lang = Sem/Lang ;				    #!! Sem/Lang
-LIST Sem/Mal = Sem/Mal ;				    #!! Sem/Mal
-LIST Sem/Measr = Sem/Measr ;			    #!! Sem/Measr
-LIST Sem/Money = Sem/Money ;			    #!! Sem/Money
-LIST Sem/Obj = Sem/Obj ;				    #!! Sem/Obj
-LIST Sem/Obj-el = Sem/Obj-el ;			    #!! Sem/Obj-el
-LIST Sem/Org = Sem/Org ;				    #!! Sem/Org
-LIST Sem/Perc-emo = Sem/Perc-emo ;		    #!! Sem/Perc-emo
-LIST Sem/Plc = Sem/Plc ;				    #!! Sem/Plc
-LIST Sem/Sign = Sem/Sign ;				    #!! Sem/Sign
-LIST Sem/State-sick = Sem/State-lang-sick ; #!! Sem/State-sick
-LIST Sem/Sur = Sem/Sur ;				    #!! Sem/Sur
-LIST Sem/Time = Sem/Time ;				    #!! Sem/Time
-LIST Sem/Txt = Sem/Txt ;				    #!! Sem/Txt
+LIST Sem/Act = Sem/Act ;				    #!! - `Sem/Act       `
+LIST Sem/Ani = Sem/Ani ;				    #!! - `Sem/Ani       `
+LIST Sem/Atr = Sem/Atr ;				    #!! - `Sem/Atr       `
+LIST Sem/Body = Sem/Body ;				    #!! - `Sem/Body      `
+LIST Sem/Clth = Sem/Clth ;				    #!! - `Sem/Clth      `
+LIST Sem/Domain = Sem/Domain ;			    #!! - `Sem/Domain    `
+LIST Sem/Feat-phys = Sem/Feat-phys ;	    #!! - `Sem/Feat-phys `
+LIST Sem/Fem = Sem/Fem ;				    #!! - `Sem/Fem       `
+LIST Sem/Group = Sem/Group ;			    #!! - `Sem/Group     `
+LIST Sem/Lang = Sem/Lang ;				    #!! - `Sem/Lang      `
+LIST Sem/Mal = Sem/Mal ;				    #!! - `Sem/Mal       `
+LIST Sem/Measr = Sem/Measr ;			    #!! - `Sem/Measr     `
+LIST Sem/Money = Sem/Money ;			    #!! - `Sem/Money     `
+LIST Sem/Obj = Sem/Obj ;				    #!! - `Sem/Obj       `
+LIST Sem/Obj-el = Sem/Obj-el ;			    #!! - `Sem/Obj-el    `
+LIST Sem/Org = Sem/Org ;				    #!! - `Sem/Org       `
+LIST Sem/Perc-emo = Sem/Perc-emo ;		    #!! - `Sem/Perc-emo  `
+LIST Sem/Plc = Sem/Plc ;				    #!! - `Sem/Plc       `
+LIST Sem/Sign = Sem/Sign ;				    #!! - `Sem/Sign      `
+LIST Sem/State-sick = Sem/State-lang-sick ; #!! - `Sem/State-sick`
+LIST Sem/Sur = Sem/Sur ;				    #!! - `Sem/Sur       `
+LIST Sem/Time = Sem/Time ;				    #!! - `Sem/Time      `
+LIST Sem/Txt = Sem/Txt ;				    #!! - `Sem/Txt       `
 
-LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! HUMAN
+#!! Other semantic sets:
 
-SET HAB-ACTOR = HUMAN ; # Goal: make this like the sme one. #!! HAB-ACTOR
-SET HAB-ACTOR-NOT-HUMAN = Sem/Org ; # make this like the sme one #!! HAB-ACTOR-NOT-HUMAN
-
-
-LIST PROP-ATTR = Sem/Mal Sem/Sur Sem/Fem ; #!! PROP-ATTR
-LIST PROP-SUR = Sem/Sur Sem/Mal Sem/Fem ; #!! PROP-SUR
-
-
-
-SET TIME-N-SET = N + Sem/Time ;  #!! TIME-N-SET
+LIST PROP-ATTR = Sem/Mal Sem/Sur Sem/Fem ;                       #!! - `PROP-ATTR          `
+LIST PROP-SUR = Sem/Sur Sem/Mal Sem/Fem ;                        #!! - `PROP-SUR           `
+LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	                         #!! - `HUMAN              `
+SET HAB-ACTOR = HUMAN ; # Goal: make this like the sme one.      #!! - `HAB-ACTOR          `
+SET HAB-ACTOR-NOT-HUMAN = Sem/Org ; # make this like the sme one #!! - `HAB-ACTOR-NOT-HUMAN`
+SET TIME-N-SET = N + Sem/Time ;  	                             #!! - `TIME-N-SET         `
 
 
 #!! ###  Syntactic tags
 
-LIST @+FAUXV = @+FAUXV ;	         #!! @+FAUXV
-LIST @+FMAINV = @+FMAINV ;	         #!! @+FMAINV
-LIST @-FAUXV = @-FAUXV ;	         #!! @-FAUXV
-LIST @-FMAINV = @-FMAINV ;	         #!! @-FMAINV
-LIST @-FSUBJ> = @-FSUBJ> ;	         #!! @-FSUBJ>
-LIST @-F<OBJ = @-F<OBJ ;	         #!! @-F<OBJ
-LIST @-FOBJ> = @-FOBJ> ;	         #!! @-FOBJ>
-LIST @SPRED<OBJ = @SPRED<OBJ ;       #!! @-FSPRED<OBJ
-LIST @-F<ADVL = @-F<ADVL ;	         #!! @-F<ADVL
-LIST @-FADVL> = @-FADVL> ;	         #!! @-FADVL>
-LIST @-F<SPRED = @-F<SPRED ;         #!! @-F<SPRED
-LIST @-F<OPRED = @-F<OPRED ;         #!! @-F<OPRED
-LIST @-FSPRED> = @-FSPRED> ;         #!! @-FSPRED>
-LIST @-FOPRED> = @-FOPRED> ;         #!! @-FOPRED>
-SET FOBJ = @-F<OBJ OR @-FOBJ> ;
-SET FMAINV = @-FMAINV OR @+FMAINV ;
-SET FAUXV = @-FAUXV OR @+FAUXV ;
-LIST @>ADVL = @>ADVL ;               #!! @>ADVL
-LIST @ADVL< = @ADVL< ;               #!! @ADVL<
-LIST @<ADVL = @<ADVL ;               #!! @<ADVL
-LIST @ADVL> = @ADVL> ;               #!! @ADVL>
-LIST ADVL = @ADVL @ADVL> @ADVL< @<ADVL @>ADVL @-F<ADVL @-FADVL> ;  #!! @ADVL
-LIST @HAB> = @HAB> ;                    #!! @HAB>
-LIST @<HAB = @<HAB ;                    #!! @<HAB
-SET @HAB = @<HAB OR @HAB> ;
-LIST @>N = @>N ;		      #!! @>N
-LIST @Interj = @Interj ;    #!! @Interj
-LIST @N< = @N< ;		      #!! @N<
-LIST @>A = @>A ;		      #!! @>A
-LIST @P< = @P< ;		      #!! @P<
-LIST @>P = @>P ;		      #!! @>P
-LIST @HNOUN = @HNOUN ;	      #!! @HNOUN
-LIST @INTERJ = @INTERJ ;      #!! @INTERJ
-LIST @>Num = @>Num;		      #!! @>Num
-LIST @Pron< = @Pron< ;	      #!! @Pron<
-LIST @>Pron = @>Pron ;	      #!! @>Pron
-LIST @Num< = @Num< ;	      #!! @Num<
-LIST @OBJ = @OBJ ;			  #!! @OBJ
-LIST @<OBJ = @<OBJ ;		  #!! @<OBJ
-LIST @OBJ> = @OBJ> ;		  #!! @OBJ>
-LIST @OPRED = @OPRED ;		  #!! @OPRED
-LIST @<OPRED = @<OPRED ;	  #!! @<OPRED
-LIST @OPRED> = @OPRED> ;	  #!! @OPRED>
-LIST @PCLE = @PCLE ;		  #!! @PCLE
-LIST @COMP-CS< = @COMP-CS< ;  #!! @COMP-CS<
-LIST @SPRED = @SPRED ;		  #!! @SPRED
-LIST @<SPRED = @<SPRED ;	  #!! @<SPRED
-LIST @SPRED> = @SPRED> ;	  #!! @SPRED>
-LIST @SUBJ = @SUBJ ;		  #!! @SUBJ
-LIST @<SUBJ = @<SUBJ ;		  #!! @<SUBJ
-LIST @SUBJ> = @SUBJ> ;		  #!! @SUBJ>
-SET SUBJ = @<SUBJ OR @SUBJ> OR @SUBJ ; #!! SUBJ
-SET SPRED = @<SPRED OR @SPRED> OR @SPRED ; #!! SPRED
-SET OPRED = @<OPRED OR @OPRED> OR @OPRED ; #!! OPRED
-LIST @PPRED = @PPRED ;        #!! @PPRED
-LIST @APP = @APP ;			   #!! @APP
-LIST @APP-N< = @APP-N< ;	   #!! @APP-N<
-LIST @APP-Pron< = @APP-Pron< ; #!! @APP-Pron<
-LIST @APP>Pron = @APP>Pron ;   #!! @APP>Pron
-LIST @APP-Num< = @APP-Num< ;   #!! @APP-Num<
-LIST @APP-ADVL< = @APP-ADVL< ; #!! @APP-ADVL<
-LIST @VOC = @VOC ;			   #!! @VOC
-LIST @CVP = @CVP ;			   #!! @CVP
-LIST @CNP = @CNP ;			   #!! @CNP
-SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ; #!! OBJ
-LIST <OBJ = @-F<OBJ @<OBJ ;     #!! <OBJ
-LIST OBJ> = @OBJ> @-FOBJ> ;    #!! OBJ>
-SET <OBJ-OTHERS = <OBJ OR (Gen) OR (Nom) OR (Ess) OR (Loc) OR (Adv) ; #!! <OBJ-OTHERS
-SET OBJ>-OTHERS = OBJ> OR (Gen) OR (Nom) OR (Ess) OR (Loc) OR (Adv) ; #!! OBJ>-OTHERS
+LIST @+FAUXV = @+FAUXV ;	                                          #!! - `@+FAUXV     `
+LIST @+FMAINV = @+FMAINV ;	                                          #!! - `@+FMAINV    `
+LIST @-FAUXV = @-FAUXV ;	                                          #!! - `@-FAUXV     `
+LIST @-FMAINV = @-FMAINV ;	                                          #!! - `@-FMAINV    `
+LIST @-FSUBJ> = @-FSUBJ> ;	                                          #!! - `@-FSUBJ>    `
+LIST @-F<OBJ = @-F<OBJ ;	                                          #!! - `@-F<OBJ     `
+LIST @-FOBJ> = @-FOBJ> ;	                                          #!! - `@-FOBJ>     `
+LIST @SPRED<OBJ = @SPRED<OBJ ;                                        #!! - `@-FSPRED<OBJ`
+LIST @-F<ADVL = @-F<ADVL ;	                                          #!! - `@-F<ADVL    `
+LIST @-FADVL> = @-FADVL> ;	                                          #!! - `@-FADVL>    `
+LIST @-F<SPRED = @-F<SPRED ;                                          #!! - `@-F<SPRED   `
+LIST @-F<OPRED = @-F<OPRED ;                                          #!! - `@-F<OPRED   `
+LIST @-FSPRED> = @-FSPRED> ;                                          #!! - `@-FSPRED>   `
+LIST @-FOPRED> = @-FOPRED> ;                                          #!! - `@-FOPRED>   `
+SET FOBJ = @-F<OBJ OR @-FOBJ> ;                                       #!! - `FOBJ        `
+SET FMAINV = @-FMAINV OR @+FMAINV ;                                   #!! - `FMAINV      `
+SET FAUXV = @-FAUXV OR @+FAUXV ;                                      #!! - `FAUXV       `
+LIST @>ADVL = @>ADVL ;                                                #!! - `@>ADVL      `
+LIST @ADVL< = @ADVL< ;                                                #!! - `@ADVL<      `
+LIST @<ADVL = @<ADVL ;                                                #!! - `@<ADVL      `
+LIST @ADVL> = @ADVL> ;                                                #!! - `@ADVL>      `
+LIST ADVL = @ADVL @ADVL> @ADVL< @<ADVL @>ADVL @-F<ADVL @-FADVL> ;     #!! - `@ADVL       `
+LIST @HAB> = @HAB> ;                                                  #!! - `@HAB>       `
+LIST @<HAB = @<HAB ;                                                  #!! - `@<HAB       `
+SET @HAB = @<HAB OR @HAB> ;                                           #!! - `@HAB        `
+LIST @>N = @>N ;		                                              #!! - `@>N         `
+LIST @Interj = @Interj ;                                              #!! - `@Interj     `
+LIST @N< = @N< ;		                                              #!! - `@N<         `
+LIST @>A = @>A ;		                                              #!! - `@>A         `
+LIST @P< = @P< ;		                                              #!! - `@P<         `
+LIST @>P = @>P ;		                                              #!! - `@>P         `
+LIST @HNOUN = @HNOUN ;	                                              #!! - `@HNOUN      `
+LIST @INTERJ = @INTERJ ;                                              #!! - `@INTERJ     `
+LIST @>Num = @>Num;		                                              #!! - `@>Num       `
+LIST @Pron< = @Pron< ;	                                              #!! - `@Pron<      `
+LIST @>Pron = @>Pron ;	                                              #!! - `@>Pron      `
+LIST @Num< = @Num< ;	                                              #!! - `@Num<       `
+LIST @OBJ = @OBJ ;			                                          #!! - `@OBJ        `
+LIST @<OBJ = @<OBJ ;		                                          #!! - `@<OBJ       `
+LIST @OBJ> = @OBJ> ;		                                          #!! - `@OBJ>       `
+LIST @OPRED = @OPRED ;		                                          #!! - `@OPRED      `
+LIST @<OPRED = @<OPRED ;	                                          #!! - `@<OPRED     `
+LIST @OPRED> = @OPRED> ;	                                          #!! - `@OPRED>     `
+LIST @PCLE = @PCLE ;		                                          #!! - `@PCLE       `
+LIST @COMP-CS< = @COMP-CS< ;                                          #!! - `@COMP-CS<   `
+LIST @SPRED = @SPRED ;		                                          #!! - `@SPRED      `
+LIST @<SPRED = @<SPRED ;	                                          #!! - `@<SPRED     `
+LIST @SPRED> = @SPRED> ;	                                          #!! - `@SPRED>     `
+LIST @SUBJ = @SUBJ ;		                                          #!! - `@SUBJ       `
+LIST @<SUBJ = @<SUBJ ;		                                          #!! - `@<SUBJ      `
+LIST @SUBJ> = @SUBJ> ;		                                          #!! - `@SUBJ>      `
+SET SUBJ = @<SUBJ OR @SUBJ> OR @SUBJ ;                                #!! - `SUBJ        `
+SET SPRED = @<SPRED OR @SPRED> OR @SPRED ;                            #!! - `SPRED       `
+SET OPRED = @<OPRED OR @OPRED> OR @OPRED ;                            #!! - `OPRED       `
+LIST @PPRED = @PPRED ;                                                #!! - `@PPRED      `
+LIST @APP = @APP ;			                                          #!! - `@APP        `
+LIST @APP-N< = @APP-N< ;	                                          #!! - `@APP-N<     `
+LIST @APP-Pron< = @APP-Pron< ;                                        #!! - `@APP-Pron<  `
+LIST @APP>Pron = @APP>Pron ;                                          #!! - `@APP>Pron   `
+LIST @APP-Num< = @APP-Num< ;                                          #!! - `@APP-Num<   `
+LIST @APP-ADVL< = @APP-ADVL< ;                                        #!! - `@APP-ADVL<  `
+LIST @VOC = @VOC ;			                                          #!! - `@VOC        `
+LIST @CVP = @CVP ;			                                          #!! - `@CVP        `
+LIST @CNP = @CNP ;			                                          #!! - `@CNP        `
+SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ;    #!! - `OBJ         `
+LIST <OBJ = @-F<OBJ @<OBJ ;                                           #!! - `<OBJ        `
+LIST OBJ> = @OBJ> @-FOBJ> ;                                           #!! - `OBJ>        `
+SET <OBJ-OTHERS = <OBJ OR (Gen) OR (Nom) OR (Ess) OR (Loc) OR (Adv) ; #!! - `<OBJ-OTHERS `
+SET OBJ>-OTHERS = OBJ> OR (Gen) OR (Nom) OR (Ess) OR (Loc) OR (Adv) ; #!! - `OBJ>-OTHERS `
 SET NOT-FAUXV = FMAINV OR OBJ + V OR ADVL + V ;
 # Works after the mapping rules for verbs.
-SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ; #!! SYN-V
-LIST @X = @X ;    #!! @X
+SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ; #!! - `SYN-V`
+LIST @X = @X ;    #!! - `@X`
 
 
+LIST <TH-Com-Any> = <TH-Com-Any> ;
 
 # ========
   SETS
@@ -345,6 +344,10 @@ LIST @X = @X ;    #!! @X
 #!! This part of the file lists a large number of sets based partly upon the tags defined above, and
 #!! partly upon lexemes drawn from the lexicon.
 #!! See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
+
+
+
+LIST REALCOPULAS = "lea" "leah" "årrodh" "sååjhtedh" ;
 
 
 
@@ -393,6 +396,10 @@ SET MOOD-V = Ind OR Pot OR Imprt OR ImprtII OR Cond OR (Neg Sup) ; #!! MOOD-V
 
 SET NOT-PRFPRC = WORD - PrfPrc ; #!! NOT-PRFPRC
 
+SET V-IND-FIN = Prs OR Prt ;
+
+SET VFIN = MOOD-V - ConNeg ;
+
 
 #!! ### Sets for person
 # - - - -
@@ -428,6 +435,8 @@ LIST VNOTDU3 = Sg1 Sg2 Sg3 Du1 Du2 Pl1 Pl2 Pl3 ;
 LIST VNOTPL1 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl2 Pl3 ;
 LIST VNOTPL2 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl3 ;
 LIST VNOTPL3 = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 ;
+
+LIST ALL-PERS = Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3;
 
 
 #!! ### Pronoun sets
@@ -621,6 +630,9 @@ SET CCCOMMA = CC OR COMMA ;
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
+LIST &msyn-pass-active = &msyn-pass-active ; 
+LIST &msyn-gåabpa-sup-komp = &msyn-gåabpa-sup-komp ;
+LIST &msyn-adjectiv-attr-pred = &msyn-adjectiv-attr-pred ;
 
 MAPPING-PREFIX = & ;
 
@@ -636,8 +648,70 @@ ADD:spell-conservatively (&typo &SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK
 # Add &typo error tag to unkown words that are not corrected by the speller, so that they at least get a blue underline and a message
 ADD:uncorrected-typos (&typo) (?) ;
 
+	# attr--> pred 
 
-#!! VErb agreement
+ADD:msyn-adjectiv-attr-pred (&msyn-adjectiv-attr-pred) TARGET (A Attr) IF (*-1 Nom BARRIER (*) - REALCOPULAS)  ;
+
+COPY:msyn-adjectiv-attr-pred (A Sg Nom &SUGGEST) EXCEPT (A Attr &msyn-adjectiv-attr-pred) AFTER Ex/A TARGET (&msyn-adjectiv-attr-pred);	
+
+	## beapmoeh (leah) njaelkies  ---> beapmoeh leah njaelkie
+	
+	# Pred ---> Attr
+
+ADD:msyn-adjectiv-pred-attr (&msyn-adjectiv-pred-attr) TARGET (A Sg Nom) IF (*1 N BARRIER NOT-A) (NEGATE 0 <TH-Com-Any> LINK 1 (N Com));
+
+COPY:msyn-adjectiv-pred-attr (A Attr &SUGGEST) EXCEPT (A Sg Nom &msyn-adjectiv-pred-attr) AFTER Ex/A TARGET (&msyn-adjectiv-pred-attr);	
+
+## Anna lea vaejkele soptsestæjja -> væjkeles soptsestæjja 
+#$ Piere (lea) væjkele maanajgujmie -> væjkele maanajgujmie
+
+	# Gåabpa + komparativ
+
+ADD:msyn-gåabpa-sup-komp (&msyn-gåabpa-sup-komp) TARGET (Der/Superl A Sg Nom) IF (-1 ("gåabpa" Sg Nom));
+
+COPY:msyn-gåabpa-sup-komp (Der/Comp &SUGGEST) EXCEPT (Der/Superl &msyn-gåabpa-sup-komp) AFTER Ex/A TARGET (&msyn-gåabpa-sup-komp);	
+	
+	## gåabpa stööremes
+
+	# Sååjhtedh as Adverb
+
+ADD:msyn-sååjhtoe-VFinitt (&msyn-sååjhtoe-VFinitt) TARGET ("sååjhtedh" Ind Prs Sg3) (1 VFIN - Sg3) ;
+
+	## Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+	
+COPY:msyn-sååjhtoe-VFinitt (Sg1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg1) ;
+COPY:msyn-sååjhtoe-VFinitt (Sg2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Sg2) ;
+COPY:msyn-sååjhtoe-VFinitt (Du1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du1) ;
+COPY:msyn-sååjhtoe-VFinitt (Du2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du2) ;
+COPY:msyn-sååjhtoe-VFinitt (Du3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Du3) ;
+COPY:msyn-sååjhtoe-VFinitt (Pl1 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl1) ;
+COPY:msyn-sååjhtoe-VFinitt (Pl2 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl2) ;
+COPY:msyn-sååjhtoe-VFinitt (Pl3 &SUGGEST) EXCEPT (Sg3 &msyn-sååjhtoe-VFinitt) TARGET (&msyn-sååjhtoe-VFinitt)(1 VFIN + Pl3) ;
+
+
+## PASSIVE VERB should be active   
+
+ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/Pass) IF (-1 Acc) ;    
+
+## Orre teknologije edtja saemiengïelem gorredovvedh
+
+ADD:msyn-pass-active (&msyn-pass-active) TARGET (Der/PassL) OR (Der/PassS) IF (1 Acc LINK NEGATE 1 Inf OR VFIN) ;    
+
+
+## Orre teknologije edtja gorredovvedh saemiengïelem
+
+COPY:msyn-pass-active (TV &SUGGEST) EXCEPT (IV Ex/V Ex/TV Der/PassL  &msyn-pass-active) OR (IV Ex/V Ex/TV Der/PassS &msyn-pass-active) AFTER V TARGET (&msyn-pass-active) ;
+
+
+## Danna ittjiv dádjaduvá majdik    ## mån ittjiv dádjaduvá majdik
+
+#$ Dat la juoga majt viertti oahppat,    #$ Jågŋå lij biebbmo valla aj juoga majt divna oasstin.
+
+
+
+
+
+#!! VERB agreement
 
 #ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(NOT -2 CC LINK -1 Sg + Nom)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1)(NOT 1 Adv LINK 1 V + Sg1);
  ADD:msyn-agr-other-sg1 (&msyn-agr-other-sg1) TARGET V IF (NOT -2 V + Sg1)(-1C Pron + Sg1 + Nom)(0 V + Ind)(NOT 0 Sg1);
@@ -649,6 +723,7 @@ COPY:msyn-agr-other-sg1 (Sg1 &SUGGEST) EXCEPT VNOTSG1 TARGET (V Ind Prs &msyn-ag
 #$ Manne båatam.
 #$ Uážum-uv mun-uv elâččiđ váhá kiirdâšmin?
 #$ Tomhân mun tiäđust-uv paaččim.
+
 
 
 

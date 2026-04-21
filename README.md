@@ -2,8 +2,10 @@ The South Sámi morphology and tools
 ==========================================
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
-[![Build Status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
+[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-sma/main/badge.svg)](https://github.com/giellalt/lang-sma/actions)
 [![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE)
+[![Desktop speller download](https://img.shields.io/badge/download%40latest-desktop--bhfst-brightgreen)](https://pahkat.uit.no/main/download/speller-sma?platform=desktop&channel=nightly)
+[![Mobile speller download](https://img.shields.io/badge/download%40latest-mobile--bhfst-brightgreen)](https://pahkat.uit.no/main/download/speller-sma?platform=mbile&channel=nightly)
 
 This repository contains finite state source files for the South Sámi language,
 for building morphological analysers, proofing tools
@@ -24,15 +26,22 @@ Accuracy](https://img.shields.io/badge/Speller_Accuracy-83_%25-green.svg)](https
 [![Spell-checking accuracy development
 graph](https://giellalt.github.io/lang-sma/speller-report.svg)](https://giellalt.github.io/lang-sma/speller-report.svg)
 
+Download and test speller files
+-------------------------------
+
+The speller files downloadable at the top of this page (the `*.bhfst` files) can
+be used with [divvunspell](https://github.com/divvun/divvunspell), to test their
+performance. These files are the exact same ones as installed on users' computers
+and mobile phones. Desktop and mobile speller files differ from each other in the
+error model and should be tested separately — thus also two different downloads.
 
 Documentation
 -------------
 
 Documentation can be found at:
 
--   <https://giellalt.uit.no/lang/sma/j-sma.html>
--   [In-source documentation](doc/Links.md)
--   <https://giellalt.uit.no/index.html> (general info)
+- [Language specific documentation](https://giellalt.github.io/lang-sma/)
+- [General documentation](https://giellalt.github.io/)
 
 Core dependencies
 -----------------

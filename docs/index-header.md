@@ -1,15 +1,12 @@
 # South Sámi documentation
 
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
-[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://raw.githubusercontent.com/giellalt/lang-sma/main/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues)
-[![Build status](https://github.com/giellalt/lang-sma/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-sma/actions)
+[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-sma/main/badge.svg)](https://github.com/giellalt/lang-sma/actions)
 
 This page documents the work on the [South Sámi language model](http://github.com/giellalt/lang-sma). 
 It is in use in a wide range of applications.
-
-
-
 
 ## Reports
 ### Speller status
@@ -18,8 +15,6 @@ It is in use in a wide range of applications.
 
 ![Spell-checking accuracy development](https://giellalt.github.io/lang-smj/speller-report.svg)
 
-
-
 ## How to use the analysers
 
 -   **First aid:** In the terminal: analyse words by writing `husma`, generate with `hdsma`
@@ -27,14 +22,13 @@ It is in use in a wide range of applications.
 -   [Generating paradigms](http://giellatekno.uit.no/cgi/p-sma.sma.html) /
 -   [Analysing text](http://giellatekno.uit.no/cgi/d-sma.sma.html) /
 
-
 ## Projects using the language model
 
 -   [Dictionary projects](/dicts/dicts.html)
 -   [ICALL](http://giellalt.uit.no/ped/index.html)
 -   [Machine translation](/mt/MachineTranslation.html) (see also [Converting the fst to Apertium format](ConvertingToApertium.md) )
 -   [Korpusinnsamling](sma-korpus-innsamling.md)
-
+-   [Grammar checker](gramcheck/index.md)
 
 ## Documenting the language model
 -   [Oversyn over ulike FST-ar](../lang-sme/KompilereFST.html)
@@ -49,7 +43,6 @@ It is in use in a wide range of applications.
 ◊ [twolc  ](https://github.com/giellalt/lang-sma/blob/main/src/fst/phonology.twolc)
 ◊ [yaml   ](https://github.com/giellalt/lang-sma/blob/main/test/src/gt-norm-yamls/)
 
-
 ### Linguistic documentation
  
 -   **Linguistic description** of South Sami:
@@ -60,13 +53,10 @@ It is in use in a wide range of applications.
     -   See also the [OAHPA South Saami grammar](http://giellatekno.uit.no/oahpa/sma/gramm/grammatikk.nob.html)
 -   [South Saami bugs in Bugzilla](http://tinyurl.com/ps9pyuu)
 
-
 ## Old documentation files (for reference)
-
 
 -   [Background information](docu-sma-background.md) on the South
     Saami project
-
 
 ### Obsolete files
 -   **[Old documentation](docu-sma-twol.md)** of the [twolc rule
@@ -86,7 +76,6 @@ The following documents were not linked to in earlier versions. They are probabl
 -   [Testplan](docu-sma-testplan.md)
 -   [Test diary](sma-testdiary.md)
 -   [Normativity issues](normativity-issues.md)
-
 
 # In-source documentation
 

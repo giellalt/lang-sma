@@ -71,8 +71,8 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 
 !! ### Usage tags
 
-!! |                    Usage tag | Explanation
-!! |                          --- | ---
+                 !!  |  Usage tag | Explanation
+                 !!  |        --- | ---
 +Use/Marg        !!≈ | **@CODE@** | Marginal, korrekte, eksisterende former, men som er sjeldne. vi kan fjerne disse ordene f.eks fra speller, fordi de er så sjeldne og lite i bruk at de lemma som ligger nært kan bli forvekslet.
 +Use/-Spell      !!≈ | **@CODE@** | Excluded from speller
 +Use/-PLX        !!≈ | **@CODE@** | Excluded in PLX speller
@@ -86,8 +86,10 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 +Use/DNorm       !!≈ | **@CODE@** | For words without formal normalization. Divvun suggest that this should be normative. Included in speller. Based on 2010 normative decision & Ove Lorentz' suggestions for the norm.
 +Use/PMatch      !!≈ | **@CODE@** | Do *only* include in fst's for hfst-pmatch
 +Use/-PMatch     !!≈ | **@CODE@** | Do not include in fst's made for hfst-pmatch
-+Use/GC          !!≈ | **@CODE@** | only retained in the HFST Grammar Checker disambiguation analyser
-+Use/-GC         !!≈ | **@CODE@** | never retained in the HFST Grammar Checker disambiguation analyser
++Use/GC          !!≈ | **@CODE@** | **only** retained in the HFST Grammar Checker disambiguation analyser
++Use/-GC         !!≈ | **@CODE@** | **never** retained in the HFST Grammar Checker disambiguation analyser
++Use/TTS         !!≈ | **@CODE@** | **only** retained in the HFST Text-To-Speech disambiguation analyser
++Use/-TTS        !!≈ | **@CODE@** | **never** retained in the HFST Text-To-Speech disambiguation analyser
 
 !! ## Dialect tags
 
@@ -206,6 +208,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
   +PxPl3                            !!≈ * **@CODE@** =  Possessives Plural
 
 !! ## Tense, Person & Number
+
 !! |                                                 Tense tag | Explanation
 !! |                                                       --- | ---
   +Prs                                       !!≈ |  **@CODE@** | Presens
@@ -292,11 +295,14 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
   +Foc/gih    !!≈ * **@CODE@**:  XXX Document better = Forsterkende particle
   +Foc/gænnah !!≈ * **@CODE@**:  XXX Document better = Forsterkende particle
 
-!! ### tags for adverbs and komparerte adj
-  +Gram/Comp +Gram/Superl !!≈ * **@CODE@**:
+!! ### Tags for adverbs and comparated adjectives
+  +Gram/Comp   !!≈ * **@CODE@**
+  +Gram/Superl !!≈ * **@CODE@**
 
 
-!! ## Semantic tags to help disambiguation & synt. analysis:
+!! ## Semantic tags
+
+!! Semantic tags help disambiguation and syntactic analysis. All tags used are defined and listed below. 
 
  +Sem/Act                   !!≈ * @CODE@ = Activity
  +Sem/Adr                   !!≈ * @CODE@ = Webadr
@@ -394,7 +400,11 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
  +Sem/Year                  !!≈ * @CODE@ = year (i.e. 1000 - 2999), used only for numerals
 
 
-!! Multiple Semantic tags
+!! ### Multiple Semantic tags
+
+!! Multiple semantic tags are written as one tag, with the different semantic values separated by an underline `_`.
+
+!! All used combinations must be declared below, and the list must be manually maintained. The tags are ordered alphabetically, both the list and the semantic values within one tag.
 
  +Sem/Act_Domain            !!≈ * @CODE@ =
  +Sem/Act_Fruit             !!≈ * @CODE@ = frukt og handling
@@ -595,17 +605,17 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! correct pronunciation based on phonotactics (orthotactics actually),
 !! we tag all words that can't be correctly transcribed using the SMA
 !! transcriber with source language codes. Once tagged, it is possible
-!! to split the lexical transducer in smaller ones according to langu-
-!! age, and apply different IPA conversion to each of them.
+!! to apply different IPA conversions to each of them.
 !!
 !! The principle of tagging is that we only tag to the extent needed,
 !! and following a priority:
-!! 1. any untagged word is pronounced with SME orthographic conventions
+
+!! 1. any untagged word is pronounced with native orthographic conventions
 !! 1. NNO and NOB have identical pronunciation, NNO is only used if
 !!   different in spelling from NOB
 !! 1. SWE has mostly the same pronunciation as NOB, and is only used
 !!   if different in spelling from NOB
-!! 1. Occasionally even SME (the default) may be tagged, to block other
+!! 1. Occasionally even SMA (the default) may be tagged, to block other
 !!   languages from being specified, mainly during semi-automatic
 !!   language tagging sessions
 !!
@@ -619,6 +629,7 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !! | --- | ---
 +OLang/SME !!≈ |  **@CODE@** | North Sámi
 +OLang/SMA !!≈ |  **@CODE@** | South Sámi
++OLang/SMJ !!≈ |  **@CODE@** | Lule Sámi
 +OLang/FIN !!≈ |  **@CODE@** | Finnish
 +OLang/SWE !!≈ |  **@CODE@** | Swedish
 +OLang/NOB !!≈ |  **@CODE@** | Norw. bokmål
@@ -646,12 +657,11 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
  o9 !!≈ * @CODE@  twol rule override,  so that o doesn't turn into u infront of j
 
         !! ## Symbols that need to be escaped on the lower side (towards twolc):
- »7     !!≈ * **@CODE@**:  Literal »
- «7     !!≈ * **@CODE@**:  Literal «
-        !! ```
- %[%>%] !!≈ @CODE@ - Literal >
- %[%<%] !!≈ @CODE@ - Literal <
-        !! ```
+ »7     !!≈ * **@CODE@**: Literal »
+ «7     !!≈ * **@CODE@**: Literal «
+ %[%>%] !!≈ * **@CODE@**: Literal >
+ %[%<%] !!≈ * **@CODE@**: Literal <
+
 !!
 !! ## Lexeme disambiguation tags
   +Hom1          !!≈ * **@CODE@**:  Homonymy
@@ -669,8 +679,11 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 !!
 
 
-!! clitic boundary mark - a multichar that usually just go to zero
-|»
+!! ## The clitic boundary mark
+
+!! A multichar that usually just goes to zero:
+
+|» !!≈ * **`@CODE@`**
 
 !! ## Umlaut and diphthong simplification triggers
 
@@ -765,9 +778,8 @@ LEXICON Root
 !! This is the beginning of everything. The **@LEXNAME@** lexicon is reserved in the
 !! LexC language, and must be the first lexicon defined.
 
-!! Here is the list of top-level lexica in the sma analyser
+!! Here is the list of top-level lexica in the South Sámi analyser:
 
-            Prefixes     ;
 ! @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
 ! @U.Cap.Opt@@U.CmpNone.TRUE@ ProperNoun-sma-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
 ! @U.Cap.Obl@@U.CmpNone.TRUE@ ProperNoun-smi-nocomp ; ! Lexicon for short names blocked from compounding. outcommented 19.9.16
@@ -777,22 +789,23 @@ LEXICON Root
 ! @U.Cap.Obl@ ProperNoun-smi       ; ! SMI proper nouns. outcommented 19.9.16
 ! @U.Cap.Opt@ ProperNoun-smi       ; ! SMI proper nouns. outcommented 19.9.16
 
-             NounRoot     ; !!≈ * `@CODE@`
-             Verb         ; !!≈ * `@CODE@`
-             Adjective    ; !!≈ * `@CODE@`
-             Pronoun      ; !!≈ * `@CODE@`
-             Adverb       ; !!≈ * `@CODE@`
-             Subjunction  ; !!≈ * `@CODE@`
-             Conjunction  ; !!≈ * `@CODE@`
-             Particle     ; !!≈ * `@CODE@`
-             Adposition   ; !!≈ * `@CODE@`
-             Punctuation  ; !!≈ * `@CODE@`
-             Symbols      ; !!≈ * `@CODE@`
-             Interjection ; !!≈ * `@CODE@`
- +Use/CircN: Numeral      ; !!≈ * `@CODE@`
-             Abbreviation ; !!≈ * `@CODE@`
-             Acronym      ; !!≈ * `@CODE@`
-             ProperNoun   ; !!≈ * `@CODE@`
+             Abbreviation ; !!≈ - `@CODE@`
+             Acronym      ; !!≈ - `@CODE@`
+             Adjective    ; !!≈ - `@CODE@`
+             Adposition   ; !!≈ - `@CODE@`
+             Adverb       ; !!≈ - `@CODE@`
+             Conjunction  ; !!≈ - `@CODE@`
+             Interjection ; !!≈ - `@CODE@`
+             NounRoot     ; !!≈ - `@CODE@`
+ +Use/CircN: Numeral      ; !!≈ - `@CODE@`
+             Particle     ; !!≈ - `@CODE@`
+             Prefixes     ; !!≈ - `@CODE@`
+             Pronoun      ; !!≈ - `@CODE@`
+             ProperNoun   ; !!≈ - `@CODE@`
+             Punctuation  ; !!≈ - `@CODE@`
+             Subjunction  ; !!≈ - `@CODE@`
+             Symbols      ; !!≈ - `@CODE@`
+             Verb         ; !!≈ - `@CODE@`
 
 LEXICON Abbreviation
 Abbreviation-sma ;

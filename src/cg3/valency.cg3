@@ -3,7 +3,7 @@
 
 # =================================================================== #
 # =================================================================== #
-#!! # S O U T H   S Á M I   V A L E N C Y   A N O T A T O R          
+#!! # S O U T H   S Á M I   V A L E N C Y   A N N O T A T O R          
 # =================================================================== #
 # =================================================================== #
 
@@ -30,7 +30,7 @@
 
 
 DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ;
-	 #!! "<.>" "<!>" "<?>" "<...>" "<¶>" sent
+		#!! `"<.>" "<!>" "<?>" "<...>" "<¶>" sent`
 
 
 # ============= #
@@ -39,29 +39,29 @@ DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ;
 
 #!! ### BOS/EOS:
 
-LIST BOS = (>>>) (<s>);  #!! * (>>>) (<s>)
-LIST EOS = (<<<) (</s>); #!!   (<<<) (</s>)
+LIST BOS = (>>>) (<s>);  #!! - `(>>>) (<s>)`
+LIST EOS = (<<<) (</s>); #!! - `(<<<) (</s>)`
 
 #!! ### Morphological tags
 	
-LIST N = N ;          #!! * N 
-LIST Sg = Sg ;       #!! * Sg 
-LIST Pl = Pl ;       #!! Pl
+LIST N   = N   ;       #!! * N 
+LIST Sg  = Sg  ;       #!! * Sg 
+LIST Pl  = Pl  ;       #!! * Pl
 LIST Nom = Nom ;       #!! * Nom
-LIST Acc = Acc ;       #!! Acc
-LIST Gen = Gen ;       #!! Gen
-LIST Ine = Ine ;       #!! Ine
-LIST Ela = Ela ;       #!! Ela
-LIST Ill = Ill ;       #!! Ill
-LIST Com = Com ;       #!! Com
-LIST Ess = Ess ;       #!! Ess
-
-LIST PxSg1 = PxSg1 ;       #!! * PxSg1 
-LIST PxSg2 = PxSg2 ;       #!! PxSg2
-LIST PxSg3 = PxSg3 ;       #!! PxSg3
-LIST PxPl1 = PxPl1 ;   #!! PxPl1
-LIST PxPl2 = PxPl2 ;   #!! PxPl3
-LIST PxPl3 = PxPl3 ;   #!! PxPl3
+LIST Acc = Acc ;       #!! * Acc
+LIST Gen = Gen ;       #!! * Gen
+LIST Ine = Ine ;       #!! * Ine
+LIST Ela = Ela ;       #!! * Ela
+LIST Ill = Ill ;       #!! * Ill
+LIST Com = Com ;       #!! * Com
+LIST Ess = Ess ;       #!! * Ess
+#!!
+LIST PxSg1 = PxSg1 ;   #!! * PxSg1 
+LIST PxSg2 = PxSg2 ;   #!! * PxSg2
+LIST PxSg3 = PxSg3 ;   #!! * PxSg3
+LIST PxPl1 = PxPl1 ;   #!! * PxPl1
+LIST PxPl2 = PxPl2 ;   #!! * PxPl3
+LIST PxPl3 = PxPl3 ;   #!! * PxPl3
 
 LIST V = V ;
 LIST Prs = Prs ;
@@ -78,6 +78,8 @@ LIST Du3 = Du3 ;
 LIST Pl1 = Pl1 ;
 LIST Pl2 = Pl2 ;
 LIST Pl3 = Pl3 ;
+
+#!! Number and person tags:
 
 LIST PERS-TAG = Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ; #!! * Sg1 Sg2 Sg3 Pl1 Pl2 Pl3 ;
 
@@ -152,42 +154,72 @@ LIST Arab = Arab ;
 
 #!! ### Derivation tags
 
-LIST Der/A = Der/A ; #!! * Der/A
-LIST Der/Car = Der/Car ; #!! Der/Car
-LIST Der/Dimin = Der/Dimin ; #!! Der/Dimin 
-LIST Der/InchL = Der/InchL ; #!! Der/InchL
-LIST Der/NomAct = Der/NomAct ; #!! Der/NomAct
-LIST Der/NomAg = Der/NomAg ; #!! Der/NomAg
-LIST Der/PassL = Der/PassL ; #!! Der/PassL
-LIST Der/PassS = Der/PassS ; #!! Der/PassS
-LIST Der/Rec = Der/Rec ; #!! Der/Rec
-LIST Der/adte = Der/adte ; #!! Der/adte
-LIST Der/ahtje = Der/ahtje ; #!! Der/ahtje
-LIST Der/alla = Der/alla ; #!! Der/alla
-LIST Der/d = Der/d ; #!! Der/d
-LIST Der/eds = Der/eds ; #!! Der/eds
-LIST Der/ht = Der/ht ; #!! Der/ht
-LIST Der/htalle  = Der/htalle  ; #!! Der/htalle 
-LIST Der/htj = Der/htj ; #!! Der/htj
-LIST Der/ihks = Der/ihks ; #!!  Der/ihks
-LIST Der/ijes = Der/ijes ; #!! Der/ijes
-LIST Der/l = Der/l ; #!! Der/l
-LIST Der/laakan = Der/laakan ; #!! Der/laakan
-LIST Der/ldahke = Der/ldahke ; #!! Der/ldahke
-LIST Der/ldh = Der/ldh ; #!! Der/ldh
-LIST Der/ldihkie = Der/ldihkie ; #!! Der/ldihkie
-LIST Der/les = Der/les ; #!! Der/les
-LIST Der/lg = Der/lg  ; #!! Der/lg
-LIST Der/st = Der/st ; #!! Der/st
-LIST Der/vuota = Der/vuota ; #!! Der/vuota 
+LIST Der/A       = Der/A       ; #!! - `Der/A      `
+LIST Der/Car     = Der/Car     ; #!! - `Der/Car    `
+LIST Der/Dimin   = Der/Dimin   ; #!! - `Der/Dimin  `
+LIST Der/InchL   = Der/InchL   ; #!! - `Der/InchL  `
+LIST Der/NomAct  = Der/NomAct  ; #!! - `Der/NomAct `
+LIST Der/NomAg   = Der/NomAg   ; #!! - `Der/NomAg  `
+LIST Der/PassL   = Der/PassL   ; #!! - `Der/PassL  `
+LIST Der/PassS   = Der/PassS   ; #!! - `Der/PassS  `
+LIST Der/Rec     = Der/Rec     ; #!! - `Der/Rec    `
+LIST Der/adte    = Der/adte    ; #!! - `Der/adte   `
+LIST Der/ahtje   = Der/ahtje   ; #!! - `Der/ahtje  `
+LIST Der/alla    = Der/alla    ; #!! - `Der/alla   `
+LIST Der/d       = Der/d       ; #!! - `Der/d      `
+LIST Der/eds     = Der/eds     ; #!! - `Der/eds    `
+LIST Der/ht      = Der/ht      ; #!! - `Der/ht     `
+LIST Der/htalle  = Der/htalle  ; #!! - `Der/htalle `
+LIST Der/htj     = Der/htj     ; #!! - `Der/htj    `
+LIST Der/ihks    = Der/ihks    ; #!! - `Der/ihks   `
+LIST Der/ijes    = Der/ijes    ; #!! - `Der/ijes   `
+LIST Der/l       = Der/l       ; #!! - `Der/l      `
+LIST Der/laakan  = Der/laakan  ; #!! - `Der/laakan `
+LIST Der/ldahke  = Der/ldahke  ; #!! - `Der/ldahke `
+LIST Der/ldh     = Der/ldh     ; #!! - `Der/ldh    `
+LIST Der/ldihkie = Der/ldihkie ; #!! - `Der/ldihkie`
+LIST Der/les     = Der/les     ; #!! - `Der/les    `
+LIST Der/lg      = Der/lg      ; #!! - `Der/lg     `
+LIST Der/st      = Der/st      ; #!! - `Der/st     `
+LIST Der/vuota   = Der/vuota   ; #!! - `Der/vuota  `
 
-LIST Cmp/Hyph = Cmp/Hyph ;
+#!! ### Error usage tags
 
+#!! We define two lists for `Err/xxx` tags:
 
-LIST <vdic> = <vdic> ;				 #!! <vdic>
+LIST Err/Orth =                  #!! - `Err/Orth`:
+                Err/Orth         #!!≈     - `@CODE@`
+                Err/Orth-a/á     #!!≈     - `@CODE@`
+                Err/Orth-nom/gen #!!≈     - `@CODE@`
+                Err/Orth-nom/acc #!!≈     - `@CODE@`
+                Err/DerSub       #!!≈     - `@CODE@`
+                Err/CmpSub       #!!≈     - `@CODE@`
+                Err/UnspaceCmp   #!!≈     - `@CODE@`
+                Err/HyphSub      #!!≈     - `@CODE@`
+                Err/SpaceCmp     #!!≈     - `@CODE@`
+                Err/Spellrelax   #!!≈     - `@CODE@`
+                err_orth_mt      #!!≈     - `@CODE@`
+                ;
+LIST Err/Orth-spes =                     #!! - `Err/Orth-spes`:
+                     Err/Orth-a/á        #!!≈     - `@CODE@`
+                     Err/Orth-nom/gen    #!!≈     - `@CODE@`
+                     Err/Orth-nom/acc    #!!≈     - `@CODE@`
+                     Err/DerSub          #!!≈     - `@CODE@`
+                     Err/CmpSub          #!!≈     - `@CODE@`
+                     Err/UnspaceCmp      #!!≈     - `@CODE@`
+                     Err/HyphSub         #!!≈     - `@CODE@`
+                     Err/SpaceCmp        #!!≈     - `@CODE@`
+                     Err/Spellrelax      #!!≈     - `@CODE@`
+                     err_orth_a_á_mt     #!!≈     - `@CODE@`
+                     err_orth_nom_acc_mt #!!≈     - `@CODE@`
+                     err_orth_nom_gen_mt #!!≈     - `@CODE@`
+                     ;
 
-LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ;
-LIST Err/Orth-spes = Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_a_á_mt err_orth_nom_acc_mt err_orth_nom_gen_mt  ;
+#!! ### Other tags
+
+LIST Cmp/Hyph = Cmp/Hyph ; #!! - `Cmp/Hyph`
+LIST <vdic> = <vdic> ;     #!! - `<vdic>`
+# Previous doccomment: use backtics to avoid interpretation as html/xml by MR processors
 
 
 #!! ###  Semantic tags
@@ -1086,4 +1118,8 @@ LIST TH-RO-ESS-V = "utnedh" ;
 SUBSTITUTE (V) (V <TH-Acc-Any><RO-Ess-Any>) TARGET TH-RO-ESS-V - Der/PassL - Der/PassS;
     ## Dam åtnam bïjline.
 
- 
+
+LIST TH-COM-A = "væjkele" "sjïehtele" ;
+
+SUBSTITUTE (A) (A <TH-Com-Any>) TARGET TH-COM-A ;
+	## Piere væjkele jïh sjïehtele maanajgujmie.
