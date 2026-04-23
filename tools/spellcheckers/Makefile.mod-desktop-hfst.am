@@ -111,26 +111,30 @@ WORD_REPLACEMENTS=yes
 							.generated/final_strings.txt.default.desktop.hfst
 	$(AM_V_CP)cp -f $< $@
 
-####### *.zhfst file: #######
-# Finally build the zhfst file, and make a copy in a subdir named '3', so that
-# we can test it without installing it (the '3' dir is a voikko requirement):
-sma-x-festschrift.zhfst: index.xml \
-					 errmodel.festschrift.hfst \
-					 $(GT_SPELLER_ACCEPTOR)
-	$(AM_V_at)rm -f $@
-	$(AM_V_at)$(MKDIR_P) build/$@
-	$(AM_V_at)rm -f build/$@/*
-	$(AM_V_at)cp index.xml build/$@/index.xml
-	$(AM_V_at)cp $(GT_SPELLER_ACCEPTOR) build/$@/
-	$(AM_V_at)cp errmodel.festschrift.hfst build/$@/$(GT_ERRMODELS)
-	$(AM_V_ZIP)cd build/$@/ && $(ZIP) $(ZIPFLAGS) ../../$@ *
+# Make the festschrift speller the default one:
+errmodel.default.hfst: .generated/errmodel.festschrift.hfst
+	$(AM_V_CP)cp -f $< $@
 
-####### *-desktop.zhfst file: #######
-# To make life easier for CI (and possibly the build flie maintainters later),
-# create a *-desktop.zhfst file by hard-linking to *.zhfst:
-sma-x-festschrift-desktop.zhfst: sma-x-festschrift.zhfst
-	$(AM_V_GEN)cp -f $< $@
+######## *.zhfst file: #######
+## Finally build the zhfst file, and make a copy in a subdir named '3', so that
+## we can test it without installing it (the '3' dir is a voikko requirement):
+#sma.zhfst: index.xml \
+#					 errmodel.festschrift.hfst \
+#					 $(GT_SPELLER_ACCEPTOR)
+#	$(AM_V_at)rm -f $@
+#	$(AM_V_at)$(MKDIR_P) build/$@
+#	$(AM_V_at)rm -f build/$@/*
+#	$(AM_V_at)cp index.xml build/$@/index.xml
+#	$(AM_V_at)cp $(GT_SPELLER_ACCEPTOR) build/$@/
+#	$(AM_V_at)cp errmodel.festschrift.hfst build/$@/$(GT_ERRMODELS)
+#	$(AM_V_ZIP)cd build/$@/ && $(ZIP) $(ZIPFLAGS) ../../$@ *
 
+######## *-desktop.zhfst file: #######
+## To make life easier for CI (and possibly the build flie maintainters later),
+## create a *-desktop.zhfst file by hard-linking to *.zhfst:
+#sma-x-festschrift-desktop.zhfst: sma-x-festschrift.zhfst
+#	$(AM_V_GEN)cp -f $< $@
+#
 #### END: Local build rules: *.regex ####
 
 # vim: set ft=automake:
