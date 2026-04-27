@@ -9,9 +9,9 @@
 
 !! More usage examples:
 !! ```
-!! $ echo "Juos gorreválggain lea (dárbbašlaš) deavdit gáibádusa boasttu olmmoš, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
-!! $ echo "(gáfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
-!! $ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+!! $ echo "Juos gorrevlggain lea (drbbala) deavdit gibdusa boasttu olmmo, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+!! $ echo "(gfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+!! $ echo "mrffibiillagffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
 !! ```
 
 !! Pmatch documentation:
@@ -48,7 +48,7 @@ Define incondform      Punct|
 !! * Medium Mathematical Space U+205F
 !! * Word joiner U+2060
 Define blank           Whitespace | incondform
-                       | Lst({           ​‌‍  ⁠})
+                       | Lst({         ​‌‍ ⁠})
                        ;
 
 Define nonprintable [ 0:? | inputmark | flags ];
@@ -66,10 +66,10 @@ Define urlword          url                          LC([blank | #]) RC([blank |
 !! We want to give 1) a match, but let 2) be treated specially by hfst-tokenise -a
 Define alphabet "a-z"
                |"A-Z"
-               |Lst({àáâãāăȧäảåǎȁȃąạḁæǽǣèéêẽēĕėëẻěȅȇẹȩęḙḛìíîĩīīĭi̇ïỉǐịįȉȋḭɨòóôõōŏȯöỏőǒȍȏơǫọɵøờớỡởợǭộǿœùúûũūŭüủůűǔȕȗưụṳųṷṵừứữửựʉỳýŷỹȳẏÿỷƴỵɏÀÁÂÃĀĂȦÄẢÅǍȀȂĄẠḀÆǼǢÈÉÊẼĒĔĖËẺĚȄȆẸȨĘḘḚÌÍÎĨĪĪĬİÏỈǏỊĮȈȊḬƗÒÓÔÕŌŎȮÖỎŐǑȌȎƠǪỌƟØỜỚỠỞỢǬỘǾŒÙÚÛŨŪŬÜỦŮŰǓȔȖƯỤṲŲṶṴỪỨỮỬỰɄỲÝŶỸȲẎŸỶƳỴɎšžčđðíŋňŧñńŠŽČĐÐÍŊŇŦÑ})
+               |Lst({āăȧảǎȁȃąạḁǽǣẽēĕėẻěȅȇẹȩęḙḛìĩīīĭi̇ỉǐịįȉȋḭɨõŏȯỏőǒȍȏơǫọɵờớỡởợǭộǿœũūŭủůűǔȕȗưụṳųṷṵừứữửựʉỳŷỹȳẏÿỷƴỵɏĀĂȦẢǍȀȂĄẠḀǼǢẼĒĔĖẺĚȄȆẸȨĘḘḚÌĨĪĪĬİỈǏỊĮȈȊḬƗÕŎȮỎŐǑȌȎƠǪỌƟỜỚỠỞỢǬỘǾŒŨŪŬỦŮŰǓȔȖƯỤṲŲṶṴỪỨỮỬỰɄỲŶỸȲẎŸỶƳỴɎňńŇ})
                !! * select extended latin symbols
                | "0-9"
-               | Lst({_§°†}) !! * select symbols
+               | Lst({_†}) !! * select symbols
                ! Combining diacritics as individual symbols,
                ! to be able to analyse unknown words with
                ! decomposed diacritics. All combining diacritics
@@ -86,7 +86,7 @@ Define alphabet "a-z"
 
 Define alphamiddle {'}|{-}|{:} ; ! Treat foo-bar as one big unknown, but -foo (or bar-) as two tokens
 Define alphaword alphabet+ ( alphamiddle alphabet+ );
-!! TODO: Could use something like this, but built-in's don't include šžđčŋ:
+!! TODO: Could use something like this, but built-in's don't include :
 ! Define MixCase(X) [OptCap(X) | UpCase(X)];
 ! Define alphaword MixCase(alphabet+);
 
