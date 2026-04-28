@@ -1,4 +1,7 @@
-# Dummy, non-sense replace rule to avoid breaking errors in the compilaton.
-# Replace with something useful, but ALWAYS test the resulting error model,
-# both regarding speed and suggestion quality.
- a -> {a}::0 ;
+# Frequent, single-letter errors that can appear multiple times in one word:
+{-} ->   0::2 ,
+{i} -> {ï}::1 ,
+{ï} -> {i}::1 ,
+{ä} -> {æ}::1 ,
+{ø} -> {ö}::1 , 
+{y} -> {ö}::1 ;
