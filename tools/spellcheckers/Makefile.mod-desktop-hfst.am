@@ -112,8 +112,8 @@ WORD_REPLACEMENTS=yes
 	$(AM_V_CP)cp -f $< $@
 
 # Make the festschrift speller the default one:
-errmodel.default.hfst: .generated/errmodel.festschrift.hfst
-	$(AM_V_CP)cp -f $< $@
+#errmodel.default.hfst: .generated/errmodel.festschrift.hfst
+#	$(AM_V_CP)cp -f $< $@
 
 ######## *.zhfst file: #######
 ## Finally build the zhfst file, and make a copy in a subdir named '3', so that
