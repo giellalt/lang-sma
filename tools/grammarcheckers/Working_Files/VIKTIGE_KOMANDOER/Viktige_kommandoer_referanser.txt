@@ -41,3 +41,34 @@ uit-mac-1062:grammarcheckers mka055$ make dev
 Njoktjen 16. b. orre raerieh böötin dutnjien mij lea sovhtine, Gaajhkesh dovnesh symptomigujmie faahketji voejngehtasseinfeksjovnese edtjieh gåetesne årrodh, Almetjehealsoeinstituhte orre, orrestamme raerine tjaala.
 
 cat /Users/mka055/uit-mac-1334:lang-sma lwi001$ cat /Users/lwi001/corpus-sma-orig/news/other_files/nrk-koronavirusinfo.txt | tools/grammarcheckers/modes/trace-smagram9-cg.mode | vislcg3 --trace -g '/Users/lwi001/lang-smj/tools/grammarcheckers/./grammarchecker.cg3' | divvun-suggest -g '/Users/lwi001/lang-smj/tools/grammarcheckers/generator-gramcheck-gt-norm.hfstol' -m '/Users/lwi001/lang-smj/tools/grammarcheckers/errors.xml' -l smj | less -R
+
+
+6+
+--
+,
+645
+
+uit-mac-1062:grammarcheckers mka055$ make dev = lager modes (modes er alle kort-kommandoer, så du slipper alle kommadoene (du slipper å skrive så lang pipe-line) 
+
+
+
+29.04.26: Dagens kommadoer: 
+
+ 578  echo "Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh." | grammarcheckers/modes/trace-smagram-dev.mode | less
+  579  ls
+  580  cd grammarcheckers/
+  581  make dev
+  582  pipx upgrade GiellaLTLexTools 
+  583  make
+  584  echo "Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh." | modes/trace-smagram-dev.mode | less
+  585  make dev
+  586  echo "Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh." | modes/trace-smagram-dev.mode | less
+  587  echo "Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh." | modes/trace-smagram-dev.mode | less -R
+  588  history
+uit-mac-1062:grammarcheckers mka055$ 
+
+
+/Users/mka055/langtech/GitHub/giellalt/lang-sma/tools/grammarcheckers
+uit-mac-1062:grammarcheckers mka055$ 
+
+uit-mac-1062:grammarcheckers mka055$ see grammarchecker.cg3 
