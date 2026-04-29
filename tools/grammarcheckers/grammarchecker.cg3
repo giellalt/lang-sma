@@ -1208,6 +1208,7 @@ SET CCCOMMA = CC OR COMMA ;
 #!! Naming convention &errorclass-errortype-wrong-correct:
 #!! So far only one errorclass: msyn.
 
+LIST &lex-subj_verb-sg3-pl3 = &lex-subj_verb-sg3-pl3 ;
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
 LIST &msyn-adj-pred-attr = &msyn-adj-pred-attr ;
@@ -1266,6 +1267,20 @@ ADD:spell-conservatively (&typo SUGGESTWF) (<spelled>) IF (NEGATE -1 QMARK LINK 
 
 # Add &typo error tag to unkown words that are not corrected by the speller, so that they at least get a blue underline and a message
 ADD:uncorrected-typos (&typo) (?) ;
+
+
+
+	# Idiomatic-Plural Noun Verb. = åejjieh saejriedieh, tjåejjieh plonterdieh, tjåejjieh skorkestieh 
+	# ----------------------------------
+	
+LIST PL-NOUN-WITH-VERB = "tjåejjie" "åejjie" ; 
+LIST PL-VERB-WITH-NOUN = "saejriedidh" "skorkestidh" "plonterdidh" ;
+	
+ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) IF (0 PL-NOUN-WITH-VERB)
+	(1 (V Sg3) + PL-VERB-WITH-NOUN) ;
+	## Aaj hïeteme, tjeapohke saejrede, åejjie saejrede, åedtjie- jïh lïhtsevearhke aaj daamhtaj maahtah damtedh.
+	
+COPY:lex-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &lex-subj_verb-sg3-pl3) ; 
 
 	# Adjective rules
 	# ---------------
