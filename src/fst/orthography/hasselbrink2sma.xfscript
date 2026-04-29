@@ -84,13 +84,13 @@ define paldel ' -> 0 || Cns _ Vow ;
 define ng ŋ -> n g ;
 define sj2s š -> s ;
 define restae ä -> æ ;
-define prefix [..] -> # || [ M i e l 
-                           | g l å e d t 
-			   | h u s ' ]
-			   _ Cns ;
-define finalaa a -> 0 || .#. [Cns* Vow+ Cns+
-             |Cns* Vow+ Cns+ Vow+ Cns+ Vow+ Cns+
-	     |Cns* Vow+ Cns+ Vow+ Cns+ Vow+ Cns+ Vow+ Cns+ Vow+ Cns+] a _ [#|.#.|Cns] ;
+!define prefix [..] -> # || M i e l _ ; ![ M i e l 
+!                           | g l å e d t 
+!			   | h u s '
+!			   ] _ Cns ;
+define aafin2 a -> 0 || .#. Cns* Vow+ Cns+ a _ (Cns) .#. ; 
+define aafin4 a -> 0 || .#. Cns* Vow+ Cns+ Vow+ Cns+ Vow+ Cns+ a _ (Cns) .#. ;
+define aafin6 a -> 0 || .#. Cns* Vow+ Cns+ Vow+ Cns+ Vow+ Cns+ Vow+ Cns+ Vow+ Cns+ a _ (xCns) .#. ;
 echo << Compile... >>
 
 
@@ -133,8 +133,10 @@ read regex [ onepal
 .o. ng
 .o. sj2s
 .o. restae
-.o. prefix
-.o. finalaa
+!.o. prefix
+.o. aafin2
+.o. aafin4
+.o. aafin6
 ] ;
 
 save hasselbrink2sma.hfst
