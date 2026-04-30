@@ -147,7 +147,7 @@ LEXICON ab-dot-cc   !!= * **@CODE@**
 !LEXICON ab-verb-trab  +ABBR+Gram/TAbbr: ab-verb ;
 !LEXICON ab-verb   !!= * __@CODE@__  A lexicon for "gč." and perhaps also other abbreviated verbs.
          ab-nodot-verb ;
-+Use/NG:%. ab-dot-verb   ;
++Use/NG:. ab-dot-verb   ;
 
 
 !LEXICON ab-dot-verb-itrab   +ABBR+Gram/IAbbr:    ab-dot-verb ;
@@ -179,24 +179,24 @@ LEXICON nodot-attr-infl   !!= * **@CODE@**
 LEXICON nodot-nomaccgen-infl   !!= * **@CODE@**
  +Sg+Nom: #     ;
  +Sg+Acc: #     ;
- +Sg+Acc+Err/Orth:%>%:a #     ; !km:a
+ +Sg+Acc+Err/Orth:>%:a #     ; !km:a
  +Sg+Gen: #     ;
           RHyph ;
 
 LEXICON nodot-oblique-infl
-          +Sg+Ill:%>%:se     # ;
-          +Sg+Ine:%>%:sne # ;
-          +Sg+Ela:%>%:ste # ;
-          +Sg+Com:%>%:ine    # ;
-          +Sg+Ess:%>%:ine     # ;
-          +Pl+Nom:%>%:h     # ;
-          +Pl+Gen:%>%:i    # ;
-          +Pl+Acc:%>%:idie    # ;
-          +Pl+Ill:%>%:idie   # ;
-          +Pl+Ine:%>%:inie    # ;
-          +Pl+Ela:%>%:ijstie    # ;
-          +Pl+Com:%>%:ijgujmie # ;
-          +Pl+Com:%>%:ijgyjmie # ;
+          +Sg+Ill:>%:se     # ;
+          +Sg+Ine:>%:sne # ;
+          +Sg+Ela:>%:ste # ;
+          +Sg+Com:>%:ine    # ;
+          +Sg+Ess:>%:ine     # ;
+          +Pl+Nom:>%:h     # ;
+          +Pl+Gen:>%:i    # ;
+          +Pl+Acc:>%:idie    # ;
+          +Pl+Ill:>%:idie   # ;
+          +Pl+Ine:>%:inie    # ;
+          +Pl+Ela:>%:ijstie    # ;
+          +Pl+Com:>%:ijgujmie # ;
+          +Pl+Com:>%:ijgyjmie # ;
 
 LEXICON dot-attrnomaccgen-infl   !!= * **@CODE@**
    dot-nomaccgen-infl ;
@@ -213,7 +213,7 @@ LEXICON dot-nomaccgen-infl   !!= * **@CODE@**
 
 LEXICON DOT   !!= * **@CODE@** - Adds the dot to dotted abbreviations.
 
- +Use/-PMatch:%. # ; ! We need the dot here for regular fsts
+ +Use/-PMatch:. # ; ! We need the dot here for regular fsts
 ! Split the abbr + full stop in two segments, but only when using pmatch:
 < "@P.Pmatch.Loc@" {.} "+CLB":0 "+Use/PMatch":0 > # ;
 ! Make a regular ABBR analysis AND backtrack to find alternative analyses:

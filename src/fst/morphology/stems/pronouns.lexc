@@ -802,9 +802,9 @@ LEXICON naakenlex !!= * @CODE@
 indodd ;
 ! XXX Sjekk desse tre formene. Er det rett?
 ! Ei spesiell attributtform heller enn td. 2x gujmie
-+Pron+Indef+Pl+Ill+Attr:%>%^DISIMPi FINAL1 ; ! mt
-+Pron+Indef+Pl+Ine+Attr:%>%^DISIMPi FINAL1 ; ! mt
-+Pron+Indef+Pl+Ela+Attr:%>%^DISIMPi FINAL1 ; ! mt
++Pron+Indef+Pl+Ill+Attr:%>^DISIMPi FINAL1 ; ! mt
++Pron+Indef+Pl+Ine+Attr:%>^DISIMPi FINAL1 ; ! mt
++Pron+Indef+Pl+Ela+Attr:%>^DISIMPi FINAL1 ; ! mt
 
 
 LEXICON indodd   !!= * @CODE@
@@ -816,24 +816,24 @@ LEXICON indodd   !!= * @CODE@
 +Pron+Indef: indess_odd ;
 
 LEXICON indsg_odd  !!= * @CODE@
-+Nom:e%^DISIMP FINAL1 ;
-+Acc:e%>%^DISIMPm FINAL1 ;
-+Gen:e%>%^DISIMPn FINAL1 ;
++Nom:e^DISIMP FINAL1 ;
++Acc:e%>^DISIMPm FINAL1 ;
++Gen:e%>^DISIMPn FINAL1 ;
 +Ill:%>asse FINAL1 ; !Rule to delete Jesuse%>asse > Jesusasse
 +Ine:%>isnie FINAL1 ;
 +Ela:%>istie FINAL1 ;
 +Com:%>inie FINAL1 ;
 
 LEXICON indpl_odd  !!= * @CODE@
-+Nom:%>%^DISIMPh FINAL1 ;
++Nom:%>^DISIMPh FINAL1 ;
 +Acc:%>idie FINAL1 ;
 +Acc+Err/Orth:%>ide FINAL1 ;
-+Gen:%>%^DISIMPi FINAL1 ;
++Gen:%>^DISIMPi FINAL1 ;
 +Ill:%>idie FINAL1 ;
 +Ill+Err/Orth:%>ide FINAL1 ;
 +Ine:%>inie FINAL1 ;
 +Ela:%>ijstie FINAL1 ;
-+Com:%>%^DISIMPigujmie FINAL1 ;
++Com:%>^DISIMPigujmie FINAL1 ;
 
 LEXICON indess_odd  !!= * @CODE@
 +Ess:%>inie FINAL1 ;

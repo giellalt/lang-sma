@@ -19,6 +19,29 @@
 
 Multichar_Symbols  !!≈ # @CODE@ definitions
 
+!! ## Alphabets
+!! The alphabet used to writing surface word-forms in __UNDEFINED__ language
+!! are:
+a b c d e f g h i ï j k l m n o p q r s t u v w x y z å ö æ !!≈ @CODE@
+A B C D E F G H I Ï J K L M N O P Q R S T U V W X Y Z Å Ö Æ !!≈ @CODE@
+1 2 3 4 5 6 7 8 9 !!= @CODE@
+!! some more non-core alphabets used in loans etc.
+á à â ã ç č đ ð þ é è ë ê í î ł ñ ŋ ó ō ò õ ô š ŧ ú ù ü û ý ž ø ä
+Á À Â Ã Ç Č Đ Ð Þ É È Ë Ê Í Î Ł Ñ Ŋ Ó Ō Ò Õ Ô Š Ŧ Ú Ù Ü Û Ý Ž Ø Ä
+!! These punctuations are always escaped in lexc files:
+%  %# %: %; %! %< %> %% %" %0 !!≈ @CODE@
+!! These are other common punctuation in __UNDEFINED__ language
+- , . | ? … ¿ ¶ ❡ ¬ • ● · · ‒ – — ― − _ = ≈ & ' * + !!≈ @CODE@
+± ` ´ / \ ~ ‐ ° ( ) [ ] { } « » ‹ › “ ” „ ‟ ‘ ’ ‚ ‛ !!≈ @CODE@
+❛ ❜ ❝ ❞ ❟ ❠ ❮ ❯ 〝 〞 〟 § € £ ¥ ® © √ ◊ ♦ ☐ ⚬ № ‰ ¢ !!≈ @CODE@
+¦ ª × ‡ ™ → ■ □ ▲ ► ▼ ★ ☆ ☺ ✓ ❖ !!≈ @CODE@
+¹ ² ³ ½ ¼ ¾ !!≈ @CODE@
+😄 🙂 !!≈ @CODE@
+ ּ  !!≈ @CODE@
+＂ !!≈ @CODE@
+!! And following whitespace and invisible stuff:
+ ­       !!= @CODE@
+
 !! ## Tags for POS (Part-Of-Speech, Word class)
 +N       !!≈ * **@CODE@** = Noun
 +A       !!≈ * **@CODE@** = Adjective
@@ -674,8 +697,8 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
         !! ## Symbols that need to be escaped on the lower side (towards twolc):
  »7     !!≈ * **@CODE@**: Literal »
  «7     !!≈ * **@CODE@**: Literal «
- %[%>%] !!≈ * **@CODE@**: Literal >
- %[%<%] !!≈ * **@CODE@**: Literal <
+ [%>] !!≈ * **@CODE@**: Literal >
+ [%<] !!≈ * **@CODE@**: Literal <
 
 !!
 !! ## Lexeme disambiguation tags
@@ -704,29 +727,29 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 
 !! |                    Trigger | Explanation
 !! |                        --- | ---
-  %^DISIMP        !!≈ |  @CODE@ | diphthong simplification
-  %^COMPDISIMP    !!≈ |  @CODE@ | diphthong simplification in comparatives
-  %^COMPDISIMP2   !!≈ |  @CODE@ | diphthong simplification in comparatives, type 2
-  %^COMPDISIMP3   !!≈ |  @CODE@ | diphthong simplification
-  %^PLCDISIMP     !!≈ |  @CODE@ | diphthong simplification in ACCRA-names
-  %^NOMAGieDISIMP !!≈ |  @CODE@ | diphthong simplification for NomAg ie stems
-  %^1UML          !!≈ |  @CODE@ | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
-  %^2UML          !!≈ |  @CODE@ | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
-  %^3UML          !!≈ |  @CODE@ | adj Umlaut oeh:an
-  %^3sUML         !!≈ |  @CODE@ | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
-  %^3dUML         !!≈ |  @CODE@ | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
-  %^iæUML         !!≈ |  @CODE@ | not used
-  %^iUML          !!≈ |  @CODE@ | i-uml in pret of V-I (båetedh - böötim)
-  %^PASSUML       !!≈ |  @CODE@ | Short passive Umlaut Rx->R5
-  %^didhUML       !!≈ |  @CODE@ | Der/d Umlaut for GUARKEDH-words
-  %^htjidhUML     !!≈ |  @CODE@ | Umlaut für der/htjidh derivations
-  %^adteUML       !!≈ |  @CODE@ | Umlaut für Der/adte and Der/alla derivations
-  %^aLATUS        !!≈ |  @CODE@ | Latus-Umlaut for -ie stems
-  %^uLATUS        !!≈ |  @CODE@ | Latus-Umlaut for -oe stems
-  %^ConsDel       !!≈ |  @CODE@ | Stem consonant deletion in front of Der/PassL
-  %^ILLELA        !!≈ |  @CODE@ | Stem vowel changes in Illative an Elative
-  %^PLGENPLCOM    !!≈ |  @CODE@ | Stem vowel changes in final from e -> i, and withoaut -j-
-  %^COMESS        !!≈ |  @CODE@ | Stem vowel changes in ACCRA-names
+  ^DISIMP        !!≈ |  @CODE@ | diphthong simplification
+  ^COMPDISIMP    !!≈ |  @CODE@ | diphthong simplification in comparatives
+  ^COMPDISIMP2   !!≈ |  @CODE@ | diphthong simplification in comparatives, type 2
+  ^COMPDISIMP3   !!≈ |  @CODE@ | diphthong simplification
+  ^PLCDISIMP     !!≈ |  @CODE@ | diphthong simplification in ACCRA-names
+  ^NOMAGieDISIMP !!≈ |  @CODE@ | diphthong simplification for NomAg ie stems
+  ^1UML          !!≈ |  @CODE@ | a-uml, like 1sg prs, perf.part of båetedh/V-I, and ill sg of -ie nouns
+  ^2UML          !!≈ |  @CODE@ | dark e, as 3sg prs & perf.part of tjearodh/V-II, and ill sg of -oe nouns
+  ^3UML          !!≈ |  @CODE@ | adj Umlaut oeh:an
+  ^3sUML         !!≈ |  @CODE@ | a-uml in 3sg prs of V-IV (roehtedh - ruahta)
+  ^3dUML         !!≈ |  @CODE@ | ie-uml in 1du & 3pl prs of V-IV (roehtedh - ruehtien)
+  ^iæUML         !!≈ |  @CODE@ | not used
+  ^iUML          !!≈ |  @CODE@ | i-uml in pret of V-I (båetedh - böötim)
+  ^PASSUML       !!≈ |  @CODE@ | Short passive Umlaut Rx->R5
+  ^didhUML       !!≈ |  @CODE@ | Der/d Umlaut for GUARKEDH-words
+  ^htjidhUML     !!≈ |  @CODE@ | Umlaut für der/htjidh derivations
+  ^adteUML       !!≈ |  @CODE@ | Umlaut für Der/adte and Der/alla derivations
+  ^aLATUS        !!≈ |  @CODE@ | Latus-Umlaut for -ie stems
+  ^uLATUS        !!≈ |  @CODE@ | Latus-Umlaut for -oe stems
+  ^ConsDel       !!≈ |  @CODE@ | Stem consonant deletion in front of Der/PassL
+  ^ILLELA        !!≈ |  @CODE@ | Stem vowel changes in Illative an Elative
+  ^PLGENPLCOM    !!≈ |  @CODE@ | Stem vowel changes in final from e -> i, and withoaut -j-
+  ^COMESS        !!≈ |  @CODE@ | Stem vowel changes in ACCRA-names
   ∑               !!≈ |  @CODE@ | Symbol used before `#` and `-` in dynamic compounds, and only there. Used to block optional conversion of word boundaries to spaces for error detection in grammar checkers. That is, dynamic compounds are not allowed to be written appart for error detection, only lexicalised ones. This is done to reduce the amound of ambiguity in the raw analyses to an amount we can cope with.
 
 
