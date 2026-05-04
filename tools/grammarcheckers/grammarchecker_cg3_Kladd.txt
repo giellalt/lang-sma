@@ -1,1 +1,29 @@
 grammarchecker.cg3_kladd
+
+Utrede pl-noun: 
+
+	# Idiomatic-Plural Noun Verb. = prælloeh etc. 
+	# ----------------------------------
+	
+LIST PL-NOUN-WITH-VERB = "prælloe" "måvhka" "jåvle" "påaske"; 
+LIST PL-VERB-WITH-NOUN = "tsaekedh" "tseegkedh" "" ;
+	
+ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) IF (0 PL-NOUN-WITH-VERB)
+	(1 (V Sg3) + PL-VERB-WITH-NOUN) ;
+	## Aaj hïeteme, tjeapohke saejrede, åejjie saejrede, åedtjie- jïh lïhtsevearhke aaj daamhtaj maahtah damtedh.
+	
+COPY:lex-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &lex-subj_verb-sg3-pl3) ; 
+
+
+
+## FORSØK på regel for verbet "tseegkedh" 
+	
+# ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (V Sg 3) IF (-1 PL-VERB-WITH-NOUN)
+#	(1 (N Sg) + PL-VERB-WITH-NOUN) ;
+	## Aaj hïeteme, tjeapohke saejrede, åejjie _saejrede_, åedtjie- jïh lïhtsevearhke aaj daamhtaj maahtah damtedh.
+	
+##. COPY:lex-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &lex-subj_verb-sg3-pl3) ;
+
+
+Åejjieh saejriedieh - men tjohpem *åajjan* tseegkedh - Når pl. og når sg? 
+
