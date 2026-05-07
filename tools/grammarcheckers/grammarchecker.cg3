@@ -1292,6 +1292,8 @@ ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (V Sg3) IF (0 PL-VERB-
 	
 COPY:lex-subj_verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3) TARGET (V &lex-subj_verb-sg3-pl3) ; 
 
+ADDRELATION ($2 RIGHT) (N &lex-subj_verb-sg3-pl3) TO (1 (V &lex-subj_verb-sg3-pl3)) ;
+
 
 
 
