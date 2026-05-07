@@ -39,7 +39,7 @@ msyn-agr-other-sg1 = First person singular after 'mun'.
     .desc = The verb-form {$1} follows 'manne', and should probably be first person singular.
 
 msyn-agr-sg3-sg1 = Verb in wrong person
-	.desc = The verbform {$1} is in the third person, here first person seems correct.
+    .desc = The verbform {$1} is in the third person, here first person seems correct.
 
 msyn-agr-other-sg3 = Third person singular after singular subject.
     .desc = The verb-form {$1} refers to a singular subject, and should probably be third person singular.
@@ -60,72 +60,73 @@ msyn-adj-pred-attr = Adjective in attributive form.
     .desc = The adjective {$1} preceeds a noun, and should probably be attributive.
 
 msyn-demphrase-congruence-plcom = Wrong form of demonstrative phrase
-	.desc = In this context, the demonstrative phrase should probably be in plural comitative.
-	
+    .desc = In this context, the demonstrative phrase should probably be in plural comitative.
+    
 msyn-demphrase-congruence-plela = Wrong form of demonstrative phrase
-	.desc = In this context, the demonstrative phrase should probably be in plural elative. 
+    .desc = In this context, the demonstrative phrase should probably be in plural elative. 
 
 msyn-demphrase-congruence-plgen = Wrong form of demonstrative phrase
-	.desc = In this context, the demonstrative phrase should probably be in plural genitive. 
+    .desc = In this context, the demonstrative phrase should probably be in plural genitive. 
 
 msyn-demphrase-congruence-plill = Wrong form of demonstrative phrase
-	.desc =  In this context, the demonstrative phrase should probably be in plural illative.
+    .desc =  In this context, the demonstrative phrase should probably be in plural illative.
 
 msyn-demphrase-congruence-plnom = Wrong form of demonstrative phrase
-	.desc =  In this context, the demonstrative phrase should probably be in plural nominative.
+    .desc =  In this context, the demonstrative phrase should probably be in plural nominative.
 
 msyn-gåabpa-sup-komp =
-	.desc = 
+    .desc = 
 
 msyn-hab-nom-gen = Habitive should be in genitive
-	.desc = In this construction, the owner ({$1}) should be in the genitive, not in the nominative.
+    .desc = In this construction, the owner ({$1}) should be in the genitive, not in the nominative.
 
 msyn-Neg-Pl3-ConNeg = Negation verb needs negative form
-	.desc = Following a negative verb, the main verb {$1) should have the negative form.
+    .desc = Following a negative verb, the main verb {$1} should have the negative form.
 
 msyn-numphrase-congruence-plnom = Plural nouns in numeral phrases
-	.desc = Following a numeral, {$2}, the nouns {$1} should be in the plural nominative.
+    .desc = Following a numeral, {$2}, the nouns {$1} should be in the plural nominative.
 
 msyn-numphrase-congruence-sgacc = Numeral phrase in singular accusative
-	.desc = 
+    .desc = 
 
 msyn-numphrase-congruence-sgcom = Noun in wrong form in numeral phrase
-	.desc =  In this context, the demonstrative phrase should probably be in singular comitative.
+    .desc =  In this context, the demonstrative phrase should probably be in singular comitative.
 
 msyn-numphrase-congruence-sgela = Noun in wrong form in numeral phrase
-	.desc =  In this context, the demonstrative phrase should probably be in singular elative.
+    .desc =  In this context, the demonstrative phrase should probably be in singular elative.
 
 msyn-numphrase-congruence-sggen = Noun in wrong form in numeral phrase
-	.desc =  In this context, the demonstrative phrase should probably be in singular genitive.
+    .desc =  In this context, the demonstrative phrase should probably be in singular genitive.
 
 msyn-numphrase-congruence-sgill = Noun in wrong form in numeral phrase
-	.desc =  In this context, the demonstrative phrase should probably be in singular illative.
+    .desc =  In this context, the demonstrative phrase should probably be in singular illative.
 
 msyn-numphrase-congruence-sgine = Noun in wrong form in numeral phrase
-	.desc =  In this context, the demonstrative phrase should probably be in singular inessive.
+    .desc =  In this context, the demonstrative phrase should probably be in singular inessive.
 
 msyn-po-acc-gen = Postposition phrases in genitive
-	.desc = Preceeding a postposition, here {$2}, the noun {$1} should be in the genitive.
+    .desc = Preceeding a postposition, here {$2}, the noun {$1} should be in the genitive.
 
 syn-delete-adv-phrasal-verb = Delete phrasal verb
-	.desc = xxx
+    .desc = xxx
 
 syn-goh_nom-ess = Goh wants essive
-	.desc = xxx
+    .desc = xxx
 
 syn-phrasal-verb-lexical-verb =
-	.desc = 
+    .desc = 
 
 syn-phrasal-verb-phrasal-verb =
-	.desc = 
+    .desc = 
 
 syn-redun-before-guktie =
-	.desc = 
+    .desc = 
 
 syn-remove-akte =
-	.desc = 
+    .desc = 
 
 syn-wo-verb_advl-advl_verb =
+    .desc = 
 
 
 msyn-Neg-ConNeg-Congr-DuPl = Negation error
