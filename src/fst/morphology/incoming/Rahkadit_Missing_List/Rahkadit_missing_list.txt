@@ -1,0 +1,52 @@
+Ráhkadit missing-listtuid
+
+
+Oppalaš gohččun: <čálihit teavstta terminálii> | <gávdnat sániid maid fst:t eai dovdda> | <gieđahit bohtosiid>
+
+
+
+Molsso smj iežat gillii.
+
+
+Doaibmi geažuslebbejuvvon ovdamearka: echo "her finnes det ikke et kvidder samisk, burde trigge mange missing. Gjentar 'missing', 'kvidder', 'finnes' for å få opp frekvensen" | hfst-tokenise $GTLANGS/lang-smj/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| husmj | grep "?" | cut -f1 | sort -u | rev | sort | rev | sed '/^$/d' | awk '{ print $1 ":" $1 " TODO ;"}' | $GTLANGS/giella-core/devtools/lexc-giella-style.py --align -
+
+Doaibmi frekveansalebbejuvvon ovdamearka: echo "her finnes det ikke et kvidder samisk, burde trigge mange missing. Gjentar 'missing', 'kvidder', 'finnes' for å få opp frekvensen" | hfst-tokenise $GTLANGS/lang-smj/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| husmj | grep "?" | cut -f1 | sort | sed '/^$/d' | uniq -c | sort -nr | awk '{ print $2 ":" $2 " TODO ;"}' | $GTLANGS/giella-core/devtools/lexc-giella-style.py --align -
+
+Čálihit teavstta terminálii
+Čálihit dábálaš fiilla sisdoalu: cat mu-teakstafiila
+Čálihit korpussisdoalu (molssu smj iežat gielain) ccat -l smj -a $GTLANGS/corpus-smj/converted $GTLANGS/corpus-smj-x-closed/converted
+Atnit echo: echo "her finnes det ikke et kvidder samisk, burde trigge mange missing. Gjentar 'missing', 'kvidder', 'finnes' for å få opp frekvensen"
+
+
+Gávdnat sániid maid fst:t eai dovdda
+hfst-tokenise $GTLANGS/lang-smj/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| husmj | grep "?" | cut -f1
+
+lebbe teavstta linnjálaga: hfst-tokenise $GTLANGS/lang-smj/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst
+fst-analiissat: husmj
+oza analiissaid mat leat ápmasat fst:i: grep "?"
+čálit dušše sáni mii lea amas: cut -f1
+
+Gieđahit bohtosiid
+geažuslebbejuvvon missinglist
+Manne geažuslebbejuvvon? Go sánit leat lebbejuvvon gehččosiid bokte, sáhttá lasihit máŋgga sáni oktanaga lexc:i.
+
+sort -u | rev | sort | rev | sed '/^$/d' | awk '{ print $1 ":" $1 " TODO ;"}' | $GTLANGS/giella-core/devtools/lexc-giella-style.py --align - > $GTLANGS/lang-smj/src/fst/morphology/incoming/mu-missing.lexc
+
+sortere bohtosa, unika sánit: sort -u
+jorgal sániid máŋosguvlui: rev
+sortere gehččosiid bokte: sort
+máhcat sáni logahahtti dillái: rev
+váldde eret guorus linnjáid: sed '/^$/d'
+ráhkat lexc mállelinnja: awk '{ print $1 ":" $1 " TODO ;"}'
+lebbes linjjáid vuogas redigerehahtti hápmái: $GTLANGS/giella-core/devtools/lexc-giella-style.py --align -
+bija bohtosa namahuvvon fiilii: > $GTLANGS/lang-smj/src/fst/morphology/incoming/mu-missing.lexc
+
+
+frekveansalebbejuvvon missinglistu
+Manne frekveansalebbejuvvon listu: lasit eanemus geavahuvvon sániid vuos
+
+sort | sed '/^$/d' | uniq -c | sort -nr | awk '{ print $2 ":" $2 " TODO ;"}' | $GTLANGS/giella-core/devtools/lexc-giella-style.py --align - > $GTLANGS/lang-smj/src/fst/morphology/incoming/mu-missing.lexc
+
+sortere sániid, eanemus gávdnosat bajimusas sort | sed '/^$/d' | uniq -c | sort -nr
+ráhkat lexc mállelinnjá: awk '{ print $2 ":" $2 " TODO ;"}
+bija bohtosa namahuvvon fiilii: > $GTLANGS/lang-smj/src/fst/morphology/incoming/mu-missing.lexc
