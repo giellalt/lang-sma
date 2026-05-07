@@ -1273,8 +1273,8 @@ ADD:uncorrected-typos (&typo) (?) ;
 	# Idiomatic-Plural Noun Verb. = åejjieh saejriedieh, tjåejjieh plonterdieh, tjåejjieh skorkestieh 
 	# ----------------------------------
 	
-LIST PL-NOUN-WITH-VERB = "tjåejjie" "åejjie" "måvhkah" "prælloeh" ; 
-LIST PL-VERB-WITH-NOUN = "saejriedidh" "skorkestidh" "plonterdidh" "årrodh" ;
+LIST PL-NOUN-WITH-VERB = "tjåejjie" "åejjie" ; 
+LIST PL-VERB-WITH-NOUN = "saejriedidh" "skorkestidh" "plonterdidh" ;
 	
 ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) IF (0 PL-NOUN-WITH-VERB)
 	(1 (V Sg3) + PL-VERB-WITH-NOUN) ;
@@ -1286,14 +1286,16 @@ COPY:lex-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &lex-subj_
 
 ## FORSØK på regel for verbet "saejriedidh" 
 	
-# ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (V Sg 3) IF (-1 PL-VERB-WITH-NOUN)
-#	(1 (N Sg) + PL-VERB-WITH-NOUN) ;
+ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (V Sg3) IF (0 PL-VERB-WITH-NOUN)
+	(-1 (N Sg &lex-subj_verb-sg3-pl3)) ;
 	## Aaj hïeteme, tjeapohke saejrede, åejjie _saejrede_, åedtjie- jïh lïhtsevearhke aaj daamhtaj maahtah damtedh.
 	
-##. COPY:lex-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &lex-subj_verb-sg3-pl3) ;
+COPY:lex-subj_verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3) TARGET (V &lex-subj_verb-sg3-pl3) ; 
 
 
-# Prøv å skrive for verbet
+
+
+
 
 
 	# Adjective rules
