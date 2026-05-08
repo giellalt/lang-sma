@@ -8,7 +8,7 @@ Oppalaš gohččun: <čálihit teavstta terminálii> | <gávdnat sániid maid fs
 Molsso smj iežat gillii.
 
 
-Doaibmi geažuslebbejuvvon ovdamearka: echo "her finnes det ikke et kvidder samisk, burde trigge mange missing. Gjentar 'missing', 'kvidder', 'finnes' for å få opp frekvensen" | hfst-tokenise $GTLANGS/lang-smj/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| husmj | grep "?" | cut -f1 | sort -u | rev | sort | rev | sed '/^$/d' | awk '{ print $1 ":" $1 " TODO ;"}' | $GTLANGS/giella-core/devtools/lexc-giella-style.py --align -
+Doaibmi geažuslebbejuvvon ovdamearka: echo "her finnes det ikke et kvidder samisk, burde trigge mange missing. Gjentar 'missing', 'kvidder', 'finnes' for å få opp frekvensen" | hfst-tokenise $GTLANGS/lang-sma/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| husma | grep "?" | cut -f1 | sort -u | rev | sort | rev | sed '/^$/d' | awk '{ print $1 ":" $1 " TODO ;"}' | $GTLANGS/giella-core/devtools/lexc-giella-style.py --align -
 
 Doaibmi frekveansalebbejuvvon ovdamearka: echo "her finnes det ikke et kvidder samisk, burde trigge mange missing. Gjentar 'missing', 'kvidder', 'finnes' for å få opp frekvensen" | hfst-tokenise $GTLANGS/lang-smj/tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| husmj | grep "?" | cut -f1 | sort | sed '/^$/d' | uniq -c | sort -nr | awk '{ print $2 ":" $2 " TODO ;"}' | $GTLANGS/giella-core/devtools/lexc-giella-style.py --align -
 
