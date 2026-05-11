@@ -158,6 +158,8 @@ fi
 if [ $transducer_found -eq 0 ]; then
     echo No transducer found
     exit 1
+else
+    printf "%spassed%s" "$green" "$reset"
 fi
 
 # When done, remove the generated data file:
