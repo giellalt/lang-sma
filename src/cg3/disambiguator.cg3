@@ -131,6 +131,7 @@ LIST Ord = Ord ;
 LIST Coll = Coll ;
 LIST ABBR = ABBR ;
 LIST ACR = ACR ;
+LIST Cmp = Cmp ;
 
 LIST Guess = Guess ;
 LIST Subqst = Subqst ;
@@ -1291,7 +1292,7 @@ SELECT:AdvnotA Adv IF (0 A LINK 1 Adv LINK *1 REAL-V BARRIER S-BOUNDARY)(*-1 VFI
 SELECT:dusnieAdv Adv IF (0 ("dusnie") LINK 1 Adv OR EOS OR Prop) ;
 	#$ Dusnie aaj buesjies kraanna Hulda.
 
-SELECT:maajeAdv Adv IF (0 ("maaje") LINK 1 A ) ;
+SELECT:maajeAdv Adv IF (0 ("maaje") LINK 1 A OR Neg OR ("sjïere") ) ;
 
 
 SELECT:meatanAdv Adv IF (0 ("meatan") LINK 1 ("vaeltedh")) ;
@@ -2854,6 +2855,13 @@ LIST SAPMI-N-HEAD =  "gïele" "lidterature" "voestes" "sijjienomme" "tjaalaldahk
 	
 #REMOVE:r1911 Prop IF (0 ("Saemie"))(NEGATE *1 SAPMI-PROP-HEAD BARRIER NOT-NPMOD);
 	# We remove the last Prop-analysis.
+
+
+SET CMP = N + Cmp OR A + Cmp OR V + Cmp ;
+SET NOT-CMP = N - CMP ;
+
+REMOVE:Cmp SUB:1 CMP (0 NOT-CMP) ;
+        #$ Su máttaráhkku lei mearrasápmelaš.
 
 
 # pronouns
