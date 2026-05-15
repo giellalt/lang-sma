@@ -1290,26 +1290,22 @@ LIST PL-NOUN-WITH-VERB = "tjåejjie" "åejjie" ;
 LIST PL-VERB-WITH-NOUN = "saejriedidh" "skorkestidh" "plonterdidh" ;
 
 
-ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) IF (0 $$PL-N-V-ALL)
-	(1 (V Sg3) + $$PL-N-V-ALL) ;
+ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) + &&PL-N-V-ALL IF (1 (V Sg3) + &&PL-N-V-ALL) ;
 
 
 #ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) IF (0 PL-NOUN-WITH-VERB)
 #	(1 (V Sg3) + PL-VERB-WITH-NOUN) ;
-
-	
-ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) IF (0 PL-NOUN-WITH-VERB)
-	(1 (V Sg3) + PL-VERB-WITH-NOUN) ;
 	## Aaj hïeteme, tjeapohke saejrede, åejjie saejrede, åedtjie- jïh lïhtsevearhke aaj daamhtaj maahtah damtedh.
 	## Gaajh guktie daenbien tjåejjie plonterde.
+	## Manne maam joem nåakem byöpmedamme, dannasinie fahketji tjåejjie skorkeste.
 	
 COPY:lex-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &lex-subj_verb-sg3-pl3) ; 
 
 
 
-## FORSØK på regel for verbet "saejriedidh" 
+## Verb regel 
 	
-ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (V Sg3) IF (0 PL-VERB-WITH-NOUN)
+ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (V Sg3) IF (0 PL-N-V-ALL)
 	(-1 (N Sg &lex-subj_verb-sg3-pl3)) ;
 	## Aaj hïeteme, tjeapohke saejrede, åejjie _saejrede_, åedtjie- jïh lïhtsevearhke aaj daamhtaj maahtah damtedh.
 	
