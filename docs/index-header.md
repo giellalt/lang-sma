@@ -7,6 +7,7 @@
 <div class="badges" markdown="1">
 [![Maturity](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fmain%2Fdocs%2Fbadgedata%2Ffst-maturity.json)](https://giellalt.github.io/MaturityClassification.html) <br/>
 ![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fmain%2Fdocs%2Fbadgedata%2Ffst-lemmacount.json) <br/>
+![Naïve coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fmain%2Fdocs%2Fbadgedata%2Ffst-coverage.json) <br/>
 [![Speller suggestion quality](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-sma%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-suggestions.json)](typosreport/) <br/>
 [![License](https://img.shields.io/github/license/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/blob/main/LICENSE) <br/>
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-sma)](https://github.com/giellalt/lang-sma/issues) <br/>
@@ -18,7 +19,7 @@ Center location data taken from [Glottolog](https://glottolog.org/). Area extent
 
 </div>
 
-This page documents the work on the [South Sámi language model](http://github.com/giellalt/lang-sma). 
+This page documents the work on the [South Sámi language model](http://github.com/giellalt/lang-sma).
 It is in use in a wide range of applications.
 
 
@@ -55,7 +56,7 @@ It is in use in a wide range of applications.
 ◊ [yaml   ](https://github.com/giellalt/lang-sma/blob/main/test/src/gt-norm-yamls/)
 
 ### Linguistic documentation
- 
+
 -   **Linguistic description** of South Sami:
     -   [Morphophonology](docu-sma-morphophonology.md),
     -   [Lemma homonymies and variants - tags for indentifying and sorting](lemma.md)
