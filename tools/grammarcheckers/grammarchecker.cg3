@@ -1271,6 +1271,7 @@ ADD:uncorrected-typos (&typo) (?) ;
 #  LIST PL-N-V-8 = "tjohpem åajjan "tseegkedh"  ;
 
 
+
 	# Idiomatic-Plural Noun Verb. = åejjieh saejriedieh, tjåejjieh plonterdieh, tjåejjieh skorkestieh 
 	# ----------------------------------
 	
@@ -1291,7 +1292,7 @@ LIST PL-NOUN-WITH-VERB = "tjåejjie" "åejjie" ;
 LIST PL-VERB-WITH-NOUN = "saejriedidh" "skorkestidh" "plonterdidh" ;
 
 
-ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) + &&PL-N-V-ALL IF (1 (V Sg3) + &&PL-N-V-ALL) ;
+ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) + &&PL-N-V-ALL IF (*1 (V Sg3) + &&PL-N-V-ALL BARRIER (*) - Adv) ;
 
 
 #ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) IF (0 PL-NOUN-WITH-VERB)
@@ -1299,7 +1300,9 @@ ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (N Sg Nom) + &&PL-N-V-
 	## Aaj hïeteme, tjeapohke saejrede, åejjie saejrede, åedtjie- jïh lïhtsevearhke aaj daamhtaj maahtah damtedh.
 	## Gaajh guktie daenbien tjåejjie plonterde.
 	## Manne maam joem nåakem byöpmedamme, dannasinie fahketji tjåejjie skorkeste.
-	
+    ## Dellie hov åejjie dan saejrede jïh biejjien mænngan savtele	
+    ## Jååktan hov åejjie dan saejriedi jïh biejjien mænngan savtele. 
+    
 COPY:lex-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &lex-subj_verb-sg3-pl3) ; 
 
 
@@ -1307,12 +1310,12 @@ COPY:lex-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &lex-subj_
 ## Verb regel 
 	
 ADD:lex-subj_verb-sg3-pl3 (&lex-subj_verb-sg3-pl3) TARGET (V Sg3) IF (0 PL-N-V-ALL)
-	(-1 (N Sg &lex-subj_verb-sg3-pl3)) ;
+	(*-1 (N Sg &lex-subj_verb-sg3-pl3)  BARRIER (*) - Adv) ;
 	## Aaj hïeteme, tjeapohke saejrede, åejjie _saejrede_, åedtjie- jïh lïhtsevearhke aaj daamhtaj maahtah damtedh.
 	
 COPY:lex-subj_verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3) TARGET (V &lex-subj_verb-sg3-pl3) ; 
 
-ADDRELATION ($2 RIGHT) (N &lex-subj_verb-sg3-pl3) TO (1 (V &lex-subj_verb-sg3-pl3)) ;
+ADDRELATION ($2 RIGHT) (N &lex-subj_verb-sg3-pl3) TO (*1 (V &lex-subj_verb-sg3-pl3)) ;
 
 
 
