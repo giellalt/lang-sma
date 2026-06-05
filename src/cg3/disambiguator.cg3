@@ -962,6 +962,9 @@ REMOVE:PlcSur Sem/Plc IF (0 Sem/Sur LINK 0 Acc OR Nom OR Attr LINK -1 Sem/Mal OR
 
 LIST SEL-PROP = "Noerhtelaanth" "Såevmie" ; 
 
+#!! * **PropInsideProp** Selects Prop if capital letter inside clause
+SELECT:PropInside Prop IF (NEGATE *-1 BOS OR (":") BARRIER WORD - Num) ;
+
 
 SELECT:Prop SEL-PROP ;
 SELECT:Prop Prop IF (0 ("Maahte") LINK 0 Adv + Err/Orth) ;
