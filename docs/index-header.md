@@ -40,8 +40,6 @@ It is in use in a wide range of applications.
 -   [Grammar checker](gramcheck/index.md)
 
 
-
-
 ## Documenting the language model
 -   [Oversyn over ulike FST-ar](../lang-sme/KompilereFST.html)
 -   [Oversyn over FST-ar for sørsamisk](KompilereFST.md)
