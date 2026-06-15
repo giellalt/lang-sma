@@ -43,32 +43,27 @@ msyn-agr-other-sg3 = Vïerpe gåalmadinie persovnesne..
     
     
     
-msyn-subj_verb-sg3-pl3 = 
-    .desc = 
+msyn-subj_verb-sg3-pl3 = Låhkoefiejlie
+    .desc = Vïerpe jïh substantijve byöroeh pluraalesne årrodh
     .example-1 = Gaajh guktie daenbien tjåejjie plonterde.
     .example-2 = Manne maam joem nåakem byöpmedamme, dannasinie fahketji tjåejjie skorkeste.
     
 
-msyn-ektine-gen-com = 
-    .desc = 
+msyn-ektine-gen-com = Kasusefiejlie
+    .desc = Datne tjaaleme substantijve genitijvesne, substantijve byöroe komitatijvesne tjåadtjodh.
     .example-1 = dejstie bieliejaepien tjåanghkosne eejhtegi ektine.
     .example-2 = Daate konvensjovne lea tjaalasovveme saemiej ektine.    
 
 
-msyn-sååjhtoe-VFinitt = 
-    .desc = 
+msyn-sååjhtoe-VFinitt = Låhkoefiejlie
+    .desc = Datne lea tjaaleme sååjhtoe gåalmadidnie persovnesne, mohte edtja seamma persovnesne tjåadtjodh goh novmene. 
     .example-1 = Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.  
     
-msyn-aux-vfin-inf = 
-    .desc = 
+msyn-aux-vfin-inf = Syjjehtimmiefiejlie
+    .desc = Datne tjaaleme vïerpem persovnegietjine, mohte viehkievïerpen mænngan edtja infinitijvehammosne årrodh. 
     .example-1 = Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
     .example-2 = Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
     .example-3 = Nimhtie aaj vihkele saemieh maehtieh åadtjoeh gïehtjedimmiejgujmie gïehtelidh.   
-
-msyn-aux-vfin-inf = 
-    .desc = 
-    .example-1 = 
-        
 
 msyn-adj-pred-attr = Adjektijve attribuhtehammosne.
     .desc = Adjektijvehammoe {$1} substantijven uvte tjåådtje, guktie byöroe atribuhtehammosne tjåadtjodh?
@@ -160,36 +155,40 @@ msyn-numphrase-congruence-sgine = båajhtoeh numeraale jallh substantijve !!M
     .desc = {$1} byöroe 
     .example-1 = Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh.
     
-msyn-gåabpa-sup-komp = komparatijve byöroe superlatijve !!M
-    .desc = 
+msyn-gåabpa-sup-komp = Graadesyjjehtimmiefiejlie
+    .desc = Datne tjaaleme superlatijve, gåabpa:n mænngan. Gåabpa:n mænngan byöroe komparatijvesne tjåadtjodh. 
     .example-1 = gåabpa stööremes
         
-msyn-hab-nom-gen = !!M
-    .desc = 
+msyn-hab-nom-gen = Kasusefiejlie
+    .desc = Datne tjaaleme "$1" nominatijvehammosne. Dïhte byöroe genitijvesne årrodh. 
     .example-1 = Gaajhkesh leah reaktah årromesæjjan.
         
-msyn-Neg-Pl3-ConNeg = !!M
-    .desc = 
+msyn-Neg-Pl3-ConNeg = Syjjehtimmiefiejlie
+    .desc = Datne tjaaleme vïerpem gåalmadinie persovnesne. Negasjovnevïerpen mænngan byöroe negasjovnehammosne årrodh. 
     .example-1 = Ij Piere gænnah tjöönieh?
     
-msyn-po-acc-gen =  !!M
-    .desc = 
+msyn-po-acc-gen =  Kasusefiejlie
+    .desc = Datne tjaaleme "$1" akkusativjehammosne. Dïhte byöroe genitijvesne årrodh.  
     .example-1 = Badth gosse naemhtie almetjigujmie gaavnedibie mijakt orre, sinsitniem jïh jïjtse bïjre lïerebe.
         
-syn-delete-adv-phrasal-verb = !!M
-    .desc = 
+syn-delete-adv-phrasal-verb = Ååpsen jïjnje baakoeh
+    .desc = Ih daarpesjh advïerpem "$1", mænngan dam vïerpem. 
+    .example-1 = vaeltieh dejtie bïssedh!
     
-syn-goh_nom-ess = !!M
+syn-goh_nom-ess = Kasusefiejlie
+    .desc = Sliejhtieh "goh", tjaelieh substntijvem essijvesne. 
+    .example-1 = Desnie aaj daerpies gïelem provhkedh goh dïrrege gosse jeatja faagh ööhpehtidh.
+
+syn-phrasal-verb-lexical-verb = Vïerpefiejlie
+    .desc = Bïejh jeatjah vïerpem "€1" jïh vaeltieh advïerpem destie.
+    .example-1 = Maaksoeh tjuerieh våålese båetedh.
+    
+syn-phrasal-verb-phrasal-verb = Vïerpefiejlie
     .desc = 
 
-syn-phrasal-verb-lexical-verb = !!M
-    .desc = 
-    
-syn-phrasal-verb-phrasal-verb = !!M
-    .desc = 
-
-syn-redun-before-guktie =  !!M
-    .desc = 
+syn-redun-before-guktie =  Ååpsen jïjnje baakoeh 
+    .desc = "$1" ij galkh "$2"
+    .example-1 = Nov guktie aaj jïjnjebidie Saepmesne.
     
 syn-remove-akte = !!M
     .desc = 
