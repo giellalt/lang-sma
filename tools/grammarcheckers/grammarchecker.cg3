@@ -2305,6 +2305,7 @@ ADDRELATION (DELETE1) (V &syn-delete-adv-phrasal-verb) TO (*0 (Adv &syn-delete-a
 
 	# Phrasal verbs in Norwegian with a lexical equivalent in South Sámi 2->1
 	# -------------------------------------------------------------------------
+	
 ADD:syn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (Adv) IF (0 DOWN-ADV) (*0  COME-V BARRIER (*) - Pcle) (*0 Nom + Sem/Money OR Sem/Amount);
 ADD:xsyn-phrasal-verb-lexical-verb (&syn-phrasal-verb-lexical-verb) TARGET (V) IF (0 COME-V) (*0 DOWN-ADV BARRIER (*) - Pcle) ;
 	## Maaksoeh tjuerieh våålese båetedh. > Maaksoeh tjuerieh aelpiedovvedh. 
@@ -2362,7 +2363,7 @@ COPY:syn-phrasal-verb-phrasal-verb ("buektedh" SUGGEST) EXCEPT ("vaeltedh" &syn-
 
 COPY:syn-phrasal-verb-phrasal-verb ("åvtese" SUGGEST) EXCEPT ("bæjjese" &syn-phrasal-verb-phrasal-verb) TARGET (Adv &syn-phrasal-verb-phrasal-verb)(NEGATE 0 SUGGEST) ;
 	## Dej jeanatjommes båarasommes maanajgujmie dah geerve almetjh maehtieh {bæjjese vaeltedh} dam maam jiïtje vuejnieh , maanajgujmie dan bïjre soptsestidh jïh dejgujmie digkiedidh.
-	## Ij leah naaken dejstie laavenjassijste buektiehtamme addisjovnine jallh subtraksjovnine , mejtie lea {bæjjese bïejeme} laavenjassh , jallh laavenjassh aktene kontekstesne.
+	## Ij leah naaken dejstie laavenjassijste buektiehtamme addisjovnine jallh subtraksjovnine, mejtie lea {bæjjese bïejeme} laavenjassh, jallh laavenjassh aktene kontekstesne.
 	#$ Manne vaaltam dam bæjjese.
 	# bæjjese vaeltedh = ta opp
 	# bæjjese vaeltedh -> åvtese buektedh
@@ -2385,7 +2386,7 @@ ADD:phrasal-v  (COERROR)  TARGET (*) IF (r:PHRASAL-ADV (&syn-phrasal-verb-phrasa
 ADD:xsyn-redun-before-guktie (&syn-redun-before-guktie) TARGET ("guktie") IF (-1 ("mah") OR ("nov")) ;
 
 ADD:xsyn-redun-before-guktie (&syn-redun-before-guktie) TARGET ("mah") OR ("nov") IF (1 ("guktie")) ;	
-	## ïh daej baakoejgujmie aatskadægan soptsestallemem mij faala buerie guvviem, mah guktie saemieh jïjtjh gïehtjedieh miehtsiem.
+	## Jïh daej baakoejgujmie aatskadægan soptsestallemem mij faala buerie guvviem, mah guktie saemieh jïjtjh gïehtjedieh miehtsiem.
 	## Nov guktie aaj jïjnjebidie Saepmesne.
 	
 ADDRELATION (DELETE1) ("guktie" &syn-redun-before-guktie) TO (-1 &syn-redun-before-guktie) ;
