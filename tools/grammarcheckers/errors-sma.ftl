@@ -40,6 +40,35 @@ msyn-agr-other-sg1 = Vïerpe voestes persovnesne.
 
 msyn-agr-other-sg3 = Vïerpe gåalmadinie persovnesne..
     .desc = Vïerpehammoen {$1} subjektese vuesehte mij lea aktengiertesne. Mejtie buerebe gåalmadinie persovnine?
+    
+    
+    
+msyn-subj_verb-sg3-pl3 = 
+    .desc = 
+    .example-1 = Gaajh guktie daenbien tjåejjie plonterde.
+    .example-2 = Manne maam joem nåakem byöpmedamme, dannasinie fahketji tjåejjie skorkeste.
+    
+
+msyn-ektine-gen-com = 
+    .desc = 
+    .example-1 = dejstie bieliejaepien tjåanghkosne eejhtegi ektine.
+    .example-2 = Daate konvensjovne lea tjaalasovveme saemiej ektine.    
+
+
+msyn-sååjhtoe-VFinitt = 
+    .desc = 
+    .example-1 = Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.  
+    
+msyn-aux-vfin-inf = 
+    .desc = 
+    .example-1 = Munnjien jis daan aejkien sååjhtoe edtjem dle uvre daelie, tjaktje-daelvien aalkoen, åarjese vååles-våårti juhtedh.
+    .example-2 = Mijjieh sïjhtebe jeatjah goh dïhte gie maanam syjhtedh maahta eejhteghmaaksoem åådtje.
+    .example-3 = Nimhtie aaj vihkele saemieh maehtieh åadtjoeh gïehtjedimmiejgujmie gïehtelidh.   
+
+msyn-aux-vfin-inf = 
+    .desc = 
+    .example-1 = 
+        
 
 msyn-adj-pred-attr = Adjektijve attribuhtehammosne.
     .desc = Adjektijvehammoe {$1} substantijven uvte tjåådtje, guktie byöroe atribuhtehammosne tjåadtjodh?
@@ -76,24 +105,36 @@ msyn-NegPrt-lih-congruence = Mïste nyöjhkemisnie
 
 msyn-Neg-VFinitt-ConNeg = Mïste nyöjhkemisnie
     .desc = Hammoe {$1} nyöjhkemevïerpen mænngan byöroe nyöjhkemehammosne årrodh.
+    .example-1 = Ean månnoeh miehtsesne {minnien} lustestallemen vuj haarjanimmien gaavhtan.
     
 msyn-demphrase-congruence-plcom = båajhtoeh demonstratijve jallh substantijve !!M
     .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
-    
+    .example-1 = Gaajhkh nïejtigujmie soptsetim.
+        
 msyn-demphrase-congruence-plela = båajhtoeh demonstratijve jallh substantijve !!M
     .desc = {$1} byöroe elatijve pluralisnie tjåadtjodh.
-    
+    .example-1 = Jienebh dejstie aamhtesidie jeatjahligke buvresne/våarhkosne vöörhkeme, daan åvteste tjuara dejtie åvtelen dængkodh.
+        
 msyn-demphrase-congruence-plgen = båajhtoeh demonstratijve jallh substantijve !!M
     .desc = {$1} byöroe genitijve pluralisnie tjåadtjodh.
-    
+    .example-1 = Gaajhkh dej nåejtiej bïjre.
+        
 msyn-demphrase-congruence-plill = båajhtoeh demonstratijve jallh substantijve !!M
     .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
+    .example-1 = Provresalmetjidie mejtie fuehpesne hijven naemhtie ånnetji raaffalgovvedh jïh gaajhkh åssjalommesidie provren bïjre luejhtedh jïh ussjedidh mannasinie sinsitnine pruvrijægan.
     
+msyn-demphrase-congruence-pline = båajhtoeh demonstratijve jallh substantijve !!M
+    .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
+    .example-1 = Dïhte gaajhkh lehkine mïnni.
+        
 msyn-demphrase-congruence-plnom = båajhtoeh demonstratijve jallh substantijve !!M
     .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
-
+    .example-1 = Daesnie lea jïjnje almetjh.
+    .example-2 = Dïhte audiovisueelle tjåanghkoeh dah leah jienebh enn 7 miljovnh spealadimmietæjmoeh.
+    
 msyn-numphrase-congruence-plnom = båajhtoeh numeraale jallh substantijve !!M
-    .desc = {$1} byöroe 
+    .desc = {$1} byöroe
+    .example-1 = Gærjagåetien tjåanghkosne 20 miljovnh aamhtese gååvnesieh. 
     
 msyn-numphrase-congruence-sgacc = båajhtoeh numeraale jallh substantijve !!M
     .desc = {$1} byöroe 
@@ -106,25 +147,35 @@ msyn-numphrase-congruence-sgela = båajhtoeh numeraale jallh substantijve !!M
     
 msyn-numphrase-congruence-sggen = båajhtoeh numeraale jallh substantijve !!M
     .desc = {$1} byöroe 
-
+    .example-1 = Nasjovnegærjagåetie lea akte staaten reereme. > akten staaten
+    
+msyn-numphrase-congruence-placc = båajhtoeh numeraale jallh substantijve !!M
+    .desc = {$1} byöroe 
+    .example-1 = Gærjagåetie dejtie almetjivåarhkoem vaarjele, eeremes leah Astrid Lindgren, August Strindberg jïh Dag Hammarsköld.
+    
 msyn-numphrase-congruence-sgill = båajhtoeh numeraale jallh substantijve !!M
     .desc = {$1} byöroe 
     
 msyn-numphrase-congruence-sgine = båajhtoeh numeraale jallh substantijve !!M
     .desc = {$1} byöroe 
+    .example-1 = Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh.
     
-msyn-gåabpa-sup-komp =  komparatijve byöroe superlatijve !!M
+msyn-gåabpa-sup-komp = komparatijve byöroe superlatijve !!M
     .desc = 
-    
+    .example-1 = gåabpa stööremes
+        
 msyn-hab-nom-gen = !!M
     .desc = 
-    
+    .example-1 = Gaajhkesh leah reaktah årromesæjjan.
+        
 msyn-Neg-Pl3-ConNeg = !!M
     .desc = 
-
+    .example-1 = Ij Piere gænnah tjöönieh?
+    
 msyn-po-acc-gen =  !!M
     .desc = 
-    
+    .example-1 = Badth gosse naemhtie almetjigujmie gaavnedibie mijakt orre, sinsitniem jïh jïjtse bïjre lïerebe.
+        
 syn-delete-adv-phrasal-verb = !!M
     .desc = 
     
