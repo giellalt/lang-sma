@@ -88,7 +88,16 @@ msyn-Neg-ConNeg-Congr-DuPl = Mïste nyöjhkemisnie preteritummesne
 
 msyn-ConNegPrt-congruence = Mïste nyöjhkemisnie preteritummesne
     .desc = Nyöjhkemehammoe {$1} preteritummesne byöroe seamma persovnen mietie sojjesovvedh goh nyöjhkemevïerpe.
+    .example-1 = Jis ij {lih} dagkere almetjedabtoe, dellie ij limh enne daajreme mejtie almetjidie golvesovvibie.
+    
+msyn-ConNegPrt-lih-congruence = 
+    .desc = 
+    .example-1 = 
 
+msyn-ConNegPrt-congruence = Mïste nyöjhkemisnie preteritummesne
+    .desc = Nyöjhkemehammoe {$1} preteritummesne byöroe seamma persovnen mietie sojjesovvedh goh nyöjhkemevïerpe.
+    .example-1 = 
+        
 msyn-Neg-ConNeg-Congr-SgPl = Mïste nyöjhkemisnie preteritummesne
     .desc = Nyöjhkemevïerpe {$1} preteritummesne byöroe seamma persovnen mietie sojjesovvedh goh nyöjhkemehammoe.
 
