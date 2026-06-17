@@ -1319,13 +1319,15 @@ ADDRELATION ($2 RIGHT) (N &msyn-subj_verb-sg3-pl3) TO (*1 (V &msyn-subj_verb-sg3
 
 	# Idiomatic saemien soptsestimmie > saemiestidh
 	# ---------------------------------------------
-
-
-
+	
+ADD:lex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (-1 ("saemien" A Attr) OR ("saemie" N Sg Gen)) ; 
 	## Fjellström lij gïelem dotkedh jïh aaj man vihkeles daejtie baakoe, baakojde lea saemien soptsestimmie gïelese.
 
 
+ADD:lex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) OR ("saemie" N Sg Gen) IF  (1 (&lex-saemiestidh)) ; 
 
+
+COPY:lex-saemiestidh ("saemiestidh" IV) EXCEPT  ("soptsestidh" TV) TARGET ("soptsestidh" &lex-saemiestidh) ;
 
 	# Adjective rules
 	# ---------------
