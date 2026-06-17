@@ -4,10 +4,12 @@
 ## Default patterns: re:real-.*
 spelling-error = Båajhtode tjaalasovveme?
     .desc = {$1}-baakoe vååjnoe båajhtode tjaalasovveme.
+    .example-1 = 
 
 ## Default patterns: id:default
 spelling-error = Båajhtode tjaalasovveme?
     .desc = {$1}-baakoe vååjnoe båajhtode tjaalasovveme.
+    .example-1 = 
 
 punct-aistton = Båajhtoeh jiehtegevæhta?
     .desc = Jiehtegevæhta ij leah saemien maallen mietie
@@ -19,30 +21,35 @@ guillemets = Båajhtoeh jiehtegevæhta?
 
 typo = "$1"-baakoe båajhtode tjaalasovveme
     .desc = {$1}-baakoe vååjnoe båajhtode tjaalasovveme.
+    .example-1 = 
 
 double-space-before = Göökte væhtagaskeh "$1"-baakoen uvte
     .desc = Göökte væhtagaskeh {$2} jïh {$1}-baakoej gaskem
+    .example-1 = 
 
 space-after-paren-beg = Væhtagaske gårroehpaaranteesen minngesne
     .desc = Væhtagaske gårroehparanteesen minngesne
+    .example-1 = 
 
 space-before-paren-end = Væhtagaske åelkiespaaranteesen uvte
     .desc = Væhtagaske åelkiesparanteesen uvte
+    .example-1 = 
 
 space-before-punct-mark = Væhtagaske tjaelemevæhtan uvte
     .desc = Væhtagaske tjaelemevæhtan uvte
+    .example-1 = 
 
 no-space-after-punct-mark = Væhtagaske fååtese
     .desc = Ij naan væhtagaske {$1}-væhtan minngesne
+    .example-1 = 
 
 msyn-agr-other-sg1 = Vïerpe voestes persovnesne.
     .desc = Vïerpehammoen lea {$1} 'manne'-baakoen minngesne. Mejtie voestes persovne buerebe?
 
 msyn-agr-other-sg3 = Vïerpe gåalmadinie persovnesne..
     .desc = Vïerpehammoen {$1} subjektese vuesehte mij lea aktengiertesne. Mejtie buerebe gåalmadinie persovnine?
-    
-    
-    
+    .example-1 = 
+
 msyn-subj_verb-sg3-pl3 = Låhkoefiejlie
     .desc = Vïerpe jïh substantijve byöroeh pluraalesne årrodh
     .example-1 = Gaajh guktie daenbien tjåejjie plonterde.
@@ -67,18 +74,23 @@ msyn-aux-vfin-inf = Syjjehtimmiefiejlie
 
 msyn-adj-pred-attr = Adjektijve attribuhtehammosne.
     .desc = Adjektijvehammoe {$1} substantijven uvte tjåådtje, guktie byöroe atribuhtehammosne tjåadtjodh?
+    .example-1 = 
 
 msyn-adj-attr-pred = Adjektijve predikatijvehammosne.
     .desc = Adjektijvehammoe {$1} ij substantijven uvte tjåadtjoeh, guktie byöroe predikatijvehammosne tjåadtjodh?
+    .example-1 = 
 
 msyn-adj-attr-predpl = Adjektijve pluraale predikatijvehammosne.
     .desc = Adjektijvehammoe {$1} ij substantijven uvte tjåadtjoeh, guktie byöroe pluraale predikatijvehammosne tjåadtjodh?
+    .example-1 = 
 
 msyn-adj-attr-ess = Adjektijve predikatijve essijvehammosne.
     .desc = Adjektijvehammoe {$1} ij substantijven uvte tjåadtjoeh, guktie byöroe predikatijve essijvehammosne tjåadtjodh?
-    
+    .example-1 = 
+
 msyn-adj-attr-ine = Adjektijve predikatijve inessijvehammosne.
     .desc = Adjektijvehammoe {$1} ij substantijven uvte tjåadtjoeh, guktie byöroe predikatijve inessijvehammosne tjåadtjodh?
+    .example-1 = 
 
 msyn-adj-attr-adv = Adjektijve byöroe advïerpine årrodh?
     .desc = {$1} lea adjektivehammoe, mohte byöroe advïerpine årrodh.
@@ -97,15 +109,18 @@ msyn-ConNegPrt-lih-congruence =
 msyn-ConNegPrt-congruence = Mïste nyöjhkemisnie preteritummesne
     .desc = Nyöjhkemehammoe {$1} preteritummesne byöroe seamma persovnen mietie sojjesovvedh goh nyöjhkemevïerpe.
     .example-1 = 
-        
+
 msyn-Neg-ConNeg-Congr-SgPl = Mïste nyöjhkemisnie preteritummesne
     .desc = Nyöjhkemevïerpe {$1} preteritummesne byöroe seamma persovnen mietie sojjesovvedh goh nyöjhkemehammoe.
+    .example-1 = 
 
 msyn-Neg-Prs-Prt = Mïste nyöjhkemisnie preteritummesne
     .desc = Nyöjhkemevïerpe {$1} lea presenisnie mohte byöroe preteritumesne tjåadtjodh.
+    .example-1 = 
 
 msyn-NegPrt-lih-congruence = Mïste nyöjhkemisnie
     .desc = Nyöjhkemevïerpe {$1} lea båajhtode.
+    .example-1 = 
 
 msyn-Neg-VFinitt-ConNeg = Mïste nyöjhkemisnie
     .desc = Hammoe {$1} nyöjhkemevïerpen mænngan byöroe nyöjhkemehammosne årrodh.
@@ -194,23 +209,36 @@ syn-phrasal-verb-lexical-verb = Vïerpefiejlie
     
 syn-phrasal-verb-phrasal-verb = Vïerpefiejlie
     .desc = 
+    .example-1 = 
+
 
 syn-redun-before-guktie =  Ååpsen jïjnje baakoeh 
     .desc = "$1" ij galkh "$2"
     .example-1 = Nov guktie aaj jïjnjebidie Saepmesne.
     
+lex-saemiestidh = !!M
+    .desc = 
+    .example-1 = Fjellström lij gïelem dotkedh jïh aaj man vihkeles daejtie baakoe, baakojde lea saemien soptsestimmie gïelese.
+    
 syn-remove-akte = !!M
     .desc = 
-    
+    .example-1 = 
+
 syn-wo-verb_advl-advl_verb = !!M
     .desc = 
-    
+    .example-1 = 
+
 msyn-pass-active = 
     .desc = Hammoe {$1}
+    .example-1 = 
+
 
 msyn-number_congruence-subj-copula-hab = 
     .desc = Hammoe {$1}
+    .example-1 = 
+
 
 ellipsis = Ellipse
     .desc = Du har brukt 3 punktum. Her ville det ha passa med ellipse, "…".
+    .example-1 = 
 
