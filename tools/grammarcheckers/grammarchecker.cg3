@@ -1306,7 +1306,6 @@ ADD:msyn-subj_verb-sg3-pl3 (&msyn-subj_verb-sg3-pl3) TARGET (N Sg Nom) + &&PL-N-
 COPY:msyn-subj_verb-sg3-pl3 (Pl SUGGEST) EXCEPT (Sg) AFTER N TARGET (N &msyn-subj_verb-sg3-pl3) ; 
 
 
-
 ## Verb regel 
 	
 ADD:msyn-subj_verb-sg3-pl3 (&msyn-subj_verb-sg3-pl3) TARGET (V Sg3) IF (0 PL-N-V-ALL)
@@ -1318,7 +1317,12 @@ COPY:msyn-subj_verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3) TARGET (V &msyn-subj_verb
 ADDRELATION ($2 RIGHT) (N &msyn-subj_verb-sg3-pl3) TO (*1 (V &msyn-subj_verb-sg3-pl3)) ;
 
 
+	# Idiomatic saemien soptsestimmie > saemiestidh
+	# ---------------------------------------------
 
+
+
+	## Fjellström lij gïelem dotkedh jïh aaj man vihkeles daejtie baakoe, baakojde lea saemien soptsestimmie gïelese.
 
 
 
@@ -2378,6 +2382,7 @@ LIST PHRASAL-V = PHRASAL-V ;
 ADDRELATIONS (PHRASAL-V) (PHRASAL-ADV) &syn-phrasal-verb-phrasal-verb TO (*0 Adv BARRIER (*) - Pcle) ;
 
 ADD:phrasal-v  (COERROR)  TARGET (*) IF (r:PHRASAL-ADV (&syn-phrasal-verb-phrasal-verb));
+
 
 
 	# redundant words
