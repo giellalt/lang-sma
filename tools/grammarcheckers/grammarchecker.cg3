@@ -1328,9 +1328,9 @@ ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (-1 ("saemien"
 ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) OR ("saemie" N Sg Gen) IF  (1 (&lex-saemiestidh)) ; 
 
 
-COPY:lex-saemiestidh ("saemiestidh" IV) EXCEPT ("soptsestidh" TV) TARGET ("soptsestidh" V &lex-saemiestidh) ;
+COPY:lex-saemiestidh ("saemiestidh" IV SUGGEST) EXCEPT ("soptsestidh" TV) AFTER V TARGET ("soptsestidh" V &lex-saemiestidh) ;
 
-COPY:lex-saemiestidh ("saemiestidh" IV) EXCEPT ("soptsestidh" TV) AFTER Ex/V TARGET ("soptsestidh" Ex/V &lex-saemiestidh) ;
+COPY:lex-saemiestidh ("saemiestidh" IV SUGGEST) EXCEPT ("soptsestidh" TV) AFTER Ex/V TARGET ("soptsestidh" Ex/V &lex-saemiestidh) ;
 
 ADDRELATION (DELETE) ("soptsestidh" &lex-saemiestidh) TO (-1 &lex-saemiestidh);
 
