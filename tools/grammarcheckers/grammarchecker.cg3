@@ -1208,6 +1208,7 @@ SET CCCOMMA = CC OR COMMA ;
 #!! Naming convention &errorclass-errortype-wrong-correct:
 #!! So far only one errorclass: msyn.
 
+LIST &lex-saemiestidh = &lex-saemiestidh ;
 LIST &msyn-subj_verb-sg3-pl3 = &msyn-subj_verb-sg3-pl3 ;
 LIST &msyn-agr-other-sg1 = &msyn-agr-other-sg1 ;
 LIST &msyn-agr-sg3-sg1 = &msyn-agr-sg3-sg1 ;
@@ -1320,14 +1321,18 @@ ADDRELATION ($2 RIGHT) (N &msyn-subj_verb-sg3-pl3) TO (*1 (V &msyn-subj_verb-sg3
 	# Idiomatic saemien soptsestimmie > saemiestidh
 	# ---------------------------------------------
 	
-ADD:lex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (-1 ("saemien" A Attr) OR ("saemie" N Sg Gen)) ; 
+ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (-1 ("saemien" A Attr) OR ("saemie" N Sg Gen)) ; 
 	## Fjellström lij gïelem dotkedh jïh aaj man vihkeles daejtie baakoe, baakojde lea saemien soptsestimmie gïelese.
 
 
-ADD:lex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) OR ("saemie" N Sg Gen) IF  (1 (&lex-saemiestidh)) ; 
+ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) OR ("saemie" N Sg Gen) IF  (1 (&lex-saemiestidh)) ; 
 
 
-COPY:lex-saemiestidh ("saemiestidh" IV) EXCEPT  ("soptsestidh" TV) TARGET ("soptsestidh" &lex-saemiestidh) ;
+COPY:lex-saemiestidh ("saemiestidh" IV) EXCEPT ("soptsestidh" TV) TARGET ("soptsestidh" V &lex-saemiestidh) ;
+
+COPY:lex-saemiestidh ("saemiestidh" IV) EXCEPT ("soptsestidh" TV) AFTER Ex/V TARGET ("soptsestidh" Ex/V &lex-saemiestidh) ;
+
+ADDRELATION (DELETE) ("soptsestidh" &lex-saemiestidh) TO (-1 &lex-saemiestidh);
 
 	# Adjective rules
 	# ---------------
