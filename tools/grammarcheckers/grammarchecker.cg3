@@ -1321,18 +1321,20 @@ ADDRELATION ($2 RIGHT) (N &msyn-subj_verb-sg3-pl3) TO (*1 (V &msyn-subj_verb-sg3
 	# Idiomatic saemien soptsestimmie > saemiestidh
 	# ---------------------------------------------
 	
-ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (-1 ("saemien" A Attr) OR ("saemie" N Sg Gen)) ; 
+ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (*-1 ("saemien" A Attr) OR ("saemie" N Sg Gen) BARRIER (*) - Adv - (N Ine)  ) ; 
 	## Fjellström lij gïelem dotkedh jïh aaj man vihkeles daejtie baakoe, baakojde lea saemien soptsestimmie gïelese.
+    ## Tjoerh jïjtje saemien gåetesne soptsestidh jallh soptsestamme, jallh guhte dov eejtegistie gåetesne saemien soptseste jalh soptsestamme, jallh guhte dov aahkijste jallh aajijste gåetesne saemien soptseste jallh soptsestamme.
 
-
-ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) OR ("saemie" N Sg Gen) IF  (1 (&lex-saemiestidh)) ; 
-
+ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) OR ("saemie" N Sg Gen) IF  (*1 (&lex-saemiestidh) BARRIER (*) - Adv - (N Ine)) ; 
 
 COPY:lex-saemiestidh ("saemiestidh" IV SUGGEST) EXCEPT ("soptsestidh" TV) AFTER V TARGET ("soptsestidh" V &lex-saemiestidh) ;
 
 COPY:lex-saemiestidh ("saemiestidh" IV SUGGEST) EXCEPT ("soptsestidh" TV) AFTER Ex/V TARGET ("soptsestidh" Ex/V &lex-saemiestidh) ;
 
-ADDRELATION (DELETE) ("soptsestidh" &lex-saemiestidh) TO (-1 &lex-saemiestidh);
+ADDRELATION (DELETE) ("soptsestidh" &lex-saemiestidh) TO (*-1 &lex-saemiestidh BARRIER (*) - Adv - (N Ine) ) ;
+
+
+
 
 	# Adjective rules
 	# ---------------
