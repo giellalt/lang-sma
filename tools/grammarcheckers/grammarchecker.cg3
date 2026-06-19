@@ -1544,6 +1544,13 @@ ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron
 COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBER TARGET (&msyn-hab-nom-gen);
 	## {Gaajhkesh}£{infl,pron,nom-gen|Gaajhkesi} leah reaktah årromesæjjan.
 	
+	#  Utnedh -> gen lea(h) nom
+	#  -----------------------------  
+	
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") IF (-1 (N Acc) LINK -1 (Pers Nom)) ; 
+
+## Dah dam vuarjasjieh jis [datne reaktam åtnah] maaksovem åadtjoeh jallh ij dam åadtjoeh, dan gaavhtan jis lij nuepie idtji skaarem sjïdth jallh jis idtji gåaredh.  
+	
 	# Finite vs. non-finite verbs
 	# ============================
 
