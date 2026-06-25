@@ -15,6 +15,8 @@ TESTS=\
 	candidates-msyn-agr-other-sg1-PASS.yaml \
 	candidates-msyn-pass-active-PASS.yaml \
 	Kongr_Subject_Verbal-PASS.yaml \
+	lex-saemiestidh-PASS.yaml \
+	lex-subj_verb-sg3-pl3-PASS.yaml \
 	msyn_KasusValens-PASS.yaml \
 	msyn_Negation_Pret-PASS.yaml \
 	msyn_pass_lgidh_sidh_Ack_Nom-PASS.yaml \
@@ -26,6 +28,7 @@ TESTS=\
 	msyn-agr-other-sg1-PASS.yaml \
 	msyn-aux-vfin-inf-PASS.yaml \
 	msyn-numphrase-congruence-plnom-PASS.yaml \
+	msyn-numphrase-congruence-sggen-PASS.yaml \
 	syn-delete-adv-phrasal-verb-PASS.yaml \
 	various-PASS.yaml
 
