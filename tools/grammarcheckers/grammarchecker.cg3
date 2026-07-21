@@ -2155,8 +2155,8 @@ COPY:syn-number_congruence-subj-verb-sg2-pl3 (Pl3 SUGGEST) EXCEPT (Sg2 &syn-numb
 	
 LIST JIEHTEDH = "boejhkelidh" "buerkiestidh" "bæjhkoehtidh" "föörhkedidh" "gæljadidh" "gæljodh" "jiehtedh" "praahkedh" "stilledh" "tjaalasovvedh" "tjåarvodh" "onterdidh" "ussjedidh" "vaestiedidh" ;
 
-ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) - <spelled> BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 (N Sg)); 
-
+ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) - <spelled> BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 (N Sg))(NEGATE 0 TV LINK *-1 (Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK *-1 (N Sg Nom) BARRIER NOT-NPMODADV)(NEGATE 0 TV LINK *-1 (Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK -1 CC LINK -1 (V Sg3)); 
+	#$ Saemiedigkie bïevnesh åådtje jïh raerieh vadta Nöörjen rååresjimmiedelegasjovnese, jïh lea meatan delegasjovnesne gosse daerpies, jïh gosse mijjieh barkoefaamoem utnebe reeremisnie.
 
 ADD:syn-number_congruence-subj-verb-sg3-pl3 (&syn-number_congruence-subj-verb-sg3-pl3) TARGET (V Ind Prs Sg3) IF (*1 (Pron Pers Pl3 Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR ("dle") LINK NEGATE 0 (N Sg Nom) OR <spelled>)(NEGATE *-1 (Pron Pers Sg3) BARRIER NOT-ADV-PCLE)(NEGATE 0 (N Sg)); 
 
