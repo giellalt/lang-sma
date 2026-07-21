@@ -1242,6 +1242,7 @@ LIST &syn-phrasal-verb-lexical-verb = &syn-phrasal-verb-lexical-verb ;
 LIST &msyn-po-acc-gen = &msyn-po-acc-gen ;
 LIST &syn-redun-before-guktie = &syn-redun-before-guktie ;
 LIST &syn-goh_nom-ess = &syn-goh_nom-ess ;
+LIST &syn-utnedh-gen-lea = &syn-utnedh-gen-lea ; 
 LIST &syn-wo-verb_advl-advl_verb = &syn-wo-verb_advl-advl_verb ;
 
 LIST SUGGEST = SUGGEST ;
@@ -1547,7 +1548,23 @@ COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBER
 	#  Utnedh -> gen lea(h) nom
 	#  -----------------------------  
 	
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") IF (-1 (N Acc) LINK -1 (Pers Nom)) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF (-1 (N Acc) LINK -1 (Pers Nom) + $$ALL-PERS) ; 
+
+
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) IF (1 (N Acc) LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
+
+
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
+
+## ADDRELATION gjør at "datne reaktam åtnah" er på samme linje i rødt" Gjør dette til EN regel
+ADDRELATION ($2 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (*-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
+
+## 
+COPY:xsyn-utnedh-gen-lea (Gen SUGGEST) EXCEPT (Nom) TARGET (Pers Nom &syn-utnedh-gen-lea) ; 
+
+COPY:xsyn-utnedh-gen-lea (Nom SUGGEST) EXCEPT (Acc) TARGET (N Acc &syn-utnedh-gen-lea) ; 
+
+COPY:xsyn-utnedh-gen-lea ("lea" V IV  SUGGEST) EXCEPT ("utnedh" V TV) BEFORE Ind TARGET ("utnedh" &syn-utnedh-gen-lea) ; 
 
 ## Dah dam vuarjasjieh jis [datne reaktam åtnah] maaksovem åadtjoeh jallh ij dam åadtjoeh, dan gaavhtan jis lij nuepie idtji skaarem sjïdth jallh jis idtji gåaredh.  
 	
