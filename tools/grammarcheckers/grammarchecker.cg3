@@ -1964,7 +1964,7 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3-
 	
 	# ij as Adverb + leam
 
-ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1) (*-1 NEG-V + Neg + Sg3 - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc LINK 0 Prs OR Prt) ;
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1) (*-1 NEG-V + Neg + Sg3 - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc LINK 0 Prs OR Prt) (NEGATE 0 <spelled> LINK 1 ConNeg);
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) ;
 	## Ij leam desnie.
