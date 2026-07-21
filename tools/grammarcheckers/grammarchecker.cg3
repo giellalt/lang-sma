@@ -1557,7 +1557,9 @@ ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) IF (1 (N Acc) LI
 ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
 
 ## ADDRELATION gjør at "datne reaktam åtnah" er på samme linje i rødt" Gjør dette til EN regel
-ADDRELATION ($2 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (*-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
+
+ADDRELATION ($2 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (-1 (N Acc &syn-utnedh-gen-lea)) ; 
+ADDRELATION ($3 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (-1 (N Acc) LINK *-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
 
 ## 
 COPY:xsyn-utnedh-gen-lea (Gen SUGGEST) EXCEPT (Nom) TARGET (Pers Nom &syn-utnedh-gen-lea) ; 
