@@ -1534,41 +1534,6 @@ COPY:msyn-po-acc-gen (Gen SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER O
 	## Gosse ussjedibie ööhpehtimmien bïjre {dejtie skyllijemaanide}£{noun,case,placc-plgen|dej skyllijemaanaj bïjre ussjedibie.
 	## Badth gosse naemhtie almetjigujmie gaavnedibie mijakt orre, sinsitniem jïh jïjtse bïjre lïerebe. > sinsitninen jïh jïjtse bïjre lïerebe. 
 	
-
-	# Habitive constructions
-	# -----------------------		
-ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Pl3) LINK 1 (N Pl Nom) - <spelled> - Err/Spellrelax OR (Pron Pl Nom))(NEGATE -1 (V <TH-FS>));
-
-ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Sg3) LINK 1 (N Sg Nom) - <spelled> - Err/Spellrelax OR (Pron Sg Nom) LINK NOT 0 Adv)(NEGATE -1 (V <TH-FS>));	
-
-
-COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBER TARGET (&msyn-hab-nom-gen);
-	## {Gaajhkesh}£{infl,pron,nom-gen|Gaajhkesi} leah reaktah årromesæjjan.
-	
-	#  Utnedh -> gen lea(h) nom
-	#  -----------------------------  
-	
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF (-1 (N Acc) LINK -1 (Pers Nom) + $$ALL-PERS) ; 
-
-
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) IF (1 (N Acc) LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
-
-
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
-
-## ADDRELATION gjør at "datne reaktam åtnah" er på samme linje i rødt" Gjør dette til EN regel
-
-ADDRELATION ($2 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (-1 (N Acc &syn-utnedh-gen-lea)) ; 
-ADDRELATION ($3 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (-1 (N Acc) LINK *-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
-
-## 
-COPY:xsyn-utnedh-gen-lea (Gen SUGGEST) EXCEPT (Nom) TARGET (Pers Nom &syn-utnedh-gen-lea) ; 
-
-COPY:xsyn-utnedh-gen-lea (Nom SUGGEST) EXCEPT (Acc) TARGET (N Acc &syn-utnedh-gen-lea) ; 
-
-COPY:xsyn-utnedh-gen-lea ("lea" V IV  SUGGEST) EXCEPT ("utnedh" V TV) BEFORE Ind TARGET ("utnedh" &syn-utnedh-gen-lea) ; 
-
-## Dah dam vuarjasjieh jis [datne reaktam åtnah] maaksovem åadtjoeh jallh ij dam åadtjoeh, dan gaavhtan jis lij nuepie idtji skaarem sjïdth jallh jis idtji gåaredh.  
 	
 	# Finite vs. non-finite verbs
 	# ============================
@@ -1632,6 +1597,41 @@ COPY:msyn-aux-vfin-inf (Inf SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-aux-vfin-inf) OR 
 #
 #COPY:msyn-aux-inf-pl3 (Inf SUGGEST) EXCEPT (Ind Prs Sg3 &msyn-aux-inf-pl3) OR (Ind Prt Sg3 &msyn-aux-inf-pl3)  TARGET (&msyn-aux-inf-pl3) ;
 #	## Mijjieh {sijhtebe}${verb,ascii|sïjhtebe} jeatjah goh {dihte}${dem,ascii|dïhte} gie {maanan}£{infl,noun,sggen-sgacc|maanam} syjhtedh maahta {eejteghmaaksoem}${noun,con|eejhteghmaaksoem} {åådtje}£{inf-after-aux,infl,verb,prssg3-inf|åadtjodh}.
+
+	# Habitive constructions
+	# -----------------------		
+ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Pl3) LINK 1 (N Pl Nom) - <spelled> - Err/Spellrelax OR (Pron Pl Nom))(NEGATE -1 (V <TH-FS>));
+
+ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Sg3) LINK 1 (N Sg Nom) - <spelled> - Err/Spellrelax OR (Pron Sg Nom) LINK NOT 0 Adv)(NEGATE -1 (V <TH-FS>));	
+
+
+COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &mmsyn-hab-nom-gen) AFTER NUMBER TARGET (&msyn-hab-nom-gen);
+	## {Gaajhkesh}£{infl,pron,nom-gen|Gaajhkesi} leah reaktah årromesæjjan.
+	
+	#  Utnedh -> gen lea(h) nom
+	#  -----------------------------  
+	
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF (-1 (N Acc) LINK -1 (Pers Nom) + $$ALL-PERS) ; 
+
+
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) IF (1 (N Acc) LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
+
+
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
+
+## ADDRELATION gjør at "datne reaktam åtnah" er på samme linje i rødt" Gjør dette til EN regel
+
+ADDRELATION ($2 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (-1 (N Acc &syn-utnedh-gen-lea)) ; 
+ADDRELATION ($3 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (-1 (N Acc) LINK *-1 (Pers Nom &syn-utnedh-gen-lea)) ; 
+
+## 
+COPY:xsyn-utnedh-gen-lea (Gen SUGGEST) EXCEPT (Nom) TARGET (Pers Nom &syn-utnedh-gen-lea) ; 
+
+COPY:xsyn-utnedh-gen-lea (Nom SUGGEST) EXCEPT (Acc) TARGET (N Acc &syn-utnedh-gen-lea) ; 
+
+COPY:xsyn-utnedh-gen-lea ("lea" V IV  SUGGEST) EXCEPT ("utnedh" V TV) BEFORE Ind TARGET ("utnedh" &syn-utnedh-gen-lea) ; 
+
+## Dah dam vuarjasjieh jis [datne reaktam åtnah] maaksovem åadtjoeh jallh ij dam åadtjoeh, dan gaavhtan jis lij nuepie idtji skaarem sjïdth jallh jis idtji gåaredh.  
 	
 	# Numphrase
 	# =========
@@ -1829,7 +1829,7 @@ ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (P
 
 ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (*-1 (Pron Dem &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) (1 (N Sg Acc));
 
-ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (N Sg Acc) OR (N Sg Nom) IF (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr);
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (N Sg Acc) OR (N Sg Nom) IF (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr)(NEGATE 0 &syn-utnedh-gen-lea);
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-sgacc) TO (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) ;	
 ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-sgacc) TO (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr LINK -1 (Indef &msyn-demphrase-congruence-sgacc)) ;
