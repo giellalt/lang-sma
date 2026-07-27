@@ -1,19 +1,9 @@
 # Lemma-tests for *verbs* in ...`verbs.lexc`
 
 
-**beertedh** failures:
-
-* `beertedh+V+Inf` does not generate!
-* `beertedh` has no analyses either
-
-**beertesovvedh** failures:
-
-* `beertesovvedh+V+Inf` does not generate!
-* `beertesovvedh` has no analyses either
-
 ## Lemma statistics
 * 10672 lemmas
-* 99.96251874062968 % success
+* 100.0 % success
 
 ## Settings used
 
