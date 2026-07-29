@@ -1613,6 +1613,12 @@ COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &msyn-hab-nom-gen) AFTER NUMBER�
 	
 ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF (-1 (N Acc) LINK *-1 (Pers Nom) + $$ALL-PERS BARRIER NOT-Attr) ; 
 	## Dah dam vuarjasjieh jis datne reaktam åtnah maaksovem åadtjoeh jallh ij dam åadtjoeh, dan gaavhtan jis lij nuepie idtji skaarem sjïdth jallh jis idtji gåaredh. 
+	
+	
+	
+	## Reektehtse «Jis doesth gihtjedh, almetjh duestieh vaestiedidh» tjïelkelaakan vuesehte mijjieh jïjnjem utnebe darjodh saemien siebriedahkesne.
+	
+	## Dïhte ööhpehtimmiem åtna goh revisjovne jïh jienebh lissiestudijh åtna ekonomijestuvremen, årganisasjovnen jïh stuvremen sisnjelen.
 
 
 ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) IF (*1 (N Acc) BARRIER NOT-Attr LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
