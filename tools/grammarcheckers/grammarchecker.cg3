@@ -1612,10 +1612,8 @@ COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &msyn-hab-nom-gen) AFTER NUMBER�
 	#  -----------------------------  
 	
 ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF (-1 (N Acc) OR (Pron Indef Acc) LINK *-1 (Pers Nom) + $$ALL-PERS OR (N Nom) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
-	## Dah dam vuarjasjieh jis datne reaktam åtnah maaksovem åadtjoeh jallh ij dam åadtjoeh, dan gaavhtan jis lij nuepie idtji skaarem sjïdth jallh jis idtji gåaredh. 
-		
-	## Dïhte ööhpehtimmiem åtna goh revisjovne jïh jienebh lissiestudijh åtna ekonomijestuvremen, årganisasjovnen jïh stuvremen sisnjelen.
-	
+	## Dah dam vuarjasjieh jis datne reaktam åtnah maaksovem åadtjoeh jallh ij dam åadtjoeh, dan gaavhtan jis lij nuepie idtji skaarem sjïdth jallh jis idtji gåaredh.	
+	## Dïhte ööhpehtimmiem åtna goh revisjovne jïh jienebh lissiestudijh åtna ekonomijestuvremen, årganisasjovnen jïh stuvremen sisnjelen.	
 	## Eejhtegedïedte sæjhta jiehtedh eejhtegh aktem hoksedïedtem åtna maanan åvteste, jïh dah nænnoestimmiereaktam utnieh maanan bieleste.
 	
 	## Akte våajnoes saemienvoete lea vihkeles ihke maanah edtjieh damtedh dah sijjiem utnieh ektievoetesne jïh leah jååhkesjamme, jïh dïhte maahta meatan årrodh dam saemien identiteetem nænnoestehtedh.
@@ -1626,11 +1624,15 @@ ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF 
 ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) OR (N Nom) + Sem/Hum IF (*1 (N Acc) OR (Pron Indef Acc) BARRIER NOT-Attr - (Num Acc) LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
 
 
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) OR (Pron Indef Acc) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (*-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) OR (Pron Indef Acc) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (*-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ;
+
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Num Acc) IF (1 (Acc &syn-utnedh-gen-lea) LINK 0 N OR Pron) (*-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
 
 	# med Inf subjekt
 	
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (V TV Inf) IF (-1 ("utnedh" &syn-utnedh-gen-lea) LINK *-1 (N Acc) OR (Pron Indef Acc) BARRIER NOT-Attr LINK *-1 (Pers Nom &syn-utnedh-gen-lea) BARRIER NOT-Attr - (Num Acc)) ; 
+LIST INF-N = "reakta" ;
+	
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (V TV Inf) IF (-1 ("utnedh" &syn-utnedh-gen-lea) LINK *-1 (N Acc) - INF-N OR (Pron Indef Acc) BARRIER NOT-Attr LINK *-1 (Pers Nom &syn-utnedh-gen-lea) BARRIER NOT-Attr - (Num Acc)) ; 
 	## Reektehtse «Jis doesth gihtjedh, almetjh duestieh vaestiedidh» tjïelkelaakan vuesehte mijjieh jïjnjem utnebe darjodh saemien siebriedahkesne.
 
 
@@ -1638,7 +1640,7 @@ ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (V TV Inf) IF (-1 ("utnedh"
 ## 
 COPY:xsyn-utnedh-gen-lea (Gen SUGGEST) EXCEPT (Nom) TARGET (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum ; 
 
-COPY:xsyn-utnedh-gen-lea (Nom SUGGEST) EXCEPT (Acc) TARGET (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea) IF (NEGATE 1 ("utnedh" &syn-utnedh-gen-lea) LINK 1 (V Inf &syn-utnedh-gen-lea)) ; 
+COPY:xsyn-utnedh-gen-lea (Nom SUGGEST) EXCEPT (Acc) TARGET (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea) OR (Num Acc &syn-utnedh-gen-lea) IF (NEGATE 1 ("utnedh" &syn-utnedh-gen-lea) LINK 1 (V Inf &syn-utnedh-gen-lea)) ; 
 
 	# Prs (depending on Sg/Pl subject)
 	
