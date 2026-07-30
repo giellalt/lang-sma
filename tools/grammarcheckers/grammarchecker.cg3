@@ -1611,7 +1611,7 @@ COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &msyn-hab-nom-gen) AFTER NUMBER�
 	#  Utnedh -> gen lea(h) nom
 	#  -----------------------------  
 	
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF (-1 (N Acc) OR (Pron Indef Acc) LINK *-1 (Pers Nom) + $$ALL-PERS BARRIER NOT-Attr) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF (-1 (N Acc) OR (Pron Indef Acc) LINK *-1 (Pers Nom) + $$ALL-PERS OR (N Nom) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
 	## Dah dam vuarjasjieh jis datne reaktam åtnah maaksovem åadtjoeh jallh ij dam åadtjoeh, dan gaavhtan jis lij nuepie idtji skaarem sjïdth jallh jis idtji gåaredh. 
 		
 	## Dïhte ööhpehtimmiem åtna goh revisjovne jïh jienebh lissiestudijh åtna ekonomijestuvremen, årganisasjovnen jïh stuvremen sisnjelen.
@@ -1623,37 +1623,37 @@ ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF 
 	## Dïhte akte gïele maam mijjieh reaktam utnebe eevtjedh jïh evtiedidh, dovne mijjen luvnie goh almetje jïh siebriedahkesne.
 
 
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) IF (*1 (N Acc) OR (Pron Indef Acc) BARRIER NOT-Attr LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) OR (N Nom) + Sem/Hum IF (*1 (N Acc) OR (Pron Indef Acc) BARRIER NOT-Attr - (Num Acc) LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
 
 
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) OR (Pron Indef Acc) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (*-1 (Pers Nom &syn-utnedh-gen-lea) BARRIER NOT-Attr) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) OR (Pron Indef Acc) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (*-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
 
 	# med Inf subjekt
 	
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (V TV Inf) IF (-1 ("utnedh" &syn-utnedh-gen-lea) LINK *-1 (N Acc) OR (Pron Indef Acc) BARRIER NOT-Attr LINK *-1 (Pers Nom &syn-utnedh-gen-lea) BARRIER NOT-Attr) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (V TV Inf) IF (-1 ("utnedh" &syn-utnedh-gen-lea) LINK *-1 (N Acc) OR (Pron Indef Acc) BARRIER NOT-Attr LINK *-1 (Pers Nom &syn-utnedh-gen-lea) BARRIER NOT-Attr - (Num Acc)) ; 
 	## Reektehtse «Jis doesth gihtjedh, almetjh duestieh vaestiedidh» tjïelkelaakan vuesehte mijjieh jïjnjem utnebe darjodh saemien siebriedahkesne.
 
 
 
 ## 
-COPY:xsyn-utnedh-gen-lea (Gen SUGGEST) EXCEPT (Nom) TARGET (Pers Nom &syn-utnedh-gen-lea) ; 
+COPY:xsyn-utnedh-gen-lea (Gen SUGGEST) EXCEPT (Nom) TARGET (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum ; 
 
 COPY:xsyn-utnedh-gen-lea (Nom SUGGEST) EXCEPT (Acc) TARGET (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea) IF (NEGATE 1 ("utnedh" &syn-utnedh-gen-lea) LINK 1 (V Inf &syn-utnedh-gen-lea)) ; 
 
 	# Prs (depending on Sg/Pl subject)
 	
-COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prs Sg3 SUGGEST) EXCEPT ("utnedh" V TV Ind Prs Sg1) OR ("utnedh" V TV Ind Prs Sg2) OR ("utnedh" V TV Ind Prs Sg3) OR ("utnedh" V TV Ind Prs Du1) OR ("utnedh" V TV Ind Prs Du2) OR ("utnedh" V TV Ind Prs Du3) OR ("utnedh" V TV Ind Prs Pl1) OR ("utnedh" V TV Ind Prs Pl2) OR ("utnedh" V TV Ind Prs Pl3) TARGET ("utnedh" Prs &syn-utnedh-gen-lea) IF (*-1 (Acc Sg &syn-utnedh-gen-lea) BARRIER NOT-Attr) 
+COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prs Sg3 SUGGEST) EXCEPT ("utnedh" V TV Ind Prs Sg1) OR ("utnedh" V TV Ind Prs Sg2) OR ("utnedh" V TV Ind Prs Sg3) OR ("utnedh" V TV Ind Prs Du1) OR ("utnedh" V TV Ind Prs Du2) OR ("utnedh" V TV Ind Prs Du3) OR ("utnedh" V TV Ind Prs Pl1) OR ("utnedh" V TV Ind Prs Pl2) OR ("utnedh" V TV Ind Prs Pl3) TARGET ("utnedh" Prs &syn-utnedh-gen-lea) IF (*-1 (Acc Sg &syn-utnedh-gen-lea) BARRIER NOT-Attr - (Num Acc)) 
 ; 
 
-COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prs Pl3 SUGGEST) EXCEPT ("utnedh" V TV Ind Prs Sg1) OR ("utnedh" V TV Ind Prs Sg2) OR ("utnedh" V TV Ind Prs Sg3) OR ("utnedh" V TV Ind Prs Du1) OR ("utnedh" V TV Ind Prs Du2) OR ("utnedh" V TV Ind Prs Du3) OR ("utnedh" V TV Ind Prs Pl1) OR ("utnedh" V TV Ind Prs Pl2) OR ("utnedh" V TV Ind Prs Pl3)  TARGET ("utnedh" Prs &syn-utnedh-gen-lea) IF (*-1 (Acc Pl &syn-utnedh-gen-lea) BARRIER NOT-Attr) 
+COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prs Pl3 SUGGEST) EXCEPT ("utnedh" V TV Ind Prs Sg1) OR ("utnedh" V TV Ind Prs Sg2) OR ("utnedh" V TV Ind Prs Sg3) OR ("utnedh" V TV Ind Prs Du1) OR ("utnedh" V TV Ind Prs Du2) OR ("utnedh" V TV Ind Prs Du3) OR ("utnedh" V TV Ind Prs Pl1) OR ("utnedh" V TV Ind Prs Pl2) OR ("utnedh" V TV Ind Prs Pl3)  TARGET ("utnedh" Prs &syn-utnedh-gen-lea) IF (*-1 (Acc Pl &syn-utnedh-gen-lea) BARRIER NOT-Attr - (Num Acc))
 ; 
 
 	# Prt (depending on Sg/Pl subject)
 
-COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prt Sg3 SUGGEST) EXCEPT ("utnedh" V TV Ind Prt Sg1) OR ("utnedh" V TV Ind Prt Sg2) OR ("utnedh" V TV Ind Prt Sg3) OR ("utnedh" V TV Ind Prt Du1) OR ("utnedh" V TV Ind Prt Du2) OR ("utnedh" V TV Ind Prt Du3) OR ("utnedh" V TV Ind Prt Pl1) OR ("utnedh" V TV Ind Prt Pl2) OR ("utnedh" V TV Ind Prt Pl3) TARGET ("utnedh" Prt &syn-utnedh-gen-lea) IF (*-1 (Sg Acc &syn-utnedh-gen-lea) BARRIER NOT-Attr) 
+COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prt Sg3 SUGGEST) EXCEPT ("utnedh" V TV Ind Prt Sg1) OR ("utnedh" V TV Ind Prt Sg2) OR ("utnedh" V TV Ind Prt Sg3) OR ("utnedh" V TV Ind Prt Du1) OR ("utnedh" V TV Ind Prt Du2) OR ("utnedh" V TV Ind Prt Du3) OR ("utnedh" V TV Ind Prt Pl1) OR ("utnedh" V TV Ind Prt Pl2) OR ("utnedh" V TV Ind Prt Pl3) TARGET ("utnedh" Prt &syn-utnedh-gen-lea) IF (*-1 (Sg Acc &syn-utnedh-gen-lea) BARRIER NOT-Attr - (Num Acc)) 
 ; 
 
-COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prt Pl3 SUGGEST) EXCEPT ("utnedh" V TV Ind Prt Sg1) OR ("utnedh" V TV Ind Prt Sg2) OR ("utnedh" V TV Ind Prt Sg3) OR ("utnedh" V TV Ind Prt Du1) OR ("utnedh" V TV Ind Prt Du2) OR ("utnedh" V TV Ind Prt Du3) OR ("utnedh" V TV Ind Prt Pl1) OR ("utnedh" V TV Ind Prt Pl2) OR ("utnedh" V TV Ind Prt Pl3) TARGET ("utnedh" Prt &syn-utnedh-gen-lea) IF (*-1 (Pl Acc &syn-utnedh-gen-lea) BARRIER NOT-Attr) 
+COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prt Pl3 SUGGEST) EXCEPT ("utnedh" V TV Ind Prt Sg1) OR ("utnedh" V TV Ind Prt Sg2) OR ("utnedh" V TV Ind Prt Sg3) OR ("utnedh" V TV Ind Prt Du1) OR ("utnedh" V TV Ind Prt Du2) OR ("utnedh" V TV Ind Prt Du3) OR ("utnedh" V TV Ind Prt Pl1) OR ("utnedh" V TV Ind Prt Pl2) OR ("utnedh" V TV Ind Prt Pl3) TARGET ("utnedh" Prt &syn-utnedh-gen-lea) IF (*-1 (Pl Acc &syn-utnedh-gen-lea) BARRIER NOT-Attr - (Num Acc)) 
 ; 
 
 
@@ -1662,7 +1662,7 @@ COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prt Pl3 SUGGEST) EXCEPT ("utnedh" V TV 
 ## ADDRELATION gjør at "datne reaktam åtnah" er på samme linje i rødt" Gjør dette til EN regel
 
 ADDRELATION ($2 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (*-1 (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea)) ; 
-ADDRELATION ($3 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (*-1 (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea) LINK *-1 (Pers Nom &syn-utnedh-gen-lea)) ;
+ADDRELATION ($3 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (*-1 (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea) LINK *-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom) + Sem/Hum) ;
 
 ADDRELATION ($4 RIGHT) ("utnedh" &syn-utnedh-gen-lea) TO (1 (Inf &syn-utnedh-gen-lea)) ; 
 
