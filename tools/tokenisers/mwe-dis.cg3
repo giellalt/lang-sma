@@ -1996,6 +1996,14 @@ REMOVE:sentenceboundary ("." CLB) IF (0 ABBR OR Num) (1*> (>>>) BARRIER (>>>) LI
 	## Aslak Anders M.J.
 	
 	
+	# Percent
+
+	# Keep only the Num Arab in subreadings of a %-lemma that have subreadings. Used in disamb analysers/tokenisers, should not affect
+	# grammar checking and TTS tokenisation. End result after cg-mwesplit is that we have two tokens: the Arab numeral, and the
+	# percent symbol, even though there are no space between.
+REMOVE:percent-num-with-mwe (Num Arab) IF (0 (".*%"r Num Arab));
+	## 100%
+	
 	# COMMA vs. PERIOD
 
 SELECT:comma-vs-period SUB:1 Sem/Date IF (-1W Sem/Time);
