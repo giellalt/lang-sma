@@ -18,9 +18,10 @@ REMOVE:MinusEla (Attr) + Case - (Ela) IF (1C (N Ela));
 #	"ruhtjehtidh" V TV Ind Prs Sg3 <W:22.4951> <WA:12.4951> <spelled> "<ruhtjehte>"
 #	"runhtjehtidh" V TV Ind Prs Sg3 <W:32.4951> <WA:12.4951> <spelled> "<runhtjehte>"
 # NB: -1, not -1*. An unbounded leftward scan means any V Sg3 anywhere earlier
-# in the sentence deletes every V Sg3 suggestion, which measured as the single
-# most destructive rule in this file: it removed the correct suggestion outright
-# in 52 of 765 scored sentences.
+# in the sentence deletes every V Sg3 suggestion. Measured over 765 sentences
+# covering 35 distinct misspellings, it was the most destructive rule in this
+# file: it removed the correct suggestion outright in 52 sentences, and cost 2
+# of the 35 misspellings their place in the top five. Bounding recovers both.
 REMOVE:SpellerVerbSug (V Sg3) IF (0 (<spelled>)) (-1 (V Sg3));
     ## Ååredæjja lea ruhtjehke goh sjovkolaade.
 
