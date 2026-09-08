@@ -59,6 +59,8 @@ else
 generated_files/smi-$(GLANG)-%.lexc:
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_C_GEN)echo "! Missing shared common data" > $@
+	$(AM_V_at)echo "LEXICON smi-$(GLANG)-$*-error" >> $@
+	$(AM_V_at)echo "0 # ;" >> $@
 endif
 
 
@@ -74,6 +76,8 @@ else
 generated_files/sme-$(GLANG)-propernouns.lexc:
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_C_GEN)echo "! Missing shared sme data" > $@
+	$(AM_V_at)echo "LEXICON sme-$(GLANG)-$*-error" >> $@
+	$(AM_V_at)echo "0 # ;" >> $@
 
 endif
 
@@ -88,6 +92,8 @@ else
 generated_files/smj-$(GLANG)-propernouns.lexc:
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_C_GEN)echo "! Missing shared sma data" > $@
+	$(AM_V_at)echo "LEXICON sma-$(GLANG)-$*-error" >> $@
+	$(AM_V_at)echo "0 # ;" >> $@
 
 endif
 
