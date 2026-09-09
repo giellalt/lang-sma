@@ -1,8 +1,15 @@
+! Initial-letter substitutions, used only when INITIAL_EDITS in
+! Makefile.mod-desktop-hfst.am is set to 'regex' or 'both'.
+!
+! The alphabet must match the one declared in editdist.default.txt. It
+! previously carried á, č and š, which South Sámi does not use, and omitted ï,
+! which it does -- so with initial edits enabled, no correction to a word
+! beginning in ï was reachable while three unused letters were searched.
 [
 [ ? ]::0 |
-[ [A|Á|B|C|Č|D|E|F|G|H|I|J|K|L|M|N|O|P|R|S|Š|T|U|V|Y|Ä|Æ|Ø|Ö|Å] ->
-  [A|Á|B|C|Č|D|E|F|G|H|I|J|K|L|M|N|O|P|R|S|Š|T|U|V|Y|Ä|Æ|Ø|Ö|Å] ]::30 
+[ [A|B|C|D|E|F|G|H|I|Ï|J|K|L|M|N|O|P|R|S|T|U|V|W|X|Y|Z|Ä|Æ|Ø|Ö|Å] ->
+  [A|B|C|D|E|F|G|H|I|Ï|J|K|L|M|N|O|P|R|S|T|U|V|W|X|Y|Z|Ä|Æ|Ø|Ö|Å] ]::30 
 |
-[ [a|á|b|c|č|d|e|f|g|h|i|j|k|l|m|n|o|p|r|s|š|t|u|v|y|ä|æ|ø|ö|å] ->
-  [a|á|b|c|č|d|e|f|g|h|i|j|k|l|m|n|o|p|r|s|š|t|u|v|y|ä|æ|ø|ö|å] ]::20 
+[ [a|b|c|d|e|f|g|h|i|ï|j|k|l|m|n|o|p|r|s|t|u|v|w|x|y|z|ä|æ|ø|ö|å] ->
+  [a|b|c|d|e|f|g|h|i|ï|j|k|l|m|n|o|p|r|s|t|u|v|w|x|y|z|ä|æ|ø|ö|å] ]::20 
 ] ;

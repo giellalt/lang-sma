@@ -139,3 +139,13 @@ yø:yö	1
 ååhke:åhka	5
 åårgan:organ	5	# åårganisasjovnijiste → organisasjovnijste
 ååhp:åahp	5	# tjaalegeååhpetje → tjaalehåahpetje
+# Transpositions. The swap block in editdist.default.txt is inert -- swaps
+# are disabled by USE_SWAPS in Makefile.am because they cost ~3*S^2 in error
+# model size -- so the pairs declared there are expressed here as ordinary
+# string edits instead. dl:ld, sj:js and kh:hk were already ported this way.
+ht:th	3	# the h,t swap declared in editdist.default.txt
+th:ht	3	# vith -> viht
+hj:jh	2	# the h,j swap declared in editdist.default.txt
+ea:ae	4	# the e,a swap declared in editdist.default.txt
+jt:tj	3	# almejth -> almetjh
+ej:je	3	# utniej -> utnije

@@ -1,0 +1,13 @@
+# Tag surviving speller suggestions so divvun.suggest will report them.
+#
+# In the full grammar checker this comes from grammarchecker.cg3, which this
+# speller-only pipeline deliberately omits. SUBSTITUTE rather than ADD: the
+# <spelled> readings cgspell emits are already mapped, and a mapping rule will
+# not apply to an already-mapped reading.
+
+MAPPING-PREFIX = & ;
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" ;
+
+SECTION
+
+SUBSTITUTE:spelled (<spelled>) (<spelled> &typo &SUGGESTWF) TARGET (<spelled>) ;

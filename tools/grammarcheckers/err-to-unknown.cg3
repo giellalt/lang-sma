@@ -1,0 +1,28 @@
+# Route Err-only cohorts to the speller.
+#
+# The grammar checker's tokeniser-analyser is descriptive: it recognises many
+# misspellings outright and tags them Err/..., so they never reach cgspell and
+# are corrected normatively instead. That is right for a grammar checker, but it
+# means this pipeline cannot be used to judge the speller unless the input is put
+# back on the speller's footing first.
+#
+# A cohort whose every reading is an Err reading is one the plain speller would
+# have seen as unknown, so it is marked +? here and cgspell replaces its readings
+# with suggestions. Cohorts with at least one clean reading are left alone: those
+# are words the speller would have accepted.
+
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" ;
+
+# Matched by regex rather than enumerated: sma has a long and growing Err
+# inventory (Err/Orth, Err/Orth-a, Err/Orth-lemma, Err/Orth-nom, Err/Orth-spes,
+# Err/Lex, Err/Der, Err/DerSub, Err/CmpSub, Err/Hyph, Err/HyphSub,
+# Err/MissingHyph, Err/MissingSpace, Err/SpaceCmp, Err/ShLo, Err/Attr ...) and an
+# enumeration would silently rot as tags are added.
+LIST ERR-ANY = /^Err\//r ;
+LIST UNKNOWN = (+?) ;
+
+SECTION
+
+# Mark the cohort unknown when no reading is error-free.
+# NEGATE ... - ERR-ANY reads as "there is no reading that is not an Err reading".
+ADD:err-to-unknown (+?) TARGET (*) IF (NEGATE 0 (*) - ERR-ANY) (NOT 0 UNKNOWN) ;
