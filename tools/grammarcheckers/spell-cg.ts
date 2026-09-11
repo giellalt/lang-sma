@@ -14,18 +14,39 @@ import { Command, StringEntry } from "./.divvun-rt/mod.ts";
 // them, then disambiguate the CONTEXT while leaving the suggestions alone, and
 // only then let spellchecker.cg3 filter them.
 //
+// The tuned speller config, from tools/spellcheckers/config.json. It is copied
+// in rather than imported because divvun-runtime relocates a pipeline's source
+// into a temporary directory before bundling it, where no relative import
+// resolves. Regenerate after retuning the speller:
+//
+//     deno run --allow-read --allow-write sync-speller-config.ts
+//
 // snake_case: SpellerConfig deserializes kebab-case but carries serde aliases
 // for these names, and the generated TypeScript bindings declare them this way.
-let spellerConfig = {
+// --- BEGIN GENERATED from tools/spellcheckers/config.json ---
+const SPELLER_BASE = {
     n_best: 100,
-    max_weight: 10000.0,
-    beam: 19.0,
+    max_weight: 10000,
+    beam: 14,
     reweight: {
-        start_penalty: 3.0,
-        end_penalty: 1.0,
-        mid_penalty: 1.0,
+        start_penalty: 3,
+        mid_penalty: 1,
+        end_penalty: 1,
     },
+    node_pool_size: 128,
     recase: true,
+};
+// --- END GENERATED ---
+
+// Where this harness departs from the tuned speller, and only there. The
+// effective values are the same ones the hand-written copy this replaced set,
+// so the A/B measures what it measured before.
+const spellerConfig = {
+    ...SPELLER_BASE,
+    // Matches the grammar checker pipeline's beam, so the A/B compares CG
+    // filtering rather than search width. Pre-existing value, wider than the
+    // tuned base - needs evaluation.
+    beam: 19.0,
 };
 
 // Baseline: speller output with no CG filtering at all, for the A/B.
