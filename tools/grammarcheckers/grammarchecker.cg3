@@ -1791,7 +1791,7 @@ ADD:msyn-numphrase-congruence-sgacc (&msyn-numphrase-congruence-sgacc) TARGET (N
 
 ADD:msyn-numphrase-congruence-sgacc (&msyn-numphrase-congruence-sgacc) TARGET (Num Nom) - Sem/Date OR (Num Gen) IF (1 CC OR COMMA LINK 1 (Num &msyn-numphrase-congruence-sgacc) LINK *1 (N &msyn-numphrase-congruence-sgacc) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
 
-COPY:msyn-numphrase-congruence-sggen (Sg Acc SUGGEST) EXCEPT (Sg Nom) OR (Sg Gen) TARGET (Num Sg &msyn-numphrase-congruence-sgacc) ;
+COPY:msyn-numphrase-congruence-sgacc (Sg Acc SUGGEST) EXCEPT (Sg Nom) OR (Sg Gen) TARGET (Num Sg &msyn-numphrase-congruence-sgacc) ;
 
 
 ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgacc) TO (*-1 (Num &msyn-numphrase-congruence-sgacc)) ;
