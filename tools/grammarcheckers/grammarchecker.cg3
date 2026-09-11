@@ -1884,9 +1884,9 @@ COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (N 
 	# sg acc
 	# ------
 	
-ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Nom) OR (Pron Attr) - Acc IF (0 Dem OR Indef)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr);
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Nom) OR (Pron Attr) - Acc IF (0 Dem OR Indef)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr LINK NOT *1 ("utnedh") BARRIER NOT-ADV-PCLE);
 
-ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef)(*1 (N Sg Nom) BARRIER (*) - (Dem Nom) - Attr);
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef)(*1 (N Sg Nom) BARRIER (*) - (Dem Nom) - Attr LINK NOT *1 ("utnedh") BARRIER NOT-ADV-PCLE);
 
 ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (*-1 (Pron Dem &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) (1 (N Sg Acc));
 
@@ -2494,8 +2494,10 @@ ADDRELATION (DELETE1) ("guktie" &syn-redun-before-guktie) TO (-1 &syn-redun-befo
 
 	# goh nom > ess
 	# - - - - - - - 
+	
+LIST ESS-V = "åadtjodh" "provhkedh" "sjïdtedh" ;
 
-ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET ("goh") IF (-1 <TH-Acc-Any><RO-Ess-Any> OR <RO-Ess-Any>)(*1 (N Nom) - <spelled> BARRIER NOT-Attr LINK NEGATE 1 VFIN) ;
+ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET ("goh") IF (-1 ESS-V)(*1 (N Nom) - <spelled> BARRIER NOT-Attr LINK NEGATE 1 VFIN) ;
 
 ADD:xsyn-goh_nom-ess (&syn-goh_nom-ess) TARGET ("goh") IF (-1 ("seamma"))(*1 (N Nom) - <spelled> BARRIER NOT-Attr LINK NEGATE 1 VFIN) ;
 
