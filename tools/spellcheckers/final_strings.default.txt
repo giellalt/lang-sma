@@ -107,8 +107,17 @@ sj:sjh	3	# krïepesj → krïebpesjh
 # and Farise´erij, scoring net −1.
 sne:sisnie	5
 sommes:mes	3
-th:tieh	7	# Båeth → Båetieh
+th:tieh	3	# Båeth → Båetieh
 tivt:tijve	3
 tjide:tjabidie	2
 åbpoe:ebe	2
 
+# Word-final -e restoration on consonant-final loan nominatives. The rival
+# s:sh rule sits at 3 and was winning these: across the combined test corpus
+# exactly ONE row wants final s->sh, while 25 distinct stems want final s->se.
+# j:je, m:me and n:ne were measured and rejected -- each lost more rows than
+# it won. Weight 1 takes 33 of the 36 rows a weight of 0 would.
+s:se	1
+t:te	1
+k:ke	1
+v:ve	1
