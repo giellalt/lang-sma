@@ -1,7 +1,8 @@
 import * as cg3 from "./.divvun-rt/cg3.ts";
 import * as divvun from "./.divvun-rt/divvun.ts";
 import * as hfst from "./.divvun-rt/hfst.ts";
-import { Command, fromKebabKeys, StringEntry } from "./.divvun-rt/mod.ts";
+import { Command, StringEntry } from "./.divvun-rt/mod.ts";
+import type { SpellerConfig } from "./.divvun-rt/divvun.ts";
 import spellerBase from "../spellcheckers/config.json" with { type: "json" };
 
 // A speller, not a grammar checker.
@@ -16,14 +17,14 @@ import spellerBase from "../spellcheckers/config.json" with { type: "json" };
 // only then let spellchecker.cg3 filter them.
 //
 // The tuned speller config, imported live from tools/spellcheckers/config.json.
-// fromKebabKeys bridges the JSON's kebab-case keys to the snake_case these
-// bindings declare; the Rust side accepts both.
-const SPELLER_BASE = fromKebabKeys(spellerBase);
+// The file is in the wire format the runtime deserializes, which is what the
+// cast asserts; these bindings render those keys as TypeScript identifiers.
+const SPELLER_BASE = spellerBase as unknown as SpellerConfig;
 
 // Where this harness departs from the tuned speller, and only there. The
 // effective values are the same ones the hand-written copy this replaced set,
 // so the A/B measures what it measured before.
-const spellerConfig = {
+const spellerConfig: SpellerConfig = {
     ...SPELLER_BASE,
     // Matches the grammar checker pipeline's beam, so the A/B compares CG
     // filtering rather than search width. Pre-existing value, wider than the
