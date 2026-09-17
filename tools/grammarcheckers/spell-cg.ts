@@ -24,7 +24,11 @@ const SPELLER_BASE = spellerBase as unknown as SpellerConfig;
 // Where this harness departs from the tuned speller, and only there. The
 // effective values are the same ones the hand-written copy this replaced set,
 // so the A/B measures what it measured before.
-const spellerConfig: SpellerConfig = {
+//
+// Deliberately not annotated with SpellerConfig: the bindings are regenerated
+// by whichever divvun-runtime built the bundle, and annotating makes this
+// literal fail on any builder whose bindings predate a field named here.
+const spellerConfig = {
     ...SPELLER_BASE,
     // Matches the grammar checker pipeline's beam, so the A/B compares CG
     // filtering rather than search width. Pre-existing value, wider than the
