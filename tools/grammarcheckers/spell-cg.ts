@@ -5,21 +5,11 @@ import { Command, StringEntry } from "./.divvun-rt/mod.ts";
 import type { SpellerConfig } from "./.divvun-rt/divvun.ts";
 import spellerBase from "../spellcheckers/config.json" with { type: "json" };
 
-// A speller, not a grammar checker.
-//
-// The question is whether CG context can improve the speller's ranking. That
-// cannot be asked of the grammar checker pipeline: its tokeniser-analyser is
-// descriptive and recognises many misspellings outright as Err/..., so they are
-// corrected normatively and never reach the speller at all.
-//
-// So: tokenise, put the Err-only cohorts back on the speller's footing, spell
-// them, then disambiguate the CONTEXT while leaving the suggestions alone, and
-// only then let spellchecker.cg3 filter them.
-//
 // The tuned speller config, imported live from tools/spellcheckers/config.json.
-// The file is in the wire format the runtime deserializes, which is what the
-// cast asserts; these bindings render those keys as TypeScript identifiers.
-const SPELLER_BASE = spellerBase as unknown as SpellerConfig;
+// Kept in the wire format the runtime deserializes: an override must use the
+// same spelling as the key it replaces, or the spread keeps both and the
+// runtime rejects the pair as a duplicate field.
+const SPELLER_BASE = spellerBase;
 
 // Where this harness departs from the tuned speller, and only there. The
 // effective values are the same ones the hand-written copy this replaced set,
@@ -44,7 +34,7 @@ export function spellOnly_dev(entry: StringEntry): Command {
     x = divvun.cgspell("speller", x, {
         acc_model_path: "@./acceptor.default.hfst",
         err_model_path: "@./errmodel.default.hfst",
-        config: spellerConfig,
+        config: spellerConfig as unknown as SpellerConfig,
     });
     x = cg3.vislcg3("spell-emit", x, { model_path: "@./spell-emit.bin" });
     return divvun.suggest("suggestions", x, { model_path: "@./generator-gramcheck-gt-norm.hfstol" });
@@ -58,7 +48,7 @@ export function spellCg_dev(entry: StringEntry): Command {
     x = divvun.cgspell("speller", x, {
         acc_model_path: "@./acceptor.default.hfst",
         err_model_path: "@./errmodel.default.hfst",
-        config: spellerConfig,
+        config: spellerConfig as unknown as SpellerConfig,
     });
     x = cg3.vislcg3("postspell-valency", x, { model_path: "@./valency-postspell.bin" });
     // grc-disambiguator PROTECTs <spelled>, so this disambiguates the context
