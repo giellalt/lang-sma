@@ -124,56 +124,70 @@ msyn-Neg-VFinitt-ConNeg = Mïste nyöjhkemisnie
     .desc = Hammoe {$1} nyöjhkemevïerpen mænngan byöroe nyöjhkemehammosne årrodh.
     .example-1 = Ean månnoeh miehtsesne {minnien} lustestallemen vuj haarjanimmien gaavhtan.
 
-msyn-demphrase-congruence-plcom = båajhtoeh demonstratijve jallh substantijve !!M
+## !!M
+msyn-demphrase-congruence-plcom = båajhtoeh demonstratijve jallh substantijve
     .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
     .example-1 = Gaajhkh nïejtigujmie soptsetim.
 
-msyn-demphrase-congruence-plela = båajhtoeh demonstratijve jallh substantijve !!M
+## !!M
+msyn-demphrase-congruence-plela = båajhtoeh demonstratijve jallh substantijve
     .desc = {$1} byöroe elatijve pluralisnie tjåadtjodh.
     .example-1 = Jienebh dejstie aamhtesidie jeatjahligke buvresne/våarhkosne vöörhkeme, daan åvteste tjuara dejtie åvtelen dængkodh.
 
-msyn-demphrase-congruence-plgen = båajhtoeh demonstratijve jallh substantijve !!M
+## !!M
+msyn-demphrase-congruence-plgen = båajhtoeh demonstratijve jallh substantijve
     .desc = {$1} byöroe genitijve pluralisnie tjåadtjodh.
     .example-1 = Gaajhkh dej nåejtiej bïjre.
 
-msyn-demphrase-congruence-plill = båajhtoeh demonstratijve jallh substantijve !!M
+## !!M
+msyn-demphrase-congruence-plill = båajhtoeh demonstratijve jallh substantijve
     .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
     .example-1 = Provresalmetjidie mejtie fuehpesne hijven naemhtie ånnetji raaffalgovvedh jïh gaajhkh åssjalommesidie provren bïjre luejhtedh jïh ussjedidh mannasinie sinsitnine pruvrijægan.
 
-msyn-demphrase-congruence-pline = båajhtoeh demonstratijve jallh substantijve !!M
+## !!M
+msyn-demphrase-congruence-pline = båajhtoeh demonstratijve jallh substantijve
     .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
     .example-1 = Dïhte gaajhkh lehkine mïnni.
 
-msyn-demphrase-congruence-plnom = båajhtoeh demonstratijve jallh substantijve !!M
+## !!M
+msyn-demphrase-congruence-plnom = båajhtoeh demonstratijve jallh substantijve
     .desc = {$1} byöroe komitatijve pluralisnie tjåadtjodh.
     .example-1 = Daesnie lea jïjnje almetjh.
     .example-2 = Dïhte audiovisueelle tjåanghkoeh dah leah jienebh enn 7 miljovnh spealadimmietæjmoeh.
 
-msyn-numphrase-congruence-plnom = båajhtoeh numeraale jallh substantijve !!M
+## !!M
+msyn-numphrase-congruence-plnom = båajhtoeh numeraale jallh substantijve
     .desc = {$1} byöroe
     .example-1 = Gærjagåetien tjåanghkosne 20 miljovnh aamhtese gååvnesieh. 
 
-msyn-numphrase-congruence-sgacc = båajhtoeh numeraale jallh substantijve !!M
+## !!M
+msyn-numphrase-congruence-sgacc = båajhtoeh numeraale jallh substantijve
     .desc = {$1} byöroe 
 
-msyn-numphrase-congruence-sgcom = båajhtoeh numeraale jallh substantijve !!M
+## !!M
+msyn-numphrase-congruence-sgcom = båajhtoeh numeraale jallh substantijve
     .desc = {$1} byöroe 
 
-msyn-numphrase-congruence-sgela = båajhtoeh numeraale jallh substantijve !!M
+## !!M
+msyn-numphrase-congruence-sgela = båajhtoeh numeraale jallh substantijve
     .desc = {$1} byöroe 
 
-msyn-numphrase-congruence-sggen = båajhtoeh numeraale jallh substantijve !!M
+## !!M
+msyn-numphrase-congruence-sggen = båajhtoeh numeraale jallh substantijve
     .desc = {$1} byöroe 
     .example-1 = Nasjovnegærjagåetie lea akte staaten reereme. > akten staaten
 
-msyn-numphrase-congruence-placc = båajhtoeh numeraale jallh substantijve !!M
+## !!M
+msyn-numphrase-congruence-placc = båajhtoeh numeraale jallh substantijve
     .desc = {$1} byöroe 
     .example-1 = Gærjagåetie dejtie almetjivåarhkoem vaarjele, eeremes leah Astrid Lindgren, August Strindberg jïh Dag Hammarsköld.
 
-msyn-numphrase-congruence-sgill = båajhtoeh numeraale jallh substantijve !!M
+## !!M
+msyn-numphrase-congruence-sgill = båajhtoeh numeraale jallh substantijve
     .desc = {$1} byöroe 
 
-msyn-numphrase-congruence-sgine = båajhtoeh numeraale jallh substantijve !!M
+## !!M
+msyn-numphrase-congruence-sgine = båajhtoeh numeraale jallh substantijve
     .desc = {$1} byöroe 
     .example-1 = Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh.
 
