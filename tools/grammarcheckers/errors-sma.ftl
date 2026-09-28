@@ -227,8 +227,9 @@ syn-redun-before-guktie =  Ååpsen jïjnje baakoeh
     .desc = "$1" ij galkh "$2"
     .example-1 = Nov guktie aaj jïjnjebidie Saepmesne.
 
-lex-saemiestidh = !!M
-    .desc = 
+## !!M
+lex-saemiestidh = "saemiestidh" i staden for "saemien soptsestimmie"
+    .desc = saemien soptsestimmie > saemiestidh
     .example-1 = Fjellström lij gïelem dotkedh jïh aaj man vihkeles daejtie baakoe, baakojde lea saemien soptsestimmie gïelese.
 
 syn-remove-akte = !!M
