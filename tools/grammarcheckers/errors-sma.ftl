@@ -237,9 +237,10 @@ syn-remove-akte = No "akte"
     .desc = Ikkje bruk "akte" som ein norsk artikkel framfor substantiv :)
     .example-1 = Saemien fealadasse lea tjïelkestamme goh fealadasse gusnie saemien kultuvrebiehkieh leah akte vihkeles gïehtelimmeste.
 
-syn-wo-verb_advl-advl_verb = !!M
-    .desc = 
-    .example-1 = 
+## !!M
+syn-wo-verb_advl-advl_verb = Adverb framfor verb, ikkje omvendt
+    .desc = Vanlegvis skal adverbet koma før verbet, slik at verbet står sist i setninga
+    .example-1 = Dah guaktah lægan jielemevåaromem jïh jearsoesvoetem åådtjeme miehtjesne. > miehtjesne åådtjeme.
 
 msyn-pass-active = 
     .desc = Hammoe {$1}
