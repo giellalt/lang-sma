@@ -38,8 +38,9 @@ no-space-after-punct-mark = Missing space
 msyn-agr-other-sg1 = First person singular after 'mun'.
     .desc = The verb-form {$1} follows 'manne', and should probably be first person singular.
 
-msyn-agr-sg3-sg1 = Verb in wrong person
-    .desc = The verbform {$1} is in the third person, here first person seems correct.
+## Ikkje brukt enno
+## msyn-agr-sg3-sg1 = Verb in wrong person
+##     .desc = The verbform {$1} is in the third person, here first person seems correct.
 
 msyn-agr-other-sg3 = Third person singular after singular subject.
     .desc = The verb-form {$1} refers to a singular subject, and should probably be third person singular.
