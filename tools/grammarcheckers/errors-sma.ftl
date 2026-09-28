@@ -232,9 +232,10 @@ lex-saemiestidh = "saemiestidh" i staden for "saemien soptsestimmie"
     .desc = saemien soptsestimmie > saemiestidh
     .example-1 = Fjellström lij gïelem dotkedh jïh aaj man vihkeles daejtie baakoe, baakojde lea saemien soptsestimmie gïelese.
 
-syn-remove-akte = !!M
-    .desc = 
-    .example-1 = 
+## !!M
+syn-remove-akte = No "akte"
+    .desc = Ikkje bruk "akte" som ein norsk artikkel framfor substantiv :)
+    .example-1 = Saemien fealadasse lea tjïelkestamme goh fealadasse gusnie saemien kultuvrebiehkieh leah akte vihkeles gïehtelimmeste.
 
 syn-wo-verb_advl-advl_verb = !!M
     .desc = 
