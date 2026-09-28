@@ -44,6 +44,21 @@ msyn-agr-sg3-sg1 = Verb in wrong person
 msyn-agr-other-sg3 = Third person singular after singular subject.
     .desc = The verb-form {$1} refers to a singular subject, and should probably be third person singular.
 
+msyn-subj_verb-sg3-pl3 =
+    .desc =
+
+msyn-ektine-gen-com =
+    .desc =
+
+msyn-sååjhtoe-VFinitt =
+    .desc =
+
+msyn-aux-vfin-inf =
+    .desc =
+
+msyn-adj-pred-attr = Adjective in attributive form.
+    .desc = The adjective {$1} preceeds a noun, and should probably be attributive.
+
 msyn-adj-attr-pred = Adjective in predicative form.
     .desc = The adjective {$1} probably stands in predicative position, and should thus be in the predicative form.
 
@@ -53,11 +68,32 @@ msyn-adj-attr-predpl = Adjective in predicative plural form.
 msyn-adj-attr-ess = Adjective in predicative essive form.
     .desc = The adjective {$1} probably stands in predicative position, and should thus be in the predicative essive form.
 
+msyn-adj-attr-ine =
+    .desc =
+
 msyn-adj-attr-adv = Adjective should be adverb.
     .desc = The adjective {$1} should probably be an adverb.
 
-msyn-adj-pred-attr = Adjective in attributive form.
-    .desc = The adjective {$1} preceeds a noun, and should probably be attributive.
+msyn-Neg-ConNeg-Congr-DuPl = Negation error
+    .desc = Error in the negation verb {$1}.
+
+msyn-ConNegPrt-congruence = Negation error
+    .desc = Error in the negation verb {$1}.
+
+msyn-ConNegPrt-lih-congruence =
+    .desc =
+
+msyn-Neg-ConNeg-Congr-SgPl = Negation error
+    .desc = Error in the negation verb {$1}.
+
+msyn-Neg-Prs-Prt = Negation error
+    .desc = Error in the negation verb {$1}.
+
+msyn-NegPrt-lih-congruence = Negation error
+    .desc = Error in the negation verb {$1}.
+
+msyn-Neg-VFinitt-ConNeg = Negation error
+    .desc = Error in the negation verb {$1}.
 
 msyn-demphrase-congruence-plcom = Wrong form of demonstrative phrase
     .desc = In this context, the demonstrative phrase should probably be in plural comitative.
@@ -71,17 +107,11 @@ msyn-demphrase-congruence-plgen = Wrong form of demonstrative phrase
 msyn-demphrase-congruence-plill = Wrong form of demonstrative phrase
     .desc =  In this context, the demonstrative phrase should probably be in plural illative.
 
+msyn-demphrase-congruence-pline =
+    .desc =
+
 msyn-demphrase-congruence-plnom = Wrong form of demonstrative phrase
     .desc =  In this context, the demonstrative phrase should probably be in plural nominative.
-
-msyn-gåabpa-sup-komp =
-    .desc = 
-
-msyn-hab-nom-gen = Habitive should be in genitive
-    .desc = In this construction, the owner ({$1}) should be in the genitive, not in the nominative.
-
-msyn-Neg-Pl3-ConNeg = Negation verb needs negative form
-    .desc = Following a negative verb, the main verb {$1} should have the negative form.
 
 msyn-numphrase-congruence-plnom = Plural nouns in numeral phrases
     .desc = Following a numeral, {$2}, the nouns {$1} should be in the plural nominative.
@@ -98,11 +128,23 @@ msyn-numphrase-congruence-sgela = Noun in wrong form in numeral phrase
 msyn-numphrase-congruence-sggen = Noun in wrong form in numeral phrase
     .desc =  In this context, the demonstrative phrase should probably be in singular genitive.
 
+msyn-numphrase-congruence-placc =
+    .desc =
+
 msyn-numphrase-congruence-sgill = Noun in wrong form in numeral phrase
     .desc =  In this context, the demonstrative phrase should probably be in singular illative.
 
 msyn-numphrase-congruence-sgine = Noun in wrong form in numeral phrase
     .desc =  In this context, the demonstrative phrase should probably be in singular inessive.
+
+msyn-gåabpa-sup-komp =
+    .desc =
+
+msyn-hab-nom-gen = Habitive should be in genitive
+    .desc = In this construction, the owner ({$1}) should be in the genitive, not in the nominative.
+
+msyn-Neg-Pl3-ConNeg = Negation verb needs negative form
+    .desc = Following a negative verb, the main verb {$1} should have the negative form.
 
 msyn-po-acc-gen = Postposition phrases in genitive
     .desc = Preceeding a postposition, here {$2}, the noun {$1} should be in the genitive.
@@ -122,30 +164,14 @@ syn-phrasal-verb-phrasal-verb =
 syn-redun-before-guktie =
     .desc = 
 
+lex-saemiestidh =
+    .desc =
+
 syn-remove-akte =
     .desc = 
 
 syn-wo-verb_advl-advl_verb =
     .desc = 
-
-
-msyn-Neg-ConNeg-Congr-DuPl = Negation error
-    .desc = Error in the negation verb {$1}.
-
-msyn-ConNegPrt-congruence = Negation error
-    .desc = Error in the negation verb {$1}.
-
-msyn-Neg-ConNeg-Congr-SgPl = Negation error
-    .desc = Error in the negation verb {$1}.
-
-msyn-Neg-Prs-Prt = Negation error
-    .desc = Error in the negation verb {$1}.
-
-msyn-NegPrt-lih-congruence = Negation error
-    .desc = Error in the negation verb {$1}.
-
-msyn-Neg-VFinitt-ConNeg = Negation error
-    .desc = Error in the negation verb {$1}.
 
 msyn-pass-active = Passive error
     .desc = Error in the passive verb {$1}.
