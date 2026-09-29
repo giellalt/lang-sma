@@ -81,8 +81,8 @@ msyn-Neg-ConNeg-Congr-DuPl = Negation error
 msyn-ConNegPrt-congruence = Negation error
     .desc = Error in the negation verb {$1}.
 
-msyn-ConNegPrt-lih-congruence =
-    .desc =
+msyn-ConNegPrt-lih-congruence = Negation error
+    .desc = The form of "lih" ({$1}) should match the negative verb before it.
 
 msyn-Neg-ConNeg-Congr-SgPl = Negation error
     .desc = Error in the negation verb {$1}.

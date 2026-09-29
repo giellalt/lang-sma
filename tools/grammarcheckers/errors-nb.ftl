@@ -77,8 +77,8 @@ msyn-Neg-ConNeg-Congr-DuPl = Negasjonsfeil
 msyn-ConNegPrt-congruence = Negasjonsfeil
     .desc = Negasjonsformen {$1} burde ha som person som nektingsverbet.
 
-msyn-ConNegPrt-lih-congruence = [Missing title for nb]
-    .desc = [Missing description for nb]
+msyn-ConNegPrt-lih-congruence = Negasjonsfeil
+    .desc = Formen av «lih» ({$1}) bør samsvare med nektingsverbet foran.
 
 msyn-Neg-ConNeg-Congr-SgPl = Negasjonsfeil
     .desc = Negasjonsverbet {$1} burde i preteritum ha samme person som nektingsformen.
