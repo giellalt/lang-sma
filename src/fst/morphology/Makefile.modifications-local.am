@@ -20,7 +20,7 @@
 
 if HAVE_SHARED_SMI
 generated_files/smi-$(GTLANG)-propernouns.lexc: \
-		$(gt_SHARED_smi)/src/fst/stems/smi-propernouns.lexc \
+		$(gt_SHARED_smi)/src/fst/morphology/stems/smi-propernouns.lexc \
 		$(srcdir)/stems/$(GTLANG)-propernouns.lexc \
 		$(top_srcdir)/src/fst/scripts/smi-$(GTLANG)-conversion.pl
 	$(AM_V_at)$(MKDIR_P) generated_files
@@ -29,7 +29,7 @@ generated_files/smi-$(GTLANG)-propernouns.lexc: \
 	$(AM_V_GEN)$(top_srcdir)/src/fst/scripts/smi-$(GTLANG)-conversion.pl $< >> $@
 
 generated_files/smi-$(GTLANG)-abbreviations.lexc: \
-		$(gt_SHARED_smi)/src/fst/stems/smi-abbreviations.lexc \
+		$(gt_SHARED_smi)/src/fst/morphology/stems/smi-abbreviations.lexc \
 		$(srcdir)/stems/$(GTLANG)-abbreviations.lexc \
 		$(top_srcdir)/src/fst/scripts/smi-$(GTLANG)-conversion.pl
 	$(AM_V_at)$(MKDIR_P) generated_files
@@ -38,7 +38,7 @@ generated_files/smi-$(GTLANG)-abbreviations.lexc: \
 	$(AM_V_GEN)$(top_srcdir)/src/fst/scripts/smi-$(GTLANG)-conversion.pl $< >> $@
 
 generated_files/smi-$(GTLANG)-acronyms.lexc: \
-		$(gt_SHARED_smi)/src/fst/stems/smi-acronyms.lexc \
+		$(gt_SHARED_smi)/src/fst/morphology/stems/smi-acronyms.lexc \
 		$(srcdir)/stems/$(GTLANG)-acronyms.lexc \
 		$(top_srcdir)/src/fst/scripts/smi-$(GTLANG)-conversion.pl
 	$(AM_V_at)$(MKDIR_P) generated_files
@@ -47,12 +47,12 @@ generated_files/smi-$(GTLANG)-acronyms.lexc: \
 	$(AM_V_GEN)$(top_srcdir)/src/fst/scripts/smi-$(GTLANG)-conversion.pl $< >> $@
 
 generated_files/smi-$(GTLANG)-%.lexc: \
-		$(gt_SHARED_smi)/src/fst/stems/%.lexc
+		$(gt_SHARED_smi)/src/fst/morphology/stems/%.lexc
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_V_GEN)cp -f $< $@
 
 generated_files/smi-$(GTLANG)-%.lexc: \
-		$(gt_SHARED_smi)/src/fst/stems/smi-%.lexc
+		$(gt_SHARED_smi)/src/fst/morphology/stems/smi-%.lexc
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_V_GEN)cp -f $< $@
 else
