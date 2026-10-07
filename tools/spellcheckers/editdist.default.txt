@@ -61,6 +61,13 @@ u	å	3
 å	o	4
 -	:	2
 
+## A pair listed once also sets the reverse at the same weight (editdist.py,
+## giella-core 1.16.12 and later). These reverses stay at the default weight:
+## o for a, e for u and ö for ø cost top-1 rows when they were cheap.
+o	a	10
+e	u	10
+ö	ø	10
+
 ## Swaps. NB! Please note that these depend on the variable
 ## USE_SWAPS in Makefile.am in this directory. Also note that
 ## enabling swaps is computationally expensive. See note in
