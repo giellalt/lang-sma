@@ -30,3 +30,27 @@ MOTEREF: MOTE I AUCKLAND - inspirert av møtene med Te-Hiku :-)
 
 
 UT402888102 3318 DIVVUN faglige reiser
+
+
+MOTEREF: 13-10.2026
+
+1) Yaml-test -biejjesne-biejjien
+2) Habitive_feiltyper 
+
+Error_Marking!!
+
+
+Forstå denne regelen!
+
+LIST GEN-TIME-N = (".*biejjie"r) ("jïjje") ("tæjmoe") ("dygne") ("tsïengele") ; 
+## Lekse: legg til alle måneder!
+
+ADD:msyn-biejjesne-biejjien (&msyn-biejjesne-biejjien) TARGET (N Sg Ine) IF (0 GEN-TIME-N) (-1 (Pron Gen)) ; 
+
+COPY:msyn-biejjesne-biejjien (Gen SUGGEST) EXCEPT (Ine &msyn-biejjesne-biejjien) TARGET (Ine &msyn-biejjesne-biejjien) ; 
+
+
+	## "Jïjnjh gæjhtoe gaajhkh heelesgi åvteste mov reakedsbiejjesne" ----> "Jïjnjh gæjhtoe [gaajhkh/gaajhki] heelsegi åvteste mov [reakedsbiejjesne/reakedsbiejjien]" ----> Jïjnjh gæjhtoe gaajhki heelsegi åvteste mov reakedsbiejjien
+	# -1 venstre, 1= höyre
+	# EXCEPT = ta bort
+	# Visl Constraint Grammar

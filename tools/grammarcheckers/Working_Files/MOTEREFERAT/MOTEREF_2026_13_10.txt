@@ -1,0 +1,56 @@
+Lexicon: 
+
+
+1)  nuekies / nuekie =prediaktiv + adv.
+
+
+2) monnehke vs. nænnoes - må være attr ved cmp. 
+
+Linda Wiechetek: "<nuekies>"
+"nuekies" Adv <W:0.0> <sma> ADD:2187:sme
+; "nuekies" A Attr <W:0.0> REMOVE:1607:AdvNotA
+
+Linda Wiechetek: "<monnehkevoete>"
+"monnehke" Ex/A Ex/Attr Der/vuota N Sg Nom <W:0.0> <sma> ADD:2187:sme
+; "voete" N Sem/Dummytag Sg Nom <W:0.0>
+; "monnehke" A Cmp/Attr Cmp <W:0.0> REMOVE:2004:longest-match
+
+3) gå igjennom fp - merke opp i yaml-filer + sjekk ev. også i lexicon
+
+4) 
+
+Kommando: Modes-kommando
+
+echo "Manne joekoen madtjeles Laanteburrie- jïh beapmoedepartemeente (LBD) daelie sæjhta vuertedh goske dïhte saemien laakemoenehtse sov barkoem dorjeme jïh sov juvnehtimmiejgujmie båateme, jïh aaj departemeente jeahta dah sijhtieh moenehtsen jarkelimmieraeriestimmieh båatsoelaakeste vuarjasjidh, saemiedigkieraerie Silje Karine Muotka jeahta." | tools/grammarcheckers/modes/trace-smagram-dev.mode | less
+
+
+MOTEREF: MOTE I AUCKLAND - inspirert av møtene med Te-Hiku :-) 
+
+
+
+
+UT402888102 3318 DIVVUN faglige reiser
+
+
+MOTEREF: 13-10.202
+
+1) Yaml-test -biejjesne-biejjien 
+2) Habitive_feiltyper 
+
+Gjrø Error_Marking av disse filene
+
+
+Forstå denne regelen!
+
+LIST GEN-TIME-N = (".*biejjie"r) ("jïjje") ("tæjmoe") ("dygne") ("tsïengele") ; 
+## Lekse: legg til alle måneder!
+
+ADD:msyn-biejjesne-biejjien (&msyn-biejjesne-biejjien) TARGET (N Sg Ine) IF (0 GEN-TIME-N) (-1 (Pron Gen)) ; 
+
+COPY:msyn-biejjesne-biejjien (Gen SUGGEST) EXCEPT (Ine &msyn-biejjesne-biejjien) TARGET (Ine &msyn-biejjesne-biejjien) ; 
+
+
+	## "Jïjnjh gæjhtoe gaajhkh heelesgi åvteste mov reakedsbiejjesne" ----> "Jïjnjh gæjhtoe [gaajhkh/gaajhki] heelsegi åvteste mov [reakedsbiejjesne/reakedsbiejjien]" ----> Jïjnjh gæjhtoe gaajhki heelsegi åvteste mov reakedsbiejjien
+	# -1 venstre, 1= höyre
+	# EXCEPT = ta bort
+	# Visl Constraint Grammar

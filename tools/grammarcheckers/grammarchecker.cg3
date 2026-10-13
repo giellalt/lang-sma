@@ -1534,6 +1534,25 @@ COPY:msyn-po-acc-gen (Gen SUGGEST) EXCEPT (Acc &msyn-po-acc-gen) AFTER NUMBER O
 	## Gosse ussjedibie ööhpehtimmien bïjre {dejtie skyllijemaanide}£{noun,case,placc-plgen|dej skyllijemaanaj bïjre ussjedibie.
 	## Badth gosse naemhtie almetjigujmie gaavnedibie mijakt orre, sinsitniem jïh jïjtse bïjre lïerebe. > sinsitninen jïh jïjtse bïjre lïerebe. 
 	
+		
+	# Time-expression Innesiv > Genitiv
+	# =================================
+	
+
+	
+LIST GEN-TIME-N = (".*biejjie"r) ("jïjje") ("tæjmoe") ("dygne") ("tsïengele") ; 
+## Lekse: legg til alle måneder!
+
+ADD:msyn-biejjesne-biejjien (&msyn-biejjesne-biejjien) TARGET (N Sg Ine) IF (0 GEN-TIME-N) (-1 (Pron Gen)) ; 
+
+COPY:msyn-biejjesne-biejjien (Gen SUGGEST) EXCEPT (Ine &msyn-biejjesne-biejjien) TARGET (Ine &msyn-biejjesne-biejjien) ; 
+
+
+	## "Jïjnjh gæjhtoe gaajhkh heelesgi åvteste mov reakedsbiejjesne" ----> "Jïjnjh gæjhtoe [gaajhkh/gaajhki] heelsegi åvteste mov [reakedsbiejjesne/reakedsbiejjien]" ----> Jïjnjh gæjhtoe gaajhki heelsegi åvteste mov reakedsbiejjien
+	# -1 venstre, 1= höyre
+	# EXCEPT = ta bort
+	# Visl Constraint Grammar
+	
 	
 	# Finite vs. non-finite verbs
 	# ============================
