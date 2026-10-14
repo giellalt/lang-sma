@@ -1660,14 +1660,20 @@ LIST INF-N = "reakta" "nuepie" "krïevenasse" "dïedte" ;
 	
 ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (V TV Inf) IF (-1 ("utnedh" &syn-utnedh-gen-lea) LINK *-1 (N Acc) - INF-N OR (Pron Indef Acc) OR (N Pl Nom) BARRIER NOT-Attr LINK *-1 (Pers Nom &syn-utnedh-gen-lea) BARRIER NOT-Attr - (Num Acc)) ; 
 	## Reektehtse «Jis doesth gihtjedh, almetjh duestieh vaestiedidh» tjïelkelaakan vuesehte mijjieh jïjnjem utnebe darjodh saemien siebriedahkesne.
-	
 
 
 
 ## 
 COPY:xsyn-utnedh-gen-lea (Gen SUGGEST) EXCEPT (Nom) TARGET (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum ; 
 
-COPY:xsyn-utnedh-gen-lea (Nom SUGGEST) EXCEPT (Acc) TARGET (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea) OR (Num Acc &syn-utnedh-gen-lea) IF (NEGATE 1 ("utnedh" &syn-utnedh-gen-lea) LINK 1 (V Inf &syn-utnedh-gen-lea)) ; 
+
+
+WITH:xsyn-utnedh-gen-lea (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea) OR (Num Acc &syn-utnedh-gen-lea)
+IF (NEGATE 1 ("utnedh" &syn-utnedh-gen-lea) LINK 1 (V Inf &syn-utnedh-gen-lea))
+{
+        COPYCOHORT (Nom SUGGEST ADDED) EXCEPT (Acc) TARGET (*) TO AFTER (1 (*)) ;
+        ADDRELATION (DELETE1) TARGET (*) FROM (1 (*));
+};
 
 	# Plural Nom Objects
 COPY:xsyn-utnedh-gen-lea (Sg SUGGEST) EXCEPT (Pl) TARGET (N Pl Nom &syn-utnedh-gen-lea) IF (NEGATE 1 ("utnedh" &syn-utnedh-gen-lea) LINK 1 (V Inf &syn-utnedh-gen-lea)) ;
@@ -1697,7 +1703,7 @@ COPY:xsyn-utnedh-gen-lea ("lea" V IV Ind Prt Pl3 SUGGEST) EXCEPT ("utnedh" V TV 
 ADDRELATION ($2 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (*-1 (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea)) ; 
 ADDRELATION ($3 LEFT) ("utnedh" &syn-utnedh-gen-lea) TO (*-1 (N Acc &syn-utnedh-gen-lea) OR (Pron Indef Acc &syn-utnedh-gen-lea) LINK *-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom) + Sem/Hum) ;
 
-ADDRELATION ($4 RIGHT) ("utnedh" &syn-utnedh-gen-lea) TO (1 (Inf &syn-utnedh-gen-lea)) ; 
+ADDRELATION:utnedh-right ($4 RIGHT) ("utnedh" &syn-utnedh-gen-lea) TO (1 (&syn-utnedh-gen-lea)) ;
 
 	# move verb before subject after habitive
 	
