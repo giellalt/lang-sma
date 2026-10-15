@@ -1544,7 +1544,7 @@ LIST GEN-TIME-N = (".*biejjie"r) ("jïjje") ("tæjmoe") ("dygne") ("aske") ("jae
 
 ADD:msyn-biejjesne-biejjien (&msyn-biejjesne-biejjien) TARGET (N Sg Ine) IF (0 GEN-TIME-N) (-1 (Pron Gen) OR (A Ord Attr) OR (Pron Refl) OR BOS) ; 
 
-ADD:msyn-biejjesne-biejjien (&msyn-biejjesne-biejjien) TARGET (N Sg Ine) IF (0 GEN-TIME-N) (-1 (N Nom Sem/Time) LINK -1 Num) ;
+ADD:msyn-biejjesne-biejjien (&msyn-biejjesne-biejjien) TARGET (N Sg Ine) IF (0 GEN-TIME-N) (-1 (N Nom) + Sem/Time LINK -1 Num) ;
 	## baalhkadasseme (jeenjemes golme biejjieh, jeenjemes gaektsie tæjmoeh {biejjesne}£{biejjien}, jeenjemes 228 kr / tæjmoe)
 
 COPY:msyn-biejjesne-biejjien (Gen SUGGEST) EXCEPT (Ine &msyn-biejjesne-biejjien) TARGET (Ine &msyn-biejjesne-biejjien) ; 
