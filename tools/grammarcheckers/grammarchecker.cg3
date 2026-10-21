@@ -1625,6 +1625,7 @@ ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron
 
 # MAjas Comment: sett denne taggen på Nom Hvis N er N og har Sem/Hum eller er et pronomen - hvis til höyre for er lea Pl3 kan det enten være en  N Pl Nom (N Pl Nom skal ikke ha en spellrelax-tagg) eller Pron Pl nom.  HVis til höyre er det PrfPrc eller Ger.  
 # HUSK: CG: s ordstilling - stedsadv - copuladrop -subj - "til höyre eller til  venstre er det noe."   
+# LINK: 
 
 
 ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Sg3) LINK 1 (N Sg Nom) - <spelled> - Err/Spellrelax OR (Pron Sg Nom) LINK NOT 0 Adv LINK NEGATE 1 (PrfPrc) OR (Ger))(NEGATE -1 (V <TH-FS>));	
