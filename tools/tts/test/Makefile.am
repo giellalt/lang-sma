@@ -17,8 +17,8 @@ endif # WANT_TTS
 XFAIL_TESTS=regresstest.sh
 
 ####### Other targets: ###########
-clean-local:
-	-rm -f *.txt
+# clean-local:
+# 	-rm -f *.txt
 
 include $(top_srcdir)/../giella-core/am-shared/tools-tts-test-dir-include.am
 include $(top_srcdir)/../giella-core/am-shared/devtest-include.am
