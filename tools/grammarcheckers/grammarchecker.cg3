@@ -1630,6 +1630,16 @@ ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron
 
 ADD:msyn-hab-nom-gen (&msyn-hab-nom-gen) TARGET (Nom) IF (0 N  + Sem/Hum OR Pron)(1 ("lea" Sg3) LINK 1 (N Sg Nom) - <spelled> - Err/Spellrelax OR (Pron Sg Nom) LINK NOT 0 Adv LINK NEGATE 1 (PrfPrc) OR (Ger))(NEGATE -1 (V <TH-FS>));	
 	#$ gusnie dotkijh leah healsoebarkijh gihtjehtamme jieniebinie tjïeltine saemien gïelen reeremedajvesne
+	##  Mange steder = på et stort antall steder    =>  gellene lehkesne 
+    ## Flere steder = på mer enn ett sted, ofte et ubestemt antall, men ikke nødvendigvis mange ---> jieniebinie sijjesne 
+    
+##  Eksempler
+##  Det snør mange steder i landet.  --->  Gellene lehkesne tjuatsa. 
+## → Det snør på svært mange steder, kanskje over store deler av landet.
+##  Det snør flere steder i landet.  ---> jïjnjebinie sijjesne tjuatsa. - Det snør på mer enn ett sted, men ikke nødvendigvis mange. 
+##  → Det snør på mer enn ett sted, men kanskje bare noen få steder.
+
+
 
 
 COPY:msyn-hab-nom-gen (Gen SUGGEST) EXCEPT (Nom &msyn-hab-nom-gen) AFTER NUMBER TARGET (&msyn-hab-nom-gen);
