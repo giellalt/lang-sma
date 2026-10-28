@@ -1781,8 +1781,8 @@ COPY:msyn-numphrase-congruence-plnom (Pl Nom SUGGEST) EXCEPT (Sg Nom) TARGET (N 
 	# incorrect noun	
 ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Pl Ine) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
 
-	# correct noun, wrong numeral
-ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Sg Ine) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") - Ine BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+	# correct noun, wrong numeral or wrong Indef (jienebe)
+ADD:msyn-numphrase-congruence-sgine (&msyn-numphrase-congruence-sgine) TARGET (Sg Ine) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") - Ine BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) OR ("jienebe" Pron Indef Sg Com) - Attr OR ("jienebe" Pron Indef Ess) OR ("jienebe" Pron Indef Pl Ine) - Attr LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
 
 COPY:msyn-numphrase-congruence-sgine (Sg Ine SUGGEST) EXCEPT (Pl Ine) TARGET (N Ine &msyn-numphrase-congruence-sgine) ;
 	
