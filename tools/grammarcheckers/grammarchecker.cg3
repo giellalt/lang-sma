@@ -1739,9 +1739,36 @@ ADDRELATION:utnedh-right ($4 RIGHT) ("utnedh" &syn-utnedh-gen-lea) TO (1 (&syn-u
 ## flytt verbal etter habitiv
 
 
-
+ # Nounphrase 
+ #NOM:  Dïhte bïjle
+ #ACK: dom/dam/doem/dom bïjlem 
+ #GEN: don/dan/doen/don bïjlen
+ #ILL: dan bïjlese
+ #INE: dennie bïjlesne.  (*desnie)
+ #ELA: dehtie bïjleste   (*destie) 
+ #KOM: dennie bijleste 
 
  
+ # INE-phrase
+ 
+ADD:msyn-nounphrase-dem-congr-sgine (&msyn-nounphrase-dem-congr-sgine) TARGET (Dem) IF (1 (N Sg Ine))
+(NEGATE 0 (Dem Sg Ine Attr)) ; 
+# Maja: NEGATE betyr at det du ikke skal rette i TARGET. Retter ikke "dennie" ("dennie" er TARGET) fordi det er Sg Ine Attr
+
+COPY:msyn-nounphrase-dem-congr-sgine (Sg Ine Attr SUGGEST) EXCEPT (Attr) OR (Sg Gen) OR (Sg Ine) OR (Sg Ill Attr) OR (Sg Ill) OR (Sg Nom) OR (Sg Ela) OR (Sg Ela Attr) OR (Sg Com) OR (Pl Ine) OR (Pl Com) TARGET (Dem &msyn-nounphrase-dem-congr-sgine) ;  
+ # EXCEPT = tagger man skal ta bort
+ 
+  
+ # ELA-phrase
+ 
+ # Maja: lekse: skriv elativ selv. 
+ADD:msyn-nounphrase-dem-congr-sgela (&msyn-nounphrase-dem-congr-sgela) TARGET (Dem) IF (1 (N Sg Ela)) 
+(NEGATE 0 (Dem Sg Ela Attr)) ; 
+
+
+# COPY:msyn-nounphrase-dem-congr-sgela (Sg Ela Attr SUGGEST) EXCEPT (Attr) OR (Sg Gen) OR (Sg Ine) OR (Sg Ill Attr) OR (Sg Ill) OR (Sg Nom) OR (Sg Ela) OR (Sg Ine Attr) OR (Sg Com) OR (Pl Ine) OR (Pl Com) TARGET (Dem &msyn-nounphrase-dem-congr-sgela) ;  
+ # EXCEPT = tagger man skal ta bort
+	
 	
 	# Numphrase
 	# =========
@@ -2211,7 +2238,7 @@ ADD:msyn-NegPrt-NegPrs (&msyn-NegPrt-NegPrs) TARGET (Neg Prt) IF (1 BE + ConNeg)
 COPY:msyn-NegPrt-NegPrs (Prs SUGGEST) EXCEPT (Prt) BEFORE ALL-PERS TARGET (&msyn-NegPrt-NegPrs);
 
 
-# Congruence between subject and verb in habitive constructions 
+# Congruence between subject and verb in  constructions 
 
 # ij leah dov naan/rööpses/vielie måvhkah -> ij --> eah 
 
