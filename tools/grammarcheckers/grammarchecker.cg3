@@ -1801,6 +1801,34 @@ ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-nump
 ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgine) TO (*-1 (Num &msyn-numphrase-congruence-sgine) LINK *-1 (Dem &msyn-numphrase-congruence-sgine) OR (Indef &msyn-numphrase-congruence-sgine)) ;
 
 	## Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh. > gaajhkine golmene laantesne gååvnesidh.
+
+
+	# sg com
+	# ------
+
+	# incorrect noun	
+ADD:msyn-numphrase-congruence-sgcom (&msyn-numphrase-congruence-sgcom) TARGET (Pl Com) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+	# correct noun, wrong numeral or wrong Indef (jienebe)
+ADD:msyn-numphrase-congruence-sgcom (&msyn-numphrase-congruence-sgcom) TARGET (Sg Com) IF (0 N OR NUMUNIT)(*-1 (Num Nom) - ("akte") - ("1") - Ine BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) OR ("jienebe" Pron Indef Sg Com) - Attr OR ("jienebe" Pron Indef Ess) OR ("jienebe" Pron Indef Pl Ine) - Attr LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom) OR ABBR OR Prop);
+
+COPY:msyn-numphrase-congruence-sgcom (Sg Com SUGGEST) EXCEPT (Pl Com) TARGET (N Com &msyn-numphrase-congruence-sgcom) ;
+	
+	# numeral
+ADD:msyn-numphrase-congruence-sgcom (&msyn-numphrase-congruence-sgcom) TARGET (Num Nom) - ("akte") - ("1")  IF (*1 (N &msyn-numphrase-congruence-sgcom) OR NUMUNIT + &msyn-numphrase-congruence-sgcom BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr))(NEGATE 0 Sem/Year OR Sem/Date);
+
+COPY:msyn-numphrase-congruence-sgcom (Sg Com Attr SUGGEST) EXCEPT (Sg Nom) TARGET (Num Sg Nom &msyn-numphrase-congruence-sgcom) ;
+
+	# demonstrative
+ADD:msyn-numphrase-congruence-sgcom (&msyn-numphrase-congruence-sgcom) TARGET (Dem Pl Nom) OR (Dem Pl Gen) OR (Indef Pl Nom) OR (Indef Pl Gen) IF (*1 (Num &msyn-numphrase-congruence-sgcom) BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr));
+
+COPY:msyn-numphrase-congruence-sgcom (Pl Com SUGGEST) EXCEPT (Pl Nom) OR (Pl Gen) TARGET (Dem Pl Nom &msyn-numphrase-congruence-sgcom) OR (Dem Pl Gen &msyn-numphrase-congruence-sgcom) OR (Indef Pl Nom &msyn-numphrase-congruence-sgcom) OR (Indef Pl Gen &msyn-numphrase-congruence-sgcom) ;
+
+
+ADDRELATION ($2 LEFT) (&msyn-numphrase-congruence-sgcom) TO (*-1 (Num &msyn-numphrase-congruence-sgcom)) ;	
+ADDRELATION ($3 LEFT) (&msyn-numphrase-congruence-sgcom) TO (*-1 (Num &msyn-numphrase-congruence-sgcom) LINK *-1 (Dem &msyn-numphrase-congruence-sgcom) OR (Indef &msyn-numphrase-congruence-sgcom)) ;
+
+	## Saemiedigkieh edtjieh gaajhki golme laantine gååvnesidh. > gaajhkine golmene laantesne gååvnesidh.
 	
 	# sg ela
 	# ------
