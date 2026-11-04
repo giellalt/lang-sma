@@ -1988,13 +1988,13 @@ COPY:msyn-demphrase-congruence-placc (Pl Acc SUGGEST) EXCEPT (Sg Acc) TARGET (N 
 	# sg acc
 	# ------
 	
-ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Nom) OR (Pron Attr) - Acc IF (0 Dem OR Indef)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr LINK NOT *1 ("utnedh") BARRIER NOT-ADV-PCLE);
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Nom)  - <spelled> OR (Pron Attr) - Acc IF (0 Dem OR Indef)(*1 (N Sg Acc) BARRIER (*) - (Dem Nom) - Attr LINK NOT *1 ("utnedh") BARRIER NOT-ADV-PCLE);
 
-ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (0 Dem OR Indef)(*1 (N Sg Nom) BARRIER (*) - (Dem Nom) - Attr LINK NOT *1 ("utnedh") BARRIER NOT-ADV-PCLE);
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) - <spelled> IF (0 Dem OR Indef)(*1 (N Sg Nom) BARRIER (*) - (Dem Nom) - Attr LINK NOT *1 ("utnedh") BARRIER NOT-ADV-PCLE);
 
-ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) IF (*-1 (Pron Dem &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) (1 (N Sg Acc));
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (Pron Sg Acc) - <spelled> IF (*-1 (Pron Dem &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) (1 (N Sg Acc));
 
-ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (N Sg Acc) OR (N Sg Nom) IF (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr)(NEGATE 0 &syn-utnedh-gen-lea);
+ADD:msyn-demphrase-congruence-sgacc (&msyn-demphrase-congruence-sgacc) TARGET (N Sg Acc) - <spelled> OR (N Sg Nom) - <spelled> IF (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr)(NEGATE 0 &syn-utnedh-gen-lea);
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-sgacc) TO (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr) ;	
 ADDRELATION ($3 LEFT) (&msyn-demphrase-congruence-sgacc) TO (*-1 (Dem &msyn-demphrase-congruence-sgacc) OR (Indef &msyn-demphrase-congruence-sgacc) BARRIER NOT-Attr LINK -1 (Indef &msyn-demphrase-congruence-sgacc)) ;
@@ -2140,9 +2140,9 @@ COPY:msyn-Neg-VFinitt-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFin
 	
 	# Neg Pl3 > ConNeg
 
-ADD:msyn-Neg-Pl3-ConNeg (&msyn-Neg-Pl3-ConNeg) TARGET (Ind Prs Pl3) IF (NEGATE 0 (ConNeg))(*-1 NEG-V + Neg + Prs BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc OR Rel) ;
+ADD:msyn-Neg-Pl3-ConNeg (&msyn-Neg-Pl3-ConNeg) TARGET (Ind Prs Pl3) - <spelled> IF (NEGATE 0 (ConNeg))(*-1 NEG-V + Neg + Prs BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc OR Rel) ;
 
-COPY:msyn-Neg-VFinitt-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3-ConNeg) TARGET (&msyn-Neg-Pl3-ConNeg) ;
+COPY:msyn-Neg-Pl3-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Pl3 &msyn-Neg-Pl3-ConNeg) TARGET (&msyn-Neg-Pl3-ConNeg) ;
 	## Ij Piere gænnah tjöönieh?
 	## Ij gænnah tjöönieh?
 	
