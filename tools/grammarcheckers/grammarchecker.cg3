@@ -1661,15 +1661,15 @@ ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh") + $$ALL-PERS IF 
 	## Dïhte akte gïele maam mijjieh reaktam utnebe eevtjedh jïh evtiedidh, dovne mijjen luvnie goh almetje jïh siebriedahkesne.
 	
 	
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh" PrfPrc) IF (-1 (N Acc) OR (Pron Indef Acc) OR (N Pl Nom) LINK *-1 (Pers Nom) OR (N Nom) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET ("utnedh" PrfPrc) IF (NEGATE 0 <spelled>)(-1 (N Acc) OR (Pron Indef Acc) OR (N Pl Nom) LINK *-1 (Pers Nom) OR (N Nom) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
 
 
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) OR (N Nom) + Sem/Hum IF (*1 (N Acc) OR (Pron Indef Acc) OR (N Pl Nom) BARRIER NOT-Attr - (Num Acc) LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Pers Nom) OR (N Nom) + Sem/Hum IF (NEGATE 0 <spelled>)(*1 (N Acc) OR (Pron Indef Acc) OR (N Pl Nom) BARRIER NOT-Attr - (Num Acc) LINK 1 ("utnedh" &syn-utnedh-gen-lea)) ; 
 
 
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) OR (Pron Indef Acc) OR (N Pl Nom) IF (1 ("utnedh" &syn-utnedh-gen-lea)) (*-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ;
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (N Acc) OR (Pron Indef Acc) OR (N Pl Nom) IF (NEGATE 0 <spelled>)(1 ("utnedh" &syn-utnedh-gen-lea)) (*-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ;
 
-ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Num Acc) IF (1 (Acc &syn-utnedh-gen-lea) LINK 0 N OR Pron) (*-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
+ADD:xsyn-utnedh-gen-lea (&syn-utnedh-gen-lea) TARGET (Num Acc) IF (NEGATE 0 <spelled>)(1 (Acc &syn-utnedh-gen-lea) LINK 0 N OR Pron) (*-1 (Pers Nom &syn-utnedh-gen-lea) OR (N Nom &syn-utnedh-gen-lea) + Sem/Hum BARRIER NOT-Attr - (Num Acc)) ; 
 
 	# med Inf subjekt - 
 	
@@ -1751,7 +1751,7 @@ ADDRELATION:utnedh-right ($4 RIGHT) ("utnedh" &syn-utnedh-gen-lea) TO (1 (&syn-u
  
  # INE-phrase
  
-ADD:msyn-nounphrase-dem-congr-sgine (&msyn-nounphrase-dem-congr-sgine) TARGET (Dem) IF (1 (N Sg Ine))
+ADD:msyn-nounphrase-dem-congr-sgine (&msyn-nounphrase-dem-congr-sgine) TARGET (Dem) - <spelled> IF (1 (N Sg Ine))
 (NEGATE 0 (Dem Sg Ine Attr)) ; 
 # Maja: NEGATE betyr at det du ikke skal rette i TARGET. Retter ikke "dennie" ("dennie" er TARGET) fordi det er Sg Ine Attr
 
@@ -1762,7 +1762,7 @@ COPY:msyn-nounphrase-dem-congr-sgine (Sg Ine Attr SUGGEST) EXCEPT (Attr) OR (Sg 
  # ELA-phrase
  
  # Maja: lekse: skriv elativ selv. 
-ADD:msyn-nounphrase-dem-congr-sgela (&msyn-nounphrase-dem-congr-sgela) TARGET (Dem) IF (1 (N Sg Ela)) 
+ADD:msyn-nounphrase-dem-congr-sgela (&msyn-nounphrase-dem-congr-sgela) TARGET (Dem) - <spelled> IF (1 (N Sg Ela)) 
 (NEGATE 0 (Dem Sg Ela Attr)) ; 
 
 
@@ -1781,7 +1781,7 @@ LIST NUMUNIT = "millijovne" "mill" "milj" "miljo" "millijarde" ; # MAJA "mrd" "m
 	# ------
 	
 	
-ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N Sg Nom) IF (*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom));
+ADD:msyn-numphrase-congruence-plnom (&msyn-numphrase-congruence-plnom) TARGET (N Sg Nom) - <spelled> IF (*-1 (Num Nom) - ("akte") - ("1") BARRIER NOT-Attr - ("millijovne" Nom) OR (A Arab Ord Attr) LINK NEGATE 0 Sem/Year OR Sem/Date)(NEGATE 0 (N Pl Nom));
 
 # millijåvnnå FROM smj
 
