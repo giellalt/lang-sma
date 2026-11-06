@@ -2056,16 +2056,16 @@ COPY:msyn-demphrase-congruence-pline (Pl Ine SUGGEST) EXCEPT (Sg Ine) TARGET (Sg
 
 	# pronoun error
 	
-ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) OR (Pron Sg Ine Attr) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ela) BARRIER (*) - Attr);
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Nom) - <spelled> OR (Pron Sg Ine Attr) - <spelled> IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Ela) BARRIER (*) - Attr);
 	## 	Dah aamhtesh dennie Sveerjen tjåanghkojste ij åadtjoeh dejtie gåatan löönedh. > dehtie
 
-ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) IF (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) BARRIER (*) - Attr);
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Pl Ela) - <spelled> IF (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela) BARRIER (*) - Attr);
 
 	# noun error
 	
-ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Ela) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Sg Gen) BARRIER (*) - Attr LINK NEGATE *1 (N Ela) BARRIER NOT-NPMOD - Adv);
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (Pron Pl Ela) - <spelled> IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Sg Gen) BARRIER (*) - Attr LINK NEGATE *1 (N Ela) BARRIER NOT-NPMOD - Adv);
 	
-ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Sg Gen) IF (*-1 (Dem Pl Ela) OR (Indef Pl Ela) BARRIER (*) - Attr LINK NEGATE *1 (N Ela) BARRIER NOT-NPMOD - Adv);
+ADD:msyn-demphrase-congruence-plela (&msyn-demphrase-congruence-plela) TARGET (N Sg Gen) - <spelled> IF (*-1 (Dem Pl Ela) OR (Indef Pl Ela) BARRIER (*) - Attr LINK NEGATE *1 (N Ela) BARRIER NOT-NPMOD - Adv);
 	#$ Daate lea akte dejstie {Saemiedigkien} raaktan stoerre dïedtijste: barkedh ihke båatsoe hijven mieriekrïevenassh åtna mij evtiedimmiem jïh monnehkevoetem gorrede guhkiebasse.
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plela) TO (*-1 (Dem &msyn-demphrase-congruence-plela) OR (Indef &msyn-demphrase-congruence-plela)) ;	
@@ -2075,17 +2075,16 @@ COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Pl Nom) OR (Sg Ine
 
 COPY:msyn-demphrase-congruence-plela (Pl Ela SUGGEST) EXCEPT (Sg Gen) TARGET (N &msyn-demphrase-congruence-plela) ;
 
-	## Jienebh dejstie aamhtesidie jeatjahligke buvresne/våarhkosne vöörhkeme, daan åvteste tjuara dejtie åvtelen dængkodh. > dejstie aamhtesijstie
-	
+	## Jienebh dejstie aamhtesidie jeatjahligke buvresne/våarhkosne vöörhkeme, daan åvteste tjuara dejtie åvtelen dængkodh. > dejstie aamhtesijstie	
 	
 	## Plaerine våhkoen gyrhkesjimmide gaavnh mij gyrhkesjimmide muvhth gærhkojne dov årromesijjesne. > muvhtene gærhkosne  or muvhtine gærhkojne??
 
 	# pl com
 	# ------
 
-ADD:msyn-demphrase-congruence-plcom (&msyn-demphrase-congruence-plcom) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(1 (N Pl Com));
+ADD:msyn-demphrase-congruence-plcom (&msyn-demphrase-congruence-plcom) TARGET (Pron Pl Nom) - <spelled> IF (0 Dem OR Indef - SG-INDEF-PRON)(1 (N Pl Com));
 
-ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plcom) TARGET (N Pl Com) IF (-1 (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom));
+ADD:msyn-demphrase-congruence-pline (&msyn-demphrase-congruence-plcom) TARGET (N Pl Com) - <spelled> IF (-1 (Dem &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom));
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plcom) TO (-1 (Com &msyn-demphrase-congruence-plcom) OR (Indef &msyn-demphrase-congruence-plcom)) ;	
 	## Gaajhkh nïejtigujmie soptsetim.
@@ -2097,10 +2096,10 @@ COPY:msyn-demphrase-congruence-plcom (Pl Gen SUGGEST) EXCEPT (Pl Nom) TARGET (De
 	# ------
 
 	# Dem
-ADD:msyn-demphrase-congruence-plgen (&msyn-demphrase-congruence-plgen) TARGET (Pron Pl Nom) IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Gen) BARRIER (*) - (Dem Gen) - (Indef Gen));
+ADD:msyn-demphrase-congruence-plgen (&msyn-demphrase-congruence-plgen) TARGET (Pron Pl Nom) - <spelled> IF (0 Dem OR Indef - SG-INDEF-PRON)(*1 (N Pl Gen) BARRIER (*) - (Dem Gen) - (Indef Gen));
 
 	# Noun
-ADD:msyn-demphrase-congruence-plgen (&msyn-demphrase-congruence-plgen) TARGET (N Pl Gen) IF (*-1 (Dem &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) BARRIER (*) - (Dem Gen) - (Indef Gen));
+ADD:msyn-demphrase-congruence-plgen (&msyn-demphrase-congruence-plgen) TARGET (N Pl Gen) - <spelled> IF (*-1 (Dem &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) BARRIER (*) - (Dem Gen) - (Indef Gen));
 
 ADDRELATION ($2 LEFT) (&msyn-demphrase-congruence-plgen) TO (*-1 (Gen &msyn-demphrase-congruence-plgen) OR (Indef &msyn-demphrase-congruence-plgen) BARRIER (*) - (Dem Gen) - (Indef Gen)) ;	
 	## Gaajhkh dej nåejtiej bïjre.
@@ -2130,7 +2129,7 @@ SET NEG-V = NEG-V-smj OR NEG-V-sme OR NEG-V-sma OR NEG-V-smn ;
 
 	# ij as Adverb - congruence between Neg and VFIN
 
-ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS OR (Ind Prt) + $$ALL-PERS OR Inf (*-1 NEG-V + Neg + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg)(NEGATE 0 Inf LINK -1 <TH-Inf>)(NEGATE 0 Neg) ;
+ADD:msyn-Neg-VFinitt-ConNeg (&msyn-Neg-VFinitt-ConNeg) TARGET (Ind Prs) + $$ALL-PERS - <spelled> OR (Ind Prt) + $$ALL-PERS  - <spelled> OR Inf  - <spelled> (*-1 NEG-V + Neg + $$ALL-PERS - <spelled> BARRIER NOT-ADV-PCLE - Dem - Attr - Gen - Nom - Acc - Ine LINK 0 Prs OR Prt)(NEGATE 0 ConNeg)(NEGATE 0 Inf LINK -1 <TH-Inf>)(NEGATE 0 Neg) ;
 
 COPY:msyn-Neg-VFinitt-ConNeg (ConNeg SUGGEST) EXCEPT (Ind Prs Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Sg3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Du3 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl1 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prs Pl2 &msyn-Neg-VFinitt-ConNeg) OR (Ind Prt Pl3 &msyn-Neg-VFinitt-ConNeg) OR (Inf &msyn-Neg-VFinitt-ConNeg) TARGET (&msyn-Neg-VFinitt-ConNeg) ;
 	## Ean månnoeh miehtsesne {minnien} lustestallemen vuj haarjanimmien gaavhtan.
