@@ -2310,7 +2310,7 @@ COPY:syn-number_congruence-subj-verb-pl3-sg3 (Sg3 SUGGEST) EXCEPT (Pl3 &syn-numb
 	# Sg2 > Pl3
 	# ---------
 
-ADD:syn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg2-pl3) TARGET (V Ind Prs Sg2) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR (Pers Sg2) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 Inf LINK *-1 AUX BARRIER S-BOUNDARY OR VFIN); 
+ADD:syn-number_congruence-subj-verb-sg2-pl3 (&syn-number_congruence-subj-verb-sg2-pl3) TARGET (V Ind Prs Sg2) IF (*-1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) OR (Pers Sg2) LINK NEGATE 0 (N Sg Nom))(NEGATE *1 (Pron Pers Sg2 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 Inf LINK *-1 AUX BARRIER S-BOUNDARY OR VFIN)(NEGATE 0 &lex-saemiestidh);
 	## Gåessie båetije laake tseegkesovvedh saemiej reaktaj bïjre dellie saemieh tjoeverh daam dåhkasjehtedh.
 	#$ Jïh daennie soptsesisnie åadtjoeh govledh mij heannadi goh Lasse jïh manne edtjimen mïnnedh sarvh vuetjedh.
 
