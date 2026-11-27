@@ -1323,11 +1323,13 @@ ADDRELATION ($2 RIGHT) (N &msyn-subj_verb-sg3-pl3) TO (*1 (V &msyn-subj_verb-sg3
 	# ---------------------------------------------
 	
 ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (*-1 ("saemien" A Attr) OR ("saemie" N Sg Gen) BARRIER (*) - Adv - (N Ine) - ("gïele" N Pl) - (Pron Recipr)) ;
+ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (-1 ("gïele" N Acc)) (-2 ("saemien" A Attr) OR ("saemie" N Sg Gen)) ;
 ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("soptsestidh") IF (-1 ("gïele" N Acc)) (-2 ("saemien" A Attr) OR ("saemie" N Sg Gen)) (-3 ("<altese>"r)) ;
 	## Fjellström lij gïelem dotkedh jïh aaj man vihkeles daejtie baakoe, baakojde lea saemien soptsestimmie gïelese.
     ## Tjoerh jïjtje saemien gåetesne soptsestidh jallh soptsestamme, jallh guhte dov eejtegistie gåetesne saemien soptseste jalh soptsestamme, jallh guhte dov aahkijste jallh aajijste gåetesne saemien soptseste jallh soptsestamme.
 
 ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) OR ("saemie" N Sg Gen) IF  (*1 (&lex-saemiestidh) BARRIER (*) - Adv - (N Ine) - ("gïele" N Pl) - (Pron Recipr)) ;
+ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) OR ("saemie" N Sg Gen) IF (1 ("gïele" N Acc)) (2 ("soptsestidh" &lex-saemiestidh)) ;
 ADD:xlex-saemiestidh (&lex-saemiestidh) TARGET ("saemien" A Attr) IF (-1 ("<altese>"r)) (1 ("gïele" N Acc)) (2 ("soptsestidh" &lex-saemiestidh)) ;
 
 COPY:lex-saemiestidh ("saemiestidh" IV SUGGEST) EXCEPT ("soptsestidh" TV) AFTER V TARGET ("soptsestidh" V &lex-saemiestidh) ;
@@ -2344,10 +2346,10 @@ COPY:syn-number_congruence-subj-verb-sg3-pl3 (Pl3 SUGGEST) EXCEPT (Sg3 &syn-numb
 
 	# Inf > Pl3
 	# ---------
-ADD:syn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*-1 (Pron Pers Pl3 Nom) OR (Rel Pl Nom) OR (Indef Pl Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - ADVLCASE - (N Acc) - Attr LINK NOT 0 (N Sg Nom) LINK NEGATE *-1 VFIN + COPULAS OR VFIN + AUX BARRIER S-BOUNDARY)(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE); 
+ADD:syn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*-1 (Pron Pers Pl3 Nom) OR (Rel Pl Nom) OR (Indef Pl Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - ADVLCASE - (N Acc) - Attr LINK NOT 0 (N Sg Nom) LINK NEGATE *-1 VFIN + COPULAS OR VFIN + AUX BARRIER S-BOUNDARY)(NEGATE *1 (Pron Pers Sg3 Nom) BARRIER NOT-ADV-PCLE)(NEGATE 0 &lex-saemiestidh); 
 
 
-ADD:syn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *-1 (Pron Pers Sg3) OR VFIN BARRIER NOT-ADV-PCLE); 
+ADD:syn-number_congruence-subj-verb-inf-pl3 (&syn-number_congruence-subj-verb-inf-pl3) TARGET (V Inf) IF (*1 (Pron Pers Pl3 Nom) OR (N Pl Nom) BARRIER NOT-ADV-PCLE - (N Ine) - (N Acc) LINK NEGATE 0 (N Sg Nom))(NEGATE *-1 (Pron Pers Sg3) OR VFIN BARRIER NOT-ADV-PCLE)(NEGATE 0 &lex-saemiestidh); 
 	## maahta vadtasovvedh dejtie guhtide geerve gïeline gïehtelidh.
 	
 	 
